@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'mate/text.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -123,18 +125,13 @@ class MyDrawer extends StatelessWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   String textData = "";
   TextAlign? textAlign;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    var x = TextMate;
+
     var textAlignWidget = TextAlign.values.map((e) => ChoiceChip(
           label: Text(e.name),
           selected: textAlign == e,
@@ -156,6 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               textData,
+              textAlign: textAlign,
             ),
             TextField(
               autofocus: true,
@@ -175,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {},
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
