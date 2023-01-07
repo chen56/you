@@ -1,36 +1,42 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/mate/text.dart';
 
-import '../../param.dart';
+import '../../param/param.dart';
 
-Param param = Param();
+Param param = Param.root();
 
 void main() {
-  param.path("text").help(TextMate.help.constructor);
-  runApp(TextHello());
+  runApp(simple());
+}
+
+Widget simple() {
+  return TextHello();
 }
 
 class TextHello extends StatelessWidget {
+  const TextHello({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Text(
-      param.path("text.data").help(TextMate.help.data).value("xxx"),
-      textAlign: param.path("text.data").help(TextMate.help.textAlign).value(TextAlign.center),
+    Container c = Container(
+      width: 200,
+      height: 100,
+      color: Colors.blue,
+      child: Text(
+        param.define<String>("text.data", value: "default", help: "").value,
+        textAlign: param.define<TextAlign>("text.textAlign", value: TextAlign.center, help: "Text.textAlign").value,
+        style: TextStyle(
+          fontSize: 24.0,
+          fontWeight: FontWeight.w900,
+          fontFamily: "Georgia",
+          color: Colors.green,
+          backgroundColor: Colors.red,
+        ),
+      ),
     );
-  }
-}
-
-class TextHello2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    var x = Text.rich;
-    var y = Text.new;
-
-    return Text(
-      /*param:"text.data"*/ "xxx" /*param*/,
-      textAlign: TextAlign.center,
+    return Center(
+      child: c,
     );
   }
 }

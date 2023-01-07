@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'mate/text.dart';
+import 'package:learn_flutter/simple/text/text_hello.dart' as text_simple;
+import 'dart:developer' as developer;
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -47,18 +48,6 @@ class TextSimple extends StatelessWidget {
             const Chip(
               avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('A')),
               label: Text('sss'),
-            ),
-            const Chip(
-              avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('M')),
-              label: Text('LafayetteLafayetteLafayetteLafayetteLafayetteLafayette'),
-            ),
-            const Chip(
-              avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('H')),
-              label: Text('Mulligan'),
-            ),
-            const Chip(
-              avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('J')),
-              label: Text('Laurens'),
             ),
           ],
         ),
@@ -125,19 +114,14 @@ class MyDrawer extends StatelessWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String textData = "";
-  TextAlign? textAlign;
-
   @override
   Widget build(BuildContext context) {
-    var x = TextMate;
-
     var textAlignWidget = TextAlign.values.map((e) => ChoiceChip(
           label: Text(e.name),
-          selected: textAlign == e,
+          selected: text_simple.param.path("text.textAlign").value == e,
           onSelected: (bool selected) {
             setState(() {
-              textAlign = selected ? e : null;
+              text_simple.param.path("text.textAlign").value = selected ? e : null;
             });
           },
         ));
@@ -151,16 +135,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              textData,
-              textAlign: textAlign,
-            ),
+            text_simple.simple(),
             TextField(
               autofocus: true,
-              decoration: InputDecoration(labelText: "data", hintText: "Text#data", prefixIcon: Icon(Icons.ac_unit)),
+              decoration:
+                  InputDecoration(labelText: "text.data", hintText: "Text#data", prefixIcon: Icon(Icons.ac_unit)),
               onChanged: (value) {
                 setState(() {
-                  textData = value;
+                  developer.log("text.data:${text_simple.param.path("text.data").value}", name: 'learn_flutter');
+                  text_simple.param.path("text.data").value = value;
                 });
               },
             ),
