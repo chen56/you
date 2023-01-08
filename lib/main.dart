@@ -118,10 +118,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     var textAlignWidget = TextAlign.values.map((e) => ChoiceChip(
           label: Text(e.name),
-          selected: text_simple.param.path("text.textAlign").value == e,
+          selected: text_simple.param.path("text.textAlign")?.value == e,
           onSelected: (bool selected) {
             setState(() {
-              text_simple.param.path("text.textAlign").value = selected ? e : null;
+              // TreeParamTemp.root().path("text.textAlign").value = selected ? e : null;
+              text_simple.param.path("text.textAlign")?.value = selected ? e : null;
             });
           },
         ));
@@ -135,15 +136,17 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            text_simple.simple(),
+            // 不能是const，不然setState无效
+            // ignore: prefer_const_constructors
+            text_simple.TextHelloSimple(),
             TextField(
               autofocus: true,
               decoration:
                   InputDecoration(labelText: "text.data", hintText: "Text#data", prefixIcon: Icon(Icons.ac_unit)),
               onChanged: (value) {
                 setState(() {
-                  developer.log("text.data:${text_simple.param.path("text.data").value}", name: 'learn_flutter');
-                  text_simple.param.path("text.data").value = value;
+                  developer.log("text.data:${text_simple.param.path("text.data")?.value}", name: 'learn_flutter');
+                  text_simple.param.path("text.data")?.value = value;
                 });
               },
             ),

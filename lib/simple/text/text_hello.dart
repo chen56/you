@@ -4,18 +4,19 @@ import 'package:flutter/material.dart';
 
 import '../../param/param.dart';
 
-Param param = Param.root();
+Params param = Params();
 
 void main() {
-  runApp(simple());
+  runApp(TextHelloSimple());
 }
 
-Widget simple() {
-  return TextHello();
+class Simple {
+  static Param<String> data = param.ofString("text.data", value: "default").notNull();
+  static TextAlignEditor textAlign = param.ofTextAlign("text.textAlign", value: TextAlign.center);
 }
 
-class TextHello extends StatelessWidget {
-  const TextHello({super.key});
+class TextHelloSimple extends StatelessWidget {
+  const TextHelloSimple({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +25,8 @@ class TextHello extends StatelessWidget {
       height: 100,
       color: Colors.blue,
       child: Text(
-        param.define<String>("text.data", value: "default", help: "").value,
-        textAlign: param.define<TextAlign>("text.textAlign", value: TextAlign.center, help: "Text.textAlign").value,
+        param.ofString("text.data", value: "default").notNull().value,
+        textAlign: Simple.textAlign.value,
         style: TextStyle(
           fontSize: 24.0,
           fontWeight: FontWeight.w900,
