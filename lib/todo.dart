@@ -6,6 +6,9 @@ import 'package:flutter/widgets.dart';
 class TODO1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    GlobalKey();
+    GlobalKey.new();
+
     return Text(
       /*param:text.data*/ "xxx" /*param*/,
       textAlign: TextAlign.center,

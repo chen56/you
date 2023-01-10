@@ -23,8 +23,8 @@ class TextHelloSample extends StatelessWidget {
       height: 100,
       color: Colors.blue,
       child: Text(
-        params.ofString("text.data", value: "default").notNull().value,
-        textAlign: params.ofTextAlign("text.textAlign", value: TextAlign.center).value,
+        params.ofString("text.data").notNull("default"),
+        textAlign: params.ofTextAlign("text.textAlign").nullable(TextAlign.center),
         style: TextStyle(
           fontSize: 24.0,
           fontWeight: FontWeight.w900,

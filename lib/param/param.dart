@@ -7,97 +7,80 @@ import 'package:flutter/material.dart';
 /// 当前未考虑线程安全问题，包内的代码线程不安全
 
 class Params {
-  final Map<String, NullableEditor> _editors = HashMap();
-  final Map<String, NullableParam> _params = HashMap();
-
-  StringEditor ofString(
-    String path, {
-    String? value,
-  }) {
-    return _initOnce(path, () => StringEditor(value: value));
+  final Map<String, Param> _editors = HashMap();
+  late final _EmptyParam _empty = _EmptyParam(this)..notNull("Empty");
+  Params();
+  StringParam ofString(String path) {
+    return _initOnce(path, () => StringParam(this));
   }
 
-  TextAlignEditor ofTextAlign<T extends Enum>(
-    String path, {
-    TextAlign? value,
-  }) {
-    return _initOnce(path, () => TextAlignEditor());
+  TextAlignParam ofTextAlign<T extends Enum>(String path) {
+    return _initOnce(path, () => TextAlignParam(this));
   }
 
-  // TODO 这个还要不要？
-  NullableEditor path(String path) {
+// TODO 这个还要不要？
+  Param path(String path) {
     if (!_editors.containsKey(path)) {
-      return _EmptyParam.empty;
+      return _empty;
     }
     return _editors[path]!;
   }
 
-  T _initOnce<T extends NullableEditor>(String path, T Function() create) {
+  T _initOnce<T extends Param>(String path, T Function() create) {
     return _editors.putIfAbsent(path, create) as T;
   }
 }
 
-abstract class NullableEditor<T> {
-  T? value;
+class _EmptyParam extends Param<String> {
+  _EmptyParam(super.params);
 
-  // T? get value;
-  // set value(T? value);
-  NullableEditor({this.value});
+  @override
+  StatefulBuilder builder() {
+    throw UnimplementedError("_EmptyParam not support this method");
+  }
+}
+
+abstract class Param<T> {
+  T? value;
+  bool isNullable = true;
+  Params params;
+  bool _initialized = false;
+
+  Param(this.params, {this.value});
 
   get isEmpty => this is _EmptyParam;
-  Param<T> notNull();
+
+  T notNull(T defaultValue) {
+    if (!_initialized) {
+      value = defaultValue;
+      isNullable = false;
+      _initialized=true;
+    }
+    return value??defaultValue;
+  }
+
+  T? nullable(T? defaultValue) {
+    if (!_initialized) {
+      value = defaultValue;
+      isNullable = true;
+      _initialized=true;
+    }
+    return value;
+  }
+
   StatefulBuilder builder();
 }
 
-class NullableParam<T> extends Param<T?> {
-  T defaultValue;
-  NullableParam({
-    super.value,
-    required this.defaultValue,
-  });
-}
-
-class _EmptyParam extends NullableEditor<String> {
-  static _EmptyParam empty = _EmptyParam();
-
-  _EmptyParam() : super(value: "Empty");
-
-  @override
-  Param<String> notNull() {
-    return Param(value: "Empty");
-  }
-
-  @override
-  StatefulBuilder builder() {
-    throw UnimplementedError();
-  }
-}
-
-class Param<T> {
-  T value;
-
-  Param({
-    required this.value,
-  });
-}
-
-class StringEditor extends NullableEditor<String> {
-  // @override
-  // String? value;
-
-  StringEditor({
-    super.value,
-  });
-
-  @override
-  Param<String> notNull() => Param(value: value ?? "");
+class StringParam extends Param<String> {
+  StringParam(super.params);
 
   StatefulBuilder builder() {
-    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+    return StatefulBuilder(
+        builder: (BuildContext context, StateSetter setState) {
       return TextField(
         autofocus: true,
         decoration: const InputDecoration(
-          labelText: "text.data",
+          labelText: "Text#data",
           hintText: "Text#data",
           prefixIcon: Icon(Icons.ac_unit),
         ),
@@ -112,15 +95,17 @@ class StringEditor extends NullableEditor<String> {
   }
 }
 
-abstract class EnumEditor<T extends Enum> extends NullableEditor<T?> {
+abstract class EnumParam<T extends Enum> extends Param<T> {
   final List<T> values;
 
-  EnumEditor({
-    super.value,
+  EnumParam(
+    super.params, {
     required this.values,
   });
+
   StatefulBuilder builder() {
-    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+    return StatefulBuilder(
+        builder: (BuildContext context, StateSetter setState) {
       var chips = values.map((e) => ChoiceChip(
             label: Text(e.name),
             selected: value == e,
@@ -140,11 +125,8 @@ abstract class EnumEditor<T extends Enum> extends NullableEditor<T?> {
   }
 }
 
-class TextAlignEditor extends EnumEditor<TextAlign> {
-  TextAlignEditor() : super(values: TextAlign.values);
-
-  @override
-  Param<TextAlign> notNull() => Param(value: value ?? TextAlign.center);
+class TextAlignParam extends EnumParam<TextAlign> {
+  TextAlignParam(super.params) : super(values: TextAlign.values);
 }
 
 // class TreeParamTemp<T> {
