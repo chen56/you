@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/simple/text/text_hello.dart' as text_simple;
-import 'dart:developer' as developer;
+import 'package:learn_flutter/simple/text/text_hello.dart' as text_hello;
 
 void main() {
   runApp(const MyApp());
@@ -44,8 +43,8 @@ class TextSimple extends StatelessWidget {
           spacing: 8.0, // 主轴(水平)方向间距
           runSpacing: 4.0, // 纵轴（垂直）方向间距
           alignment: WrapAlignment.center, //沿主轴方向居中
-          children: <Widget>[
-            const Chip(
+          children: const <Widget>[
+            Chip(
               avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text('A')),
               label: Text('sss'),
             ),
@@ -116,17 +115,8 @@ class MyDrawer extends StatelessWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var textAlignWidget = TextAlign.values.map((e) => ChoiceChip(
-          label: Text(e.name),
-          selected: text_simple.param.path("text.textAlign")?.value == e,
-          onSelected: (bool selected) {
-            setState(() {
-              // TreeParamTemp.root().path("text.textAlign").value = selected ? e : null;
-              text_simple.param.path("text.textAlign")?.value = selected ? e : null;
-            });
-          },
-        ));
     var drawer = const MyDrawer();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -136,25 +126,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // 不能是const，不然setState无效
-            // ignore: prefer_const_constructors
-            text_simple.TextHelloSimple(),
-            TextField(
-              autofocus: true,
-              decoration:
-                  InputDecoration(labelText: "text.data", hintText: "Text#data", prefixIcon: Icon(Icons.ac_unit)),
-              onChanged: (value) {
-                setState(() {
-                  developer.log("text.data:${text_simple.param.path("text.data")?.value}", name: 'learn_flutter');
-                  text_simple.param.path("text.data")?.value = value;
-                });
-              },
-            ),
-            Wrap(
-              spacing: 8.0, // gap between adjacent chips
-              runSpacing: 4.0, // gap between lines
-              children: textAlignWidget.toList(),
-            )
+            text_hello.TextHelloSample(),
+            StatefulBuilder(
+                builder: (BuildContext context, StateSetter setState) => text_hello.params.path("text.data").builder()),
+            StatefulBuilder(
+                builder: (BuildContext context, StateSetter setState) =>
+                    text_hello.params.path("text.textAlign").builder()),
+            // text_hello.params.path("text.textAlign").builder(),
           ],
         ),
       ),

@@ -1,6 +1,8 @@
 import 'dart:collection';
 import 'dart:core';
-import 'dart:ui';
+import 'dart:developer' as developer;
+
+import 'package:flutter/material.dart';
 
 /// 当前未考虑线程安全问题，包内的代码线程不安全
 
@@ -44,6 +46,7 @@ abstract class NullableEditor<T> {
 
   get isEmpty => this is _EmptyParam;
   Param<T> notNull();
+  StatefulBuilder builder();
 }
 
 class NullableParam<T> extends Param<T?> {
@@ -62,6 +65,11 @@ class _EmptyParam extends NullableEditor<String> {
   @override
   Param<String> notNull() {
     return Param(value: "Empty");
+  }
+
+  @override
+  StatefulBuilder builder() {
+    throw UnimplementedError();
   }
 }
 
@@ -83,15 +91,58 @@ class StringEditor extends NullableEditor<String> {
 
   @override
   Param<String> notNull() => Param(value: value ?? "");
+
+  StatefulBuilder builder() {
+    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+      return TextField(
+        autofocus: true,
+        decoration: const InputDecoration(
+          labelText: "text.data",
+          hintText: "Text#data",
+          prefixIcon: Icon(Icons.ac_unit),
+        ),
+        onChanged: (value) {
+          setState(() {
+            developer.log("text.data:$value", name: 'learn_flutter');
+            this.value = value;
+          });
+        },
+      );
+    });
+  }
 }
 
-abstract class EnumEditor<T> extends NullableEditor<T?> {
+abstract class EnumEditor<T extends Enum> extends NullableEditor<T?> {
+  final List<T> values;
+
   EnumEditor({
     super.value,
+    required this.values,
   });
+  StatefulBuilder builder() {
+    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+      var chips = values.map((e) => ChoiceChip(
+            label: Text(e.name),
+            selected: value == e,
+            onSelected: (bool selected) {
+              setState(() {
+                value = selected ? e : null;
+              });
+            },
+          ));
+
+      return Wrap(
+        spacing: 8.0, // gap between adjacent chips
+        runSpacing: 4.0, // gap between lines
+        children: chips.toList(),
+      );
+    });
+  }
 }
 
-class TextAlignEditor extends EnumEditor<TextAlign?> {
+class TextAlignEditor extends EnumEditor<TextAlign> {
+  TextAlignEditor() : super(values: TextAlign.values);
+
   @override
   Param<TextAlign> notNull() => Param(value: value ?? TextAlign.center);
 }

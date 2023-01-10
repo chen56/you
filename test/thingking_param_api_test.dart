@@ -71,6 +71,26 @@ void main() {
       String? s = pp.value;
     }
   });
+
+  test('param api 实验 ，dart的范型和nullable难搞', () {
+    x<T>() {
+      return T;
+    }
+
+    // ignore: unnecessary_type_check
+    expect(x<String>() is Type, isTrue);
+    expect(String is Type, isTrue);
+
+    expect(x().toString(), equals("dynamic"));
+    expect(x().runtimeType, equals(Type));
+
+    expect(x(), equals(dynamic));
+    expect(x<String>(), equals(String));
+    expect(x<List<String>>(), equals(List<String>));
+
+    expect(<int?>[] is List<int>, isFalse, reason: "_isSoundMode");
+    expect(<int>[] is List<int>, isTrue, reason: ""); //covariant
+  });
 }
 
 class Param2<T> {
