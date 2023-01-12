@@ -4,66 +4,96 @@ import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
 
-/// 当前未考虑线程安全问题，包内的代码线程不安全
-
 class Params {
-  final Map<String, Param> _editors = HashMap();
-  late final _EmptyParam _empty = _EmptyParam(this)..notNull("Empty");
+  final Map<String, Editor> _editors = HashMap();
+  late final _EmptyEditor _empty = _EmptyEditor()..notNull("Empty");
+
   Params();
-  StringParam ofString(String path) {
-    return _initOnce(path, () => StringParam(this));
+
+  OfString ofString(String path) {
+    return _initOnce(path, () => OfString());
   }
 
-  TextAlignParam ofTextAlign<T extends Enum>(String path) {
-    return _initOnce(path, () => TextAlignParam(this));
+  OfDouble ofDouble(String path) {
+    return _initOnce(path, () => OfDouble());
   }
 
-// TODO 这个还要不要？
-  Param path(String path) {
+  OfTextAlign ofTextAlign<T extends Enum>(String path) {
+    return _initOnce(path, () => OfTextAlign());
+  }
+
+// TODO 这个还要不要？看来这个方法是多余的
+  Editor path(String path) {
     if (!_editors.containsKey(path)) {
       return _empty;
     }
     return _editors[path]!;
   }
 
-  T _initOnce<T extends Param>(String path, T Function() create) {
-    return _editors.putIfAbsent(path, create) as T;
+  T _initOnce<T extends Editor>(String path, T Function() create) {
+    return _editors.putIfAbsent(path, () {
+      var p = create();
+      p.params = this;
+      return p;
+    }) as T;
+  }
+
+  T insert<T>(String path, T value, Editor<T> param) {
+    _editors[path] = param;
+    return value;
+  }
+
+  T? insert_<T>(String path, T? value,[Editor<T>? editor]) {
+    editor ??= OfObject<T>();
+    _editors[path] = editor;
+    return value;
+  }
+  T insertObject_<T>(String path, T value) {
+    _editors[path] = OfObject<T>();
+    return value;
   }
 }
 
-class _EmptyParam extends Param<String> {
-  _EmptyParam(super.params);
+class _EmptyEditor extends Editor<String> {
+  _EmptyEditor();
 
   @override
   StatefulBuilder builder() {
-    throw UnimplementedError("_EmptyParam not support this method");
+    return StatefulBuilder(
+        builder: (BuildContext context, StateSetter setState) {
+      return const Text("error:_EmptyParam",
+          style: TextStyle(
+            color: Colors.red,
+            backgroundColor: Colors.yellow,
+          ));
+    });
   }
 }
 
-abstract class Param<T> {
+abstract class Editor<T> {
   T? value;
   bool isNullable = true;
-  Params params;
+  late final Params params;
   bool _initialized = false;
 
-  Param(this.params, {this.value});
+  Editor();
 
-  get isEmpty => this is _EmptyParam;
+  get isEmpty => this is _EmptyEditor;
 
   T notNull(T defaultValue) {
     if (!_initialized) {
       value = defaultValue;
       isNullable = false;
-      _initialized=true;
+      _initialized = true;
     }
-    return value??defaultValue;
+    return value ?? defaultValue;
   }
 
-  T? nullable(T? defaultValue) {
+  T? nullable([T? defaultValue]) {
     if (!_initialized) {
       value = defaultValue;
       isNullable = true;
-      _initialized=true;
+      _initialized = true;
     }
     return value;
   }
@@ -71,8 +101,8 @@ abstract class Param<T> {
   StatefulBuilder builder();
 }
 
-class StringParam extends Param<String> {
-  StringParam(super.params);
+class OfString extends Editor<String> {
+  OfString();
 
   StatefulBuilder builder() {
     return StatefulBuilder(
@@ -95,11 +125,45 @@ class StringParam extends Param<String> {
   }
 }
 
-abstract class EnumParam<T extends Enum> extends Param<T> {
+class OfDouble extends Editor<double> {
+  OfDouble();
+
+  StatefulBuilder builder() {
+    return StatefulBuilder(
+        builder: (BuildContext context, StateSetter setState) {
+      return TextField(
+        autofocus: true,
+        decoration: const InputDecoration(
+          labelText: "double",
+          hintText: "double",
+          prefixIcon: Icon(Icons.ac_unit),
+        ),
+        onChanged: (value) {
+          setState(() {
+            developer.log("double:$value", name: 'learn_flutter');
+            this.value = double.tryParse(value);
+          });
+        },
+      );
+    });
+  }
+}
+
+class OfObject<T> extends Editor<T> {
+  OfObject();
+
+  StatefulBuilder builder() {
+    return StatefulBuilder(
+        builder: (BuildContext context, StateSetter setState) {
+          return Text("TODO ObjectEditor.builder");
+    });
+  }
+}
+
+abstract class EnumEditor<T extends Enum> extends Editor<T> {
   final List<T> values;
 
-  EnumParam(
-    super.params, {
+  EnumEditor({
     required this.values,
   });
 
@@ -125,9 +189,10 @@ abstract class EnumParam<T extends Enum> extends Param<T> {
   }
 }
 
-class TextAlignParam extends EnumParam<TextAlign> {
-  TextAlignParam(super.params) : super(values: TextAlign.values);
+class OfTextAlign extends EnumEditor<TextAlign> {
+  OfTextAlign() : super(values: TextAlign.values);
 }
+
 
 // class TreeParamTemp<T> {
 //   final Map<String, TreeParamTemp> _children = HashMap();

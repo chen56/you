@@ -142,3 +142,10 @@ class StringEditor {
     return Param2<String>(value: value ?? notNullDefault);
   }
 }
+// typedef IntList = String with int;
+// typedef s=Function;
+// void x(){
+//   s.apply(function, positionalArguments)
+// }
+// class A<T extends (Object|Null)>{}
+// class B extends A<int>{}

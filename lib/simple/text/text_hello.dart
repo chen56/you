@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 import '../../param/param.dart';
@@ -11,31 +9,46 @@ void main() {
 }
 
 final Params params = Params();
+final insert = params.insert;
+final insert_ = params.insert_;
+
+// Container.width
+// Container.height
+// Container.child.data
+// Container.child.textAlign
+// Container.child.style.fontSize
 
 class TextHelloSample extends StatelessWidget {
   TextHelloSample({super.key});
 
   @override
   Widget build(BuildContext context) {
-    for (int i = 0; i < 10; i++) {}
     Container c = Container(
-      width: 200,
-      height: 100,
+      width: insert("Container.width", 100, OfDouble()),
+      height: insert("Container.height", 100, OfDouble()),
       color: Colors.blue,
       child: Text(
-        params.ofString("text.data").notNull("default"),
-        textAlign: params.ofTextAlign("text.textAlign").nullable(TextAlign.center),
-        style: TextStyle(
-          fontSize: 24.0,
-          fontWeight: FontWeight.w900,
-          fontFamily: "Georgia",
-          color: Colors.green,
-          backgroundColor: Colors.red,
-        ),
+        params.ofString("Container.child.data").notNull("default"),
+        textAlign: insert_("Container.child.textAlign", TextAlign.center, OfTextAlign()),
+        style: insert_(
+            "Container.child.style",
+            TextStyle(
+              fontSize: insert("Container.child.style.fontSize", 24.0, OfDouble()),
+              fontWeight: FontWeight.w900,
+              fontFamily: "Georgia",
+              color: Colors.greenAccent,
+              backgroundColor: Colors.red,
+            )),
       ),
     );
+
     return Center(
       child: c,
     );
   }
 }
+
+// class X{
+//   String? ss;
+//   static String? ss;
+// }
