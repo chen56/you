@@ -1,11 +1,8 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-
-import '../../param/param.dart';
+import 'package:learn_flutter/src/notebook/param.dart';
 
 void main() {
-  runApp(TextHelloSample());
+  runApp(const NormalTextSample());
 }
 
 final Params params = Params();
@@ -18,17 +15,17 @@ final insert_ = params.insert_;
 // Container.child.textAlign
 // Container.child.style.fontSize
 
-class TextHelloSample extends StatelessWidget {
-  TextHelloSample({super.key});
+class NormalTextSample extends StatelessWidget {
+  const NormalTextSample({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Container c = Container(
+    return Container(
       width: insert("Container.width", 100, OfDouble()),
       height: insert("Container.height", 100, OfDouble()),
       color: Colors.blue,
       child: Text(
-        params.ofString("Container.child.data").notNull("default"),
+        insert("Container.child.data", "文本", OfString()),
         textAlign: insert_("Container.child.textAlign", TextAlign.center, OfTextAlign()),
         style: insert_(
             "Container.child.style",
@@ -40,10 +37,6 @@ class TextHelloSample extends StatelessWidget {
               backgroundColor: Colors.red,
             )),
       ),
-    );
-
-    return Center(
-      child: c,
     );
   }
 }

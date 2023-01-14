@@ -39,17 +39,15 @@ class Params {
   }
 
   T insert<T>(String path, T value, Editor<T> param) {
+    param.value=value;
     _editors[path] = param;
     return value;
   }
 
   T? insert_<T>(String path, T? value,[Editor<T>? editor]) {
     editor ??= OfObject<T>();
+    editor.value=value;
     _editors[path] = editor;
-    return value;
-  }
-  T insertObject_<T>(String path, T value) {
-    _editors[path] = OfObject<T>();
     return value;
   }
 }

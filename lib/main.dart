@@ -1,33 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/simple/text/text_hello.dart' as text_hello;
+import 'package:learn_flutter/src/docs/widgets/text/Text/text_rich.dart' as text_hello;
 
 void main() {
-  runApp(const MyApp());
+  runApp(const LearnApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class LearnApp extends StatelessWidget {
+  const LearnApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Learn Flutter with Samples',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("AppBar.title"),
+        ),
+        drawer: MyDrawer(),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              text_hello.RichTextSample(),
+              text_hello.params.path("text.data").builder(),
+              StatefulBuilder(
+                  builder: (BuildContext context, StateSetter setState) =>
+                      text_hello.params.path("text.textAlign").builder()),
+              // text_hello.params.path("text.textAlign").builder(),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          tooltip: 'Increment',
+          child: const Icon(Icons.add),
+        ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class MyDrawer extends StatelessWidget {
@@ -40,8 +54,6 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     (context as Element).widget == this;
-//更多请阅读：https://www.yiibai.com/flutter/flutter-elevatedbutton.html
-
     return Drawer(
       child: MediaQuery.removePadding(
         context: context,
@@ -57,36 +69,6 @@ class MyDrawer extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      drawer: MyDrawer(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            text_hello.TextHelloSample(),
-            text_hello.params.path("text.data").builder(),
-            StatefulBuilder(
-                builder: (BuildContext context, StateSetter setState) =>
-                    text_hello.params.path("text.textAlign").builder()),
-            // text_hello.params.path("text.textAlign").builder(),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
