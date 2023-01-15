@@ -1,12 +1,12 @@
-import 'package:learn_flutter/src/notebook/notebook.dart';
+import 'package:learn_flutter/src/note/note.dart';
 
 import 'sample_elevated_button.dart';
 
-Doc doc = Doc(
-  title: "Text",
+Note doc = Note(
+   "Text",
 );
 
-notebook() {
+note() {
   doc.markdown(r'''
 ## 范例1 button 
 

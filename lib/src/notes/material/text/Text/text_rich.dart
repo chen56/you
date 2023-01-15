@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/src/notebook/param.dart';
+import 'package:learn_flutter/src/note/param.dart';
 
 
 void main() {

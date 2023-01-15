@@ -1,12 +1,13 @@
-import 'package:learn_flutter/src/notebook/notebook.dart';
+import 'package:learn_flutter/src/note/note.dart';
 
 import 'text_normal.dart';
 import 'text_rich.dart';
 
-Doc doc = Doc(
-  title: "Text",
+Note doc = Note(
+  "Text",
 );
-notebook() {
+
+note() {
   doc.markdown(r'''
 ## 范例1 普通文本 
 

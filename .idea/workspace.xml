@@ -12,32 +12,24 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="试探一下note tree">
-      <change afterPath="$PROJECT_DIR$/lib/src/docs/notebook.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/docs/widgets/button/ElevatedButton/doc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/docs/widgets/button/ElevatedButton/sample_elevated_button.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/docs/widgets/text/RichText" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/text_rich.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notebook/notebook.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore copy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有">
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/note.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/notes.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README copy.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/learn_flutter_temp/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn_flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learn_flutter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notebook/types.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/mate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/mate/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/mate/mate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/mate/mate.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/mate/text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/mate/text.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/param/param.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notebook/param.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/simple/text/text_hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/text_normal.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/docs/notebook.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/button/ElevatedButton/doc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/button/ElevatedButton/sample_elevated_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/sample_elevated_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/text/RichText" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/doc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/RichText/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/text_normal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_normal.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/text_rich.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_rich.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notebook/notebook.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notebook/param.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/param.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notebook/types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/types.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/common/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/common/state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/common/types_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/common/types_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/params_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/params_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +66,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notebooks/widgets/button/ElevatedButton",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/material/text/RichText",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -83,6 +76,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/notes/material/text/RichText" />
       <recent name="$PROJECT_DIR$/lib/src/notebooks/widgets/button/ElevatedButton" />
       <recent name="$PROJECT_DIR$/lib/src/notebooks/widgets/text/Text" />
     </key>
@@ -94,9 +88,9 @@
       <recent name="$PROJECT_DIR$/lib/notebooks/widgits" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.x.dart">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="x.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/docs/x.dart" />
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/x.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -105,7 +99,7 @@
       <method v="2" />
     </configuration>
     <configuration name="text_rich.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/text_rich.dart" />
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_rich.dart" />
       <method v="2" />
     </configuration>
     <configuration name="tests in params_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
@@ -163,7 +157,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673512408109</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="试探一下note tree">
+      <created>1673709696586</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673709696586</updated>
+    </task>
+    <task id="LOCAL-00005" summary="试探一下note tree">
+      <created>1673709887966</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673709887966</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +190,7 @@
     <MESSAGE value="参数重构，貌似目前结构更合理，参数本身有isnullable属性" />
     <MESSAGE value="参数重构，insert（插值） 概念不错，后面代码生成也简单点，把匹配insert(xxxx)的替换掉即可" />
     <MESSAGE value="试探一下note tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="试探一下note tree" />
+    <MESSAGE value="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有" />
+    <option name="LAST_COMMIT_MESSAGE" value="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有" />
   </component>
 </project>
