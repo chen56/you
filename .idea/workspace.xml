@@ -12,24 +12,25 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有">
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/note.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/notes.dart" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/app/1.hello_meterial_app.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/slider/note.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/1.text_normal.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_cross.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/docs/notebook.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/button/ElevatedButton/doc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/button/ElevatedButton/sample_elevated_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/sample_elevated_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/text/RichText" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/doc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/RichText/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/text_normal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_normal.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/docs/widgets/text/Text/text_rich.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_rich.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notebook/notebook.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notebook/param.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/param.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notebook/types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/types.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/common/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/common/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/common/types_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/common/types_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/params_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/params_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/note/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/sample_elevated_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/1.elevated_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/RichText/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/RichText/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_normal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/slider/1.slider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_rich.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/2.text_rich.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/notes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/notes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/thingking_param_api_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/thingking_param_api_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,51 +66,52 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/material/text/RichText",
+    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/material/slider",
     "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/notes/material/slider" />
+      <recent name="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state" />
+      <recent name="$PROJECT_DIR$/lib/src/notes/state/01.sss" />
       <recent name="$PROJECT_DIR$/lib/src/notes/material/text/RichText" />
       <recent name="$PROJECT_DIR$/lib/src/notebooks/widgets/button/ElevatedButton" />
-      <recent name="$PROJECT_DIR$/lib/src/notebooks/widgets/text/Text" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/notes/material/app" />
       <recent name="$PROJECT_DIR$/lib/src/notebook" />
       <recent name="$PROJECT_DIR$/lib/src" />
       <recent name="$PROJECT_DIR$/lib/notebooks/widgits/text/Text" />
       <recent name="$PROJECT_DIR$/lib/notebooks/widgits/text" />
-      <recent name="$PROJECT_DIR$/lib/notebooks/widgits" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.main.dart">
-    <configuration name="x.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/x.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
+  <component name="RunManager" selected="Flutter.2.stateful_cross.dart">
+    <configuration name="1.hello_meterial_app.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/app/1.hello_meterial_app.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1.slider.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/slider/1.slider.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="2.stateful_cross.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_cross.dart" />
       <method v="2" />
     </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="text_rich.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_rich.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests in params_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/test/params_test.dart" />
-      <option name="useRegexp" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests in test" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testDir" value="$PROJECT_DIR$/test" />
-      <option name="useRegexp" value="false" />
+    <configuration name="ss.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/slider/ss.dart" />
       <method v="2" />
     </configuration>
     <configuration name="tests in thingking_param_api_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
@@ -119,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Dart Command Line App.x.dart" />
+        <item itemvalue="Flutter.2.stateful_cross.dart" />
+        <item itemvalue="Flutter.1.slider.dart" />
+        <item itemvalue="Flutter.ss.dart" />
+        <item itemvalue="Flutter.1.hello_meterial_app.dart" />
         <item itemvalue="Flutter Test.tests in thingking_param_api_test.dart" />
-        <item itemvalue="Flutter.text_rich.dart" />
-        <item itemvalue="Flutter.main.dart" />
-        <item itemvalue="Flutter Test.tests in params_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673709887966</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有">
+      <created>1673775639390</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673775639390</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +200,18 @@
     <MESSAGE value="参数重构，insert（插值） 概念不错，后面代码生成也简单点，把匹配insert(xxxx)的替换掉即可" />
     <MESSAGE value="试探一下note tree" />
     <MESSAGE value="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有" />
-    <option name="LAST_COMMIT_MESSAGE" value="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有" />
+    <MESSAGE value="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管" />
+    <option name="LAST_COMMIT_MESSAGE" value="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$USER_HOME$/app/flutter/packages/flutter/lib/src/widgets/basic.dart</url>
+          <line>2090</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

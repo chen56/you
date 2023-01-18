@@ -1,11 +1,11 @@
 import 'package:learn_flutter/src/note/note.dart';
 
-Note doc = Note(
+Note note = Note(
   "RichText",
 );
 
-note() {
-  doc.markdown(r'''
+build() {
+  note.markdown(r'''
 ## 范例1 普通文本
 
 RichText.new()

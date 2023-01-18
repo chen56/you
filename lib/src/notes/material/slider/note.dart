@@ -1,17 +1,24 @@
 import 'package:learn_flutter/src/note/note.dart';
 
-import '1.elevated_button.dart';
 
 Note note = Note(
-   "Text",
+  "Text",
 );
 
 build() {
   note.markdown(r'''
-## 范例1 button 
+## 范例1 普通文本 
 
+Text.new()
 
   ''');
 
-  note.sample(const Sample1());
+
+  note.markdown(r'''
+## 范例1 富文本 
+
+Text.rich()
+
+  ''');
+
 }
