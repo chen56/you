@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(const HelloStatefulApp());
+  runApp(const App());
 }
 
-class HelloStatefulApp extends StatefulWidget {
-  const HelloStatefulApp({super.key});
+// ignore: camel_case_types
+class App extends StatefulWidget {
+  const App({super.key});
 
   @override
-  State<HelloStatefulApp> createState() => HelloStatefulAppState();
+  State<App> createState() => AppState();
 }
 
-class HelloStatefulAppState extends State<HelloStatefulApp> {
+class AppState extends State<App> {
   double _size = 24; //state
 
   @override
   Widget build(BuildContext context) {
     var body = Row(children: [
-      ElevatedButton(child: const Text("-"), onPressed: () => setState(() => _size += 10)),
-      Icon(Icons.accessibility, size: _size),
-      ElevatedButton(child: const Text("-"), onPressed: () => setState(() => _size -= 10)),
+      ElevatedButton(child: Text("大大大！【size=$_size】"), onPressed: () => setState(() => _size += 10)),
+      Icon(Icons.blur_off, size: _size),
     ]);
     return MaterialApp(home: Scaffold(body: body));
   }

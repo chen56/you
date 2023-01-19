@@ -13,24 +13,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/app/1.hello_meterial_app.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/slider/note.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/1.text_normal.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_cross.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_child.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/4.stateful_notifier.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/x.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/note/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/sample_elevated_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/1.elevated_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/RichText/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/RichText/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_normal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/slider/1.slider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/text_rich.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/material/text/Text/2.text_rich.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/notes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/notes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/thingking_param_api_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/thingking_param_api_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_cross.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/3.stateful_notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +39,7 @@
   </component>
   <component name="HierarchyBrowserManager">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+    <option name="SORT_ALPHABETICALLY" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,7 +59,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/material/slider",
+    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/state/1.vanilla_state",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -79,8 +69,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/src/notes/material/slider" />
       <recent name="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state" />
+      <recent name="$PROJECT_DIR$/lib/src/notes/material/slider" />
       <recent name="$PROJECT_DIR$/lib/src/notes/state/01.sss" />
       <recent name="$PROJECT_DIR$/lib/src/notes/material/text/RichText" />
       <recent name="$PROJECT_DIR$/lib/src/notebooks/widgets/button/ElevatedButton" />
@@ -93,39 +83,38 @@
       <recent name="$PROJECT_DIR$/lib/notebooks/widgits/text" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.2.stateful_cross.dart">
-    <configuration name="1.hello_meterial_app.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/app/1.hello_meterial_app.dart" />
+  <component name="RunManager" selected="Flutter.4.stateful_notifier.dart">
+    <configuration name="1.stateful_hello.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="1.slider.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/slider/1.slider.dart" />
+    <configuration name="2.stateful_child.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_child.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="2.stateful_cross.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_cross.dart" />
+    <configuration name="3.stateful_notifier.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/3.stateful_notifier.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="4.stateful_notifier.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/4.stateful_notifier.dart" />
       <method v="2" />
     </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="ss.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/slider/ss.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests in thingking_param_api_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/test/thingking_param_api_test.dart" />
-      <option name="useRegexp" value="false" />
+    <configuration name="x.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/x.dart" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter.2.stateful_cross.dart" />
-        <item itemvalue="Flutter.1.slider.dart" />
-        <item itemvalue="Flutter.ss.dart" />
-        <item itemvalue="Flutter.1.hello_meterial_app.dart" />
-        <item itemvalue="Flutter Test.tests in thingking_param_api_test.dart" />
+        <item itemvalue="Flutter.4.stateful_notifier.dart" />
+        <item itemvalue="Flutter.3.stateful_notifier.dart" />
+        <item itemvalue="Flutter.2.stateful_child.dart" />
+        <item itemvalue="Flutter.x.dart" />
+        <item itemvalue="Flutter.1.stateful_hello.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673775639390</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管">
+      <created>1674025117535</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674025117536</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +206,11 @@
           <url>file://$USER_HOME$/app/flutter/packages/flutter/lib/src/widgets/basic.dart</url>
           <line>2090</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$USER_HOME$/app/flutter/packages/flutter/lib/src/widgets/framework.dart</url>
+          <line>897</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
