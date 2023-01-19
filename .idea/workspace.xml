@@ -12,13 +12,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="ValueNotifier + ValueListenableBuilder">
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="注释更新">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.hello.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_child.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/3.stateful_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.2.notifier.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/4.stateful_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.2.notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.2.notifier.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674122029791</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="注释更新">
+      <created>1674123222645</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674123222645</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,7 +221,8 @@
     <MESSAGE value="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有" />
     <MESSAGE value="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管" />
     <MESSAGE value="ValueNotifier + ValueListenableBuilder" />
-    <option name="LAST_COMMIT_MESSAGE" value="ValueNotifier + ValueListenableBuilder" />
+    <MESSAGE value="注释更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="注释更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

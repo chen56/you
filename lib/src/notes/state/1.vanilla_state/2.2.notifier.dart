@@ -20,15 +20,17 @@ class App extends StatefulWidget {
 
   @override
   State<App> createState() => AppState();
+
+
+  static AppState of(BuildContext context) {
+    return context.findAncestorStateOfType<AppState>()!;
+  }
+
 }
 
 class AppState extends State<App> {
   static const double defaultSize = 24;
   final ValueNotifier<double> size = ValueNotifier(defaultSize);
-
-  static AppState of(BuildContext context) {
-    return context.findAncestorStateOfType<AppState>()!;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,7 @@ class ChildRead extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppState state = AppState.of(context);
+    AppState state = App.of(context);
     return ValueListenableBuilder(
         valueListenable: state.size,
         builder: (context, value, child) => Icon(Icons.blur_off, size: value));
@@ -59,7 +61,7 @@ class ChildWrite extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppState state = AppState.of(context);
+    AppState state = App.of(context);
     return ElevatedButton(
         child: Text("大大大！ 因未监听状态，导致【size=${state.size.value}】无变化"), onPressed: () => state.size.value += 10);
   }

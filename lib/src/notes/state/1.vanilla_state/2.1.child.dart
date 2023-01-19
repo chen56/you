@@ -18,6 +18,10 @@ class App extends StatefulWidget {
 
   @override
   State<App> createState() => AppState();
+
+  static AppState of(BuildContext context) {
+    return context.findAncestorStateOfType<AppState>()!;
+  }
 }
 
 class AppState extends State<App> {
@@ -35,10 +39,6 @@ class AppState extends State<App> {
       ChildRead(size: _size), //参数传递
     ]);
     return MaterialApp(home: Scaffold(body: body));
-  }
-
-  static AppState of(BuildContext context) {
-    return context.findAncestorStateOfType<AppState>()!;
   }
 }
 
@@ -60,7 +60,7 @@ class ChildWrite extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppState state = AppState.of(context);
+    AppState state = App.of(context);
     return ElevatedButton(
         child: Text("大大大！【size=${state.size}】"), onPressed: () => state.size += 10);
   }
