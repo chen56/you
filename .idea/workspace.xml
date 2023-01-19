@@ -12,13 +12,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管">
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_child.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/4.stateful_notifier.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/x.dart" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="ValueNotifier + ValueListenableBuilder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_cross.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/3.stateful_notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.hello.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_child.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/3.stateful_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.2.notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/4.stateful_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +28,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -36,6 +40,14 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="46afb56b-b3e1-4ee3-b8a3-f6841535defc" />
+        <option name="url" value="git@github.com:chen56/learn_flutter.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HierarchyBrowserManager">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
@@ -83,21 +95,21 @@
       <recent name="$PROJECT_DIR$/lib/notebooks/widgits/text" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.4.stateful_notifier.dart">
-    <configuration name="1.stateful_hello.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.stateful_hello.dart" />
+  <component name="RunManager" selected="Flutter.2.3.stateless_notifier.dart">
+    <configuration name="1.hello.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.hello.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="2.stateful_child.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.stateful_child.dart" />
+    <configuration name="2.1.child.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="3.stateful_notifier.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/3.stateful_notifier.dart" />
+    <configuration name="2.2.notifier.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.2.notifier.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="4.stateful_notifier.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/4.stateful_notifier.dart" />
+    <configuration name="2.3.stateless_notifier.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" />
       <method v="2" />
     </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
@@ -110,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter.4.stateful_notifier.dart" />
-        <item itemvalue="Flutter.3.stateful_notifier.dart" />
-        <item itemvalue="Flutter.2.stateful_child.dart" />
+        <item itemvalue="Flutter.2.3.stateless_notifier.dart" />
+        <item itemvalue="Flutter.2.2.notifier.dart" />
+        <item itemvalue="Flutter.2.1.child.dart" />
         <item itemvalue="Flutter.x.dart" />
-        <item itemvalue="Flutter.1.stateful_hello.dart" />
+        <item itemvalue="Flutter.1.hello.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674025117536</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ValueNotifier + ValueListenableBuilder">
+      <created>1674122029791</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674122029791</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +216,8 @@
     <MESSAGE value="试探一下note tree" />
     <MESSAGE value="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有" />
     <MESSAGE value="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管" />
-    <option name="LAST_COMMIT_MESSAGE" value="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管" />
+    <MESSAGE value="ValueNotifier + ValueListenableBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="ValueNotifier + ValueListenableBuilder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
