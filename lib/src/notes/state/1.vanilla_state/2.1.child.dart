@@ -25,32 +25,38 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  static const double defaultSize = 24;
-  double _size = defaultSize;
+  bool _wifiOn = false;
 
-  double get size => _size;
+  bool get wifiOn => _wifiOn;
 
-  set size(double size) => setState(() => _size = size); //state
+  set wifiOn(bool wifiOn) => setState(() => _wifiOn = wifiOn); //state
 
   @override
   Widget build(BuildContext context) {
     var body = Row(children: [
       ChildWrite(), // findAncestorStateOfType
-      ChildRead(size: _size), //参数传递
+      ChildRead(wifiOn: wifiOn), //参数传递
     ]);
     return MaterialApp(home: Scaffold(body: body));
   }
 }
 
 class ChildRead extends StatelessWidget {
-  final double size;
+  final bool wifiOn;
 
   // ignore: prefer_const_constructors_in_immutables
-  ChildRead({super.key, this.size = AppState.defaultSize});
+  ChildRead({super.key, this.wifiOn = false});
 
   @override
   Widget build(BuildContext context) {
-    return Icon(Icons.blur_off, size: size);
+    var icon = wifiOn ? Icons.sentiment_very_satisfied : Icons.sentiment_very_dissatisfied;
+    var text = wifiOn ? const Text("wifi一开笑口常开") : const Text("wifi一断肝肠寸断");
+    return Row(
+      children: [
+        text,
+        ...List.generate(10, (index) => Icon(icon)),
+      ],
+    );
   }
 }
 
@@ -61,7 +67,9 @@ class ChildWrite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AppState state = App.of(context);
-    return ElevatedButton(
-        child: Text("大大大！【size=${state.size}】"), onPressed: () => state.size += 10);
+    return TextButton(
+      child: Icon(Icons.wifi, color: state.wifiOn ? Colors.blue : Colors.grey),
+      onPressed: () => state.wifiOn = !(state.wifiOn),
+    );
   }
 }

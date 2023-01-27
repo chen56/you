@@ -14,7 +14,7 @@ class Note with ChangeNotifier{
     for (var child in children) {
       child._parent = this;
     }
-    attributes=_NoteAttributeMap(this);
+    attributes=_NoteAttributes(this);
   }
 
   bool get isLeaf => children.isEmpty;
@@ -35,11 +35,10 @@ class Note with ChangeNotifier{
   }
 }
 
-
-class _NoteAttributeMap extends MapBase<String,Object> {
+class _NoteAttributes extends MapBase<String,Object> {
   final Map<String,Object> _attributes={};
   ChangeNotifier notifier;
-  _NoteAttributeMap(this.notifier);
+  _NoteAttributes(this.notifier);
 
   @override
   Object? operator [](Object? key) {
