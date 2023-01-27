@@ -13,26 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator v2的摸索，这玩意太麻烦复杂了，暂时放弃，准备搞v1试试">
-      <change afterPath="$PROJECT_DIR$/lib/catalog.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/app/drawer/1.drawer_in_body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/app/drawer/2.drawer_header.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/debug/note.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/material/Material/sample1.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v1/sample1.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/navigator_1.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/page_view/page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/scrollable/Dismissible/sample1.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/scrollable/DraggableScrollableSheet/sample1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/basic/Divider/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/note/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/note/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.hello.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/x.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner.xcodeproj/project.pbxproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +104,7 @@
       <recent name="$PROJECT_DIR$/lib/notebooks/widgits/text/Text" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.navigator_1.dart">
+  <component name="RunManager" selected="Flutter.sample1.dart (3)">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
@@ -141,9 +125,8 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v1/sample1.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="sample1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="additionalArgs" value="--web-renderer html" />
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/material/Material/sample1.dart" />
+    <configuration name="sample1.dart (3)" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/basic/Divider/sample1.dart" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -164,16 +147,16 @@
       <item itemvalue="Flutter.ref-understanding-navigator-v2.dart" />
       <item itemvalue="Flutter.sample1.dart (1)" />
       <item itemvalue="Flutter.sample1.dart (2)" />
-      <item itemvalue="Flutter.sample1.dart" />
+      <item itemvalue="Flutter.sample1.dart (3)" />
       <item itemvalue="Flutter.navigator_1.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.sample1.dart (3)" />
         <item itemvalue="Flutter.navigator_1.dart" />
         <item itemvalue="Flutter.sample1.dart (2)" />
         <item itemvalue="Flutter.sample1.dart (1)" />
         <item itemvalue="Flutter.ref-understanding-navigator-v2.dart" />
-        <item itemvalue="Flutter.sample1.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674125813786</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="navigator v2的摸索，这玩意太麻烦复杂了，暂时放弃，准备搞v1试试">
+      <created>1674782412103</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674782412103</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -299,7 +289,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$USER_HOME$/app/flutter/packages/flutter/lib/src/widgets/framework.dart</url>
-          <line>897</line>
+          <line>909</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
