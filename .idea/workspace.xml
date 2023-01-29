@@ -13,11 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute">
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.3.router.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/xx.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "flutter.performance.tool.window.visible": "true",
     "io.flutter.reload.alreadyRun": "true",
     "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/navigator/navigator_v2",
     "project.structure.last.edited": "Libraries",
@@ -106,9 +106,9 @@
       <recent name="$PROJECT_DIR$/lib/notebooks/widgits/text/Text" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.1.1.router.dart">
-    <configuration name="1.1.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" />
+  <component name="RunManager" selected="Flutter.1.2.router.dart">
+    <configuration name="1.2.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" />
       <method v="2" />
     </configuration>
     <configuration name="1.2.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
@@ -146,7 +146,6 @@
     </configuration>
     <list>
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter.1.1.router.dart" />
       <item itemvalue="Flutter.1.2.router.dart" />
       <item itemvalue="Flutter.1.drawer_in_body.dart" />
       <item itemvalue="Flutter.x.dart" />
@@ -154,7 +153,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter.1.1.router.dart" />
+        <item itemvalue="Flutter.1.2.router.dart" />
         <item itemvalue="Flutter.x.dart" />
         <item itemvalue="Flutter.1.2.router.dart" />
         <item itemvalue="Flutter.1.drawer_in_body.dart" />
@@ -255,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674786308181</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute">
+      <created>1674962918198</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674962918198</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
