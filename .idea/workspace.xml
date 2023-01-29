@@ -12,11 +12,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator v2的摸索，这玩意太麻烦复杂了，暂时放弃，准备搞v1试试">
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/basic/Divider/sample1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute">
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/xx.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner.xcodeproj/project.pbxproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,21 +74,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/cc/git/chen56/learn_flutter/lib/src/notes/navigator/navigator_v2&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "flutter.performance.tool.window.visible": "true",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/navigator/navigator_v2",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2" />
@@ -104,29 +106,29 @@
       <recent name="$PROJECT_DIR$/lib/notebooks/widgits/text/Text" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.sample1.dart (3)">
+  <component name="RunManager" selected="Flutter.1.1.router.dart">
+    <configuration name="1.1.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1.2.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1.drawer_in_body.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/app/drawer/1.drawer_in_body.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="navigator_1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/navigator_1.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ref-understanding-navigator-v2.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sample1.dart (1)" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/hero/sample1.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sample1.dart (2)" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v1/sample1.dart" />
-      <method v="2" />
-    </configuration>
     <configuration name="sample1.dart (3)" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/basic/Divider/sample1.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="x.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.dart" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -144,19 +146,19 @@
     </configuration>
     <list>
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter.ref-understanding-navigator-v2.dart" />
-      <item itemvalue="Flutter.sample1.dart (1)" />
-      <item itemvalue="Flutter.sample1.dart (2)" />
+      <item itemvalue="Flutter.1.1.router.dart" />
+      <item itemvalue="Flutter.1.2.router.dart" />
+      <item itemvalue="Flutter.1.drawer_in_body.dart" />
+      <item itemvalue="Flutter.x.dart" />
       <item itemvalue="Flutter.sample1.dart (3)" />
-      <item itemvalue="Flutter.navigator_1.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.1.1.router.dart" />
+        <item itemvalue="Flutter.x.dart" />
+        <item itemvalue="Flutter.1.2.router.dart" />
+        <item itemvalue="Flutter.1.drawer_in_body.dart" />
         <item itemvalue="Flutter.sample1.dart (3)" />
-        <item itemvalue="Flutter.navigator_1.dart" />
-        <item itemvalue="Flutter.sample1.dart (2)" />
-        <item itemvalue="Flutter.sample1.dart (1)" />
-        <item itemvalue="Flutter.ref-understanding-navigator-v2.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674782412103</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Divider">
+      <created>1674786308181</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674786308181</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -282,7 +291,9 @@
     <MESSAGE value="注释更新" />
     <MESSAGE value="修订of方法到Widget上" />
     <MESSAGE value="navigator v2的摸索，这玩意太麻烦复杂了，暂时放弃，准备搞v1试试" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigator v2的摸索，这玩意太麻烦复杂了，暂时放弃，准备搞v1试试" />
+    <MESSAGE value="Divider" />
+    <MESSAGE value="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute" />
+    <option name="LAST_COMMIT_MESSAGE" value="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
