@@ -12,13 +12,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute">
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.3.router.dart" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 2.0 准备做几个层级递进的例子">
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/xx.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674962918198</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="navigator 2.0 准备做几个层级递进的例子">
+      <created>1675002155515</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675002155515</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -299,7 +303,8 @@
     <MESSAGE value="navigator v2的摸索，这玩意太麻烦复杂了，暂时放弃，准备搞v1试试" />
     <MESSAGE value="Divider" />
     <MESSAGE value="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute" />
+    <MESSAGE value="navigator 2.0 准备做几个层级递进的例子" />
+    <option name="LAST_COMMIT_MESSAGE" value="navigator 2.0 准备做几个层级递进的例子" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
