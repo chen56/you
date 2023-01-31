@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 void main() {
   runApp(const App());
@@ -9,38 +8,48 @@ void main() {
 class Rules {
   static final List<RouteRule> rules = List.empty(growable: true);
 
-  static final notFound = _warpMainScreen("/404", const Text("404!"));
-  static final home = _warpMainScreen("/", const Text("Welcome Home!"));
-  static final about = _warpMainScreen("/about", const Text("About!"));
-  static final help = _warpMainScreen("/help", const Text("Help!"));
+  static final home = rule("/", const Text("Welcome Home!"));
+  static final about = rule("/about", const Text("About!"));
+  static final help = rule("/help", const Text("Help!"));
 
-  static RouteRule _warpMainScreen(String path, Widget right) {
-    final left = Builder(
-      builder: (context) => Drawer(
-        child: ListView(
-          children: [
-            _link("GO Home", home),
-            _link("About us", about),
-            _link("Help", help),
-          ],
-        ),
-      ),
-    );
-
-    final warpMainScreen = Builder(
-      builder: (context) => Scaffold(
-        appBar: AppBar(title: Text(path)),
-        body: Row(
-          children: [
-            SizedBox(width: 200, child: left),
-            Expanded(child: right),
-          ],
-        ),
-      ),
-    );
-    var result = RouteRule(path: path, widget: warpMainScreen);
+  static RouteRule rule(String path, Widget toScreen) {
+    var result = RouteRule(path: path, widget: _embedMainScreen(title: path, right: toScreen));
     rules.add(result);
     return result;
+  }
+
+  static _embedMainScreen({required String title, required Widget right}) {
+    final left = Builder(
+      builder: (context) {
+        var pages = App.of(context).rules._pages.reversed.toList();
+        bool canGoBack = App.of(context).rules.canGoBack;
+        return Drawer(
+          child: ListView(
+            children: [
+              _link("GO Home", home),
+              _link("About us", about),
+              _link("Help", help),
+              ElevatedButton(
+                  onPressed: canGoBack ? () => App.of(context).rules.pop(context) : null,
+                  child: const Text("< back history")),
+              for (int i = 0; i < pages.length; i++)
+                ListTile(title: Text("  pages[${pages.length - i - 1}]:${pages[i].name}"))
+            ],
+          ),
+        );
+      },
+    );
+
+    return Builder(
+      builder: (context) {
+        return Scaffold(
+          appBar: AppBar(title: Text(title)),
+          body: Row(
+            children: [left, right],
+          ),
+        );
+      },
+    );
   }
 
   static Widget _link(String linkText, RouteRule rule) {
@@ -48,6 +57,7 @@ class Rules {
       builder: (context) => ListTile(
         title: Text(linkText),
         onTap: () {
+          Scaffold.of(context).closeDrawer();
           App.of(context).rules.push(rule);
         },
       ),
@@ -69,41 +79,33 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  late RouteRules rules = RouteRules(
-      setState: setState, home: Rules.home, notFound: Rules.notFound, routes: Rules.rules.toList());
+  late RouteRules rules = RouteRules(setState: setState, routes: Rules.rules.toList());
 
   @override
   Widget build(BuildContext context) {
-    log("build");
-    return MaterialApp(home: Scaffold(body: rules.build(context)));
-  }
-
-  void log(Object? message) {
-    if (kDebugMode) {
-      print("$runtimeType(id:${identityHashCode(this)}) - $message");
-    }
+    return MaterialApp(home: Scaffold(body: rules.buildNavigator(context)));
   }
 }
 
+/////////////////////////////////////////
+// 以下是业务无关的工具代码，可以复用
+/////////////////////////////////////////
 class RouteRules {
   final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>(debugLabel: "myNavigator");
   final List<Page> _pages = List.empty(growable: true);
 
   RouteRules({
-    required this.home,
-    required this.notFound,
     required this.routes,
     required this.setState,
-  });
+  }) {
+    log("new");
+  }
 
-  final RouteRule home;
-  final RouteRule notFound;
   final List<RouteRule> routes;
   final void Function(VoidCallback fn) setState;
 
-  @override
-  Widget build(BuildContext context) {
+  Navigator buildNavigator(BuildContext context) {
     if (_pages.isEmpty) {
       _pages.add(Rules.home.buildPage());
     }
@@ -112,7 +114,7 @@ class RouteRules {
     var navigator = Navigator(
       key: navigatorKey,
       onPopPage: (route, result) {
-        log("onPopPage - route:$route, result:$result, ${_pages.map((e) => e.name)}");
+        log("build.onPopPage - route:${route.settings.name}, result:$result");
         if (_pages.isNotEmpty) {
           setState(() => _pages.removeLast());
         }
@@ -123,11 +125,22 @@ class RouteRules {
     return navigator;
   }
 
+  bool get canGoBack => _pages.length > 1;
+
   void push(RouteRule rule) {
     log("push - rule:$rule");
 
     setState(() {
       _pages.add(rule.buildPage());
+    });
+  }
+
+  pop(BuildContext context) {
+    if (_pages.isEmpty) {
+      return;
+    }
+    setState(() {
+      _pages.removeLast();
     });
   }
 

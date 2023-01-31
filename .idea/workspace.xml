@@ -16,8 +16,7 @@
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/xx.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +104,7 @@
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.1.2.router.dart">
+  <component name="RunManager" selected="Flutter.1.1.navigator_v2_hello.dart">
     <configuration name="1.1.navigator_v2_hello.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" />
       <method v="2" />
@@ -157,8 +156,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter.1.2.router.dart" />
         <item itemvalue="Flutter.1.1.navigator_v2_hello.dart" />
+        <item itemvalue="Flutter.1.2.router.dart" />
         <item itemvalue="Flutter.1.sample_v1.dart" />
         <item itemvalue="Flutter.2.sample_vertical_divider.dart" />
         <item itemvalue="Flutter.1.sample_divider.dart" />
@@ -286,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675152843162</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="navigator 1.0 摸索一下">
+      <created>1675181261552</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1675181261552</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
