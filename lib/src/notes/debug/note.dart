@@ -10,6 +10,10 @@ build() {
 
 print(WidgetInspectorService.instance.getRootWidgetSummaryTree("groupName"));
 
+打印组件树
+
+print(WidgetsBinding.instance.renderViewElement?.toDiagnosticsNode().toStringDeep());
+
 
   ''');
 
