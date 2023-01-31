@@ -13,18 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 1.0 摸索一下">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/basic/Divider/1.sample_divider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/basic/Divider/2.sample_vertical_divider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v1/1.sample_v1.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/xx.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/basic/Divider/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/basic/Card/sample1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/debug/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/debug/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v1/sample1.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +85,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Markdown",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -112,9 +105,13 @@
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.1.sample_v1.dart">
-    <configuration name="1.1.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.router.dart" />
+  <component name="RunManager" selected="Flutter.1.2.router.dart">
+    <configuration name="1.1.navigator_v2_hello.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1.2.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" />
       <method v="2" />
     </configuration>
     <configuration name="1.2.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
@@ -137,10 +134,6 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="sample1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/basic/Card/sample1.dart" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="learn_flutter" />
       <method v="2">
@@ -156,19 +149,19 @@
     </configuration>
     <list>
       <item itemvalue="Flutter.main.dart" />
+      <item itemvalue="Flutter.1.1.navigator_v2_hello.dart" />
       <item itemvalue="Flutter.1.sample_divider.dart" />
       <item itemvalue="Flutter.1.sample_v1.dart" />
       <item itemvalue="Flutter.2.sample_vertical_divider.dart" />
-      <item itemvalue="Flutter.1.1.router.dart" />
-      <item itemvalue="Flutter.sample1.dart (3)" />
+      <item itemvalue="Flutter.1.2.router.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.1.2.router.dart" />
+        <item itemvalue="Flutter.1.1.navigator_v2_hello.dart" />
         <item itemvalue="Flutter.1.sample_v1.dart" />
         <item itemvalue="Flutter.2.sample_vertical_divider.dart" />
         <item itemvalue="Flutter.1.sample_divider.dart" />
-        <item itemvalue="Flutter.sample1.dart (3)" />
-        <item itemvalue="Flutter.1.1.router.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -286,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675088732127</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="navigator 1.0 摸索一下">
+      <created>1675152843162</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675152843162</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

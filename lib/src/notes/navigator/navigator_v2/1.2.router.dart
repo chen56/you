@@ -15,7 +15,7 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  final RouteRules routeRules = RouteRules(
+  final RouteRules rules = RouteRules(
     notFound: RouteRule(location: "/404", builder: (context) => const Text("404!")),
     routes: [
       RouteRule(location: "/", builder: (context) => const Text("Home")),
@@ -24,11 +24,7 @@ class AppState extends State<App> {
     ],
   );
 
-  late final MyRouterDelegate _routerDelegate;
-
-  AppState() {
-    _routerDelegate = MyRouterDelegate(routeRules);
-  }
+  late final MyRouterDelegate _routerDelegate=MyRouterDelegate(rules);
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +112,9 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
     }
     var pages = _history.map((e) {
       String location = e.location!;
+      onTap(String location) {
+        setState(() => _history.add(RouteInformation(location: location)));
+      }
 
       RouteRule routeRule = routeRules.findBy(location: location);
       return MaterialPage(
@@ -134,7 +133,7 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
             );
             var scaffold = Scaffold(
               // drawer: drawer,
-              appBar: AppBar(title: const Text(' Samples')),
+              appBar: AppBar(title: Text("location:$location")),
               body: Row(children: <Widget>[
                 drawer,
                 Expanded(child: routeRule.builder(context)),
@@ -160,10 +159,6 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
       },
       pages: pages.toList(),
     );
-  }
-
-  onTap(String location) {
-    setState(() => _history.add(RouteInformation(location: location)));
   }
 
   void setState(void Function() callback) {
