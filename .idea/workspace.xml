@@ -12,7 +12,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 1.0 摸索一下">
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能">
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.navigator_v2_hello2.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/xx.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -80,7 +81,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/basic/Divider",
+    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/src/notes/navigator/navigator_v2",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -90,8 +91,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/src/notes/basic/Divider" />
       <recent name="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2" />
+      <recent name="$PROJECT_DIR$/lib/src/notes/basic/Divider" />
       <recent name="$PROJECT_DIR$/lib/src/notes/app/drawer" />
       <recent name="$PROJECT_DIR$/lib/src/notes/debug" />
       <recent name="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state" />
@@ -292,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675181261552</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能">
+      <created>1675186198309</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1675186198309</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -332,7 +340,8 @@
     <MESSAGE value="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute" />
     <MESSAGE value="navigator 2.0 准备做几个层级递进的例子" />
     <MESSAGE value="navigator 1.0 摸索一下" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigator 1.0 摸索一下" />
+    <MESSAGE value="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

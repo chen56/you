@@ -21,7 +21,7 @@ class Rules {
   static _embedMainScreen({required String title, required Widget right}) {
     final left = Builder(
       builder: (context) {
-        var pages = App.of(context).rules._pages.toList();
+        var pages = App.of(context).rules._pages.reversed.toList();
         bool canGoBack = App.of(context).rules.canGoBack;
         return Drawer(
           child: ListView(
@@ -32,19 +32,23 @@ class Rules {
               ElevatedButton(
                   onPressed: canGoBack ? () => App.of(context).rules.pop(context) : null,
                   child: const Text("< back history")),
-              for (int i = pages.length - 1; i >= 0; i--)
-                ListTile(title: Text("  pages[$i]:${pages[i].name}"))
+              for (int i = 0; i < pages.length; i++)
+                ListTile(title: Text("  pages[${pages.length - i - 1}]:${pages[i].name}"))
             ],
           ),
         );
       },
     );
 
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: Row(
-        children: [left, right],
-      ),
+    return Builder(
+      builder: (context) {
+        return Scaffold(
+          appBar: AppBar(title: Text(title)),
+          body: Row(
+            children: [left, right],
+          ),
+        );
+      },
     );
   }
 
@@ -75,8 +79,7 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  late RouteRules rules =
-      RouteRules(first: Rules.home, setState: setState, routes: Rules.rules.toList());
+  late RouteRules rules = RouteRules(setState: setState, routes: Rules.rules.toList());
 
   @override
   Widget build(BuildContext context) {
@@ -85,32 +88,33 @@ class AppState extends State<App> {
 }
 
 /////////////////////////////////////////
-// 以下是业务无关的navigator 封装lib
+// 以下是业务无关的工具代码，可以复用
 /////////////////////////////////////////
 class RouteRules {
   final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>(debugLabel: "myNavigator");
-  late final List<Page> _pages;
+  final List<Page> _pages = List.empty(growable: true);
 
   RouteRules({
-    required this.first,
     required this.routes,
     required this.setState,
   }) {
-    _pages = List.from([first.buildPage()], growable: true);
+    log("new");
   }
 
-  final RouteRule first;
   final List<RouteRule> routes;
   final void Function(VoidCallback fn) setState;
 
   Navigator buildNavigator(BuildContext context) {
-    log("buildNavigator");
+    if (_pages.isEmpty) {
+      _pages.add(Rules.home.buildPage());
+    }
+    log("build");
 
     var navigator = Navigator(
       key: navigatorKey,
       onPopPage: (route, result) {
-        log("buildNavigator.onPopPage - route:${route.settings.name}, result:$result");
+        log("build.onPopPage - route:${route.settings.name}, result:$result");
         if (_pages.isNotEmpty) {
           setState(() => _pages.removeLast());
         }
@@ -132,8 +136,6 @@ class RouteRules {
   }
 
   pop(BuildContext context) {
-    log("pop");
-
     if (_pages.isEmpty) {
       return;
     }
@@ -160,11 +162,18 @@ class RouteRule {
   final String path;
 
   MaterialPage<dynamic> buildPage() {
+    log("buildPage");
     return MaterialPage(name: path, child: widget);
   }
 
   @override
   String toString() {
     return path;
+  }
+
+  void log(Object? message) {
+    if (kDebugMode) {
+      print("$runtimeType(id:${identityHashCode(this)}) - $message ");
+    }
   }
 }
