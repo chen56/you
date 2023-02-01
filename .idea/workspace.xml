@@ -12,12 +12,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能">
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.navigator_v2_hello2.dart" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator 1.0 摸索一下: 1.1Sample 保持原样，warpMainScreen 删掉的话，会要建其他Screen Class，也不见得简单">
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v2.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/xx.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.navigator_v2_hello2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.navigator_v2_advanced.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,11 @@
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.1.1.navigator_v2_hello.dart">
+  <component name="RunManager" selected="Flutter.1.1.navigator_hello_v2.dart">
+    <configuration name="1.1.navigator_hello_v2.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v2.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="1.1.navigator_v2_hello.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_v2_hello.dart" />
       <method v="2" />
@@ -116,10 +122,6 @@
     </configuration>
     <configuration name="1.2.router.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.router.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="1.sample_divider.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/basic/Divider/1.sample_divider.dart" />
       <method v="2" />
     </configuration>
     <configuration name="1.sample_v1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
@@ -149,8 +151,7 @@
     </configuration>
     <list>
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter.1.1.navigator_v2_hello.dart" />
-      <item itemvalue="Flutter.1.sample_divider.dart" />
+      <item itemvalue="Flutter.1.1.navigator_hello_v2.dart" />
       <item itemvalue="Flutter.1.sample_v1.dart" />
       <item itemvalue="Flutter.2.sample_vertical_divider.dart" />
       <item itemvalue="Flutter.1.2.router.dart" />
@@ -158,10 +159,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Flutter.1.1.navigator_v2_hello.dart" />
+        <item itemvalue="Flutter.1.1.navigator_hello_v2.dart" />
         <item itemvalue="Flutter.1.2.router.dart" />
         <item itemvalue="Flutter.1.sample_v1.dart" />
         <item itemvalue="Flutter.2.sample_vertical_divider.dart" />
-        <item itemvalue="Flutter.1.sample_divider.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675186198309</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="navigator 1.0 摸索一下: 1.1Sample 保持原样，warpMainScreen 删掉的话，会要建其他Screen Class，也不见得简单">
+      <created>1675187799268</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1675187799268</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -341,7 +349,8 @@
     <MESSAGE value="navigator 2.0 准备做几个层级递进的例子" />
     <MESSAGE value="navigator 1.0 摸索一下" />
     <MESSAGE value="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能" />
+    <MESSAGE value="navigator 1.0 摸索一下: 1.1Sample 保持原样，warpMainScreen 删掉的话，会要建其他Screen Class，也不见得简单" />
+    <option name="LAST_COMMIT_MESSAGE" value="navigator 1.0 摸索一下: 1.1Sample 保持原样，warpMainScreen 删掉的话，会要建其他Screen Class，也不见得简单" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
