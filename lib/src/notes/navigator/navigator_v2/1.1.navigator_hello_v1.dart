@@ -5,17 +5,21 @@ void main() {
 }
 
 class Rules {
-  static final List<RouteRule> rules = List.empty(growable: true);
+  static final List<RouteRule> _rules = List.empty(growable: true);
 
-  static final home = rule("/home", const HomeScreen());
-  static final about = rule("/about", const AbortScreen());
+  final home = _rule("/home", const HomeScreen());
+  final help = _rule("/help", const HelpScreen());
 
-  static RouteRule rule(String path, Widget toScreen) {
+  Rules._();
+
+  static RouteRule _rule(String path, Widget toScreen) {
     var result = RouteRule(path: path, widget: toScreen);
-    rules.add(result);
+    _rules.add(result);
     return result;
   }
 }
+
+Rules rules = Rules._();
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,24 +27,24 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("/home")),
+      appBar: AppBar(title: Text(rules.home.path)),
       body: ElevatedButton(
-        child: const Text("Navigator.push(context, Rules.about)"),
+        child: const Text("Navigator.push(context, Rules.help)"),
         onPressed: () {
-          Navigator.pushNamed(context, Rules.about.path);
+          Navigator.pushNamed(context, rules.help.path);
         },
       ),
     );
   }
 }
 
-class AbortScreen extends StatelessWidget {
-  const AbortScreen({super.key});
+class HelpScreen extends StatelessWidget {
+  const HelpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("/about")),
+      appBar: AppBar(title: Text(rules.help.path)),
       body: ElevatedButton(
         child: const Text("Navigator.pop(context)"),
         onPressed: () {
@@ -58,17 +62,17 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       onGenerateRoute: (RouteSettings settings) {
-        return Rules.rules.firstWhere((element) => element.path == settings.name).buildRoute();
+        return Rules._rules.firstWhere((element) => element.path == settings.name).buildRoute();
       },
-      home: const Scaffold(
-        body: HomeScreen(),
+      home: Scaffold(
+        body: rules.home.widget,
       ),
     );
   }
 }
 
 class RouteRule {
-  RouteRule({
+  const RouteRule({
     required this.path,
     required this.widget,
   });

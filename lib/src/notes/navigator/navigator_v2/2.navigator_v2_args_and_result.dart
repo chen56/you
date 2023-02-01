@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -6,47 +8,66 @@ void main() {
 }
 
 class Rules {
-  static final List<RouteRule> rules = List.empty(growable: true);
+  static final List<RouteRule> _rules = List.empty(growable: true);
 
-  static final home = rule("/home", const HomeScreen());
-  static final about = rule("/about", const AbortScreen());
+  final home = _rule<void>("/home", const HomeScreen());
+  final help = _rule<String>("/help", const HelpScreen());
 
-  static RouteRule rule(String path, Widget toScreen) {
-    var result = RouteRule(path: path, widget: toScreen);
-    rules.add(result);
+  Rules._();
+
+  static RouteRule<R> _rule<R>(String path, Widget toScreen) {
+    var result = RouteRule<R>(path: path, widget: toScreen);
+    _rules.add(result);
     return result;
   }
 }
+
+Rules rules = Rules._();
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    ScaffoldMessengerState sms = ScaffoldMessenger.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text("/home")),
+      appBar: AppBar(title: Text(rules.home.path)),
       body: ElevatedButton(
-        child: const Text("NavigatorV2.push(context, Rules.about)"),
-        onPressed: () {
-          NavigatorV2.pushNamed(context, Rules.about.path);
+        child: const Text("NavigatorV2s.push(context, Rules.help)"),
+        onPressed: () async {
+          String result = await NavigatorV2.push(context, rules.help);
+          sms.showSnackBar(SnackBar(
+            duration: const Duration(milliseconds: 1000),
+            content: Text('help result: $result'),
+          ));
         },
       ),
     );
   }
 }
 
-class AbortScreen extends StatelessWidget {
-  const AbortScreen({super.key});
+class HelpScreen extends StatelessWidget {
+  const HelpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("/about")),
-      body: ElevatedButton(
-        child: const Text("NavigatorV2.pop(context)"),
-        onPressed: () {
-          NavigatorV2.pop(context);
-        },
+      appBar: AppBar(title: Text(rules.help.path)),
+      body: Column(
+        children: [
+          ElevatedButton(
+            child: const Text("NavigatorV2.pop(context,'已解决')"),
+            onPressed: () {
+              NavigatorV2.pop(context, "已解决");
+            },
+          ),
+          ElevatedButton(
+            child: const Text("NavigatorV2.pop(context，'未解决')"),
+            onPressed: () {
+              NavigatorV2.pop(context, "未解决");
+            },
+          )
+        ],
       ),
     );
   }
@@ -60,8 +81,8 @@ class App extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: NavigatorV2(
-          first: Rules.home,
-          rules: Rules.rules.toList(),
+          first: rules.home,
+          rules: Rules._rules.toList(),
         ),
       ),
     );
@@ -72,7 +93,7 @@ class App extends StatelessWidget {
 // 以下是封装后的NavigatorV2高级Api
 ////////////////////////////////////////////////
 
-class RouteRule {
+class RouteRule<R> {
   RouteRule({
     required this.path,
     required this.widget,
@@ -81,13 +102,17 @@ class RouteRule {
   final Widget widget;
   final String path;
 
-  MaterialPage buildPage() {
-    return MaterialPage(name: path, child: widget);
+  MyPage<R> buildPage() {
+    return MyPage(rule: this);
   }
 
   @override
   String toString() {
     return path;
+  }
+
+  Future<R> push(BuildContext context) {
+    return NavigatorV2.push<R>(context, this);
   }
 }
 
@@ -102,7 +127,7 @@ class NavigatorV2 extends StatefulWidget {
     required this.rules,
   });
 
-  final RouteRule first;
+  final RouteRule<void> first;
   final List<RouteRule> rules;
 
   @override
@@ -110,14 +135,13 @@ class NavigatorV2 extends StatefulWidget {
     return NavigatorV2State();
   }
 
-  static void pop(BuildContext context) {
-    of(context).pop();
+  @optionalTypeArgs
+  static void pop<R>(BuildContext context, [R? result]) {
+    of(context).pop<R>(result);
   }
 
-  static void pushNamed(BuildContext context, String path) {
-    var state = of(context);
-    var rule = state.widget.rules.firstWhere((element) => element.path == path);
-    state.push(rule);
+  static Future<R> push<R>(BuildContext context, RouteRule<R> rule) {
+    return of(context).push<R>(rule);
   }
 }
 
@@ -125,7 +149,7 @@ class NavigatorV2State extends State<NavigatorV2> {
   final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>(debugLabel: "myNavigator");
 
-  late final List<Page> _pages = List.from([widget.first.buildPage()], growable: true);
+  late final List<MyPage> _pages = List.from([widget.first.buildPage()], growable: true);
 
   @override
   Widget build(BuildContext context) {
@@ -150,20 +174,24 @@ class NavigatorV2State extends State<NavigatorV2> {
 
   bool get canGoBack => _pages.length > 1;
 
-  void push(RouteRule rule) {
+  Future<R> push<R>(RouteRule<R> rule) {
     log("push - rule:$rule");
+    MyPage<R> page = rule.buildPage();
     setState(() {
-      _pages.add(rule.buildPage());
+      _pages.add(page);
     });
+    return page.poped;
   }
 
-  pop() {
+  @optionalTypeArgs
+  void pop<R>([R? result]) {
     log("pop");
     if (_pages.isEmpty) {
       return;
     }
     setState(() {
-      _pages.removeLast();
+      var page = _pages.removeLast();
+      page._completer.complete(result);
     });
   }
 
@@ -173,4 +201,15 @@ class NavigatorV2State extends State<NavigatorV2> {
       print("$runtimeType(id:${identityHashCode(this)}) - $message - pages:$pageLog");
     }
   }
+}
+
+class MyPage<R> extends MaterialPage<R> {
+  MyPage({
+    super.key,
+    required RouteRule rule,
+  }) : super(name: rule.path, child: rule.widget);
+
+  final Completer<R> _completer = Completer();
+
+  Future<R> get poped => _completer.future;
 }
