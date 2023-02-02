@@ -9,6 +9,7 @@ class Rules {
 
   final home = _rule("/home", const HomeScreen());
   final help = _rule("/help", const HelpScreen());
+  final notFound = _rule("/404", const HelpScreen());
 
   Rules._();
 
@@ -17,6 +18,9 @@ class Rules {
     _rules.add(result);
     return result;
   }
+
+  RouteRule find(String path) =>
+      _rules.firstWhere((element) => element.path == path, orElse: () => notFound);
 }
 
 Rules rules = Rules._();
@@ -62,7 +66,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       onGenerateRoute: (RouteSettings settings) {
-        return Rules._rules.firstWhere((element) => element.path == settings.name).buildRoute();
+        return rules.find(settings.name!).buildRoute();
       },
       home: Scaffold(
         body: rules.home.widget,
