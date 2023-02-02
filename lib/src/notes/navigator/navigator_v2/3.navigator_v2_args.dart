@@ -10,14 +10,14 @@ void main() {
 class Rules {
   static final List<RouteRule> _rules = List.empty(growable: true);
 
-  final home = _rule<void>("/home", const HomeScreen());
-  final help = _rule<String>("/help", const HelpScreen());
-  final notFound = _rule<void>("/404", const Text("404 not found"));
+  final home = _rule<void, void>("/home", (_) => const HomeScreen());
+  final help = _rule<HelpArgs, String>("/help", (question) => HelpScreen(args: question));
+  final notFound = _rule<void, void>("/404", (_) => const Text("404 not found"));
 
   Rules._();
 
-  static RouteRule<R> _rule<R>(String path, Widget toScreen) {
-    var result = RouteRule<R>(path: path, widget: toScreen);
+  static RouteRule<A, R> _rule<A, R>(String path, Widget Function(A a) builder) {
+    var result = RouteRule<A, R>(path: path, builder: builder);
     _rules.add(result);
     return result;
   }
@@ -37,12 +37,14 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(rules.home.path)),
       body: ElevatedButton(
-        child: const Text("""String result = await rules.help.push(context)"""),
+        child: const Text(
+            """String answer = rules.help.push(context, args: HelpArgs("how to use navigator v2?")"""),
         onPressed: () async {
-          String answer = await rules.help.push(context);
+          String answer =
+              await rules.help.push(context, args: HelpArgs("how to use navigator v2?"));
           sms.showSnackBar(SnackBar(
             duration: const Duration(milliseconds: 2000),
-            content: Text('result:$answer'),
+            content: Text('answer: $answer'),
           ));
         },
       ),
@@ -50,8 +52,16 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+class HelpArgs {
+  HelpArgs(this.question);
+
+  final String question;
+}
+
 class HelpScreen extends StatelessWidget {
-  const HelpScreen({super.key});
+  final HelpArgs args;
+
+  const HelpScreen({super.key, required this.args});
 
   @override
   Widget build(BuildContext context) {
@@ -59,16 +69,17 @@ class HelpScreen extends StatelessWidget {
       appBar: AppBar(title: Text(rules.help.path)),
       body: Column(
         children: [
+          Text("question:${args.question} "),
           ElevatedButton(
-            child: const Text("""rules.help.pop(context, "您的问题是啥？")"""),
+            child: const Text('''rules.help.pop(context,"我们有开发过v2吗？") '''),
             onPressed: () {
-              rules.help.pop(context, "您的问题是啥？");
+              rules.help.pop(context, "我们有开发过v2吗？");
             },
           ),
           ElevatedButton(
-            child: const Text("""rules.help.pop(context, "您贵姓？需要啥帮助？")"""),
+            child: const Text('''rules.help.pop(context,"你说的v2被另一只狗吓跑了") '''),
             onPressed: () {
-              rules.help.pop(context, "您贵姓？需要啥帮助？");
+              rules.help.pop(context, "你说的v2被另一只狗吓跑了");
             },
           )
         ],
@@ -97,19 +108,18 @@ class App extends StatelessWidget {
 ////////////////////////////////////////////////
 // 上面是应用代码，下面是封装后的NavigatorV2高级Api
 ////////////////////////////////////////////////
-
-/// 范型R:结果类型
-class RouteRule<R> {
+/// 范型A： 参数类型, R:结果类型
+class RouteRule<A, R> {
   RouteRule({
     required this.path,
-    required this.widget,
+    required this.builder,
   });
 
-  final Widget widget;
+  final Widget Function(A a) builder;
   final String path;
 
-  MyPage<R> buildPage() {
-    return MyPage(rule: this);
+  MyPage<R> buildPage({required A args}) {
+    return MyPage(name: path, child: builder(args));
   }
 
   @override
@@ -117,8 +127,8 @@ class RouteRule<R> {
     return path;
   }
 
-  Future<R> push(BuildContext context) {
-    return NavigatorV2.pushNamed<R>(context, this.path);
+  Future<R> push(BuildContext context, {required A args}) {
+    return NavigatorV2.pushNamed<A, R>(context, this.path, args: args);
   }
 
   void pop(BuildContext context, R result) {
@@ -138,8 +148,8 @@ class NavigatorV2 extends StatefulWidget {
     required this.rules,
   });
 
-  final RouteRule<void> first;
-  final RouteRule<void> notFound;
+  final RouteRule<void, void> first;
+  final RouteRule<void, void> notFound;
   final List<RouteRule> rules;
 
   @override
@@ -152,11 +162,11 @@ class NavigatorV2 extends StatefulWidget {
     of(context).pop<R>(result);
   }
 
-  static Future<R> pushNamed<R>(BuildContext context, String path) {
+  static Future<R> pushNamed<A, R>(BuildContext context, String path, {required A args}) {
     var state = of(context);
-    RouteRule<R> find = state.widget.rules.firstWhere((element) => element.path == path,
-        orElse: () => state.widget.notFound) as RouteRule<R>;
-    return state.push<R>(find);
+    RouteRule<A, R> find = state.widget.rules.firstWhere((element) => element.path == path,
+        orElse: () => state.widget.notFound) as RouteRule<A, R>;
+    return state.push<A, R>(find, args: args);
   }
 }
 
@@ -164,7 +174,7 @@ class NavigatorV2State extends State<NavigatorV2> {
   final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>(debugLabel: "myNavigator");
 
-  late final List<MyPage> _pages = List.from([widget.first.buildPage()], growable: true);
+  late final List<MyPage> _pages = List.from([widget.first.buildPage(args: null)], growable: true);
 
   @override
   Widget build(BuildContext context) {
@@ -189,9 +199,9 @@ class NavigatorV2State extends State<NavigatorV2> {
 
   bool get canGoBack => _pages.length > 1;
 
-  Future<R> push<R>(RouteRule<R> rule) {
+  Future<R> push<A, R>(RouteRule<A, R> rule, {required A args}) {
     log("push - rule:$rule");
-    MyPage<R> page = rule.buildPage();
+    MyPage<R> page = rule.buildPage(args: args);
     setState(() {
       _pages.add(page);
     });
@@ -221,8 +231,9 @@ class NavigatorV2State extends State<NavigatorV2> {
 class MyPage<R> extends MaterialPage<R> {
   MyPage({
     super.key,
-    required RouteRule rule,
-  }) : super(name: rule.path, child: rule.widget);
+    super.name,
+    required super.child,
+  });
 
   final Completer<R> _completer = Completer();
 

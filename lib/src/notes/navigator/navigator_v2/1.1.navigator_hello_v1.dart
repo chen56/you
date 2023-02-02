@@ -9,7 +9,7 @@ class Rules {
 
   final home = _rule("/home", const HomeScreen());
   final help = _rule("/help", const HelpScreen());
-  final notFound = _rule("/404", const HelpScreen());
+  final notFound = _rule("/404", const Text("404 not found"));
 
   Rules._();
 

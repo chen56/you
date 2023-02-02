@@ -12,12 +12,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="navigator v2 增加返回结果: Future&lt;R&gt; push&lt;R&gt;(BuildContext context, RouteRule&lt;R&gt; rule)">
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="稍作调整">
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.navigator_v2_args.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v1/1.sample_v1.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.navigator_hello_v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.navigator_hello_v2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/2.navigator_v2_args_and_result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/2.navigator_v2_result.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/2.navigator_v2_result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/2.navigator_v2_result.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.1.navigator_v2_browser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/4.navigator_v2_advanced.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.navigator_v2_advanced.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,7 @@
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.2.navigator_v2_result.dart">
+  <component name="RunManager" selected="Flutter.3.navigator_v2_args.dart">
     <configuration name="1.1.navigator_hello_v1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" />
       <method v="2" />
@@ -126,16 +128,16 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/2.navigator_v2_result.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="2.sample_vertical_divider.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/basic/Divider/2.sample_vertical_divider.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="3.1.navigator_v2_browser.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.1.navigator_v2_browser.dart" />
+    <configuration name="3.navigator_v2_args.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.navigator_v2_args.dart" />
       <method v="2" />
     </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="x.1.navigator_v2_browser.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -156,16 +158,16 @@
       <item itemvalue="Flutter.1.1.navigator_hello_v1.dart" />
       <item itemvalue="Flutter.1.2.navigator_hello_v2.dart" />
       <item itemvalue="Flutter.2.navigator_v2_result.dart" />
-      <item itemvalue="Flutter.2.sample_vertical_divider.dart" />
-      <item itemvalue="Flutter.3.1.navigator_v2_browser.dart" />
+      <item itemvalue="Flutter.3.navigator_v2_args.dart" />
+      <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.3.navigator_v2_args.dart" />
         <item itemvalue="Flutter.2.navigator_v2_result.dart" />
         <item itemvalue="Flutter.1.1.navigator_hello_v1.dart" />
         <item itemvalue="Flutter.1.2.navigator_hello_v2.dart" />
         <item itemvalue="Flutter.1.1.navigator_v2_hello.dart" />
-        <item itemvalue="Flutter.3.1.navigator_v2_browser.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675265829099</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="稍作调整">
+      <created>1675301221918</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1675301221918</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -369,7 +378,8 @@
     <MESSAGE value="navigator 1.0 摸索一下: 1.1Sample 保持原样，warpMainScreen 删掉的话，会要建其他Screen Class，也不见得简单" />
     <MESSAGE value="navigator 1.0 摸索一下: 实现了v1，v2两个版本的helloworld，感觉解释力比较强，也足够简单" />
     <MESSAGE value="navigator v2 增加返回结果: Future&lt;R&gt; push&lt;R&gt;(BuildContext context, RouteRule&lt;R&gt; rule)" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigator v2 增加返回结果: Future&lt;R&gt; push&lt;R&gt;(BuildContext context, RouteRule&lt;R&gt; rule)" />
+    <MESSAGE value="稍作调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="稍作调整" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
