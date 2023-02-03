@@ -13,65 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="flutter run下载太慢（https://unpkg.com/canvaskit-wasm@0.37.1/bin/canvaskit.wasm），FLUTTER_WEB_CANVASKIT_URL对flutter run不起作，但对build起作用">
-      <change afterPath="$PROJECT_DIR$/cache/fonts/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v1/ref.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/canvaskit-wasm@0.37.1/bin/canvaskit.wasm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/x.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn_flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learn_flutter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/catalog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/catalog.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/mate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mate/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/mate/mate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mate/mate.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/mate/text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mate/text.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/note/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/note/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/note/param.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/note/param.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/note/types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/note/types.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/app/drawer/1.drawer_in_body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/app/drawer/1.drawer_in_body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/app/drawer/2.drawer_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/app/drawer/2.drawer_header.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/basic/Card/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/basic/Card/sample1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/basic/Divider/1.sample_divider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/basic/Divider/1.sample_divider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/basic/Divider/2.sample_vertical_divider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/basic/Divider/2.sample_vertical_divider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/debug/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/debug/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/Material/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/Material/sample1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/app/1.hello_meterial_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/app/1.hello_meterial_app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/1.elevated_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/button/ElevatedButton/1.elevated_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/button/ElevatedButton/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/slider/1.slider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/slider/1.slider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/slider/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/slider/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/RichText/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/text/RichText/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/1.text_normal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/text/Text/1.text_normal.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/2.text_rich.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/text/Text/2.text_rich.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/text/Text/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.navigator_hello_v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/1.2.navigator_hello_v2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/2.navigator_v2_result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/2.navigator_v2_result.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.1.navigator_v2_args_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.1.navigator_v2_only_pages_last_version.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.navigator_v2_args.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_args.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.navigator_v2_advanced.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.navigator_v2_advanced.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/notes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/notes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/page_view/page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/page_view/page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/scrollable/Dismissible/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/scrollable/Dismissible/sample1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/scrollable/DraggableScrollableSheet/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/scrollable/DraggableScrollableSheet/sample1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/1.hello.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.1.child.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.2.notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.2.notifier.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/Flutter-Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/Flutter-Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/common/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/common/state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/common/types_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/common/types_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/params_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/params_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

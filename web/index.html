@@ -32,15 +32,15 @@
     <title>myapp</title>
     <link rel="manifest" href="manifest.json">
 
-    <script>
+    <script type="text/javascript">
     // The value below is injected by flutter build, do not touch.
     var serviceWorkerVersion = null;
   </script>
     <!-- This script adds the flutter initialization JS code -->
-    <script src="flutter.js" defer></script>
+    <script type="text/javascript" src="flutter.js" defer></script>
 </head>
 <body>
-<script>
+<script type="text/javascript">
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
@@ -49,16 +49,17 @@
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine({
-            //canvasKitBaseUrl: "https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/",
-            //canvasKitBaseUrl: "/canvaskit-wasm@0.37.1/bin/",
+            //canvasKitBaseUrl: "https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.38.0/bin/",
+            canvasKitBaseUrl: "https://cdnjs.cloudflare.com/ajax/libs/canvaskit-wasm/0.38.0/",
           }).then(function(appRunner) {
             appRunner.runApp();
           });
         }
       });
     });
-  </script>
+</script>
 <div>
+
     看到这个估计是字体下不来：
     URL: https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf
 </div>
