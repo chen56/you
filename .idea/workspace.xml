@@ -12,9 +12,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="增加push参数">
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.1.navigator_v2_args_screen.dart" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多">
+      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/todo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +107,7 @@
   </component>
   <component name="RunManager" selected="Flutter.1.1.navigator_hello_v1.dart">
     <configuration name="1.1.navigator_hello_v1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="additionalArgs" value="--dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.38.0/bin/" />
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" />
       <method v="2" />
     </configuration>
@@ -335,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675334108454</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多">
+      <created>1675359209845</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1675359209845</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -381,7 +392,8 @@
     <MESSAGE value="navigator v2 增加返回结果: Future&lt;R&gt; push&lt;R&gt;(BuildContext context, RouteRule&lt;R&gt; rule)" />
     <MESSAGE value="稍作调整" />
     <MESSAGE value="增加push参数" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加push参数" />
+    <MESSAGE value="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多" />
+    <option name="LAST_COMMIT_MESSAGE" value="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
