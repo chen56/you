@@ -66,7 +66,7 @@ flutter build web -v --release  --web-renderer canvaskit --dart-define=FLUTTER_W
 
 ### fonts.gstatic.com下载问题
 
-下不下来 <https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf>
+flutter run时，web模式下载慢: <https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf>
 
 硬编码的下载地址： <https://github.com/flutter/engine/blob/3.8.0-2.0.pre/lib/web_ui/lib/src/engine/canvaskit/fonts.dart#L21>
 
@@ -91,6 +91,8 @@ flutter:
       _downloadFont(pendingFonts, _robotoUrl, 'Roboto');
     }
 ```
+
+
 
   ''');
 

@@ -49,8 +49,8 @@
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine({
-            //canvasKitBaseUrl: "https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.38.0/bin/",
-            canvasKitBaseUrl: "https://cdnjs.cloudflare.com/ajax/libs/canvaskit-wasm/0.38.0/",
+            canvasKitBaseUrl: "https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.38.0/bin/",
+            //canvasKitBaseUrl: "https://cdnjs.cloudflare.com/ajax/libs/canvaskit-wasm/0.38.0/",
           }).then(function(appRunner) {
             appRunner.runApp();
           });

@@ -12,7 +12,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="flutter run下载太慢（https://unpkg.com/canvaskit-wasm@0.37.1/bin/canvaskit.wasm），FLUTTER_WEB_CANVASKIT_URL对flutter run不起作，但对build起作用">
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="解决字体和wasm下载问题">
+      <change afterPath="$PROJECT_DIR$/lib/notes/dialog/1.sample_dialog.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/notes/dialog/2.alert_dialog.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
@@ -79,7 +81,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/cache",
+    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/notes/dialog",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -89,11 +91,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/notes/dialog" />
       <recent name="$PROJECT_DIR$/cache" />
       <recent name="$PROJECT_DIR$/fonts" />
       <recent name="$PROJECT_DIR$/lib/notes/cn_net_env" />
       <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web" />
@@ -103,14 +105,13 @@
       <recent name="$PROJECT_DIR$/lib/src/notes/basic/Card" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.x.1.navigator_v2_browser.dart">
-    <configuration name="1.1.navigator_hello_v1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="additionalArgs" value="--dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.38.0/bin/" />
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" />
+  <component name="RunManager" selected="Flutter.2.alert_dialog.dart">
+    <configuration name="1.sample_dialog.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/dialog/1.sample_dialog.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="3.1.navigator_v2_only_pages_last_version.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.1.navigator_v2_only_pages_last_version.dart" />
+    <configuration name="2.alert_dialog.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/dialog/2.alert_dialog.dart" />
       <method v="2" />
     </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
@@ -145,19 +146,19 @@
     </configuration>
     <list>
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter.3.1.navigator_v2_only_pages_last_version.dart" />
+      <item itemvalue="Flutter.1.sample_dialog.dart" />
+      <item itemvalue="Flutter.2.alert_dialog.dart" />
       <item itemvalue="Flutter.ref.dart" />
       <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
       <item itemvalue="Flutter.x.navigator_v2_advanced.dart" />
-      <item itemvalue="Flutter.1.1.navigator_hello_v1.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.2.alert_dialog.dart" />
+        <item itemvalue="Flutter.1.sample_dialog.dart" />
         <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
         <item itemvalue="Flutter.x.navigator_v2_advanced.dart" />
         <item itemvalue="Flutter.ref.dart" />
-        <item itemvalue="Flutter.3.1.navigator_v2_only_pages_last_version.dart" />
-        <item itemvalue="Flutter.1.1.navigator_hello_v1.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -345,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675359209845</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="解决字体和wasm下载问题">
+      <created>1675436142118</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1675436142118</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -392,7 +400,8 @@
     <MESSAGE value="稍作调整" />
     <MESSAGE value="增加push参数" />
     <MESSAGE value="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多" />
-    <option name="LAST_COMMIT_MESSAGE" value="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多" />
+    <MESSAGE value="解决字体和wasm下载问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决字体和wasm下载问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
