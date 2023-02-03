@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/src/notes/material/text/Text/2.text_rich.dart' as text_hello;
-import 'package:learn_flutter/src/notes/notes.dart';
+import 'package:learn_flutter/notes/material/text/Text/2.text_rich.dart' as text_hello;
+import 'package:learn_flutter/notes/notes.dart';
 
 import 'catalog.dart';
 

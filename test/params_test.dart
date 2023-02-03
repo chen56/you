@@ -1,6 +1,6 @@
 // ignore_for_file: unused_local_variable
 
-import 'package:learn_flutter/src/note/param.dart';
+import 'package:learn_flutter/note/param.dart';
 import 'package:test/test.dart';
 
 void main() {

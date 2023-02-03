@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'src/note/note.dart';
+import 'note/note.dart';
 
 class NoteDrawer extends StatefulWidget {
   final Note root;

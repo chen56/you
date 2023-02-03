@@ -12,12 +12,67 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多">
-      <change afterPath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="flutter run下载太慢（https://unpkg.com/canvaskit-wasm@0.37.1/bin/canvaskit.wasm），FLUTTER_WEB_CANVASKIT_URL对flutter run不起作，但对build起作用">
+      <change afterPath="$PROJECT_DIR$/cache/fonts/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v1/ref.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/canvaskit-wasm@0.37.1/bin/canvaskit.wasm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn_flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learn_flutter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/catalog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/catalog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/mate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mate/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/mate/mate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mate/mate.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/mate/text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mate/text.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/note/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/note/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/note/param.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/note/param.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/note/types.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/note/types.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/app/drawer/1.drawer_in_body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/app/drawer/1.drawer_in_body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/app/drawer/2.drawer_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/app/drawer/2.drawer_header.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/basic/Card/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/basic/Card/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/basic/Divider/1.sample_divider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/basic/Divider/1.sample_divider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/basic/Divider/2.sample_vertical_divider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/basic/Divider/2.sample_vertical_divider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/debug/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/debug/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/Material/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/Material/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/app/1.hello_meterial_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/app/1.hello_meterial_app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/1.elevated_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/button/ElevatedButton/1.elevated_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/button/ElevatedButton/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/button/ElevatedButton/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/slider/1.slider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/slider/1.slider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/slider/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/slider/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/RichText/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/text/RichText/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/1.text_normal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/text/Text/1.text_normal.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/2.text_rich.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/text/Text/2.text_rich.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/material/text/Text/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/material/text/Text/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.navigator_hello_v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/1.2.navigator_hello_v2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/2.navigator_v2_result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/2.navigator_v2_result.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.1.navigator_v2_args_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.1.navigator_v2_only_pages_last_version.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.navigator_v2_args.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_args.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/x.navigator_v2_advanced.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.navigator_v2_advanced.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/notes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/notes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/page_view/page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/page_view/page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/scrollable/Dismissible/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/scrollable/Dismissible/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/scrollable/DraggableScrollableSheet/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/scrollable/DraggableScrollableSheet/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/1.hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/1.hello.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.1.child.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.1.child.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.2.notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.2.notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/note.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/todo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/Flutter-Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/Flutter-Release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/common/state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/common/state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/common/types_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/common/types_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/params_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/params_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,61 +129,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/cc/git/chen56/learn_flutter/lib/src/notes/navigator/navigator_v2&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Markdown&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/cache",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Markdown",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cache" />
+      <recent name="$PROJECT_DIR$/fonts" />
+      <recent name="$PROJECT_DIR$/lib/notes/cn_net_env" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2" />
-      <recent name="$PROJECT_DIR$/lib/src/notes/basic/Divider" />
-      <recent name="$PROJECT_DIR$/lib/src/notes/app/drawer" />
-      <recent name="$PROJECT_DIR$/lib/src/notes/debug" />
-      <recent name="$PROJECT_DIR$/lib/src/notes/state/1.vanilla_state" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/cache/canvaskit-wasm@0.37.1/bin" />
+      <recent name="$PROJECT_DIR$/cache" />
+      <recent name="$PROJECT_DIR$/lib/notes" />
       <recent name="$PROJECT_DIR$/lib/src/notes/basic/Card" />
-      <recent name="$PROJECT_DIR$/lib/src/notes/navigator" />
-      <recent name="$PROJECT_DIR$/lib/src/notes/material/app" />
-      <recent name="$PROJECT_DIR$/lib/src/notebook" />
-      <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.1.1.navigator_hello_v1.dart">
+  <component name="RunManager" selected="Flutter.x.1.navigator_v2_browser.dart">
     <configuration name="1.1.navigator_hello_v1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="additionalArgs" value="--dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.38.0/bin/" />
       <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="1.2.navigator_hello_v2.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/1.2.navigator_hello_v2.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="2.navigator_v2_result.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/2.navigator_v2_result.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="3.1.navigator_v2_args_screen.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.1.navigator_v2_args_screen.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="3.navigator_v2_args.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/src/notes/navigator/navigator_v2/3.navigator_v2_args.dart" />
+    <configuration name="3.1.navigator_v2_only_pages_last_version.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.1.navigator_v2_only_pages_last_version.dart" />
       <method v="2" />
     </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ref.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v1/ref.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="x.1.navigator_v2_browser.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="additionalArgs" value="-v --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/" />
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="x.navigator_v2_advanced.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.navigator_v2_advanced.dart" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -146,19 +202,19 @@
     </configuration>
     <list>
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter.3.1.navigator_v2_args_screen.dart" />
+      <item itemvalue="Flutter.3.1.navigator_v2_only_pages_last_version.dart" />
+      <item itemvalue="Flutter.ref.dart" />
+      <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
+      <item itemvalue="Flutter.x.navigator_v2_advanced.dart" />
       <item itemvalue="Flutter.1.1.navigator_hello_v1.dart" />
-      <item itemvalue="Flutter.1.2.navigator_hello_v2.dart" />
-      <item itemvalue="Flutter.2.navigator_v2_result.dart" />
-      <item itemvalue="Flutter.3.navigator_v2_args.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
+        <item itemvalue="Flutter.x.navigator_v2_advanced.dart" />
+        <item itemvalue="Flutter.ref.dart" />
+        <item itemvalue="Flutter.3.1.navigator_v2_only_pages_last_version.dart" />
         <item itemvalue="Flutter.1.1.navigator_hello_v1.dart" />
-        <item itemvalue="Flutter.3.1.navigator_v2_args_screen.dart" />
-        <item itemvalue="Flutter.3.navigator_v2_args.dart" />
-        <item itemvalue="Flutter.2.navigator_v2_result.dart" />
-        <item itemvalue="Flutter.1.2.navigator_hello_v2.dart" />
       </list>
     </recent_temporary>
   </component>

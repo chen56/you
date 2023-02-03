@@ -26,7 +26,7 @@ class TODO3_web_too_slow{
   // 替换canvaskit.wasm CDN 地址，国内defult的太慢，下面方法没用，
   // 还是从unpkg下载，要五分钟：https://unpkg.com/canvaskit-wasm@0.37.1/bin/canvaskit.wasm
   //这样不起作用：
-  // flutter build web -v --profile  --web-renderer canvaskit --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/ lib/src/notes/navigator/navigator_v2/3.1.navigator_v2_args_screen.dart
+  // flutter build web -v --profile  --web-renderer canvaskit --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/ lib/notes/navigator/navigator_v2/3.1.navigator_v2_only_pages_last_version.dart
 
   //  flutter run 慢
   // 拿不到字体：https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf
