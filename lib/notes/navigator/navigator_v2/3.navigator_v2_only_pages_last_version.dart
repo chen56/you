@@ -2,6 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/note/includes/log.dart';
+
+Logger logger = Logger();
 
 void main() {
   runApp(const App());
@@ -17,16 +20,16 @@ class HomeScreen extends StatelessWidget with Screen<void, void> {
   Widget build(BuildContext context) {
     ScaffoldMessengerState sms = ScaffoldMessenger.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text("HomeScreen")),
+      appBar: AppBar(title: const Text("HomeScreen navigator v2")),
       body: Column(children: [
         ElevatedButton(
           child: const Text(
-              """String answer = await HelpScreen(args: "how to use navigator v2?").push(context)"""),
+              """String answer=await HelpScreen(args: "how to use navigator v2?").push(context)"""),
           onPressed: () async {
-            String? answer = await HelpScreen(args: "how to use navigator v2?").push(context);
+            String? answer = await HelpScreen(question: "how to use navigator v2?").push(context);
             sms.showSnackBar(SnackBar(
               duration: const Duration(milliseconds: 2000),
-              content: Text('answer: ${answer ?? "null(从系统back button返回则结果为null)"}'),
+              content: Text('answer: ${answer ?? "null(可能点了系统返回按钮)"}'),
             ));
           },
         ),
@@ -37,30 +40,22 @@ class HomeScreen extends StatelessWidget with Screen<void, void> {
 }
 
 class HelpScreen extends StatelessWidget with Screen<String, String> {
-  @override
-  final String args;
+  final String question;
 
-  HelpScreen({super.key, required this.args});
+  HelpScreen({super.key, required this.question});
 
   @override
   Widget build(BuildContext context) {
+    option(String answer) => ElevatedButton(
+        child: Text('''completer.complete("$answer")'''),
+        onPressed: () => completer.complete(answer));
     return Scaffold(
       appBar: AppBar(title: const Text("HelpScreen")),
       body: Column(
         children: [
-          Text("question:$args "),
-          ElevatedButton(
-            child: const Text('''completer.complete("我们有开发过v2吗?")'''),
-            onPressed: () {
-              completer.complete("我们有开发过v2吗?");
-            },
-          ),
-          ElevatedButton(
-            child: const Text('''completer.complete("你说的v2被另一只狗吓跑了") '''),
-            onPressed: () {
-              completer.complete("你说的v2被另一只狗吓跑了");
-            },
-          ),
+          Text("question:$question "),
+          option("我们有开发过v2吗？"),
+          option("你说的v2被另一只狗吓跑了！"),
           const DebugPagesLog(),
         ],
       ),
@@ -109,7 +104,7 @@ class NavigatorV2State extends State<NavigatorV2> {
   final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>(debugLabel: "myNavigator");
 
-  late final List<MyPage> _pages = List.from([widget.first.buildPage()], growable: true);
+  late final List<MyPage> _pages = List.from([widget.first.createPage()], growable: true);
 
   @override
   Widget build(BuildContext context) {
@@ -142,19 +137,38 @@ class NavigatorV2State extends State<NavigatorV2> {
 
   void log(Object? message) {
     if (kDebugMode) {
-      var pageLog = _pages.map((e) => "${e.screen.runtimeType}(args:${e.screen.args})").toList();
+      var pageLog = _pages.map((e) => "${e.screen})").toList();
       print("$runtimeType(id:${identityHashCode(this)}) - $message - pages:$pageLog");
     }
+  }
+
+  Future<R?> push<A, R>(Screen<A, R> screen) {
+    var page = screen.createPage();
+    //把completer的完成指责放权给各Screen自己后，框架需监听其完成后删除Page
+    screen.completer.future.whenComplete(() {
+      setState(() {
+        logger.log("NavigatorV2State.push.whenComplete - page:${page.name}  ");
+        _pages.remove(page);
+      });
+    });
+    setState(() {
+      _pages.add(page);
+    });
+    return screen.completer.future;
   }
 }
 
 /// A: Screen参数类型，R: push返回值类型
 class MyPage<A, R> extends MaterialPage<R> {
   MyPage({
-    super.key,
-    super.name,
+    // super.key,
+    // super.name,
     required this.screen,
-  }) : super(child: screen);
+  }) : super(
+          child: screen,
+          name: screen.runtimeType.toString(),
+          key: ValueKey(screen.runtimeType.toString()), //key的临时用法
+        );
   Screen<A, R> screen;
 }
 
@@ -170,28 +184,16 @@ mixin Screen<A, R> on Widget {
     }
   }
 
-  MyPage<A, R> buildPage() => MyPage(screen: this);
-
-  @protected
-  A get args;
+  MyPage<A, R> createPage() => MyPage(screen: this);
 
   Future<R?> push(BuildContext context) {
-    log("push");
+    logger.log("$this.push");
+    return NavigatorV2.of(context).push<A, R>(this);
+  }
 
-    var state = NavigatorV2.of(context);
-    var page = buildPage();
-    //把completer的完成指责放权给各Screen自己后，框架需监听其完成后删除Page
-    completer.future.whenComplete(() {
-      state.setState(() {
-        log("push.whenComplete - page:${page.name}  ");
-        state._pages.remove(page);
-      });
-    });
-    // ignore: invalid_use_of_protected_member
-    state.setState(() {
-      state._pages.add(page);
-    });
-    return completer.future;
+  @override
+  String toStringShort() {
+    return "Screen()";
   }
 }
 
@@ -206,7 +208,7 @@ class DebugPagesLog extends StatelessWidget {
         const Divider(thickness: 2),
         const Center(child: Text("--- debug: pages ---")),
         for (int i = screens.length - 1; i >= 0; i--)
-          ListTile(title: Text("  pages[$i]: ${screens[i].runtimeType}(args:${screens[i].args})")),
+          ListTile(title: Text("  pages[$i]: ${screens[i]})")),
         const Divider(thickness: 2),
       ]),
     );

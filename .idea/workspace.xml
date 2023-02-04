@@ -12,16 +12,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="dialog">
-      <change afterPath="$PROJECT_DIR$/cache/fonts/NotoSans-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/fonts/NotoSans-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/fonts/NotoSans-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/fonts/NotoSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/fonts/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="为字体累死">
+      <change afterPath="$PROJECT_DIR$/lib/note/includes/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/note/includes/log.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/note/includes/log_router_delegate.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.1.navigator_v2_only_pages_last_version.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_only_pages_last_version.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_args.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/4.navigator_v2_last_version.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/todo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/cache",
+    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/notes/navigator/navigator_v2",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -95,44 +97,47 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/notes/navigator/navigator_v2" />
       <recent name="$PROJECT_DIR$/cache" />
       <recent name="$PROJECT_DIR$/cache/fonts" />
       <recent name="$PROJECT_DIR$/lib/notes/dialog" />
       <recent name="$PROJECT_DIR$/fonts" />
-      <recent name="$PROJECT_DIR$/lib/notes/cn_net_env" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/note/log" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/cache/canvaskit-wasm@0.37.1/bin" />
       <recent name="$PROJECT_DIR$/cache" />
       <recent name="$PROJECT_DIR$/lib/notes" />
-      <recent name="$PROJECT_DIR$/lib/src/notes/basic/Card" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.2.alert_dialog.dart">
-    <configuration name="1.sample_dialog.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/dialog/1.sample_dialog.dart" />
+  <component name="RunManager" selected="Flutter.ref.dart">
+    <configuration name="3.navigator_v2_only_pages_last_version.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_only_pages_last_version.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="2.alert_dialog.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/dialog/2.alert_dialog.dart" />
+    <configuration name="4.navigator_v2_last_version.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/4.navigator_v2_last_version.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="additionalArgs" value="-v" />
       <method v="2" />
     </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="ref-understanding-navigator-v2.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="ref.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v1/ref.dart" />
+      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/ref.dart" />
       <method v="2" />
     </configuration>
     <configuration name="x.1.navigator_v2_browser.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="additionalArgs" value="-v" />
       <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="x.navigator_v2_advanced.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.navigator_v2_advanced.dart" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -150,19 +155,19 @@
     </configuration>
     <list>
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter.1.sample_dialog.dart" />
-      <item itemvalue="Flutter.2.alert_dialog.dart" />
+      <item itemvalue="Flutter.3.navigator_v2_only_pages_last_version.dart" />
+      <item itemvalue="Flutter.ref-understanding-navigator-v2.dart" />
       <item itemvalue="Flutter.ref.dart" />
+      <item itemvalue="Flutter.4.navigator_v2_last_version.dart" />
       <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
-      <item itemvalue="Flutter.x.navigator_v2_advanced.dart" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter.2.alert_dialog.dart" />
-        <item itemvalue="Flutter.1.sample_dialog.dart" />
-        <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
-        <item itemvalue="Flutter.x.navigator_v2_advanced.dart" />
         <item itemvalue="Flutter.ref.dart" />
+        <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
+        <item itemvalue="Flutter.ref-understanding-navigator-v2.dart" />
+        <item itemvalue="Flutter.4.navigator_v2_last_version.dart" />
+        <item itemvalue="Flutter.3.navigator_v2_only_pages_last_version.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675439894505</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="为字体累死">
+      <created>1675445586799</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1675445586799</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -413,7 +425,8 @@
     <MESSAGE value="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多" />
     <MESSAGE value="解决字体和wasm下载问题" />
     <MESSAGE value="dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="dialog" />
+    <MESSAGE value="为字体累死" />
+    <option name="LAST_COMMIT_MESSAGE" value="为字体累死" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
