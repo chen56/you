@@ -27,16 +27,16 @@ class Note with ChangeNotifier   {
   Note? _parent;
   late final Map<String, Object> attributes;
 
-  late final Skeleton _skeleton;
+  late final Frame _skeleton;
   late final NoteMeta meta;
 
   Note(
     this.name, {
     NoteMeta? meta,
-    Skeleton? skeleton,
+    Frame? frame,
     this.kids = const [],
   }) {
-    _skeleton = skeleton ?? _EmptySkeleton();
+    _skeleton = frame ?? _EmptyFrame();
     this.meta = meta ?? NoteMeta._empty();
     attributes = _NoteAttributes(this);
 
@@ -50,12 +50,12 @@ class Note with ChangeNotifier   {
 
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
-  Skeleton get skeleton {
+  Frame get skeleton {
     if (isRoot) return _skeleton;
-    return _skeleton is _EmptySkeleton ? _skeleton : _parent!.skeleton;
+    return _skeleton is _EmptyFrame ? _skeleton : _parent!.skeleton;
   }
 
-  void set skeleton(Skeleton value) {
+  void set skeleton(Frame value) {
     _skeleton = value;
   }
 
@@ -98,14 +98,14 @@ class Note with ChangeNotifier   {
 
 }
 
-abstract class Skeleton {
-  const Skeleton();
+abstract class Frame {
+  const Frame();
 
   Widget embed(Widget child);
 }
 
-class _EmptySkeleton extends Skeleton {
-  const _EmptySkeleton();
+class _EmptyFrame extends Frame {
+  const _EmptyFrame();
 
   @override
   Widget embed(Widget child) {

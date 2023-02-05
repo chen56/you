@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 import '1.hello.dart' as stateful_hello ;
 
-NoteMeta note = NoteMeta(
+NoteMeta vanillaStateNote = NoteMeta(
   title: "最原始的状态管理",
   builder: build,
 );

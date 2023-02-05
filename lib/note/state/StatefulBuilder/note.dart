@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 
-NoteMeta note = NoteMeta(
+NoteMeta widgetStatefulBuilderNote = NoteMeta(
   title: "StatefulBuilder",
   builder: build,
 );

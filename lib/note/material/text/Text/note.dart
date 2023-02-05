@@ -4,7 +4,7 @@ import 'package:learn_flutter/note/@common/note.dart';
 import '1.text_normal.dart';
 import '2.text_rich.dart';
 
-NoteMeta note = NoteMeta(
+NoteMeta widgetTextNote = NoteMeta(
   title: "Text",
   builder: build,
 );

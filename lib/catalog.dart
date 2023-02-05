@@ -31,10 +31,13 @@ class NoteDrawerPartState extends State<NoteDrawerPart> {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-          shrinkWrap: false,
-          padding: const EdgeInsets.all(20),
-          children: widget.root.toList(includeThis: false).map((e) => NoteLink(e)).toList(),
-        ),
+        shrinkWrap: false,
+        padding: const EdgeInsets.all(20),
+        children: widget.root
+            .toList(includeThis: false)
+            .map((e) => NoteLink(e))
+            .toList(),
+      ),
     );
   }
 }
@@ -68,15 +71,11 @@ class NoteLink extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      trailing: Icon(
-        note.isLeaf ? Icons.open_in_new : null,
-        size: note.isLeaf ? 20 : null,
-      ),
       title: Row(
         children: [
           Icon(
             note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down,
-            // size: e.isLeaf ? 15 : null,
+            size: note.isLeaf ? 12 : null,
           ),
           Text(note.name),
         ],
@@ -84,7 +83,7 @@ class NoteLink extends StatelessWidget {
       dense: true,
       //更紧凑布局
       visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
-      contentPadding: EdgeInsets.only(left: 20 * (note.level - 1).toDouble()),
+      contentPadding: EdgeInsets.only(left: 15 * (note.level - 1).toDouble()),
       enabled: true,
       minLeadingWidth: 0,
       onTap: () {

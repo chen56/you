@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:learn_flutter/navigator.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 
-NoteMeta fucknetNote = NoteMeta(
+NoteMeta devMirrorNote = NoteMeta(
   title: "网络问题",
   builder: build,
 );

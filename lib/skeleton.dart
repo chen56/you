@@ -3,7 +3,7 @@ import 'package:learn_flutter/note/@common/note.dart';
 import 'package:learn_flutter/page.dart';
 import 'package:learn_flutter/note/material/text/Text/2.text_rich.dart' as text_hello;
 
-class RootSkeleton implements Skeleton {
+class RootFrame implements Frame {
   @override
   Widget embed(Widget child) {
     return Scaffold(

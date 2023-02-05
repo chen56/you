@@ -3,7 +3,7 @@ import 'package:learn_flutter/note/@common/note.dart';
 
 import '1.elevated_button.dart';
 
-NoteMeta note = NoteMeta(
+NoteMeta widgetElevatedButtonNote = NoteMeta(
   title: "ElevatedButton",
   builder: build,
 );

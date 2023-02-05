@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 
 
-NoteMeta note = NoteMeta(
+NoteMeta widgetSliderNote = NoteMeta(
   title: "Slider",
   builder: build,
 );
