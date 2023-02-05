@@ -1,11 +1,14 @@
+import 'package:flutter/cupertino.dart';
+import 'package:learn_flutter/navigator.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 
-Pag fucknetNote = Pag(
-   "Text",
+NoteMeta fucknetNote = NoteMeta(
+  title: "网络问题",
+  builder: build,
 );
 
-build() {
-  fucknetNote.markdown(r'''
+build(Note note ,BuildContext context) {
+  note.markdown(r'''
 # 网络环境问题及方案
   
 ## flutter pub镜像慢

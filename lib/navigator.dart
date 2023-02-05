@@ -30,7 +30,8 @@ class NavigatorV2 extends StatelessWidget {
     return Navigator(
       key: navigatorKey,
       onPopPage: (route, result) {
-        logger.log("NavigatorV2.build.onPopPage - route:${route.settings.name}, result:$result");
+        logger.log(
+            "NavigatorV2.build.onPopPage - route:${route.settings.name}, result:$result");
         if (!route.didPop(result)) {
           return false;
         }
@@ -51,7 +52,7 @@ class NavigatorV2 extends StatelessWidget {
     );
   }
 
-  Future<R?> push<A, R>(Screen<A, R> screen) {
+  Future<R?> push<R>(Screen<R> screen) {
     return _routerDelegate._push(screen);
   }
 }
@@ -59,10 +60,11 @@ class NavigatorV2 extends StatelessWidget {
 class NParser extends RouteInformationParser<RouteInformation> {
   NParser({required this.rules});
 
-  final List<Path> rules;
+  final List<Peg> rules;
 
   @override
-  Future<RouteInformation> parseRouteInformation(RouteInformation routeInformation) {
+  Future<RouteInformation> parseRouteInformation(
+      RouteInformation routeInformation) {
     return SynchronousFuture(routeInformation);
   }
 
@@ -78,11 +80,12 @@ class NRouterDelegate extends RouterDelegate<RouteInformation>
     required this.first,
     required this.rules,
     required this.notFound,
-  }) : _pages = List.from([first.parse(Uri(path: first.path))!._createPage()], growable: true);
-  final Path<void, void> first;
-  final Path<void, void> notFound;
+  }) : _pages = List.from([first.parse(Uri(path: first.path))!._createPage()],
+            growable: true);
+  final Peg<void> first;
+  final Peg<void> notFound;
   final List<NPage> _pages;
-  final List<Path> rules;
+  final List<Peg> rules;
 
   @override
   final GlobalKey<NavigatorState> navigatorKey =
@@ -101,14 +104,15 @@ class NRouterDelegate extends RouterDelegate<RouteInformation>
   @override
   Future<void> setNewRoutePath(RouteInformation configuration) {
     var uri = Uri.parse(configuration.location ?? "/");
-    var p = rules.lastWhere((element) => uri.path == element.path, orElse: () => notFound);
+    var p = rules.lastWhere((element) => uri.path == element.path,
+        orElse: () => notFound);
     Screen? screen = p.parse(uri);
     screen ??= notFound.parse(uri)!;
     _push(screen);
     return SynchronousFuture(null);
   }
 
-  Future<R?> _push<A, R>(Screen<A, R> screen) {
+  Future<R?> _push<R>(Screen<R> screen) {
     var page = screen._createPage();
     //把completer的完成指责放权给各Screen后，框架需监听其完成后删除Page
     //并在onPopPage后
@@ -135,7 +139,7 @@ class NRouterDelegate extends RouterDelegate<RouteInformation>
 }
 
 /// A: Screen参数类型，R: push返回值类型
-class NPage<A, R> extends MaterialPage<R> {
+class NPage<R> extends MaterialPage<R> {
   NPage({
     required this.screen,
   }) : super(
@@ -144,13 +148,13 @@ class NPage<A, R> extends MaterialPage<R> {
           key: ValueKey(keyGen++), //key的临时用法
         );
   static int keyGen = 0;
-  final Screen<A, R> screen;
+  final Screen<R> screen;
 }
 
-typedef ScreenBuilder<A, R> = Screen<A, R> Function(Uri a);
+typedef ScreenBuilder<R> = Screen<R> Function(Uri a);
 
 /// A: Screen参数类型，R: push返回值类型
-mixin Screen<A, R> on Widget {
+mixin Screen<R> on Widget {
   @protected
   final Completer<R?> completer = Completer();
 
@@ -161,14 +165,14 @@ mixin Screen<A, R> on Widget {
     }
   }
 
-  NPage<A, R> _createPage() => NPage(screen: this);
+  NPage<R> _createPage() => NPage(screen: this);
 
   @protected
   Uri get uri;
 
   Future<R?> push(BuildContext context) {
     logger.log("$this.push");
-    return NavigatorV2.of(context).push<A, R>(this);
+    return NavigatorV2.of(context).push<R>(this);
   }
 
   @override
@@ -194,14 +198,25 @@ class DebugPagesLog extends StatelessWidget {
 }
 
 /// 范型A： 参数类型, R:结果类型
-class Path<A, R> {
-  Path({
+class PegImpl<R> implements Peg<R>{
+  PegImpl({
     required this.path,
     required this.parse,
   });
 
-  final Screen<A, R>? Function(Uri uri) parse;
+  @override
+  final Screen<R>? Function(Uri uri) parse;
   final String path;
+
+  @override
+  String toString() {
+    return path;
+  }
+}
+
+abstract class Peg<R> {
+  Screen<R>? Function(Uri uri) get parse;
+  String get path;
 
   @override
   String toString() {

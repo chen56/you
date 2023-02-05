@@ -1,29 +1,52 @@
 import 'dart:collection';
 
 import 'package:flutter/widgets.dart';
+import 'package:learn_flutter/navigator.dart';
+
+void Function(Note note, BuildContext context) _Empty = (_, __) {};
+
+class NoteMeta {
+  final String title;
+  final void Function(Note note, BuildContext context) builder;
+
+  NoteMeta({
+    required this.title,
+    required this.builder,
+  });
+
+  NoteMeta._empty()
+      : title = "",
+        builder = _Empty;
+}
 
 /// 用kids代替单词children,原因是children太长了
-class Pag with ChangeNotifier {
-  final String title;
-  final List<Pag> kids;
-  final Map<String, Pag> kidsMap = {};
-  Pag? _parent;
+class Note with ChangeNotifier   {
+  final String name;
+  final List<Note> kids;
+  final Map<String, Note> kidsMap = {};
+  Note? _parent;
   late final Map<String, Object> attributes;
 
-  Skeleton _skeleton = const _EmptySkeleton();
+  late final Skeleton _skeleton;
+  late final NoteMeta meta;
 
-  Pag(
-    this.title, {
+  Note(
+    this.name, {
+    NoteMeta? meta,
     Skeleton? skeleton,
     this.kids = const [],
   }) {
-    _skeleton = skeleton ?? _skeleton;
+    _skeleton = skeleton ?? _EmptySkeleton();
+    this.meta = meta ?? NoteMeta._empty();
+    attributes = _NoteAttributes(this);
+
     for (var child in kids) {
       child._parent = this;
-      kidsMap[child.title] = child;
+      kidsMap[child.name] = child;
     }
-    attributes = _NoteAttributes(this);
   }
+
+  // final Screen<R>? Function(Uri uri) parse;
 
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
@@ -48,23 +71,31 @@ class Pag with ChangeNotifier {
 
   bool get isRoot => _parent == null;
 
-  List<Pag> toList({bool includeThis = true}) {
+  String get path {
+    if (isRoot) return "/";
+    var parentPath = _parent!.path;
+    return parentPath == "/" ? "/$name" : "$parentPath/$name";
+  }
+
+  List<Note> toList({bool includeThis = true}) {
     var flatChildren = kids.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  Pag kid(String path) {
-    Pag? result = this;
+  Note kid(String path) {
+    Note? result = this;
     // expect("/".split("/"), ["",""]);
     // expect("/a".split("/"), ["","a"]);
     // expect("/a/".split("/"), ["","a",""]);
-    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split
+        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?.kidsMap[split];
       if (result == null) break;
     }
     assert(result != null, "child($path) not found");
     return result!;
   }
+
 }
 
 abstract class Skeleton {

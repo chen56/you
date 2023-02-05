@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learn_flutter/navigator.dart';
 import 'screens.dart';
 
-class NotFoundScreen extends StatelessWidget with Screen<void, void> {
+class NotFoundScreen extends StatelessWidget with Screen<void> {
   final Uri unknown;
 
   NotFoundScreen({super.key, required this.unknown});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/note/@common/note.dart';
-import 'package:learn_flutter/note/notes.dart';
+import 'package:learn_flutter/page.dart';
 import 'package:learn_flutter/note/material/text/Text/2.text_rich.dart' as text_hello;
 
 class RootSkeleton implements Skeleton {
@@ -33,7 +33,7 @@ class RootSkeleton implements Skeleton {
 }
 
 class NoteDrawerPart extends StatefulWidget {
-  final Pag root;
+  final Note root;
 
   const NoteDrawerPart(
     this.root, {
@@ -70,7 +70,7 @@ class NoteDrawerPartState extends State<NoteDrawerPart> {
 }
 
 // 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension TreeViewNote on Pag {
+extension TreeViewNote on Note {
   static const _extendAttrName = "catalog.TreeViewNote.extend";
 
   //展开状态
@@ -91,7 +91,7 @@ extension TreeViewNote on Pag {
 }
 
 class NoteLink extends StatelessWidget {
-  final Pag note;
+  final Note note;
 
   const NoteLink(this.note, {super.key});
 
@@ -108,7 +108,7 @@ class NoteLink extends StatelessWidget {
             note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down,
             // size: e.isLeaf ? 15 : null,
           ),
-          Text(note.title),
+          Text(note.name),
         ],
       ),
       dense: true,

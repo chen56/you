@@ -1,11 +1,13 @@
+import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 import '1.hello.dart' as stateful_hello ;
 
-Pag note = Pag(
-  "最原始的状态管理",
+NoteMeta note = NoteMeta(
+  title: "最原始的状态管理",
+  builder: build,
 );
 
-build() {
+build(Note note ,BuildContext context) {
   note.markdown(r'''
 ## 范例1 普通文本 
 

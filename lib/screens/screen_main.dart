@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learn_flutter/navigator.dart';
 import 'screens.dart';
 
-class HomeScreen extends StatelessWidget with Screen<void, void> {
+class HomeScreen extends StatelessWidget with Screen<void> {
   HomeScreen({super.key});
 
   @override

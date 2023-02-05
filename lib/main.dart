@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/note/material/text/Text/2.text_rich.dart' as text_hello;
-import 'package:learn_flutter/note/notes.dart';
+import 'package:learn_flutter/page.dart';
 
 import 'catalog.dart';
+import 'navigator.dart';
 
 void main() {
   runApp(const App());
@@ -19,7 +20,7 @@ class App extends StatelessWidget {
     //     primarySwatch: Colors.blue,
     //     useMaterial3: true,
     //   ),
-    //     // routeInformationParser:NRouterDelegate(),
+    //     routeInformationParser:NRouterDelegate(),
     // );
     return MaterialApp(
       title: 'Learn Flutter with Samples',
