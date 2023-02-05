@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'note/note.dart';
 
-class NoteDrawer extends StatefulWidget {
+class NoteDrawerPart extends StatefulWidget {
   final Note root;
 
-  const NoteDrawer(
+  const NoteDrawerPart(
     this.root, {
     Key? key,
   }) : super(key: key);
 
   @override
-  State<NoteDrawer> createState() => NoteDrawerState();
+  State<NoteDrawerPart> createState() => NoteDrawerPartState();
 }
 
-class NoteDrawerState extends State<NoteDrawer> {
-  NoteDrawerState();
+class NoteDrawerPartState extends State<NoteDrawerPart> {
+  NoteDrawerPartState();
 
   @override
   void initState() {
@@ -30,16 +30,11 @@ class NoteDrawerState extends State<NoteDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: MediaQuery.removePadding(
-        context: context,
-        //移除抽屉菜单顶部默认留白
-        removeTop: true,
-        child: ListView(
+      child: ListView(
           shrinkWrap: false,
-          padding: const EdgeInsets.all(10),
-          children: widget.root.toList(includeThis: false).map((e) => NoteItem(e)).toList(),
+          padding: const EdgeInsets.all(2),
+          children: widget.root.toList(includeThis: false).map((e) => NoteLink(e)).toList(),
         ),
-      ),
     );
   }
 }
@@ -65,10 +60,10 @@ extension TreeViewNote on Note {
   }
 }
 
-class NoteItem extends StatelessWidget {
+class NoteLink extends StatelessWidget {
   final Note note;
 
-  const NoteItem(this.note, {super.key});
+  const NoteLink(this.note, {super.key});
 
   @override
   Widget build(BuildContext context) {

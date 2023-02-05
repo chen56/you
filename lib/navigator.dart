@@ -2,163 +2,24 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/note/includes/log.dart';
-import 'package:learn_flutter/note/includes/log_router_delegate.dart';
 
-Logger logger = Logger();
-
-void main() {
-  runApp(App());
-}
-
-class App extends StatelessWidget {
-  MyRouterDelegate delegate =
-      MyRouterDelegate(rules: rules.list, first: rules.home, notFound: rules.notFound);
-
-  App({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerDelegate: LoggableRouterDelegate(delegate: delegate, logger: logger),
-      routeInformationParser: Parser(rules: rules.list),
-    );
-  }
-}
-
-class Parser extends RouteInformationParser<RouteInformation> {
-  Parser({required this.rules});
-
-  final List<Path> rules;
-
-  @override
-  Future<RouteInformation> parseRouteInformation(RouteInformation routeInformation) {
-    return SynchronousFuture(routeInformation);
-  }
-  @override
-  RouteInformation? restoreRouteInformation(RouteInformation configuration) {
-    return configuration;
-  }
-}
-
-
-class Paths {
-  static final List<Path> _list = List.empty(growable: true);
-
-  final root = _rule<void, void>("/", (_) => HomeScreen());
-  final home = _rule<void, void>("/home", (_) => HomeScreen());
-  final help = _rule<String, String>("/help", (uri) => HelpScreen.parse(uri));
-  final notFound = _rule<void, void>("/404", (uri) => NotFoundScreen(unknown: uri));
-
-  List<Path> get list => List.unmodifiable(_list);
-
-  Paths._();
-
-  static Path<A, R> _rule<A, R>(String name, Screen<A, R>? Function(Uri a) parse) {
-    var result = Path<A, R>(path: name, parse: parse);
-    _list.add(result);
-    return result;
-  }
-}
-
-// 单例
-Paths rules = Paths._();
-
-class HomeScreen extends StatelessWidget with Screen<void, void> {
-  HomeScreen({super.key});
-
-  @override
-  Uri get uri => Uri(path: rules.home.path);
-
-  @override
-  Widget build(BuildContext context) {
-    ScaffoldMessengerState sms = ScaffoldMessenger.of(context);
-    return Scaffold(
-      appBar: AppBar(title: const Text("HomeScreen navigator v2")),
-      body: Column(children: [
-        ElevatedButton(
-          child: const Text(
-              """String answer=await HelpScreen(question: "how about v2?").push(context)"""),
-          onPressed: () async {
-            String? answer = await HelpScreen(question: "how about v2?").push(context);
-            sms.showSnackBar(SnackBar(
-              duration: const Duration(milliseconds: 2000),
-              content: Text('answer: ${answer ?? "null(点了系统返回按钮)"}'),
-            ));
-          },
-        ),
-        const DebugPagesLog(),
-      ]),
-    );
-  }
-}
-
-class HelpScreen extends StatelessWidget with Screen<String, String> {
-  final String question;
-
-  HelpScreen({super.key, required this.question});
-
-  static Screen<String, String>? parse(Uri uri) {
-    String? question = uri.queryParameters["question"];
-    return question == null ? null : HelpScreen(question: question);
-  }
-
-  @override
-  Uri get uri => Uri(path: rules.help.path, queryParameters: {"question": question});
-
-  @override
-  Widget build(BuildContext context) {
-    option(String answer) => ElevatedButton(
-        child: Text('''completer.complete("$answer")'''),
-        onPressed: () => completer.complete(answer));
-    return Scaffold(
-      appBar: AppBar(title: const Text("HelpScreen")),
-      body: Column(
-        children: [
-          Text("question:$question "),
-          option("有v2吗？"),
-          option("v2被另一只狗吓跑了！"),
-          const DebugPagesLog(),
-        ],
-      ),
-    );
-  }
-}
-
-class NotFoundScreen extends StatelessWidget with Screen<void, void> {
-  final Uri unknown;
-
-  NotFoundScreen({super.key, required this.unknown});
-
-  @override
-  Widget build(BuildContext context) {
-    ScaffoldMessengerState sms = ScaffoldMessenger.of(context);
-    return Scaffold(
-      appBar: AppBar(title: Text(rules.notFound.path)),
-      body: Text("404 not found: $unknown"),
-    );
-  }
-
-  @override
-  Uri get uri => Uri(path: rules.notFound.path);
-}
+import 'log.dart';
 
 ////////////////////////////////////////////////
 // 上面是应用代码，下面是封装后的NavigatorV2高级Api
 ////////////////////////////////////////////////
 class NavigatorV2 extends StatelessWidget {
   const NavigatorV2._({
-    super.key,
     required this.navigatorKey,
     required this.pages,
     required this.notifyListeners,
-    required MyRouterDelegate routerDelegate,
+    required NRouterDelegate routerDelegate,
   }) : _routerDelegate = routerDelegate;
 
   final GlobalKey<NavigatorState> navigatorKey;
-  final List<MyPage> pages;
+  final List<NPage> pages;
   final Function() notifyListeners;
-  final MyRouterDelegate _routerDelegate;
+  final NRouterDelegate _routerDelegate;
 
   static NavigatorV2 of(BuildContext context) {
     return context.findAncestorWidgetOfExactType<NavigatorV2>()!;
@@ -195,16 +56,32 @@ class NavigatorV2 extends StatelessWidget {
   }
 }
 
-class MyRouterDelegate extends RouterDelegate<RouteInformation>
+class NParser extends RouteInformationParser<RouteInformation> {
+  NParser({required this.rules});
+
+  final List<Path> rules;
+
+  @override
+  Future<RouteInformation> parseRouteInformation(RouteInformation routeInformation) {
+    return SynchronousFuture(routeInformation);
+  }
+
+  @override
+  RouteInformation? restoreRouteInformation(RouteInformation configuration) {
+    return configuration;
+  }
+}
+
+class NRouterDelegate extends RouterDelegate<RouteInformation>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<RouteInformation> {
-  MyRouterDelegate({
+  NRouterDelegate({
     required this.first,
     required this.rules,
     required this.notFound,
   }) : _pages = List.from([first.parse(Uri(path: first.path))!.createPage()], growable: true);
   final Path<void, void> first;
   final Path<void, void> notFound;
-  final List<MyPage> _pages;
+  final List<NPage> _pages;
   final List<Path> rules;
 
   @override
@@ -258,8 +135,8 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
 }
 
 /// A: Screen参数类型，R: push返回值类型
-class MyPage<A, R> extends MaterialPage<R> {
-  MyPage({
+class NPage<A, R> extends MaterialPage<R> {
+  NPage({
     required this.screen,
   }) : super(
           child: screen,
@@ -284,7 +161,7 @@ mixin Screen<A, R> on Widget {
     }
   }
 
-  MyPage<A, R> createPage() => MyPage(screen: this);
+  NPage<A, R> createPage() => NPage(screen: this);
 
   @protected
   Uri get uri;

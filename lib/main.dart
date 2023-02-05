@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/notes/material/text/Text/2.text_rich.dart' as text_hello;
-import 'package:learn_flutter/notes/notes.dart';
+import 'package:learn_flutter/pages/note/material/text/Text/2.text_rich.dart' as text_hello;
+import 'package:learn_flutter/pages/note/notes.dart';
 
 import 'catalog.dart';
 
 void main() {
-  runApp(const LearnApp());
+  runApp(const App());
 }
 
-class LearnApp extends StatelessWidget {
-  const LearnApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +21,12 @@ class LearnApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: const Text("AppBar.title")),
-        drawer: NoteDrawer(noteRoot),
+        drawer: NoteDrawerPart(noteRoot),
         body: Center(
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(width: 300, child: NoteDrawerPart(noteRoot)),
               const text_hello.RichTextSample(),
               text_hello.params.path("text.data").builder(),
               StatefulBuilder(

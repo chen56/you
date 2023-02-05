@@ -1,446 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
-  </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="NONE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="为字体累死">
-      <change afterPath="$PROJECT_DIR$/lib/note/includes/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/note/includes/log.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/note/includes/log_router_delegate.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="3251bf5e-6a49-459d-a0a5-a8387dd73b71" name="Changes" comment="switch to dart 3.0">
+      <change afterPath="$PROJECT_DIR$/lib/log.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/navigator.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/index.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/note/state/StatefulBuilder/note.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/screen_404.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/screen_main.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/screens.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/dart/dart3.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.1.navigator_v2_only_pages_last_version.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_only_pages_last_version.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_args.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/4.navigator_v2_last_version.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/analysis_options.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/fonts/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/cache/fonts/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/catalog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/catalog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/app/drawer/1.drawer_in_body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/app/drawer/1.drawer_in_body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/app/drawer/2.drawer_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/app/drawer/2.drawer_header.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/basic/Card/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/basic/Card/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/basic/Divider/1.sample_divider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/basic/Divider/1.sample_divider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/basic/Divider/2.sample_vertical_divider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/basic/Divider/2.sample_vertical_divider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/cn_net_env/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/cn_net_env/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/debug/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/debug/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/dialog/1.sample_dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/dialog/1.sample_dialog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/dialog/2.alert_dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/dialog/2.alert_dialog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/Material/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/Material/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/app/1.hello_meterial_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/app/1.hello_meterial_app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/button/ElevatedButton/1.elevated_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/button/ElevatedButton/1.elevated_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/button/ElevatedButton/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/button/ElevatedButton/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/slider/1.slider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/slider/1.slider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/slider/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/slider/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/text/RichText/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/text/RichText/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/text/Text/1.text_normal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/text/Text/1.text_normal.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/text/Text/2.text_rich.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/text/Text/2.text_rich.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/material/text/Text/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/material/text/Text/note.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v1/ref.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/navigator/navigator_v1/ref.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/1.1.navigator_hello_v1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/navigator/navigator_v2/1.1.navigator_hello_v1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/1.2.navigator_hello_v2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/navigator/navigator_v2/1.2.navigator_hello_v2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/2.navigator_v2_result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/navigator/navigator_v2/2.navigator_v2_result.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_only_pages_last_version.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/navigator/navigator_v2/3.navigator_v2_only_pages_last_version.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/4.navigator_v2_last_version.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/navigator/navigator_v2/4.navigator_v2_last_version.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/notes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/notes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/page_view/page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/page_view/page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/scrollable/Dismissible/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/scrollable/Dismissible/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/scrollable/DraggableScrollableSheet/sample1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/scrollable/DraggableScrollableSheet/sample1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/1.hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/state/1.vanilla_state/1.hello.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.1.child.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/state/1.vanilla_state/2.1.child.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.2.notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/state/1.vanilla_state/2.2.notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/2.3.stateless_notifier.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/state/1.vanilla_state/2.3.stateless_notifier.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/notes/state/1.vanilla_state/note.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/note/state/1.vanilla_state/note.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/todo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Dart File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="46afb56b-b3e1-4ee3-b8a3-f6841535defc" />
-        <option name="url" value="git@github.com:chen56/learn_flutter.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="HierarchyBrowserManager">
-    <option name="SORT_ALPHABETICALLY" value="true" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/app/flutter/packages/flutter/lib/src/material/app.dart" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/app/flutter/packages/flutter/lib/src/widgets/app.dart" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/app/flutter/packages/flutter/lib/src/widgets/navigator.dart" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+  <component name="ProjectId" id="2LIwbkQDYawh8tCLAoV33qv74Gb" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
   </component>
-  <component name="ProjectId" id="2K81mkzYQdsPfmC1a4TfHb3n6EU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/cc/git/chen56/learn_flutter/lib/notes/navigator/navigator_v2",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Markdown",
-    "show.migrate.to.gradle.popup": "false"
+    "last_opened_file_path": "/Users/cc/git/chen56/x",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/notes/navigator/navigator_v2" />
-      <recent name="$PROJECT_DIR$/cache" />
-      <recent name="$PROJECT_DIR$/cache/fonts" />
-      <recent name="$PROJECT_DIR$/lib/notes/dialog" />
-      <recent name="$PROJECT_DIR$/fonts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/note/log" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/cache/canvaskit-wasm@0.37.1/bin" />
-      <recent name="$PROJECT_DIR$/cache" />
-      <recent name="$PROJECT_DIR$/lib/notes" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Flutter.ref.dart">
-    <configuration name="3.navigator_v2_only_pages_last_version.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/3.navigator_v2_only_pages_last_version.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="4.navigator_v2_last_version.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/4.navigator_v2_last_version.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="additionalArgs" value="-v" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true">
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="ref-understanding-navigator-v2.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/ref-understanding-navigator-v2.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ref.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/ref.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="x.1.navigator_v2_browser.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/notes/navigator/navigator_v2/x.1.navigator_v2_browser.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="learn_flutter" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="learn_flutter" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter.3.navigator_v2_only_pages_last_version.dart" />
-      <item itemvalue="Flutter.ref-understanding-navigator-v2.dart" />
-      <item itemvalue="Flutter.ref.dart" />
-      <item itemvalue="Flutter.4.navigator_v2_last_version.dart" />
-      <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Flutter.ref.dart" />
-        <item itemvalue="Flutter.x.1.navigator_v2_browser.dart" />
-        <item itemvalue="Flutter.ref-understanding-navigator-v2.dart" />
-        <item itemvalue="Flutter.4.navigator_v2_last_version.dart" />
-        <item itemvalue="Flutter.3.navigator_v2_only_pages_last_version.dart" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6bfa78b7-f024-4fbe-ac86-6a18e101dbe5" name="Changes" comment="" />
-      <created>1673341563462</created>
+      <changelist id="3251bf5e-6a49-459d-a0a5-a8387dd73b71" name="Changes" comment="" />
+      <created>1675571979015</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1673341563462</updated>
+      <updated>1675571979015</updated>
+      <workItem from="1675571982239" duration="2000" />
+      <workItem from="1675571985627" duration="476000" />
     </task>
-    <task id="LOCAL-00001" summary="ignore">
-      <created>1673342271625</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1673342271625</updated>
-    </task>
-    <task id="LOCAL-00002" summary="参数重构，貌似目前结构更合理，参数本身有isnullable属性">
-      <created>1673360853556</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1673360853556</updated>
-    </task>
-    <task id="LOCAL-00003" summary="参数重构，insert（插值） 概念不错，后面代码生成也简单点，把匹配insert(xxxx)的替换掉即可">
-      <created>1673512408109</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1673512408109</updated>
-    </task>
-    <task id="LOCAL-00004" summary="试探一下note tree">
-      <created>1673709696586</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1673709696586</updated>
-    </task>
-    <task id="LOCAL-00005" summary="试探一下note tree">
-      <created>1673709887966</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1673709887966</updated>
-    </task>
-    <task id="LOCAL-00006" summary="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有">
-      <created>1673775639390</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1673775639390</updated>
-    </task>
-    <task id="LOCAL-00007" summary="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管">
-      <created>1674025117535</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1674025117536</updated>
-    </task>
-    <task id="LOCAL-00008" summary="ValueNotifier + ValueListenableBuilder">
-      <created>1674122029791</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1674122029791</updated>
-    </task>
-    <task id="LOCAL-00009" summary="注释更新">
-      <created>1674123222645</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1674123222645</updated>
-    </task>
-    <task id="LOCAL-00010" summary="修订of方法到Widget上">
-      <created>1674125813785</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1674125813786</updated>
-    </task>
-    <task id="LOCAL-00011" summary="navigator v2的摸索，这玩意太麻烦复杂了，暂时放弃，准备搞v1试试">
-      <created>1674782412103</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1674782412103</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Divider">
-      <created>1674786308181</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1674786308181</updated>
-    </task>
-    <task id="LOCAL-00013" summary="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute">
-      <created>1674962918198</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1674962918198</updated>
-    </task>
-    <task id="LOCAL-00014" summary="navigator 2.0 准备做几个层级递进的例子">
-      <created>1675002155515</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1675002155515</updated>
-    </task>
-    <task id="LOCAL-00015" summary="navigator 2.0 准备做几个层级递进的例子">
-      <created>1675088732127</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1675088732127</updated>
-    </task>
-    <task id="LOCAL-00016" summary="navigator 1.0 摸索一下">
-      <created>1675152843162</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1675152843162</updated>
-    </task>
-    <task id="LOCAL-00017" summary="navigator 1.0 摸索一下">
-      <created>1675181261552</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1675181261552</updated>
-    </task>
-    <task id="LOCAL-00018" summary="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能">
-      <created>1675186198309</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1675186198309</updated>
-    </task>
-    <task id="LOCAL-00019" summary="navigator 1.0 摸索一下: 1.1Sample 保持原样，warpMainScreen 删掉的话，会要建其他Screen Class，也不见得简单">
-      <created>1675187799268</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1675187799268</updated>
-    </task>
-    <task id="LOCAL-00020" summary="navigator 1.0 摸索一下: 实现了v1，v2两个版本的helloworld，感觉解释力比较强，也足够简单">
-      <created>1675226222256</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1675226222256</updated>
-    </task>
-    <task id="LOCAL-00021" summary="navigator v2 增加返回结果: Future&lt;R&gt; push&lt;R&gt;(BuildContext context, RouteRule&lt;R&gt; rule)">
-      <created>1675265829099</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1675265829099</updated>
-    </task>
-    <task id="LOCAL-00022" summary="稍作调整">
-      <created>1675301221918</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1675301221918</updated>
-    </task>
-    <task id="LOCAL-00023" summary="增加push参数">
-      <created>1675334101199</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1675334101199</updated>
-    </task>
-    <task id="LOCAL-00024" summary="增加push参数">
-      <created>1675334108454</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1675334108454</updated>
-    </task>
-    <task id="LOCAL-00025" summary="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多">
-      <created>1675359209845</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1675359209845</updated>
-    </task>
-    <task id="LOCAL-00026" summary="解决字体和wasm下载问题">
-      <created>1675436142118</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1675436142118</updated>
-    </task>
-    <task id="LOCAL-00027" summary="dialog">
-      <created>1675439894505</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1675439894505</updated>
-    </task>
-    <task id="LOCAL-00028" summary="为字体累死">
-      <created>1675445586799</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1675445586799</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ignore" />
-    <MESSAGE value="参数重构，貌似目前结构更合理，参数本身有isnullable属性" />
-    <MESSAGE value="参数重构，insert（插值） 概念不错，后面代码生成也简单点，把匹配insert(xxxx)的替换掉即可" />
-    <MESSAGE value="试探一下note tree" />
-    <MESSAGE value="note tree 用ListView实现了一半，看来是可行的，可以模仿树行为，谁让flutter连个内置的tree都没有" />
-    <MESSAGE value="先暂停note机制的实现，学习和实现一些state的范例，以便理解本应的状态怎么管" />
-    <MESSAGE value="ValueNotifier + ValueListenableBuilder" />
-    <MESSAGE value="注释更新" />
-    <MESSAGE value="修订of方法到Widget上" />
-    <MESSAGE value="navigator v2的摸索，这玩意太麻烦复杂了，暂时放弃，准备搞v1试试" />
-    <MESSAGE value="Divider" />
-    <MESSAGE value="navigator 2.0 还是得搞一把2.0 ,但2.0得浏览器回退按钮触发的是setNewRoutePath，而不是popRoute" />
-    <MESSAGE value="navigator 2.0 准备做几个层级递进的例子" />
-    <MESSAGE value="navigator 1.0 摸索一下" />
-    <MESSAGE value="navigator 1.0 摸索一下: 1.1Sample有点复杂，应该去掉包装主屏的功能" />
-    <MESSAGE value="navigator 1.0 摸索一下: 1.1Sample 保持原样，warpMainScreen 删掉的话，会要建其他Screen Class，也不见得简单" />
-    <MESSAGE value="navigator 1.0 摸索一下: 实现了v1，v2两个版本的helloworld，感觉解释力比较强，也足够简单" />
-    <MESSAGE value="navigator v2 增加返回结果: Future&lt;R&gt; push&lt;R&gt;(BuildContext context, RouteRule&lt;R&gt; rule)" />
-    <MESSAGE value="稍作调整" />
-    <MESSAGE value="增加push参数" />
-    <MESSAGE value="去掉path 和routeRule 回归Screen纯构造器自然创建，简化了很多" />
-    <MESSAGE value="解决字体和wasm下载问题" />
-    <MESSAGE value="dialog" />
-    <MESSAGE value="为字体累死" />
-    <option name="LAST_COMMIT_MESSAGE" value="为字体累死" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$USER_HOME$/app/flutter/packages/flutter/lib/src/widgets/framework.dart</url>
-          <line>909</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="switch to dart 3.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch to dart 3.0" />
   </component>
 </project>
