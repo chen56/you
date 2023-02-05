@@ -1,16 +1,16 @@
 import 'package:learn_flutter/navigator.dart';
 import 'package:learn_flutter/note/@common/note.dart';
-import 'package:learn_flutter/note/dev/debug/note.dart';
+import 'package:learn_flutter/note/dev/debug/page.dart';
 import 'package:learn_flutter/note/dev/mirror/page.dart';
-import 'package:learn_flutter/note/material/button/ElevatedButton/note.dart';
-import 'package:learn_flutter/note/material/slider/note.dart';
-import 'package:learn_flutter/note/material/text/RichText/note.dart';
-import 'package:learn_flutter/note/material/text/Text/note.dart';
-import 'package:learn_flutter/note/state/1.vanilla_state/note.dart';
-import 'package:learn_flutter/note/state/StatefulBuilder/note.dart';
+import 'package:learn_flutter/note/material/button/ElevatedButton/page.dart';
+import 'package:learn_flutter/note/material/slider/page.dart';
+import 'package:learn_flutter/note/material/text/RichText/page.dart';
+import 'package:learn_flutter/note/material/text/Text/page.dart';
+import 'package:learn_flutter/note/state/1.vanilla_state/page.dart';
+import 'package:learn_flutter/note/state/StatefulBuilder/page.dart';
 import 'package:learn_flutter/page_frame.dart';
 
-import 'notFound/screen_404.dart';
+import 'not_found/page.dart';
 
 Note rootPage = Note(
   "/",
