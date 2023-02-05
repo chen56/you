@@ -1,10 +1,12 @@
+import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 
-Pag note = Pag(
-  "最原始的状态管理",
+NoteMeta note = NoteMeta(
+  title: "debug相关",
+  builder: build,
 );
 
-build() {
+build(Note note ,BuildContext context) {
   note.markdown(r'''
 ## 范例1 普通文本 
 

@@ -4,22 +4,22 @@ import 'package:learn_flutter/note/material/text/RichText//note.dart' as materia
 import 'package:learn_flutter/note/state/1.vanilla_state/note.dart' as vanilla_state;
 import 'package:learn_flutter/skeleton.dart';
 
-Pag rootPage = Pag("/", skeleton: RootSkeleton(), kids: [
-  Pag("/note", kids: [
-    Pag("material", kids: [
-      Pag("button", kids: []),
-      Pag("text", kids: [
-        material_text_text.note,
-        material_text_rich_text.note,
+Note rootPage = Note("/", skeleton: RootSkeleton(), kids: [
+  Note("note", kids: [
+    Note("material", kids: [
+      Note("button", kids: []),
+      Note("text", kids: [
+        Note("", meta: material_text_text.note),
+        Note("", meta: material_text_rich_text.note),
       ]),
     ]),
-    Pag("state", kids: [
-      vanilla_state.note,
+    Note("state", kids: [
+      Note("1.vanilla_state", meta: vanilla_state.note),
     ]),
   ]),
 ]);
 
-Pag $(path) => rootPage.kid(path);
+Note $(path) => rootPage.kid(path);
 
 var root = (
 /**/$:$("/"),
