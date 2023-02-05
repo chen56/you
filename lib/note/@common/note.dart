@@ -19,24 +19,29 @@ class NoteMeta {
         builder = _Empty;
 }
 
+typedef FrameBuilder = Frame Function(Note note);
+
+Frame _emptyFrameBuilder(note) => EmptyFrame(note);
+
 /// 用kids代替单词children,原因是children太长了
-class Note with ChangeNotifier   {
+class Note with ChangeNotifier implements Peg<void> {
   final String name;
   final List<Note> kids;
+  final List<Widget> widgets = List.empty(growable: true);
   final Map<String, Note> kidsMap = {};
   Note? _parent;
   late final Map<String, Object> attributes;
 
-  late final Frame _skeleton;
+  late final FrameBuilder _frameBuilder;
   late final NoteMeta meta;
 
   Note(
     this.name, {
     NoteMeta? meta,
-    Frame? frame,
+    FrameBuilder? frame,
     this.kids = const [],
   }) {
-    _skeleton = frame ?? _EmptyFrame();
+    _frameBuilder = frame ?? _emptyFrameBuilder;
     this.meta = meta ?? NoteMeta._empty();
     attributes = _NoteAttributes(this);
 
@@ -50,22 +55,20 @@ class Note with ChangeNotifier   {
 
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
-  Frame get skeleton {
-    if (isRoot) return _skeleton;
-    return _skeleton is _EmptyFrame ? _skeleton : _parent!.skeleton;
+  FrameBuilder get skeleton {
+    if (isRoot) return _frameBuilder;
+    return _frameBuilder != _emptyFrameBuilder
+        ? _frameBuilder
+        : _parent!.skeleton;
   }
 
-  void set skeleton(Frame value) {
-    _skeleton = value;
-  }
+  get uri => Uri(path: path);
 
   bool get isLeaf => kids.isEmpty;
 
   void sample(Widget sample) {}
 
-  void markdown(String s) {
-    // print(s);
-  }
+  void markdown(String s) {}
 
   int get level => isRoot ? 0 : _parent!.level + 1;
 
@@ -96,21 +99,28 @@ class Note with ChangeNotifier   {
     return result!;
   }
 
+  @override
+  Screen<void>? Function(Uri uri) get parse => (uri)=>_frameBuilder(this);
+
 }
 
-abstract class Frame {
-  const Frame();
+abstract class Frame implements Screen {}
 
-  Widget embed(Widget child);
-}
+class EmptyFrame extends StatelessWidget with Frame, Screen {
+  final Note note;
 
-class _EmptyFrame extends Frame {
-  const _EmptyFrame();
+  EmptyFrame(this.note);
 
   @override
-  Widget embed(Widget child) {
-    return child;
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Text("_emptyFrame(page:${note.uri})"),
+      ...note.widgets,
+    ]);
   }
+
+  @override
+  Uri get uri => note.uri;
 }
 
 class _NoteAttributes extends MapBase<String, Object> {

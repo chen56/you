@@ -1,11 +1,16 @@
+
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/navigator.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 import 'package:learn_flutter/page.dart';
-import 'package:learn_flutter/note/material/text/Text/2.text_rich.dart' as text_hello;
 
-class RootFrame implements Frame {
+class RootFrame extends StatelessWidget with Screen implements Frame {
+  final Note note;
+
+  RootFrame(this.note, {super.key});
+
   @override
-  Widget embed(Widget child) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("AppBar.title")),
       // drawer: NoteDrawerPart(noteRoot),
@@ -14,12 +19,7 @@ class RootFrame implements Frame {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(width: 200, child: NoteDrawerPart(rootPage)),
-            // const text_hello.RichTextSample(),
-            text_hello.params.path("text.data").builder(),
-            StatefulBuilder(
-                builder: (BuildContext context, StateSetter setState) =>
-                    text_hello.params.path("text.textAlign").builder()),
-            // text_hello.params.path("text.textAlign").builder(),
+            ...note.widgets,
           ],
         ),
       ),
@@ -30,6 +30,9 @@ class RootFrame implements Frame {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
+  @override
+  Uri get uri => note.uri;
 }
 
 class NoteDrawerPart extends StatefulWidget {
@@ -63,7 +66,10 @@ class NoteDrawerPartState extends State<NoteDrawerPart> {
       child: ListView(
         shrinkWrap: false,
         padding: const EdgeInsets.all(20),
-        children: widget.root.toList(includeThis: false).map((e) => NoteLink(e)).toList(),
+        children: widget.root
+            .toList(includeThis: false)
+            .map((e) => NoteLink(e))
+            .toList(),
       ),
     );
   }

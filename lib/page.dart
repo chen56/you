@@ -1,3 +1,4 @@
+import 'package:learn_flutter/navigator.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 import 'package:learn_flutter/note/dev/debug/note.dart';
 import 'package:learn_flutter/note/dev/mirror/page.dart';
@@ -7,50 +8,58 @@ import 'package:learn_flutter/note/material/text/RichText/note.dart';
 import 'package:learn_flutter/note/material/text/Text/note.dart';
 import 'package:learn_flutter/note/state/1.vanilla_state/note.dart';
 import 'package:learn_flutter/note/state/StatefulBuilder/note.dart';
-import 'package:learn_flutter/skeleton.dart';
+import 'package:learn_flutter/page_frame.dart';
 
-Note rootPage = Note("/", frame: RootFrame(), kids: [
-  Note("note", kids: [
-    Note("material", kids: [
-      Note("button", kids: [
-        Note("ElevatedButton", meta: widgetElevatedButtonNote),
+import 'notFound/screen_404.dart';
+
+Note rootPage = Note(
+  "/",
+  frame: (note) => RootFrame(note),
+  kids: [
+    Note("note", kids: [
+      Note("material", kids: [
+        Note("button", kids: [
+          Note("ElevatedButton", meta: widgetElevatedButtonNote),
+        ]),
+        Note("text", kids: [
+          Note("RichText", meta: widgetTextNote),
+          Note("Text", meta: widgetRichTextNote),
+        ]),
+        Note("slider", meta: widgetSliderNote),
       ]),
-      Note("text", kids: [
-        Note("RichText", meta: widgetTextNote),
-        Note("Text", meta: widgetRichTextNote),
+      Note("state", kids: [
+        Note("1.vanilla_state", meta: vanillaStateNote),
+        Note("StatefulBuilder", meta: widgetStatefulBuilderNote),
       ]),
-      Note("slider", meta: widgetSliderNote),
+      Note("dev", kids: [
+        Note("debug", meta: devDebugNote),
+        Note("mirror", meta: devMirrorNote),
+      ]),
     ]),
-    Note("state", kids: [
-      Note("1.vanilla_state", meta: vanillaStateNote),
-      Note("StatefulBuilder", meta: widgetStatefulBuilderNote),
-    ]),
-    Note("dev", kids: [
-      Note("debug", meta: devDebugNote),
-      Note("mirror", meta: devMirrorNote),
-    ]),
-  ]),
-]);
-
-Note $(path) => rootPage.kid(path);
-
-var root = (
-/**/$:$("/"),
-/**/note: (
-/****/material : (
-/******/text:(
-/********/RichText: $("/note/text/RichText"),
-/********/Text: $("/note/text/Text"),
-/****/),
-/****/),
-/****/dev : (
-/******/mirror: $("/note/dev/mirror"),
-/****/),
-/**/)
+  ],
 );
 
-main() {
-  root.$.skeleton = RootFrame();
-  // var x = pages.self./**/;
+Note page(path) => rootPage.kid(path);
+
+class Paths {
+  static final List<Peg> _list = List.empty(growable: true);
+
+  final home = page("/note/meterial/button/ElevatedButton");
+  final notFound = _rule<void>("/404", (uri) => NotFoundScreen(unknown: uri));
+
+  List<Peg> get list => List.unmodifiable(_list);
+
+  Paths._();
+
+  static Peg<R> _rule<R>(String path, Screen<R>? Function(Uri a) parse) {
+    var result = PegImpl<R>(path: path, parse: parse);
+    _list.add(result);
+    return result;
+  }
 }
 
+var paths = Paths._();
+
+main() {
+  // var x = pages.self./**/;
+}

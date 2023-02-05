@@ -198,7 +198,7 @@ class DebugPagesLog extends StatelessWidget {
 }
 
 /// 范型A： 参数类型, R:结果类型
-class PegImpl<R> implements Peg<R>{
+class PegImpl<R> implements Peg<R> {
   PegImpl({
     required this.path,
     required this.parse,
@@ -216,6 +216,7 @@ class PegImpl<R> implements Peg<R>{
 
 abstract class Peg<R> {
   Screen<R>? Function(Uri uri) get parse;
+
   String get path;
 
   @override
