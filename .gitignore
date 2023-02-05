@@ -1,5 +1,6 @@
 # See https://www.dartlang.org/guides/libraries/private-files
 
+# idea 
 .idea
 
 # Files and directories created by pub
@@ -22,4 +23,5 @@ doc/api/
 *.js.deps
 *.js.map
 
+# macbook
 .DS_Store
