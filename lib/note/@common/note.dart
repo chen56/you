@@ -2,24 +2,25 @@ import 'dart:collection';
 
 import 'package:flutter/widgets.dart';
 
+/// 用kids代替单词children,原因是children太长了
 class Pag with ChangeNotifier {
   final String title;
-  final List<Pag> children;
-  final Map<String, Pag> childrenMap = {};
+  final List<Pag> kids;
+  final Map<String, Pag> kidsMap = {};
   Pag? _parent;
   late final Map<String, Object> attributes;
 
-  Skeleton _skeleton = EmptySkeleton();
+  Skeleton _skeleton = const _EmptySkeleton();
 
   Pag(
     this.title, {
     Skeleton? skeleton,
-    this.children = const [],
+    this.kids = const [],
   }) {
     _skeleton = skeleton ?? _skeleton;
-    for (var child in children) {
+    for (var child in kids) {
       child._parent = this;
-      childrenMap[child.title] = child;
+      kidsMap[child.title] = child;
     }
     attributes = _NoteAttributes(this);
   }
@@ -28,10 +29,14 @@ class Pag with ChangeNotifier {
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
   Skeleton get skeleton {
     if (isRoot) return _skeleton;
-    return _skeleton is EmptySkeleton ? _skeleton : _parent!.skeleton;
+    return _skeleton is _EmptySkeleton ? _skeleton : _parent!.skeleton;
   }
 
-  bool get isLeaf => children.isEmpty;
+  void set skeleton(Skeleton value) {
+    _skeleton = value;
+  }
+
+  bool get isLeaf => kids.isEmpty;
 
   void sample(Widget sample) {}
 
@@ -44,17 +49,17 @@ class Pag with ChangeNotifier {
   bool get isRoot => _parent == null;
 
   List<Pag> toList({bool includeThis = true}) {
-    var flatChildren = children.expand((element) => element.toList()).toList();
+    var flatChildren = kids.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  Pag child(String path) {
+  Pag kid(String path) {
     Pag? result = this;
     // expect("/".split("/"), ["",""]);
     // expect("/a".split("/"), ["","a"]);
     // expect("/a/".split("/"), ["","a",""]);
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
-      result = result?.childrenMap[split];
+      result = result?.kidsMap[split];
       if (result == null) break;
     }
     assert(result != null, "child($path) not found");
@@ -63,10 +68,14 @@ class Pag with ChangeNotifier {
 }
 
 abstract class Skeleton {
+  const Skeleton();
+
   Widget embed(Widget child);
 }
 
-class EmptySkeleton extends Skeleton {
+class _EmptySkeleton extends Skeleton {
+  const _EmptySkeleton();
+
   @override
   Widget embed(Widget child) {
     return child;

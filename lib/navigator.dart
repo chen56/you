@@ -78,7 +78,7 @@ class NRouterDelegate extends RouterDelegate<RouteInformation>
     required this.first,
     required this.rules,
     required this.notFound,
-  }) : _pages = List.from([first.parse(Uri(path: first.path))!.createPage()], growable: true);
+  }) : _pages = List.from([first.parse(Uri(path: first.path))!._createPage()], growable: true);
   final Path<void, void> first;
   final Path<void, void> notFound;
   final List<NPage> _pages;
@@ -109,7 +109,7 @@ class NRouterDelegate extends RouterDelegate<RouteInformation>
   }
 
   Future<R?> _push<A, R>(Screen<A, R> screen) {
-    var page = screen.createPage();
+    var page = screen._createPage();
     //把completer的完成指责放权给各Screen后，框架需监听其完成后删除Page
     //并在onPopPage后
     screen.completer.future.whenComplete(() {
@@ -161,7 +161,7 @@ mixin Screen<A, R> on Widget {
     }
   }
 
-  NPage<A, R> createPage() => NPage(screen: this);
+  NPage<A, R> _createPage() => NPage(screen: this);
 
   @protected
   Uri get uri;

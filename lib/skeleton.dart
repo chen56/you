@@ -13,7 +13,7 @@ class RootSkeleton implements Skeleton {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(width: 200, child: NoteDrawerPart(root)),
+            SizedBox(width: 200, child: NoteDrawerPart(rootPage)),
             // const text_hello.RichTextSample(),
             text_hello.params.path("text.data").builder(),
             StatefulBuilder(
