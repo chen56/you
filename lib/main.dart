@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/pages/note/material/text/Text/2.text_rich.dart' as text_hello;
-import 'package:learn_flutter/pages/note/notes.dart';
+import 'package:learn_flutter/note/material/text/Text/2.text_rich.dart' as text_hello;
+import 'package:learn_flutter/note/notes.dart';
 
 import 'catalog.dart';
 
@@ -13,6 +13,14 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return MaterialApp.router(
+    //   title: 'Learn Flutter with Samples',
+    //   theme: ThemeData(
+    //     primarySwatch: Colors.blue,
+    //     useMaterial3: true,
+    //   ),
+    //     // routeInformationParser:NRouterDelegate(),
+    // );
     return MaterialApp(
       title: 'Learn Flutter with Samples',
       theme: ThemeData(
@@ -21,13 +29,13 @@ class App extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: const Text("AppBar.title")),
-        drawer: NoteDrawerPart(noteRoot),
+        // drawer: NoteDrawerPart(noteRoot),
         body: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(width: 300, child: NoteDrawerPart(noteRoot)),
-              const text_hello.RichTextSample(),
+              SizedBox(width: 200, child: NoteDrawerPart(root)),
+              // const text_hello.RichTextSample(),
               text_hello.params.path("text.data").builder(),
               StatefulBuilder(
                   builder: (BuildContext context, StateSetter setState) =>

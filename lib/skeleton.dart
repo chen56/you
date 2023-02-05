@@ -1,6 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/note/@common/note.dart';
+import 'package:learn_flutter/note/notes.dart';
+import 'package:learn_flutter/note/material/text/Text/2.text_rich.dart' as text_hello;
 
-import 'note/@common/note.dart';
+class RootSkeleton implements Skeleton {
+  @override
+  Widget embed(Widget child) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("AppBar.title")),
+      // drawer: NoteDrawerPart(noteRoot),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(width: 200, child: NoteDrawerPart(root)),
+            // const text_hello.RichTextSample(),
+            text_hello.params.path("text.data").builder(),
+            StatefulBuilder(
+                builder: (BuildContext context, StateSetter setState) =>
+                    text_hello.params.path("text.textAlign").builder()),
+            // text_hello.params.path("text.textAlign").builder(),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
 
 class NoteDrawerPart extends StatefulWidget {
   final Pag root;
@@ -31,10 +61,10 @@ class NoteDrawerPartState extends State<NoteDrawerPart> {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-          shrinkWrap: false,
-          padding: const EdgeInsets.all(20),
-          children: widget.root.toList(includeThis: false).map((e) => NoteLink(e)).toList(),
-        ),
+        shrinkWrap: false,
+        padding: const EdgeInsets.all(20),
+        children: widget.root.toList(includeThis: false).map((e) => NoteLink(e)).toList(),
+      ),
     );
   }
 }

@@ -7,9 +7,9 @@ class Paths {
 
   final root = _rule<void, void>("/", (_) => HomeScreen());
   final home = _rule<void, void>("/home", (_) => HomeScreen());
-
-  // final help = _rule<String, String>("/help", (uri) => HelpScreen.parse(uri));
   final notFound = _rule<void, void>("/404", (uri) => NotFoundScreen(unknown: uri));
+  final note = _rule<void, void>("/note", (uri) => NotFoundScreen(unknown: uri));
+  late final x = print(note.path);
 
   List<Path> get list => List.unmodifiable(_list);
 
@@ -21,6 +21,11 @@ class Paths {
     return result;
   }
 }
+class Note{
 
+}
 // 单例
 Paths rules = Paths._();
+main(){
+  print(rules);
+}

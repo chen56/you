@@ -1,3 +1,0 @@
-class WidgetMate {
-  const WidgetMate();
-}
