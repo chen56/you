@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/navigator.dart';
-import 'package:learn_flutter/note/@common/note.dart';
+import 'package:learn_flutter/note/note.dart';
 import 'package:learn_flutter/page.dart';
 
-class RootFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
-  final P<T> note;
+class NoteFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
+  final Dir<T> note;
 
-  RootFrame(this.note, {super.key});
+  NoteFrame(this.note, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +32,14 @@ class RootFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
   }
 
   @override
-  String get location => note.uri;
+  String get location => note.path;
 
   @override
   Rule<T> get rule => note;
 }
 
 class NoteDrawerPart extends StatefulWidget {
-  final P root;
+  final Dir root;
 
   const NoteDrawerPart(
     this.root, {
@@ -76,7 +76,7 @@ class NoteDrawerPartState extends State<NoteDrawerPart> {
 }
 
 // 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension TreeViewNote on P {
+extension TreeViewNote on Dir {
   static const _extendAttrName = "catalog.TreeViewNote.extend";
 
   //展开状态
@@ -97,7 +97,7 @@ extension TreeViewNote on P {
 }
 
 class NoteLink extends StatelessWidget {
-  final P note;
+  final Dir note;
 
   const NoteLink(this.note, {super.key});
 

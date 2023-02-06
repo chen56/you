@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
-import 'package:learn_flutter/note/@common/note.dart';
+import 'package:learn_flutter/note/note.dart';
 
 NoteMeta devMirrorNote = NoteMeta(
   title: "网络问题",
   builder: build,
 );
 
-build(Pen note ,BuildContext context) {
+build(NotePen note ,BuildContext context) {
   note.markdown(r'''
 # 网络环境问题及方案
   

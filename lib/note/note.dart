@@ -1,32 +1,34 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/navigator.dart';
 
-/// <T> [Navigator.push] 的返回类型
-class PageMeta<T> {}
 
 /// 所有的Note Page 都无返回
 class NoteMeta extends PageMeta<void> {
   final String title;
-  final void Function(Pen<void> note, BuildContext context) builder;
+  final void Function(NotePen<void> note, BuildContext context) builder;
 
   NoteMeta({
     required this.title,
     required this.builder,
   });
+
+  List<Widget> build(BuildContext context, Dir p) {
+    //Pen一次性用品，用完丢弃，防止Flutter框架多次刷新造成的状态问题
+    NotePen<void> pen = NotePen(page: p);
+    builder(pen, context);
+    return pen.widgets;
+  }
 }
 
-typedef FrameBuilder = Frame<T> Function<T>(P<T> note);
-
-Frame<T> _emptyFrameBuilder<T>(note) => EmptyFrame<T>(note);
-
-class Pen<T> {
+class NotePen<T> {
   final List<Widget> _widgets = List.empty(growable: true);
-  final P<T> page;
+  final Dir<T> page;
 
-  Pen({required this.page});
+  List<Widget> get widgets => List.unmodifiable(_widgets);
+
+  NotePen({required this.page});
 
   void sample(Widget sample) {
     _widgets.add(Text("sample: $sample")); //临时实现
@@ -37,17 +39,26 @@ class Pen<T> {
   }
 }
 
+/// <T> [Navigator.push] 的返回类型
+class PageMeta<T> {
+
+}
+
+typedef FrameBuilder = Frame<T> Function<T>(Dir<T> note);
+
+Frame<T> _emptyFrameBuilder<T>(note) => EmptyFrame<T>(note);
+
 /// 用kids代替单词children,原因是children太长了
-class P<T> with ChangeNotifier implements Rule<T> {
+class Dir<T> with ChangeNotifier implements Rule<T> {
   final String name;
-  final List<P> kids;
-  final Map<String, P> kidsMap = {};
-  P? _parent;
+  final List<Dir> kids;
+  final Map<String, Dir> kidsMap = {};
+  late final Dir? _parent;
   late final Map<String, Object> attributes;
   late final FrameBuilder _frameBuilder;
   late final NoteMeta? meta;
 
-  P(
+  Dir(
     this.name, {
     this.meta,
     FrameBuilder? frame,
@@ -62,11 +73,11 @@ class P<T> with ChangeNotifier implements Rule<T> {
     }
   }
 
+  bool get hasPage => meta != null;
+
   List<Widget> build(BuildContext context) {
-    //Pen一次性用品，用完丢弃，防止Flutter框架多次刷新造成的状态问题
-    Pen<T> pen = Pen(page: this);
-    meta?.builder(pen, context);
-    return List.unmodifiable(pen._widgets);
+    if (meta == null) return List.empty();
+    return meta!.build(context, this);
   }
 
   // final Screen<R>? Function(Uri uri) parse;
@@ -78,27 +89,26 @@ class P<T> with ChangeNotifier implements Rule<T> {
     return _frameBuilder != _emptyFrameBuilder ? _frameBuilder : _parent!.frame;
   }
 
-  get uri => path;
-
   bool get isLeaf => kids.isEmpty;
 
   int get level => isRoot ? 0 : _parent!.level + 1;
 
   bool get isRoot => _parent == null;
 
+  @override
   String get path {
     if (isRoot) return "/";
     var parentPath = _parent!.path;
     return parentPath == "/" ? "/$name" : "$parentPath/$name";
   }
 
-  List<P> toList({bool includeThis = true}) {
+  List<Dir> toList({bool includeThis = true}) {
     var flatChildren = kids.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  P kid(String path) {
-    P? result = this;
+  Dir kid(String path) {
+    Dir? result = this;
     // expect("/".split("/"), ["",""]);
     // expect("/a".split("/"), ["","a"]);
     // expect("/a/".split("/"), ["","a",""]);
@@ -110,8 +120,6 @@ class P<T> with ChangeNotifier implements Rule<T> {
     return result!;
   }
 
-  // /note/material/button/ElevatedButton
-  // /note/meterial/button/ElevatedButton
   @override
   Screen<T> Function(String path) get parse => (uri) => frame<T>(this);
 
@@ -125,7 +133,7 @@ class P<T> with ChangeNotifier implements Rule<T> {
       return "Page($path ,kids:${kids.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
-      for (P n in toList()) {
+      for (Dir n in toList()) {
         sb.write("$n\n");
       }
       return sb.toString();
@@ -136,7 +144,7 @@ class P<T> with ChangeNotifier implements Rule<T> {
 abstract class Frame<T> implements Screen<T> {}
 
 class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
-  final P<T> note;
+  final Dir<T> note;
 
   EmptyFrame(this.note, {super.key});
 
@@ -151,10 +159,7 @@ class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
   }
 
   @override
-  Uri get uri => note.uri;
-
-  @override
-  String get location => note.uri.toString();
+  String get location => note.path;
 
   @override
   Rule<T> get rule => note;

@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/note/@common/note.dart';
+import 'package:learn_flutter/note/note.dart';
 
 import '1.elevated_button.dart';
 
@@ -8,7 +8,7 @@ NoteMeta widgetElevatedButtonNote = NoteMeta(
   builder: build,
 );
 
-build(Pen note, BuildContext context) {
+build(NotePen note, BuildContext context) {
   note.markdown(r'''
 ## 范例1 button 
 

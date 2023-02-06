@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/note/@common/note.dart';
+import 'package:learn_flutter/note/note.dart';
 
 import '1.text_normal.dart';
 import '2.text_rich.dart';
@@ -9,7 +9,7 @@ NoteMeta widgetTextNote = NoteMeta(
   builder: build,
 );
 
-build(Pen note ,BuildContext context) {
+build(NotePen note ,BuildContext context) {
   note.markdown(r'''
 ## 范例1 普通文本 
 
