@@ -18,6 +18,7 @@ class TODO1 extends StatelessWidget {
 
 class TODO2_navigator{
    //route.settings 如果是Page，会在Page更新时回调Route.xxxx?
+  //当前Page模型如何处理参数
 
 }
 

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/navigator.dart';
 import 'package:learn_flutter/note/@common/note.dart';
@@ -18,7 +17,7 @@ class RootFrame extends StatelessWidget with Screen implements Frame {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(width: 200, child: NoteDrawerPart(rootPage)),
+            SizedBox(width: 200, child: NoteDrawerPart(root)),
             ...note.widgets,
           ],
         ),
@@ -32,7 +31,10 @@ class RootFrame extends StatelessWidget with Screen implements Frame {
   }
 
   @override
-  Uri get uri => note.uri;
+  String get location => note.uri;
+
+  @override
+  Rule get rule => note;
 }
 
 class NoteDrawerPart extends StatefulWidget {
@@ -66,10 +68,7 @@ class NoteDrawerPartState extends State<NoteDrawerPart> {
       child: ListView(
         shrinkWrap: false,
         padding: const EdgeInsets.all(20),
-        children: widget.root
-            .toList(includeThis: false)
-            .map((e) => NoteLink(e))
-            .toList(),
+        children: widget.root.toList(includeThis: false).map((e) => NoteLink(e)).toList(),
       ),
     );
   }

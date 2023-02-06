@@ -1,9 +1,8 @@
 import 'dart:async';
+import 'dart:core';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-import 'log.dart';
 
 ////////////////////////////////////////////////
 // 上面是应用代码，下面是封装后的NavigatorV2高级Api
@@ -13,13 +12,13 @@ class NavigatorV2 extends StatelessWidget {
     required this.navigatorKey,
     required this.pages,
     required this.notifyListeners,
-    required NRouterDelegate routerDelegate,
+    required MyRouterDelegate routerDelegate,
   }) : _routerDelegate = routerDelegate;
 
   final GlobalKey<NavigatorState> navigatorKey;
-  final List<NPage> pages;
+  final List<MyPage> pages;
   final Function() notifyListeners;
-  final NRouterDelegate _routerDelegate;
+  final MyRouterDelegate _routerDelegate;
 
   static NavigatorV2 of(BuildContext context) {
     return context.findAncestorWidgetOfExactType<NavigatorV2>()!;
@@ -30,8 +29,6 @@ class NavigatorV2 extends StatelessWidget {
     return Navigator(
       key: navigatorKey,
       onPopPage: (route, result) {
-        logger.log(
-            "NavigatorV2.build.onPopPage - route:${route.settings.name}, result:$result");
         if (!route.didPop(result)) {
           return false;
         }
@@ -41,8 +38,8 @@ class NavigatorV2 extends StatelessWidget {
         var page = pages.removeLast();
         //把completer的完成指责放权给各Screen自己后，
         //如果由系统back button触发onPopPage，框架应使completer完成，要不会泄露Future
-        if (!page.screen.completer.isCompleted) {
-          page.screen.completer.complete(null);
+        if (!page.completer.isCompleted) {
+          page.completer.complete(null);
         }
         notifyListeners();
         return true;
@@ -52,19 +49,18 @@ class NavigatorV2 extends StatelessWidget {
     );
   }
 
-  Future<R?> push<R>(Screen<R> screen) {
-    return _routerDelegate._push(screen);
+  Future<R?> push<R>(String location) {
+    return _routerDelegate._push<R>(location);
   }
 }
 
-class NParser extends RouteInformationParser<RouteInformation> {
-  NParser({required this.rules});
+class Parser extends RouteInformationParser<RouteInformation> {
+  Parser({required this.rules});
 
-  final List<Peg> rules;
+  final List<Rule> rules;
 
   @override
-  Future<RouteInformation> parseRouteInformation(
-      RouteInformation routeInformation) {
+  Future<RouteInformation> parseRouteInformation(RouteInformation routeInformation) {
     return SynchronousFuture(routeInformation);
   }
 
@@ -74,18 +70,17 @@ class NParser extends RouteInformationParser<RouteInformation> {
   }
 }
 
-class NRouterDelegate extends RouterDelegate<RouteInformation>
+class MyRouterDelegate extends RouterDelegate<RouteInformation>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<RouteInformation> {
-  NRouterDelegate({
-    required this.first,
+  MyRouterDelegate({
     required this.rules,
+    required this.first,
     required this.notFound,
-  }) : _pages = List.from([first.parse(Uri(path: first.path))!._createPage()],
-            growable: true);
-  final Peg<void> first;
-  final Peg<void> notFound;
-  final List<NPage> _pages;
-  final List<Peg> rules;
+  }) : _pages = List.from([], growable: true);
+  final Rule<void> first;
+  final Rule<void> notFound;
+  final List<MyPage> _pages;
+  final List<Rule> rules;
 
   @override
   final GlobalKey<NavigatorState> navigatorKey =
@@ -103,27 +98,28 @@ class NRouterDelegate extends RouterDelegate<RouteInformation>
 
   @override
   Future<void> setNewRoutePath(RouteInformation configuration) {
-    var uri = Uri.parse(configuration.location ?? "/");
-    var p = rules.lastWhere((element) => uri.path == element.path,
-        orElse: () => notFound);
-    Screen? screen = p.parse(uri);
-    screen ??= notFound.parse(uri)!;
-    _push(screen);
+    _push(configuration.location ?? "/");
     return SynchronousFuture(null);
   }
 
-  Future<R?> _push<R>(Screen<R> screen) {
-    var page = screen._createPage();
+  Rule match(String location) {
+    Uri uri = Uri.parse(location);
+    return rules.lastWhere((element) => uri.path == element.path, orElse: () => notFound);
+  }
+
+  Future<R?> _push<R>(String location) {
+    Rule rule = match(location);
+    Screen screen = rule.parse(location);
+    MyPage page = screen.page;
     //把completer的完成指责放权给各Screen后，框架需监听其完成后删除Page
     //并在onPopPage后
-    screen.completer.future.whenComplete(() {
-      logger.log("MyRouterDelegate.push.whenComplete - page:${page.name}  ");
+    page.completer.future.whenComplete(() {
       _pages.remove(page);
       notifyListeners();
     });
     _pages.add(page);
     notifyListeners();
-    return screen.completer.future;
+    return page.completer.future as Future<R?>;
   }
 
   @override
@@ -139,45 +135,37 @@ class NRouterDelegate extends RouterDelegate<RouteInformation>
 }
 
 /// A: Screen参数类型，R: push返回值类型
-class NPage<R> extends MaterialPage<R> {
-  NPage({
-    required this.screen,
-  }) : super(
-          child: screen,
-          name: screen.uri.toString(),
-          key: ValueKey(keyGen++), //key的临时用法
-        );
-  static int keyGen = 0;
-  final Screen<R> screen;
-}
+class MyPage<R> extends MaterialPage<R> {
+  MyPage({required this.rule, required super.name, required super.child})
+      : super(key: ValueKey(keyGen++));
 
-typedef ScreenBuilder<R> = Screen<R> Function(Uri a);
+  @protected
+  final Completer<R?> completer = Completer();
+
+  static int keyGen = 0;
+
+  final Rule<R> rule;
+}
 
 /// A: Screen参数类型，R: push返回值类型
 mixin Screen<R> on Widget {
   @protected
-  final Completer<R?> completer = Completer();
+  late final MyPage<R> page = MyPage(rule: rule, name: location, child: this);
 
   @protected
-  void log(Object? message) {
-    if (kDebugMode) {
-      print("$runtimeType(id:${identityHashCode(this)}) - $message ");
-    }
-  }
-
-  NPage<R> _createPage() => NPage(screen: this);
+  String get location;
 
   @protected
-  Uri get uri;
+  Rule<R> get rule;
 
+  @protected
   Future<R?> push(BuildContext context) {
-    logger.log("$this.push");
-    return NavigatorV2.of(context).push<R>(this);
+    return NavigatorV2.of(context).push<R>(location.toString());
   }
 
   @override
   String toStringShort() {
-    return "Screen(uri:${uri.toString()})";
+    return "Screen(${page.name})";
   }
 }
 
@@ -186,36 +174,20 @@ class DebugPagesLog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var screens = NavigatorV2.of(context).pages.map((e) => e.screen).toList();
+    var names = NavigatorV2.of(context).pages.map((e) => e.name).toList();
     return Expanded(
       child: ListView(children: [
         const Center(child: Text("-----debug:pages-----")),
-        for (int i = screens.length - 1; i >= 0; i--)
-          ListTile(title: Text("  pages[$i]: ${screens[i]})")),
+        for (int i = names.length - 1; i >= 0; i--)
+          ListTile(title: Text("  pages[$i]: ${names[i]})")),
       ]),
     );
   }
 }
 
-/// 范型A： 参数类型, R:结果类型
-class PegImpl<R> implements Peg<R> {
-  PegImpl({
-    required this.path,
-    required this.parse,
-  });
-
-  @override
-  final Screen<R>? Function(Uri uri) parse;
-  final String path;
-
-  @override
-  String toString() {
-    return path;
-  }
-}
-
-abstract class Peg<R> {
-  Screen<R>? Function(Uri uri) get parse;
+/// 范型A： R:结果类型
+abstract class Rule<R> {
+  Screen<R> Function(String path) get parse;
 
   String get path;
 

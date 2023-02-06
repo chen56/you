@@ -24,7 +24,7 @@ typedef FrameBuilder = Frame Function(Note note);
 Frame _emptyFrameBuilder(note) => EmptyFrame(note);
 
 /// 用kids代替单词children,原因是children太长了
-class Note with ChangeNotifier implements Peg<void> {
+class Note with ChangeNotifier implements Rule<void> {
   final String name;
   final List<Note> kids;
   final List<Widget> widgets = List.empty(growable: true);
@@ -95,13 +95,29 @@ class Note with ChangeNotifier implements Peg<void> {
       result = result?.kidsMap[split];
       if (result == null) break;
     }
-    assert(result != null, "child($path) not found");
+    assert(result != null, "page(${this.path}).kid($path) not found");
     return result!;
   }
-
+  // /note/material/button/ElevatedButton
+  // /note/meterial/button/ElevatedButton
   @override
-  Screen<void>? Function(Uri uri) get parse => (uri)=>_frameBuilder(this);
+  Screen Function(String path) get parse => (uri)=>_frameBuilder(this);
 
+  String toStringShort() {
+    return path;
+  }
+  @override
+  String toString({bool? deep}) {
+    if(deep==null||!deep){
+      return "Page($path ,kids:${kids.map((e) => e.toStringShort()).toList()})";
+    }else{
+      StringBuffer sb =  StringBuffer();
+      for(Note n in toList()){
+        sb.write("$n\n");
+      }
+      return sb.toString();
+    }
+  }
 }
 
 abstract class Frame implements Screen {}
@@ -121,6 +137,12 @@ class EmptyFrame extends StatelessWidget with Frame, Screen {
 
   @override
   Uri get uri => note.uri;
+
+  @override
+  String get location => note.uri.toString();
+
+  @override
+  Rule get rule => note;
 }
 
 class _NoteAttributes extends MapBase<String, Object> {

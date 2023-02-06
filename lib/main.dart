@@ -18,11 +18,12 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      routerDelegate: NRouterDelegate(
-        first: paths.notFound,
+      routerDelegate: MyRouterDelegate(
+        first: paths.home,
         notFound: paths.notFound,
-        rules: rootPage.toList(),
+        rules: root.toList(),
       ),
+      routeInformationParser: Parser(rules: root.toList()),
     );
   }
 }
