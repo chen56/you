@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 
-NoteMeta notFoundPage = NoteMeta(
-  title: "404",
+NoteMeta rootPage = NoteMeta(
+  title: "home",
   builder: build,
 );
 
 build(Pen note, BuildContext context) {
   note.markdown(r'''
-## 404 Not Found 
+## 欢迎来到flutter世界 
 
 
   ''');

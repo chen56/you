@@ -6,7 +6,7 @@ NoteMeta devMirrorNote = NoteMeta(
   builder: build,
 );
 
-build(Note note ,BuildContext context) {
+build(Pen note ,BuildContext context) {
   note.markdown(r'''
 # 网络环境问题及方案
   

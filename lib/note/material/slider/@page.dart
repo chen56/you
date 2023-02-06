@@ -7,7 +7,7 @@ NoteMeta widgetSliderNote = NoteMeta(
   builder: build,
 );
 
-build(Note note ,BuildContext context) {
+build(Pen note ,BuildContext context) {
   note.markdown(r'''
 ## 范例1 普通文本 
 

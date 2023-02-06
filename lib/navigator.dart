@@ -78,7 +78,7 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
     required this.notFound,
   }) : _pages = List.from([], growable: true);
   final Rule<void> first;
-  final Rule<void> notFound;
+  final Rule notFound;
   final List<MyPage> _pages;
   final List<Rule> rules;
 
@@ -104,7 +104,10 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
 
   Rule match(String location) {
     Uri uri = Uri.parse(location);
-    return rules.lastWhere((element) => uri.path == element.path, orElse: () => notFound);
+    // Rule Function() x=() => notFound;
+    Rule Function()? x=null;
+    print("match:$location");//todo remove
+    return rules.lastWhere((element) => uri.path == element.path, orElse: x);
   }
 
   Future<R?> _push<R>(String location) {

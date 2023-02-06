@@ -2,9 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/note/@common/includes/include_log.dart';
-
-Logger logger = Logger();
 
 void main() {
   runApp(const App());
@@ -33,7 +30,7 @@ class HomeScreen extends StatelessWidget with Screen<void, void> {
             ));
           },
         ),
-        const DebugPagesLog(),
+        const ShowPages(),
       ]),
     );
   }
@@ -56,7 +53,7 @@ class HelpScreen extends StatelessWidget with Screen<String, String> {
           Text("question:$question "),
           option("我们有开发过v2吗？"),
           option("你说的v2被另一只狗吓跑了！"),
-          const DebugPagesLog(),
+          const ShowPages(),
         ],
       ),
     );
@@ -147,7 +144,6 @@ class NavigatorV2State extends State<NavigatorV2> {
     //把completer的完成指责放权给各Screen自己后，框架需监听其完成后删除Page
     screen.completer.future.whenComplete(() {
       setState(() {
-        logger.log("NavigatorV2State.push.whenComplete - page:${page.name}  ");
         _pages.remove(page);
       });
     });
@@ -187,7 +183,6 @@ mixin Screen<A, R> on Widget {
   MyPage<A, R> createPage() => MyPage(screen: this);
 
   Future<R?> push(BuildContext context) {
-    logger.log("$this.push");
     return NavigatorV2.of(context).push<A, R>(this);
   }
 
@@ -197,8 +192,8 @@ mixin Screen<A, R> on Widget {
   }
 }
 
-class DebugPagesLog extends StatelessWidget {
-  const DebugPagesLog({super.key});
+class ShowPages extends StatelessWidget {
+  const ShowPages({super.key});
 
   @override
   Widget build(BuildContext context) {

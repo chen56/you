@@ -1,3 +1,4 @@
+import 'package:learn_flutter/@page.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 import 'package:learn_flutter/note/dev/debug/@page.dart';
 import 'package:learn_flutter/note/dev/mirror/@page.dart';
@@ -11,35 +12,35 @@ import 'package:learn_flutter/page_frame.dart';
 
 import 'not_found/@page.dart';
 
-Note root = Note("/", frame: (note) => RootFrame(note), kids: [
-  Note("not_found", meta: notFoundPage),
-  Note("note", kids: [
-    Note("material", kids: [
-      Note("button", kids: [
-        Note("ElevatedButton", meta: widgetElevatedButtonNote),
+P root = P("/", frame: <T>(P<T> note) => RootFrame<T>(note), meta: rootPage, kids: [
+  P<void>("not_found", meta: notFoundPage),
+  P<void>("note", kids: [
+    P<void>("material", kids: [
+      P<void>("button", kids: [
+        P<void>("ElevatedButton", meta: widgetElevatedButtonNote),
       ]),
-      Note("text", kids: [
-        Note("RichText", meta: widgetTextNote),
-        Note("Text", meta: widgetRichTextNote),
+      P<void>("text", kids: [
+        P<void>("RichText", meta: widgetTextNote),
+        P<void>("Text", meta: widgetRichTextNote),
       ]),
-      Note("slider", meta: widgetSliderNote),
+      P<void>("slider", meta: widgetSliderNote),
     ]),
-    Note("state", kids: [
-      Note("1.vanilla_state", meta: vanillaStateNote),
-      Note("StatefulBuilder", meta: widgetStatefulBuilderNote),
+    P<void>("state", kids: [
+      P<void>("1.vanilla_state", meta: vanillaStateNote),
+      P<void>("StatefulBuilder", meta: widgetStatefulBuilderNote),
     ]),
-    Note("dev", kids: [
-      Note("debug", meta: devDebugNote),
-      Note("mirror", meta: devMirrorNote),
+    P<void>("dev", kids: [
+      P<void>("debug", meta: devDebugNote),
+      P<void>("mirror", meta: devMirrorNote),
     ]),
   ]),
 ]);
 
-Note page(path) => root.kid(path);
+P page(path) => root.kid(path);
 
 class Paths {
-  final home = page("/note/material/button/ElevatedButton");
   final notFound = page("/not_found");
+  final home = page("/");
 
   Paths._();
 }

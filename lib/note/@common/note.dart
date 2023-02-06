@@ -3,46 +3,53 @@ import 'dart:collection';
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/navigator.dart';
 
-void Function(Note note, BuildContext context) _Empty = (_, __) {};
+/// <T> [Navigator.push] 的返回类型
+class PageMeta<T> {}
 
-class NoteMeta {
+/// 所有的Note Page 都无返回
+class NoteMeta extends PageMeta<void> {
   final String title;
-  final void Function(Note note, BuildContext context) builder;
+  final void Function(Pen<void> note, BuildContext context) builder;
 
   NoteMeta({
     required this.title,
     required this.builder,
   });
-
-  NoteMeta._empty()
-      : title = "",
-        builder = _Empty;
 }
 
-typedef FrameBuilder = Frame Function(Note note);
+typedef FrameBuilder = Frame<T> Function<T>(P<T> note);
 
-Frame _emptyFrameBuilder(note) => EmptyFrame(note);
+Frame<T> _emptyFrameBuilder<T>(note) => EmptyFrame<T>(note);
+class Pen<T>{
+  final List<Widget> _widgets = List.empty(growable: true);
+  final P<T> page;
+  Pen({required this.page});
 
+  void sample(Widget sample) {
+    _widgets.add(Text("sample: $sample")); //临时实现
+  }
+
+  void markdown(String s) {
+    _widgets.add(Text("markdown: $s")); //临时实现
+  }
+}
 /// 用kids代替单词children,原因是children太长了
-class Note with ChangeNotifier implements Rule<void> {
+class P<T> with ChangeNotifier implements Rule<T> {
   final String name;
-  final List<Note> kids;
-  final List<Widget> widgets = List.empty(growable: true);
-  final Map<String, Note> kidsMap = {};
-  Note? _parent;
+  final List<P> kids;
+  final Map<String, P> kidsMap = {};
+  P? _parent;
   late final Map<String, Object> attributes;
-
   late final FrameBuilder _frameBuilder;
-  late final NoteMeta meta;
+  late final NoteMeta? meta;
 
-  Note(
+  P(
     this.name, {
-    NoteMeta? meta,
+        this.meta,
     FrameBuilder? frame,
     this.kids = const [],
   }) {
     _frameBuilder = frame ?? _emptyFrameBuilder;
-    this.meta = meta ?? NoteMeta._empty();
     attributes = _NoteAttributes(this);
 
     for (var child in kids) {
@@ -51,24 +58,25 @@ class Note with ChangeNotifier implements Rule<void> {
     }
   }
 
+  List<Widget> build(BuildContext context){
+    //Pen一次性用品，用完丢弃，防止Flutter框架多次刷新造成的状态问题
+    Pen<T> pen=Pen(page: this);
+    meta?.builder(pen,context);
+    return List.unmodifiable(pen._widgets);
+  }
+
   // final Screen<R>? Function(Uri uri) parse;
 
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
-  FrameBuilder get skeleton {
+  FrameBuilder get frame {
     if (isRoot) return _frameBuilder;
-    return _frameBuilder != _emptyFrameBuilder
-        ? _frameBuilder
-        : _parent!.skeleton;
+    return _frameBuilder != _emptyFrameBuilder ? _frameBuilder : _parent!.frame;
   }
 
-  get uri => Uri(path: path);
+  get uri => path;
 
   bool get isLeaf => kids.isEmpty;
-
-  void sample(Widget sample) {}
-
-  void markdown(String s) {}
 
   int get level => isRoot ? 0 : _parent!.level + 1;
 
@@ -80,39 +88,40 @@ class Note with ChangeNotifier implements Rule<void> {
     return parentPath == "/" ? "/$name" : "$parentPath/$name";
   }
 
-  List<Note> toList({bool includeThis = true}) {
+  List<P> toList({bool includeThis = true}) {
     var flatChildren = kids.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  Note kid(String path) {
-    Note? result = this;
+  P kid(String path) {
+    P? result = this;
     // expect("/".split("/"), ["",""]);
     // expect("/a".split("/"), ["","a"]);
     // expect("/a/".split("/"), ["","a",""]);
-    for (var split
-        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?.kidsMap[split];
       if (result == null) break;
     }
     assert(result != null, "page(${this.path}).kid($path) not found");
     return result!;
   }
+
   // /note/material/button/ElevatedButton
   // /note/meterial/button/ElevatedButton
   @override
-  Screen Function(String path) get parse => (uri)=>_frameBuilder(this);
+  Screen<T> Function(String path) get parse => (uri) => _frameBuilder<T>(this);
 
   String toStringShort() {
     return path;
   }
+
   @override
   String toString({bool? deep}) {
-    if(deep==null||!deep){
+    if (deep == null || !deep) {
       return "Page($path ,kids:${kids.map((e) => e.toStringShort()).toList()})";
-    }else{
-      StringBuffer sb =  StringBuffer();
-      for(Note n in toList()){
+    } else {
+      StringBuffer sb = StringBuffer();
+      for (P n in toList()) {
         sb.write("$n\n");
       }
       return sb.toString();
@@ -120,18 +129,18 @@ class Note with ChangeNotifier implements Rule<void> {
   }
 }
 
-abstract class Frame implements Screen {}
+abstract class Frame<T> implements Screen<T> {}
 
-class EmptyFrame extends StatelessWidget with Frame, Screen {
-  final Note note;
+class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
+  final P<T> note;
 
-  EmptyFrame(this.note);
+  EmptyFrame(this.note, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       Text("_emptyFrame(page:${note.uri})"),
-      ...note.widgets,
+      ...note.build(context),
     ]);
   }
 
@@ -142,7 +151,7 @@ class EmptyFrame extends StatelessWidget with Frame, Screen {
   String get location => note.uri.toString();
 
   @override
-  Rule get rule => note;
+  Rule<T> get rule => note;
 }
 
 class _NoteAttributes extends MapBase<String, Object> {

@@ -3,22 +3,27 @@ import 'package:learn_flutter/navigator.dart';
 import 'package:learn_flutter/note/@common/note.dart';
 import 'package:learn_flutter/page.dart';
 
-class RootFrame extends StatelessWidget with Screen implements Frame {
-  final Note note;
+class RootFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
+  final P<T> note;
 
-  RootFrame(this.note, {super.key});
+  RootFrame(this.note, {super.key}){
+    print("RootFrame()");//todo remove
+
+  }
 
   @override
   Widget build(BuildContext context) {
+    print("rootframe");//todo remove
+    List<Widget> pageContent = note.build(context);
     return Scaffold(
       appBar: AppBar(title: const Text("AppBar.title")),
-      // drawer: NoteDrawerPart(noteRoot),
+      drawer: NoteDrawerPart(root),
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(width: 200, child: NoteDrawerPart(root)),
-            ...note.widgets,
+            // SizedBox(width: 200, child: NoteDrawerPart(root)),
+            Column(children: [...pageContent],),
           ],
         ),
       ),
@@ -34,11 +39,11 @@ class RootFrame extends StatelessWidget with Screen implements Frame {
   String get location => note.uri;
 
   @override
-  Rule get rule => note;
+  Rule<T> get rule => note;
 }
 
 class NoteDrawerPart extends StatefulWidget {
-  final Note root;
+  final P root;
 
   const NoteDrawerPart(
     this.root, {
@@ -75,7 +80,7 @@ class NoteDrawerPartState extends State<NoteDrawerPart> {
 }
 
 // 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension TreeViewNote on Note {
+extension TreeViewNote on P {
   static const _extendAttrName = "catalog.TreeViewNote.extend";
 
   //展开状态
@@ -96,7 +101,7 @@ extension TreeViewNote on Note {
 }
 
 class NoteLink extends StatelessWidget {
-  final Note note;
+  final P note;
 
   const NoteLink(this.note, {super.key});
 
@@ -130,3 +135,4 @@ class NoteLink extends StatelessWidget {
     );
   }
 }
+

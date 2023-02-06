@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/log.dart';
 import 'package:learn_flutter/page.dart';
 
 import 'navigator.dart';
@@ -6,7 +7,7 @@ import 'navigator.dart';
 void main() {
   runApp(const App());
 }
-
+Logger logger = Logger();
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -18,11 +19,11 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      routerDelegate: MyRouterDelegate(
+      routerDelegate: LoggableRouterDelegate(logger:logger,delegate:MyRouterDelegate(
         first: paths.home,
         notFound: paths.notFound,
         rules: root.toList(),
-      ),
+      )),
       routeInformationParser: Parser(rules: root.toList()),
     );
   }
