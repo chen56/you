@@ -6,7 +6,7 @@ NoteMeta devDebugNote = NoteMeta(
   builder: build,
 );
 
-build(Note note ,BuildContext context) {
+build(Note note, BuildContext context) {
   note.markdown(r'''
 ## 范例1 普通文本 
 
@@ -19,10 +19,8 @@ print(WidgetsBinding.instance.renderViewElement?.toDiagnosticsNode().toStringDee
 
   ''');
 
-
   note.markdown(r'''
 ## 范例1 普通文本 
 
   ''');
-
 }
