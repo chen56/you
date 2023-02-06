@@ -14,7 +14,7 @@ import 'not_found/@page.dart';
 
 P root = P("/", frame: <T>(P<T> note) => RootFrame<T>(note), meta: rootPage, kids: [
   P<void>("not_found", meta: notFoundPage),
-  P<void>("note", kids: [
+  P<void>("note", frame: <T>(P<T> note) => RootFrame<T>(note), kids: [
     P<void>("material", kids: [
       P<void>("button", kids: [
         P<void>("ElevatedButton", meta: widgetElevatedButtonNote),

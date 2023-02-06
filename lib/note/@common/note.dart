@@ -1,5 +1,6 @@
 import 'dart:collection';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/navigator.dart';
 
@@ -20,9 +21,11 @@ class NoteMeta extends PageMeta<void> {
 typedef FrameBuilder = Frame<T> Function<T>(P<T> note);
 
 Frame<T> _emptyFrameBuilder<T>(note) => EmptyFrame<T>(note);
-class Pen<T>{
+
+class Pen<T> {
   final List<Widget> _widgets = List.empty(growable: true);
   final P<T> page;
+
   Pen({required this.page});
 
   void sample(Widget sample) {
@@ -33,6 +36,7 @@ class Pen<T>{
     _widgets.add(Text("markdown: $s")); //临时实现
   }
 }
+
 /// 用kids代替单词children,原因是children太长了
 class P<T> with ChangeNotifier implements Rule<T> {
   final String name;
@@ -45,7 +49,7 @@ class P<T> with ChangeNotifier implements Rule<T> {
 
   P(
     this.name, {
-        this.meta,
+    this.meta,
     FrameBuilder? frame,
     this.kids = const [],
   }) {
@@ -58,10 +62,10 @@ class P<T> with ChangeNotifier implements Rule<T> {
     }
   }
 
-  List<Widget> build(BuildContext context){
+  List<Widget> build(BuildContext context) {
     //Pen一次性用品，用完丢弃，防止Flutter框架多次刷新造成的状态问题
-    Pen<T> pen=Pen(page: this);
-    meta?.builder(pen,context);
+    Pen<T> pen = Pen(page: this);
+    meta?.builder(pen, context);
     return List.unmodifiable(pen._widgets);
   }
 
@@ -109,7 +113,7 @@ class P<T> with ChangeNotifier implements Rule<T> {
   // /note/material/button/ElevatedButton
   // /note/meterial/button/ElevatedButton
   @override
-  Screen<T> Function(String path) get parse => (uri) => _frameBuilder<T>(this);
+  Screen<T> Function(String path) get parse => (uri) => frame<T>(this);
 
   String toStringShort() {
     return path;
@@ -138,10 +142,12 @@ class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Text("_emptyFrame(page:${note.uri})"),
-      ...note.build(context),
-    ]);
+    return Scaffold(
+      appBar: AppBar(title: const Text("当前是缺省Frame,您最少有个根Frame")),
+      body: ListView(children: [
+        ...note.build(context),
+      ]),
+    );
   }
 
   @override

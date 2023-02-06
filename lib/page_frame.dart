@@ -6,14 +6,10 @@ import 'package:learn_flutter/page.dart';
 class RootFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
   final P<T> note;
 
-  RootFrame(this.note, {super.key}){
-    print("RootFrame()");//todo remove
-
-  }
+  RootFrame(this.note, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    print("rootframe");//todo remove
     List<Widget> pageContent = note.build(context);
     return Scaffold(
       appBar: AppBar(title: const Text("AppBar.title")),
@@ -23,7 +19,7 @@ class RootFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // SizedBox(width: 200, child: NoteDrawerPart(root)),
-            Column(children: [...pageContent],),
+            Expanded(child: ListView(children: [...pageContent],)),
           ],
         ),
       ),
@@ -129,6 +125,7 @@ class NoteLink extends StatelessWidget {
       minLeadingWidth: 0,
       onTap: () {
         note.extend = !note.extend;
+        NavigatorV2.of(context).push(note.path);
       },
       // 是否选中
       selected: false,
