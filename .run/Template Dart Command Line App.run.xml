@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <option name="VMOptions" value="--enable-experiment=class-modifiers --enable-experiment=records" />
+    <method v="2" />
+  </configuration>
+</component>

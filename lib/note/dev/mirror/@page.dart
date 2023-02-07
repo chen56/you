@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:learn_flutter/note.dart';
 
-PageMeta devMirrorNote = PageMeta(
+Meta devMirrorNote = Meta(
   title: "网络问题",
   builder: build,
 );
 
-build(Pen note ,BuildContext context) {
-  note.markdown(r'''
+build(Pen pen ,BuildContext context) {
+  pen. markdown(r'''
 # 网络环境问题及方案
   
 ## flutter pub镜像慢

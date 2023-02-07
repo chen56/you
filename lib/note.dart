@@ -5,12 +5,12 @@ import 'package:learn_flutter/navigator_v2.dart';
 import 'package:learn_flutter/note/frame.dart';
 
 /// <T> [Navigator.push] 的返回类型
-class PageMeta<T> {
+class Meta<T> {
   final String title;
   final void Function(Pen<void> note, BuildContext context) builder;
   late final FrameBuilder frameBuilder;
 
-  PageMeta({
+  Meta({
     required this.title,
     required this.builder,
     FrameBuilder? frameBuilder,
@@ -48,13 +48,13 @@ typedef FrameBuilder = Frame<T> Function<T>(N<T> note);
 Frame<T> _emptyFrameBuilder<T>(note) => EmptyFrame<T>(note);
 
 /// 用kids代替单词children,原因是children太长了
-class N<T> with ChangeNotifier implements Rule<T> {
+class N<T> implements Rule<T> {
   final String name;
   final List<N> kids;
   final Map<String, N> kidsMap = {};
   N? _parent;
-  late final Map<String, Object> attributes;
-  late final PageMeta<T>? meta;
+  final Map<String, Object> attributes = _NoteAttributes();
+  late final Meta<T>? meta;
 
   N(
     this.name, {
@@ -62,8 +62,6 @@ class N<T> with ChangeNotifier implements Rule<T> {
     FrameBuilder? frame,
     this.kids = const [],
   }) {
-    attributes = _NoteAttributes(this);
-
     for (var child in kids) {
       child._parent = this;
       kidsMap[child.name] = child;
@@ -138,7 +136,9 @@ class N<T> with ChangeNotifier implements Rule<T> {
   }
 }
 
-abstract class Frame<T> implements Screen<T> {}
+/// Dart 3 class-modifiers:interface class
+/// kua
+mixin Frame<T> implements Screen<T> {}
 
 class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
   final N<T> note;
@@ -164,9 +164,9 @@ class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
 
 class _NoteAttributes extends MapBase<String, Object> {
   final Map<String, Object> _attributes = {};
-  ChangeNotifier notifier;
+  ChangeNotifier notifier = ChangeNotifier();
 
-  _NoteAttributes(this.notifier);
+  _NoteAttributes();
 
   @override
   Object? operator [](Object? key) {

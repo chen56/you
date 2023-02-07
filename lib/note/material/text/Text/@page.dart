@@ -4,27 +4,27 @@ import 'package:learn_flutter/note.dart';
 import '1.text_normal.dart';
 import '2.text_rich.dart';
 
-PageMeta widgetTextNote = PageMeta(
+Meta widgetTextNote = Meta(
   title: "Text",
   builder: build,
 );
 
-build(Pen note ,BuildContext context) {
-  note.markdown(r'''
+build(Pen pen ,BuildContext context) {
+  pen. markdown(r'''
 ## 范例1 普通文本 
 
 Text.new()
 
   ''');
 
-  note.sample(const NormalTextSample());
+  pen.sample(const NormalTextSample());
 
-  note.markdown(r'''
+  pen. markdown(r'''
 ## 范例1 富文本 
 
 Text.rich()
 
   ''');
 
-  note.sample(const RichTextSample());
+  pen.sample(const RichTextSample());
 }

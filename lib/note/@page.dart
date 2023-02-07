@@ -3,14 +3,14 @@ import 'package:learn_flutter/note.dart';
 
 import 'frame.dart';
 
-PageMeta notePage = PageMeta(
+Meta notePage = Meta(
   title: "note",
   builder: build,
   frameBuilder: <T>(N<T> note) => NoteFrame<T>(note),
 );
 
-build(Pen note, BuildContext context) {
-  note.markdown(r'''
+build(Pen pen, BuildContext context) {
+  pen.markdown(r'''
 ## flutter Note
   ''');
 }
