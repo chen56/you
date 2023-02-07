@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/navigator.dart';
-import 'package:learn_flutter/note/note.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:learn_flutter/navigator_v2.dart';
+import 'package:learn_flutter/note.dart';
+import 'package:learn_flutter/root_tree.dart';
 
 class NoteFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
-  final Dir<T> note;
+  final N<T> note;
 
   NoteFrame(this.note, {super.key});
 
@@ -12,14 +12,17 @@ class NoteFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
   Widget build(BuildContext context) {
     List<Widget> pageContent = note.build(context);
     return Scaffold(
-      appBar: AppBar(title: const Text("AppBar.title")),
-      drawer: NoteDrawerPart(root),
+      appBar: AppBar(title: const Text("Flutter Note")),
+      drawer: _NoteTreeView(root),
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // SizedBox(width: 200, child: NoteDrawerPart(root)),
-            Expanded(child: ListView(children: [...pageContent],)),
+            Expanded(
+                child: ListView(
+              children: [...pageContent],
+            )),
           ],
         ),
       ),
@@ -38,20 +41,20 @@ class NoteFrame<T> extends StatelessWidget with Screen<T> implements Frame<T> {
   Rule<T> get rule => note;
 }
 
-class NoteDrawerPart extends StatefulWidget {
-  final Dir root;
+class _NoteTreeView extends StatefulWidget {
+  final N root;
 
-  const NoteDrawerPart(
+  const _NoteTreeView(
     this.root, {
     Key? key,
   }) : super(key: key);
 
   @override
-  State<NoteDrawerPart> createState() => NoteDrawerPartState();
+  State<_NoteTreeView> createState() => _NoteTreeViewState();
 }
 
-class NoteDrawerPartState extends State<NoteDrawerPart> {
-  NoteDrawerPartState();
+class _NoteTreeViewState extends State<_NoteTreeView> {
+  _NoteTreeViewState();
 
   @override
   void initState() {
@@ -65,18 +68,48 @@ class NoteDrawerPartState extends State<NoteDrawerPart> {
 
   @override
   Widget build(BuildContext context) {
+    Widget link(N note) {
+      return ListTile(
+        trailing: Icon(
+          note.isLeaf ? Icons.open_in_new : null,
+          size: note.isLeaf ? 20 : null,
+        ),
+        title: Row(
+          children: [
+            Icon(
+              note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down,
+              // size: e.isLeaf ? 15 : null,
+            ),
+            Text(note.name),
+          ],
+        ),
+        dense: true,
+        //更紧凑布局
+        visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
+        contentPadding: EdgeInsets.only(left: 20 * (note.level - 1).toDouble()),
+        enabled: true,
+        minLeadingWidth: 0,
+        onTap:  !note.hasPage?null: () {
+          note.extend = !note.extend;
+          NavigatorV2.of(context).push(note.path);
+        },
+        // 是否选中
+        selected: false,
+      );
+    }
+
     return Drawer(
       child: ListView(
         shrinkWrap: false,
         padding: const EdgeInsets.all(20),
-        children: widget.root.toList(includeThis: false).map((e) => NoteLink(e)).toList(),
+        children: widget.root.toList(includeThis: false).map((e) => link(e)).toList(),
       ),
     );
   }
 }
 
 // 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension TreeViewNote on Dir {
+extension _TreeViewNote on N {
   static const _extendAttrName = "catalog.TreeViewNote.extend";
 
   //展开状态
@@ -95,41 +128,3 @@ extension TreeViewNote on Dir {
     attributes[_extendAttrName] = extend;
   }
 }
-
-class NoteLink extends StatelessWidget {
-  final Dir note;
-
-  const NoteLink(this.note, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      trailing: Icon(
-        note.isLeaf ? Icons.open_in_new : null,
-        size: note.isLeaf ? 20 : null,
-      ),
-      title: Row(
-        children: [
-          Icon(
-            note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down,
-            // size: e.isLeaf ? 15 : null,
-          ),
-          Text(note.name),
-        ],
-      ),
-      dense: true,
-      //更紧凑布局
-      visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
-      contentPadding: EdgeInsets.only(left: 20 * (note.level - 1).toDouble()),
-      enabled: true,
-      minLeadingWidth: 0,
-      onTap: () {
-        note.extend = !note.extend;
-        NavigatorV2.of(context).push(note.path);
-      },
-      // 是否选中
-      selected: false,
-    );
-  }
-}
-

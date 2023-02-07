@@ -1,34 +1,38 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/navigator.dart';
+import 'package:learn_flutter/navigator_v2.dart';
+import 'package:learn_flutter/note/frame.dart';
 
-
-/// 所有的Note Page 都无返回
-class NoteMeta extends PageMeta<void> {
+/// <T> [Navigator.push] 的返回类型
+class PageMeta<T> {
   final String title;
-  final void Function(NotePen<void> note, BuildContext context) builder;
+  final void Function(Pen<void> note, BuildContext context) builder;
+  late final FrameBuilder frameBuilder;
 
-  NoteMeta({
+  PageMeta({
     required this.title,
     required this.builder,
-  });
+    FrameBuilder? frameBuilder,
+  }) {
+    this.frameBuilder = frameBuilder ?? <T>(N<T> note) => NoteFrame<T>(note);
+  }
 
-  List<Widget> build(BuildContext context, Dir p) {
+  List<Widget> build(BuildContext context, N<T> p) {
     //Pen一次性用品，用完丢弃，防止Flutter框架多次刷新造成的状态问题
-    NotePen<void> pen = NotePen(page: p);
+    Pen<void> pen = Pen(page: p);
     builder(pen, context);
     return pen.widgets;
   }
 }
 
-class NotePen<T> {
+class Pen<T> {
   final List<Widget> _widgets = List.empty(growable: true);
-  final Dir<T> page;
+  final N<T> page;
 
   List<Widget> get widgets => List.unmodifiable(_widgets);
 
-  NotePen({required this.page});
+  Pen({required this.page});
 
   void sample(Widget sample) {
     _widgets.add(Text("sample: $sample")); //临时实现
@@ -39,32 +43,25 @@ class NotePen<T> {
   }
 }
 
-/// <T> [Navigator.push] 的返回类型
-class PageMeta<T> {
-
-}
-
-typedef FrameBuilder = Frame<T> Function<T>(Dir<T> note);
+typedef FrameBuilder = Frame<T> Function<T>(N<T> note);
 
 Frame<T> _emptyFrameBuilder<T>(note) => EmptyFrame<T>(note);
 
 /// 用kids代替单词children,原因是children太长了
-class Dir<T> with ChangeNotifier implements Rule<T> {
+class N<T> with ChangeNotifier implements Rule<T> {
   final String name;
-  final List<Dir> kids;
-  final Map<String, Dir> kidsMap = {};
-  late final Dir? _parent;
+  final List<N> kids;
+  final Map<String, N> kidsMap = {};
+  N? _parent;
   late final Map<String, Object> attributes;
-  late final FrameBuilder _frameBuilder;
-  late final NoteMeta? meta;
+  late final PageMeta<T>? meta;
 
-  Dir(
+  N(
     this.name, {
     this.meta,
     FrameBuilder? frame,
     this.kids = const [],
   }) {
-    _frameBuilder = frame ?? _emptyFrameBuilder;
     attributes = _NoteAttributes(this);
 
     for (var child in kids) {
@@ -85,8 +82,8 @@ class Dir<T> with ChangeNotifier implements Rule<T> {
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
   FrameBuilder get frame {
-    if (isRoot) return _frameBuilder;
-    return _frameBuilder != _emptyFrameBuilder ? _frameBuilder : _parent!.frame;
+    if (isRoot) return meta == null ? _emptyFrameBuilder : meta!.frameBuilder;
+    return meta?.frameBuilder != null ? meta!.frameBuilder : _parent!.frame;
   }
 
   bool get isLeaf => kids.isEmpty;
@@ -102,13 +99,13 @@ class Dir<T> with ChangeNotifier implements Rule<T> {
     return parentPath == "/" ? "/$name" : "$parentPath/$name";
   }
 
-  List<Dir> toList({bool includeThis = true}) {
+  List<N> toList({bool includeThis = true}) {
     var flatChildren = kids.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  Dir kid(String path) {
-    Dir? result = this;
+  N kid(String path) {
+    N? result = this;
     // expect("/".split("/"), ["",""]);
     // expect("/a".split("/"), ["","a"]);
     // expect("/a/".split("/"), ["","a",""]);
@@ -133,7 +130,7 @@ class Dir<T> with ChangeNotifier implements Rule<T> {
       return "Page($path ,kids:${kids.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
-      for (Dir n in toList()) {
+      for (N n in toList()) {
         sb.write("$n\n");
       }
       return sb.toString();
@@ -144,7 +141,7 @@ class Dir<T> with ChangeNotifier implements Rule<T> {
 abstract class Frame<T> implements Screen<T> {}
 
 class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
-  final Dir<T> note;
+  final N<T> note;
 
   EmptyFrame(this.note, {super.key});
 

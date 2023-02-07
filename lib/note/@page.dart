@@ -1,15 +1,16 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/note/note.dart';
+import 'package:learn_flutter/note.dart';
 
-NoteMeta notePage = NoteMeta(
+import 'frame.dart';
+
+PageMeta notePage = PageMeta(
   title: "note",
   builder: build,
+  frameBuilder: <T>(N<T> note) => NoteFrame<T>(note),
 );
 
-build(NotePen note, BuildContext context) {
+build(Pen note, BuildContext context) {
   note.markdown(r'''
 ## flutter Note
-
-
   ''');
 }

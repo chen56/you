@@ -1,12 +1,12 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/note/note.dart';
+import 'package:learn_flutter/note.dart';
 
-NoteMeta widgetRichTextNote = NoteMeta(
+PageMeta widgetRichTextNote = PageMeta(
   title: "RichText",
   builder: build,
 );
 
-build(NotePen note ,BuildContext context) {
+build(Pen note ,BuildContext context) {
   note.markdown(r'''
 ## 范例1 普通文本
 

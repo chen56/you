@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/note/note.dart';
+import 'package:learn_flutter/note.dart';
 
 
-NoteMeta widgetSliderNote = NoteMeta(
+PageMeta widgetSliderNote = PageMeta(
   title: "Slider",
   builder: build,
 );
 
-build(NotePen note ,BuildContext context) {
+build(Pen note ,BuildContext context) {
   note.markdown(r'''
 ## 范例1 普通文本 
 

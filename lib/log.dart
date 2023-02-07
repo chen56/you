@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'navigator.dart';
+import 'navigator_v2.dart';
 
 Logger logger = Logger();
 
@@ -48,7 +48,7 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
 
   @override
   Widget build(BuildContext context) {
-    log("build()");
+    log("build(${(context as Element).toStringShallow(minLevel: DiagnosticLevel.hidden)})");
     return delegate.build(context);
   }
 
@@ -60,7 +60,9 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
 
   String _configuration(T? configuration) {
     var result = configuration;
-    var str = result is RouteInformation ? "${result.location}" : "$result";
+    var str = result is RouteInformation
+        ? "location:${result.location},state:${result.state}"
+        : "$result";
     return str;
   }
 
@@ -98,6 +100,7 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
     logger.log("${delegate.runtimeType}(id:${identityHashCode(delegate)}).$msg");
   }
 }
+
 class DebugPagesLog extends StatelessWidget {
   const DebugPagesLog({super.key});
 

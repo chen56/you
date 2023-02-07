@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/log.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:learn_flutter/root_tree.dart';
 
-import 'navigator.dart';
+import 'navigator_v2.dart';
 
 void main() {
   runApp(const App());

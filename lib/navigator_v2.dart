@@ -76,7 +76,7 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
     required this.rules,
     required this.first,
     required this.notFound,
-  }) : _pages = List.from([], growable: true);
+  }) : _pages = List.from([first.parse("/").page], growable: true);
   final Rule<void> first;
   final Rule notFound;
   final List<MyPage> _pages;
@@ -104,9 +104,7 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
 
   Rule match(String location) {
     Uri uri = Uri.parse(location);
-    // Rule Function() x=() => notFound;
-    Rule Function()? x=null;
-    print("match:$location");//todo remove
+    Rule Function()? x = null;
     return rules.lastWhere((element) => uri.path == element.path, orElse: x);
   }
 
@@ -171,7 +169,6 @@ mixin Screen<R> on Widget {
     return "Screen(${page.name})";
   }
 }
-
 
 /// 范型A： R:结果类型
 abstract class Rule<R> {
