@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/navigator_v2.dart';
-import 'package:learn_flutter/note.dart';
+import 'package:learn_flutter/page.dart';
 import 'package:learn_flutter/root_tree.dart';
 
-class NoteFrame<T> extends StatelessWidget with Screen<T> , Frame<T> {
+class NoteLayout<T> extends StatelessWidget with Screen<T> , Layout<T> {
   final N<T> note;
 
-  NoteFrame(this.note, {super.key});
+  NoteLayout(this.note, {super.key});
 
   @override
   Widget build(BuildContext context) {

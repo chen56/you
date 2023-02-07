@@ -1,5 +1,3 @@
-// ignore_for_file: unused_local_variableimport 'package:test/test.dart';
-
 import 'package:learn_flutter/note/param.dart';
 import 'package:test/test.dart';
 
@@ -21,15 +19,13 @@ void main() {
       expect(param.ofString("a").nullable("new default"), equals("default"));
       expect(param.ofString("a").notNull("new default"), equals("default"));
     }
-
   });
 
   test('Param.value  runtimeType', () {
     var root = Params();
     expect(root.ofString(next()).value.runtimeType, equals(Null));
     expect(root.ofString(next()).nullable("default").runtimeType, equals(String));
-    expect(root.ofString(next()).notNull("value").runtimeType,
-        equals(String));
+    expect(root.ofString(next()).notNull("value").runtimeType, equals(String));
   });
 
   test('Param.ofString()  定义Param', () {
@@ -46,13 +42,11 @@ void main() {
     var root = Params();
     expect(root.ofString(next()).value.runtimeType, equals(Null));
     expect(root.ofString(next()).nullable("default").runtimeType, equals(String));
-    expect(root.ofString(next()).notNull("value").runtimeType,
-        equals(String));
+    expect(root.ofString(next()).notNull("value").runtimeType, equals(String));
   });
 }
 
-Iterator<String> paths =
-    Iterable.generate(100, ((index) => "param.$index")).iterator;
+Iterator<String> paths = Iterable.generate(100, ((index) => "param.$index")).iterator;
 
 String next() {
   paths.moveNext();

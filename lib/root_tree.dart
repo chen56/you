@@ -1,6 +1,6 @@
 import 'package:learn_flutter/@page.dart';
 import 'package:learn_flutter/note/@page.dart';
-import 'package:learn_flutter/note.dart';
+import 'package:learn_flutter/page.dart';
 import 'package:learn_flutter/note/dev/debug/@page.dart';
 import 'package:learn_flutter/note/dev/mirror/@page.dart';
 import 'package:learn_flutter/note/material/button/ElevatedButton/@page.dart';

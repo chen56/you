@@ -14,6 +14,10 @@ class TODO_core_architecture{
   // - navatitor 用时间戳或id控制浏览器后退按钮的鉴别
   // - state恢复表单，防止没保存
 }
+class TODO_js_static_site{
+  // flutter貌似是有点大，半天加载不出来！应提供一个简版的静态站：html+js
+  // https://www.11ty.dev
+}
 
 
 /// # 生成的代码应有参数注释，以便把调参和代码对应起来

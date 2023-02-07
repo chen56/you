@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:learn_flutter/note.dart';
+import 'package:learn_flutter/page.dart';
 
 Meta devMirrorNote = Meta(
   title: "网络问题",

@@ -1,21 +1,21 @@
-import 'dart:collection';
-
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/navigator_v2.dart';
 import 'package:learn_flutter/note/frame.dart';
 
-/// <T> [Navigator.push] 的返回类型
+import 'utils.dart';
+
+/// <T>: [Navigator.push] 的返回类型
 class Meta<T> {
   final String title;
   final void Function(Pen<void> note, BuildContext context) builder;
-  late final FrameBuilder frameBuilder;
+  late final LayoutBuilder layout;
 
   Meta({
     required this.title,
     required this.builder,
-    FrameBuilder? frameBuilder,
+    LayoutBuilder? layout,
   }) {
-    this.frameBuilder = frameBuilder ?? <T>(N<T> note) => NoteFrame<T>(note);
+    this.layout = layout ?? <T>(N<T> note) => NoteLayout<T>(note);
   }
 
   List<Widget> build(BuildContext context, N<T> p) {
@@ -43,9 +43,9 @@ class Pen<T> {
   }
 }
 
-typedef FrameBuilder = Frame<T> Function<T>(N<T> note);
+typedef LayoutBuilder = Layout<T> Function<T>(N<T> page);
 
-Frame<T> _emptyFrameBuilder<T>(note) => EmptyFrame<T>(note);
+Layout<T> _emptyFrameBuilder<T>(note) => _EmptyLayout<T>(note);
 
 /// 用kids代替单词children,原因是children太长了
 class N<T> implements Rule<T> {
@@ -53,13 +53,13 @@ class N<T> implements Rule<T> {
   final List<N> kids;
   final Map<String, N> kidsMap = {};
   N? _parent;
-  final Map<String, Object> attributes = _NoteAttributes();
+  final Map<String, Object> attributes = ListenableMap();
   late final Meta<T>? meta;
 
   N(
     this.name, {
     this.meta,
-    FrameBuilder? frame,
+    LayoutBuilder? frame,
     this.kids = const [],
   }) {
     for (var child in kids) {
@@ -79,9 +79,9 @@ class N<T> implements Rule<T> {
 
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
-  FrameBuilder get frame {
-    if (isRoot) return meta == null ? _emptyFrameBuilder : meta!.frameBuilder;
-    return meta?.frameBuilder != null ? meta!.frameBuilder : _parent!.frame;
+  LayoutBuilder get layout {
+    if (isRoot) return meta == null ? _emptyFrameBuilder : meta!.layout;
+    return meta?.layout != null ? meta!.layout : _parent!.layout;
   }
 
   bool get isLeaf => kids.isEmpty;
@@ -116,7 +116,7 @@ class N<T> implements Rule<T> {
   }
 
   @override
-  Screen<T> Function(String path) get parse => (uri) => frame<T>(this);
+  Screen<T> Function(String path) get parse => (uri) => layout<T>(this);
 
   String toStringShort() {
     return path;
@@ -138,12 +138,12 @@ class N<T> implements Rule<T> {
 
 /// Dart 3 class-modifiers:interface class
 /// kua
-mixin Frame<T> implements Screen<T> {}
+mixin Layout<T> implements Screen<T> {}
 
-class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
+class _EmptyLayout<T> extends StatelessWidget with Layout<T>, Screen<T> {
   final N<T> note;
 
-  EmptyFrame(this.note, {super.key});
+  _EmptyLayout(this.note, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -160,38 +160,4 @@ class EmptyFrame<T> extends StatelessWidget with Frame<T>, Screen<T> {
 
   @override
   Rule<T> get rule => note;
-}
-
-class _NoteAttributes extends MapBase<String, Object> {
-  final Map<String, Object> _attributes = {};
-  ChangeNotifier notifier = ChangeNotifier();
-
-  _NoteAttributes();
-
-  @override
-  Object? operator [](Object? key) {
-    return _attributes[key];
-  }
-
-  @override
-  void operator []=(String key, Object value) {
-    _attributes[key] = value;
-    notifier.notifyListeners();
-  }
-
-  @override
-  void clear() {
-    _attributes.clear();
-    notifier.notifyListeners();
-  }
-
-  @override
-  Iterable<String> get keys => _attributes.keys;
-
-  @override
-  Object? remove(Object? key) {
-    var result = _attributes.remove(key);
-    notifier.notifyListeners();
-    return result;
-  }
 }

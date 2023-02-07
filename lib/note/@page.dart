@@ -1,12 +1,12 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/note.dart';
+import 'package:learn_flutter/page.dart';
 
 import 'frame.dart';
 
 Meta notePage = Meta(
   title: "note",
   builder: build,
-  frameBuilder: <T>(N<T> note) => NoteFrame<T>(note),
+  layout: <T>(N<T> note) => NoteLayout<T>(note),
 );
 
 build(Pen pen, BuildContext context) {
