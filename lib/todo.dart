@@ -2,8 +2,6 @@
 
 import 'package:flutter/widgets.dart';
 
-
-
 class TODO_core_architecture{
   // navigator
   // - 参数传递 及返回值
@@ -16,7 +14,11 @@ class TODO_core_architecture{
 }
 class TODO_js_static_site{
   // flutter貌似是有点大，半天加载不出来！应提供一个简版的静态站：html+js
+
+  //https://www.patterns.dev/posts/islands-architecture/
+  //https://markojs.com
   // https://www.11ty.dev
+  // Astro Snowpack的作者
 }
 
 
