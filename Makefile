@@ -6,9 +6,7 @@ init:
 
 .PHONY: build
 build: 
-	echo '1' $@
-	echo '1' $<
-	echo '1' $^
+	flutter build web -v --release  --web-renderer canvaskit --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/ -o docs/
 
 # FLUTTER_WEB_CANVASKIT_URL对flutter run不起作用
 .PHONY: chrome
