@@ -2,73 +2,97 @@
 set -o errtrace #trap inherited in sub script
 set -o errexit
 set -o functrace #trap inherited in function
-
 # set -x
 
-# build 命令是。。。。。
-# build 命令是。。。。。2
+if (( BASH_VERSINFO[0] < 6 ))  ; then
+  echo "Error: 您bash版本过低(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
+  apt install bash  # ubuntu
+  brew install bash # mac"
+  exit 1
+fi
+
+if ! realpath --help >/dev/null 2>&1  ; then
+  echo "Error: 未找到命令realpath，您需要安装coreutils:
+  apt install coreutils  # ubuntu
+  brew install coreutils # mac"
+  exit 1
+fi
+
+# 构建命令
 @build() {
   echo "in build: $*"
 }
 
-
-# run 命令是。。。。。
-# run 命令是。。。。。2
+# 运行命令
 @run() {
-  return
+  echo "run"
 }
 
-listCmds() {
+@help() {
+
+cat <<- '__EOF'
+____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
+|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
+|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
+Usage:
+./bake [command] [options]
+
+Available Commands:
+__EOF
+
   # IFS=$'\n'指分配回车符给IFS
   IFS=$'\n'
 
+  # 列出所有@开头的命令
   # declare -F 会列出所有定义, 我们要找出以@开头的函数，作为子命令
-  # declare -f nvm_version_dir
+  # $ declare -F
+  #     => declare -f @build
   for f in $(declare -F); do
-    local cmdName=${f:11}
+    local func=${f:11}
 
-    # 只有@开头的才认为是cmd
-    if test ! "$(grep "^@" <<<"$cmdName")"; then  continue; fi
+    # 必须@开头
+    if test ! "$(grep "^@" <<<"$func")"; then  continue; fi
 
     # extdebug可以让 `declare -F`打印出文件和行号，比如：
-    #   $ declare -F nvm_version
-    #   -------------------------------------------
-    #   nvm_version 536 /Users/cc/.nvm/nvm.sh
-    local cmd; shopt -s extdebug; readarray -d " " -t cmd <<< "$( declare -F "$cmdName" )"
+    # $ declare -F nvm_version
+    #     => nvm_version 536 /Users/cc/.nvm/nvm.sh
+    local funcRecord; shopt -s extdebug; readarray -d " " -t funcRecord < <( declare -F "$func" )
+    local lineno=${funcRecord[1]}
+    local file=${funcRecord[2]}
+    # shellcheck disable=SC2155
+    local realFile=$(realpath -P "$(cat <<< "$file")")
+    readarray lines < <(cat "${realFile}")
 
-    # 取子命令的帮助：从cmd的lineNumber向上数，有注释的行都是帮助，直到非注释行
-    readarray lines <<< "${cmd[2]}"
-    echo -e "$cmdName ${#lines[@]}" ;
-    for(( i=cmd[1]-2; i >0 ; i--  ))
-    do
-      # 到非#开头的行就停下
-      # shellcheck disable=SC2046
-      if test ! $(grep -E '^[ ]*#' <<< "${lines[$i]}") ; then
-        break
-      fi
-      # shellcheck disable=SC2001
-      line=$(sed 's/^[ ]*#//g' <<< "${lines[$i]}")
-      echo "        ${line}"
-    done
-    echo
+    # 去掉前缀@就是cmd名，bash语法：${PARAMETER/PATTERN/STRING}
+    # https://wiki.bash-hackers.org/syntax/pe#search_and_replace
+    local cmd="${func/@/}"
 
+    # 只取cmd函数头顶上的第一行，作为cmd的help描述
+    local cmdHelp="${lines[(lineno-2)]}"
+    # 头顶上不是注释行的cmd就认为没有帮助
+    if ! grep "^[ ]*#" <<< "$cmdHelp" >/dev/null 2>&1  ; then  cmdHelp="-" ; fi
+    # 去掉前缀#，bash语法：${PARAMETER/PATTERN/STRING}
+    printf "  %-10s %s\n" $cmd ${cmdHelp/\#/}
   done
   return
 }
-_help=$(
-  cat <<END_HEREDOC
-./bake 不想再用makefile了，父子命令就用这个就行了
-----------------
-$(listCmds)
-----------------
-END_HEREDOC
-)
 
+# 没子命令的就显示help
 if [ "$#" == 0 ]; then
-  echo "$_help"
-  exit 0
+  @help
+  echo
+  echo ">>> Error: missing command './bake COMMAND'"
+  exit 1
 fi
 
 # shellcheck disable=SC2145
-echo "[$@]"
-"$@"
+cmd="$1"
+# cmd 加上@前缀就是相应的函数
+cmdFunc="@$cmd"
+if ! declare -f "$cmdFunc" >/dev/null 2>&1 ; then
+  echo "Error: 命令[${cmd}] 不存在, 未找到相应的函数[${cmdFunc}()]"
+  exit 1
+fi
+
+# shellcheck disable=SC2145
+"@$@"

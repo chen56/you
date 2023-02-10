@@ -29,6 +29,7 @@ linter:
 # https://dart.dev/guides/language/analysis-options
 
 analyzer:
+
     enable-experiment:
         - records
         - class-modifiers
