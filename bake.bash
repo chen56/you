@@ -4,7 +4,7 @@ set -o errexit
 set -o functrace #trap inherited in function
 # set -x
 
-if (( BASH_VERSINFO[0] < 6 ))  ; then
+if (( BASH_VERSINFO[0] < 4 ))  ; then
   echo "Error: 您bash版本过低(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
   apt install bash  # ubuntu
   brew install bash # mac"
