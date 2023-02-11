@@ -20,7 +20,8 @@ fi
 
 # 构建命令
 @build() {
-  echo "in build: $*"
+  echo "run build: $*"
+  flutter build web --release  --web-renderer canvaskit --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/ -o build/web/canvaskit
 }
 
 # 运行命令
