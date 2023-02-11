@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
-import 'package:learn_flutter/note/frame.dart';
+import 'package:learn_flutter/note/layout.dart';
 
 Meta rootPage = Meta(
   title: "dart 3 新特性",
