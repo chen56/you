@@ -27,7 +27,7 @@
 项目已发布在<https://chen56.github.io/flutter-note>, 若要自己跑，这样搞：
 
 ```
-git@github.com:chen56/flutter-note.git
+git clone git@github.com:chen56/flutter-note.git
 flutter channel master
 flutter run --web-renderer html --device-id chrome 
 ```
