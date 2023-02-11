@@ -6,12 +6,12 @@
 
 目前我遇到的学习问题，也是flutter-note想改善的：
 
-- 【问题】flutter学习资源，以文档居多，demo混杂凌乱，没有一个可以所见即所得速查各组件外观及用法的便宜地儿，比如[官网samples](https://flutter.github.io/samples/#)真心凌乱
-- 【问题】官网的Sample用dartpad展示，加载极慢，在耐心丧失前的加载成功率为13%   o(一︿一+)o
-- 【问题】flutter的高级主题（尤其是state和navigator），少有很好的介绍，致使学习时间大增 ，这些都是每个APP的地基，没设计好，没理解透，将来要掉头发的
-- 【问题】官网推的高级主题[brianegan/flutter_architecture_samples](https://github.com/brianegan/flutter_architecture_samples)案例设计过于复杂
-- 【问题】很多不错的案例（比如[官网samples](https://flutter.github.io/samples/#)），展示、说明、代码三者又不能整合，你看着案例，都不知道代码长啥样，还得现去找，去对。
-- 【问题】某些比较动态的案例，比如某按钮Sample，为了展示按钮的外观参数，加了一些控件来调节属性，这些动态调节的代码太复杂，污染了原本要展示的按钮逻辑，这种代码很难高速阅读。
+- flutter学习资源，以文档居多，demo混杂凌乱，没有一个可以所见即所得速查各组件外观及用法的便宜地儿，比如[官网samples](https://flutter.github.io/samples/#)真心凌乱
+- 官网的Sample用dartpad展示，加载极慢，在耐心丧失前的加载成功率为13%   o(一︿一+)o
+- flutter的高级主题（尤其是state和navigator），少有很好的介绍，致使学习时间大增 ，这些都是每个APP的地基，没设计好，没理解透，将来要掉头发的
+- 官网推的高级主题[brianegan/flutter_architecture_samples](https://github.com/brianegan/flutter_architecture_samples)案例设计过于复杂
+- 很多不错的案例（比如[官网samples](https://flutter.github.io/samples/#)），展示、说明、代码三者又不能整合，你看着案例，都不知道代码长啥样，还得现去找，去对。
+- 某些比较动态的案例，比如某按钮Sample，为了展示按钮的外观参数，加了一些控件来调节属性，这些动态调节的代码太复杂，污染了原本要展示的按钮逻辑，这种代码很难高速阅读。
 
 以上，得治：
 
