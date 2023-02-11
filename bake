@@ -4,6 +4,24 @@ set -o errexit
 set -o functrace #trap inherited in function
 # set -x
 
+# bake == (bash)ake == 去make的bash工具
+# ------------------------------------------------------------------------------
+# bake 是个简单的自建命令工具，以替代Makefile的子命令功能
+# make工具的主要特点是处理文件依赖进行增量编译，但flutter、golang、java、js项目的build工具
+# 太厉害了，这几年唯一还在用Makefile的理由就是他的子命令机制: "make build"、
+# "make run", 可以方便的自定义单一入口的父子命令，但Makefile本身的语法套路也很复杂，
+# 很多批处理还是要靠bash, 这就尴尬了，工具太多，麻烦！本脚本尝试彻底摆脱使用Makefile。
+# 经尝试，代码很少啊 ，公共代码几十行啊，还主要是提取显示子命令帮助的，功能足够了：
+#   ./bake       # 列子命令看帮助，
+#   ./bake build # 子命令
+#   ./bake run   # 子命令
+# bake命令规则：
+# 1. 定义以斜杠"/"为前缀的function作为子命令，/build、/run、/assets/list、
+#    表示命令的其父子关系，执行时去掉斜杠/, 构成父子命令：./bake assets list -x -y -z
+# 2. 命令function上方的一行注释作为命令的帮助，显示在命令列表
+# 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
+# ------------------------------------------------------------------------------
+
 if (( BASH_VERSINFO[0] < 4 ))  ; then
   echo "Error: 您bash版本过低(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
   apt install bash  # ubuntu
@@ -17,11 +35,17 @@ if ! realpath --help >/dev/null 2>&1  ; then
   brew install coreutils # mac"
   exit 1
 fi
+
+
 # 临时试验命令行工具用
 /temp() {
-  declare | grep FUNCNAME
+  declare | grep path
   echo "${FUNCNAME[0]} "
-  /sss
+}
+
+# 项目init
+/init() {
+  git lfs install
 }
 
 # 构建命令
@@ -37,6 +61,7 @@ fi
 /preview() {
   echo "bake preview"
   /build
+# 	npx http-server ./build/web --port 8080
   deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
 }
 
@@ -104,7 +129,7 @@ __EOF
   return
 }
 
-# 没子命令的就显示help
+# 执行./bake 没参数，即没子命令，就显示help
 if [ "$#" == 0 ]; then
   /help
   echo
@@ -121,5 +146,7 @@ if ! declare -f "$cmdFunc" >/dev/null 2>&1 ; then
   exit 1
 fi
 
+# 加上/前缀执行相应的function
+# 比如"./bike build" ,执行的是"/build"函数
 # shellcheck disable=SC2145
 "/$@"

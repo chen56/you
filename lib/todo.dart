@@ -11,6 +11,8 @@ class TODO_core_architecture{
   // - 可分享给朋友打开的页面就是独立页面，否则是不独立页面比如多步骤向导页中的某一步  需单独处理
   // - navatitor 用时间戳或id控制浏览器后退按钮的鉴别
   // - state恢复表单，防止没保存
+  // - page 越来越多，如何安排目录呢？按package？按用途？
+  // - 【低优先级】page用tag组织一下？
 }
 class TODO_js_static_site{
   // flutter貌似是有点大，半天加载不出来！应提供一个简版的静态站：html+js
