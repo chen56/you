@@ -32,7 +32,7 @@ fi
 /build() {
   export
   echo "bake build"
-  flutter build web --release --web-renderer canvaskit
+  flutter build web --release --web-renderer canvaskit --base-href='/flutter-note/'
 }
 
 
