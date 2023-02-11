@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-import 'note/frame.dart';
+import 'note/layout.dart';
 
 Meta rootPage = Meta(
   title: "home",

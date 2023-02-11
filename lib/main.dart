@@ -7,7 +7,9 @@ import 'navigator_v2.dart';
 void main() {
   runApp(const App());
 }
+
 Logger logger = Logger();
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -16,14 +18,17 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       title: 'Flutter Note',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
         useMaterial3: true,
+        brightness: Brightness.dark,
       ),
-      routerDelegate: LoggableRouterDelegate(logger:logger,delegate:MyRouterDelegate(
-        first: paths.home,
-        notFound: paths.notFound,
-        rules: root.toList(),
-      )),
+      routerDelegate: LoggableRouterDelegate(
+          logger: logger,
+          delegate: MyRouterDelegate(
+            first: paths.home,
+            notFound: paths.notFound,
+            rules: root.toList(),
+          )),
       routeInformationParser: Parser(rules: root.toList()),
     );
   }
