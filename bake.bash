@@ -32,7 +32,8 @@ fi
 /build() {
   export
   echo "bake build"
-  flutter build web --release --web-renderer canvaskit --base-href='/flutter-note/'
+  # canvaskit web版文件太大了十几MB
+  flutter build web --release --web-renderer html --base-href='/flutter-note/'
 }
 
 
