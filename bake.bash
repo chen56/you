@@ -24,10 +24,6 @@ fi
   /sss
 }
 
-/sss(){
- echo "s"
-}
-
 # 构建命令
 /build() {
   export
@@ -42,6 +38,12 @@ fi
   echo "bake preview"
   /build
   deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
+}
+
+# dev run local http://localhost:8000
+/run() {
+  echo "bake run"
+  flutter run --web-renderer html --device-id chrome --enable-experiment=records
 }
 
 # 清理
