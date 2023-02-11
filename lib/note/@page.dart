@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-import 'frame.dart';
+import 'layout.dart';
 
 Meta notePage = Meta(
   title: "note",

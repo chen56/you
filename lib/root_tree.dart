@@ -5,7 +5,6 @@ import 'package:learn_flutter/note/dev/debug/@page.dart';
 import 'package:learn_flutter/note/dev/mirror/@page.dart';
 import 'package:learn_flutter/note/material/button/ElevatedButton/@page.dart';
 import 'package:learn_flutter/note/material/slider/@page.dart';
-import 'package:learn_flutter/note/material/text/RichText/@page.dart';
 import 'package:learn_flutter/note/material/text/Text/@page.dart';
 import 'package:learn_flutter/note/state/1.vanilla_state/@page.dart';
 import 'package:learn_flutter/note/state/StatefulBuilder/@page.dart';
@@ -15,6 +14,7 @@ import 'not_found/@page.dart';
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // https://github.com/dart-lang/language/issues/2826
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
+// 需求被拒绝，貌似这种自省需求会影响到dart的性能策略
 
 N<void> root = N<void>("/", meta: rootPage, kids: [
   N<void>("not_found", meta: notFoundPage),
@@ -25,7 +25,6 @@ N<void> root = N<void>("/", meta: rootPage, kids: [
       ]),
       N<void>("text", kids: [
         N<void>("RichText", meta: widgetTextNote),
-        N<void>("Text", meta: widgetRichTextNote),
       ]),
       N<void>("slider", meta: widgetSliderNote),
     ]),
