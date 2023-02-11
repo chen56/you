@@ -20,14 +20,24 @@ fi
 
 # 构建命令
 @build() {
-  echo "run build: $*"
-  flutter build web --release  --web-renderer canvaskit --dart-define=FLUTTER_WEB_CANVASKIT_URL=https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.37.1/bin/ -o build/web/canvaskit
+  echo "bake build"
+  flutter build web --release --web-renderer canvaskit
 }
 
-# 运行命令
-@run() {
-  echo "run"
+
+# build + run local http://localhost:8000
+@preview() {
+  echo "bake preview $*"
+  @build
+  deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
 }
+
+# 清理
+@clean() {
+  echo "bake clean: $*"
+  flutter clean
+}
+
 
 @help() {
 
