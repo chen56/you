@@ -67,6 +67,13 @@ function _realpath(){
   flutter build web --release --web-renderer html --base-href='/flutter-note/'
 }
 
+# 构建命令
+/test() {
+  echo "bake build"
+  # canvaskit web版文件太大了十几MB
+  flutter test --web-renderer html
+}
+
 
 # build + run local http://localhost:8000
 /preview() {

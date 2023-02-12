@@ -58,3 +58,19 @@ analyzer:
 ```bash
 flutter run --enable-experiment=records
 ```
+## project workflow
+
+```text
+当前workflow：
+PR---->main
+         | 
+         |-----> deploy : https://chen56.github.com/flutter-note/
+
+# 待后面功能稳定了，可以加个prod分支（暂时没有）：
+PR---->main--->prod
+         |       |-----> deploy prod: https://chen56.github.com/flutter-note
+         | 
+         |-----> deploy main(inner review) : https://chen56.github.com/flutter-note/main
+
+```
+

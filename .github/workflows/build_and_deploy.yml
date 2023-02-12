@@ -3,13 +3,13 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Dart
+name: Build And Deploy
 
 on:
   push:
-    branches: [ "website" ]
+    branches: [ "main","prod" ]
   pull_request:
-    branches: [ "website" ]
+    branches: [ "main","prod"  ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -24,7 +24,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3        
       - name: Flutter action
         # You may pin to the exact commit or the version.
         # uses: subosito/flutter-action@dbf1fa04f4d2e52c33185153d06cdb5443aa189d
@@ -42,21 +41,24 @@ jobs:
           # cache-path: # optional, default is ${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:
           # The architecture of Flutter SDK executable (x64 or arm64)
           # architecture: # optional, default is ${{ runner.arch }}        
-          
-      # Your project will need to have tests in test/ and a dependency on
-      # package:test for this step to succeed. Note that Flutter projects will
-      # want to change this to 'flutter test'.
-      - name: Run tests
-        run: flutter test
+
+      - name: checkout main
+        uses: actions/checkout@v3
+
+      # test
+      - name: test main
+        run:  ./bake test
+
+      # build
       - name: Build
         run: |
-          echo "-----steps.pages.outputs.base_url: ${{ steps.pages.outputs.base_url }}/"
           ./bake build
           ls ./build/web/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./build/web
+
   # Deployment job
   deploy:
     environment:
