@@ -1,12 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-import 'note/layout.dart';
+import 'defalut_layout.dart';
 
 Meta rootPage = Meta(
   title: "home",
   builder: build,
-  layout: <T>(N<T> note) => NoteLayout<T>(note),
+  layout: <T>(N<T> note) => DefaultLayout<T>(note),
 
 );
 

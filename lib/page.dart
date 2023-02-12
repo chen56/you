@@ -1,34 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:learn_flutter/navigator_v2.dart';
-import 'package:learn_flutter/note/layout.dart';
+import 'package:learn_flutter/defalut_layout.dart';
 
 import 'utils.dart';
+import 'package:markdown/markdown.dart' as md;
 
 /// <T>: [Navigator.push] 的返回类型
 class Meta<T> {
   final String title;
   final void Function(Pen<void> note, BuildContext context) builder;
-  late final LayoutBuilder layout;
+  late final LayoutBuilder<T> layoutBuilder;
 
   Meta({
     required this.title,
     required this.builder,
     LayoutBuilder? layout,
   }) {
-    this.layout = layout ?? <T>(N<T> note) => NoteLayout<T>(note);
+    this.layoutBuilder = layout ?? <T>(N<T> note) => DefaultLayout<T>(note);
   }
 
-  List<Widget> build(BuildContext context, N<T> p) {
+  Pen<T> build(BuildContext context, N<T> p) {
     //Pen一次性用品，用完丢弃，防止Flutter框架多次刷新造成的状态问题
-    Pen<void> pen = Pen(page: p);
+    Pen<T> pen = Pen<T>(page: p);
     builder(pen, context);
-    return pen.widgets;
+    return pen;
   }
 }
 
 class Pen<T> {
   final List<Widget> _widgets = List.empty(growable: true);
   final N<T> page;
+  final List<md.Element> markdownElements = List.empty(growable: true);
 
   List<Widget> get widgets => List.unmodifiable(_widgets);
 
@@ -38,14 +41,52 @@ class Pen<T> {
     _widgets.add(Text("sample: $sample")); //临时实现
   }
 
-  void markdown(String s) {
-    _widgets.add(Text("markdown: $s")); //临时实现
+  void markdown(String content) {
+    var markdownBody = MarkdownBody(
+      data: content,
+      selectable: true,
+      builders: <String, MarkdownElementBuilder>{
+        'h1': CenteredHeaderBuilder(this),
+        'h2': CenteredHeaderBuilder(this),
+        'h3': CenteredHeaderBuilder(this),
+        'h4': CenteredHeaderBuilder(this),
+        'h5': CenteredHeaderBuilder(this),
+        'h6': CenteredHeaderBuilder(this),
+        'h7': CenteredHeaderBuilder(this),
+      },
+    );
+    _widgets.add(markdownBody); //临时实现
+  }
+
+  void visitMarkdownElemnet(md.Element element) {
+    print("${element.textContent} ssss  ");
+    markdownElements.add(element);
   }
 }
 
-typedef LayoutBuilder = Layout<T> Function<T>(N<T> page);
+class CenteredHeaderBuilder extends MarkdownElementBuilder {
+  final Pen pen;
 
-Layout<T> _emptyFrameBuilder<T>(note) => _EmptyLayout<T>(note);
+  CenteredHeaderBuilder(this.pen);
+
+  @override
+  Widget? visitText(md.Text text, TextStyle? preferredStyle) {
+    return Row(
+      children: <Widget>[
+        Text(text.text, style: preferredStyle),
+      ],
+    );
+  }
+
+  @override
+  void visitElementBefore(md.Element element) {
+    print("object ${element.textContent}");
+    pen.visitMarkdownElemnet(element);
+    super.visitElementBefore(element);
+  }
+}
+
+typedef LayoutBuilder<T> = Layout<T> Function<T>(N<T> page);
 
 /// 用kids代替单词children,原因是children太长了
 class N<T> implements Rule<T> {
@@ -70,8 +111,8 @@ class N<T> implements Rule<T> {
 
   bool get hasPage => meta != null;
 
-  List<Widget> build(BuildContext context) {
-    if (meta == null) return List.empty();
+  Pen<T> build(BuildContext context) {
+    if (meta == null) return Pen(page: this);
     return meta!.build(context, this);
   }
 
@@ -80,8 +121,10 @@ class N<T> implements Rule<T> {
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
   LayoutBuilder get layout {
-    if (isRoot) return meta == null ? _emptyFrameBuilder : meta!.layout;
-    return meta?.layout != null ? meta!.layout : _parent!.layout;
+    if (isRoot) {
+      return meta == null ? <T>(N<T> note) => DefaultLayout<T>(note) : meta!.layoutBuilder;
+    }
+    return meta?.layoutBuilder != null ? meta!.layoutBuilder : _parent!.layout;
   }
 
   bool get isLeaf => kids.isEmpty;
@@ -139,25 +182,3 @@ class N<T> implements Rule<T> {
 /// Dart 3 class-modifiers:interface class
 /// kua
 mixin Layout<T> implements Screen<T> {}
-
-class _EmptyLayout<T> extends StatelessWidget with Layout<T>, Screen<T> {
-  final N<T> note;
-
-  _EmptyLayout(this.note, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("当前是缺省Frame,您最少有个根Frame")),
-      body: ListView(children: [
-        ...note.build(context),
-      ]),
-    );
-  }
-
-  @override
-  String get location => note.path;
-
-  @override
-  Rule<T> get rule => note;
-}

@@ -2,22 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:learn_flutter/navigator_v2.dart';
 import 'package:learn_flutter/page.dart';
 import 'package:learn_flutter/root_tree.dart';
+import 'package:markdown/markdown.dart' as md;
 
-class NoteLayout<T> extends StatelessWidget with Screen<T>, Layout<T> {
+class DefaultLayout<T> extends StatelessWidget with Screen<T>, Layout<T> {
   final N<T> note;
 
-  NoteLayout(this.note, {super.key});
+  DefaultLayout(this.note, {super.key});
 
   @override
   Widget build(BuildContext context) {
     var left = _NoteTreeView(root);
-    var right = Scaffold(
+
+    Pen<T> pen = note.build(context);
+    var center = Scaffold(
       appBar: AppBar(title: const Text("Flutter Note")),
-      // drawer: _NoteTreeView(root),
-      body: ListView(children: [...note.build(context)]),
+      body: ListView(children: [...pen.widgets]),
     );
-    return Row(
-      children: [left, Expanded(child: right)],
+    var right = ListView(
+      shrinkWrap: false,
+      padding: const EdgeInsets.all(20),
+      children: [
+        for (var m in pen.markdownElements)
+          ListTile(
+            title: Row(children: [Text(m.textContent)]),
+          )
+      ],
+    );
+    return Scaffold(
+      body: Row(
+        children: [
+          left,
+          Expanded(child: center),
+            Expanded(child: right),
+        ],
+      ),
     );
   }
 

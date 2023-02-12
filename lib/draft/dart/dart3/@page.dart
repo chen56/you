@@ -1,11 +1,11 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
-import 'package:learn_flutter/note/layout.dart';
+import 'package:learn_flutter/defalut_layout.dart';
 
 Meta rootPage = Meta(
   title: "dart 3 新特性",
   builder: build,
-  layout: <T>(N<T> note) => NoteLayout<T>(note),
+  layout: <T>(N<T> note) => DefaultLayout<T>(note),
 );
 
 build(Pen pen, BuildContext context) {

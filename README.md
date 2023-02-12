@@ -44,7 +44,7 @@ environment:
     sdk: '>=3.0.0-204.0.dev <4.0.0'
 ```
 
-本项目可能会使用一些dart 3.0的体验特性， 已配置analysis_options.yaml，告诉ide别报错，比如idea/vscode, 按<https://dart.dev/tools/experiment-flags >
+本项目可能会使用一些dart 3.0的体验特性， 已配置analysis_options.yaml，告诉ide别报错，比如idea/vscode, 按<https://dart.dev/tools/experiment-flags>
 
 ```yaml
 analyzer:
