@@ -64,7 +64,7 @@ flutter run --enable-experiment=records
 当前workflow：
 PR---->main
          | 
-         |-----> deploy main(inner review) : https://chen56.github.com/flutter-note/main
+         |-----> deploy : https://chen56.github.com/flutter-note/
 
 # 待后面功能稳定了，可以加个prod分支（暂时没有）：
 PR---->main--->prod
