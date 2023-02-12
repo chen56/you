@@ -58,3 +58,12 @@ analyzer:
 ```bash
 flutter run --enable-experiment=records
 ```
+## project workflow
+
+```text
+PR---->main--->prod
+         |       |-----> deploy prod: https://chen56.github.com/flutter-note
+         | 
+         |-----> deploy main(inner review) : https://chen56.github.com/flutter-note/main
+```
+
