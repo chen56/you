@@ -42,37 +42,17 @@ jobs:
           # The architecture of Flutter SDK executable (x64 or arm64)
           # architecture: # optional, default is ${{ runner.arch }}        
 
-      - name: checkout prod -> ./prod
+      - name: checkout main
         uses: actions/checkout@v3
-        with:
-          ref: prod
-          path: prod
-      - name: checkout main -> ./main
-        uses: actions/checkout@v3
-        with:
-          ref: main
-          path: main
 
       # test
       - name: test main
-        run: cd main && flutter test
-      - name: test prod
-        run: cd prod && flutter test
+        run:  ./bake test
 
       # build
-      - name: Build ./prod
+      - name: Build
         run: |
-          cd prod && ./bake build
-          ls ./prod/build/web/
-      - name: Build ./main
-        run: |
-          cd main && ./bake build
-          ls ./main/build/web/
-      - name: Put them together
-        run: |
-          mkdir -p ./build/web
-          cp -R ./prod/build/web ./build/web
-          cp -R ./main/build/web ./build/web/main
+          ./bake build
           ls ./build/web/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
