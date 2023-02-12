@@ -3,13 +3,13 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Dart
+name: Build And Deploy
 
 on:
   push:
-    branches: [ "website" ]
+    branches: [ "main","prod" ]
   pull_request:
-    branches: [ "website" ]
+    branches: [ "main","prod"  ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -53,18 +53,20 @@ jobs:
           ref: main
           path: main
 
-      # Your project will need to have tests in test/ and a dependency on
-      # package:test for this step to succeed. Note that Flutter projects will
-      # want to change this to 'flutter test'.
-      - name: Run tests
-        run: flutter test
+      # test
+      - name: test main
+        run: cd main && flutter test
+      - name: test prod
+        run: cd prod && flutter test
+
+      # build
       - name: Build ./prod
         run: |
-          ./prod/bake build
+          cd prod && ./bake build
           ls ./prod/build/web/
       - name: Build ./main
         run: |
-          ./main/bake build
+          cd main && ./bake build
           ls ./main/build/web/
       - name: Put them together
         run: |
@@ -76,6 +78,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./build/web
+
   # Deployment job
   deploy:
     environment:
