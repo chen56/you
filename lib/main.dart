@@ -25,7 +25,7 @@ class App extends StatelessWidget {
       routerDelegate: LoggableRouterDelegate(
           logger: logger,
           delegate: MyRouterDelegate(
-            first: paths.home,
+            first: paths.welcome,
             notFound: paths.notFound,
             rules: root.toList(),
           )),
