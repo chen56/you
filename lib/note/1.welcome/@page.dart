@@ -1,12 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-import 'root_tree.dart';
-
-Meta rootPage = Meta(
-  title: "home",
+Meta welcomePage = Meta(
+  title: "welcome",
   builder: build,
-  layout: <T>(N<T> note) => DefaultLayout<T>(current: note, tree: paths.note),
 );
 
 build(Pen pen, BuildContext context) {

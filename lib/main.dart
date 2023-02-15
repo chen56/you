@@ -20,12 +20,12 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
         useMaterial3: true,
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
       ),
       routerDelegate: LoggableRouterDelegate(
           logger: logger,
           delegate: MyRouterDelegate(
-            first: paths.home,
+            first: paths.welcome,
             notFound: paths.notFound,
             rules: root.toList(),
           )),

@@ -171,6 +171,7 @@ mixin Screen<R> on Widget {
 }
 
 /// 范型A： R:结果类型
+/// navigator_v2.dart 是更初级的包，用此类隔离其他包的依赖性
 abstract class Rule<R> {
   Screen<R> Function(String path) get parse;
 

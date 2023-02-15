@@ -8,16 +8,21 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-    sdk: '>=3.0.0-204.0.dev <4.0.0'
+  sdk: '>=3.0.0-204.0.dev <4.0.0'
 
 dependencies:
 
   flutter:
     sdk: flutter
 
+  # markdown pen
+  markdown: ^7.0.0
+  flutter_markdown: ^0.6.14
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  # 应该是不需要这个东东的，暂时注释掉
+#  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   test:
@@ -41,10 +46,10 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   fonts:
-      - family: 'Roboto'
-        fonts:
-            - asset: assets/fonts/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf
-        # 中文默认字体，这个不起作用？web模式下不下来文件也是够喝一壶
-      - family: 'Noto Sans SC"'
-        fonts:
-            - asset: assets/fonts/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.otf
+    - family: 'Roboto'
+      fonts:
+        - asset: assets/fonts/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf
+      # 中文默认字体，这个不起作用？web模式下不下来文件也是够喝一壶
+    - family: 'Noto Sans SC"'
+      fonts:
+        - asset: assets/fonts/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.otf
