@@ -101,18 +101,3 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
   }
 }
 
-class DebugPagesLog extends StatelessWidget {
-  const DebugPagesLog({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    var names = NavigatorV2.of(context).pages.map((e) => e.name).toList();
-    return Expanded(
-      child: ListView(children: [
-        const Center(child: Text("-----debug:pages-----")),
-        for (int i = names.length - 1; i >= 0; i--)
-          ListTile(title: Text("  pages[$i]: ${names[i]})")),
-      ]),
-    );
-  }
-}

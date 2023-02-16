@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/log.dart';
-import 'package:learn_flutter/root_tree.dart';
+import 'package:learn_flutter/pages/root_tree.dart';
 
 import 'navigator_v2.dart';
 
@@ -26,7 +26,6 @@ class App extends StatelessWidget {
           logger: logger,
           delegate: MyRouterDelegate(
             first: paths.welcome,
-            notFound: paths.notFound,
             rules: root.toList(),
           )),
       routeInformationParser: Parser(rules: root.toList()),

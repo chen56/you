@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:learn_flutter/navigator_v2.dart';
@@ -58,7 +57,7 @@ class Pen<T> {
 }
 
 // markdown 的结构轮廓，主要用来显示TOC
-class _Outline extends ChangeNotifier {
+class _Outline {
   _OutlineNode root = _OutlineNode(heading: 0, title: "");
   _OutlineNode? current;
 
@@ -66,12 +65,10 @@ class _Outline extends ChangeNotifier {
     var newNode = _OutlineNode(heading: heading, title: title);
     if (current == null) {
       current = root.add(newNode);
-      notifyListeners();
 
       return;
     }
     current = current!.add(newNode);
-    notifyListeners();
   }
 }
 
@@ -108,14 +105,14 @@ class _OutlineNode {
 
   @override
   String toString() {
-    return "heading:${heading} title:${title} kids:${kids.length}";
+    return "heading:$heading title:$title kids:${kids.length}";
   }
 }
 
 class _OutlineView extends StatelessWidget {
   final _Outline outline;
 
-  _OutlineView({super.key, required this.outline});
+  const _OutlineView({super.key, required this.outline});
 
   @override
   Widget build(BuildContext context) {
@@ -176,8 +173,8 @@ typedef LayoutBuilder<T> = Layout<T> Function<T>(N<T> page);
 /// 用kids代替单词children,原因是children太长了
 class N<T> implements Rule<T> {
   final String name;
-  final List<N> kids;
-  final Map<String, N> kidsMap = {};
+  final List<N> _kids;
+  final Map<String, N> _kidsMap = {};
   N? _parent;
   final Map<String, Object> attributes = ListenableMap();
   late final Meta<T>? meta;
@@ -186,11 +183,11 @@ class N<T> implements Rule<T> {
     this.name, {
     this.meta,
     LayoutBuilder? frame,
-    this.kids = const [],
-  }) {
-    for (var child in kids) {
+    List<N<dynamic>> kids = const [],
+  }) : _kids = kids {
+    for (var child in _kids) {
       child._parent = this;
-      kidsMap[child.name] = child;
+      _kidsMap[child.name] = child;
     }
   }
 
@@ -204,19 +201,19 @@ class N<T> implements Rule<T> {
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
   LayoutBuilder get layout {
-    if(meta!=null && meta!.layoutBuilder!=null){
+    if (meta != null && meta!.layoutBuilder != null) {
       return meta!.layoutBuilder!;
     }
 
     if (isRoot) {
       return <T>(N<T> note) => DefaultLayout<T>(
-        current: note,
-      );
+            current: note,
+          );
     }
     return _parent!.layout;
   }
 
-  bool get isLeaf => kids.isEmpty;
+  bool get isLeaf => _kids.isEmpty;
 
   int get level => isRoot ? 0 : _parent!.level + 1;
 
@@ -232,7 +229,7 @@ class N<T> implements Rule<T> {
   }
 
   List<N> toList({bool includeThis = true}) {
-    var flatChildren = kids.expand((element) => element.toList()).toList();
+    var flatChildren = _kids.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
@@ -242,7 +239,7 @@ class N<T> implements Rule<T> {
     // expect("/a".split("/"), ["","a"]);
     // expect("/a/".split("/"), ["","a",""]);
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
-      result = result?.kidsMap[split];
+      result = result?._kidsMap[split];
       if (result == null) break;
     }
     assert(result != null, "page(${this.path}).kid($path) not found");
@@ -259,7 +256,7 @@ class N<T> implements Rule<T> {
   @override
   String toString({bool? deep}) {
     if (deep == null || !deep) {
-      return "Page($path ,kids:${kids.map((e) => e.toStringShort()).toList()})";
+      return "Page($path ,kids:${_kids.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
       for (N n in toList()) {
@@ -289,13 +286,14 @@ class DefaultLayout<T> extends StatefulWidget with Screen<T>, Layout<T> {
 
   @override
   State<StatefulWidget> createState() {
-    return DefaultLayoutState<T>();
+    return _DefaultLayoutState<T>();
   }
 }
 
-class DefaultLayoutState<T> extends State<DefaultLayout<T>> {
+class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
   Pen<T>? pen;
-  bool get _didBuildFirstTime=> pen != null;
+
+  bool get _didBuildFirstTime => pen != null;
 
   @override
   void initState() {
@@ -304,8 +302,7 @@ class DefaultLayoutState<T> extends State<DefaultLayout<T>> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // 只有在第一次build后才setState，促使二次build
       if (_didBuildFirstTime) {
-        setState(() {
-        });
+        setState(() {});
       }
     });
   }
