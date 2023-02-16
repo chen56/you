@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-Meta widgetRichTextNote = Meta(
+PageMeta widgetRichTextNote = PageMeta(
   title: "RichText",
   builder: build,
 );

@@ -76,12 +76,13 @@ class Parser extends RouteInformationParser<RouteInformation> {
 class MyRouterDelegate extends RouterDelegate<RouteInformation>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<RouteInformation> {
   MyRouterDelegate({
-    required this.rules,
-    required Rule<void> first,
-  }) : _pages = List.from([first.parse("/")._page], growable: true);
-  final List<_Page> _pages;
-  final List<Rule> rules;
+    required Screen first,
+    required Navigable navigable,
+  })  : _pages = List.from([first._page], growable: true),
+        _navigable = navigable;
 
+  final List<_Page> _pages;
+  final Navigable _navigable;
   @override
   final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>(debugLabel: "myNavigator");
@@ -102,15 +103,8 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
     return SynchronousFuture(null);
   }
 
-  Rule match(String location) {
-    Uri uri = Uri.parse(location);
-    Rule Function()? x;
-    return rules.lastWhere((element) => uri.path == element.path, orElse: x);
-  }
-
   Future<R?> _push<R>(String location) {
-    Rule rule = match(location);
-    Screen screen = rule.parse(location);
+    Screen screen = _navigable.parse(location);
     _Page page = screen._page;
     //把completer的完成指责放权给各Screen后，框架需监听其完成后删除Page
     //并在onPopPage后
@@ -173,7 +167,7 @@ mixin Screen<R> on Widget {
 /// 范型A： R:结果类型
 /// navigator_v2.dart 是更初级的包，用此类隔离其他包的依赖性
 abstract class Rule<R> {
-  Screen<R> Function(String path) get parse;
+  Screen<R> parse(String path);
 
   String get path;
 
@@ -181,6 +175,10 @@ abstract class Rule<R> {
   String toString() {
     return path;
   }
+}
+
+abstract class Navigable {
+  Screen parse(String location);
 }
 
 class DebugPagesLog extends StatelessWidget {

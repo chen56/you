@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:learn_flutter/page.dart';
 
-Meta devMirrorNote = Meta(
+PageMeta devMirrorNote = PageMeta(
   title: "网络问题",
   builder: build,
 );

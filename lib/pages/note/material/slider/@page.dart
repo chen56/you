@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
 
-Meta widgetSliderNote = Meta(
+PageMeta widgetSliderNote = PageMeta(
   title: "Slider",
   builder: build,
 );

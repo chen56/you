@@ -4,7 +4,7 @@ import 'package:learn_flutter/page.dart';
 import '1.text_normal.dart';
 import '2.text_rich.dart';
 
-Meta widgetTextNote = Meta(
+PageMeta widgetTextNote = PageMeta(
   title: "Text",
   builder: build,
 );

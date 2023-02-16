@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-Meta notFoundPage = Meta(
+PageMeta notFoundPage = PageMeta(
   title: "404",
   builder: build,
 );
 
 build(Pen pen, BuildContext context) {
-  pen. markdown(r'''
+  pen.markdown(r'''
 ## 404 Not Found 
 
 

@@ -6,53 +6,45 @@ import 'utils.dart';
 import 'package:markdown/markdown.dart' as md;
 
 /// <T>: [NavigatorV2.push] 的返回类型
-class Meta<T> {
+class PageMeta<T> {
   final String title;
   final void Function(Pen<void> note, BuildContext context) builder;
   late final LayoutBuilder<T>? layoutBuilder;
 
-  Meta({
+  PageMeta({
     required this.title,
     required this.builder,
     LayoutBuilder? layout,
   }) : layoutBuilder = layout;
-
-  Pen<T> build(BuildContext context, N<T> p) {
-    //Pen一次性用品，用完丢弃，防止Flutter框架多次刷新造成的状态问题
-    Pen<T> pen = Pen<T>(page: p);
-    builder(pen, context);
-    return pen;
-  }
 }
 
 class Pen<T> {
-  final List<Widget> _widgets = List.empty(growable: true);
+  final List<Widget> _content = List.empty(growable: true);
   final N<T> page;
   final _Outline _outline = _Outline();
-
-  List<Widget> get widgets => List.unmodifiable(_widgets);
 
   Pen({required this.page});
 
   void sample(Widget sample) {
-    _widgets.add(Text("sample: $sample")); //临时实现
+    _content.add(Text("sample: $sample")); //临时实现
   }
 
   void markdown(String content) {
+    var headerBuilder = _CenteredHeaderBuilder(_outline);
     var markdownBody = MarkdownBody(
       data: content,
       selectable: true,
       builders: <String, MarkdownElementBuilder>{
-        'h1': _CenteredHeaderBuilder(_outline),
-        'h2': _CenteredHeaderBuilder(_outline),
-        'h3': _CenteredHeaderBuilder(_outline),
-        'h4': _CenteredHeaderBuilder(_outline),
-        'h5': _CenteredHeaderBuilder(_outline),
-        'h6': _CenteredHeaderBuilder(_outline),
-        'h7': _CenteredHeaderBuilder(_outline),
+        'h1': headerBuilder,
+        'h2': headerBuilder,
+        'h3': headerBuilder,
+        'h4': headerBuilder,
+        'h5': headerBuilder,
+        'h6': headerBuilder,
+        'h7': headerBuilder,
       },
     );
-    _widgets.add(markdownBody); //临时实现
+    _content.add(markdownBody);
   }
 }
 
@@ -177,7 +169,7 @@ class N<T> implements Rule<T> {
   final Map<String, N> _kidsMap = {};
   N? _parent;
   final Map<String, Object> attributes = ListenableMap();
-  late final Meta<T>? meta;
+  late final PageMeta<T>? meta;
 
   N(
     this.name, {
@@ -193,9 +185,9 @@ class N<T> implements Rule<T> {
 
   bool get hasPage => meta != null;
 
-  Pen<T> build(BuildContext context) {
-    if (meta == null) return Pen(page: this);
-    return meta!.build(context, this);
+  void build(Pen pen, BuildContext context) {
+    if (meta == null) return;
+    meta!.builder(pen, context);
   }
 
   /// 页面骨架
@@ -247,7 +239,7 @@ class N<T> implements Rule<T> {
   }
 
   @override
-  Screen<T> Function(String path) get parse => (uri) => layout<T>(this);
+  Screen<T> parse(String location) => layout<T>(this);
 
   String toStringShort() {
     return path;
@@ -293,15 +285,15 @@ class DefaultLayout<T> extends StatefulWidget with Screen<T>, Layout<T> {
 class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
   Pen<T>? pen;
 
-  bool get _didBuildFirstTime => pen != null;
-
   @override
   void initState() {
     super.initState();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // 只有在第一次build后才setState，促使二次build
-      if (_didBuildFirstTime) {
+      bool afterFirstBuild = pen != null;
+      // 第一次build后, outline才被装配出内容，再次绘制，outline才能显示
+      // 所以每次页面都需要两次build
+      if (afterFirstBuild) {
         setState(() {});
       }
     });
@@ -309,21 +301,28 @@ class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
 
   @override
   Widget build(BuildContext context) {
+    //第一次layout build时, widget.current.build()
+    //第二次layout build时, pen=null
+    bool firstBuild = pen == null;
+    bool secondBuild = pen != null;
+
+    if (firstBuild) {
+      pen = Pen<T>(page: widget.current);
+      widget.current.build(pen!, context);
+    }
+
     var left = _NoteTreeView(widget.tree ?? widget.current.root);
-
-    bool closePen = _didBuildFirstTime;
-    pen ??= widget.current.build(context);
-
     var center = Scaffold(
-      appBar: AppBar(title: Text("${widget.current.path}")),
+      appBar: AppBar(title: Text(widget.current.name)),
       body: ListView(
         padding: const EdgeInsets.all(20),
-        children: [...pen!.widgets],
+        children: [...pen!._content],
       ),
     );
     var right = _OutlineView(outline: pen!._outline);
 
-    if (closePen) {
+    // outline 非空说明是第二次build，这时候已经收集完widget，可以释放了
+    if (secondBuild) {
       pen = null;
     }
     return Scaffold(

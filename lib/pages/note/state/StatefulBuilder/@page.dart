@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-Meta widgetStatefulBuilderNote = Meta(
+PageMeta widgetStatefulBuilderNote = PageMeta(
   title: "StatefulBuilder",
   builder: build,
 );

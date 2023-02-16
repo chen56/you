@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
 
-Meta notePage = Meta(
+PageMeta notePage = PageMeta(
   title: "可选择性",
   builder: build,
 );
