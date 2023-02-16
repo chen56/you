@@ -28,18 +28,18 @@ class App extends StatelessWidget {
           delegate: MyRouterDelegate(
             //todo 这有问题
             first: paths.welcome.parse(paths.welcome.path),
-            navigable:PageLocation(root,paths.notFound),
+            navigable:PageLocator(root,paths.notFound),
           )),
       routeInformationParser: Parser(rules: root.toList()),
     );
   }
 }
-class PageLocation extends Navigable{
+class PageLocator extends Navigable{
   N root;
   List<N> rules;
 
   N notFound;
-  PageLocation(this.root, this.notFound) : rules=root.toList();
+  PageLocator(this.root, this.notFound) : rules=root.toList();
   @override
   Screen parse(String location) {
     Uri uri = Uri.parse(location);
