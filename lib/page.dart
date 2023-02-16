@@ -8,7 +8,7 @@ import 'package:markdown/markdown.dart' as md;
 /// <T>: [NavigatorV2.push] 的返回类型
 class PageMeta<T> {
   final String title;
-  final void Function(Pen<void> note, BuildContext context) builder;
+  final void Function(Pen note, BuildContext context) builder;
   late final LayoutBuilder<T>? layoutBuilder;
 
   PageMeta({
@@ -18,12 +18,11 @@ class PageMeta<T> {
   }) : layoutBuilder = layout;
 }
 
-class Pen<T> {
+class Pen {
   final List<Widget> _content = List.empty(growable: true);
-  final N<T> page;
   final _Outline _outline = _Outline();
 
-  Pen({required this.page});
+  Pen();
 
   void sample(Widget sample) {
     _content.add(Text("sample: $sample")); //临时实现
@@ -283,7 +282,7 @@ class DefaultLayout<T> extends StatefulWidget with Screen<T>, Layout<T> {
 }
 
 class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
-  Pen<T>? pen;
+  Pen? pen;
 
   @override
   void initState() {
@@ -307,7 +306,7 @@ class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
     bool secondBuild = pen != null;
 
     if (firstBuild) {
-      pen = Pen<T>(page: widget.current);
+      pen = Pen();
       widget.current.build(pen!, context);
     }
 
