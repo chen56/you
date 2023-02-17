@@ -23,27 +23,26 @@ class App extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.light,
       ),
-      routerDelegate: LoggableRouterDelegate(
-          logger: logger,
-          delegate: MyRouterDelegate(
-            //todo 这有问题
-            first: paths.welcome.parse(paths.welcome.path),
-            navigable:PageLocator(root,paths.notFound),
-          )),
-      routeInformationParser: Parser(rules: root.toList()),
+      routerConfig: NavigatorV2.createRouterConfig(
+        first: paths.parse(paths.welcome.path),
+        navigable: paths,
+      ),
     );
   }
 }
-class PageLocator extends Navigable{
-  N root;
-  List<N> rules;
 
-  N notFound;
-  PageLocator(this.root, this.notFound) : rules=root.toList();
+class PageLocator extends Navigable {
+  Path root;
+  List<Path> rules;
+
+  Path notFound;
+
+  PageLocator(this.root, this.notFound) : rules = root.toList();
+
   @override
   Screen parse(String location) {
     Uri uri = Uri.parse(location);
-    N find = rules.lastWhere((element) => uri.path == element.path, orElse: ()=>notFound);
-    return find.parse(location);
+    Path find = rules.lastWhere((element) => uri.path == element.path, orElse: () => notFound);
+    return find.createScreen(location);
   }
 }

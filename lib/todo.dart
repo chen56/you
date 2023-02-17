@@ -35,7 +35,6 @@ class TODO_feature_optimization{
 }
 
 class TODO2_note{
-  //PreferredSizeWidget 是啥
   //是否搞个组件继承树作为导航，方便查阅，类似 https://juejin.cn/post/6997370774466068517
   // var mediaQuery = MediaQuery.removePadding(
   //     context: context,
@@ -43,5 +42,9 @@ class TODO2_note{
   //     removeTop: true,
   //     child: listView,
   //   );
+  //PreferredSizeWidget
+  // SafeArea
+  // https://api.flutter.dev/flutter/widgets/GlobalKey-class.html
+  // GlobalKey昂贵的解释
 }
 

@@ -103,7 +103,7 @@ class _OutlineNode {
 class _OutlineView extends StatelessWidget {
   final _Outline outline;
 
-  const _OutlineView({super.key, required this.outline});
+  const _OutlineView({required this.outline});
 
   @override
   Widget build(BuildContext context) {
@@ -159,22 +159,22 @@ class _CenteredHeaderBuilder extends MarkdownElementBuilder {
   }
 }
 
-typedef LayoutBuilder<T> = Layout<T> Function<T>(N<T> page);
+typedef LayoutBuilder<T> = Layout<T> Function<T>(Path<T> page);
 
 /// 用kids代替单词children,原因是children太长了
-class N<T> implements Rule<T> {
+class Path<T> {
   final String name;
-  final List<N> _kids;
-  final Map<String, N> _kidsMap = {};
-  N? _parent;
+  final List<Path> _kids;
+  final Map<String, Path> _kidsMap = {};
+  Path? _parent;
   final Map<String, Object> attributes = ListenableMap();
   late final PageMeta<T>? meta;
 
-  N(
+  Path(
     this.name, {
     this.meta,
     LayoutBuilder? frame,
-    List<N<dynamic>> kids = const [],
+    List<Path<dynamic>> kids = const [],
   }) : _kids = kids {
     for (var child in _kids) {
       child._parent = this;
@@ -197,7 +197,7 @@ class N<T> implements Rule<T> {
     }
 
     if (isRoot) {
-      return <T>(N<T> note) => DefaultLayout<T>(
+      return <T>(Path<T> note) => DefaultLayout<T>(
             current: note,
           );
     }
@@ -210,35 +210,29 @@ class N<T> implements Rule<T> {
 
   bool get isRoot => _parent == null;
 
-  N get root => isRoot ? this : _parent!.root;
+  Path get root => isRoot ? this : _parent!.root;
 
-  @override
   String get path {
     if (isRoot) return "/";
     var parentPath = _parent!.path;
     return parentPath == "/" ? "/$name" : "$parentPath/$name";
   }
 
-  List<N> toList({bool includeThis = true}) {
+  List<Path> toList({bool includeThis = true}) {
     var flatChildren = _kids.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  N kid(String path) {
-    N? result = this;
-    // expect("/".split("/"), ["",""]);
-    // expect("/a".split("/"), ["","a"]);
-    // expect("/a/".split("/"), ["","a",""]);
+  Path? kid(String path) {
+    Path? result = this;
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._kidsMap[split];
       if (result == null) break;
     }
-    assert(result != null, "page(${this.path}).kid($path) not found");
-    return result!;
+    return result;
   }
 
-  @override
-  Screen<T> parse(String location) => layout<T>(this);
+  Screen<T> createScreen(String location) => layout<T>(this);
 
   String toStringShort() {
     return path;
@@ -250,7 +244,7 @@ class N<T> implements Rule<T> {
       return "Page($path ,kids:${_kids.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
-      for (N n in toList()) {
+      for (Path n in toList()) {
         sb.write("$n\n");
       }
       return sb.toString();
@@ -263,17 +257,14 @@ class N<T> implements Rule<T> {
 mixin Layout<T> implements Screen<T> {}
 
 class DefaultLayout<T> extends StatefulWidget with Screen<T>, Layout<T> {
-  final N<T> current;
+  final Path<T> current;
 
-  final N? tree;
+  final Path? tree;
 
   DefaultLayout({super.key, this.tree, required this.current});
 
   @override
   String get location => current.path;
-
-  @override
-  Rule<T> get rule => current;
 
   @override
   State<StatefulWidget> createState() {
@@ -347,7 +338,7 @@ class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
 }
 
 class _NoteTreeView extends StatefulWidget {
-  final N root;
+  final Path root;
 
   const _NoteTreeView(
     this.root, {
@@ -364,7 +355,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
-    Widget pageLink(N note) {
+    Widget pageLink(Path note) {
       IconData titleIcon = note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
       click() {
         // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
@@ -398,7 +389,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
 }
 
 // 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension _TreeViewNote on N {
+extension _TreeViewNote on Path {
   static const _extendAttrName = "note.layout._TreeViewNote.extend";
 
   //展开状态

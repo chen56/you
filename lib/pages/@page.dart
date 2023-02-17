@@ -6,7 +6,7 @@ import 'root_tree.dart';
 PageMeta rootPage = PageMeta(
   title: "home",
   builder: build,
-  layout: <T>(N<T> note) => DefaultLayout<T>(current: note, tree: paths.note),
+  layout: <T>(Path<T> note) => DefaultLayout<T>(current: note, tree: paths.note),
 );
 
 build(Pen pen, BuildContext context) {

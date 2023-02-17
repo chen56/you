@@ -3,16 +3,16 @@ import 'dart:core';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/log.dart';
 
-////////////////////////////////////////////////
-// 上面是应用代码，下面是封装后的NavigatorV2高级Api
-////////////////////////////////////////////////
+
+/// navigator_v2 是基础包，不依赖其他业务代码
 class NavigatorV2 extends StatelessWidget {
   const NavigatorV2._({
     required GlobalKey<NavigatorState> navigatorKey,
     required List<_Page<dynamic>> pages,
     required dynamic Function() notifyListeners,
-    required MyRouterDelegate routerDelegate,
+    required _MyRouterDelegate routerDelegate,
   })  : _navigatorKey = navigatorKey,
         _notifyListeners = notifyListeners,
         _pages = pages,
@@ -21,7 +21,7 @@ class NavigatorV2 extends StatelessWidget {
   final GlobalKey<NavigatorState> _navigatorKey;
   final List<_Page> _pages;
   final Function() _notifyListeners;
-  final MyRouterDelegate _routerDelegate;
+  final _MyRouterDelegate _routerDelegate;
 
   static NavigatorV2 of(BuildContext context) {
     return context.findAncestorWidgetOfExactType<NavigatorV2>()!;
@@ -55,12 +55,27 @@ class NavigatorV2 extends StatelessWidget {
   Future<R?> push<R>(String location) {
     return _routerDelegate._push<R>(location);
   }
+
+  static RouterConfig<RouteInformation> createRouterConfig(
+      {required Screen first, required Navigable navigable}) {
+    return RouterConfig(
+      routeInformationProvider: PlatformRouteInformationProvider(
+          initialRouteInformation: RouteInformation(
+        location: first.location,
+      )),
+      routerDelegate: LoggableRouterDelegate(
+          logger: logger,
+          delegate: _MyRouterDelegate(
+            first: first,
+            navigable: navigable,
+          )),
+      routeInformationParser: _Parser(),
+    );
+  }
 }
 
-class Parser extends RouteInformationParser<RouteInformation> {
-  Parser({required List<Rule<dynamic>> rules}) : _rules = rules;
-
-  final List<Rule> _rules;
+class _Parser extends RouteInformationParser<RouteInformation> {
+  _Parser();
 
   @override
   Future<RouteInformation> parseRouteInformation(RouteInformation routeInformation) {
@@ -73,9 +88,9 @@ class Parser extends RouteInformationParser<RouteInformation> {
   }
 }
 
-class MyRouterDelegate extends RouterDelegate<RouteInformation>
+class _MyRouterDelegate extends RouterDelegate<RouteInformation>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<RouteInformation> {
-  MyRouterDelegate({
+  _MyRouterDelegate({
     required Screen first,
     required Navigable navigable,
   })  : _pages = List.from([first._page], growable: true),
@@ -131,27 +146,21 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
 
 /// A: Screen参数类型，R: push返回值类型
 class _Page<R> extends MaterialPage<R> {
-  _Page({required this.rule, required super.name, required super.child})
-      : super(key: ValueKey(keyGen++));
+  _Page({required super.name, required super.child}) : super(key: ValueKey(keyGen++));
 
   @protected
   final Completer<R?> completer = Completer();
 
   static int keyGen = 0;
-
-  final Rule<R> rule;
 }
 
 /// A: Screen参数类型，R: push返回值类型
 mixin Screen<R> on Widget {
   @protected
-  late final _Page<R> _page = _Page(rule: rule, name: location, child: this);
+  late final _Page<R> _page = _Page(name: location, child: this);
 
   @protected
   String get location;
-
-  @protected
-  Rule<R> get rule;
 
   @protected
   Future<R?> push(BuildContext context) {
@@ -164,19 +173,7 @@ mixin Screen<R> on Widget {
   }
 }
 
-/// 范型A： R:结果类型
 /// navigator_v2.dart 是更初级的包，用此类隔离其他包的依赖性
-abstract class Rule<R> {
-  Screen<R> parse(String path);
-
-  String get path;
-
-  @override
-  String toString() {
-    return path;
-  }
-}
-
 abstract class Navigable {
   Screen parse(String location);
 }
