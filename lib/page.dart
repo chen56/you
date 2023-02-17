@@ -229,6 +229,13 @@ class Path<T> {
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
+  List<Path> topList({bool topDown = true}) {
+    if (isRoot) {
+      return [this];
+    }
+    return [..._parent!.topList(), this];
+  }
+
   Path? kid(String path) {
     Path? result = this;
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
@@ -310,12 +317,14 @@ class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
     var navTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
     var outline = _OutlineView(outline: pen!._outline);
-
+    
     var center = Scaffold(
       appBar: AppBar(title: Text(widget.current.name)),
       body: ListView(
         padding: const EdgeInsets.all(20),
-        children: [...pen!._content],
+        children: [
+          ...pen!._content,
+        ],
       ),
     );
     // outline 非空说明是第二次build，这时候已经收集完widget，可以释放了
