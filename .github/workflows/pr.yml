@@ -1,0 +1,58 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Build And Deploy
+
+on:
+  pull_request:
+    branches: [ "main","prod"  ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Flutter action
+        # You may pin to the exact commit or the version.
+        # uses: subosito/flutter-action@dbf1fa04f4d2e52c33185153d06cdb5443aa189d
+        uses: subosito/flutter-action@v2.8.0
+        with:
+          # The Flutter version to make available on the path
+          #flutter-version: # optional, default is any
+          # The Flutter build release channel
+          channel: master # optional, default is stable
+          # Cache the Flutter SDK
+          cache: true # optional
+          # Identifier for the Flutter SDK cache
+          # cache-key: # optional, default is flutter-:os:-:channel:-:version:-:arch:-:hash:
+          # Flutter SDK cache path
+          # cache-path: # optional, default is ${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:
+          # The architecture of Flutter SDK executable (x64 or arm64)
+          # architecture: # optional, default is ${{ runner.arch }}        
+
+      - name: checkout main
+        uses: actions/checkout@v3
+
+      # test
+      - name: test main
+        run:  ./bake test
+
+      # build
+      - name: Build
+        run: |
+          ./bake build
+          ls ./build/web/
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./build/web
