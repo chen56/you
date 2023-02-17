@@ -50,6 +50,7 @@ class Paths extends Navigable{
   final Path<void> notFound = _get("/not_found");
   final Path<void> note = _get("/note");
   final Path<void> welcome = _get("/note/welcome");
+  final Path<void> mirror = _get("/note/dev/mirror");
 
   Paths._();
 

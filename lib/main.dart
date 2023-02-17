@@ -24,7 +24,7 @@ class App extends StatelessWidget {
         brightness: Brightness.light,
       ),
       routerConfig: NavigatorV2.createRouterConfig(
-        first: paths.parse(paths.welcome.path),
+        first: paths.parse(paths.mirror.path),
         navigable: paths,
       ),
     );

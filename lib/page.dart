@@ -108,29 +108,35 @@ class _OutlineView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
-    Widget pageLink(_OutlineNode node) {
+    Widget headLink(_OutlineNode node) {
       IconData titleIcon = node.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
-      return ListTile(
-        trailing: Icon(node.isLeaf ? Icons.open_in_new : null),
-        title: Row(children: [Icon(titleIcon), Text(node.title)]),
-        onTap: null,
-        //如何定位到相应位置
-        // 是否选中
-        selected: false,
-        //---------------下面是外观调整
-        //更紧凑布局
-        dense: false,
-        visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
-        contentPadding: EdgeInsets.only(left: 20 * (node.level - 1).toDouble()),
+      return Padding(
+        padding: EdgeInsets.only(left: 20 * (node.level - 1).toDouble()),
+        child: Row(
+          // title 被Flexible包裹后，文本太长会自动换行
+          // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(titleIcon),
+            Flexible(child: Text(node.title)),
+          ],
+        ),
       );
     }
 
     var nodes = outline.root.toList(includeThis: false);
-    return Drawer(
-      child: ListView(
-        shrinkWrap: false,
-        padding: const EdgeInsets.all(20),
-        children: nodes.map((e) => pageLink(e)).toList(),
+    var headings = Column(
+      children: [
+        const Text("Table of Contents"),
+        ...nodes.map((e) => headLink(e)).toList(),
+      ],
+    );
+    return Container(
+      // width: 300.0,
+      color: Colors.blue.shade50,
+      child: Align(
+        alignment: Alignment.topRight,
+        child: headings,
       ),
     );
   }
@@ -301,7 +307,10 @@ class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
       widget.current.build(pen!, context);
     }
 
-    var left = _NoteTreeView(widget.tree ?? widget.current.root);
+    var navTree = _NoteTreeView(widget.tree ?? widget.current.root);
+
+    var outline = _OutlineView(outline: pen!._outline);
+
     var center = Scaffold(
       appBar: AppBar(title: Text(widget.current.name)),
       body: ListView(
@@ -309,8 +318,6 @@ class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
         children: [...pen!._content],
       ),
     );
-    var right = _OutlineView(outline: pen!._outline);
-
     // outline 非空说明是第二次build，这时候已经收集完widget，可以释放了
     if (secondBuild) {
       pen = null;
@@ -318,9 +325,9 @@ class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
     return Scaffold(
       body: Row(
         children: [
-          left,
-          Expanded(child: center),
-          Expanded(child: right),
+          navTree,
+          Expanded(flex: 100, child: center),
+          Expanded(flex: 30, child: outline),
         ],
       ),
     );
