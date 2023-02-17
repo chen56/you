@@ -3,22 +3,25 @@ import 'dart:core';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/log.dart';
 
-////////////////////////////////////////////////
-// 上面是应用代码，下面是封装后的NavigatorV2高级Api
-////////////////////////////////////////////////
+
+/// navigator_v2 是基础包，不依赖其他业务代码
 class NavigatorV2 extends StatelessWidget {
   const NavigatorV2._({
-    required this.navigatorKey,
-    required this.pages,
-    required this.notifyListeners,
-    required MyRouterDelegate routerDelegate,
-  }) : _routerDelegate = routerDelegate;
+    required GlobalKey<NavigatorState> navigatorKey,
+    required List<_Page<dynamic>> pages,
+    required dynamic Function() notifyListeners,
+    required _MyRouterDelegate routerDelegate,
+  })  : _navigatorKey = navigatorKey,
+        _notifyListeners = notifyListeners,
+        _pages = pages,
+        _routerDelegate = routerDelegate;
 
-  final GlobalKey<NavigatorState> navigatorKey;
-  final List<MyPage> pages;
-  final Function() notifyListeners;
-  final MyRouterDelegate _routerDelegate;
+  final GlobalKey<NavigatorState> _navigatorKey;
+  final List<_Page> _pages;
+  final Function() _notifyListeners;
+  final _MyRouterDelegate _routerDelegate;
 
   static NavigatorV2 of(BuildContext context) {
     return context.findAncestorWidgetOfExactType<NavigatorV2>()!;
@@ -27,37 +30,52 @@ class NavigatorV2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Navigator(
-      key: navigatorKey,
+      key: _navigatorKey,
       onPopPage: (route, result) {
         if (!route.didPop(result)) {
           return false;
         }
-        if (pages.isEmpty) {
+        if (_pages.isEmpty) {
           return true;
         }
-        var page = pages.removeLast();
+        var page = _pages.removeLast();
         //把completer的完成指责放权给各Screen自己后，
         //如果由系统back button触发onPopPage，框架应使completer完成，要不会泄露Future
         if (!page.completer.isCompleted) {
           page.completer.complete(null);
         }
-        notifyListeners();
+        _notifyListeners();
         return true;
       },
       //!!! toList()非常重要! 如果传入的pages是同一个ref，flutter会认为无变化
-      pages: pages.toList(),
+      pages: _pages.toList(),
     );
   }
 
   Future<R?> push<R>(String location) {
     return _routerDelegate._push<R>(location);
   }
+
+  static RouterConfig<RouteInformation> createRouterConfig(
+      {required Screen first, required Navigable navigable}) {
+    return RouterConfig(
+      routeInformationProvider: PlatformRouteInformationProvider(
+          initialRouteInformation: RouteInformation(
+        location: first.location,
+      )),
+      routerDelegate: LoggableRouterDelegate(
+          logger: logger,
+          delegate: _MyRouterDelegate(
+            first: first,
+            navigable: navigable,
+          )),
+      routeInformationParser: _Parser(),
+    );
+  }
 }
 
-class Parser extends RouteInformationParser<RouteInformation> {
-  Parser({required this.rules});
-
-  final List<Rule> rules;
+class _Parser extends RouteInformationParser<RouteInformation> {
+  _Parser();
 
   @override
   Future<RouteInformation> parseRouteInformation(RouteInformation routeInformation) {
@@ -70,18 +88,16 @@ class Parser extends RouteInformationParser<RouteInformation> {
   }
 }
 
-class MyRouterDelegate extends RouterDelegate<RouteInformation>
+class _MyRouterDelegate extends RouterDelegate<RouteInformation>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<RouteInformation> {
-  MyRouterDelegate({
-    required this.rules,
-    required this.first,
-    required this.notFound,
-  }) : _pages = List.from([first.parse("/").page], growable: true);
-  final Rule<void> first;
-  final Rule notFound;
-  final List<MyPage> _pages;
-  final List<Rule> rules;
+  _MyRouterDelegate({
+    required Screen first,
+    required Navigable navigable,
+  })  : _pages = List.from([first._page], growable: true),
+        _navigable = navigable;
 
+  final List<_Page> _pages;
+  final Navigable _navigable;
   @override
   final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>(debugLabel: "myNavigator");
@@ -102,16 +118,9 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
     return SynchronousFuture(null);
   }
 
-  Rule match(String location) {
-    Uri uri = Uri.parse(location);
-    Rule Function()? x = null;
-    return rules.lastWhere((element) => uri.path == element.path, orElse: x);
-  }
-
   Future<R?> _push<R>(String location) {
-    Rule rule = match(location);
-    Screen screen = rule.parse(location);
-    MyPage page = screen.page;
+    Screen screen = _navigable.parse(location);
+    _Page page = screen._page;
     //把completer的完成指责放权给各Screen后，框架需监听其完成后删除Page
     //并在onPopPage后
     page.completer.future.whenComplete(() {
@@ -136,28 +145,22 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
 }
 
 /// A: Screen参数类型，R: push返回值类型
-class MyPage<R> extends MaterialPage<R> {
-  MyPage({required this.rule, required super.name, required super.child})
-      : super(key: ValueKey(keyGen++));
+class _Page<R> extends MaterialPage<R> {
+  _Page({required super.name, required super.child}) : super(key: ValueKey(keyGen++));
 
   @protected
   final Completer<R?> completer = Completer();
 
   static int keyGen = 0;
-
-  final Rule<R> rule;
 }
 
 /// A: Screen参数类型，R: push返回值类型
 mixin Screen<R> on Widget {
   @protected
-  late final MyPage<R> page = MyPage(rule: rule, name: location, child: this);
+  late final _Page<R> _page = _Page(name: location, child: this);
 
   @protected
   String get location;
-
-  @protected
-  Rule<R> get rule;
 
   @protected
   Future<R?> push(BuildContext context) {
@@ -166,19 +169,27 @@ mixin Screen<R> on Widget {
 
   @override
   String toStringShort() {
-    return "Screen(${page.name})";
+    return "Screen(${_page.name})";
   }
 }
 
-/// 范型A： R:结果类型
 /// navigator_v2.dart 是更初级的包，用此类隔离其他包的依赖性
-abstract class Rule<R> {
-  Screen<R> Function(String path) get parse;
+abstract class Navigable {
+  Screen parse(String location);
+}
 
-  String get path;
+class DebugPagesLog extends StatelessWidget {
+  const DebugPagesLog({super.key});
 
   @override
-  String toString() {
-    return path;
+  Widget build(BuildContext context) {
+    var names = NavigatorV2.of(context)._pages.map((e) => e.name).toList();
+    return Expanded(
+      child: ListView(children: [
+        const Center(child: Text("-----debug:pages-----")),
+        for (int i = names.length - 1; i >= 0; i--)
+          ListTile(title: Text("  pages[$i]: ${names[i]})")),
+      ]),
+    );
   }
 }

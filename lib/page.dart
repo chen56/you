@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:learn_flutter/navigator_v2.dart';
@@ -7,58 +6,49 @@ import 'utils.dart';
 import 'package:markdown/markdown.dart' as md;
 
 /// <T>: [NavigatorV2.push] 的返回类型
-class Meta<T> {
+class PageMeta<T> {
   final String title;
-  final void Function(Pen<void> note, BuildContext context) builder;
+  final void Function(Pen note, BuildContext context) builder;
   late final LayoutBuilder<T>? layoutBuilder;
 
-  Meta({
+  PageMeta({
     required this.title,
     required this.builder,
     LayoutBuilder? layout,
   }) : layoutBuilder = layout;
-
-  Pen<T> build(BuildContext context, N<T> p) {
-    //Pen一次性用品，用完丢弃，防止Flutter框架多次刷新造成的状态问题
-    Pen<T> pen = Pen<T>(page: p);
-    builder(pen, context);
-    return pen;
-  }
 }
 
-class Pen<T> {
-  final List<Widget> _widgets = List.empty(growable: true);
-  final N<T> page;
+class Pen {
+  final List<Widget> _content = List.empty(growable: true);
   final _Outline _outline = _Outline();
 
-  List<Widget> get widgets => List.unmodifiable(_widgets);
-
-  Pen({required this.page});
+  Pen();
 
   void sample(Widget sample) {
-    _widgets.add(Text("sample: $sample")); //临时实现
+    _content.add(Text("sample: $sample")); //临时实现
   }
 
   void markdown(String content) {
+    var headerBuilder = _CenteredHeaderBuilder(_outline);
     var markdownBody = MarkdownBody(
       data: content,
       selectable: true,
       builders: <String, MarkdownElementBuilder>{
-        'h1': _CenteredHeaderBuilder(_outline),
-        'h2': _CenteredHeaderBuilder(_outline),
-        'h3': _CenteredHeaderBuilder(_outline),
-        'h4': _CenteredHeaderBuilder(_outline),
-        'h5': _CenteredHeaderBuilder(_outline),
-        'h6': _CenteredHeaderBuilder(_outline),
-        'h7': _CenteredHeaderBuilder(_outline),
+        'h1': headerBuilder,
+        'h2': headerBuilder,
+        'h3': headerBuilder,
+        'h4': headerBuilder,
+        'h5': headerBuilder,
+        'h6': headerBuilder,
+        'h7': headerBuilder,
       },
     );
-    _widgets.add(markdownBody); //临时实现
+    _content.add(markdownBody);
   }
 }
 
 // markdown 的结构轮廓，主要用来显示TOC
-class _Outline extends ChangeNotifier {
+class _Outline {
   _OutlineNode root = _OutlineNode(heading: 0, title: "");
   _OutlineNode? current;
 
@@ -66,12 +56,10 @@ class _Outline extends ChangeNotifier {
     var newNode = _OutlineNode(heading: heading, title: title);
     if (current == null) {
       current = root.add(newNode);
-      notifyListeners();
 
       return;
     }
     current = current!.add(newNode);
-    notifyListeners();
   }
 }
 
@@ -108,14 +96,14 @@ class _OutlineNode {
 
   @override
   String toString() {
-    return "heading:${heading} title:${title} kids:${kids.length}";
+    return "heading:$heading title:$title kids:${kids.length}";
   }
 }
 
 class _OutlineView extends StatelessWidget {
   final _Outline outline;
 
-  _OutlineView({super.key, required this.outline});
+  const _OutlineView({required this.outline});
 
   @override
   Widget build(BuildContext context) {
@@ -171,86 +159,80 @@ class _CenteredHeaderBuilder extends MarkdownElementBuilder {
   }
 }
 
-typedef LayoutBuilder<T> = Layout<T> Function<T>(N<T> page);
+typedef LayoutBuilder<T> = Layout<T> Function<T>(Path<T> page);
 
 /// 用kids代替单词children,原因是children太长了
-class N<T> implements Rule<T> {
+class Path<T> {
   final String name;
-  final List<N> kids;
-  final Map<String, N> kidsMap = {};
-  N? _parent;
+  final List<Path> _kids;
+  final Map<String, Path> _kidsMap = {};
+  Path? _parent;
   final Map<String, Object> attributes = ListenableMap();
-  late final Meta<T>? meta;
+  late final PageMeta<T>? meta;
 
-  N(
+  Path(
     this.name, {
     this.meta,
     LayoutBuilder? frame,
-    this.kids = const [],
-  }) {
-    for (var child in kids) {
+    List<Path<dynamic>> kids = const [],
+  }) : _kids = kids {
+    for (var child in _kids) {
       child._parent = this;
-      kidsMap[child.name] = child;
+      _kidsMap[child.name] = child;
     }
   }
 
   bool get hasPage => meta != null;
 
-  Pen<T> build(BuildContext context) {
-    if (meta == null) return Pen(page: this);
-    return meta!.build(context, this);
+  void build(Pen pen, BuildContext context) {
+    if (meta == null) return;
+    meta!.builder(pen, context);
   }
 
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
   LayoutBuilder get layout {
-    if(meta!=null && meta!.layoutBuilder!=null){
+    if (meta != null && meta!.layoutBuilder != null) {
       return meta!.layoutBuilder!;
     }
 
     if (isRoot) {
-      return <T>(N<T> note) => DefaultLayout<T>(
-        current: note,
-      );
+      return <T>(Path<T> note) => DefaultLayout<T>(
+            current: note,
+          );
     }
     return _parent!.layout;
   }
 
-  bool get isLeaf => kids.isEmpty;
+  bool get isLeaf => _kids.isEmpty;
 
   int get level => isRoot ? 0 : _parent!.level + 1;
 
   bool get isRoot => _parent == null;
 
-  N get root => isRoot ? this : _parent!.root;
+  Path get root => isRoot ? this : _parent!.root;
 
-  @override
   String get path {
     if (isRoot) return "/";
     var parentPath = _parent!.path;
     return parentPath == "/" ? "/$name" : "$parentPath/$name";
   }
 
-  List<N> toList({bool includeThis = true}) {
-    var flatChildren = kids.expand((element) => element.toList()).toList();
+  List<Path> toList({bool includeThis = true}) {
+    var flatChildren = _kids.expand((element) => element.toList()).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  N kid(String path) {
-    N? result = this;
-    // expect("/".split("/"), ["",""]);
-    // expect("/a".split("/"), ["","a"]);
-    // expect("/a/".split("/"), ["","a",""]);
+  Path? kid(String path) {
+    Path? result = this;
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
-      result = result?.kidsMap[split];
+      result = result?._kidsMap[split];
       if (result == null) break;
     }
-    assert(result != null, "page(${this.path}).kid($path) not found");
-    return result!;
+    return result;
   }
 
-  @override
-  Screen<T> Function(String path) get parse => (uri) => layout<T>(this);
+  Screen<T> createScreen(String location) => layout<T>(this);
 
   String toStringShort() {
     return path;
@@ -259,10 +241,10 @@ class N<T> implements Rule<T> {
   @override
   String toString({bool? deep}) {
     if (deep == null || !deep) {
-      return "Page($path ,kids:${kids.map((e) => e.toStringShort()).toList()})";
+      return "Page($path ,kids:${_kids.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
-      for (N n in toList()) {
+      for (Path n in toList()) {
         sb.write("$n\n");
       }
       return sb.toString();
@@ -275,9 +257,9 @@ class N<T> implements Rule<T> {
 mixin Layout<T> implements Screen<T> {}
 
 class DefaultLayout<T> extends StatefulWidget with Screen<T>, Layout<T> {
-  final N<T> current;
+  final Path<T> current;
 
-  final N? tree;
+  final Path? tree;
 
   DefaultLayout({super.key, this.tree, required this.current});
 
@@ -285,48 +267,52 @@ class DefaultLayout<T> extends StatefulWidget with Screen<T>, Layout<T> {
   String get location => current.path;
 
   @override
-  Rule<T> get rule => current;
-
-  @override
   State<StatefulWidget> createState() {
-    return DefaultLayoutState<T>();
+    return _DefaultLayoutState<T>();
   }
 }
 
-class DefaultLayoutState<T> extends State<DefaultLayout<T>> {
-  Pen<T>? pen;
-  bool get _didBuildFirstTime=> pen != null;
+class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
+  Pen? pen;
 
   @override
   void initState() {
     super.initState();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // 只有在第一次build后才setState，促使二次build
-      if (_didBuildFirstTime) {
-        setState(() {
-        });
+      bool afterFirstBuild = pen != null;
+      // 第一次build后, outline才被装配出内容，再次绘制，outline才能显示
+      // 所以每次页面都需要两次build
+      if (afterFirstBuild) {
+        setState(() {});
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    //第一次layout build时, widget.current.build()
+    //第二次layout build时, pen=null
+    bool firstBuild = pen == null;
+    bool secondBuild = pen != null;
+
+    if (firstBuild) {
+      pen = Pen();
+      widget.current.build(pen!, context);
+    }
+
     var left = _NoteTreeView(widget.tree ?? widget.current.root);
-
-    bool closePen = _didBuildFirstTime;
-    pen ??= widget.current.build(context);
-
     var center = Scaffold(
-      appBar: AppBar(title: Text("${widget.current.path}")),
+      appBar: AppBar(title: Text(widget.current.name)),
       body: ListView(
         padding: const EdgeInsets.all(20),
-        children: [...pen!.widgets],
+        children: [...pen!._content],
       ),
     );
     var right = _OutlineView(outline: pen!._outline);
 
-    if (closePen) {
+    // outline 非空说明是第二次build，这时候已经收集完widget，可以释放了
+    if (secondBuild) {
       pen = null;
     }
     return Scaffold(
@@ -352,7 +338,7 @@ class DefaultLayoutState<T> extends State<DefaultLayout<T>> {
 }
 
 class _NoteTreeView extends StatefulWidget {
-  final N root;
+  final Path root;
 
   const _NoteTreeView(
     this.root, {
@@ -369,7 +355,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
-    Widget pageLink(N note) {
+    Widget pageLink(Path note) {
       IconData titleIcon = note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
       click() {
         // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
@@ -403,7 +389,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
 }
 
 // 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension _TreeViewNote on N {
+extension _TreeViewNote on Path {
   static const _extendAttrName = "note.layout._TreeViewNote.extend";
 
   //展开状态
