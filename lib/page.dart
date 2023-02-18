@@ -91,7 +91,8 @@ class Path<T> {
 
   Path? kid(String path) {
     Path? result = this;
-    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split
+        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._kidsMap[split];
       if (result == null) break;
     }
@@ -149,13 +150,42 @@ class Pen {
   }
 }
 
+class _CenteredHeaderBuilder extends MarkdownElementBuilder {
+  final Outline outline;
+
+  _CenteredHeaderBuilder(this.outline);
+
+  // globalKey用来滚动到此位置
+  GlobalKey? key;
+
+  @override
+  Widget? visitText(md.Text text, TextStyle? preferredStyle) {
+    return Row(
+      children: <Widget>[
+        // Flexible 可已使超出边界的文本换行
+        Flexible(child: Text(key: key, text.text, style: preferredStyle)),
+      ],
+    );
+  }
+
+  @override
+  void visitElementBefore(md.Element element) {
+    // element.accept(_NodeVisitor());
+    // tag value : h1 | h2 | h3 ....
+    key = GlobalKey();
+    int heading = int.parse(element.tag.substring(1));
+    outline.add(key!, heading, element.textContent);
+    // super.visitElementBefore(element);
+  }
+}
+
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
-  OutlineNode root = OutlineNode(heading: 0, title: "");
+  OutlineNode root = OutlineNode(key: GlobalKey(), heading: 0, title: "");
   OutlineNode? current;
 
-  void add(int heading, String title) {
-    var newNode = OutlineNode(heading: heading, title: title);
+  void add(GlobalKey key, int heading, String title) {
+    var newNode = OutlineNode(key: key, heading: heading, title: title);
     if (current == null) {
       current = root.add(newNode);
 
@@ -166,13 +196,16 @@ class Outline {
 }
 
 class OutlineNode {
+  GlobalKey key;
   int heading;
   String title;
 
   OutlineNode? _parent;
   List<OutlineNode> kids = List.empty(growable: true);
 
-  OutlineNode({required this.title, required this.heading});
+  OutlineNode({required this.title, required this.heading, required this.key});
+
+  get currentContext => null;
 
   OutlineNode add(OutlineNode newNode) {
     if (_parent == null || heading < newNode.heading) {
@@ -231,28 +264,4 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
 
   @override
   String get location => current.path;
-}
-
-
-class _CenteredHeaderBuilder extends MarkdownElementBuilder {
-  final Outline outline;
-
-  _CenteredHeaderBuilder(this.outline);
-
-  @override
-  Widget? visitText(md.Text text, TextStyle? preferredStyle) {
-    return Row(
-      children: <Widget>[
-        Text(text.text, style: preferredStyle),
-      ],
-    );
-  }
-
-  @override
-  void visitElementBefore(md.Element element) {
-    // tag value : h1 | h2 | h3 ....
-    int heading = int.parse(element.tag.substring(1));
-    outline.add(heading, element.textContent);
-    super.visitElementBefore(element);
-  }
 }

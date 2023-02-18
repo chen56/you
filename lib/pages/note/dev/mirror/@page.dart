@@ -18,11 +18,11 @@ export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 ```
 
-## --web-renderer 无法下载各种文件
+## web 版
 
 `--web-renderer`模式会自动下载一些文件，大概率要失败。解决方案：
 
-### canvaskit-wasm 下载
+### canvaskit-wasm
 
 <https://unpkg.com/canvaskit-wasm@0.37.1/bin/canvaskit.wasm>
 可改成：
@@ -33,7 +33,9 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 参考文档：<https://docs.flutter.dev/development/platform-integration/web/initialization#initializing-the-engine>
 配置相关源码: <https://github.com/flutter/engine/blob/3.8.0-2.0.pre/lib/web_ui/lib/src/engine/configuration.dart>
 
-#### 解决方案1：FLUTTER_WEB_CANVASKIT_URL环境变量
+#### 方案1
+
+定制FLUTTER_WEB_CANVASKIT_URL环境变量
 
 ```bash
 # 注意 只有--release环境生效，--debug和--profile都无效 - 2023-02-03 Flutter-3.7.1
@@ -44,9 +46,9 @@ flutter build web -v --release  --web-renderer canvaskit --dart-define=FLUTTER_W
 ```
 
 
-#### 解决方案2：定制 /web/index.html debug也有效
+#### 方案2定制html
 
-解决方案：定制canvasKitBaseUrl，在index.html里长这样：
+定制 /web/index.html， debug也有效, 定制canvasKitBaseUrl，在index.html里长这样：
 
 ```html
 <script type="text/javascript">
@@ -69,7 +71,7 @@ flutter build web -v --release  --web-renderer canvaskit --dart-define=FLUTTER_W
 </script>
 ```
 
-### fonts.gstatic.com无法下载
+### 字体下载
 
 flutter run时，web模式下载慢: 
 - 英文默认字体 <https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf>
@@ -99,7 +101,7 @@ flutter:
     }
 ```
 
-
+### 到这里
 
   ''');
 

@@ -20,7 +20,9 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
   Pen? pen;
+  ScrollController controller = ScrollController();
 
+  // PrimaryScrollController primary=PrimaryScrollController(controller:controller, child: null,);
   @override
   void initState() {
     super.initState();
@@ -49,14 +51,17 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outline = OutlineView(outline: pen!.outline);
+    var outline = _OutlineView(controller: controller, outline: pen!.outline);
 
     var content = ListView(
+      // primary: true,
+      controller: controller,
       padding: const EdgeInsets.all(20),
       children: [
         ...pen!.content,
       ],
     );
+
     // outline 非空说明是第二次build，这时候已经收集完widget，可以释放了
     if (secondBuild) {
       pen = null;
@@ -71,8 +76,8 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       ),
       body: Row(
         children: [
-          navigatorTree,
-          Expanded(flex: 100, child: content),
+          Expanded(flex: 30, child: navigatorTree),
+          Expanded(flex: 150, child: content),
           Expanded(flex: 30, child: outline),
         ],
       ),
@@ -109,7 +114,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   Widget build(BuildContext context) {
     // 一页一个链接
     Widget pageLink(Path note) {
-      IconData titleIcon = note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
+      IconData titleIcon =
+          note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
       click() {
         // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
         note.extend = !note.extend;
@@ -117,7 +123,6 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       }
 
       return ListTile(
-        // trailing: Icon(note.isLeaf ? Icons.open_in_new : null),
         title: Row(children: [Icon(titleIcon), Text(note.title)]),
         onTap: note.hasPage ? click : null,
         // 是否选中
@@ -162,43 +167,53 @@ extension _TreeViewNote on Path {
   }
 }
 
-class OutlineView extends StatelessWidget {
+class _OutlineView extends StatelessWidget {
   final Outline outline;
+  final ScrollController controller;
 
-  const OutlineView({super.key, required this.outline});
+  const _OutlineView(
+      {required this.outline, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
     Widget headLink(OutlineNode node) {
-      IconData titleIcon = node.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
-      return Padding(
-        padding: EdgeInsets.only(left: 20 * (node.level - 1).toDouble()),
+      var link2 = TextButton(
         child: Row(
           // title 被Flexible包裹后，文本太长会自动换行
           // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(titleIcon),
+            const Icon(Icons.arrow_right,),
             Flexible(child: Text(node.title)),
           ],
         ),
+        onPressed: () {
+          // 总是偶发的报错：
+          // The Scrollbar's ScrollController has no ScrollPosition attached.
+          // 参考：https://stackoverflow.com/questions/52114535/scrollcontroller-not-attached-to-any-scroll-views
+          // 增加 if(controller.hasClients) 判断试试看
+          if (controller.hasClients) {
+            Scrollable.ensureVisible(node.key.currentContext!);
+          }
+        },
+      );
+      // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
+      return Padding(
+        // 缩进模仿树形
+        padding: EdgeInsets.only(left: 20 * (node.level - 1).toDouble()),
+        child: link2,
       );
     }
 
     var nodes = outline.root.toList(includeThis: false);
-    var headings = Column(
-      children: [
-        const Text("Table of Contents"),
-        ...nodes.map((e) => headLink(e)).toList(),
-      ],
-    );
     return Container(
       // width: 300.0,
       color: Colors.blue.shade50,
-      child: Align(
-        alignment: Alignment.topRight,
-        child: headings,
+      child: Column(
+        children: [
+          ...nodes.map((e) => headLink(e)).toList(),
+        ],
       ),
     );
   }
