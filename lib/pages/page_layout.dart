@@ -51,15 +51,23 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outline = _OutlineView(controller: controller, outline: pen!.outline);
+    var outline =
+        _OutlineView(contentPartController: controller, outline: pen!.outline);
 
-    var content = ListView(
-      // primary: true,
+    var contentList = ListView(
+      scrollDirection: Axis.vertical,
+      shrinkWrap: true,
       controller: controller,
-      padding: const EdgeInsets.all(20),
-      children: [
-        ...pen!.content,
-      ],
+      children: pen!.content,
+    );
+
+    // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
+    // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
+    // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太熟悉：
+    var content = Scrollbar(
+      thickness: 10,
+      controller: controller, // Here
+      child: contentList,
     );
 
     // outline 非空说明是第二次build，这时候已经收集完widget，可以释放了
@@ -67,12 +75,10 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       pen = null;
     }
 
-    var theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.current.title),
         toolbarHeight: 36,
-        titleTextStyle: theme.appBarTheme.titleTextStyle,
       ),
       body: Row(
         children: [
@@ -122,8 +128,12 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
         NavigatorV2.of(context).push(note.path);
       }
 
+      // title 被Flexible包裹后，文本太长会自动换行
+      // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
+      var title = Flexible(child: Text(note.title));
+
       return ListTile(
-        title: Row(children: [Icon(titleIcon), Text(note.title)]),
+        title: Row(children: [Icon(titleIcon), title]),
         onTap: note.hasPage ? click : null,
         // 是否选中
         selected: false,
@@ -169,10 +179,12 @@ extension _TreeViewNote on Path {
 
 class _OutlineView extends StatelessWidget {
   final Outline outline;
-  final ScrollController controller;
+
+  // 主内容部分的滚动控制，防止异常用
+  final ScrollController contentPartController;
 
   const _OutlineView(
-      {required this.outline, required this.controller});
+      {required this.outline, required this.contentPartController});
 
   @override
   Widget build(BuildContext context) {
@@ -180,20 +192,19 @@ class _OutlineView extends StatelessWidget {
     Widget headLink(OutlineNode node) {
       var link2 = TextButton(
         child: Row(
-          // title 被Flexible包裹后，文本太长会自动换行
-          // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Icon(Icons.arrow_right,),
+            const Icon(
+              Icons.arrow_right,
+            ),
+            // title 被Flexible包裹后，文本太长会自动换行
+            // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
             Flexible(child: Text(node.title)),
           ],
         ),
         onPressed: () {
-          // 总是偶发的报错：
-          // The Scrollbar's ScrollController has no ScrollPosition attached.
-          // 参考：https://stackoverflow.com/questions/52114535/scrollcontroller-not-attached-to-any-scroll-views
-          // 增加 if(controller.hasClients) 判断试试看
-          if (controller.hasClients) {
+          // 防止异常
+          if (contentPartController.hasClients) {
             Scrollable.ensureVisible(node.key.currentContext!);
           }
         },

@@ -133,9 +133,13 @@ class Pen {
 
   void markdown(String content) {
     var headerBuilder = _CenteredHeaderBuilder(outline);
-    var markdownBody = MarkdownBody(
+    var markdownWidget = Markdown(
       data: content,
       selectable: true,
+      // 得研究下controller层层嵌套要怎么用
+      // controller: controller,
+      shrinkWrap: true,
+
       builders: <String, MarkdownElementBuilder>{
         'h1': headerBuilder,
         'h2': headerBuilder,
@@ -146,7 +150,7 @@ class Pen {
         'h7': headerBuilder,
       },
     );
-    _content.add(markdownBody);
+    _content.add(markdownWidget);
   }
 }
 
@@ -155,26 +159,39 @@ class _CenteredHeaderBuilder extends MarkdownElementBuilder {
 
   _CenteredHeaderBuilder(this.outline);
 
-  // globalKey用来滚动到此位置
-  GlobalKey? key;
+  OutlineNode? currentNode;
 
   @override
   Widget? visitText(md.Text text, TextStyle? preferredStyle) {
+    // 我们假设每一个header 都按顺序调用visitElementBefore->visitText
+    // 加个守卫语句，防止flutter-markdown没有按顺序调用导致无效head
+    if (currentNode == null) {
+      return null;
+    }
+    outline.add(currentNode!);
     return Row(
       children: <Widget>[
         // Flexible 可已使超出边界的文本换行
-        Flexible(child: Text(key: key, text.text, style: preferredStyle)),
+        Flexible(
+          child: Text(
+            key: currentNode!.key,
+            text.text,
+            style: preferredStyle,
+          ),
+        ),
       ],
     );
   }
 
   @override
   void visitElementBefore(md.Element element) {
-    // element.accept(_NodeVisitor());
     // tag value : h1 | h2 | h3 ....
-    key = GlobalKey();
-    int heading = int.parse(element.tag.substring(1));
-    outline.add(key!, heading, element.textContent);
+    currentNode = OutlineNode(
+      // globalKey用来滚动到此位置
+      key: GlobalKey()!,
+      heading: int.parse(element.tag.substring(1)),
+      title: element.textContent,
+    );
     // super.visitElementBefore(element);
   }
 }
@@ -184,11 +201,9 @@ class Outline {
   OutlineNode root = OutlineNode(key: GlobalKey(), heading: 0, title: "");
   OutlineNode? current;
 
-  void add(GlobalKey key, int heading, String title) {
-    var newNode = OutlineNode(key: key, heading: heading, title: title);
+  void add(OutlineNode newNode) {
     if (current == null) {
       current = root.add(newNode);
-
       return;
     }
     current = current!.add(newNode);
