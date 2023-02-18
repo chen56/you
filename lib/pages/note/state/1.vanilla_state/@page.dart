@@ -3,7 +3,7 @@ import 'package:learn_flutter/page.dart';
 import '1.hello.dart' as stateful_hello ;
 
 PageMeta vanillaStateNote = PageMeta(
-  title: "最原始的状态管理",
+  shortTitle: "最原始的状态管理",
   builder: build,
 );
 

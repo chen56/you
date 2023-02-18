@@ -3,7 +3,7 @@ import 'package:learn_flutter/page.dart';
 
 
 PageMeta widgetSliderNote = PageMeta(
-  title: "Slider",
+  shortTitle: "Slider",
   builder: build,
 );
 

@@ -7,12 +7,13 @@ import 'package:markdown/markdown.dart' as md;
 
 /// <T>: [NavigatorV2.push] 的返回类型
 class PageMeta<T> {
-  final String title;
+  /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
+  final String shortTitle;
   final void Function(Pen note, BuildContext context) builder;
   late final Layout<T>? layoutBuilder;
 
   PageMeta({
-    required this.title,
+    required this.shortTitle,
     required this.builder,
     Layout? layout,
   }) : layoutBuilder = layout;
@@ -69,7 +70,7 @@ class Path<T> {
 
   Path get root => isRoot ? this : _parent!.root;
 
-  String get title => _meta == null ? name : _meta!.title;
+  String get title => _meta == null ? name : _meta!.shortTitle;
 
   String get path {
     if (isRoot) return "/";
