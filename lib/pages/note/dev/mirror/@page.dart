@@ -2,13 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:learn_flutter/page.dart';
 
 PageMeta devMirrorNote = PageMeta(
-  title: "网络问题",
+  title: "网络连不上",
   builder: build,
 );
 
 build(Pen pen ,BuildContext context) {
   pen. markdown(r'''
-# 网络环境问题及方案
   
 ## flutter pub镜像慢
 
@@ -18,7 +17,8 @@ build(Pen pen ,BuildContext context) {
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 ```
-## `--web-renderer`无法下载各种文件
+
+## --web-renderer 无法下载各种文件
 
 `--web-renderer`模式会自动下载一些文件，大概率要失败。解决方案：
 
@@ -26,6 +26,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 <https://unpkg.com/canvaskit-wasm@0.37.1/bin/canvaskit.wasm>
 可改成：
+
 - <https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.38.0/bin/canvaskit.wasm>
 - <https://cdnjs.cloudflare.com/ajax/libs/canvaskit-wasm/0.38.0/canvaskit.wasm>
 

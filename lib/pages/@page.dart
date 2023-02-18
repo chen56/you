@@ -1,12 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
+import 'package:learn_flutter/pages/page_layout.dart';
 
 import 'root_tree.dart';
 
 PageMeta rootPage = PageMeta(
   title: "home",
   builder: build,
-  layout: <T>(Path<T> note) => DefaultLayout<T>(current: note, tree: paths.note),
+  layout: <T>(Path<T> note) => PageScreen<T>(current: note, tree: paths.note),
 );
 
 build(Pen pen, BuildContext context) {
