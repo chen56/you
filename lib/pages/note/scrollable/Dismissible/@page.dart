@@ -1,25 +1,17 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-PageMeta welcomePage = PageMeta(
-  title: "welcome",
+PageMeta notFoundPage = PageMeta(
+  title: " Dismissible滑动清除",
   builder: build,
 );
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-  
-# 1
+## 参考
 
-111
+<https://flutter.cn/docs/cookbook/gestures/dismissible> 
 
-## 1.1
 
-1.11111
-
-## 1.2
-
-1.22222
-  
   ''');
 }

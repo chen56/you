@@ -9,157 +9,14 @@ import 'package:markdown/markdown.dart' as md;
 class PageMeta<T> {
   final String title;
   final void Function(Pen note, BuildContext context) builder;
-  late final LayoutBuilder<T>? layoutBuilder;
+  late final Layout<T>? layoutBuilder;
 
   PageMeta({
     required this.title,
     required this.builder,
-    LayoutBuilder? layout,
+    Layout? layout,
   }) : layoutBuilder = layout;
 }
-
-class Pen {
-  final List<Widget> _content = List.empty(growable: true);
-  final _Outline _outline = _Outline();
-
-  Pen();
-
-  void sample(Widget sample) {
-    _content.add(Text("sample: $sample")); //临时实现
-  }
-
-  void markdown(String content) {
-    var headerBuilder = _CenteredHeaderBuilder(_outline);
-    var markdownBody = MarkdownBody(
-      data: content,
-      selectable: true,
-      builders: <String, MarkdownElementBuilder>{
-        'h1': headerBuilder,
-        'h2': headerBuilder,
-        'h3': headerBuilder,
-        'h4': headerBuilder,
-        'h5': headerBuilder,
-        'h6': headerBuilder,
-        'h7': headerBuilder,
-      },
-    );
-    _content.add(markdownBody);
-  }
-}
-
-// markdown 的结构轮廓，主要用来显示TOC
-class _Outline {
-  _OutlineNode root = _OutlineNode(heading: 0, title: "");
-  _OutlineNode? current;
-
-  void add(int heading, String title) {
-    var newNode = _OutlineNode(heading: heading, title: title);
-    if (current == null) {
-      current = root.add(newNode);
-
-      return;
-    }
-    current = current!.add(newNode);
-  }
-}
-
-class _OutlineNode {
-  int heading;
-  String title;
-
-  _OutlineNode? _parent;
-  List<_OutlineNode> kids = List.empty(growable: true);
-
-  _OutlineNode({required this.title, required this.heading});
-
-  _OutlineNode add(_OutlineNode newNode) {
-    if (_parent == null || heading < newNode.heading) {
-      newNode._parent = this;
-      kids.add(newNode);
-      return newNode;
-    }
-    return _parent!.add(newNode);
-  }
-
-  bool get isLeaf => kids.isEmpty;
-
-  int get level => isRoot ? 0 : _parent!.level + 1;
-
-  bool get isRoot => _parent == null;
-
-  _OutlineNode get root => isRoot ? this : _parent!.root;
-
-  List<_OutlineNode> toList({bool includeThis = true}) {
-    var flatChildren = kids.expand((element) => element.toList()).toList();
-    return includeThis ? [this, ...flatChildren] : flatChildren;
-  }
-
-  @override
-  String toString() {
-    return "heading:$heading title:$title kids:${kids.length}";
-  }
-}
-
-class _OutlineView extends StatelessWidget {
-  final _Outline outline;
-
-  const _OutlineView({required this.outline});
-
-  @override
-  Widget build(BuildContext context) {
-    // 一页一个链接
-    Widget pageLink(_OutlineNode node) {
-      IconData titleIcon = node.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
-      return ListTile(
-        trailing: Icon(node.isLeaf ? Icons.open_in_new : null),
-        title: Row(children: [Icon(titleIcon), Text(node.title)]),
-        onTap: null,
-        //如何定位到相应位置
-        // 是否选中
-        selected: false,
-        //---------------下面是外观调整
-        //更紧凑布局
-        dense: false,
-        visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
-        contentPadding: EdgeInsets.only(left: 20 * (node.level - 1).toDouble()),
-      );
-    }
-
-    var nodes = outline.root.toList(includeThis: false);
-    return Drawer(
-      child: ListView(
-        shrinkWrap: false,
-        padding: const EdgeInsets.all(20),
-        children: nodes.map((e) => pageLink(e)).toList(),
-      ),
-    );
-  }
-}
-
-class _CenteredHeaderBuilder extends MarkdownElementBuilder {
-  final _Outline outline;
-
-  _CenteredHeaderBuilder(this.outline);
-
-  @override
-  Widget? visitText(md.Text text, TextStyle? preferredStyle) {
-    return Row(
-      children: <Widget>[
-        Text(text.text, style: preferredStyle),
-      ],
-    );
-  }
-
-  @override
-  void visitElementBefore(md.Element element) {
-    // tag value : h1 | h2 | h3 ....
-    int heading = int.parse(element.tag.substring(1));
-    outline.add(heading, element.textContent);
-    super.visitElementBefore(element);
-  }
-}
-
-typedef LayoutBuilder<T> = Layout<T> Function<T>(Path<T> page);
 
 /// 用kids代替单词children,原因是children太长了
 class Path<T> {
@@ -168,36 +25,36 @@ class Path<T> {
   final Map<String, Path> _kidsMap = {};
   Path? _parent;
   final Map<String, Object> attributes = ListenableMap();
-  late final PageMeta<T>? meta;
+  late final PageMeta<T>? _meta;
 
   Path(
     this.name, {
-    this.meta,
-    LayoutBuilder? frame,
+    PageMeta<T>? meta,
     List<Path<dynamic>> kids = const [],
-  }) : _kids = kids {
+  })  : _meta = meta,
+        _kids = kids {
     for (var child in _kids) {
       child._parent = this;
       _kidsMap[child.name] = child;
     }
   }
 
-  bool get hasPage => meta != null;
+  bool get hasPage => _meta != null;
 
   void build(Pen pen, BuildContext context) {
-    if (meta == null) return;
-    meta!.builder(pen, context);
+    if (_meta == null) return;
+    _meta!.builder(pen, context);
   }
 
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
-  LayoutBuilder get layout {
-    if (meta != null && meta!.layoutBuilder != null) {
-      return meta!.layoutBuilder!;
+  Layout get layout {
+    if (_meta != null && _meta!.layoutBuilder != null) {
+      return _meta!.layoutBuilder!;
     }
 
     if (isRoot) {
-      return <T>(Path<T> note) => DefaultLayout<T>(
+      return <T>(Path<T> note) => _DefaultScreen<T>(
             current: note,
           );
     }
@@ -212,6 +69,8 @@ class Path<T> {
 
   Path get root => isRoot ? this : _parent!.root;
 
+  String get title => _meta == null ? name : _meta!.title;
+
   String get path {
     if (isRoot) return "/";
     var parentPath = _parent!.path;
@@ -223,9 +82,17 @@ class Path<T> {
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
+  List<Path> topList({bool topDown = true}) {
+    if (isRoot) {
+      return [this];
+    }
+    return [..._parent!.topList(), this];
+  }
+
   Path? kid(String path) {
     Path? result = this;
-    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split
+        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._kidsMap[split];
       if (result == null) break;
     }
@@ -252,159 +119,149 @@ class Path<T> {
   }
 }
 
-/// Dart 3 class-modifiers:interface class
-/// kua
-mixin Layout<T> implements Screen<T> {}
+class Pen {
+  final List<Widget> _content = List.empty(growable: true);
+  final Outline outline = Outline();
 
-class DefaultLayout<T> extends StatefulWidget with Screen<T>, Layout<T> {
+  Pen();
+
+  void sample(Widget sample) {
+    _content.add(Text("sample: $sample")); //临时实现
+  }
+
+  List<Widget> get content => List.unmodifiable(_content);
+
+  void markdown(String content) {
+    var headerBuilder = _CenteredHeaderBuilder(outline);
+    var markdownBody = MarkdownBody(
+      data: content,
+      selectable: true,
+      builders: <String, MarkdownElementBuilder>{
+        'h1': headerBuilder,
+        'h2': headerBuilder,
+        'h3': headerBuilder,
+        'h4': headerBuilder,
+        'h5': headerBuilder,
+        'h6': headerBuilder,
+        'h7': headerBuilder,
+      },
+    );
+    _content.add(markdownBody);
+  }
+}
+
+class _CenteredHeaderBuilder extends MarkdownElementBuilder {
+  final Outline outline;
+
+  _CenteredHeaderBuilder(this.outline);
+
+  // globalKey用来滚动到此位置
+  GlobalKey? key;
+
+  @override
+  Widget? visitText(md.Text text, TextStyle? preferredStyle) {
+    return Row(
+      children: <Widget>[
+        // Flexible 可已使超出边界的文本换行
+        Flexible(child: Text(key: key, text.text, style: preferredStyle)),
+      ],
+    );
+  }
+
+  @override
+  void visitElementBefore(md.Element element) {
+    // element.accept(_NodeVisitor());
+    // tag value : h1 | h2 | h3 ....
+    key = GlobalKey();
+    int heading = int.parse(element.tag.substring(1));
+    outline.add(key!, heading, element.textContent);
+    // super.visitElementBefore(element);
+  }
+}
+
+// markdown 的结构轮廓，主要用来显示TOC
+class Outline {
+  OutlineNode root = OutlineNode(key: GlobalKey(), heading: 0, title: "");
+  OutlineNode? current;
+
+  void add(GlobalKey key, int heading, String title) {
+    var newNode = OutlineNode(key: key, heading: heading, title: title);
+    if (current == null) {
+      current = root.add(newNode);
+
+      return;
+    }
+    current = current!.add(newNode);
+  }
+}
+
+class OutlineNode {
+  GlobalKey key;
+  int heading;
+  String title;
+
+  OutlineNode? _parent;
+  List<OutlineNode> kids = List.empty(growable: true);
+
+  OutlineNode({required this.title, required this.heading, required this.key});
+
+  get currentContext => null;
+
+  OutlineNode add(OutlineNode newNode) {
+    if (_parent == null || heading < newNode.heading) {
+      newNode._parent = this;
+      kids.add(newNode);
+      return newNode;
+    }
+    return _parent!.add(newNode);
+  }
+
+  bool get isLeaf => kids.isEmpty;
+
+  int get level => isRoot ? 0 : _parent!.level + 1;
+
+  bool get isRoot => _parent == null;
+
+  OutlineNode get root => isRoot ? this : _parent!.root;
+
+  List<OutlineNode> toList({bool includeThis = true}) {
+    var flatChildren = kids.expand((element) => element.toList()).toList();
+    return includeThis ? [this, ...flatChildren] : flatChildren;
+  }
+
+  @override
+  String toString() {
+    return "heading:$heading title:$title kids:${kids.length}";
+  }
+}
+
+typedef Layout<T> = Screen<T> Function<T>(Path<T> page);
+
+/// 在页面树上找不到任何Layout时套用这个缺省的
+class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
   final Path<T> current;
 
-  final Path? tree;
+  _DefaultScreen({super.key, required this.current});
 
-  DefaultLayout({super.key, this.tree, required this.current});
+  @override
+  Widget build(BuildContext context) {
+    Pen pen = Pen();
+    current.build(pen!, context);
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(children: [
+          const Text(
+            "WARN：当前Path上未配置Layout，这是默认Layout的简单视图",
+            style: TextStyle(
+              color: Colors.red,
+            ),
+          ),
+          ...pen._content,
+        ]),
+      ),
+    );
+  }
 
   @override
   String get location => current.path;
-
-  @override
-  State<StatefulWidget> createState() {
-    return _DefaultLayoutState<T>();
-  }
-}
-
-class _DefaultLayoutState<T> extends State<DefaultLayout<T>> {
-  Pen? pen;
-
-  @override
-  void initState() {
-    super.initState();
-
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      bool afterFirstBuild = pen != null;
-      // 第一次build后, outline才被装配出内容，再次绘制，outline才能显示
-      // 所以每次页面都需要两次build
-      if (afterFirstBuild) {
-        setState(() {});
-      }
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    //第一次layout build时, widget.current.build()
-    //第二次layout build时, pen=null
-    bool firstBuild = pen == null;
-    bool secondBuild = pen != null;
-
-    if (firstBuild) {
-      pen = Pen();
-      widget.current.build(pen!, context);
-    }
-
-    var left = _NoteTreeView(widget.tree ?? widget.current.root);
-    var center = Scaffold(
-      appBar: AppBar(title: Text(widget.current.name)),
-      body: ListView(
-        padding: const EdgeInsets.all(20),
-        children: [...pen!._content],
-      ),
-    );
-    var right = _OutlineView(outline: pen!._outline);
-
-    // outline 非空说明是第二次build，这时候已经收集完widget，可以释放了
-    if (secondBuild) {
-      pen = null;
-    }
-    return Scaffold(
-      body: Row(
-        children: [
-          left,
-          Expanded(child: center),
-          Expanded(child: right),
-        ],
-      ),
-    );
-  }
-
-  @override
-  void didUpdateWidget(covariant DefaultLayout<T> oldWidget) {
-    super.didUpdateWidget(oldWidget);
-  }
-
-  @override
-  void activate() {
-    super.activate();
-  }
-}
-
-class _NoteTreeView extends StatefulWidget {
-  final Path root;
-
-  const _NoteTreeView(
-    this.root, {
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<_NoteTreeView> createState() => _NoteTreeViewState();
-}
-
-class _NoteTreeViewState extends State<_NoteTreeView> {
-  _NoteTreeViewState();
-
-  @override
-  Widget build(BuildContext context) {
-    // 一页一个链接
-    Widget pageLink(Path note) {
-      IconData titleIcon = note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
-      click() {
-        // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
-        note.extend = !note.extend;
-        NavigatorV2.of(context).push(note.path);
-      }
-
-      return ListTile(
-        trailing: Icon(note.isLeaf ? Icons.open_in_new : null),
-        title: Row(children: [Icon(titleIcon), Text(note.name)]),
-        onTap: note.hasPage ? click : null,
-        // 是否选中
-        selected: false,
-        //---------------下面是外观调整
-        //更紧凑布局
-        dense: false,
-        visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
-        contentPadding: EdgeInsets.only(left: 20 * (note.level - 1).toDouble()),
-      );
-    }
-
-    var notes = widget.root.toList(includeThis: false);
-    return Drawer(
-      child: ListView(
-        shrinkWrap: false,
-        padding: const EdgeInsets.all(20),
-        children: notes.map((e) => pageLink(e)).toList(),
-      ),
-    );
-  }
-}
-
-// 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension _TreeViewNote on Path {
-  static const _extendAttrName = "note.layout._TreeViewNote.extend";
-
-  //展开状态
-  bool get extend {
-    if (isLeaf) {
-      return false;
-    }
-    Object? result = attributes[_extendAttrName];
-    return result == null ? false : result as bool;
-  }
-
-  set extend(bool extend) {
-    if (isLeaf) {
-      return;
-    }
-    attributes[_extendAttrName] = extend;
-  }
 }

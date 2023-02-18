@@ -19,12 +19,11 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       title: 'Flutter Note',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        useMaterial3: true,
-        brightness: Brightness.light,
+        primarySwatch: Colors.indigo,
+        useMaterial3: false,
       ),
       routerConfig: NavigatorV2.createRouterConfig(
-        first: paths.parse(paths.welcome.path),
+        first: paths.parse(paths.mirror.path),
         navigable: paths,
       ),
     );
