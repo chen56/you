@@ -52,9 +52,9 @@ function _realpath(){
 # 临时试验命令行工具用
 /temp?shortHelp(){
 cat << EOF
-line 1
-line 2
-line 3
+shortHelp line 1
+shortHelp line 2
+shortHelp line 3
 EOF
 }
 /temp?help(){ echo -e "sss"; }
@@ -62,17 +62,25 @@ EOF
   local var1;
   local a=($(tr "/" " " <<< "/aa/b"))
   echo "var 1 $a "
-
+  local myArray4
+  IFS=$'\n' mapfile -t myArray4 <<< $(ls -al)
+  declare -p myArray4
+  x
+}
+x(){
+  echo "====="
+  declare -p myArray4
 }
 
 
-
 # 项目init
+/init?shortHelp(){ cat <<< "初始化项目工具"; }
 /init() {
   git lfs install
 }
 
 # 构建命令,可附加flutter build的参数
+/build?shortHelp(){ cat <<< "构建命令,可附加flutter build的参数"; }
 /build() {
   echo "bake build $*"
   # web-renderer=canvaskit 太大了十几MB,所以要用html版
@@ -81,14 +89,16 @@ EOF
 }
 
 # 构建命令
+/test?shortHelp(){ cat <<< "test"; }
 /test() {
-  echo "bake build"
+  echo "bake test"
   # canvaskit web版文件太大了十几MB
   flutter test --web-renderer html
 }
 
 
 # build + run local http://localhost:8000
+/preview?shortHelp(){ cat <<< "预览，先build,再开web server: http://localhost:8000"; }
 /preview() {
   echo "bake preview"
   flutter build web --release --web-renderer html --base-href='/' $*
@@ -97,18 +107,20 @@ EOF
 }
 
 # dev run local http://localhost:8000
+/run?shortHelp(){ cat <<< "开发模式 flutter run: http://localhost:8000"; }
 /run() {
   echo "bake run"
   flutter run --web-renderer html --device-id chrome --enable-experiment=records
 }
 
 # 清理
+/clean?shortHelp(){ cat <<< "清理项目目录"; }
 /clean() {
   echo "bake clean"
   flutter clean
 }
 
-
+/help?shortHelp(){ cat <<< "显示帮助，及列出子命令"; }
 /help() {
 
 cat <<- '__EOF'
@@ -121,40 +133,44 @@ Usage:
 Available Commands:
 __EOF
 
-  # IFS=$'\n'指分配回车符给IFS
   IFS=$'\n'
 
+  # 我们要找出:
+  # 1. 以/开头的函数，作为子命令
+  # 2. 不包含?
   # 列出所有/开头的命令
   # declare -F 会列出所有定义,比如
   # $ declare -F
   #     => declare -f /build
   #     => declare -f /help
-  # 我们要找出:
-  # 1. 以/开头的函数，作为子命令
-  # 2. 不包含?
-  local allFirstCmd=()
-  local allShortHelp=()
+  #转成命令全名
+  #     => /build
+  #     => /help
+  IFS=$'\n'  # 分配回车符给IFS
+  local cmdFullnames=$( declare -F | grep "^declare -f /" | grep -v "?" | sed -e 's/^declare -f //g')
+  readarray -t cmdFullnames <<< "$cmdFullnames"
+  local cmds=()
+  local shortHelps=()
   local maxLengthOfCmd=0;
   local i=0;
-  for f in $(declare -F | grep "^declare -f /" | grep -v "?" ); do
-    local cmdFullname=${f:11}
+  for cmdFullname in ${cmdFullnames[*]}; do
     # 先去第一个"/"，再按"/"split成数组
-    local cmds=($(tr "/" " " <<< "${cmdFullname:1}" ))
-    local cmd=${cmds[0]} #目前只用 第一个命令
+    local split=($(tr "/" " " <<< "${cmdFullname:1}" ))
+    local cmd=${split[0]} #目前只用 第一个命令
     local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null  || true )
-    allFirstCmd[i]=${cmd}
-    allShortHelp[i]=${shortHelp}
+    cmds[i]=${cmd}
+    shortHelps[i]=${shortHelp}
     # 求命令的最大长度，一会padding用
     if (( ${#cmd} > maxLengthOfCmd ))  ; then maxLengthOfCmd=${#cmd}; fi
     i=$((i+1))
   done
 
-  # print all sub commands with shortHelp
-  for i in ${!allFirstCmd[*]} ; do
-    local padding=$(printf %-$((maxLengthOfCmd + 4))b  "")
+  # print all commands and shortHelp
+  for i in ${!cmds[*]} ; do
+    local padding=$(printf %-$((maxLengthOfCmd + 6))b  "")
     # 第二行开始，都补空格
-    local shortHelp=$(sed "2,1000s/^/$padding/g"  <<< "${allShortHelp[i]}" )
-    printf "  %-$((maxLengthOfCmd))s  ${shortHelp}\n" "${allFirstCmd[i]}"
+    local shortHelp=$(sed "2,1000s/^/$padding/g"  <<< "${shortHelps[i]}" )
+    printf "  %-$((maxLengthOfCmd))s    ${shortHelp}\n" "${cmds[i]}"
   done
 
   return
