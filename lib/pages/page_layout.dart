@@ -81,6 +81,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
         toolbarHeight: 36,
       ),
       body: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(flex: 30, child: navigatorTree),
           Expanded(flex: 150, child: content),
@@ -146,12 +147,11 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
     }
 
     var notes = widget.root.toList(includeThis: false);
-    return Drawer(
-      child: ListView(
-        shrinkWrap: false,
-        padding: const EdgeInsets.all(2),
-        children: notes.map((e) => pageLink(e)).toList(),
-      ),
+    return ListView(
+      shrinkWrap: false,
+      padding: const EdgeInsets.all(2),
+      children: notes.map((e) => pageLink(e)).toList(),
+
     );
   }
 }

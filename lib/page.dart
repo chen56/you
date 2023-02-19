@@ -10,13 +10,13 @@ class PageMeta<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
   final void Function(Pen note, BuildContext context) builder;
-  late final Layout<T>? layoutBuilder;
+  late final Layout<T>? layout;
 
   PageMeta({
     required this.shortTitle,
     required this.builder,
-    Layout? layout,
-  }) : layoutBuilder = layout;
+    this.layout,
+  });
 }
 
 /// 用kids代替单词children,原因是children太长了
@@ -50,8 +50,8 @@ class Path<T> {
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
   Layout get layout {
-    if (_meta != null && _meta!.layoutBuilder != null) {
-      return _meta!.layoutBuilder!;
+    if (_meta != null && _meta!.layout != null) {
+      return _meta!.layout!;
     }
 
     if (isRoot) {
@@ -170,6 +170,7 @@ class _CenteredHeaderBuilder extends MarkdownElementBuilder {
       return null;
     }
     outline.add(currentNode!);
+    
     return Row(
       children: <Widget>[
         // Flexible 可已使超出边界的文本换行

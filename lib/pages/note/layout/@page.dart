@@ -1,25 +1,22 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-PageMeta welcome = PageMeta(
-  shortTitle: "welcome",
+
+PageMeta layoutNote = PageMeta(
+  shortTitle: "layout布局",
   builder: build,
 );
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-  
-# 1
 
-111
+# 布局
 
-## 1.1
+## 弹性布局
 
-1.11111
+- Flex <https://api.flutter-io.cn/flutter/widgets/Flex-class.html>
+  - Row
+  - Column
 
-## 1.2
-
-1.22222
-  
   ''');
 }

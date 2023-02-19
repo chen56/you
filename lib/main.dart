@@ -23,7 +23,7 @@ class App extends StatelessWidget {
         useMaterial3: false,
       ),
       routerConfig: NavigatorV2.createRouterConfig(
-        first: paths.parse(paths.mirror.path),
+        first: paths.parse(paths.layout.path),
         navigable: paths,
       ),
     );

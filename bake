@@ -50,21 +50,34 @@ function _realpath(){
 }
 
 # 临时试验命令行工具用
-/temp() {
-  declare | grep path
-  echo "${FUNCNAME[0]} "
+/temp?shortHelp(){
+cat << EOF
+line 1
+line 2
+line 3
+EOF
 }
+/temp?help(){ echo -e "sss"; }
+/temp() {
+  local var1;
+  local a=($(tr "/" " " <<< "/aa/b"))
+  echo "var 1 $a "
+
+}
+
+
 
 # 项目init
 /init() {
   git lfs install
 }
 
-# 构建命令
+# 构建命令,可附加flutter build的参数
 /build() {
-  echo "bake build"
-  # canvaskit web版文件太大了十几MB
-  flutter build web --release --web-renderer html --base-href='/flutter-note/'
+  echo "bake build $*"
+  # web-renderer=canvaskit 太大了十几MB,所以要用html版
+  # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/flutter-note
+  flutter build web --release --web-renderer html --base-href='/flutter-note/' $*
 }
 
 # 构建命令
@@ -78,8 +91,8 @@ function _realpath(){
 # build + run local http://localhost:8000
 /preview() {
   echo "bake preview"
-  /build
-# 	npx http-server ./build/web --port 8080
+  flutter build web --release --web-renderer html --base-href='/' $*
+# 	npx http-server ./build/web --port 8000
   deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
 }
 
@@ -112,38 +125,38 @@ __EOF
   IFS=$'\n'
 
   # 列出所有/开头的命令
-  # declare -F 会列出所有定义, 我们要找出以/开头的函数，作为子命令
+  # declare -F 会列出所有定义,比如
   # $ declare -F
   #     => declare -f /build
-  for f in $(declare -F); do
-    local func=${f:11}
-
-    # 必须/开头
-    if test ! "$(grep "^/" <<<"$func")"; then  continue; fi
-
-    # `extdebug`可以让 `declare -F`打印出文件和行号，比如：
-    # $ declare -F nvm_version
-    #     => nvm_version 536 /Users/cc/.nvm/nvm.sh
-    local funcRecord; shopt -s extdebug; readarray -d " " -t funcRecord < <( declare -F "$func" )
-    local lineno=${funcRecord[1]}
-    local file=${funcRecord[2]}
-    # shellcheck disable=SC2155
-    local realFile=$(_realpath "$(cat <<< "$file")")
-    readarray lines < <(cat "${realFile}")
-
-    # 去掉前缀/就是cmd名，
-    # 等同：local cmd="$(sed 's/\///' <<< "$func" ) "
-    # bash语法：${PARAMETER/PATTERN/STRING}
-    # <https://wiki.bash-hackers.org/syntax/pe#search_and_replace>
-    local cmd="${func/\//}"
-
-    # 只取cmd函数头顶上的第一行，作为cmd的help描述
-    local cmdOneLineHelp="${lines[(lineno-2)]}"
-    # 头顶上不是注释行的cmd就认为没有帮助
-    if ! grep "^[ ]*#" <<< "$cmdOneLineHelp" >/dev/null 2>&1  ; then  cmdOneLineHelp=" -" ; fi
-    # 去掉前缀#，bash语法：${PARAMETER/PATTERN/STRING}
-    printf "  %-12s %s\n" "$cmd" ${cmdOneLineHelp/\#/}
+  #     => declare -f /help
+  # 我们要找出:
+  # 1. 以/开头的函数，作为子命令
+  # 2. 不包含?
+  local allFirstCmd=()
+  local allShortHelp=()
+  local maxLengthOfCmd=0;
+  local i=0;
+  for f in $(declare -F | grep "^declare -f /" | grep -v "?" ); do
+    local cmdFullname=${f:11}
+    # 先去第一个"/"，再按"/"split成数组
+    local cmds=($(tr "/" " " <<< "${cmdFullname:1}" ))
+    local cmd=${cmds[0]} #目前只用 第一个命令
+    local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null  || true )
+    allFirstCmd[i]=${cmd}
+    allShortHelp[i]=${shortHelp}
+    # 求命令的最大长度，一会padding用
+    if (( ${#cmd} > maxLengthOfCmd ))  ; then maxLengthOfCmd=${#cmd}; fi
+    i=$((i+1))
   done
+
+  # print all sub commands with shortHelp
+  for i in ${!allFirstCmd[*]} ; do
+    local padding=$(printf %-$((maxLengthOfCmd + 4))b  "")
+    # 第二行开始，都补空格
+    local shortHelp=$(sed "2,1000s/^/$padding/g"  <<< "${allShortHelp[i]}" )
+    printf "  %-$((maxLengthOfCmd))s  ${shortHelp}\n" "${allFirstCmd[i]}"
+  done
+
   return
 }
 
