@@ -56,17 +56,17 @@ class NavigatorV2 extends StatelessWidget {
     return _routerDelegate._push<R>(location);
   }
 
-  static RouterConfig<RouteInformation> createRouterConfig(
-      {required Screen first, required Navigable navigable}) {
+  static RouterConfig<RouteInformation> config(
+      {required Screen initial, required Navigable navigable}) {
     return RouterConfig(
       routeInformationProvider: PlatformRouteInformationProvider(
           initialRouteInformation: RouteInformation(
-        location: first.location,
+        location: initial.location,
       )),
       routerDelegate: LoggableRouterDelegate(
           logger: logger,
           delegate: _MyRouterDelegate(
-            first: first,
+            initial: initial,
             navigable: navigable,
           )),
       routeInformationParser: _Parser(),
@@ -91,9 +91,9 @@ class _Parser extends RouteInformationParser<RouteInformation> {
 class _MyRouterDelegate extends RouterDelegate<RouteInformation>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<RouteInformation> {
   _MyRouterDelegate({
-    required Screen first,
+    required Screen initial,
     required Navigable navigable,
-  })  : _pages = List.from([first._page], growable: true),
+  })  : _pages = List.from([initial._page], growable: true),
         _navigable = navigable;
 
   final List<_Page> _pages;

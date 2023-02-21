@@ -3,7 +3,7 @@ import 'package:learn_flutter/page.dart';
 
 
 PageMeta notePage = PageMeta(
-  title: "note",
+  shortTitle: "note",
   builder: build,
 );
 

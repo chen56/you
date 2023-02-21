@@ -3,7 +3,7 @@ import 'package:learn_flutter/page.dart';
 
 
 PageMeta notePage = PageMeta(
-  title: "可选择性",
+  shortTitle: "可选择性",
   builder: build,
 );
 

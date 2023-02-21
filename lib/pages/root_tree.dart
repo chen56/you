@@ -6,6 +6,7 @@ import 'package:learn_flutter/pages/note/@page.dart';
 import 'package:learn_flutter/page.dart';
 import 'package:learn_flutter/pages/note/dev/debug/@page.dart';
 import 'package:learn_flutter/pages/note/dev/mirror/@page.dart';
+import 'package:learn_flutter/pages/note/layout/@page.dart';
 import 'package:learn_flutter/pages/note/material/button/ElevatedButton/@page.dart';
 import 'package:learn_flutter/pages/note/material/slider/@page.dart';
 import 'package:learn_flutter/pages/note/material/text/Text/@page.dart';
@@ -17,12 +18,13 @@ import 'package:learn_flutter/pages/note/state/StatefulBuilder/@page.dart';
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
-// 需求被拒绝，貌似这种自省需求会影响到dart的性能策略,只能另想办法
+// 需求被拒绝，貌似这种自省需求会影响到dart的性能策略,只能另想办法, 比如自动生成
 
 Path<void> root = Path<void>("/", meta: rootPage, kids: [
   Path<void>("not_found", meta: notFoundPage),
   Path<void>("note", meta: notePage, kids: [
-    Path<void>("welcome", meta: welcomePage),
+    Path<void>("welcome", meta: welcome),
+    Path<void>("layout", meta: layoutNote),
     Path<void>("material", kids: [
       Path<void>("button", kids: [
         Path<void>("ElevatedButton", meta: widgetElevatedButtonNote),
@@ -46,11 +48,15 @@ Path<void> root = Path<void>("/", meta: rootPage, kids: [
 Path _get(path) => root.kid(path)!;
 
 class Paths extends Navigable{
+  final Path<void> initial = _get("/note/dev/mirror");
+
   final Path<void> home = _get("/");
+
   final Path<void> notFound = _get("/not_found");
   final Path<void> note = _get("/note");
   final Path<void> welcome = _get("/note/welcome");
   final Path<void> mirror = _get("/note/dev/mirror");
+  final Path<void> layout = _get("/note/layout");
 
   Paths._();
 

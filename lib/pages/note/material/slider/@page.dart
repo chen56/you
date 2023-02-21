@@ -3,12 +3,14 @@ import 'package:learn_flutter/page.dart';
 
 
 PageMeta widgetSliderNote = PageMeta(
-  title: "Slider",
+  shortTitle: "Slider进度条",
   builder: build,
 );
 
 build(Pen pen ,BuildContext context) {
   pen. markdown(r'''
+# 进度条  
+
 ## 范例1 普通文本 
 
 Text.new()

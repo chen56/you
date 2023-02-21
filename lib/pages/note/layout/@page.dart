@@ -1,17 +1,22 @@
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
-PageMeta notFoundPage = PageMeta(
-  shortTitle: " Dismissible滑动清除",
+
+PageMeta layoutNote = PageMeta(
+  shortTitle: "layout布局",
   builder: build,
 );
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-## 参考
 
-<https://flutter.cn/docs/cookbook/gestures/dismissible> 
+# 布局
 
+## 弹性布局
+
+- Flex <https://api.flutter-io.cn/flutter/widgets/Flex-class.html>
+  - Row
+  - Column
 
   ''');
 }

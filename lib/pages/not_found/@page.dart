@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
 PageMeta notFoundPage = PageMeta(
-  title: "404",
+  shortTitle: "404",
   builder: build,
 );
 

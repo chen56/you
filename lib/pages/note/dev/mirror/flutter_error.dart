@@ -1,13 +1,104 @@
-import 'package:flutter/cupertino.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:markdown/markdown.dart' as md;
 
-PageMeta devMirrorNote = PageMeta(
-  shortTitle: "网络连不上",
-  builder: build,
-);
+void main() => runApp(MyApp());
 
-build(Pen pen ,BuildContext context) {
-  pen. markdown(r'''
+// https://api.flutter-io.cn/flutter/material/Divider-class.html
+class MyApp extends StatelessWidget {
+  ScrollController controller = ScrollController();
+
+  MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var headerBuilder = _CenteredHeaderBuilder();
+
+    Markdown markdown = Markdown(
+      data: str,
+      selectable: true,
+      // 得研究下controller层层嵌套要怎么用
+      controller: controller,
+      shrinkWrap: true,
+
+      builders: <String, MarkdownElementBuilder>{
+        'h1': headerBuilder,
+        'h2': headerBuilder,
+        'h3': headerBuilder,
+        'h4': headerBuilder,
+        'h5': headerBuilder,
+        'h6': headerBuilder,
+        'h7': headerBuilder,
+      },
+    );
+
+    var listView = ListView(controller: controller, children: <Widget>[
+      const Divider(),
+      markdown,
+    ]);
+    return MaterialApp(
+      theme: ThemeData(colorSchemeSeed: Colors.blue, useMaterial3: true),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Markdown Sample')),
+        body: markdown,
+      ),
+    );
+  }
+}
+
+class MarkdownView extends StatelessWidget {
+  final String content;
+  ScrollController controller = ScrollController();
+
+  MarkdownView({super.key, required this.content});
+
+  @override
+  Widget build(BuildContext context) {
+    var headerBuilder = _CenteredHeaderBuilder();
+    return Markdown(
+      data: content,
+      selectable: true,
+      // 得研究下controller层层嵌套要怎么用
+      controller: controller,
+      shrinkWrap: true,
+
+      builders: <String, MarkdownElementBuilder>{
+        'h1': headerBuilder,
+        'h2': headerBuilder,
+        'h3': headerBuilder,
+        'h4': headerBuilder,
+        'h5': headerBuilder,
+        'h6': headerBuilder,
+        'h7': headerBuilder,
+      },
+    );
+  }
+}
+
+class _CenteredHeaderBuilder extends MarkdownElementBuilder {
+  _CenteredHeaderBuilder();
+
+  @override
+  Widget? visitText(md.Text text, TextStyle? preferredStyle) {
+    var textWidget = Text(
+      text.text,
+      style: preferredStyle!.copyWith(height: 2),
+    );
+    var heading = Flexible(
+      fit: FlexFit.tight,
+      flex: 0,
+      child: Align(alignment: Alignment.centerLeft, child: textWidget),
+    );
+    return Column(
+      children: [
+        heading,
+        Divider(height: 20, thickness: 1),
+      ],
+    );
+  }
+}
+
+var str = r'''
   
 ## flutter pub镜像慢
 
@@ -20,7 +111,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 ## web 版
 
---web-renderer模式会自动下载一些文件，大概率要失败。解决方案：
+`--web-renderer`模式会自动下载一些文件，大概率要失败。解决方案：
 
 ### canvaskit-wasm
 
@@ -101,8 +192,6 @@ flutter:
     }
 ```
 
-### 还有呢？
+### 到这里
 
-  ''');
-
-}
+  ''';

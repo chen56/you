@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
 PageMeta devDebugNote = PageMeta(
-  title: "debug相关",
+  shortTitle: "debug相关",
   builder: build,
 );
 

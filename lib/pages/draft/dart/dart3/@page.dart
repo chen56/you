@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/page.dart';
 
 PageMeta rootPage = PageMeta(
-  title: "dart 3 新特性",
+  shortTitle: "dart 3 新特性",
   builder: build,
 );
 
