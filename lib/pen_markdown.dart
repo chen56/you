@@ -58,7 +58,7 @@ class _HeaderBuilder extends MarkdownElementBuilder {
       child: Align(
           alignment: Alignment.centerLeft,
           child: SelectableText.rich(
-            TextSpan(style: preferredStyle?.copyWith(height: 2), text: text.text),
+            TextSpan(style: preferredStyle?.copyWith(height: 2,fontWeight: FontWeight.bold), text: text.text),
             style: preferredStyle,
           )),
     );
@@ -112,6 +112,13 @@ class _PreBuilder extends MarkdownElementBuilder {
         fontSize: 16,
       ),
     );
+    var noScroll = Row(
+      children: [
+        Expanded(child: highlight),
+      ],
+    );
+
+
     var listView = ListView.separated(
       shrinkWrap: true,
       itemCount: 1,
@@ -120,23 +127,16 @@ class _PreBuilder extends MarkdownElementBuilder {
         return highlight;
       },
     );
-    var column = Column(
-      children: [
-        Container(height: 3, color: Colors.blue),
-        listView,
-      ],
-    );
-    var singleChildScrollView = SingleChildScrollView(
-      child: listView,
-    );
-    Scrollbar scrollbar = Scrollbar(
+    Scrollbar scroll = Scrollbar(
       controller: controller,
-      child: singleChildScrollView,
+      child: SingleChildScrollView(
+        child: highlight,
+      ),
     );
-
+    //目前看，markdown中的code/prd 不滚动是不是更好些，一般内容不会很长
     return Container(
       padding: EdgeInsets.only(right: 100),
-      child: scrollbar,
+      child: noScroll,
     );
   }
 }
