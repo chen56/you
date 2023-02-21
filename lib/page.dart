@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/navigator_v2.dart';
 
-import 'utils.dart';
-import 'package:markdown/markdown.dart' as md;
+/// 本项目的就死活page开发模型，包括几部分：
+/// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
+/// - [Layout]的具体实现，比如[Page]
+/// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
+///
+///
+
+
 
 /// <T>: [NavigatorV2.push] 的返回类型
 class PageMeta<T> {
@@ -25,7 +31,7 @@ class Path<T> {
   final List<Path> _kids;
   final Map<String, Path> _kidsMap = {};
   Path? _parent;
-  final Map<String, Object> attributes = ListenableMap();
+  final Map<String, Object> attributes = {};
   late final PageMeta<T>? _meta;
 
   Path(
@@ -92,8 +98,7 @@ class Path<T> {
 
   Path? kid(String path) {
     Path? result = this;
-    for (var split
-        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._kidsMap[split];
       if (result == null) break;
     }
@@ -120,83 +125,23 @@ class Path<T> {
   }
 }
 
-class Pen {
-  final List<Widget> _content = List.empty(growable: true);
-  final Outline outline = Outline();
+enum ContentType { markdown, sample, widget }
 
-  Pen();
+class Content {
+  final ContentType type;
+  final Object value;
 
-  void sample(Widget sample) {
-    _content.add(Text("sample: $sample")); //临时实现
-  }
-
-  List<Widget> get content => List.unmodifiable(_content);
-
-  void markdown(String content) {
-    var headerBuilder = _CenteredHeaderBuilder(outline);
-    var markdownWidget = Markdown(
-      data: content,
-      selectable: true,
-      // 得研究下controller层层嵌套要怎么用
-      // controller: controller,
-      shrinkWrap: true,
-
-      builders: <String, MarkdownElementBuilder>{
-        'h1': headerBuilder,
-        'h2': headerBuilder,
-        'h3': headerBuilder,
-        'h4': headerBuilder,
-        'h5': headerBuilder,
-        'h6': headerBuilder,
-        'h7': headerBuilder,
-      },
-    );
-    _content.add(markdownWidget);
-  }
+  Content._({required this.type, required this.value});
 }
 
-class _CenteredHeaderBuilder extends MarkdownElementBuilder {
-  final Outline outline;
+abstract class Pen {
+  void sample(Widget sample);
 
-  _CenteredHeaderBuilder(this.outline);
+  void widget(Widget widget);
 
-  OutlineNode? currentNode;
-
-  @override
-  Widget? visitText(md.Text text, TextStyle? preferredStyle) {
-    // 我们假设每一个header 都按顺序调用visitElementBefore->visitText
-    // 加个守卫语句，防止flutter-markdown没有按顺序调用导致无效head
-    if (currentNode == null) {
-      return null;
-    }
-    outline.add(currentNode!);
-    
-    return Row(
-      children: <Widget>[
-        // Flexible 可已使超出边界的文本换行
-        Flexible(
-          child: Text(
-            key: currentNode!.key,
-            text.text,
-            style: preferredStyle,
-          ),
-        ),
-      ],
-    );
-  }
-
-  @override
-  void visitElementBefore(md.Element element) {
-    // tag value : h1 | h2 | h3 ....
-    currentNode = OutlineNode(
-      // globalKey用来滚动到此位置
-      key: GlobalKey()!,
-      heading: int.parse(element.tag.substring(1)),
-      title: element.textContent,
-    );
-    // super.visitElementBefore(element);
-  }
+  void markdown(String content);
 }
+
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -214,6 +159,14 @@ class Outline {
 
 class OutlineNode {
   GlobalKey key;
+
+  /// markdown 的原始标题级数：
+  ///   root特殊为 0级
+  ///   # 一级
+  ///   ## 二级
+  ///   等等...
+  /// heading 和 level不一定想等，有时候markdown 的级数可能乱标，我们按idea,vscode的父子逻辑
+  /// 来组织tree
   int heading;
   String title;
 
@@ -262,19 +215,16 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
 
   @override
   Widget build(BuildContext context) {
-    Pen pen = Pen();
-    current.build(pen!, context);
+    var theme = Theme.of(context);
     return Scaffold(
+      appBar: AppBar(title: const Text("_DefaultScreen")),
       body: SingleChildScrollView(
-        child: Column(children: [
-          const Text(
-            "WARN：当前Path上未配置Layout，这是默认Layout的简单视图",
-            style: TextStyle(
-              color: Colors.red,
-            ),
+        child: Center(
+          child: Text(
+            "WARN：当前Path上未配置任何Layout: ${current.path}",
+            style: theme.textTheme.titleLarge?.copyWith(color: theme.colorScheme.error),
           ),
-          ...pen._content,
-        ]),
+        ),
       ),
     );
   }

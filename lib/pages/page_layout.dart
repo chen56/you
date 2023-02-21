@@ -1,6 +1,8 @@
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:learn_flutter/page.dart';
 import 'package:learn_flutter/navigator_v2.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/pen_markdown.dart';
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
@@ -19,75 +21,57 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 }
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
-  Pen? pen;
-  ScrollController controller = ScrollController();
+  final _PagePen pen=_PagePen();
+  final ScrollController controller = ScrollController(initialScrollOffset: 0);
 
-  // PrimaryScrollController primary=PrimaryScrollController(controller:controller, child: null,);
   @override
   void initState() {
     super.initState();
+    //内容outline只build一次
+    widget.current.build(pen!, context);
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      bool afterFirstBuild = pen != null;
-      // 第一次build后, outline才被装配出内容，再次绘制，outline才能显示
-      // 所以每次页面都需要两次build
-      if (afterFirstBuild) {
-        setState(() {});
-      }
+      // 第一次[build]时, flutter-mardown包无法装配出outline，只有第一次[build]完，才能装配好，
+      // 所以需要触发第二次build
+      setState(() {});
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    //第一次layout build时, widget.current.build()
-    //第二次layout build时, pen=null
-    bool firstBuild = pen == null;
-    bool secondBuild = pen != null;
-
-    if (firstBuild) {
-      pen = Pen();
-      widget.current.build(pen!, context);
-    }
-
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outline =
-        _OutlineView(contentPartController: controller, outline: pen!.outline);
-
-    var contentList = ListView(
-      scrollDirection: Axis.vertical,
-      shrinkWrap: true,
-      controller: controller,
-      children: pen!.content,
-    );
+    var outlineView =
+    _OutlineView(contentPartController: controller, outline: pen.outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
     // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太熟悉：
+    var contentListView = ListView(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
+        controller: controller,
+        children:pen._contents,
+      );
     var content = Scrollbar(
       thickness: 10,
       controller: controller, // Here
-      child: contentList,
+      child: contentListView,
     );
-
-    // outline 非空说明是第二次build，这时候已经收集完widget，可以释放了
-    if (secondBuild) {
-      pen = null;
-    }
 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.current.title),
         toolbarHeight: 36,
       ),
-      body: Row(
+      body: Center(child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(flex: 30, child: navigatorTree),
-          Expanded(flex: 150, child: content),
-          Expanded(flex: 30, child: outline),
+          SizedBox(width: 200, child: navigatorTree),
+          Expanded(child: contentListView,),
+          SizedBox(width:200,child: outlineView,),
         ],
-      ),
+      ),),
     );
   }
 
@@ -105,8 +89,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 class _NoteTreeView extends StatefulWidget {
   final Path root;
 
-  const _NoteTreeView(
-    this.root, {
+  const _NoteTreeView(this.root, {
     Key? key,
   }) : super(key: key);
 
@@ -122,7 +105,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
     // 一页一个链接
     Widget pageLink(Path note) {
       IconData titleIcon =
-          note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
+      note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
       click() {
         // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
         note.extend = !note.extend;
@@ -183,8 +166,7 @@ class _OutlineView extends StatelessWidget {
   // 主内容部分的滚动控制，防止异常用
   final ScrollController contentPartController;
 
-  const _OutlineView(
-      {required this.outline, required this.contentPartController});
+  const _OutlineView({required this.outline, required this.contentPartController});
 
   @override
   Widget build(BuildContext context) {
@@ -227,5 +209,26 @@ class _OutlineView extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class _PagePen extends Pen {
+  _PagePen();
+
+  Outline outline = Outline();
+  final List<Widget> _contents = List.empty(growable: true);
+
+  List<Content> get contents => List.unmodifiable(_contents);
+
+  void sample(Widget sample) {
+    _contents.add(ConstrainedBox(constraints: BoxConstraints.tightFor(width: 200,height: 200),child: sample,));
+  }
+
+  void widget(Widget widget) {
+    _contents.add(ConstrainedBox(constraints: BoxConstraints.tightFor(width: 200,height: 200),child: widget,));
+  }
+
+  void markdown(String content) {
+    _contents.add(MarkdownView(outline: outline, content: content,));
   }
 }

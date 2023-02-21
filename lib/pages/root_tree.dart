@@ -48,7 +48,10 @@ Path<void> root = Path<void>("/", meta: rootPage, kids: [
 Path _get(path) => root.kid(path)!;
 
 class Paths extends Navigable{
+  final Path<void> initial = _get("/note/dev/mirror");
+
   final Path<void> home = _get("/");
+
   final Path<void> notFound = _get("/not_found");
   final Path<void> note = _get("/note");
   final Path<void> welcome = _get("/note/welcome");

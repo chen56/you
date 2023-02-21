@@ -22,8 +22,8 @@ class App extends StatelessWidget {
         primarySwatch: Colors.indigo,
         useMaterial3: false,
       ),
-      routerConfig: NavigatorV2.createRouterConfig(
-        first: paths.parse(paths.layout.path),
+      routerConfig: NavigatorV2.config(
+        initial: paths.parse(paths.initial.path),
         navigable: paths,
       ),
     );

@@ -49,29 +49,58 @@ function _realpath(){
   echo "$_path"
 }
 
-# 临时试验命令行工具用
-/temp?shortHelp(){
-cat << EOF
-shortHelp line 1
+/test1?shortHelp(){ cat << EOF
+测试shortHelp的规范 ，shortHelp line 1
 shortHelp line 2
 shortHelp line 3
 EOF
 }
-/temp?help(){ echo -e "sss"; }
-/temp() {
+/test1() {
   local var1;
   local a=($(tr "/" " " <<< "/aa/b"))
   echo "var 1 $a "
   local myArray4
   IFS=$'\n' mapfile -t myArray4 <<< $(ls -al)
   declare -p myArray4
-  x
-}
-x(){
-  echo "====="
-  declare -p myArray4
 }
 
+/test_option?shortHelp(){ cat << EOF
+测试参数规范
+  ./bake test2 -h
+  ./bake test2 -n chen56
+  ./bake test2 --name chen56
+EOF
+}
+/test_option?option(){
+  option "-n" "--name"    "您的名字" "参数帮助:姓名"
+  option "-v" "--version" ""        "参数帮助:版本"
+}
+/test_option(){
+  echo "your name(-n):${-n}"
+  echo "your name(--name):${--name}"
+}
+option(){
+  local short="$1"
+  local long="$2"
+
+  local arg="$3"
+  local help="$4"
+  local hasArg=false;
+  [[ $arg != "" ]] && hasArg=true
+
+  local toString="short:'$short', long:'$long',arg:'$arg', help:'$help'"
+  if [[ $long == "" ]]; then
+     cat <<< "long option must not be empty: ($toString)
+        # option 'short option' 'long option(no empty!)'   'arg info'   'help'
+        # option '-n'           '--name'                   'your name'  'give me your name'
+     "
+     exit 1
+  fi
+
+}
+
+/test_option?option
+#echo 临时退出 && exit 1
 
 # 项目init
 /init?shortHelp(){ cat <<< "初始化项目工具"; }
@@ -120,9 +149,7 @@ x(){
   flutter clean
 }
 
-/help?shortHelp(){ cat <<< "显示帮助，及列出子命令"; }
-/help() {
-
+/?help() {
 cat <<- '__EOF'
 ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
 |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
@@ -133,6 +160,14 @@ Usage:
 Available Commands:
 __EOF
 
+print_commands
+
+}
+
+##########################################
+# 以下是bake命令行玩法的公共代码，与业务无关
+##########################################
+print_commands() {
   IFS=$'\n'
 
   # 我们要找出:
@@ -178,13 +213,12 @@ __EOF
 
 # 执行./bake 没参数，即没子命令，就显示help
 if [ "$#" == 0 ]; then
-  /help
+  /?help # 根命令的帮助
   echo
   echo ">>> Error: missing command './bake COMMAND'"
   exit 1
 fi
 
-# shellcheck disable=SC2145
 cmd="$1"
 # cmd 加上/前缀就是相应的函数
 cmdFunc="/$cmd"
