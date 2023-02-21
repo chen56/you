@@ -21,7 +21,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 }
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
-  final _PagePen pen=_PagePen();
+  final _PagePen pen = _PagePen();
   final ScrollController controller = ScrollController(initialScrollOffset: 0);
 
   @override
@@ -41,37 +41,45 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   Widget build(BuildContext context) {
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView =
-    _OutlineView(contentPartController: controller, outline: pen.outline);
+    var outlineView = _OutlineView(contentPartController: controller, outline: pen.outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
     // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太熟悉：
     var contentListView = ListView(
-        scrollDirection: Axis.vertical,
-        shrinkWrap: true,
-        controller: controller,
-        children:pen._contents,
-      );
+      scrollDirection: Axis.vertical,
+      shrinkWrap: true,
+      controller: controller,
+      children: pen._contents,
+    );
     var content = Scrollbar(
       thickness: 10,
       controller: controller, // Here
       child: contentListView,
     );
+    var scorllBehavior = ScrollBehavior().buildScrollbar(context, contentListView,
+        ScrollableDetails(direction: AxisDirection.down, controller: controller));
 
+    var row = Row(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SizedBox(width: 200, child: navigatorTree),
+        Expanded(child: scorllBehavior),
+        SizedBox(width: 200, child: outlineView),
+      ],
+    );
+    var container = Container(
+      child: row,
+    );
+    var safeArea = SafeArea(
+        child: container,
+      );
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.current.title),
         toolbarHeight: 36,
       ),
-      body: Center(child: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(width: 200, child: navigatorTree),
-          Expanded(child: contentListView,),
-          SizedBox(width:200,child: outlineView,),
-        ],
-      ),),
+      body: safeArea,
     );
   }
 
@@ -89,7 +97,8 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 class _NoteTreeView extends StatefulWidget {
   final Path root;
 
-  const _NoteTreeView(this.root, {
+  const _NoteTreeView(
+    this.root, {
     Key? key,
   }) : super(key: key);
 
@@ -104,8 +113,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   Widget build(BuildContext context) {
     // 一页一个链接
     Widget pageLink(Path note) {
-      IconData titleIcon =
-      note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
+      IconData titleIcon = note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
       click() {
         // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
         note.extend = !note.extend;
@@ -134,7 +142,6 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       shrinkWrap: false,
       padding: const EdgeInsets.all(2),
       children: notes.map((e) => pageLink(e)).toList(),
-
     );
   }
 }
@@ -213,6 +220,8 @@ class _OutlineView extends StatelessWidget {
 }
 
 class _PagePen extends Pen {
+  int i = 0;
+
   _PagePen();
 
   Outline outline = Outline();
@@ -221,14 +230,26 @@ class _PagePen extends Pen {
   List<Content> get contents => List.unmodifiable(_contents);
 
   void sample(Widget sample) {
-    _contents.add(ConstrainedBox(constraints: BoxConstraints.tightFor(width: 200,height: 200),child: sample,));
+    _contents.add(ConstrainedBox(
+      key: ValueKey(i++),
+      constraints: BoxConstraints.tightFor(width: 200, height: 200),
+      child: sample,
+    ));
   }
 
   void widget(Widget widget) {
-    _contents.add(ConstrainedBox(constraints: BoxConstraints.tightFor(width: 200,height: 200),child: widget,));
+    _contents.add(ConstrainedBox(
+      key: ValueKey(i++),
+      constraints: BoxConstraints.tightFor(width: 200, height: 200),
+      child: widget,
+    ));
   }
 
   void markdown(String content) {
-    _contents.add(MarkdownView(outline: outline, content: content,));
+    _contents.add(MarkdownView(
+      key: ValueKey(i++),
+      outline: outline,
+      content: content,
+    ));
   }
 }

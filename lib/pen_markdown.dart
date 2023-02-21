@@ -3,7 +3,6 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:learn_flutter/page.dart';
 import 'package:markdown/markdown.dart' as md;
 
-
 class MarkdownView extends StatelessWidget {
   final Outline outline;
   final String content;
@@ -14,26 +13,25 @@ class MarkdownView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var headerBuilder = _CenteredHeaderBuilder(outline);
-    return MarkdownBody(
+    return Markdown(
       data: content,
       selectable: true,
       // 得研究下controller层层嵌套要怎么用
-      // controller: controller,
+      controller: controller,
       shrinkWrap: true,
 
-      builders: <String, MarkdownElementBuilder>{
-        'h1': headerBuilder,
-        'h2': headerBuilder,
-        'h3': headerBuilder,
-        'h4': headerBuilder,
-        'h5': headerBuilder,
-        'h6': headerBuilder,
-        'h7': headerBuilder,
-      },
+      // builders: <String, MarkdownElementBuilder>{
+      //   'h1': headerBuilder,
+      //   'h2': headerBuilder,
+      //   'h3': headerBuilder,
+      //   'h4': headerBuilder,
+      //   'h5': headerBuilder,
+      //   'h6': headerBuilder,
+      //   'h7': headerBuilder,
+      // },
     );
   }
 }
-
 
 class _CenteredHeaderBuilder extends MarkdownElementBuilder {
   final Outline outline;
@@ -50,29 +48,25 @@ class _CenteredHeaderBuilder extends MarkdownElementBuilder {
       return null;
     }
     outline.add(currentNode!);
-    var divider = const Divider(
-      height: 20,
-      thickness: 1,
-      // indent: 20,
-      // endIndent: 20,
+    var textWidget = SelectableText.rich(
+      key: currentNode!.key,
+      TextSpan(style: preferredStyle?.copyWith(height: 2), text: text.text),
     );
-
+    var textWidget2 = Text(
+      key: currentNode!.key,
+      text.text,
+      style: preferredStyle!.copyWith(height: 2),
+    );
     var heading = Flexible(
       fit: FlexFit.tight,
       flex: 0,
-      child: Align(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            key: currentNode!.key,
-            text.text,
-            style: preferredStyle!.copyWith(height: 2),
-          )),
+      child: Align(alignment: Alignment.centerLeft, child: textWidget),
     );
     return Column(
       children: [
         heading,
         // h1 h2 加个横线
-        if (currentNode!.heading <= 2) divider,
+        if (currentNode!.heading <= 2) Divider(height: 20, thickness: 1),
       ],
     );
   }
