@@ -20,7 +20,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 ## web 版
 
-`--web-renderer`模式会自动下载一些文件，大概率要失败。解决方案：
+--web-renderer模式会自动下载一些文件，大概率要失败。解决方案：
 
 ### canvaskit-wasm
 
