@@ -5,6 +5,7 @@ set -o functrace #trap inherited in function
 # set -x
 
 # bake == (bash)ake == 去make的bash工具
+# v0.1.20230222
 # ------------------------------------------------------------------------------
 # bake 是个简单的自建命令工具，以替代Makefile的子命令功能
 # make工具的主要特点是处理文件依赖进行增量编译，但flutter、golang、java、js项目的build工具
@@ -167,6 +168,23 @@ print_commands
 ##########################################
 # 以下是bake命令行玩法的公共代码，与业务无关
 ##########################################
+on_error() {
+  echo "traped an error: ↑ , trace: ↓" >&2
+  print_stack
+}
+
+print_stack() {
+  local i=0
+  local errout
+  while true; do
+    errout=$(caller $i 2>&1 && true) && true
+    if [[ $? != 0 ]]; then break; fi
+    echo "  $errout" >&2
+
+    i=$((i + 1))
+  done
+}
+
 print_commands() {
   IFS=$'\n'
 
@@ -181,35 +199,37 @@ print_commands() {
   #转成命令全名
   #     => /build
   #     => /help
-  IFS=$'\n'  # 分配回车符给IFS
-  local cmdFullnames=$( declare -F | grep "^declare -f /" | grep -v "?" | sed -e 's/^declare -f //g')
-  readarray -t cmdFullnames <<< "$cmdFullnames"
+  IFS=$'\n' # 分配回车符给IFS
+  local cmdFullnames=$(declare -F | grep "^declare -f /" | grep -v "?" | sed -e 's/^declare -f //g')
+  readarray -t cmdFullnames <<<"$cmdFullnames"
   local cmds=()
   local shortHelps=()
-  local maxLengthOfCmd=0;
-  local i=0;
+  local maxLengthOfCmd=0
+  local i=0
   for cmdFullname in ${cmdFullnames[*]}; do
     # 先去第一个"/"，再按"/"split成数组
-    local split=($(tr "/" " " <<< "${cmdFullname:1}" ))
+    local split=($(tr "/" " " <<<"${cmdFullname:1}"))
     local cmd=${split[0]} #目前只用 第一个命令
-    local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null  || true )
+    local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null || true)
     cmds[i]=${cmd}
     shortHelps[i]=${shortHelp}
     # 求命令的最大长度，一会padding用
-    if (( ${#cmd} > maxLengthOfCmd ))  ; then maxLengthOfCmd=${#cmd}; fi
-    i=$((i+1))
+    if ((${#cmd} > maxLengthOfCmd)); then maxLengthOfCmd=${#cmd}; fi
+    i=$((i + 1))
   done
 
   # print all commands and shortHelp
-  for i in ${!cmds[*]} ; do
-    local padding=$(printf %-$((maxLengthOfCmd + 6))b  "")
+  for i in ${!cmds[*]}; do
+    local padding=$(printf %-$((maxLengthOfCmd + 6))b "")
     # 第二行开始，都补空格
-    local shortHelp=$(sed "2,1000s/^/$padding/g"  <<< "${shortHelps[i]}" )
+    local shortHelp=$(sed "2,1000s/^/$padding/g" <<<"${shortHelps[i]}")
     printf "  %-$((maxLengthOfCmd))s    ${shortHelp}\n" "${cmds[i]}"
   done
 
   return
 }
+
+trap " set +x; on_error " ERR
 
 # 执行./bake 没参数，即没子命令，就显示help
 if [ "$#" == 0 ]; then
@@ -222,7 +242,7 @@ fi
 cmd="$1"
 # cmd 加上/前缀就是相应的函数
 cmdFunc="/$cmd"
-if ! declare -f "$cmdFunc" >/dev/null 2>&1 ; then
+if ! declare -f "$cmdFunc" >/dev/null 2>&1; then
   echo "Error: 命令[${cmd}] 不存在, 未找到相应的函数[${cmdFunc}()]"
   exit 1
 fi
