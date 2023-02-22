@@ -22,7 +22,6 @@ class Params {
     return _initOnce(path, () => OfTextAlign());
   }
 
-// TODO 这个还要不要？看来这个方法是多余的
   Editor path(String path) {
     if (!_editors.containsKey(path)) {
       return _empty;
