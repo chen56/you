@@ -4,11 +4,9 @@ import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
 
-class Params {
+class ParamNode {
   final Map<String, Editor> _editors = HashMap();
   late final _EmptyEditor _empty = _EmptyEditor()..notNull("Empty");
-
-  Params();
 
   OfString ofString(String path) {
     return _initOnce(path, () => OfString());
@@ -70,7 +68,7 @@ class _EmptyEditor extends Editor<String> {
 abstract class Editor<T> {
   T? value;
   bool isNullable = true;
-  late final Params params;
+  late final ParamNode params;
   bool _initialized = false;
 
   Editor();
@@ -125,6 +123,7 @@ class OfString extends Editor<String> {
 class OfDouble extends Editor<double> {
   OfDouble();
 
+  @override
   StatefulBuilder builder() {
     return StatefulBuilder(
         builder: (BuildContext context, StateSetter setState) {
@@ -149,6 +148,7 @@ class OfDouble extends Editor<double> {
 class OfObject<T> extends Editor<T> {
   OfObject();
 
+  @override
   StatefulBuilder builder() {
     return StatefulBuilder(
         builder: (BuildContext context, StateSetter setState) {
@@ -164,6 +164,7 @@ abstract class EnumEditor<T extends Enum> extends Editor<T> {
     required this.values,
   });
 
+  @override
   StatefulBuilder builder() {
     return StatefulBuilder(
         builder: (BuildContext context, StateSetter setState) {
@@ -189,65 +190,3 @@ abstract class EnumEditor<T extends Enum> extends Editor<T> {
 class OfTextAlign extends EnumEditor<TextAlign> {
   OfTextAlign() : super(values: TextAlign.values);
 }
-
-
-// class TreeParamTemp<T> {
-//   final Map<String, TreeParamTemp> _children = HashMap();
-
-//   static const String separator = ".";
-
-//   T value;
-//   String name;
-//   String? help;
-
-//   // TODO how to private new func
-//   TreeParamTemp(this.name, {required this.value, this.help});
-
-//   TreeParamTemp _child(String name) {
-//     if (!_children.containsKey(name)) {
-//       TreeParamTemp empty = TreeParamTemp(name, value: "empty value", help: "");
-//       return empty;
-//     }
-//     return _children[name]!;
-//   }
-
-//   TreeParamTemp<C> path<C>(String path) {
-//     return path.split(".").fold<TreeParamTemp>(this, (previous, item) => previous._child(item)) as TreeParamTemp<C>;
-//   }
-
-//   TreeParamTemp<C> define<C>(
-//     String path, {
-//     required C value,
-//     String? help,
-//   }) {
-//     var paths = path.split(separator);
-//     assert(paths.isNotEmpty, "empty!what? path:$path");
-
-//     var last = paths[paths.length - 1];
-//     var parents = paths.sublist(0, paths.length - 1);
-
-//     // ensure all parent node
-//     TreeParamTemp current = this;
-//     for (var name in parents) {
-//       var child = current._children[name];
-//       if (!current._children.containsKey(name)) {
-//         child = TreeParamTemp(name, value: null, help: "");
-//         current._children[name] = child;
-//       }
-//       current = child!;
-//     }
-
-//     // 只能define一次，已定义过的直接返回
-//     if (current._children.containsKey(last)) {
-//       return current._children[last] as TreeParamTemp<C>;
-//     }
-
-//     var result = TreeParamTemp(last, value: value, help: help);
-//     current._children[last] = result;
-//     return result;
-//   }
-
-//   static TreeParamTemp root() {
-//     return TreeParamTemp("root", value: "root", help: "");
-//   }
-// }

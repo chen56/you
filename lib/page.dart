@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:learn_flutter/navigator_v2.dart';
+import 'package:learn_flutter/params/flutter/widgets/container.dart';
 
 /// 本项目的就死活page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -140,6 +141,8 @@ abstract class Pen {
   void widget(Widget widget);
 
   void markdown(String content);
+
+  void widgetMate(WidgetMate widgetMate) ;
 }
 
 

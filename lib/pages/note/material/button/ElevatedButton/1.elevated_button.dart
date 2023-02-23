@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/param.dart';
+import 'package:learn_flutter/params/param.dart';
 
 void main() {
   runApp(const Sample1());
 }
 
-final Params params = Params();
+final ParamNode params = ParamNode();
 final insert = params.insert;
 final insert_ = params.insert_;
 
@@ -19,9 +19,7 @@ class Sample1 extends StatelessWidget {
       width: insert("Container.width", 100, OfDouble()),
       height: insert("Container.height", 100, OfDouble()),
       color: Colors.blue,
-      child: ElevatedButton(
-        child: const Text("normal"),
-        onPressed: () {},
+      child: Container(
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:learn_flutter/navigator_v2.dart';
 import 'package:learn_flutter/pages/@page.dart';
 import 'package:learn_flutter/pages/not_found/@page.dart';
+import 'package:learn_flutter/pages/note/1.welcome/1.note-self/@page.dart';
 import 'package:learn_flutter/pages/note/1.welcome/@page.dart';
 import 'package:learn_flutter/pages/note/@page.dart';
 import 'package:learn_flutter/page.dart';
@@ -13,8 +14,6 @@ import 'package:learn_flutter/pages/note/material/text/Text/@page.dart';
 import 'package:learn_flutter/pages/note/state/1.vanilla_state/@page.dart';
 import 'package:learn_flutter/pages/note/state/StatefulBuilder/@page.dart';
 
-
-
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
@@ -23,7 +22,9 @@ import 'package:learn_flutter/pages/note/state/StatefulBuilder/@page.dart';
 Path<void> root = Path<void>("/", meta: rootPage, kids: [
   Path<void>("not_found", meta: notFoundPage),
   Path<void>("note", meta: notePage, kids: [
-    Path<void>("welcome", meta: welcome),
+    Path<void>("welcome", meta: welcome, kids: [
+      Path<void>("note-self", meta: noteSelfNote),
+    ]),
     Path<void>("layout", meta: layoutNote),
     Path<void>("material", kids: [
       Path<void>("button", kids: [
@@ -47,8 +48,9 @@ Path<void> root = Path<void>("/", meta: rootPage, kids: [
 
 Path _get(path) => root.kid(path)!;
 
-class Paths extends Navigable{
-  final Path<void> initial = _get("/note/dev/mirror");
+class Paths extends Navigable {
+  late final Path<void> initial;
+  final Path<void> noteSelf = _get("/note/welcome/note-self");
 
   final Path<void> home = _get("/");
 
@@ -58,11 +60,13 @@ class Paths extends Navigable{
   final Path<void> mirror = _get("/note/dev/mirror");
   final Path<void> layout = _get("/note/layout");
 
-  Paths._();
+  Paths._() {
+    initial = noteSelf;
+  }
 
   @override
   Screen parse(String location) {
-    Path find = root.kid(location)??notFound;
+    Path find = root.kid(location) ?? notFound;
     return find.createScreen(location);
   }
 }

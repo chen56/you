@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/param.dart';
+import 'package:learn_flutter/params/param.dart';
 
 void main() {
   runApp(const NormalTextSample());
 }
 
-final Params params = Params();
+final ParamNode params = ParamNode();
 final insert = params.insert;
 final insert_ = params.insert_;
 

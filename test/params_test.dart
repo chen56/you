@@ -1,10 +1,10 @@
-import 'package:learn_flutter/param.dart';
+import 'package:learn_flutter/params/param.dart';
 import 'package:test/test.dart';
 
 void main() {
   test('Param.ofString()  定义Param', () {
     {
-      var param = Params();
+      var param = ParamNode();
       expect(param.ofString("a").value, equals(null));
       expect(param.ofString("a").value, equals(null));
       expect(param.ofString("a").isNullable, equals(true));
@@ -22,14 +22,14 @@ void main() {
   });
 
   test('Param.value  runtimeType', () {
-    var root = Params();
+    var root = ParamNode();
     expect(root.ofString(next()).value.runtimeType, equals(Null));
     expect(root.ofString(next()).nullable("default").runtimeType, equals(String));
     expect(root.ofString(next()).notNull("value").runtimeType, equals(String));
   });
 
   test('Param.ofString()  定义Param', () {
-    var param = Params();
+    var param = ParamNode();
     expect(param.path("not exists path").isEmpty, equals(true));
     expect(param.path("not exists path").value, equals("Empty"));
 
@@ -39,7 +39,7 @@ void main() {
   });
 
   test('Param.value  runtimeType', () {
-    var root = Params();
+    var root = ParamNode();
     expect(root.ofString(next()).value.runtimeType, equals(Null));
     expect(root.ofString(next()).nullable("default").runtimeType, equals(String));
     expect(root.ofString(next()).notNull("value").runtimeType, equals(String));
