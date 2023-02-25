@@ -26,11 +26,11 @@ dependencies:
   # 应该是不需要这个东东的，暂时注释掉
 #  cupertino_icons: ^1.0.2
 
-  # build那一套
-  analyzer: ">=2.0.0 <6.0.0"
-  build: ^2.0.0
-  # Not imported in code, but used to constrain `build.yaml` requirements
-  build_config: ^1.0.0
+#  # build那一套
+#  analyzer: ">=2.0.0 <6.0.0"
+#  build: ^2.0.0
+#  # Not imported in code, but used to constrain `build.yaml` requirements
+#  build_config: ^1.0.0
 
 dev_dependencies:
   test:
@@ -38,9 +38,6 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.0
-
-  source_gen:
-  build_runner:
 #  build_web_compilers: ^3.0.0
 
 # For information on the generic Dart part of this file, see the

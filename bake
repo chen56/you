@@ -112,10 +112,10 @@ option(){
 # 构建命令,可附加flutter build的参数
 /build?shortHelp(){ cat <<< "构建命令,可附加flutter build的参数"; }
 /build() {
-  echo "bake build $*"
+  echo "bake build  $@"
   # web-renderer=canvaskit 太大了十几MB,所以要用html版
   # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/flutter-note
-  flutter build web --release --web-renderer html --base-href='/flutter-note/' $*
+  flutter build web --release --web-renderer html --base-href='/flutter-note/' "$@"
 }
 
 # 构建命令
@@ -127,13 +127,18 @@ option(){
 }
 
 
-# build + run local http://localhost:8000
 /preview?shortHelp(){ cat <<< "预览，先build,再开web server: http://localhost:8000"; }
 /preview() {
   echo "bake preview"
-  flutter build web --release --web-renderer html --base-href='/' $*
+  flutter build web --release --web-renderer html --base-href='/' "$@"
 # 	npx http-server ./build/web --port 8000
   deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
+}
+
+/build?shortHelp?shortHelp(){ cat <<< "预览，先build,再开web server: http://localhost:8000"; }
+/build() {
+  echo "bake build"
+  flutter build web --release --web-renderer html --base-href='/' "$@"
 }
 
 # dev run local http://localhost:8000

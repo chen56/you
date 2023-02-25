@@ -3,11 +3,10 @@ import 'dart:io';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/utilities.dart';
 import 'package:analyzer/dart/ast/ast.dart';
-import 'package:learn_flutter/analyzer.dart';
+import 'package:learn_flutter/pages/draft/dart/analyzer/analyzer_ast.dart';
 
 main() {
-  read(File(
-      "/usr/local/Cellar/flutter/packages/flutter/lib/src/widgets/container.dart"));
+  read(File("/usr/local/Cellar/flutter/packages/flutter/lib/src/widgets/container.dart"));
 }
 
 read(File file) {
