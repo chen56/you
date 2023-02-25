@@ -8,7 +8,7 @@ PageMeta rootPage = PageMeta(
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-## dart 3 
+## dart 3  暂时放弃，等稳定后再搞
 
 # type
 

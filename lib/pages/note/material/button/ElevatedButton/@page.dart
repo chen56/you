@@ -29,12 +29,4 @@ build(Pen pen, BuildContext context) {
 
   ''');
 
-  pen.widgetMate(CenterMate(
-    key: const ValueKey("center2"),
-    child: ContainerMate(
-      width: 100,
-      height: 100,
-      color: Colors.green,
-    ),
-  ));
 }

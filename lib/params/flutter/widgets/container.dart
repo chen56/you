@@ -1,143 +1,164 @@
 import 'package:flutter/material.dart';
 
-class ContainerMate extends WidgetMate {
-  final AlignmentGeometry? alignment;
-  final EdgeInsetsGeometry? padding;
-  final Color? color;
-  final Decoration? decoration;
-  final Decoration? foregroundDecoration;
-  final BoxConstraints? constraints;
-  final EdgeInsetsGeometry? margin;
-  final Matrix4? transform;
-  final AlignmentGeometry? transformAlignment;
-  final Clip clipBehavior;
-
-  late final Double_ width;
-  late final Double_ height;
-
-  final WidgetMate? child;
+class ContainerMate extends Container with WidgetMate {
+  late final Double _width;
+  late final Double _height;
 
   ContainerMate({
-    super.key,
-    this.alignment,
-    this.padding,
-    this.color,
-    this.decoration,
-    this.foregroundDecoration,
+    Key? key,
+    AlignmentGeometry? alignment,
+    Color? color,
+    super.clipBehavior,
     double? width,
     double? height,
-    this.constraints,
-    this.margin,
-    this.transform,
-    this.transformAlignment,
-    this.child,
-    this.clipBehavior = Clip.none,
-  }) {
-    this.width = ofDouble_(name: "width", init: width);
-    this.height = ofDouble_(name: "height", init: height);
+    Widget? child,
+  }) : super(
+          key: key,
+          alignment: alignment,
+          width: width,
+          height: height,
+          color: color,
+          child: child,
+        ) {
+    _width = addDouble_(name: "width", init: width);
+    _height = addDouble_(name: "height", init: height);
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
+  ContainerMate clone() {
+    return ContainerMate(
       key: key,
-      alignment: alignment,
-      padding: padding,
-      color: color,
-      decoration: decoration,
-      foregroundDecoration: foregroundDecoration,
-      width: width.get(),
-      height: height.get(),
-      constraints: constraints,
-      margin: margin,
-      transform: transform,
-      transformAlignment: transformAlignment,
-      clipBehavior: clipBehavior,
-      child: child?.build(context),
+      width: _width.value,
+      height: _height.value,
     );
   }
+
+// @override
+// Widget build(BuildContext context) {
+//   return Container(
+//     key: key,
+//     alignment: alignment,
+//     padding: padding,
+//     color: color,
+//     decoration: decoration,
+//     foregroundDecoration: foregroundDecoration,
+//     width: width.get(),
+//     height: height.get(),
+//     constraints: constraints,
+//     margin: margin,
+//     transform: transform,
+//     transformAlignment: transformAlignment,
+//     clipBehavior: clipBehavior,
+//     // child: child?.build(context),
+//   );
+// }
 }
 
-class ColumnMate extends WidgetMate {
-  final List<WidgetMate> children;
-
+class ColumnMate extends Column with WidgetMate {
   ColumnMate({
-    Key? key,
-    this.children = const <WidgetMate>[],
+    super.key,
+    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
+    List<Widget> children = const <Widget>[],
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       key: key,
-      children: children.map((e) => e.build(context)).toList(),
+      // children: children.map((e) => e.build(context)).toList(),
     );
-  }
-}
-
-class CenterMate extends WidgetMate {
-  late final Double_ widthFactor;
-  late final Double_ heightFactor;
-  WidgetMate? child;
-
-  CenterMate({
-    super.key,
-    double? widthFactor,
-    double? heightFactor,
-    this.child,
-  }) {
-    this.widthFactor = ofDouble_(name: "widthFactor", init: widthFactor);
-    this.heightFactor = ofDouble_(name: "heightFactor", init: heightFactor);
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Center(
+  WidgetMate clone() {
+    // TODO: implement clone
+    throw UnimplementedError();
+  }
+}
+
+class CenterMate extends Center with WidgetMate {
+  late final Double _widthFactor;
+  late final Double _heightFactor;
+
+  CenterMate({
+    Key? key,
+    double? widthFactor,
+    double? heightFactor,
+    Widget? child,
+  }) : super(
+          key: key,
+          widthFactor: widthFactor,
+          heightFactor: heightFactor,
+          child: child,
+        ) {
+    _widthFactor = addDouble_(name: "widthFactor", init: widthFactor);
+    _heightFactor = addDouble_(name: "heightFactor", init: heightFactor);
+  }
+
+  @override
+  CenterMate clone() {
+    return CenterMate(
       key: key,
-      widthFactor: widthFactor.get(),
-      heightFactor: heightFactor.get(),
-      child: child?.build(context),
+      widthFactor: _widthFactor.value,
+      heightFactor: _heightFactor.value,
+      child: child is WidgetMate ? (child as WidgetMate).clone() : child,
     );
   }
 }
 
-abstract class Editor<T> {}
+abstract class Editor<T> {
+  final String name;
+  final T? init;
+  T? _value;
+  bool _alreadySet = false;
 
-class Double extends Editor<double> {}
+  set value(T? v) {
+    _value = v;
+    _alreadySet = true;
+  }
 
-class Double_ extends Editor<double> {
-  double? init;
-  String name;
+  T? get value {
+    return _alreadySet ? _value : init;
+  }
 
-  Double_({required this.name, this.init});
+  Editor({required this.name, this.init});
+}
 
-  double? get() {
-    return init;
+class Double extends Editor<double> {
+  Double({required super.name, super.init});
+}
+
+class MateNode {
+  final Map<String, Editor> _paramMap = {};
+  final List<Editor> _params = List.empty(growable: true);
+
+  void add(Editor editor) {
+    assert(!_paramMap.containsKey(editor.name),
+        "error:duplicate key: ${editor.name} ");
+    _paramMap[editor.name] = editor;
+    _params.add(editor);
+  }
+
+  Editor get(String name) {
+    return _paramMap[name]!;
   }
 }
 
-abstract class WidgetMate {
-  Map<String, Object?> params = {};
-
-  final Key? key;
-
-  WidgetMate({this.key});
+mixin WidgetMate on Widget {
+  final MateNode node = MateNode();
 
   T get<T>(String name, T o) {
     return o;
   }
 
-  Double_ ofDouble_({required String name, double? init}) {
-    return _initOnce(name, () => Double_(name: name, init: init));
+  Double addDouble_({required String name, double? init}) {
+    var result = Double(name: name, init: init);
+    node.add(result);
+    return result;
   }
 
-  T _initOnce<T extends Editor>(String name, T Function() create) {
-    return params.putIfAbsent(name, () {
-      return create();
-    }) as T;
-  }
-
-  Widget build(BuildContext context);
+  WidgetMate clone();
+// Widget build(BuildContext context);
 }
 
 mixin Show on Widget {

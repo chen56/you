@@ -270,12 +270,9 @@ class _PagePen extends Pen {
 
     _contents.add(Container(
       // padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 2.0),
+      height: 100,
       decoration: boxDecoration,
-      child: Builder(
-        builder: (context) {
-          return widgetMate.build(context);
-        },
-      ),
+      child: widgetMate,
     ));
   }
 }

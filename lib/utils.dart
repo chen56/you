@@ -1,9 +1,16 @@
-import 'package:flutter/widgets.dart';
 import 'dart:collection';
+
+import 'package:flutter/widgets.dart';
 
 /// 判断类型Sub是否是Super的子类型
 bool isSubtype<Super, Sub>() {
   return <Sub>[] is List<Super>;
+}
+
+class TypeIs<T> {}
+
+isType<T>(Object o, TypeIs<T> type) {
+  return o is T;
 }
 
 /// 判断类型T是否是nullable的:

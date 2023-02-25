@@ -30,13 +30,13 @@
 
 ```bash
 git clone git@github.com:chen56/flutter-note.git
-flutter channel master
 flutter run --web-renderer html --device-id chrome 
 ```
 
-本项目是学习项目，***用是最新SDK***，要自己运行本项目，需`flutter channel master`
 
-### 本项目相关dart 3.0的备注
+### ~~本项目相关dart 3.0的备注~~ 已恢复使用dart 2.x
+
+~~本项目是学习项目，***用是最新SDK***，要自己运行本项目，需`flutter channel master`
 
 pubspec.yaml已配置：
 
@@ -59,6 +59,8 @@ analyzer:
 ```bash
 flutter run --enable-experiment=records
 ```
+
+
 ## project workflow
 
 ```text

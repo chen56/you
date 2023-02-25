@@ -16,8 +16,11 @@ build(Pen pen, BuildContext context) {
 
   ''');
 
-  pen.widgetMate(CenterMate(
+  pen.widgetMate(ContainerMate(
     key: const ValueKey("center2"),
+    height: 50,
+    color: Colors.red,
+    //
     child: ContainerMate(
       width: 100,
       height: 100,
