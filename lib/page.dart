@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:learn_flutter/experiments/experiment_param_widget.dart';
 import 'package:learn_flutter/navigator_v2.dart';
-import 'package:learn_flutter/params/flutter/widgets/container.dart';
 
 /// 本项目的就死活page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -9,8 +8,6 @@ import 'package:learn_flutter/params/flutter/widgets/container.dart';
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 ///
 ///
-
-
 
 /// <T>: [NavigatorV2.push] 的返回类型
 class PageMeta<T> {
@@ -142,9 +139,8 @@ abstract class Pen {
 
   void markdown(String content);
 
-  void widgetMate(WidgetMate widgetMate) ;
+  void widgetMate(WidgetMate widgetMate);
 }
-
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {

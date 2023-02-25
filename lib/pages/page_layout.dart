@@ -1,8 +1,7 @@
-import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:learn_flutter/page.dart';
-import 'package:learn_flutter/navigator_v2.dart';
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/params/flutter/widgets/container.dart';
+import 'package:learn_flutter/experiments/experiment_param_widget.dart';
+import 'package:learn_flutter/navigator_v2.dart';
+import 'package:learn_flutter/page.dart';
 import 'package:learn_flutter/pen_markdown.dart';
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
@@ -42,8 +41,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   Widget build(BuildContext context) {
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView =
-        _OutlineView(contentPartController: controller, outline: pen.outline);
+    var outlineView = _OutlineView(contentPartController: controller, outline: pen.outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
@@ -59,11 +57,8 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       controller: controller, // Here
       child: contentListView,
     );
-    var scorllBehavior = ScrollBehavior().buildScrollbar(
-        context,
-        contentListView,
-        ScrollableDetails(
-            direction: AxisDirection.down, controller: controller));
+    var scorllBehavior = ScrollBehavior().buildScrollbar(context, contentListView,
+        ScrollableDetails(direction: AxisDirection.down, controller: controller));
 
     var row = Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -118,8 +113,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   Widget build(BuildContext context) {
     // 一页一个链接
     Widget pageLink(Path note) {
-      IconData titleIcon =
-          note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
+      IconData titleIcon = note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
       click() {
         // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
         note.extend = !note.extend;
@@ -179,8 +173,7 @@ class _OutlineView extends StatelessWidget {
   // 主内容部分的滚动控制，防止异常用
   final ScrollController contentPartController;
 
-  const _OutlineView(
-      {required this.outline, required this.contentPartController});
+  const _OutlineView({required this.outline, required this.contentPartController});
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,7 @@ import 'package:learn_flutter/utils.dart';
 import 'package:test/test.dart';
 
 void main() {
-  test('common.types isSubtype 子类型判断', () {
+  test('1', () {
     expect(isSubtype<num, int>(), isTrue);
     expect(isSubtype<num, String>(), isFalse);
   });
