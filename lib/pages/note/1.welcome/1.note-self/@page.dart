@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/experiments/experiment_param_widget.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:flutter_note/experiments/experiment_param_widget.dart';
+import 'package:flutter_note/page.dart';
 
 PageMeta noteSelfNote = PageMeta(
   shortTitle: "Note机制",

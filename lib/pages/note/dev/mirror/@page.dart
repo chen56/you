@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:flutter_note/page.dart';
 
 PageMeta devMirrorNote = PageMeta(
   shortTitle: "网络连不上",
   builder: build,
 );
 
-build(Pen pen ,BuildContext context) {
-  pen. markdown(r'''
+build(Pen pen, BuildContext context) {
+  pen.markdown(r'''
   
 ## flutter pub镜像慢
 
@@ -104,5 +104,4 @@ flutter:
 ### 还有呢？
 
   ''');
-
 }

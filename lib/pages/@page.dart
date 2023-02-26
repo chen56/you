@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/page.dart';
-import 'package:learn_flutter/pages/page_layout.dart';
+import 'package:flutter_note/page.dart';
+import 'package:flutter_note/pages/page_layout.dart';
 
 import 'root_tree.dart';
 

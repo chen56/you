@@ -3,8 +3,7 @@ import 'dart:core';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/log.dart';
-
+import 'package:flutter_note/log.dart';
 
 /// navigator_v2 是基础包，不依赖其他业务代码
 class NavigatorV2 extends StatelessWidget {

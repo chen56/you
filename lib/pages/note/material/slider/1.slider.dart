@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/params/param.dart';
+import 'package:flutter_note/params/param.dart';
 
 void main() {
   runApp(const SliderApp());

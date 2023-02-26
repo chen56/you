@@ -1,18 +1,18 @@
-import 'package:learn_flutter/navigator_v2.dart';
-import 'package:learn_flutter/pages/@page.dart';
-import 'package:learn_flutter/pages/not_found/@page.dart';
-import 'package:learn_flutter/pages/note/1.welcome/1.note-self/@page.dart';
-import 'package:learn_flutter/pages/note/1.welcome/@page.dart';
-import 'package:learn_flutter/pages/note/@page.dart';
-import 'package:learn_flutter/page.dart';
-import 'package:learn_flutter/pages/note/dev/debug/@page.dart';
-import 'package:learn_flutter/pages/note/dev/mirror/@page.dart';
-import 'package:learn_flutter/pages/note/layout/@page.dart';
-import 'package:learn_flutter/pages/note/material/button/ElevatedButton/@page.dart';
-import 'package:learn_flutter/pages/note/material/slider/@page.dart';
-import 'package:learn_flutter/pages/note/material/text/Text/@page.dart';
-import 'package:learn_flutter/pages/note/state/1.vanilla_state/@page.dart';
-import 'package:learn_flutter/pages/note/state/StatefulBuilder/@page.dart';
+import 'package:flutter_note/navigator_v2.dart';
+import 'package:flutter_note/page.dart';
+import 'package:flutter_note/pages/@page.dart';
+import 'package:flutter_note/pages/not_found/@page.dart';
+import 'package:flutter_note/pages/note/1.welcome/1.note-self/@page.dart';
+import 'package:flutter_note/pages/note/1.welcome/@page.dart';
+import 'package:flutter_note/pages/note/@page.dart';
+import 'package:flutter_note/pages/note/dev/debug/@page.dart';
+import 'package:flutter_note/pages/note/dev/mirror/@page.dart';
+import 'package:flutter_note/pages/note/layout/@page.dart';
+import 'package:flutter_note/pages/note/material/button/ElevatedButton/@page.dart';
+import 'package:flutter_note/pages/note/material/slider/@page.dart';
+import 'package:flutter_note/pages/note/material/text/Text/@page.dart';
+import 'package:flutter_note/pages/note/state/1.vanilla_state/@page.dart';
+import 'package:flutter_note/pages/note/state/StatefulBuilder/@page.dart';
 
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>

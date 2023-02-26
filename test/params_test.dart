@@ -1,4 +1,4 @@
-import 'package:learn_flutter/params/param.dart';
+import 'package:flutter_note/params/param.dart';
 import 'package:test/test.dart';
 
 void main() {

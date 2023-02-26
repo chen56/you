@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:flutter_note/page.dart';
 
 PageMeta widgetStatefulBuilderNote = PageMeta(
   shortTitle: "StatefulBuilder",
   builder: build,
 );
 
-build(Pen pen ,BuildContext context) {
-  pen. markdown(r'''
+build(Pen pen, BuildContext context) {
+  pen.markdown(r'''
 ## 范例1   
 
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:flutter_note/page.dart';
 
 import '1.elevated_button.dart';
 

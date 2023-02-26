@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/params/param.dart';
+import 'package:flutter_note/params/param.dart';
 
 void main() {
   runApp(const Sample1());
@@ -8,7 +8,6 @@ void main() {
 final ParamNode params = ParamNode();
 final insert = params.insert;
 final insert_ = params.insert_;
-
 
 class Sample1 extends StatelessWidget {
   const Sample1({super.key});
@@ -19,8 +18,7 @@ class Sample1 extends StatelessWidget {
       width: insert("Container.width", 100, OfDouble()),
       height: insert("Container.height", 100, OfDouble()),
       color: Colors.blue,
-      child: Container(
-      ),
+      child: Container(),
     );
   }
 }

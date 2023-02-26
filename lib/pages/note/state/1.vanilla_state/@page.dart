@@ -1,14 +1,15 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/page.dart';
-import '1.hello.dart' as stateful_hello ;
+import 'package:flutter_note/page.dart';
+
+import '1.hello.dart' as stateful_hello;
 
 PageMeta vanillaStateNote = PageMeta(
   shortTitle: "最原始的状态管理",
   builder: build,
 );
 
-build(Pen pen ,BuildContext context) {
-  pen. markdown(r'''
+build(Pen pen, BuildContext context) {
+  pen.markdown(r'''
 ## 范例1 普通文本 
 
 什么是状态管理？在Flutter UI中，
@@ -46,9 +47,8 @@ State
 
   pen.sample(const stateful_hello.App());
 
-  pen. markdown(r'''
+  pen.markdown(r'''
 ## 范例1 普通文本 
 
   ''');
-
 }

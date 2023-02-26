@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:flutter_note/page.dart';
 
 PageMeta devDebugNote = PageMeta(
   shortTitle: "debug相关",
@@ -7,7 +7,7 @@ PageMeta devDebugNote = PageMeta(
 );
 
 build(Pen pen, BuildContext context) {
-  pen. markdown(r'''
+  pen.markdown(r'''
 ## 范例1 普通文本 
 
 print(WidgetInspectorService.instance.getRootWidgetSummaryTree("groupName"));
@@ -19,7 +19,7 @@ print(WidgetsBinding.instance.renderViewElement?.toDiagnosticsNode().toStringDee
 
   ''');
 
-  pen. markdown(r'''
+  pen.markdown(r'''
 ## 范例1 普通文本 
 
   ''');

@@ -36,14 +36,14 @@ class ParamNode {
   }
 
   T insert<T>(String path, T value, Editor<T> param) {
-    param.value=value;
+    param.value = value;
     _editors[path] = param;
     return value;
   }
 
-  T? insert_<T>(String path, T? value,[Editor<T>? editor]) {
+  T? insert_<T>(String path, T? value, [Editor<T>? editor]) {
     editor ??= OfObject<T>();
-    editor.value=value;
+    editor.value = value;
     _editors[path] = editor;
     return value;
   }
@@ -54,8 +54,7 @@ class _EmptyEditor extends Editor<String> {
 
   @override
   StatefulBuilder builder() {
-    return StatefulBuilder(
-        builder: (BuildContext context, StateSetter setState) {
+    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
       return const Text("error:_EmptyParam",
           style: TextStyle(
             color: Colors.red,
@@ -100,8 +99,7 @@ class OfString extends Editor<String> {
   OfString();
 
   StatefulBuilder builder() {
-    return StatefulBuilder(
-        builder: (BuildContext context, StateSetter setState) {
+    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
       return TextField(
         autofocus: true,
         decoration: const InputDecoration(
@@ -111,7 +109,7 @@ class OfString extends Editor<String> {
         ),
         onChanged: (value) {
           setState(() {
-            developer.log("text.data:$value", name: 'learn_flutter');
+            developer.log("text.data:$value", name: 'flutter_note');
             this.value = value;
           });
         },
@@ -125,8 +123,7 @@ class OfDouble extends Editor<double> {
 
   @override
   StatefulBuilder builder() {
-    return StatefulBuilder(
-        builder: (BuildContext context, StateSetter setState) {
+    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
       return TextField(
         autofocus: true,
         decoration: const InputDecoration(
@@ -136,7 +133,7 @@ class OfDouble extends Editor<double> {
         ),
         onChanged: (value) {
           setState(() {
-            developer.log("double:$value", name: 'learn_flutter');
+            developer.log("double:$value", name: 'flutter_note');
             this.value = double.tryParse(value);
           });
         },
@@ -150,9 +147,8 @@ class OfObject<T> extends Editor<T> {
 
   @override
   StatefulBuilder builder() {
-    return StatefulBuilder(
-        builder: (BuildContext context, StateSetter setState) {
-          return Text("TODO ObjectEditor.builder");
+    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+      return Text("TODO ObjectEditor.builder");
     });
   }
 }
@@ -166,8 +162,7 @@ abstract class EnumEditor<T extends Enum> extends Editor<T> {
 
   @override
   StatefulBuilder builder() {
-    return StatefulBuilder(
-        builder: (BuildContext context, StateSetter setState) {
+    return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
       var chips = values.map((e) => ChoiceChip(
             label: Text(e.name),
             selected: value == e,

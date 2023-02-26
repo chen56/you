@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:flutter_note/page.dart';
 
 import '1.text_normal.dart';
 import '2.text_rich.dart';
@@ -9,8 +9,8 @@ PageMeta widgetTextNote = PageMeta(
   builder: build,
 );
 
-build(Pen pen ,BuildContext context) {
-  pen. markdown(r'''
+build(Pen pen, BuildContext context) {
+  pen.markdown(r'''
 ## 范例1 普通文本 
 
 Text.new()
@@ -19,7 +19,7 @@ Text.new()
 
   pen.sample(const NormalTextSample());
 
-  pen. markdown(r'''
+  pen.markdown(r'''
 ## 范例1 富文本 
 
 Text.rich()

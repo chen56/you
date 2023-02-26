@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/experiments/experiment_param_widget.dart';
-import 'package:learn_flutter/navigator_v2.dart';
-import 'package:learn_flutter/page.dart';
-import 'package:learn_flutter/pen_markdown.dart';
+import 'package:flutter_note/experiments/experiment_param_widget.dart';
+import 'package:flutter_note/navigator_v2.dart';
+import 'package:flutter_note/page.dart';
+import 'package:flutter_note/pen_markdown.dart';
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;

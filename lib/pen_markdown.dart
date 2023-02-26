@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:learn_flutter/page.dart';
-import 'package:markdown/markdown.dart' as md;
+import 'package:flutter_note/page.dart';
 import 'package:highlight/highlight.dart' show highlight, Node;
+import 'package:markdown/markdown.dart' as md;
 
 class MarkdownView extends StatelessWidget {
   final Outline outline;
@@ -58,7 +58,9 @@ class _HeaderBuilder extends MarkdownElementBuilder {
       child: Align(
           alignment: Alignment.centerLeft,
           child: SelectableText.rich(
-            TextSpan(style: preferredStyle?.copyWith(height: 2,fontWeight: FontWeight.bold), text: text.text),
+            TextSpan(
+                style: preferredStyle?.copyWith(height: 2, fontWeight: FontWeight.bold),
+                text: text.text),
             style: preferredStyle,
           )),
     );
@@ -117,7 +119,6 @@ class _PreBuilder extends MarkdownElementBuilder {
         Expanded(child: highlight),
       ],
     );
-
 
     var listView = ListView.separated(
       shrinkWrap: true,

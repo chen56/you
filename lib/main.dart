@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/log.dart';
-import 'package:learn_flutter/page.dart';
-import 'package:learn_flutter/pages/root_tree.dart';
+import 'package:flutter_note/log.dart';
+import 'package:flutter_note/page.dart';
+import 'package:flutter_note/pages/root_tree.dart';
 
 import 'navigator_v2.dart';
 

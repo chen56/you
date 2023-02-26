@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:learn_flutter/page.dart';
+import 'package:flutter_note/page.dart';
 
 PageMeta rootPage = PageMeta(
   shortTitle: "dart 3 新特性",
