@@ -21,23 +21,30 @@ class PageMeta<T> {
     required this.builder,
     this.layout,
   });
+
+  @override
+  String toString() {
+    return "PageMeta($shortTitle)";
+  }
 }
 
 /// 用kids代替单词children,原因是children太长了
 class Path<T> {
   final String name;
-  final List<Path> _kids;
+  List<Path> _kids = List.empty(growable: true);
   final Map<String, Path> _kidsMap = {};
   Path? _parent;
   final Map<String, Object> attributes = {};
-  late final PageMeta<T>? _meta;
+  PageMeta<T>? _meta;
 
   Path(
     this.name, {
     PageMeta<T>? meta,
     List<Path<dynamic>> kids = const [],
+    Path? parent,
   })  : _meta = meta,
-        _kids = kids {
+        // _kids = kids,
+        _parent = parent {
     for (var child in _kids) {
       child._parent = this;
       _kidsMap[child.name] = child;
@@ -45,6 +52,30 @@ class Path<T> {
   }
 
   bool get hasPage => _meta != null;
+
+  void add(String fullPath, PageMeta<T>? meta) {
+    var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
+    assert(p.isNotEmpty, "${this.path} add kid:'$fullPath',path:${p} invalid path:$fullPath");
+    var path = _ensurePath(p);
+    assert(path._meta == null,
+        " ${path} add kid '$fullPath': duplicate put , ${path._meta} already exists ");
+    path._meta = meta;
+  }
+
+  Path _ensurePath(List<String> path) {
+    if (path.isEmpty) {
+      return this;
+    }
+    String name = path[0];
+    assert(name != "" && name != "/", "path:$path, path[0]:'${name}' must not be '' and '/' ");
+    var next = _kidsMap.putIfAbsent(name, () {
+      var kid = Path(name, parent: this);
+      _kids.add(kid);
+      _kidsMap[name] = Path(name, parent: this);
+      return kid;
+    });
+    return next._ensurePath(path.sublist(1));
+  }
 
   void build(Pen pen, BuildContext context) {
     if (_meta == null) return;

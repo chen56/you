@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_note/experiments/experiment_param_widget.dart';
 import 'package:flutter_note/page.dart';
 
-PageMeta noteSelfNote = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: "Note机制",
   builder: build,
 );

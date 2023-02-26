@@ -97,9 +97,9 @@ class ContainerMate extends Container with WidgetMate {
         ) {
     mate = MateNode(Creators.container);
     //这里会换成代码生成，凡是可以取到类型的，都可以支持编辑
-    set(editor: Dynamic(name: "key", init: key));
-    set(editor: Dynamic(name: "alignment", init: alignment));
-    set(editor: Dynamic(name: "color", init: color));
+    set_(editor: Dynamic(name: "key", init: key));
+    set_(editor: Dynamic(name: "alignment", init: alignment));
+    set_(editor: Dynamic(name: "color", init: color));
     set(editor: Dynamic(name: "clipBehavior", init: clipBehavior));
     set_(editor: Double(name: "width", init: width));
     set_(editor: Double(name: "height", init: height));
