@@ -57,12 +57,7 @@ shortHelp line 3
 EOF
 }
 /test1() {
-  local var1;
-  local a=($(tr "/" " " <<< "/aa/b"))
-  echo "var 1 $a "
-  local myArray4
-  IFS=$'\n' mapfile -t myArray4 <<< $(ls -al)
-  declare -p myArray4
+  run echo aaaa
 }
 
 /test_option?shortHelp(){ cat << EOF
@@ -106,7 +101,7 @@ option(){
 # 项目init
 /init?shortHelp(){ cat <<< "初始化项目工具"; }
 /init() {
-  git lfs install
+  run git lfs install
 }
 
 # 构建命令,可附加flutter build的参数
@@ -115,7 +110,7 @@ option(){
   echo "bake build  $@"
   # web-renderer=canvaskit 太大了十几MB,所以要用html版
   # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/flutter-note
-  flutter build web --release --web-renderer html --base-href='/flutter-note/' "$@"
+  run flutter build web --release --web-renderer html --base-href='/flutter-note/' "$@"
 }
 
 # 构建命令
@@ -123,7 +118,7 @@ option(){
 /test() {
   echo "bake test"
   # canvaskit web版文件太大了十几MB
-  flutter test --web-renderer html
+  run flutter test --web-renderer html
 }
 
 
@@ -132,27 +127,36 @@ option(){
   echo "bake preview"
   flutter build web --release --web-renderer html --base-href='/' "$@"
 # 	npx http-server ./build/web --port 8000
-  deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
+  run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
 }
 
 /build?shortHelp?shortHelp(){ cat <<< "预览，先build,再开web server: http://localhost:8000"; }
 /build() {
   echo "bake build"
-  flutter build web --release --web-renderer html --base-href='/' "$@"
+  run flutter build web --release --web-renderer html --base-href='/' "$@"
 }
+
+/gen?shortHelp?shortHelp(){ cat <<< "build_runner，代码生成"; }
+/gen() {
+  echo "bake gen"
+  run dart run build_runner build -o lib:build/bulid_runner "$@"
+}
+
+
 
 # dev run local http://localhost:8000
 /run?shortHelp(){ cat <<< "开发模式 flutter run: http://localhost:8000"; }
 /run() {
   echo "bake run"
-  flutter run --web-renderer html --device-id chrome --enable-experiment=records
+  run flutter run --web-renderer html --device-id chrome --enable-experiment=records
 }
 
 # 清理
 /clean?shortHelp(){ cat <<< "清理项目目录"; }
 /clean() {
   echo "bake clean"
-  flutter clean
+  run flutter clean
+  run dart run build_runner clean
 }
 
 /?help() {
@@ -189,10 +193,16 @@ print_stack() {
     i=$((i + 1))
   done
 }
+# 先打印 后执行
+run() {
+  echo -e "▶︎ ${FUNCNAME[1]} ▶︎ $@"
+  "$@"
+  return $?
+}
 
 print_commands() {
   IFS=$'\n'
-
+▶︎
   # 我们要找出:
   # 1. 以/开头的函数，作为子命令
   # 2. 不包含?

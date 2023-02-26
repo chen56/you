@@ -1,0 +1,8 @@
+# Read about `build.yaml` at https://pub.dev/packages/build_config
+builders:
+  pagesBuilder:
+    import: "package:learn_flutter/build_ext/builder.dart"
+    builder_factories: ["pagesBuilder"]
+    build_extensions: {"$package$": ["lib/pages.g.dart"]}
+    auto_apply: root_package
+    build_to: source
