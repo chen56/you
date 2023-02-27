@@ -1,11 +1,12 @@
-# Read about `build.yaml` at https://pub.dev/packages/build_config
+
+# Read about `build.mate.yaml` at https://pub.dev/packages/build_config
 builders:
   pagesLoadBuilder:
     import: "dev/builder.dart"
     builder_factories: ["pagesLoadBuilder"]
     build_extensions: {"@page.dart": [".dart.info.json"]}
-    build_to: source
-    auto_apply: root_package
+#    build_to: source
+    auto_apply: none
     defaults:
       generate_for:
         # Only apply to .dart files in the web directory
@@ -20,5 +21,17 @@ builders:
     import: "dev/builder.dart"
     builder_factories: ["pagesGenBuilder"]
     build_extensions: {"$package$": ["lib/generated/pages.g.dart"]}
-    auto_apply: root_package
+    auto_apply: none
     build_to: source
+  mateBuilder:
+    import: "dev/builder.dart"
+    builder_factories: ["mateBuilder"]
+    build_extensions: {"^{{}}.dart": ["lib/generated/{{}}.dart"]}
+#    build_extensions: {"^lib/{{}}.dart": ["lib/generated/{{}}.dart"]}
+    build_to: source
+    auto_apply: dependents
+#    defaults:
+#      generate_for:
+#        # Only apply to .dart files in the web directory
+#        include:
+#          - lib/todo.dart

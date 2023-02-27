@@ -115,11 +115,7 @@ option(){
 
 # 构建命令
 /test?shortHelp(){ cat <<< "test"; }
-/test() {
-  echo "bake test"
-  # canvaskit web版文件太大了十几MB
-  run flutter test --web-renderer html
-}
+/test() {   run flutter test --web-renderer html; }
 
 
 /preview?shortHelp(){ cat <<< "预览，先build,再开web server: http://localhost:8000"; }
@@ -131,25 +127,23 @@ option(){
 }
 
 /build?shortHelp?shortHelp(){ cat <<< "预览，先build,再开web server: http://localhost:8000"; }
-/build() {
-  echo "bake build"
-  run flutter build web --release --web-renderer html --base-href='/' "$@"
+/build() {  run flutter build web --release --web-renderer html --base-href='/' "$@" ; }
+
+/gen?shortHelp?shortHelp(){ cat <<< "build_runner，代码生成"; }
+/gen() {  
+  /gen_pages
+  /gen_mate
 }
 
 /gen?shortHelp?shortHelp(){ cat <<< "build_runner，代码生成"; }
-/gen() {
-  echo "bake gen"
-  run dart run build_runner build -o lib:build/bulid_runner "$@"
-}
+/gen_pages() {  run dart run build_runner build -o lib:build/bulid_runner -c pages "$@";}
 
-
+/gen_mate?shortHelp?shortHelp(){ cat <<< "build_runner，代码生成"; }
+/gen_mate() { run dart run build_runner build -o lib:build/bulid_runner -c mate "$@" ; }
 
 # dev run local http://localhost:8000
 /run?shortHelp(){ cat <<< "开发模式 flutter run: http://localhost:8000"; }
-/run() {
-  echo "bake run"
-  run flutter run --web-renderer html --device-id chrome --enable-experiment=records
-}
+/run() {  run flutter run --web-renderer html --device-id chrome --enable-experiment=records ; }
 
 # 清理
 /clean?shortHelp(){ cat <<< "清理项目目录"; }
@@ -202,7 +196,7 @@ run() {
 
 print_commands() {
   IFS=$'\n'
-▶︎
+
   # 我们要找出:
   # 1. 以/开头的函数，作为子命令
   # 2. 不包含?

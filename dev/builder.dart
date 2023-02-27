@@ -8,6 +8,11 @@ import 'package:build/build.dart';
 Builder pagesLoadBuilder(BuilderOptions options) => PagesLoadBuilder();
 
 Builder pagesGenBuilder(BuilderOptions options) => PagesGenBuilder();
+Builder mateBuilder(BuilderOptions options) => MateBuilder();
+
+void log(Object? object) {
+  print("${DateTime.now()} - ${object}");
+}
 
 class Gen {
   List<LibraryElement> libs = List.empty(growable: true);
@@ -32,10 +37,6 @@ class PagesLoadBuilder implements Builder {
   final buildExtensions = const {
     '.dart': ['.dart.info']
   };
-}
-
-void log(Object? object) {
-  print("${DateTime.now()} - ${object}");
 }
 
 /// Adds `generated.css` to the `web` directory.
@@ -123,4 +124,18 @@ ${fields.toString()}
         .replaceAll("-", "_")
         .replaceAll("@", "_");
   }
+}
+
+class MateBuilder implements Builder {
+  @override
+  Future build(BuildStep buildStep) async {
+    // Get the `LibraryElement` for the primary input.
+    var inputLibrary = await buildStep.inputLibrary;
+    log("MateBuilder: ${inputLibrary.identifier}");
+  }
+
+  @override
+  final buildExtensions = const {
+    "^lib/{{}}.dart": ["lib/generated/{{}}.dart"]
+  };
 }

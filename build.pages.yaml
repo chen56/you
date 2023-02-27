@@ -1,0 +1,8 @@
+# Read about `build.mate.yaml` at https://pub.dev/packages/build_config
+targets:
+  $default:
+    builders:
+      flutter_note:pagesLoadBuilder:
+        enabled: true
+      flutter_note:pagesGenBuilder:
+        enabled: true
