@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note/page.dart';
 
-PageMeta widgetElevatedButtonNote = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: "Components",
   builder: build,
 );

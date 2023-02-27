@@ -1,11 +1,4 @@
-import 'package:flutter_note/navigator_v2.dart';
-import 'package:flutter_note/page.dart';
-import 'package:flutter_note/pages/@page.dart';
-
-import 'not_found/@page.dart';
-import 'note/1.welcome/1.note-self/@page.dart';
-import 'note/1.welcome/@page.dart';
-import 'note/@page.dart';
+part of "pages.g.dart";
 
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
@@ -39,41 +32,30 @@ import 'note/@page.dart';
 //   ]),
 // ]);
 
-class Paths extends Navigable {
+class Paths extends _Paths with Navigable {
   late final Path<void> initial;
-  final Path<void> noteSelf = _get("/note/welcome/note-self");
-
-  final Path<void> home = _get("/");
-
-  final Path<void> notFound = _get("/not_found");
-  final Path<void> note = _get("/note");
-  // final Path<void> welcome = _get("/note/welcome");
-  // final Path<void> mirror = _get("/note/dev/mirror");
-  // final Path<void> layout = _get("/note/layout");
-
   Paths._() {
-    initial = noteSelf;
+    initial = note;
   }
 
   @override
   Screen parse(String location) {
-    Path find = root.kid(location) ?? notFound;
+    Path find = root.kid(location)!; // ?? notFound;
     return find.createScreen(location);
   }
-
-  static Path _get(path) => root.kid(path)!;
 }
 
-Path<void> root = Path<void>("/", meta: rootPage);
+Path<void> root = Path.root();
+var paths = _init();
+_put<C>(String path, PageMeta<C>? meta) {
+  return root.put(path, meta);
+}
+
 Paths _init() {
-  root.add("not_found", notFoundPage);
-  root.add("note", notePage);
-  root.add("note/welcome", welcomePage);
-  root.add("note/welcome/note-self", page);
-  root.toList(includeThis: true).forEach((element) {
-    print("---- init page ${element}");
-  });
+  // root.put("/", rootPage);
+  // root.put("not_found", notFoundPage);
+  // root.put("note", notePage);
+  // root.put("note/welcome", welcomePage);
+  // root.put("note/welcome/note-self", page);
   return Paths._();
 }
-
-var paths = _init();

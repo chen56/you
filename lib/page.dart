@@ -31,50 +31,47 @@ class PageMeta<T> {
 /// 用kids代替单词children,原因是children太长了
 class Path<T> {
   final String name;
-  List<Path> _kids = List.empty(growable: true);
-  final Map<String, Path> _kidsMap = {};
-  Path? _parent;
+  final List<Path> _children = List.empty(growable: true);
+  final Map<String, Path> _childrenMap = {};
+  final Path? parent;
   final Map<String, Object> attributes = {};
   PageMeta<T>? _meta;
 
-  Path(
+  Path._child(
     this.name, {
-    PageMeta<T>? meta,
-    List<Path<dynamic>> kids = const [],
-    Path? parent,
-  })  : _meta = meta,
-        // _kids = kids,
-        _parent = parent {
-    for (var child in _kids) {
-      child._parent = this;
-      _kidsMap[child.name] = child;
-    }
-  }
+    required Path this.parent,
+  });
+
+  Path.root()
+      : name = "/",
+        parent = null;
 
   bool get hasPage => _meta != null;
 
-  void add(String fullPath, PageMeta<T>? meta) {
+  List<Path> get children => List.unmodifiable(_children);
+
+  Path<C> put<C>(String fullPath, PageMeta<C>? meta) {
     var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
-    assert(p.isNotEmpty, "${this.path} add kid:'$fullPath',path:${p} invalid path:$fullPath");
     var path = _ensurePath(p);
     assert(path._meta == null,
         " ${path} add kid '$fullPath': duplicate put , ${path._meta} already exists ");
     path._meta = meta;
+    return path as Path<C>;
   }
 
-  Path _ensurePath(List<String> path) {
-    if (path.isEmpty) {
+  Path _ensurePath<C>(List<String> nameList) {
+    if (nameList.isEmpty) {
       return this;
     }
-    String name = path[0];
-    assert(name != "" && name != "/", "path:$path, path[0]:'${name}' must not be '' and '/' ");
-    var next = _kidsMap.putIfAbsent(name, () {
-      var kid = Path(name, parent: this);
-      _kids.add(kid);
-      _kidsMap[name] = Path(name, parent: this);
-      return kid;
+    String name = nameList[0];
+    assert(name != "" && name != "/", "path:$nameList, path[0]:'${name}' must not be '' and '/' ");
+    var next = _childrenMap.putIfAbsent(name, () {
+      var child = Path._child(name, parent: this);
+      _children.add(child);
+      _childrenMap[name] = child;
+      return child;
     });
-    return next._ensurePath(path.sublist(1));
+    return next._ensurePath(nameList.sublist(1));
   }
 
   void build(Pen pen, BuildContext context) {
@@ -94,27 +91,32 @@ class Path<T> {
             current: note,
           );
     }
-    return _parent!.layout;
+    return parent!.layout;
   }
 
-  bool get isLeaf => _kids.isEmpty;
+  bool get isLeaf => _children.isEmpty;
 
-  int get level => isRoot ? 0 : _parent!.level + 1;
+  int get level => isRoot ? 0 : parent!.level + 1;
 
-  bool get isRoot => _parent == null;
+  int levelTo(Path parent) => this.level - parent.level;
 
-  Path get root => isRoot ? this : _parent!.root;
+  bool get isRoot => parent == null;
 
-  String get title => _meta == null ? name : _meta!.shortTitle;
+  Path get root => isRoot ? this : parent!.root;
+
+  String get title => _meta == null ? nameFlat : _meta!.shortTitle;
 
   String get path {
     if (isRoot) return "/";
-    var parentPath = _parent!.path;
+    var parentPath = parent!.path;
     return parentPath == "/" ? "/$name" : "$parentPath/$name";
   }
 
-  List<Path> toList({bool includeThis = true}) {
-    var flatChildren = _kids.expand((element) => element.toList()).toList();
+  List<Path> toList({bool includeThis = true, bool Function(Path path)? test}) {
+    test = test ?? (e) => true;
+    var flatChildren = _children.where(test).expand((child) {
+      return child.toList(includeThis: true, test: test);
+    }).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
@@ -122,19 +124,25 @@ class Path<T> {
     if (isRoot) {
       return [this];
     }
-    return [..._parent!.topList(), this];
+    return [...parent!.topList(), this];
   }
 
   Path? kid(String path) {
     Path? result = this;
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
-      result = result?._kidsMap[split];
+      result = result?._childrenMap[split];
       if (result == null) break;
     }
     return result;
   }
 
   Screen<T> createScreen(String location) => layout<T>(this);
+
+  /// 扁平化name，去掉排序用的数字前缀
+  String get nameFlat {
+    return name.replaceAll(RegExp("\\d+\."), "") // 1.note-self -> note-self
+        ;
+  }
 
   String toStringShort() {
     return path;
@@ -143,7 +151,7 @@ class Path<T> {
   @override
   String toString({bool? deep}) {
     if (deep == null || !deep) {
-      return "Page($path ,kids:${_kids.map((e) => e.toStringShort()).toList()})";
+      return "Page($path ,kids:${_children.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
       for (Path n in toList()) {

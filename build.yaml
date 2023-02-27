@@ -10,8 +10,9 @@ builders:
       generate_for:
         # Only apply to .dart files in the web directory
         include:
-#        - lib/pages/**
-        - lib/pages/note/1.welcome/1.note-self/@page.dart
+          - lib/pages/@page.dart
+          - lib/pages/**/@page.dart
+#        - lib/pages/note/1.welcome/1.note-self/@page.dart
     runs_before: ["flutter_note:pagesGenBuilder"]
 
   pagesGenBuilder:

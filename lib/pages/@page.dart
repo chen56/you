@@ -2,9 +2,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_note/page.dart';
 import 'package:flutter_note/pages/page_layout.dart';
 
-import 'root_tree.dart';
+import 'pages.g.dart';
 
-PageMeta rootPage = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: "home",
   builder: build,
   layout: <T>(Path<T> note) => PageScreen<T>(current: note, tree: paths.note),

@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_note/page.dart';
 
-
-PageMeta layoutNote = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: "layout布局",
   builder: build,
 );

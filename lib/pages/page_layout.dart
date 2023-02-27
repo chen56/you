@@ -112,37 +112,53 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
-    Widget pageLink(Path note) {
-      IconData titleIcon = note.isLeaf ? Icons.remove : Icons.keyboard_arrow_down;
+    Widget newLink(Path node) {
       click() {
         // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
-        note.extend = !note.extend;
-        NavigatorV2.of(context).push(note.path);
+        // node.extend = !node.extend;
+        NavigatorV2.of(context).push(node.path);
       }
 
+      String icon1 = node.isLeaf
+          ? "   "
+          : node.extend
+              ? "▽  "
+              : "▶︎  ";
+      String icon2 = "🗓";
+      // 📁📂📄🗓📜▸▾▹▿ ▶︎▷▼▽►
       // title 被Flexible包裹后，文本太长会自动换行
       // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
-      var title = Flexible(child: Text(note.title));
+      // children: [Flexible(child: Text("$icon ${node.title}"))],
+      // 但是Flexible要上面套一个Flex的子类
+      var link2 = TextButton(
+        onPressed: node.hasPage ? click : null,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => setState(() => node.extend = !node.extend),
+              child: Text(icon1),
+            ),
+            Text(icon2),
+            Flexible(child: Text("${node.title}")),
+          ],
+        ),
+      );
 
-      return ListTile(
-        title: Row(children: [Icon(titleIcon), title]),
-        onTap: note.hasPage ? click : null,
-        // 是否选中
-        selected: false,
-        //---------------下面是外观调整
-        //更紧凑布局
-        dense: false,
-        visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
-        contentPadding: EdgeInsets.only(left: 20 * (note.level - 1).toDouble()),
+      // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
+      return Padding(
+        // 缩进模仿树形
+        padding: EdgeInsets.only(left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
+        child: link2,
       );
     }
 
-    var notes = widget.root.toList(includeThis: false);
-    return ListView(
-      shrinkWrap: false,
-      padding: const EdgeInsets.all(2),
-      children: notes.map((e) => pageLink(e)).toList(),
+    // var notes = widget.root.toListWithExtend(includeThis: false, hiddenNoExpend: true);
+    var notes = widget.root.toList(
+      includeThis: false,
+      test: (e) => e.isRoot ? true : e.parent!.extend,
     );
+    return Column(children: notes.map((e) => newLink(e)).toList());
   }
 }
 
@@ -156,7 +172,7 @@ extension _TreeViewNote on Path {
       return false;
     }
     Object? result = attributes[_extendAttrName];
-    return result == null ? false : result as bool;
+    return result == null ? true : result as bool;
   }
 
   set extend(bool extend) {
@@ -164,6 +180,16 @@ extension _TreeViewNote on Path {
       return;
     }
     attributes[_extendAttrName] = extend;
+  }
+
+  List<Path> toListWithExtend({bool includeThis = true, bool hiddenNoExpend = false}) {
+    var flatChildren = children.expand((child) {
+      if (hiddenNoExpend && !child.extend) {
+        return [child];
+      }
+      return child.toListWithExtend(includeThis: true, hiddenNoExpend: hiddenNoExpend);
+    }).toList();
+    return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 }
 
@@ -183,12 +209,13 @@ class _OutlineView extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.arrow_right,
-            ),
-            // title 被Flexible包裹后，文本太长会自动换行
+            // const Icon(
+            //   Icons.arrow_right,
+            // ),
+            // title 被Flexible包裹后，文本太长会自动换行▽
             // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
-            Flexible(child: Text(node.title)),
+            //📜📁📂📄🗓📜 ▸▾▹▿▶︎▷▼▽►🔘◽️▫️◻️◼️⬛️🔹⚉
+            Flexible(child: Text("◻ ${node.title}")),
           ],
         ),
         onPressed: () {
@@ -229,6 +256,7 @@ class _PagePen extends Pen {
 
   List<Content> get contents => List.unmodifiable(_contents);
 
+  @override
   void sample(Widget sample) {
     _contents.add(ConstrainedBox(
       key: ValueKey(i++),
@@ -237,6 +265,7 @@ class _PagePen extends Pen {
     ));
   }
 
+  @override
   void widget(Widget widget) {
     _contents.add(ConstrainedBox(
       key: ValueKey(i++),
@@ -245,6 +274,7 @@ class _PagePen extends Pen {
     ));
   }
 
+  @override
   void markdown(String content) {
     _contents.add(MarkdownView(
       key: ValueKey(i++),

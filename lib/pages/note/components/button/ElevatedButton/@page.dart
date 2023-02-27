@@ -3,7 +3,7 @@ import 'package:flutter_note/page.dart';
 
 import '1.elevated_button.dart';
 
-PageMeta widgetElevatedButtonNote = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: "ElevatedButton",
   builder: build,
 );

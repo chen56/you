@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_note/page.dart';
 
-PageMeta notFoundPage = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: " Dismissible滑动清除",
   builder: build,
 );

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_note/page.dart';
 
-PageMeta welcomePage = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: "welcome",
   builder: build,
 );

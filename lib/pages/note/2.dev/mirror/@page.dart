@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_note/page.dart';
 
-PageMeta devMirrorNote = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: "网络连不上",
   builder: build,
 );

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_note/page.dart';
 
-PageMeta notePage = PageMeta(
+PageMeta page = PageMeta(
   shortTitle: "可选择性",
   builder: build,
 );
