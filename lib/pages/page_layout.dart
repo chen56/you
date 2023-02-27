@@ -97,10 +97,15 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 class _NoteTreeView extends StatefulWidget {
   final Path root;
 
-  const _NoteTreeView(
+  _NoteTreeView(
     this.root, {
     Key? key,
-  }) : super(key: key);
+  }) : super(key: key) {
+    // 初始化 所有parent为展开状态
+    root.parents.forEach((parent) {
+      parent.extend = true;
+    });
+  }
 
   @override
   State<_NoteTreeView> createState() => _NoteTreeViewState();
@@ -172,7 +177,7 @@ extension _TreeViewNote on Path {
       return false;
     }
     Object? result = attributes[_extendAttrName];
-    return result == null ? true : result as bool;
+    return result == null ? false : result as bool;
   }
 
   set extend(bool extend) {

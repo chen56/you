@@ -100,6 +100,8 @@ class Path<T> {
 
   int levelTo(Path parent) => this.level - parent.level;
 
+  List<Path> get parents => this.isRoot ? [this] : [this, ...parent!.parents];
+
   bool get isRoot => parent == null;
 
   Path get root => isRoot ? this : parent!.root;
@@ -114,7 +116,10 @@ class Path<T> {
 
   List<Path> toList({bool includeThis = true, bool Function(Path path)? test}) {
     test = test ?? (e) => true;
-    var flatChildren = _children.where(test).expand((child) {
+    if (!test(this)) {
+      return [];
+    }
+    var flatChildren = _children.expand((child) {
       return child.toList(includeThis: true, test: test);
     }).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
