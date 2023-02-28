@@ -4,5 +4,7 @@ targets:
     builders:
       flutter_note:mateBuilder:
         generate_for:
-          - /Users/cccc/git/chen56/flutter-note/lib/**/*.dart
+#          - /Users/cccc/git/chen56/flutter-note/lib/**/*.dart
+#          - /Users/cccc/git/chen56/flutter-note/lib/experiments/experiment_param_widget.dart
+          - /Users/cccc/app/flutter/packages/flutter/lib/*.dart
 

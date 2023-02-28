@@ -31,6 +31,6 @@ linter:
 analyzer:
 
     enable-experiment:
-# 暂时放弃dart 3
 #        - records
 #        - class-modifiers
+      - macros
