@@ -17,4 +17,10 @@ void main() {
     expect(x == i, isTrue);
     expect(x.runtimeType, equals(1.runtimeType));
   });
+
+  test('Symbol', () {
+    const Symbol symbol = #ssss;
+    expect(symbol, equals(Symbol("ssss")));
+    expect(symbol.toString(), 'Symbol("ssss")');
+  });
 }

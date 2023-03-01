@@ -1,0 +1,31 @@
+
+# Read about `build.mate.yaml` at https://pub.dev/packages/build_config
+builders:
+  pagesLoadBuilder:
+    import: "lib/builder.dart"
+    builder_factories: ["pagesLoadBuilder"]
+    build_extensions: {"@page.dart": [".dart.info.json"]}
+#    build_to: source
+    auto_apply: none
+    defaults:
+      generate_for:
+        # Only apply to .dart files in the web directory
+        include:
+          - lib/pages/@page.dart
+          - lib/pages/**/@page.dart
+#        - lib/pages/note/1.welcome/1.note-self/@page.dart
+    runs_before: ["flutter_note:pagesGenBuilder"]
+
+  pagesGenBuilder:
+#    import: "package:flutter_note/build_ext/builder.dart"
+    import: "lib/builder.dart"
+    builder_factories: ["pagesGenBuilder"]
+    build_extensions: {"$package$": ["lib/generated/pages.g.dart"]}
+    auto_apply: none
+    build_to: source
+  mateBuilder:
+    import: "lib/builder.dart"
+    builder_factories: ["mateBuilder"]
+    build_extensions: {"^{{}}.dart": ["lib/generated/{{}}.dart"]}
+    build_to: source
+    auto_apply: root_package

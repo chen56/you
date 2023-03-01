@@ -31,6 +31,6 @@ linter:
 analyzer:
 
     enable-experiment:
-#        - records
-#        - class-modifiers
+      - records
       - macros
+#     - class-modifiers
