@@ -26,7 +26,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   # 应该是不需要这个东东的，暂时注释掉
 #  cupertino_icons: ^1.0.2
-
 #  # build那一套
 #  analyzer: ">=2.0.0 <6.0.0"
 #  build: ^2.0.0
@@ -40,16 +39,18 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
 
-
   build_runner: ^2.0.0
-#  build_runner_core: ^2.0.0
+  build_runner_core: ^7.2.7
   build: ^2.0.0
-  # Not imported in code, but used to constrain `build.mate.yaml` requirements
-#  build_config: ^1.0.0
-#  analyzer: ">=2.0.0 <6.0.0"
+#   Not imported in code, but used to constrain `build.mate.yaml` requirements
+  build_config: ^1.0.0
+  analyzer: ">=2.0.0 <6.0.0"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+dependency_overrides:
+  build_ext:
+    path: ./build_ext
 
 # The following section is specific to Flutter packages.
 flutter:

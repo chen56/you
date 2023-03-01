@@ -1,37 +1,43 @@
+# ref:
+#  https://github.com/dart-lang/build/tree/master/build_config
+#  https://github.com/dart-lang/build/blob/master/docs/build_yaml_format.md
+targets:
+  $default:
+    builders:
+      flutter_note:pagesLoadBuilder:
+        enabled: true
+        generate_for:
+          # Only apply to .dart files in the web directory
+          include:
+            - lib/pages/@page.dart
+            - lib/pages/**/@page.dart
+      flutter_note:pagesGenBuilder:
+        enabled: true
+      flutter_note:mateBuilder:
+        enabled: true
+        generate_for:
+          # Only apply to .dart files in the web directory
+          include:
+            - lib/mate_hint.dart
 
-# Read about `build.mate.yaml` at https://pub.dev/packages/build_config
 builders:
+  mateBuilder:
+    import: "package:build_ext/builder.dart"
+    builder_factories: ["mateBuilder"]
+    #    build_extensions: {"^{{}}.dart": ["lib/generated/{{}}.dart"]}
+    build_extensions: {".dart": [".dart.info.json"]}
+    build_to: source
+    auto_apply: root_package
   pagesLoadBuilder:
-    import: "dev/builder.dart"
+    import: "package:build_ext/builder.dart"
     builder_factories: ["pagesLoadBuilder"]
-    build_extensions: {"@page.dart": [".dart.info.json"]}
-#    build_to: source
+    build_extensions: {"@page.dart": [".no_output"]}
+    build_to: cache # this builder no output
     auto_apply: none
-    defaults:
-      generate_for:
-        # Only apply to .dart files in the web directory
-        include:
-          - lib/pages/@page.dart
-          - lib/pages/**/@page.dart
-#        - lib/pages/note/1.welcome/1.note-self/@page.dart
     runs_before: ["flutter_note:pagesGenBuilder"]
-
   pagesGenBuilder:
-#    import: "package:flutter_note/build_ext/builder.dart"
-    import: "dev/builder.dart"
+    import: "package:build_ext/builder.dart"
     builder_factories: ["pagesGenBuilder"]
     build_extensions: {"$package$": ["lib/generated/pages.g.dart"]}
     auto_apply: none
     build_to: source
-  mateBuilder:
-    import: "dev/builder.dart"
-    builder_factories: ["mateBuilder"]
-    build_extensions: {"^{{}}.dart": ["lib/generated/{{}}.dart"]}
-#    build_extensions: {"^lib/{{}}.dart": ["lib/generated/{{}}.dart"]}
-    build_to: source
-    auto_apply: dependents
-#    defaults:
-#      generate_for:
-#        # Only apply to .dart files in the web directory
-#        include:
-#          - lib/todo.dart

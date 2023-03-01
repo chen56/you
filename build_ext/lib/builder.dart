@@ -5,6 +5,8 @@
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
 
+export 'builder.dart' show MateBuilder;
+
 Builder pagesLoadBuilder(BuilderOptions options) => PagesLoadBuilder();
 
 Builder pagesGenBuilder(BuilderOptions options) => PagesGenBuilder();
@@ -153,25 +155,25 @@ class MateBuilder implements Builder {
     sb.writeln(
         "libraryElement - name: ${lib.name}  identifier:${lib.identifier}  ");
     lib.exportNamespace.definedNames.forEach((key, value) {
-      // if (value is ClassElement) {
-      //   value.source;
-      //   if (!value.source.fullName.contains("flutter")) {
-      //     // return;
-      //   }
-      //   sb.writeln("  class ${value.name}");
-      //   for (var constructor in value.constructors) {
-      //     sb.writeln("    constructor  ${constructor.name}");
-      //     for (var parameter in constructor.parameters) {
-      //       sb.writeln(
-      //           "      parameter${parameter.name}  ${parameter.type}   ${parameter}");
-      //     }
-      //   }
-      // }
+      if (value is ClassElement) {
+        value.source;
+        if (!value.source.fullName.contains("flutter")) {
+          return;
+        }
+        sb.writeln("  class ${value.name}");
+        for (var constructor in value.constructors) {
+          sb.writeln("    constructor  ${constructor.name}");
+          for (var parameter in constructor.parameters) {
+            sb.writeln(
+                "      parameter${parameter.name}  ${parameter.type}   ${parameter}");
+          }
+        }
+      }
     });
   }
 
   @override
   final buildExtensions = const {
-    "^lib/{{}}.dart": ["lib/generated/{{}}.dart"]
+    "^{{}}.dart": ["lib/generated/{{}}.dart"]
   };
 }
