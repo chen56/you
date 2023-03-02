@@ -41,7 +41,8 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   Widget build(BuildContext context) {
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView = _OutlineView(contentPartController: controller, outline: pen.outline);
+    var outlineView =
+        _OutlineView(contentPartController: controller, outline: pen.outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
@@ -57,8 +58,11 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       controller: controller, // Here
       child: contentListView,
     );
-    var scorllBehavior = ScrollBehavior().buildScrollbar(context, contentListView,
-        ScrollableDetails(direction: AxisDirection.down, controller: controller));
+    var scorllBehavior = ScrollBehavior().buildScrollbar(
+        context,
+        contentListView,
+        ScrollableDetails(
+            direction: AxisDirection.down, controller: controller));
 
     var row = Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -153,7 +157,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
       return Padding(
         // 缩进模仿树形
-        padding: EdgeInsets.only(left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
+        padding: EdgeInsets.only(
+            left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
         child: link2,
       );
     }
@@ -187,12 +192,14 @@ extension _TreeViewNote on Path {
     attributes[_extendAttrName] = extend;
   }
 
-  List<Path> toListWithExtend({bool includeThis = true, bool hiddenNoExpend = false}) {
+  List<Path> toListWithExtend(
+      {bool includeThis = true, bool hiddenNoExpend = false}) {
     var flatChildren = children.expand((child) {
       if (hiddenNoExpend && !child.extend) {
         return [child];
       }
-      return child.toListWithExtend(includeThis: true, hiddenNoExpend: hiddenNoExpend);
+      return child.toListWithExtend(
+          includeThis: true, hiddenNoExpend: hiddenNoExpend);
     }).toList();
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
@@ -204,7 +211,8 @@ class _OutlineView extends StatelessWidget {
   // 主内容部分的滚动控制，防止异常用
   final ScrollController contentPartController;
 
-  const _OutlineView({required this.outline, required this.contentPartController});
+  const _OutlineView(
+      {required this.outline, required this.contentPartController});
 
   @override
   Widget build(BuildContext context) {
@@ -302,5 +310,11 @@ class _PagePen extends Pen {
       decoration: boxDecoration,
       child: widgetMate,
     ));
+  }
+
+  @override
+  void widgetSnippet(WidgetMate Function(MateNode node) builder) {
+    MateNode node = MateNode(Creators.pen);
+    widgetMate(builder(node));
   }
 }

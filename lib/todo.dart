@@ -32,3 +32,8 @@ class TODO2_note {
   // https://api.flutter.dev/flutter/widgets/GlobalKey-class.html
   // GlobalKey昂贵的解释
 }
+
+// 质量监控及分析
+class X {
+  // Google Analytics
+}

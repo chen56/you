@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Creators {
+  static const String pen = "pen";
   static const String container = "Container";
+  static const String column = "Column";
 }
 
 class Nullable<T> {
-  final T? value;
+  T? value;
 
   Nullable(this.value);
 }
@@ -45,9 +47,20 @@ class MateNode {
   MateNode(this.creator);
 
   void add(Editor editor) {
-    assert(!_paramMap.containsKey(editor.name), "error:duplicate key: ${editor.name} ");
+    assert(!_paramMap.containsKey(editor.name),
+        "error:duplicate key: ${editor.name} ");
     _paramMap[editor.name] = editor;
     _params.add(editor);
+  }
+
+  Nullable<T> set_<T>({required Editor<T> editor}) {
+    add(editor);
+    return Nullable(editor.value);
+  }
+
+  NotNull<T> set<T>({required Editor<T> editor}) {
+    add(editor);
+    return NotNull(editor.value!);
   }
 
   T get<T>(String name) {
@@ -61,16 +74,6 @@ class MateNode {
 
 mixin WidgetMate on Widget {
   late final MateNode mate;
-
-  NotNull<T> set<T>({required Editor<T> editor}) {
-    mate.add(editor);
-    return NotNull(editor.value!);
-  }
-
-  Nullable<T> set_<T>({required Editor<T> editor}) {
-    mate.add(editor);
-    return Nullable(editor.value);
-  }
 }
 
 class Double extends Editor<double> {
@@ -82,6 +85,9 @@ class Dynamic extends Editor<dynamic> {
 }
 
 class ContainerMate extends Container with WidgetMate {
+  late final Nullable<double> widthMate;
+  late final Nullable<double> heightMate;
+
   ContainerMate({
     super.key,
     super.alignment,
@@ -97,25 +103,29 @@ class ContainerMate extends Container with WidgetMate {
         ) {
     mate = MateNode(Creators.container);
     //这里会换成代码生成，凡是可以取到类型的，都可以支持编辑
-    set_(editor: Dynamic(name: "key", init: key));
-    set_(editor: Dynamic(name: "alignment", init: alignment));
-    set_(editor: Dynamic(name: "color", init: color));
-    set(editor: Dynamic(name: "clipBehavior", init: clipBehavior));
-    set_(editor: Double(name: "width", init: width));
-    set_(editor: Double(name: "height", init: height));
-    set_(editor: Dynamic(name: "child", init: child));
+    mate.set_(editor: Dynamic(name: "key", init: key));
+    mate.set_(editor: Dynamic(name: "alignment", init: alignment));
+    mate.set_(editor: Dynamic(name: "color", init: color));
+    mate.set(editor: Dynamic(name: "clipBehavior", init: clipBehavior));
+    widthMate = mate.set_(editor: Double(name: "width", init: width));
+    heightMate = mate.set_(editor: Double(name: "height", init: height));
+    mate.set_(editor: Dynamic(name: "child", init: child));
   }
 
-  static ContainerMate create(MateNode node) {
+  static ContainerMate create(MateNode mate) {
     return ContainerMate(
-      key: node.get<dynamic>("key"),
-      alignment: node.get<dynamic>("alignment"),
-      color: node.get<dynamic>("color"),
-      clipBehavior: node.get<dynamic>("clipBehavior"),
-      width: node.get<double>("width"),
-      height: node.get<double>("height"),
-      child: node.get<dynamic>("child"),
+      key: mate.get<dynamic>("key"),
+      alignment: mate.get<dynamic>("alignment"),
+      color: mate.get<dynamic>("color"),
+      clipBehavior: mate.get<dynamic>("clipBehavior"),
+      width: mate.get<double>("width"),
+      height: mate.get<double>("height"),
+      child: mate.get<dynamic>("child"),
     );
+  }
+
+  ContainerMate configMate({required void config(ContainerMate self)}) {
+    return this;
   }
 }
 
@@ -125,9 +135,12 @@ class ColumnMate extends Column with WidgetMate {
     super.mainAxisAlignment,
     List<Widget> children = const <Widget>[],
   }) : super(children: children) {
-    set(editor: Dynamic(name: "key", init: key));
-    set(editor: Dynamic(name: "mainAxisAlignment", init: mainAxisAlignment));
-    set_(editor: Dynamic(name: "children", init: children));
+    mate = MateNode(Creators.column);
+
+    mate.set(editor: Dynamic(name: "key", init: key));
+    mate.set(
+        editor: Dynamic(name: "mainAxisAlignment", init: mainAxisAlignment));
+    mate.set_(editor: Dynamic(name: "children", init: children));
   }
 
   @override
@@ -160,10 +173,11 @@ class CenterMate extends Center with WidgetMate {
           heightFactor: heightFactor,
           child: child,
         ) {
-    set_(editor: Dynamic(name: "key", init: key));
-    set_(editor: Double(name: "widthFactor", init: widthFactor));
-    set_(editor: Double(name: "heightFactor", init: heightFactor));
-    set_(editor: Dynamic(name: "child", init: child));
+    mate = MateNode(Creators.column);
+    mate.set_(editor: Dynamic(name: "key", init: key));
+    mate.set_(editor: Double(name: "widthFactor", init: widthFactor));
+    mate.set_(editor: Double(name: "heightFactor", init: heightFactor));
+    mate.set_(editor: Dynamic(name: "child", init: child));
   }
 
   @override
