@@ -1,5 +1,5 @@
-import 'package:build/build.dart';
-import 'package:build_config/build_config.dart';
+import 'package:build/build.dart' as build;
+import 'package:build_config/build_config.dart' as build_config;
 import 'package:build_ext/builder.dart';
 import 'package:build_runner/build_runner.dart' as builder_runner;
 import 'package:build_runner_core/build_runner_core.dart' as build_runner_core;
@@ -34,13 +34,12 @@ main() {
 
     var app = build_runner_core.BuilderApplication.forBuilder(
         '', // This field is not required
-        [(BuilderOptions buildOptions) => MateBuilder()],
+        [(build.BuilderOptions buildOptions) => MateBuilder()],
         build_runner_core.toAllPackages(),
         hideOutput: false, //打印日志
-        defaultGenerateFor: const InputSet(
+        defaultGenerateFor: const build_config.InputSet(
           include: [
-            "lib/abc/*.dart",
-            "test/y.dart",
+            "test/fixtures_mate.dart",
           ],
         ));
     var result = await builder_runner

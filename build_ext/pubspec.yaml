@@ -9,8 +9,7 @@ environment:
 dependencies:
   build_runner_core: ^7.2.7
   package_config: ^2.1.0
-
-  path: ^1.8.0
+  code_builder: ^4.4.0
 
 dev_dependencies:
   lints: ^2.0.0

@@ -33,4 +33,5 @@ analyzer:
     enable-experiment:
       - records
       - macros
+      - non_nullable
 #     - class-modifiers

@@ -47,15 +47,11 @@ class Paths extends _Paths with Navigable {
 
 Path<void> root = Path.root();
 var paths = _init();
+
 _put<C>(String path, PageMeta<C>? meta) {
   return root.put(path, meta);
 }
 
 Paths _init() {
-  // root.put("/", rootPage);
-  // root.put("not_found", notFoundPage);
-  // root.put("note", notePage);
-  // root.put("note/welcome", welcomePage);
-  // root.put("note/welcome/note-self", page);
   return Paths._();
 }

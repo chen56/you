@@ -3,13 +3,17 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/dart/element/type.dart';
 import 'package:build/build.dart';
+import 'package:code_builder/code_builder.dart';
+import 'package:dart_style/dart_style.dart';
 
 export 'builder.dart' show MateBuilder;
 
 Builder pagesLoadBuilder(BuilderOptions options) => PagesLoadBuilder();
 
 Builder pagesGenBuilder(BuilderOptions options) => PagesGenBuilder();
+
 Builder mateBuilder(BuilderOptions options) => MateBuilder();
 
 void log(Object? object) {
@@ -18,7 +22,9 @@ void log(Object? object) {
 
 class Gen {
   List<LibraryElement> libs = List.empty(growable: true);
+
   Gen._();
+
   void add(LibraryElement lib) {
     libs.add(lib);
   }
@@ -133,17 +139,15 @@ ${fields.toString()}
   }
 }
 
+final _dartfmt = DartFormatter();
+
 class MateBuilder implements Builder {
   @override
   Future build(BuildStep buildStep) async {
     // Get the `LibraryElement` for the primary input.
     var inputLibrary = await buildStep.inputLibrary;
     StringBuffer sb = StringBuffer();
-    sb.writeln("MateBuilder: ${inputLibrary.identifier}");
-
-    ///Users/cccc/app/flutter/packages/flutter/lib/src/widgets/container.dart
-    ////Users/cccc/git/chen56/flutter-note/lib/experiments/experiment_param_widget.dart
-    /// package:flutter/material.dart
+    sb.writeln("###  MateBuilder: ${inputLibrary.identifier}");
     showLib(sb, inputLibrary);
     inputLibrary.importedLibraries.forEach((lib) {
       showLib(sb, lib);
@@ -151,29 +155,95 @@ class MateBuilder implements Builder {
     print(sb.toString());
   }
 
+  // class SyntaxErrorInAssetException
+  //   constructor
+  //     parameterassetId  AssetId   AssetId assetId
+  //     parameterfilesWithErrors  List<AnalysisResultWithErrors>   List<AnalysisResultWithErrors> filesWithErrors
   void showLib(StringBuffer sb, LibraryElement lib) {
     sb.writeln(
         "libraryElement - name: ${lib.name}  identifier:${lib.identifier}  ");
-    lib.exportNamespace.definedNames.forEach((key, value) {
-      if (value is ClassElement) {
-        value.source;
-        if (!value.source.fullName.contains("flutter")) {
-          return;
-        }
-        sb.writeln("  class ${value.name}");
-        for (var constructor in value.constructors) {
-          sb.writeln("    constructor  ${constructor.name}");
-          for (var parameter in constructor.parameters) {
-            sb.writeln(
-                "      parameter${parameter.name}  ${parameter.type}   ${parameter}");
-          }
-        }
-      }
-    });
+    if (lib.source == null) return;
+    // dart.core dart.io等sdk内部库暂时不支持
+    bool isDartCoreLib = !(lib.source.fullName.endsWith(".dart"));
+    if (isDartCoreLib) return;
+
+    Library buildLib = Library((b) => b
+      ..name = lib.name == "" ? "xxx" : lib.name
+      ..body.addAll(lib.exportNamespace.definedNames.values
+          .where((element) => element is ClassElement)
+          .map((element) => element as ClassElement)
+          //ignore: can not inherited class
+          .where((clazz) => !lib.typeProvider.isNonSubtypableClass(clazz))
+          .map((clazz) => Class((b) => b
+            ..name = "${clazz.name}Mate"
+            ..abstract = clazz.isAbstract
+            ..extend = refer("${clazz.thisType}", findRefer(clazz.thisType))
+            ..constructors.addAll(clazz.constructors
+                .where((constructor) => !constructor.isFactory)
+                .map((constructor) => Constructor((b) {
+                      var optionals =
+                          constructor.parameters.where((e) => e.isOptional);
+                      var requireds =
+                          constructor.parameters.where((e) => e.isRequired);
+                      b
+                        ..name =
+                            constructor.name.isEmpty ? null : constructor.name
+                        ..docs.addAll(["/// $constructor"])
+                        // A const constructor can't have a body. but we need body.
+                        ..constant = false
+                        ..factory = constructor.isFactory
+                        ..optionalParameters.addAll(optionals.map((param) =>
+                            Parameter((b) => b
+                              ..name = param.name
+                              ..type = refer(
+                                  "${param.type}", findRefer(param.type)))))
+                        ..requiredParameters
+                            .addAll(requireds.map((param) => Parameter((b) => b
+                              ..name = param.name
+                              ..type = refer("${param.type}"))))
+                        ..body = constructor.isConst ||
+                                constructor.redirectedConstructor != null
+                            ? null
+                            : Code('');
+                    })))))));
+
+    sb.writeln(_dartfmt.format('${buildLib.accept(DartEmitter())}'));
   }
 
   @override
   final buildExtensions = const {
     "^{{}}.dart": ["lib/generated/{{}}.dart"]
   };
+
+  String findRefer(DartType type) {
+    var source = type.element?.library?.source;
+    if (source == null) return "TODO what?";
+    String refer = source.uri.toString();
+    return refer == "" ? "xx" : refer;
+  }
+
+  Code? constructorBody(ConstructorElement constructor) {
+    if (constructor.isConst || constructor.redirectedConstructor != null) {
+      return null;
+    }
+    return Code("// TODO");
+  }
+}
+
+class X {
+  final int i;
+
+  const X(this.i);
+  factory X.x() {
+    return X(1);
+  }
+}
+
+class Y extends X {
+  Y(super.i);
+
+  // factory Y.x() {
+  //   // return Y();
+  // }
+  // const Y.ss() {}
 }

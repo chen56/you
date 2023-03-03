@@ -43,7 +43,7 @@ dev_dependencies:
 #  build: ^2.0.0
 #   Not imported in code, but used to constrain `build.mate.yaml` requirements
 #  build_config: ^1.0.0
-#  analyzer: ">=2.0.0 <6.0.0"
+  analyzer: ">=5.0.0 <6.0.0"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
