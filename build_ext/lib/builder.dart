@@ -146,22 +146,19 @@ class MateBuilder implements Builder {
   Future build(BuildStep buildStep) async {
     // Get the `LibraryElement` for the primary input.
     var inputLibrary = await buildStep.inputLibrary;
-    StringBuffer sb = StringBuffer();
-    sb.writeln("###  MateBuilder: ${inputLibrary.identifier}");
-    showLib(sb, inputLibrary);
+    print("###  MateBuilder: ${inputLibrary.identifier}");
+    genMate(buildStep, inputLibrary);
     inputLibrary.importedLibraries.forEach((lib) {
-      showLib(sb, lib);
+      genMate(buildStep, lib);
     });
-    print(sb.toString());
   }
 
   // class SyntaxErrorInAssetException
   //   constructor
   //     parameterassetId  AssetId   AssetId assetId
   //     parameterfilesWithErrors  List<AnalysisResultWithErrors>   List<AnalysisResultWithErrors> filesWithErrors
-  void showLib(StringBuffer sb, LibraryElement lib) {
-    sb.writeln(
-        "libraryElement - name: ${lib.name}  identifier:${lib.identifier}  ");
+  void genMate(BuildStep buildStep, LibraryElement lib) {
+    print("libraryElement - name: ${lib.name}  identifier:${lib.identifier}  ");
     if (lib.source == null) return;
     // dart.core dart.io等sdk内部库暂时不支持
     bool isDartCoreLib = !(lib.source.fullName.endsWith(".dart"));
@@ -201,18 +198,17 @@ class MateBuilder implements Builder {
                             .addAll(requireds.map((param) => Parameter((b) => b
                               ..name = param.name
                               ..type = refer("${param.type}"))))
-                        ..body = constructor.isConst ||
-                                constructor.redirectedConstructor != null
-                            ? null
-                            : Code('');
+                        ..body = Code('// all have body');
                     })))))));
-
-    sb.writeln(_dartfmt.format('${buildLib.accept(DartEmitter())}'));
+    var path = "build/generated/${lib.source.uri.path}";
+    print("output: $path");
+    buildStep.writeAsString(AssetId("build_ext", path),
+        _dartfmt.format('${buildLib.accept(DartEmitter())}'));
   }
 
   @override
   final buildExtensions = const {
-    "^{{}}.dart": ["lib/generated/{{}}.dart"]
+    "{{}}.dart": ["lib/generated/{{}}.dart"]
   };
 
   String findRefer(DartType type) {
@@ -228,22 +224,4 @@ class MateBuilder implements Builder {
     }
     return Code("// TODO");
   }
-}
-
-class X {
-  final int i;
-
-  const X(this.i);
-  factory X.x() {
-    return X(1);
-  }
-}
-
-class Y extends X {
-  Y(super.i);
-
-  // factory Y.x() {
-  //   // return Y();
-  // }
-  // const Y.ss() {}
 }
