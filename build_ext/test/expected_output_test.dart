@@ -25,4 +25,15 @@ main() {
               "lib/generated/flutter_markdown/flutter_markdown.dart")
         ]));
   });
+  test('MateBuilder', () async {
+    expect(
+        expectedOutputs(
+            MateBuilder(buildDir: ".dart_tool"),
+            AssetId(
+                "flutter_markdown", "flutter_markdown/flutter_markdown.dart")),
+        equals([
+          AssetId("flutter_markdown",
+              "lib/generated/flutter_markdown/flutter_markdown.dart")
+        ]));
+  });
 }

@@ -7,6 +7,7 @@ import 'package:analyzer/dart/element/type.dart';
 import 'package:build/build.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
+import "package:path/path.dart" as path;
 
 export 'builder.dart' show MateBuilder;
 
@@ -79,8 +80,7 @@ class PagesGenBuilder implements Builder {
           .replaceAll("package:flutter_note/pages", "")
           .replaceAll("/@page.dart", "");
       path = path == "" ? "/" : path;
-      fields.write(
-          """  final Path $pagePackage = _put("$path", g${pagePackage}.page);\n""");
+      fields.write("""  final Path $pagePackage = _put("$path", g${pagePackage}.page);\n""");
     }
 
     content.write("""
@@ -101,8 +101,7 @@ ${fields.toString()}
 """);
 
     String toPath = buildStep.allowedOutputs.first.path;
-    await buildStep.writeAsString(
-        AssetId(buildStep.inputId.package, toPath), content.toString());
+    await buildStep.writeAsString(AssetId(buildStep.inputId.package, toPath), content.toString());
 
     // final inputLibrary =
     //     await buildStep.resolver.libraryFor(buildStep.inputId, allowSyntaxErrors: true);
@@ -142,27 +141,56 @@ ${fields.toString()}
 final _dartfmt = DartFormatter();
 
 class MateBuilder implements Builder {
+  final String buildDir;
+  MateBuilder({this.buildDir = ""});
   @override
   Future build(BuildStep buildStep) async {
     // Get the `LibraryElement` for the primary input.
     var inputLibrary = await buildStep.inputLibrary;
     print("###  MateBuilder: ${inputLibrary.identifier}");
-    genMate(buildStep, inputLibrary);
+
+    // genMate(buildStep, inputLibrary);
+    // 1. collect all we care lib
+    Set<LibraryElement> collect = Set();
     inputLibrary.importedLibraries.forEach((lib) {
-      genMate(buildStep, lib);
+      // genMate(buildStep, lib);
+      visitAllExport(collect, lib, 0);
+    });
+
+    // 2. gen we care lib
+    StringBuffer sb = StringBuffer();
+    collect.forEach((lib) {
+      sb.writeln("${lib.source}  location:${lib.location}");
+      if (lib.libraryExports.isEmpty) {
+        genLeafLib(buildStep, lib);
+      } else {
+        genExportLib(buildStep, lib);
+      }
+    });
+    print(sb);
+  }
+
+  void visitAllExport(Set<LibraryElement> collect, LibraryElement lib, int level) {
+    if (isWeCareLib(lib)) return;
+    collect.add(lib);
+    // sb.writeln("${"--" * level}${lib.source}  location:${lib.location}");
+    lib.exportedLibraries.forEach((element) {
+      visitAllExport(collect, element, level + 1);
     });
   }
+
+  // filter core package : dart:core , dart:async
+  bool isWeCareLib(LibraryElement lib) => !(lib.source.fullName.endsWith(".dart"));
+
+  void genExportLib(BuildStep buildStep, LibraryElement lib) {}
 
   // class SyntaxErrorInAssetException
   //   constructor
   //     parameterassetId  AssetId   AssetId assetId
   //     parameterfilesWithErrors  List<AnalysisResultWithErrors>   List<AnalysisResultWithErrors> filesWithErrors
-  void genMate(BuildStep buildStep, LibraryElement lib) {
+  void genLeafLib(BuildStep buildStep, LibraryElement lib) {
     print("libraryElement - name: ${lib.name}  identifier:${lib.identifier}  ");
-    if (lib.source == null) return;
     // dart.core dart.io等sdk内部库暂时不支持
-    bool isDartCoreLib = !(lib.source.fullName.endsWith(".dart"));
-    if (isDartCoreLib) return;
 
     Library buildLib = Library((b) => b
       ..name = lib.name == "" ? "xxx" : lib.name
@@ -178,38 +206,35 @@ class MateBuilder implements Builder {
             ..constructors.addAll(clazz.constructors
                 .where((constructor) => !constructor.isFactory)
                 .map((constructor) => Constructor((b) {
-                      var optionals =
-                          constructor.parameters.where((e) => e.isOptional);
-                      var requireds =
-                          constructor.parameters.where((e) => e.isRequired);
+                      var optionals = constructor.parameters.where((e) => e.isOptional);
+                      var requireds = constructor.parameters.where((e) => e.isRequired);
                       b
-                        ..name =
-                            constructor.name.isEmpty ? null : constructor.name
+                        ..name = constructor.name.isEmpty ? null : constructor.name
                         ..docs.addAll(["/// $constructor"])
                         // A const constructor can't have a body. but we need body.
                         ..constant = false
                         ..factory = constructor.isFactory
-                        ..optionalParameters.addAll(optionals.map((param) =>
-                            Parameter((b) => b
-                              ..name = param.name
-                              ..type = refer(
-                                  "${param.type}", findRefer(param.type)))))
-                        ..requiredParameters
-                            .addAll(requireds.map((param) => Parameter((b) => b
-                              ..name = param.name
-                              ..type = refer("${param.type}"))))
-                        ..body = Code('// all have body');
+                        ..optionalParameters.addAll(optionals.map((param) => Parameter((b) => b
+                          ..name = param.name
+                          ..type = refer("${param.type}", findRefer(param.type)))))
+                        ..requiredParameters.addAll(requireds.map((param) => Parameter((b) => b
+                          ..name = param.name
+                          ..type = refer("${param.type}"))))
+                        ..body = Code('');
                     })))))));
-    var path = "build/generated/${lib.source.uri.path}";
-    print("output: $path");
-    buildStep.writeAsString(AssetId("build_ext", path),
-        _dartfmt.format('${buildLib.accept(DartEmitter())}'));
+    var toFile = path.join(buildDir, "lib/generated/test/fixtures_mate.dart");
+    print("output: $toFile");
+    // buildStep.writeAsString(AssetId("build_ext", path),
+    //     _dartfmt.format('${buildLib.accept(DartEmitter())}'));
+
+    buildStep.writeAsString(
+        AssetId("build_ext", toFile), buildLib.accept(DartEmitter()).toString());
   }
 
   @override
-  final buildExtensions = const {
-    "{{}}.dart": ["lib/generated/{{}}.dart"]
-  };
+  Map<String, List<String>> get buildExtensions => {
+        "{{}}.dart": [path.join(buildDir, "lib/generated/{{}}.dart")]
+      };
 
   String findRefer(DartType type) {
     var source = type.element?.library?.source;
