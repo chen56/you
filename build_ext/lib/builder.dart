@@ -6,7 +6,6 @@ import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/type.dart';
 import 'package:build/build.dart';
 import 'package:code_builder/code_builder.dart';
-import 'package:dart_style/dart_style.dart';
 import "package:path/path.dart" as path;
 
 export 'builder.dart' show MateBuilder;
@@ -138,7 +137,7 @@ ${fields.toString()}
   }
 }
 
-final _dartfmt = DartFormatter();
+// final _dartfmt = DartFormatter();
 
 class MateBuilder implements Builder {
   final String buildDir;
@@ -150,39 +149,33 @@ class MateBuilder implements Builder {
     print("###  MateBuilder: ${inputLibrary.identifier}");
 
     // genMate(buildStep, inputLibrary);
-    // 1. collect all we care lib
+    // 1. collect all we care lib, and remove duplicate
     Set<LibraryElement> collect = Set();
     inputLibrary.importedLibraries.forEach((lib) {
       // genMate(buildStep, lib);
-      visitAllExport(collect, lib, 0);
+      collectLib(collect, lib, 0);
     });
 
     // 2. gen we care lib
-    StringBuffer sb = StringBuffer();
+    StringBuffer log = StringBuffer();
     collect.forEach((lib) {
-      sb.writeln("${lib.source}  location:${lib.location}");
-      if (lib.libraryExports.isEmpty) {
-        genLeafLib(buildStep, lib);
-      } else {
-        genExportLib(buildStep, lib);
-      }
+      log.writeln("${lib.source}  location:${lib.location}");
+      genLeafLib(buildStep, lib);
     });
-    print(sb);
+    print(log);
   }
 
-  void visitAllExport(Set<LibraryElement> collect, LibraryElement lib, int level) {
+  void collectLib(Set<LibraryElement> collect, LibraryElement lib, int level) {
     if (isWeCareLib(lib)) return;
     collect.add(lib);
     // sb.writeln("${"--" * level}${lib.source}  location:${lib.location}");
     lib.exportedLibraries.forEach((element) {
-      visitAllExport(collect, element, level + 1);
+      collectLib(collect, element, level + 1);
     });
   }
 
   // filter core package : dart:core , dart:async
   bool isWeCareLib(LibraryElement lib) => !(lib.source.fullName.endsWith(".dart"));
-
-  void genExportLib(BuildStep buildStep, LibraryElement lib) {}
 
   // class SyntaxErrorInAssetException
   //   constructor
@@ -193,7 +186,7 @@ class MateBuilder implements Builder {
     // dart.core dart.io等sdk内部库暂时不支持
 
     Library buildLib = Library((b) => b
-      ..name = lib.name == "" ? "xxx" : lib.name
+      ..name = lib.name
       ..body.addAll(lib.exportNamespace.definedNames.values
           .where((element) => element is ClassElement)
           .map((element) => element as ClassElement)
