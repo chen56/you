@@ -1,5 +1,7 @@
-part of "pages.g.dart";
-
+// part of "pages.g.dart";
+import 'package:flutter_note/navigator_v2.dart';
+import 'package:flutter_note/page.dart';
+import 'package:flutter_note/pages/pages.g.dart';
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
@@ -32,7 +34,7 @@ part of "pages.g.dart";
 //   ]),
 // ]);
 
-class Paths extends _Paths with Navigable {
+class Paths with Navigable, PathsMixin {
   late final Path<void> initial;
   Paths._() {
     initial = note;
@@ -40,16 +42,16 @@ class Paths extends _Paths with Navigable {
 
   @override
   Screen parse(String location) {
-    Path find = root.kid(location)!; // ?? notFound;
+    Path find = _root.kid(location)!; // ?? notFound;
     return find.createScreen(location);
   }
 }
 
-Path<void> root = Path.root();
+Path<void> _root = Path.root();
 var paths = _init();
 
-_put<C>(String path, PageMeta<C>? meta) {
-  return root.put(path, meta);
+put<C>(String path, PageMeta<C>? meta) {
+  return _root.put(path, meta);
 }
 
 Paths _init() {

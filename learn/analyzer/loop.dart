@@ -8,7 +8,7 @@ import 'package:path/path.dart' as path;
 main() async {
   ResourceProvider resourceProvider = PhysicalResourceProvider.INSTANCE;
   final collection = AnalysisContextCollection(
-    includedPaths: [path.absolute(path.join(path.current, "lib/page.dart"))],
+    includedPaths: [path.normalize(path.absolute(path.join(path.current, "lib/page.dart")))],
     sdkPath: "/Users/cccc/app/flutter/bin/cache/dart-sdk",
     resourceProvider: resourceProvider,
   );

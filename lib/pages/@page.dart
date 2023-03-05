@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_note/page.dart';
 import 'package:flutter_note/pages/page_layout.dart';
-
-import 'pages.g.dart';
+import 'package:flutter_note/pages/pages.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "home",

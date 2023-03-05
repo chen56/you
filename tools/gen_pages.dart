@@ -1,0 +1,94 @@
+import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
+import 'package:analyzer/dart/analysis/context_root.dart';
+import 'package:analyzer/dart/analysis/results.dart';
+import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/file_system/physical_file_system.dart';
+import 'package:code_builder/code_builder.dart';
+import 'package:dart_style/dart_style.dart';
+import 'package:file/file.dart';
+import 'package:file/local.dart';
+import 'package:glob/glob.dart';
+import 'package:glob/list_local_fs.dart';
+import 'package:path/path.dart' as path;
+
+import 'env.dart';
+
+final _dartfmt = DartFormatter(pageWidth: 120);
+
+main() async {
+  Env env = Env();
+  Glob glob = Glob("lib/**/@page.dart");
+  FileSystem fs = const LocalFileSystem();
+
+  final collection = AnalysisContextCollection(
+    includedPaths: glob.listSync().map((e) => path.normalize(path.absolute(e.path))).toList(),
+    sdkPath: env.sdkDir,
+    resourceProvider: PhysicalResourceProvider.INSTANCE,
+  );
+  for (final context in collection.contexts) {
+    ContextRoot root = context.contextRoot;
+    log('---------------------context:  ${root.root.path} ----------------------- ');
+    List<LibraryElement> libs = List.empty(growable: true);
+    for (final filePath in root.analyzedFiles()) {
+      var lib = (await context.currentSession.getResolvedLibrary(filePath) as ResolvedLibraryResult)
+          .element;
+      libs.add(lib);
+    }
+    // 排序，顺序可以通过为目录名添加数字前缀来强行引导： 1.pagename
+    libs.sort((a, b) => a.identifier.compareTo(b.identifier));
+
+    Library libGen = Library((b) => b
+      ..comments.add("value")
+      ..directives.add(Directive.import("package:flutter_note/page.dart"))
+      ..directives.add(Directive.import("package:flutter_note/pages/pages.dart"))
+      ..directives.addAll(libs
+          .map((lib) => Directive.import(lib.identifier, as: "g${_flatLibPath(lib.identifier)}")))
+      // ..directives.sort((a, b) => a.url.compareTo(b.url))
+      ..body.add(Mixin((b) => b
+        ..name = "PathsMixin"
+        ..fields.addAll(libs.map((lib) {
+          String flatPagePath = _flatLibPath(lib.identifier);
+          String path = lib.identifier
+              .replaceAll("package:flutter_note/pages", "")
+              .replaceAll("/@page.dart", "");
+          path = path == "" ? "/" : path;
+          return Field((b) => b
+            ..name = flatPagePath
+            ..modifier = FieldModifier.final$
+            ..type = refer("Path", "package:flutter_note/page.dart")
+            ..assignment = Code('put("$path", g$flatPagePath.page)'));
+        })))));
+
+    String code = '${libGen.accept(DartEmitter())}';
+    code = _dartfmt.format(code);
+    fs.file("lib/pages/pages.g.dart").writeAsStringSync(code);
+  }
+}
+
+log(Object? o) {
+  print("${DateTime.now()} - $o");
+}
+
+/// 包名平整化：
+/// package:flutter-note/pages/note/1.welcome/1.note-self/@page.dart
+/// --->
+/// note$welcome$note_self
+///
+/// 规则：
+/// - 去掉package:flutter-note前缀
+/// - 去掉用来排序的数字前缀"1."
+/// - '/'换成'$'
+/// - 其他特殊字符换成'_'
+String _flatLibPath(String packageName) {
+  String result = packageName.replaceAll("package:flutter_note/pages/", "");
+  if (result == "@page.dart") {
+    return "root";
+  }
+  return result
+      .replaceAll(RegExp("/@page.dart\$"), "") // 后缀
+      .replaceAll(RegExp("/\\d+\."), "/") // 1.note-self -> note-self
+      .replaceAll("/", "\$")
+      .replaceAll(".", "_")
+      .replaceAll("-", "_")
+      .replaceAll("@", "_");
+}
