@@ -78,7 +78,7 @@ class _HeaderBuilder extends MarkdownElementBuilder {
     // tag value : h1 | h2 | h3 ....
     currentNode = OutlineNode(
       // globalKey用来滚动到此位置
-      key: GlobalKey()!,
+      key: GlobalKey(),
       heading: int.parse(element.tag.substring(1)),
       title: element.textContent,
     );

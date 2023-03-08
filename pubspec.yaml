@@ -36,7 +36,8 @@ dev_dependencies:
   test:
   flutter_test:
     sdk: flutter
-
+  flutter_lints: ^2.0.1
+  lints: ^2.0.1
 #  flutter_lints: ^2.0.0
 #  build_runner: ^2.0.0
 #  build_runner_core: ^7.2.7
@@ -45,14 +46,15 @@ dev_dependencies:
 #  build_config: ^1.0.0
   analyzer: ">=5.0.0 <6.0.0"
   file: ^6.1.4
-
+  dart_style: ^2.0.0
+  mate_flutter:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 dependency_overrides:
-  analyzer: ">=5.0.0 <6.0.0"
-  dart_style: ^2.0.0
   build_ext:
     path: ./build_ext
+  mate_flutter:
+    path: ./mate_flutter
 #  flutter:
 #    path: ./build/packages/flutter
 # The following section is specific to Flutter packages.

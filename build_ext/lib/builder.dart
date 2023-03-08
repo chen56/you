@@ -2,8 +2,9 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'package:analyzer/dart/element/element.dart';
-import 'package:analyzer/dart/element/type.dart';
+import "package:analyzer/dart/element/element.dart"
+    show ClassElement, ConstructorElement, LibraryElement;
+import 'package:analyzer/dart/element/type.dart' show DartType;
 import 'package:build/build.dart';
 import 'package:code_builder/code_builder.dart';
 import "package:path/path.dart" as path;
