@@ -21,8 +21,8 @@ main() async {
   _log("## main");
 
   List<String> include = [
-    // "package:flutter/",
-    "package:flutter/src/rendering/box.dart"
+    "package:flutter/",
+    // "package:flutter/src/rendering/box.dart"
   ];
 
   gen(
@@ -64,7 +64,7 @@ Future<void> gen({
   LibNode root = LibNode(entryLib, children: entryLib.importedLibraries, allLibs: allMateLibs);
 
   _log("## output collectAllTypes");
-  TypeRefers allTypes = root.collectAllTypes();
+  TypeRefers allTypes = root.collectAllTypes(libFilter);
   for (var key in allTypes.keys) {
     _log("${key}:${allTypes[key]!.identifier}");
   }
@@ -109,46 +109,44 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
   }
 
   Reference elementRef(Element element, {required ClassElement inClass}) {
-    if (inClass.name.startsWith("UniqueWidget")) {
-      _log("createRefer $element");
-    }
     if (element is ParameterElement) {
       DartType type = element.type;
       return typeRef(type, inClass: inClass);
     }
     if (element is TypeParameterElement) {
-      // LibraryElement? lib = this[element.bound];
-      //
-      TypeReference ref = TypeReference((b) {
-        b.symbol = element.name;
-        if (element.bound == null) {
-          return;
-        }
-        b.types.add(typeRef(element.bound!, inClass: inClass));
-      });
-      return ref;
+      return TypeReference((b) => b
+        ..symbol = element.name
+        ..bound = element.bound == null ? null : typeRef(element.bound!, inClass: inClass));
     }
-
     throw UnimplementedError(
         "element type:${element.runtimeType} not implemented : ${element.source?.uri.path}");
   }
 
   Reference typeRef(DartType type, {required ClassElement inClass}) {
-    LibraryElement? lib = this[type.element];
+    // LibraryElement? lib = this[type.element];
+    LibraryElement? lib = type.element?.library;
+    bool coreType = type is VoidType || type is t.FunctionType || type is DynamicType;
+    if (lib == null && !coreType) {
+      _log("typeRef $type  lib is null");
+    }
+
     if (type is t.ParameterizedType) {
       TypeReference ref = TypeReference((b) => b
         ..symbol = type.element?.name
         ..isNullable = type.nullabilitySuffix == NullabilitySuffix.question
         ..url = lib?.identifier
         ..types.addAll(type.typeArguments.map((e) => typeRef(e, inClass: inClass))));
+
       return ref;
     }
     if (type is t.FunctionType) {
+      if (inClass.name.startsWith("WidgetsApp")) {
+        _log("createRefer $type");
+      }
+
       code.FunctionType ref = code.FunctionType((b) => b
         ..returnType = typeRef(type.returnType, inClass: inClass)
-        ..types.addAll(type.typeFormals
-            .where((e) => e.bound != null)
-            .map((e) => typeRef(e.bound!, inClass: inClass)))
+        ..types.addAll(type.typeFormals.map((e) => elementRef(e, inClass: inClass)))
         ..requiredParameters.addAll(type.parameters
             .where((e) => e.isPositional)
             .map((e) => typeRef(e.type, inClass: inClass)))
@@ -167,10 +165,10 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
       return ref;
     }
 
-    _log("TypeRefers.createRefer: default - ${type.runtimeType} : $type");
-    if (lib == null) {
-      _log("TypeRefers.createRefer: not found ref: $type");
+    if (!coreType) {
+      _log("TypeRefers.createRefer: default - ${type.runtimeType} : $type");
     }
+
     // final result = refer("$type", lib?.identifier);
     return Reference(type.getDisplayString(withNullability: true), lib?.identifier);
   }
@@ -212,9 +210,9 @@ class LibNode {
     }
   }
 
-  TypeRefers collectAllTypes() {
+  TypeRefers collectAllTypes(bool Function(LibraryElement lib) libFilter) {
     TypeRefers result = TypeRefers();
-    for (final mate in toList()) {
+    for (final mate in toList().where((element) => libFilter(element.lib))) {
       for (final e in mate.lib.exportNamespace.definedNames.values) {
         result.putIfAbsent(e, () => mate.firstPublicLib);
       }
@@ -261,12 +259,13 @@ void _genLibMate({
   required TypeRefers typeRefers,
 }) {
   _log("_genLibMate: identifier:${lib.identifier} importedLibraries:${lib.importedLibraries}  ");
-  // dart.core dart.io等sdk内部库暂时不支持
   bool importFilter(LibraryImportElement libImport) {
-    bool notPrivate = !path
-        .basename((libImport.uri as DirectiveUriWithLibrary).relativeUriString)
-        .startsWith("_");
-    return notPrivate;
+    final uri = libImport.uri as DirectiveUriWithLibrary;
+    bool notPrivate = !path.basename(uri.relativeUriString).startsWith("_");
+    //不要相对路径的导入，比如：import x.dart
+    bool noRelative =
+        ["dart:", "package:"].any((prefix) => uri.relativeUriString.startsWith(prefix));
+    return notPrivate && noRelative;
   }
 
   bool exportFilter(LibraryExportElement libExport) {
@@ -289,21 +288,21 @@ void _genLibMate({
   Library buildLib = Library((b) => b
     ..name = lib.name
     ..comments.addAll(
-        ["/// Generated by mat_flutter, please don't edit! Created time: ${DateTime.now()}"])
-    ..directives.add(Directive((b) => b
-      ..type = DirectiveType.import
-      // import lib self
-      ..url = lib.identifier))
-    ..directives.addAll(lib.libraryImports.where(importFilter).map((libImport) => Directive((b) => b
-      ..type = DirectiveType.import
-      ..url = (libImport.uri as DirectiveUriWithLibrary).relativeUriString
-      ..as = libImport.prefix?.element.name
-      ..show.addAll(libImport.combinators
-          .whereType<ShowElementCombinator>()
-          .expand((show) => show.shownNames))
-      ..hide.addAll(libImport.combinators
-          .whereType<HideElementCombinator>()
-          .expand((hide) => hide.hiddenNames)))))
+        ["/// Generated by mate_flutter, please don't edit! Created time: ${DateTime.now()}"])
+    // ..directives.add(Directive((b) => b
+    //   ..type = DirectiveType.import
+    //   // import lib self
+    //   ..url = lib.identifier))
+    // ..directives.addAll(lib.libraryImports.where(importFilter).map((libImport) => Directive((b) => b
+    //   ..type = DirectiveType.import
+    //   ..url = (libImport.uri as DirectiveUriWithLibrary).relativeUriString
+    //   ..as = libImport.prefix?.element.name
+    //   ..show.addAll(libImport.combinators
+    //       .whereType<ShowElementCombinator>()
+    //       .expand((show) => show.shownNames))
+    //   ..hide.addAll(libImport.combinators
+    //       .whereType<HideElementCombinator>()
+    //       .expand((hide) => hide.hiddenNames)))))
     ..directives.addAll(lib.libraryExports.where(exportFilter).map((libExport) => Directive((b) => b
       ..type = DirectiveType.export
       ..url = (libExport.uri as DirectiveUriWithLibrary).relativeUriString
@@ -331,15 +330,13 @@ void _genLibMate({
                 ..requiredParameters.addAll(constructor.parameters
                     .where((e) => !e.isNamed)
                     .map((param) => Parameter((b) => b
-                      ..docs.add("// param: ${param.getDisplayString(withNullability: true)} ")
-                      ..docs.add("// param: ${param.getDisplayString(withNullability: true)} ")
+                      ..docs.add("\n// param: ${param.getDisplayString(withNullability: true)} ")
                       ..type = typeRefers.elementRef(param, inClass: clazz)
                       ..name = param.name
                       ..named = false)))
                 ..optionalParameters.addAll(constructor.parameters.where((e) => e.isNamed).map(
                     (param) => Parameter((b) => b
-                      ..docs.add("// param: ${param.getDisplayString(withNullability: true)} ")
-                      ..docs.add("// param: ${param.getDisplayString(withNullability: true)} ")
+                      ..docs.add("\n// param: ${param.getDisplayString(withNullability: true)}")
                       ..type = typeRefers.elementRef(param, inClass: clazz)
                       ..name = param.name
                       ..named = true
@@ -348,11 +345,17 @@ void _genLibMate({
                 ..body = _constructorBody(constructor))))))));
   var toFile = writeTo(lib);
 
-  String code = buildLib.accept(DartEmitter.scoped(useNullSafetySyntax: true)).toString();
-  // code = dartFormatter.format(code);
+  String code = buildLib
+      .accept(
+        DartEmitter(
+          allocator: Allocator(), // reference的 import 不增加前缀 ”_i1“ 这种形式
+          useNullSafetySyntax: true,
+        ),
+      )
+      .toString();
+  code = dartFormatter.format(code);
   writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
   writeFS.file(toFile).writeAsStringSync(code);
-  // buildStep.writeAsString(AssetId("build_ext", toFile), buildLib.accept(DartEmitter()).toString());
 }
 
 Code? _constructorBody(ConstructorElement constructor) {
