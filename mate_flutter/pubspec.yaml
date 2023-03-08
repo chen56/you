@@ -1,4 +1,4 @@
-name: mate
+name: mate_flutter
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
@@ -19,3 +19,4 @@ dev_dependencies:
   file: ^6.1.4
   code_builder: ^4.4.0
   dart_style: ^2.0.0
+  path: ^1.8.3
