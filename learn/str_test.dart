@@ -16,4 +16,9 @@ void main() {
   test('common.types isType 类型判断', () {
     expect(isType(Center(), TypeIs<Widget>()), isTrue);
   });
+  test('raw string', () {
+    String name = "chen56";
+    expect("name:$name", "name:chen56");
+    expect(r"name:$name", "name:\$name", reason: "r means raw string");
+  });
 }
