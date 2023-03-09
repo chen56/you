@@ -19,16 +19,18 @@ import 'env.dart';
 // ref: ElementDisplayStringBuilder
 main() async {
   _log("## main");
-
   List<String> include = [
     "package:flutter/",
-    // "package:flutter/src/rendering/box.dart"
+    // "package:flutter/src/material/button.dart",
+    // "c/src/cupertino/activity_indicator.dart",
+    // "package:flutter/src/cupertino/bottom_tab_bar.dart"
+    // "package:flutter/src/animation/curves.dart"
   ];
 
   gen(
     env: Env(),
     entryFile: path.normalize(path.absolute("tools/gen_mates_sample.dart")),
-    libFilter: (lib) =>
+    mateFilter: (lib) =>
         lib.identifier.endsWith(".dart") && include.any((uri) => lib.identifier.startsWith(uri)),
     // writeFS: MemoryFileSystem(),
     writeFS: LocalFileSystem(),
@@ -45,7 +47,7 @@ Future<void> gen({
   required Env env,
   required String entryFile, //入口lib的文件绝对路径
   required FileSystem writeFS,
-  required bool Function(LibraryElement lib) libFilter, //void Function(LibraryBuilder) updates
+  required bool Function(LibraryElement lib) mateFilter,
   required String Function(LibraryElement lib) writeTo,
   required DartFormatter dartFormatter, //void Function(LibraryBuilder) updates
 }) async {
@@ -59,19 +61,24 @@ Future<void> gen({
           as ResolvedLibraryResult)
       .element;
 
-  _log("## collect lib, create LibNode tree and remove duplicate");
+  _log("## collect lib start, create LibNode tree and remove duplicate,");
   Set<LibraryElement> allMateLibs = {};
-  LibNode root = LibNode(entryLib, children: entryLib.importedLibraries, allLibs: allMateLibs);
+  LibNode root = LibNode(entryLib,
+      children: entryLib.importedLibraries, allLibs: allMateLibs, mateFilter: mateFilter);
+  _log("## collect lib ok!");
 
-  _log("## output collectAllTypes");
-  TypeRefers allTypes = root.collectAllTypes(libFilter);
+  _log("## collect AllTypes start");
+  TypeRefers allTypes = root.collectAllTypes(mateFilter);
+  _log("## collect AllTypes ok!");
+  _log("## AllTypes print:");
   for (var key in allTypes.keys) {
-    _log("${key}:${allTypes[key]!.identifier}");
+    _log("allTypes--- ${key} - runtimeType:${key.runtimeType}  lib:${allTypes[key]!.identifier}");
   }
 
-  _log("## gen lib mate");
+  _log("## gen lib mate, list all:");
   root.debugLog();
-  for (var lib in allMateLibs.where(libFilter).toList()) {
+  _log("## gen lib mate start:");
+  for (var lib in allMateLibs.where(mateFilter).toList()) {
     _genLibMate(
         writeFS: writeFS,
         writeTo: writeTo,
@@ -79,11 +86,12 @@ Future<void> gen({
         dartFormatter: dartFormatter,
         typeRefers: allTypes);
   }
-  _log("## over!");
+  _log("## gen lib mate ok!");
 }
 
 class TypeRefers extends MapBase<Element, LibraryElement> {
   Map<Element, LibraryElement> typeRefers = {};
+  Map<String, Element> name_types = {};
 
   @override
   LibraryElement? operator [](Object? key) {
@@ -93,6 +101,7 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
   @override
   void operator []=(Element key, LibraryElement value) {
     typeRefers[key] = value;
+    name_types[key.displayName] = key;
   }
 
   @override
@@ -129,21 +138,35 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
     if (lib == null && !coreType) {
       _log("typeRef $type  lib is null");
     }
+    //类型名，可以过滤设置断点
+    if (inClass.name.startsWith("--WidgetsApp")) {
+      _log("createRefer $type");
+    }
 
+    // alias
+    // T Function<T>(T) -> Callback<T>
+    if (type.alias != null) {
+      final alias = type.alias!;
+      return TypeReference((b) => b
+        ..symbol = alias.element.name
+        ..url = alias.element.library.identifier
+        ..isNullable = type.nullabilitySuffix == NullabilitySuffix.question
+        ..types.addAll(alias.typeArguments.map((e) => typeRef(e, inClass: inClass))));
+    }
+
+    // ParameterizedType主要是可范型的类及接口等
+    // class Button
+    // class XButton<T>
     if (type is t.ParameterizedType) {
       TypeReference ref = TypeReference((b) => b
         ..symbol = type.element?.name
         ..isNullable = type.nullabilitySuffix == NullabilitySuffix.question
         ..url = lib?.identifier
         ..types.addAll(type.typeArguments.map((e) => typeRef(e, inClass: inClass))));
-
       return ref;
     }
-    if (type is t.FunctionType) {
-      if (inClass.name.startsWith("WidgetsApp")) {
-        _log("createRefer $type");
-      }
 
+    if (type is t.FunctionType) {
       code.FunctionType ref = code.FunctionType((b) => b
         ..returnType = typeRef(type.returnType, inClass: inClass)
         ..types.addAll(type.typeFormals.map((e) => elementRef(e, inClass: inClass)))
@@ -166,10 +189,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
     }
 
     if (!coreType) {
-      _log("TypeRefers.createRefer: default - ${type.runtimeType} : $type");
+      _log("TypeRefers.createRefer: no coreType default - ${type.runtimeType} : $type");
     }
-
-    // final result = refer("$type", lib?.identifier);
     return Reference(type.getDisplayString(withNullability: true), lib?.identifier);
   }
 }
@@ -195,6 +216,7 @@ class LibNode {
     this.parent,
     required List<LibraryElement> children,
     required Set<LibraryElement> allLibs,
+    required bool Function(LibraryElement lib) mateFilter,
   }) {
     allLibs.add(lib);
     for (final child in children) {
@@ -204,18 +226,23 @@ class LibNode {
       _children.add(LibNode(
         child,
         parent: this,
-        children: child.exportedLibraries,
+        children: child.exportedLibraries.where(mateFilter).toList(),
         allLibs: allLibs,
+        mateFilter: mateFilter,
       ));
     }
   }
 
+  /// 收集所有生成过程中可能用到的依赖类型信息，比如某类有参数Y: class X{X(Y y);}
+  /// 就要知道Y所在的lib，以方便生成时import
   TypeRefers collectAllTypes(bool Function(LibraryElement lib) libFilter) {
     TypeRefers result = TypeRefers();
     for (final mate in toList().where((element) => libFilter(element.lib))) {
+      // 注册mate 库的导出元素
       for (final e in mate.lib.exportNamespace.definedNames.values) {
         result.putIfAbsent(e, () => mate.firstPublicLib);
       }
+      // 注册mate库自己import的相关库的元素，只导入第一层即可，不用向下递归追溯
       for (final importLib in mate.lib.importedLibraries) {
         for (final e in importLib.exportNamespace.definedNames.values) {
           result.putIfAbsent(e, () => importLib);
@@ -227,7 +254,7 @@ class LibNode {
 
   int get level => parent == null ? 0 : parent!.level + 1;
 
-  String get path => parent == null ? lib.identifier : "${lib.identifier}:${parent!.path}";
+  String get path => parent == null ? lib.identifier : "${lib.identifier} | ${parent!.path}";
 
   bool get isPublic => !lib.source.uri.path.startsWith("src/");
 
@@ -268,21 +295,27 @@ void _genLibMate({
     return notPrivate && noRelative;
   }
 
-  bool exportFilter(LibraryExportElement libExport) {
-    bool notPrivate = !path
-        .basename((libExport.uri as DirectiveUriWithLibrary).relativeUriString)
-        .startsWith("_");
-    return notPrivate;
+  bool constructorFilter(ConstructorElement constructor) {
+    return !constructor.isFactory &&
+        !constructor.name.startsWith("_") &&
+        constructor.parameters.isNotEmpty;
   }
 
   bool classFilter(ClassElement clazz) {
     //ignore: private
     //ignore: can not inherited class
-    return !clazz.name.startsWith("_") && !lib.typeProvider.isNonSubtypableClass(clazz);
+    //ignore: no constructors
+    return !clazz.name.startsWith("_") &&
+        !lib.typeProvider.isNonSubtypableClass(clazz) &&
+        clazz.constructors.where(constructorFilter).isNotEmpty;
   }
 
-  bool constructorFilter(ConstructorElement constructor) {
-    return !constructor.isFactory && !constructor.name.startsWith("_");
+  bool exportFilter(LibraryExportElement libExport) {
+    bool notPrivate = !path
+        .basename((libExport.uri as DirectiveUriWithLibrary).relativeUriString)
+        .startsWith("_");
+    return notPrivate &&
+        libExport.library.definingCompilationUnit.classes.where(classFilter).isNotEmpty;
   }
 
   Library buildLib = Library((b) => b
@@ -317,7 +350,7 @@ void _genLibMate({
           ..docs.add("/// ${clazz.getDisplayString(withNullability: true)}")
           ..name = "${clazz.name}Mate"
           ..abstract = clazz.isAbstract
-          // ..extend = refer("${clazz.thisType}", _findRefer(clazz.thisType))
+          ..extend = typeRefers.typeRef(clazz.thisType, inClass: clazz)
           ..types.addAll(clazz.typeParameters
               .map((typeParam) => typeRefers.elementRef(typeParam, inClass: clazz)))
           ..constructors.addAll(
@@ -330,18 +363,28 @@ void _genLibMate({
                 ..requiredParameters.addAll(constructor.parameters
                     .where((e) => !e.isNamed)
                     .map((param) => Parameter((b) => b
-                      ..docs.add("\n// param: ${param.getDisplayString(withNullability: true)} ")
+                      ..docs.add("/// param: ${param.getDisplayString(withNullability: true)} ")
                       ..type = typeRefers.elementRef(param, inClass: clazz)
                       ..name = param.name
                       ..named = false)))
                 ..optionalParameters.addAll(constructor.parameters.where((e) => e.isNamed).map(
                     (param) => Parameter((b) => b
-                      ..docs.add("\n// param: ${param.getDisplayString(withNullability: true)}")
+                      ..docs.add("/// param: ${param.getDisplayString(withNullability: true)}")
                       ..type = typeRefers.elementRef(param, inClass: clazz)
                       ..name = param.name
                       ..named = true
                       ..required = param.isRequired ||
                           param.type.nullabilitySuffix == NullabilitySuffix.none)))
+                ..initializers.add(
+                    refer(constructor.name.isEmpty ? "super" : "super.${constructor.name}")
+                        .call(
+                            constructor.parameters
+                                .where((e) => e.isPositional)
+                                .map((e) => refer(e.name)),
+                            Map.fromEntries(constructor.parameters
+                                .where((e) => e.isNamed)
+                                .map((e) => MapEntry(e.name, refer(e.name)))))
+                        .code)
                 ..body = _constructorBody(constructor))))))));
   var toFile = writeTo(lib);
 
