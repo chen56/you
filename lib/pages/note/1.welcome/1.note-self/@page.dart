@@ -3,13 +3,13 @@ import 'package:flutter_note/experiments/experiment_param_widget.dart';
 import 'package:flutter_note/page.dart';
 
 PageMeta page = PageMeta(
-  shortTitle: "Note机制",
+  shortTitle: "Note机制试验田",
   builder: build,
 );
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-# note 机制介绍
+# note 机制【实验阶段】
 
 ## 可拖动组件，快速实验
 
@@ -24,6 +24,7 @@ build(Pen pen, BuildContext context) {
   );
 ```
   ''');
+
   pen.widgetMate(
     ContainerMate(
       width: 100,

@@ -6,13 +6,15 @@ class Creators {
   static const String column = "Column";
 }
 
-class Nullable<T> {
+class Param {}
+
+class Nullable<T> extends Param {
   T? value;
 
   Nullable(this.value);
 }
 
-class NotNull<T> {
+class NotNull<T> extends Param {
   final T value;
 
   NotNull(this.value);
@@ -47,8 +49,7 @@ class MateNode {
   MateNode(this.creator);
 
   void add(Editor editor) {
-    assert(!_paramMap.containsKey(editor.name),
-        "error:duplicate key: ${editor.name} ");
+    assert(!_paramMap.containsKey(editor.name), "error:duplicate key: ${editor.name} ");
     _paramMap[editor.name] = editor;
     _params.add(editor);
   }
@@ -56,6 +57,10 @@ class MateNode {
   Nullable<T> set_<T>({required Editor<T> editor}) {
     add(editor);
     return Nullable(editor.value);
+  }
+
+  Nullable<T> set2_<T>({required String name, T? init}) {
+    return Nullable(init);
   }
 
   NotNull<T> set<T>({required Editor<T> editor}) {
@@ -138,8 +143,7 @@ class ColumnMate extends Column with WidgetMate {
     mate = MateNode(Creators.column);
 
     mate.set(editor: Dynamic(name: "key", init: key));
-    mate.set(
-        editor: Dynamic(name: "mainAxisAlignment", init: mainAxisAlignment));
+    mate.set(editor: Dynamic(name: "mainAxisAlignment", init: mainAxisAlignment));
     mate.set_(editor: Dynamic(name: "children", init: children));
   }
 
@@ -168,13 +172,14 @@ class CenterMate extends Center with WidgetMate {
     double? heightFactor,
     Widget? child,
   }) : super(
-          key: key,
+          key: set_(name: "widthFactor", init: key).value,
           widthFactor: widthFactor,
           heightFactor: heightFactor,
           child: child,
         ) {
     mate = MateNode(Creators.column);
     mate.set_(editor: Dynamic(name: "key", init: key));
+    double? d = mate.set2_(name: "widthFactor", init: widthFactor).value;
     mate.set_(editor: Double(name: "widthFactor", init: widthFactor));
     mate.set_(editor: Double(name: "heightFactor", init: heightFactor));
     mate.set_(editor: Dynamic(name: "child", init: child));
@@ -182,6 +187,8 @@ class CenterMate extends Center with WidgetMate {
 
   @override
   static CenterMate create(MateNode meta) {
+    double x = meta.get("widthFactor");
+    double? x2 = meta.get("widthFactor");
     return CenterMate(
       key: meta.get("key"),
       widthFactor: meta.get("widthFactor"),

@@ -51,11 +51,7 @@ class Path<T> {
   List<Path> get children => List.unmodifiable(_children);
 
   Path<C> put<C>(String fullPath, PageMeta<C>? meta) {
-    var p = fullPath
-        .split("/")
-        .map((e) => e.trim())
-        .where((e) => e.isNotEmpty)
-        .toList();
+    var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
     var path = _ensurePath(p);
     assert(path._meta == null,
         " ${path} add kid '$fullPath': duplicate put , ${path._meta} already exists ");
@@ -68,8 +64,7 @@ class Path<T> {
       return this;
     }
     String name = nameList[0];
-    assert(name != "" && name != "/",
-        "path:$nameList, path[0]:'${name}' must not be '' and '/' ");
+    assert(name != "" && name != "/", "path:$nameList, path[0]:'${name}' must not be '' and '/' ");
     var next = _childrenMap.putIfAbsent(name, () {
       var child = Path._child(name, parent: this);
       _children.add(child);
@@ -139,8 +134,7 @@ class Path<T> {
 
   Path? kid(String path) {
     Path? result = this;
-    for (var split
-        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._childrenMap[split];
       if (result == null) break;
     }
@@ -190,6 +184,7 @@ abstract class Pen {
   void markdown(String content);
 
   void widgetMate(WidgetMate widgetMate);
+
   void widgetSnippet(WidgetMate builder(MateNode node));
 }
 
@@ -276,8 +271,7 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
         child: Center(
           child: Text(
             "WARN：当前Path上未配置任何Layout: ${current.path}",
-            style: theme.textTheme.titleLarge
-                ?.copyWith(color: theme.colorScheme.error),
+            style: theme.textTheme.titleLarge?.copyWith(color: theme.colorScheme.error),
           ),
         ),
       ),
