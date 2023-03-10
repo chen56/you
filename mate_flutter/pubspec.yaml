@@ -4,7 +4,8 @@ version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: '>=3.0.0-218.1.beta <4.0.0'
+#  sdk: '>=3.0.0-218.1.beta <4.0.0'
+  sdk: ">=2.18.0 <3.0.0"
 
 # Add regular dependencies here.
 dependencies:
