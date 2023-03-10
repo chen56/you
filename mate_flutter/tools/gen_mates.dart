@@ -21,7 +21,7 @@ main() async {
   _log("## main");
   List<String> include = [
     "package:flutter/",
-    // "package:flutter/src/material/button.dart",
+    "package:flutter/src/material/button.dart",
     // "c/src/cupertino/activity_indicator.dart",
     // "package:flutter/src/cupertino/bottom_tab_bar.dart"
     // "package:flutter/src/animation/curves.dart"
@@ -78,7 +78,9 @@ Future<void> gen({
   _log("## gen lib mate, list all:");
   root.debugLog();
   _log("## gen lib mate start:");
-  for (var lib in allMateLibs.where(mateFilter).where(libFilter).toList()) {
+  for (var lib in allMateLibs.where(mateFilter).toList()) {
+    _log("## gen lib mate: ${lib.identifier}");
+
     _genLibMate(
         writeFS: writeFS,
         writeTo: writeTo,
@@ -285,7 +287,7 @@ bool classFilter(ClassElement clazz) {
   //ignore: can not inherited class
   //ignore: no constructors
   return !clazz.name.startsWith("_") &&
-      clazz.library.typeProvider.isNonSubtypableClass(clazz) &&
+      !clazz.library.typeProvider.isNonSubtypableClass(clazz) &&
       clazz.constructors.where(constructorFilter).isNotEmpty;
 }
 

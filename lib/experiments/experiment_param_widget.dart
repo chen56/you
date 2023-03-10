@@ -172,7 +172,7 @@ class CenterMate extends Center with WidgetMate {
     double? heightFactor,
     Widget? child,
   }) : super(
-          key: set_(name: "widthFactor", init: key).value,
+          key: ValueKey("1"),
           widthFactor: widthFactor,
           heightFactor: heightFactor,
           child: child,
