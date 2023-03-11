@@ -6,16 +6,16 @@ abstract class Param<T> {
   T get value;
 }
 
-class ParamNode<T> extends Param<T> {
-  final Map<String, ParamNode> _paramMap = {};
-  final T Function(ParamNode<T> mate)? builder;
+class Params<T> extends Param<T> {
+  final Map<String, Params> _paramMap = {};
+  final T Function(Params<T> mate)? builder;
 
   @override
   final T init;
 
   final T _value;
 
-  ParamNode({required this.init, this.builder}) : _value = init;
+  Params({required this.init, this.builder}) : _value = init;
 
   bool get isNullable => utils.isNullable<T>();
 
@@ -26,7 +26,7 @@ class ParamNode<T> extends Param<T> {
     assert(
         !_paramMap.containsKey(name), "error:duplicate param name: $name , old:${_paramMap[name]}");
 
-    var result = ParamNode(init: init);
+    var result = Params(init: init);
     return _paramMap[name] = result;
   }
 
@@ -40,12 +40,12 @@ class ParamNode<T> extends Param<T> {
 }
 
 mixin Mate<T> {
-  late final ParamNode<T> mate;
+  late final Params<T> mateParams;
 }
 
 mixin WidgetMate<T> on Widget implements Mate<T> {
   @override
-  late final ParamNode<T> mate;
+  late final Params<T> mateParams;
 }
 
 class A with Mate<String> {}

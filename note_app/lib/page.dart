@@ -185,7 +185,7 @@ abstract class Pen {
 
   void widgetMate(WidgetMate widgetMate);
 
-  void widgetSnippet(WidgetMate Function(ParamNode node) builder);
+  void widgetSnippet(WidgetMate Function(Params node) builder);
 }
 
 class MateConfig {

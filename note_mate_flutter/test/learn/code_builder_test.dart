@@ -4,8 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:test/test.dart';
 
 final _dartfmt = DartFormatter(pageWidth: 120);
+
 typedef PageRouteFactory = PageRoute<T> Function<T>(RouteSettings settings);
+
 PageRouteFactory? x;
+
 void main() {
   test('Class.constructor', () {
     var lib = Library((b) => b
@@ -90,6 +93,29 @@ void main() {
 
     print(_dartfmt.format('${lib.accept(DartEmitter.scoped())}'));
   });
+  test('expression.assign', () {
+    var x = refer("mateParams")
+        .assign(refer("Params").call([], {
+          "init": refer("this"),
+          "builder": Method((b) => b
+            ..name = ''
+            ..requiredParameters.add(Parameter((b) => b.name = "p"))
+            ..body = refer("ContainerMate").call([], {
+              "key": refer("p.get").call([literal("key")]).property("value"),
+              "width": refer("p.get").call([literal("width")]).property("value"),
+            }).code).closure,
+        }))
+        .code;
+    print(_noformat(x));
+  });
+}
+
+String _format(Spec item) {
+  return _dartfmt.format('${item.accept(DartEmitter.scoped())}');
+}
+
+String _noformat(Spec item) {
+  return '${item.accept(DartEmitter.scoped())}';
 }
 
 // Function(

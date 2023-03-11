@@ -18,25 +18,25 @@ class ContainerMate extends Container with WidgetMate<ContainerMate> {
           height: height,
           child: child,
         ) {
-    mate = ParamNode(
+    mateParams = Params(
         init: this,
-        builder: (mate) => ContainerMate(
-              key: mate.getValue<dynamic>("key"),
-              alignment: mate.getValue<dynamic>("alignment"),
-              color: mate.getValue<dynamic>("color"),
-              clipBehavior: mate.getValue<dynamic>("clipBehavior"),
-              width: mate.getValue<double>("width"),
-              height: mate.getValue<double>("height"),
-              child: mate.getValue<dynamic>("child"),
+        builder: (p) => ContainerMate(
+              key: p.getValue("key"),
+              alignment: p.getValue("alignment"),
+              color: p.getValue("color"),
+              clipBehavior: p.getValue("clipBehavior"),
+              width: p.getValue("width"),
+              height: p.getValue("height"),
+              child: p.getValue("child"),
             ));
     //这里会换成代码生成，凡是可以取到类型的，都可以支持编辑
-    mate.set(name: "key", init: key);
-    mate.set(name: "alignment", init: alignment);
-    mate.set(name: "color", init: color);
-    mate.set(name: "clipBehavior", init: clipBehavior);
-    widthMate = mate.set(name: "width", init: width);
-    heightMate = mate.set(name: "height", init: height);
-    mate.set(name: "child", init: child);
+    mateParams.set(name: "key", init: key);
+    mateParams.set(name: "alignment", init: alignment);
+    mateParams.set(name: "color", init: color);
+    mateParams.set(name: "clipBehavior", init: clipBehavior);
+    widthMate = mateParams.set(name: "width", init: width);
+    heightMate = mateParams.set(name: "height", init: height);
+    mateParams.set(name: "child", init: child);
   }
 
   ContainerMate configMate({required void Function(ContainerMate self) config}) {
@@ -50,7 +50,7 @@ class ColumnMate extends Column with WidgetMate<ColumnMate> {
     super.mainAxisAlignment,
     List<Widget> children = const <Widget>[],
   }) : super(children: children) {
-    mate = ParamNode(
+    mateParams = Params(
         init: this,
         builder: (p) => ColumnMate(
               key: p.getValue("key"),
@@ -58,9 +58,9 @@ class ColumnMate extends Column with WidgetMate<ColumnMate> {
               children: p.getValue("children"),
             ));
 
-    mate.set(name: "key", init: key);
-    mate.set(name: "mainAxisAlignment", init: mainAxisAlignment);
-    mate.set(name: "children", init: children);
+    mateParams.set(name: "key", init: key);
+    mateParams.set(name: "mainAxisAlignment", init: mainAxisAlignment);
+    mateParams.set(name: "children", init: children);
   }
 }
 
@@ -76,7 +76,7 @@ class CenterMate extends Center with WidgetMate<CenterMate> {
           heightFactor: heightFactor,
           child: child,
         ) {
-    mate = ParamNode(
+    mateParams = Params(
         init: this,
         builder: (p) => CenterMate(
               key: p.getValue("key"),
@@ -84,9 +84,9 @@ class CenterMate extends Center with WidgetMate<CenterMate> {
               heightFactor: p.getValue("heightFactor"),
               child: p.getValue("child"),
             ));
-    mate.set(name: "key", init: key);
-    mate.set(name: "widthFactor", init: widthFactor);
-    mate.set(name: "heightFactor", init: heightFactor);
-    mate.set(name: "child", init: child);
+    mateParams.set(name: "key", init: key);
+    mateParams.set(name: "widthFactor", init: widthFactor);
+    mateParams.set(name: "heightFactor", init: heightFactor);
+    mateParams.set(name: "child", init: child);
   }
 }
