@@ -5,6 +5,10 @@
 ///     20230228 新进展 analyzer的element机制提供类似功能
 /// 这种情况，都直接给super，回避掉这个问题:Container(super.clipBehavior)
 
+// ！！！！！！！！
+// export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
+// mate机制有点导出问题
+
 class TODO_js_static_site {
   //静态lite web版
   //https://www.patterns.dev/posts/islands-architecture/

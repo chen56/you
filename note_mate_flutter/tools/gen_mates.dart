@@ -349,61 +349,85 @@ void _genLibMate({
       ..hide.addAll(libExport.combinators
           .whereType<HideElementCombinator>()
           .expand((hide) => hide.hiddenNames)))))
-    ..body.addAll(lib.definingCompilationUnit.classes.where(classFilter).map((clazz) => Class((b) =>
-        b
-          ..docs.add("/// ${clazz.getDisplayString(withNullability: true)}")
-          ..name = "${clazz.name}\$Mate"
-          ..abstract = clazz.isAbstract
-          ..extend = typeRefers.typeRef(clazz.thisType, inClass: clazz)
-          ..mixins.add(TypeReference((b) => b
-            ..symbol = clazz.isSubClassOf(
-                    className: "Widget", package: "package:flutter/src/widgets/framework.dart")
-                ? "WidgetMate"
-                : "Mate"
-            ..types.add(refer("${clazz.name}\$Mate"))))
-          ..types.addAll(clazz.typeParameters
-              .map((typeParam) => typeRefers.elementRef(typeParam, inClass: clazz)))
-          ..constructors.addAll(
-              clazz.constructors.where(constructorFilter).map((constructor) => Constructor((b) {
-                    b
-                      ..name = constructor.name.isEmpty ? null : constructor.name
-                      ..docs.addAll(["/// $constructor"])
-                      // A const constructor can't have a body. but we need body.
-                      ..constant = false
-                      ..factory = constructor.isFactory
-                      ..requiredParameters.addAll(constructor.parameters
-                          .where((e) => !e.isNamed)
-                          .map((param) => Parameter((b) => b
-                            ..docs
-                                .add("/// param: ${param.getDisplayString(withNullability: true)} ")
-                            ..type = typeRefers.elementRef(param, inClass: clazz)
-                            ..name = param.name
-                            ..named = false)))
-                      ..optionalParameters.addAll(constructor.parameters
-                          .where((e) => e.isNamed)
-                          .map((param) => Parameter((b) => b
-                            ..docs
-                                .add("/// param: ${param.getDisplayString(withNullability: true)}")
-                            ..type = typeRefers.elementRef(param, inClass: clazz)
-                            ..name = param.name
-                            ..named = true
-                            ..required = param.isRequired ||
-                                param.type.nullabilitySuffix == NullabilitySuffix.none)))
-                      ..initializers.add(
-                          refer(constructor.name.isEmpty ? "super" : "super.${constructor.name}")
-                              .call(
-                                  constructor.parameters
-                                      .where((e) => e.isPositional)
-                                      .map((e) => refer(e.name)),
-                                  Map.fromEntries(constructor.parameters
-                                      .where((e) => e.isNamed)
-                                      .map((e) => MapEntry(e.name, refer(e.name)))))
-                              .code)
-                      ..body = _constructorBody(constructor);
-                  })))))));
+    ..body.addAll(lib.definingCompilationUnit.classes.where(classFilter).map((clazz) {
+      String mateClassName = "${clazz.name}\$Mate";
+
+      return Class((b) => b
+        ..docs.add("/// ${clazz.getDisplayString(withNullability: true)}")
+        ..name = mateClassName
+        ..abstract = clazz.isAbstract
+        ..extend = typeRefers.typeRef(clazz.thisType, inClass: clazz)
+        ..mixins.add(TypeReference((b) => b
+          ..symbol = clazz.isSubClassOf(
+                  className: "Widget", package: "package:flutter/src/widgets/framework.dart")
+              ? "WidgetMate"
+              : "Mate"
+          ..types.add(refer(mateClassName))))
+        ..types.addAll(clazz.typeParameters
+            .map((typeParam) => typeRefers.elementRef(typeParam, inClass: clazz)))
+        ..constructors.addAll(clazz.constructors.where(constructorFilter).map((constructor) {
+          String mateConstructorCallName =
+              constructor.name.isEmpty ? mateClassName : "$mateClassName.${constructor.name}";
+
+          return Constructor((b) {
+            b
+              ..name = constructor.name.isEmpty ? null : constructor.name
+              ..docs.addAll(["/// $constructor"])
+              // A const constructor can't have a body. but we need body.
+              ..constant = false
+              ..factory = constructor.isFactory
+              ..requiredParameters.addAll(
+                  constructor.parameters.where((e) => !e.isNamed).map((param) => Parameter((b) => b
+                    ..docs.add("/// param: ${param.getDisplayString(withNullability: true)} ")
+                    ..type = typeRefers.elementRef(param, inClass: clazz)
+                    ..name = param.name
+                    ..named = false)))
+              ..optionalParameters.addAll(constructor.parameters.where((e) => e.isNamed).map(
+                  (param) => Parameter((b) => b
+                    ..docs.add("/// param: ${param.getDisplayString(withNullability: true)}")
+                    ..type = typeRefers.elementRef(param, inClass: clazz)
+                    ..name = param.name
+                    ..named = true
+                    ..required = param.isRequired ||
+                        param.type.nullabilitySuffix == NullabilitySuffix.none)))
+              ..initializers.add(
+                  refer(constructor.name.isEmpty ? "super" : "super.${constructor.name}")
+                      .call(
+                          constructor.parameters
+                              .where((e) => e.isPositional)
+                              .map((e) => refer(e.name)),
+                          Map.fromEntries(constructor.parameters
+                              .where((e) => e.isNamed)
+                              .map((e) => MapEntry(e.name, refer(e.name)))))
+                      .code)
+              // ref: package:note/lib/experiment_mates.dart
+              ..body = Block.of([
+                refer("mateParams")
+                    .assign(refer("Params", "package:note/mate.dart").call([], {
+                      "init": refer("this"),
+                      "builder": Method((b) => b
+                        ..name = ''
+                        ..requiredParameters.add(Parameter((b) => b.name = "p"))
+                        ..body = refer(mateConstructorCallName)
+                            .call(
+                                constructor.parameters
+                                    .where((e) => e.isPositional)
+                                    .map((e) => refer("p.getValue").call([code.literal(e.name)])),
+                                Map.fromEntries(constructor.parameters.where((e) => e.isNamed).map(
+                                    (e) => MapEntry(
+                                        e.name, refer("p.getValue").call([literal(e.name)])))))
+                            .code).closure,
+                    }))
+                    .statement,
+                ...constructor.parameters
+                    .map((e) => Code("mateParams.set(name:'${e.name}',init:${e.name});")),
+              ]);
+          });
+        })));
+    })));
   var toFile = writeTo(lib);
 
-  String code = buildLib
+  String writeContent = buildLib
       .accept(
         DartEmitter(
           allocator: Allocator(), // reference的 import 不增加前缀 ”_i1“ 这种形式
@@ -411,37 +435,9 @@ void _genLibMate({
         ),
       )
       .toString();
-  code = dartFormatter.format(code);
+  writeContent = dartFormatter.format(writeContent);
   writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
-  writeFS.file(toFile).writeAsStringSync(code);
-}
-
-// ref: package:note/lib/experiment_mates.dart
-Code? _constructorBody(ConstructorElement constructor) {
-  String className = "${constructor.enclosingElement.name}\$Mate";
-  String constructorName = constructor.name.isEmpty ? className : "$className.${constructor.name}";
-  return Block.of([
-    refer("mateParams")
-        .assign(refer("Params", "package:note/mate.dart").call([], {
-          "init": refer("this"),
-          "builder": Method((b) => b
-            ..name = ''
-            ..requiredParameters.add(Parameter((b) => b.name = "p"))
-            ..body = refer(constructorName)
-                .call(
-                    constructor.parameters
-                        .where((e) => e.isPositional)
-                        .map((e) => refer("p.getValue").call([code.literal(e.name)])),
-                    Map.fromEntries(constructor.parameters
-                        .where((e) => e.isNamed)
-                        .map((e) => MapEntry(e.name, refer("p.getValue").call([literal(e.name)])))))
-                .code).closure,
-        }))
-        .statement,
-    // ...constructor.parameters.map((e) => refer("mateParams.set")
-    //     .call([], {"name": literal(e.name), "init": refer("${e.name}")}).statement),
-    ...constructor.parameters.map((e) => Code("mateParams.set(name:'${e.name}',init:${e.name});")),
-  ]);
+  writeFS.file(toFile).writeAsStringSync(writeContent);
 }
 
 _log(Object? o) {
