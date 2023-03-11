@@ -5,8 +5,6 @@ import 'dart:ui';
 import 'dart:core';
 import 'package:note/mate.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'events.dart' show PointerDownEvent, PointerEvent;
 
 /// class ForcePressDetails
 class ForcePressDetails$Mate extends ForcePressDetails with Mate<ForcePressDetails$Mate> {

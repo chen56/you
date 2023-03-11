@@ -4,7 +4,6 @@ import 'package:flutter/src/gestures/velocity_tracker.dart';
 import 'dart:ui';
 import 'package:note/mate.dart';
 import 'dart:core';
-export 'dart:ui' show Offset, PointerDeviceKind;
 
 /// class Velocity
 class Velocity$Mate extends Velocity with Mate<Velocity$Mate> {

@@ -5,11 +5,6 @@ import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 import 'package:note/mate.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'arena.dart' show GestureDisposition;
-export 'drag.dart' show Drag;
-export 'events.dart' show PointerDownEvent;
-export 'gesture_settings.dart' show DeviceGestureSettings;
 
 /// class ImmediateMultiDragGestureRecognizer extends MultiDragGestureRecognizer
 class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGestureRecognizer

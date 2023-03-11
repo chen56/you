@@ -7,7 +7,6 @@ import 'package:note/mate.dart';
 import 'dart:ui';
 import 'package:flutter/src/cupertino/text_theme.dart';
 import 'dart:core';
-export 'package:flutter/foundation.dart' show Brightness;
 
 /// class CupertinoTheme extends StatelessWidget
 class CupertinoTheme$Mate extends CupertinoTheme with WidgetMate<CupertinoTheme$Mate> {

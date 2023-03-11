@@ -4,7 +4,6 @@ import 'package:flutter/src/physics/friction_simulation.dart';
 import 'dart:core';
 import 'package:flutter/src/physics/tolerance.dart';
 import 'package:note/mate.dart';
-export 'tolerance.dart' show Tolerance;
 
 /// class FrictionSimulation extends Simulation
 class FrictionSimulation$Mate extends FrictionSimulation with Mate<FrictionSimulation$Mate> {

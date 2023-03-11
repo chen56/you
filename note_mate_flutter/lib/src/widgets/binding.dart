@@ -5,7 +5,6 @@ import 'package:flutter/src/widgets/binding.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:ui' show AppLifecycleState, Locale;
 
 /// class RenderObjectToWidgetAdapter<T extends RenderObject> extends RenderObjectWidget
 class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObjectToWidgetAdapter<T>

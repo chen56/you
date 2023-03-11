@@ -6,7 +6,6 @@ import 'dart:core';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/inline_span.dart';
 import 'package:flutter/src/painting/strut_style.dart';
-export 'package:flutter/services.dart' show TextRange, TextSelection;
 
 /// class PlaceholderDimensions
 class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate<PlaceholderDimensions$Mate> {

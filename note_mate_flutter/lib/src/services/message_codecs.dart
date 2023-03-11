@@ -2,9 +2,6 @@
 
 import 'package:flutter/src/services/message_codecs.dart';
 import 'package:note/mate.dart';
-export 'dart:typed_data' show ByteData;
-export 'package:flutter/foundation.dart' show ReadBuffer, WriteBuffer;
-export 'message_codec.dart' show MethodCall;
 
 /// class StandardMethodCodec implements MethodCodec
 class StandardMethodCodec$Mate extends StandardMethodCodec with Mate<StandardMethodCodec$Mate> {

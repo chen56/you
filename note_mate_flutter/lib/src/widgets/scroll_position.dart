@@ -4,7 +4,6 @@ import 'package:flutter/src/widgets/scroll_position.dart';
 import 'package:flutter/src/widgets/scroll_metrics.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
-export 'scroll_activity.dart' show ScrollHoldController;
 
 /// class ScrollMetricsNotification extends Notification with ViewportNotificationMixin
 class ScrollMetricsNotification$Mate extends ScrollMetricsNotification with Mate<ScrollMetricsNotification$Mate> {

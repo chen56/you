@@ -24,7 +24,6 @@ import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/widgets/magnifier.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/services.dart' show SmartDashesType, SmartQuotesType;
 
 /// class TextFormField extends FormField<String>
 class TextFormField$Mate extends TextFormField with WidgetMate<TextFormField$Mate> {

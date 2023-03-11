@@ -3,8 +3,6 @@
 import 'package:flutter/src/services/asset_bundle.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:typed_data' show ByteData;
-export 'dart:ui' show ImmutableBuffer;
 
 /// class NetworkAssetBundle extends AssetBundle
 class NetworkAssetBundle$Mate extends NetworkAssetBundle with Mate<NetworkAssetBundle$Mate> {

@@ -13,18 +13,6 @@ import 'package:note/mate.dart';
 import 'dart:io';
 import 'package:flutter/src/services/asset_bundle.dart';
 import 'dart:typed_data';
-export 'package:flutter/painting.dart'
-    show
-        AssetImage,
-        ExactAssetImage,
-        FileImage,
-        FilterQuality,
-        ImageConfiguration,
-        ImageInfo,
-        ImageProvider,
-        ImageStream,
-        MemoryImage,
-        NetworkImage;
 
 /// class Image extends StatefulWidget
 class Image$Mate extends Image with WidgetMate<Image$Mate> {

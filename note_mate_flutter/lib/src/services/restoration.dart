@@ -3,7 +3,6 @@
 import 'package:flutter/src/services/restoration.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:typed_data' show Uint8List;
 
 /// class RestorationBucket
 class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBucket$Mate> {

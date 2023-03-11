@@ -20,8 +20,6 @@ import 'package:flutter/src/gestures/force_press.dart';
 import 'package:flutter/src/gestures/tap.dart';
 import 'package:flutter/src/gestures/long_press.dart';
 import 'package:flutter/src/rendering/proxy_box.dart';
-export 'package:flutter/rendering.dart' show TextSelectionPoint;
-export 'package:flutter/services.dart' show TextSelectionDelegate;
 
 /// class TextSelectionOverlay
 class TextSelectionOverlay$Mate extends TextSelectionOverlay with Mate<TextSelectionOverlay$Mate> {

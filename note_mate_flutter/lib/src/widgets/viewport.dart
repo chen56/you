@@ -9,7 +9,6 @@ import 'package:flutter/src/rendering/viewport.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/rendering.dart' show AxisDirection, GrowthDirection;
 
 /// class Viewport extends MultiChildRenderObjectWidget
 class Viewport$Mate extends Viewport with WidgetMate<Viewport$Mate> {

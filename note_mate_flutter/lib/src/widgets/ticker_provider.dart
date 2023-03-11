@@ -5,7 +5,6 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/scheduler.dart' show TickerProvider;
 
 /// class TickerMode extends StatefulWidget
 class TickerMode$Mate extends TickerMode with WidgetMate<TickerMode$Mate> {

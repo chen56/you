@@ -6,8 +6,6 @@ import 'dart:core';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/rendering/sliver_grid.dart';
-export 'package:flutter/rendering.dart'
-    show SliverGridDelegate, SliverGridDelegateWithFixedCrossAxisCount, SliverGridDelegateWithMaxCrossAxisExtent;
 
 /// class SliverChildBuilderDelegate extends SliverChildDelegate
 class SliverChildBuilderDelegate$Mate extends SliverChildBuilderDelegate with Mate<SliverChildBuilderDelegate$Mate> {

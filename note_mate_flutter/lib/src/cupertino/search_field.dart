@@ -16,7 +16,6 @@ import 'package:flutter/src/widgets/icon.dart';
 import 'package:flutter/src/cupertino/text_field.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/services.dart' show SmartDashesType, SmartQuotesType;
 
 /// class CupertinoSearchTextField extends StatefulWidget
 class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with WidgetMate<CupertinoSearchTextField$Mate> {

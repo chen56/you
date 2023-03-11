@@ -6,10 +6,6 @@ import 'package:note/mate.dart';
 import 'dart:ui';
 import 'package:flutter/src/services/autofill.dart';
 import 'package:flutter/src/services/text_editing.dart';
-export 'dart:ui' show Brightness, FontWeight, Offset, Rect, Size, TextAlign, TextDirection, TextPosition, TextRange;
-export 'package:vector_math/vector_math_64.dart' show Matrix4;
-export 'autofill.dart' show AutofillConfiguration, AutofillScope;
-export 'text_editing.dart' show TextSelection;
 
 /// class TextInputType
 class TextInputType$Mate extends TextInputType with Mate<TextInputType$Mate> {

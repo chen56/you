@@ -7,14 +7,6 @@ import 'dart:ui';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/foundation/assertions.dart';
 import 'package:flutter/src/rendering/object.dart';
-export 'package:flutter/foundation.dart'
-    show factory, immutable, mustCallSuper, optionalTypeArgs, protected, required, visibleForTesting;
-export 'package:flutter/foundation.dart'
-    show ErrorDescription, ErrorHint, ErrorSummary, FlutterError, debugPrint, debugPrintStack;
-export 'package:flutter/foundation.dart' show ValueChanged, ValueGetter, ValueSetter, VoidCallback;
-export 'package:flutter/foundation.dart' show DiagnosticLevel, DiagnosticsNode;
-export 'package:flutter/foundation.dart' show Key, LocalKey, ValueKey;
-export 'package:flutter/rendering.dart' show RenderBox, RenderObject, debugDumpLayerTree, debugDumpRenderTree;
 
 /// class ObjectKey extends LocalKey
 class ObjectKey$Mate extends ObjectKey with Mate<ObjectKey$Mate> {

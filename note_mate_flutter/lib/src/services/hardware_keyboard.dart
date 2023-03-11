@@ -5,10 +5,6 @@ import 'package:flutter/src/services/keyboard_key.g.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
 import 'package:flutter/src/services/raw_keyboard.dart';
-export 'dart:ui' show KeyData;
-export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
-export 'keyboard_key.g.dart' show LogicalKeyboardKey, PhysicalKeyboardKey;
-export 'raw_keyboard.dart' show RawKeyEvent, RawKeyboard;
 
 /// class KeyDownEvent extends KeyEvent
 class KeyDownEvent$Mate extends KeyDownEvent with Mate<KeyDownEvent$Mate> {

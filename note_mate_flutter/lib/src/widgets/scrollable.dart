@@ -11,7 +11,6 @@ import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'dart:ui';
 import 'package:note/mate.dart';
 import 'package:flutter/src/widgets/scroll_metrics.dart';
-export 'package:flutter/physics.dart' show Tolerance;
 
 /// class Scrollable extends StatefulWidget
 class Scrollable$Mate extends Scrollable with WidgetMate<Scrollable$Mate> {

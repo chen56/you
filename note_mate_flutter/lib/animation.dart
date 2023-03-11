@@ -2,7 +2,6 @@
 
 library animation;
 
-export 'package:flutter/scheduler.dart' show TickerCanceled;
 export 'src/animation/animation.dart';
 export 'src/animation/animation_controller.dart';
 export 'src/animation/animations.dart';

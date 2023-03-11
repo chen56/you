@@ -6,9 +6,6 @@ import 'package:flutter/src/services/message_codec.dart';
 import 'package:flutter/src/services/binary_messenger.dart';
 import 'package:note/mate.dart';
 export '_background_isolate_binary_messenger_io.dart';
-export 'binary_messenger.dart' show BinaryMessenger;
-export 'binding.dart' show RootIsolateToken;
-export 'message_codec.dart' show MessageCodec, MethodCall, MethodCodec;
 
 /// class BasicMessageChannel<T>
 class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate<BasicMessageChannel$Mate> {

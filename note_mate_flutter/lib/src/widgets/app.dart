@@ -13,7 +13,6 @@ import 'package:flutter/src/widgets/shortcuts.dart';
 import 'package:flutter/src/widgets/actions.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/widgets/router.dart';
-export 'dart:ui' show Locale;
 
 /// class WidgetsApp extends StatefulWidget
 class WidgetsApp$Mate extends WidgetsApp with WidgetMate<WidgetsApp$Mate> {

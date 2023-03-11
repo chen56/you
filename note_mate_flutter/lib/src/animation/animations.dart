@@ -6,9 +6,6 @@ import 'package:flutter/src/animation/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/animation/curves.dart';
 import 'dart:ui';
-export 'dart:ui' show VoidCallback;
-export 'animation.dart' show Animation, AnimationStatus, AnimationStatusListener;
-export 'curves.dart' show Curve;
 
 /// class AlwaysStoppedAnimation<T> extends Animation<T>
 class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T> with Mate<AlwaysStoppedAnimation$Mate> {

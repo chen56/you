@@ -5,9 +5,6 @@ import 'dart:core';
 import 'package:flutter/src/services/text_editing.dart';
 import 'dart:ui';
 import 'package:note/mate.dart';
-export 'dart:ui' show TextRange;
-export 'text_editing.dart' show TextSelection;
-export 'text_input.dart' show TextEditingValue;
 
 /// class TextEditingDeltaInsertion extends TextEditingDelta
 class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate<TextEditingDeltaInsertion$Mate> {

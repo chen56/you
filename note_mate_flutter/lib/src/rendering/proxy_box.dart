@@ -21,8 +21,6 @@ import 'package:flutter/src/gestures/long_press.dart';
 import 'package:flutter/src/gestures/drag_details.dart';
 import 'package:flutter/src/semantics/semantics.dart';
 import 'package:flutter/src/rendering/layer.dart';
-export 'package:flutter/gestures.dart'
-    show PointerCancelEvent, PointerDownEvent, PointerEvent, PointerMoveEvent, PointerUpEvent;
 
 /// class RenderProxyBox extends RenderBox with RenderObjectWithChildMixin<RenderBox>, RenderProxyBoxMixin<RenderBox>
 class RenderProxyBox$Mate extends RenderProxyBox with Mate<RenderProxyBox$Mate> {

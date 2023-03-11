@@ -22,7 +22,7 @@ main() async {
   List<String> include = [
     "package:flutter/",
     // "package:flutter/src/material/button.dart",
-    "package:flutter/src/material/bottom_sheet.dart",
+    "package:flutter/src/gestures/team.dart",
     // "package:flutter/src/cupertino/bottom_tab_bar.dart"
     // "package:flutter/src/animation/curves.dart"
   ];
@@ -340,15 +340,19 @@ void _genLibMate({
     //   ..hide.addAll(libImport.combinators
     //       .whereType<HideElementCombinator>()
     //       .expand((hide) => hide.hiddenNames)))))
-    ..directives.addAll(lib.libraryExports.map((libExport) => Directive((b) => b
-      ..type = DirectiveType.export
-      ..url = (libExport.uri as DirectiveUriWithLibrary).relativeUriString
-      ..show.addAll(libExport.combinators
-          .whereType<ShowElementCombinator>()
-          .expand((show) => show.shownNames))
-      ..hide.addAll(libExport.combinators
-          .whereType<HideElementCombinator>()
-          .expand((hide) => hide.hiddenNames)))))
+    // 如果有combinators就别导出了
+    // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
+    // 瞎导出会导出不存在的元素
+    ..directives.addAll(lib.libraryExports.where((e) => e.combinators.length == 0).map(
+        (libExport) => Directive((b) => b
+          ..type = DirectiveType.export
+          ..url = (libExport.uri as DirectiveUriWithLibrary).relativeUriString
+          ..show.addAll(libExport.combinators
+              .whereType<ShowElementCombinator>()
+              .expand((show) => show.shownNames))
+          ..hide.addAll(libExport.combinators
+              .whereType<HideElementCombinator>()
+              .expand((hide) => hide.hiddenNames)))))
     ..body.addAll(lib.definingCompilationUnit.classes.where(classFilter).map((clazz) {
       String mateClassName = "${clazz.name}\$Mate";
 

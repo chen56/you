@@ -4,10 +4,6 @@ import 'package:flutter/src/animation/animation_controller.dart';
 import 'dart:core';
 import 'package:flutter/src/scheduler/ticker.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/physics.dart' show Simulation, SpringDescription;
-export 'package:flutter/scheduler.dart' show TickerFuture, TickerProvider;
-export 'animation.dart' show Animation, AnimationStatus;
-export 'curves.dart' show Curve;
 
 /// class AnimationController extends Animation<double> with AnimationEagerListenerMixin, AnimationLocalListenersMixin, AnimationLocalStatusListenersMixin
 class AnimationController$Mate extends AnimationController with Mate<AnimationController$Mate> {

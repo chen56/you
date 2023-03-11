@@ -8,7 +8,6 @@ import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
 import 'package:flutter/src/painting/decoration_image.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/painting.dart' show BoxFit, ImageRepeat;
 
 /// class RenderImage extends RenderBox
 class RenderImage$Mate extends RenderImage with Mate<RenderImage$Mate> {

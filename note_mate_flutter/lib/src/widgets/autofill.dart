@@ -4,7 +4,6 @@ import 'package:flutter/src/widgets/autofill.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/services.dart' show AutofillHints;
 
 /// class AutofillGroup extends StatefulWidget
 class AutofillGroup$Mate extends AutofillGroup with WidgetMate<AutofillGroup$Mate> {

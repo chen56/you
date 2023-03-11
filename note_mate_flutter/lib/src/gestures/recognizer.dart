@@ -3,13 +3,6 @@
 import 'package:flutter/src/gestures/recognizer.dart';
 import 'dart:ui';
 import 'package:note/mate.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
-export 'package:vector_math/vector_math_64.dart' show Matrix4;
-export 'arena.dart' show GestureDisposition;
-export 'events.dart' show PointerDownEvent, PointerEvent, PointerPanZoomStartEvent;
-export 'gesture_settings.dart' show DeviceGestureSettings;
-export 'team.dart' show GestureArenaTeam;
 
 /// class OffsetPair
 class OffsetPair$Mate extends OffsetPair with Mate<OffsetPair$Mate> {

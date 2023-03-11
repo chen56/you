@@ -2,7 +2,6 @@
 
 import 'package:flutter/src/foundation/change_notifier.dart';
 import 'package:note/mate.dart';
-export 'dart:ui' show VoidCallback;
 
 /// class ValueNotifier<T> extends ChangeNotifier implements ValueListenable<T>
 class ValueNotifier$Mate<T> extends ValueNotifier<T> with Mate<ValueNotifier$Mate> {

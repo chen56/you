@@ -5,9 +5,6 @@ import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 import 'package:note/mate.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'events.dart' show PointerDownEvent;
-export 'tap.dart' show GestureTapCancelCallback, GestureTapDownCallback, TapDownDetails, TapUpDetails;
 
 /// class DoubleTapGestureRecognizer extends GestureRecognizer
 class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Mate<DoubleTapGestureRecognizer$Mate> {

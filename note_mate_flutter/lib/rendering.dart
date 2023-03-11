@@ -2,9 +2,7 @@
 
 library rendering;
 
-export 'package:flutter/foundation.dart' show DiagnosticLevel, ValueChanged, ValueGetter, ValueSetter, VoidCallback;
 export 'package:flutter/semantics.dart';
-export 'package:vector_math/vector_math_64.dart' show Matrix4;
 export 'src/rendering/animated_size.dart';
 export 'src/rendering/binding.dart';
 export 'src/rendering/box.dart';

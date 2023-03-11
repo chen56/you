@@ -4,8 +4,6 @@ import 'package:flutter/src/services/system_chrome.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
 import 'dart:ui';
-export 'dart:ui' show Brightness, Color;
-export 'binding.dart' show SystemUiChangeCallback;
 
 /// class ApplicationSwitcherDescription
 class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription

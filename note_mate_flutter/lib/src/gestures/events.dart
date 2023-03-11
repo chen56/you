@@ -4,10 +4,6 @@ import 'package:flutter/src/gestures/events.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:note/mate.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
-export 'package:vector_math/vector_math_64.dart' show Matrix4;
-export 'gesture_settings.dart' show DeviceGestureSettings;
 
 /// class PointerAddedEvent extends PointerEvent with _PointerEventDescription, _CopyPointerAddedEvent
 class PointerAddedEvent$Mate extends PointerAddedEvent with Mate<PointerAddedEvent$Mate> {

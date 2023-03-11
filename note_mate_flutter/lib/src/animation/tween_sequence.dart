@@ -4,7 +4,6 @@ import 'package:flutter/src/animation/tween_sequence.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
 import 'package:flutter/src/animation/tween.dart';
-export 'tween.dart' show Animatable;
 
 /// class TweenSequence<T> extends Animatable<T>
 class TweenSequence$Mate<T> extends TweenSequence<T> with Mate<TweenSequence$Mate> {

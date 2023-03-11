@@ -3,8 +3,6 @@
 import 'package:flutter/src/foundation/binding.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:ui' show PlatformDispatcher, SingletonFlutterWindow;
-export 'basic_types.dart' show AsyncCallback, AsyncValueGetter, AsyncValueSetter;
 
 /// class DebugReassembleConfig
 class DebugReassembleConfig$Mate extends DebugReassembleConfig with Mate<DebugReassembleConfig$Mate> {

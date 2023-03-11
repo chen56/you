@@ -3,7 +3,6 @@
 import 'package:flutter/src/rendering/binding.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/gestures.dart' show HitTestResult;
 
 /// class RenderingFlutterBinding extends BindingBase with GestureBinding, SchedulerBinding, ServicesBinding, SemanticsBinding, PaintingBinding, RendererBinding
 class RenderingFlutterBinding$Mate extends RenderingFlutterBinding with Mate<RenderingFlutterBinding$Mate> {

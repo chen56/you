@@ -24,15 +24,6 @@ import 'package:flutter/src/services/autofill.dart';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'package:flutter/src/widgets/spell_check.dart';
 import 'package:flutter/src/widgets/magnifier.dart';
-export 'package:flutter/services.dart'
-    show
-        KeyboardInsertedContent,
-        SelectionChangedCause,
-        SmartDashesType,
-        SmartQuotesType,
-        TextEditingValue,
-        TextInputType,
-        TextSelection;
 
 /// class TextEditingController extends ValueNotifier<TextEditingValue>
 class TextEditingController$Mate extends TextEditingController with Mate<TextEditingController$Mate> {

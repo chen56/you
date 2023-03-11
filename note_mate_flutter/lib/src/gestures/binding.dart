@@ -7,13 +7,6 @@ import 'package:flutter/src/gestures/events.dart';
 import 'package:flutter/src/gestures/hit_test.dart';
 import 'package:flutter/src/foundation/assertions.dart';
 import 'package:note/mate.dart';
-export 'dart:ui' show Offset;
-export 'package:flutter/foundation.dart' show DiagnosticsNode, InformationCollector;
-export 'arena.dart' show GestureArenaManager;
-export 'events.dart' show PointerEvent;
-export 'hit_test.dart' show HitTestEntry, HitTestResult, HitTestTarget;
-export 'pointer_router.dart' show PointerRouter;
-export 'pointer_signal_resolver.dart' show PointerSignalResolver;
 
 /// class FlutterErrorDetailsForPointerEventDispatcher extends FlutterErrorDetails
 class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDetailsForPointerEventDispatcher

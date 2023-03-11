@@ -9,17 +9,6 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/rendering/table.dart';
 import 'dart:ui';
 import 'package:flutter/src/rendering/table_border.dart';
-export 'package:flutter/rendering.dart'
-    show
-        FixedColumnWidth,
-        FlexColumnWidth,
-        FractionColumnWidth,
-        IntrinsicColumnWidth,
-        MaxColumnWidth,
-        MinColumnWidth,
-        TableBorder,
-        TableCellVerticalAlignment,
-        TableColumnWidth;
 
 /// class TableRow
 class TableRow$Mate extends TableRow with Mate<TableRow$Mate> {

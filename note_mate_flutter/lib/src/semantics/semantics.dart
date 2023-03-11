@@ -8,18 +8,6 @@ import 'package:flutter/src/foundation/diagnostics.dart';
 import 'package:flutter/src/services/text_editing.dart';
 import 'package:vector_math/vector_math_64.dart';
 import 'package:flutter/src/foundation/key.dart';
-export 'dart:ui' show Offset, Rect, SemanticsAction, SemanticsFlag, StringAttribute, TextDirection, VoidCallback;
-export 'package:flutter/foundation.dart'
-    show
-        DiagnosticLevel,
-        DiagnosticPropertiesBuilder,
-        DiagnosticsNode,
-        DiagnosticsTreeStyle,
-        Key,
-        TextTreeConfiguration;
-export 'package:flutter/services.dart' show TextSelection;
-export 'package:vector_math/vector_math_64.dart' show Matrix4;
-export 'semantics_event.dart' show SemanticsEvent;
 
 /// class SemanticsTag
 class SemanticsTag$Mate extends SemanticsTag with Mate<SemanticsTag$Mate> {

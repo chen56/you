@@ -15,7 +15,6 @@ import 'package:flutter/src/rendering/proxy_box.dart';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/painting/text_painter.dart';
 import 'package:flutter/src/foundation/change_notifier.dart';
-export 'package:flutter/rendering.dart' show RelativeRect;
 
 /// class SlideTransition extends AnimatedWidget
 class SlideTransition$Mate extends SlideTransition with WidgetMate<SlideTransition$Mate> {

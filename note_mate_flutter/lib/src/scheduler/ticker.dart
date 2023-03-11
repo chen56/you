@@ -3,8 +3,6 @@
 import 'package:flutter/src/scheduler/ticker.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:ui' show VoidCallback;
-export 'package:flutter/foundation.dart' show DiagnosticsNode;
 
 /// class Ticker
 class Ticker$Mate extends Ticker with Mate<Ticker$Mate> {

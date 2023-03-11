@@ -3,8 +3,6 @@
 import 'package:flutter/src/services/text_formatter.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'package:flutter/foundation.dart' show TargetPlatform;
-export 'text_input.dart' show TextEditingValue;
 
 /// class FilteringTextInputFormatter extends TextInputFormatter
 class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with Mate<FilteringTextInputFormatter$Mate> {

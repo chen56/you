@@ -5,11 +5,6 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/recognizer.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
-export 'package:vector_math/vector_math_64.dart' show Matrix4;
-export 'arena.dart' show GestureDisposition;
-export 'events.dart' show PointerCancelEvent, PointerDownEvent, PointerEvent, PointerUpEvent;
 
 /// class TapDownDetails
 class TapDownDetails$Mate extends TapDownDetails with Mate<TapDownDetails$Mate> {

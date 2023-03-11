@@ -5,9 +5,6 @@ import 'package:flutter/src/animation/tween.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
 import 'package:flutter/src/animation/curves.dart';
-export 'dart:ui' show Color, Rect, Size;
-export 'animation.dart' show Animation;
-export 'curves.dart' show Curve;
 
 /// class Tween<T extends Object?> extends Animatable<T>
 class Tween$Mate<T extends Object?> extends Tween<T> with Mate<Tween$Mate> {

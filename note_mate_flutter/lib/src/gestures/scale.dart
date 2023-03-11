@@ -6,10 +6,6 @@ import 'dart:core';
 import 'package:note/mate.dart';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'events.dart' show PointerDownEvent, PointerEvent, PointerPanZoomStartEvent;
-export 'recognizer.dart' show DragStartBehavior;
-export 'velocity_tracker.dart' show Velocity;
 
 /// class ScaleStartDetails
 class ScaleStartDetails$Mate extends ScaleStartDetails with Mate<ScaleStartDetails$Mate> {

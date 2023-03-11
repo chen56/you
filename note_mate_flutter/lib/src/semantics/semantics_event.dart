@@ -4,7 +4,6 @@ import 'package:flutter/src/semantics/semantics_event.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:note/mate.dart';
-export 'dart:ui' show TextDirection;
 
 /// class AnnounceSemanticsEvent extends SemanticsEvent
 class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate<AnnounceSemanticsEvent$Mate> {

@@ -6,22 +6,6 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 import 'package:flutter/src/semantics/semantics.dart';
 import 'dart:core';
-export 'package:flutter/foundation.dart'
-    show
-        DiagnosticPropertiesBuilder,
-        DiagnosticsNode,
-        DiagnosticsProperty,
-        DoubleProperty,
-        EnumProperty,
-        ErrorDescription,
-        ErrorHint,
-        ErrorSummary,
-        FlagProperty,
-        FlutterError,
-        InformationCollector,
-        IntProperty,
-        StringProperty;
-export 'package:flutter/gestures.dart' show HitTestEntry, HitTestResult;
 export 'package:flutter/painting.dart';
 
 /// class PaintingContext extends ClipContext

@@ -5,8 +5,6 @@ import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 import 'package:note/mate.dart';
-export 'dart:ui' show PointerDeviceKind;
-export 'events.dart' show PointerDownEvent, PointerEvent;
 
 /// class EagerGestureRecognizer extends OneSequenceGestureRecognizer
 class EagerGestureRecognizer$Mate extends EagerGestureRecognizer with Mate<EagerGestureRecognizer$Mate> {

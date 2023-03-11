@@ -4,9 +4,6 @@ import 'package:flutter/src/services/mouse_tracking.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
-export 'package:flutter/gestures.dart' show PointerEnterEvent, PointerExitEvent, PointerHoverEvent;
-export 'mouse_cursor.dart' show MouseCursor;
 
 /// class MouseTrackerAnnotation with Diagnosticable
 class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate<MouseTrackerAnnotation$Mate> {

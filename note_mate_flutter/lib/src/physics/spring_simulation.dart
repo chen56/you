@@ -4,7 +4,6 @@ import 'package:flutter/src/physics/spring_simulation.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
 import 'package:flutter/src/physics/tolerance.dart';
-export 'tolerance.dart' show Tolerance;
 
 /// class SpringDescription
 class SpringDescription$Mate extends SpringDescription with Mate<SpringDescription$Mate> {

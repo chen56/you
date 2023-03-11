@@ -4,7 +4,6 @@ import 'package:flutter/src/physics/clamped_simulation.dart';
 import 'package:flutter/src/physics/simulation.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'simulation.dart' show Simulation;
 
 /// class ClampedSimulation extends Simulation
 class ClampedSimulation$Mate extends ClampedSimulation with Mate<ClampedSimulation$Mate> {

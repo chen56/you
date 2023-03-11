@@ -58,7 +58,6 @@ import 'package:flutter/src/material/toggle_buttons_theme.dart';
 import 'package:flutter/src/material/tooltip_theme.dart';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/services.dart' show Brightness;
 
 /// class ThemeData with Diagnosticable
 class ThemeData$Mate extends ThemeData with Mate<ThemeData$Mate> {

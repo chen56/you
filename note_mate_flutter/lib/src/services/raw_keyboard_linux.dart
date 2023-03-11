@@ -3,9 +3,6 @@
 import 'package:flutter/src/services/raw_keyboard_linux.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
-export 'keyboard_key.g.dart' show LogicalKeyboardKey, PhysicalKeyboardKey;
-export 'raw_keyboard.dart' show KeyboardSide, ModifierKey;
 
 /// class RawKeyEventDataLinux extends RawKeyEventData
 class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate<RawKeyEventDataLinux$Mate> {

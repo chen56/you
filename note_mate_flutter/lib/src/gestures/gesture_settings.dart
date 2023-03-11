@@ -3,7 +3,6 @@
 import 'package:flutter/src/gestures/gesture_settings.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:ui' show FlutterView;
 
 /// class DeviceGestureSettings
 class DeviceGestureSettings$Mate extends DeviceGestureSettings with Mate<DeviceGestureSettings$Mate> {

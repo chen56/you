@@ -8,7 +8,6 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/animation/curves.dart';
 import 'dart:core';
 import 'dart:ui';
-export 'theme_data.dart' show Brightness, ThemeData;
 
 /// class Theme extends StatelessWidget
 class Theme$Mate extends Theme with WidgetMate<Theme$Mate> {

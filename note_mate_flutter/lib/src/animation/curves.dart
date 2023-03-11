@@ -4,7 +4,6 @@ import 'package:flutter/src/animation/curves.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
 import 'dart:ui';
-export 'dart:ui' show Offset;
 
 /// class SawTooth extends Curve
 class SawTooth$Mate extends SawTooth with Mate<SawTooth$Mate> {

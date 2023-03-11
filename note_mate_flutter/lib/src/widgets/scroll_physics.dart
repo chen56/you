@@ -2,7 +2,6 @@
 
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/physics.dart' show ScrollSpringSimulation, Simulation, Tolerance;
 
 /// class ScrollPhysics
 class ScrollPhysics$Mate extends ScrollPhysics with Mate<ScrollPhysics$Mate> {

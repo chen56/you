@@ -3,9 +3,6 @@
 import 'package:flutter/src/services/platform_views.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:ui' show Offset, Size, TextDirection, VoidCallback;
-export 'package:flutter/gestures.dart' show PointerEvent;
-export 'message_codec.dart' show MessageCodec;
 
 /// class AndroidPointerProperties
 class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate<AndroidPointerProperties$Mate> {

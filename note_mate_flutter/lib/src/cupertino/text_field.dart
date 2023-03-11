@@ -24,8 +24,6 @@ import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/widgets/spell_check.dart';
 import 'package:flutter/src/widgets/magnifier.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/services.dart'
-    show SmartDashesType, SmartQuotesType, TextCapitalization, TextInputAction, TextInputType;
 
 /// class CupertinoTextField extends StatefulWidget
 class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<CupertinoTextField$Mate> {

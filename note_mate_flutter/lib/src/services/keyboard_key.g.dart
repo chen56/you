@@ -3,7 +3,6 @@
 import 'package:flutter/src/services/keyboard_key.g.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
 
 /// class LogicalKeyboardKey extends KeyboardKey
 class LogicalKeyboardKey$Mate extends LogicalKeyboardKey with Mate<LogicalKeyboardKey$Mate> {

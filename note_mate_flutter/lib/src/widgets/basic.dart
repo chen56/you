@@ -34,54 +34,7 @@ import 'package:flutter/src/services/mouse_tracking.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/semantics/semantics.dart';
 export 'package:flutter/animation.dart';
-export 'package:flutter/foundation.dart'
-    show ChangeNotifier, FlutterErrorDetails, Listenable, TargetPlatform, ValueNotifier;
 export 'package:flutter/painting.dart';
-export 'package:flutter/rendering.dart'
-    show
-        AlignmentGeometryTween,
-        AlignmentTween,
-        Axis,
-        BoxConstraints,
-        BoxConstraintsTransform,
-        CrossAxisAlignment,
-        CustomClipper,
-        CustomPainter,
-        CustomPainterSemantics,
-        DecorationPosition,
-        FlexFit,
-        FlowDelegate,
-        FlowPaintingContext,
-        FractionalOffsetTween,
-        HitTestBehavior,
-        LayerLink,
-        MainAxisAlignment,
-        MainAxisSize,
-        MouseCursor,
-        MultiChildLayoutDelegate,
-        PaintingContext,
-        PointerCancelEvent,
-        PointerCancelEventListener,
-        PointerDownEvent,
-        PointerDownEventListener,
-        PointerEvent,
-        PointerMoveEvent,
-        PointerMoveEventListener,
-        PointerUpEvent,
-        PointerUpEventListener,
-        RelativeRect,
-        SemanticsBuilderCallback,
-        ShaderCallback,
-        ShapeBorderClipper,
-        SingleChildLayoutDelegate,
-        StackFit,
-        SystemMouseCursors,
-        TextOverflow,
-        ValueChanged,
-        ValueGetter,
-        WrapAlignment,
-        WrapCrossAlignment;
-export 'package:flutter/services.dart' show AssetBundle;
 
 /// class Directionality extends _UbiquitousInheritedWidget
 class Directionality$Mate extends Directionality with WidgetMate<Directionality$Mate> {

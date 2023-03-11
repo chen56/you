@@ -3,7 +3,6 @@
 import 'package:flutter/src/services/message_codec.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:typed_data' show ByteData;
 
 /// class MethodCall
 class MethodCall$Mate extends MethodCall with Mate<MethodCall$Mate> {

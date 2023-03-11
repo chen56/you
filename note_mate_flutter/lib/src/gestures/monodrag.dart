@@ -5,20 +5,6 @@ import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 import 'package:note/mate.dart';
-export 'dart:ui' show PointerDeviceKind;
-export 'package:flutter/foundation.dart' show DiagnosticPropertiesBuilder;
-export 'drag.dart' show DragEndDetails, DragUpdateDetails;
-export 'drag_details.dart'
-    show
-        DragDownDetails,
-        DragStartDetails,
-        DragUpdateDetails,
-        GestureDragDownCallback,
-        GestureDragStartCallback,
-        GestureDragUpdateCallback;
-export 'events.dart' show PointerDownEvent, PointerEvent, PointerPanZoomStartEvent;
-export 'recognizer.dart' show DragStartBehavior;
-export 'velocity_tracker.dart' show VelocityEstimate, VelocityTracker;
 
 /// class VerticalDragGestureRecognizer extends DragGestureRecognizer
 class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer

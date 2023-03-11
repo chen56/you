@@ -6,10 +6,6 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/recognizer.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'arena.dart' show GestureDisposition;
-export 'events.dart' show PointerDownEvent, PointerEvent;
-export 'velocity_tracker.dart' show Velocity;
 
 /// class LongPressDownDetails
 class LongPressDownDetails$Mate extends LongPressDownDetails with Mate<LongPressDownDetails$Mate> {

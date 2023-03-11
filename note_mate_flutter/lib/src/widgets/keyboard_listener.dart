@@ -8,7 +8,6 @@ import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/services/hardware_keyboard.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/services.dart' show KeyEvent;
 
 /// class KeyboardListener extends StatelessWidget
 class KeyboardListener$Mate extends KeyboardListener with WidgetMate<KeyboardListener$Mate> {

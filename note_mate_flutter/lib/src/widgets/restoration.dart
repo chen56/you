@@ -6,7 +6,6 @@ import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/services/restoration.dart';
-export 'package:flutter/services.dart' show RestorationBucket;
 
 /// class RestorationScope extends StatefulWidget
 class RestorationScope$Mate extends RestorationScope with WidgetMate<RestorationScope$Mate> {

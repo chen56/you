@@ -2,7 +2,6 @@
 
 library painting;
 
-export 'dart:ui' show PlaceholderAlignment, Shadow, TextHeightBehavior, TextLeadingDistribution;
 export 'src/painting/alignment.dart';
 export 'src/painting/basic_types.dart';
 export 'src/painting/beveled_rectangle_border.dart';

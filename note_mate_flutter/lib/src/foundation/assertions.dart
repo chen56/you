@@ -5,9 +5,6 @@ import 'dart:core';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
-export 'basic_types.dart' show IterableFilter;
-export 'diagnostics.dart' show DiagnosticLevel, DiagnosticPropertiesBuilder, DiagnosticsNode, DiagnosticsTreeStyle;
-export 'stack_frame.dart' show StackFrame;
 
 /// class PartialStackFrame
 class PartialStackFrame$Mate extends PartialStackFrame with Mate<PartialStackFrame$Mate> {

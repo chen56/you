@@ -3,7 +3,6 @@
 import 'package:flutter/src/services/font_loader.dart';
 import 'dart:core';
 import 'package:note/mate.dart';
-export 'dart:typed_data' show ByteData;
 
 /// class FontLoader
 class FontLoader$Mate extends FontLoader with Mate<FontLoader$Mate> {

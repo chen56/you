@@ -5,8 +5,6 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
-export 'dart:ui' show Offset, PointerDeviceKind;
-export 'velocity_tracker.dart' show Velocity;
 
 /// class DragDownDetails
 class DragDownDetails$Mate extends DragDownDetails with Mate<DragDownDetails$Mate> {

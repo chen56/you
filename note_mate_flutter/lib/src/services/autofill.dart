@@ -4,7 +4,6 @@ import 'package:flutter/src/services/autofill.dart';
 import 'dart:core';
 import 'package:flutter/src/services/text_input.dart';
 import 'package:note/mate.dart';
-export 'text_input.dart' show TextEditingValue, TextInputClient, TextInputConfiguration, TextInputConnection;
 
 /// class AutofillConfiguration
 class AutofillConfiguration$Mate extends AutofillConfiguration with Mate<AutofillConfiguration$Mate> {

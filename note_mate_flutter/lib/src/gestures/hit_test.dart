@@ -2,9 +2,6 @@
 
 import 'package:flutter/src/gestures/hit_test.dart';
 import 'package:note/mate.dart';
-export 'dart:ui' show Offset;
-export 'package:vector_math/vector_math_64.dart' show Matrix4;
-export 'events.dart' show PointerEvent;
 
 /// class HitTestEntry<T extends HitTestTarget>
 class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T> with Mate<HitTestEntry$Mate> {

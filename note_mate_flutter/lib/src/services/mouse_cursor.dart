@@ -2,8 +2,6 @@
 
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:note/mate.dart';
-export 'package:flutter/foundation.dart' show DiagnosticLevel, DiagnosticPropertiesBuilder;
-export 'package:flutter/gestures.dart' show PointerEvent;
 
 /// class MouseCursorManager
 class MouseCursorManager$Mate extends MouseCursorManager with Mate<MouseCursorManager$Mate> {

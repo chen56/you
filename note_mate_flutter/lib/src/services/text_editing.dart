@@ -4,7 +4,6 @@ import 'package:flutter/src/services/text_editing.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:note/mate.dart';
-export 'dart:ui' show TextAffinity, TextPosition;
 
 /// class TextSelection extends TextRange
 class TextSelection$Mate extends TextSelection with Mate<TextSelection$Mate> {
