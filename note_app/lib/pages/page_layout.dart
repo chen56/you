@@ -291,7 +291,7 @@ class _PagePen extends Pen {
 
   @override
   void widgetSnippet(WidgetMate Function(ParamNode node) builder) {
-    ParamNode node = ParamNode(Creators.pen);
+    ParamNode<void> node = ParamNode<void>(init: null, builder: (p) => builder(p));
     widgetMate(builder(node));
   }
 }

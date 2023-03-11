@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/experiment_param.dart';
+import 'package:note/experiment_mates.dart';
 import 'package:flutter_note/page.dart';
+import 'package:note/experiment_param.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "Note机制试验田",
@@ -30,7 +32,7 @@ build(Pen pen, BuildContext context) {
       width: 100,
       height: 100,
       color: Colors.green,
-    )..widthMate.value = 1,
+    ),
   );
 
   // 这种形式比较好清理代码
@@ -41,7 +43,9 @@ build(Pen pen, BuildContext context) {
       color: Colors.green,
     ).configMate(config: (self) {
       // 可配置mate 编辑器等参数
-      self.widthMate.value = 1;
+      if (kDebugMode) {
+        print(self.widthMate.value);
+      }
     }),
   );
 
