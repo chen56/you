@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_note/experiments/experiment_param_widget.dart';
+import 'package:note/experiment_param_widget.dart';
 import 'package:flutter_note/navigator_v2.dart';
 import 'package:flutter_note/page.dart';
 import 'package:flutter_note/pen_markdown.dart';
@@ -51,11 +51,6 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       shrinkWrap: true,
       controller: controller,
       children: pen._contents,
-    );
-    var content = Scrollbar(
-      thickness: 10,
-      controller: controller, // Here
-      child: contentListView,
     );
     var scorllBehavior = ScrollBehavior().buildScrollbar(context, contentListView,
         ScrollableDetails(direction: AxisDirection.down, controller: controller));
@@ -186,16 +181,6 @@ extension _TreeViewNote on Path {
     }
     attributes[_extendAttrName] = extend;
   }
-
-  List<Path> toListWithExtend({bool includeThis = true, bool hiddenNoExpend = false}) {
-    var flatChildren = children.expand((child) {
-      if (hiddenNoExpend && !child.extend) {
-        return [child];
-      }
-      return child.toListWithExtend(includeThis: true, hiddenNoExpend: hiddenNoExpend);
-    }).toList();
-    return includeThis ? [this, ...flatChildren] : flatChildren;
-  }
 }
 
 class _OutlineView extends StatelessWidget {
@@ -305,8 +290,8 @@ class _PagePen extends Pen {
   }
 
   @override
-  void widgetSnippet(WidgetMate Function(MateNode node) builder) {
-    MateNode node = MateNode(Creators.pen);
+  void widgetSnippet(WidgetMate Function(ParamNode node) builder) {
+    ParamNode node = ParamNode(Creators.pen);
     widgetMate(builder(node));
   }
 }

@@ -6,39 +6,15 @@ class Creators {
   static const String column = "Column";
 }
 
-class Param {}
-
-class Nullable<T> extends Param {
-  T? value;
-
-  Nullable(this.value);
-}
-
-class NotNull<T> extends Param {
-  final T value;
-
-  NotNull(this.value);
-}
-
-abstract class Editor<T> {
+class Param<T> {
   final String name;
-  final T? init;
-  T? _value;
-  bool _alreadySet = false;
+  final T init;
+  T value;
 
-  set value(T? v) {
-    _value = v;
-    _alreadySet = true;
-  }
-
-  T? get value {
-    return _alreadySet ? _value : init;
-  }
-
-  Editor({required this.name, this.init});
+  Param({required this.name, required this.init}) : value = init;
 }
 
-class MateNode {
+class ParamNode {
   final Map<String, Editor> _paramMap = {};
   final List<Editor> _params = List.empty(growable: true);
 
@@ -46,7 +22,7 @@ class MateNode {
   /// 这样才能按原构造器recreate
   String creator;
 
-  MateNode(this.creator);
+  ParamNode(this.creator);
 
   void add(Editor editor) {
     assert(!_paramMap.containsKey(editor.name), "error:duplicate key: ${editor.name} ");
@@ -54,44 +30,22 @@ class MateNode {
     _params.add(editor);
   }
 
-  Nullable<T> set_<T>({required Editor<T> editor}) {
-    add(editor);
-    return Nullable(editor.value);
-  }
-
-  Nullable<T> set2_<T>({required String name, T? init}) {
-    return Nullable(init);
-  }
-
-  NotNull<T> set<T>({required Editor<T> editor}) {
-    add(editor);
-    return NotNull(editor.value!);
+  Param<T> set<T>({required String name, required init}) {
+    return Param(name: name, init: init);
   }
 
   T get<T>(String name) {
     return _paramMap[name] as T;
   }
-
-  T? get_<T>(String name, T o) {
-    return _paramMap[name] as T;
-  }
 }
 
 mixin WidgetMate on Widget {
-  late final MateNode mate;
-}
-
-class Double extends Editor<double> {
-  Double({required super.name, super.init});
-}
-
-class Dynamic extends Editor<dynamic> {
-  Dynamic({required super.name, super.init});
+  late final ParamNode mate;
 }
 
 class ContainerMate extends Container with WidgetMate {
-  late final Nullable<double> widthMate;
-  late final Nullable<double> heightMate;
+  late final Param<double> widthMate;
+  late final Param<double> heightMate;
 
   ContainerMate({
     super.key,
@@ -106,18 +60,18 @@ class ContainerMate extends Container with WidgetMate {
           height: height,
           child: child,
         ) {
-    mate = MateNode(Creators.container);
+    mate = ParamNode(Creators.container);
     //这里会换成代码生成，凡是可以取到类型的，都可以支持编辑
-    mate.set_(editor: Dynamic(name: "key", init: key));
-    mate.set_(editor: Dynamic(name: "alignment", init: alignment));
-    mate.set_(editor: Dynamic(name: "color", init: color));
-    mate.set(editor: Dynamic(name: "clipBehavior", init: clipBehavior));
-    widthMate = mate.set_(editor: Double(name: "width", init: width));
-    heightMate = mate.set_(editor: Double(name: "height", init: height));
-    mate.set_(editor: Dynamic(name: "child", init: child));
+    mate.set(name: "key", init: key);
+    mate.set(name: "alignment", init: alignment);
+    mate.set(name: "color", init: color);
+    mate.set(name: "clipBehavior", init: clipBehavior);
+    widthMate = mate.set(name: "width", init: width);
+    heightMate = mate.set(name: "height", init: height);
+    mate.set(name: "child", init: child);
   }
 
-  static ContainerMate create(MateNode mate) {
+  static ContainerMate create(ParamNode mate) {
     return ContainerMate(
       key: mate.get<dynamic>("key"),
       alignment: mate.get<dynamic>("alignment"),
@@ -140,11 +94,11 @@ class ColumnMate extends Column with WidgetMate {
     super.mainAxisAlignment,
     List<Widget> children = const <Widget>[],
   }) : super(children: children) {
-    mate = MateNode(Creators.column);
+    mate = ParamNode(Creators.column);
 
-    mate.set(editor: Dynamic(name: "key", init: key));
-    mate.set(editor: Dynamic(name: "mainAxisAlignment", init: mainAxisAlignment));
-    mate.set_(editor: Dynamic(name: "children", init: children));
+    mate.set(name: "key", init: key);
+    mate.set(name: "mainAxisAlignment", init: mainAxisAlignment);
+    mate.set(name: "children", init: children);
   }
 
   @override
@@ -156,7 +110,7 @@ class ColumnMate extends Column with WidgetMate {
   }
 
   @override
-  static ColumnMate create(MateNode meta) {
+  static ColumnMate create(ParamNode meta) {
     return ColumnMate(
       key: meta.get("key"),
       mainAxisAlignment: meta.get("mainAxisAlignment"),
@@ -172,23 +126,20 @@ class CenterMate extends Center with WidgetMate {
     double? heightFactor,
     Widget? child,
   }) : super(
-          key: ValueKey("1"),
+          key: key,
           widthFactor: widthFactor,
           heightFactor: heightFactor,
           child: child,
         ) {
-    mate = MateNode(Creators.column);
-    mate.set_(editor: Dynamic(name: "key", init: key));
-    double? d = mate.set2_(name: "widthFactor", init: widthFactor).value;
-    mate.set_(editor: Double(name: "widthFactor", init: widthFactor));
-    mate.set_(editor: Double(name: "heightFactor", init: heightFactor));
-    mate.set_(editor: Dynamic(name: "child", init: child));
+    mate = ParamNode(Creators.column);
+    mate.set(name: "key", init: key);
+    mate.set(name: "widthFactor", init: widthFactor);
+    mate.set(name: "heightFactor", init: heightFactor);
+    mate.set(name: "child", init: child);
   }
 
   @override
-  static CenterMate create(MateNode meta) {
-    double x = meta.get("widthFactor");
-    double? x2 = meta.get("widthFactor");
+  static CenterMate create(ParamNode meta) {
     return CenterMate(
       key: meta.get("key"),
       widthFactor: meta.get("widthFactor"),
@@ -196,4 +147,30 @@ class CenterMate extends Center with WidgetMate {
       child: meta.get("child"),
     );
   }
+}
+
+abstract class Editor<T> {
+  final String name;
+  final T? init;
+  T? _value;
+  bool _alreadySet = false;
+
+  set value(T? v) {
+    _value = v;
+    _alreadySet = true;
+  }
+
+  T? get value {
+    return _alreadySet ? _value : init;
+  }
+
+  Editor({required this.name, this.init});
+}
+
+class Double extends Editor<double> {
+  Double({required super.name, super.init});
+}
+
+class Dynamic extends Editor<dynamic> {
+  Dynamic({required super.name, super.init});
 }

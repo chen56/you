@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_note/experiments/experiment_param_widget.dart';
+import 'package:note/experiment_param_widget.dart';
 import 'package:flutter_note/navigator_v2.dart';
 
 /// 本项目的就死活page开发模型，包括几部分：
@@ -185,7 +185,7 @@ abstract class Pen {
 
   void widgetMate(WidgetMate widgetMate);
 
-  void widgetSnippet(WidgetMate builder(MateNode node));
+  void widgetSnippet(WidgetMate builder(ParamNode node));
 }
 
 class MateConfig {

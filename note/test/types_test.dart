@@ -10,7 +10,7 @@ void main() {
     expect(isSubtype<num, String>(), isFalse);
   });
   test('common.types isType 类型判断', () {
-    expect(isType(Center(), TypeIs<Widget>()), isTrue);
+    expect(isType(const Center(), TypeIs<Widget>()), isTrue);
   });
 
   test('common.types isNullable 判断', () {

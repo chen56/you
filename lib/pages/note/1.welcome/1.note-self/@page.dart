@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_note/experiments/experiment_param_widget.dart';
+import 'package:note/experiment_param_widget.dart';
 import 'package:flutter_note/page.dart';
 
 PageMeta page = PageMeta(
@@ -53,10 +53,15 @@ build(Pen pen, BuildContext context) {
       color: Colors.green,
     ),
   );
+  // root
+  //   Container.new
+  //     width
+  //     child: Container.new
+  //       width
   // 这里可以放一些比较复杂的共享MateNode的场景，比如多个组件同width
-  pen.widgetSnippet((mate) {
-    Nullable<double> width = mate.set_(editor: Double(name: "width"));
-    Nullable<double> height = mate.set_(editor: Double(name: "height"));
+  pen.widgetSnippet((params) {
+    Param<double> width = params.set(name: "width", init: 100);
+    Param<double> height = params.set(name: "height", init: 100);
 
     return ContainerMate(
       width: width.value,
