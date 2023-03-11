@@ -1,8 +1,8 @@
 // ignore_for_file: unnecessary_type_check
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_note/utils.dart';
-import 'package:test/test.dart';
+import 'package:note/utils.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('common.types isSubtype 子类型判断', () {

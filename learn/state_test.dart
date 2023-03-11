@@ -1,6 +1,6 @@
 // ignore_for_file: unnecessary_type_check
 
-import 'package:flutter_note/utils.dart';
+import 'package:note/utils.dart';
 import 'package:test/test.dart';
 
 void main() {
