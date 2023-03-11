@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/experiment_param.dart';
+import 'package:note/mate.dart';
 import 'package:flutter_note/navigator_v2.dart';
 import 'package:flutter_note/page.dart';
 import 'package:flutter_note/pen_markdown.dart';

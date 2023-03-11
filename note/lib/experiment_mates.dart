@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/experiment_param.dart';
+import 'package:note/mate.dart';
 
 class ContainerMate extends Container with WidgetMate<ContainerMate> {
   late final Param<double?> widthMate;
@@ -89,30 +89,4 @@ class CenterMate extends Center with WidgetMate<CenterMate> {
     mate.set(name: "heightFactor", init: heightFactor);
     mate.set(name: "child", init: child);
   }
-}
-
-abstract class Editor<T> {
-  final String name;
-  final T? init;
-  T? _value;
-  bool _alreadySet = false;
-
-  set value(T? v) {
-    _value = v;
-    _alreadySet = true;
-  }
-
-  T? get value {
-    return _alreadySet ? _value : init;
-  }
-
-  Editor({required this.name, this.init});
-}
-
-class Double extends Editor<double> {
-  Double({required super.name, super.init});
-}
-
-class Dynamic extends Editor<dynamic> {
-  Dynamic({required super.name, super.init});
 }

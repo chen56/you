@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/experiment_mates.dart';
 import 'package:flutter_note/page.dart';
-import 'package:note/experiment_param.dart';
+import 'package:note/mate.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "Note机制试验田",
