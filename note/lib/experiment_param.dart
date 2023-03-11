@@ -15,8 +15,8 @@ class Param<T> {
 }
 
 class ParamNode {
-  final Map<String, Editor> _paramMap = {};
-  final List<Editor> _params = List.empty(growable: true);
+  final Map<String, ParamNode> _paramMap = {};
+  final List<ParamNode> _params = List.empty(growable: true);
 
   /// 创建器，因为一个类可能有多个构造器，每个构造器的参数表不同，要区分开
   /// 这样才能按原构造器recreate
@@ -24,10 +24,10 @@ class ParamNode {
 
   ParamNode(this.creator);
 
-  void add(Editor editor) {
-    assert(!_paramMap.containsKey(editor.name), "error:duplicate key: ${editor.name} ");
-    _paramMap[editor.name] = editor;
-    _params.add(editor);
+  void add(ParamNode editor) {
+    // assert(!_paramMap.containsKey(editor.name), "error:duplicate key: ${editor.name} ");
+    // _paramMap[editor.name] = editor;
+    // _params.add(editor);
   }
 
   Param<T> set<T>({required String name, required init}) {

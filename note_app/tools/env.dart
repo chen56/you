@@ -1,6 +1,6 @@
-import 'dart:io';
+import 'dart:io' show File, Platform, Process, stderr, stdout;
 
-import 'package:path/path.dart' as path;
+import "package:path/path.dart" as path;
 
 class Env {
   factory Env() {
