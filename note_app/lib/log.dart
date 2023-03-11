@@ -1,8 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'navigator_v2.dart';
-
 Logger logger = Logger();
 
 class Logger extends ChangeNotifier {
@@ -100,4 +98,3 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
     logger.log("${delegate.runtimeType}(id:${identityHashCode(delegate)}).$msg");
   }
 }
-

@@ -339,7 +339,7 @@ void _genLibMate({
     ..body.addAll(lib.definingCompilationUnit.classes.where(classFilter).map((clazz) => Class((b) =>
         b
           ..docs.add("/// ${clazz.getDisplayString(withNullability: true)}")
-          ..name = "${clazz.name}Mate"
+          ..name = "${clazz.name}\$Mate"
           ..abstract = clazz.isAbstract
           ..extend = typeRefers.typeRef(clazz.thisType, inClass: clazz)
           ..types.addAll(clazz.typeParameters

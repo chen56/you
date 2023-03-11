@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/experiment_param_widget.dart';
+import 'package:note/experiment_param.dart';
 import 'package:flutter_note/page.dart';
 
 PageMeta page = PageMeta(

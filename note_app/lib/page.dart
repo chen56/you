@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/experiment_param_widget.dart';
+import 'package:note/experiment_param.dart';
 import 'package:flutter_note/navigator_v2.dart';
 
 /// 本项目的就死活page开发模型，包括几部分：
