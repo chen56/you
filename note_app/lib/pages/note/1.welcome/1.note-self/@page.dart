@@ -60,8 +60,8 @@ build(Pen pen, BuildContext context) {
   //       width
   // 这里可以放一些比较复杂的共享MateNode的场景，比如多个组件同width
   pen.widgetSnippet((params) {
-    Param<double> width = params.set(name: "width", init: 100);
-    Param<double> height = params.set(name: "height", init: 100);
+    Param<double> width = params.set<double>(name: "width", init: 100.0);
+    Param<double> height = params.set(name: "height", init: 100.0);
 
     return ContainerMate(
       width: width.value,
