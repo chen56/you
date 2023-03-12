@@ -32,10 +32,6 @@ class MyApp extends StatelessWidget {
       },
     );
 
-    var listView = ListView(controller: controller, children: <Widget>[
-      const Divider(),
-      markdown,
-    ]);
     return MaterialApp(
       theme: ThemeData(colorSchemeSeed: Colors.blue, useMaterial3: true),
       home: Scaffold(

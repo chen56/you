@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page.dart';
-import 'package:flutter_note/page_layout.dart';
+import 'package:note/page_layout.dart';
 import 'package:flutter_note/pages.dart';
 
 PageMeta page = PageMeta(

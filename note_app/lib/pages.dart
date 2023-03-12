@@ -51,7 +51,6 @@ Path<void> _root = Path.root();
 var paths = _init();
 
 put<C>(String path, PageMeta<C>? meta) {
-  print(path);
   return _root.put(path, meta);
 }
 

@@ -22,18 +22,19 @@ class MyHomepage extends StatelessWidget {
       print(" constraints addPostFrameCallback ${context.findRenderObject()?.parentData}");
       print(" constraints addPostFrameCallback ${context.findRenderObject()?.semanticBounds}");
       print(" constraints addPostFrameCallback ${context.findRenderObject()?.sizedByParent}");
-      context.visitAncestorElements((element){
-        print(" element pre  ${" "*element.depth} ${element.toStringShort()} ${element.toDiagnosticsNode().getProperties().map((e) => "xxxx:${e.name}")}");
+      context.visitAncestorElements((element) {
+        print(
+            " element pre  ${" " * element.depth} ${element.toStringShort()} ${element.toDiagnosticsNode().getProperties().map((e) => "xxxx:${e.name}")}");
         print("${element is RootRenderObjectElement}");
 
-        if(!(element is RootRenderObjectElement)){
-          print(" element con ${element.toStringShallow()} ${element.findRenderObject()?.constraints}");
-        }else{
+        if (!(element is RootRenderObjectElement)) {
+          print(
+              " element con ${element.toStringShallow()} ${element.findRenderObject()?.constraints}");
+        } else {
           print(" --  ${element.toDiagnosticsNode()} ");
         }
         return true;
       });
-
     });
     // print(" constraints ${context.findRenderObject()?.constraints}");
     // print(" constraints ${context.findRenderObject()?.parentData}");
@@ -46,6 +47,5 @@ class MyHomepage extends StatelessWidget {
       // height: 100,
       child: directionality,
     );
-    ;
   }
 }
