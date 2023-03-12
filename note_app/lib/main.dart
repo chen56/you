@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_note/log.dart';
-import 'package:flutter_note/page.dart';
-import 'package:flutter_note/pages/pages.dart';
-import 'package:flutter_note/navigator_v2.dart';
+import 'package:note/log.dart';
+import 'package:note/page.dart';
+import 'package:flutter_note/pages.dart';
+import 'package:note/navigator_v2.dart';
 
 void main() {
   runApp(const App());

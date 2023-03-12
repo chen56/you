@@ -17,7 +17,7 @@ final _dartfmt = DartFormatter(pageWidth: 120);
 
 main() async {
   Env env = Env();
-  Glob glob = Glob("lib/**/@page.dart");
+  Glob glob = Glob("lib/**@page.dart");
   FileSystem fs = const LocalFileSystem();
 
   final collection = AnalysisContextCollection(
@@ -39,29 +39,28 @@ main() async {
 
     Library libGen = Library((b) => b
       ..comments.add("value")
-      ..directives.add(Directive.import("package:flutter_note/page.dart"))
-      ..directives.add(Directive.import("package:flutter_note/pages/pages.dart"))
+      ..directives.add(Directive.import("package:note/page.dart"))
+      ..directives.add(Directive.import("package:flutter_note/pages.dart"))
       ..directives.addAll(libs
-          .map((lib) => Directive.import(lib.identifier, as: "g${_flatLibPath(lib.identifier)}")))
-      // ..directives.sort((a, b) => a.url.compareTo(b.url))
+          .map((lib) => Directive.import(lib.identifier, as: "${_flatLibPath(lib.identifier)}_")))
       ..body.add(Mixin((b) => b
         ..name = "PathsMixin"
         ..fields.addAll(libs.map((lib) {
           String flatPagePath = _flatLibPath(lib.identifier);
-          String path = lib.identifier
-              .replaceAll("package:flutter_note/pages", "")
-              .replaceAll("/@page.dart", "");
+          String path =
+              lib.identifier.replaceAll("package:flutter_note", "").replaceAll("/@page.dart", "");
           path = path == "" ? "/" : path;
           return Field((b) => b
             ..name = flatPagePath
             ..modifier = FieldModifier.final$
-            ..type = refer("Path", "package:flutter_note/page.dart")
-            ..assignment = Code('put("$path", g$flatPagePath.page)'));
+            ..type = refer("Path", "package:note/page.dart")
+            ..assignment = Code('put("$path", ${flatPagePath}_.page)'));
         })))));
 
-    String code = '${libGen.accept(DartEmitter())}';
+    String code =
+        '${libGen.accept(DartEmitter(allocator: Allocator.none, orderDirectives: true, useNullSafetySyntax: true))}';
     code = _dartfmt.format(code);
-    fs.file("lib/pages/pages.g.dart").writeAsStringSync(code);
+    fs.file("lib/pages.g.dart").writeAsStringSync(code);
   }
 }
 
@@ -80,14 +79,37 @@ log(Object? o) {
 /// - '/'换成'$'
 /// - 其他特殊字符换成'_'
 String _flatLibPath(String packageName) {
-  String result = packageName.replaceAll("package:flutter_note/pages/", "");
+  String result = packageName.replaceAll("package:flutter_note/", "");
   if (result == "@page.dart") {
     return "root";
   }
+
+  // var list = result.split("/");
+  // String toFirstUpperCase(String s) => s.isEmpty ? '' : '${s[0].toUpperCase()}${s.substring(1)}';
+  // String toFirstLowerCase(String s) => s.isEmpty ? '' : '${s[0].toLowerCase()}${s.substring(1)}';
+  //
+  // return [toFirstLowerCase(list[0]), ...list.sublist(1).map(toFirstUpperCase)]
+  //     .map((e) => e
+  //         .replaceAll(RegExp("^\\d+\."), "") // 1.note-self -> note-self
+  //         .replaceAll(".", "_")
+  //         .replaceAll("-", "_")
+  //         .replaceAll("@", "_"))
+  //     .join("");
+  // return result
+  //     .split("/")
+  //     .map((e) => e
+  //         .replaceAll(RegExp("/@page.dart\$"), "") // 后缀
+  //         .replaceAll(RegExp("/\\d+\."), "/") // 1.note-self -> note-self
+  //         .replaceAll("/", "_")
+  //         .replaceAll(".", "_")
+  //         .replaceAll("-", "_")
+  //         .replaceAll("@", "_")
+  //         .s)
+  //     .join("");
   return result
       .replaceAll(RegExp("/@page.dart\$"), "") // 后缀
       .replaceAll(RegExp("/\\d+\."), "/") // 1.note-self -> note-self
-      .replaceAll("/", "\$")
+      .replaceAll("/", "_")
       .replaceAll(".", "_")
       .replaceAll("-", "_")
       .replaceAll("@", "_");

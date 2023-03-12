@@ -1,7 +1,7 @@
 name: note
 description: A new Flutter project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/chen56/note
 
 environment:
 #  sdk: '>=3.0.0-218.1.beta <4.0.0'
@@ -11,6 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  markdown: ^7.0.0
+  flutter_markdown: ^0.6.14
+
+  flutter_highlight: ^0.7.0
+  highlight: ^0.7.0
 
 dev_dependencies:
   flutter_test:

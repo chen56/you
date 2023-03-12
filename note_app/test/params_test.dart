@@ -1,4 +1,4 @@
-import 'package:flutter_note/params/param.dart';
+import 'package:note/param_deprecated.dart';
 import 'package:test/test.dart';
 
 void main() {

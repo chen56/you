@@ -292,6 +292,11 @@ bool classFilter(ClassElement clazz) {
       clazz.constructors.where(constructorFilter).isNotEmpty;
 }
 
+bool libFilter(LibraryElement lib) {
+  bool notPrivate = !path.basename(lib.identifier).startsWith("_");
+  return notPrivate && lib.definingCompilationUnit.classes.where(classFilter).isNotEmpty;
+}
+
 extension _InterfaceElement on InterfaceElement {
   bool isSubClassOf({required String className, required String package}) {
     if (name == className && source.uri.toString() == package) {
@@ -303,11 +308,6 @@ extension _InterfaceElement on InterfaceElement {
     }
     return supertype!.element.isSubClassOf(className: className, package: package);
   }
-}
-
-bool libFilter(LibraryElement lib) {
-  bool notPrivate = !path.basename(lib.identifier).startsWith("_");
-  return notPrivate && lib.definingCompilationUnit.classes.where(classFilter).isNotEmpty;
 }
 
 // class SyntaxErrorInAssetException
