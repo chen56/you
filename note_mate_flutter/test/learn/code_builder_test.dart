@@ -70,12 +70,14 @@ void main() {
             ..namedParameters["a"] = TypeReference((b) => b
               ..symbol = "List"
               ..types.add(refer("String")))
-            ..namedRequiredParameters["b"] = refer("int")
+            ..namedRequiredParameters["b"] = TypeReference((b) => b
+              ..symbol = "List"
+              ..url = "dart:ui")
             ..requiredParameters.add(refer("int"))
           // ..optionalParameters.add(refer("String")),
           ))));
 
-    print(_format(lib));
+    print("---${_format(lib)}");
   });
   test('class.TypeReference', () {
     var lib = Library((b) => b

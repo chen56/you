@@ -24,7 +24,7 @@ class Animal {
 
 class Cat extends Animal {
   String? catAlias;
-  int catAge;
+  late int catAge;
   Cat({
     required super.name,
     super.alias,
