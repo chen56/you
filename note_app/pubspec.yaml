@@ -23,7 +23,7 @@ dependencies:
   highlight: ^0.7.0
 
   note:
-    path: ../note
+  note_mate_flutter:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   # 应该是不需要这个东东的，暂时注释掉
@@ -45,6 +45,13 @@ dev_dependencies:
   code_builder: ^4.4.0
   glob: ^2.1.1
   path: ^1.8.3
+
+dependency_overrides:
+  note:
+    path: ../note
+  note_mate_flutter:
+    path: ../note_mate_flutter
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 #dependency_overrides:

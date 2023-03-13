@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/mate_api_experiment.dart';
 import 'package:note/page.dart';
 import 'package:note/mate.dart';
+import 'package:note_mate_flutter/material.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "Note机制试验田",
@@ -28,7 +28,7 @@ build(Pen pen, BuildContext context) {
   ''');
 
   pen.widgetMate(
-    ContainerMate(
+    Container$Mate(
       width: 100,
       height: 100,
       color: Colors.green,
@@ -37,21 +37,16 @@ build(Pen pen, BuildContext context) {
 
   // 这种形式比较好清理代码
   pen.widgetMate(
-    ContainerMate(
+    Container$Mate(
       width: 100,
       height: 100,
       color: Colors.green,
-    ).configMate(config: (self) {
-      // 可配置mate 编辑器等参数
-      if (kDebugMode) {
-        print(self.widthMate.value);
-      }
-    }),
+    ),
   );
 
   // 这种形式比较好清理代码
   pen.widgetMate(
-    ContainerMate(
+    Container$Mate(
       width: 100,
       height: 100,
       color: Colors.green,
@@ -67,11 +62,11 @@ build(Pen pen, BuildContext context) {
     Param<double> width = params.set<double>(name: "width", init: 100.0);
     Param<double> height = params.set(name: "height", init: 100.0);
 
-    return ContainerMate(
+    return Container$Mate(
       width: width.value,
       height: height.value,
       color: Colors.green,
-      child: ContainerMate(
+      child: Container$Mate(
         width: width.value,
         height: height.value,
         color: Colors.green,
