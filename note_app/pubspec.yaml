@@ -62,11 +62,3 @@ flutter:
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  fonts:
-    - family: 'Roboto'
-      fonts:
-        - asset: assets/fonts/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf
-      # 中文默认字体，这个不起作用？web模式下不下来文件也是够喝一壶
-    - family: 'Noto Sans SC"'
-      fonts:
-        - asset: assets/fonts/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.otf
