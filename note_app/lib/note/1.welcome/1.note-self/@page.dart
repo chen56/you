@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/experiment_mates.dart';
+import 'package:note/mate_api_experiment.dart';
 import 'package:note/page.dart';
 import 'package:note/mate.dart';
 
