@@ -14,7 +14,7 @@ class PageMeta<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
   final void Function(Pen note, BuildContext context) builder;
-  late final Layout<T>? layout;
+  late final Layout? layout;
 
   PageMeta({
     required this.shortTitle,
@@ -54,7 +54,7 @@ class Path<T> {
     var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
     var path = _ensurePath(p);
     assert(path._meta == null,
-        " ${path} add kid '$fullPath': duplicate put , ${path._meta} already exists ");
+        " $path add kid '$fullPath': duplicate put , ${path._meta} already exists ");
     path._meta = meta;
     return path as Path<C>;
   }
@@ -64,7 +64,7 @@ class Path<T> {
       return this;
     }
     String name = nameList[0];
-    assert(name != "" && name != "/", "path:$nameList, path[0]:'${name}' must not be '' and '/' ");
+    assert(name != "" && name != "/", "path:$nameList, path[0]:'$name' must not be '' and '/' ");
     var next = _childrenMap.putIfAbsent(name, () {
       var child = Path._child(name, parent: this);
       _children.add(child);
@@ -141,11 +141,11 @@ class Path<T> {
     return result;
   }
 
-  Screen<T> createScreen(String location) => layout<T>(this);
+  Screen createScreen(String location) => layout(this);
 
   /// 扁平化name，去掉排序用的数字前缀
   String get nameFlat {
-    return name.replaceAll(RegExp("\\d+\."), "") // 1.note-self -> note-self
+    return name.replaceAll(RegExp("\\d+[.]"), "") // 1.note-self -> note-self
         ;
   }
 
@@ -186,10 +186,6 @@ abstract class Pen {
   void widgetMate(WidgetMate widgetMate);
 
   void widgetSnippet(WidgetMate Function(Params node) builder);
-}
-
-class MateConfig {
-  void config({required void config(Object o)}) {}
 }
 
 // markdown 的结构轮廓，主要用来显示TOC
@@ -254,7 +250,7 @@ class OutlineNode {
   }
 }
 
-typedef Layout<T> = Screen<T> Function<T>(Path<T> page);
+typedef Layout = Screen Function(Path page);
 
 /// 在页面树上找不到任何Layout时套用这个缺省的
 class _DefaultScreen<T> extends StatelessWidget with Screen<T> {

@@ -138,7 +138,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
               child: Text(iconExtend),
             ),
             Text(icon),
-            Flexible(child: Text("${node.title}")),
+            Flexible(child: Text(node.title)),
           ],
         ),
       );
@@ -248,7 +248,7 @@ class _PagePen extends Pen {
   void sample(Widget sample) {
     _contents.add(ConstrainedBox(
       key: ValueKey(i++),
-      constraints: BoxConstraints.tightFor(width: 200, height: 200),
+      constraints: const BoxConstraints.tightFor(width: 200, height: 200),
       child: sample,
     ));
   }
@@ -257,7 +257,7 @@ class _PagePen extends Pen {
   void widget(Widget widget) {
     _contents.add(ConstrainedBox(
       key: ValueKey(i++),
-      constraints: BoxConstraints.tightFor(width: 200, height: 200),
+      constraints: const BoxConstraints.tightFor(width: 200, height: 200),
       child: widget,
     ));
   }

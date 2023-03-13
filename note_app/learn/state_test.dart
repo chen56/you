@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_type_check
+// ignore_for_file: unnecessary_type_check, avoid_print
 
 import 'package:note/utils.dart';
 import 'package:test/test.dart';

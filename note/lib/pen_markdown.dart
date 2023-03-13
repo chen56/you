@@ -68,7 +68,7 @@ class _HeaderBuilder extends MarkdownElementBuilder {
       children: [
         heading,
         // h1 h2 加个横线
-        if (currentNode!.heading <= 2) Divider(height: 20, thickness: 1),
+        if (currentNode!.heading <= 2) const Divider(height: 20, thickness: 1),
       ],
     );
   }
@@ -106,10 +106,10 @@ class _PreBuilder extends MarkdownElementBuilder {
       theme: vs2015Theme,
 
       // Specify padding
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
 
       // Specify text style
-      textStyle: TextStyle(
+      textStyle: const TextStyle(
         fontFamily: 'My awesome monospace font',
         fontSize: 16,
       ),
@@ -122,7 +122,7 @@ class _PreBuilder extends MarkdownElementBuilder {
 
     //目前看，markdown中的code/prd 不滚动是不是更好些，一般内容不会很长
     return Container(
-      padding: EdgeInsets.only(right: 100),
+      padding: const EdgeInsets.only(right: 100),
       child: noScroll,
     );
   }
@@ -169,7 +169,7 @@ class _HighlightView extends StatelessWidget {
     var currentSpans = spans;
     List<List<TextSpan>> stack = [];
 
-    _traverse(Node node) {
+    traverse(Node node) {
       if (node.value != null) {
         currentSpans.add(node.className == null
             ? TextSpan(text: node.value)
@@ -180,17 +180,17 @@ class _HighlightView extends StatelessWidget {
         stack.add(currentSpans);
         currentSpans = tmp;
 
-        node.children!.forEach((n) {
-          _traverse(n);
+        for (var n in node.children!) {
+          traverse(n);
           if (n == node.children!.last) {
             currentSpans = stack.isEmpty ? spans : stack.removeLast();
           }
-        });
+        }
       }
     }
 
     for (var node in nodes) {
-      _traverse(node);
+      traverse(node);
     }
 
     return spans;

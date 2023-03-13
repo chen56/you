@@ -14,14 +14,13 @@ class MyHomepage extends StatelessWidget {
   Widget build(BuildContext context) {
     const directionality = Directionality(
       textDirection: TextDirection.ltr,
-      child: Text("aaaaaaaaa"),
+      child: Text("Hello"),
     );
     SchedulerBinding.instance.addPostFrameCallback((Duration timeStamp) {
       print(" constraints addPostFrameCallback ${context.findRenderObject()?.constraints}");
       print(" constraints addPostFrameCallback ${context.findRenderObject()?.paintBounds}");
       print(" constraints addPostFrameCallback ${context.findRenderObject()?.parentData}");
       print(" constraints addPostFrameCallback ${context.findRenderObject()?.semanticBounds}");
-      print(" constraints addPostFrameCallback ${context.findRenderObject()?.sizedByParent}");
       context.visitAncestorElements((element) {
         print(
             " element pre  ${" " * element.depth} ${element.toStringShort()} ${element.toDiagnosticsNode().getProperties().map((e) => "xxxx:${e.name}")}");

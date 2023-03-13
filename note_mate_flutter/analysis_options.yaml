@@ -12,16 +12,28 @@
 # The core lints are also what is used by pub.dev for scoring packages.
 
 #include: package:lints/recommended.yaml
+include: package:flutter_lints/flutter.yaml
 
 # Uncomment the following section to specify additional rules.
 
 linter:
   rules:
-    - camel_case_types
-    - always_use_package_imports
-    - implementation_imports
+#    camel_case_types
+#    always_use_package_imports
+    implementation_imports: false
 
-# analyzer:
+# ref:
+# https://github.com/flutter/engine/blob/master/analysis_options.yaml
+analyzer:
+  errors:
+    unnecessary_import: ignore
+    no_leading_underscores_for_local_identifiers: ignore
+    sort_child_properties_last: ignore
+    # gen_mates.dart应过滤
+    deprecated_member_use: ignore
+    depend_on_referenced_packages: ignore
+    # gen_mates.dart应过滤
+    invalid_use_of_visible_for_testing_member: ignore
 #   exclude:
 #     - path/to/excluded/files/**
 

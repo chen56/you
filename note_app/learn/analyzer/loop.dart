@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/element/element.dart';
@@ -28,7 +30,6 @@ main() async {
           if (c is! ClassElement) {
             continue;
           }
-          c = c as ClassElement;
           if (c.name.startsWith("_")) {
             continue;
           }
@@ -38,7 +39,7 @@ main() async {
                 "    constructor: ${co.displayName} isGenerative:${co.isGenerative} isDefaultConstructor:${co.isDefaultConstructor} isConst:${co.isConst} ");
             for (ParameterElement p in co.parameters) {
               print(
-                  "      parameter: ${p} , type:${p.type}  ,defaultValueCode:${p.defaultValueCode} , typeParameters:${p.typeParameters} ,  runtimeType:${p.runtimeType}, isSuperFormal:${p.isSuperFormal}, hasImplicitType:${p.hasImplicitType}  children:${p.children}   getDisplayString:${p.getDisplayString(withNullability: true, multiline: false)} , ");
+                  "      parameter: $p , type:${p.type}  ,defaultValueCode:${p.defaultValueCode} , typeParameters:${p.typeParameters} ,  runtimeType:${p.runtimeType}, isSuperFormal:${p.isSuperFormal}, hasImplicitType:${p.hasImplicitType}  children:${p.children}   getDisplayString:${p.getDisplayString(withNullability: true, multiline: false)} , ");
             }
           }
         }

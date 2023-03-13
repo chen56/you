@@ -102,6 +102,7 @@ abstract class Editor<T> {
 class OfString extends Editor<String> {
   OfString();
 
+  @override
   StatefulBuilder builder() {
     return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
       return TextField(
@@ -154,7 +155,7 @@ class OfObject<T> extends Editor<T> {
   @override
   StatefulBuilder builder() {
     return StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
-      return Text("TODO ObjectEditor.builder");
+      return const Text("TODO ObjectEditor.builder");
     });
   }
 }

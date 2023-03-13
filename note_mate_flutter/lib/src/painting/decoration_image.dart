@@ -8,6 +8,7 @@ import 'dart:ui';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
 import 'package:note/mate.dart';
+// ignore: depend_on_referenced_packages
 import 'package:vector_math/vector_math_64.dart';
 
 /// class DecorationImage

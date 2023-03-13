@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:flutter/cupertino.dart';
@@ -45,8 +47,7 @@ void main() {
                 )),
         )))));
 
-    lib.accept(DartEmitter());
-    print(_dartfmt.format('${lib.accept(DartEmitter.scoped())}'));
+    print(_format(lib));
   });
   test('lib import', () {
     final methods = [
@@ -59,11 +60,11 @@ void main() {
         ..name = 'doOther'
         ..returns = refer('Other', 'package:b/b.dart')),
     ];
-    final library = Library((b) => b.body.addAll(methods));
-    print(_dartfmt.format('${library.accept(DartEmitter.scoped())}'));
+    final lib = Library((b) => b.body.addAll(methods));
+    print(_format(lib));
   });
   test('FunctionType', () {
-    final library = Library((b) => b.body.add(Field((b) => b
+    final lib = Library((b) => b.body.add(Field((b) => b
       ..name = "func"
       ..type = FunctionType((b) => b
             ..namedParameters["a"] = TypeReference((b) => b
@@ -74,7 +75,7 @@ void main() {
           // ..optionalParameters.add(refer("String")),
           ))));
 
-    print(_dartfmt.format('${library.accept(DartEmitter.scoped())}'));
+    print(_format(lib));
   });
   test('class.TypeReference', () {
     var lib = Library((b) => b
@@ -91,7 +92,7 @@ void main() {
               ..types.add(TypeReference((b) => b..symbol = "String"))))),
       )));
 
-    print(_dartfmt.format('${lib.accept(DartEmitter.scoped())}'));
+    print(_format(lib));
   });
   test('expression.assign', () {
     var x = refer("mateParams")
@@ -106,7 +107,7 @@ void main() {
             }).code).closure,
         }))
         .code;
-    print(_noformat(x));
+    print(_noFormat(x));
   });
 }
 
@@ -114,7 +115,7 @@ String _format(Spec item) {
   return _dartfmt.format('${item.accept(DartEmitter.scoped())}');
 }
 
-String _noformat(Spec item) {
+String _noFormat(Spec item) {
   return '${item.accept(DartEmitter.scoped())}';
 }
 

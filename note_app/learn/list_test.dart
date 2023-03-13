@@ -10,6 +10,4 @@ void main() {
     expect(["1"].sublist(0, 0), []);
     expect(() => ["1"].sublist(0, 2), throwsA(isA<RangeError>()));
   });
-
-  List<String> list;
 }

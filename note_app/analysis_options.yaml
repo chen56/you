@@ -33,7 +33,9 @@ analyzer:
 
     # https://dart.dev/tools/experiment-flags#using-experiment-flags-with-the-dart-analyzer-command-line-and-ide
     # https://github.com/dart-lang/sdk/blob/3.0.0-315.0.dev/tools/experimental_features.yaml
-    enable-experiment:
-      - records
-      - macros
+  enable-experiment:
+    - records
+    - macros
 #     - class-modifiers
+  errors:
+    deprecated_member_use: false
