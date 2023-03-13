@@ -2,7 +2,7 @@
 
 import 'dart:io';
 
-import '../tools/env.dart';
+import '../../note_app/tools/env.dart';
 
 main() {
   Env env = Env();

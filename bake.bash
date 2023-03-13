@@ -24,31 +24,15 @@ set -o functrace #trap inherited in function
 # 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
 # ------------------------------------------------------------------------------
 
-if (( BASH_VERSINFO[0] < 4 ))  ; then
+if ((BASH_VERSINFO[0] < 4)); then
   echo "Error: 您bash版本过低(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
   apt install bash  # ubuntu
   brew install bash # mac"
   exit 1
 fi
 
-##########################################
-# get cmd real path
-# 不要用readlink取实际路径,mac和linux语法不兼容
-# 也不用coreutils的realpath，保持macos的简单
-##########################################
-function _realpath(){
-  local _path="$1"
-  while [ -h "$_path" ] ; do
-      ls=$(ls -ld "$_path")
-      link=$(expr "$ls" : '.*-> \(.*\)$')
-      if expr "$link" : '/.*' > /dev/null; then
-          _path="$link"
-      else
-          _path=$(dirname "$_path")"/$link"
-      fi
-  done
-  echo "$_path"
-}
+# copy from flutter
+# ----------------------
 # On Mac OS, readlink -f doesn't work, so follow_links traverses the path one
 # link at a time, and then cds into the link destination and find out where it
 # ends up.
@@ -67,7 +51,7 @@ function _realpath(){
 function follow_links() (
   cd -P "$(dirname -- "$1")"
   file="$PWD/$(basename -- "$1")"
-  while [[ -h "$file" ]]; do
+  while [[ -L "$file" ]]; do
     cd -P "$(dirname -- "$file")"
     file="$(readlink -- "$file")"
     cd -P "$(dirname -- "$file")"
@@ -77,119 +61,154 @@ function follow_links() (
 )
 export BAKE_HOME=$(dirname "$(follow_links $BASH_SOURCE)")
 
-/test1?shortHelp(){ cat << EOF
+/test1?setup() {
+  /test1?shortHelp() {
+    cat <<EOF
 测试shortHelp的规范 ，shortHelp line 1
 shortHelp line 2
 shortHelp line 3
 EOF
-}
-/test1() {
-  run echo aaaa
+  }
+  /test1() {
+    run echo "test1 run $*"
+  }
 }
 
-/test_option?shortHelp(){ cat << EOF
+/test_option?setup() {
+  /test_option?shortHelp() {
+    cat <<EOF
 测试参数规范
   ./bake test2 -h
   ./bake test2 -n chen56
   ./bake test2 --name chen56
 EOF
+  }
+  /test_option?option() {
+    option "-n" "--name" "名称" "参数帮助:名称"
+    option "-v" "--version" "" "参数帮助:版本"
+  }
+
+  /test_option?option() {
+    echo "${name}"
+    echo "${version}"
+  }
+
 }
-/test_option?option(){
-  option "-n" "--name"    "名称" "参数帮助:名称"
-  option "-v" "--version" ""        "参数帮助:版本"
-}
-/test_option(){
-  echo "your name(-n):${-n}"
-  echo "your name(--name):${--name}"
-}
-option(){
+
+option() {
   local short="$1"
   local long="$2"
 
   local arg="$3"
   local help="$4"
-  local hasArg=false;
+  local hasArg=false
   [[ $arg != "" ]] && hasArg=true
 
   local toString="short:'$short', long:'$long',arg:'$arg', help:'$help'"
   if [[ $long == "" ]]; then
-     cat <<< "long option must not be empty: ($toString)
+    cat <<<"long option must not be empty: ($toString)
         # option 'short option' 'long option(no empty!)'   'arg info'   'help'
         # option '-n'           '--name'                   'your name'  'give me your name'
      "
-     exit 1
+    exit 1
   fi
 
 }
 
-/test_option?option
+#/test_option?option
 #echo 临时退出 && exit 1
 
 # 项目init
-/init?shortHelp(){ cat <<< "初始化项目工具"; }
-/init() {
-  run git lfs install
+/init?setup() {
+  /init?shortHelp() { cat <<<"初始化项目工具"; }
+  /init?run() {
+    run git lfs install
+  }
 }
 
 # 项目init
-/get?shortHelp(){ cat <<< "all: pub get"; }
-/get() {
-  run flutter pub get --directory $BAKE_HOME/note
-  run flutter pub get --directory $BAKE_HOME/note_app
-  run flutter pub get --directory $BAKE_HOME/note_mate_flutter
+/get?setup() {
+  /get?shortHelp() { cat <<<"all: pub get"; }
+  /get?run() {
+    run flutter pub get --directory $BAKE_HOME/note
+    run flutter pub get --directory $BAKE_HOME/note_app
+    run flutter pub get --directory $BAKE_HOME/note_mate_flutter
+  }
 }
 
-
-# 构建命令,可附加flutter build的参数
-/build?shortHelp(){ cat <<< "构建命令,可附加flutter build的参数"; }
-/build() {
-  # web-renderer=canvaskit 太大了十几MB,所以要用html版
-  # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/flutter-note
-  run flutter build web --release --web-renderer html --base-href='/flutter-note/' "$@"
+/build?setup() {
+  /build?shortHelp() { cat <<<"构建命令,可附加flutter build的参数"; }
+  /build?run() {
+    # web-renderer=canvaskit 太大了十几MB,所以要用html版
+    # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/flutter-note
+    run flutter build web --release --web-renderer html --base-href='/flutter-note/' "$@"
+  }
 }
 
-# 构建命令
-/test?shortHelp(){ cat <<< "test"; }
-/test() {   run flutter test --web-renderer html; }
-
-
-/preview?shortHelp(){ cat <<< "预览，先build,再开web server: http://localhost:8000"; }
-/preview() {
-  echo "bake preview"
-  flutter build web --release --web-renderer html --base-href='/' "$@"
-# 	npx http-server ./build/web --port 8000
-  run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
+/test?setup() {
+  /test?shortHelp() { cat <<<"test"; }
+  /test?run() { run flutter test --web-renderer html; }
 }
 
-/build?shortHelp?shortHelp(){ cat <<< "预览，先build,再开web server: http://localhost:8000"; }
-/build() {  run flutter build web --release --web-renderer html --base-href='/' "$@" ; }
-
-/gen?shortHelp?shortHelp(){ cat <<< "build_runner，代码生成"; }
-/gen() {  
-  /gen_pages
-  /gen_mate
+/preview?setup() {
+  /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
+  /preview?run() {
+    echo "bake preview"
+    flutter build web --release --web-renderer html --base-href='/' "$@"
+    # 	npx http-server ./build/web --port 8000
+    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
+  }
 }
 
-/gen?shortHelp?shortHelp(){ cat <<< "build_runner，代码生成"; }
-/gen_pages() {  run dart run build_runner build -o lib:build/bulid_runner -c pages "$@";}
+/build?setup() {
+  /build?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
+  /build?run() {
+    run flutter build web --release --web-renderer html --base-href='/' "$@"
+  }
+}
 
-/gen_mate?shortHelp?shortHelp(){ cat <<< "build_runner，代码生成"; }
-/gen_mate() { run dart run build_runner build -o lib:build/bulid_runner -c mate "$@" ; }
+/gen?setup() {
+  /gen?shortHelp() { cat <<<"build_runner，代码生成"; }
+  /gen?run() {
+    /gen_pages
+    /gen_mate
+  }
+}
 
-# dev run local http://localhost:8000
-/run?shortHelp(){ cat <<< "开发模式 flutter run: http://localhost:8000"; }
-/run() {  run flutter run --web-renderer html --device-id chrome --enable-experiment=records ; }
+/gen_pages?setup() {
+  /gen_pages?shortHelp() { cat <<<"build_runner，代码生成"; }
+  /gen_pages?run() {
+    run dart run build_runner build -o lib:build/bulid_runner -c pages "$@"
+  }
+}
+
+/gen_mate?setup() {
+  /gen_mate?shortHelp() { cat <<<"build_runner，代码生成"; }
+  /gen_mate?run() {
+    run dart run build_runner build -o lib:build/bulid_runner -c mate "$@"
+  }
+}
+
+/run?setup() {
+  /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
+  /run?run() {
+    run flutter run --web-renderer html --device-id chrome --enable-experiment=records;
+  }
+}
 
 # 清理
-/clean?shortHelp(){ cat <<< "清理项目目录"; }
-/clean() {
-  echo "bake clean"
-  run flutter clean
-  run dart run build_runner clean
+/clean?setup() {
+  /clean?shortHelp() { cat <<<"清理项目目录"; }
+  /clean?run() {
+    echo "bake clean"
+    run flutter clean
+    run dart run build_runner clean
+  }
+
 }
 
-/?help() {
-cat <<- '__EOF'
+_help() {
+  cat <<-'__EOF'
 ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
 |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
 |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
@@ -199,7 +218,7 @@ Usage:
 Available Commands:
 __EOF
 
-print_commands
+  print_commands
 
 }
 
@@ -229,45 +248,49 @@ run() {
   return $?
 }
 
+
+
 print_commands() {
   IFS=$'\n'
 
-  # 我们要找出:
-  # 1. 以/开头的函数，作为子命令
-  # 2. 不包含?
+  # 我们要找出形如'/build?setup'开头的函数，作为子命令的注册函数
   # 列出所有/开头的命令
   # declare -F 会列出所有定义,比如
   # $ declare -F
-  #     => declare -f /build
-  #     => declare -f /help
-  #转成命令全名
+  #     => declare -f /build?setup
+  #     => declare -f /run?setup
+  #转成命令全名 fullNames
   #     => /build
-  #     => /help
+  #     => /run
   IFS=$'\n' # 分配回车符给IFS
-  local cmdFullnames=$(declare -F | grep "^declare -f /" | grep -v "?" | sed -e 's/^declare -f //g')
-  readarray -t cmdFullnames <<<"$cmdFullnames"
-  local cmds=()
+  local fullNames=$(declare -F | grep -E "^declare -f (\/.*)\?setup" | sed -r 's/^declare -f (\/.*)\?setup/\1/')
+  readarray -t fullNames <<<"$fullNames"
+  local commands=()
   local shortHelps=()
   local maxLengthOfCmd=0
   local i=0
-  for cmdFullname in ${cmdFullnames[*]}; do
+  for cmdFullname in ${fullNames[*]}; do
+    # 先调用最外层setup命令
+    "${cmdFullname}?setup"
+    # 现在可以取到内层注册的函数，取帮助等
+    local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null || true)
+    shortHelps[i]=${shortHelp}
+
     # 先去第一个"/"，再按"/"split成数组
     local split=($(tr "/" " " <<<"${cmdFullname:1}"))
-    local cmd=${split[0]} #目前只用 第一个命令
-    local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null || true)
-    cmds[i]=${cmd}
-    shortHelps[i]=${shortHelp}
+    local cmd=${split[0]} #目前只用 第一个命令, 将来可以扩展为多层父子命令
+    commands[i]=${cmd}
     # 求命令的最大长度，一会padding用
     if ((${#cmd} > maxLengthOfCmd)); then maxLengthOfCmd=${#cmd}; fi
     i=$((i + 1))
   done
 
   # print all commands and shortHelp
-  for i in ${!cmds[*]}; do
+  for i in ${!commands[*]}; do
     local padding=$(printf %-$((maxLengthOfCmd + 6))b "")
     # 第二行开始，都补空格
     local shortHelp=$(sed "2,1000s/^/$padding/g" <<<"${shortHelps[i]}")
-    printf "  %-$((maxLengthOfCmd))s    ${shortHelp}\n" "${cmds[i]}"
+    printf "  %-$((maxLengthOfCmd))s    ${shortHelp}\n" "${commands[i]}"
   done
 
   return
@@ -277,21 +300,27 @@ trap " set +x; on_error " ERR
 
 # 执行./bake 没参数，即没子命令，就显示help
 if [ "$#" == 0 ]; then
-  /?help # 根命令的帮助
+  _help # 根命令的帮助
   echo
   echo ">>> Error: missing command './bake COMMAND'"
   exit 1
 fi
 
 cmd="$1"
+shift
+
 # cmd 加上/前缀就是相应的函数
-cmdFunc="/$cmd"
-if ! declare -f "$cmdFunc" >/dev/null 2>&1; then
-  echo "Error: 命令[${cmd}] 不存在, 未找到相应的函数[${cmdFunc}()]"
+cmdSetup="/$cmd?setup"
+commanFullname="/$cmd"
+if ! declare -f "$cmdSetup" >/dev/null 2>&1; then
+  echo "Error: 命令[${cmd}] 不存在, 未找到相应的命令注册函数[${cmdSetup}()]"
   exit 1
 fi
 
 # 加上/前缀执行相应的function
 # 比如"./bike build" ,执行的是"/build"函数
 # shellcheck disable=SC2145
-"/$@"
+# 先跑外层注册命令
+$cmdSetup
+# 再执行命令
+$commanFullname "$@"

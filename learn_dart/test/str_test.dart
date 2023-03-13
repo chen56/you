@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_type_check
 
-import 'package:flutter/material.dart';
-import 'package:note/utils.dart';
+import 'dart:collection';
+
 import 'package:test/test.dart';
 
 void main() {
@@ -14,11 +14,21 @@ void main() {
   });
 
   test('common.types isType 类型判断', () {
-    expect(isType(Center(), TypeIs<Widget>()), isTrue);
+    expect(isType(Cat(), TypeIs<Animal>()), isTrue);
   });
   test('raw string', () {
     String name = "chen56";
     expect("name:$name", "name:chen56");
     expect(r"name:$name", "name:\$name", reason: "r means raw string");
   });
+}
+
+class Animal {}
+
+class Cat extends Animal {}
+
+class TypeIs<T> {}
+
+isType<T>(Object o, TypeIs<T> type) {
+  return o is T;
 }
