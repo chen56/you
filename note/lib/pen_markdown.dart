@@ -5,12 +5,12 @@ import 'package:note/page.dart';
 import 'package:highlight/highlight.dart' show highlight, Node;
 import 'package:markdown/markdown.dart' as md;
 
-class MarkdownView extends StatelessWidget {
+class MarkdownContent extends StatelessWidget {
   final Outline outline;
   final String content;
   final ScrollController controller = ScrollController();
 
-  MarkdownView({super.key, required this.outline, required this.content});
+  MarkdownContent({super.key, required this.outline, required this.content});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +93,7 @@ class _PreBuilder extends MarkdownElementBuilder {
 
   @override
   Widget? visitText(md.Text text, TextStyle? preferredStyle) {
-    var highlight = HighlightView(
+    var highlight = _HighlightView(
       // The original code to be highlighted
       text.textContent,
 
@@ -131,7 +131,7 @@ class _PreBuilder extends MarkdownElementBuilder {
 // 我们需要可选的文本框，所以改八改八
 // copy from https://github.com/git-touch/highlight.dart/blob/v0.7.0/flutter_highlight/lib/flutter_highlight.dart
 /// Highlight Flutter Widget
-class HighlightView extends StatelessWidget {
+class _HighlightView extends StatelessWidget {
   /// The original code to be highlighted
   final String source;
 
@@ -155,7 +155,7 @@ class HighlightView extends StatelessWidget {
   /// Specify text styles such as font family and font size
   final TextStyle? textStyle;
 
-  HighlightView(
+  _HighlightView(
     String input, {
     this.language,
     this.theme = const {},
@@ -207,19 +207,17 @@ class HighlightView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _textStyle = TextStyle(
+    var newStyle = TextStyle(
       fontFamily: _defaultFontFamily,
       color: theme[_rootKey]?.color ?? _defaultFontColor,
-    );
-    if (textStyle != null) {
-      _textStyle = _textStyle.merge(textStyle);
-    }
+    ).merge(textStyle);
+
     return Container(
       color: theme[_rootKey]?.backgroundColor ?? _defaultBackgroundColor,
       padding: padding,
       child: SelectableText.rich(
         TextSpan(
-          style: _textStyle,
+          style: newStyle,
           children: _convert(highlight.parse(source, language: language).nodes!),
         ),
       ),

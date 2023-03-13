@@ -52,14 +52,14 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       controller: controller,
       children: pen._contents,
     );
-    var scorllBehavior = ScrollBehavior().buildScrollbar(context, contentListView,
+    final scrollBehavior = const ScrollBehavior().buildScrollbar(context, contentListView,
         ScrollableDetails(direction: AxisDirection.down, controller: controller));
 
     var row = Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SizedBox(width: 200, child: navigatorTree),
-        Expanded(child: scorllBehavior),
+        SizedBox(width: 220, child: navigatorTree),
+        Expanded(child: scrollBehavior),
         SizedBox(width: 200, child: outlineView),
       ],
     );
@@ -97,9 +97,9 @@ class _NoteTreeView extends StatefulWidget {
     Key? key,
   }) : super(key: key) {
     // 初始化 所有parent为展开状态
-    root.parents.forEach((parent) {
+    for (var parent in root.parents) {
       parent.extend = true;
-    });
+    }
   }
 
   @override
@@ -114,32 +114,30 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
     // 一页一个链接
     Widget newLink(Path node) {
       click() {
-        // 还未用上这个展开状态，还没想好怎么让ListView模仿树节点的展开和关闭
-        // node.extend = !node.extend;
         NavigatorV2.of(context).push(node.path);
       }
 
-      String icon1 = node.isLeaf
-          ? "   "
+      String iconExtend = node.isLeaf
+          ? "     "
           : node.extend
               ? "▽  "
-              : "▶︎  ";
-      String icon2 = "🗓";
+              : "▷︎  ";
+      String icon = "🗓";
       // 📁📂📄🗓📜▸▾▹▿ ▶︎▷▼▽►
       // title 被Flexible包裹后，文本太长会自动换行
       // 换行后左边图标需要CrossAxisAlignment.start 排在文本的第一行
       // children: [Flexible(child: Text("$icon ${node.title}"))],
       // 但是Flexible要上面套一个Flex的子类
-      var link2 = TextButton(
+      var link = TextButton(
         onPressed: node.hasPage ? click : null,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             GestureDetector(
               onTap: () => setState(() => node.extend = !node.extend),
-              child: Text(icon1),
+              child: Text(iconExtend),
             ),
-            Text(icon2),
+            Text(icon),
             Flexible(child: Text("${node.title}")),
           ],
         ),
@@ -149,7 +147,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       return Padding(
         // 缩进模仿树形
         padding: EdgeInsets.only(left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
-        child: link2,
+        child: link,
       );
     }
 
@@ -266,7 +264,7 @@ class _PagePen extends Pen {
 
   @override
   void markdown(String content) {
-    _contents.add(MarkdownView(
+    _contents.add(MarkdownContent(
       key: ValueKey(i++),
       outline: outline,
       content: content,

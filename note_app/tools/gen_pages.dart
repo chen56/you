@@ -40,7 +40,7 @@ main() async {
     Library libGen = Library((b) => b
       ..comments.add("value")
       ..directives.add(Directive.import("package:note/page.dart"))
-      ..directives.add(Directive.import("package:flutter_note/pages.dart"))
+      ..directives.add(Directive.import("package:note_app/pages.dart"))
       ..directives.addAll(libs
           .map((lib) => Directive.import(lib.identifier, as: "${_flatLibPath(lib.identifier)}_")))
       ..body.add(Mixin((b) => b
@@ -48,7 +48,7 @@ main() async {
         ..fields.addAll(libs.map((lib) {
           String flatPagePath = _flatLibPath(lib.identifier);
           String path =
-              lib.identifier.replaceAll("package:flutter_note", "").replaceAll("/@page.dart", "");
+              lib.identifier.replaceAll("package:note_app", "").replaceAll("/@page.dart", "");
           path = path == "" ? "/" : path;
           return Field((b) => b
             ..name = flatPagePath
@@ -79,7 +79,7 @@ log(Object? o) {
 /// - '/'换成'$'
 /// - 其他特殊字符换成'_'
 String _flatLibPath(String packageName) {
-  String result = packageName.replaceAll("package:flutter_note/", "");
+  String result = packageName.replaceAll("package:note_app/", "");
   if (result == "@page.dart") {
     return "root";
   }

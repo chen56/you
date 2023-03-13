@@ -6,7 +6,7 @@ import 'package:analyzer/dart/analysis/utilities.dart';
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/token.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
-import 'package:flutter_note/draft/dart/analyzer/tosource.dart';
+import 'package:note_app/draft/dart/analyzer/tosource.dart';
 
 main() {
   read(File("/usr/local/Cellar/flutter/packages/flutter/lib/src/widgets/async.dart"));

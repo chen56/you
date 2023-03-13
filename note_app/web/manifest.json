@@ -1,6 +1,6 @@
 {
-    "name": "flutter_note",
-    "short_name": "flutter_note",
+    "name": "note_app",
+    "short_name": "note_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

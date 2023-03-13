@@ -113,7 +113,7 @@ class OfString extends Editor<String> {
         ),
         onChanged: (value) {
           setState(() {
-            developer.log("text.data:$value", name: 'flutter_note');
+            developer.log("text.data:$value", name: 'note_app');
             this.value = value;
           });
         },
@@ -138,7 +138,7 @@ class OfDouble extends Editor<double> {
         ),
         onChanged: (value) {
           setState(() {
-            developer.log("double:$value", name: 'flutter_note');
+            developer.log("double:$value", name: 'note_app');
             this.value = double.tryParse(value);
           });
         },
