@@ -1,6 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/page.dart';
+import 'package:note/page_core.dart';
 import 'package:note/mate.dart';
 import 'package:note_mate_flutter/material.dart';
 
@@ -16,7 +15,6 @@ build(Pen pen, BuildContext context) {
 ## 可拖动组件，快速实验
 
 ```dart
-  //这种形式可以配置Mate参数,但Sample不好清理代码
   pen.widgetMate(
     ContainerMate(
       width: 100,
@@ -27,31 +25,20 @@ build(Pen pen, BuildContext context) {
 ```
   ''');
 
-  pen.widgetMate(
-    Container$Mate(
-      width: 100,
-      height: 100,
-      color: Colors.green,
-    ),
-  );
+  pen.markdown(r'''
+## xxx
+  ''');
 
-  // 这种形式比较好清理代码
-  pen.widgetMate(
-    Container$Mate(
-      width: 100,
-      height: 100,
-      color: Colors.green,
-    ),
-  );
+  pen.widgetMate(Container$Mate(
+    height: 50,
+    color: Colors.green,
+    clipBehavior: Clip.none,
+  ));
 
-  // 这种形式比较好清理代码
-  pen.widgetMate(
-    Container$Mate(
-      width: 100,
-      height: 100,
-      color: Colors.green,
-    ),
-  );
+  pen.markdown(r'''
+## xxx
+  ''');
+
   // root
   //   Container.new
   //     width
@@ -59,17 +46,19 @@ build(Pen pen, BuildContext context) {
   //       width
   // 这里可以放一些比较复杂的共享MateNode的场景，比如多个组件同width
   pen.widgetSnippet((params) {
-    Param<double> width = params.set<double>(name: "width", init: 100.0);
-    Param<double> height = params.set(name: "height", init: 100.0);
+    Param<double> width = params.set(name: "width", init: 200.0);
+    Param<double> height = params.set(name: "height", init: 200.0);
 
     return Container$Mate(
       width: width.value,
       height: height.value,
       color: Colors.green,
+      clipBehavior: Clip.none,
       child: Container$Mate(
         width: width.value,
         height: height.value,
         color: Colors.green,
+        clipBehavior: Clip.none,
       ),
     );
   });

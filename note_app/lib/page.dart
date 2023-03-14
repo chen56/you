@@ -1,5 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/widgets.dart';
-import 'package:note/page.dart';
+import 'package:note/page_core.dart';
 import 'package:note/page_layout.dart';
 import 'package:note_app/pages.dart';
 

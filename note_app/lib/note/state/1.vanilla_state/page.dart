@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:note/page.dart';
+import 'package:note/page_core.dart';
 
 import '1.hello.dart' as stateful_hello;
 

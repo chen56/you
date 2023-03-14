@@ -179,8 +179,6 @@ class Content {
 abstract class Pen {
   void sample(Widget sample);
 
-  void widget(Widget widget);
-
   void markdown(String content);
 
   void widgetMate(WidgetMate widgetMate);

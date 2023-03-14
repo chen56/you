@@ -21,9 +21,11 @@ dependencies:
 
   flutter_highlight: ^0.7.0
   highlight: ^0.7.0
+  analyzer: ">=5.0.0 <6.0.0"
 
-  note:
-  note_mate_flutter:
+  note: ^0.0.1
+  note_mate_flutter: ^1.0.0
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   # 应该是不需要这个东东的，暂时注释掉
@@ -39,7 +41,6 @@ dev_dependencies:
   lints: ^2.0.1
 
   # for tools/gen_pages.dart
-  analyzer: ">=5.0.0 <6.0.0"
   file: ^6.1.4
   dart_style: ^2.0.0
   code_builder: ^4.4.0

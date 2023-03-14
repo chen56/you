@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('string.split', () {
-    Glob glob = Glob("lib/note/**/@page.dart");
+    Glob glob = Glob("lib/note/**/page.dart");
     glob.listSync().forEach((element) {
       print(element);
     });

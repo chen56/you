@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:note/page.dart';
+import 'package:note/page_core.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "404",

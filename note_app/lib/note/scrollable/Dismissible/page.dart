@@ -1,16 +1,17 @@
 import 'package:flutter/widgets.dart';
-import 'package:note/page.dart';
+import 'package:note/page_core.dart';
 
 PageMeta page = PageMeta(
-  shortTitle: "可选择性",
+  shortTitle: " Dismissible滑动清除",
   builder: build,
 );
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-## flutter Note
+## 参考
 
-flutter 默认是无法中UI文本的，相应的也无法进行页面搜索。
+<https://flutter.cn/docs/cookbook/gestures/dismissible> 
+
 
   ''');
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:note/page.dart';
+import 'package:note/page_core.dart';
 import 'package:highlight/highlight.dart' show highlight, Node;
 import 'package:markdown/markdown.dart' as md;
 

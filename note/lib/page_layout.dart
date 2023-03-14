@@ -264,18 +264,8 @@ class _PagePen extends Pen {
 
   @override
   void widgetMate(WidgetMate widgetMate) {
-    var boxDecoration = BoxDecoration(
-      border: Border.all(
-        color: Colors.black12,
-      ),
-    );
-
-    // widgetMate.mateParams
-    _contents.add(Container(
-      // padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 2.0),
-      // height: 100,
-      decoration: boxDecoration,
-      child: widgetMate,
+    _contents.add(MateCode(
+      widgetMate: widgetMate,
     ));
   }
 
@@ -283,5 +273,45 @@ class _PagePen extends Pen {
   void widgetSnippet(WidgetMate Function(Params node) builder) {
     Params<void> node = Params<void>(init: null, builder: (p) => builder(p));
     widgetMate(builder(node));
+  }
+}
+
+class MateCode extends StatefulWidget {
+  final WidgetMate widgetMate;
+  const MateCode({super.key, required this.widgetMate});
+
+  @override
+  State<StatefulWidget> createState() {
+    return MateCodeState();
+  }
+}
+
+class MateCodeState extends State<MateCode> {
+  bool isExpanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 2,
+      child: Column(
+        children: [
+          widget.widgetMate,
+          ExpansionTile(
+            title: Row(
+              children: [
+                Text("参数设置&代码"),
+              ],
+            ),
+            children: [
+              Container(
+                padding: const EdgeInsets.all(0),
+                width: double.infinity,
+                child: const Text("xxx"),
+              )
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
