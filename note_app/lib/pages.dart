@@ -1,6 +1,6 @@
 // part of "pages.g.dart";
 import 'package:note/navigator_v2.dart';
-import 'package:note/page.dart';
+import 'package:note/page_core.dart';
 import 'package:note_app/pages.g.dart';
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
@@ -37,7 +37,9 @@ import 'package:note_app/pages.g.dart';
 class Paths with Navigable, PathsMixin {
   late final Path<void> initial;
   Paths._() {
-    initial = note;
+    // todo reset to note
+    // initial = note
+    initial = note_welcome_note_self;
   }
 
   @override

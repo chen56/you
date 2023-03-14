@@ -12,7 +12,7 @@ void main() {
     expect(x == null, isTrue);
   });
   test('2', () {
-    dynamic? x = 1;
+    dynamic x = 1;
     int i = x;
     expect(x == i, isTrue);
     expect(x.runtimeType, equals(1.runtimeType));

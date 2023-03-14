@@ -1,7 +1,5 @@
 // ignore_for_file: unnecessary_type_check
 
-import 'dart:collection';
-
 import 'package:test/test.dart';
 
 void main() {

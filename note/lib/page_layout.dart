@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
-import 'package:note/page.dart';
+import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
@@ -254,15 +254,6 @@ class _PagePen extends Pen {
   }
 
   @override
-  void widget(Widget widget) {
-    _contents.add(ConstrainedBox(
-      key: ValueKey(i++),
-      constraints: const BoxConstraints.tightFor(width: 200, height: 200),
-      child: widget,
-    ));
-  }
-
-  @override
   void markdown(String content) {
     _contents.add(MarkdownContent(
       key: ValueKey(i++),
@@ -279,9 +270,10 @@ class _PagePen extends Pen {
       ),
     );
 
+    // widgetMate.mateParams
     _contents.add(Container(
       // padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 2.0),
-      height: 100,
+      // height: 100,
       decoration: boxDecoration,
       child: widgetMate,
     ));

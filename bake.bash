@@ -61,7 +61,7 @@ function follow_links() (
 )
 export BAKE_HOME=$(dirname "$(follow_links $BASH_SOURCE)")
 
-/test1?setup() {
+/test1?() {
   /test1?shortHelp() {
     cat <<EOF
 测试shortHelp的规范 ，shortHelp line 1
@@ -74,7 +74,7 @@ EOF
   }
 }
 
-/test_option?setup() {
+/test_option?() {
   /test_option?shortHelp() {
     cat <<EOF
 测试参数规范
@@ -119,40 +119,46 @@ option() {
 #echo 临时退出 && exit 1
 
 # 项目init
-/init?setup() {
+/init?() {
   /init?shortHelp() { cat <<<"初始化项目工具"; }
-  /init?run() {
+  /init() {
     run git lfs install
+    (
+      run cd "$BAKE_HOME/note_app"
+      # 增加平台支持到现存项目
+      # https://docs.flutter.dev/development/platform-integration/desktop#add-desktop-support-to-an-existing-flutter-app
+      run flutter create --platforms=macos .
+    )
   }
 }
 
 # 项目init
-/get?setup() {
+/get?() {
   /get?shortHelp() { cat <<<"all: pub get"; }
-  /get?run() {
+  /get() {
     run flutter pub get --directory $BAKE_HOME/note
     run flutter pub get --directory $BAKE_HOME/note_app
     run flutter pub get --directory $BAKE_HOME/note_mate_flutter
   }
 }
 
-/build?setup() {
+/build?() {
   /build?shortHelp() { cat <<<"构建命令,可附加flutter build的参数"; }
-  /build?run() {
+  /build() {
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/flutter-note
     run flutter build web --release --web-renderer html --base-href='/flutter-note/' "$@"
   }
 }
 
-/test?setup() {
+/test?() {
   /test?shortHelp() { cat <<<"test"; }
-  /test?run() { run flutter test --web-renderer html; }
+  /test() { run flutter test --web-renderer html; }
 }
 
-/preview?setup() {
+/preview?() {
   /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
-  /preview?run() {
+  /preview() {
     echo "bake preview"
     flutter build web --release --web-renderer html --base-href='/' "$@"
     # 	npx http-server ./build/web --port 8000
@@ -160,51 +166,50 @@ option() {
   }
 }
 
-/build?setup() {
+/build?() {
   /build?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
   /build?run() {
     run flutter build web --release --web-renderer html --base-href='/' "$@"
   }
 }
 
-/gen?setup() {
+/gen?() {
   /gen?shortHelp() { cat <<<"build_runner，代码生成"; }
-  /gen?run() {
+  /gen() {
     /gen_pages
     /gen_mate
   }
 }
 
-/gen_pages?setup() {
+/gen_pages?() {
   /gen_pages?shortHelp() { cat <<<"build_runner，代码生成"; }
-  /gen_pages?run() {
+  /gen_pages() {
     run dart run build_runner build -o lib:build/bulid_runner -c pages "$@"
   }
 }
 
-/gen_mate?setup() {
+/gen_mate?() {
   /gen_mate?shortHelp() { cat <<<"build_runner，代码生成"; }
   /gen_mate?run() {
     run dart run build_runner build -o lib:build/bulid_runner -c mate "$@"
   }
 }
 
-/run?setup() {
+/run?() {
   /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
-  /run?run() {
+  /run() {
     run flutter run --web-renderer html --device-id chrome --enable-experiment=records;
   }
 }
 
 # 清理
-/clean?setup() {
+/clean?() {
   /clean?shortHelp() { cat <<<"清理项目目录"; }
-  /clean?run() {
+  /clean() {
     echo "bake clean"
     run flutter clean
     run dart run build_runner clean
   }
-
 }
 
 _help() {
@@ -249,29 +254,34 @@ run() {
 }
 
 
+run_from_stdin() { while read cmd; do "$cmd"; done; }
+initCommands(){
+    run_from_stdin <<< $(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')
+}
 
 print_commands() {
   IFS=$'\n'
 
-  # 我们要找出形如'/build?setup'开头的函数，作为子命令的注册函数
+  # 我们要找出形如'/build?'开头的函数，作为子命令的注册函数
   # 列出所有/开头的命令
   # declare -F 会列出所有定义,比如
   # $ declare -F
-  #     => declare -f /build?setup
-  #     => declare -f /run?setup
+  #     => declare -f /build?
+  #     => declare -f /run?
   #转成命令全名 fullNames
   #     => /build
   #     => /run
+  # 而fullName 是最终可执行的自命令函数
   IFS=$'\n' # 分配回车符给IFS
-  local fullNames=$(declare -F | grep -E "^declare -f (\/.*)\?setup" | sed -r 's/^declare -f (\/.*)\?setup/\1/')
+  local fullNames=$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f (\/.*)\?$/\1/')
   readarray -t fullNames <<<"$fullNames"
   local commands=()
   local shortHelps=()
   local maxLengthOfCmd=0
   local i=0
   for cmdFullname in ${fullNames[*]}; do
-    # 先调用最外层setup命令
-    "${cmdFullname}?setup"
+    # 先调用最外层注册命令
+    "${cmdFullname}?"
     # 现在可以取到内层注册的函数，取帮助等
     local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null || true)
     shortHelps[i]=${shortHelp}
@@ -296,7 +306,15 @@ print_commands() {
   return
 }
 
+
+##########################################
+# 以下是 main 脚本执行区
+##########################################
+
 trap " set +x; on_error " ERR
+
+# init all sub commands
+initCommands
 
 # 执行./bake 没参数，即没子命令，就显示help
 if [ "$#" == 0 ]; then
@@ -310,10 +328,9 @@ cmd="$1"
 shift
 
 # cmd 加上/前缀就是相应的函数
-cmdSetup="/$cmd?setup"
-commanFullname="/$cmd"
-if ! declare -f "$cmdSetup" >/dev/null 2>&1; then
-  echo "Error: 命令[${cmd}] 不存在, 未找到相应的命令注册函数[${cmdSetup}()]"
+cmdFullName="/$cmd"
+if ! declare -f "$cmdFullName" >/dev/null 2>&1; then
+  echo "Error: 404 ,command '${cmd}' not exists, command function '${cmdFullName}()'" not found
   exit 1
 fi
 
@@ -323,4 +340,4 @@ fi
 # 先跑外层注册命令
 $cmdSetup
 # 再执行命令
-$commanFullname "$@"
+$cmdFullName "$@"
