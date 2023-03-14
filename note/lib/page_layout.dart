@@ -278,6 +278,7 @@ class _PagePen extends Pen {
 
 class MateCode extends StatefulWidget {
   final WidgetMate widgetMate;
+
   const MateCode({super.key, required this.widgetMate});
 
   @override
@@ -291,27 +292,84 @@ class MateCodeState extends State<MateCode> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    DataRow row(Param param) {
+      return DataRow(
+        cells: <DataCell>[
+          DataCell(Text('Sarah')),
+          DataCell(Text('19')),
+        ],
+      );
+    }
+
+    var card = Card(
       elevation: 2,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           widget.widgetMate,
           ExpansionTile(
-            title: Row(
+            expandedAlignment: Alignment.centerLeft,
+            title: const Row(
               children: [
                 Text("参数设置&代码"),
               ],
             ),
             children: [
-              Container(
-                padding: const EdgeInsets.all(0),
-                width: double.infinity,
-                child: const Text("xxx"),
+              DataTable(
+                columns: const <DataColumn>[
+                  DataColumn(
+                    label: Expanded(
+                      child: Text(
+                        'param',
+                        style: TextStyle(fontStyle: FontStyle.italic),
+                      ),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Expanded(
+                      child: Text(
+                        'value',
+                        style: TextStyle(fontStyle: FontStyle.italic),
+                      ),
+                    ),
+                  ),
+                ],
+                rows: const <DataRow>[
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text('Sarah')),
+                      DataCell(Text('19')),
+                    ],
+                  ),
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text('Janine')),
+                      DataCell(Text('43')),
+                    ],
+                  ),
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text('William')),
+                      DataCell(Text('27')),
+                    ],
+                  ),
+                ],
               )
             ],
           ),
         ],
       ),
+    );
+    var theme = Theme.of(context);
+    return Theme(
+      data: Theme.of(context).copyWith(
+        dataTableTheme: theme.dataTableTheme.copyWith(
+          headingRowHeight: 24,
+          dataRowHeight: 24,
+        ),
+      ),
+      child: card,
     );
   }
 }
