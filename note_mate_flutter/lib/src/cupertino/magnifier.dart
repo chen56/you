@@ -58,13 +58,13 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with WidgetMate
         magnifierInfo: p.get('magnifierInfo').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('animationCurve', init: animationCurve);
-    mateParams.put('controller', init: controller);
-    mateParams.put('dragResistance', init: dragResistance);
-    mateParams.put('hideBelowThreshold', init: hideBelowThreshold);
-    mateParams.put('horizontalScreenEdgePadding', init: horizontalScreenEdgePadding);
-    mateParams.put('magnifierInfo', init: magnifierInfo);
+    mateParams.put('key', key);
+    mateParams.put('animationCurve', animationCurve);
+    mateParams.put('controller', controller);
+    mateParams.put('dragResistance', dragResistance);
+    mateParams.put('hideBelowThreshold', hideBelowThreshold);
+    mateParams.put('horizontalScreenEdgePadding', horizontalScreenEdgePadding);
+    mateParams.put('magnifierInfo', magnifierInfo);
   }
 }
 
@@ -113,12 +113,12 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with WidgetMate<Cuperti
         inOutAnimation: p.get('inOutAnimation').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('size', init: size);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('additionalFocalPointOffset', init: additionalFocalPointOffset);
-    mateParams.put('shadows', init: shadows);
-    mateParams.put('borderSide', init: borderSide);
-    mateParams.put('inOutAnimation', init: inOutAnimation);
+    mateParams.put('key', key);
+    mateParams.put('size', size);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('additionalFocalPointOffset', additionalFocalPointOffset);
+    mateParams.put('shadows', shadows);
+    mateParams.put('borderSide', borderSide);
+    mateParams.put('inOutAnimation', inOutAnimation);
   }
 }

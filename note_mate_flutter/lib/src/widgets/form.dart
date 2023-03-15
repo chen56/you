@@ -43,11 +43,11 @@ class Form$Mate extends Form with WidgetMate<Form$Mate> {
         autovalidateMode: p.get('autovalidateMode').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('onWillPop', init: onWillPop);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('autovalidateMode', init: autovalidateMode);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('onWillPop', onWillPop);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('autovalidateMode', autovalidateMode);
   }
 }
 
@@ -101,13 +101,13 @@ class FormField$Mate<T> extends FormField<T> with WidgetMate<FormField$Mate> {
         restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('builder', init: builder);
-    mateParams.put('onSaved', init: onSaved);
-    mateParams.put('validator', init: validator);
-    mateParams.put('initialValue', init: initialValue);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('autovalidateMode', init: autovalidateMode);
-    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('key', key);
+    mateParams.put('builder', builder);
+    mateParams.put('onSaved', onSaved);
+    mateParams.put('validator', validator);
+    mateParams.put('initialValue', initialValue);
+    mateParams.put('enabled', enabled);
+    mateParams.put('autovalidateMode', autovalidateMode);
+    mateParams.put('restorationId', restorationId);
   }
 }

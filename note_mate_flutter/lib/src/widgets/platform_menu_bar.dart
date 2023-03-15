@@ -39,10 +39,10 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate<Shortcu
         meta: p.get('meta').value,
       ),
     );
-    mateParams.put('character', init: character);
-    mateParams.put('alt', init: alt);
-    mateParams.put('control', init: control);
-    mateParams.put('meta', init: meta);
+    mateParams.put('character', character);
+    mateParams.put('alt', alt);
+    mateParams.put('control', control);
+    mateParams.put('meta', meta);
   }
 
   /// ShortcutSerialization ShortcutSerialization.modifier(LogicalKeyboardKey trigger, {bool alt = false, bool control = false, bool meta = false, bool shift = false})
@@ -77,11 +77,11 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate<Shortcu
         shift: p.get('shift').value,
       ),
     );
-    mateParams.put('trigger', init: trigger);
-    mateParams.put('alt', init: alt);
-    mateParams.put('control', init: control);
-    mateParams.put('meta', init: meta);
-    mateParams.put('shift', init: shift);
+    mateParams.put('trigger', trigger);
+    mateParams.put('alt', alt);
+    mateParams.put('control', control);
+    mateParams.put('meta', meta);
+    mateParams.put('shift', shift);
   }
 }
 
@@ -97,7 +97,7 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
       init: this,
       builder: (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').value),
     );
-    mateParams.put('channel', init: channel);
+    mateParams.put('channel', channel);
   }
 }
 
@@ -126,9 +126,9 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with WidgetMate<PlatformMenuB
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('menus', init: menus);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('menus', menus);
+    mateParams.put('child', child);
   }
 }
 
@@ -162,10 +162,10 @@ class PlatformMenu$Mate extends PlatformMenu with Mate<PlatformMenu$Mate> {
         menus: p.get('menus').value,
       ),
     );
-    mateParams.put('label', init: label);
-    mateParams.put('onOpen', init: onOpen);
-    mateParams.put('onClose', init: onClose);
-    mateParams.put('menus', init: menus);
+    mateParams.put('label', label);
+    mateParams.put('onOpen', onOpen);
+    mateParams.put('onClose', onClose);
+    mateParams.put('menus', menus);
   }
 }
 
@@ -181,7 +181,7 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate<Platfor
       init: this,
       builder: (p) => PlatformMenuItemGroup$Mate(members: p.get('members').value),
     );
-    mateParams.put('members', init: members);
+    mateParams.put('members', members);
   }
 }
 
@@ -215,10 +215,10 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate<PlatformMenuItem$
         onSelectedIntent: p.get('onSelectedIntent').value,
       ),
     );
-    mateParams.put('label', init: label);
-    mateParams.put('shortcut', init: shortcut);
-    mateParams.put('onSelected', init: onSelected);
-    mateParams.put('onSelectedIntent', init: onSelectedIntent);
+    mateParams.put('label', label);
+    mateParams.put('shortcut', shortcut);
+    mateParams.put('onSelected', onSelected);
+    mateParams.put('onSelectedIntent', onSelectedIntent);
   }
 }
 
@@ -242,7 +242,7 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate<P
         enabled: p.get('enabled').value,
       ),
     );
-    mateParams.put('type', init: type);
-    mateParams.put('enabled', init: enabled);
+    mateParams.put('type', type);
+    mateParams.put('enabled', enabled);
   }
 }

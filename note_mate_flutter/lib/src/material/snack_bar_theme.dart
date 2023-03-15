@@ -73,16 +73,16 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate<SnackBarThemeDa
         closeIconColor: p.get('closeIconColor').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('actionTextColor', init: actionTextColor);
-    mateParams.put('disabledActionTextColor', init: disabledActionTextColor);
-    mateParams.put('contentTextStyle', init: contentTextStyle);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shape', init: shape);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('width', init: width);
-    mateParams.put('insetPadding', init: insetPadding);
-    mateParams.put('showCloseIcon', init: showCloseIcon);
-    mateParams.put('closeIconColor', init: closeIconColor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('actionTextColor', actionTextColor);
+    mateParams.put('disabledActionTextColor', disabledActionTextColor);
+    mateParams.put('contentTextStyle', contentTextStyle);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shape', shape);
+    mateParams.put('behavior', behavior);
+    mateParams.put('width', width);
+    mateParams.put('insetPadding', insetPadding);
+    mateParams.put('showCloseIcon', showCloseIcon);
+    mateParams.put('closeIconColor', closeIconColor);
   }
 }

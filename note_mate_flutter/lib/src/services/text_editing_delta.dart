@@ -41,11 +41,11 @@ class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate
         composing: p.get('composing').value,
       ),
     );
-    mateParams.put('oldText', init: oldText);
-    mateParams.put('textInserted', init: textInserted);
-    mateParams.put('insertionOffset', init: insertionOffset);
-    mateParams.put('selection', init: selection);
-    mateParams.put('composing', init: composing);
+    mateParams.put('oldText', oldText);
+    mateParams.put('textInserted', textInserted);
+    mateParams.put('insertionOffset', insertionOffset);
+    mateParams.put('selection', selection);
+    mateParams.put('composing', composing);
   }
 }
 
@@ -79,10 +79,10 @@ class TextEditingDeltaDeletion$Mate extends TextEditingDeltaDeletion with Mate<T
         composing: p.get('composing').value,
       ),
     );
-    mateParams.put('oldText', init: oldText);
-    mateParams.put('deletedRange', init: deletedRange);
-    mateParams.put('selection', init: selection);
-    mateParams.put('composing', init: composing);
+    mateParams.put('oldText', oldText);
+    mateParams.put('deletedRange', deletedRange);
+    mateParams.put('selection', selection);
+    mateParams.put('composing', composing);
   }
 }
 
@@ -121,11 +121,11 @@ class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with 
         composing: p.get('composing').value,
       ),
     );
-    mateParams.put('oldText', init: oldText);
-    mateParams.put('replacementText', init: replacementText);
-    mateParams.put('replacedRange', init: replacedRange);
-    mateParams.put('selection', init: selection);
-    mateParams.put('composing', init: composing);
+    mateParams.put('oldText', oldText);
+    mateParams.put('replacementText', replacementText);
+    mateParams.put('replacedRange', replacedRange);
+    mateParams.put('selection', selection);
+    mateParams.put('composing', composing);
   }
 }
 
@@ -155,8 +155,8 @@ class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate
         composing: p.get('composing').value,
       ),
     );
-    mateParams.put('oldText', init: oldText);
-    mateParams.put('selection', init: selection);
-    mateParams.put('composing', init: composing);
+    mateParams.put('oldText', oldText);
+    mateParams.put('selection', selection);
+    mateParams.put('composing', composing);
   }
 }

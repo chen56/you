@@ -82,18 +82,18 @@ class Scrollable$Mate extends Scrollable with WidgetMate<Scrollable$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('controller', init: controller);
-    mateParams.put('physics', init: physics);
-    mateParams.put('viewportBuilder', init: viewportBuilder);
-    mateParams.put('incrementCalculator', init: incrementCalculator);
-    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('scrollBehavior', init: scrollBehavior);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('controller', controller);
+    mateParams.put('physics', physics);
+    mateParams.put('viewportBuilder', viewportBuilder);
+    mateParams.put('incrementCalculator', incrementCalculator);
+    mateParams.put('excludeFromSemantics', excludeFromSemantics);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('scrollBehavior', scrollBehavior);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -121,9 +121,9 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate<E
         velocityScalar: p.get('velocityScalar').value,
       ),
     );
-    mateParams.put('scrollable', init: scrollable);
-    mateParams.put('onScrollViewScrolled', init: onScrollViewScrolled);
-    mateParams.put('velocityScalar', init: velocityScalar);
+    mateParams.put('scrollable', scrollable);
+    mateParams.put('onScrollViewScrolled', onScrollViewScrolled);
+    mateParams.put('velocityScalar', velocityScalar);
   }
 }
 
@@ -152,9 +152,9 @@ class ScrollableDetails$Mate extends ScrollableDetails with Mate<ScrollableDetai
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('direction', init: direction);
-    mateParams.put('controller', init: controller);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('direction', direction);
+    mateParams.put('controller', controller);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -178,8 +178,8 @@ class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate<Scrol
         metrics: p.get('metrics').value,
       ),
     );
-    mateParams.put('type', init: type);
-    mateParams.put('metrics', init: metrics);
+    mateParams.put('type', type);
+    mateParams.put('metrics', metrics);
   }
 }
 
@@ -203,7 +203,7 @@ class ScrollIntent$Mate extends ScrollIntent with Mate<ScrollIntent$Mate> {
         type: p.get('type').value,
       ),
     );
-    mateParams.put('direction', init: direction);
-    mateParams.put('type', init: type);
+    mateParams.put('direction', direction);
+    mateParams.put('type', type);
   }
 }

@@ -95,21 +95,21 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate<Toggl
         borderWidth: p.get('borderWidth').value,
       ),
     );
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('constraints', init: constraints);
-    mateParams.put('color', init: color);
-    mateParams.put('selectedColor', init: selectedColor);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('fillColor', init: fillColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('highlightColor', init: highlightColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('borderColor', init: borderColor);
-    mateParams.put('selectedBorderColor', init: selectedBorderColor);
-    mateParams.put('disabledBorderColor', init: disabledBorderColor);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('borderWidth', init: borderWidth);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('constraints', constraints);
+    mateParams.put('color', color);
+    mateParams.put('selectedColor', selectedColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('fillColor', fillColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('highlightColor', highlightColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('borderColor', borderColor);
+    mateParams.put('selectedBorderColor', selectedBorderColor);
+    mateParams.put('disabledBorderColor', disabledBorderColor);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('borderWidth', borderWidth);
   }
 }
 
@@ -138,8 +138,8 @@ class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with WidgetMate<ToggleB
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

@@ -60,15 +60,15 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate<Cuperti
         darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').value,
       ),
     );
-    mateParams.put('debugLabel', init: debugLabel);
-    mateParams.put('color', init: color);
-    mateParams.put('darkColor', init: darkColor);
-    mateParams.put('highContrastColor', init: highContrastColor);
-    mateParams.put('darkHighContrastColor', init: darkHighContrastColor);
-    mateParams.put('elevatedColor', init: elevatedColor);
-    mateParams.put('darkElevatedColor', init: darkElevatedColor);
-    mateParams.put('highContrastElevatedColor', init: highContrastElevatedColor);
-    mateParams.put('darkHighContrastElevatedColor', init: darkHighContrastElevatedColor);
+    mateParams.put('debugLabel', debugLabel);
+    mateParams.put('color', color);
+    mateParams.put('darkColor', darkColor);
+    mateParams.put('highContrastColor', highContrastColor);
+    mateParams.put('darkHighContrastColor', darkHighContrastColor);
+    mateParams.put('elevatedColor', elevatedColor);
+    mateParams.put('darkElevatedColor', darkElevatedColor);
+    mateParams.put('highContrastElevatedColor', highContrastElevatedColor);
+    mateParams.put('darkHighContrastElevatedColor', darkHighContrastElevatedColor);
   }
 
   /// CupertinoDynamicColor CupertinoDynamicColor.withBrightnessAndContrast({String? debugLabel, required Color color, required Color darkColor, required Color highContrastColor, required Color darkHighContrastColor})
@@ -104,11 +104,11 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate<Cuperti
         darkHighContrastColor: p.get('darkHighContrastColor').value,
       ),
     );
-    mateParams.put('debugLabel', init: debugLabel);
-    mateParams.put('color', init: color);
-    mateParams.put('darkColor', init: darkColor);
-    mateParams.put('highContrastColor', init: highContrastColor);
-    mateParams.put('darkHighContrastColor', init: darkHighContrastColor);
+    mateParams.put('debugLabel', debugLabel);
+    mateParams.put('color', color);
+    mateParams.put('darkColor', darkColor);
+    mateParams.put('highContrastColor', highContrastColor);
+    mateParams.put('darkHighContrastColor', darkHighContrastColor);
   }
 
   /// CupertinoDynamicColor CupertinoDynamicColor.withBrightness({String? debugLabel, required Color color, required Color darkColor})
@@ -134,8 +134,8 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate<Cuperti
         darkColor: p.get('darkColor').value,
       ),
     );
-    mateParams.put('debugLabel', init: debugLabel);
-    mateParams.put('color', init: color);
-    mateParams.put('darkColor', init: darkColor);
+    mateParams.put('debugLabel', debugLabel);
+    mateParams.put('color', color);
+    mateParams.put('darkColor', darkColor);
   }
 }

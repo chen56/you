@@ -18,7 +18,7 @@ class IconButtonThemeData$Mate extends IconButtonThemeData with Mate<IconButtonT
       init: this,
       builder: (p) => IconButtonThemeData$Mate(style: p.get('style').value),
     );
-    mateParams.put('style', init: style);
+    mateParams.put('style', style);
   }
 }
 
@@ -47,8 +47,8 @@ class IconButtonTheme$Mate extends IconButtonTheme with WidgetMate<IconButtonThe
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

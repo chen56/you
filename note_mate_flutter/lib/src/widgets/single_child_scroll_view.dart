@@ -83,17 +83,17 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with WidgetMate<S
         keyboardDismissBehavior: p.get('keyboardDismissBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('padding', init: padding);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('controller', init: controller);
-    mateParams.put('child', init: child);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('padding', padding);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('controller', controller);
+    mateParams.put('child', child);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
   }
 }

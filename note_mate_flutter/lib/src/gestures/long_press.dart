@@ -32,9 +32,9 @@ class LongPressDownDetails$Mate extends LongPressDownDetails with Mate<LongPress
         kind: p.get('kind').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('kind', init: kind);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('kind', kind);
   }
 }
 
@@ -58,8 +58,8 @@ class LongPressStartDetails$Mate extends LongPressStartDetails with Mate<LongPre
         localPosition: p.get('localPosition').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
   }
 }
 
@@ -93,10 +93,10 @@ class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Ma
         localOffsetFromOrigin: p.get('localOffsetFromOrigin').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('offsetFromOrigin', init: offsetFromOrigin);
-    mateParams.put('localOffsetFromOrigin', init: localOffsetFromOrigin);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('offsetFromOrigin', offsetFromOrigin);
+    mateParams.put('localOffsetFromOrigin', localOffsetFromOrigin);
   }
 }
 
@@ -125,9 +125,9 @@ class LongPressEndDetails$Mate extends LongPressEndDetails with Mate<LongPressEn
         velocity: p.get('velocity').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('velocity', init: velocity);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('velocity', velocity);
   }
 }
 
@@ -166,10 +166,10 @@ class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Ma
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('duration', init: duration);
-    mateParams.put('postAcceptSlopTolerance', init: postAcceptSlopTolerance);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('duration', duration);
+    mateParams.put('postAcceptSlopTolerance', postAcceptSlopTolerance);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

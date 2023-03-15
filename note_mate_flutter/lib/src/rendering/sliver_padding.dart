@@ -31,8 +31,8 @@ class RenderSliverPadding$Mate extends RenderSliverPadding with Mate<RenderSlive
         child: p.get('child').value,
       ),
     );
-    mateParams.put('padding', init: padding);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('child', init: child);
+    mateParams.put('padding', padding);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('child', child);
   }
 }

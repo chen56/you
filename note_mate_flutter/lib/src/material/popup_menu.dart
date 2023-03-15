@@ -34,8 +34,8 @@ class PopupMenuDivider$Mate extends PopupMenuDivider with WidgetMate<PopupMenuDi
         height: p.get('height').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('height', init: height);
+    mateParams.put('key', key);
+    mateParams.put('height', height);
   }
 }
 
@@ -99,16 +99,16 @@ class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with WidgetMate<PopupMenuIt
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('height', init: height);
-    mateParams.put('padding', init: padding);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('labelTextStyle', init: labelTextStyle);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('onTap', onTap);
+    mateParams.put('enabled', enabled);
+    mateParams.put('height', height);
+    mateParams.put('padding', padding);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('labelTextStyle', labelTextStyle);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('child', child);
   }
 }
 
@@ -162,14 +162,14 @@ class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with WidgetMa
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('checked', init: checked);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('padding', init: padding);
-    mateParams.put('height', init: height);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('checked', checked);
+    mateParams.put('enabled', enabled);
+    mateParams.put('padding', padding);
+    mateParams.put('height', height);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('child', child);
   }
 }
 
@@ -298,28 +298,28 @@ class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with WidgetMate<PopupMe
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('itemBuilder', init: itemBuilder);
-    mateParams.put('initialValue', init: initialValue);
-    mateParams.put('onOpened', init: onOpened);
-    mateParams.put('onSelected', init: onSelected);
-    mateParams.put('onCanceled', init: onCanceled);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('padding', init: padding);
-    mateParams.put('child', init: child);
-    mateParams.put('splashRadius', init: splashRadius);
-    mateParams.put('icon', init: icon);
-    mateParams.put('iconSize', init: iconSize);
-    mateParams.put('offset', init: offset);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('shape', init: shape);
-    mateParams.put('color', init: color);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('constraints', init: constraints);
-    mateParams.put('position', init: position);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('itemBuilder', itemBuilder);
+    mateParams.put('initialValue', initialValue);
+    mateParams.put('onOpened', onOpened);
+    mateParams.put('onSelected', onSelected);
+    mateParams.put('onCanceled', onCanceled);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('padding', padding);
+    mateParams.put('child', child);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('icon', icon);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('offset', offset);
+    mateParams.put('enabled', enabled);
+    mateParams.put('shape', shape);
+    mateParams.put('color', color);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('constraints', constraints);
+    mateParams.put('position', position);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

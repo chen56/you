@@ -29,9 +29,9 @@ class ScrollController$Mate extends ScrollController with Mate<ScrollController$
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('initialScrollOffset', init: initialScrollOffset);
-    mateParams.put('keepScrollOffset', init: keepScrollOffset);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('initialScrollOffset', initialScrollOffset);
+    mateParams.put('keepScrollOffset', keepScrollOffset);
+    mateParams.put('debugLabel', debugLabel);
   }
 }
 
@@ -60,8 +60,8 @@ class TrackingScrollController$Mate extends TrackingScrollController with Mate<T
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('initialScrollOffset', init: initialScrollOffset);
-    mateParams.put('keepScrollOffset', init: keepScrollOffset);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('initialScrollOffset', initialScrollOffset);
+    mateParams.put('keepScrollOffset', keepScrollOffset);
+    mateParams.put('debugLabel', debugLabel);
   }
 }

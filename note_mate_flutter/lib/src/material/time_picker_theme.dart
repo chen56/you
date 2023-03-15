@@ -132,28 +132,28 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate<TimePickerT
         shape: p.get('shape').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('cancelButtonStyle', init: cancelButtonStyle);
-    mateParams.put('confirmButtonStyle', init: confirmButtonStyle);
-    mateParams.put('dayPeriodBorderSide', init: dayPeriodBorderSide);
-    mateParams.put('dayPeriodColor', init: dayPeriodColor);
-    mateParams.put('dayPeriodShape', init: dayPeriodShape);
-    mateParams.put('dayPeriodTextColor', init: dayPeriodTextColor);
-    mateParams.put('dayPeriodTextStyle', init: dayPeriodTextStyle);
-    mateParams.put('dialBackgroundColor', init: dialBackgroundColor);
-    mateParams.put('dialHandColor', init: dialHandColor);
-    mateParams.put('dialTextColor', init: dialTextColor);
-    mateParams.put('dialTextStyle', init: dialTextStyle);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('entryModeIconColor', init: entryModeIconColor);
-    mateParams.put('helpTextStyle', init: helpTextStyle);
-    mateParams.put('hourMinuteColor', init: hourMinuteColor);
-    mateParams.put('hourMinuteShape', init: hourMinuteShape);
-    mateParams.put('hourMinuteTextColor', init: hourMinuteTextColor);
-    mateParams.put('hourMinuteTextStyle', init: hourMinuteTextStyle);
-    mateParams.put('inputDecorationTheme', init: inputDecorationTheme);
-    mateParams.put('padding', init: padding);
-    mateParams.put('shape', init: shape);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('cancelButtonStyle', cancelButtonStyle);
+    mateParams.put('confirmButtonStyle', confirmButtonStyle);
+    mateParams.put('dayPeriodBorderSide', dayPeriodBorderSide);
+    mateParams.put('dayPeriodColor', dayPeriodColor);
+    mateParams.put('dayPeriodShape', dayPeriodShape);
+    mateParams.put('dayPeriodTextColor', dayPeriodTextColor);
+    mateParams.put('dayPeriodTextStyle', dayPeriodTextStyle);
+    mateParams.put('dialBackgroundColor', dialBackgroundColor);
+    mateParams.put('dialHandColor', dialHandColor);
+    mateParams.put('dialTextColor', dialTextColor);
+    mateParams.put('dialTextStyle', dialTextStyle);
+    mateParams.put('elevation', elevation);
+    mateParams.put('entryModeIconColor', entryModeIconColor);
+    mateParams.put('helpTextStyle', helpTextStyle);
+    mateParams.put('hourMinuteColor', hourMinuteColor);
+    mateParams.put('hourMinuteShape', hourMinuteShape);
+    mateParams.put('hourMinuteTextColor', hourMinuteTextColor);
+    mateParams.put('hourMinuteTextStyle', hourMinuteTextStyle);
+    mateParams.put('inputDecorationTheme', inputDecorationTheme);
+    mateParams.put('padding', padding);
+    mateParams.put('shape', shape);
   }
 }
 
@@ -182,8 +182,8 @@ class TimePickerTheme$Mate extends TimePickerTheme with WidgetMate<TimePickerThe
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

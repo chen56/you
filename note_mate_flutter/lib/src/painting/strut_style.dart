@@ -71,17 +71,17 @@ class StrutStyle$Mate extends StrutStyle with Mate<StrutStyle$Mate> {
         package: p.get('package').value,
       ),
     );
-    mateParams.put('fontFamily', init: fontFamily);
-    mateParams.put('fontFamilyFallback', init: fontFamilyFallback);
-    mateParams.put('fontSize', init: fontSize);
-    mateParams.put('height', init: height);
-    mateParams.put('leadingDistribution', init: leadingDistribution);
-    mateParams.put('leading', init: leading);
-    mateParams.put('fontWeight', init: fontWeight);
-    mateParams.put('fontStyle', init: fontStyle);
-    mateParams.put('forceStrutHeight', init: forceStrutHeight);
-    mateParams.put('debugLabel', init: debugLabel);
-    mateParams.put('package', init: package);
+    mateParams.put('fontFamily', fontFamily);
+    mateParams.put('fontFamilyFallback', fontFamilyFallback);
+    mateParams.put('fontSize', fontSize);
+    mateParams.put('height', height);
+    mateParams.put('leadingDistribution', leadingDistribution);
+    mateParams.put('leading', leading);
+    mateParams.put('fontWeight', fontWeight);
+    mateParams.put('fontStyle', fontStyle);
+    mateParams.put('forceStrutHeight', forceStrutHeight);
+    mateParams.put('debugLabel', debugLabel);
+    mateParams.put('package', package);
   }
 
   /// StrutStyle StrutStyle.fromTextStyle(TextStyle textStyle, {String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
@@ -151,17 +151,17 @@ class StrutStyle$Mate extends StrutStyle with Mate<StrutStyle$Mate> {
         package: p.get('package').value,
       ),
     );
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('fontFamily', init: fontFamily);
-    mateParams.put('fontFamilyFallback', init: fontFamilyFallback);
-    mateParams.put('fontSize', init: fontSize);
-    mateParams.put('height', init: height);
-    mateParams.put('leadingDistribution', init: leadingDistribution);
-    mateParams.put('leading', init: leading);
-    mateParams.put('fontWeight', init: fontWeight);
-    mateParams.put('fontStyle', init: fontStyle);
-    mateParams.put('forceStrutHeight', init: forceStrutHeight);
-    mateParams.put('debugLabel', init: debugLabel);
-    mateParams.put('package', init: package);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('fontFamily', fontFamily);
+    mateParams.put('fontFamilyFallback', fontFamilyFallback);
+    mateParams.put('fontSize', fontSize);
+    mateParams.put('height', height);
+    mateParams.put('leadingDistribution', leadingDistribution);
+    mateParams.put('leading', leading);
+    mateParams.put('fontWeight', fontWeight);
+    mateParams.put('fontStyle', fontStyle);
+    mateParams.put('forceStrutHeight', forceStrutHeight);
+    mateParams.put('debugLabel', debugLabel);
+    mateParams.put('package', package);
   }
 }

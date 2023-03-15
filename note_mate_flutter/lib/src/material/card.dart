@@ -74,16 +74,16 @@ class Card$Mate extends Card with WidgetMate<Card$Mate> {
         semanticContainer: p.get('semanticContainer').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shape', init: shape);
-    mateParams.put('borderOnForeground', init: borderOnForeground);
-    mateParams.put('margin', init: margin);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('child', init: child);
-    mateParams.put('semanticContainer', init: semanticContainer);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shape', shape);
+    mateParams.put('borderOnForeground', borderOnForeground);
+    mateParams.put('margin', margin);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('child', child);
+    mateParams.put('semanticContainer', semanticContainer);
   }
 }

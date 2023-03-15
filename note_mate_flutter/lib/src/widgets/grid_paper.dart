@@ -47,11 +47,11 @@ class GridPaper$Mate extends GridPaper with WidgetMate<GridPaper$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('interval', init: interval);
-    mateParams.put('divisions', init: divisions);
-    mateParams.put('subdivisions', init: subdivisions);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('interval', interval);
+    mateParams.put('divisions', divisions);
+    mateParams.put('subdivisions', subdivisions);
+    mateParams.put('child', child);
   }
 }

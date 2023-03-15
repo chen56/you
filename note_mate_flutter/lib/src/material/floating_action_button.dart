@@ -143,30 +143,30 @@ class FloatingActionButton$Mate extends FloatingActionButton with WidgetMate<Flo
         enableFeedback: p.get('enableFeedback').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('foregroundColor', init: foregroundColor);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('heroTag', init: heroTag);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('focusElevation', init: focusElevation);
-    mateParams.put('hoverElevation', init: hoverElevation);
-    mateParams.put('highlightElevation', init: highlightElevation);
-    mateParams.put('disabledElevation', init: disabledElevation);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('mini', init: mini);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('isExtended', init: isExtended);
-    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('foregroundColor', foregroundColor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('heroTag', heroTag);
+    mateParams.put('elevation', elevation);
+    mateParams.put('focusElevation', focusElevation);
+    mateParams.put('hoverElevation', hoverElevation);
+    mateParams.put('highlightElevation', highlightElevation);
+    mateParams.put('disabledElevation', disabledElevation);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('mini', mini);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('isExtended', isExtended);
+    mateParams.put('enableFeedback', enableFeedback);
   }
 
   /// FloatingActionButton FloatingActionButton.small({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool? enableFeedback})
@@ -287,28 +287,28 @@ class FloatingActionButton$Mate extends FloatingActionButton with WidgetMate<Flo
         enableFeedback: p.get('enableFeedback').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('foregroundColor', init: foregroundColor);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('heroTag', init: heroTag);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('focusElevation', init: focusElevation);
-    mateParams.put('hoverElevation', init: hoverElevation);
-    mateParams.put('highlightElevation', init: highlightElevation);
-    mateParams.put('disabledElevation', init: disabledElevation);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('foregroundColor', foregroundColor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('heroTag', heroTag);
+    mateParams.put('elevation', elevation);
+    mateParams.put('focusElevation', focusElevation);
+    mateParams.put('hoverElevation', hoverElevation);
+    mateParams.put('highlightElevation', highlightElevation);
+    mateParams.put('disabledElevation', disabledElevation);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('enableFeedback', enableFeedback);
   }
 
   /// FloatingActionButton FloatingActionButton.large({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool? enableFeedback})
@@ -429,28 +429,28 @@ class FloatingActionButton$Mate extends FloatingActionButton with WidgetMate<Flo
         enableFeedback: p.get('enableFeedback').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('foregroundColor', init: foregroundColor);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('heroTag', init: heroTag);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('focusElevation', init: focusElevation);
-    mateParams.put('hoverElevation', init: hoverElevation);
-    mateParams.put('highlightElevation', init: highlightElevation);
-    mateParams.put('disabledElevation', init: disabledElevation);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('foregroundColor', foregroundColor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('heroTag', heroTag);
+    mateParams.put('elevation', elevation);
+    mateParams.put('focusElevation', focusElevation);
+    mateParams.put('hoverElevation', hoverElevation);
+    mateParams.put('highlightElevation', highlightElevation);
+    mateParams.put('disabledElevation', disabledElevation);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('enableFeedback', enableFeedback);
   }
 
   /// FloatingActionButton FloatingActionButton.extended({Key? key, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, Color? splashColor, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor = SystemMouseCursors.click, ShapeBorder? shape, bool isExtended = true, MaterialTapTargetSize? materialTapTargetSize, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, Widget? icon, required Widget label, bool? enableFeedback})
@@ -596,32 +596,32 @@ class FloatingActionButton$Mate extends FloatingActionButton with WidgetMate<Flo
         enableFeedback: p.get('enableFeedback').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('foregroundColor', init: foregroundColor);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('heroTag', init: heroTag);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('focusElevation', init: focusElevation);
-    mateParams.put('hoverElevation', init: hoverElevation);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('highlightElevation', init: highlightElevation);
-    mateParams.put('disabledElevation', init: disabledElevation);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('isExtended', init: isExtended);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('extendedIconLabelSpacing', init: extendedIconLabelSpacing);
-    mateParams.put('extendedPadding', init: extendedPadding);
-    mateParams.put('extendedTextStyle', init: extendedTextStyle);
-    mateParams.put('icon', init: icon);
-    mateParams.put('label', init: label);
-    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('key', key);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('foregroundColor', foregroundColor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('heroTag', heroTag);
+    mateParams.put('elevation', elevation);
+    mateParams.put('focusElevation', focusElevation);
+    mateParams.put('hoverElevation', hoverElevation);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('highlightElevation', highlightElevation);
+    mateParams.put('disabledElevation', disabledElevation);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('shape', shape);
+    mateParams.put('isExtended', isExtended);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('extendedIconLabelSpacing', extendedIconLabelSpacing);
+    mateParams.put('extendedPadding', extendedPadding);
+    mateParams.put('extendedTextStyle', extendedTextStyle);
+    mateParams.put('icon', icon);
+    mateParams.put('label', label);
+    mateParams.put('enableFeedback', enableFeedback);
   }
 }

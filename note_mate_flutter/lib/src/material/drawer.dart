@@ -64,15 +64,15 @@ class Drawer$Mate extends Drawer with WidgetMate<Drawer$Mate> {
         semanticLabel: p.get('semanticLabel').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('width', init: width);
-    mateParams.put('child', init: child);
-    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('key', key);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('shape', shape);
+    mateParams.put('width', width);
+    mateParams.put('child', child);
+    mateParams.put('semanticLabel', semanticLabel);
   }
 }
 
@@ -131,14 +131,14 @@ class DrawerController$Mate extends DrawerController with WidgetMate<DrawerContr
         enableOpenDragGesture: p.get('enableOpenDragGesture').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('isDrawerOpen', init: isDrawerOpen);
-    mateParams.put('drawerCallback', init: drawerCallback);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('scrimColor', init: scrimColor);
-    mateParams.put('edgeDragWidth', init: edgeDragWidth);
-    mateParams.put('enableOpenDragGesture', init: enableOpenDragGesture);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('alignment', alignment);
+    mateParams.put('isDrawerOpen', isDrawerOpen);
+    mateParams.put('drawerCallback', drawerCallback);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('scrimColor', scrimColor);
+    mateParams.put('edgeDragWidth', edgeDragWidth);
+    mateParams.put('enableOpenDragGesture', enableOpenDragGesture);
   }
 }

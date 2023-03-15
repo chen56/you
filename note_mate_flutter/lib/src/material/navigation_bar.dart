@@ -86,19 +86,19 @@ class NavigationBar$Mate extends NavigationBar with WidgetMate<NavigationBar$Mat
         labelBehavior: p.get('labelBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('animationDuration', init: animationDuration);
-    mateParams.put('selectedIndex', init: selectedIndex);
-    mateParams.put('destinations', init: destinations);
-    mateParams.put('onDestinationSelected', init: onDestinationSelected);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('indicatorColor', init: indicatorColor);
-    mateParams.put('indicatorShape', init: indicatorShape);
-    mateParams.put('height', init: height);
-    mateParams.put('labelBehavior', init: labelBehavior);
+    mateParams.put('key', key);
+    mateParams.put('animationDuration', animationDuration);
+    mateParams.put('selectedIndex', selectedIndex);
+    mateParams.put('destinations', destinations);
+    mateParams.put('onDestinationSelected', onDestinationSelected);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('indicatorColor', indicatorColor);
+    mateParams.put('indicatorShape', indicatorShape);
+    mateParams.put('height', height);
+    mateParams.put('labelBehavior', labelBehavior);
   }
 }
 
@@ -137,11 +137,11 @@ class NavigationDestination$Mate extends NavigationDestination with WidgetMate<N
         tooltip: p.get('tooltip').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('icon', init: icon);
-    mateParams.put('selectedIcon', init: selectedIcon);
-    mateParams.put('label', init: label);
-    mateParams.put('tooltip', init: tooltip);
+    mateParams.put('key', key);
+    mateParams.put('icon', icon);
+    mateParams.put('selectedIcon', selectedIcon);
+    mateParams.put('label', label);
+    mateParams.put('tooltip', tooltip);
   }
 }
 
@@ -190,12 +190,12 @@ class NavigationIndicator$Mate extends NavigationIndicator with WidgetMate<Navig
         shape: p.get('shape').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('animation', init: animation);
-    mateParams.put('color', init: color);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('shape', init: shape);
+    mateParams.put('key', key);
+    mateParams.put('animation', animation);
+    mateParams.put('color', color);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('shape', shape);
   }
 }

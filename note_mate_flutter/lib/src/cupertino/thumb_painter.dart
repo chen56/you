@@ -26,8 +26,8 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate<Cuperti
         shadows: p.get('shadows').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('shadows', init: shadows);
+    mateParams.put('color', color);
+    mateParams.put('shadows', shadows);
   }
 
   /// CupertinoThumbPainter CupertinoThumbPainter.switchThumb({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSwitchBoxShadows})
@@ -48,7 +48,7 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate<Cuperti
         shadows: p.get('shadows').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('shadows', init: shadows);
+    mateParams.put('color', color);
+    mateParams.put('shadows', shadows);
   }
 }

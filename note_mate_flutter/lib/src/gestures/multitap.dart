@@ -31,9 +31,9 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -67,10 +67,10 @@ class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('longTapDelay', init: longTapDelay);
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('longTapDelay', longTapDelay);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -109,11 +109,11 @@ class SerialTapDownDetails$Mate extends SerialTapDownDetails with Mate<SerialTap
         count: p.get('count').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('kind', init: kind);
-    mateParams.put('buttons', init: buttons);
-    mateParams.put('count', init: count);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('kind', kind);
+    mateParams.put('buttons', buttons);
+    mateParams.put('count', count);
   }
 }
 
@@ -129,7 +129,7 @@ class SerialTapCancelDetails$Mate extends SerialTapCancelDetails with Mate<Seria
       init: this,
       builder: (p) => SerialTapCancelDetails$Mate(count: p.get('count').value),
     );
-    mateParams.put('count', init: count);
+    mateParams.put('count', count);
   }
 }
 
@@ -163,10 +163,10 @@ class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate<SerialTapUpDe
         count: p.get('count').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('kind', init: kind);
-    mateParams.put('count', init: count);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('kind', kind);
+    mateParams.put('count', count);
   }
 }
 
@@ -195,8 +195,8 @@ class SerialTapGestureRecognizer$Mate extends SerialTapGestureRecognizer with Ma
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

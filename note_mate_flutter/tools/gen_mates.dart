@@ -453,7 +453,7 @@ void _genLibMate({
                             .code).closure,
                     }))
                     .statement,
-                ...parameters.map((e) => Code("mateParams.put('${e.name}',init:${e.name});")),
+                ...parameters.map((e) => Code("mateParams.put('${e.name}', ${e.name});")),
               ]);
           });
         })));

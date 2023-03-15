@@ -16,6 +16,6 @@ class DeviceGestureSettings$Mate extends DeviceGestureSettings with Mate<DeviceG
       init: this,
       builder: (p) => DeviceGestureSettings$Mate(touchSlop: p.get('touchSlop').value),
     );
-    mateParams.put('touchSlop', init: touchSlop);
+    mateParams.put('touchSlop', touchSlop);
   }
 }

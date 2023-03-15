@@ -101,21 +101,21 @@ class Radio$Mate<T> extends Radio<T> with WidgetMate<Radio$Mate> {
         autofocus: p.get('autofocus').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('groupValue', init: groupValue);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('toggleable', init: toggleable);
-    mateParams.put('activeColor', init: activeColor);
-    mateParams.put('fillColor', init: fillColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('splashRadius', init: splashRadius);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('visualDensity', init: visualDensity);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('groupValue', groupValue);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('toggleable', toggleable);
+    mateParams.put('activeColor', activeColor);
+    mateParams.put('fillColor', fillColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
   }
 }

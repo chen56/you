@@ -29,9 +29,9 @@ class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate<Annou
         assertiveness: p.get('assertiveness').value,
       ),
     );
-    mateParams.put('message', init: message);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('assertiveness', init: assertiveness);
+    mateParams.put('message', message);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('assertiveness', assertiveness);
   }
 }
 
@@ -47,6 +47,6 @@ class TooltipSemanticsEvent$Mate extends TooltipSemanticsEvent with Mate<Tooltip
       init: this,
       builder: (p) => TooltipSemanticsEvent$Mate(p.get('message').value),
     );
-    mateParams.put('message', init: message);
+    mateParams.put('message', message);
   }
 }

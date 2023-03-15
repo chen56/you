@@ -27,8 +27,8 @@ class TapRegionSurface$Mate extends TapRegionSurface with WidgetMate<TapRegionSu
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -82,14 +82,14 @@ class TapRegion$Mate extends TapRegion with WidgetMate<TapRegion$Mate> {
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('onTapOutside', init: onTapOutside);
-    mateParams.put('onTapInside', init: onTapInside);
-    mateParams.put('groupId', init: groupId);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('enabled', enabled);
+    mateParams.put('behavior', behavior);
+    mateParams.put('onTapOutside', onTapOutside);
+    mateParams.put('onTapInside', onTapInside);
+    mateParams.put('groupId', groupId);
+    mateParams.put('debugLabel', debugLabel);
   }
 }
 
@@ -138,13 +138,13 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate<RenderTapRegion$Mat
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('registry', init: registry);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('onTapOutside', init: onTapOutside);
-    mateParams.put('onTapInside', init: onTapInside);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('groupId', init: groupId);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('registry', registry);
+    mateParams.put('enabled', enabled);
+    mateParams.put('onTapOutside', onTapOutside);
+    mateParams.put('onTapInside', onTapInside);
+    mateParams.put('behavior', behavior);
+    mateParams.put('groupId', groupId);
+    mateParams.put('debugLabel', debugLabel);
   }
 }
 
@@ -188,11 +188,11 @@ class TextFieldTapRegion$Mate extends TextFieldTapRegion with WidgetMate<TextFie
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('onTapOutside', init: onTapOutside);
-    mateParams.put('onTapInside', init: onTapInside);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('enabled', enabled);
+    mateParams.put('onTapOutside', onTapOutside);
+    mateParams.put('onTapInside', onTapInside);
+    mateParams.put('debugLabel', debugLabel);
   }
 }

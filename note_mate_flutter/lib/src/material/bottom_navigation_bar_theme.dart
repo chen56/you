@@ -93,20 +93,20 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData
         mouseCursor: p.get('mouseCursor').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('selectedIconTheme', init: selectedIconTheme);
-    mateParams.put('unselectedIconTheme', init: unselectedIconTheme);
-    mateParams.put('selectedItemColor', init: selectedItemColor);
-    mateParams.put('unselectedItemColor', init: unselectedItemColor);
-    mateParams.put('selectedLabelStyle', init: selectedLabelStyle);
-    mateParams.put('unselectedLabelStyle', init: unselectedLabelStyle);
-    mateParams.put('showSelectedLabels', init: showSelectedLabels);
-    mateParams.put('showUnselectedLabels', init: showUnselectedLabels);
-    mateParams.put('type', init: type);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('landscapeLayout', init: landscapeLayout);
-    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('selectedIconTheme', selectedIconTheme);
+    mateParams.put('unselectedIconTheme', unselectedIconTheme);
+    mateParams.put('selectedItemColor', selectedItemColor);
+    mateParams.put('unselectedItemColor', unselectedItemColor);
+    mateParams.put('selectedLabelStyle', selectedLabelStyle);
+    mateParams.put('unselectedLabelStyle', unselectedLabelStyle);
+    mateParams.put('showSelectedLabels', showSelectedLabels);
+    mateParams.put('showUnselectedLabels', showUnselectedLabels);
+    mateParams.put('type', type);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('landscapeLayout', landscapeLayout);
+    mateParams.put('mouseCursor', mouseCursor);
   }
 }
 
@@ -135,8 +135,8 @@ class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Widget
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

@@ -47,11 +47,11 @@ class Placeholder$Mate extends Placeholder with WidgetMate<Placeholder$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('strokeWidth', init: strokeWidth);
-    mateParams.put('fallbackWidth', init: fallbackWidth);
-    mateParams.put('fallbackHeight', init: fallbackHeight);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('strokeWidth', strokeWidth);
+    mateParams.put('fallbackWidth', fallbackWidth);
+    mateParams.put('fallbackHeight', fallbackHeight);
+    mateParams.put('child', child);
   }
 }

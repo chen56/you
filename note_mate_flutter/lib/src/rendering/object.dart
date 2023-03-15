@@ -28,8 +28,8 @@ class PaintingContext$Mate extends PaintingContext with Mate<PaintingContext$Mat
         p.get('estimatedBounds').value,
       ),
     );
-    mateParams.put('_containerLayer', init: _containerLayer);
-    mateParams.put('estimatedBounds', init: estimatedBounds);
+    mateParams.put('_containerLayer', _containerLayer);
+    mateParams.put('estimatedBounds', estimatedBounds);
   }
 }
 
@@ -63,10 +63,10 @@ class PipelineOwner$Mate extends PipelineOwner with Mate<PipelineOwner$Mate> {
         onSemanticsOwnerDisposed: p.get('onSemanticsOwnerDisposed').value,
       ),
     );
-    mateParams.put('onNeedVisualUpdate', init: onNeedVisualUpdate);
-    mateParams.put('onSemanticsOwnerCreated', init: onSemanticsOwnerCreated);
-    mateParams.put('onSemanticsUpdate', init: onSemanticsUpdate);
-    mateParams.put('onSemanticsOwnerDisposed', init: onSemanticsOwnerDisposed);
+    mateParams.put('onNeedVisualUpdate', onNeedVisualUpdate);
+    mateParams.put('onSemanticsOwnerCreated', onSemanticsOwnerCreated);
+    mateParams.put('onSemanticsUpdate', onSemanticsUpdate);
+    mateParams.put('onSemanticsOwnerDisposed', onSemanticsOwnerDisposed);
   }
 }
 
@@ -82,6 +82,6 @@ class DiagnosticsDebugCreator$Mate extends DiagnosticsDebugCreator with Mate<Dia
       init: this,
       builder: (p) => DiagnosticsDebugCreator$Mate(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }

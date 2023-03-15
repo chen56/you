@@ -104,23 +104,23 @@ class MediaQueryData$Mate extends MediaQueryData with Mate<MediaQueryData$Mate> 
         displayFeatures: p.get('displayFeatures').value,
       ),
     );
-    mateParams.put('size', init: size);
-    mateParams.put('devicePixelRatio', init: devicePixelRatio);
-    mateParams.put('textScaleFactor', init: textScaleFactor);
-    mateParams.put('platformBrightness', init: platformBrightness);
-    mateParams.put('padding', init: padding);
-    mateParams.put('viewInsets', init: viewInsets);
-    mateParams.put('systemGestureInsets', init: systemGestureInsets);
-    mateParams.put('viewPadding', init: viewPadding);
-    mateParams.put('alwaysUse24HourFormat', init: alwaysUse24HourFormat);
-    mateParams.put('accessibleNavigation', init: accessibleNavigation);
-    mateParams.put('invertColors', init: invertColors);
-    mateParams.put('highContrast', init: highContrast);
-    mateParams.put('disableAnimations', init: disableAnimations);
-    mateParams.put('boldText', init: boldText);
-    mateParams.put('navigationMode', init: navigationMode);
-    mateParams.put('gestureSettings', init: gestureSettings);
-    mateParams.put('displayFeatures', init: displayFeatures);
+    mateParams.put('size', size);
+    mateParams.put('devicePixelRatio', devicePixelRatio);
+    mateParams.put('textScaleFactor', textScaleFactor);
+    mateParams.put('platformBrightness', platformBrightness);
+    mateParams.put('padding', padding);
+    mateParams.put('viewInsets', viewInsets);
+    mateParams.put('systemGestureInsets', systemGestureInsets);
+    mateParams.put('viewPadding', viewPadding);
+    mateParams.put('alwaysUse24HourFormat', alwaysUse24HourFormat);
+    mateParams.put('accessibleNavigation', accessibleNavigation);
+    mateParams.put('invertColors', invertColors);
+    mateParams.put('highContrast', highContrast);
+    mateParams.put('disableAnimations', disableAnimations);
+    mateParams.put('boldText', boldText);
+    mateParams.put('navigationMode', navigationMode);
+    mateParams.put('gestureSettings', gestureSettings);
+    mateParams.put('displayFeatures', displayFeatures);
   }
 
   /// MediaQueryData MediaQueryData.fromView(FlutterView view, {MediaQueryData? platformData})
@@ -140,8 +140,8 @@ class MediaQueryData$Mate extends MediaQueryData with Mate<MediaQueryData$Mate> 
         platformData: p.get('platformData').value,
       ),
     );
-    mateParams.put('view', init: view);
-    mateParams.put('platformData', init: platformData);
+    mateParams.put('view', view);
+    mateParams.put('platformData', platformData);
   }
 }
 
@@ -170,8 +170,8 @@ class MediaQuery$Mate extends MediaQuery with WidgetMate<MediaQuery$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

@@ -40,10 +40,10 @@ class TransformProperty$Mate extends TransformProperty with Mate<TransformProper
         level: p.get('level').value,
       ),
     );
-    mateParams.put('name', init: name);
-    mateParams.put('value', init: value);
-    mateParams.put('showName', init: showName);
-    mateParams.put('defaultValue', init: defaultValue);
-    mateParams.put('level', init: level);
+    mateParams.put('name', name);
+    mateParams.put('value', value);
+    mateParams.put('showName', showName);
+    mateParams.put('defaultValue', defaultValue);
+    mateParams.put('level', level);
   }
 }

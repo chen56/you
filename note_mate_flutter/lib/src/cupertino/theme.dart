@@ -33,9 +33,9 @@ class CupertinoTheme$Mate extends CupertinoTheme with WidgetMate<CupertinoTheme$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }
 
@@ -84,13 +84,13 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate<CupertinoThem
         applyThemeToAll: p.get('applyThemeToAll').value,
       ),
     );
-    mateParams.put('brightness', init: brightness);
-    mateParams.put('primaryColor', init: primaryColor);
-    mateParams.put('primaryContrastingColor', init: primaryContrastingColor);
-    mateParams.put('textTheme', init: textTheme);
-    mateParams.put('barBackgroundColor', init: barBackgroundColor);
-    mateParams.put('scaffoldBackgroundColor', init: scaffoldBackgroundColor);
-    mateParams.put('applyThemeToAll', init: applyThemeToAll);
+    mateParams.put('brightness', brightness);
+    mateParams.put('primaryColor', primaryColor);
+    mateParams.put('primaryContrastingColor', primaryContrastingColor);
+    mateParams.put('textTheme', textTheme);
+    mateParams.put('barBackgroundColor', barBackgroundColor);
+    mateParams.put('scaffoldBackgroundColor', scaffoldBackgroundColor);
+    mateParams.put('applyThemeToAll', applyThemeToAll);
   }
 
   /// CupertinoThemeData CupertinoThemeData.raw(Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll)
@@ -136,13 +136,13 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate<CupertinoThem
         p.get('applyThemeToAll').value,
       ),
     );
-    mateParams.put('brightness', init: brightness);
-    mateParams.put('primaryColor', init: primaryColor);
-    mateParams.put('primaryContrastingColor', init: primaryContrastingColor);
-    mateParams.put('textTheme', init: textTheme);
-    mateParams.put('barBackgroundColor', init: barBackgroundColor);
-    mateParams.put('scaffoldBackgroundColor', init: scaffoldBackgroundColor);
-    mateParams.put('applyThemeToAll', init: applyThemeToAll);
+    mateParams.put('brightness', brightness);
+    mateParams.put('primaryColor', primaryColor);
+    mateParams.put('primaryContrastingColor', primaryContrastingColor);
+    mateParams.put('textTheme', textTheme);
+    mateParams.put('barBackgroundColor', barBackgroundColor);
+    mateParams.put('scaffoldBackgroundColor', scaffoldBackgroundColor);
+    mateParams.put('applyThemeToAll', applyThemeToAll);
   }
 }
 
@@ -191,12 +191,12 @@ class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with 
         applyThemeToAll: p.get('applyThemeToAll').value,
       ),
     );
-    mateParams.put('brightness', init: brightness);
-    mateParams.put('primaryColor', init: primaryColor);
-    mateParams.put('primaryContrastingColor', init: primaryContrastingColor);
-    mateParams.put('textTheme', init: textTheme);
-    mateParams.put('barBackgroundColor', init: barBackgroundColor);
-    mateParams.put('scaffoldBackgroundColor', init: scaffoldBackgroundColor);
-    mateParams.put('applyThemeToAll', init: applyThemeToAll);
+    mateParams.put('brightness', brightness);
+    mateParams.put('primaryColor', primaryColor);
+    mateParams.put('primaryContrastingColor', primaryContrastingColor);
+    mateParams.put('textTheme', textTheme);
+    mateParams.put('barBackgroundColor', barBackgroundColor);
+    mateParams.put('scaffoldBackgroundColor', scaffoldBackgroundColor);
+    mateParams.put('applyThemeToAll', applyThemeToAll);
   }
 }

@@ -18,7 +18,7 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate<TextButtonT
       init: this,
       builder: (p) => TextButtonThemeData$Mate(style: p.get('style').value),
     );
-    mateParams.put('style', init: style);
+    mateParams.put('style', style);
   }
 }
 
@@ -47,8 +47,8 @@ class TextButtonTheme$Mate extends TextButtonTheme with WidgetMate<TextButtonThe
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

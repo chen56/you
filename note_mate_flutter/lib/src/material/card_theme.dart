@@ -52,12 +52,12 @@ class CardTheme$Mate extends CardTheme with Mate<CardTheme$Mate> {
         shape: p.get('shape').value,
       ),
     );
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('color', init: color);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('margin', init: margin);
-    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('color', color);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('margin', margin);
+    mateParams.put('shape', shape);
   }
 }

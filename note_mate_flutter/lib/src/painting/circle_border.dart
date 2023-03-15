@@ -25,7 +25,7 @@ class CircleBorder$Mate extends CircleBorder with Mate<CircleBorder$Mate> {
         eccentricity: p.get('eccentricity').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('eccentricity', init: eccentricity);
+    mateParams.put('side', side);
+    mateParams.put('eccentricity', eccentricity);
   }
 }

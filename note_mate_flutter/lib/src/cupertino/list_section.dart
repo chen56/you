@@ -79,18 +79,18 @@ class CupertinoListSection$Mate extends CupertinoListSection with WidgetMate<Cup
         hasLeading: p.get('hasLeading').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('header', init: header);
-    mateParams.put('footer', init: footer);
-    mateParams.put('margin', init: margin);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('dividerMargin', init: dividerMargin);
-    mateParams.put('additionalDividerMargin', init: additionalDividerMargin);
-    mateParams.put('topMargin', init: topMargin);
-    mateParams.put('hasLeading', init: hasLeading);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('header', header);
+    mateParams.put('footer', footer);
+    mateParams.put('margin', margin);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('decoration', decoration);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('dividerMargin', dividerMargin);
+    mateParams.put('additionalDividerMargin', additionalDividerMargin);
+    mateParams.put('topMargin', topMargin);
+    mateParams.put('hasLeading', hasLeading);
   }
 
   /// CupertinoListSection CupertinoListSection.insetGrouped({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry? margin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.hardEdge, double dividerMargin = _kInsetDividerMargin, double? additionalDividerMargin, double? topMargin, bool hasLeading = true})
@@ -161,17 +161,17 @@ class CupertinoListSection$Mate extends CupertinoListSection with WidgetMate<Cup
         hasLeading: p.get('hasLeading').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('header', init: header);
-    mateParams.put('footer', init: footer);
-    mateParams.put('margin', init: margin);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('dividerMargin', init: dividerMargin);
-    mateParams.put('additionalDividerMargin', init: additionalDividerMargin);
-    mateParams.put('topMargin', init: topMargin);
-    mateParams.put('hasLeading', init: hasLeading);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('header', header);
+    mateParams.put('footer', footer);
+    mateParams.put('margin', margin);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('decoration', decoration);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('dividerMargin', dividerMargin);
+    mateParams.put('additionalDividerMargin', additionalDividerMargin);
+    mateParams.put('topMargin', topMargin);
+    mateParams.put('hasLeading', hasLeading);
   }
 }

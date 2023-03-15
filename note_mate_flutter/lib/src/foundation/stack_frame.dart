@@ -64,15 +64,15 @@ class StackFrame$Mate extends StackFrame with Mate<StackFrame$Mate> {
         source: p.get('source').value,
       ),
     );
-    mateParams.put('number', init: number);
-    mateParams.put('column', init: column);
-    mateParams.put('line', init: line);
-    mateParams.put('packageScheme', init: packageScheme);
-    mateParams.put('package', init: package);
-    mateParams.put('packagePath', init: packagePath);
-    mateParams.put('className', init: className);
-    mateParams.put('method', init: method);
-    mateParams.put('isConstructor', init: isConstructor);
-    mateParams.put('source', init: source);
+    mateParams.put('number', number);
+    mateParams.put('column', column);
+    mateParams.put('line', line);
+    mateParams.put('packageScheme', packageScheme);
+    mateParams.put('package', package);
+    mateParams.put('packagePath', packagePath);
+    mateParams.put('className', className);
+    mateParams.put('method', method);
+    mateParams.put('isConstructor', isConstructor);
+    mateParams.put('source', source);
   }
 }

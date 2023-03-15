@@ -36,8 +36,8 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends GestureRecognizer>
         p.get('_initializer').value,
       ),
     );
-    mateParams.put('_constructor', init: _constructor);
-    mateParams.put('_initializer', init: _initializer);
+    mateParams.put('_constructor', _constructor);
+    mateParams.put('_initializer', _initializer);
   }
 }
 
@@ -376,71 +376,71 @@ class GestureDetector$Mate extends GestureDetector with WidgetMate<GestureDetect
         supportedDevices: p.get('supportedDevices').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('onTapDown', init: onTapDown);
-    mateParams.put('onTapUp', init: onTapUp);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('onTapCancel', init: onTapCancel);
-    mateParams.put('onSecondaryTap', init: onSecondaryTap);
-    mateParams.put('onSecondaryTapDown', init: onSecondaryTapDown);
-    mateParams.put('onSecondaryTapUp', init: onSecondaryTapUp);
-    mateParams.put('onSecondaryTapCancel', init: onSecondaryTapCancel);
-    mateParams.put('onTertiaryTapDown', init: onTertiaryTapDown);
-    mateParams.put('onTertiaryTapUp', init: onTertiaryTapUp);
-    mateParams.put('onTertiaryTapCancel', init: onTertiaryTapCancel);
-    mateParams.put('onDoubleTapDown', init: onDoubleTapDown);
-    mateParams.put('onDoubleTap', init: onDoubleTap);
-    mateParams.put('onDoubleTapCancel', init: onDoubleTapCancel);
-    mateParams.put('onLongPressDown', init: onLongPressDown);
-    mateParams.put('onLongPressCancel', init: onLongPressCancel);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('onLongPressStart', init: onLongPressStart);
-    mateParams.put('onLongPressMoveUpdate', init: onLongPressMoveUpdate);
-    mateParams.put('onLongPressUp', init: onLongPressUp);
-    mateParams.put('onLongPressEnd', init: onLongPressEnd);
-    mateParams.put('onSecondaryLongPressDown', init: onSecondaryLongPressDown);
-    mateParams.put('onSecondaryLongPressCancel', init: onSecondaryLongPressCancel);
-    mateParams.put('onSecondaryLongPress', init: onSecondaryLongPress);
-    mateParams.put('onSecondaryLongPressStart', init: onSecondaryLongPressStart);
-    mateParams.put('onSecondaryLongPressMoveUpdate', init: onSecondaryLongPressMoveUpdate);
-    mateParams.put('onSecondaryLongPressUp', init: onSecondaryLongPressUp);
-    mateParams.put('onSecondaryLongPressEnd', init: onSecondaryLongPressEnd);
-    mateParams.put('onTertiaryLongPressDown', init: onTertiaryLongPressDown);
-    mateParams.put('onTertiaryLongPressCancel', init: onTertiaryLongPressCancel);
-    mateParams.put('onTertiaryLongPress', init: onTertiaryLongPress);
-    mateParams.put('onTertiaryLongPressStart', init: onTertiaryLongPressStart);
-    mateParams.put('onTertiaryLongPressMoveUpdate', init: onTertiaryLongPressMoveUpdate);
-    mateParams.put('onTertiaryLongPressUp', init: onTertiaryLongPressUp);
-    mateParams.put('onTertiaryLongPressEnd', init: onTertiaryLongPressEnd);
-    mateParams.put('onVerticalDragDown', init: onVerticalDragDown);
-    mateParams.put('onVerticalDragStart', init: onVerticalDragStart);
-    mateParams.put('onVerticalDragUpdate', init: onVerticalDragUpdate);
-    mateParams.put('onVerticalDragEnd', init: onVerticalDragEnd);
-    mateParams.put('onVerticalDragCancel', init: onVerticalDragCancel);
-    mateParams.put('onHorizontalDragDown', init: onHorizontalDragDown);
-    mateParams.put('onHorizontalDragStart', init: onHorizontalDragStart);
-    mateParams.put('onHorizontalDragUpdate', init: onHorizontalDragUpdate);
-    mateParams.put('onHorizontalDragEnd', init: onHorizontalDragEnd);
-    mateParams.put('onHorizontalDragCancel', init: onHorizontalDragCancel);
-    mateParams.put('onForcePressStart', init: onForcePressStart);
-    mateParams.put('onForcePressPeak', init: onForcePressPeak);
-    mateParams.put('onForcePressUpdate', init: onForcePressUpdate);
-    mateParams.put('onForcePressEnd', init: onForcePressEnd);
-    mateParams.put('onPanDown', init: onPanDown);
-    mateParams.put('onPanStart', init: onPanStart);
-    mateParams.put('onPanUpdate', init: onPanUpdate);
-    mateParams.put('onPanEnd', init: onPanEnd);
-    mateParams.put('onPanCancel', init: onPanCancel);
-    mateParams.put('onScaleStart', init: onScaleStart);
-    mateParams.put('onScaleUpdate', init: onScaleUpdate);
-    mateParams.put('onScaleEnd', init: onScaleEnd);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('trackpadScrollCausesScale', init: trackpadScrollCausesScale);
-    mateParams.put('trackpadScrollToScaleFactor', init: trackpadScrollToScaleFactor);
-    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('onTapDown', onTapDown);
+    mateParams.put('onTapUp', onTapUp);
+    mateParams.put('onTap', onTap);
+    mateParams.put('onTapCancel', onTapCancel);
+    mateParams.put('onSecondaryTap', onSecondaryTap);
+    mateParams.put('onSecondaryTapDown', onSecondaryTapDown);
+    mateParams.put('onSecondaryTapUp', onSecondaryTapUp);
+    mateParams.put('onSecondaryTapCancel', onSecondaryTapCancel);
+    mateParams.put('onTertiaryTapDown', onTertiaryTapDown);
+    mateParams.put('onTertiaryTapUp', onTertiaryTapUp);
+    mateParams.put('onTertiaryTapCancel', onTertiaryTapCancel);
+    mateParams.put('onDoubleTapDown', onDoubleTapDown);
+    mateParams.put('onDoubleTap', onDoubleTap);
+    mateParams.put('onDoubleTapCancel', onDoubleTapCancel);
+    mateParams.put('onLongPressDown', onLongPressDown);
+    mateParams.put('onLongPressCancel', onLongPressCancel);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('onLongPressStart', onLongPressStart);
+    mateParams.put('onLongPressMoveUpdate', onLongPressMoveUpdate);
+    mateParams.put('onLongPressUp', onLongPressUp);
+    mateParams.put('onLongPressEnd', onLongPressEnd);
+    mateParams.put('onSecondaryLongPressDown', onSecondaryLongPressDown);
+    mateParams.put('onSecondaryLongPressCancel', onSecondaryLongPressCancel);
+    mateParams.put('onSecondaryLongPress', onSecondaryLongPress);
+    mateParams.put('onSecondaryLongPressStart', onSecondaryLongPressStart);
+    mateParams.put('onSecondaryLongPressMoveUpdate', onSecondaryLongPressMoveUpdate);
+    mateParams.put('onSecondaryLongPressUp', onSecondaryLongPressUp);
+    mateParams.put('onSecondaryLongPressEnd', onSecondaryLongPressEnd);
+    mateParams.put('onTertiaryLongPressDown', onTertiaryLongPressDown);
+    mateParams.put('onTertiaryLongPressCancel', onTertiaryLongPressCancel);
+    mateParams.put('onTertiaryLongPress', onTertiaryLongPress);
+    mateParams.put('onTertiaryLongPressStart', onTertiaryLongPressStart);
+    mateParams.put('onTertiaryLongPressMoveUpdate', onTertiaryLongPressMoveUpdate);
+    mateParams.put('onTertiaryLongPressUp', onTertiaryLongPressUp);
+    mateParams.put('onTertiaryLongPressEnd', onTertiaryLongPressEnd);
+    mateParams.put('onVerticalDragDown', onVerticalDragDown);
+    mateParams.put('onVerticalDragStart', onVerticalDragStart);
+    mateParams.put('onVerticalDragUpdate', onVerticalDragUpdate);
+    mateParams.put('onVerticalDragEnd', onVerticalDragEnd);
+    mateParams.put('onVerticalDragCancel', onVerticalDragCancel);
+    mateParams.put('onHorizontalDragDown', onHorizontalDragDown);
+    mateParams.put('onHorizontalDragStart', onHorizontalDragStart);
+    mateParams.put('onHorizontalDragUpdate', onHorizontalDragUpdate);
+    mateParams.put('onHorizontalDragEnd', onHorizontalDragEnd);
+    mateParams.put('onHorizontalDragCancel', onHorizontalDragCancel);
+    mateParams.put('onForcePressStart', onForcePressStart);
+    mateParams.put('onForcePressPeak', onForcePressPeak);
+    mateParams.put('onForcePressUpdate', onForcePressUpdate);
+    mateParams.put('onForcePressEnd', onForcePressEnd);
+    mateParams.put('onPanDown', onPanDown);
+    mateParams.put('onPanStart', onPanStart);
+    mateParams.put('onPanUpdate', onPanUpdate);
+    mateParams.put('onPanEnd', onPanEnd);
+    mateParams.put('onPanCancel', onPanCancel);
+    mateParams.put('onScaleStart', onScaleStart);
+    mateParams.put('onScaleUpdate', onScaleUpdate);
+    mateParams.put('onScaleEnd', onScaleEnd);
+    mateParams.put('behavior', behavior);
+    mateParams.put('excludeFromSemantics', excludeFromSemantics);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateParams.put('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
+    mateParams.put('supportedDevices', supportedDevices);
   }
 }
 
@@ -484,11 +484,11 @@ class RawGestureDetector$Mate extends RawGestureDetector with WidgetMate<RawGest
         semantics: p.get('semantics').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('gestures', init: gestures);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.put('semantics', init: semantics);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('gestures', gestures);
+    mateParams.put('behavior', behavior);
+    mateParams.put('excludeFromSemantics', excludeFromSemantics);
+    mateParams.put('semantics', semantics);
   }
 }

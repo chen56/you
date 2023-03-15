@@ -31,9 +31,9 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate<PartialStackFra
         method: p.get('method').value,
       ),
     );
-    mateParams.put('package', init: package);
-    mateParams.put('className', init: className);
-    mateParams.put('method', init: method);
+    mateParams.put('package', package);
+    mateParams.put('className', className);
+    mateParams.put('method', method);
   }
 }
 
@@ -57,8 +57,8 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Ma
         replacement: p.get('replacement').value,
       ),
     );
-    mateParams.put('frames', init: frames);
-    mateParams.put('replacement', init: replacement);
+    mateParams.put('frames', frames);
+    mateParams.put('replacement', replacement);
   }
 }
 
@@ -74,7 +74,7 @@ class ErrorDescription$Mate extends ErrorDescription with Mate<ErrorDescription$
       init: this,
       builder: (p) => ErrorDescription$Mate(p.get('message').value),
     );
-    mateParams.put('message', init: message);
+    mateParams.put('message', message);
   }
 }
 
@@ -90,7 +90,7 @@ class ErrorSummary$Mate extends ErrorSummary with Mate<ErrorSummary$Mate> {
       init: this,
       builder: (p) => ErrorSummary$Mate(p.get('message').value),
     );
-    mateParams.put('message', init: message);
+    mateParams.put('message', message);
   }
 }
 
@@ -106,7 +106,7 @@ class ErrorHint$Mate extends ErrorHint with Mate<ErrorHint$Mate> {
       init: this,
       builder: (p) => ErrorHint$Mate(p.get('message').value),
     );
-    mateParams.put('message', init: message);
+    mateParams.put('message', message);
   }
 }
 
@@ -155,13 +155,13 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate<FlutterErro
         silent: p.get('silent').value,
       ),
     );
-    mateParams.put('exception', init: exception);
-    mateParams.put('stack', init: stack);
-    mateParams.put('library', init: library);
-    mateParams.put('context', init: context);
-    mateParams.put('stackFilter', init: stackFilter);
-    mateParams.put('informationCollector', init: informationCollector);
-    mateParams.put('silent', init: silent);
+    mateParams.put('exception', exception);
+    mateParams.put('stack', stack);
+    mateParams.put('library', library);
+    mateParams.put('context', context);
+    mateParams.put('stackFilter', stackFilter);
+    mateParams.put('informationCollector', informationCollector);
+    mateParams.put('silent', silent);
   }
 }
 
@@ -177,7 +177,7 @@ class FlutterError$Mate extends FlutterError with Mate<FlutterError$Mate> {
       init: this,
       builder: (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value),
     );
-    mateParams.put('diagnostics', init: diagnostics);
+    mateParams.put('diagnostics', diagnostics);
   }
 }
 
@@ -210,10 +210,10 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate<Diagnos
         showSeparator: p.get('showSeparator').value,
       ),
     );
-    mateParams.put('name', init: name);
-    mateParams.put('stack', init: stack);
-    mateParams.put('stackFilter', init: stackFilter);
-    mateParams.put('showSeparator', init: showSeparator);
+    mateParams.put('name', name);
+    mateParams.put('stack', stack);
+    mateParams.put('stackFilter', stackFilter);
+    mateParams.put('showSeparator', showSeparator);
   }
 
   /// DiagnosticsStackTrace DiagnosticsStackTrace.singleFrame(String name, {required String frame, bool showSeparator = true})
@@ -238,8 +238,8 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate<Diagnos
         showSeparator: p.get('showSeparator').value,
       ),
     );
-    mateParams.put('name', init: name);
-    mateParams.put('frame', init: frame);
-    mateParams.put('showSeparator', init: showSeparator);
+    mateParams.put('name', name);
+    mateParams.put('frame', frame);
+    mateParams.put('showSeparator', showSeparator);
   }
 }

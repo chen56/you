@@ -65,14 +65,14 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmente
         padding: p.get('padding').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('onValueChanged', init: onValueChanged);
-    mateParams.put('groupValue', init: groupValue);
-    mateParams.put('unselectedColor', init: unselectedColor);
-    mateParams.put('selectedColor', init: selectedColor);
-    mateParams.put('borderColor', init: borderColor);
-    mateParams.put('pressedColor', init: pressedColor);
-    mateParams.put('padding', init: padding);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('onValueChanged', onValueChanged);
+    mateParams.put('groupValue', groupValue);
+    mateParams.put('unselectedColor', unselectedColor);
+    mateParams.put('selectedColor', selectedColor);
+    mateParams.put('borderColor', borderColor);
+    mateParams.put('pressedColor', pressedColor);
+    mateParams.put('padding', padding);
   }
 }

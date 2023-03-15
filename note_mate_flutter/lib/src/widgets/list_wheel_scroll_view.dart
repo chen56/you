@@ -25,7 +25,7 @@ class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Ma
       init: this,
       builder: (p) => ListWheelChildListDelegate$Mate(children: p.get('children').value),
     );
-    mateParams.put('children', init: children);
+    mateParams.put('children', children);
   }
 }
 
@@ -42,7 +42,7 @@ class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDe
       init: this,
       builder: (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').value),
     );
-    mateParams.put('children', init: children);
+    mateParams.put('children', children);
   }
 }
 
@@ -67,8 +67,8 @@ class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate
         childCount: p.get('childCount').value,
       ),
     );
-    mateParams.put('builder', init: builder);
-    mateParams.put('childCount', init: childCount);
+    mateParams.put('builder', builder);
+    mateParams.put('childCount', childCount);
   }
 }
 
@@ -84,7 +84,7 @@ class FixedExtentScrollController$Mate extends FixedExtentScrollController with 
       init: this,
       builder: (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').value),
     );
-    mateParams.put('initialItem', init: initialItem);
+    mateParams.put('initialItem', initialItem);
   }
 }
 
@@ -133,13 +133,13 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate<FixedExtentMe
         devicePixelRatio: p.get('devicePixelRatio').value,
       ),
     );
-    mateParams.put('minScrollExtent', init: minScrollExtent);
-    mateParams.put('maxScrollExtent', init: maxScrollExtent);
-    mateParams.put('pixels', init: pixels);
-    mateParams.put('viewportDimension', init: viewportDimension);
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('itemIndex', init: itemIndex);
-    mateParams.put('devicePixelRatio', init: devicePixelRatio);
+    mateParams.put('minScrollExtent', minScrollExtent);
+    mateParams.put('maxScrollExtent', maxScrollExtent);
+    mateParams.put('pixels', pixels);
+    mateParams.put('viewportDimension', viewportDimension);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('itemIndex', itemIndex);
+    mateParams.put('devicePixelRatio', devicePixelRatio);
   }
 }
 
@@ -155,7 +155,7 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate<F
       init: this,
       builder: (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').value),
     );
-    mateParams.put('parent', init: parent);
+    mateParams.put('parent', parent);
   }
 }
 
@@ -254,23 +254,23 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with WidgetMate<ListW
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('controller', init: controller);
-    mateParams.put('physics', init: physics);
-    mateParams.put('diameterRatio', init: diameterRatio);
-    mateParams.put('perspective', init: perspective);
-    mateParams.put('offAxisFraction', init: offAxisFraction);
-    mateParams.put('useMagnifier', init: useMagnifier);
-    mateParams.put('magnification', init: magnification);
-    mateParams.put('overAndUnderCenterOpacity', init: overAndUnderCenterOpacity);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('squeeze', init: squeeze);
-    mateParams.put('onSelectedItemChanged', init: onSelectedItemChanged);
-    mateParams.put('renderChildrenOutsideViewport', init: renderChildrenOutsideViewport);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('scrollBehavior', init: scrollBehavior);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('controller', controller);
+    mateParams.put('physics', physics);
+    mateParams.put('diameterRatio', diameterRatio);
+    mateParams.put('perspective', perspective);
+    mateParams.put('offAxisFraction', offAxisFraction);
+    mateParams.put('useMagnifier', useMagnifier);
+    mateParams.put('magnification', magnification);
+    mateParams.put('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('squeeze', squeeze);
+    mateParams.put('onSelectedItemChanged', onSelectedItemChanged);
+    mateParams.put('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('scrollBehavior', scrollBehavior);
+    mateParams.put('children', children);
   }
 
   /// ListWheelScrollView ListWheelScrollView.useDelegate({Key? key, ScrollController? controller, ScrollPhysics? physics, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, void Function(int)? onSelectedItemChanged, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, required ListWheelChildDelegate childDelegate})
@@ -366,23 +366,23 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with WidgetMate<ListW
         childDelegate: p.get('childDelegate').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('controller', init: controller);
-    mateParams.put('physics', init: physics);
-    mateParams.put('diameterRatio', init: diameterRatio);
-    mateParams.put('perspective', init: perspective);
-    mateParams.put('offAxisFraction', init: offAxisFraction);
-    mateParams.put('useMagnifier', init: useMagnifier);
-    mateParams.put('magnification', init: magnification);
-    mateParams.put('overAndUnderCenterOpacity', init: overAndUnderCenterOpacity);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('squeeze', init: squeeze);
-    mateParams.put('onSelectedItemChanged', init: onSelectedItemChanged);
-    mateParams.put('renderChildrenOutsideViewport', init: renderChildrenOutsideViewport);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('scrollBehavior', init: scrollBehavior);
-    mateParams.put('childDelegate', init: childDelegate);
+    mateParams.put('key', key);
+    mateParams.put('controller', controller);
+    mateParams.put('physics', physics);
+    mateParams.put('diameterRatio', diameterRatio);
+    mateParams.put('perspective', perspective);
+    mateParams.put('offAxisFraction', offAxisFraction);
+    mateParams.put('useMagnifier', useMagnifier);
+    mateParams.put('magnification', magnification);
+    mateParams.put('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('squeeze', squeeze);
+    mateParams.put('onSelectedItemChanged', onSelectedItemChanged);
+    mateParams.put('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('scrollBehavior', scrollBehavior);
+    mateParams.put('childDelegate', childDelegate);
   }
 }
 
@@ -398,7 +398,7 @@ class ListWheelElement$Mate extends ListWheelElement with Mate<ListWheelElement$
       init: this,
       builder: (p) => ListWheelElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }
 
@@ -477,18 +477,18 @@ class ListWheelViewport$Mate extends ListWheelViewport with WidgetMate<ListWheel
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('diameterRatio', init: diameterRatio);
-    mateParams.put('perspective', init: perspective);
-    mateParams.put('offAxisFraction', init: offAxisFraction);
-    mateParams.put('useMagnifier', init: useMagnifier);
-    mateParams.put('magnification', init: magnification);
-    mateParams.put('overAndUnderCenterOpacity', init: overAndUnderCenterOpacity);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('squeeze', init: squeeze);
-    mateParams.put('renderChildrenOutsideViewport', init: renderChildrenOutsideViewport);
-    mateParams.put('offset', init: offset);
-    mateParams.put('childDelegate', init: childDelegate);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('diameterRatio', diameterRatio);
+    mateParams.put('perspective', perspective);
+    mateParams.put('offAxisFraction', offAxisFraction);
+    mateParams.put('useMagnifier', useMagnifier);
+    mateParams.put('magnification', magnification);
+    mateParams.put('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('squeeze', squeeze);
+    mateParams.put('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
+    mateParams.put('offset', offset);
+    mateParams.put('childDelegate', childDelegate);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

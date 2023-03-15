@@ -37,10 +37,10 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
         radius: p.get('radius').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('animating', init: animating);
-    mateParams.put('radius', init: radius);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('animating', animating);
+    mateParams.put('radius', radius);
   }
 
   /// CupertinoActivityIndicator CupertinoActivityIndicator.partiallyRevealed({Key? key, Color? color, double radius = _kDefaultIndicatorRadius, double progress = 1.0})
@@ -71,9 +71,9 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
         progress: p.get('progress').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('radius', init: radius);
-    mateParams.put('progress', init: progress);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('radius', radius);
+    mateParams.put('progress', progress);
   }
 }

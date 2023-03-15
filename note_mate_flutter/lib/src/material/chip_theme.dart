@@ -36,9 +36,9 @@ class ChipTheme$Mate extends ChipTheme with WidgetMate<ChipTheme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }
 
@@ -152,25 +152,25 @@ class ChipThemeData$Mate extends ChipThemeData with Mate<ChipThemeData$Mate> {
         iconTheme: p.get('iconTheme').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('deleteIconColor', init: deleteIconColor);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('selectedColor', init: selectedColor);
-    mateParams.put('secondarySelectedColor', init: secondarySelectedColor);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('selectedShadowColor', init: selectedShadowColor);
-    mateParams.put('showCheckmark', init: showCheckmark);
-    mateParams.put('checkmarkColor', init: checkmarkColor);
-    mateParams.put('labelPadding', init: labelPadding);
-    mateParams.put('padding', init: padding);
-    mateParams.put('side', init: side);
-    mateParams.put('shape', init: shape);
-    mateParams.put('labelStyle', init: labelStyle);
-    mateParams.put('secondaryLabelStyle', init: secondaryLabelStyle);
-    mateParams.put('brightness', init: brightness);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('pressElevation', init: pressElevation);
-    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('deleteIconColor', deleteIconColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('selectedColor', selectedColor);
+    mateParams.put('secondarySelectedColor', secondarySelectedColor);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('selectedShadowColor', selectedShadowColor);
+    mateParams.put('showCheckmark', showCheckmark);
+    mateParams.put('checkmarkColor', checkmarkColor);
+    mateParams.put('labelPadding', labelPadding);
+    mateParams.put('padding', padding);
+    mateParams.put('side', side);
+    mateParams.put('shape', shape);
+    mateParams.put('labelStyle', labelStyle);
+    mateParams.put('secondaryLabelStyle', secondaryLabelStyle);
+    mateParams.put('brightness', brightness);
+    mateParams.put('elevation', elevation);
+    mateParams.put('pressElevation', pressElevation);
+    mateParams.put('iconTheme', iconTheme);
   }
 }

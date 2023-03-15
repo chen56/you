@@ -24,8 +24,8 @@ class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate<A
         toolType: p.get('toolType').value,
       ),
     );
-    mateParams.put('id', init: id);
-    mateParams.put('toolType', init: toolType);
+    mateParams.put('id', id);
+    mateParams.put('toolType', toolType);
   }
 }
 
@@ -84,15 +84,15 @@ class AndroidPointerCoords$Mate extends AndroidPointerCoords with Mate<AndroidPo
         y: p.get('y').value,
       ),
     );
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('pressure', init: pressure);
-    mateParams.put('size', init: size);
-    mateParams.put('toolMajor', init: toolMajor);
-    mateParams.put('toolMinor', init: toolMinor);
-    mateParams.put('touchMajor', init: touchMajor);
-    mateParams.put('touchMinor', init: touchMinor);
-    mateParams.put('x', init: x);
-    mateParams.put('y', init: y);
+    mateParams.put('orientation', orientation);
+    mateParams.put('pressure', pressure);
+    mateParams.put('size', size);
+    mateParams.put('toolMajor', toolMajor);
+    mateParams.put('toolMinor', toolMinor);
+    mateParams.put('touchMajor', touchMajor);
+    mateParams.put('touchMinor', touchMinor);
+    mateParams.put('x', x);
+    mateParams.put('y', y);
   }
 }
 
@@ -181,20 +181,20 @@ class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate<AndroidMotion
         motionEventId: p.get('motionEventId').value,
       ),
     );
-    mateParams.put('downTime', init: downTime);
-    mateParams.put('eventTime', init: eventTime);
-    mateParams.put('action', init: action);
-    mateParams.put('pointerCount', init: pointerCount);
-    mateParams.put('pointerProperties', init: pointerProperties);
-    mateParams.put('pointerCoords', init: pointerCoords);
-    mateParams.put('metaState', init: metaState);
-    mateParams.put('buttonState', init: buttonState);
-    mateParams.put('xPrecision', init: xPrecision);
-    mateParams.put('yPrecision', init: yPrecision);
-    mateParams.put('deviceId', init: deviceId);
-    mateParams.put('edgeFlags', init: edgeFlags);
-    mateParams.put('source', init: source);
-    mateParams.put('flags', init: flags);
-    mateParams.put('motionEventId', init: motionEventId);
+    mateParams.put('downTime', downTime);
+    mateParams.put('eventTime', eventTime);
+    mateParams.put('action', action);
+    mateParams.put('pointerCount', pointerCount);
+    mateParams.put('pointerProperties', pointerProperties);
+    mateParams.put('pointerCoords', pointerCoords);
+    mateParams.put('metaState', metaState);
+    mateParams.put('buttonState', buttonState);
+    mateParams.put('xPrecision', xPrecision);
+    mateParams.put('yPrecision', yPrecision);
+    mateParams.put('deviceId', deviceId);
+    mateParams.put('edgeFlags', edgeFlags);
+    mateParams.put('source', source);
+    mateParams.put('flags', flags);
+    mateParams.put('motionEventId', motionEventId);
   }
 }

@@ -24,7 +24,7 @@ class OffsetPair$Mate extends OffsetPair with Mate<OffsetPair$Mate> {
         global: p.get('global').value,
       ),
     );
-    mateParams.put('local', init: local);
-    mateParams.put('global', init: global);
+    mateParams.put('local', local);
+    mateParams.put('global', global);
   }
 }

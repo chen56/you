@@ -20,7 +20,7 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate<Cuper
       init: this,
       builder: (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').value),
     );
-    mateParams.put('initialIndex', init: initialIndex);
+    mateParams.put('initialIndex', initialIndex);
   }
 }
 
@@ -69,13 +69,13 @@ class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with WidgetMate<Cup
         restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('tabBar', init: tabBar);
-    mateParams.put('tabBuilder', init: tabBuilder);
-    mateParams.put('controller', init: controller);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('resizeToAvoidBottomInset', init: resizeToAvoidBottomInset);
-    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('key', key);
+    mateParams.put('tabBar', tabBar);
+    mateParams.put('tabBuilder', tabBuilder);
+    mateParams.put('controller', controller);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
+    mateParams.put('restorationId', restorationId);
   }
 }
 
@@ -92,6 +92,6 @@ class RestorableCupertinoTabController$Mate extends RestorableCupertinoTabContro
       init: this,
       builder: (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').value),
     );
-    mateParams.put('initialIndex', init: initialIndex);
+    mateParams.put('initialIndex', initialIndex);
   }
 }

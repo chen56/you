@@ -79,18 +79,18 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate<Expan
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('collapsedBackgroundColor', init: collapsedBackgroundColor);
-    mateParams.put('tilePadding', init: tilePadding);
-    mateParams.put('expandedAlignment', init: expandedAlignment);
-    mateParams.put('childrenPadding', init: childrenPadding);
-    mateParams.put('iconColor', init: iconColor);
-    mateParams.put('collapsedIconColor', init: collapsedIconColor);
-    mateParams.put('textColor', init: textColor);
-    mateParams.put('collapsedTextColor', init: collapsedTextColor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('collapsedShape', init: collapsedShape);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('collapsedBackgroundColor', collapsedBackgroundColor);
+    mateParams.put('tilePadding', tilePadding);
+    mateParams.put('expandedAlignment', expandedAlignment);
+    mateParams.put('childrenPadding', childrenPadding);
+    mateParams.put('iconColor', iconColor);
+    mateParams.put('collapsedIconColor', collapsedIconColor);
+    mateParams.put('textColor', textColor);
+    mateParams.put('collapsedTextColor', collapsedTextColor);
+    mateParams.put('shape', shape);
+    mateParams.put('collapsedShape', collapsedShape);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -119,8 +119,8 @@ class ExpansionTileTheme$Mate extends ExpansionTileTheme with WidgetMate<Expansi
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

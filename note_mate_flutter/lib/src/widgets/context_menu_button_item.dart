@@ -30,8 +30,8 @@ class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate<Context
         label: p.get('label').value,
       ),
     );
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('type', init: type);
-    mateParams.put('label', init: label);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('type', type);
+    mateParams.put('label', label);
   }
 }

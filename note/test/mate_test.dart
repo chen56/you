@@ -7,12 +7,12 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('ObjectParam.get', () {
     ObjectParam<Widget?> p = ObjectParam(init: Container());
-    var width = p.put("width", init: 1);
+    var width = p.put("width", 1);
     expect(1, p.get("width").value);
     expect(1, width.value);
 
     // null
-    var height = p.put("height", init: null);
+    var height = p.put("height", null);
     expect(null, p.get("height").value);
     expect(null, height.value);
   });

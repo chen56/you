@@ -66,15 +66,15 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate<CheckboxThemeDa
         side: p.get('side').value,
       ),
     );
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('fillColor', init: fillColor);
-    mateParams.put('checkColor', init: checkColor);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('splashRadius', init: splashRadius);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('visualDensity', init: visualDensity);
-    mateParams.put('shape', init: shape);
-    mateParams.put('side', init: side);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('fillColor', fillColor);
+    mateParams.put('checkColor', checkColor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('shape', shape);
+    mateParams.put('side', side);
   }
 }
 
@@ -103,8 +103,8 @@ class CheckboxTheme$Mate extends CheckboxTheme with WidgetMate<CheckboxTheme$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

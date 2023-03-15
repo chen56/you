@@ -48,11 +48,11 @@ class FlutterLogo$Mate extends FlutterLogo with WidgetMate<FlutterLogo$Mate> {
         curve: p.get('curve').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('size', init: size);
-    mateParams.put('textColor', init: textColor);
-    mateParams.put('style', init: style);
-    mateParams.put('duration', init: duration);
-    mateParams.put('curve', init: curve);
+    mateParams.put('key', key);
+    mateParams.put('size', size);
+    mateParams.put('textColor', textColor);
+    mateParams.put('style', style);
+    mateParams.put('duration', duration);
+    mateParams.put('curve', curve);
   }
 }

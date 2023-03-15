@@ -57,13 +57,13 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with WidgetMat
         initialValue: p.get('initialValue').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('optionsBuilder', init: optionsBuilder);
-    mateParams.put('displayStringForOption', init: displayStringForOption);
-    mateParams.put('fieldViewBuilder', init: fieldViewBuilder);
-    mateParams.put('onSelected', init: onSelected);
-    mateParams.put('optionsMaxHeight', init: optionsMaxHeight);
-    mateParams.put('optionsViewBuilder', init: optionsViewBuilder);
-    mateParams.put('initialValue', init: initialValue);
+    mateParams.put('key', key);
+    mateParams.put('optionsBuilder', optionsBuilder);
+    mateParams.put('displayStringForOption', displayStringForOption);
+    mateParams.put('fieldViewBuilder', fieldViewBuilder);
+    mateParams.put('onSelected', onSelected);
+    mateParams.put('optionsMaxHeight', optionsMaxHeight);
+    mateParams.put('optionsViewBuilder', optionsViewBuilder);
+    mateParams.put('initialValue', initialValue);
   }
 }

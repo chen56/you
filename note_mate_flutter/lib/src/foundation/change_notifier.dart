@@ -15,6 +15,6 @@ class ValueNotifier$Mate<T> extends ValueNotifier<T> with Mate<ValueNotifier$Mat
       init: this,
       builder: (p) => ValueNotifier$Mate(p.get('_value').value),
     );
-    mateParams.put('_value', init: _value);
+    mateParams.put('_value', _value);
   }
 }

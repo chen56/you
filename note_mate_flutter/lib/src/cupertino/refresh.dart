@@ -41,10 +41,10 @@ class CupertinoSliverRefreshControl$Mate extends CupertinoSliverRefreshControl
         onRefresh: p.get('onRefresh').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('refreshTriggerPullDistance', init: refreshTriggerPullDistance);
-    mateParams.put('refreshIndicatorExtent', init: refreshIndicatorExtent);
-    mateParams.put('builder', init: builder);
-    mateParams.put('onRefresh', init: onRefresh);
+    mateParams.put('key', key);
+    mateParams.put('refreshTriggerPullDistance', refreshTriggerPullDistance);
+    mateParams.put('refreshIndicatorExtent', refreshIndicatorExtent);
+    mateParams.put('builder', builder);
+    mateParams.put('onRefresh', onRefresh);
   }
 }

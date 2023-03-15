@@ -60,14 +60,14 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with WidgetMate<Cup
         insetAnimationCurve: p.get('insetAnimationCurve').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('title', init: title);
-    mateParams.put('content', init: content);
-    mateParams.put('actions', init: actions);
-    mateParams.put('scrollController', init: scrollController);
-    mateParams.put('actionScrollController', init: actionScrollController);
-    mateParams.put('insetAnimationDuration', init: insetAnimationDuration);
-    mateParams.put('insetAnimationCurve', init: insetAnimationCurve);
+    mateParams.put('key', key);
+    mateParams.put('title', title);
+    mateParams.put('content', content);
+    mateParams.put('actions', actions);
+    mateParams.put('scrollController', scrollController);
+    mateParams.put('actionScrollController', actionScrollController);
+    mateParams.put('insetAnimationDuration', insetAnimationDuration);
+    mateParams.put('insetAnimationCurve', insetAnimationCurve);
   }
 }
 
@@ -96,9 +96,9 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with WidgetMate<C
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('isSurfacePainted', init: isSurfacePainted);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('isSurfacePainted', isSurfacePainted);
+    mateParams.put('child', child);
   }
 }
 
@@ -147,13 +147,13 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with WidgetMate<Cup
         cancelButton: p.get('cancelButton').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('title', init: title);
-    mateParams.put('message', init: message);
-    mateParams.put('actions', init: actions);
-    mateParams.put('messageScrollController', init: messageScrollController);
-    mateParams.put('actionScrollController', init: actionScrollController);
-    mateParams.put('cancelButton', init: cancelButton);
+    mateParams.put('key', key);
+    mateParams.put('title', title);
+    mateParams.put('message', message);
+    mateParams.put('actions', actions);
+    mateParams.put('messageScrollController', messageScrollController);
+    mateParams.put('actionScrollController', actionScrollController);
+    mateParams.put('cancelButton', cancelButton);
   }
 }
 
@@ -193,11 +193,11 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('isDefaultAction', init: isDefaultAction);
-    mateParams.put('isDestructiveAction', init: isDestructiveAction);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('isDefaultAction', isDefaultAction);
+    mateParams.put('isDestructiveAction', isDestructiveAction);
+    mateParams.put('child', child);
   }
 }
 
@@ -241,11 +241,11 @@ class CupertinoDialogAction$Mate extends CupertinoDialogAction with WidgetMate<C
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('isDefaultAction', init: isDefaultAction);
-    mateParams.put('isDestructiveAction', init: isDestructiveAction);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('isDefaultAction', isDefaultAction);
+    mateParams.put('isDestructiveAction', isDestructiveAction);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('child', child);
   }
 }

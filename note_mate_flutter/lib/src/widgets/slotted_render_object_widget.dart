@@ -16,6 +16,6 @@ class SlottedRenderObjectElement$Mate<S> extends SlottedRenderObjectElement<S>
       init: this,
       builder: (p) => SlottedRenderObjectElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }

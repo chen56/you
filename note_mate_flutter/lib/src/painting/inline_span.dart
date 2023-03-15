@@ -18,7 +18,7 @@ class Accumulator$Mate extends Accumulator with Mate<Accumulator$Mate> {
       init: this,
       builder: (p) => Accumulator$Mate(p.get('_value').value),
     );
-    mateParams.put('_value', init: _value);
+    mateParams.put('_value', _value);
   }
 }
 
@@ -57,10 +57,10 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
         recognizer: p.get('recognizer').value,
       ),
     );
-    mateParams.put('text', init: text);
-    mateParams.put('isPlaceholder', init: isPlaceholder);
-    mateParams.put('semanticsLabel', init: semanticsLabel);
-    mateParams.put('stringAttributes', init: stringAttributes);
-    mateParams.put('recognizer', init: recognizer);
+    mateParams.put('text', text);
+    mateParams.put('isPlaceholder', isPlaceholder);
+    mateParams.put('semanticsLabel', semanticsLabel);
+    mateParams.put('stringAttributes', stringAttributes);
+    mateParams.put('recognizer', recognizer);
   }
 }

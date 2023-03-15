@@ -16,6 +16,6 @@ class ReadBuffer$Mate extends ReadBuffer with Mate<ReadBuffer$Mate> {
       init: this,
       builder: (p) => ReadBuffer$Mate(p.get('data').value),
     );
-    mateParams.put('data', init: data);
+    mateParams.put('data', data);
   }
 }

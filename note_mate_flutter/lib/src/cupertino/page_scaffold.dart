@@ -42,10 +42,10 @@ class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with WidgetMate<C
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('navigationBar', init: navigationBar);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('resizeToAvoidBottomInset', init: resizeToAvoidBottomInset);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('navigationBar', navigationBar);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
+    mateParams.put('child', child);
   }
 }

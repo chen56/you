@@ -48,12 +48,12 @@ class BannerPainter$Mate extends BannerPainter with Mate<BannerPainter$Mate> {
         textStyle: p.get('textStyle').value,
       ),
     );
-    mateParams.put('message', init: message);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('location', init: location);
-    mateParams.put('layoutDirection', init: layoutDirection);
-    mateParams.put('color', init: color);
-    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('message', message);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('location', location);
+    mateParams.put('layoutDirection', layoutDirection);
+    mateParams.put('color', color);
+    mateParams.put('textStyle', textStyle);
   }
 }
 
@@ -107,14 +107,14 @@ class Banner$Mate extends Banner with WidgetMate<Banner$Mate> {
         textStyle: p.get('textStyle').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('message', init: message);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('location', init: location);
-    mateParams.put('layoutDirection', init: layoutDirection);
-    mateParams.put('color', init: color);
-    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('message', message);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('location', location);
+    mateParams.put('layoutDirection', layoutDirection);
+    mateParams.put('color', color);
+    mateParams.put('textStyle', textStyle);
   }
 }
 
@@ -138,7 +138,7 @@ class CheckedModeBanner$Mate extends CheckedModeBanner with WidgetMate<CheckedMo
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }

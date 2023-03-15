@@ -32,9 +32,9 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate<ScaleStartDetai
         pointerCount: p.get('pointerCount').value,
       ),
     );
-    mateParams.put('focalPoint', init: focalPoint);
-    mateParams.put('localFocalPoint', init: localFocalPoint);
-    mateParams.put('pointerCount', init: pointerCount);
+    mateParams.put('focalPoint', focalPoint);
+    mateParams.put('localFocalPoint', localFocalPoint);
+    mateParams.put('pointerCount', pointerCount);
   }
 }
 
@@ -88,14 +88,14 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate<ScaleUpdateDe
         focalPointDelta: p.get('focalPointDelta').value,
       ),
     );
-    mateParams.put('focalPoint', init: focalPoint);
-    mateParams.put('localFocalPoint', init: localFocalPoint);
-    mateParams.put('scale', init: scale);
-    mateParams.put('horizontalScale', init: horizontalScale);
-    mateParams.put('verticalScale', init: verticalScale);
-    mateParams.put('rotation', init: rotation);
-    mateParams.put('pointerCount', init: pointerCount);
-    mateParams.put('focalPointDelta', init: focalPointDelta);
+    mateParams.put('focalPoint', focalPoint);
+    mateParams.put('localFocalPoint', localFocalPoint);
+    mateParams.put('scale', scale);
+    mateParams.put('horizontalScale', horizontalScale);
+    mateParams.put('verticalScale', verticalScale);
+    mateParams.put('rotation', rotation);
+    mateParams.put('pointerCount', pointerCount);
+    mateParams.put('focalPointDelta', focalPointDelta);
   }
 }
 
@@ -124,9 +124,9 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate<ScaleEndDetails$Mat
         pointerCount: p.get('pointerCount').value,
       ),
     );
-    mateParams.put('velocity', init: velocity);
-    mateParams.put('scaleVelocity', init: scaleVelocity);
-    mateParams.put('pointerCount', init: pointerCount);
+    mateParams.put('velocity', velocity);
+    mateParams.put('scaleVelocity', scaleVelocity);
+    mateParams.put('pointerCount', pointerCount);
   }
 }
 
@@ -170,11 +170,11 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate<Scale
         trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('trackpadScrollCausesScale', init: trackpadScrollCausesScale);
-    mateParams.put('trackpadScrollToScaleFactor', init: trackpadScrollToScaleFactor);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateParams.put('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
   }
 }

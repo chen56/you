@@ -32,9 +32,9 @@ class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGesture
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -64,9 +64,9 @@ class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestu
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -96,9 +96,9 @@ class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRe
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -133,9 +133,9 @@ class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureReco
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('delay', init: delay);
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('delay', delay);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

@@ -17,6 +17,6 @@ class DesktopTextSelectionToolbarLayoutDelegate$Mate extends DesktopTextSelectio
       init: this,
       builder: (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(anchor: p.get('anchor').value),
     );
-    mateParams.put('anchor', init: anchor);
+    mateParams.put('anchor', anchor);
   }
 }

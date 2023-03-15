@@ -90,21 +90,21 @@ class PointerAddedEvent$Mate extends PointerAddedEvent with Mate<PointerAddedEve
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distance', init: distance);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('tilt', init: tilt);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('pointer', pointer);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distance', distance);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('orientation', orientation);
+    mateParams.put('tilt', tilt);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -183,19 +183,19 @@ class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate<PointerRemo
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('original', init: original);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('pointer', pointer);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('original', original);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -314,27 +314,27 @@ class PointerHoverEvent$Mate extends PointerHoverEvent with Mate<PointerHoverEve
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('kind', init: kind);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('delta', init: delta);
-    mateParams.put('buttons', init: buttons);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distance', init: distance);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('size', init: size);
-    mateParams.put('radiusMajor', init: radiusMajor);
-    mateParams.put('radiusMinor', init: radiusMinor);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('tilt', init: tilt);
-    mateParams.put('synthesized', init: synthesized);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('kind', kind);
+    mateParams.put('pointer', pointer);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('delta', delta);
+    mateParams.put('buttons', buttons);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distance', distance);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('size', size);
+    mateParams.put('radiusMajor', radiusMajor);
+    mateParams.put('radiusMinor', radiusMinor);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('orientation', orientation);
+    mateParams.put('tilt', tilt);
+    mateParams.put('synthesized', synthesized);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -458,28 +458,28 @@ class PointerEnterEvent$Mate extends PointerEnterEvent with Mate<PointerEnterEve
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('delta', init: delta);
-    mateParams.put('buttons', init: buttons);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distance', init: distance);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('size', init: size);
-    mateParams.put('radiusMajor', init: radiusMajor);
-    mateParams.put('radiusMinor', init: radiusMinor);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('tilt', init: tilt);
-    mateParams.put('down', init: down);
-    mateParams.put('synthesized', init: synthesized);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('pointer', pointer);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('delta', delta);
+    mateParams.put('buttons', buttons);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distance', distance);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('size', size);
+    mateParams.put('radiusMajor', radiusMajor);
+    mateParams.put('radiusMinor', radiusMinor);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('orientation', orientation);
+    mateParams.put('tilt', tilt);
+    mateParams.put('down', down);
+    mateParams.put('synthesized', synthesized);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -603,28 +603,28 @@ class PointerExitEvent$Mate extends PointerExitEvent with Mate<PointerExitEvent$
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('kind', init: kind);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('delta', init: delta);
-    mateParams.put('buttons', init: buttons);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distance', init: distance);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('size', init: size);
-    mateParams.put('radiusMajor', init: radiusMajor);
-    mateParams.put('radiusMinor', init: radiusMinor);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('tilt', init: tilt);
-    mateParams.put('down', init: down);
-    mateParams.put('synthesized', init: synthesized);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('kind', kind);
+    mateParams.put('pointer', pointer);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('delta', delta);
+    mateParams.put('buttons', buttons);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distance', distance);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('size', size);
+    mateParams.put('radiusMajor', radiusMajor);
+    mateParams.put('radiusMinor', radiusMinor);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('orientation', orientation);
+    mateParams.put('tilt', tilt);
+    mateParams.put('down', down);
+    mateParams.put('synthesized', synthesized);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -733,25 +733,25 @@ class PointerDownEvent$Mate extends PointerDownEvent with Mate<PointerDownEvent$
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('buttons', init: buttons);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressure', init: pressure);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('size', init: size);
-    mateParams.put('radiusMajor', init: radiusMajor);
-    mateParams.put('radiusMinor', init: radiusMinor);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('tilt', init: tilt);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('pointer', pointer);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('buttons', buttons);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressure', pressure);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('size', size);
+    mateParams.put('radiusMajor', radiusMajor);
+    mateParams.put('radiusMinor', radiusMinor);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('orientation', orientation);
+    mateParams.put('tilt', tilt);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -875,28 +875,28 @@ class PointerMoveEvent$Mate extends PointerMoveEvent with Mate<PointerMoveEvent$
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('delta', init: delta);
-    mateParams.put('buttons', init: buttons);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressure', init: pressure);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('size', init: size);
-    mateParams.put('radiusMajor', init: radiusMajor);
-    mateParams.put('radiusMinor', init: radiusMinor);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('tilt', init: tilt);
-    mateParams.put('platformData', init: platformData);
-    mateParams.put('synthesized', init: synthesized);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('pointer', pointer);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('delta', delta);
+    mateParams.put('buttons', buttons);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressure', pressure);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('size', size);
+    mateParams.put('radiusMajor', radiusMajor);
+    mateParams.put('radiusMinor', radiusMinor);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('orientation', orientation);
+    mateParams.put('tilt', tilt);
+    mateParams.put('platformData', platformData);
+    mateParams.put('synthesized', synthesized);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -1010,26 +1010,26 @@ class PointerUpEvent$Mate extends PointerUpEvent with Mate<PointerUpEvent$Mate> 
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('buttons', init: buttons);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressure', init: pressure);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distance', init: distance);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('size', init: size);
-    mateParams.put('radiusMajor', init: radiusMajor);
-    mateParams.put('radiusMinor', init: radiusMinor);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('tilt', init: tilt);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('pointer', pointer);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('buttons', buttons);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressure', pressure);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distance', distance);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('size', size);
+    mateParams.put('radiusMajor', radiusMajor);
+    mateParams.put('radiusMinor', radiusMinor);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('orientation', orientation);
+    mateParams.put('tilt', tilt);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -1073,12 +1073,12 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate<PointerScroll
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('scrollDelta', init: scrollDelta);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('scrollDelta', scrollDelta);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -1118,11 +1118,11 @@ class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEve
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('embedderId', embedderId);
   }
 }
 
@@ -1166,12 +1166,12 @@ class PointerScaleEvent$Mate extends PointerScaleEvent with Mate<PointerScaleEve
         scale: p.get('scale').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('embedderId', init: embedderId);
-    mateParams.put('scale', init: scale);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('embedderId', embedderId);
+    mateParams.put('scale', scale);
   }
 }
 
@@ -1215,12 +1215,12 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate<P
         synthesized: p.get('synthesized').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('device', init: device);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('position', init: position);
-    mateParams.put('embedderId', init: embedderId);
-    mateParams.put('synthesized', init: synthesized);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('device', device);
+    mateParams.put('pointer', pointer);
+    mateParams.put('position', position);
+    mateParams.put('embedderId', embedderId);
+    mateParams.put('synthesized', synthesized);
   }
 }
 
@@ -1284,16 +1284,16 @@ class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate
         synthesized: p.get('synthesized').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('device', init: device);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('position', init: position);
-    mateParams.put('embedderId', init: embedderId);
-    mateParams.put('pan', init: pan);
-    mateParams.put('panDelta', init: panDelta);
-    mateParams.put('scale', init: scale);
-    mateParams.put('rotation', init: rotation);
-    mateParams.put('synthesized', init: synthesized);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('device', device);
+    mateParams.put('pointer', pointer);
+    mateParams.put('position', position);
+    mateParams.put('embedderId', embedderId);
+    mateParams.put('pan', pan);
+    mateParams.put('panDelta', panDelta);
+    mateParams.put('scale', scale);
+    mateParams.put('rotation', rotation);
+    mateParams.put('synthesized', synthesized);
   }
 }
 
@@ -1337,12 +1337,12 @@ class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate<Point
         synthesized: p.get('synthesized').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('device', init: device);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('position', init: position);
-    mateParams.put('embedderId', init: embedderId);
-    mateParams.put('synthesized', init: synthesized);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('device', device);
+    mateParams.put('pointer', pointer);
+    mateParams.put('position', position);
+    mateParams.put('embedderId', embedderId);
+    mateParams.put('synthesized', synthesized);
   }
 }
 
@@ -1451,24 +1451,24 @@ class PointerCancelEvent$Mate extends PointerCancelEvent with Mate<PointerCancel
         embedderId: p.get('embedderId').value,
       ),
     );
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('pointer', init: pointer);
-    mateParams.put('kind', init: kind);
-    mateParams.put('device', init: device);
-    mateParams.put('position', init: position);
-    mateParams.put('buttons', init: buttons);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('pressureMin', init: pressureMin);
-    mateParams.put('pressureMax', init: pressureMax);
-    mateParams.put('distance', init: distance);
-    mateParams.put('distanceMax', init: distanceMax);
-    mateParams.put('size', init: size);
-    mateParams.put('radiusMajor', init: radiusMajor);
-    mateParams.put('radiusMinor', init: radiusMinor);
-    mateParams.put('radiusMin', init: radiusMin);
-    mateParams.put('radiusMax', init: radiusMax);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('tilt', init: tilt);
-    mateParams.put('embedderId', init: embedderId);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('pointer', pointer);
+    mateParams.put('kind', kind);
+    mateParams.put('device', device);
+    mateParams.put('position', position);
+    mateParams.put('buttons', buttons);
+    mateParams.put('obscured', obscured);
+    mateParams.put('pressureMin', pressureMin);
+    mateParams.put('pressureMax', pressureMax);
+    mateParams.put('distance', distance);
+    mateParams.put('distanceMax', distanceMax);
+    mateParams.put('size', size);
+    mateParams.put('radiusMajor', radiusMajor);
+    mateParams.put('radiusMinor', radiusMinor);
+    mateParams.put('radiusMin', radiusMin);
+    mateParams.put('radiusMax', radiusMax);
+    mateParams.put('orientation', orientation);
+    mateParams.put('tilt', tilt);
+    mateParams.put('embedderId', embedderId);
   }
 }

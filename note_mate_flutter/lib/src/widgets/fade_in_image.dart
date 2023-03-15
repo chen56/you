@@ -124,26 +124,26 @@ class FadeInImage$Mate extends FadeInImage with WidgetMate<FadeInImage$Mate> {
         matchTextDirection: p.get('matchTextDirection').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('placeholder', init: placeholder);
-    mateParams.put('placeholderErrorBuilder', init: placeholderErrorBuilder);
-    mateParams.put('image', init: image);
-    mateParams.put('imageErrorBuilder', init: imageErrorBuilder);
-    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.put('imageSemanticLabel', init: imageSemanticLabel);
-    mateParams.put('fadeOutDuration', init: fadeOutDuration);
-    mateParams.put('fadeOutCurve', init: fadeOutCurve);
-    mateParams.put('fadeInDuration', init: fadeInDuration);
-    mateParams.put('fadeInCurve', init: fadeInCurve);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('fit', init: fit);
-    mateParams.put('placeholderFit', init: placeholderFit);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('placeholderFilterQuality', init: placeholderFilterQuality);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('repeat', init: repeat);
-    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('key', key);
+    mateParams.put('placeholder', placeholder);
+    mateParams.put('placeholderErrorBuilder', placeholderErrorBuilder);
+    mateParams.put('image', image);
+    mateParams.put('imageErrorBuilder', imageErrorBuilder);
+    mateParams.put('excludeFromSemantics', excludeFromSemantics);
+    mateParams.put('imageSemanticLabel', imageSemanticLabel);
+    mateParams.put('fadeOutDuration', fadeOutDuration);
+    mateParams.put('fadeOutCurve', fadeOutCurve);
+    mateParams.put('fadeInDuration', fadeInDuration);
+    mateParams.put('fadeInCurve', fadeInCurve);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('fit', fit);
+    mateParams.put('placeholderFit', placeholderFit);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('placeholderFilterQuality', placeholderFilterQuality);
+    mateParams.put('alignment', alignment);
+    mateParams.put('repeat', repeat);
+    mateParams.put('matchTextDirection', matchTextDirection);
   }
 
   /// FadeInImage FadeInImage.memoryNetwork({Key? key, required Uint8List placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, double placeholderScale = 1.0, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
@@ -284,32 +284,32 @@ class FadeInImage$Mate extends FadeInImage with WidgetMate<FadeInImage$Mate> {
         imageCacheHeight: p.get('imageCacheHeight').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('placeholder', init: placeholder);
-    mateParams.put('placeholderErrorBuilder', init: placeholderErrorBuilder);
-    mateParams.put('image', init: image);
-    mateParams.put('imageErrorBuilder', init: imageErrorBuilder);
-    mateParams.put('placeholderScale', init: placeholderScale);
-    mateParams.put('imageScale', init: imageScale);
-    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.put('imageSemanticLabel', init: imageSemanticLabel);
-    mateParams.put('fadeOutDuration', init: fadeOutDuration);
-    mateParams.put('fadeOutCurve', init: fadeOutCurve);
-    mateParams.put('fadeInDuration', init: fadeInDuration);
-    mateParams.put('fadeInCurve', init: fadeInCurve);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('fit', init: fit);
-    mateParams.put('placeholderFit', init: placeholderFit);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('placeholderFilterQuality', init: placeholderFilterQuality);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('repeat', init: repeat);
-    mateParams.put('matchTextDirection', init: matchTextDirection);
-    mateParams.put('placeholderCacheWidth', init: placeholderCacheWidth);
-    mateParams.put('placeholderCacheHeight', init: placeholderCacheHeight);
-    mateParams.put('imageCacheWidth', init: imageCacheWidth);
-    mateParams.put('imageCacheHeight', init: imageCacheHeight);
+    mateParams.put('key', key);
+    mateParams.put('placeholder', placeholder);
+    mateParams.put('placeholderErrorBuilder', placeholderErrorBuilder);
+    mateParams.put('image', image);
+    mateParams.put('imageErrorBuilder', imageErrorBuilder);
+    mateParams.put('placeholderScale', placeholderScale);
+    mateParams.put('imageScale', imageScale);
+    mateParams.put('excludeFromSemantics', excludeFromSemantics);
+    mateParams.put('imageSemanticLabel', imageSemanticLabel);
+    mateParams.put('fadeOutDuration', fadeOutDuration);
+    mateParams.put('fadeOutCurve', fadeOutCurve);
+    mateParams.put('fadeInDuration', fadeInDuration);
+    mateParams.put('fadeInCurve', fadeInCurve);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('fit', fit);
+    mateParams.put('placeholderFit', placeholderFit);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('placeholderFilterQuality', placeholderFilterQuality);
+    mateParams.put('alignment', alignment);
+    mateParams.put('repeat', repeat);
+    mateParams.put('matchTextDirection', matchTextDirection);
+    mateParams.put('placeholderCacheWidth', placeholderCacheWidth);
+    mateParams.put('placeholderCacheHeight', placeholderCacheHeight);
+    mateParams.put('imageCacheWidth', imageCacheWidth);
+    mateParams.put('imageCacheHeight', imageCacheHeight);
   }
 
   /// FadeInImage FadeInImage.assetNetwork({Key? key, required String placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, AssetBundle? bundle, double? placeholderScale, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
@@ -455,32 +455,32 @@ class FadeInImage$Mate extends FadeInImage with WidgetMate<FadeInImage$Mate> {
         imageCacheHeight: p.get('imageCacheHeight').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('placeholder', init: placeholder);
-    mateParams.put('placeholderErrorBuilder', init: placeholderErrorBuilder);
-    mateParams.put('image', init: image);
-    mateParams.put('imageErrorBuilder', init: imageErrorBuilder);
-    mateParams.put('bundle', init: bundle);
-    mateParams.put('placeholderScale', init: placeholderScale);
-    mateParams.put('imageScale', init: imageScale);
-    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.put('imageSemanticLabel', init: imageSemanticLabel);
-    mateParams.put('fadeOutDuration', init: fadeOutDuration);
-    mateParams.put('fadeOutCurve', init: fadeOutCurve);
-    mateParams.put('fadeInDuration', init: fadeInDuration);
-    mateParams.put('fadeInCurve', init: fadeInCurve);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('fit', init: fit);
-    mateParams.put('placeholderFit', init: placeholderFit);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('placeholderFilterQuality', init: placeholderFilterQuality);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('repeat', init: repeat);
-    mateParams.put('matchTextDirection', init: matchTextDirection);
-    mateParams.put('placeholderCacheWidth', init: placeholderCacheWidth);
-    mateParams.put('placeholderCacheHeight', init: placeholderCacheHeight);
-    mateParams.put('imageCacheWidth', init: imageCacheWidth);
-    mateParams.put('imageCacheHeight', init: imageCacheHeight);
+    mateParams.put('key', key);
+    mateParams.put('placeholder', placeholder);
+    mateParams.put('placeholderErrorBuilder', placeholderErrorBuilder);
+    mateParams.put('image', image);
+    mateParams.put('imageErrorBuilder', imageErrorBuilder);
+    mateParams.put('bundle', bundle);
+    mateParams.put('placeholderScale', placeholderScale);
+    mateParams.put('imageScale', imageScale);
+    mateParams.put('excludeFromSemantics', excludeFromSemantics);
+    mateParams.put('imageSemanticLabel', imageSemanticLabel);
+    mateParams.put('fadeOutDuration', fadeOutDuration);
+    mateParams.put('fadeOutCurve', fadeOutCurve);
+    mateParams.put('fadeInDuration', fadeInDuration);
+    mateParams.put('fadeInCurve', fadeInCurve);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('fit', fit);
+    mateParams.put('placeholderFit', placeholderFit);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('placeholderFilterQuality', placeholderFilterQuality);
+    mateParams.put('alignment', alignment);
+    mateParams.put('repeat', repeat);
+    mateParams.put('matchTextDirection', matchTextDirection);
+    mateParams.put('placeholderCacheWidth', placeholderCacheWidth);
+    mateParams.put('placeholderCacheHeight', placeholderCacheHeight);
+    mateParams.put('imageCacheWidth', imageCacheWidth);
+    mateParams.put('imageCacheHeight', imageCacheHeight);
   }
 }

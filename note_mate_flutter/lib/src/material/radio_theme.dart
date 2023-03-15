@@ -50,12 +50,12 @@ class RadioThemeData$Mate extends RadioThemeData with Mate<RadioThemeData$Mate> 
         visualDensity: p.get('visualDensity').value,
       ),
     );
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('fillColor', init: fillColor);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('splashRadius', init: splashRadius);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('fillColor', fillColor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('visualDensity', visualDensity);
   }
 }
 
@@ -84,8 +84,8 @@ class RadioTheme$Mate extends RadioTheme with WidgetMate<RadioTheme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

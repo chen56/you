@@ -32,9 +32,9 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Widg
         prototypeItem: p.get('prototypeItem').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('prototypeItem', init: prototypeItem);
+    mateParams.put('key', key);
+    mateParams.put('delegate', delegate);
+    mateParams.put('prototypeItem', prototypeItem);
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.builder({Key? key, required Widget? Function(BuildContext, int) itemBuilder, required Widget prototypeItem, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -85,14 +85,14 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Widg
         addSemanticIndexes: p.get('addSemanticIndexes').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('itemBuilder', init: itemBuilder);
-    mateParams.put('prototypeItem', init: prototypeItem);
-    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.put('itemCount', init: itemCount);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
+    mateParams.put('key', key);
+    mateParams.put('itemBuilder', itemBuilder);
+    mateParams.put('prototypeItem', prototypeItem);
+    mateParams.put('findChildIndexCallback', findChildIndexCallback);
+    mateParams.put('itemCount', itemCount);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.list({Key? key, required List<Widget> children, required Widget prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -133,11 +133,11 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Widg
         addSemanticIndexes: p.get('addSemanticIndexes').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('prototypeItem', init: prototypeItem);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('prototypeItem', prototypeItem);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
   }
 }

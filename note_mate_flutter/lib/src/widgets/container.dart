@@ -43,10 +43,10 @@ class DecoratedBox$Mate extends DecoratedBox with WidgetMate<DecoratedBox$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('position', init: position);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('decoration', decoration);
+    mateParams.put('position', position);
+    mateParams.put('child', child);
   }
 }
 
@@ -130,19 +130,19 @@ class Container$Mate extends Container with WidgetMate<Container$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('padding', init: padding);
-    mateParams.put('color', init: color);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('foregroundDecoration', init: foregroundDecoration);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('constraints', init: constraints);
-    mateParams.put('margin', init: margin);
-    mateParams.put('transform', init: transform);
-    mateParams.put('transformAlignment', init: transformAlignment);
-    mateParams.put('child', init: child);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('padding', padding);
+    mateParams.put('color', color);
+    mateParams.put('decoration', decoration);
+    mateParams.put('foregroundDecoration', foregroundDecoration);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('constraints', constraints);
+    mateParams.put('margin', margin);
+    mateParams.put('transform', transform);
+    mateParams.put('transformAlignment', transformAlignment);
+    mateParams.put('child', child);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

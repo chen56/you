@@ -64,14 +64,14 @@ class OverflowBar$Mate extends OverflowBar with WidgetMate<OverflowBar$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('spacing', init: spacing);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('overflowSpacing', init: overflowSpacing);
-    mateParams.put('overflowAlignment', init: overflowAlignment);
-    mateParams.put('overflowDirection', init: overflowDirection);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('spacing', spacing);
+    mateParams.put('alignment', alignment);
+    mateParams.put('overflowSpacing', overflowSpacing);
+    mateParams.put('overflowAlignment', overflowAlignment);
+    mateParams.put('overflowDirection', overflowDirection);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('children', children);
   }
 }

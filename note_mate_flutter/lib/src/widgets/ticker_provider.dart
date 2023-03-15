@@ -31,8 +31,8 @@ class TickerMode$Mate extends TickerMode with WidgetMate<TickerMode$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('enabled', enabled);
+    mateParams.put('child', child);
   }
 }

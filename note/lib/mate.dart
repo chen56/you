@@ -49,7 +49,7 @@ class ObjectParam<T> extends Param<T> with MapMixin<String, T> {
 
   ObjectParam({required super.init, this.builder});
 
-  Param<C> put<C>(String name, {required C init}) {
+  Param<C> put<C>(String name, C init) {
     assert(
         !_paramMap.containsKey(name), "error:duplicate param name: $name , old:${_paramMap[name]}");
 
@@ -69,7 +69,7 @@ class ObjectParam<T> extends Param<T> with MapMixin<String, T> {
 
   @override
   void operator []=(String key, T value) {
-    put(key, init: value);
+    put(key, value);
   }
 
   @override

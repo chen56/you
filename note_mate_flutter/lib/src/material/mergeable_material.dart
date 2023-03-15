@@ -33,9 +33,9 @@ class MaterialSlice$Mate extends MaterialSlice with Mate<MaterialSlice$Mate> {
         color: p.get('color').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('color', init: color);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('color', color);
   }
 }
 
@@ -59,8 +59,8 @@ class MaterialGap$Mate extends MaterialGap with Mate<MaterialGap$Mate> {
         size: p.get('size').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('size', init: size);
+    mateParams.put('key', key);
+    mateParams.put('size', size);
   }
 }
 
@@ -104,11 +104,11 @@ class MergeableMaterial$Mate extends MergeableMaterial with WidgetMate<Mergeable
         dividerColor: p.get('dividerColor').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('mainAxis', init: mainAxis);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('hasDividers', init: hasDividers);
-    mateParams.put('children', init: children);
-    mateParams.put('dividerColor', init: dividerColor);
+    mateParams.put('key', key);
+    mateParams.put('mainAxis', mainAxis);
+    mateParams.put('elevation', elevation);
+    mateParams.put('hasDividers', hasDividers);
+    mateParams.put('children', children);
+    mateParams.put('dividerColor', dividerColor);
   }
 }

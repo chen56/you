@@ -32,9 +32,9 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObj
         debugShortDescription: p.get('debugShortDescription').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('container', init: container);
-    mateParams.put('debugShortDescription', init: debugShortDescription);
+    mateParams.put('child', child);
+    mateParams.put('container', container);
+    mateParams.put('debugShortDescription', debugShortDescription);
   }
 }
 
@@ -51,6 +51,6 @@ class RenderObjectToWidgetElement$Mate<T extends RenderObject> extends RenderObj
       init: this,
       builder: (p) => RenderObjectToWidgetElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }

@@ -37,10 +37,10 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate<ButtonSegment$Mat
         enabled: p.get('enabled').value,
       ),
     );
-    mateParams.put('value', init: value);
-    mateParams.put('icon', init: icon);
-    mateParams.put('label', init: label);
-    mateParams.put('enabled', init: enabled);
+    mateParams.put('value', value);
+    mateParams.put('icon', icon);
+    mateParams.put('label', label);
+    mateParams.put('enabled', enabled);
   }
 }
 
@@ -99,14 +99,14 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with WidgetMate<Segment
         selectedIcon: p.get('selectedIcon').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('segments', init: segments);
-    mateParams.put('selected', init: selected);
-    mateParams.put('onSelectionChanged', init: onSelectionChanged);
-    mateParams.put('multiSelectionEnabled', init: multiSelectionEnabled);
-    mateParams.put('emptySelectionAllowed', init: emptySelectionAllowed);
-    mateParams.put('style', init: style);
-    mateParams.put('showSelectedIcon', init: showSelectedIcon);
-    mateParams.put('selectedIcon', init: selectedIcon);
+    mateParams.put('key', key);
+    mateParams.put('segments', segments);
+    mateParams.put('selected', selected);
+    mateParams.put('onSelectionChanged', onSelectionChanged);
+    mateParams.put('multiSelectionEnabled', multiSelectionEnabled);
+    mateParams.put('emptySelectionAllowed', emptySelectionAllowed);
+    mateParams.put('style', style);
+    mateParams.put('showSelectedIcon', showSelectedIcon);
+    mateParams.put('selectedIcon', selectedIcon);
   }
 }

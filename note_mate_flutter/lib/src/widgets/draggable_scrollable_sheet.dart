@@ -66,16 +66,16 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Widget
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('initialChildSize', init: initialChildSize);
-    mateParams.put('minChildSize', init: minChildSize);
-    mateParams.put('maxChildSize', init: maxChildSize);
-    mateParams.put('expand', init: expand);
-    mateParams.put('snap', init: snap);
-    mateParams.put('snapSizes', init: snapSizes);
-    mateParams.put('snapAnimationDuration', init: snapAnimationDuration);
-    mateParams.put('controller', init: controller);
-    mateParams.put('builder', init: builder);
+    mateParams.put('key', key);
+    mateParams.put('initialChildSize', initialChildSize);
+    mateParams.put('minChildSize', minChildSize);
+    mateParams.put('maxChildSize', maxChildSize);
+    mateParams.put('expand', expand);
+    mateParams.put('snap', snap);
+    mateParams.put('snapSizes', snapSizes);
+    mateParams.put('snapAnimationDuration', snapAnimationDuration);
+    mateParams.put('controller', controller);
+    mateParams.put('builder', builder);
   }
 }
 
@@ -115,11 +115,11 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
         context: p.get('context').value,
       ),
     );
-    mateParams.put('extent', init: extent);
-    mateParams.put('minExtent', init: minExtent);
-    mateParams.put('maxExtent', init: maxExtent);
-    mateParams.put('initialExtent', init: initialExtent);
-    mateParams.put('context', init: context);
+    mateParams.put('extent', extent);
+    mateParams.put('minExtent', minExtent);
+    mateParams.put('maxExtent', maxExtent);
+    mateParams.put('initialExtent', initialExtent);
+    mateParams.put('context', context);
   }
 }
 
@@ -144,7 +144,7 @@ class DraggableScrollableActuator$Mate extends DraggableScrollableActuator
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }

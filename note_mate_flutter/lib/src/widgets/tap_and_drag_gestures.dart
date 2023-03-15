@@ -43,11 +43,11 @@ class TapDragDownDetails$Mate extends TapDragDownDetails with Mate<TapDragDownDe
         keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('kind', init: kind);
-    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('kind', kind);
+    mateParams.put('consecutiveTapCount', consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -86,11 +86,11 @@ class TapDragUpDetails$Mate extends TapDragUpDetails with Mate<TapDragUpDetails$
         keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.put('kind', init: kind);
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('kind', kind);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('consecutiveTapCount', consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -134,12 +134,12 @@ class TapDragStartDetails$Mate extends TapDragStartDetails with Mate<TapDragStar
         keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.put('sourceTimeStamp', init: sourceTimeStamp);
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('kind', init: kind);
-    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('sourceTimeStamp', sourceTimeStamp);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('kind', kind);
+    mateParams.put('consecutiveTapCount', consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -203,16 +203,16 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate<TapDragUp
         keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.put('sourceTimeStamp', init: sourceTimeStamp);
-    mateParams.put('delta', init: delta);
-    mateParams.put('primaryDelta', init: primaryDelta);
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('kind', init: kind);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('offsetFromOrigin', init: offsetFromOrigin);
-    mateParams.put('localOffsetFromOrigin', init: localOffsetFromOrigin);
-    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('sourceTimeStamp', sourceTimeStamp);
+    mateParams.put('delta', delta);
+    mateParams.put('primaryDelta', primaryDelta);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('kind', kind);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('offsetFromOrigin', offsetFromOrigin);
+    mateParams.put('localOffsetFromOrigin', localOffsetFromOrigin);
+    mateParams.put('consecutiveTapCount', consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -246,10 +246,10 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate<TapDragEndDetai
         keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.put('velocity', init: velocity);
-    mateParams.put('primaryVelocity', init: primaryVelocity);
-    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('velocity', velocity);
+    mateParams.put('primaryVelocity', primaryVelocity);
+    mateParams.put('consecutiveTapCount', consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -278,8 +278,8 @@ class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with 
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

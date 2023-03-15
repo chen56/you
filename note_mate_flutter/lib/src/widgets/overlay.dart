@@ -32,9 +32,9 @@ class OverlayEntry$Mate extends OverlayEntry with Mate<OverlayEntry$Mate> {
         maintainState: p.get('maintainState').value,
       ),
     );
-    mateParams.put('builder', init: builder);
-    mateParams.put('opaque', init: opaque);
-    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('builder', builder);
+    mateParams.put('opaque', opaque);
+    mateParams.put('maintainState', maintainState);
   }
 }
 
@@ -63,8 +63,8 @@ class Overlay$Mate extends Overlay with WidgetMate<Overlay$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('initialEntries', init: initialEntries);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('initialEntries', initialEntries);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

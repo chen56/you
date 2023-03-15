@@ -17,7 +17,7 @@ class Velocity$Mate extends Velocity with Mate<Velocity$Mate> {
       init: this,
       builder: (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').value),
     );
-    mateParams.put('pixelsPerSecond', init: pixelsPerSecond);
+    mateParams.put('pixelsPerSecond', pixelsPerSecond);
   }
 }
 
@@ -51,10 +51,10 @@ class VelocityEstimate$Mate extends VelocityEstimate with Mate<VelocityEstimate$
         offset: p.get('offset').value,
       ),
     );
-    mateParams.put('pixelsPerSecond', init: pixelsPerSecond);
-    mateParams.put('confidence', init: confidence);
-    mateParams.put('duration', init: duration);
-    mateParams.put('offset', init: offset);
+    mateParams.put('pixelsPerSecond', pixelsPerSecond);
+    mateParams.put('confidence', confidence);
+    mateParams.put('duration', duration);
+    mateParams.put('offset', offset);
   }
 }
 
@@ -70,7 +70,7 @@ class VelocityTracker$Mate extends VelocityTracker with Mate<VelocityTracker$Mat
       init: this,
       builder: (p) => VelocityTracker$Mate.withKind(p.get('kind').value),
     );
-    mateParams.put('kind', init: kind);
+    mateParams.put('kind', kind);
   }
 }
 
@@ -87,7 +87,7 @@ class IOSScrollViewFlingVelocityTracker$Mate extends IOSScrollViewFlingVelocityT
       init: this,
       builder: (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value),
     );
-    mateParams.put('kind', init: kind);
+    mateParams.put('kind', kind);
   }
 }
 
@@ -104,6 +104,6 @@ class MacOSScrollViewFlingVelocityTracker$Mate extends MacOSScrollViewFlingVeloc
       init: this,
       builder: (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value),
     );
-    mateParams.put('kind', init: kind);
+    mateParams.put('kind', kind);
   }
 }

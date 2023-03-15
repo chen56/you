@@ -51,13 +51,13 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate<B
         tolerance: p.get('tolerance').value,
       ),
     );
-    mateParams.put('position', init: position);
-    mateParams.put('velocity', init: velocity);
-    mateParams.put('leadingExtent', init: leadingExtent);
-    mateParams.put('trailingExtent', init: trailingExtent);
-    mateParams.put('spring', init: spring);
-    mateParams.put('constantDeceleration', init: constantDeceleration);
-    mateParams.put('tolerance', init: tolerance);
+    mateParams.put('position', position);
+    mateParams.put('velocity', velocity);
+    mateParams.put('leadingExtent', leadingExtent);
+    mateParams.put('trailingExtent', trailingExtent);
+    mateParams.put('spring', spring);
+    mateParams.put('constantDeceleration', constantDeceleration);
+    mateParams.put('tolerance', tolerance);
   }
 }
 
@@ -91,9 +91,9 @@ class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate<C
         tolerance: p.get('tolerance').value,
       ),
     );
-    mateParams.put('position', init: position);
-    mateParams.put('velocity', init: velocity);
-    mateParams.put('friction', init: friction);
-    mateParams.put('tolerance', init: tolerance);
+    mateParams.put('position', position);
+    mateParams.put('velocity', velocity);
+    mateParams.put('friction', friction);
+    mateParams.put('tolerance', tolerance);
   }
 }

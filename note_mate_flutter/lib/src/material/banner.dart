@@ -106,22 +106,22 @@ class MaterialBanner$Mate extends MaterialBanner with WidgetMate<MaterialBanner$
         onVisible: p.get('onVisible').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('content', init: content);
-    mateParams.put('contentTextStyle', init: contentTextStyle);
-    mateParams.put('actions', init: actions);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('leading', init: leading);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('dividerColor', init: dividerColor);
-    mateParams.put('padding', init: padding);
-    mateParams.put('margin', init: margin);
-    mateParams.put('leadingPadding', init: leadingPadding);
-    mateParams.put('forceActionsBelow', init: forceActionsBelow);
-    mateParams.put('overflowAlignment', init: overflowAlignment);
-    mateParams.put('animation', init: animation);
-    mateParams.put('onVisible', init: onVisible);
+    mateParams.put('key', key);
+    mateParams.put('content', content);
+    mateParams.put('contentTextStyle', contentTextStyle);
+    mateParams.put('actions', actions);
+    mateParams.put('elevation', elevation);
+    mateParams.put('leading', leading);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('dividerColor', dividerColor);
+    mateParams.put('padding', padding);
+    mateParams.put('margin', margin);
+    mateParams.put('leadingPadding', leadingPadding);
+    mateParams.put('forceActionsBelow', forceActionsBelow);
+    mateParams.put('overflowAlignment', overflowAlignment);
+    mateParams.put('animation', animation);
+    mateParams.put('onVisible', onVisible);
   }
 }

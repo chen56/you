@@ -31,8 +31,8 @@ class RenderFlow$Mate extends RenderFlow with Mate<RenderFlow$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('children', init: children);
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('children', children);
+    mateParams.put('delegate', delegate);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

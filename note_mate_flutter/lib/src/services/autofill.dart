@@ -35,9 +35,9 @@ class AutofillConfiguration$Mate extends AutofillConfiguration with Mate<Autofil
         hintText: p.get('hintText').value,
       ),
     );
-    mateParams.put('uniqueIdentifier', init: uniqueIdentifier);
-    mateParams.put('autofillHints', init: autofillHints);
-    mateParams.put('currentEditingValue', init: currentEditingValue);
-    mateParams.put('hintText', init: hintText);
+    mateParams.put('uniqueIdentifier', uniqueIdentifier);
+    mateParams.put('autofillHints', autofillHints);
+    mateParams.put('currentEditingValue', currentEditingValue);
+    mateParams.put('hintText', hintText);
   }
 }

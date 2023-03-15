@@ -34,9 +34,9 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('child', child);
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
@@ -67,10 +67,10 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
         text: p.get('text').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('context', init: context);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('text', init: text);
+    mateParams.put('key', key);
+    mateParams.put('context', context);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('text', text);
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
@@ -91,7 +91,7 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
         buttonItem: p.get('buttonItem').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('buttonItem', init: buttonItem);
+    mateParams.put('key', key);
+    mateParams.put('buttonItem', buttonItem);
   }
 }

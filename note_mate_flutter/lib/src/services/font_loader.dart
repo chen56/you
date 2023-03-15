@@ -16,6 +16,6 @@ class FontLoader$Mate extends FontLoader with Mate<FontLoader$Mate> {
       init: this,
       builder: (p) => FontLoader$Mate(p.get('family').value),
     );
-    mateParams.put('family', init: family);
+    mateParams.put('family', family);
   }
 }

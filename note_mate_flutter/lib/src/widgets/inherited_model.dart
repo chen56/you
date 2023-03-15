@@ -15,6 +15,6 @@ class InheritedModelElement$Mate<T> extends InheritedModelElement<T> with Mate<I
       init: this,
       builder: (p) => InheritedModelElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }

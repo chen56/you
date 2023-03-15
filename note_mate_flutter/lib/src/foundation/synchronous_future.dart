@@ -15,6 +15,6 @@ class SynchronousFuture$Mate<T> extends SynchronousFuture<T> with Mate<Synchrono
       init: this,
       builder: (p) => SynchronousFuture$Mate(p.get('_value').value),
     );
-    mateParams.put('_value', init: _value);
+    mateParams.put('_value', _value);
   }
 }

@@ -36,10 +36,10 @@ class SelectionContainer$Mate extends SelectionContainer with WidgetMate<Selecti
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('registrar', init: registrar);
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('registrar', registrar);
+    mateParams.put('delegate', delegate);
+    mateParams.put('child', child);
   }
 
   /// SelectionContainer SelectionContainer.disabled({Key? key, required Widget child})
@@ -60,8 +60,8 @@ class SelectionContainer$Mate extends SelectionContainer with WidgetMate<Selecti
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -90,8 +90,8 @@ class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with WidgetMa
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('registrar', init: registrar);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('registrar', registrar);
+    mateParams.put('child', child);
   }
 }

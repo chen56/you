@@ -84,19 +84,19 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with WidgetMate
         heroTag: p.get('heroTag').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('leading', init: leading);
-    mateParams.put('automaticallyImplyLeading', init: automaticallyImplyLeading);
-    mateParams.put('automaticallyImplyMiddle', init: automaticallyImplyMiddle);
-    mateParams.put('previousPageTitle', init: previousPageTitle);
-    mateParams.put('middle', init: middle);
-    mateParams.put('trailing', init: trailing);
-    mateParams.put('border', init: border);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('brightness', init: brightness);
-    mateParams.put('padding', init: padding);
-    mateParams.put('transitionBetweenRoutes', init: transitionBetweenRoutes);
-    mateParams.put('heroTag', init: heroTag);
+    mateParams.put('key', key);
+    mateParams.put('leading', leading);
+    mateParams.put('automaticallyImplyLeading', automaticallyImplyLeading);
+    mateParams.put('automaticallyImplyMiddle', automaticallyImplyMiddle);
+    mateParams.put('previousPageTitle', previousPageTitle);
+    mateParams.put('middle', middle);
+    mateParams.put('trailing', trailing);
+    mateParams.put('border', border);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('brightness', brightness);
+    mateParams.put('padding', padding);
+    mateParams.put('transitionBetweenRoutes', transitionBetweenRoutes);
+    mateParams.put('heroTag', heroTag);
   }
 }
 
@@ -191,22 +191,22 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar
         stretch: p.get('stretch').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('largeTitle', init: largeTitle);
-    mateParams.put('leading', init: leading);
-    mateParams.put('automaticallyImplyLeading', init: automaticallyImplyLeading);
-    mateParams.put('automaticallyImplyTitle', init: automaticallyImplyTitle);
-    mateParams.put('alwaysShowMiddle', init: alwaysShowMiddle);
-    mateParams.put('previousPageTitle', init: previousPageTitle);
-    mateParams.put('middle', init: middle);
-    mateParams.put('trailing', init: trailing);
-    mateParams.put('border', init: border);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('brightness', init: brightness);
-    mateParams.put('padding', init: padding);
-    mateParams.put('transitionBetweenRoutes', init: transitionBetweenRoutes);
-    mateParams.put('heroTag', init: heroTag);
-    mateParams.put('stretch', init: stretch);
+    mateParams.put('key', key);
+    mateParams.put('largeTitle', largeTitle);
+    mateParams.put('leading', leading);
+    mateParams.put('automaticallyImplyLeading', automaticallyImplyLeading);
+    mateParams.put('automaticallyImplyTitle', automaticallyImplyTitle);
+    mateParams.put('alwaysShowMiddle', alwaysShowMiddle);
+    mateParams.put('previousPageTitle', previousPageTitle);
+    mateParams.put('middle', middle);
+    mateParams.put('trailing', trailing);
+    mateParams.put('border', border);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('brightness', brightness);
+    mateParams.put('padding', padding);
+    mateParams.put('transitionBetweenRoutes', transitionBetweenRoutes);
+    mateParams.put('heroTag', heroTag);
+    mateParams.put('stretch', stretch);
   }
 }
 
@@ -241,9 +241,9 @@ class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackBu
         onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('previousPageTitle', init: previousPageTitle);
-    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('previousPageTitle', previousPageTitle);
+    mateParams.put('onPressed', onPressed);
   }
 }

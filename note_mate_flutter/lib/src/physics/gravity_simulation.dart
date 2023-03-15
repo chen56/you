@@ -34,9 +34,9 @@ class GravitySimulation$Mate extends GravitySimulation with Mate<GravitySimulati
         p.get('velocity').value,
       ),
     );
-    mateParams.put('acceleration', init: acceleration);
-    mateParams.put('distance', init: distance);
-    mateParams.put('endDistance', init: endDistance);
-    mateParams.put('velocity', init: velocity);
+    mateParams.put('acceleration', acceleration);
+    mateParams.put('distance', distance);
+    mateParams.put('endDistance', endDistance);
+    mateParams.put('velocity', velocity);
   }
 }

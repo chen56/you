@@ -26,8 +26,8 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate<AsyncSnapshot$Mat
         p.get('data').value,
       ),
     );
-    mateParams.put('state', init: state);
-    mateParams.put('data', init: data);
+    mateParams.put('state', state);
+    mateParams.put('data', data);
   }
 
   /// AsyncSnapshot<T> AsyncSnapshot.withError(ConnectionState state, Object error, [StackTrace stackTrace = StackTrace.empty])
@@ -53,9 +53,9 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate<AsyncSnapshot$Mat
         p.get('stackTrace').value,
       ),
     );
-    mateParams.put('state', init: state);
-    mateParams.put('error', init: error);
-    mateParams.put('stackTrace', init: stackTrace);
+    mateParams.put('state', state);
+    mateParams.put('error', error);
+    mateParams.put('stackTrace', stackTrace);
   }
 }
 
@@ -89,10 +89,10 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with WidgetMate<StreamBuild
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('initialData', init: initialData);
-    mateParams.put('stream', init: stream);
-    mateParams.put('builder', init: builder);
+    mateParams.put('key', key);
+    mateParams.put('initialData', initialData);
+    mateParams.put('stream', stream);
+    mateParams.put('builder', builder);
   }
 }
 
@@ -126,9 +126,9 @@ class FutureBuilder$Mate<T> extends FutureBuilder<T> with WidgetMate<FutureBuild
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('future', init: future);
-    mateParams.put('initialData', init: initialData);
-    mateParams.put('builder', init: builder);
+    mateParams.put('key', key);
+    mateParams.put('future', future);
+    mateParams.put('initialData', initialData);
+    mateParams.put('builder', builder);
   }
 }

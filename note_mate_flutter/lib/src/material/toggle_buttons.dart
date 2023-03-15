@@ -149,30 +149,30 @@ class ToggleButtons$Mate extends ToggleButtons with WidgetMate<ToggleButtons$Mat
         verticalDirection: p.get('verticalDirection').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('isSelected', init: isSelected);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('tapTargetSize', init: tapTargetSize);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('constraints', init: constraints);
-    mateParams.put('color', init: color);
-    mateParams.put('selectedColor', init: selectedColor);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('fillColor', init: fillColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('highlightColor', init: highlightColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('focusNodes', init: focusNodes);
-    mateParams.put('renderBorder', init: renderBorder);
-    mateParams.put('borderColor', init: borderColor);
-    mateParams.put('selectedBorderColor', init: selectedBorderColor);
-    mateParams.put('disabledBorderColor', init: disabledBorderColor);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('borderWidth', init: borderWidth);
-    mateParams.put('direction', init: direction);
-    mateParams.put('verticalDirection', init: verticalDirection);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('isSelected', isSelected);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('tapTargetSize', tapTargetSize);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('constraints', constraints);
+    mateParams.put('color', color);
+    mateParams.put('selectedColor', selectedColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('fillColor', fillColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('highlightColor', highlightColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('focusNodes', focusNodes);
+    mateParams.put('renderBorder', renderBorder);
+    mateParams.put('borderColor', borderColor);
+    mateParams.put('selectedBorderColor', selectedBorderColor);
+    mateParams.put('disabledBorderColor', disabledBorderColor);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('borderWidth', borderWidth);
+    mateParams.put('direction', direction);
+    mateParams.put('verticalDirection', verticalDirection);
   }
 }

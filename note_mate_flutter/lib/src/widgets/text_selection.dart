@@ -106,21 +106,21 @@ class TextSelectionOverlay$Mate extends TextSelectionOverlay with Mate<TextSelec
         magnifierConfiguration: p.get('magnifierConfiguration').value,
       ),
     );
-    mateParams.put('value', init: value);
-    mateParams.put('context', init: context);
-    mateParams.put('debugRequiredFor', init: debugRequiredFor);
-    mateParams.put('toolbarLayerLink', init: toolbarLayerLink);
-    mateParams.put('startHandleLayerLink', init: startHandleLayerLink);
-    mateParams.put('endHandleLayerLink', init: endHandleLayerLink);
-    mateParams.put('renderObject', init: renderObject);
-    mateParams.put('selectionControls', init: selectionControls);
-    mateParams.put('handlesVisible', init: handlesVisible);
-    mateParams.put('selectionDelegate', init: selectionDelegate);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('onSelectionHandleTapped', init: onSelectionHandleTapped);
-    mateParams.put('clipboardStatus', init: clipboardStatus);
-    mateParams.put('contextMenuBuilder', init: contextMenuBuilder);
-    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
+    mateParams.put('value', value);
+    mateParams.put('context', context);
+    mateParams.put('debugRequiredFor', debugRequiredFor);
+    mateParams.put('toolbarLayerLink', toolbarLayerLink);
+    mateParams.put('startHandleLayerLink', startHandleLayerLink);
+    mateParams.put('endHandleLayerLink', endHandleLayerLink);
+    mateParams.put('renderObject', renderObject);
+    mateParams.put('selectionControls', selectionControls);
+    mateParams.put('handlesVisible', handlesVisible);
+    mateParams.put('selectionDelegate', selectionDelegate);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('onSelectionHandleTapped', onSelectionHandleTapped);
+    mateParams.put('clipboardStatus', clipboardStatus);
+    mateParams.put('contextMenuBuilder', contextMenuBuilder);
+    mateParams.put('magnifierConfiguration', magnifierConfiguration);
   }
 }
 
@@ -259,31 +259,31 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate<SelectionOverlay$
         magnifierConfiguration: p.get('magnifierConfiguration').value,
       ),
     );
-    mateParams.put('context', init: context);
-    mateParams.put('debugRequiredFor', init: debugRequiredFor);
-    mateParams.put('startHandleType', init: startHandleType);
-    mateParams.put('lineHeightAtStart', init: lineHeightAtStart);
-    mateParams.put('startHandlesVisible', init: startHandlesVisible);
-    mateParams.put('onStartHandleDragStart', init: onStartHandleDragStart);
-    mateParams.put('onStartHandleDragUpdate', init: onStartHandleDragUpdate);
-    mateParams.put('onStartHandleDragEnd', init: onStartHandleDragEnd);
-    mateParams.put('endHandleType', init: endHandleType);
-    mateParams.put('lineHeightAtEnd', init: lineHeightAtEnd);
-    mateParams.put('endHandlesVisible', init: endHandlesVisible);
-    mateParams.put('onEndHandleDragStart', init: onEndHandleDragStart);
-    mateParams.put('onEndHandleDragUpdate', init: onEndHandleDragUpdate);
-    mateParams.put('onEndHandleDragEnd', init: onEndHandleDragEnd);
-    mateParams.put('toolbarVisible', init: toolbarVisible);
-    mateParams.put('selectionEndpoints', init: selectionEndpoints);
-    mateParams.put('selectionControls', init: selectionControls);
-    mateParams.put('selectionDelegate', init: selectionDelegate);
-    mateParams.put('clipboardStatus', init: clipboardStatus);
-    mateParams.put('startHandleLayerLink', init: startHandleLayerLink);
-    mateParams.put('endHandleLayerLink', init: endHandleLayerLink);
-    mateParams.put('toolbarLayerLink', init: toolbarLayerLink);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('onSelectionHandleTapped', init: onSelectionHandleTapped);
-    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
+    mateParams.put('context', context);
+    mateParams.put('debugRequiredFor', debugRequiredFor);
+    mateParams.put('startHandleType', startHandleType);
+    mateParams.put('lineHeightAtStart', lineHeightAtStart);
+    mateParams.put('startHandlesVisible', startHandlesVisible);
+    mateParams.put('onStartHandleDragStart', onStartHandleDragStart);
+    mateParams.put('onStartHandleDragUpdate', onStartHandleDragUpdate);
+    mateParams.put('onStartHandleDragEnd', onStartHandleDragEnd);
+    mateParams.put('endHandleType', endHandleType);
+    mateParams.put('lineHeightAtEnd', lineHeightAtEnd);
+    mateParams.put('endHandlesVisible', endHandlesVisible);
+    mateParams.put('onEndHandleDragStart', onEndHandleDragStart);
+    mateParams.put('onEndHandleDragUpdate', onEndHandleDragUpdate);
+    mateParams.put('onEndHandleDragEnd', onEndHandleDragEnd);
+    mateParams.put('toolbarVisible', toolbarVisible);
+    mateParams.put('selectionEndpoints', selectionEndpoints);
+    mateParams.put('selectionControls', selectionControls);
+    mateParams.put('selectionDelegate', selectionDelegate);
+    mateParams.put('clipboardStatus', clipboardStatus);
+    mateParams.put('startHandleLayerLink', startHandleLayerLink);
+    mateParams.put('endHandleLayerLink', endHandleLayerLink);
+    mateParams.put('toolbarLayerLink', toolbarLayerLink);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('onSelectionHandleTapped', onSelectionHandleTapped);
+    mateParams.put('magnifierConfiguration', magnifierConfiguration);
   }
 }
 
@@ -300,7 +300,7 @@ class TextSelectionGestureDetectorBuilder$Mate extends TextSelectionGestureDetec
       init: this,
       builder: (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.get('delegate').value),
     );
-    mateParams.put('delegate', init: delegate);
+    mateParams.put('delegate', delegate);
   }
 }
 
@@ -400,23 +400,23 @@ class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onTapDown', init: onTapDown);
-    mateParams.put('onForcePressStart', init: onForcePressStart);
-    mateParams.put('onForcePressEnd', init: onForcePressEnd);
-    mateParams.put('onSecondaryTap', init: onSecondaryTap);
-    mateParams.put('onSecondaryTapDown', init: onSecondaryTapDown);
-    mateParams.put('onSingleTapUp', init: onSingleTapUp);
-    mateParams.put('onSingleTapCancel', init: onSingleTapCancel);
-    mateParams.put('onSingleLongTapStart', init: onSingleLongTapStart);
-    mateParams.put('onSingleLongTapMoveUpdate', init: onSingleLongTapMoveUpdate);
-    mateParams.put('onSingleLongTapEnd', init: onSingleLongTapEnd);
-    mateParams.put('onDoubleTapDown', init: onDoubleTapDown);
-    mateParams.put('onDragSelectionStart', init: onDragSelectionStart);
-    mateParams.put('onDragSelectionUpdate', init: onDragSelectionUpdate);
-    mateParams.put('onDragSelectionEnd', init: onDragSelectionEnd);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onTapDown', onTapDown);
+    mateParams.put('onForcePressStart', onForcePressStart);
+    mateParams.put('onForcePressEnd', onForcePressEnd);
+    mateParams.put('onSecondaryTap', onSecondaryTap);
+    mateParams.put('onSecondaryTapDown', onSecondaryTapDown);
+    mateParams.put('onSingleTapUp', onSingleTapUp);
+    mateParams.put('onSingleTapCancel', onSingleTapCancel);
+    mateParams.put('onSingleLongTapStart', onSingleLongTapStart);
+    mateParams.put('onSingleLongTapMoveUpdate', onSingleLongTapMoveUpdate);
+    mateParams.put('onSingleLongTapEnd', onSingleLongTapEnd);
+    mateParams.put('onDoubleTapDown', onDoubleTapDown);
+    mateParams.put('onDragSelectionStart', onDragSelectionStart);
+    mateParams.put('onDragSelectionUpdate', onDragSelectionUpdate);
+    mateParams.put('onDragSelectionEnd', onDragSelectionEnd);
+    mateParams.put('behavior', behavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -432,6 +432,6 @@ class ClipboardStatusNotifier$Mate extends ClipboardStatusNotifier with Mate<Cli
       init: this,
       builder: (p) => ClipboardStatusNotifier$Mate(value: p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }

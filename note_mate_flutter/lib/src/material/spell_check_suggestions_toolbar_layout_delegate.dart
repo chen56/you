@@ -17,6 +17,6 @@ class SpellCheckSuggestionsToolbarLayoutDelegate$Mate extends SpellCheckSuggesti
       init: this,
       builder: (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.get('anchor').value),
     );
-    mateParams.put('anchor', init: anchor);
+    mateParams.put('anchor', anchor);
   }
 }

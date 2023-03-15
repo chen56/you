@@ -26,8 +26,8 @@ class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription
         primaryColor: p.get('primaryColor').value,
       ),
     );
-    mateParams.put('label', init: label);
-    mateParams.put('primaryColor', init: primaryColor);
+    mateParams.put('label', label);
+    mateParams.put('primaryColor', primaryColor);
   }
 }
 
@@ -81,13 +81,13 @@ class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate<SystemUiO
         systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').value,
       ),
     );
-    mateParams.put('systemNavigationBarColor', init: systemNavigationBarColor);
-    mateParams.put('systemNavigationBarDividerColor', init: systemNavigationBarDividerColor);
-    mateParams.put('systemNavigationBarIconBrightness', init: systemNavigationBarIconBrightness);
-    mateParams.put('systemNavigationBarContrastEnforced', init: systemNavigationBarContrastEnforced);
-    mateParams.put('statusBarColor', init: statusBarColor);
-    mateParams.put('statusBarBrightness', init: statusBarBrightness);
-    mateParams.put('statusBarIconBrightness', init: statusBarIconBrightness);
-    mateParams.put('systemStatusBarContrastEnforced', init: systemStatusBarContrastEnforced);
+    mateParams.put('systemNavigationBarColor', systemNavigationBarColor);
+    mateParams.put('systemNavigationBarDividerColor', systemNavigationBarDividerColor);
+    mateParams.put('systemNavigationBarIconBrightness', systemNavigationBarIconBrightness);
+    mateParams.put('systemNavigationBarContrastEnforced', systemNavigationBarContrastEnforced);
+    mateParams.put('statusBarColor', statusBarColor);
+    mateParams.put('statusBarBrightness', statusBarBrightness);
+    mateParams.put('statusBarIconBrightness', statusBarIconBrightness);
+    mateParams.put('systemStatusBarContrastEnforced', systemStatusBarContrastEnforced);
   }
 }

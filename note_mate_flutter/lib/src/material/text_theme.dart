@@ -89,20 +89,20 @@ class TextTheme$Mate extends TextTheme with Mate<TextTheme$Mate> {
         labelSmall: p.get('labelSmall').value,
       ),
     );
-    mateParams.put('displayLarge', init: displayLarge);
-    mateParams.put('displayMedium', init: displayMedium);
-    mateParams.put('displaySmall', init: displaySmall);
-    mateParams.put('headlineLarge', init: headlineLarge);
-    mateParams.put('headlineMedium', init: headlineMedium);
-    mateParams.put('headlineSmall', init: headlineSmall);
-    mateParams.put('titleLarge', init: titleLarge);
-    mateParams.put('titleMedium', init: titleMedium);
-    mateParams.put('titleSmall', init: titleSmall);
-    mateParams.put('bodyLarge', init: bodyLarge);
-    mateParams.put('bodyMedium', init: bodyMedium);
-    mateParams.put('bodySmall', init: bodySmall);
-    mateParams.put('labelLarge', init: labelLarge);
-    mateParams.put('labelMedium', init: labelMedium);
-    mateParams.put('labelSmall', init: labelSmall);
+    mateParams.put('displayLarge', displayLarge);
+    mateParams.put('displayMedium', displayMedium);
+    mateParams.put('displaySmall', displaySmall);
+    mateParams.put('headlineLarge', headlineLarge);
+    mateParams.put('headlineMedium', headlineMedium);
+    mateParams.put('headlineSmall', headlineSmall);
+    mateParams.put('titleLarge', titleLarge);
+    mateParams.put('titleMedium', titleMedium);
+    mateParams.put('titleSmall', titleSmall);
+    mateParams.put('bodyLarge', bodyLarge);
+    mateParams.put('bodyMedium', bodyMedium);
+    mateParams.put('bodySmall', bodySmall);
+    mateParams.put('labelLarge', labelLarge);
+    mateParams.put('labelMedium', labelMedium);
+    mateParams.put('labelSmall', labelSmall);
   }
 }

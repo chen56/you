@@ -30,7 +30,7 @@ class LayoutBuilder$Mate extends LayoutBuilder with WidgetMate<LayoutBuilder$Mat
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('builder', init: builder);
+    mateParams.put('key', key);
+    mateParams.put('builder', builder);
   }
 }

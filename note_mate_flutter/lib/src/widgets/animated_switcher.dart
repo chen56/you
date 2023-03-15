@@ -57,13 +57,13 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with WidgetMate<AnimatedSwi
         layoutBuilder: p.get('layoutBuilder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('duration', init: duration);
-    mateParams.put('reverseDuration', init: reverseDuration);
-    mateParams.put('switchInCurve', init: switchInCurve);
-    mateParams.put('switchOutCurve', init: switchOutCurve);
-    mateParams.put('transitionBuilder', init: transitionBuilder);
-    mateParams.put('layoutBuilder', init: layoutBuilder);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('duration', duration);
+    mateParams.put('reverseDuration', reverseDuration);
+    mateParams.put('switchInCurve', switchInCurve);
+    mateParams.put('switchOutCurve', switchOutCurve);
+    mateParams.put('transitionBuilder', transitionBuilder);
+    mateParams.put('layoutBuilder', layoutBuilder);
   }
 }

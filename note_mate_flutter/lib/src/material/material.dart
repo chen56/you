@@ -85,19 +85,19 @@ class Material$Mate extends Material with WidgetMate<Material$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('type', init: type);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('color', init: color);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('shape', init: shape);
-    mateParams.put('borderOnForeground', init: borderOnForeground);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('animationDuration', init: animationDuration);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('type', type);
+    mateParams.put('elevation', elevation);
+    mateParams.put('color', color);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('shape', shape);
+    mateParams.put('borderOnForeground', borderOnForeground);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('animationDuration', animationDuration);
+    mateParams.put('child', child);
   }
 }
 
@@ -121,7 +121,7 @@ class ShapeBorderTween$Mate extends ShapeBorderTween with Mate<ShapeBorderTween$
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }

@@ -16,6 +16,6 @@ class RenderSliverList$Mate extends RenderSliverList with Mate<RenderSliverList$
       init: this,
       builder: (p) => RenderSliverList$Mate(childManager: p.get('childManager').value),
     );
-    mateParams.put('childManager', init: childManager);
+    mateParams.put('childManager', childManager);
   }
 }

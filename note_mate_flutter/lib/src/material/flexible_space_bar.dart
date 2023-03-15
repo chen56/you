@@ -57,14 +57,14 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with WidgetMate<FlexibleSpa
         expandedTitleScale: p.get('expandedTitleScale').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('title', init: title);
-    mateParams.put('background', init: background);
-    mateParams.put('centerTitle', init: centerTitle);
-    mateParams.put('titlePadding', init: titlePadding);
-    mateParams.put('collapseMode', init: collapseMode);
-    mateParams.put('stretchModes', init: stretchModes);
-    mateParams.put('expandedTitleScale', init: expandedTitleScale);
+    mateParams.put('key', key);
+    mateParams.put('title', title);
+    mateParams.put('background', background);
+    mateParams.put('centerTitle', centerTitle);
+    mateParams.put('titlePadding', titlePadding);
+    mateParams.put('collapseMode', collapseMode);
+    mateParams.put('stretchModes', stretchModes);
+    mateParams.put('expandedTitleScale', expandedTitleScale);
   }
 }
 
@@ -113,12 +113,12 @@ class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Widget
         isScrolledUnder: p.get('isScrolledUnder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('toolbarOpacity', init: toolbarOpacity);
-    mateParams.put('minExtent', init: minExtent);
-    mateParams.put('maxExtent', init: maxExtent);
-    mateParams.put('currentExtent', init: currentExtent);
-    mateParams.put('child', init: child);
-    mateParams.put('isScrolledUnder', init: isScrolledUnder);
+    mateParams.put('key', key);
+    mateParams.put('toolbarOpacity', toolbarOpacity);
+    mateParams.put('minExtent', minExtent);
+    mateParams.put('maxExtent', maxExtent);
+    mateParams.put('currentExtent', currentExtent);
+    mateParams.put('child', child);
+    mateParams.put('isScrolledUnder', isScrolledUnder);
   }
 }

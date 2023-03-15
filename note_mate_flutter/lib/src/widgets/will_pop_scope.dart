@@ -31,8 +31,8 @@ class WillPopScope$Mate extends WillPopScope with WidgetMate<WillPopScope$Mate> 
         onWillPop: p.get('onWillPop').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('onWillPop', init: onWillPop);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('onWillPop', onWillPop);
   }
 }

@@ -84,19 +84,19 @@ class CupertinoPicker$Mate extends CupertinoPicker with WidgetMate<CupertinoPick
         looping: p.get('looping').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('diameterRatio', init: diameterRatio);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('offAxisFraction', init: offAxisFraction);
-    mateParams.put('useMagnifier', init: useMagnifier);
-    mateParams.put('magnification', init: magnification);
-    mateParams.put('scrollController', init: scrollController);
-    mateParams.put('squeeze', init: squeeze);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('onSelectedItemChanged', init: onSelectedItemChanged);
-    mateParams.put('children', init: children);
-    mateParams.put('selectionOverlay', init: selectionOverlay);
-    mateParams.put('looping', init: looping);
+    mateParams.put('key', key);
+    mateParams.put('diameterRatio', diameterRatio);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('offAxisFraction', offAxisFraction);
+    mateParams.put('useMagnifier', useMagnifier);
+    mateParams.put('magnification', magnification);
+    mateParams.put('scrollController', scrollController);
+    mateParams.put('squeeze', squeeze);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('onSelectedItemChanged', onSelectedItemChanged);
+    mateParams.put('children', children);
+    mateParams.put('selectionOverlay', selectionOverlay);
+    mateParams.put('looping', looping);
   }
 
   /// CupertinoPicker CupertinoPicker.builder({Key? key, double diameterRatio = _kDefaultDiameterRatio, Color? backgroundColor, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, FixedExtentScrollController? scrollController, double squeeze = _kSqueeze, required double itemExtent, required void Function(int)? onSelectedItemChanged, required Widget? Function(BuildContext, int) itemBuilder, int? childCount, Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()})
@@ -172,19 +172,19 @@ class CupertinoPicker$Mate extends CupertinoPicker with WidgetMate<CupertinoPick
         selectionOverlay: p.get('selectionOverlay').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('diameterRatio', init: diameterRatio);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('offAxisFraction', init: offAxisFraction);
-    mateParams.put('useMagnifier', init: useMagnifier);
-    mateParams.put('magnification', init: magnification);
-    mateParams.put('scrollController', init: scrollController);
-    mateParams.put('squeeze', init: squeeze);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('onSelectedItemChanged', init: onSelectedItemChanged);
-    mateParams.put('itemBuilder', init: itemBuilder);
-    mateParams.put('childCount', init: childCount);
-    mateParams.put('selectionOverlay', init: selectionOverlay);
+    mateParams.put('key', key);
+    mateParams.put('diameterRatio', diameterRatio);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('offAxisFraction', offAxisFraction);
+    mateParams.put('useMagnifier', useMagnifier);
+    mateParams.put('magnification', magnification);
+    mateParams.put('scrollController', scrollController);
+    mateParams.put('squeeze', squeeze);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('onSelectedItemChanged', onSelectedItemChanged);
+    mateParams.put('itemBuilder', itemBuilder);
+    mateParams.put('childCount', childCount);
+    mateParams.put('selectionOverlay', selectionOverlay);
   }
 }
 
@@ -219,9 +219,9 @@ class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefault
         capEndEdge: p.get('capEndEdge').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('background', init: background);
-    mateParams.put('capStartEdge', init: capStartEdge);
-    mateParams.put('capEndEdge', init: capEndEdge);
+    mateParams.put('key', key);
+    mateParams.put('background', background);
+    mateParams.put('capStartEdge', capStartEdge);
+    mateParams.put('capEndEdge', capEndEdge);
   }
 }

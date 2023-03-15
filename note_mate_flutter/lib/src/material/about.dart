@@ -61,15 +61,15 @@ class AboutListTile$Mate extends AboutListTile with WidgetMate<AboutListTile$Mat
         dense: p.get('dense').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('icon', init: icon);
-    mateParams.put('child', init: child);
-    mateParams.put('applicationName', init: applicationName);
-    mateParams.put('applicationVersion', init: applicationVersion);
-    mateParams.put('applicationIcon', init: applicationIcon);
-    mateParams.put('applicationLegalese', init: applicationLegalese);
-    mateParams.put('aboutBoxChildren', init: aboutBoxChildren);
-    mateParams.put('dense', init: dense);
+    mateParams.put('key', key);
+    mateParams.put('icon', icon);
+    mateParams.put('child', child);
+    mateParams.put('applicationName', applicationName);
+    mateParams.put('applicationVersion', applicationVersion);
+    mateParams.put('applicationIcon', applicationIcon);
+    mateParams.put('applicationLegalese', applicationLegalese);
+    mateParams.put('aboutBoxChildren', aboutBoxChildren);
+    mateParams.put('dense', dense);
   }
 }
 
@@ -113,12 +113,12 @@ class AboutDialog$Mate extends AboutDialog with WidgetMate<AboutDialog$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('applicationName', init: applicationName);
-    mateParams.put('applicationVersion', init: applicationVersion);
-    mateParams.put('applicationIcon', init: applicationIcon);
-    mateParams.put('applicationLegalese', init: applicationLegalese);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('applicationName', applicationName);
+    mateParams.put('applicationVersion', applicationVersion);
+    mateParams.put('applicationIcon', applicationIcon);
+    mateParams.put('applicationLegalese', applicationLegalese);
+    mateParams.put('children', children);
   }
 }
 
@@ -157,10 +157,10 @@ class LicensePage$Mate extends LicensePage with WidgetMate<LicensePage$Mate> {
         applicationLegalese: p.get('applicationLegalese').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('applicationName', init: applicationName);
-    mateParams.put('applicationVersion', init: applicationVersion);
-    mateParams.put('applicationIcon', init: applicationIcon);
-    mateParams.put('applicationLegalese', init: applicationLegalese);
+    mateParams.put('key', key);
+    mateParams.put('applicationName', applicationName);
+    mateParams.put('applicationVersion', applicationVersion);
+    mateParams.put('applicationIcon', applicationIcon);
+    mateParams.put('applicationLegalese', applicationLegalese);
   }
 }

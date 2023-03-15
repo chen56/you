@@ -26,7 +26,7 @@ class EagerGestureRecognizer$Mate extends EagerGestureRecognizer with Mate<Eager
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

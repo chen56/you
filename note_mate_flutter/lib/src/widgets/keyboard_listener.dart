@@ -49,11 +49,11 @@ class KeyboardListener$Mate extends KeyboardListener with WidgetMate<KeyboardLis
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('includeSemantics', init: includeSemantics);
-    mateParams.put('onKeyEvent', init: onKeyEvent);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('includeSemantics', includeSemantics);
+    mateParams.put('onKeyEvent', onKeyEvent);
+    mateParams.put('child', child);
   }
 }

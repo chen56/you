@@ -31,9 +31,9 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('actions', init: actions);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('actions', actions);
+    mateParams.put('child', child);
   }
 
   /// CupertinoContextMenu CupertinoContextMenu.builder({Key? key, required List<Widget> actions, required Widget Function(BuildContext, Animation<double>) builder})
@@ -59,8 +59,8 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('actions', init: actions);
-    mateParams.put('builder', init: builder);
+    mateParams.put('key', key);
+    mateParams.put('actions', actions);
+    mateParams.put('builder', builder);
   }
 }

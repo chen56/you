@@ -62,14 +62,14 @@ class RenderFlex$Mate extends RenderFlex with Mate<RenderFlex$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('children', init: children);
-    mateParams.put('direction', init: direction);
-    mateParams.put('mainAxisSize', init: mainAxisSize);
-    mateParams.put('mainAxisAlignment', init: mainAxisAlignment);
-    mateParams.put('crossAxisAlignment', init: crossAxisAlignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('verticalDirection', init: verticalDirection);
-    mateParams.put('textBaseline', init: textBaseline);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('children', children);
+    mateParams.put('direction', direction);
+    mateParams.put('mainAxisSize', mainAxisSize);
+    mateParams.put('mainAxisAlignment', mainAxisAlignment);
+    mateParams.put('crossAxisAlignment', crossAxisAlignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('verticalDirection', verticalDirection);
+    mateParams.put('textBaseline', textBaseline);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

@@ -42,11 +42,11 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
         refreshBackgroundColor: p.get('refreshBackgroundColor').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('linearTrackColor', init: linearTrackColor);
-    mateParams.put('linearMinHeight', init: linearMinHeight);
-    mateParams.put('circularTrackColor', init: circularTrackColor);
-    mateParams.put('refreshBackgroundColor', init: refreshBackgroundColor);
+    mateParams.put('color', color);
+    mateParams.put('linearTrackColor', linearTrackColor);
+    mateParams.put('linearMinHeight', linearMinHeight);
+    mateParams.put('circularTrackColor', circularTrackColor);
+    mateParams.put('refreshBackgroundColor', refreshBackgroundColor);
   }
 }
 
@@ -75,8 +75,8 @@ class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with WidgetMate
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

@@ -19,7 +19,7 @@ class DeleteCharacterIntent$Mate extends DeleteCharacterIntent with Mate<DeleteC
       init: this,
       builder: (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -36,7 +36,7 @@ class DeleteToNextWordBoundaryIntent$Mate extends DeleteToNextWordBoundaryIntent
       init: this,
       builder: (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -52,7 +52,7 @@ class DeleteToLineBreakIntent$Mate extends DeleteToLineBreakIntent with Mate<Del
       init: this,
       builder: (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -77,8 +77,8 @@ class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIn
         collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.put('forward', init: forward);
-    mateParams.put('collapseSelection', init: collapseSelection);
+    mateParams.put('forward', forward);
+    mateParams.put('collapseSelection', collapseSelection);
   }
 }
 
@@ -103,8 +103,8 @@ class ExtendSelectionToNextWordBoundaryIntent$Mate extends ExtendSelectionToNext
         collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.put('forward', init: forward);
-    mateParams.put('collapseSelection', init: collapseSelection);
+    mateParams.put('forward', forward);
+    mateParams.put('collapseSelection', collapseSelection);
   }
 }
 
@@ -122,7 +122,7 @@ class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate
       init: this,
       builder: (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -139,7 +139,7 @@ class ExpandSelectionToDocumentBoundaryIntent$Mate extends ExpandSelectionToDocu
       init: this,
       builder: (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -156,7 +156,7 @@ class ExpandSelectionToLineBreakIntent$Mate extends ExpandSelectionToLineBreakIn
       init: this,
       builder: (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -191,10 +191,10 @@ class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIn
         continuesAtWrap: p.get('continuesAtWrap').value,
       ),
     );
-    mateParams.put('forward', init: forward);
-    mateParams.put('collapseSelection', init: collapseSelection);
-    mateParams.put('collapseAtReversal', init: collapseAtReversal);
-    mateParams.put('continuesAtWrap', init: continuesAtWrap);
+    mateParams.put('forward', forward);
+    mateParams.put('collapseSelection', collapseSelection);
+    mateParams.put('collapseAtReversal', collapseAtReversal);
+    mateParams.put('continuesAtWrap', continuesAtWrap);
   }
 }
 
@@ -219,8 +219,8 @@ class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelection
         collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.put('forward', init: forward);
-    mateParams.put('collapseSelection', init: collapseSelection);
+    mateParams.put('forward', forward);
+    mateParams.put('collapseSelection', collapseSelection);
   }
 }
 
@@ -245,8 +245,8 @@ class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelection
         collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.put('forward', init: forward);
-    mateParams.put('collapseSelection', init: collapseSelection);
+    mateParams.put('forward', forward);
+    mateParams.put('collapseSelection', collapseSelection);
   }
 }
 
@@ -271,8 +271,8 @@ class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionT
         collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.put('forward', init: forward);
-    mateParams.put('collapseSelection', init: collapseSelection);
+    mateParams.put('forward', forward);
+    mateParams.put('collapseSelection', collapseSelection);
   }
 }
 
@@ -290,7 +290,7 @@ class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate
       init: this,
       builder: (p) => ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -315,8 +315,8 @@ class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocu
         collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.put('forward', init: forward);
-    mateParams.put('collapseSelection', init: collapseSelection);
+    mateParams.put('forward', forward);
+    mateParams.put('collapseSelection', collapseSelection);
   }
 }
 
@@ -333,7 +333,7 @@ class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent
       init: this,
       builder: (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -349,7 +349,7 @@ class ExtendSelectionByPageIntent$Mate extends ExtendSelectionByPageIntent with 
       init: this,
       builder: (p) => ExtendSelectionByPageIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.put('forward', init: forward);
+    mateParams.put('forward', forward);
   }
 }
 
@@ -365,7 +365,7 @@ class SelectAllTextIntent$Mate extends SelectAllTextIntent with Mate<SelectAllTe
       init: this,
       builder: (p) => SelectAllTextIntent$Mate(p.get('cause').value),
     );
-    mateParams.put('cause', init: cause);
+    mateParams.put('cause', cause);
   }
 }
 
@@ -381,7 +381,7 @@ class CopySelectionTextIntent$Mate extends CopySelectionTextIntent with Mate<Cop
       init: this,
       builder: (p) => CopySelectionTextIntent$Mate.cut(p.get('cause').value),
     );
-    mateParams.put('cause', init: cause);
+    mateParams.put('cause', cause);
   }
 }
 
@@ -397,7 +397,7 @@ class PasteTextIntent$Mate extends PasteTextIntent with Mate<PasteTextIntent$Mat
       init: this,
       builder: (p) => PasteTextIntent$Mate(p.get('cause').value),
     );
-    mateParams.put('cause', init: cause);
+    mateParams.put('cause', cause);
   }
 }
 
@@ -413,7 +413,7 @@ class RedoTextIntent$Mate extends RedoTextIntent with Mate<RedoTextIntent$Mate> 
       init: this,
       builder: (p) => RedoTextIntent$Mate(p.get('cause').value),
     );
-    mateParams.put('cause', init: cause);
+    mateParams.put('cause', cause);
   }
 }
 
@@ -447,10 +447,10 @@ class ReplaceTextIntent$Mate extends ReplaceTextIntent with Mate<ReplaceTextInte
         p.get('cause').value,
       ),
     );
-    mateParams.put('currentTextEditingValue', init: currentTextEditingValue);
-    mateParams.put('replacementText', init: replacementText);
-    mateParams.put('replacementRange', init: replacementRange);
-    mateParams.put('cause', init: cause);
+    mateParams.put('currentTextEditingValue', currentTextEditingValue);
+    mateParams.put('replacementText', replacementText);
+    mateParams.put('replacementRange', replacementRange);
+    mateParams.put('cause', cause);
   }
 }
 
@@ -466,7 +466,7 @@ class UndoTextIntent$Mate extends UndoTextIntent with Mate<UndoTextIntent$Mate> 
       init: this,
       builder: (p) => UndoTextIntent$Mate(p.get('cause').value),
     );
-    mateParams.put('cause', init: cause);
+    mateParams.put('cause', cause);
   }
 }
 
@@ -495,8 +495,8 @@ class UpdateSelectionIntent$Mate extends UpdateSelectionIntent with Mate<UpdateS
         p.get('cause').value,
       ),
     );
-    mateParams.put('currentTextEditingValue', init: currentTextEditingValue);
-    mateParams.put('newSelection', init: newSelection);
-    mateParams.put('cause', init: cause);
+    mateParams.put('currentTextEditingValue', currentTextEditingValue);
+    mateParams.put('newSelection', newSelection);
+    mateParams.put('cause', cause);
   }
 }

@@ -63,15 +63,15 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with WidgetMate<Calenda
         selectableDayPredicate: p.get('selectableDayPredicate').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('initialDate', init: initialDate);
-    mateParams.put('firstDate', init: firstDate);
-    mateParams.put('lastDate', init: lastDate);
-    mateParams.put('currentDate', init: currentDate);
-    mateParams.put('onDateChanged', init: onDateChanged);
-    mateParams.put('onDisplayedMonthChanged', init: onDisplayedMonthChanged);
-    mateParams.put('initialCalendarMode', init: initialCalendarMode);
-    mateParams.put('selectableDayPredicate', init: selectableDayPredicate);
+    mateParams.put('key', key);
+    mateParams.put('initialDate', initialDate);
+    mateParams.put('firstDate', firstDate);
+    mateParams.put('lastDate', lastDate);
+    mateParams.put('currentDate', currentDate);
+    mateParams.put('onDateChanged', onDateChanged);
+    mateParams.put('onDisplayedMonthChanged', onDisplayedMonthChanged);
+    mateParams.put('initialCalendarMode', initialCalendarMode);
+    mateParams.put('selectableDayPredicate', selectableDayPredicate);
   }
 }
 
@@ -125,13 +125,13 @@ class YearPicker$Mate extends YearPicker with WidgetMate<YearPicker$Mate> {
         dragStartBehavior: p.get('dragStartBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('currentDate', init: currentDate);
-    mateParams.put('firstDate', init: firstDate);
-    mateParams.put('lastDate', init: lastDate);
-    mateParams.put('initialDate', init: initialDate);
-    mateParams.put('selectedDate', init: selectedDate);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('key', key);
+    mateParams.put('currentDate', currentDate);
+    mateParams.put('firstDate', firstDate);
+    mateParams.put('lastDate', lastDate);
+    mateParams.put('initialDate', initialDate);
+    mateParams.put('selectedDate', selectedDate);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
   }
 }

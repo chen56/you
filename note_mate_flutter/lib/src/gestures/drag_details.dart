@@ -26,8 +26,8 @@ class DragDownDetails$Mate extends DragDownDetails with Mate<DragDownDetails$Mat
         localPosition: p.get('localPosition').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
   }
 }
 
@@ -61,10 +61,10 @@ class DragStartDetails$Mate extends DragStartDetails with Mate<DragStartDetails$
         kind: p.get('kind').value,
       ),
     );
-    mateParams.put('sourceTimeStamp', init: sourceTimeStamp);
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('kind', init: kind);
+    mateParams.put('sourceTimeStamp', sourceTimeStamp);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('kind', kind);
   }
 }
 
@@ -103,11 +103,11 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate<DragUpdateDetai
         localPosition: p.get('localPosition').value,
       ),
     );
-    mateParams.put('sourceTimeStamp', init: sourceTimeStamp);
-    mateParams.put('delta', init: delta);
-    mateParams.put('primaryDelta', init: primaryDelta);
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('sourceTimeStamp', sourceTimeStamp);
+    mateParams.put('delta', delta);
+    mateParams.put('primaryDelta', primaryDelta);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
   }
 }
 
@@ -131,7 +131,7 @@ class DragEndDetails$Mate extends DragEndDetails with Mate<DragEndDetails$Mate> 
         primaryVelocity: p.get('primaryVelocity').value,
       ),
     );
-    mateParams.put('velocity', init: velocity);
-    mateParams.put('primaryVelocity', init: primaryVelocity);
+    mateParams.put('velocity', velocity);
+    mateParams.put('primaryVelocity', primaryVelocity);
   }
 }

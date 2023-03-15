@@ -71,16 +71,16 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate<PopupMenuThem
         position: p.get('position').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('shape', init: shape);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('labelTextStyle', init: labelTextStyle);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('position', init: position);
+    mateParams.put('color', color);
+    mateParams.put('shape', shape);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('labelTextStyle', labelTextStyle);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('position', position);
   }
 }
 
@@ -109,8 +109,8 @@ class PopupMenuTheme$Mate extends PopupMenuTheme with WidgetMate<PopupMenuTheme$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

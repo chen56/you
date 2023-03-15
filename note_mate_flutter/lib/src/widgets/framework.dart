@@ -20,7 +20,7 @@ class ObjectKey$Mate extends ObjectKey with Mate<ObjectKey$Mate> {
       init: this,
       builder: (p) => ObjectKey$Mate(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }
 
@@ -37,7 +37,7 @@ class LabeledGlobalKey$Mate<T extends State<StatefulWidget>> extends LabeledGlob
       init: this,
       builder: (p) => LabeledGlobalKey$Mate(p.get('_debugLabel').value),
     );
-    mateParams.put('_debugLabel', init: _debugLabel);
+    mateParams.put('_debugLabel', _debugLabel);
   }
 }
 
@@ -53,7 +53,7 @@ class GlobalObjectKey$Mate<T extends State<StatefulWidget>> extends GlobalObject
       init: this,
       builder: (p) => GlobalObjectKey$Mate(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }
 
@@ -77,8 +77,8 @@ class BuildOwner$Mate extends BuildOwner with Mate<BuildOwner$Mate> {
         focusManager: p.get('focusManager').value,
       ),
     );
-    mateParams.put('onBuildScheduled', init: onBuildScheduled);
-    mateParams.put('focusManager', init: focusManager);
+    mateParams.put('onBuildScheduled', onBuildScheduled);
+    mateParams.put('focusManager', focusManager);
   }
 }
 
@@ -94,7 +94,7 @@ class ErrorWidget$Mate extends ErrorWidget with WidgetMate<ErrorWidget$Mate> {
       init: this,
       builder: (p) => ErrorWidget$Mate(p.get('exception').value),
     );
-    mateParams.put('exception', init: exception);
+    mateParams.put('exception', exception);
   }
 
   /// ErrorWidget ErrorWidget.withDetails({String message = '', FlutterError? error})
@@ -115,8 +115,8 @@ class ErrorWidget$Mate extends ErrorWidget with WidgetMate<ErrorWidget$Mate> {
         error: p.get('error').value,
       ),
     );
-    mateParams.put('message', init: message);
-    mateParams.put('error', init: error);
+    mateParams.put('message', message);
+    mateParams.put('error', error);
   }
 }
 
@@ -132,7 +132,7 @@ class StatelessElement$Mate extends StatelessElement with Mate<StatelessElement$
       init: this,
       builder: (p) => StatelessElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }
 
@@ -148,7 +148,7 @@ class StatefulElement$Mate extends StatefulElement with Mate<StatefulElement$Mat
       init: this,
       builder: (p) => StatefulElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }
 
@@ -164,7 +164,7 @@ class ParentDataElement$Mate<T extends ParentData> extends ParentDataElement<T> 
       init: this,
       builder: (p) => ParentDataElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }
 
@@ -180,7 +180,7 @@ class InheritedElement$Mate extends InheritedElement with Mate<InheritedElement$
       init: this,
       builder: (p) => InheritedElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }
 
@@ -196,7 +196,7 @@ class LeafRenderObjectElement$Mate extends LeafRenderObjectElement with Mate<Lea
       init: this,
       builder: (p) => LeafRenderObjectElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }
 
@@ -213,7 +213,7 @@ class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement
       init: this,
       builder: (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }
 
@@ -230,7 +230,7 @@ class MultiChildRenderObjectElement$Mate extends MultiChildRenderObjectElement
       init: this,
       builder: (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value),
     );
-    mateParams.put('widget', init: widget);
+    mateParams.put('widget', widget);
   }
 }
 
@@ -246,7 +246,7 @@ class DebugCreator$Mate extends DebugCreator with Mate<DebugCreator$Mate> {
       init: this,
       builder: (p) => DebugCreator$Mate(p.get('element').value),
     );
-    mateParams.put('element', init: element);
+    mateParams.put('element', element);
   }
 }
 
@@ -270,7 +270,7 @@ class IndexedSlot$Mate<T extends Element?> extends IndexedSlot<T> with Mate<Inde
         p.get('value').value,
       ),
     );
-    mateParams.put('index', init: index);
-    mateParams.put('value', init: value);
+    mateParams.put('index', index);
+    mateParams.put('value', value);
   }
 }

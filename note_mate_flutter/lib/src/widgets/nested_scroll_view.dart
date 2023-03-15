@@ -84,18 +84,18 @@ class NestedScrollView$Mate extends NestedScrollView with WidgetMate<NestedScrol
         scrollBehavior: p.get('scrollBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('controller', init: controller);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('physics', init: physics);
-    mateParams.put('headerSliverBuilder', init: headerSliverBuilder);
-    mateParams.put('body', init: body);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('floatHeaderSlivers', init: floatHeaderSlivers);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('scrollBehavior', init: scrollBehavior);
+    mateParams.put('key', key);
+    mateParams.put('controller', controller);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('physics', physics);
+    mateParams.put('headerSliverBuilder', headerSliverBuilder);
+    mateParams.put('body', body);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('floatHeaderSlivers', floatHeaderSlivers);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('scrollBehavior', scrollBehavior);
   }
 }
 
@@ -124,9 +124,9 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with WidgetMate<S
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('handle', init: handle);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('key', key);
+    mateParams.put('handle', handle);
+    mateParams.put('sliver', sliver);
   }
 }
 
@@ -150,8 +150,8 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with 
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('handle', init: handle);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('handle', handle);
+    mateParams.put('sliver', sliver);
   }
 }
 
@@ -180,9 +180,9 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with WidgetMate<S
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('handle', init: handle);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('key', key);
+    mateParams.put('handle', handle);
+    mateParams.put('sliver', sliver);
   }
 }
 
@@ -198,7 +198,7 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with 
       init: this,
       builder: (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').value),
     );
-    mateParams.put('handle', init: handle);
+    mateParams.put('handle', handle);
   }
 }
 
@@ -257,15 +257,15 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Widget
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('crossAxisDirection', init: crossAxisDirection);
-    mateParams.put('anchor', init: anchor);
-    mateParams.put('offset', init: offset);
-    mateParams.put('center', init: center);
-    mateParams.put('slivers', init: slivers);
-    mateParams.put('handle', init: handle);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('crossAxisDirection', crossAxisDirection);
+    mateParams.put('anchor', anchor);
+    mateParams.put('offset', offset);
+    mateParams.put('center', center);
+    mateParams.put('slivers', slivers);
+    mateParams.put('handle', handle);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -320,13 +320,13 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('crossAxisDirection', init: crossAxisDirection);
-    mateParams.put('offset', init: offset);
-    mateParams.put('anchor', init: anchor);
-    mateParams.put('children', init: children);
-    mateParams.put('center', init: center);
-    mateParams.put('handle', init: handle);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('crossAxisDirection', crossAxisDirection);
+    mateParams.put('offset', offset);
+    mateParams.put('anchor', anchor);
+    mateParams.put('children', children);
+    mateParams.put('center', center);
+    mateParams.put('handle', handle);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

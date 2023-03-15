@@ -33,9 +33,9 @@ class RenderPadding$Mate extends RenderPadding with Mate<RenderPadding$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('padding', init: padding);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('child', init: child);
+    mateParams.put('padding', padding);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('child', child);
   }
 }
 
@@ -74,11 +74,11 @@ class RenderPositionedBox$Mate extends RenderPositionedBox with Mate<RenderPosit
         textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('widthFactor', init: widthFactor);
-    mateParams.put('heightFactor', init: heightFactor);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', child);
+    mateParams.put('widthFactor', widthFactor);
+    mateParams.put('heightFactor', heightFactor);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
   }
 }
 
@@ -128,13 +128,13 @@ class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox
         textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('minWidth', init: minWidth);
-    mateParams.put('maxWidth', init: maxWidth);
-    mateParams.put('minHeight', init: minHeight);
-    mateParams.put('maxHeight', init: maxHeight);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', child);
+    mateParams.put('minWidth', minWidth);
+    mateParams.put('maxWidth', maxWidth);
+    mateParams.put('minHeight', minHeight);
+    mateParams.put('maxHeight', maxHeight);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
   }
 }
 
@@ -174,11 +174,11 @@ class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('constraintsTransform', init: constraintsTransform);
-    mateParams.put('child', init: child);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('constraintsTransform', constraintsTransform);
+    mateParams.put('child', child);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -212,10 +212,10 @@ class RenderSizedOverflowBox$Mate extends RenderSizedOverflowBox with Mate<Rende
         textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('requestedSize', init: requestedSize);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', child);
+    mateParams.put('requestedSize', requestedSize);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
   }
 }
 
@@ -255,11 +255,11 @@ class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOve
         textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('widthFactor', init: widthFactor);
-    mateParams.put('heightFactor', init: heightFactor);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', child);
+    mateParams.put('widthFactor', widthFactor);
+    mateParams.put('heightFactor', heightFactor);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
   }
 }
 
@@ -284,8 +284,8 @@ class RenderCustomSingleChildLayoutBox$Mate extends RenderCustomSingleChildLayou
         delegate: p.get('delegate').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('delegate', init: delegate);
+    mateParams.put('child', child);
+    mateParams.put('delegate', delegate);
   }
 }
 
@@ -314,8 +314,8 @@ class RenderBaseline$Mate extends RenderBaseline with Mate<RenderBaseline$Mate> 
         baselineType: p.get('baselineType').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('baseline', init: baseline);
-    mateParams.put('baselineType', init: baselineType);
+    mateParams.put('child', child);
+    mateParams.put('baseline', baseline);
+    mateParams.put('baselineType', baselineType);
   }
 }

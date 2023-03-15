@@ -57,14 +57,14 @@ class SafeArea$Mate extends SafeArea with WidgetMate<SafeArea$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('left', init: left);
-    mateParams.put('top', init: top);
-    mateParams.put('right', init: right);
-    mateParams.put('bottom', init: bottom);
-    mateParams.put('minimum', init: minimum);
-    mateParams.put('maintainBottomViewPadding', init: maintainBottomViewPadding);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('left', left);
+    mateParams.put('top', top);
+    mateParams.put('right', right);
+    mateParams.put('bottom', bottom);
+    mateParams.put('minimum', minimum);
+    mateParams.put('maintainBottomViewPadding', maintainBottomViewPadding);
+    mateParams.put('child', child);
   }
 }
 
@@ -113,12 +113,12 @@ class SliverSafeArea$Mate extends SliverSafeArea with WidgetMate<SliverSafeArea$
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('left', init: left);
-    mateParams.put('top', init: top);
-    mateParams.put('right', init: right);
-    mateParams.put('bottom', init: bottom);
-    mateParams.put('minimum', init: minimum);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('key', key);
+    mateParams.put('left', left);
+    mateParams.put('top', top);
+    mateParams.put('right', right);
+    mateParams.put('bottom', bottom);
+    mateParams.put('minimum', minimum);
+    mateParams.put('sliver', sliver);
   }
 }

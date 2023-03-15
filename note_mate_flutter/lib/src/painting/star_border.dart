@@ -50,13 +50,13 @@ class StarBorder$Mate extends StarBorder with Mate<StarBorder$Mate> {
         squash: p.get('squash').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('points', init: points);
-    mateParams.put('innerRadiusRatio', init: innerRadiusRatio);
-    mateParams.put('pointRounding', init: pointRounding);
-    mateParams.put('valleyRounding', init: valleyRounding);
-    mateParams.put('rotation', init: rotation);
-    mateParams.put('squash', init: squash);
+    mateParams.put('side', side);
+    mateParams.put('points', points);
+    mateParams.put('innerRadiusRatio', innerRadiusRatio);
+    mateParams.put('pointRounding', pointRounding);
+    mateParams.put('valleyRounding', valleyRounding);
+    mateParams.put('rotation', rotation);
+    mateParams.put('squash', squash);
   }
 
   /// StarBorder StarBorder.polygon({BorderSide side = BorderSide.none, double sides = 5, double pointRounding = 0, double rotation = 0, double squash = 0})
@@ -92,10 +92,10 @@ class StarBorder$Mate extends StarBorder with Mate<StarBorder$Mate> {
         squash: p.get('squash').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('sides', init: sides);
-    mateParams.put('pointRounding', init: pointRounding);
-    mateParams.put('rotation', init: rotation);
-    mateParams.put('squash', init: squash);
+    mateParams.put('side', side);
+    mateParams.put('sides', sides);
+    mateParams.put('pointRounding', pointRounding);
+    mateParams.put('rotation', rotation);
+    mateParams.put('squash', squash);
   }
 }

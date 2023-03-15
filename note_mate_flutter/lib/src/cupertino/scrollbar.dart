@@ -70,15 +70,15 @@ class CupertinoScrollbar$Mate extends CupertinoScrollbar with WidgetMate<Cuperti
         scrollbarOrientation: p.get('scrollbarOrientation').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('controller', init: controller);
-    mateParams.put('thumbVisibility', init: thumbVisibility);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('thicknessWhileDragging', init: thicknessWhileDragging);
-    mateParams.put('radius', init: radius);
-    mateParams.put('radiusWhileDragging', init: radiusWhileDragging);
-    mateParams.put('notificationPredicate', init: notificationPredicate);
-    mateParams.put('scrollbarOrientation', init: scrollbarOrientation);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('controller', controller);
+    mateParams.put('thumbVisibility', thumbVisibility);
+    mateParams.put('thickness', thickness);
+    mateParams.put('thicknessWhileDragging', thicknessWhileDragging);
+    mateParams.put('radius', radius);
+    mateParams.put('radiusWhileDragging', radiusWhileDragging);
+    mateParams.put('notificationPredicate', notificationPredicate);
+    mateParams.put('scrollbarOrientation', scrollbarOrientation);
   }
 }

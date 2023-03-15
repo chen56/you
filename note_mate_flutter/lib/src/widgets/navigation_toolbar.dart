@@ -46,11 +46,11 @@ class NavigationToolbar$Mate extends NavigationToolbar with WidgetMate<Navigatio
         middleSpacing: p.get('middleSpacing').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('leading', init: leading);
-    mateParams.put('middle', init: middle);
-    mateParams.put('trailing', init: trailing);
-    mateParams.put('centerMiddle', init: centerMiddle);
-    mateParams.put('middleSpacing', init: middleSpacing);
+    mateParams.put('key', key);
+    mateParams.put('leading', leading);
+    mateParams.put('middle', middle);
+    mateParams.put('trailing', trailing);
+    mateParams.put('centerMiddle', centerMiddle);
+    mateParams.put('middleSpacing', middleSpacing);
   }
 }

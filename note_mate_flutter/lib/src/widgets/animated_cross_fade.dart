@@ -78,17 +78,17 @@ class AnimatedCrossFade$Mate extends AnimatedCrossFade with WidgetMate<AnimatedC
         excludeBottomFocus: p.get('excludeBottomFocus').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('firstChild', init: firstChild);
-    mateParams.put('secondChild', init: secondChild);
-    mateParams.put('firstCurve', init: firstCurve);
-    mateParams.put('secondCurve', init: secondCurve);
-    mateParams.put('sizeCurve', init: sizeCurve);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('crossFadeState', init: crossFadeState);
-    mateParams.put('duration', init: duration);
-    mateParams.put('reverseDuration', init: reverseDuration);
-    mateParams.put('layoutBuilder', init: layoutBuilder);
-    mateParams.put('excludeBottomFocus', init: excludeBottomFocus);
+    mateParams.put('key', key);
+    mateParams.put('firstChild', firstChild);
+    mateParams.put('secondChild', secondChild);
+    mateParams.put('firstCurve', firstCurve);
+    mateParams.put('secondCurve', secondCurve);
+    mateParams.put('sizeCurve', sizeCurve);
+    mateParams.put('alignment', alignment);
+    mateParams.put('crossFadeState', crossFadeState);
+    mateParams.put('duration', duration);
+    mateParams.put('reverseDuration', reverseDuration);
+    mateParams.put('layoutBuilder', layoutBuilder);
+    mateParams.put('excludeBottomFocus', excludeBottomFocus);
   }
 }

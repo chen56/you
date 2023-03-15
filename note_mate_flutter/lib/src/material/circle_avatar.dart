@@ -74,16 +74,16 @@ class CircleAvatar$Mate extends CircleAvatar with WidgetMate<CircleAvatar$Mate> 
         maxRadius: p.get('maxRadius').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('backgroundImage', init: backgroundImage);
-    mateParams.put('foregroundImage', init: foregroundImage);
-    mateParams.put('onBackgroundImageError', init: onBackgroundImageError);
-    mateParams.put('onForegroundImageError', init: onForegroundImageError);
-    mateParams.put('foregroundColor', init: foregroundColor);
-    mateParams.put('radius', init: radius);
-    mateParams.put('minRadius', init: minRadius);
-    mateParams.put('maxRadius', init: maxRadius);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('backgroundImage', backgroundImage);
+    mateParams.put('foregroundImage', foregroundImage);
+    mateParams.put('onBackgroundImageError', onBackgroundImageError);
+    mateParams.put('onForegroundImageError', onForegroundImageError);
+    mateParams.put('foregroundColor', foregroundColor);
+    mateParams.put('radius', radius);
+    mateParams.put('minRadius', minRadius);
+    mateParams.put('maxRadius', maxRadius);
   }
 }

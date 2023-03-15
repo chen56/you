@@ -60,13 +60,13 @@ class BoxDecoration$Mate extends BoxDecoration with Mate<BoxDecoration$Mate> {
         shape: p.get('shape').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('image', init: image);
-    mateParams.put('border', init: border);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('boxShadow', init: boxShadow);
-    mateParams.put('gradient', init: gradient);
-    mateParams.put('backgroundBlendMode', init: backgroundBlendMode);
-    mateParams.put('shape', init: shape);
+    mateParams.put('color', color);
+    mateParams.put('image', image);
+    mateParams.put('border', border);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('boxShadow', boxShadow);
+    mateParams.put('gradient', gradient);
+    mateParams.put('backgroundBlendMode', backgroundBlendMode);
+    mateParams.put('shape', shape);
   }
 }

@@ -25,8 +25,8 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate<LinearBorderEdge$
         alignment: p.get('alignment').value,
       ),
     );
-    mateParams.put('size', init: size);
-    mateParams.put('alignment', init: alignment);
+    mateParams.put('size', size);
+    mateParams.put('alignment', alignment);
   }
 }
 
@@ -65,11 +65,11 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
         bottom: p.get('bottom').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('start', init: start);
-    mateParams.put('end', init: end);
-    mateParams.put('top', init: top);
-    mateParams.put('bottom', init: bottom);
+    mateParams.put('side', side);
+    mateParams.put('start', start);
+    mateParams.put('end', end);
+    mateParams.put('top', top);
+    mateParams.put('bottom', bottom);
   }
 
   /// LinearBorder LinearBorder.start({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -95,9 +95,9 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
         size: p.get('size').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('size', init: size);
+    mateParams.put('side', side);
+    mateParams.put('alignment', alignment);
+    mateParams.put('size', size);
   }
 
   /// LinearBorder LinearBorder.end({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -123,9 +123,9 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
         size: p.get('size').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('size', init: size);
+    mateParams.put('side', side);
+    mateParams.put('alignment', alignment);
+    mateParams.put('size', size);
   }
 
   /// LinearBorder LinearBorder.top({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -151,9 +151,9 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
         size: p.get('size').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('size', init: size);
+    mateParams.put('side', side);
+    mateParams.put('alignment', alignment);
+    mateParams.put('size', size);
   }
 
   /// LinearBorder LinearBorder.bottom({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -179,8 +179,8 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
         size: p.get('size').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('size', init: size);
+    mateParams.put('side', side);
+    mateParams.put('alignment', alignment);
+    mateParams.put('size', size);
   }
 }

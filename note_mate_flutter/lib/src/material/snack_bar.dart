@@ -47,11 +47,11 @@ class SnackBarAction$Mate extends SnackBarAction with WidgetMate<SnackBarAction$
         onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('textColor', init: textColor);
-    mateParams.put('disabledTextColor', init: disabledTextColor);
-    mateParams.put('label', init: label);
-    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('key', key);
+    mateParams.put('textColor', textColor);
+    mateParams.put('disabledTextColor', disabledTextColor);
+    mateParams.put('label', label);
+    mateParams.put('onPressed', onPressed);
   }
 }
 
@@ -150,22 +150,22 @@ class SnackBar$Mate extends SnackBar with WidgetMate<SnackBar$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('content', init: content);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('margin', init: margin);
-    mateParams.put('padding', init: padding);
-    mateParams.put('width', init: width);
-    mateParams.put('shape', init: shape);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('action', init: action);
-    mateParams.put('showCloseIcon', init: showCloseIcon);
-    mateParams.put('closeIconColor', init: closeIconColor);
-    mateParams.put('duration', init: duration);
-    mateParams.put('animation', init: animation);
-    mateParams.put('onVisible', init: onVisible);
-    mateParams.put('dismissDirection', init: dismissDirection);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('content', content);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('margin', margin);
+    mateParams.put('padding', padding);
+    mateParams.put('width', width);
+    mateParams.put('shape', shape);
+    mateParams.put('behavior', behavior);
+    mateParams.put('action', action);
+    mateParams.put('showCloseIcon', showCloseIcon);
+    mateParams.put('closeIconColor', closeIconColor);
+    mateParams.put('duration', duration);
+    mateParams.put('animation', animation);
+    mateParams.put('onVisible', onVisible);
+    mateParams.put('dismissDirection', dismissDirection);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

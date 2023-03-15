@@ -34,10 +34,10 @@ class IconData$Mate extends IconData with Mate<IconData$Mate> {
         matchTextDirection: p.get('matchTextDirection').value,
       ),
     );
-    mateParams.put('codePoint', init: codePoint);
-    mateParams.put('fontFamily', init: fontFamily);
-    mateParams.put('fontPackage', init: fontPackage);
-    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('codePoint', codePoint);
+    mateParams.put('fontFamily', fontFamily);
+    mateParams.put('fontPackage', fontPackage);
+    mateParams.put('matchTextDirection', matchTextDirection);
   }
 }
 
@@ -80,11 +80,11 @@ class IconDataProperty$Mate extends IconDataProperty with Mate<IconDataProperty$
         level: p.get('level').value,
       ),
     );
-    mateParams.put('name', init: name);
-    mateParams.put('value', init: value);
-    mateParams.put('ifNull', init: ifNull);
-    mateParams.put('showName', init: showName);
-    mateParams.put('style', init: style);
-    mateParams.put('level', init: level);
+    mateParams.put('name', name);
+    mateParams.put('value', value);
+    mateParams.put('ifNull', ifNull);
+    mateParams.put('showName', showName);
+    mateParams.put('style', style);
+    mateParams.put('level', level);
   }
 }

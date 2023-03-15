@@ -41,11 +41,11 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate<KeyDownEvent$Mate> {
         synthesized: p.get('synthesized').value,
       ),
     );
-    mateParams.put('physicalKey', init: physicalKey);
-    mateParams.put('logicalKey', init: logicalKey);
-    mateParams.put('character', init: character);
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('synthesized', init: synthesized);
+    mateParams.put('physicalKey', physicalKey);
+    mateParams.put('logicalKey', logicalKey);
+    mateParams.put('character', character);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('synthesized', synthesized);
   }
 }
 
@@ -79,10 +79,10 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate<KeyUpEvent$Mate> {
         synthesized: p.get('synthesized').value,
       ),
     );
-    mateParams.put('physicalKey', init: physicalKey);
-    mateParams.put('logicalKey', init: logicalKey);
-    mateParams.put('timeStamp', init: timeStamp);
-    mateParams.put('synthesized', init: synthesized);
+    mateParams.put('physicalKey', physicalKey);
+    mateParams.put('logicalKey', logicalKey);
+    mateParams.put('timeStamp', timeStamp);
+    mateParams.put('synthesized', synthesized);
   }
 }
 
@@ -116,10 +116,10 @@ class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate<KeyRepeatEvent$Mate> 
         timeStamp: p.get('timeStamp').value,
       ),
     );
-    mateParams.put('physicalKey', init: physicalKey);
-    mateParams.put('logicalKey', init: logicalKey);
-    mateParams.put('character', init: character);
-    mateParams.put('timeStamp', init: timeStamp);
+    mateParams.put('physicalKey', physicalKey);
+    mateParams.put('logicalKey', logicalKey);
+    mateParams.put('character', character);
+    mateParams.put('timeStamp', timeStamp);
   }
 }
 
@@ -143,8 +143,8 @@ class KeyMessage$Mate extends KeyMessage with Mate<KeyMessage$Mate> {
         p.get('rawEvent').value,
       ),
     );
-    mateParams.put('events', init: events);
-    mateParams.put('rawEvent', init: rawEvent);
+    mateParams.put('events', events);
+    mateParams.put('rawEvent', rawEvent);
   }
 }
 
@@ -168,7 +168,7 @@ class KeyEventManager$Mate extends KeyEventManager with Mate<KeyEventManager$Mat
         p.get('_rawKeyboard').value,
       ),
     );
-    mateParams.put('_hardwareKeyboard', init: _hardwareKeyboard);
-    mateParams.put('_rawKeyboard', init: _rawKeyboard);
+    mateParams.put('_hardwareKeyboard', _hardwareKeyboard);
+    mateParams.put('_rawKeyboard', _rawKeyboard);
   }
 }

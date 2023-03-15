@@ -80,17 +80,17 @@ class ButtonBar$Mate extends ButtonBar with WidgetMate<ButtonBar$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('mainAxisSize', init: mainAxisSize);
-    mateParams.put('buttonTextTheme', init: buttonTextTheme);
-    mateParams.put('buttonMinWidth', init: buttonMinWidth);
-    mateParams.put('buttonHeight', init: buttonHeight);
-    mateParams.put('buttonPadding', init: buttonPadding);
-    mateParams.put('buttonAlignedDropdown', init: buttonAlignedDropdown);
-    mateParams.put('layoutBehavior', init: layoutBehavior);
-    mateParams.put('overflowDirection', init: overflowDirection);
-    mateParams.put('overflowButtonSpacing', init: overflowButtonSpacing);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('mainAxisSize', mainAxisSize);
+    mateParams.put('buttonTextTheme', buttonTextTheme);
+    mateParams.put('buttonMinWidth', buttonMinWidth);
+    mateParams.put('buttonHeight', buttonHeight);
+    mateParams.put('buttonPadding', buttonPadding);
+    mateParams.put('buttonAlignedDropdown', buttonAlignedDropdown);
+    mateParams.put('layoutBehavior', layoutBehavior);
+    mateParams.put('overflowDirection', overflowDirection);
+    mateParams.put('overflowButtonSpacing', overflowButtonSpacing);
+    mateParams.put('children', children);
   }
 }

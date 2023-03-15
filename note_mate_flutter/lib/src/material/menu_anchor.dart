@@ -88,19 +88,19 @@ class MenuAnchor$Mate extends MenuAnchor with WidgetMate<MenuAnchor$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('controller', init: controller);
-    mateParams.put('childFocusNode', init: childFocusNode);
-    mateParams.put('style', init: style);
-    mateParams.put('alignmentOffset', init: alignmentOffset);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('anchorTapClosesMenu', init: anchorTapClosesMenu);
-    mateParams.put('onOpen', init: onOpen);
-    mateParams.put('onClose', init: onClose);
-    mateParams.put('crossAxisUnconstrained', init: crossAxisUnconstrained);
-    mateParams.put('menuChildren', init: menuChildren);
-    mateParams.put('builder', init: builder);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('controller', controller);
+    mateParams.put('childFocusNode', childFocusNode);
+    mateParams.put('style', style);
+    mateParams.put('alignmentOffset', alignmentOffset);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('anchorTapClosesMenu', anchorTapClosesMenu);
+    mateParams.put('onOpen', onOpen);
+    mateParams.put('onClose', onClose);
+    mateParams.put('crossAxisUnconstrained', crossAxisUnconstrained);
+    mateParams.put('menuChildren', menuChildren);
+    mateParams.put('builder', builder);
+    mateParams.put('child', child);
   }
 }
 
@@ -139,11 +139,11 @@ class MenuBar$Mate extends MenuBar with WidgetMate<MenuBar$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('style', init: style);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('controller', init: controller);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('style', style);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('controller', controller);
+    mateParams.put('children', children);
   }
 }
 
@@ -222,19 +222,19 @@ class MenuItemButton$Mate extends MenuItemButton with WidgetMate<MenuItemButton$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('onHover', init: onHover);
-    mateParams.put('requestFocusOnHover', init: requestFocusOnHover);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('shortcut', init: shortcut);
-    mateParams.put('style', init: style);
-    mateParams.put('statesController', init: statesController);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('leadingIcon', init: leadingIcon);
-    mateParams.put('trailingIcon', init: trailingIcon);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('onHover', onHover);
+    mateParams.put('requestFocusOnHover', requestFocusOnHover);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('shortcut', shortcut);
+    mateParams.put('style', style);
+    mateParams.put('statesController', statesController);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('leadingIcon', leadingIcon);
+    mateParams.put('trailingIcon', trailingIcon);
+    mateParams.put('child', child);
   }
 }
 
@@ -318,20 +318,20 @@ class CheckboxMenuButton$Mate extends CheckboxMenuButton with WidgetMate<Checkbo
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('tristate', init: tristate);
-    mateParams.put('isError', init: isError);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('onHover', init: onHover);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('shortcut', init: shortcut);
-    mateParams.put('style', init: style);
-    mateParams.put('statesController', init: statesController);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('trailingIcon', init: trailingIcon);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('tristate', tristate);
+    mateParams.put('isError', isError);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('onHover', onHover);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('shortcut', shortcut);
+    mateParams.put('style', style);
+    mateParams.put('statesController', statesController);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('trailingIcon', trailingIcon);
+    mateParams.put('child', child);
   }
 }
 
@@ -415,20 +415,20 @@ class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with WidgetMate<RadioMe
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('groupValue', init: groupValue);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('toggleable', init: toggleable);
-    mateParams.put('onHover', init: onHover);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('shortcut', init: shortcut);
-    mateParams.put('style', init: style);
-    mateParams.put('statesController', init: statesController);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('trailingIcon', init: trailingIcon);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('groupValue', groupValue);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('toggleable', toggleable);
+    mateParams.put('onHover', onHover);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('shortcut', shortcut);
+    mateParams.put('style', style);
+    mateParams.put('statesController', statesController);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('trailingIcon', trailingIcon);
+    mateParams.put('child', child);
   }
 }
 
@@ -517,21 +517,21 @@ class SubmenuButton$Mate extends SubmenuButton with WidgetMate<SubmenuButton$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onHover', init: onHover);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('onOpen', init: onOpen);
-    mateParams.put('onClose', init: onClose);
-    mateParams.put('style', init: style);
-    mateParams.put('menuStyle', init: menuStyle);
-    mateParams.put('alignmentOffset', init: alignmentOffset);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('statesController', init: statesController);
-    mateParams.put('leadingIcon', init: leadingIcon);
-    mateParams.put('trailingIcon', init: trailingIcon);
-    mateParams.put('menuChildren', init: menuChildren);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onHover', onHover);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('onOpen', onOpen);
+    mateParams.put('onClose', onClose);
+    mateParams.put('style', style);
+    mateParams.put('menuStyle', menuStyle);
+    mateParams.put('alignmentOffset', alignmentOffset);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('statesController', statesController);
+    mateParams.put('leadingIcon', leadingIcon);
+    mateParams.put('trailingIcon', trailingIcon);
+    mateParams.put('menuChildren', menuChildren);
+    mateParams.put('child', child);
   }
 }
 
@@ -547,7 +547,7 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate<DismissMenuActi
       init: this,
       builder: (p) => DismissMenuAction$Mate(controller: p.get('controller').value),
     );
-    mateParams.put('controller', init: controller);
+    mateParams.put('controller', controller);
   }
 }
 
@@ -582,10 +582,10 @@ class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onInvoke', init: onInvoke);
-    mateParams.put('hasSubmenu', init: hasSubmenu);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onInvoke', onInvoke);
+    mateParams.put('hasSubmenu', hasSubmenu);
+    mateParams.put('child', child);
   }
 }
 
@@ -613,8 +613,8 @@ class MenuAcceleratorLabel$Mate extends MenuAcceleratorLabel with WidgetMate<Men
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('label', init: label);
-    mateParams.put('key', init: key);
-    mateParams.put('builder', init: builder);
+    mateParams.put('label', label);
+    mateParams.put('key', key);
+    mateParams.put('builder', builder);
   }
 }

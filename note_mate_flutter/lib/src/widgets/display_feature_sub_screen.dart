@@ -31,8 +31,8 @@ class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with WidgetMa
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('anchorPoint', init: anchorPoint);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('anchorPoint', anchorPoint);
+    mateParams.put('child', child);
   }
 }

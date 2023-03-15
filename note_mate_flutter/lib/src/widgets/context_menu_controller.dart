@@ -16,6 +16,6 @@ class ContextMenuController$Mate extends ContextMenuController with Mate<Context
       init: this,
       builder: (p) => ContextMenuController$Mate(onRemove: p.get('onRemove').value),
     );
-    mateParams.put('onRemove', init: onRemove);
+    mateParams.put('onRemove', onRemove);
   }
 }

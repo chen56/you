@@ -36,9 +36,9 @@ class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Wid
         sized: p.get('sized').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('value', init: value);
-    mateParams.put('sized', init: sized);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('value', value);
+    mateParams.put('sized', sized);
   }
 }

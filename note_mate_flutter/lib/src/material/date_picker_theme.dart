@@ -180,38 +180,38 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate<DatePickerT
         rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('headerBackgroundColor', init: headerBackgroundColor);
-    mateParams.put('headerForegroundColor', init: headerForegroundColor);
-    mateParams.put('headerHeadlineStyle', init: headerHeadlineStyle);
-    mateParams.put('headerHelpStyle', init: headerHelpStyle);
-    mateParams.put('weekdayStyle', init: weekdayStyle);
-    mateParams.put('dayStyle', init: dayStyle);
-    mateParams.put('dayForegroundColor', init: dayForegroundColor);
-    mateParams.put('dayBackgroundColor', init: dayBackgroundColor);
-    mateParams.put('dayOverlayColor', init: dayOverlayColor);
-    mateParams.put('todayForegroundColor', init: todayForegroundColor);
-    mateParams.put('todayBackgroundColor', init: todayBackgroundColor);
-    mateParams.put('todayBorder', init: todayBorder);
-    mateParams.put('yearStyle', init: yearStyle);
-    mateParams.put('yearForegroundColor', init: yearForegroundColor);
-    mateParams.put('yearBackgroundColor', init: yearBackgroundColor);
-    mateParams.put('yearOverlayColor', init: yearOverlayColor);
-    mateParams.put('rangePickerBackgroundColor', init: rangePickerBackgroundColor);
-    mateParams.put('rangePickerElevation', init: rangePickerElevation);
-    mateParams.put('rangePickerShadowColor', init: rangePickerShadowColor);
-    mateParams.put('rangePickerSurfaceTintColor', init: rangePickerSurfaceTintColor);
-    mateParams.put('rangePickerShape', init: rangePickerShape);
-    mateParams.put('rangePickerHeaderBackgroundColor', init: rangePickerHeaderBackgroundColor);
-    mateParams.put('rangePickerHeaderForegroundColor', init: rangePickerHeaderForegroundColor);
-    mateParams.put('rangePickerHeaderHeadlineStyle', init: rangePickerHeaderHeadlineStyle);
-    mateParams.put('rangePickerHeaderHelpStyle', init: rangePickerHeaderHelpStyle);
-    mateParams.put('rangeSelectionBackgroundColor', init: rangeSelectionBackgroundColor);
-    mateParams.put('rangeSelectionOverlayColor', init: rangeSelectionOverlayColor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('shape', shape);
+    mateParams.put('headerBackgroundColor', headerBackgroundColor);
+    mateParams.put('headerForegroundColor', headerForegroundColor);
+    mateParams.put('headerHeadlineStyle', headerHeadlineStyle);
+    mateParams.put('headerHelpStyle', headerHelpStyle);
+    mateParams.put('weekdayStyle', weekdayStyle);
+    mateParams.put('dayStyle', dayStyle);
+    mateParams.put('dayForegroundColor', dayForegroundColor);
+    mateParams.put('dayBackgroundColor', dayBackgroundColor);
+    mateParams.put('dayOverlayColor', dayOverlayColor);
+    mateParams.put('todayForegroundColor', todayForegroundColor);
+    mateParams.put('todayBackgroundColor', todayBackgroundColor);
+    mateParams.put('todayBorder', todayBorder);
+    mateParams.put('yearStyle', yearStyle);
+    mateParams.put('yearForegroundColor', yearForegroundColor);
+    mateParams.put('yearBackgroundColor', yearBackgroundColor);
+    mateParams.put('yearOverlayColor', yearOverlayColor);
+    mateParams.put('rangePickerBackgroundColor', rangePickerBackgroundColor);
+    mateParams.put('rangePickerElevation', rangePickerElevation);
+    mateParams.put('rangePickerShadowColor', rangePickerShadowColor);
+    mateParams.put('rangePickerSurfaceTintColor', rangePickerSurfaceTintColor);
+    mateParams.put('rangePickerShape', rangePickerShape);
+    mateParams.put('rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor);
+    mateParams.put('rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor);
+    mateParams.put('rangePickerHeaderHeadlineStyle', rangePickerHeaderHeadlineStyle);
+    mateParams.put('rangePickerHeaderHelpStyle', rangePickerHeaderHelpStyle);
+    mateParams.put('rangeSelectionBackgroundColor', rangeSelectionBackgroundColor);
+    mateParams.put('rangeSelectionOverlayColor', rangeSelectionOverlayColor);
   }
 }
 
@@ -240,8 +240,8 @@ class DatePickerTheme$Mate extends DatePickerTheme with WidgetMate<DatePickerThe
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

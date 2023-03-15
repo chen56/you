@@ -65,15 +65,15 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Wid
         initialValue: p.get('initialValue').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('optionsViewBuilder', init: optionsViewBuilder);
-    mateParams.put('optionsBuilder', init: optionsBuilder);
-    mateParams.put('displayStringForOption', init: displayStringForOption);
-    mateParams.put('fieldViewBuilder', init: fieldViewBuilder);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('onSelected', init: onSelected);
-    mateParams.put('textEditingController', init: textEditingController);
-    mateParams.put('initialValue', init: initialValue);
+    mateParams.put('key', key);
+    mateParams.put('optionsViewBuilder', optionsViewBuilder);
+    mateParams.put('optionsBuilder', optionsBuilder);
+    mateParams.put('displayStringForOption', displayStringForOption);
+    mateParams.put('fieldViewBuilder', fieldViewBuilder);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('onSelected', onSelected);
+    mateParams.put('textEditingController', textEditingController);
+    mateParams.put('initialValue', initialValue);
   }
 }
 
@@ -103,8 +103,8 @@ class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('highlightIndexNotifier', init: highlightIndexNotifier);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('highlightIndexNotifier', highlightIndexNotifier);
+    mateParams.put('child', child);
   }
 }

@@ -36,10 +36,10 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with WidgetMate<D
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('cursorColor', init: cursorColor);
-    mateParams.put('selectionColor', init: selectionColor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('cursorColor', cursorColor);
+    mateParams.put('selectionColor', selectionColor);
+    mateParams.put('child', child);
   }
 
   /// DefaultSelectionStyle DefaultSelectionStyle.fallback({Key? key})
@@ -52,6 +52,6 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with WidgetMate<D
       init: this,
       builder: (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').value),
     );
-    mateParams.put('key', init: key);
+    mateParams.put('key', key);
   }
 }

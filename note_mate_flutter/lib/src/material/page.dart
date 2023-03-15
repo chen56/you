@@ -42,11 +42,11 @@ class MaterialPageRoute$Mate<T> extends MaterialPageRoute<T> with Mate<MaterialP
         allowSnapshotting: p.get('allowSnapshotting').value,
       ),
     );
-    mateParams.put('builder', init: builder);
-    mateParams.put('settings', init: settings);
-    mateParams.put('maintainState', init: maintainState);
-    mateParams.put('fullscreenDialog', init: fullscreenDialog);
-    mateParams.put('allowSnapshotting', init: allowSnapshotting);
+    mateParams.put('builder', builder);
+    mateParams.put('settings', settings);
+    mateParams.put('maintainState', maintainState);
+    mateParams.put('fullscreenDialog', fullscreenDialog);
+    mateParams.put('allowSnapshotting', allowSnapshotting);
   }
 }
 
@@ -100,13 +100,13 @@ class MaterialPage$Mate<T> extends MaterialPage<T> with Mate<MaterialPage$Mate> 
         restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('maintainState', init: maintainState);
-    mateParams.put('fullscreenDialog', init: fullscreenDialog);
-    mateParams.put('allowSnapshotting', init: allowSnapshotting);
-    mateParams.put('key', init: key);
-    mateParams.put('name', init: name);
-    mateParams.put('arguments', init: arguments);
-    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('child', child);
+    mateParams.put('maintainState', maintainState);
+    mateParams.put('fullscreenDialog', fullscreenDialog);
+    mateParams.put('allowSnapshotting', allowSnapshotting);
+    mateParams.put('key', key);
+    mateParams.put('name', name);
+    mateParams.put('arguments', arguments);
+    mateParams.put('restorationId', restorationId);
   }
 }

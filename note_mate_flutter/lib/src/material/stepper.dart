@@ -40,10 +40,10 @@ class ControlsDetails$Mate extends ControlsDetails with Mate<ControlsDetails$Mat
         onStepContinue: p.get('onStepContinue').value,
       ),
     );
-    mateParams.put('currentStep', init: currentStep);
-    mateParams.put('stepIndex', init: stepIndex);
-    mateParams.put('onStepCancel', init: onStepCancel);
-    mateParams.put('onStepContinue', init: onStepContinue);
+    mateParams.put('currentStep', currentStep);
+    mateParams.put('stepIndex', stepIndex);
+    mateParams.put('onStepCancel', onStepCancel);
+    mateParams.put('onStepContinue', onStepContinue);
   }
 }
 
@@ -87,12 +87,12 @@ class Step$Mate extends Step with Mate<Step$Mate> {
         label: p.get('label').value,
       ),
     );
-    mateParams.put('title', init: title);
-    mateParams.put('subtitle', init: subtitle);
-    mateParams.put('content', init: content);
-    mateParams.put('state', init: state);
-    mateParams.put('isActive', init: isActive);
-    mateParams.put('label', init: label);
+    mateParams.put('title', title);
+    mateParams.put('subtitle', subtitle);
+    mateParams.put('content', content);
+    mateParams.put('state', state);
+    mateParams.put('isActive', isActive);
+    mateParams.put('label', label);
   }
 }
 
@@ -161,16 +161,16 @@ class Stepper$Mate extends Stepper with WidgetMate<Stepper$Mate> {
         margin: p.get('margin').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('steps', init: steps);
-    mateParams.put('physics', init: physics);
-    mateParams.put('type', init: type);
-    mateParams.put('currentStep', init: currentStep);
-    mateParams.put('onStepTapped', init: onStepTapped);
-    mateParams.put('onStepContinue', init: onStepContinue);
-    mateParams.put('onStepCancel', init: onStepCancel);
-    mateParams.put('controlsBuilder', init: controlsBuilder);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('margin', init: margin);
+    mateParams.put('key', key);
+    mateParams.put('steps', steps);
+    mateParams.put('physics', physics);
+    mateParams.put('type', type);
+    mateParams.put('currentStep', currentStep);
+    mateParams.put('onStepTapped', onStepTapped);
+    mateParams.put('onStepContinue', onStepContinue);
+    mateParams.put('onStepCancel', onStepCancel);
+    mateParams.put('controlsBuilder', controlsBuilder);
+    mateParams.put('elevation', elevation);
+    mateParams.put('margin', margin);
   }
 }

@@ -31,8 +31,8 @@ class TooltipVisibility$Mate extends TooltipVisibility with WidgetMate<TooltipVi
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('visible', init: visible);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('visible', visible);
+    mateParams.put('child', child);
   }
 }

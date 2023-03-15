@@ -134,28 +134,28 @@ class ReorderableList$Mate extends ReorderableList with WidgetMate<ReorderableLi
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('itemBuilder', init: itemBuilder);
-    mateParams.put('itemCount', init: itemCount);
-    mateParams.put('onReorder', init: onReorder);
-    mateParams.put('onReorderStart', init: onReorderStart);
-    mateParams.put('onReorderEnd', init: onReorderEnd);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('prototypeItem', init: prototypeItem);
-    mateParams.put('proxyDecorator', init: proxyDecorator);
-    mateParams.put('padding', init: padding);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('anchor', init: anchor);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('itemBuilder', itemBuilder);
+    mateParams.put('itemCount', itemCount);
+    mateParams.put('onReorder', onReorder);
+    mateParams.put('onReorderStart', onReorderStart);
+    mateParams.put('onReorderEnd', onReorderEnd);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('prototypeItem', prototypeItem);
+    mateParams.put('proxyDecorator', proxyDecorator);
+    mateParams.put('padding', padding);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('anchor', anchor);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -219,16 +219,16 @@ class SliverReorderableList$Mate extends SliverReorderableList with WidgetMate<S
         proxyDecorator: p.get('proxyDecorator').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('itemBuilder', init: itemBuilder);
-    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.put('itemCount', init: itemCount);
-    mateParams.put('onReorder', init: onReorder);
-    mateParams.put('onReorderStart', init: onReorderStart);
-    mateParams.put('onReorderEnd', init: onReorderEnd);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('prototypeItem', init: prototypeItem);
-    mateParams.put('proxyDecorator', init: proxyDecorator);
+    mateParams.put('key', key);
+    mateParams.put('itemBuilder', itemBuilder);
+    mateParams.put('findChildIndexCallback', findChildIndexCallback);
+    mateParams.put('itemCount', itemCount);
+    mateParams.put('onReorder', onReorder);
+    mateParams.put('onReorderStart', onReorderStart);
+    mateParams.put('onReorderEnd', onReorderEnd);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('prototypeItem', prototypeItem);
+    mateParams.put('proxyDecorator', proxyDecorator);
   }
 }
 
@@ -263,10 +263,10 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
         enabled: p.get('enabled').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('index', init: index);
-    mateParams.put('enabled', init: enabled);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('index', index);
+    mateParams.put('enabled', enabled);
   }
 }
 
@@ -301,9 +301,9 @@ class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragSta
         enabled: p.get('enabled').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('index', init: index);
-    mateParams.put('enabled', init: enabled);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('index', index);
+    mateParams.put('enabled', enabled);
   }
 }

@@ -29,8 +29,8 @@ class AssetMetadata$Mate extends AssetMetadata with Mate<AssetMetadata$Mate> {
         main: p.get('main').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('targetDevicePixelRatio', init: targetDevicePixelRatio);
-    mateParams.put('main', init: main);
+    mateParams.put('key', key);
+    mateParams.put('targetDevicePixelRatio', targetDevicePixelRatio);
+    mateParams.put('main', main);
   }
 }

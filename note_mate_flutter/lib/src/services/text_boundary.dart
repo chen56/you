@@ -17,7 +17,7 @@ class CharacterBoundary$Mate extends CharacterBoundary with Mate<CharacterBounda
       init: this,
       builder: (p) => CharacterBoundary$Mate(p.get('_text').value),
     );
-    mateParams.put('_text', init: _text);
+    mateParams.put('_text', _text);
   }
 }
 
@@ -33,7 +33,7 @@ class LineBoundary$Mate extends LineBoundary with Mate<LineBoundary$Mate> {
       init: this,
       builder: (p) => LineBoundary$Mate(p.get('_textLayout').value),
     );
-    mateParams.put('_textLayout', init: _textLayout);
+    mateParams.put('_textLayout', _textLayout);
   }
 }
 
@@ -49,7 +49,7 @@ class ParagraphBoundary$Mate extends ParagraphBoundary with Mate<ParagraphBounda
       init: this,
       builder: (p) => ParagraphBoundary$Mate(p.get('_text').value),
     );
-    mateParams.put('_text', init: _text);
+    mateParams.put('_text', _text);
   }
 }
 
@@ -65,6 +65,6 @@ class DocumentBoundary$Mate extends DocumentBoundary with Mate<DocumentBoundary$
       init: this,
       builder: (p) => DocumentBoundary$Mate(p.get('_text').value),
     );
-    mateParams.put('_text', init: _text);
+    mateParams.put('_text', _text);
   }
 }

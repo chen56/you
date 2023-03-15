@@ -30,8 +30,8 @@ class TextureBox$Mate extends TextureBox with Mate<TextureBox$Mate> {
         filterQuality: p.get('filterQuality').value,
       ),
     );
-    mateParams.put('textureId', init: textureId);
-    mateParams.put('freeze', init: freeze);
-    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('textureId', textureId);
+    mateParams.put('freeze', freeze);
+    mateParams.put('filterQuality', filterQuality);
   }
 }

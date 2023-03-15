@@ -112,23 +112,23 @@ class Tooltip$Mate extends Tooltip with WidgetMate<Tooltip$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('message', init: message);
-    mateParams.put('richMessage', init: richMessage);
-    mateParams.put('height', init: height);
-    mateParams.put('padding', init: padding);
-    mateParams.put('margin', init: margin);
-    mateParams.put('verticalOffset', init: verticalOffset);
-    mateParams.put('preferBelow', init: preferBelow);
-    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('textAlign', init: textAlign);
-    mateParams.put('waitDuration', init: waitDuration);
-    mateParams.put('showDuration', init: showDuration);
-    mateParams.put('triggerMode', init: triggerMode);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('onTriggered', init: onTriggered);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('message', message);
+    mateParams.put('richMessage', richMessage);
+    mateParams.put('height', height);
+    mateParams.put('padding', padding);
+    mateParams.put('margin', margin);
+    mateParams.put('verticalOffset', verticalOffset);
+    mateParams.put('preferBelow', preferBelow);
+    mateParams.put('excludeFromSemantics', excludeFromSemantics);
+    mateParams.put('decoration', decoration);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('textAlign', textAlign);
+    mateParams.put('waitDuration', waitDuration);
+    mateParams.put('showDuration', showDuration);
+    mateParams.put('triggerMode', triggerMode);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('onTriggered', onTriggered);
+    mateParams.put('child', child);
   }
 }

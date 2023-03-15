@@ -52,12 +52,12 @@ class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate<DropdownM
         style: p.get('style').value,
       ),
     );
-    mateParams.put('value', init: value);
-    mateParams.put('label', init: label);
-    mateParams.put('leadingIcon', init: leadingIcon);
-    mateParams.put('trailingIcon', init: trailingIcon);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('style', init: style);
+    mateParams.put('value', value);
+    mateParams.put('label', label);
+    mateParams.put('leadingIcon', leadingIcon);
+    mateParams.put('trailingIcon', trailingIcon);
+    mateParams.put('enabled', enabled);
+    mateParams.put('style', style);
   }
 }
 
@@ -166,24 +166,24 @@ class DropdownMenu$Mate<T> extends DropdownMenu<T> with WidgetMate<DropdownMenu$
         dropdownMenuEntries: p.get('dropdownMenuEntries').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('width', init: width);
-    mateParams.put('menuHeight', init: menuHeight);
-    mateParams.put('leadingIcon', init: leadingIcon);
-    mateParams.put('trailingIcon', init: trailingIcon);
-    mateParams.put('label', init: label);
-    mateParams.put('hintText', init: hintText);
-    mateParams.put('selectedTrailingIcon', init: selectedTrailingIcon);
-    mateParams.put('enableFilter', init: enableFilter);
-    mateParams.put('enableSearch', init: enableSearch);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('inputDecorationTheme', init: inputDecorationTheme);
-    mateParams.put('menuStyle', init: menuStyle);
-    mateParams.put('controller', init: controller);
-    mateParams.put('initialSelection', init: initialSelection);
-    mateParams.put('onSelected', init: onSelected);
-    mateParams.put('requestFocusOnTap', init: requestFocusOnTap);
-    mateParams.put('dropdownMenuEntries', init: dropdownMenuEntries);
+    mateParams.put('key', key);
+    mateParams.put('enabled', enabled);
+    mateParams.put('width', width);
+    mateParams.put('menuHeight', menuHeight);
+    mateParams.put('leadingIcon', leadingIcon);
+    mateParams.put('trailingIcon', trailingIcon);
+    mateParams.put('label', label);
+    mateParams.put('hintText', hintText);
+    mateParams.put('selectedTrailingIcon', selectedTrailingIcon);
+    mateParams.put('enableFilter', enableFilter);
+    mateParams.put('enableSearch', enableSearch);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('inputDecorationTheme', inputDecorationTheme);
+    mateParams.put('menuStyle', menuStyle);
+    mateParams.put('controller', controller);
+    mateParams.put('initialSelection', initialSelection);
+    mateParams.put('onSelected', onSelected);
+    mateParams.put('requestFocusOnTap', requestFocusOnTap);
+    mateParams.put('dropdownMenuEntries', dropdownMenuEntries);
   }
 }

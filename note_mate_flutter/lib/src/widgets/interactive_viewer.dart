@@ -111,24 +111,24 @@ class InteractiveViewer$Mate extends InteractiveViewer with WidgetMate<Interacti
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('panAxis', init: panAxis);
-    mateParams.put('boundaryMargin', init: boundaryMargin);
-    mateParams.put('constrained', init: constrained);
-    mateParams.put('maxScale', init: maxScale);
-    mateParams.put('minScale', init: minScale);
-    mateParams.put('interactionEndFrictionCoefficient', init: interactionEndFrictionCoefficient);
-    mateParams.put('onInteractionEnd', init: onInteractionEnd);
-    mateParams.put('onInteractionStart', init: onInteractionStart);
-    mateParams.put('onInteractionUpdate', init: onInteractionUpdate);
-    mateParams.put('panEnabled', init: panEnabled);
-    mateParams.put('scaleEnabled', init: scaleEnabled);
-    mateParams.put('scaleFactor', init: scaleFactor);
-    mateParams.put('transformationController', init: transformationController);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('trackpadScrollCausesScale', init: trackpadScrollCausesScale);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('panAxis', panAxis);
+    mateParams.put('boundaryMargin', boundaryMargin);
+    mateParams.put('constrained', constrained);
+    mateParams.put('maxScale', maxScale);
+    mateParams.put('minScale', minScale);
+    mateParams.put('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
+    mateParams.put('onInteractionEnd', onInteractionEnd);
+    mateParams.put('onInteractionStart', onInteractionStart);
+    mateParams.put('onInteractionUpdate', onInteractionUpdate);
+    mateParams.put('panEnabled', panEnabled);
+    mateParams.put('scaleEnabled', scaleEnabled);
+    mateParams.put('scaleFactor', scaleFactor);
+    mateParams.put('transformationController', transformationController);
+    mateParams.put('alignment', alignment);
+    mateParams.put('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateParams.put('child', child);
   }
 
   /// InteractiveViewer InteractiveViewer.builder({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = 200.0, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget Function(BuildContext, Quad) builder})
@@ -224,23 +224,23 @@ class InteractiveViewer$Mate extends InteractiveViewer with WidgetMate<Interacti
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('panAxis', init: panAxis);
-    mateParams.put('boundaryMargin', init: boundaryMargin);
-    mateParams.put('maxScale', init: maxScale);
-    mateParams.put('minScale', init: minScale);
-    mateParams.put('interactionEndFrictionCoefficient', init: interactionEndFrictionCoefficient);
-    mateParams.put('onInteractionEnd', init: onInteractionEnd);
-    mateParams.put('onInteractionStart', init: onInteractionStart);
-    mateParams.put('onInteractionUpdate', init: onInteractionUpdate);
-    mateParams.put('panEnabled', init: panEnabled);
-    mateParams.put('scaleEnabled', init: scaleEnabled);
-    mateParams.put('scaleFactor', init: scaleFactor);
-    mateParams.put('transformationController', init: transformationController);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('trackpadScrollCausesScale', init: trackpadScrollCausesScale);
-    mateParams.put('builder', init: builder);
+    mateParams.put('key', key);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('panAxis', panAxis);
+    mateParams.put('boundaryMargin', boundaryMargin);
+    mateParams.put('maxScale', maxScale);
+    mateParams.put('minScale', minScale);
+    mateParams.put('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
+    mateParams.put('onInteractionEnd', onInteractionEnd);
+    mateParams.put('onInteractionStart', onInteractionStart);
+    mateParams.put('onInteractionUpdate', onInteractionUpdate);
+    mateParams.put('panEnabled', panEnabled);
+    mateParams.put('scaleEnabled', scaleEnabled);
+    mateParams.put('scaleFactor', scaleFactor);
+    mateParams.put('transformationController', transformationController);
+    mateParams.put('alignment', alignment);
+    mateParams.put('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateParams.put('builder', builder);
   }
 }
 
@@ -256,6 +256,6 @@ class TransformationController$Mate extends TransformationController with Mate<T
       init: this,
       builder: (p) => TransformationController$Mate(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }

@@ -55,12 +55,12 @@ class SelectableRegion$Mate extends SelectableRegion with WidgetMate<SelectableR
         onSelectionChanged: p.get('onSelectionChanged').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('contextMenuBuilder', init: contextMenuBuilder);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('selectionControls', init: selectionControls);
-    mateParams.put('child', init: child);
-    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
-    mateParams.put('onSelectionChanged', init: onSelectionChanged);
+    mateParams.put('key', key);
+    mateParams.put('contextMenuBuilder', contextMenuBuilder);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('selectionControls', selectionControls);
+    mateParams.put('child', child);
+    mateParams.put('magnifierConfiguration', magnifierConfiguration);
+    mateParams.put('onSelectionChanged', onSelectionChanged);
   }
 }

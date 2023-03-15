@@ -17,7 +17,7 @@ class SelectedContent$Mate extends SelectedContent with Mate<SelectedContent$Mat
       init: this,
       builder: (p) => SelectedContent$Mate(plainText: p.get('plainText').value),
     );
-    mateParams.put('plainText', init: plainText);
+    mateParams.put('plainText', plainText);
   }
 }
 
@@ -33,7 +33,7 @@ class SelectWordSelectionEvent$Mate extends SelectWordSelectionEvent with Mate<S
       init: this,
       builder: (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').value),
     );
-    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('globalPosition', globalPosition);
   }
 }
 
@@ -49,7 +49,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate<S
       init: this,
       builder: (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').value),
     );
-    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('globalPosition', globalPosition);
   }
 
   /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forEnd({required Offset globalPosition})
@@ -62,7 +62,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate<S
       init: this,
       builder: (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').value),
     );
-    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('globalPosition', globalPosition);
   }
 }
 
@@ -92,9 +92,9 @@ class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
         granularity: p.get('granularity').value,
       ),
     );
-    mateParams.put('forward', init: forward);
-    mateParams.put('isEnd', init: isEnd);
-    mateParams.put('granularity', init: granularity);
+    mateParams.put('forward', forward);
+    mateParams.put('isEnd', isEnd);
+    mateParams.put('granularity', granularity);
   }
 }
 
@@ -124,9 +124,9 @@ class DirectionallyExtendSelectionEvent$Mate extends DirectionallyExtendSelectio
         direction: p.get('direction').value,
       ),
     );
-    mateParams.put('dx', init: dx);
-    mateParams.put('isEnd', init: isEnd);
-    mateParams.put('direction', init: direction);
+    mateParams.put('dx', dx);
+    mateParams.put('isEnd', isEnd);
+    mateParams.put('direction', direction);
   }
 }
 
@@ -160,10 +160,10 @@ class SelectionGeometry$Mate extends SelectionGeometry with Mate<SelectionGeomet
         hasContent: p.get('hasContent').value,
       ),
     );
-    mateParams.put('startSelectionPoint', init: startSelectionPoint);
-    mateParams.put('endSelectionPoint', init: endSelectionPoint);
-    mateParams.put('status', init: status);
-    mateParams.put('hasContent', init: hasContent);
+    mateParams.put('startSelectionPoint', startSelectionPoint);
+    mateParams.put('endSelectionPoint', endSelectionPoint);
+    mateParams.put('status', status);
+    mateParams.put('hasContent', hasContent);
   }
 }
 
@@ -192,8 +192,8 @@ class SelectionPoint$Mate extends SelectionPoint with Mate<SelectionPoint$Mate> 
         handleType: p.get('handleType').value,
       ),
     );
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('lineHeight', init: lineHeight);
-    mateParams.put('handleType', init: handleType);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('lineHeight', lineHeight);
+    mateParams.put('handleType', handleType);
   }
 }

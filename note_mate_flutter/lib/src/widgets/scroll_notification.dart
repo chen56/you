@@ -33,9 +33,9 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate<Scr
         dragDetails: p.get('dragDetails').value,
       ),
     );
-    mateParams.put('metrics', init: metrics);
-    mateParams.put('context', init: context);
-    mateParams.put('dragDetails', init: dragDetails);
+    mateParams.put('metrics', metrics);
+    mateParams.put('context', context);
+    mateParams.put('dragDetails', dragDetails);
   }
 }
 
@@ -74,11 +74,11 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate<S
         depth: p.get('depth').value,
       ),
     );
-    mateParams.put('metrics', init: metrics);
-    mateParams.put('context', init: context);
-    mateParams.put('dragDetails', init: dragDetails);
-    mateParams.put('scrollDelta', init: scrollDelta);
-    mateParams.put('depth', init: depth);
+    mateParams.put('metrics', metrics);
+    mateParams.put('context', context);
+    mateParams.put('dragDetails', dragDetails);
+    mateParams.put('scrollDelta', scrollDelta);
+    mateParams.put('depth', depth);
   }
 }
 
@@ -117,11 +117,11 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate<Overs
         velocity: p.get('velocity').value,
       ),
     );
-    mateParams.put('metrics', init: metrics);
-    mateParams.put('context', init: context);
-    mateParams.put('dragDetails', init: dragDetails);
-    mateParams.put('overscroll', init: overscroll);
-    mateParams.put('velocity', init: velocity);
+    mateParams.put('metrics', metrics);
+    mateParams.put('context', context);
+    mateParams.put('dragDetails', dragDetails);
+    mateParams.put('overscroll', overscroll);
+    mateParams.put('velocity', velocity);
   }
 }
 
@@ -150,9 +150,9 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate<ScrollE
         dragDetails: p.get('dragDetails').value,
       ),
     );
-    mateParams.put('metrics', init: metrics);
-    mateParams.put('context', init: context);
-    mateParams.put('dragDetails', init: dragDetails);
+    mateParams.put('metrics', metrics);
+    mateParams.put('context', context);
+    mateParams.put('dragDetails', dragDetails);
   }
 }
 
@@ -181,8 +181,8 @@ class UserScrollNotification$Mate extends UserScrollNotification with Mate<UserS
         direction: p.get('direction').value,
       ),
     );
-    mateParams.put('metrics', init: metrics);
-    mateParams.put('context', init: context);
-    mateParams.put('direction', init: direction);
+    mateParams.put('metrics', metrics);
+    mateParams.put('context', context);
+    mateParams.put('direction', direction);
   }
 }

@@ -59,13 +59,13 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate<RenderAnimate
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('vsync', init: vsync);
-    mateParams.put('duration', init: duration);
-    mateParams.put('reverseDuration', init: reverseDuration);
-    mateParams.put('curve', init: curve);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('child', init: child);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('vsync', vsync);
+    mateParams.put('duration', duration);
+    mateParams.put('reverseDuration', reverseDuration);
+    mateParams.put('curve', curve);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('child', child);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

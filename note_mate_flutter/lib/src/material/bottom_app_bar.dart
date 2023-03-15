@@ -69,15 +69,15 @@ class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> 
         height: p.get('height').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('notchMargin', init: notchMargin);
-    mateParams.put('child', init: child);
-    mateParams.put('padding', init: padding);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('height', init: height);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('notchMargin', notchMargin);
+    mateParams.put('child', child);
+    mateParams.put('padding', padding);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('height', height);
   }
 }

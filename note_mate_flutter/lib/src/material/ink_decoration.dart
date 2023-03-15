@@ -61,13 +61,13 @@ class Ink$Mate extends Ink with WidgetMate<Ink$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('padding', init: padding);
-    mateParams.put('color', init: color);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('padding', padding);
+    mateParams.put('color', color);
+    mateParams.put('decoration', decoration);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('child', child);
   }
 
   /// Ink Ink.image({Key? key, EdgeInsetsGeometry? padding, required ImageProvider<Object> image, void Function(Object, StackTrace?)? onImageError, ColorFilter? colorFilter, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, Rect? centerSlice, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, double? width, double? height, Widget? child})
@@ -143,19 +143,19 @@ class Ink$Mate extends Ink with WidgetMate<Ink$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('padding', init: padding);
-    mateParams.put('image', init: image);
-    mateParams.put('onImageError', init: onImageError);
-    mateParams.put('colorFilter', init: colorFilter);
-    mateParams.put('fit', init: fit);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('centerSlice', init: centerSlice);
-    mateParams.put('repeat', init: repeat);
-    mateParams.put('matchTextDirection', init: matchTextDirection);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('padding', padding);
+    mateParams.put('image', image);
+    mateParams.put('onImageError', onImageError);
+    mateParams.put('colorFilter', colorFilter);
+    mateParams.put('fit', fit);
+    mateParams.put('alignment', alignment);
+    mateParams.put('centerSlice', centerSlice);
+    mateParams.put('repeat', repeat);
+    mateParams.put('matchTextDirection', matchTextDirection);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('child', child);
   }
 }
 
@@ -194,10 +194,10 @@ class InkDecoration$Mate extends InkDecoration with Mate<InkDecoration$Mate> {
         onRemoved: p.get('onRemoved').value,
       ),
     );
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('configuration', init: configuration);
-    mateParams.put('controller', init: controller);
-    mateParams.put('referenceBox', init: referenceBox);
-    mateParams.put('onRemoved', init: onRemoved);
+    mateParams.put('decoration', decoration);
+    mateParams.put('configuration', configuration);
+    mateParams.put('controller', controller);
+    mateParams.put('referenceBox', referenceBox);
+    mateParams.put('onRemoved', onRemoved);
   }
 }

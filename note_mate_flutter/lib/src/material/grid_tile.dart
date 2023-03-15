@@ -35,9 +35,9 @@ class GridTile$Mate extends GridTile with WidgetMate<GridTile$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('header', init: header);
-    mateParams.put('footer', init: footer);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('header', header);
+    mateParams.put('footer', footer);
+    mateParams.put('child', child);
   }
 }

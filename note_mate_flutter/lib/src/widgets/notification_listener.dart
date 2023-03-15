@@ -31,8 +31,8 @@ class NotificationListener$Mate<T extends Notification> extends NotificationList
         onNotification: p.get('onNotification').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('onNotification', init: onNotification);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('onNotification', onNotification);
   }
 }

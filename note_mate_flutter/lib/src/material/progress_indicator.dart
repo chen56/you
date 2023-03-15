@@ -57,14 +57,14 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with WidgetMa
         semanticsValue: p.get('semanticsValue').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('color', init: color);
-    mateParams.put('valueColor', init: valueColor);
-    mateParams.put('minHeight', init: minHeight);
-    mateParams.put('semanticsLabel', init: semanticsLabel);
-    mateParams.put('semanticsValue', init: semanticsValue);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('color', color);
+    mateParams.put('valueColor', valueColor);
+    mateParams.put('minHeight', minHeight);
+    mateParams.put('semanticsLabel', semanticsLabel);
+    mateParams.put('semanticsValue', semanticsValue);
   }
 }
 
@@ -118,14 +118,14 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Widg
         semanticsValue: p.get('semanticsValue').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('color', init: color);
-    mateParams.put('valueColor', init: valueColor);
-    mateParams.put('strokeWidth', init: strokeWidth);
-    mateParams.put('semanticsLabel', init: semanticsLabel);
-    mateParams.put('semanticsValue', init: semanticsValue);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('color', color);
+    mateParams.put('valueColor', valueColor);
+    mateParams.put('strokeWidth', strokeWidth);
+    mateParams.put('semanticsLabel', semanticsLabel);
+    mateParams.put('semanticsValue', semanticsValue);
   }
 
   /// CircularProgressIndicator CircularProgressIndicator.adaptive({Key? key, double? value, Color? backgroundColor, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
@@ -171,13 +171,13 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Widg
         semanticsValue: p.get('semanticsValue').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('valueColor', init: valueColor);
-    mateParams.put('strokeWidth', init: strokeWidth);
-    mateParams.put('semanticsLabel', init: semanticsLabel);
-    mateParams.put('semanticsValue', init: semanticsValue);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('valueColor', valueColor);
+    mateParams.put('strokeWidth', strokeWidth);
+    mateParams.put('semanticsLabel', semanticsLabel);
+    mateParams.put('semanticsValue', semanticsValue);
   }
 }
 
@@ -231,13 +231,13 @@ class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Widget
         semanticsValue: p.get('semanticsValue').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('color', init: color);
-    mateParams.put('valueColor', init: valueColor);
-    mateParams.put('strokeWidth', init: strokeWidth);
-    mateParams.put('semanticsLabel', init: semanticsLabel);
-    mateParams.put('semanticsValue', init: semanticsValue);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('color', color);
+    mateParams.put('valueColor', valueColor);
+    mateParams.put('strokeWidth', strokeWidth);
+    mateParams.put('semanticsLabel', semanticsLabel);
+    mateParams.put('semanticsValue', semanticsValue);
   }
 }

@@ -146,31 +146,31 @@ class TextStyle$Mate extends TextStyle with Mate<TextStyle$Mate> {
         overflow: p.get('overflow').value,
       ),
     );
-    mateParams.put('inherit', init: inherit);
-    mateParams.put('color', init: color);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('fontSize', init: fontSize);
-    mateParams.put('fontWeight', init: fontWeight);
-    mateParams.put('fontStyle', init: fontStyle);
-    mateParams.put('letterSpacing', init: letterSpacing);
-    mateParams.put('wordSpacing', init: wordSpacing);
-    mateParams.put('textBaseline', init: textBaseline);
-    mateParams.put('height', init: height);
-    mateParams.put('leadingDistribution', init: leadingDistribution);
-    mateParams.put('locale', init: locale);
-    mateParams.put('foreground', init: foreground);
-    mateParams.put('background', init: background);
-    mateParams.put('shadows', init: shadows);
-    mateParams.put('fontFeatures', init: fontFeatures);
-    mateParams.put('fontVariations', init: fontVariations);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('decorationColor', init: decorationColor);
-    mateParams.put('decorationStyle', init: decorationStyle);
-    mateParams.put('decorationThickness', init: decorationThickness);
-    mateParams.put('debugLabel', init: debugLabel);
-    mateParams.put('fontFamily', init: fontFamily);
-    mateParams.put('fontFamilyFallback', init: fontFamilyFallback);
-    mateParams.put('package', init: package);
-    mateParams.put('overflow', init: overflow);
+    mateParams.put('inherit', inherit);
+    mateParams.put('color', color);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('fontSize', fontSize);
+    mateParams.put('fontWeight', fontWeight);
+    mateParams.put('fontStyle', fontStyle);
+    mateParams.put('letterSpacing', letterSpacing);
+    mateParams.put('wordSpacing', wordSpacing);
+    mateParams.put('textBaseline', textBaseline);
+    mateParams.put('height', height);
+    mateParams.put('leadingDistribution', leadingDistribution);
+    mateParams.put('locale', locale);
+    mateParams.put('foreground', foreground);
+    mateParams.put('background', background);
+    mateParams.put('shadows', shadows);
+    mateParams.put('fontFeatures', fontFeatures);
+    mateParams.put('fontVariations', fontVariations);
+    mateParams.put('decoration', decoration);
+    mateParams.put('decorationColor', decorationColor);
+    mateParams.put('decorationStyle', decorationStyle);
+    mateParams.put('decorationThickness', decorationThickness);
+    mateParams.put('debugLabel', debugLabel);
+    mateParams.put('fontFamily', fontFamily);
+    mateParams.put('fontFamilyFallback', fontFamilyFallback);
+    mateParams.put('package', package);
+    mateParams.put('overflow', overflow);
   }
 }

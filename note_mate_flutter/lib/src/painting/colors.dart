@@ -36,10 +36,10 @@ class HSVColor$Mate extends HSVColor with Mate<HSVColor$Mate> {
         p.get('value').value,
       ),
     );
-    mateParams.put('alpha', init: alpha);
-    mateParams.put('hue', init: hue);
-    mateParams.put('saturation', init: saturation);
-    mateParams.put('value', init: value);
+    mateParams.put('alpha', alpha);
+    mateParams.put('hue', hue);
+    mateParams.put('saturation', saturation);
+    mateParams.put('value', value);
   }
 }
 
@@ -73,10 +73,10 @@ class HSLColor$Mate extends HSLColor with Mate<HSLColor$Mate> {
         p.get('lightness').value,
       ),
     );
-    mateParams.put('alpha', init: alpha);
-    mateParams.put('hue', init: hue);
-    mateParams.put('saturation', init: saturation);
-    mateParams.put('lightness', init: lightness);
+    mateParams.put('alpha', alpha);
+    mateParams.put('hue', hue);
+    mateParams.put('saturation', saturation);
+    mateParams.put('lightness', lightness);
   }
 }
 
@@ -100,8 +100,8 @@ class ColorSwatch$Mate<T> extends ColorSwatch<T> with Mate<ColorSwatch$Mate> {
         p.get('_swatch').value,
       ),
     );
-    mateParams.put('primary', init: primary);
-    mateParams.put('_swatch', init: _swatch);
+    mateParams.put('primary', primary);
+    mateParams.put('_swatch', _swatch);
   }
 }
 
@@ -144,11 +144,11 @@ class ColorProperty$Mate extends ColorProperty with Mate<ColorProperty$Mate> {
         level: p.get('level').value,
       ),
     );
-    mateParams.put('name', init: name);
-    mateParams.put('value', init: value);
-    mateParams.put('showName', init: showName);
-    mateParams.put('defaultValue', init: defaultValue);
-    mateParams.put('style', init: style);
-    mateParams.put('level', init: level);
+    mateParams.put('name', name);
+    mateParams.put('value', value);
+    mateParams.put('showName', showName);
+    mateParams.put('defaultValue', defaultValue);
+    mateParams.put('style', style);
+    mateParams.put('level', level);
   }
 }

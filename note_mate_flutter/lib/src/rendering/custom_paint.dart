@@ -44,11 +44,11 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate<Custo
         tags: p.get('tags').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('rect', init: rect);
-    mateParams.put('properties', init: properties);
-    mateParams.put('transform', init: transform);
-    mateParams.put('tags', init: tags);
+    mateParams.put('key', key);
+    mateParams.put('rect', rect);
+    mateParams.put('properties', properties);
+    mateParams.put('transform', transform);
+    mateParams.put('tags', tags);
   }
 }
 
@@ -92,11 +92,11 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate<RenderCustomPai
         child: p.get('child').value,
       ),
     );
-    mateParams.put('painter', init: painter);
-    mateParams.put('foregroundPainter', init: foregroundPainter);
-    mateParams.put('preferredSize', init: preferredSize);
-    mateParams.put('isComplex', init: isComplex);
-    mateParams.put('willChange', init: willChange);
-    mateParams.put('child', init: child);
+    mateParams.put('painter', painter);
+    mateParams.put('foregroundPainter', foregroundPainter);
+    mateParams.put('preferredSize', preferredSize);
+    mateParams.put('isComplex', isComplex);
+    mateParams.put('willChange', willChange);
+    mateParams.put('child', child);
   }
 }

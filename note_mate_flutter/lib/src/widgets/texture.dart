@@ -36,9 +36,9 @@ class Texture$Mate extends Texture with WidgetMate<Texture$Mate> {
         filterQuality: p.get('filterQuality').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('textureId', init: textureId);
-    mateParams.put('freeze', init: freeze);
-    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('key', key);
+    mateParams.put('textureId', textureId);
+    mateParams.put('freeze', freeze);
+    mateParams.put('filterQuality', filterQuality);
   }
 }

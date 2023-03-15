@@ -67,15 +67,15 @@ class CupertinoSlider$Mate extends CupertinoSlider with WidgetMate<CupertinoSlid
         thumbColor: p.get('thumbColor').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('onChangeStart', init: onChangeStart);
-    mateParams.put('onChangeEnd', init: onChangeEnd);
-    mateParams.put('min', init: min);
-    mateParams.put('max', init: max);
-    mateParams.put('divisions', init: divisions);
-    mateParams.put('activeColor', init: activeColor);
-    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('onChangeStart', onChangeStart);
+    mateParams.put('onChangeEnd', onChangeEnd);
+    mateParams.put('min', min);
+    mateParams.put('max', max);
+    mateParams.put('divisions', divisions);
+    mateParams.put('activeColor', activeColor);
+    mateParams.put('thumbColor', thumbColor);
   }
 }

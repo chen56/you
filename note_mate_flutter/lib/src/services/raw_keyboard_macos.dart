@@ -39,10 +39,10 @@ class RawKeyEventDataMacOs$Mate extends RawKeyEventDataMacOs with Mate<RawKeyEve
         specifiedLogicalKey: p.get('specifiedLogicalKey').value,
       ),
     );
-    mateParams.put('characters', init: characters);
-    mateParams.put('charactersIgnoringModifiers', init: charactersIgnoringModifiers);
-    mateParams.put('keyCode', init: keyCode);
-    mateParams.put('modifiers', init: modifiers);
-    mateParams.put('specifiedLogicalKey', init: specifiedLogicalKey);
+    mateParams.put('characters', characters);
+    mateParams.put('charactersIgnoringModifiers', charactersIgnoringModifiers);
+    mateParams.put('keyCode', keyCode);
+    mateParams.put('modifiers', modifiers);
+    mateParams.put('specifiedLogicalKey', specifiedLogicalKey);
   }
 }

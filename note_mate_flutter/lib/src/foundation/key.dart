@@ -15,6 +15,6 @@ class ValueKey$Mate<T> extends ValueKey<T> with Mate<ValueKey$Mate> {
       init: this,
       builder: (p) => ValueKey$Mate(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }

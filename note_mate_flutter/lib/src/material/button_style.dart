@@ -133,27 +133,27 @@ class ButtonStyle$Mate extends ButtonStyle with Mate<ButtonStyle$Mate> {
         splashFactory: p.get('splashFactory').value,
       ),
     );
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('foregroundColor', init: foregroundColor);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('padding', init: padding);
-    mateParams.put('minimumSize', init: minimumSize);
-    mateParams.put('fixedSize', init: fixedSize);
-    mateParams.put('maximumSize', init: maximumSize);
-    mateParams.put('iconColor', init: iconColor);
-    mateParams.put('iconSize', init: iconSize);
-    mateParams.put('side', init: side);
-    mateParams.put('shape', init: shape);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('visualDensity', init: visualDensity);
-    mateParams.put('tapTargetSize', init: tapTargetSize);
-    mateParams.put('animationDuration', init: animationDuration);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('splashFactory', init: splashFactory);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('foregroundColor', foregroundColor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('padding', padding);
+    mateParams.put('minimumSize', minimumSize);
+    mateParams.put('fixedSize', fixedSize);
+    mateParams.put('maximumSize', maximumSize);
+    mateParams.put('iconColor', iconColor);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('side', side);
+    mateParams.put('shape', shape);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('tapTargetSize', tapTargetSize);
+    mateParams.put('animationDuration', animationDuration);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('alignment', alignment);
+    mateParams.put('splashFactory', splashFactory);
   }
 }

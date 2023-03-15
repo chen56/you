@@ -50,12 +50,12 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate<Cuperti
         allowSnapshotting: p.get('allowSnapshotting').value,
       ),
     );
-    mateParams.put('builder', init: builder);
-    mateParams.put('title', init: title);
-    mateParams.put('settings', init: settings);
-    mateParams.put('maintainState', init: maintainState);
-    mateParams.put('fullscreenDialog', init: fullscreenDialog);
-    mateParams.put('allowSnapshotting', init: allowSnapshotting);
+    mateParams.put('builder', builder);
+    mateParams.put('title', title);
+    mateParams.put('settings', settings);
+    mateParams.put('maintainState', maintainState);
+    mateParams.put('fullscreenDialog', fullscreenDialog);
+    mateParams.put('allowSnapshotting', allowSnapshotting);
   }
 }
 
@@ -114,15 +114,15 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate<CupertinoPage$Mat
         restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('maintainState', init: maintainState);
-    mateParams.put('title', init: title);
-    mateParams.put('fullscreenDialog', init: fullscreenDialog);
-    mateParams.put('allowSnapshotting', init: allowSnapshotting);
-    mateParams.put('key', init: key);
-    mateParams.put('name', init: name);
-    mateParams.put('arguments', init: arguments);
-    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('child', child);
+    mateParams.put('maintainState', maintainState);
+    mateParams.put('title', title);
+    mateParams.put('fullscreenDialog', fullscreenDialog);
+    mateParams.put('allowSnapshotting', allowSnapshotting);
+    mateParams.put('key', key);
+    mateParams.put('name', name);
+    mateParams.put('arguments', arguments);
+    mateParams.put('restorationId', restorationId);
   }
 }
 
@@ -161,11 +161,11 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with WidgetMa
         linearTransition: p.get('linearTransition').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('primaryRouteAnimation', init: primaryRouteAnimation);
-    mateParams.put('secondaryRouteAnimation', init: secondaryRouteAnimation);
-    mateParams.put('child', init: child);
-    mateParams.put('linearTransition', init: linearTransition);
+    mateParams.put('key', key);
+    mateParams.put('primaryRouteAnimation', primaryRouteAnimation);
+    mateParams.put('secondaryRouteAnimation', secondaryRouteAnimation);
+    mateParams.put('child', child);
+    mateParams.put('linearTransition', linearTransition);
   }
 }
 
@@ -205,11 +205,11 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
         linearTransition: p.get('linearTransition').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('primaryRouteAnimation', init: primaryRouteAnimation);
-    mateParams.put('secondaryRouteAnimation', init: secondaryRouteAnimation);
-    mateParams.put('child', init: child);
-    mateParams.put('linearTransition', init: linearTransition);
+    mateParams.put('key', key);
+    mateParams.put('primaryRouteAnimation', primaryRouteAnimation);
+    mateParams.put('secondaryRouteAnimation', secondaryRouteAnimation);
+    mateParams.put('child', child);
+    mateParams.put('linearTransition', linearTransition);
   }
 }
 
@@ -263,14 +263,14 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
         anchorPoint: p.get('anchorPoint').value,
       ),
     );
-    mateParams.put('builder', init: builder);
-    mateParams.put('barrierLabel', init: barrierLabel);
-    mateParams.put('barrierColor', init: barrierColor);
-    mateParams.put('barrierDismissible', init: barrierDismissible);
-    mateParams.put('semanticsDismissible', init: semanticsDismissible);
-    mateParams.put('filter', init: filter);
-    mateParams.put('settings', init: settings);
-    mateParams.put('anchorPoint', init: anchorPoint);
+    mateParams.put('builder', builder);
+    mateParams.put('barrierLabel', barrierLabel);
+    mateParams.put('barrierColor', barrierColor);
+    mateParams.put('barrierDismissible', barrierDismissible);
+    mateParams.put('semanticsDismissible', semanticsDismissible);
+    mateParams.put('filter', filter);
+    mateParams.put('settings', settings);
+    mateParams.put('anchorPoint', anchorPoint);
   }
 }
 
@@ -329,14 +329,14 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate<Cup
         anchorPoint: p.get('anchorPoint').value,
       ),
     );
-    mateParams.put('builder', init: builder);
-    mateParams.put('context', init: context);
-    mateParams.put('barrierDismissible', init: barrierDismissible);
-    mateParams.put('barrierColor', init: barrierColor);
-    mateParams.put('barrierLabel', init: barrierLabel);
-    mateParams.put('transitionDuration', init: transitionDuration);
-    mateParams.put('transitionBuilder', init: transitionBuilder);
-    mateParams.put('settings', init: settings);
-    mateParams.put('anchorPoint', init: anchorPoint);
+    mateParams.put('builder', builder);
+    mateParams.put('context', context);
+    mateParams.put('barrierDismissible', barrierDismissible);
+    mateParams.put('barrierColor', barrierColor);
+    mateParams.put('barrierLabel', barrierLabel);
+    mateParams.put('transitionDuration', transitionDuration);
+    mateParams.put('transitionBuilder', transitionBuilder);
+    mateParams.put('settings', settings);
+    mateParams.put('anchorPoint', anchorPoint);
   }
 }

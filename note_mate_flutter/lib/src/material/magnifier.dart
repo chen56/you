@@ -30,8 +30,8 @@ class TextMagnifier$Mate extends TextMagnifier with WidgetMate<TextMagnifier$Mat
         magnifierInfo: p.get('magnifierInfo').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('magnifierInfo', init: magnifierInfo);
+    mateParams.put('key', key);
+    mateParams.put('magnifierInfo', magnifierInfo);
   }
 }
 
@@ -75,11 +75,11 @@ class Magnifier$Mate extends Magnifier with WidgetMate<Magnifier$Mate> {
         size: p.get('size').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('additionalFocalPointOffset', init: additionalFocalPointOffset);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('filmColor', init: filmColor);
-    mateParams.put('shadows', init: shadows);
-    mateParams.put('size', init: size);
+    mateParams.put('key', key);
+    mateParams.put('additionalFocalPointOffset', additionalFocalPointOffset);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('filmColor', filmColor);
+    mateParams.put('shadows', shadows);
+    mateParams.put('size', size);
   }
 }

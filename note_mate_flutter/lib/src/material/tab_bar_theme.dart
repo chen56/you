@@ -81,17 +81,17 @@ class TabBarTheme$Mate extends TabBarTheme with Mate<TabBarTheme$Mate> {
         mouseCursor: p.get('mouseCursor').value,
       ),
     );
-    mateParams.put('indicator', init: indicator);
-    mateParams.put('indicatorColor', init: indicatorColor);
-    mateParams.put('indicatorSize', init: indicatorSize);
-    mateParams.put('dividerColor', init: dividerColor);
-    mateParams.put('labelColor', init: labelColor);
-    mateParams.put('labelPadding', init: labelPadding);
-    mateParams.put('labelStyle', init: labelStyle);
-    mateParams.put('unselectedLabelColor', init: unselectedLabelColor);
-    mateParams.put('unselectedLabelStyle', init: unselectedLabelStyle);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('splashFactory', init: splashFactory);
-    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('indicator', indicator);
+    mateParams.put('indicatorColor', indicatorColor);
+    mateParams.put('indicatorSize', indicatorSize);
+    mateParams.put('dividerColor', dividerColor);
+    mateParams.put('labelColor', labelColor);
+    mateParams.put('labelPadding', labelPadding);
+    mateParams.put('labelStyle', labelStyle);
+    mateParams.put('unselectedLabelColor', unselectedLabelColor);
+    mateParams.put('unselectedLabelStyle', unselectedLabelStyle);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('splashFactory', splashFactory);
+    mateParams.put('mouseCursor', mouseCursor);
   }
 }

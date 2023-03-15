@@ -15,7 +15,7 @@ class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T> with Ma
       init: this,
       builder: (p) => HitTestEntry$Mate(p.get('target').value),
     );
-    mateParams.put('target', init: target);
+    mateParams.put('target', target);
   }
 }
 
@@ -31,6 +31,6 @@ class HitTestResult$Mate extends HitTestResult with Mate<HitTestResult$Mate> {
       init: this,
       builder: (p) => HitTestResult$Mate.wrap(p.get('result').value),
     );
-    mateParams.put('result', init: result);
+    mateParams.put('result', result);
   }
 }

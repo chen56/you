@@ -32,9 +32,9 @@ class WidgetInspector$Mate extends WidgetInspector with WidgetMate<WidgetInspect
         selectButtonBuilder: p.get('selectButtonBuilder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('selectButtonBuilder', init: selectButtonBuilder);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('selectButtonBuilder', selectButtonBuilder);
   }
 }
 
@@ -58,8 +58,8 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate<D
         p.get('url').value,
       ),
     );
-    mateParams.put('description', init: description);
-    mateParams.put('url', init: url);
+    mateParams.put('description', description);
+    mateParams.put('url', url);
   }
 }
 
@@ -118,13 +118,13 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
         addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').value,
       ),
     );
-    mateParams.put('groupName', init: groupName);
-    mateParams.put('summaryTree', init: summaryTree);
-    mateParams.put('maxDescendentsTruncatableNode', init: maxDescendentsTruncatableNode);
-    mateParams.put('expandPropertyValues', init: expandPropertyValues);
-    mateParams.put('subtreeDepth', init: subtreeDepth);
-    mateParams.put('includeProperties', init: includeProperties);
-    mateParams.put('service', init: service);
-    mateParams.put('addAdditionalPropertiesCallback', init: addAdditionalPropertiesCallback);
+    mateParams.put('groupName', groupName);
+    mateParams.put('summaryTree', summaryTree);
+    mateParams.put('maxDescendentsTruncatableNode', maxDescendentsTruncatableNode);
+    mateParams.put('expandPropertyValues', expandPropertyValues);
+    mateParams.put('subtreeDepth', subtreeDepth);
+    mateParams.put('includeProperties', includeProperties);
+    mateParams.put('service', service);
+    mateParams.put('addAdditionalPropertiesCallback', addAdditionalPropertiesCallback);
   }
 }

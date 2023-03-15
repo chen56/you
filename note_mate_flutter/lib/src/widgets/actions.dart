@@ -41,10 +41,10 @@ class ActionListener$Mate extends ActionListener with WidgetMate<ActionListener$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('listener', init: listener);
-    mateParams.put('action', init: action);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('listener', listener);
+    mateParams.put('action', action);
+    mateParams.put('child', child);
   }
 }
 
@@ -60,7 +60,7 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate<
       init: this,
       builder: (p) => CallbackAction$Mate(onInvoke: p.get('onInvoke').value),
     );
-    mateParams.put('onInvoke', init: onInvoke);
+    mateParams.put('onInvoke', onInvoke);
   }
 }
 
@@ -94,10 +94,10 @@ class Actions$Mate extends Actions with WidgetMate<Actions$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('dispatcher', init: dispatcher);
-    mateParams.put('actions', init: actions);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('dispatcher', dispatcher);
+    mateParams.put('actions', actions);
+    mateParams.put('child', child);
   }
 }
 
@@ -181,20 +181,20 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with WidgetMa
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('descendantsAreFocusable', init: descendantsAreFocusable);
-    mateParams.put('descendantsAreTraversable', init: descendantsAreTraversable);
-    mateParams.put('shortcuts', init: shortcuts);
-    mateParams.put('actions', init: actions);
-    mateParams.put('onShowFocusHighlight', init: onShowFocusHighlight);
-    mateParams.put('onShowHoverHighlight', init: onShowHoverHighlight);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('includeFocusSemantics', init: includeFocusSemantics);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('enabled', enabled);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('descendantsAreFocusable', descendantsAreFocusable);
+    mateParams.put('descendantsAreTraversable', descendantsAreTraversable);
+    mateParams.put('shortcuts', shortcuts);
+    mateParams.put('actions', actions);
+    mateParams.put('onShowFocusHighlight', onShowFocusHighlight);
+    mateParams.put('onShowHoverHighlight', onShowHoverHighlight);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('includeFocusSemantics', includeFocusSemantics);
+    mateParams.put('child', child);
   }
 }
 
@@ -210,7 +210,7 @@ class VoidCallbackIntent$Mate extends VoidCallbackIntent with Mate<VoidCallbackI
       init: this,
       builder: (p) => VoidCallbackIntent$Mate(p.get('callback').value),
     );
-    mateParams.put('callback', init: callback);
+    mateParams.put('callback', callback);
   }
 }
 
@@ -226,7 +226,7 @@ class DoNothingAction$Mate extends DoNothingAction with Mate<DoNothingAction$Mat
       init: this,
       builder: (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').value),
     );
-    mateParams.put('consumesKey', init: consumesKey);
+    mateParams.put('consumesKey', consumesKey);
   }
 }
 
@@ -242,6 +242,6 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate<PrioritizedIn
       init: this,
       builder: (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').value),
     );
-    mateParams.put('orderedIntents', init: orderedIntents);
+    mateParams.put('orderedIntents', orderedIntents);
   }
 }

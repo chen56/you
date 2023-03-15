@@ -44,10 +44,10 @@ class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton
         alignment: p.get('alignment').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('padding', init: padding);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('alignment', init: alignment);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('padding', padding);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('alignment', alignment);
   }
 }

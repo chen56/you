@@ -25,8 +25,8 @@ class SuggestionSpan$Mate extends SuggestionSpan with Mate<SuggestionSpan$Mate> 
         p.get('suggestions').value,
       ),
     );
-    mateParams.put('range', init: range);
-    mateParams.put('suggestions', init: suggestions);
+    mateParams.put('range', range);
+    mateParams.put('suggestions', suggestions);
   }
 }
 
@@ -50,7 +50,7 @@ class SpellCheckResults$Mate extends SpellCheckResults with Mate<SpellCheckResul
         p.get('suggestionSpans').value,
       ),
     );
-    mateParams.put('spellCheckedText', init: spellCheckedText);
-    mateParams.put('suggestionSpans', init: suggestionSpans);
+    mateParams.put('spellCheckedText', spellCheckedText);
+    mateParams.put('suggestionSpans', suggestionSpans);
   }
 }

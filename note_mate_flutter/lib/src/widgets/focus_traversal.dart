@@ -19,7 +19,7 @@ class NumericFocusOrder$Mate extends NumericFocusOrder with Mate<NumericFocusOrd
       init: this,
       builder: (p) => NumericFocusOrder$Mate(p.get('order').value),
     );
-    mateParams.put('order', init: order);
+    mateParams.put('order', order);
   }
 }
 
@@ -35,7 +35,7 @@ class LexicalFocusOrder$Mate extends LexicalFocusOrder with Mate<LexicalFocusOrd
       init: this,
       builder: (p) => LexicalFocusOrder$Mate(p.get('order').value),
     );
-    mateParams.put('order', init: order);
+    mateParams.put('order', order);
   }
 }
 
@@ -51,7 +51,7 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate<Order
       init: this,
       builder: (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').value),
     );
-    mateParams.put('secondary', init: secondary);
+    mateParams.put('secondary', secondary);
   }
 }
 
@@ -80,9 +80,9 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with WidgetMate<Focus
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('order', init: order);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('order', order);
+    mateParams.put('child', child);
   }
 }
 
@@ -121,11 +121,11 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with WidgetMate<Focus
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('policy', init: policy);
-    mateParams.put('descendantsAreFocusable', init: descendantsAreFocusable);
-    mateParams.put('descendantsAreTraversable', init: descendantsAreTraversable);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('policy', policy);
+    mateParams.put('descendantsAreFocusable', descendantsAreFocusable);
+    mateParams.put('descendantsAreTraversable', descendantsAreTraversable);
+    mateParams.put('child', child);
   }
 }
 
@@ -141,7 +141,7 @@ class RequestFocusIntent$Mate extends RequestFocusIntent with Mate<RequestFocusI
       init: this,
       builder: (p) => RequestFocusIntent$Mate(p.get('focusNode').value),
     );
-    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('focusNode', focusNode);
   }
 }
 
@@ -164,8 +164,8 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate<Direc
         ignoreTextFields: p.get('ignoreTextFields').value,
       ),
     );
-    mateParams.put('direction', init: direction);
-    mateParams.put('ignoreTextFields', init: ignoreTextFields);
+    mateParams.put('direction', direction);
+    mateParams.put('ignoreTextFields', ignoreTextFields);
   }
 }
 
@@ -194,8 +194,8 @@ class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with WidgetMate<E
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('excluding', init: excluding);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('excluding', excluding);
+    mateParams.put('child', child);
   }
 }

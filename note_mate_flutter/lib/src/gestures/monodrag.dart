@@ -32,9 +32,9 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -64,9 +64,9 @@ class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecogniz
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -95,8 +95,8 @@ class PanGestureRecognizer$Mate extends PanGestureRecognizer with Mate<PanGestur
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

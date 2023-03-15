@@ -35,9 +35,9 @@ class TableRow$Mate extends TableRow with Mate<TableRow$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('decoration', decoration);
+    mateParams.put('children', children);
   }
 }
 
@@ -91,14 +91,14 @@ class Table$Mate extends Table with WidgetMate<Table$Mate> {
         textBaseline: p.get('textBaseline').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('columnWidths', init: columnWidths);
-    mateParams.put('defaultColumnWidth', init: defaultColumnWidth);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('border', init: border);
-    mateParams.put('defaultVerticalAlignment', init: defaultVerticalAlignment);
-    mateParams.put('textBaseline', init: textBaseline);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('columnWidths', columnWidths);
+    mateParams.put('defaultColumnWidth', defaultColumnWidth);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('border', border);
+    mateParams.put('defaultVerticalAlignment', defaultVerticalAlignment);
+    mateParams.put('textBaseline', textBaseline);
   }
 }
 
@@ -127,8 +127,8 @@ class TableCell$Mate extends TableCell with WidgetMate<TableCell$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('verticalAlignment', init: verticalAlignment);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('verticalAlignment', verticalAlignment);
+    mateParams.put('child', child);
   }
 }

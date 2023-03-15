@@ -80,18 +80,18 @@ class Badge$Mate extends Badge with WidgetMate<Badge$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('textColor', init: textColor);
-    mateParams.put('smallSize', init: smallSize);
-    mateParams.put('largeSize', init: largeSize);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('padding', init: padding);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('offset', init: offset);
-    mateParams.put('label', init: label);
-    mateParams.put('isLabelVisible', init: isLabelVisible);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('textColor', textColor);
+    mateParams.put('smallSize', smallSize);
+    mateParams.put('largeSize', largeSize);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('padding', padding);
+    mateParams.put('alignment', alignment);
+    mateParams.put('offset', offset);
+    mateParams.put('label', label);
+    mateParams.put('isLabelVisible', isLabelVisible);
+    mateParams.put('child', child);
   }
 
   /// Badge Badge.count({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, required int count, bool isLabelVisible = true, Widget? child})
@@ -162,17 +162,17 @@ class Badge$Mate extends Badge with WidgetMate<Badge$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('textColor', init: textColor);
-    mateParams.put('smallSize', init: smallSize);
-    mateParams.put('largeSize', init: largeSize);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('padding', init: padding);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('offset', init: offset);
-    mateParams.put('count', init: count);
-    mateParams.put('isLabelVisible', init: isLabelVisible);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('textColor', textColor);
+    mateParams.put('smallSize', smallSize);
+    mateParams.put('largeSize', largeSize);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('padding', padding);
+    mateParams.put('alignment', alignment);
+    mateParams.put('offset', offset);
+    mateParams.put('count', count);
+    mateParams.put('isLabelVisible', isLabelVisible);
+    mateParams.put('child', child);
   }
 }

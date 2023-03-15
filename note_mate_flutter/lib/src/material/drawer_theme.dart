@@ -58,14 +58,14 @@ class DrawerThemeData$Mate extends DrawerThemeData with Mate<DrawerThemeData$Mat
         width: p.get('width').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('scrimColor', init: scrimColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('endShape', init: endShape);
-    mateParams.put('width', init: width);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('scrimColor', scrimColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('shape', shape);
+    mateParams.put('endShape', endShape);
+    mateParams.put('width', width);
   }
 }
 
@@ -94,8 +94,8 @@ class DrawerTheme$Mate extends DrawerTheme with WidgetMate<DrawerTheme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

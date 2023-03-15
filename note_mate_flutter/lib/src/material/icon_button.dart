@@ -139,28 +139,28 @@ class IconButton$Mate extends IconButton with WidgetMate<IconButton$Mate> {
         icon: p.get('icon').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('iconSize', init: iconSize);
-    mateParams.put('visualDensity', init: visualDensity);
-    mateParams.put('padding', init: padding);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('splashRadius', init: splashRadius);
-    mateParams.put('color', init: color);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('highlightColor', init: highlightColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('constraints', init: constraints);
-    mateParams.put('style', init: style);
-    mateParams.put('isSelected', init: isSelected);
-    mateParams.put('selectedIcon', init: selectedIcon);
-    mateParams.put('icon', init: icon);
+    mateParams.put('key', key);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('padding', padding);
+    mateParams.put('alignment', alignment);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('color', color);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('highlightColor', highlightColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('constraints', constraints);
+    mateParams.put('style', style);
+    mateParams.put('isSelected', isSelected);
+    mateParams.put('selectedIcon', selectedIcon);
+    mateParams.put('icon', icon);
   }
 }

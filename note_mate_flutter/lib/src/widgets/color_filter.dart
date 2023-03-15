@@ -31,8 +31,8 @@ class ColorFiltered$Mate extends ColorFiltered with WidgetMate<ColorFiltered$Mat
         key: p.get('key').value,
       ),
     );
-    mateParams.put('colorFilter', init: colorFilter);
-    mateParams.put('child', init: child);
-    mateParams.put('key', init: key);
+    mateParams.put('colorFilter', colorFilter);
+    mateParams.put('child', child);
+    mateParams.put('key', key);
   }
 }

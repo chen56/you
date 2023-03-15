@@ -59,14 +59,14 @@ class ModalBarrier$Mate extends ModalBarrier with WidgetMate<ModalBarrier$Mate> 
         semanticsOnTapHint: p.get('semanticsOnTapHint').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('dismissible', init: dismissible);
-    mateParams.put('onDismiss', init: onDismiss);
-    mateParams.put('semanticsLabel', init: semanticsLabel);
-    mateParams.put('barrierSemanticsDismissible', init: barrierSemanticsDismissible);
-    mateParams.put('clipDetailsNotifier', init: clipDetailsNotifier);
-    mateParams.put('semanticsOnTapHint', init: semanticsOnTapHint);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('dismissible', dismissible);
+    mateParams.put('onDismiss', onDismiss);
+    mateParams.put('semanticsLabel', semanticsLabel);
+    mateParams.put('barrierSemanticsDismissible', barrierSemanticsDismissible);
+    mateParams.put('clipDetailsNotifier', clipDetailsNotifier);
+    mateParams.put('semanticsOnTapHint', semanticsOnTapHint);
   }
 }
 
@@ -120,13 +120,13 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with WidgetMate<Ani
         semanticsOnTapHint: p.get('semanticsOnTapHint').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('dismissible', init: dismissible);
-    mateParams.put('semanticsLabel', init: semanticsLabel);
-    mateParams.put('barrierSemanticsDismissible', init: barrierSemanticsDismissible);
-    mateParams.put('onDismiss', init: onDismiss);
-    mateParams.put('clipDetailsNotifier', init: clipDetailsNotifier);
-    mateParams.put('semanticsOnTapHint', init: semanticsOnTapHint);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('dismissible', dismissible);
+    mateParams.put('semanticsLabel', semanticsLabel);
+    mateParams.put('barrierSemanticsDismissible', barrierSemanticsDismissible);
+    mateParams.put('onDismiss', onDismiss);
+    mateParams.put('clipDetailsNotifier', clipDetailsNotifier);
+    mateParams.put('semanticsOnTapHint', semanticsOnTapHint);
   }
 }

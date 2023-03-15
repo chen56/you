@@ -49,11 +49,11 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction
         trailingIcon: p.get('trailingIcon').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('isDefaultAction', init: isDefaultAction);
-    mateParams.put('isDestructiveAction', init: isDestructiveAction);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('trailingIcon', init: trailingIcon);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('isDefaultAction', isDefaultAction);
+    mateParams.put('isDestructiveAction', isDestructiveAction);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('trailingIcon', trailingIcon);
   }
 }

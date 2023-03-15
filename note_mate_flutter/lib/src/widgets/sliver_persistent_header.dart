@@ -35,9 +35,9 @@ class SliverPersistentHeader$Mate extends SliverPersistentHeader with WidgetMate
         floating: p.get('floating').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('pinned', init: pinned);
-    mateParams.put('floating', init: floating);
+    mateParams.put('key', key);
+    mateParams.put('delegate', delegate);
+    mateParams.put('pinned', pinned);
+    mateParams.put('floating', floating);
   }
 }

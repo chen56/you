@@ -24,7 +24,7 @@ class FittedSizes$Mate extends FittedSizes with Mate<FittedSizes$Mate> {
         p.get('destination').value,
       ),
     );
-    mateParams.put('source', init: source);
-    mateParams.put('destination', init: destination);
+    mateParams.put('source', source);
+    mateParams.put('destination', destination);
   }
 }

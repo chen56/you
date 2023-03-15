@@ -59,13 +59,13 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
         silent: p.get('silent').value,
       ),
     );
-    mateParams.put('exception', init: exception);
-    mateParams.put('stack', init: stack);
-    mateParams.put('library', init: library);
-    mateParams.put('context', init: context);
-    mateParams.put('event', init: event);
-    mateParams.put('hitTestEntry', init: hitTestEntry);
-    mateParams.put('informationCollector', init: informationCollector);
-    mateParams.put('silent', init: silent);
+    mateParams.put('exception', exception);
+    mateParams.put('stack', stack);
+    mateParams.put('library', library);
+    mateParams.put('context', context);
+    mateParams.put('event', event);
+    mateParams.put('hitTestEntry', hitTestEntry);
+    mateParams.put('informationCollector', informationCollector);
+    mateParams.put('silent', silent);
   }
 }

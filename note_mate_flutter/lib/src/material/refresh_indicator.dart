@@ -78,17 +78,17 @@ class RefreshIndicator$Mate extends RefreshIndicator with WidgetMate<RefreshIndi
         triggerMode: p.get('triggerMode').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('displacement', init: displacement);
-    mateParams.put('edgeOffset', init: edgeOffset);
-    mateParams.put('onRefresh', init: onRefresh);
-    mateParams.put('color', init: color);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('notificationPredicate', init: notificationPredicate);
-    mateParams.put('semanticsLabel', init: semanticsLabel);
-    mateParams.put('semanticsValue', init: semanticsValue);
-    mateParams.put('strokeWidth', init: strokeWidth);
-    mateParams.put('triggerMode', init: triggerMode);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('displacement', displacement);
+    mateParams.put('edgeOffset', edgeOffset);
+    mateParams.put('onRefresh', onRefresh);
+    mateParams.put('color', color);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('notificationPredicate', notificationPredicate);
+    mateParams.put('semanticsLabel', semanticsLabel);
+    mateParams.put('semanticsValue', semanticsValue);
+    mateParams.put('strokeWidth', strokeWidth);
+    mateParams.put('triggerMode', triggerMode);
   }
 }

@@ -61,9 +61,9 @@ class Directionality$Mate extends Directionality with WidgetMate<Directionality$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('child', child);
   }
 }
 
@@ -97,10 +97,10 @@ class Opacity$Mate extends Opacity with WidgetMate<Opacity$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('opacity', opacity);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateParams.put('child', child);
   }
 }
 
@@ -134,10 +134,10 @@ class ShaderMask$Mate extends ShaderMask with WidgetMate<ShaderMask$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('shaderCallback', init: shaderCallback);
-    mateParams.put('blendMode', init: blendMode);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('shaderCallback', shaderCallback);
+    mateParams.put('blendMode', blendMode);
+    mateParams.put('child', child);
   }
 }
 
@@ -171,10 +171,10 @@ class BackdropFilter$Mate extends BackdropFilter with WidgetMate<BackdropFilter$
         blendMode: p.get('blendMode').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('filter', init: filter);
-    mateParams.put('child', init: child);
-    mateParams.put('blendMode', init: blendMode);
+    mateParams.put('key', key);
+    mateParams.put('filter', filter);
+    mateParams.put('child', child);
+    mateParams.put('blendMode', blendMode);
   }
 }
 
@@ -223,13 +223,13 @@ class CustomPaint$Mate extends CustomPaint with WidgetMate<CustomPaint$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('painter', init: painter);
-    mateParams.put('foregroundPainter', init: foregroundPainter);
-    mateParams.put('size', init: size);
-    mateParams.put('isComplex', init: isComplex);
-    mateParams.put('willChange', init: willChange);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('painter', painter);
+    mateParams.put('foregroundPainter', foregroundPainter);
+    mateParams.put('size', size);
+    mateParams.put('isComplex', isComplex);
+    mateParams.put('willChange', willChange);
+    mateParams.put('child', child);
   }
 }
 
@@ -263,10 +263,10 @@ class ClipRect$Mate extends ClipRect with WidgetMate<ClipRect$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -305,11 +305,11 @@ class ClipRRect$Mate extends ClipRRect with WidgetMate<ClipRRect$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -343,10 +343,10 @@ class ClipOval$Mate extends ClipOval with WidgetMate<ClipOval$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -380,10 +380,10 @@ class ClipPath$Mate extends ClipPath with WidgetMate<ClipPath$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -437,14 +437,14 @@ class PhysicalModel$Mate extends PhysicalModel with WidgetMate<PhysicalModel$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('color', init: color);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('elevation', elevation);
+    mateParams.put('color', color);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('child', child);
   }
 }
 
@@ -493,13 +493,13 @@ class PhysicalShape$Mate extends PhysicalShape with WidgetMate<PhysicalShape$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('color', init: color);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('elevation', elevation);
+    mateParams.put('color', color);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('child', child);
   }
 }
 
@@ -548,13 +548,13 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('transform', init: transform);
-    mateParams.put('origin', init: origin);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('transform', transform);
+    mateParams.put('origin', origin);
+    mateParams.put('alignment', alignment);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('child', child);
   }
 
   /// Transform Transform.rotate({Key? key, required double angle, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
@@ -600,13 +600,13 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('angle', init: angle);
-    mateParams.put('origin', init: origin);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('angle', angle);
+    mateParams.put('origin', origin);
+    mateParams.put('alignment', alignment);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('child', child);
   }
 
   /// Transform Transform.translate({Key? key, required Offset offset, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
@@ -642,11 +642,11 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('offset', init: offset);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('offset', offset);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('child', child);
   }
 
   /// Transform Transform.scale({Key? key, double? scale, double? scaleX, double? scaleY, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
@@ -702,15 +702,15 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scale', init: scale);
-    mateParams.put('scaleX', init: scaleX);
-    mateParams.put('scaleY', init: scaleY);
-    mateParams.put('origin', init: origin);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('scale', scale);
+    mateParams.put('scaleX', scaleX);
+    mateParams.put('scaleY', scaleY);
+    mateParams.put('origin', origin);
+    mateParams.put('alignment', alignment);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('child', child);
   }
 
   /// Transform Transform.flip({Key? key, bool flipX = false, bool flipY = false, Offset? origin, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
@@ -756,13 +756,13 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('flipX', init: flipX);
-    mateParams.put('flipY', init: flipY);
-    mateParams.put('origin', init: origin);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('flipX', flipX);
+    mateParams.put('flipY', flipY);
+    mateParams.put('origin', origin);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('child', child);
   }
 }
 
@@ -791,9 +791,9 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Widg
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('link', init: link);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('link', link);
+    mateParams.put('child', child);
   }
 }
 
@@ -843,13 +843,13 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('link', init: link);
-    mateParams.put('showWhenUnlinked', init: showWhenUnlinked);
-    mateParams.put('offset', init: offset);
-    mateParams.put('targetAnchor', init: targetAnchor);
-    mateParams.put('followerAnchor', init: followerAnchor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('link', link);
+    mateParams.put('showWhenUnlinked', showWhenUnlinked);
+    mateParams.put('offset', offset);
+    mateParams.put('targetAnchor', targetAnchor);
+    mateParams.put('followerAnchor', followerAnchor);
+    mateParams.put('child', child);
   }
 }
 
@@ -888,11 +888,11 @@ class FittedBox$Mate extends FittedBox with WidgetMate<FittedBox$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('fit', init: fit);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('fit', fit);
+    mateParams.put('alignment', alignment);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -926,10 +926,10 @@ class FractionalTranslation$Mate extends FractionalTranslation with WidgetMate<F
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('translation', init: translation);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('translation', translation);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('child', child);
   }
 }
 
@@ -958,9 +958,9 @@ class RotatedBox$Mate extends RotatedBox with WidgetMate<RotatedBox$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('quarterTurns', init: quarterTurns);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('quarterTurns', quarterTurns);
+    mateParams.put('child', child);
   }
 }
 
@@ -989,9 +989,9 @@ class Padding$Mate extends Padding with WidgetMate<Padding$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('padding', init: padding);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('padding', padding);
+    mateParams.put('child', child);
   }
 }
 
@@ -1030,11 +1030,11 @@ class Align$Mate extends Align with WidgetMate<Align$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('widthFactor', init: widthFactor);
-    mateParams.put('heightFactor', init: heightFactor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('widthFactor', widthFactor);
+    mateParams.put('heightFactor', heightFactor);
+    mateParams.put('child', child);
   }
 }
 
@@ -1068,10 +1068,10 @@ class Center$Mate extends Center with WidgetMate<Center$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('widthFactor', init: widthFactor);
-    mateParams.put('heightFactor', init: heightFactor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('widthFactor', widthFactor);
+    mateParams.put('heightFactor', heightFactor);
+    mateParams.put('child', child);
   }
 }
 
@@ -1100,9 +1100,9 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with WidgetMa
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('delegate', delegate);
+    mateParams.put('child', child);
   }
 }
 
@@ -1131,9 +1131,9 @@ class LayoutId$Mate extends LayoutId with WidgetMate<LayoutId$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('id', init: id);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('id', id);
+    mateParams.put('child', child);
   }
 }
 
@@ -1162,9 +1162,9 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with WidgetMate
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('delegate', delegate);
+    mateParams.put('children', children);
   }
 }
 
@@ -1198,10 +1198,10 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('child', child);
   }
 
   /// SizedBox SizedBox.expand({Key? key, Widget? child})
@@ -1222,8 +1222,8 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 
   /// SizedBox SizedBox.shrink({Key? key, Widget? child})
@@ -1244,8 +1244,8 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 
   /// SizedBox SizedBox.fromSize({Key? key, Widget? child, Size? size})
@@ -1271,9 +1271,9 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
         size: p.get('size').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('size', init: size);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('size', size);
   }
 
   /// SizedBox SizedBox.square({Key? key, Widget? child, double? dimension})
@@ -1299,9 +1299,9 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
         dimension: p.get('dimension').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('dimension', init: dimension);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('dimension', dimension);
   }
 }
 
@@ -1330,9 +1330,9 @@ class ConstrainedBox$Mate extends ConstrainedBox with WidgetMate<ConstrainedBox$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('constraints', init: constraints);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('constraints', constraints);
+    mateParams.put('child', child);
   }
 }
 
@@ -1381,13 +1381,13 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with WidgetMa
         debugTransformType: p.get('debugTransformType').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('constraintsTransform', init: constraintsTransform);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('debugTransformType', init: debugTransformType);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('alignment', alignment);
+    mateParams.put('constraintsTransform', constraintsTransform);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('debugTransformType', debugTransformType);
   }
 }
 
@@ -1431,12 +1431,12 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with WidgetMate<Unconstrain
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('constrainedAxis', init: constrainedAxis);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('alignment', alignment);
+    mateParams.put('constrainedAxis', constrainedAxis);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -1475,11 +1475,11 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with WidgetMate<Fra
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('widthFactor', init: widthFactor);
-    mateParams.put('heightFactor', init: heightFactor);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('widthFactor', widthFactor);
+    mateParams.put('heightFactor', heightFactor);
+    mateParams.put('child', child);
   }
 }
 
@@ -1513,10 +1513,10 @@ class LimitedBox$Mate extends LimitedBox with WidgetMate<LimitedBox$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('maxWidth', init: maxWidth);
-    mateParams.put('maxHeight', init: maxHeight);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('maxWidth', maxWidth);
+    mateParams.put('maxHeight', maxHeight);
+    mateParams.put('child', child);
   }
 }
 
@@ -1565,13 +1565,13 @@ class OverflowBox$Mate extends OverflowBox with WidgetMate<OverflowBox$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('minWidth', init: minWidth);
-    mateParams.put('maxWidth', init: maxWidth);
-    mateParams.put('minHeight', init: minHeight);
-    mateParams.put('maxHeight', init: maxHeight);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('minWidth', minWidth);
+    mateParams.put('maxWidth', maxWidth);
+    mateParams.put('minHeight', minHeight);
+    mateParams.put('maxHeight', maxHeight);
+    mateParams.put('child', child);
   }
 }
 
@@ -1605,10 +1605,10 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with WidgetMate<SizedOverfl
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('size', init: size);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('size', size);
+    mateParams.put('alignment', alignment);
+    mateParams.put('child', child);
   }
 }
 
@@ -1637,9 +1637,9 @@ class Offstage$Mate extends Offstage with WidgetMate<Offstage$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('offstage', init: offstage);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('offstage', offstage);
+    mateParams.put('child', child);
   }
 }
 
@@ -1668,9 +1668,9 @@ class AspectRatio$Mate extends AspectRatio with WidgetMate<AspectRatio$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('aspectRatio', init: aspectRatio);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('aspectRatio', aspectRatio);
+    mateParams.put('child', child);
   }
 }
 
@@ -1704,10 +1704,10 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with WidgetMate<IntrinsicWidth$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('stepWidth', init: stepWidth);
-    mateParams.put('stepHeight', init: stepHeight);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('stepWidth', stepWidth);
+    mateParams.put('stepHeight', stepHeight);
+    mateParams.put('child', child);
   }
 }
 
@@ -1731,8 +1731,8 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with WidgetMate<IntrinsicHeig
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -1766,10 +1766,10 @@ class Baseline$Mate extends Baseline with WidgetMate<Baseline$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('baseline', init: baseline);
-    mateParams.put('baselineType', init: baselineType);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('baseline', baseline);
+    mateParams.put('baselineType', baselineType);
+    mateParams.put('child', child);
   }
 }
 
@@ -1793,8 +1793,8 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with WidgetMate<SliverT
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -1823,9 +1823,9 @@ class SliverPadding$Mate extends SliverPadding with WidgetMate<SliverPadding$Mat
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('padding', init: padding);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('key', key);
+    mateParams.put('padding', padding);
+    mateParams.put('sliver', sliver);
   }
 }
 
@@ -1859,10 +1859,10 @@ class ListBody$Mate extends ListBody with WidgetMate<ListBody$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('mainAxis', init: mainAxis);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('mainAxis', mainAxis);
+    mateParams.put('reverse', reverse);
+    mateParams.put('children', children);
   }
 }
 
@@ -1906,12 +1906,12 @@ class Stack$Mate extends Stack with WidgetMate<Stack$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('fit', init: fit);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('fit', fit);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('children', children);
   }
 }
 
@@ -1960,13 +1960,13 @@ class IndexedStack$Mate extends IndexedStack with WidgetMate<IndexedStack$Mate> 
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('sizing', init: sizing);
-    mateParams.put('index', init: index);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('sizing', sizing);
+    mateParams.put('index', index);
+    mateParams.put('children', children);
   }
 }
 
@@ -2020,14 +2020,14 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('left', init: left);
-    mateParams.put('top', init: top);
-    mateParams.put('right', init: right);
-    mateParams.put('bottom', init: bottom);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('left', left);
+    mateParams.put('top', top);
+    mateParams.put('right', right);
+    mateParams.put('bottom', bottom);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('child', child);
   }
 
   /// Positioned Positioned.fromRect({Key? key, required Rect rect, required Widget child})
@@ -2053,9 +2053,9 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('rect', init: rect);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('rect', rect);
+    mateParams.put('child', child);
   }
 
   /// Positioned Positioned.fromRelativeRect({Key? key, required RelativeRect rect, required Widget child})
@@ -2081,9 +2081,9 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('rect', init: rect);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('rect', rect);
+    mateParams.put('child', child);
   }
 
   /// Positioned Positioned.fill({Key? key, double? left = 0.0, double? top = 0.0, double? right = 0.0, double? bottom = 0.0, required Widget child})
@@ -2124,12 +2124,12 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('left', init: left);
-    mateParams.put('top', init: top);
-    mateParams.put('right', init: right);
-    mateParams.put('bottom', init: bottom);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('left', left);
+    mateParams.put('top', top);
+    mateParams.put('right', right);
+    mateParams.put('bottom', bottom);
+    mateParams.put('child', child);
   }
 }
 
@@ -2183,14 +2183,14 @@ class PositionedDirectional$Mate extends PositionedDirectional with WidgetMate<P
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('start', init: start);
-    mateParams.put('top', init: top);
-    mateParams.put('end', init: end);
-    mateParams.put('bottom', init: bottom);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('start', start);
+    mateParams.put('top', top);
+    mateParams.put('end', end);
+    mateParams.put('bottom', bottom);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('child', child);
   }
 }
 
@@ -2254,16 +2254,16 @@ class Flex$Mate extends Flex with WidgetMate<Flex$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('direction', init: direction);
-    mateParams.put('mainAxisAlignment', init: mainAxisAlignment);
-    mateParams.put('mainAxisSize', init: mainAxisSize);
-    mateParams.put('crossAxisAlignment', init: crossAxisAlignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('verticalDirection', init: verticalDirection);
-    mateParams.put('textBaseline', init: textBaseline);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('direction', direction);
+    mateParams.put('mainAxisAlignment', mainAxisAlignment);
+    mateParams.put('mainAxisSize', mainAxisSize);
+    mateParams.put('crossAxisAlignment', crossAxisAlignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('verticalDirection', verticalDirection);
+    mateParams.put('textBaseline', textBaseline);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('children', children);
   }
 }
 
@@ -2317,14 +2317,14 @@ class Row$Mate extends Row with WidgetMate<Row$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('mainAxisAlignment', init: mainAxisAlignment);
-    mateParams.put('mainAxisSize', init: mainAxisSize);
-    mateParams.put('crossAxisAlignment', init: crossAxisAlignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('verticalDirection', init: verticalDirection);
-    mateParams.put('textBaseline', init: textBaseline);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('mainAxisAlignment', mainAxisAlignment);
+    mateParams.put('mainAxisSize', mainAxisSize);
+    mateParams.put('crossAxisAlignment', crossAxisAlignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('verticalDirection', verticalDirection);
+    mateParams.put('textBaseline', textBaseline);
+    mateParams.put('children', children);
   }
 }
 
@@ -2378,14 +2378,14 @@ class Column$Mate extends Column with WidgetMate<Column$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('mainAxisAlignment', init: mainAxisAlignment);
-    mateParams.put('mainAxisSize', init: mainAxisSize);
-    mateParams.put('crossAxisAlignment', init: crossAxisAlignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('verticalDirection', init: verticalDirection);
-    mateParams.put('textBaseline', init: textBaseline);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('mainAxisAlignment', mainAxisAlignment);
+    mateParams.put('mainAxisSize', mainAxisSize);
+    mateParams.put('crossAxisAlignment', crossAxisAlignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('verticalDirection', verticalDirection);
+    mateParams.put('textBaseline', textBaseline);
+    mateParams.put('children', children);
   }
 }
 
@@ -2419,10 +2419,10 @@ class Flexible$Mate extends Flexible with WidgetMate<Flexible$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('flex', init: flex);
-    mateParams.put('fit', init: fit);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('flex', flex);
+    mateParams.put('fit', fit);
+    mateParams.put('child', child);
   }
 }
 
@@ -2451,9 +2451,9 @@ class Expanded$Mate extends Expanded with WidgetMate<Expanded$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('flex', init: flex);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('flex', flex);
+    mateParams.put('child', child);
   }
 }
 
@@ -2522,17 +2522,17 @@ class Wrap$Mate extends Wrap with WidgetMate<Wrap$Mate> {
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('direction', init: direction);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('spacing', init: spacing);
-    mateParams.put('runAlignment', init: runAlignment);
-    mateParams.put('runSpacing', init: runSpacing);
-    mateParams.put('crossAxisAlignment', init: crossAxisAlignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('verticalDirection', init: verticalDirection);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('direction', direction);
+    mateParams.put('alignment', alignment);
+    mateParams.put('spacing', spacing);
+    mateParams.put('runAlignment', runAlignment);
+    mateParams.put('runSpacing', runSpacing);
+    mateParams.put('crossAxisAlignment', crossAxisAlignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('verticalDirection', verticalDirection);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('children', children);
   }
 }
 
@@ -2566,10 +2566,10 @@ class Flow$Mate extends Flow with WidgetMate<Flow$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('children', init: children);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('delegate', delegate);
+    mateParams.put('children', children);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 
   /// Flow Flow.unwrapped({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
@@ -2600,10 +2600,10 @@ class Flow$Mate extends Flow with WidgetMate<Flow$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('children', init: children);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('delegate', delegate);
+    mateParams.put('children', children);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -2687,20 +2687,20 @@ class RichText$Mate extends RichText with WidgetMate<RichText$Mate> {
         selectionColor: p.get('selectionColor').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('text', init: text);
-    mateParams.put('textAlign', init: textAlign);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('softWrap', init: softWrap);
-    mateParams.put('overflow', init: overflow);
-    mateParams.put('textScaleFactor', init: textScaleFactor);
-    mateParams.put('maxLines', init: maxLines);
-    mateParams.put('locale', init: locale);
-    mateParams.put('strutStyle', init: strutStyle);
-    mateParams.put('textWidthBasis', init: textWidthBasis);
-    mateParams.put('textHeightBehavior', init: textHeightBehavior);
-    mateParams.put('selectionRegistrar', init: selectionRegistrar);
-    mateParams.put('selectionColor', init: selectionColor);
+    mateParams.put('key', key);
+    mateParams.put('text', text);
+    mateParams.put('textAlign', textAlign);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('softWrap', softWrap);
+    mateParams.put('overflow', overflow);
+    mateParams.put('textScaleFactor', textScaleFactor);
+    mateParams.put('maxLines', maxLines);
+    mateParams.put('locale', locale);
+    mateParams.put('strutStyle', strutStyle);
+    mateParams.put('textWidthBasis', textWidthBasis);
+    mateParams.put('textHeightBehavior', textHeightBehavior);
+    mateParams.put('selectionRegistrar', selectionRegistrar);
+    mateParams.put('selectionColor', selectionColor);
   }
 }
 
@@ -2799,23 +2799,23 @@ class RawImage$Mate extends RawImage with WidgetMate<RawImage$Mate> {
         isAntiAlias: p.get('isAntiAlias').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('image', init: image);
-    mateParams.put('debugImageLabel', init: debugImageLabel);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('scale', init: scale);
-    mateParams.put('color', init: color);
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('colorBlendMode', init: colorBlendMode);
-    mateParams.put('fit', init: fit);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('repeat', init: repeat);
-    mateParams.put('centerSlice', init: centerSlice);
-    mateParams.put('matchTextDirection', init: matchTextDirection);
-    mateParams.put('invertColors', init: invertColors);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('isAntiAlias', init: isAntiAlias);
+    mateParams.put('key', key);
+    mateParams.put('image', image);
+    mateParams.put('debugImageLabel', debugImageLabel);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('scale', scale);
+    mateParams.put('color', color);
+    mateParams.put('opacity', opacity);
+    mateParams.put('colorBlendMode', colorBlendMode);
+    mateParams.put('fit', fit);
+    mateParams.put('alignment', alignment);
+    mateParams.put('repeat', repeat);
+    mateParams.put('centerSlice', centerSlice);
+    mateParams.put('matchTextDirection', matchTextDirection);
+    mateParams.put('invertColors', invertColors);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('isAntiAlias', isAntiAlias);
   }
 }
 
@@ -2844,9 +2844,9 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with WidgetMate<Default
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('bundle', init: bundle);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('bundle', bundle);
+    mateParams.put('child', child);
   }
 }
 
@@ -2875,9 +2875,9 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Widget
         onUnmount: p.get('onUnmount').value,
       ),
     );
-    mateParams.put('renderBox', init: renderBox);
-    mateParams.put('onBuild', init: onBuild);
-    mateParams.put('onUnmount', init: onUnmount);
+    mateParams.put('renderBox', renderBox);
+    mateParams.put('onBuild', onBuild);
+    mateParams.put('onUnmount', onUnmount);
   }
 }
 
@@ -2951,18 +2951,18 @@ class Listener$Mate extends Listener with WidgetMate<Listener$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPointerDown', init: onPointerDown);
-    mateParams.put('onPointerMove', init: onPointerMove);
-    mateParams.put('onPointerUp', init: onPointerUp);
-    mateParams.put('onPointerHover', init: onPointerHover);
-    mateParams.put('onPointerCancel', init: onPointerCancel);
-    mateParams.put('onPointerPanZoomStart', init: onPointerPanZoomStart);
-    mateParams.put('onPointerPanZoomUpdate', init: onPointerPanZoomUpdate);
-    mateParams.put('onPointerPanZoomEnd', init: onPointerPanZoomEnd);
-    mateParams.put('onPointerSignal', init: onPointerSignal);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onPointerDown', onPointerDown);
+    mateParams.put('onPointerMove', onPointerMove);
+    mateParams.put('onPointerUp', onPointerUp);
+    mateParams.put('onPointerHover', onPointerHover);
+    mateParams.put('onPointerCancel', onPointerCancel);
+    mateParams.put('onPointerPanZoomStart', onPointerPanZoomStart);
+    mateParams.put('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
+    mateParams.put('onPointerPanZoomEnd', onPointerPanZoomEnd);
+    mateParams.put('onPointerSignal', onPointerSignal);
+    mateParams.put('behavior', behavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -3016,14 +3016,14 @@ class MouseRegion$Mate extends MouseRegion with WidgetMate<MouseRegion$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onEnter', init: onEnter);
-    mateParams.put('onExit', init: onExit);
-    mateParams.put('onHover', init: onHover);
-    mateParams.put('cursor', init: cursor);
-    mateParams.put('opaque', init: opaque);
-    mateParams.put('hitTestBehavior', init: hitTestBehavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onEnter', onEnter);
+    mateParams.put('onExit', onExit);
+    mateParams.put('onHover', onHover);
+    mateParams.put('cursor', cursor);
+    mateParams.put('opaque', opaque);
+    mateParams.put('hitTestBehavior', hitTestBehavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -3047,8 +3047,8 @@ class RepaintBoundary$Mate extends RepaintBoundary with WidgetMate<RepaintBounda
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -3082,10 +3082,10 @@ class IgnorePointer$Mate extends IgnorePointer with WidgetMate<IgnorePointer$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('ignoring', init: ignoring);
-    mateParams.put('ignoringSemantics', init: ignoringSemantics);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('ignoring', ignoring);
+    mateParams.put('ignoringSemantics', ignoringSemantics);
+    mateParams.put('child', child);
   }
 }
 
@@ -3119,10 +3119,10 @@ class AbsorbPointer$Mate extends AbsorbPointer with WidgetMate<AbsorbPointer$Mat
         ignoringSemantics: p.get('ignoringSemantics').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('absorbing', init: absorbing);
-    mateParams.put('child', init: child);
-    mateParams.put('ignoringSemantics', init: ignoringSemantics);
+    mateParams.put('key', key);
+    mateParams.put('absorbing', absorbing);
+    mateParams.put('child', child);
+    mateParams.put('ignoringSemantics', ignoringSemantics);
   }
 }
 
@@ -3156,10 +3156,10 @@ class MetaData$Mate extends MetaData with WidgetMate<MetaData$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('metaData', init: metaData);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('metaData', metaData);
+    mateParams.put('behavior', behavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -3493,70 +3493,70 @@ class Semantics$Mate extends Semantics with WidgetMate<Semantics$Mate> {
         customSemanticsActions: p.get('customSemanticsActions').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('container', init: container);
-    mateParams.put('explicitChildNodes', init: explicitChildNodes);
-    mateParams.put('excludeSemantics', init: excludeSemantics);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('checked', init: checked);
-    mateParams.put('mixed', init: mixed);
-    mateParams.put('selected', init: selected);
-    mateParams.put('toggled', init: toggled);
-    mateParams.put('button', init: button);
-    mateParams.put('slider', init: slider);
-    mateParams.put('keyboardKey', init: keyboardKey);
-    mateParams.put('link', init: link);
-    mateParams.put('header', init: header);
-    mateParams.put('textField', init: textField);
-    mateParams.put('readOnly', init: readOnly);
-    mateParams.put('focusable', init: focusable);
-    mateParams.put('focused', init: focused);
-    mateParams.put('inMutuallyExclusiveGroup', init: inMutuallyExclusiveGroup);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('multiline', init: multiline);
-    mateParams.put('scopesRoute', init: scopesRoute);
-    mateParams.put('namesRoute', init: namesRoute);
-    mateParams.put('hidden', init: hidden);
-    mateParams.put('image', init: image);
-    mateParams.put('liveRegion', init: liveRegion);
-    mateParams.put('maxValueLength', init: maxValueLength);
-    mateParams.put('currentValueLength', init: currentValueLength);
-    mateParams.put('label', init: label);
-    mateParams.put('attributedLabel', init: attributedLabel);
-    mateParams.put('value', init: value);
-    mateParams.put('attributedValue', init: attributedValue);
-    mateParams.put('increasedValue', init: increasedValue);
-    mateParams.put('attributedIncreasedValue', init: attributedIncreasedValue);
-    mateParams.put('decreasedValue', init: decreasedValue);
-    mateParams.put('attributedDecreasedValue', init: attributedDecreasedValue);
-    mateParams.put('hint', init: hint);
-    mateParams.put('attributedHint', init: attributedHint);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('onTapHint', init: onTapHint);
-    mateParams.put('onLongPressHint', init: onLongPressHint);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('sortKey', init: sortKey);
-    mateParams.put('tagForChildren', init: tagForChildren);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('onScrollLeft', init: onScrollLeft);
-    mateParams.put('onScrollRight', init: onScrollRight);
-    mateParams.put('onScrollUp', init: onScrollUp);
-    mateParams.put('onScrollDown', init: onScrollDown);
-    mateParams.put('onIncrease', init: onIncrease);
-    mateParams.put('onDecrease', init: onDecrease);
-    mateParams.put('onCopy', init: onCopy);
-    mateParams.put('onCut', init: onCut);
-    mateParams.put('onPaste', init: onPaste);
-    mateParams.put('onDismiss', init: onDismiss);
-    mateParams.put('onMoveCursorForwardByCharacter', init: onMoveCursorForwardByCharacter);
-    mateParams.put('onMoveCursorBackwardByCharacter', init: onMoveCursorBackwardByCharacter);
-    mateParams.put('onSetSelection', init: onSetSelection);
-    mateParams.put('onSetText', init: onSetText);
-    mateParams.put('onDidGainAccessibilityFocus', init: onDidGainAccessibilityFocus);
-    mateParams.put('onDidLoseAccessibilityFocus', init: onDidLoseAccessibilityFocus);
-    mateParams.put('customSemanticsActions', init: customSemanticsActions);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('container', container);
+    mateParams.put('explicitChildNodes', explicitChildNodes);
+    mateParams.put('excludeSemantics', excludeSemantics);
+    mateParams.put('enabled', enabled);
+    mateParams.put('checked', checked);
+    mateParams.put('mixed', mixed);
+    mateParams.put('selected', selected);
+    mateParams.put('toggled', toggled);
+    mateParams.put('button', button);
+    mateParams.put('slider', slider);
+    mateParams.put('keyboardKey', keyboardKey);
+    mateParams.put('link', link);
+    mateParams.put('header', header);
+    mateParams.put('textField', textField);
+    mateParams.put('readOnly', readOnly);
+    mateParams.put('focusable', focusable);
+    mateParams.put('focused', focused);
+    mateParams.put('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
+    mateParams.put('obscured', obscured);
+    mateParams.put('multiline', multiline);
+    mateParams.put('scopesRoute', scopesRoute);
+    mateParams.put('namesRoute', namesRoute);
+    mateParams.put('hidden', hidden);
+    mateParams.put('image', image);
+    mateParams.put('liveRegion', liveRegion);
+    mateParams.put('maxValueLength', maxValueLength);
+    mateParams.put('currentValueLength', currentValueLength);
+    mateParams.put('label', label);
+    mateParams.put('attributedLabel', attributedLabel);
+    mateParams.put('value', value);
+    mateParams.put('attributedValue', attributedValue);
+    mateParams.put('increasedValue', increasedValue);
+    mateParams.put('attributedIncreasedValue', attributedIncreasedValue);
+    mateParams.put('decreasedValue', decreasedValue);
+    mateParams.put('attributedDecreasedValue', attributedDecreasedValue);
+    mateParams.put('hint', hint);
+    mateParams.put('attributedHint', attributedHint);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('onTapHint', onTapHint);
+    mateParams.put('onLongPressHint', onLongPressHint);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('sortKey', sortKey);
+    mateParams.put('tagForChildren', tagForChildren);
+    mateParams.put('onTap', onTap);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('onScrollLeft', onScrollLeft);
+    mateParams.put('onScrollRight', onScrollRight);
+    mateParams.put('onScrollUp', onScrollUp);
+    mateParams.put('onScrollDown', onScrollDown);
+    mateParams.put('onIncrease', onIncrease);
+    mateParams.put('onDecrease', onDecrease);
+    mateParams.put('onCopy', onCopy);
+    mateParams.put('onCut', onCut);
+    mateParams.put('onPaste', onPaste);
+    mateParams.put('onDismiss', onDismiss);
+    mateParams.put('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
+    mateParams.put('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
+    mateParams.put('onSetSelection', onSetSelection);
+    mateParams.put('onSetText', onSetText);
+    mateParams.put('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
+    mateParams.put('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
+    mateParams.put('customSemanticsActions', customSemanticsActions);
   }
 
   /// Semantics Semantics.fromProperties({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, required SemanticsProperties properties})
@@ -3597,12 +3597,12 @@ class Semantics$Mate extends Semantics with WidgetMate<Semantics$Mate> {
         properties: p.get('properties').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('container', init: container);
-    mateParams.put('explicitChildNodes', init: explicitChildNodes);
-    mateParams.put('excludeSemantics', init: excludeSemantics);
-    mateParams.put('properties', init: properties);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('container', container);
+    mateParams.put('explicitChildNodes', explicitChildNodes);
+    mateParams.put('excludeSemantics', excludeSemantics);
+    mateParams.put('properties', properties);
   }
 }
 
@@ -3626,8 +3626,8 @@ class MergeSemantics$Mate extends MergeSemantics with WidgetMate<MergeSemantics$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -3656,9 +3656,9 @@ class BlockSemantics$Mate extends BlockSemantics with WidgetMate<BlockSemantics$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('blocking', init: blocking);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('blocking', blocking);
+    mateParams.put('child', child);
   }
 }
 
@@ -3687,9 +3687,9 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with WidgetMate<ExcludeSema
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('excluding', init: excluding);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('excluding', excluding);
+    mateParams.put('child', child);
   }
 }
 
@@ -3718,9 +3718,9 @@ class IndexedSemantics$Mate extends IndexedSemantics with WidgetMate<IndexedSema
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('index', init: index);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('index', index);
+    mateParams.put('child', child);
   }
 }
 
@@ -3744,8 +3744,8 @@ class KeyedSubtree$Mate extends KeyedSubtree with WidgetMate<KeyedSubtree$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -3769,8 +3769,8 @@ class Builder$Mate extends Builder with WidgetMate<Builder$Mate> {
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('builder', init: builder);
+    mateParams.put('key', key);
+    mateParams.put('builder', builder);
   }
 }
 
@@ -3794,8 +3794,8 @@ class StatefulBuilder$Mate extends StatefulBuilder with WidgetMate<StatefulBuild
         builder: p.get('builder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('builder', init: builder);
+    mateParams.put('key', key);
+    mateParams.put('builder', builder);
   }
 }
 
@@ -3824,8 +3824,8 @@ class ColoredBox$Mate extends ColoredBox with WidgetMate<ColoredBox$Mate> {
         key: p.get('key').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('child', init: child);
-    mateParams.put('key', init: key);
+    mateParams.put('color', color);
+    mateParams.put('child', child);
+    mateParams.put('key', key);
   }
 }

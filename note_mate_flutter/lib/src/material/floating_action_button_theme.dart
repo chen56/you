@@ -127,26 +127,26 @@ class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData
         mouseCursor: p.get('mouseCursor').value,
       ),
     );
-    mateParams.put('foregroundColor', init: foregroundColor);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('focusElevation', init: focusElevation);
-    mateParams.put('hoverElevation', init: hoverElevation);
-    mateParams.put('disabledElevation', init: disabledElevation);
-    mateParams.put('highlightElevation', init: highlightElevation);
-    mateParams.put('shape', init: shape);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('iconSize', init: iconSize);
-    mateParams.put('sizeConstraints', init: sizeConstraints);
-    mateParams.put('smallSizeConstraints', init: smallSizeConstraints);
-    mateParams.put('largeSizeConstraints', init: largeSizeConstraints);
-    mateParams.put('extendedSizeConstraints', init: extendedSizeConstraints);
-    mateParams.put('extendedIconLabelSpacing', init: extendedIconLabelSpacing);
-    mateParams.put('extendedPadding', init: extendedPadding);
-    mateParams.put('extendedTextStyle', init: extendedTextStyle);
-    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('foregroundColor', foregroundColor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('focusElevation', focusElevation);
+    mateParams.put('hoverElevation', hoverElevation);
+    mateParams.put('disabledElevation', disabledElevation);
+    mateParams.put('highlightElevation', highlightElevation);
+    mateParams.put('shape', shape);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('sizeConstraints', sizeConstraints);
+    mateParams.put('smallSizeConstraints', smallSizeConstraints);
+    mateParams.put('largeSizeConstraints', largeSizeConstraints);
+    mateParams.put('extendedSizeConstraints', extendedSizeConstraints);
+    mateParams.put('extendedIconLabelSpacing', extendedIconLabelSpacing);
+    mateParams.put('extendedPadding', extendedPadding);
+    mateParams.put('extendedTextStyle', extendedTextStyle);
+    mateParams.put('mouseCursor', mouseCursor);
   }
 }

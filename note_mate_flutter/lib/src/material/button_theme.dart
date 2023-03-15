@@ -106,23 +106,23 @@ class ButtonTheme$Mate extends ButtonTheme with WidgetMate<ButtonTheme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('textTheme', init: textTheme);
-    mateParams.put('layoutBehavior', init: layoutBehavior);
-    mateParams.put('minWidth', init: minWidth);
-    mateParams.put('height', init: height);
-    mateParams.put('padding', init: padding);
-    mateParams.put('shape', init: shape);
-    mateParams.put('alignedDropdown', init: alignedDropdown);
-    mateParams.put('buttonColor', init: buttonColor);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('highlightColor', init: highlightColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('colorScheme', init: colorScheme);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('textTheme', textTheme);
+    mateParams.put('layoutBehavior', layoutBehavior);
+    mateParams.put('minWidth', minWidth);
+    mateParams.put('height', height);
+    mateParams.put('padding', padding);
+    mateParams.put('shape', shape);
+    mateParams.put('alignedDropdown', alignedDropdown);
+    mateParams.put('buttonColor', buttonColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('highlightColor', highlightColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('colorScheme', colorScheme);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('child', child);
   }
 
   /// ButtonTheme ButtonTheme.fromButtonThemeData({Key? key, required ButtonThemeData data, required Widget child})
@@ -148,9 +148,9 @@ class ButtonTheme$Mate extends ButtonTheme with WidgetMate<ButtonTheme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }
 
@@ -239,20 +239,20 @@ class ButtonThemeData$Mate extends ButtonThemeData with Mate<ButtonThemeData$Mat
         materialTapTargetSize: p.get('materialTapTargetSize').value,
       ),
     );
-    mateParams.put('textTheme', init: textTheme);
-    mateParams.put('minWidth', init: minWidth);
-    mateParams.put('height', init: height);
-    mateParams.put('padding', init: padding);
-    mateParams.put('shape', init: shape);
-    mateParams.put('layoutBehavior', init: layoutBehavior);
-    mateParams.put('alignedDropdown', init: alignedDropdown);
-    mateParams.put('buttonColor', init: buttonColor);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('hoverColor', init: hoverColor);
-    mateParams.put('highlightColor', init: highlightColor);
-    mateParams.put('splashColor', init: splashColor);
-    mateParams.put('colorScheme', init: colorScheme);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('textTheme', textTheme);
+    mateParams.put('minWidth', minWidth);
+    mateParams.put('height', height);
+    mateParams.put('padding', padding);
+    mateParams.put('shape', shape);
+    mateParams.put('layoutBehavior', layoutBehavior);
+    mateParams.put('alignedDropdown', alignedDropdown);
+    mateParams.put('buttonColor', buttonColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('highlightColor', highlightColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('colorScheme', colorScheme);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
   }
 }

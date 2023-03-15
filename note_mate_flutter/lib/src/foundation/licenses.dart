@@ -24,8 +24,8 @@ class LicenseParagraph$Mate extends LicenseParagraph with Mate<LicenseParagraph$
         p.get('indent').value,
       ),
     );
-    mateParams.put('text', init: text);
-    mateParams.put('indent', init: indent);
+    mateParams.put('text', text);
+    mateParams.put('indent', indent);
   }
 }
 
@@ -49,7 +49,7 @@ class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks with Ma
         p.get('text').value,
       ),
     );
-    mateParams.put('packages', init: packages);
-    mateParams.put('text', init: text);
+    mateParams.put('packages', packages);
+    mateParams.put('text', text);
   }
 }

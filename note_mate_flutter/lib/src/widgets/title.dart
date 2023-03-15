@@ -37,9 +37,9 @@ class Title$Mate extends Title with WidgetMate<Title$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('title', init: title);
-    mateParams.put('color', init: color);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('title', title);
+    mateParams.put('color', color);
+    mateParams.put('child', child);
   }
 }

@@ -25,7 +25,7 @@ class View$Mate extends View with WidgetMate<View$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('view', init: view);
-    mateParams.put('child', init: child);
+    mateParams.put('view', view);
+    mateParams.put('child', child);
   }
 }

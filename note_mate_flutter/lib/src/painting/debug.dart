@@ -30,8 +30,8 @@ class ImageSizeInfo$Mate extends ImageSizeInfo with Mate<ImageSizeInfo$Mate> {
         imageSize: p.get('imageSize').value,
       ),
     );
-    mateParams.put('source', init: source);
-    mateParams.put('displaySize', init: displaySize);
-    mateParams.put('imageSize', init: imageSize);
+    mateParams.put('source', source);
+    mateParams.put('displaySize', displaySize);
+    mateParams.put('imageSize', imageSize);
   }
 }

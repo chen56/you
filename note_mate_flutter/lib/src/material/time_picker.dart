@@ -77,17 +77,17 @@ class TimePickerDialog$Mate extends TimePickerDialog with WidgetMate<TimePickerD
         onEntryModeChanged: p.get('onEntryModeChanged').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('initialTime', init: initialTime);
-    mateParams.put('cancelText', init: cancelText);
-    mateParams.put('confirmText', init: confirmText);
-    mateParams.put('helpText', init: helpText);
-    mateParams.put('errorInvalidText', init: errorInvalidText);
-    mateParams.put('hourLabelText', init: hourLabelText);
-    mateParams.put('minuteLabelText', init: minuteLabelText);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('initialEntryMode', init: initialEntryMode);
-    mateParams.put('orientation', init: orientation);
-    mateParams.put('onEntryModeChanged', init: onEntryModeChanged);
+    mateParams.put('key', key);
+    mateParams.put('initialTime', initialTime);
+    mateParams.put('cancelText', cancelText);
+    mateParams.put('confirmText', confirmText);
+    mateParams.put('helpText', helpText);
+    mateParams.put('errorInvalidText', errorInvalidText);
+    mateParams.put('hourLabelText', hourLabelText);
+    mateParams.put('minuteLabelText', minuteLabelText);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('initialEntryMode', initialEntryMode);
+    mateParams.put('orientation', orientation);
+    mateParams.put('onEntryModeChanged', onEntryModeChanged);
   }
 }

@@ -29,8 +29,8 @@ class Tolerance$Mate extends Tolerance with Mate<Tolerance$Mate> {
         velocity: p.get('velocity').value,
       ),
     );
-    mateParams.put('distance', init: distance);
-    mateParams.put('time', init: time);
-    mateParams.put('velocity', init: velocity);
+    mateParams.put('distance', distance);
+    mateParams.put('time', time);
+    mateParams.put('velocity', velocity);
   }
 }

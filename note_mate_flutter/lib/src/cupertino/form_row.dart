@@ -46,11 +46,11 @@ class CupertinoFormRow$Mate extends CupertinoFormRow with WidgetMate<CupertinoFo
         error: p.get('error').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('prefix', init: prefix);
-    mateParams.put('padding', init: padding);
-    mateParams.put('helper', init: helper);
-    mateParams.put('error', init: error);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('prefix', prefix);
+    mateParams.put('padding', padding);
+    mateParams.put('helper', helper);
+    mateParams.put('error', error);
   }
 }

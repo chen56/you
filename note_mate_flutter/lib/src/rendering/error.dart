@@ -16,6 +16,6 @@ class RenderErrorBox$Mate extends RenderErrorBox with Mate<RenderErrorBox$Mate> 
       init: this,
       builder: (p) => RenderErrorBox$Mate(p.get('message').value),
     );
-    mateParams.put('message', init: message);
+    mateParams.put('message', message);
   }
 }

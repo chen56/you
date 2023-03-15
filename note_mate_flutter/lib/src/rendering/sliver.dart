@@ -78,18 +78,18 @@ class SliverConstraints$Mate extends SliverConstraints with Mate<SliverConstrain
         cacheOrigin: p.get('cacheOrigin').value,
       ),
     );
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('growthDirection', init: growthDirection);
-    mateParams.put('userScrollDirection', init: userScrollDirection);
-    mateParams.put('scrollOffset', init: scrollOffset);
-    mateParams.put('precedingScrollExtent', init: precedingScrollExtent);
-    mateParams.put('overlap', init: overlap);
-    mateParams.put('remainingPaintExtent', init: remainingPaintExtent);
-    mateParams.put('crossAxisExtent', init: crossAxisExtent);
-    mateParams.put('crossAxisDirection', init: crossAxisDirection);
-    mateParams.put('viewportMainAxisExtent', init: viewportMainAxisExtent);
-    mateParams.put('remainingCacheExtent', init: remainingCacheExtent);
-    mateParams.put('cacheOrigin', init: cacheOrigin);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('growthDirection', growthDirection);
+    mateParams.put('userScrollDirection', userScrollDirection);
+    mateParams.put('scrollOffset', scrollOffset);
+    mateParams.put('precedingScrollExtent', precedingScrollExtent);
+    mateParams.put('overlap', overlap);
+    mateParams.put('remainingPaintExtent', remainingPaintExtent);
+    mateParams.put('crossAxisExtent', crossAxisExtent);
+    mateParams.put('crossAxisDirection', crossAxisDirection);
+    mateParams.put('viewportMainAxisExtent', viewportMainAxisExtent);
+    mateParams.put('remainingCacheExtent', remainingCacheExtent);
+    mateParams.put('cacheOrigin', cacheOrigin);
   }
 }
 
@@ -158,17 +158,17 @@ class SliverGeometry$Mate extends SliverGeometry with Mate<SliverGeometry$Mate> 
         cacheExtent: p.get('cacheExtent').value,
       ),
     );
-    mateParams.put('scrollExtent', init: scrollExtent);
-    mateParams.put('paintExtent', init: paintExtent);
-    mateParams.put('paintOrigin', init: paintOrigin);
-    mateParams.put('layoutExtent', init: layoutExtent);
-    mateParams.put('maxPaintExtent', init: maxPaintExtent);
-    mateParams.put('maxScrollObstructionExtent', init: maxScrollObstructionExtent);
-    mateParams.put('hitTestExtent', init: hitTestExtent);
-    mateParams.put('visible', init: visible);
-    mateParams.put('hasVisualOverflow', init: hasVisualOverflow);
-    mateParams.put('scrollOffsetCorrection', init: scrollOffsetCorrection);
-    mateParams.put('cacheExtent', init: cacheExtent);
+    mateParams.put('scrollExtent', scrollExtent);
+    mateParams.put('paintExtent', paintExtent);
+    mateParams.put('paintOrigin', paintOrigin);
+    mateParams.put('layoutExtent', layoutExtent);
+    mateParams.put('maxPaintExtent', maxPaintExtent);
+    mateParams.put('maxScrollObstructionExtent', maxScrollObstructionExtent);
+    mateParams.put('hitTestExtent', hitTestExtent);
+    mateParams.put('visible', visible);
+    mateParams.put('hasVisualOverflow', hasVisualOverflow);
+    mateParams.put('scrollOffsetCorrection', scrollOffsetCorrection);
+    mateParams.put('cacheExtent', cacheExtent);
   }
 }
 
@@ -184,7 +184,7 @@ class SliverHitTestResult$Mate extends SliverHitTestResult with Mate<SliverHitTe
       init: this,
       builder: (p) => SliverHitTestResult$Mate.wrap(p.get('result').value),
     );
-    mateParams.put('result', init: result);
+    mateParams.put('result', result);
   }
 }
 
@@ -212,9 +212,9 @@ class SliverHitTestEntry$Mate extends SliverHitTestEntry with Mate<SliverHitTest
         crossAxisPosition: p.get('crossAxisPosition').value,
       ),
     );
-    mateParams.put('target', init: target);
-    mateParams.put('mainAxisPosition', init: mainAxisPosition);
-    mateParams.put('crossAxisPosition', init: crossAxisPosition);
+    mateParams.put('target', target);
+    mateParams.put('mainAxisPosition', mainAxisPosition);
+    mateParams.put('crossAxisPosition', crossAxisPosition);
   }
 }
 
@@ -230,6 +230,6 @@ class RenderSliverToBoxAdapter$Mate extends RenderSliverToBoxAdapter with Mate<R
       init: this,
       builder: (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').value),
     );
-    mateParams.put('child', init: child);
+    mateParams.put('child', child);
   }
 }

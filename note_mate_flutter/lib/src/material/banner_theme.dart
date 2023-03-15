@@ -59,14 +59,14 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate<Mat
         leadingPadding: p.get('leadingPadding').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('dividerColor', init: dividerColor);
-    mateParams.put('contentTextStyle', init: contentTextStyle);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('padding', init: padding);
-    mateParams.put('leadingPadding', init: leadingPadding);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('dividerColor', dividerColor);
+    mateParams.put('contentTextStyle', contentTextStyle);
+    mateParams.put('elevation', elevation);
+    mateParams.put('padding', padding);
+    mateParams.put('leadingPadding', leadingPadding);
   }
 }
 
@@ -95,8 +95,8 @@ class MaterialBannerTheme$Mate extends MaterialBannerTheme with WidgetMate<Mater
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

@@ -23,7 +23,7 @@ class PlaceholderSpanIndexSemanticsTag$Mate extends PlaceholderSpanIndexSemantic
       init: this,
       builder: (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value),
     );
-    mateParams.put('index', init: index);
+    mateParams.put('index', index);
   }
 }
 
@@ -106,19 +106,19 @@ class RenderParagraph$Mate extends RenderParagraph with Mate<RenderParagraph$Mat
         registrar: p.get('registrar').value,
       ),
     );
-    mateParams.put('text', init: text);
-    mateParams.put('textAlign', init: textAlign);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('softWrap', init: softWrap);
-    mateParams.put('overflow', init: overflow);
-    mateParams.put('textScaleFactor', init: textScaleFactor);
-    mateParams.put('maxLines', init: maxLines);
-    mateParams.put('locale', init: locale);
-    mateParams.put('strutStyle', init: strutStyle);
-    mateParams.put('textWidthBasis', init: textWidthBasis);
-    mateParams.put('textHeightBehavior', init: textHeightBehavior);
-    mateParams.put('children', init: children);
-    mateParams.put('selectionColor', init: selectionColor);
-    mateParams.put('registrar', init: registrar);
+    mateParams.put('text', text);
+    mateParams.put('textAlign', textAlign);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('softWrap', softWrap);
+    mateParams.put('overflow', overflow);
+    mateParams.put('textScaleFactor', textScaleFactor);
+    mateParams.put('maxLines', maxLines);
+    mateParams.put('locale', locale);
+    mateParams.put('strutStyle', strutStyle);
+    mateParams.put('textWidthBasis', textWidthBasis);
+    mateParams.put('textHeightBehavior', textHeightBehavior);
+    mateParams.put('children', children);
+    mateParams.put('selectionColor', selectionColor);
+    mateParams.put('registrar', registrar);
   }
 }

@@ -21,7 +21,7 @@ class IdleScrollActivity$Mate extends IdleScrollActivity with Mate<IdleScrollAct
       init: this,
       builder: (p) => IdleScrollActivity$Mate(p.get('delegate').value),
     );
-    mateParams.put('delegate', init: delegate);
+    mateParams.put('delegate', delegate);
   }
 }
 
@@ -45,8 +45,8 @@ class HoldScrollActivity$Mate extends HoldScrollActivity with Mate<HoldScrollAct
         onHoldCanceled: p.get('onHoldCanceled').value,
       ),
     );
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('onHoldCanceled', init: onHoldCanceled);
+    mateParams.put('delegate', delegate);
+    mateParams.put('onHoldCanceled', onHoldCanceled);
   }
 }
 
@@ -85,11 +85,11 @@ class ScrollDragController$Mate extends ScrollDragController with Mate<ScrollDra
         motionStartDistanceThreshold: p.get('motionStartDistanceThreshold').value,
       ),
     );
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('details', init: details);
-    mateParams.put('onDragCanceled', init: onDragCanceled);
-    mateParams.put('carriedVelocity', init: carriedVelocity);
-    mateParams.put('motionStartDistanceThreshold', init: motionStartDistanceThreshold);
+    mateParams.put('delegate', delegate);
+    mateParams.put('details', details);
+    mateParams.put('onDragCanceled', onDragCanceled);
+    mateParams.put('carriedVelocity', carriedVelocity);
+    mateParams.put('motionStartDistanceThreshold', motionStartDistanceThreshold);
   }
 }
 
@@ -113,8 +113,8 @@ class DragScrollActivity$Mate extends DragScrollActivity with Mate<DragScrollAct
         p.get('controller').value,
       ),
     );
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('controller', init: controller);
+    mateParams.put('delegate', delegate);
+    mateParams.put('controller', controller);
   }
 }
 
@@ -148,10 +148,10 @@ class BallisticScrollActivity$Mate extends BallisticScrollActivity with Mate<Bal
         p.get('shouldIgnorePointer').value,
       ),
     );
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('simulation', init: simulation);
-    mateParams.put('vsync', init: vsync);
-    mateParams.put('shouldIgnorePointer', init: shouldIgnorePointer);
+    mateParams.put('delegate', delegate);
+    mateParams.put('simulation', simulation);
+    mateParams.put('vsync', vsync);
+    mateParams.put('shouldIgnorePointer', shouldIgnorePointer);
   }
 }
 
@@ -194,11 +194,11 @@ class DrivenScrollActivity$Mate extends DrivenScrollActivity with Mate<DrivenScr
         vsync: p.get('vsync').value,
       ),
     );
-    mateParams.put('delegate', init: delegate);
-    mateParams.put('from', init: from);
-    mateParams.put('to', init: to);
-    mateParams.put('duration', init: duration);
-    mateParams.put('curve', init: curve);
-    mateParams.put('vsync', init: vsync);
+    mateParams.put('delegate', delegate);
+    mateParams.put('from', from);
+    mateParams.put('to', to);
+    mateParams.put('duration', duration);
+    mateParams.put('curve', curve);
+    mateParams.put('vsync', vsync);
   }
 }

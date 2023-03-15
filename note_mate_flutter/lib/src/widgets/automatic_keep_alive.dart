@@ -26,8 +26,8 @@ class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with WidgetMate<Automat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -43,6 +43,6 @@ class KeepAliveNotification$Mate extends KeepAliveNotification with Mate<KeepAli
       init: this,
       builder: (p) => KeepAliveNotification$Mate(p.get('handle').value),
     );
-    mateParams.put('handle', init: handle);
+    mateParams.put('handle', handle);
   }
 }

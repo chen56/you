@@ -54,12 +54,12 @@ class DrawerHeader$Mate extends DrawerHeader with WidgetMate<DrawerHeader$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('margin', init: margin);
-    mateParams.put('padding', init: padding);
-    mateParams.put('duration', init: duration);
-    mateParams.put('curve', init: curve);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('decoration', decoration);
+    mateParams.put('margin', margin);
+    mateParams.put('padding', padding);
+    mateParams.put('duration', duration);
+    mateParams.put('curve', curve);
+    mateParams.put('child', child);
   }
 }

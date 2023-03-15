@@ -58,13 +58,13 @@ class ExpandIcon$Mate extends ExpandIcon with WidgetMate<ExpandIcon$Mate> {
         expandedColor: p.get('expandedColor').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('isExpanded', init: isExpanded);
-    mateParams.put('size', init: size);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('padding', init: padding);
-    mateParams.put('color', init: color);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('expandedColor', init: expandedColor);
+    mateParams.put('key', key);
+    mateParams.put('isExpanded', isExpanded);
+    mateParams.put('size', size);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('padding', padding);
+    mateParams.put('color', color);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('expandedColor', expandedColor);
   }
 }

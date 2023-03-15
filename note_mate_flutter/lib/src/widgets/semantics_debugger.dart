@@ -31,8 +31,8 @@ class SemanticsDebugger$Mate extends SemanticsDebugger with WidgetMate<Semantics
         labelStyle: p.get('labelStyle').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('labelStyle', labelStyle);
   }
 }

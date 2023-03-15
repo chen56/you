@@ -46,11 +46,11 @@ class GridTileBar$Mate extends GridTileBar with WidgetMate<GridTileBar$Mate> {
         trailing: p.get('trailing').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('leading', init: leading);
-    mateParams.put('title', init: title);
-    mateParams.put('subtitle', init: subtitle);
-    mateParams.put('trailing', init: trailing);
+    mateParams.put('key', key);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('leading', leading);
+    mateParams.put('title', title);
+    mateParams.put('subtitle', subtitle);
+    mateParams.put('trailing', trailing);
   }
 }

@@ -50,12 +50,12 @@ class TableBorder$Mate extends TableBorder with Mate<TableBorder$Mate> {
         borderRadius: p.get('borderRadius').value,
       ),
     );
-    mateParams.put('top', init: top);
-    mateParams.put('right', init: right);
-    mateParams.put('bottom', init: bottom);
-    mateParams.put('left', init: left);
-    mateParams.put('horizontalInside', init: horizontalInside);
-    mateParams.put('verticalInside', init: verticalInside);
-    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('top', top);
+    mateParams.put('right', right);
+    mateParams.put('bottom', bottom);
+    mateParams.put('left', left);
+    mateParams.put('horizontalInside', horizontalInside);
+    mateParams.put('verticalInside', verticalInside);
+    mateParams.put('borderRadius', borderRadius);
   }
 }

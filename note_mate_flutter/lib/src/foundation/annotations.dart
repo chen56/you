@@ -16,7 +16,7 @@ class Category$Mate extends Category with Mate<Category$Mate> {
       init: this,
       builder: (p) => Category$Mate(p.get('sections').value),
     );
-    mateParams.put('sections', init: sections);
+    mateParams.put('sections', sections);
   }
 }
 
@@ -32,7 +32,7 @@ class DocumentationIcon$Mate extends DocumentationIcon with Mate<DocumentationIc
       init: this,
       builder: (p) => DocumentationIcon$Mate(p.get('url').value),
     );
-    mateParams.put('url', init: url);
+    mateParams.put('url', url);
   }
 }
 
@@ -48,6 +48,6 @@ class Summary$Mate extends Summary with Mate<Summary$Mate> {
       init: this,
       builder: (p) => Summary$Mate(p.get('text').value),
     );
-    mateParams.put('text', init: text);
+    mateParams.put('text', text);
   }
 }

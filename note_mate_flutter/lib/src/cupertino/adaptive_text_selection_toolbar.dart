@@ -38,9 +38,9 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
         anchors: p.get('anchors').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('anchors', init: anchors);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
@@ -66,9 +66,9 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
         anchors: p.get('anchors').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('buttonItems', init: buttonItems);
-    mateParams.put('anchors', init: anchors);
+    mateParams.put('key', key);
+    mateParams.put('buttonItems', buttonItems);
+    mateParams.put('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
@@ -114,13 +114,13 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
         anchors: p.get('anchors').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('clipboardStatus', init: clipboardStatus);
-    mateParams.put('onCopy', init: onCopy);
-    mateParams.put('onCut', init: onCut);
-    mateParams.put('onPaste', init: onPaste);
-    mateParams.put('onSelectAll', init: onSelectAll);
-    mateParams.put('anchors', init: anchors);
+    mateParams.put('key', key);
+    mateParams.put('clipboardStatus', clipboardStatus);
+    mateParams.put('onCopy', onCopy);
+    mateParams.put('onCut', onCut);
+    mateParams.put('onPaste', onPaste);
+    mateParams.put('onSelectAll', onSelectAll);
+    mateParams.put('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
@@ -141,8 +141,8 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
         editableTextState: p.get('editableTextState').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('editableTextState', init: editableTextState);
+    mateParams.put('key', key);
+    mateParams.put('editableTextState', editableTextState);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
@@ -178,10 +178,10 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
         anchors: p.get('anchors').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onCopy', init: onCopy);
-    mateParams.put('onSelectAll', init: onSelectAll);
-    mateParams.put('selectionGeometry', init: selectionGeometry);
-    mateParams.put('anchors', init: anchors);
+    mateParams.put('key', key);
+    mateParams.put('onCopy', onCopy);
+    mateParams.put('onSelectAll', onSelectAll);
+    mateParams.put('selectionGeometry', selectionGeometry);
+    mateParams.put('anchors', anchors);
   }
 }

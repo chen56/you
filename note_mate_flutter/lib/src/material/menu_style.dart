@@ -86,18 +86,18 @@ class MenuStyle$Mate extends MenuStyle with Mate<MenuStyle$Mate> {
         alignment: p.get('alignment').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('padding', init: padding);
-    mateParams.put('minimumSize', init: minimumSize);
-    mateParams.put('fixedSize', init: fixedSize);
-    mateParams.put('maximumSize', init: maximumSize);
-    mateParams.put('side', init: side);
-    mateParams.put('shape', init: shape);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('visualDensity', init: visualDensity);
-    mateParams.put('alignment', init: alignment);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('padding', padding);
+    mateParams.put('minimumSize', minimumSize);
+    mateParams.put('fixedSize', fixedSize);
+    mateParams.put('maximumSize', maximumSize);
+    mateParams.put('side', side);
+    mateParams.put('shape', shape);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('alignment', alignment);
   }
 }

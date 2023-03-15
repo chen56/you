@@ -88,20 +88,20 @@ class Focus$Mate extends Focus with WidgetMate<Focus$Mate> {
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('parentNode', init: parentNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('onKeyEvent', init: onKeyEvent);
-    mateParams.put('onKey', init: onKey);
-    mateParams.put('canRequestFocus', init: canRequestFocus);
-    mateParams.put('skipTraversal', init: skipTraversal);
-    mateParams.put('descendantsAreFocusable', init: descendantsAreFocusable);
-    mateParams.put('descendantsAreTraversable', init: descendantsAreTraversable);
-    mateParams.put('includeSemantics', init: includeSemantics);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('parentNode', parentNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('onKeyEvent', onKeyEvent);
+    mateParams.put('onKey', onKey);
+    mateParams.put('canRequestFocus', canRequestFocus);
+    mateParams.put('skipTraversal', skipTraversal);
+    mateParams.put('descendantsAreFocusable', descendantsAreFocusable);
+    mateParams.put('descendantsAreTraversable', descendantsAreTraversable);
+    mateParams.put('includeSemantics', includeSemantics);
+    mateParams.put('debugLabel', debugLabel);
   }
 }
 
@@ -170,17 +170,17 @@ class FocusScope$Mate extends FocusScope with WidgetMate<FocusScope$Mate> {
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('node', init: node);
-    mateParams.put('parentNode', init: parentNode);
-    mateParams.put('child', init: child);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('canRequestFocus', init: canRequestFocus);
-    mateParams.put('skipTraversal', init: skipTraversal);
-    mateParams.put('onKeyEvent', init: onKeyEvent);
-    mateParams.put('onKey', init: onKey);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('key', key);
+    mateParams.put('node', node);
+    mateParams.put('parentNode', parentNode);
+    mateParams.put('child', child);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('canRequestFocus', canRequestFocus);
+    mateParams.put('skipTraversal', skipTraversal);
+    mateParams.put('onKeyEvent', onKeyEvent);
+    mateParams.put('onKey', onKey);
+    mateParams.put('debugLabel', debugLabel);
   }
 }
 
@@ -209,8 +209,8 @@ class ExcludeFocus$Mate extends ExcludeFocus with WidgetMate<ExcludeFocus$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('excluding', init: excluding);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('excluding', excluding);
+    mateParams.put('child', child);
   }
 }

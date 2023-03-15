@@ -25,7 +25,7 @@ class OvalBorder$Mate extends OvalBorder with Mate<OvalBorder$Mate> {
         eccentricity: p.get('eccentricity').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('eccentricity', init: eccentricity);
+    mateParams.put('side', side);
+    mateParams.put('eccentricity', eccentricity);
   }
 }

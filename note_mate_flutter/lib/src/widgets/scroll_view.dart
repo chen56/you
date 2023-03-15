@@ -110,23 +110,23 @@ class CustomScrollView$Mate extends CustomScrollView with WidgetMate<CustomScrol
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('scrollBehavior', init: scrollBehavior);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('center', init: center);
-    mateParams.put('anchor', init: anchor);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('slivers', init: slivers);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('scrollBehavior', scrollBehavior);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('center', center);
+    mateParams.put('anchor', anchor);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('slivers', slivers);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -240,26 +240,26 @@ class ListView$Mate extends ListView with WidgetMate<ListView$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('prototypeItem', init: prototypeItem);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('children', init: children);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('prototypeItem', prototypeItem);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('children', children);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -380,28 +380,28 @@ class ListView$Mate extends ListView with WidgetMate<ListView$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('prototypeItem', init: prototypeItem);
-    mateParams.put('itemBuilder', init: itemBuilder);
-    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.put('itemCount', init: itemCount);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('prototypeItem', prototypeItem);
+    mateParams.put('itemBuilder', itemBuilder);
+    mateParams.put('findChildIndexCallback', findChildIndexCallback);
+    mateParams.put('itemCount', itemCount);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.separated({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required Widget Function(BuildContext, int) separatorBuilder, required int itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -512,26 +512,26 @@ class ListView$Mate extends ListView with WidgetMate<ListView$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('itemBuilder', init: itemBuilder);
-    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.put('separatorBuilder', init: separatorBuilder);
-    mateParams.put('itemCount', init: itemCount);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('itemBuilder', itemBuilder);
+    mateParams.put('findChildIndexCallback', findChildIndexCallback);
+    mateParams.put('separatorBuilder', separatorBuilder);
+    mateParams.put('itemCount', itemCount);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -627,23 +627,23 @@ class ListView$Mate extends ListView with WidgetMate<ListView$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('itemExtent', init: itemExtent);
-    mateParams.put('prototypeItem', init: prototypeItem);
-    mateParams.put('childrenDelegate', init: childrenDelegate);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('itemExtent', itemExtent);
+    mateParams.put('prototypeItem', prototypeItem);
+    mateParams.put('childrenDelegate', childrenDelegate);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -752,25 +752,25 @@ class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
         restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('gridDelegate', init: gridDelegate);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('children', init: children);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('gridDelegate', gridDelegate);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('children', children);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
   }
 
   /// GridView GridView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -886,27 +886,27 @@ class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('gridDelegate', init: gridDelegate);
-    mateParams.put('itemBuilder', init: itemBuilder);
-    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.put('itemCount', init: itemCount);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('gridDelegate', gridDelegate);
+    mateParams.put('itemBuilder', itemBuilder);
+    mateParams.put('findChildIndexCallback', findChildIndexCallback);
+    mateParams.put('itemCount', itemCount);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -997,22 +997,22 @@ class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('gridDelegate', init: gridDelegate);
-    mateParams.put('childrenDelegate', init: childrenDelegate);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('gridDelegate', gridDelegate);
+    mateParams.put('childrenDelegate', childrenDelegate);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.count({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required int crossAxisCount, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -1133,28 +1133,28 @@ class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('crossAxisCount', init: crossAxisCount);
-    mateParams.put('mainAxisSpacing', init: mainAxisSpacing);
-    mateParams.put('crossAxisSpacing', init: crossAxisSpacing);
-    mateParams.put('childAspectRatio', init: childAspectRatio);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('children', init: children);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('crossAxisCount', crossAxisCount);
+    mateParams.put('mainAxisSpacing', mainAxisSpacing);
+    mateParams.put('crossAxisSpacing', crossAxisSpacing);
+    mateParams.put('childAspectRatio', childAspectRatio);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('children', children);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.extent({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -1275,27 +1275,27 @@ class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('reverse', init: reverse);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
-    mateParams.put('physics', init: physics);
-    mateParams.put('shrinkWrap', init: shrinkWrap);
-    mateParams.put('padding', init: padding);
-    mateParams.put('maxCrossAxisExtent', init: maxCrossAxisExtent);
-    mateParams.put('mainAxisSpacing', init: mainAxisSpacing);
-    mateParams.put('crossAxisSpacing', init: crossAxisSpacing);
-    mateParams.put('childAspectRatio', init: childAspectRatio);
-    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('children', init: children);
-    mateParams.put('semanticChildCount', init: semanticChildCount);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('reverse', reverse);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
+    mateParams.put('physics', physics);
+    mateParams.put('shrinkWrap', shrinkWrap);
+    mateParams.put('padding', padding);
+    mateParams.put('maxCrossAxisExtent', maxCrossAxisExtent);
+    mateParams.put('mainAxisSpacing', mainAxisSpacing);
+    mateParams.put('crossAxisSpacing', crossAxisSpacing);
+    mateParams.put('childAspectRatio', childAspectRatio);
+    mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', addSemanticIndexes);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('children', children);
+    mateParams.put('semanticChildCount', semanticChildCount);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

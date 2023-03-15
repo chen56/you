@@ -25,7 +25,7 @@ class RenderRotatedBox$Mate extends RenderRotatedBox with Mate<RenderRotatedBox$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('quarterTurns', init: quarterTurns);
-    mateParams.put('child', init: child);
+    mateParams.put('quarterTurns', quarterTurns);
+    mateParams.put('child', child);
   }
 }

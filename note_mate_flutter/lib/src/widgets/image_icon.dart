@@ -41,10 +41,10 @@ class ImageIcon$Mate extends ImageIcon with WidgetMate<ImageIcon$Mate> {
         semanticLabel: p.get('semanticLabel').value,
       ),
     );
-    mateParams.put('image', init: image);
-    mateParams.put('key', init: key);
-    mateParams.put('size', init: size);
-    mateParams.put('color', init: color);
-    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('image', image);
+    mateParams.put('key', key);
+    mateParams.put('size', size);
+    mateParams.put('color', color);
+    mateParams.put('semanticLabel', semanticLabel);
   }
 }

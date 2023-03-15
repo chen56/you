@@ -16,7 +16,7 @@ class LogicalKeyboardKey$Mate extends LogicalKeyboardKey with Mate<LogicalKeyboa
       init: this,
       builder: (p) => LogicalKeyboardKey$Mate(p.get('keyId').value),
     );
-    mateParams.put('keyId', init: keyId);
+    mateParams.put('keyId', keyId);
   }
 }
 
@@ -32,6 +32,6 @@ class PhysicalKeyboardKey$Mate extends PhysicalKeyboardKey with Mate<PhysicalKey
       init: this,
       builder: (p) => PhysicalKeyboardKey$Mate(p.get('usbHidUsage').value),
     );
-    mateParams.put('usbHidUsage', init: usbHidUsage);
+    mateParams.put('usbHidUsage', usbHidUsage);
   }
 }

@@ -37,9 +37,9 @@ class ImageFiltered$Mate extends ImageFiltered with WidgetMate<ImageFiltered$Mat
         enabled: p.get('enabled').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('imageFilter', init: imageFilter);
-    mateParams.put('child', init: child);
-    mateParams.put('enabled', init: enabled);
+    mateParams.put('key', key);
+    mateParams.put('imageFilter', imageFilter);
+    mateParams.put('child', child);
+    mateParams.put('enabled', enabled);
   }
 }

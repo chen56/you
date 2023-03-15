@@ -34,9 +34,9 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('child', child);
   }
 
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton.text({Key? key, void Function()? onPressed, required String? text})
@@ -62,9 +62,9 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
         text: p.get('text').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('text', init: text);
+    mateParams.put('key', key);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('text', text);
   }
 
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
@@ -85,7 +85,7 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
         buttonItem: p.get('buttonItem').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('buttonItem', init: buttonItem);
+    mateParams.put('key', key);
+    mateParams.put('buttonItem', buttonItem);
   }
 }

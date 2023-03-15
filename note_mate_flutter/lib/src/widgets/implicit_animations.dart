@@ -37,8 +37,8 @@ class BoxConstraintsTween$Mate extends BoxConstraintsTween with Mate<BoxConstrai
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -62,8 +62,8 @@ class DecorationTween$Mate extends DecorationTween with Mate<DecorationTween$Mat
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -87,8 +87,8 @@ class EdgeInsetsTween$Mate extends EdgeInsetsTween with Mate<EdgeInsetsTween$Mat
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -112,8 +112,8 @@ class EdgeInsetsGeometryTween$Mate extends EdgeInsetsGeometryTween with Mate<Edg
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -137,8 +137,8 @@ class BorderRadiusTween$Mate extends BorderRadiusTween with Mate<BorderRadiusTwe
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -162,8 +162,8 @@ class BorderTween$Mate extends BorderTween with Mate<BorderTween$Mate> {
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -187,8 +187,8 @@ class Matrix4Tween$Mate extends Matrix4Tween with Mate<Matrix4Tween$Mate> {
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -212,8 +212,8 @@ class TextStyleTween$Mate extends TextStyleTween with Mate<TextStyleTween$Mate> 
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -312,23 +312,23 @@ class AnimatedContainer$Mate extends AnimatedContainer with WidgetMate<AnimatedC
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('padding', init: padding);
-    mateParams.put('color', init: color);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('foregroundDecoration', init: foregroundDecoration);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('constraints', init: constraints);
-    mateParams.put('margin', init: margin);
-    mateParams.put('transform', init: transform);
-    mateParams.put('transformAlignment', init: transformAlignment);
-    mateParams.put('child', init: child);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('padding', padding);
+    mateParams.put('color', color);
+    mateParams.put('decoration', decoration);
+    mateParams.put('foregroundDecoration', foregroundDecoration);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('constraints', constraints);
+    mateParams.put('margin', margin);
+    mateParams.put('transform', transform);
+    mateParams.put('transformAlignment', transformAlignment);
+    mateParams.put('child', child);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -372,12 +372,12 @@ class AnimatedPadding$Mate extends AnimatedPadding with WidgetMate<AnimatedPaddi
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('padding', init: padding);
-    mateParams.put('child', init: child);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('padding', padding);
+    mateParams.put('child', child);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -431,14 +431,14 @@ class AnimatedAlign$Mate extends AnimatedAlign with WidgetMate<AnimatedAlign$Mat
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('child', init: child);
-    mateParams.put('heightFactor', init: heightFactor);
-    mateParams.put('widthFactor', init: widthFactor);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('child', child);
+    mateParams.put('heightFactor', heightFactor);
+    mateParams.put('widthFactor', widthFactor);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -507,17 +507,17 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with WidgetMate<Animate
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('left', init: left);
-    mateParams.put('top', init: top);
-    mateParams.put('right', init: right);
-    mateParams.put('bottom', init: bottom);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('left', left);
+    mateParams.put('top', top);
+    mateParams.put('right', right);
+    mateParams.put('bottom', bottom);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 
   /// AnimatedPositioned AnimatedPositioned.fromRect({Key? key, required Widget child, required Rect rect, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
@@ -558,12 +558,12 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with WidgetMate<Animate
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('rect', init: rect);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('rect', rect);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -633,17 +633,17 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('start', init: start);
-    mateParams.put('top', init: top);
-    mateParams.put('end', init: end);
-    mateParams.put('bottom', init: bottom);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('start', start);
+    mateParams.put('top', top);
+    mateParams.put('end', end);
+    mateParams.put('bottom', bottom);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -697,14 +697,14 @@ class AnimatedScale$Mate extends AnimatedScale with WidgetMate<AnimatedScale$Mat
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('scale', init: scale);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('scale', scale);
+    mateParams.put('alignment', alignment);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -758,14 +758,14 @@ class AnimatedRotation$Mate extends AnimatedRotation with WidgetMate<AnimatedRot
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('turns', init: turns);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('turns', turns);
+    mateParams.put('alignment', alignment);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -809,12 +809,12 @@ class AnimatedSlide$Mate extends AnimatedSlide with WidgetMate<AnimatedSlide$Mat
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('offset', init: offset);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('offset', offset);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -863,13 +863,13 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with WidgetMate<AnimatedOpaci
         alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('opacity', opacity);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
   }
 }
 
@@ -918,13 +918,13 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with WidgetMate<S
         alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('sliver', init: sliver);
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
+    mateParams.put('key', key);
+    mateParams.put('sliver', sliver);
+    mateParams.put('opacity', opacity);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
   }
 }
 
@@ -998,18 +998,18 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Widget
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('style', init: style);
-    mateParams.put('textAlign', init: textAlign);
-    mateParams.put('softWrap', init: softWrap);
-    mateParams.put('overflow', init: overflow);
-    mateParams.put('maxLines', init: maxLines);
-    mateParams.put('textWidthBasis', init: textWidthBasis);
-    mateParams.put('textHeightBehavior', init: textHeightBehavior);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('style', style);
+    mateParams.put('textAlign', textAlign);
+    mateParams.put('softWrap', softWrap);
+    mateParams.put('overflow', overflow);
+    mateParams.put('maxLines', maxLines);
+    mateParams.put('textWidthBasis', textWidthBasis);
+    mateParams.put('textHeightBehavior', textHeightBehavior);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -1088,19 +1088,19 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with WidgetMate<A
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('color', init: color);
-    mateParams.put('animateColor', init: animateColor);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('animateShadowColor', init: animateShadowColor);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('elevation', elevation);
+    mateParams.put('color', color);
+    mateParams.put('animateColor', animateColor);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('animateShadowColor', animateShadowColor);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }
 
@@ -1155,13 +1155,13 @@ class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox
         onEnd: p.get('onEnd').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('child', init: child);
-    mateParams.put('heightFactor', init: heightFactor);
-    mateParams.put('widthFactor', init: widthFactor);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('child', child);
+    mateParams.put('heightFactor', heightFactor);
+    mateParams.put('widthFactor', widthFactor);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
   }
 }

@@ -44,11 +44,11 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with WidgetMa
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('controller', init: controller);
-    mateParams.put('automaticallyInheritForPlatforms', init: automaticallyInheritForPlatforms);
-    mateParams.put('scrollDirection', init: scrollDirection);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('controller', controller);
+    mateParams.put('automaticallyInheritForPlatforms', automaticallyInheritForPlatforms);
+    mateParams.put('scrollDirection', scrollDirection);
+    mateParams.put('child', child);
   }
 
   /// PrimaryScrollController PrimaryScrollController.none({Key? key, required Widget child})
@@ -69,7 +69,7 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with WidgetMa
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }

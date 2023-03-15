@@ -25,7 +25,7 @@ class ScrollMetricsNotification$Mate extends ScrollMetricsNotification with Mate
         context: p.get('context').value,
       ),
     );
-    mateParams.put('metrics', init: metrics);
-    mateParams.put('context', init: context);
+    mateParams.put('metrics', metrics);
+    mateParams.put('context', context);
   }
 }

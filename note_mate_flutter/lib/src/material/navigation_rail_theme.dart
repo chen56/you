@@ -86,19 +86,19 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate<Nav
         minExtendedWidth: p.get('minExtendedWidth').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('unselectedLabelTextStyle', init: unselectedLabelTextStyle);
-    mateParams.put('selectedLabelTextStyle', init: selectedLabelTextStyle);
-    mateParams.put('unselectedIconTheme', init: unselectedIconTheme);
-    mateParams.put('selectedIconTheme', init: selectedIconTheme);
-    mateParams.put('groupAlignment', init: groupAlignment);
-    mateParams.put('labelType', init: labelType);
-    mateParams.put('useIndicator', init: useIndicator);
-    mateParams.put('indicatorColor', init: indicatorColor);
-    mateParams.put('indicatorShape', init: indicatorShape);
-    mateParams.put('minWidth', init: minWidth);
-    mateParams.put('minExtendedWidth', init: minExtendedWidth);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('unselectedLabelTextStyle', unselectedLabelTextStyle);
+    mateParams.put('selectedLabelTextStyle', selectedLabelTextStyle);
+    mateParams.put('unselectedIconTheme', unselectedIconTheme);
+    mateParams.put('selectedIconTheme', selectedIconTheme);
+    mateParams.put('groupAlignment', groupAlignment);
+    mateParams.put('labelType', labelType);
+    mateParams.put('useIndicator', useIndicator);
+    mateParams.put('indicatorColor', indicatorColor);
+    mateParams.put('indicatorShape', indicatorShape);
+    mateParams.put('minWidth', minWidth);
+    mateParams.put('minExtendedWidth', minExtendedWidth);
   }
 }
 
@@ -127,8 +127,8 @@ class NavigationRailTheme$Mate extends NavigationRailTheme with WidgetMate<Navig
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

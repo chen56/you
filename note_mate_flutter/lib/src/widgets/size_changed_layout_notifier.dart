@@ -25,7 +25,7 @@ class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with Widg
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }

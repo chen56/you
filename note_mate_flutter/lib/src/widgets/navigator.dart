@@ -29,8 +29,8 @@ class RouteSettings$Mate extends RouteSettings with Mate<RouteSettings$Mate> {
         arguments: p.get('arguments').value,
       ),
     );
-    mateParams.put('name', init: name);
-    mateParams.put('arguments', init: arguments);
+    mateParams.put('name', name);
+    mateParams.put('arguments', arguments);
   }
 }
 
@@ -59,9 +59,9 @@ class HeroControllerScope$Mate extends HeroControllerScope with WidgetMate<HeroC
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('controller', init: controller);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('controller', controller);
+    mateParams.put('child', child);
   }
 
   /// HeroControllerScope HeroControllerScope.none({Key? key, required Widget child})
@@ -82,8 +82,8 @@ class HeroControllerScope$Mate extends HeroControllerScope with WidgetMate<HeroC
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -167,20 +167,20 @@ class Navigator$Mate extends Navigator with WidgetMate<Navigator$Mate> {
         routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('pages', init: pages);
-    mateParams.put('onPopPage', init: onPopPage);
-    mateParams.put('initialRoute', init: initialRoute);
-    mateParams.put('onGenerateInitialRoutes', init: onGenerateInitialRoutes);
-    mateParams.put('onGenerateRoute', init: onGenerateRoute);
-    mateParams.put('onUnknownRoute', init: onUnknownRoute);
-    mateParams.put('transitionDelegate', init: transitionDelegate);
-    mateParams.put('reportsRouteUpdateToEngine', init: reportsRouteUpdateToEngine);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('observers', init: observers);
-    mateParams.put('requestFocus', init: requestFocus);
-    mateParams.put('restorationScopeId', init: restorationScopeId);
-    mateParams.put('routeTraversalEdgeBehavior', init: routeTraversalEdgeBehavior);
+    mateParams.put('key', key);
+    mateParams.put('pages', pages);
+    mateParams.put('onPopPage', onPopPage);
+    mateParams.put('initialRoute', initialRoute);
+    mateParams.put('onGenerateInitialRoutes', onGenerateInitialRoutes);
+    mateParams.put('onGenerateRoute', onGenerateRoute);
+    mateParams.put('onUnknownRoute', onUnknownRoute);
+    mateParams.put('transitionDelegate', transitionDelegate);
+    mateParams.put('reportsRouteUpdateToEngine', reportsRouteUpdateToEngine);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('observers', observers);
+    mateParams.put('requestFocus', requestFocus);
+    mateParams.put('restorationScopeId', restorationScopeId);
+    mateParams.put('routeTraversalEdgeBehavior', routeTraversalEdgeBehavior);
   }
 }
 
@@ -209,8 +209,8 @@ class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate<R
         onComplete: p.get('onComplete').value,
       ),
     );
-    mateParams.put('navigatorFinder', init: navigatorFinder);
-    mateParams.put('onPresent', init: onPresent);
-    mateParams.put('onComplete', init: onComplete);
+    mateParams.put('navigatorFinder', navigatorFinder);
+    mateParams.put('onPresent', onPresent);
+    mateParams.put('onComplete', onComplete);
   }
 }

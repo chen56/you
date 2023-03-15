@@ -70,16 +70,16 @@ class CupertinoButton$Mate extends CupertinoButton with WidgetMate<CupertinoButt
         onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('padding', init: padding);
-    mateParams.put('color', init: color);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('minSize', init: minSize);
-    mateParams.put('pressedOpacity', init: pressedOpacity);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('padding', padding);
+    mateParams.put('color', color);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('minSize', minSize);
+    mateParams.put('pressedOpacity', pressedOpacity);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('alignment', alignment);
+    mateParams.put('onPressed', onPressed);
   }
 
   /// CupertinoButton CupertinoButton.filled({Key? key, required Widget child, EdgeInsetsGeometry? padding, Color disabledColor = CupertinoColors.quaternarySystemFill, double? minSize = kMinInteractiveDimensionCupertino, double? pressedOpacity = 0.4, BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0)), AlignmentGeometry alignment = Alignment.center, required void Function()? onPressed})
@@ -135,14 +135,14 @@ class CupertinoButton$Mate extends CupertinoButton with WidgetMate<CupertinoButt
         onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('padding', init: padding);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('minSize', init: minSize);
-    mateParams.put('pressedOpacity', init: pressedOpacity);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('padding', padding);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('minSize', minSize);
+    mateParams.put('pressedOpacity', pressedOpacity);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('alignment', alignment);
+    mateParams.put('onPressed', onPressed);
   }
 }

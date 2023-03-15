@@ -18,7 +18,7 @@ class MenuThemeData$Mate extends MenuThemeData with Mate<MenuThemeData$Mate> {
       init: this,
       builder: (p) => MenuThemeData$Mate(style: p.get('style').value),
     );
-    mateParams.put('style', init: style);
+    mateParams.put('style', style);
   }
 }
 
@@ -47,8 +47,8 @@ class MenuTheme$Mate extends MenuTheme with WidgetMate<MenuTheme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

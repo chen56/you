@@ -34,7 +34,7 @@ class RenderProxyBox$Mate extends RenderProxyBox with Mate<RenderProxyBox$Mate> 
       init: this,
       builder: (p) => RenderProxyBox$Mate(p.get('child').value),
     );
-    mateParams.put('child', init: child);
+    mateParams.put('child', child);
   }
 }
 
@@ -58,8 +58,8 @@ class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate<RenderCon
         additionalConstraints: p.get('additionalConstraints').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('additionalConstraints', init: additionalConstraints);
+    mateParams.put('child', child);
+    mateParams.put('additionalConstraints', additionalConstraints);
   }
 }
 
@@ -88,9 +88,9 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate<RenderLimitedBox$
         maxHeight: p.get('maxHeight').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('maxWidth', init: maxWidth);
-    mateParams.put('maxHeight', init: maxHeight);
+    mateParams.put('child', child);
+    mateParams.put('maxWidth', maxWidth);
+    mateParams.put('maxHeight', maxHeight);
   }
 }
 
@@ -114,8 +114,8 @@ class RenderAspectRatio$Mate extends RenderAspectRatio with Mate<RenderAspectRat
         aspectRatio: p.get('aspectRatio').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('aspectRatio', init: aspectRatio);
+    mateParams.put('child', child);
+    mateParams.put('aspectRatio', aspectRatio);
   }
 }
 
@@ -144,9 +144,9 @@ class RenderIntrinsicWidth$Mate extends RenderIntrinsicWidth with Mate<RenderInt
         child: p.get('child').value,
       ),
     );
-    mateParams.put('stepWidth', init: stepWidth);
-    mateParams.put('stepHeight', init: stepHeight);
-    mateParams.put('child', init: child);
+    mateParams.put('stepWidth', stepWidth);
+    mateParams.put('stepHeight', stepHeight);
+    mateParams.put('child', child);
   }
 }
 
@@ -162,7 +162,7 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate<RenderI
       init: this,
       builder: (p) => RenderIntrinsicHeight$Mate(child: p.get('child').value),
     );
-    mateParams.put('child', init: child);
+    mateParams.put('child', child);
   }
 }
 
@@ -191,9 +191,9 @@ class RenderOpacity$Mate extends RenderOpacity with Mate<RenderOpacity$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.put('child', init: child);
+    mateParams.put('opacity', opacity);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateParams.put('child', child);
   }
 }
 
@@ -222,9 +222,9 @@ class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate<RenderA
         child: p.get('child').value,
       ),
     );
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.put('child', init: child);
+    mateParams.put('opacity', opacity);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateParams.put('child', child);
   }
 }
 
@@ -253,9 +253,9 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate<RenderShaderMask$
         blendMode: p.get('blendMode').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('shaderCallback', init: shaderCallback);
-    mateParams.put('blendMode', init: blendMode);
+    mateParams.put('child', child);
+    mateParams.put('shaderCallback', shaderCallback);
+    mateParams.put('blendMode', blendMode);
   }
 }
 
@@ -284,9 +284,9 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate<RenderBac
         blendMode: p.get('blendMode').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('filter', init: filter);
-    mateParams.put('blendMode', init: blendMode);
+    mateParams.put('child', child);
+    mateParams.put('filter', filter);
+    mateParams.put('blendMode', blendMode);
   }
 }
 
@@ -310,8 +310,8 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate<ShapeBorderCl
         textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.put('shape', init: shape);
-    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('shape', shape);
+    mateParams.put('textDirection', textDirection);
   }
 }
 
@@ -340,9 +340,9 @@ class RenderClipRect$Mate extends RenderClipRect with Mate<RenderClipRect$Mate> 
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('child', child);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -381,11 +381,11 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate<RenderClipRRect$Mat
         textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', child);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('textDirection', textDirection);
   }
 }
 
@@ -414,9 +414,9 @@ class RenderClipOval$Mate extends RenderClipOval with Mate<RenderClipOval$Mate> 
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('child', child);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -445,9 +445,9 @@ class RenderClipPath$Mate extends RenderClipPath with Mate<RenderClipPath$Mate> 
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('child', child);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -496,13 +496,13 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate<RenderPhysi
         shadowColor: p.get('shadowColor').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('borderRadius', init: borderRadius);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('color', init: color);
-    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('child', child);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('borderRadius', borderRadius);
+    mateParams.put('elevation', elevation);
+    mateParams.put('color', color);
+    mateParams.put('shadowColor', shadowColor);
   }
 }
 
@@ -546,12 +546,12 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate<RenderPhysi
         shadowColor: p.get('shadowColor').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('clipper', init: clipper);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('color', init: color);
-    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('child', child);
+    mateParams.put('clipper', clipper);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('elevation', elevation);
+    mateParams.put('color', color);
+    mateParams.put('shadowColor', shadowColor);
   }
 }
 
@@ -585,10 +585,10 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate<RenderDecorat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('position', init: position);
-    mateParams.put('configuration', init: configuration);
-    mateParams.put('child', init: child);
+    mateParams.put('decoration', decoration);
+    mateParams.put('position', position);
+    mateParams.put('configuration', configuration);
+    mateParams.put('child', child);
   }
 }
 
@@ -637,13 +637,13 @@ class RenderTransform$Mate extends RenderTransform with Mate<RenderTransform$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('transform', init: transform);
-    mateParams.put('origin', init: origin);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('child', init: child);
+    mateParams.put('transform', transform);
+    mateParams.put('origin', origin);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('child', child);
   }
 }
 
@@ -682,11 +682,11 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate<RenderFittedBox$Mat
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('fit', init: fit);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('child', init: child);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('fit', fit);
+    mateParams.put('alignment', alignment);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('child', child);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -715,9 +715,9 @@ class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('translation', init: translation);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('child', init: child);
+    mateParams.put('translation', translation);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('child', child);
   }
 }
 
@@ -786,17 +786,17 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate<RenderP
         child: p.get('child').value,
       ),
     );
-    mateParams.put('onPointerDown', init: onPointerDown);
-    mateParams.put('onPointerMove', init: onPointerMove);
-    mateParams.put('onPointerUp', init: onPointerUp);
-    mateParams.put('onPointerHover', init: onPointerHover);
-    mateParams.put('onPointerCancel', init: onPointerCancel);
-    mateParams.put('onPointerPanZoomStart', init: onPointerPanZoomStart);
-    mateParams.put('onPointerPanZoomUpdate', init: onPointerPanZoomUpdate);
-    mateParams.put('onPointerPanZoomEnd', init: onPointerPanZoomEnd);
-    mateParams.put('onPointerSignal', init: onPointerSignal);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('child', init: child);
+    mateParams.put('onPointerDown', onPointerDown);
+    mateParams.put('onPointerMove', onPointerMove);
+    mateParams.put('onPointerUp', onPointerUp);
+    mateParams.put('onPointerHover', onPointerHover);
+    mateParams.put('onPointerCancel', onPointerCancel);
+    mateParams.put('onPointerPanZoomStart', onPointerPanZoomStart);
+    mateParams.put('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
+    mateParams.put('onPointerPanZoomEnd', onPointerPanZoomEnd);
+    mateParams.put('onPointerSignal', onPointerSignal);
+    mateParams.put('behavior', behavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -850,14 +850,14 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate<RenderMouseRegi
         hitTestBehavior: p.get('hitTestBehavior').value,
       ),
     );
-    mateParams.put('onEnter', init: onEnter);
-    mateParams.put('onHover', init: onHover);
-    mateParams.put('onExit', init: onExit);
-    mateParams.put('cursor', init: cursor);
-    mateParams.put('validForMouseTracker', init: validForMouseTracker);
-    mateParams.put('opaque', init: opaque);
-    mateParams.put('child', init: child);
-    mateParams.put('hitTestBehavior', init: hitTestBehavior);
+    mateParams.put('onEnter', onEnter);
+    mateParams.put('onHover', onHover);
+    mateParams.put('onExit', onExit);
+    mateParams.put('cursor', cursor);
+    mateParams.put('validForMouseTracker', validForMouseTracker);
+    mateParams.put('opaque', opaque);
+    mateParams.put('child', child);
+    mateParams.put('hitTestBehavior', hitTestBehavior);
   }
 }
 
@@ -873,7 +873,7 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate<RenderR
       init: this,
       builder: (p) => RenderRepaintBoundary$Mate(child: p.get('child').value),
     );
-    mateParams.put('child', init: child);
+    mateParams.put('child', child);
   }
 }
 
@@ -902,9 +902,9 @@ class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate<RenderIgnor
         ignoringSemantics: p.get('ignoringSemantics').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('ignoring', init: ignoring);
-    mateParams.put('ignoringSemantics', init: ignoringSemantics);
+    mateParams.put('child', child);
+    mateParams.put('ignoring', ignoring);
+    mateParams.put('ignoringSemantics', ignoringSemantics);
   }
 }
 
@@ -928,8 +928,8 @@ class RenderOffstage$Mate extends RenderOffstage with Mate<RenderOffstage$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('offstage', init: offstage);
-    mateParams.put('child', init: child);
+    mateParams.put('offstage', offstage);
+    mateParams.put('child', child);
   }
 }
 
@@ -958,9 +958,9 @@ class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate<RenderAbsor
         ignoringSemantics: p.get('ignoringSemantics').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('absorbing', init: absorbing);
-    mateParams.put('ignoringSemantics', init: ignoringSemantics);
+    mateParams.put('child', child);
+    mateParams.put('absorbing', absorbing);
+    mateParams.put('ignoringSemantics', ignoringSemantics);
   }
 }
 
@@ -989,9 +989,9 @@ class RenderMetaData$Mate extends RenderMetaData with Mate<RenderMetaData$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('metaData', init: metaData);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('child', init: child);
+    mateParams.put('metaData', metaData);
+    mateParams.put('behavior', behavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -1041,13 +1041,13 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
         behavior: p.get('behavior').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('onHorizontalDragUpdate', init: onHorizontalDragUpdate);
-    mateParams.put('onVerticalDragUpdate', init: onVerticalDragUpdate);
-    mateParams.put('scrollFactor', init: scrollFactor);
-    mateParams.put('behavior', init: behavior);
+    mateParams.put('child', child);
+    mateParams.put('onTap', onTap);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('onHorizontalDragUpdate', onHorizontalDragUpdate);
+    mateParams.put('onVerticalDragUpdate', onVerticalDragUpdate);
+    mateParams.put('scrollFactor', scrollFactor);
+    mateParams.put('behavior', behavior);
   }
 }
 
@@ -1091,12 +1091,12 @@ class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Ma
         textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('properties', init: properties);
-    mateParams.put('container', init: container);
-    mateParams.put('explicitChildNodes', init: explicitChildNodes);
-    mateParams.put('excludeSemantics', init: excludeSemantics);
-    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', child);
+    mateParams.put('properties', properties);
+    mateParams.put('container', container);
+    mateParams.put('explicitChildNodes', explicitChildNodes);
+    mateParams.put('excludeSemantics', excludeSemantics);
+    mateParams.put('textDirection', textDirection);
   }
 }
 
@@ -1120,8 +1120,8 @@ class RenderBlockSemantics$Mate extends RenderBlockSemantics with Mate<RenderBlo
         blocking: p.get('blocking').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('blocking', init: blocking);
+    mateParams.put('child', child);
+    mateParams.put('blocking', blocking);
   }
 }
 
@@ -1137,7 +1137,7 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate<RenderMer
       init: this,
       builder: (p) => RenderMergeSemantics$Mate(child: p.get('child').value),
     );
-    mateParams.put('child', init: child);
+    mateParams.put('child', child);
   }
 }
 
@@ -1161,8 +1161,8 @@ class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate<Rende
         excluding: p.get('excluding').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('excluding', init: excluding);
+    mateParams.put('child', child);
+    mateParams.put('excluding', excluding);
   }
 }
 
@@ -1186,8 +1186,8 @@ class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate<Rende
         index: p.get('index').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('index', init: index);
+    mateParams.put('child', child);
+    mateParams.put('index', index);
   }
 }
 
@@ -1211,8 +1211,8 @@ class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate<RenderLeaderLay
         child: p.get('child').value,
       ),
     );
-    mateParams.put('link', init: link);
-    mateParams.put('child', init: child);
+    mateParams.put('link', link);
+    mateParams.put('child', child);
   }
 }
 
@@ -1256,12 +1256,12 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate<RenderFollo
         child: p.get('child').value,
       ),
     );
-    mateParams.put('link', init: link);
-    mateParams.put('showWhenUnlinked', init: showWhenUnlinked);
-    mateParams.put('offset', init: offset);
-    mateParams.put('leaderAnchor', init: leaderAnchor);
-    mateParams.put('followerAnchor', init: followerAnchor);
-    mateParams.put('child', init: child);
+    mateParams.put('link', link);
+    mateParams.put('showWhenUnlinked', showWhenUnlinked);
+    mateParams.put('offset', offset);
+    mateParams.put('leaderAnchor', leaderAnchor);
+    mateParams.put('followerAnchor', followerAnchor);
+    mateParams.put('child', child);
   }
 }
 
@@ -1291,8 +1291,8 @@ class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion
         child: p.get('child').value,
       ),
     );
-    mateParams.put('value', init: value);
-    mateParams.put('sized', init: sized);
-    mateParams.put('child', init: child);
+    mateParams.put('value', value);
+    mateParams.put('sized', sized);
+    mateParams.put('child', child);
   }
 }

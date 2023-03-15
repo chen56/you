@@ -136,28 +136,28 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with WidgetMate<Botto
         useLegacyColorScheme: p.get('useLegacyColorScheme').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('items', init: items);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('currentIndex', init: currentIndex);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('type', init: type);
-    mateParams.put('fixedColor', init: fixedColor);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('iconSize', init: iconSize);
-    mateParams.put('selectedItemColor', init: selectedItemColor);
-    mateParams.put('unselectedItemColor', init: unselectedItemColor);
-    mateParams.put('selectedIconTheme', init: selectedIconTheme);
-    mateParams.put('unselectedIconTheme', init: unselectedIconTheme);
-    mateParams.put('selectedFontSize', init: selectedFontSize);
-    mateParams.put('unselectedFontSize', init: unselectedFontSize);
-    mateParams.put('selectedLabelStyle', init: selectedLabelStyle);
-    mateParams.put('unselectedLabelStyle', init: unselectedLabelStyle);
-    mateParams.put('showSelectedLabels', init: showSelectedLabels);
-    mateParams.put('showUnselectedLabels', init: showUnselectedLabels);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('landscapeLayout', init: landscapeLayout);
-    mateParams.put('useLegacyColorScheme', init: useLegacyColorScheme);
+    mateParams.put('key', key);
+    mateParams.put('items', items);
+    mateParams.put('onTap', onTap);
+    mateParams.put('currentIndex', currentIndex);
+    mateParams.put('elevation', elevation);
+    mateParams.put('type', type);
+    mateParams.put('fixedColor', fixedColor);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('selectedItemColor', selectedItemColor);
+    mateParams.put('unselectedItemColor', unselectedItemColor);
+    mateParams.put('selectedIconTheme', selectedIconTheme);
+    mateParams.put('unselectedIconTheme', unselectedIconTheme);
+    mateParams.put('selectedFontSize', selectedFontSize);
+    mateParams.put('unselectedFontSize', unselectedFontSize);
+    mateParams.put('selectedLabelStyle', selectedLabelStyle);
+    mateParams.put('unselectedLabelStyle', unselectedLabelStyle);
+    mateParams.put('showSelectedLabels', showSelectedLabels);
+    mateParams.put('showUnselectedLabels', showUnselectedLabels);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('landscapeLayout', landscapeLayout);
+    mateParams.put('useLegacyColorScheme', useLegacyColorScheme);
   }
 }

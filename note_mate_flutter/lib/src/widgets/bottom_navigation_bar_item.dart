@@ -41,10 +41,10 @@ class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate<Bot
         tooltip: p.get('tooltip').value,
       ),
     );
-    mateParams.put('icon', init: icon);
-    mateParams.put('label', init: label);
-    mateParams.put('activeIcon', init: activeIcon);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('tooltip', init: tooltip);
+    mateParams.put('icon', icon);
+    mateParams.put('label', label);
+    mateParams.put('activeIcon', activeIcon);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('tooltip', tooltip);
   }
 }

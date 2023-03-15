@@ -62,14 +62,14 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate<BottomShe
         constraints: p.get('constraints').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('modalBackgroundColor', init: modalBackgroundColor);
-    mateParams.put('modalBarrierColor', init: modalBarrierColor);
-    mateParams.put('modalElevation', init: modalElevation);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('constraints', init: constraints);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('modalBackgroundColor', modalBackgroundColor);
+    mateParams.put('modalBarrierColor', modalBarrierColor);
+    mateParams.put('modalElevation', modalElevation);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('constraints', constraints);
   }
 }

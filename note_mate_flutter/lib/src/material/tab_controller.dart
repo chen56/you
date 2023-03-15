@@ -37,10 +37,10 @@ class TabController$Mate extends TabController with Mate<TabController$Mate> {
         vsync: p.get('vsync').value,
       ),
     );
-    mateParams.put('initialIndex', init: initialIndex);
-    mateParams.put('animationDuration', init: animationDuration);
-    mateParams.put('length', init: length);
-    mateParams.put('vsync', init: vsync);
+    mateParams.put('initialIndex', initialIndex);
+    mateParams.put('animationDuration', animationDuration);
+    mateParams.put('length', length);
+    mateParams.put('vsync', vsync);
   }
 }
 
@@ -79,10 +79,10 @@ class DefaultTabController$Mate extends DefaultTabController with WidgetMate<Def
         animationDuration: p.get('animationDuration').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('length', init: length);
-    mateParams.put('initialIndex', init: initialIndex);
-    mateParams.put('child', init: child);
-    mateParams.put('animationDuration', init: animationDuration);
+    mateParams.put('key', key);
+    mateParams.put('length', length);
+    mateParams.put('initialIndex', initialIndex);
+    mateParams.put('child', child);
+    mateParams.put('animationDuration', animationDuration);
   }
 }

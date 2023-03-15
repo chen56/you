@@ -17,6 +17,6 @@ class DisposableBuildContext$Mate<T extends State<StatefulWidget>> extends Dispo
       init: this,
       builder: (p) => DisposableBuildContext$Mate(p.get('_state').value),
     );
-    mateParams.put('_state', init: _state);
+    mateParams.put('_state', _state);
   }
 }

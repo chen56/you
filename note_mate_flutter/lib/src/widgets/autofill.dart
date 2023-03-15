@@ -30,8 +30,8 @@ class AutofillGroup$Mate extends AutofillGroup with WidgetMate<AutofillGroup$Mat
         onDisposeAction: p.get('onDisposeAction').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('onDisposeAction', init: onDisposeAction);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('onDisposeAction', onDisposeAction);
   }
 }

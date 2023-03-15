@@ -30,8 +30,8 @@ class ScrollConfiguration$Mate extends ScrollConfiguration with WidgetMate<Scrol
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('behavior', init: behavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('behavior', behavior);
+    mateParams.put('child', child);
   }
 }

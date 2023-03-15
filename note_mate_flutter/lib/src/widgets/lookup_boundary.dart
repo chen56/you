@@ -25,7 +25,7 @@ class LookupBoundary$Mate extends LookupBoundary with WidgetMate<LookupBoundary$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }

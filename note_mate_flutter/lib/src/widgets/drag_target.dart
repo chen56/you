@@ -121,26 +121,26 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with WidgetMate<Drag
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('feedback', init: feedback);
-    mateParams.put('data', init: data);
-    mateParams.put('axis', init: axis);
-    mateParams.put('childWhenDragging', init: childWhenDragging);
-    mateParams.put('feedbackOffset', init: feedbackOffset);
-    mateParams.put('dragAnchorStrategy', init: dragAnchorStrategy);
-    mateParams.put('affinity', init: affinity);
-    mateParams.put('maxSimultaneousDrags', init: maxSimultaneousDrags);
-    mateParams.put('onDragStarted', init: onDragStarted);
-    mateParams.put('onDragUpdate', init: onDragUpdate);
-    mateParams.put('onDraggableCanceled', init: onDraggableCanceled);
-    mateParams.put('onDragEnd', init: onDragEnd);
-    mateParams.put('onDragCompleted', init: onDragCompleted);
-    mateParams.put('ignoringFeedbackSemantics', init: ignoringFeedbackSemantics);
-    mateParams.put('ignoringFeedbackPointer', init: ignoringFeedbackPointer);
-    mateParams.put('rootOverlay', init: rootOverlay);
-    mateParams.put('hitTestBehavior', init: hitTestBehavior);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('feedback', feedback);
+    mateParams.put('data', data);
+    mateParams.put('axis', axis);
+    mateParams.put('childWhenDragging', childWhenDragging);
+    mateParams.put('feedbackOffset', feedbackOffset);
+    mateParams.put('dragAnchorStrategy', dragAnchorStrategy);
+    mateParams.put('affinity', affinity);
+    mateParams.put('maxSimultaneousDrags', maxSimultaneousDrags);
+    mateParams.put('onDragStarted', onDragStarted);
+    mateParams.put('onDragUpdate', onDragUpdate);
+    mateParams.put('onDraggableCanceled', onDraggableCanceled);
+    mateParams.put('onDragEnd', onDragEnd);
+    mateParams.put('onDragCompleted', onDragCompleted);
+    mateParams.put('ignoringFeedbackSemantics', ignoringFeedbackSemantics);
+    mateParams.put('ignoringFeedbackPointer', ignoringFeedbackPointer);
+    mateParams.put('rootOverlay', rootOverlay);
+    mateParams.put('hitTestBehavior', hitTestBehavior);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -249,25 +249,25 @@ class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> wi
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('feedback', init: feedback);
-    mateParams.put('data', init: data);
-    mateParams.put('axis', init: axis);
-    mateParams.put('childWhenDragging', init: childWhenDragging);
-    mateParams.put('feedbackOffset', init: feedbackOffset);
-    mateParams.put('dragAnchorStrategy', init: dragAnchorStrategy);
-    mateParams.put('maxSimultaneousDrags', init: maxSimultaneousDrags);
-    mateParams.put('onDragStarted', init: onDragStarted);
-    mateParams.put('onDragUpdate', init: onDragUpdate);
-    mateParams.put('onDraggableCanceled', init: onDraggableCanceled);
-    mateParams.put('onDragEnd', init: onDragEnd);
-    mateParams.put('onDragCompleted', init: onDragCompleted);
-    mateParams.put('hapticFeedbackOnStart', init: hapticFeedbackOnStart);
-    mateParams.put('ignoringFeedbackSemantics', init: ignoringFeedbackSemantics);
-    mateParams.put('ignoringFeedbackPointer', init: ignoringFeedbackPointer);
-    mateParams.put('delay', init: delay);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('feedback', feedback);
+    mateParams.put('data', data);
+    mateParams.put('axis', axis);
+    mateParams.put('childWhenDragging', childWhenDragging);
+    mateParams.put('feedbackOffset', feedbackOffset);
+    mateParams.put('dragAnchorStrategy', dragAnchorStrategy);
+    mateParams.put('maxSimultaneousDrags', maxSimultaneousDrags);
+    mateParams.put('onDragStarted', onDragStarted);
+    mateParams.put('onDragUpdate', onDragUpdate);
+    mateParams.put('onDraggableCanceled', onDraggableCanceled);
+    mateParams.put('onDragEnd', onDragEnd);
+    mateParams.put('onDragCompleted', onDragCompleted);
+    mateParams.put('hapticFeedbackOnStart', hapticFeedbackOnStart);
+    mateParams.put('ignoringFeedbackSemantics', ignoringFeedbackSemantics);
+    mateParams.put('ignoringFeedbackPointer', ignoringFeedbackPointer);
+    mateParams.put('delay', delay);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -296,9 +296,9 @@ class DraggableDetails$Mate extends DraggableDetails with Mate<DraggableDetails$
         offset: p.get('offset').value,
       ),
     );
-    mateParams.put('wasAccepted', init: wasAccepted);
-    mateParams.put('velocity', init: velocity);
-    mateParams.put('offset', init: offset);
+    mateParams.put('wasAccepted', wasAccepted);
+    mateParams.put('velocity', velocity);
+    mateParams.put('offset', offset);
   }
 }
 
@@ -322,8 +322,8 @@ class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate<DragTarge
         offset: p.get('offset').value,
       ),
     );
-    mateParams.put('data', init: data);
-    mateParams.put('offset', init: offset);
+    mateParams.put('data', data);
+    mateParams.put('offset', offset);
   }
 }
 
@@ -377,13 +377,13 @@ class DragTarget$Mate<T extends Object> extends DragTarget<T> with WidgetMate<Dr
         hitTestBehavior: p.get('hitTestBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('builder', init: builder);
-    mateParams.put('onWillAccept', init: onWillAccept);
-    mateParams.put('onAccept', init: onAccept);
-    mateParams.put('onAcceptWithDetails', init: onAcceptWithDetails);
-    mateParams.put('onLeave', init: onLeave);
-    mateParams.put('onMove', init: onMove);
-    mateParams.put('hitTestBehavior', init: hitTestBehavior);
+    mateParams.put('key', key);
+    mateParams.put('builder', builder);
+    mateParams.put('onWillAccept', onWillAccept);
+    mateParams.put('onAccept', onAccept);
+    mateParams.put('onAcceptWithDetails', onAcceptWithDetails);
+    mateParams.put('onLeave', onLeave);
+    mateParams.put('onMove', onMove);
+    mateParams.put('hitTestBehavior', hitTestBehavior);
   }
 }

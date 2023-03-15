@@ -31,9 +31,9 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate<ForcePressDetai
         pressure: p.get('pressure').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('pressure', init: pressure);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('pressure', pressure);
   }
 }
 
@@ -77,11 +77,11 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('startPressure', init: startPressure);
-    mateParams.put('peakPressure', init: peakPressure);
-    mateParams.put('interpolation', init: interpolation);
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('startPressure', startPressure);
+    mateParams.put('peakPressure', peakPressure);
+    mateParams.put('interpolation', interpolation);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

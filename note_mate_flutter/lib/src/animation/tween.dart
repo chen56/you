@@ -26,8 +26,8 @@ class Tween$Mate<T extends Object?> extends Tween<T> with Mate<Tween$Mate> {
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -43,7 +43,7 @@ class ReverseTween$Mate<T extends Object?> extends ReverseTween<T> with Mate<Rev
       init: this,
       builder: (p) => ReverseTween$Mate(p.get('parent').value),
     );
-    mateParams.put('parent', init: parent);
+    mateParams.put('parent', parent);
   }
 }
 
@@ -67,8 +67,8 @@ class ColorTween$Mate extends ColorTween with Mate<ColorTween$Mate> {
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -92,8 +92,8 @@ class SizeTween$Mate extends SizeTween with Mate<SizeTween$Mate> {
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -117,8 +117,8 @@ class RectTween$Mate extends RectTween with Mate<RectTween$Mate> {
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -142,8 +142,8 @@ class IntTween$Mate extends IntTween with Mate<IntTween$Mate> {
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -167,8 +167,8 @@ class StepTween$Mate extends StepTween with Mate<StepTween$Mate> {
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -184,7 +184,7 @@ class ConstantTween$Mate<T> extends ConstantTween<T> with Mate<ConstantTween$Mat
       init: this,
       builder: (p) => ConstantTween$Mate(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }
 
@@ -200,6 +200,6 @@ class CurveTween$Mate extends CurveTween with Mate<CurveTween$Mate> {
       init: this,
       builder: (p) => CurveTween$Mate(curve: p.get('curve').value),
     );
-    mateParams.put('curve', init: curve);
+    mateParams.put('curve', curve);
   }
 }

@@ -79,18 +79,18 @@ class CupertinoListTile$Mate extends CupertinoListTile with WidgetMate<Cupertino
         leadingToTitle: p.get('leadingToTitle').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('title', init: title);
-    mateParams.put('subtitle', init: subtitle);
-    mateParams.put('additionalInfo', init: additionalInfo);
-    mateParams.put('leading', init: leading);
-    mateParams.put('trailing', init: trailing);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('backgroundColorActivated', init: backgroundColorActivated);
-    mateParams.put('padding', init: padding);
-    mateParams.put('leadingSize', init: leadingSize);
-    mateParams.put('leadingToTitle', init: leadingToTitle);
+    mateParams.put('key', key);
+    mateParams.put('title', title);
+    mateParams.put('subtitle', subtitle);
+    mateParams.put('additionalInfo', additionalInfo);
+    mateParams.put('leading', leading);
+    mateParams.put('trailing', trailing);
+    mateParams.put('onTap', onTap);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('backgroundColorActivated', backgroundColorActivated);
+    mateParams.put('padding', padding);
+    mateParams.put('leadingSize', leadingSize);
+    mateParams.put('leadingToTitle', leadingToTitle);
   }
 
   /// CupertinoListTile CupertinoListTile.notched({Key? key, required Widget title, Widget? subtitle, Widget? additionalInfo, Widget? leading, Widget? trailing, FutureOr<void> Function()? onTap, Color? backgroundColor, Color? backgroundColorActivated, EdgeInsetsGeometry? padding, double leadingSize = _kNotchedLeadingSize, double leadingToTitle = _kNotchedLeadingToTitle})
@@ -161,18 +161,18 @@ class CupertinoListTile$Mate extends CupertinoListTile with WidgetMate<Cupertino
         leadingToTitle: p.get('leadingToTitle').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('title', init: title);
-    mateParams.put('subtitle', init: subtitle);
-    mateParams.put('additionalInfo', init: additionalInfo);
-    mateParams.put('leading', init: leading);
-    mateParams.put('trailing', init: trailing);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('backgroundColorActivated', init: backgroundColorActivated);
-    mateParams.put('padding', init: padding);
-    mateParams.put('leadingSize', init: leadingSize);
-    mateParams.put('leadingToTitle', init: leadingToTitle);
+    mateParams.put('key', key);
+    mateParams.put('title', title);
+    mateParams.put('subtitle', subtitle);
+    mateParams.put('additionalInfo', additionalInfo);
+    mateParams.put('leading', leading);
+    mateParams.put('trailing', trailing);
+    mateParams.put('onTap', onTap);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('backgroundColorActivated', backgroundColorActivated);
+    mateParams.put('padding', padding);
+    mateParams.put('leadingSize', leadingSize);
+    mateParams.put('leadingToTitle', leadingToTitle);
   }
 }
 
@@ -188,6 +188,6 @@ class CupertinoListTileChevron$Mate extends CupertinoListTileChevron with Widget
       init: this,
       builder: (p) => CupertinoListTileChevron$Mate(key: p.get('key').value),
     );
-    mateParams.put('key', init: key);
+    mateParams.put('key', key);
   }
 }

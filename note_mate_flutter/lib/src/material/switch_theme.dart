@@ -61,14 +61,14 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate<SwitchThemeData$Mat
         thumbIcon: p.get('thumbIcon').value,
       ),
     );
-    mateParams.put('thumbColor', init: thumbColor);
-    mateParams.put('trackColor', init: trackColor);
-    mateParams.put('trackOutlineColor', init: trackOutlineColor);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('splashRadius', init: splashRadius);
-    mateParams.put('thumbIcon', init: thumbIcon);
+    mateParams.put('thumbColor', thumbColor);
+    mateParams.put('trackColor', trackColor);
+    mateParams.put('trackOutlineColor', trackOutlineColor);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('thumbIcon', thumbIcon);
   }
 }
 
@@ -97,8 +97,8 @@ class SwitchTheme$Mate extends SwitchTheme with WidgetMate<SwitchTheme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

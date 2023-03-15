@@ -36,10 +36,10 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
         maxHeight: p.get('maxHeight').value,
       ),
     );
-    mateParams.put('minWidth', init: minWidth);
-    mateParams.put('maxWidth', init: maxWidth);
-    mateParams.put('minHeight', init: minHeight);
-    mateParams.put('maxHeight', init: maxHeight);
+    mateParams.put('minWidth', minWidth);
+    mateParams.put('maxWidth', maxWidth);
+    mateParams.put('minHeight', minHeight);
+    mateParams.put('maxHeight', maxHeight);
   }
 
   /// BoxConstraints BoxConstraints.tight(Size size)
@@ -52,7 +52,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
       init: this,
       builder: (p) => BoxConstraints$Mate.tight(p.get('size').value),
     );
-    mateParams.put('size', init: size);
+    mateParams.put('size', size);
   }
 
   /// BoxConstraints BoxConstraints.tightFor({double? width, double? height})
@@ -73,8 +73,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
         height: p.get('height').value,
       ),
     );
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
   }
 
   /// BoxConstraints BoxConstraints.tightForFinite({double width = double.infinity, double height = double.infinity})
@@ -95,8 +95,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
         height: p.get('height').value,
       ),
     );
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
   }
 
   /// BoxConstraints BoxConstraints.loose(Size size)
@@ -109,7 +109,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
       init: this,
       builder: (p) => BoxConstraints$Mate.loose(p.get('size').value),
     );
-    mateParams.put('size', init: size);
+    mateParams.put('size', size);
   }
 
   /// BoxConstraints BoxConstraints.expand({double? width, double? height})
@@ -130,8 +130,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
         height: p.get('height').value,
       ),
     );
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
   }
 }
 
@@ -147,7 +147,7 @@ class BoxHitTestResult$Mate extends BoxHitTestResult with Mate<BoxHitTestResult$
       init: this,
       builder: (p) => BoxHitTestResult$Mate.wrap(p.get('result').value),
     );
-    mateParams.put('result', init: result);
+    mateParams.put('result', result);
   }
 }
 
@@ -171,7 +171,7 @@ class BoxHitTestEntry$Mate extends BoxHitTestEntry with Mate<BoxHitTestEntry$Mat
         p.get('localPosition').value,
       ),
     );
-    mateParams.put('target', init: target);
-    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('target', target);
+    mateParams.put('localPosition', localPosition);
   }
 }

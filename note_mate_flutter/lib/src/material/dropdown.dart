@@ -54,12 +54,12 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with WidgetMate<Dropd
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('value', init: value);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onTap', onTap);
+    mateParams.put('value', value);
+    mateParams.put('enabled', enabled);
+    mateParams.put('alignment', alignment);
+    mateParams.put('child', child);
   }
 }
 
@@ -84,8 +84,8 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }
 
@@ -229,32 +229,32 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownB
         borderRadius: p.get('borderRadius').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('items', init: items);
-    mateParams.put('selectedItemBuilder', init: selectedItemBuilder);
-    mateParams.put('value', init: value);
-    mateParams.put('hint', init: hint);
-    mateParams.put('disabledHint', init: disabledHint);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('style', init: style);
-    mateParams.put('underline', init: underline);
-    mateParams.put('icon', init: icon);
-    mateParams.put('iconDisabledColor', init: iconDisabledColor);
-    mateParams.put('iconEnabledColor', init: iconEnabledColor);
-    mateParams.put('iconSize', init: iconSize);
-    mateParams.put('isDense', init: isDense);
-    mateParams.put('isExpanded', init: isExpanded);
-    mateParams.put('itemHeight', init: itemHeight);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('dropdownColor', init: dropdownColor);
-    mateParams.put('menuMaxHeight', init: menuMaxHeight);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('key', key);
+    mateParams.put('items', items);
+    mateParams.put('selectedItemBuilder', selectedItemBuilder);
+    mateParams.put('value', value);
+    mateParams.put('hint', hint);
+    mateParams.put('disabledHint', disabledHint);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('onTap', onTap);
+    mateParams.put('elevation', elevation);
+    mateParams.put('style', style);
+    mateParams.put('underline', underline);
+    mateParams.put('icon', icon);
+    mateParams.put('iconDisabledColor', iconDisabledColor);
+    mateParams.put('iconEnabledColor', iconEnabledColor);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('isDense', isDense);
+    mateParams.put('isExpanded', isExpanded);
+    mateParams.put('itemHeight', itemHeight);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('dropdownColor', dropdownColor);
+    mateParams.put('menuMaxHeight', menuMaxHeight);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('alignment', alignment);
+    mateParams.put('borderRadius', borderRadius);
   }
 }
 
@@ -413,34 +413,34 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Wi
         borderRadius: p.get('borderRadius').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('items', init: items);
-    mateParams.put('selectedItemBuilder', init: selectedItemBuilder);
-    mateParams.put('value', init: value);
-    mateParams.put('hint', init: hint);
-    mateParams.put('disabledHint', init: disabledHint);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('style', init: style);
-    mateParams.put('icon', init: icon);
-    mateParams.put('iconDisabledColor', init: iconDisabledColor);
-    mateParams.put('iconEnabledColor', init: iconEnabledColor);
-    mateParams.put('iconSize', init: iconSize);
-    mateParams.put('isDense', init: isDense);
-    mateParams.put('isExpanded', init: isExpanded);
-    mateParams.put('itemHeight', init: itemHeight);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('dropdownColor', init: dropdownColor);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('onSaved', init: onSaved);
-    mateParams.put('validator', init: validator);
-    mateParams.put('autovalidateMode', init: autovalidateMode);
-    mateParams.put('menuMaxHeight', init: menuMaxHeight);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('key', key);
+    mateParams.put('items', items);
+    mateParams.put('selectedItemBuilder', selectedItemBuilder);
+    mateParams.put('value', value);
+    mateParams.put('hint', hint);
+    mateParams.put('disabledHint', disabledHint);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('onTap', onTap);
+    mateParams.put('elevation', elevation);
+    mateParams.put('style', style);
+    mateParams.put('icon', icon);
+    mateParams.put('iconDisabledColor', iconDisabledColor);
+    mateParams.put('iconEnabledColor', iconEnabledColor);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('isDense', isDense);
+    mateParams.put('isExpanded', isExpanded);
+    mateParams.put('itemHeight', itemHeight);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('dropdownColor', dropdownColor);
+    mateParams.put('decoration', decoration);
+    mateParams.put('onSaved', onSaved);
+    mateParams.put('validator', validator);
+    mateParams.put('autovalidateMode', autovalidateMode);
+    mateParams.put('menuMaxHeight', menuMaxHeight);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('alignment', alignment);
+    mateParams.put('borderRadius', borderRadius);
   }
 }

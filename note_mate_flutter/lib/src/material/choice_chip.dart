@@ -154,31 +154,31 @@ class ChoiceChip$Mate extends ChoiceChip with WidgetMate<ChoiceChip$Mate> {
         avatarBorder: p.get('avatarBorder').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('avatar', init: avatar);
-    mateParams.put('label', init: label);
-    mateParams.put('labelStyle', init: labelStyle);
-    mateParams.put('labelPadding', init: labelPadding);
-    mateParams.put('onSelected', init: onSelected);
-    mateParams.put('pressElevation', init: pressElevation);
-    mateParams.put('selected', init: selected);
-    mateParams.put('selectedColor', init: selectedColor);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('side', init: side);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('padding', init: padding);
-    mateParams.put('visualDensity', init: visualDensity);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('iconTheme', init: iconTheme);
-    mateParams.put('selectedShadowColor', init: selectedShadowColor);
-    mateParams.put('avatarBorder', init: avatarBorder);
+    mateParams.put('key', key);
+    mateParams.put('avatar', avatar);
+    mateParams.put('label', label);
+    mateParams.put('labelStyle', labelStyle);
+    mateParams.put('labelPadding', labelPadding);
+    mateParams.put('onSelected', onSelected);
+    mateParams.put('pressElevation', pressElevation);
+    mateParams.put('selected', selected);
+    mateParams.put('selectedColor', selectedColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('side', side);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('padding', padding);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('iconTheme', iconTheme);
+    mateParams.put('selectedShadowColor', selectedShadowColor);
+    mateParams.put('avatarBorder', avatarBorder);
   }
 }

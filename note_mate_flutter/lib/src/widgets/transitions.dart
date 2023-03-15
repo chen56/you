@@ -51,11 +51,11 @@ class SlideTransition$Mate extends SlideTransition with WidgetMate<SlideTransiti
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('position', init: position);
-    mateParams.put('transformHitTests', init: transformHitTests);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('position', position);
+    mateParams.put('transformHitTests', transformHitTests);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('child', child);
   }
 }
 
@@ -94,11 +94,11 @@ class ScaleTransition$Mate extends ScaleTransition with WidgetMate<ScaleTransiti
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('scale', init: scale);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('scale', scale);
+    mateParams.put('alignment', alignment);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('child', child);
   }
 }
 
@@ -137,11 +137,11 @@ class RotationTransition$Mate extends RotationTransition with WidgetMate<Rotatio
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('turns', init: turns);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('turns', turns);
+    mateParams.put('alignment', alignment);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('child', child);
   }
 }
 
@@ -180,11 +180,11 @@ class SizeTransition$Mate extends SizeTransition with WidgetMate<SizeTransition$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('axis', init: axis);
-    mateParams.put('sizeFactor', init: sizeFactor);
-    mateParams.put('axisAlignment', init: axisAlignment);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('axis', axis);
+    mateParams.put('sizeFactor', sizeFactor);
+    mateParams.put('axisAlignment', axisAlignment);
+    mateParams.put('child', child);
   }
 }
 
@@ -218,10 +218,10 @@ class FadeTransition$Mate extends FadeTransition with WidgetMate<FadeTransition$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('opacity', opacity);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateParams.put('child', child);
   }
 }
 
@@ -255,10 +255,10 @@ class SliverFadeTransition$Mate extends SliverFadeTransition with WidgetMate<Sli
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('key', key);
+    mateParams.put('opacity', opacity);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateParams.put('sliver', sliver);
   }
 }
 
@@ -282,8 +282,8 @@ class RelativeRectTween$Mate extends RelativeRectTween with Mate<RelativeRectTwe
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -312,9 +312,9 @@ class PositionedTransition$Mate extends PositionedTransition with WidgetMate<Pos
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('rect', init: rect);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('rect', rect);
+    mateParams.put('child', child);
   }
 }
 
@@ -349,10 +349,10 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('rect', init: rect);
-    mateParams.put('size', init: size);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('rect', rect);
+    mateParams.put('size', size);
+    mateParams.put('child', child);
   }
 }
 
@@ -386,10 +386,10 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with WidgetMate
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('position', init: position);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('decoration', decoration);
+    mateParams.put('position', position);
+    mateParams.put('child', child);
   }
 }
 
@@ -428,11 +428,11 @@ class AlignTransition$Mate extends AlignTransition with WidgetMate<AlignTransiti
         heightFactor: p.get('heightFactor').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('child', init: child);
-    mateParams.put('widthFactor', init: widthFactor);
-    mateParams.put('heightFactor', init: heightFactor);
+    mateParams.put('key', key);
+    mateParams.put('alignment', alignment);
+    mateParams.put('child', child);
+    mateParams.put('widthFactor', widthFactor);
+    mateParams.put('heightFactor', heightFactor);
   }
 }
 
@@ -482,13 +482,13 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition
         maxLines: p.get('maxLines').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('style', init: style);
-    mateParams.put('child', init: child);
-    mateParams.put('textAlign', init: textAlign);
-    mateParams.put('softWrap', init: softWrap);
-    mateParams.put('overflow', init: overflow);
-    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('key', key);
+    mateParams.put('style', style);
+    mateParams.put('child', child);
+    mateParams.put('textAlign', textAlign);
+    mateParams.put('softWrap', softWrap);
+    mateParams.put('overflow', overflow);
+    mateParams.put('maxLines', maxLines);
   }
 }
 
@@ -522,10 +522,10 @@ class ListenableBuilder$Mate extends ListenableBuilder with WidgetMate<Listenabl
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('listenable', init: listenable);
-    mateParams.put('builder', init: builder);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('listenable', listenable);
+    mateParams.put('builder', builder);
+    mateParams.put('child', child);
   }
 }
 
@@ -559,9 +559,9 @@ class AnimatedBuilder$Mate extends AnimatedBuilder with WidgetMate<AnimatedBuild
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('animation', init: animation);
-    mateParams.put('builder', init: builder);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('animation', animation);
+    mateParams.put('builder', builder);
+    mateParams.put('child', child);
   }
 }

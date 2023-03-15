@@ -94,21 +94,21 @@ class Dismissible$Mate extends Dismissible with WidgetMate<Dismissible$Mate> {
         behavior: p.get('behavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('background', init: background);
-    mateParams.put('secondaryBackground', init: secondaryBackground);
-    mateParams.put('confirmDismiss', init: confirmDismiss);
-    mateParams.put('onResize', init: onResize);
-    mateParams.put('onUpdate', init: onUpdate);
-    mateParams.put('onDismissed', init: onDismissed);
-    mateParams.put('direction', init: direction);
-    mateParams.put('resizeDuration', init: resizeDuration);
-    mateParams.put('dismissThresholds', init: dismissThresholds);
-    mateParams.put('movementDuration', init: movementDuration);
-    mateParams.put('crossAxisEndOffset', init: crossAxisEndOffset);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('behavior', init: behavior);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('background', background);
+    mateParams.put('secondaryBackground', secondaryBackground);
+    mateParams.put('confirmDismiss', confirmDismiss);
+    mateParams.put('onResize', onResize);
+    mateParams.put('onUpdate', onUpdate);
+    mateParams.put('onDismissed', onDismissed);
+    mateParams.put('direction', direction);
+    mateParams.put('resizeDuration', resizeDuration);
+    mateParams.put('dismissThresholds', dismissThresholds);
+    mateParams.put('movementDuration', movementDuration);
+    mateParams.put('crossAxisEndOffset', crossAxisEndOffset);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('behavior', behavior);
   }
 }
 
@@ -142,9 +142,9 @@ class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate<DismissUp
         progress: p.get('progress').value,
       ),
     );
-    mateParams.put('direction', init: direction);
-    mateParams.put('reached', init: reached);
-    mateParams.put('previousReached', init: previousReached);
-    mateParams.put('progress', init: progress);
+    mateParams.put('direction', direction);
+    mateParams.put('reached', reached);
+    mateParams.put('previousReached', previousReached);
+    mateParams.put('progress', progress);
   }
 }

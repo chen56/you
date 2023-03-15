@@ -56,12 +56,12 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('tween', init: tween);
-    mateParams.put('duration', init: duration);
-    mateParams.put('curve', init: curve);
-    mateParams.put('builder', init: builder);
-    mateParams.put('onEnd', init: onEnd);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('tween', tween);
+    mateParams.put('duration', duration);
+    mateParams.put('curve', curve);
+    mateParams.put('builder', builder);
+    mateParams.put('onEnd', onEnd);
+    mateParams.put('child', child);
   }
 }

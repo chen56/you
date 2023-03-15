@@ -32,9 +32,9 @@ class RestorationScope$Mate extends RestorationScope with WidgetMate<Restoration
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('child', child);
   }
 }
 
@@ -63,9 +63,9 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Widg
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('bucket', init: bucket);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('bucket', bucket);
+    mateParams.put('child', child);
   }
 }
 
@@ -94,8 +94,8 @@ class RootRestorationScope$Mate extends RootRestorationScope with WidgetMate<Roo
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('child', child);
   }
 }

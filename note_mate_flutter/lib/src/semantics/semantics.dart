@@ -21,7 +21,7 @@ class SemanticsTag$Mate extends SemanticsTag with Mate<SemanticsTag$Mate> {
       init: this,
       builder: (p) => SemanticsTag$Mate(p.get('name').value),
     );
-    mateParams.put('name', init: name);
+    mateParams.put('name', name);
   }
 }
 
@@ -37,7 +37,7 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate<CustomS
       init: this,
       builder: (p) => CustomSemanticsAction$Mate(label: p.get('label').value),
     );
-    mateParams.put('label', init: label);
+    mateParams.put('label', label);
   }
 
   /// CustomSemanticsAction CustomSemanticsAction.overridingAction({required String hint, required SemanticsAction action})
@@ -58,8 +58,8 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate<CustomS
         action: p.get('action').value,
       ),
     );
-    mateParams.put('hint', init: hint);
-    mateParams.put('action', init: action);
+    mateParams.put('hint', hint);
+    mateParams.put('action', action);
   }
 }
 
@@ -82,8 +82,8 @@ class AttributedString$Mate extends AttributedString with Mate<AttributedString$
         attributes: p.get('attributes').value,
       ),
     );
-    mateParams.put('string', init: string);
-    mateParams.put('attributes', init: attributes);
+    mateParams.put('string', string);
+    mateParams.put('attributes', attributes);
   }
 }
 
@@ -131,13 +131,13 @@ class AttributedStringProperty$Mate extends AttributedStringProperty with Mate<A
         description: p.get('description').value,
       ),
     );
-    mateParams.put('name', init: name);
-    mateParams.put('value', init: value);
-    mateParams.put('showName', init: showName);
-    mateParams.put('showWhenEmpty', init: showWhenEmpty);
-    mateParams.put('defaultValue', init: defaultValue);
-    mateParams.put('level', init: level);
-    mateParams.put('description', init: description);
+    mateParams.put('name', name);
+    mateParams.put('value', value);
+    mateParams.put('showName', showName);
+    mateParams.put('showWhenEmpty', showWhenEmpty);
+    mateParams.put('defaultValue', defaultValue);
+    mateParams.put('level', level);
+    mateParams.put('description', description);
   }
 }
 
@@ -271,30 +271,30 @@ class SemanticsData$Mate extends SemanticsData with Mate<SemanticsData$Mate> {
         customSemanticsActionIds: p.get('customSemanticsActionIds').value,
       ),
     );
-    mateParams.put('flags', init: flags);
-    mateParams.put('actions', init: actions);
-    mateParams.put('attributedLabel', init: attributedLabel);
-    mateParams.put('attributedValue', init: attributedValue);
-    mateParams.put('attributedIncreasedValue', init: attributedIncreasedValue);
-    mateParams.put('attributedDecreasedValue', init: attributedDecreasedValue);
-    mateParams.put('attributedHint', init: attributedHint);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('rect', init: rect);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('textSelection', init: textSelection);
-    mateParams.put('scrollIndex', init: scrollIndex);
-    mateParams.put('scrollChildCount', init: scrollChildCount);
-    mateParams.put('scrollPosition', init: scrollPosition);
-    mateParams.put('scrollExtentMax', init: scrollExtentMax);
-    mateParams.put('scrollExtentMin', init: scrollExtentMin);
-    mateParams.put('platformViewId', init: platformViewId);
-    mateParams.put('maxValueLength', init: maxValueLength);
-    mateParams.put('currentValueLength', init: currentValueLength);
-    mateParams.put('tags', init: tags);
-    mateParams.put('transform', init: transform);
-    mateParams.put('customSemanticsActionIds', init: customSemanticsActionIds);
+    mateParams.put('flags', flags);
+    mateParams.put('actions', actions);
+    mateParams.put('attributedLabel', attributedLabel);
+    mateParams.put('attributedValue', attributedValue);
+    mateParams.put('attributedIncreasedValue', attributedIncreasedValue);
+    mateParams.put('attributedDecreasedValue', attributedDecreasedValue);
+    mateParams.put('attributedHint', attributedHint);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('rect', rect);
+    mateParams.put('elevation', elevation);
+    mateParams.put('thickness', thickness);
+    mateParams.put('textSelection', textSelection);
+    mateParams.put('scrollIndex', scrollIndex);
+    mateParams.put('scrollChildCount', scrollChildCount);
+    mateParams.put('scrollPosition', scrollPosition);
+    mateParams.put('scrollExtentMax', scrollExtentMax);
+    mateParams.put('scrollExtentMin', scrollExtentMin);
+    mateParams.put('platformViewId', platformViewId);
+    mateParams.put('maxValueLength', maxValueLength);
+    mateParams.put('currentValueLength', currentValueLength);
+    mateParams.put('tags', tags);
+    mateParams.put('transform', transform);
+    mateParams.put('customSemanticsActionIds', customSemanticsActionIds);
   }
 }
 
@@ -318,8 +318,8 @@ class SemanticsHintOverrides$Mate extends SemanticsHintOverrides with Mate<Seman
         onLongPressHint: p.get('onLongPressHint').value,
       ),
     );
-    mateParams.put('onTapHint', init: onTapHint);
-    mateParams.put('onLongPressHint', init: onLongPressHint);
+    mateParams.put('onTapHint', onTapHint);
+    mateParams.put('onLongPressHint', onLongPressHint);
   }
 }
 
@@ -633,66 +633,66 @@ class SemanticsProperties$Mate extends SemanticsProperties with Mate<SemanticsPr
         customSemanticsActions: p.get('customSemanticsActions').value,
       ),
     );
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('checked', init: checked);
-    mateParams.put('mixed', init: mixed);
-    mateParams.put('selected', init: selected);
-    mateParams.put('toggled', init: toggled);
-    mateParams.put('button', init: button);
-    mateParams.put('link', init: link);
-    mateParams.put('header', init: header);
-    mateParams.put('textField', init: textField);
-    mateParams.put('slider', init: slider);
-    mateParams.put('keyboardKey', init: keyboardKey);
-    mateParams.put('readOnly', init: readOnly);
-    mateParams.put('focusable', init: focusable);
-    mateParams.put('focused', init: focused);
-    mateParams.put('inMutuallyExclusiveGroup', init: inMutuallyExclusiveGroup);
-    mateParams.put('hidden', init: hidden);
-    mateParams.put('obscured', init: obscured);
-    mateParams.put('multiline', init: multiline);
-    mateParams.put('scopesRoute', init: scopesRoute);
-    mateParams.put('namesRoute', init: namesRoute);
-    mateParams.put('image', init: image);
-    mateParams.put('liveRegion', init: liveRegion);
-    mateParams.put('maxValueLength', init: maxValueLength);
-    mateParams.put('currentValueLength', init: currentValueLength);
-    mateParams.put('label', init: label);
-    mateParams.put('attributedLabel', init: attributedLabel);
-    mateParams.put('value', init: value);
-    mateParams.put('attributedValue', init: attributedValue);
-    mateParams.put('increasedValue', init: increasedValue);
-    mateParams.put('attributedIncreasedValue', init: attributedIncreasedValue);
-    mateParams.put('decreasedValue', init: decreasedValue);
-    mateParams.put('attributedDecreasedValue', init: attributedDecreasedValue);
-    mateParams.put('hint', init: hint);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('attributedHint', init: attributedHint);
-    mateParams.put('hintOverrides', init: hintOverrides);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('sortKey', init: sortKey);
-    mateParams.put('tagForChildren', init: tagForChildren);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('onScrollLeft', init: onScrollLeft);
-    mateParams.put('onScrollRight', init: onScrollRight);
-    mateParams.put('onScrollUp', init: onScrollUp);
-    mateParams.put('onScrollDown', init: onScrollDown);
-    mateParams.put('onIncrease', init: onIncrease);
-    mateParams.put('onDecrease', init: onDecrease);
-    mateParams.put('onCopy', init: onCopy);
-    mateParams.put('onCut', init: onCut);
-    mateParams.put('onPaste', init: onPaste);
-    mateParams.put('onMoveCursorForwardByCharacter', init: onMoveCursorForwardByCharacter);
-    mateParams.put('onMoveCursorBackwardByCharacter', init: onMoveCursorBackwardByCharacter);
-    mateParams.put('onMoveCursorForwardByWord', init: onMoveCursorForwardByWord);
-    mateParams.put('onMoveCursorBackwardByWord', init: onMoveCursorBackwardByWord);
-    mateParams.put('onSetSelection', init: onSetSelection);
-    mateParams.put('onSetText', init: onSetText);
-    mateParams.put('onDidGainAccessibilityFocus', init: onDidGainAccessibilityFocus);
-    mateParams.put('onDidLoseAccessibilityFocus', init: onDidLoseAccessibilityFocus);
-    mateParams.put('onDismiss', init: onDismiss);
-    mateParams.put('customSemanticsActions', init: customSemanticsActions);
+    mateParams.put('enabled', enabled);
+    mateParams.put('checked', checked);
+    mateParams.put('mixed', mixed);
+    mateParams.put('selected', selected);
+    mateParams.put('toggled', toggled);
+    mateParams.put('button', button);
+    mateParams.put('link', link);
+    mateParams.put('header', header);
+    mateParams.put('textField', textField);
+    mateParams.put('slider', slider);
+    mateParams.put('keyboardKey', keyboardKey);
+    mateParams.put('readOnly', readOnly);
+    mateParams.put('focusable', focusable);
+    mateParams.put('focused', focused);
+    mateParams.put('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
+    mateParams.put('hidden', hidden);
+    mateParams.put('obscured', obscured);
+    mateParams.put('multiline', multiline);
+    mateParams.put('scopesRoute', scopesRoute);
+    mateParams.put('namesRoute', namesRoute);
+    mateParams.put('image', image);
+    mateParams.put('liveRegion', liveRegion);
+    mateParams.put('maxValueLength', maxValueLength);
+    mateParams.put('currentValueLength', currentValueLength);
+    mateParams.put('label', label);
+    mateParams.put('attributedLabel', attributedLabel);
+    mateParams.put('value', value);
+    mateParams.put('attributedValue', attributedValue);
+    mateParams.put('increasedValue', increasedValue);
+    mateParams.put('attributedIncreasedValue', attributedIncreasedValue);
+    mateParams.put('decreasedValue', decreasedValue);
+    mateParams.put('attributedDecreasedValue', attributedDecreasedValue);
+    mateParams.put('hint', hint);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('attributedHint', attributedHint);
+    mateParams.put('hintOverrides', hintOverrides);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('sortKey', sortKey);
+    mateParams.put('tagForChildren', tagForChildren);
+    mateParams.put('onTap', onTap);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('onScrollLeft', onScrollLeft);
+    mateParams.put('onScrollRight', onScrollRight);
+    mateParams.put('onScrollUp', onScrollUp);
+    mateParams.put('onScrollDown', onScrollDown);
+    mateParams.put('onIncrease', onIncrease);
+    mateParams.put('onDecrease', onDecrease);
+    mateParams.put('onCopy', onCopy);
+    mateParams.put('onCut', onCut);
+    mateParams.put('onPaste', onPaste);
+    mateParams.put('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
+    mateParams.put('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
+    mateParams.put('onMoveCursorForwardByWord', onMoveCursorForwardByWord);
+    mateParams.put('onMoveCursorBackwardByWord', onMoveCursorBackwardByWord);
+    mateParams.put('onSetSelection', onSetSelection);
+    mateParams.put('onSetText', onSetText);
+    mateParams.put('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
+    mateParams.put('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
+    mateParams.put('onDismiss', onDismiss);
+    mateParams.put('customSemanticsActions', customSemanticsActions);
   }
 }
 
@@ -716,8 +716,8 @@ class SemanticsNode$Mate extends SemanticsNode with Mate<SemanticsNode$Mate> {
         showOnScreen: p.get('showOnScreen').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('showOnScreen', init: showOnScreen);
+    mateParams.put('key', key);
+    mateParams.put('showOnScreen', showOnScreen);
   }
 
   /// SemanticsNode SemanticsNode.root({Key? key, void Function()? showOnScreen, required SemanticsOwner owner})
@@ -743,9 +743,9 @@ class SemanticsNode$Mate extends SemanticsNode with Mate<SemanticsNode$Mate> {
         owner: p.get('owner').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('showOnScreen', init: showOnScreen);
-    mateParams.put('owner', init: owner);
+    mateParams.put('key', key);
+    mateParams.put('showOnScreen', showOnScreen);
+    mateParams.put('owner', owner);
   }
 }
 
@@ -761,7 +761,7 @@ class SemanticsOwner$Mate extends SemanticsOwner with Mate<SemanticsOwner$Mate> 
       init: this,
       builder: (p) => SemanticsOwner$Mate(onSemanticsUpdate: p.get('onSemanticsUpdate').value),
     );
-    mateParams.put('onSemanticsUpdate', init: onSemanticsUpdate);
+    mateParams.put('onSemanticsUpdate', onSemanticsUpdate);
   }
 }
 
@@ -784,7 +784,7 @@ class OrdinalSortKey$Mate extends OrdinalSortKey with Mate<OrdinalSortKey$Mate> 
         name: p.get('name').value,
       ),
     );
-    mateParams.put('order', init: order);
-    mateParams.put('name', init: name);
+    mateParams.put('order', order);
+    mateParams.put('name', name);
   }
 }

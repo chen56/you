@@ -42,11 +42,11 @@ class DividerThemeData$Mate extends DividerThemeData with Mate<DividerThemeData$
         endIndent: p.get('endIndent').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('space', init: space);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('indent', init: indent);
-    mateParams.put('endIndent', init: endIndent);
+    mateParams.put('color', color);
+    mateParams.put('space', space);
+    mateParams.put('thickness', thickness);
+    mateParams.put('indent', indent);
+    mateParams.put('endIndent', endIndent);
   }
 }
 
@@ -75,8 +75,8 @@ class DividerTheme$Mate extends DividerTheme with WidgetMate<DividerTheme$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

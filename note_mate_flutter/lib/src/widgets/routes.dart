@@ -27,8 +27,8 @@ class LocalHistoryEntry$Mate extends LocalHistoryEntry with Mate<LocalHistoryEnt
         impliesAppBarDismissal: p.get('impliesAppBarDismissal').value,
       ),
     );
-    mateParams.put('onRemove', init: onRemove);
-    mateParams.put('impliesAppBarDismissal', init: impliesAppBarDismissal);
+    mateParams.put('onRemove', onRemove);
+    mateParams.put('impliesAppBarDismissal', impliesAppBarDismissal);
   }
 }
 
@@ -87,14 +87,14 @@ class RawDialogRoute$Mate<T> extends RawDialogRoute<T> with Mate<RawDialogRoute$
         traversalEdgeBehavior: p.get('traversalEdgeBehavior').value,
       ),
     );
-    mateParams.put('pageBuilder', init: pageBuilder);
-    mateParams.put('barrierDismissible', init: barrierDismissible);
-    mateParams.put('barrierColor', init: barrierColor);
-    mateParams.put('barrierLabel', init: barrierLabel);
-    mateParams.put('transitionDuration', init: transitionDuration);
-    mateParams.put('transitionBuilder', init: transitionBuilder);
-    mateParams.put('settings', init: settings);
-    mateParams.put('anchorPoint', init: anchorPoint);
-    mateParams.put('traversalEdgeBehavior', init: traversalEdgeBehavior);
+    mateParams.put('pageBuilder', pageBuilder);
+    mateParams.put('barrierDismissible', barrierDismissible);
+    mateParams.put('barrierColor', barrierColor);
+    mateParams.put('barrierLabel', barrierLabel);
+    mateParams.put('transitionDuration', transitionDuration);
+    mateParams.put('transitionBuilder', transitionBuilder);
+    mateParams.put('settings', settings);
+    mateParams.put('anchorPoint', anchorPoint);
+    mateParams.put('traversalEdgeBehavior', traversalEdgeBehavior);
   }
 }

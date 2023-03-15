@@ -60,14 +60,14 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate<BadgeThemeData$Mate> 
         offset: p.get('offset').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('textColor', init: textColor);
-    mateParams.put('smallSize', init: smallSize);
-    mateParams.put('largeSize', init: largeSize);
-    mateParams.put('textStyle', init: textStyle);
-    mateParams.put('padding', init: padding);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('offset', init: offset);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('textColor', textColor);
+    mateParams.put('smallSize', smallSize);
+    mateParams.put('largeSize', largeSize);
+    mateParams.put('textStyle', textStyle);
+    mateParams.put('padding', padding);
+    mateParams.put('alignment', alignment);
+    mateParams.put('offset', offset);
   }
 }
 
@@ -96,8 +96,8 @@ class BadgeTheme$Mate extends BadgeTheme with WidgetMate<BadgeTheme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

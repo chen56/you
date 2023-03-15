@@ -59,14 +59,14 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<Cup
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('header', init: header);
-    mateParams.put('footer', init: footer);
-    mateParams.put('margin', init: margin);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('header', header);
+    mateParams.put('footer', footer);
+    mateParams.put('margin', margin);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('decoration', decoration);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 
   /// CupertinoFormSection CupertinoFormSection.insetGrouped({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
@@ -117,13 +117,13 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<Cup
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('header', init: header);
-    mateParams.put('footer', init: footer);
-    mateParams.put('margin', init: margin);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('header', header);
+    mateParams.put('footer', footer);
+    mateParams.put('margin', margin);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('decoration', decoration);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

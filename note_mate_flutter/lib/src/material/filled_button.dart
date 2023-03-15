@@ -76,17 +76,17 @@ class FilledButton$Mate extends FilledButton with WidgetMate<FilledButton$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('onHover', init: onHover);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('style', init: style);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('statesController', init: statesController);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('onHover', onHover);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('style', style);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('statesController', statesController);
+    mateParams.put('child', child);
   }
 
   /// FilledButton FilledButton.tonal({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget? child})
@@ -152,16 +152,16 @@ class FilledButton$Mate extends FilledButton with WidgetMate<FilledButton$Mate> 
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('onHover', init: onHover);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('style', init: style);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('statesController', init: statesController);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('onHover', onHover);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('style', style);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('statesController', statesController);
+    mateParams.put('child', child);
   }
 }

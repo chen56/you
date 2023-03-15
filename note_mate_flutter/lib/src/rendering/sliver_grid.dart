@@ -35,10 +35,10 @@ class SliverGridGeometry$Mate extends SliverGridGeometry with Mate<SliverGridGeo
         crossAxisExtent: p.get('crossAxisExtent').value,
       ),
     );
-    mateParams.put('scrollOffset', init: scrollOffset);
-    mateParams.put('crossAxisOffset', init: crossAxisOffset);
-    mateParams.put('mainAxisExtent', init: mainAxisExtent);
-    mateParams.put('crossAxisExtent', init: crossAxisExtent);
+    mateParams.put('scrollOffset', scrollOffset);
+    mateParams.put('crossAxisOffset', crossAxisOffset);
+    mateParams.put('mainAxisExtent', mainAxisExtent);
+    mateParams.put('crossAxisExtent', crossAxisExtent);
   }
 }
 
@@ -82,12 +82,12 @@ class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout with 
         reverseCrossAxis: p.get('reverseCrossAxis').value,
       ),
     );
-    mateParams.put('crossAxisCount', init: crossAxisCount);
-    mateParams.put('mainAxisStride', init: mainAxisStride);
-    mateParams.put('crossAxisStride', init: crossAxisStride);
-    mateParams.put('childMainAxisExtent', init: childMainAxisExtent);
-    mateParams.put('childCrossAxisExtent', init: childCrossAxisExtent);
-    mateParams.put('reverseCrossAxis', init: reverseCrossAxis);
+    mateParams.put('crossAxisCount', crossAxisCount);
+    mateParams.put('mainAxisStride', mainAxisStride);
+    mateParams.put('crossAxisStride', crossAxisStride);
+    mateParams.put('childMainAxisExtent', childMainAxisExtent);
+    mateParams.put('childCrossAxisExtent', childCrossAxisExtent);
+    mateParams.put('reverseCrossAxis', reverseCrossAxis);
   }
 }
 
@@ -127,11 +127,11 @@ class SliverGridDelegateWithFixedCrossAxisCount$Mate extends SliverGridDelegateW
         mainAxisExtent: p.get('mainAxisExtent').value,
       ),
     );
-    mateParams.put('crossAxisCount', init: crossAxisCount);
-    mateParams.put('mainAxisSpacing', init: mainAxisSpacing);
-    mateParams.put('crossAxisSpacing', init: crossAxisSpacing);
-    mateParams.put('childAspectRatio', init: childAspectRatio);
-    mateParams.put('mainAxisExtent', init: mainAxisExtent);
+    mateParams.put('crossAxisCount', crossAxisCount);
+    mateParams.put('mainAxisSpacing', mainAxisSpacing);
+    mateParams.put('crossAxisSpacing', crossAxisSpacing);
+    mateParams.put('childAspectRatio', childAspectRatio);
+    mateParams.put('mainAxisExtent', mainAxisExtent);
   }
 }
 
@@ -171,11 +171,11 @@ class SliverGridDelegateWithMaxCrossAxisExtent$Mate extends SliverGridDelegateWi
         mainAxisExtent: p.get('mainAxisExtent').value,
       ),
     );
-    mateParams.put('maxCrossAxisExtent', init: maxCrossAxisExtent);
-    mateParams.put('mainAxisSpacing', init: mainAxisSpacing);
-    mateParams.put('crossAxisSpacing', init: crossAxisSpacing);
-    mateParams.put('childAspectRatio', init: childAspectRatio);
-    mateParams.put('mainAxisExtent', init: mainAxisExtent);
+    mateParams.put('maxCrossAxisExtent', maxCrossAxisExtent);
+    mateParams.put('mainAxisSpacing', mainAxisSpacing);
+    mateParams.put('crossAxisSpacing', crossAxisSpacing);
+    mateParams.put('childAspectRatio', childAspectRatio);
+    mateParams.put('mainAxisExtent', mainAxisExtent);
   }
 }
 
@@ -199,7 +199,7 @@ class RenderSliverGrid$Mate extends RenderSliverGrid with Mate<RenderSliverGrid$
         gridDelegate: p.get('gridDelegate').value,
       ),
     );
-    mateParams.put('childManager', init: childManager);
-    mateParams.put('gridDelegate', init: gridDelegate);
+    mateParams.put('childManager', childManager);
+    mateParams.put('gridDelegate', gridDelegate);
   }
 }

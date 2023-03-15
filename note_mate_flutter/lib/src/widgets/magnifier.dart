@@ -40,10 +40,10 @@ class MagnifierInfo$Mate extends MagnifierInfo with Mate<MagnifierInfo$Mate> {
         currentLineBoundaries: p.get('currentLineBoundaries').value,
       ),
     );
-    mateParams.put('globalGesturePosition', init: globalGesturePosition);
-    mateParams.put('caretRect', init: caretRect);
-    mateParams.put('fieldBounds', init: fieldBounds);
-    mateParams.put('currentLineBoundaries', init: currentLineBoundaries);
+    mateParams.put('globalGesturePosition', globalGesturePosition);
+    mateParams.put('caretRect', caretRect);
+    mateParams.put('fieldBounds', fieldBounds);
+    mateParams.put('currentLineBoundaries', currentLineBoundaries);
   }
 }
 
@@ -67,8 +67,8 @@ class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration with Ma
         shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').value,
       ),
     );
-    mateParams.put('magnifierBuilder', init: magnifierBuilder);
-    mateParams.put('shouldDisplayHandlesInMagnifier', init: shouldDisplayHandlesInMagnifier);
+    mateParams.put('magnifierBuilder', magnifierBuilder);
+    mateParams.put('shouldDisplayHandlesInMagnifier', shouldDisplayHandlesInMagnifier);
   }
 }
 
@@ -84,7 +84,7 @@ class MagnifierController$Mate extends MagnifierController with Mate<MagnifierCo
       init: this,
       builder: (p) => MagnifierController$Mate(animationController: p.get('animationController').value),
     );
-    mateParams.put('animationController', init: animationController);
+    mateParams.put('animationController', animationController);
   }
 }
 
@@ -113,9 +113,9 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate<MagnifierDe
         shape: p.get('shape').value,
       ),
     );
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('shadows', init: shadows);
-    mateParams.put('shape', init: shape);
+    mateParams.put('opacity', opacity);
+    mateParams.put('shadows', shadows);
+    mateParams.put('shape', shape);
   }
 }
 
@@ -159,11 +159,11 @@ class RawMagnifier$Mate extends RawMagnifier with WidgetMate<RawMagnifier$Mate> 
         size: p.get('size').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('focalPointOffset', init: focalPointOffset);
-    mateParams.put('magnificationScale', init: magnificationScale);
-    mateParams.put('size', init: size);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('decoration', decoration);
+    mateParams.put('focalPointOffset', focalPointOffset);
+    mateParams.put('magnificationScale', magnificationScale);
+    mateParams.put('size', size);
   }
 }

@@ -75,17 +75,17 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThem
         checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').value,
       ),
     );
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('dataRowColor', init: dataRowColor);
-    mateParams.put('dataRowHeight', init: dataRowHeight);
-    mateParams.put('dataTextStyle', init: dataTextStyle);
-    mateParams.put('headingRowColor', init: headingRowColor);
-    mateParams.put('headingRowHeight', init: headingRowHeight);
-    mateParams.put('headingTextStyle', init: headingTextStyle);
-    mateParams.put('horizontalMargin', init: horizontalMargin);
-    mateParams.put('columnSpacing', init: columnSpacing);
-    mateParams.put('dividerThickness', init: dividerThickness);
-    mateParams.put('checkboxHorizontalMargin', init: checkboxHorizontalMargin);
+    mateParams.put('decoration', decoration);
+    mateParams.put('dataRowColor', dataRowColor);
+    mateParams.put('dataRowHeight', dataRowHeight);
+    mateParams.put('dataTextStyle', dataTextStyle);
+    mateParams.put('headingRowColor', headingRowColor);
+    mateParams.put('headingRowHeight', headingRowHeight);
+    mateParams.put('headingTextStyle', headingTextStyle);
+    mateParams.put('horizontalMargin', horizontalMargin);
+    mateParams.put('columnSpacing', columnSpacing);
+    mateParams.put('dividerThickness', dividerThickness);
+    mateParams.put('checkboxHorizontalMargin', checkboxHorizontalMargin);
   }
 }
 
@@ -114,8 +114,8 @@ class DataTableTheme$Mate extends DataTableTheme with WidgetMate<DataTableTheme$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

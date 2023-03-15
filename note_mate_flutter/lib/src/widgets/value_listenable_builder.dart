@@ -36,9 +36,9 @@ class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Widg
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('valueListenable', init: valueListenable);
-    mateParams.put('builder', init: builder);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('valueListenable', valueListenable);
+    mateParams.put('builder', builder);
+    mateParams.put('child', child);
   }
 }

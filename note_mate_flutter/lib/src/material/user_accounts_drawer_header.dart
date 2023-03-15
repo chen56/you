@@ -74,16 +74,16 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Widget
         arrowColor: p.get('arrowColor').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('margin', init: margin);
-    mateParams.put('currentAccountPicture', init: currentAccountPicture);
-    mateParams.put('otherAccountsPictures', init: otherAccountsPictures);
-    mateParams.put('currentAccountPictureSize', init: currentAccountPictureSize);
-    mateParams.put('otherAccountsPicturesSize', init: otherAccountsPicturesSize);
-    mateParams.put('accountName', init: accountName);
-    mateParams.put('accountEmail', init: accountEmail);
-    mateParams.put('onDetailsPressed', init: onDetailsPressed);
-    mateParams.put('arrowColor', init: arrowColor);
+    mateParams.put('key', key);
+    mateParams.put('decoration', decoration);
+    mateParams.put('margin', margin);
+    mateParams.put('currentAccountPicture', currentAccountPicture);
+    mateParams.put('otherAccountsPictures', otherAccountsPictures);
+    mateParams.put('currentAccountPictureSize', currentAccountPictureSize);
+    mateParams.put('otherAccountsPicturesSize', otherAccountsPicturesSize);
+    mateParams.put('accountName', accountName);
+    mateParams.put('accountEmail', accountEmail);
+    mateParams.put('onDetailsPressed', onDetailsPressed);
+    mateParams.put('arrowColor', arrowColor);
   }
 }

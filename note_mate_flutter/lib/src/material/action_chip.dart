@@ -133,27 +133,27 @@ class ActionChip$Mate extends ActionChip with WidgetMate<ActionChip$Mate> {
         iconTheme: p.get('iconTheme').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('avatar', init: avatar);
-    mateParams.put('label', init: label);
-    mateParams.put('labelStyle', init: labelStyle);
-    mateParams.put('labelPadding', init: labelPadding);
-    mateParams.put('onPressed', init: onPressed);
-    mateParams.put('pressElevation', init: pressElevation);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('side', init: side);
-    mateParams.put('shape', init: shape);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('disabledColor', init: disabledColor);
-    mateParams.put('padding', init: padding);
-    mateParams.put('visualDensity', init: visualDensity);
-    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('key', key);
+    mateParams.put('avatar', avatar);
+    mateParams.put('label', label);
+    mateParams.put('labelStyle', labelStyle);
+    mateParams.put('labelPadding', labelPadding);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('pressElevation', pressElevation);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('side', side);
+    mateParams.put('shape', shape);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('padding', padding);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('iconTheme', iconTheme);
   }
 }

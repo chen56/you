@@ -148,30 +148,30 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
         enableFeedback: p.get('enableFeedback').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('activeColor', init: activeColor);
-    mateParams.put('checkColor', init: checkColor);
-    mateParams.put('enabled', init: enabled);
-    mateParams.put('tileColor', init: tileColor);
-    mateParams.put('title', init: title);
-    mateParams.put('subtitle', init: subtitle);
-    mateParams.put('isThreeLine', init: isThreeLine);
-    mateParams.put('dense', init: dense);
-    mateParams.put('secondary', init: secondary);
-    mateParams.put('selected', init: selected);
-    mateParams.put('controlAffinity', init: controlAffinity);
-    mateParams.put('autofocus', init: autofocus);
-    mateParams.put('contentPadding', init: contentPadding);
-    mateParams.put('tristate', init: tristate);
-    mateParams.put('shape', init: shape);
-    mateParams.put('checkboxShape', init: checkboxShape);
-    mateParams.put('selectedTileColor', init: selectedTileColor);
-    mateParams.put('side', init: side);
-    mateParams.put('visualDensity', init: visualDensity);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('onFocusChange', init: onFocusChange);
-    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('activeColor', activeColor);
+    mateParams.put('checkColor', checkColor);
+    mateParams.put('enabled', enabled);
+    mateParams.put('tileColor', tileColor);
+    mateParams.put('title', title);
+    mateParams.put('subtitle', subtitle);
+    mateParams.put('isThreeLine', isThreeLine);
+    mateParams.put('dense', dense);
+    mateParams.put('secondary', secondary);
+    mateParams.put('selected', selected);
+    mateParams.put('controlAffinity', controlAffinity);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('contentPadding', contentPadding);
+    mateParams.put('tristate', tristate);
+    mateParams.put('shape', shape);
+    mateParams.put('checkboxShape', checkboxShape);
+    mateParams.put('selectedTileColor', selectedTileColor);
+    mateParams.put('side', side);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('onFocusChange', onFocusChange);
+    mateParams.put('enableFeedback', enableFeedback);
   }
 }

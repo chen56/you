@@ -28,8 +28,8 @@ class RevealedOffset$Mate extends RevealedOffset with Mate<RevealedOffset$Mate> 
         rect: p.get('rect').value,
       ),
     );
-    mateParams.put('offset', init: offset);
-    mateParams.put('rect', init: rect);
+    mateParams.put('offset', offset);
+    mateParams.put('rect', rect);
   }
 }
 
@@ -88,15 +88,15 @@ class RenderViewport$Mate extends RenderViewport with Mate<RenderViewport$Mate> 
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('crossAxisDirection', init: crossAxisDirection);
-    mateParams.put('offset', init: offset);
-    mateParams.put('anchor', init: anchor);
-    mateParams.put('children', init: children);
-    mateParams.put('center', init: center);
-    mateParams.put('cacheExtent', init: cacheExtent);
-    mateParams.put('cacheExtentStyle', init: cacheExtentStyle);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('crossAxisDirection', crossAxisDirection);
+    mateParams.put('offset', offset);
+    mateParams.put('anchor', anchor);
+    mateParams.put('children', children);
+    mateParams.put('center', center);
+    mateParams.put('cacheExtent', cacheExtent);
+    mateParams.put('cacheExtentStyle', cacheExtentStyle);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -136,10 +136,10 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport
         children: p.get('children').value,
       ),
     );
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('crossAxisDirection', init: crossAxisDirection);
-    mateParams.put('offset', init: offset);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('children', init: children);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('crossAxisDirection', crossAxisDirection);
+    mateParams.put('offset', offset);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('children', children);
   }
 }

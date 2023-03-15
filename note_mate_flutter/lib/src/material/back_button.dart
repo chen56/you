@@ -17,7 +17,7 @@ class BackButtonIcon$Mate extends BackButtonIcon with WidgetMate<BackButtonIcon$
       init: this,
       builder: (p) => BackButtonIcon$Mate(key: p.get('key').value),
     );
-    mateParams.put('key', init: key);
+    mateParams.put('key', key);
   }
 }
 
@@ -46,9 +46,9 @@ class BackButton$Mate extends BackButton with WidgetMate<BackButton$Mate> {
         onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('onPressed', onPressed);
   }
 }
 
@@ -77,8 +77,8 @@ class CloseButton$Mate extends CloseButton with WidgetMate<CloseButton$Mate> {
         onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('color', init: color);
-    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('key', key);
+    mateParams.put('color', color);
+    mateParams.put('onPressed', onPressed);
   }
 }

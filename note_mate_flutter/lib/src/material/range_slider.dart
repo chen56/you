@@ -90,19 +90,19 @@ class RangeSlider$Mate extends RangeSlider with WidgetMate<RangeSlider$Mate> {
         semanticFormatterCallback: p.get('semanticFormatterCallback').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('values', init: values);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('onChangeStart', init: onChangeStart);
-    mateParams.put('onChangeEnd', init: onChangeEnd);
-    mateParams.put('min', init: min);
-    mateParams.put('max', init: max);
-    mateParams.put('divisions', init: divisions);
-    mateParams.put('labels', init: labels);
-    mateParams.put('activeColor', init: activeColor);
-    mateParams.put('inactiveColor', init: inactiveColor);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('semanticFormatterCallback', init: semanticFormatterCallback);
+    mateParams.put('key', key);
+    mateParams.put('values', values);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('onChangeStart', onChangeStart);
+    mateParams.put('onChangeEnd', onChangeEnd);
+    mateParams.put('min', min);
+    mateParams.put('max', max);
+    mateParams.put('divisions', divisions);
+    mateParams.put('labels', labels);
+    mateParams.put('activeColor', activeColor);
+    mateParams.put('inactiveColor', inactiveColor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('semanticFormatterCallback', semanticFormatterCallback);
   }
 }

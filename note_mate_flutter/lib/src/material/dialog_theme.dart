@@ -69,15 +69,15 @@ class DialogTheme$Mate extends DialogTheme with Mate<DialogTheme$Mate> {
         actionsPadding: p.get('actionsPadding').value,
       ),
     );
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('iconColor', init: iconColor);
-    mateParams.put('titleTextStyle', init: titleTextStyle);
-    mateParams.put('contentTextStyle', init: contentTextStyle);
-    mateParams.put('actionsPadding', init: actionsPadding);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('shape', shape);
+    mateParams.put('alignment', alignment);
+    mateParams.put('iconColor', iconColor);
+    mateParams.put('titleTextStyle', titleTextStyle);
+    mateParams.put('contentTextStyle', contentTextStyle);
+    mateParams.put('actionsPadding', actionsPadding);
   }
 }

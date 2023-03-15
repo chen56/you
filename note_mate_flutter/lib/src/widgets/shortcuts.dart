@@ -40,10 +40,10 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate<KeySet$Mate
         p.get('key4').value,
       ),
     );
-    mateParams.put('key1', init: key1);
-    mateParams.put('key2', init: key2);
-    mateParams.put('key3', init: key3);
-    mateParams.put('key4', init: key4);
+    mateParams.put('key1', key1);
+    mateParams.put('key2', key2);
+    mateParams.put('key3', key3);
+    mateParams.put('key4', key4);
   }
 
   /// KeySet<T> KeySet.fromSet(Set<T> keys)
@@ -56,7 +56,7 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate<KeySet$Mate
       init: this,
       builder: (p) => KeySet$Mate.fromSet(p.get('keys').value),
     );
-    mateParams.put('keys', init: keys);
+    mateParams.put('keys', keys);
   }
 }
 
@@ -90,10 +90,10 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate<LogicalKeySet$Mate> {
         p.get('key4').value,
       ),
     );
-    mateParams.put('key1', init: key1);
-    mateParams.put('key2', init: key2);
-    mateParams.put('key3', init: key3);
-    mateParams.put('key4', init: key4);
+    mateParams.put('key1', key1);
+    mateParams.put('key2', key2);
+    mateParams.put('key3', key3);
+    mateParams.put('key4', key4);
   }
 
   /// LogicalKeySet LogicalKeySet.fromSet(Set<LogicalKeyboardKey> keys)
@@ -106,7 +106,7 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate<LogicalKeySet$Mate> {
       init: this,
       builder: (p) => LogicalKeySet$Mate.fromSet(p.get('keys').value),
     );
-    mateParams.put('keys', init: keys);
+    mateParams.put('keys', keys);
   }
 }
 
@@ -149,12 +149,12 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate<ShortcutMap
         description: p.get('description').value,
       ),
     );
-    mateParams.put('name', init: name);
-    mateParams.put('value', init: value);
-    mateParams.put('showName', init: showName);
-    mateParams.put('defaultValue', init: defaultValue);
-    mateParams.put('level', init: level);
-    mateParams.put('description', init: description);
+    mateParams.put('name', name);
+    mateParams.put('value', value);
+    mateParams.put('showName', showName);
+    mateParams.put('defaultValue', defaultValue);
+    mateParams.put('level', level);
+    mateParams.put('description', description);
   }
 }
 
@@ -197,12 +197,12 @@ class SingleActivator$Mate extends SingleActivator with Mate<SingleActivator$Mat
         includeRepeats: p.get('includeRepeats').value,
       ),
     );
-    mateParams.put('trigger', init: trigger);
-    mateParams.put('control', init: control);
-    mateParams.put('shift', init: shift);
-    mateParams.put('alt', init: alt);
-    mateParams.put('meta', init: meta);
-    mateParams.put('includeRepeats', init: includeRepeats);
+    mateParams.put('trigger', trigger);
+    mateParams.put('control', control);
+    mateParams.put('shift', shift);
+    mateParams.put('alt', alt);
+    mateParams.put('meta', meta);
+    mateParams.put('includeRepeats', includeRepeats);
   }
 }
 
@@ -240,11 +240,11 @@ class CharacterActivator$Mate extends CharacterActivator with Mate<CharacterActi
         includeRepeats: p.get('includeRepeats').value,
       ),
     );
-    mateParams.put('character', init: character);
-    mateParams.put('alt', init: alt);
-    mateParams.put('control', init: control);
-    mateParams.put('meta', init: meta);
-    mateParams.put('includeRepeats', init: includeRepeats);
+    mateParams.put('character', character);
+    mateParams.put('alt', alt);
+    mateParams.put('control', control);
+    mateParams.put('meta', meta);
+    mateParams.put('includeRepeats', includeRepeats);
   }
 }
 
@@ -268,8 +268,8 @@ class ShortcutManager$Mate extends ShortcutManager with Mate<ShortcutManager$Mat
         modal: p.get('modal').value,
       ),
     );
-    mateParams.put('shortcuts', init: shortcuts);
-    mateParams.put('modal', init: modal);
+    mateParams.put('shortcuts', shortcuts);
+    mateParams.put('modal', modal);
   }
 }
 
@@ -303,10 +303,10 @@ class Shortcuts$Mate extends Shortcuts with WidgetMate<Shortcuts$Mate> {
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('shortcuts', init: shortcuts);
-    mateParams.put('child', init: child);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('key', key);
+    mateParams.put('shortcuts', shortcuts);
+    mateParams.put('child', child);
+    mateParams.put('debugLabel', debugLabel);
   }
 
   /// Shortcuts Shortcuts.manager({Key? key, required ShortcutManager manager, required Widget child, String? debugLabel})
@@ -337,10 +337,10 @@ class Shortcuts$Mate extends Shortcuts with WidgetMate<Shortcuts$Mate> {
         debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('manager', init: manager);
-    mateParams.put('child', init: child);
-    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('key', key);
+    mateParams.put('manager', manager);
+    mateParams.put('child', child);
+    mateParams.put('debugLabel', debugLabel);
   }
 }
 
@@ -369,9 +369,9 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with WidgetMate<CallbackS
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('bindings', init: bindings);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('bindings', bindings);
+    mateParams.put('child', child);
   }
 }
 
@@ -395,7 +395,7 @@ class ShortcutRegistrar$Mate extends ShortcutRegistrar with WidgetMate<ShortcutR
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
   }
 }

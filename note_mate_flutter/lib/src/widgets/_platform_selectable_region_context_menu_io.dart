@@ -26,7 +26,7 @@ class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionC
         key: p.get('key').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('key', init: key);
+    mateParams.put('child', child);
+    mateParams.put('key', key);
   }
 }

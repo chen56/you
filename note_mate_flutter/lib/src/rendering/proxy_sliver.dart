@@ -31,9 +31,9 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate<RenderSlive
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('opacity', opacity);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateParams.put('sliver', sliver);
   }
 }
 
@@ -62,9 +62,9 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
         ignoringSemantics: p.get('ignoringSemantics').value,
       ),
     );
-    mateParams.put('sliver', init: sliver);
-    mateParams.put('ignoring', init: ignoring);
-    mateParams.put('ignoringSemantics', init: ignoringSemantics);
+    mateParams.put('sliver', sliver);
+    mateParams.put('ignoring', ignoring);
+    mateParams.put('ignoringSemantics', ignoringSemantics);
   }
 }
 
@@ -88,8 +88,8 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate<RenderSli
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('offstage', init: offstage);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('offstage', offstage);
+    mateParams.put('sliver', sliver);
   }
 }
 
@@ -118,8 +118,8 @@ class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with 
         sliver: p.get('sliver').value,
       ),
     );
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.put('sliver', init: sliver);
+    mateParams.put('opacity', opacity);
+    mateParams.put('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateParams.put('sliver', sliver);
   }
 }

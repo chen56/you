@@ -46,12 +46,12 @@ class Divider$Mate extends Divider with WidgetMate<Divider$Mate> {
         color: p.get('color').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('height', init: height);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('indent', init: indent);
-    mateParams.put('endIndent', init: endIndent);
-    mateParams.put('color', init: color);
+    mateParams.put('key', key);
+    mateParams.put('height', height);
+    mateParams.put('thickness', thickness);
+    mateParams.put('indent', indent);
+    mateParams.put('endIndent', endIndent);
+    mateParams.put('color', color);
   }
 }
 
@@ -95,11 +95,11 @@ class VerticalDivider$Mate extends VerticalDivider with WidgetMate<VerticalDivid
         color: p.get('color').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('width', init: width);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('indent', init: indent);
-    mateParams.put('endIndent', init: endIndent);
-    mateParams.put('color', init: color);
+    mateParams.put('key', key);
+    mateParams.put('width', width);
+    mateParams.put('thickness', thickness);
+    mateParams.put('indent', indent);
+    mateParams.put('endIndent', endIndent);
+    mateParams.put('color', color);
   }
 }

@@ -27,8 +27,8 @@ class TextInputType$Mate extends TextInputType with Mate<TextInputType$Mate> {
         decimal: p.get('decimal').value,
       ),
     );
-    mateParams.put('signed', init: signed);
-    mateParams.put('decimal', init: decimal);
+    mateParams.put('signed', signed);
+    mateParams.put('decimal', decimal);
   }
 }
 
@@ -122,22 +122,22 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate<TextI
         enableDeltaModel: p.get('enableDeltaModel').value,
       ),
     );
-    mateParams.put('inputType', init: inputType);
-    mateParams.put('readOnly', init: readOnly);
-    mateParams.put('obscureText', init: obscureText);
-    mateParams.put('autocorrect', init: autocorrect);
-    mateParams.put('smartDashesType', init: smartDashesType);
-    mateParams.put('smartQuotesType', init: smartQuotesType);
-    mateParams.put('enableSuggestions', init: enableSuggestions);
-    mateParams.put('enableInteractiveSelection', init: enableInteractiveSelection);
-    mateParams.put('actionLabel', init: actionLabel);
-    mateParams.put('inputAction', init: inputAction);
-    mateParams.put('keyboardAppearance', init: keyboardAppearance);
-    mateParams.put('textCapitalization', init: textCapitalization);
-    mateParams.put('autofillConfiguration', init: autofillConfiguration);
-    mateParams.put('enableIMEPersonalizedLearning', init: enableIMEPersonalizedLearning);
-    mateParams.put('allowedMimeTypes', init: allowedMimeTypes);
-    mateParams.put('enableDeltaModel', init: enableDeltaModel);
+    mateParams.put('inputType', inputType);
+    mateParams.put('readOnly', readOnly);
+    mateParams.put('obscureText', obscureText);
+    mateParams.put('autocorrect', autocorrect);
+    mateParams.put('smartDashesType', smartDashesType);
+    mateParams.put('smartQuotesType', smartQuotesType);
+    mateParams.put('enableSuggestions', enableSuggestions);
+    mateParams.put('enableInteractiveSelection', enableInteractiveSelection);
+    mateParams.put('actionLabel', actionLabel);
+    mateParams.put('inputAction', inputAction);
+    mateParams.put('keyboardAppearance', keyboardAppearance);
+    mateParams.put('textCapitalization', textCapitalization);
+    mateParams.put('autofillConfiguration', autofillConfiguration);
+    mateParams.put('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
+    mateParams.put('allowedMimeTypes', allowedMimeTypes);
+    mateParams.put('enableDeltaModel', enableDeltaModel);
   }
 }
 
@@ -161,8 +161,8 @@ class RawFloatingCursorPoint$Mate extends RawFloatingCursorPoint with Mate<RawFl
         state: p.get('state').value,
       ),
     );
-    mateParams.put('offset', init: offset);
-    mateParams.put('state', init: state);
+    mateParams.put('offset', offset);
+    mateParams.put('state', state);
   }
 }
 
@@ -191,9 +191,9 @@ class TextEditingValue$Mate extends TextEditingValue with Mate<TextEditingValue$
         composing: p.get('composing').value,
       ),
     );
-    mateParams.put('text', init: text);
-    mateParams.put('selection', init: selection);
-    mateParams.put('composing', init: composing);
+    mateParams.put('text', text);
+    mateParams.put('selection', selection);
+    mateParams.put('composing', composing);
   }
 }
 
@@ -222,8 +222,8 @@ class SelectionRect$Mate extends SelectionRect with Mate<SelectionRect$Mate> {
         direction: p.get('direction').value,
       ),
     );
-    mateParams.put('position', init: position);
-    mateParams.put('bounds', init: bounds);
-    mateParams.put('direction', init: direction);
+    mateParams.put('position', position);
+    mateParams.put('bounds', bounds);
+    mateParams.put('direction', direction);
   }
 }

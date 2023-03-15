@@ -35,10 +35,10 @@ class EdgeInsets$Mate extends EdgeInsets with Mate<EdgeInsets$Mate> {
         p.get('bottom').value,
       ),
     );
-    mateParams.put('left', init: left);
-    mateParams.put('top', init: top);
-    mateParams.put('right', init: right);
-    mateParams.put('bottom', init: bottom);
+    mateParams.put('left', left);
+    mateParams.put('top', top);
+    mateParams.put('right', right);
+    mateParams.put('bottom', bottom);
   }
 
   /// EdgeInsets EdgeInsets.all(double value)
@@ -51,7 +51,7 @@ class EdgeInsets$Mate extends EdgeInsets with Mate<EdgeInsets$Mate> {
       init: this,
       builder: (p) => EdgeInsets$Mate.all(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 
   /// EdgeInsets EdgeInsets.only({double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0})
@@ -82,10 +82,10 @@ class EdgeInsets$Mate extends EdgeInsets with Mate<EdgeInsets$Mate> {
         bottom: p.get('bottom').value,
       ),
     );
-    mateParams.put('left', init: left);
-    mateParams.put('top', init: top);
-    mateParams.put('right', init: right);
-    mateParams.put('bottom', init: bottom);
+    mateParams.put('left', left);
+    mateParams.put('top', top);
+    mateParams.put('right', right);
+    mateParams.put('bottom', bottom);
   }
 
   /// EdgeInsets EdgeInsets.symmetric({double vertical = 0.0, double horizontal = 0.0})
@@ -106,8 +106,8 @@ class EdgeInsets$Mate extends EdgeInsets with Mate<EdgeInsets$Mate> {
         horizontal: p.get('horizontal').value,
       ),
     );
-    mateParams.put('vertical', init: vertical);
-    mateParams.put('horizontal', init: horizontal);
+    mateParams.put('vertical', vertical);
+    mateParams.put('horizontal', horizontal);
   }
 
   /// EdgeInsets EdgeInsets.fromWindowPadding(WindowPadding padding, double devicePixelRatio)
@@ -128,8 +128,8 @@ class EdgeInsets$Mate extends EdgeInsets with Mate<EdgeInsets$Mate> {
         p.get('devicePixelRatio').value,
       ),
     );
-    mateParams.put('padding', init: padding);
-    mateParams.put('devicePixelRatio', init: devicePixelRatio);
+    mateParams.put('padding', padding);
+    mateParams.put('devicePixelRatio', devicePixelRatio);
   }
 }
 
@@ -163,10 +163,10 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate<EdgeIns
         p.get('bottom').value,
       ),
     );
-    mateParams.put('start', init: start);
-    mateParams.put('top', init: top);
-    mateParams.put('end', init: end);
-    mateParams.put('bottom', init: bottom);
+    mateParams.put('start', start);
+    mateParams.put('top', top);
+    mateParams.put('end', end);
+    mateParams.put('bottom', bottom);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.only({double start = 0.0, double top = 0.0, double end = 0.0, double bottom = 0.0})
@@ -197,10 +197,10 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate<EdgeIns
         bottom: p.get('bottom').value,
       ),
     );
-    mateParams.put('start', init: start);
-    mateParams.put('top', init: top);
-    mateParams.put('end', init: end);
-    mateParams.put('bottom', init: bottom);
+    mateParams.put('start', start);
+    mateParams.put('top', top);
+    mateParams.put('end', end);
+    mateParams.put('bottom', bottom);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.symmetric({double horizontal = 0.0, double vertical = 0.0})
@@ -221,8 +221,8 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate<EdgeIns
         vertical: p.get('vertical').value,
       ),
     );
-    mateParams.put('horizontal', init: horizontal);
-    mateParams.put('vertical', init: vertical);
+    mateParams.put('horizontal', horizontal);
+    mateParams.put('vertical', vertical);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.all(double value)
@@ -235,6 +235,6 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate<EdgeIns
       init: this,
       builder: (p) => EdgeInsetsDirectional$Mate.all(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }

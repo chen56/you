@@ -33,8 +33,8 @@ class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSele
         children: p.get('children').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('anchor', init: anchor);
-    mateParams.put('children', init: children);
+    mateParams.put('key', key);
+    mateParams.put('anchor', anchor);
+    mateParams.put('children', children);
   }
 }

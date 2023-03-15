@@ -34,9 +34,9 @@ class Theme$Mate extends Theme with WidgetMate<Theme$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }
 
@@ -60,8 +60,8 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate<ThemeDataTween$Mate> 
         end: p.get('end').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
   }
 }
 
@@ -105,11 +105,11 @@ class AnimatedTheme$Mate extends AnimatedTheme with WidgetMate<AnimatedTheme$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('onEnd', init: onEnd);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('onEnd', onEnd);
+    mateParams.put('child', child);
   }
 }

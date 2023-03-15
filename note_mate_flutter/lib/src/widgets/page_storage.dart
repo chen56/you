@@ -17,7 +17,7 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate<PageStorageKey$
       init: this,
       builder: (p) => PageStorageKey$Mate(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }
 
@@ -46,8 +46,8 @@ class PageStorage$Mate extends PageStorage with WidgetMate<PageStorage$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('bucket', init: bucket);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('bucket', bucket);
+    mateParams.put('child', child);
   }
 }

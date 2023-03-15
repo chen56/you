@@ -19,7 +19,7 @@ class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T> with Mate
       init: this,
       builder: (p) => AlwaysStoppedAnimation$Mate(p.get('value').value),
     );
-    mateParams.put('value', init: value);
+    mateParams.put('value', value);
   }
 }
 
@@ -35,7 +35,7 @@ class ProxyAnimation$Mate extends ProxyAnimation with Mate<ProxyAnimation$Mate> 
       init: this,
       builder: (p) => ProxyAnimation$Mate(p.get('animation').value),
     );
-    mateParams.put('animation', init: animation);
+    mateParams.put('animation', animation);
   }
 }
 
@@ -51,7 +51,7 @@ class ReverseAnimation$Mate extends ReverseAnimation with Mate<ReverseAnimation$
       init: this,
       builder: (p) => ReverseAnimation$Mate(p.get('parent').value),
     );
-    mateParams.put('parent', init: parent);
+    mateParams.put('parent', parent);
   }
 }
 
@@ -80,9 +80,9 @@ class CurvedAnimation$Mate extends CurvedAnimation with Mate<CurvedAnimation$Mat
         reverseCurve: p.get('reverseCurve').value,
       ),
     );
-    mateParams.put('parent', init: parent);
-    mateParams.put('curve', init: curve);
-    mateParams.put('reverseCurve', init: reverseCurve);
+    mateParams.put('parent', parent);
+    mateParams.put('curve', curve);
+    mateParams.put('reverseCurve', reverseCurve);
   }
 }
 
@@ -110,9 +110,9 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate<TrainHo
         onSwitchedTrain: p.get('onSwitchedTrain').value,
       ),
     );
-    mateParams.put('_currentTrain', init: _currentTrain);
-    mateParams.put('_nextTrain', init: _nextTrain);
-    mateParams.put('onSwitchedTrain', init: onSwitchedTrain);
+    mateParams.put('_currentTrain', _currentTrain);
+    mateParams.put('_nextTrain', _nextTrain);
+    mateParams.put('onSwitchedTrain', onSwitchedTrain);
   }
 }
 
@@ -136,8 +136,8 @@ class AnimationMean$Mate extends AnimationMean with Mate<AnimationMean$Mate> {
         right: p.get('right').value,
       ),
     );
-    mateParams.put('left', init: left);
-    mateParams.put('right', init: right);
+    mateParams.put('left', left);
+    mateParams.put('right', right);
   }
 }
 
@@ -161,8 +161,8 @@ class AnimationMax$Mate<T extends num> extends AnimationMax<T> with Mate<Animati
         p.get('next').value,
       ),
     );
-    mateParams.put('first', init: first);
-    mateParams.put('next', init: next);
+    mateParams.put('first', first);
+    mateParams.put('next', next);
   }
 }
 
@@ -186,7 +186,7 @@ class AnimationMin$Mate<T extends num> extends AnimationMin<T> with Mate<Animati
         p.get('next').value,
       ),
     );
-    mateParams.put('first', init: first);
-    mateParams.put('next', init: next);
+    mateParams.put('first', first);
+    mateParams.put('next', next);
   }
 }

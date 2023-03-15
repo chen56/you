@@ -16,6 +16,6 @@ class NetworkAssetBundle$Mate extends NetworkAssetBundle with Mate<NetworkAssetB
       init: this,
       builder: (p) => NetworkAssetBundle$Mate(p.get('baseUrl').value),
     );
-    mateParams.put('baseUrl', init: baseUrl);
+    mateParams.put('baseUrl', baseUrl);
   }
 }

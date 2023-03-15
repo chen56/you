@@ -63,14 +63,14 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with WidgetMate<CupertinoSwit
         dragStartBehavior: p.get('dragStartBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('activeColor', init: activeColor);
-    mateParams.put('trackColor', init: trackColor);
-    mateParams.put('thumbColor', init: thumbColor);
-    mateParams.put('applyTheme', init: applyTheme);
-    mateParams.put('focusColor', init: focusColor);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('activeColor', activeColor);
+    mateParams.put('trackColor', trackColor);
+    mateParams.put('thumbColor', thumbColor);
+    mateParams.put('applyTheme', applyTheme);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
   }
 }

@@ -24,7 +24,7 @@ class AutomaticNotchedShape$Mate extends AutomaticNotchedShape with Mate<Automat
         p.get('guest').value,
       ),
     );
-    mateParams.put('host', init: host);
-    mateParams.put('guest', init: guest);
+    mateParams.put('host', host);
+    mateParams.put('guest', guest);
   }
 }

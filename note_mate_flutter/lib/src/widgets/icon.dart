@@ -71,16 +71,16 @@ class Icon$Mate extends Icon with WidgetMate<Icon$Mate> {
         textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.put('icon', init: icon);
-    mateParams.put('key', init: key);
-    mateParams.put('size', init: size);
-    mateParams.put('fill', init: fill);
-    mateParams.put('weight', init: weight);
-    mateParams.put('grade', init: grade);
-    mateParams.put('opticalSize', init: opticalSize);
-    mateParams.put('color', init: color);
-    mateParams.put('shadows', init: shadows);
-    mateParams.put('semanticLabel', init: semanticLabel);
-    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('icon', icon);
+    mateParams.put('key', key);
+    mateParams.put('size', size);
+    mateParams.put('fill', fill);
+    mateParams.put('weight', weight);
+    mateParams.put('grade', grade);
+    mateParams.put('opticalSize', opticalSize);
+    mateParams.put('color', color);
+    mateParams.put('shadows', shadows);
+    mateParams.put('semanticLabel', semanticLabel);
+    mateParams.put('textDirection', textDirection);
   }
 }

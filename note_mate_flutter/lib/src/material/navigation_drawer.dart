@@ -69,16 +69,16 @@ class NavigationDrawer$Mate extends NavigationDrawer with WidgetMate<NavigationD
         selectedIndex: p.get('selectedIndex').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('children', init: children);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('indicatorColor', init: indicatorColor);
-    mateParams.put('indicatorShape', init: indicatorShape);
-    mateParams.put('onDestinationSelected', init: onDestinationSelected);
-    mateParams.put('selectedIndex', init: selectedIndex);
+    mateParams.put('key', key);
+    mateParams.put('children', children);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('indicatorColor', indicatorColor);
+    mateParams.put('indicatorShape', indicatorShape);
+    mateParams.put('onDestinationSelected', onDestinationSelected);
+    mateParams.put('selectedIndex', selectedIndex);
   }
 }
 
@@ -118,10 +118,10 @@ class NavigationDrawerDestination$Mate extends NavigationDrawerDestination
         label: p.get('label').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('icon', init: icon);
-    mateParams.put('selectedIcon', init: selectedIcon);
-    mateParams.put('label', init: label);
+    mateParams.put('key', key);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('icon', icon);
+    mateParams.put('selectedIcon', selectedIcon);
+    mateParams.put('label', label);
   }
 }

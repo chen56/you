@@ -102,22 +102,22 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate<ScrollbarPainter$
         ignorePointer: p.get('ignorePointer').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('fadeoutOpacityAnimation', init: fadeoutOpacityAnimation);
-    mateParams.put('trackColor', init: trackColor);
-    mateParams.put('trackBorderColor', init: trackBorderColor);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('padding', init: padding);
-    mateParams.put('mainAxisMargin', init: mainAxisMargin);
-    mateParams.put('crossAxisMargin', init: crossAxisMargin);
-    mateParams.put('radius', init: radius);
-    mateParams.put('trackRadius', init: trackRadius);
-    mateParams.put('shape', init: shape);
-    mateParams.put('minLength', init: minLength);
-    mateParams.put('minOverscrollLength', init: minOverscrollLength);
-    mateParams.put('scrollbarOrientation', init: scrollbarOrientation);
-    mateParams.put('ignorePointer', init: ignorePointer);
+    mateParams.put('color', color);
+    mateParams.put('fadeoutOpacityAnimation', fadeoutOpacityAnimation);
+    mateParams.put('trackColor', trackColor);
+    mateParams.put('trackBorderColor', trackBorderColor);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('thickness', thickness);
+    mateParams.put('padding', padding);
+    mateParams.put('mainAxisMargin', mainAxisMargin);
+    mateParams.put('crossAxisMargin', crossAxisMargin);
+    mateParams.put('radius', radius);
+    mateParams.put('trackRadius', trackRadius);
+    mateParams.put('shape', shape);
+    mateParams.put('minLength', minLength);
+    mateParams.put('minOverscrollLength', minOverscrollLength);
+    mateParams.put('scrollbarOrientation', scrollbarOrientation);
+    mateParams.put('ignorePointer', ignorePointer);
   }
 }
 
@@ -246,28 +246,28 @@ class RawScrollbar$Mate extends RawScrollbar with WidgetMate<RawScrollbar$Mate> 
         padding: p.get('padding').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('controller', init: controller);
-    mateParams.put('thumbVisibility', init: thumbVisibility);
-    mateParams.put('shape', init: shape);
-    mateParams.put('radius', init: radius);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('thumbColor', init: thumbColor);
-    mateParams.put('minThumbLength', init: minThumbLength);
-    mateParams.put('minOverscrollLength', init: minOverscrollLength);
-    mateParams.put('trackVisibility', init: trackVisibility);
-    mateParams.put('trackRadius', init: trackRadius);
-    mateParams.put('trackColor', init: trackColor);
-    mateParams.put('trackBorderColor', init: trackBorderColor);
-    mateParams.put('fadeDuration', init: fadeDuration);
-    mateParams.put('timeToFade', init: timeToFade);
-    mateParams.put('pressDuration', init: pressDuration);
-    mateParams.put('notificationPredicate', init: notificationPredicate);
-    mateParams.put('interactive', init: interactive);
-    mateParams.put('scrollbarOrientation', init: scrollbarOrientation);
-    mateParams.put('mainAxisMargin', init: mainAxisMargin);
-    mateParams.put('crossAxisMargin', init: crossAxisMargin);
-    mateParams.put('padding', init: padding);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('controller', controller);
+    mateParams.put('thumbVisibility', thumbVisibility);
+    mateParams.put('shape', shape);
+    mateParams.put('radius', radius);
+    mateParams.put('thickness', thickness);
+    mateParams.put('thumbColor', thumbColor);
+    mateParams.put('minThumbLength', minThumbLength);
+    mateParams.put('minOverscrollLength', minOverscrollLength);
+    mateParams.put('trackVisibility', trackVisibility);
+    mateParams.put('trackRadius', trackRadius);
+    mateParams.put('trackColor', trackColor);
+    mateParams.put('trackBorderColor', trackBorderColor);
+    mateParams.put('fadeDuration', fadeDuration);
+    mateParams.put('timeToFade', timeToFade);
+    mateParams.put('pressDuration', pressDuration);
+    mateParams.put('notificationPredicate', notificationPredicate);
+    mateParams.put('interactive', interactive);
+    mateParams.put('scrollbarOrientation', scrollbarOrientation);
+    mateParams.put('mainAxisMargin', mainAxisMargin);
+    mateParams.put('crossAxisMargin', crossAxisMargin);
+    mateParams.put('padding', padding);
   }
 }

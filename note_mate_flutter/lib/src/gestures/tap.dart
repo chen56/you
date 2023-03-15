@@ -31,9 +31,9 @@ class TapDownDetails$Mate extends TapDownDetails with Mate<TapDownDetails$Mate> 
         kind: p.get('kind').value,
       ),
     );
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
-    mateParams.put('kind', init: kind);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
+    mateParams.put('kind', kind);
   }
 }
 
@@ -62,9 +62,9 @@ class TapUpDetails$Mate extends TapUpDetails with Mate<TapUpDetails$Mate> {
         localPosition: p.get('localPosition').value,
       ),
     );
-    mateParams.put('kind', init: kind);
-    mateParams.put('globalPosition', init: globalPosition);
-    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('kind', kind);
+    mateParams.put('globalPosition', globalPosition);
+    mateParams.put('localPosition', localPosition);
   }
 }
 
@@ -93,8 +93,8 @@ class TapGestureRecognizer$Mate extends TapGestureRecognizer with Mate<TapGestur
         allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.put('debugOwner', init: debugOwner);
-    mateParams.put('supportedDevices', init: supportedDevices);
-    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', debugOwner);
+    mateParams.put('supportedDevices', supportedDevices);
+    mateParams.put('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

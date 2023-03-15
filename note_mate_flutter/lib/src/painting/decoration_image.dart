@@ -85,19 +85,19 @@ class DecorationImage$Mate extends DecorationImage with Mate<DecorationImage$Mat
         isAntiAlias: p.get('isAntiAlias').value,
       ),
     );
-    mateParams.put('image', init: image);
-    mateParams.put('onError', init: onError);
-    mateParams.put('colorFilter', init: colorFilter);
-    mateParams.put('fit', init: fit);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('centerSlice', init: centerSlice);
-    mateParams.put('repeat', init: repeat);
-    mateParams.put('matchTextDirection', init: matchTextDirection);
-    mateParams.put('scale', init: scale);
-    mateParams.put('opacity', init: opacity);
-    mateParams.put('filterQuality', init: filterQuality);
-    mateParams.put('invertColors', init: invertColors);
-    mateParams.put('isAntiAlias', init: isAntiAlias);
+    mateParams.put('image', image);
+    mateParams.put('onError', onError);
+    mateParams.put('colorFilter', colorFilter);
+    mateParams.put('fit', fit);
+    mateParams.put('alignment', alignment);
+    mateParams.put('centerSlice', centerSlice);
+    mateParams.put('repeat', repeat);
+    mateParams.put('matchTextDirection', matchTextDirection);
+    mateParams.put('scale', scale);
+    mateParams.put('opacity', opacity);
+    mateParams.put('filterQuality', filterQuality);
+    mateParams.put('invertColors', invertColors);
+    mateParams.put('isAntiAlias', isAntiAlias);
   }
 }
 
@@ -126,8 +126,8 @@ class ImageTilingInfo$Mate extends ImageTilingInfo with Mate<ImageTilingInfo$Mat
         transform: p.get('transform').value,
       ),
     );
-    mateParams.put('tmx', init: tmx);
-    mateParams.put('tmy', init: tmy);
-    mateParams.put('transform', init: transform);
+    mateParams.put('tmx', tmx);
+    mateParams.put('tmy', tmy);
+    mateParams.put('transform', transform);
   }
 }

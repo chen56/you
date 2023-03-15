@@ -142,29 +142,29 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<Paginat
         primary: p.get('primary').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('header', init: header);
-    mateParams.put('actions', init: actions);
-    mateParams.put('columns', init: columns);
-    mateParams.put('sortColumnIndex', init: sortColumnIndex);
-    mateParams.put('sortAscending', init: sortAscending);
-    mateParams.put('onSelectAll', init: onSelectAll);
-    mateParams.put('dataRowHeight', init: dataRowHeight);
-    mateParams.put('headingRowHeight', init: headingRowHeight);
-    mateParams.put('horizontalMargin', init: horizontalMargin);
-    mateParams.put('columnSpacing', init: columnSpacing);
-    mateParams.put('showCheckboxColumn', init: showCheckboxColumn);
-    mateParams.put('showFirstLastButtons', init: showFirstLastButtons);
-    mateParams.put('initialFirstRowIndex', init: initialFirstRowIndex);
-    mateParams.put('onPageChanged', init: onPageChanged);
-    mateParams.put('rowsPerPage', init: rowsPerPage);
-    mateParams.put('availableRowsPerPage', init: availableRowsPerPage);
-    mateParams.put('onRowsPerPageChanged', init: onRowsPerPageChanged);
-    mateParams.put('dragStartBehavior', init: dragStartBehavior);
-    mateParams.put('arrowHeadColor', init: arrowHeadColor);
-    mateParams.put('source', init: source);
-    mateParams.put('checkboxHorizontalMargin', init: checkboxHorizontalMargin);
-    mateParams.put('controller', init: controller);
-    mateParams.put('primary', init: primary);
+    mateParams.put('key', key);
+    mateParams.put('header', header);
+    mateParams.put('actions', actions);
+    mateParams.put('columns', columns);
+    mateParams.put('sortColumnIndex', sortColumnIndex);
+    mateParams.put('sortAscending', sortAscending);
+    mateParams.put('onSelectAll', onSelectAll);
+    mateParams.put('dataRowHeight', dataRowHeight);
+    mateParams.put('headingRowHeight', headingRowHeight);
+    mateParams.put('horizontalMargin', horizontalMargin);
+    mateParams.put('columnSpacing', columnSpacing);
+    mateParams.put('showCheckboxColumn', showCheckboxColumn);
+    mateParams.put('showFirstLastButtons', showFirstLastButtons);
+    mateParams.put('initialFirstRowIndex', initialFirstRowIndex);
+    mateParams.put('onPageChanged', onPageChanged);
+    mateParams.put('rowsPerPage', rowsPerPage);
+    mateParams.put('availableRowsPerPage', availableRowsPerPage);
+    mateParams.put('onRowsPerPageChanged', onRowsPerPageChanged);
+    mateParams.put('dragStartBehavior', dragStartBehavior);
+    mateParams.put('arrowHeadColor', arrowHeadColor);
+    mateParams.put('source', source);
+    mateParams.put('checkboxHorizontalMargin', checkboxHorizontalMargin);
+    mateParams.put('controller', controller);
+    mateParams.put('primary', primary);
   }
 }

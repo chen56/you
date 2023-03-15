@@ -44,10 +44,10 @@ class DataColumn$Mate extends DataColumn with Mate<DataColumn$Mate> {
         onSort: p.get('onSort').value,
       ),
     );
-    mateParams.put('label', init: label);
-    mateParams.put('tooltip', init: tooltip);
-    mateParams.put('numeric', init: numeric);
-    mateParams.put('onSort', init: onSort);
+    mateParams.put('label', label);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('numeric', numeric);
+    mateParams.put('onSort', onSort);
   }
 }
 
@@ -91,12 +91,12 @@ class DataRow$Mate extends DataRow with Mate<DataRow$Mate> {
         cells: p.get('cells').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('selected', init: selected);
-    mateParams.put('onSelectChanged', init: onSelectChanged);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('color', init: color);
-    mateParams.put('cells', init: cells);
+    mateParams.put('key', key);
+    mateParams.put('selected', selected);
+    mateParams.put('onSelectChanged', onSelectChanged);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('color', color);
+    mateParams.put('cells', cells);
   }
 
   /// DataRow DataRow.byIndex({int? index, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
@@ -137,12 +137,12 @@ class DataRow$Mate extends DataRow with Mate<DataRow$Mate> {
         cells: p.get('cells').value,
       ),
     );
-    mateParams.put('index', init: index);
-    mateParams.put('selected', init: selected);
-    mateParams.put('onSelectChanged', init: onSelectChanged);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('color', init: color);
-    mateParams.put('cells', init: cells);
+    mateParams.put('index', index);
+    mateParams.put('selected', selected);
+    mateParams.put('onSelectChanged', onSelectChanged);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('color', color);
+    mateParams.put('cells', cells);
   }
 }
 
@@ -195,14 +195,14 @@ class DataCell$Mate extends DataCell with Mate<DataCell$Mate> {
         onTapCancel: p.get('onTapCancel').value,
       ),
     );
-    mateParams.put('child', init: child);
-    mateParams.put('placeholder', init: placeholder);
-    mateParams.put('showEditIcon', init: showEditIcon);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('onTapDown', init: onTapDown);
-    mateParams.put('onDoubleTap', init: onDoubleTap);
-    mateParams.put('onTapCancel', init: onTapCancel);
+    mateParams.put('child', child);
+    mateParams.put('placeholder', placeholder);
+    mateParams.put('showEditIcon', showEditIcon);
+    mateParams.put('onTap', onTap);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('onTapDown', onTapDown);
+    mateParams.put('onDoubleTap', onDoubleTap);
+    mateParams.put('onTapCancel', onTapCancel);
   }
 }
 
@@ -321,27 +321,27 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('columns', init: columns);
-    mateParams.put('sortColumnIndex', init: sortColumnIndex);
-    mateParams.put('sortAscending', init: sortAscending);
-    mateParams.put('onSelectAll', init: onSelectAll);
-    mateParams.put('decoration', init: decoration);
-    mateParams.put('dataRowColor', init: dataRowColor);
-    mateParams.put('dataRowHeight', init: dataRowHeight);
-    mateParams.put('dataTextStyle', init: dataTextStyle);
-    mateParams.put('headingRowColor', init: headingRowColor);
-    mateParams.put('headingRowHeight', init: headingRowHeight);
-    mateParams.put('headingTextStyle', init: headingTextStyle);
-    mateParams.put('horizontalMargin', init: horizontalMargin);
-    mateParams.put('columnSpacing', init: columnSpacing);
-    mateParams.put('showCheckboxColumn', init: showCheckboxColumn);
-    mateParams.put('showBottomBorder', init: showBottomBorder);
-    mateParams.put('dividerThickness', init: dividerThickness);
-    mateParams.put('rows', init: rows);
-    mateParams.put('checkboxHorizontalMargin', init: checkboxHorizontalMargin);
-    mateParams.put('border', init: border);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('columns', columns);
+    mateParams.put('sortColumnIndex', sortColumnIndex);
+    mateParams.put('sortAscending', sortAscending);
+    mateParams.put('onSelectAll', onSelectAll);
+    mateParams.put('decoration', decoration);
+    mateParams.put('dataRowColor', dataRowColor);
+    mateParams.put('dataRowHeight', dataRowHeight);
+    mateParams.put('dataTextStyle', dataTextStyle);
+    mateParams.put('headingRowColor', headingRowColor);
+    mateParams.put('headingRowHeight', headingRowHeight);
+    mateParams.put('headingTextStyle', headingTextStyle);
+    mateParams.put('horizontalMargin', horizontalMargin);
+    mateParams.put('columnSpacing', columnSpacing);
+    mateParams.put('showCheckboxColumn', showCheckboxColumn);
+    mateParams.put('showBottomBorder', showBottomBorder);
+    mateParams.put('dividerThickness', dividerThickness);
+    mateParams.put('rows', rows);
+    mateParams.put('checkboxHorizontalMargin', checkboxHorizontalMargin);
+    mateParams.put('border', border);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }
 
@@ -390,12 +390,12 @@ class TableRowInkWell$Mate extends TableRowInkWell with WidgetMate<TableRowInkWe
         overlayColor: p.get('overlayColor').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('onDoubleTap', init: onDoubleTap);
-    mateParams.put('onLongPress', init: onLongPress);
-    mateParams.put('onHighlightChanged', init: onHighlightChanged);
-    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('onTap', onTap);
+    mateParams.put('onDoubleTap', onDoubleTap);
+    mateParams.put('onLongPress', onLongPress);
+    mateParams.put('onHighlightChanged', onHighlightChanged);
+    mateParams.put('overlayColor', overlayColor);
   }
 }

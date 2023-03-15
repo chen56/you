@@ -18,7 +18,7 @@ class GradientRotation$Mate extends GradientRotation with Mate<GradientRotation$
       init: this,
       builder: (p) => GradientRotation$Mate(p.get('radians').value),
     );
-    mateParams.put('radians', init: radians);
+    mateParams.put('radians', radians);
   }
 }
 
@@ -62,12 +62,12 @@ class LinearGradient$Mate extends LinearGradient with Mate<LinearGradient$Mate> 
         transform: p.get('transform').value,
       ),
     );
-    mateParams.put('begin', init: begin);
-    mateParams.put('end', init: end);
-    mateParams.put('colors', init: colors);
-    mateParams.put('stops', init: stops);
-    mateParams.put('tileMode', init: tileMode);
-    mateParams.put('transform', init: transform);
+    mateParams.put('begin', begin);
+    mateParams.put('end', end);
+    mateParams.put('colors', colors);
+    mateParams.put('stops', stops);
+    mateParams.put('tileMode', tileMode);
+    mateParams.put('transform', transform);
   }
 }
 
@@ -121,14 +121,14 @@ class RadialGradient$Mate extends RadialGradient with Mate<RadialGradient$Mate> 
         transform: p.get('transform').value,
       ),
     );
-    mateParams.put('center', init: center);
-    mateParams.put('radius', init: radius);
-    mateParams.put('colors', init: colors);
-    mateParams.put('stops', init: stops);
-    mateParams.put('tileMode', init: tileMode);
-    mateParams.put('focal', init: focal);
-    mateParams.put('focalRadius', init: focalRadius);
-    mateParams.put('transform', init: transform);
+    mateParams.put('center', center);
+    mateParams.put('radius', radius);
+    mateParams.put('colors', colors);
+    mateParams.put('stops', stops);
+    mateParams.put('tileMode', tileMode);
+    mateParams.put('focal', focal);
+    mateParams.put('focalRadius', focalRadius);
+    mateParams.put('transform', transform);
   }
 }
 
@@ -177,12 +177,12 @@ class SweepGradient$Mate extends SweepGradient with Mate<SweepGradient$Mate> {
         transform: p.get('transform').value,
       ),
     );
-    mateParams.put('center', init: center);
-    mateParams.put('startAngle', init: startAngle);
-    mateParams.put('endAngle', init: endAngle);
-    mateParams.put('colors', init: colors);
-    mateParams.put('stops', init: stops);
-    mateParams.put('tileMode', init: tileMode);
-    mateParams.put('transform', init: transform);
+    mateParams.put('center', center);
+    mateParams.put('startAngle', startAngle);
+    mateParams.put('endAngle', endAngle);
+    mateParams.put('colors', colors);
+    mateParams.put('stops', stops);
+    mateParams.put('tileMode', tileMode);
+    mateParams.put('transform', transform);
   }
 }

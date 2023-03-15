@@ -49,12 +49,12 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate<ImageConfigur
         platform: p.get('platform').value,
       ),
     );
-    mateParams.put('bundle', init: bundle);
-    mateParams.put('devicePixelRatio', init: devicePixelRatio);
-    mateParams.put('locale', init: locale);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('size', init: size);
-    mateParams.put('platform', init: platform);
+    mateParams.put('bundle', bundle);
+    mateParams.put('devicePixelRatio', devicePixelRatio);
+    mateParams.put('locale', locale);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('size', size);
+    mateParams.put('platform', platform);
   }
 }
 
@@ -83,9 +83,9 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate<AssetBundle
         scale: p.get('scale').value,
       ),
     );
-    mateParams.put('bundle', init: bundle);
-    mateParams.put('name', init: name);
-    mateParams.put('scale', init: scale);
+    mateParams.put('bundle', bundle);
+    mateParams.put('name', name);
+    mateParams.put('scale', scale);
   }
 }
 
@@ -118,10 +118,10 @@ class ResizeImage$Mate extends ResizeImage with Mate<ResizeImage$Mate> {
         allowUpscaling: p.get('allowUpscaling').value,
       ),
     );
-    mateParams.put('imageProvider', init: imageProvider);
-    mateParams.put('width', init: width);
-    mateParams.put('height', init: height);
-    mateParams.put('allowUpscaling', init: allowUpscaling);
+    mateParams.put('imageProvider', imageProvider);
+    mateParams.put('width', width);
+    mateParams.put('height', height);
+    mateParams.put('allowUpscaling', allowUpscaling);
   }
 }
 
@@ -144,8 +144,8 @@ class FileImage$Mate extends FileImage with Mate<FileImage$Mate> {
         scale: p.get('scale').value,
       ),
     );
-    mateParams.put('file', init: file);
-    mateParams.put('scale', init: scale);
+    mateParams.put('file', file);
+    mateParams.put('scale', scale);
   }
 }
 
@@ -168,8 +168,8 @@ class MemoryImage$Mate extends MemoryImage with Mate<MemoryImage$Mate> {
         scale: p.get('scale').value,
       ),
     );
-    mateParams.put('bytes', init: bytes);
-    mateParams.put('scale', init: scale);
+    mateParams.put('bytes', bytes);
+    mateParams.put('scale', scale);
   }
 }
 
@@ -202,10 +202,10 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate<ExactAssetImage$Mat
         package: p.get('package').value,
       ),
     );
-    mateParams.put('assetName', init: assetName);
-    mateParams.put('scale', init: scale);
-    mateParams.put('bundle', init: bundle);
-    mateParams.put('package', init: package);
+    mateParams.put('assetName', assetName);
+    mateParams.put('scale', scale);
+    mateParams.put('bundle', bundle);
+    mateParams.put('package', package);
   }
 }
 
@@ -229,7 +229,7 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate
         uri: p.get('uri').value,
       ),
     );
-    mateParams.put('statusCode', init: statusCode);
-    mateParams.put('uri', init: uri);
+    mateParams.put('statusCode', statusCode);
+    mateParams.put('uri', uri);
   }
 }

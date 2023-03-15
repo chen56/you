@@ -51,13 +51,13 @@ class Hero$Mate extends Hero with WidgetMate<Hero$Mate> {
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('tag', init: tag);
-    mateParams.put('createRectTween', init: createRectTween);
-    mateParams.put('flightShuttleBuilder', init: flightShuttleBuilder);
-    mateParams.put('placeholderBuilder', init: placeholderBuilder);
-    mateParams.put('transitionOnUserGestures', init: transitionOnUserGestures);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('tag', tag);
+    mateParams.put('createRectTween', createRectTween);
+    mateParams.put('flightShuttleBuilder', flightShuttleBuilder);
+    mateParams.put('placeholderBuilder', placeholderBuilder);
+    mateParams.put('transitionOnUserGestures', transitionOnUserGestures);
+    mateParams.put('child', child);
   }
 }
 
@@ -73,7 +73,7 @@ class HeroController$Mate extends HeroController with Mate<HeroController$Mate> 
       init: this,
       builder: (p) => HeroController$Mate(createRectTween: p.get('createRectTween').value),
     );
-    mateParams.put('createRectTween', init: createRectTween);
+    mateParams.put('createRectTween', createRectTween);
   }
 }
 
@@ -102,8 +102,8 @@ class HeroMode$Mate extends HeroMode with WidgetMate<HeroMode$Mate> {
         enabled: p.get('enabled').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('enabled', init: enabled);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('enabled', enabled);
   }
 }

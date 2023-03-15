@@ -31,9 +31,9 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate<TextS
         selectionHandleColor: p.get('selectionHandleColor').value,
       ),
     );
-    mateParams.put('cursorColor', init: cursorColor);
-    mateParams.put('selectionColor', init: selectionColor);
-    mateParams.put('selectionHandleColor', init: selectionHandleColor);
+    mateParams.put('cursorColor', cursorColor);
+    mateParams.put('selectionColor', selectionColor);
+    mateParams.put('selectionHandleColor', selectionHandleColor);
   }
 }
 
@@ -62,8 +62,8 @@ class TextSelectionTheme$Mate extends TextSelectionTheme with WidgetMate<TextSel
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

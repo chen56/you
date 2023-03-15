@@ -26,7 +26,7 @@ class RenderCustomMultiChildLayoutBox$Mate extends RenderCustomMultiChildLayoutB
         delegate: p.get('delegate').value,
       ),
     );
-    mateParams.put('children', init: children);
-    mateParams.put('delegate', init: delegate);
+    mateParams.put('children', children);
+    mateParams.put('delegate', delegate);
   }
 }

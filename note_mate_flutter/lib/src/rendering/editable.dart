@@ -35,8 +35,8 @@ class TextSelectionPoint$Mate extends TextSelectionPoint with Mate<TextSelection
         p.get('direction').value,
       ),
     );
-    mateParams.put('point', init: point);
-    mateParams.put('direction', init: direction);
+    mateParams.put('point', point);
+    mateParams.put('direction', direction);
   }
 }
 
@@ -265,48 +265,48 @@ class RenderEditable$Mate extends RenderEditable with Mate<RenderEditable$Mate> 
         children: p.get('children').value,
       ),
     );
-    mateParams.put('text', init: text);
-    mateParams.put('textDirection', init: textDirection);
-    mateParams.put('textAlign', init: textAlign);
-    mateParams.put('cursorColor', init: cursorColor);
-    mateParams.put('backgroundCursorColor', init: backgroundCursorColor);
-    mateParams.put('showCursor', init: showCursor);
-    mateParams.put('hasFocus', init: hasFocus);
-    mateParams.put('startHandleLayerLink', init: startHandleLayerLink);
-    mateParams.put('endHandleLayerLink', init: endHandleLayerLink);
-    mateParams.put('maxLines', init: maxLines);
-    mateParams.put('minLines', init: minLines);
-    mateParams.put('expands', init: expands);
-    mateParams.put('strutStyle', init: strutStyle);
-    mateParams.put('selectionColor', init: selectionColor);
-    mateParams.put('textScaleFactor', init: textScaleFactor);
-    mateParams.put('selection', init: selection);
-    mateParams.put('offset', init: offset);
-    mateParams.put('onCaretChanged', init: onCaretChanged);
-    mateParams.put('ignorePointer', init: ignorePointer);
-    mateParams.put('readOnly', init: readOnly);
-    mateParams.put('forceLine', init: forceLine);
-    mateParams.put('textHeightBehavior', init: textHeightBehavior);
-    mateParams.put('textWidthBasis', init: textWidthBasis);
-    mateParams.put('obscuringCharacter', init: obscuringCharacter);
-    mateParams.put('obscureText', init: obscureText);
-    mateParams.put('locale', init: locale);
-    mateParams.put('cursorWidth', init: cursorWidth);
-    mateParams.put('cursorHeight', init: cursorHeight);
-    mateParams.put('cursorRadius', init: cursorRadius);
-    mateParams.put('paintCursorAboveText', init: paintCursorAboveText);
-    mateParams.put('cursorOffset', init: cursorOffset);
-    mateParams.put('devicePixelRatio', init: devicePixelRatio);
-    mateParams.put('selectionHeightStyle', init: selectionHeightStyle);
-    mateParams.put('selectionWidthStyle', init: selectionWidthStyle);
-    mateParams.put('enableInteractiveSelection', init: enableInteractiveSelection);
-    mateParams.put('floatingCursorAddedMargin', init: floatingCursorAddedMargin);
-    mateParams.put('promptRectRange', init: promptRectRange);
-    mateParams.put('promptRectColor', init: promptRectColor);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('textSelectionDelegate', init: textSelectionDelegate);
-    mateParams.put('painter', init: painter);
-    mateParams.put('foregroundPainter', init: foregroundPainter);
-    mateParams.put('children', init: children);
+    mateParams.put('text', text);
+    mateParams.put('textDirection', textDirection);
+    mateParams.put('textAlign', textAlign);
+    mateParams.put('cursorColor', cursorColor);
+    mateParams.put('backgroundCursorColor', backgroundCursorColor);
+    mateParams.put('showCursor', showCursor);
+    mateParams.put('hasFocus', hasFocus);
+    mateParams.put('startHandleLayerLink', startHandleLayerLink);
+    mateParams.put('endHandleLayerLink', endHandleLayerLink);
+    mateParams.put('maxLines', maxLines);
+    mateParams.put('minLines', minLines);
+    mateParams.put('expands', expands);
+    mateParams.put('strutStyle', strutStyle);
+    mateParams.put('selectionColor', selectionColor);
+    mateParams.put('textScaleFactor', textScaleFactor);
+    mateParams.put('selection', selection);
+    mateParams.put('offset', offset);
+    mateParams.put('onCaretChanged', onCaretChanged);
+    mateParams.put('ignorePointer', ignorePointer);
+    mateParams.put('readOnly', readOnly);
+    mateParams.put('forceLine', forceLine);
+    mateParams.put('textHeightBehavior', textHeightBehavior);
+    mateParams.put('textWidthBasis', textWidthBasis);
+    mateParams.put('obscuringCharacter', obscuringCharacter);
+    mateParams.put('obscureText', obscureText);
+    mateParams.put('locale', locale);
+    mateParams.put('cursorWidth', cursorWidth);
+    mateParams.put('cursorHeight', cursorHeight);
+    mateParams.put('cursorRadius', cursorRadius);
+    mateParams.put('paintCursorAboveText', paintCursorAboveText);
+    mateParams.put('cursorOffset', cursorOffset);
+    mateParams.put('devicePixelRatio', devicePixelRatio);
+    mateParams.put('selectionHeightStyle', selectionHeightStyle);
+    mateParams.put('selectionWidthStyle', selectionWidthStyle);
+    mateParams.put('enableInteractiveSelection', enableInteractiveSelection);
+    mateParams.put('floatingCursorAddedMargin', floatingCursorAddedMargin);
+    mateParams.put('promptRectRange', promptRectRange);
+    mateParams.put('promptRectColor', promptRectColor);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('textSelectionDelegate', textSelectionDelegate);
+    mateParams.put('painter', painter);
+    mateParams.put('foregroundPainter', foregroundPainter);
+    mateParams.put('children', children);
   }
 }

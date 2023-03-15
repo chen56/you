@@ -26,8 +26,8 @@ class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate<S
         selectedIcon: p.get('selectedIcon').value,
       ),
     );
-    mateParams.put('style', init: style);
-    mateParams.put('selectedIcon', init: selectedIcon);
+    mateParams.put('style', style);
+    mateParams.put('selectedIcon', selectedIcon);
   }
 }
 
@@ -56,8 +56,8 @@ class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with WidgetMate<Seg
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

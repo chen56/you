@@ -55,13 +55,13 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('showLeading', init: showLeading);
-    mateParams.put('showTrailing', init: showTrailing);
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('color', init: color);
-    mateParams.put('notificationPredicate', init: notificationPredicate);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('showLeading', showLeading);
+    mateParams.put('showTrailing', showTrailing);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('color', color);
+    mateParams.put('notificationPredicate', notificationPredicate);
+    mateParams.put('child', child);
   }
 }
 
@@ -101,11 +101,11 @@ class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('axisDirection', init: axisDirection);
-    mateParams.put('notificationPredicate', init: notificationPredicate);
-    mateParams.put('clipBehavior', init: clipBehavior);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('axisDirection', axisDirection);
+    mateParams.put('notificationPredicate', notificationPredicate);
+    mateParams.put('clipBehavior', clipBehavior);
+    mateParams.put('child', child);
   }
 }
 
@@ -122,6 +122,6 @@ class OverscrollIndicatorNotification$Mate extends OverscrollIndicatorNotificati
       init: this,
       builder: (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').value),
     );
-    mateParams.put('leading', init: leading);
+    mateParams.put('leading', leading);
   }
 }

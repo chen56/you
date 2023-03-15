@@ -44,10 +44,10 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate<ShapeDecoration$Mat
         shape: p.get('shape').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('image', init: image);
-    mateParams.put('gradient', init: gradient);
-    mateParams.put('shadows', init: shadows);
-    mateParams.put('shape', init: shape);
+    mateParams.put('color', color);
+    mateParams.put('image', image);
+    mateParams.put('gradient', gradient);
+    mateParams.put('shadows', shadows);
+    mateParams.put('shape', shape);
   }
 }

@@ -73,17 +73,17 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate<ScrollbarThem
         interactive: p.get('interactive').value,
       ),
     );
-    mateParams.put('thumbVisibility', init: thumbVisibility);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('trackVisibility', init: trackVisibility);
-    mateParams.put('radius', init: radius);
-    mateParams.put('thumbColor', init: thumbColor);
-    mateParams.put('trackColor', init: trackColor);
-    mateParams.put('trackBorderColor', init: trackBorderColor);
-    mateParams.put('crossAxisMargin', init: crossAxisMargin);
-    mateParams.put('mainAxisMargin', init: mainAxisMargin);
-    mateParams.put('minThumbLength', init: minThumbLength);
-    mateParams.put('interactive', init: interactive);
+    mateParams.put('thumbVisibility', thumbVisibility);
+    mateParams.put('thickness', thickness);
+    mateParams.put('trackVisibility', trackVisibility);
+    mateParams.put('radius', radius);
+    mateParams.put('thumbColor', thumbColor);
+    mateParams.put('trackColor', trackColor);
+    mateParams.put('trackBorderColor', trackBorderColor);
+    mateParams.put('crossAxisMargin', crossAxisMargin);
+    mateParams.put('mainAxisMargin', mainAxisMargin);
+    mateParams.put('minThumbLength', minThumbLength);
+    mateParams.put('interactive', interactive);
   }
 }
 
@@ -112,8 +112,8 @@ class ScrollbarTheme$Mate extends ScrollbarTheme with WidgetMate<ScrollbarTheme$
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

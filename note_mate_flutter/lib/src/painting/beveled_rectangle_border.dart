@@ -25,7 +25,7 @@ class BeveledRectangleBorder$Mate extends BeveledRectangleBorder with Mate<Bevel
         borderRadius: p.get('borderRadius').value,
       ),
     );
-    mateParams.put('side', init: side);
-    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('side', side);
+    mateParams.put('borderRadius', borderRadius);
   }
 }

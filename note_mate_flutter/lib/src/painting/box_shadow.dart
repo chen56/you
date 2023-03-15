@@ -40,10 +40,10 @@ class BoxShadow$Mate extends BoxShadow with Mate<BoxShadow$Mate> {
         blurStyle: p.get('blurStyle').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('offset', init: offset);
-    mateParams.put('blurRadius', init: blurRadius);
-    mateParams.put('spreadRadius', init: spreadRadius);
-    mateParams.put('blurStyle', init: blurStyle);
+    mateParams.put('color', color);
+    mateParams.put('offset', offset);
+    mateParams.put('blurRadius', blurRadius);
+    mateParams.put('spreadRadius', spreadRadius);
+    mateParams.put('blurStyle', blurStyle);
   }
 }

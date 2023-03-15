@@ -54,12 +54,12 @@ class AnimatedSize$Mate extends AnimatedSize with WidgetMate<AnimatedSize$Mate> 
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('curve', init: curve);
-    mateParams.put('duration', init: duration);
-    mateParams.put('reverseDuration', init: reverseDuration);
-    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('alignment', alignment);
+    mateParams.put('curve', curve);
+    mateParams.put('duration', duration);
+    mateParams.put('reverseDuration', reverseDuration);
+    mateParams.put('clipBehavior', clipBehavior);
   }
 }

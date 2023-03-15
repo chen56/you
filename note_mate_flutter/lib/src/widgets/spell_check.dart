@@ -31,8 +31,8 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate<Spe
         spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').value,
       ),
     );
-    mateParams.put('spellCheckService', init: spellCheckService);
-    mateParams.put('misspelledTextStyle', init: misspelledTextStyle);
-    mateParams.put('spellCheckSuggestionsToolbarBuilder', init: spellCheckSuggestionsToolbarBuilder);
+    mateParams.put('spellCheckService', spellCheckService);
+    mateParams.put('misspelledTextStyle', misspelledTextStyle);
+    mateParams.put('spellCheckSuggestionsToolbarBuilder', spellCheckSuggestionsToolbarBuilder);
   }
 }

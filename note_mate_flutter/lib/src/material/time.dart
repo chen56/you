@@ -24,8 +24,8 @@ class TimeOfDay$Mate extends TimeOfDay with Mate<TimeOfDay$Mate> {
         minute: p.get('minute').value,
       ),
     );
-    mateParams.put('hour', init: hour);
-    mateParams.put('minute', init: minute);
+    mateParams.put('hour', hour);
+    mateParams.put('minute', minute);
   }
 
   /// TimeOfDay TimeOfDay.fromDateTime(DateTime time)
@@ -38,7 +38,7 @@ class TimeOfDay$Mate extends TimeOfDay with Mate<TimeOfDay$Mate> {
       init: this,
       builder: (p) => TimeOfDay$Mate.fromDateTime(p.get('time').value),
     );
-    mateParams.put('time', init: time);
+    mateParams.put('time', time);
   }
 }
 
@@ -54,6 +54,6 @@ class RestorableTimeOfDay$Mate extends RestorableTimeOfDay with Mate<RestorableT
       init: this,
       builder: (p) => RestorableTimeOfDay$Mate(p.get('defaultValue').value),
     );
-    mateParams.put('defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', defaultValue);
   }
 }

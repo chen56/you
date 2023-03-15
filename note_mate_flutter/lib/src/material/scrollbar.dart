@@ -70,15 +70,15 @@ class Scrollbar$Mate extends Scrollbar with WidgetMate<Scrollbar$Mate> {
         scrollbarOrientation: p.get('scrollbarOrientation').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('controller', init: controller);
-    mateParams.put('thumbVisibility', init: thumbVisibility);
-    mateParams.put('trackVisibility', init: trackVisibility);
-    mateParams.put('thickness', init: thickness);
-    mateParams.put('radius', init: radius);
-    mateParams.put('notificationPredicate', init: notificationPredicate);
-    mateParams.put('interactive', init: interactive);
-    mateParams.put('scrollbarOrientation', init: scrollbarOrientation);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('controller', controller);
+    mateParams.put('thumbVisibility', thumbVisibility);
+    mateParams.put('trackVisibility', trackVisibility);
+    mateParams.put('thickness', thickness);
+    mateParams.put('radius', radius);
+    mateParams.put('notificationPredicate', notificationPredicate);
+    mateParams.put('interactive', interactive);
+    mateParams.put('scrollbarOrientation', scrollbarOrientation);
   }
 }

@@ -28,9 +28,9 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
         replacementString: p.get('replacementString').value,
       ),
     );
-    mateParams.put('filterPattern', init: filterPattern);
-    mateParams.put('allow', init: allow);
-    mateParams.put('replacementString', init: replacementString);
+    mateParams.put('filterPattern', filterPattern);
+    mateParams.put('allow', allow);
+    mateParams.put('replacementString', replacementString);
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.allow(Pattern filterPattern, {String replacementString = ''})
@@ -50,8 +50,8 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
         replacementString: p.get('replacementString').value,
       ),
     );
-    mateParams.put('filterPattern', init: filterPattern);
-    mateParams.put('replacementString', init: replacementString);
+    mateParams.put('filterPattern', filterPattern);
+    mateParams.put('replacementString', replacementString);
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.deny(Pattern filterPattern, {String replacementString = ''})
@@ -71,8 +71,8 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
         replacementString: p.get('replacementString').value,
       ),
     );
-    mateParams.put('filterPattern', init: filterPattern);
-    mateParams.put('replacementString', init: replacementString);
+    mateParams.put('filterPattern', filterPattern);
+    mateParams.put('replacementString', replacementString);
   }
 }
 
@@ -96,7 +96,7 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
         maxLengthEnforcement: p.get('maxLengthEnforcement').value,
       ),
     );
-    mateParams.put('maxLength', init: maxLength);
-    mateParams.put('maxLengthEnforcement', init: maxLengthEnforcement);
+    mateParams.put('maxLength', maxLength);
+    mateParams.put('maxLengthEnforcement', maxLengthEnforcement);
   }
 }

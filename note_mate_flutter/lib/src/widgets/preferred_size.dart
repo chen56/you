@@ -31,8 +31,8 @@ class PreferredSize$Mate extends PreferredSize with WidgetMate<PreferredSize$Mat
         preferredSize: p.get('preferredSize').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('child', init: child);
-    mateParams.put('preferredSize', init: preferredSize);
+    mateParams.put('key', key);
+    mateParams.put('child', child);
+    mateParams.put('preferredSize', preferredSize);
   }
 }

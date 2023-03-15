@@ -116,25 +116,25 @@ class Slider$Mate extends Slider with WidgetMate<Slider$Mate> {
         autofocus: p.get('autofocus').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('secondaryTrackValue', init: secondaryTrackValue);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('onChangeStart', init: onChangeStart);
-    mateParams.put('onChangeEnd', init: onChangeEnd);
-    mateParams.put('min', init: min);
-    mateParams.put('max', init: max);
-    mateParams.put('divisions', init: divisions);
-    mateParams.put('label', init: label);
-    mateParams.put('activeColor', init: activeColor);
-    mateParams.put('inactiveColor', init: inactiveColor);
-    mateParams.put('secondaryActiveColor', init: secondaryActiveColor);
-    mateParams.put('thumbColor', init: thumbColor);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('semanticFormatterCallback', init: semanticFormatterCallback);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('secondaryTrackValue', secondaryTrackValue);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('onChangeStart', onChangeStart);
+    mateParams.put('onChangeEnd', onChangeEnd);
+    mateParams.put('min', min);
+    mateParams.put('max', max);
+    mateParams.put('divisions', divisions);
+    mateParams.put('label', label);
+    mateParams.put('activeColor', activeColor);
+    mateParams.put('inactiveColor', inactiveColor);
+    mateParams.put('secondaryActiveColor', secondaryActiveColor);
+    mateParams.put('thumbColor', thumbColor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('semanticFormatterCallback', semanticFormatterCallback);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
   }
 
   /// Slider Slider.adaptive({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, MouseCursor? mouseCursor, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
@@ -240,24 +240,24 @@ class Slider$Mate extends Slider with WidgetMate<Slider$Mate> {
         autofocus: p.get('autofocus').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('value', init: value);
-    mateParams.put('secondaryTrackValue', init: secondaryTrackValue);
-    mateParams.put('onChanged', init: onChanged);
-    mateParams.put('onChangeStart', init: onChangeStart);
-    mateParams.put('onChangeEnd', init: onChangeEnd);
-    mateParams.put('min', init: min);
-    mateParams.put('max', init: max);
-    mateParams.put('divisions', init: divisions);
-    mateParams.put('label', init: label);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('activeColor', init: activeColor);
-    mateParams.put('inactiveColor', init: inactiveColor);
-    mateParams.put('secondaryActiveColor', init: secondaryActiveColor);
-    mateParams.put('thumbColor', init: thumbColor);
-    mateParams.put('overlayColor', init: overlayColor);
-    mateParams.put('semanticFormatterCallback', init: semanticFormatterCallback);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('key', key);
+    mateParams.put('value', value);
+    mateParams.put('secondaryTrackValue', secondaryTrackValue);
+    mateParams.put('onChanged', onChanged);
+    mateParams.put('onChangeStart', onChangeStart);
+    mateParams.put('onChangeEnd', onChangeEnd);
+    mateParams.put('min', min);
+    mateParams.put('max', max);
+    mateParams.put('divisions', divisions);
+    mateParams.put('label', label);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('activeColor', activeColor);
+    mateParams.put('inactiveColor', inactiveColor);
+    mateParams.put('secondaryActiveColor', secondaryActiveColor);
+    mateParams.put('thumbColor', thumbColor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('semanticFormatterCallback', semanticFormatterCallback);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
   }
 }

@@ -99,21 +99,21 @@ class AppBarTheme$Mate extends AppBarTheme with Mate<AppBarTheme$Mate> {
         systemOverlayStyle: p.get('systemOverlayStyle').value,
       ),
     );
-    mateParams.put('color', init: color);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('foregroundColor', init: foregroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('scrolledUnderElevation', init: scrolledUnderElevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('shape', init: shape);
-    mateParams.put('iconTheme', init: iconTheme);
-    mateParams.put('actionsIconTheme', init: actionsIconTheme);
-    mateParams.put('centerTitle', init: centerTitle);
-    mateParams.put('titleSpacing', init: titleSpacing);
-    mateParams.put('toolbarHeight', init: toolbarHeight);
-    mateParams.put('toolbarTextStyle', init: toolbarTextStyle);
-    mateParams.put('titleTextStyle', init: titleTextStyle);
-    mateParams.put('systemOverlayStyle', init: systemOverlayStyle);
+    mateParams.put('color', color);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('foregroundColor', foregroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('scrolledUnderElevation', scrolledUnderElevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('shape', shape);
+    mateParams.put('iconTheme', iconTheme);
+    mateParams.put('actionsIconTheme', actionsIconTheme);
+    mateParams.put('centerTitle', centerTitle);
+    mateParams.put('titleSpacing', titleSpacing);
+    mateParams.put('toolbarHeight', toolbarHeight);
+    mateParams.put('toolbarTextStyle', toolbarTextStyle);
+    mateParams.put('titleTextStyle', titleTextStyle);
+    mateParams.put('systemOverlayStyle', systemOverlayStyle);
   }
 }

@@ -114,24 +114,24 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate<ListTileThemeDa
         visualDensity: p.get('visualDensity').value,
       ),
     );
-    mateParams.put('dense', init: dense);
-    mateParams.put('shape', init: shape);
-    mateParams.put('style', init: style);
-    mateParams.put('selectedColor', init: selectedColor);
-    mateParams.put('iconColor', init: iconColor);
-    mateParams.put('textColor', init: textColor);
-    mateParams.put('titleTextStyle', init: titleTextStyle);
-    mateParams.put('subtitleTextStyle', init: subtitleTextStyle);
-    mateParams.put('leadingAndTrailingTextStyle', init: leadingAndTrailingTextStyle);
-    mateParams.put('contentPadding', init: contentPadding);
-    mateParams.put('tileColor', init: tileColor);
-    mateParams.put('selectedTileColor', init: selectedTileColor);
-    mateParams.put('horizontalTitleGap', init: horizontalTitleGap);
-    mateParams.put('minVerticalPadding', init: minVerticalPadding);
-    mateParams.put('minLeadingWidth', init: minLeadingWidth);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('dense', dense);
+    mateParams.put('shape', shape);
+    mateParams.put('style', style);
+    mateParams.put('selectedColor', selectedColor);
+    mateParams.put('iconColor', iconColor);
+    mateParams.put('textColor', textColor);
+    mateParams.put('titleTextStyle', titleTextStyle);
+    mateParams.put('subtitleTextStyle', subtitleTextStyle);
+    mateParams.put('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle);
+    mateParams.put('contentPadding', contentPadding);
+    mateParams.put('tileColor', tileColor);
+    mateParams.put('selectedTileColor', selectedTileColor);
+    mateParams.put('horizontalTitleGap', horizontalTitleGap);
+    mateParams.put('minVerticalPadding', minVerticalPadding);
+    mateParams.put('minLeadingWidth', minLeadingWidth);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('visualDensity', visualDensity);
   }
 }
 
@@ -230,22 +230,22 @@ class ListTileTheme$Mate extends ListTileTheme with WidgetMate<ListTileTheme$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('dense', init: dense);
-    mateParams.put('shape', init: shape);
-    mateParams.put('style', init: style);
-    mateParams.put('selectedColor', init: selectedColor);
-    mateParams.put('iconColor', init: iconColor);
-    mateParams.put('textColor', init: textColor);
-    mateParams.put('contentPadding', init: contentPadding);
-    mateParams.put('tileColor', init: tileColor);
-    mateParams.put('selectedTileColor', init: selectedTileColor);
-    mateParams.put('enableFeedback', init: enableFeedback);
-    mateParams.put('mouseCursor', init: mouseCursor);
-    mateParams.put('horizontalTitleGap', init: horizontalTitleGap);
-    mateParams.put('minVerticalPadding', init: minVerticalPadding);
-    mateParams.put('minLeadingWidth', init: minLeadingWidth);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('dense', dense);
+    mateParams.put('shape', shape);
+    mateParams.put('style', style);
+    mateParams.put('selectedColor', selectedColor);
+    mateParams.put('iconColor', iconColor);
+    mateParams.put('textColor', textColor);
+    mateParams.put('contentPadding', contentPadding);
+    mateParams.put('tileColor', tileColor);
+    mateParams.put('selectedTileColor', selectedTileColor);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('horizontalTitleGap', horizontalTitleGap);
+    mateParams.put('minVerticalPadding', minVerticalPadding);
+    mateParams.put('minLeadingWidth', minLeadingWidth);
+    mateParams.put('child', child);
   }
 }

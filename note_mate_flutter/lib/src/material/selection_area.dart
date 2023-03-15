@@ -56,12 +56,12 @@ class SelectionArea$Mate extends SelectionArea with WidgetMate<SelectionArea$Mat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('focusNode', init: focusNode);
-    mateParams.put('selectionControls', init: selectionControls);
-    mateParams.put('contextMenuBuilder', init: contextMenuBuilder);
-    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
-    mateParams.put('onSelectionChanged', init: onSelectionChanged);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('selectionControls', selectionControls);
+    mateParams.put('contextMenuBuilder', contextMenuBuilder);
+    mateParams.put('magnifierConfiguration', magnifierConfiguration);
+    mateParams.put('onSelectionChanged', onSelectionChanged);
+    mateParams.put('child', child);
   }
 }

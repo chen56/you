@@ -69,15 +69,15 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with WidgetMate<CupertinoTabB
         border: p.get('border').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('items', init: items);
-    mateParams.put('onTap', init: onTap);
-    mateParams.put('currentIndex', init: currentIndex);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('activeColor', init: activeColor);
-    mateParams.put('inactiveColor', init: inactiveColor);
-    mateParams.put('iconSize', init: iconSize);
-    mateParams.put('height', init: height);
-    mateParams.put('border', init: border);
+    mateParams.put('key', key);
+    mateParams.put('items', items);
+    mateParams.put('onTap', onTap);
+    mateParams.put('currentIndex', currentIndex);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('activeColor', activeColor);
+    mateParams.put('inactiveColor', inactiveColor);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('height', height);
+    mateParams.put('border', border);
   }
 }

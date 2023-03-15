@@ -30,9 +30,9 @@ class SpringDescription$Mate extends SpringDescription with Mate<SpringDescripti
         damping: p.get('damping').value,
       ),
     );
-    mateParams.put('mass', init: mass);
-    mateParams.put('stiffness', init: stiffness);
-    mateParams.put('damping', init: damping);
+    mateParams.put('mass', mass);
+    mateParams.put('stiffness', stiffness);
+    mateParams.put('damping', damping);
   }
 
   /// SpringDescription SpringDescription.withDampingRatio({required double mass, required double stiffness, double ratio = 1.0})
@@ -58,9 +58,9 @@ class SpringDescription$Mate extends SpringDescription with Mate<SpringDescripti
         ratio: p.get('ratio').value,
       ),
     );
-    mateParams.put('mass', init: mass);
-    mateParams.put('stiffness', init: stiffness);
-    mateParams.put('ratio', init: ratio);
+    mateParams.put('mass', mass);
+    mateParams.put('stiffness', stiffness);
+    mateParams.put('ratio', ratio);
   }
 }
 
@@ -98,11 +98,11 @@ class SpringSimulation$Mate extends SpringSimulation with Mate<SpringSimulation$
         tolerance: p.get('tolerance').value,
       ),
     );
-    mateParams.put('spring', init: spring);
-    mateParams.put('start', init: start);
-    mateParams.put('end', init: end);
-    mateParams.put('velocity', init: velocity);
-    mateParams.put('tolerance', init: tolerance);
+    mateParams.put('spring', spring);
+    mateParams.put('start', start);
+    mateParams.put('end', end);
+    mateParams.put('velocity', velocity);
+    mateParams.put('tolerance', tolerance);
   }
 }
 
@@ -140,10 +140,10 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate<Scrol
         tolerance: p.get('tolerance').value,
       ),
     );
-    mateParams.put('spring', init: spring);
-    mateParams.put('start', init: start);
-    mateParams.put('end', init: end);
-    mateParams.put('velocity', init: velocity);
-    mateParams.put('tolerance', init: tolerance);
+    mateParams.put('spring', spring);
+    mateParams.put('start', start);
+    mateParams.put('end', end);
+    mateParams.put('velocity', velocity);
+    mateParams.put('tolerance', tolerance);
   }
 }

@@ -71,16 +71,16 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
         iconTheme: p.get('iconTheme').value,
       ),
     );
-    mateParams.put('tileHeight', init: tileHeight);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('indicatorColor', init: indicatorColor);
-    mateParams.put('indicatorShape', init: indicatorShape);
-    mateParams.put('indicatorSize', init: indicatorSize);
-    mateParams.put('labelTextStyle', init: labelTextStyle);
-    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('tileHeight', tileHeight);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('indicatorColor', indicatorColor);
+    mateParams.put('indicatorShape', indicatorShape);
+    mateParams.put('indicatorSize', indicatorSize);
+    mateParams.put('labelTextStyle', labelTextStyle);
+    mateParams.put('iconTheme', iconTheme);
   }
 }
 
@@ -109,8 +109,8 @@ class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with WidgetMate<N
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }

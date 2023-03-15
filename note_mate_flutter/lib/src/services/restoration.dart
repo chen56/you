@@ -24,8 +24,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
         debugOwner: p.get('debugOwner').value,
       ),
     );
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('debugOwner', debugOwner);
   }
 
   /// RestorationBucket RestorationBucket.root({required RestorationManager manager, required Map<Object?, Object?>? rawData})
@@ -46,8 +46,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
         rawData: p.get('rawData').value,
       ),
     );
-    mateParams.put('manager', init: manager);
-    mateParams.put('rawData', init: rawData);
+    mateParams.put('manager', manager);
+    mateParams.put('rawData', rawData);
   }
 
   /// RestorationBucket RestorationBucket.child({required String restorationId, required RestorationBucket parent, required Object? debugOwner})
@@ -73,8 +73,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
         debugOwner: p.get('debugOwner').value,
       ),
     );
-    mateParams.put('restorationId', init: restorationId);
-    mateParams.put('parent', init: parent);
-    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('restorationId', restorationId);
+    mateParams.put('parent', parent);
+    mateParams.put('debugOwner', debugOwner);
   }
 }

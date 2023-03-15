@@ -79,18 +79,18 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<Cuper
         backgroundColor: p.get('backgroundColor').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('mode', init: mode);
-    mateParams.put('onDateTimeChanged', init: onDateTimeChanged);
-    mateParams.put('initialDateTime', init: initialDateTime);
-    mateParams.put('minimumDate', init: minimumDate);
-    mateParams.put('maximumDate', init: maximumDate);
-    mateParams.put('minimumYear', init: minimumYear);
-    mateParams.put('maximumYear', init: maximumYear);
-    mateParams.put('minuteInterval', init: minuteInterval);
-    mateParams.put('use24hFormat', init: use24hFormat);
-    mateParams.put('dateOrder', init: dateOrder);
-    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('key', key);
+    mateParams.put('mode', mode);
+    mateParams.put('onDateTimeChanged', onDateTimeChanged);
+    mateParams.put('initialDateTime', initialDateTime);
+    mateParams.put('minimumDate', minimumDate);
+    mateParams.put('maximumDate', maximumDate);
+    mateParams.put('minimumYear', minimumYear);
+    mateParams.put('maximumYear', maximumYear);
+    mateParams.put('minuteInterval', minuteInterval);
+    mateParams.put('use24hFormat', use24hFormat);
+    mateParams.put('dateOrder', dateOrder);
+    mateParams.put('backgroundColor', backgroundColor);
   }
 }
 
@@ -144,13 +144,13 @@ class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with WidgetMate<Cup
         onTimerDurationChanged: p.get('onTimerDurationChanged').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('mode', init: mode);
-    mateParams.put('initialTimerDuration', init: initialTimerDuration);
-    mateParams.put('minuteInterval', init: minuteInterval);
-    mateParams.put('secondInterval', init: secondInterval);
-    mateParams.put('alignment', init: alignment);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('onTimerDurationChanged', init: onTimerDurationChanged);
+    mateParams.put('key', key);
+    mateParams.put('mode', mode);
+    mateParams.put('initialTimerDuration', initialTimerDuration);
+    mateParams.put('minuteInterval', minuteInterval);
+    mateParams.put('secondInterval', secondInterval);
+    mateParams.put('alignment', alignment);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('onTimerDurationChanged', onTimerDurationChanged);
   }
 }

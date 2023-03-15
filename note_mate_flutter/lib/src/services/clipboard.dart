@@ -16,6 +16,6 @@ class ClipboardData$Mate extends ClipboardData with Mate<ClipboardData$Mate> {
       init: this,
       builder: (p) => ClipboardData$Mate(text: p.get('text').value),
     );
-    mateParams.put('text', init: text);
+    mateParams.put('text', text);
   }
 }

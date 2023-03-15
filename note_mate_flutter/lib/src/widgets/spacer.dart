@@ -25,7 +25,7 @@ class Spacer$Mate extends Spacer with WidgetMate<Spacer$Mate> {
         flex: p.get('flex').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('flex', init: flex);
+    mateParams.put('key', key);
+    mateParams.put('flex', flex);
   }
 }

@@ -72,16 +72,16 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate<Navig
         labelBehavior: p.get('labelBehavior').value,
       ),
     );
-    mateParams.put('height', init: height);
-    mateParams.put('backgroundColor', init: backgroundColor);
-    mateParams.put('elevation', init: elevation);
-    mateParams.put('shadowColor', init: shadowColor);
-    mateParams.put('surfaceTintColor', init: surfaceTintColor);
-    mateParams.put('indicatorColor', init: indicatorColor);
-    mateParams.put('indicatorShape', init: indicatorShape);
-    mateParams.put('labelTextStyle', init: labelTextStyle);
-    mateParams.put('iconTheme', init: iconTheme);
-    mateParams.put('labelBehavior', init: labelBehavior);
+    mateParams.put('height', height);
+    mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('elevation', elevation);
+    mateParams.put('shadowColor', shadowColor);
+    mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('indicatorColor', indicatorColor);
+    mateParams.put('indicatorShape', indicatorShape);
+    mateParams.put('labelTextStyle', labelTextStyle);
+    mateParams.put('iconTheme', iconTheme);
+    mateParams.put('labelBehavior', labelBehavior);
   }
 }
 
@@ -110,8 +110,8 @@ class NavigationBarTheme$Mate extends NavigationBarTheme with WidgetMate<Navigat
         child: p.get('child').value,
       ),
     );
-    mateParams.put('key', init: key);
-    mateParams.put('data', init: data);
-    mateParams.put('child', init: child);
+    mateParams.put('key', key);
+    mateParams.put('data', data);
+    mateParams.put('child', child);
   }
 }
