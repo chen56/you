@@ -18,7 +18,7 @@ import 'package:note/mate.dart';
 
 /// class ListTile extends StatelessWidget
 class ListTile$Mate extends ListTile with WidgetMate<ListTile$Mate> {
-  /// ListTile ListTile({Key? key, Widget? leading, Widget? title, Widget? subtitle, Widget? trailing, bool isThreeLine = false, bool? dense, VisualDensity? visualDensity, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, bool enabled = true, void Function()? onTap, void Function()? onLongPress, void Function(bool)? onFocusChange, MouseCursor? mouseCursor, bool selected = false, Color? focusColor, Color? hoverColor, Color? splashColor, FocusNode? focusNode, bool autofocus = false, Color? tileColor, Color? selectedTileColor, bool? enableFeedback, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth})
+  /// ListTile ListTile({Key? key, Widget? leading, Widget? title, Widget? subtitle, Widget? trailing, bool isThreeLine = false, bool? dense, VisualDensity? visualDensity, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, bool enabled = true, void Function()? onTap, void Function()? onLongPress, void Function(bool)? onFocusChange, MouseCursor? mouseCursor, bool selected = false, Color? focusColor, Color? hoverColor, Color? splashColor, FocusNode? focusNode, bool autofocus = false, Color? tileColor, Color? selectedTileColor, bool? enableFeedback, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, ListTileTitleAlignment? titleAlignment})
   ListTile$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -121,6 +121,9 @@ class ListTile$Mate extends ListTile with WidgetMate<ListTile$Mate> {
 
     /// optionalParameters: {double? minLeadingWidth} , hasDefaultValue:false, defaultValueCode:null
     double? minLeadingWidth,
+
+    /// optionalParameters: {ListTileTitleAlignment? titleAlignment} , hasDefaultValue:false, defaultValueCode:null
+    ListTileTitleAlignment? titleAlignment,
   }) : super(
           key: key,
           leading: leading,
@@ -156,6 +159,7 @@ class ListTile$Mate extends ListTile with WidgetMate<ListTile$Mate> {
           horizontalTitleGap: horizontalTitleGap,
           minVerticalPadding: minVerticalPadding,
           minLeadingWidth: minLeadingWidth,
+          titleAlignment: titleAlignment,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -194,6 +198,7 @@ class ListTile$Mate extends ListTile with WidgetMate<ListTile$Mate> {
         horizontalTitleGap: p.get('horizontalTitleGap').value,
         minVerticalPadding: p.get('minVerticalPadding').value,
         minLeadingWidth: p.get('minLeadingWidth').value,
+        titleAlignment: p.get('titleAlignment').value,
       ),
     );
     mateParams.put('key', key);
@@ -230,5 +235,6 @@ class ListTile$Mate extends ListTile with WidgetMate<ListTile$Mate> {
     mateParams.put('horizontalTitleGap', horizontalTitleGap);
     mateParams.put('minVerticalPadding', minVerticalPadding);
     mateParams.put('minLeadingWidth', minLeadingWidth);
+    mateParams.put('titleAlignment', titleAlignment);
   }
 }

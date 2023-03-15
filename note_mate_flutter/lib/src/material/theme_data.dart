@@ -13,6 +13,7 @@ import 'package:flutter/src/material/color_scheme.dart';
 import 'package:flutter/src/widgets/icon_theme_data.dart';
 import 'package:flutter/src/material/text_theme.dart';
 import 'package:flutter/src/material/typography.dart';
+import 'package:flutter/src/material/action_icons_theme.dart';
 import 'package:flutter/src/material/app_bar_theme.dart';
 import 'package:flutter/src/material/badge_theme.dart';
 import 'package:flutter/src/material/banner_theme.dart';
@@ -60,7 +61,7 @@ import 'package:note/mate.dart';
 
 /// class ThemeData with Diagnosticable
 class ThemeData$Mate extends ThemeData with Mate<ThemeData$Mate> {
-  /// ThemeData ThemeData.raw({required bool applyElevationOverlayColor, required NoDefaultCupertinoThemeData? cupertinoOverrideTheme, required Map<Object, ThemeExtension<dynamic>> extensions, required InputDecorationTheme inputDecorationTheme, required MaterialTapTargetSize materialTapTargetSize, required PageTransitionsTheme pageTransitionsTheme, required TargetPlatform platform, required ScrollbarThemeData scrollbarTheme, required InteractiveInkFeatureFactory splashFactory, required bool useMaterial3, required VisualDensity visualDensity, required Color canvasColor, required Color cardColor, required ColorScheme colorScheme, required Color dialogBackgroundColor, required Color disabledColor, required Color dividerColor, required Color focusColor, required Color highlightColor, required Color hintColor, required Color hoverColor, required Color indicatorColor, required Color primaryColor, required Color primaryColorDark, required Color primaryColorLight, required Color scaffoldBackgroundColor, required Color secondaryHeaderColor, required Color shadowColor, required Color splashColor, required Color unselectedWidgetColor, required IconThemeData iconTheme, required IconThemeData primaryIconTheme, required TextTheme primaryTextTheme, required TextTheme textTheme, required Typography typography, required AppBarTheme appBarTheme, required BadgeThemeData badgeTheme, required MaterialBannerThemeData bannerTheme, required BottomAppBarTheme bottomAppBarTheme, required BottomNavigationBarThemeData bottomNavigationBarTheme, required BottomSheetThemeData bottomSheetTheme, required ButtonBarThemeData buttonBarTheme, required ButtonThemeData buttonTheme, required CardTheme cardTheme, required CheckboxThemeData checkboxTheme, required ChipThemeData chipTheme, required DataTableThemeData dataTableTheme, required DatePickerThemeData datePickerTheme, required DialogTheme dialogTheme, required DividerThemeData dividerTheme, required DrawerThemeData drawerTheme, required DropdownMenuThemeData dropdownMenuTheme, required ElevatedButtonThemeData elevatedButtonTheme, required ExpansionTileThemeData expansionTileTheme, required FilledButtonThemeData filledButtonTheme, required FloatingActionButtonThemeData floatingActionButtonTheme, required IconButtonThemeData iconButtonTheme, required ListTileThemeData listTileTheme, required MenuBarThemeData menuBarTheme, required MenuButtonThemeData menuButtonTheme, required MenuThemeData menuTheme, required NavigationBarThemeData navigationBarTheme, required NavigationDrawerThemeData navigationDrawerTheme, required NavigationRailThemeData navigationRailTheme, required OutlinedButtonThemeData outlinedButtonTheme, required PopupMenuThemeData popupMenuTheme, required ProgressIndicatorThemeData progressIndicatorTheme, required RadioThemeData radioTheme, required SegmentedButtonThemeData segmentedButtonTheme, required SliderThemeData sliderTheme, required SnackBarThemeData snackBarTheme, required SwitchThemeData switchTheme, required TabBarTheme tabBarTheme, required TextButtonThemeData textButtonTheme, required TextSelectionThemeData textSelectionTheme, required TimePickerThemeData timePickerTheme, required ToggleButtonsThemeData toggleButtonsTheme, required TooltipThemeData tooltipTheme, Color? accentColor, Brightness? accentColorBrightness, bool? fixTextFieldOutlineLabel, Brightness? primaryColorBrightness, AndroidOverscrollIndicator? androidOverscrollIndicator, Color? toggleableActiveColor, Color? selectedRowColor, Color? errorColor, Color? backgroundColor, Color? bottomAppBarColor})
+  /// ThemeData ThemeData.raw({required bool applyElevationOverlayColor, required NoDefaultCupertinoThemeData? cupertinoOverrideTheme, required Map<Object, ThemeExtension<dynamic>> extensions, required InputDecorationTheme inputDecorationTheme, required MaterialTapTargetSize materialTapTargetSize, required PageTransitionsTheme pageTransitionsTheme, required TargetPlatform platform, required ScrollbarThemeData scrollbarTheme, required InteractiveInkFeatureFactory splashFactory, required bool useMaterial3, required VisualDensity visualDensity, required Color canvasColor, required Color cardColor, required ColorScheme colorScheme, required Color dialogBackgroundColor, required Color disabledColor, required Color dividerColor, required Color focusColor, required Color highlightColor, required Color hintColor, required Color hoverColor, required Color indicatorColor, required Color primaryColor, required Color primaryColorDark, required Color primaryColorLight, required Color scaffoldBackgroundColor, required Color secondaryHeaderColor, required Color shadowColor, required Color splashColor, required Color unselectedWidgetColor, required IconThemeData iconTheme, required IconThemeData primaryIconTheme, required TextTheme primaryTextTheme, required TextTheme textTheme, required Typography typography, required ActionIconThemeData? actionIconTheme, required AppBarTheme appBarTheme, required BadgeThemeData badgeTheme, required MaterialBannerThemeData bannerTheme, required BottomAppBarTheme bottomAppBarTheme, required BottomNavigationBarThemeData bottomNavigationBarTheme, required BottomSheetThemeData bottomSheetTheme, required ButtonBarThemeData buttonBarTheme, required ButtonThemeData buttonTheme, required CardTheme cardTheme, required CheckboxThemeData checkboxTheme, required ChipThemeData chipTheme, required DataTableThemeData dataTableTheme, required DatePickerThemeData datePickerTheme, required DialogTheme dialogTheme, required DividerThemeData dividerTheme, required DrawerThemeData drawerTheme, required DropdownMenuThemeData dropdownMenuTheme, required ElevatedButtonThemeData elevatedButtonTheme, required ExpansionTileThemeData expansionTileTheme, required FilledButtonThemeData filledButtonTheme, required FloatingActionButtonThemeData floatingActionButtonTheme, required IconButtonThemeData iconButtonTheme, required ListTileThemeData listTileTheme, required MenuBarThemeData menuBarTheme, required MenuButtonThemeData menuButtonTheme, required MenuThemeData menuTheme, required NavigationBarThemeData navigationBarTheme, required NavigationDrawerThemeData navigationDrawerTheme, required NavigationRailThemeData navigationRailTheme, required OutlinedButtonThemeData outlinedButtonTheme, required PopupMenuThemeData popupMenuTheme, required ProgressIndicatorThemeData progressIndicatorTheme, required RadioThemeData radioTheme, required SegmentedButtonThemeData segmentedButtonTheme, required SliderThemeData sliderTheme, required SnackBarThemeData snackBarTheme, required SwitchThemeData switchTheme, required TabBarTheme tabBarTheme, required TextButtonThemeData textButtonTheme, required TextSelectionThemeData textSelectionTheme, required TimePickerThemeData timePickerTheme, required ToggleButtonsThemeData toggleButtonsTheme, required TooltipThemeData tooltipTheme, bool? fixTextFieldOutlineLabel, Brightness? primaryColorBrightness, AndroidOverscrollIndicator? androidOverscrollIndicator, Color? toggleableActiveColor, Color? selectedRowColor, Color? errorColor, Color? backgroundColor, Color? bottomAppBarColor})
   ThemeData$Mate.raw({
     /// optionalParameters: {required bool applyElevationOverlayColor} , hasDefaultValue:false, defaultValueCode:null
     required bool applyElevationOverlayColor,
@@ -166,6 +167,9 @@ class ThemeData$Mate extends ThemeData with Mate<ThemeData$Mate> {
 
     /// optionalParameters: {required Typography typography} , hasDefaultValue:false, defaultValueCode:null
     required Typography typography,
+
+    /// optionalParameters: {required ActionIconThemeData? actionIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    required ActionIconThemeData? actionIconTheme,
 
     /// optionalParameters: {required AppBarTheme appBarTheme} , hasDefaultValue:false, defaultValueCode:null
     required AppBarTheme appBarTheme,
@@ -331,6 +335,7 @@ class ThemeData$Mate extends ThemeData with Mate<ThemeData$Mate> {
           primaryTextTheme: primaryTextTheme,
           textTheme: textTheme,
           typography: typography,
+          actionIconTheme: actionIconTheme,
           appBarTheme: appBarTheme,
           badgeTheme: badgeTheme,
           bannerTheme: bannerTheme,
@@ -413,6 +418,7 @@ class ThemeData$Mate extends ThemeData with Mate<ThemeData$Mate> {
         primaryTextTheme: p.get('primaryTextTheme').value,
         textTheme: p.get('textTheme').value,
         typography: p.get('typography').value,
+        actionIconTheme: p.get('actionIconTheme').value,
         appBarTheme: p.get('appBarTheme').value,
         badgeTheme: p.get('badgeTheme').value,
         bannerTheme: p.get('bannerTheme').value,
@@ -493,6 +499,7 @@ class ThemeData$Mate extends ThemeData with Mate<ThemeData$Mate> {
     mateParams.put('primaryTextTheme', primaryTextTheme);
     mateParams.put('textTheme', textTheme);
     mateParams.put('typography', typography);
+    mateParams.put('actionIconTheme', actionIconTheme);
     mateParams.put('appBarTheme', appBarTheme);
     mateParams.put('badgeTheme', badgeTheme);
     mateParams.put('bannerTheme', bannerTheme);

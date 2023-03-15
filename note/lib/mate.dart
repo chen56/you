@@ -13,6 +13,10 @@ abstract class Param<T> {
   Param({required this.init}) : _value = init;
 
   bool get isNullable => utils.isNullable<T>();
+
+  factory Param.newValue({required init}) {
+    return ValueParam(init: init);
+  }
 }
 
 class ValueParam<T> extends Param<T> {
@@ -44,7 +48,7 @@ class ArrayParam<T> extends Param<List<T>> with ListMixin<T> {
 }
 
 class ObjectParam<T> extends Param<T> with MapMixin<String, T> {
-  final Map<String, ObjectParam> _paramMap = {};
+  final Map<String, Param> _paramMap = {};
   final T Function(ObjectParam<T> mate)? builder;
 
   ObjectParam({required super.init, this.builder});
@@ -53,9 +57,22 @@ class ObjectParam<T> extends Param<T> with MapMixin<String, T> {
     assert(
         !_paramMap.containsKey(name), "error:duplicate param name: $name , old:${_paramMap[name]}");
 
-    var result = ObjectParam(init: init);
+    var result = _convert<C>(init);
     result.parent = this;
-    return _paramMap[name] = result;
+    _paramMap[name] = result;
+    return result;
+  }
+
+  Param<C> _convert<C>(C init) {
+    // if (init is Param) return init as Param<C>;
+    // if (init is Mate) return init.mateParams as Param<C>;
+    // return ValueParam(init: init);
+    // dart3 switch parttens ide点击跳不到源代码，支持还不行
+    return switch (init) {
+      Mate() => init.mateParams as Param<C>,
+      Param() => init as Param<C>,
+      _ => Param.newValue(init: init),
+    };
   }
 
   Param<C> get<C>(String name) {
@@ -84,6 +101,10 @@ class ObjectParam<T> extends Param<T> with MapMixin<String, T> {
   T? remove(Object? key) {
     var p = _paramMap.remove(key);
     return p?.value;
+  }
+
+  List<MapEntry<Object, Param>> toList() {
+    return List.empty();
   }
 }
 

@@ -9,7 +9,7 @@ import 'package:note/mate.dart';
 /// class VerticalDragGestureRecognizer extends DragGestureRecognizer
 class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
     with Mate<VerticalDragGestureRecognizer$Mate> {
-  /// VerticalDragGestureRecognizer VerticalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
+  /// VerticalDragGestureRecognizer VerticalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   VerticalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
     Object? debugOwner,
@@ -17,7 +17,7 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -41,7 +41,7 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
 /// class HorizontalDragGestureRecognizer extends DragGestureRecognizer
 class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecognizer
     with Mate<HorizontalDragGestureRecognizer$Mate> {
-  /// HorizontalDragGestureRecognizer HorizontalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
+  /// HorizontalDragGestureRecognizer HorizontalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   HorizontalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
     Object? debugOwner,
@@ -49,7 +49,7 @@ class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecogniz
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -72,7 +72,7 @@ class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecogniz
 
 /// class PanGestureRecognizer extends DragGestureRecognizer
 class PanGestureRecognizer$Mate extends PanGestureRecognizer with Mate<PanGestureRecognizer$Mate> {
-  /// PanGestureRecognizer PanGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
+  /// PanGestureRecognizer PanGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   PanGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
     Object? debugOwner,
@@ -80,7 +80,7 @@ class PanGestureRecognizer$Mate extends PanGestureRecognizer with Mate<PanGestur
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,

@@ -9,7 +9,7 @@ import 'package:note/mate.dart';
 /// class ImmediateMultiDragGestureRecognizer extends MultiDragGestureRecognizer
 class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGestureRecognizer
     with Mate<ImmediateMultiDragGestureRecognizer$Mate> {
-  /// ImmediateMultiDragGestureRecognizer ImmediateMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
+  /// ImmediateMultiDragGestureRecognizer ImmediateMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ImmediateMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
     Object? debugOwner,
@@ -17,7 +17,7 @@ class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGesture
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -41,7 +41,7 @@ class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGesture
 /// class HorizontalMultiDragGestureRecognizer extends MultiDragGestureRecognizer
 class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestureRecognizer
     with Mate<HorizontalMultiDragGestureRecognizer$Mate> {
-  /// HorizontalMultiDragGestureRecognizer HorizontalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
+  /// HorizontalMultiDragGestureRecognizer HorizontalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   HorizontalMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
     Object? debugOwner,
@@ -49,7 +49,7 @@ class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestu
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -73,7 +73,7 @@ class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestu
 /// class VerticalMultiDragGestureRecognizer extends MultiDragGestureRecognizer
 class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRecognizer
     with Mate<VerticalMultiDragGestureRecognizer$Mate> {
-  /// VerticalMultiDragGestureRecognizer VerticalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
+  /// VerticalMultiDragGestureRecognizer VerticalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   VerticalMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
     Object? debugOwner,
@@ -81,7 +81,7 @@ class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRe
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -105,7 +105,7 @@ class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRe
 /// class DelayedMultiDragGestureRecognizer extends MultiDragGestureRecognizer
 class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureRecognizer
     with Mate<DelayedMultiDragGestureRecognizer$Mate> {
-  /// DelayedMultiDragGestureRecognizer DelayedMultiDragGestureRecognizer({Duration delay = kLongPressTimeout, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
+  /// DelayedMultiDragGestureRecognizer DelayedMultiDragGestureRecognizer({Duration delay = kLongPressTimeout, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   DelayedMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Duration delay = kLongPressTimeout} , hasDefaultValue:true, defaultValueCode:kLongPressTimeout
     required Duration delay,
@@ -116,7 +116,7 @@ class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureReco
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           delay: delay,

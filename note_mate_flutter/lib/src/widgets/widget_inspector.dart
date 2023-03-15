@@ -66,7 +66,7 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate<D
 /// class InspectorSerializationDelegate implements DiagnosticsSerializationDelegate
 class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     with Mate<InspectorSerializationDelegate$Mate> {
-  /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendentsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
+  /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
     /// optionalParameters: {String? groupName} , hasDefaultValue:false, defaultValueCode:null
     String? groupName,
@@ -74,8 +74,8 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     /// optionalParameters: {bool summaryTree = false} , hasDefaultValue:true, defaultValueCode:false
     required bool summaryTree,
 
-    /// optionalParameters: {int maxDescendentsTruncatableNode = -1} , hasDefaultValue:true, defaultValueCode:-1
-    required int maxDescendentsTruncatableNode,
+    /// optionalParameters: {int maxDescendantsTruncatableNode = -1} , hasDefaultValue:true, defaultValueCode:-1
+    required int maxDescendantsTruncatableNode,
 
     /// optionalParameters: {bool expandPropertyValues = true} , hasDefaultValue:true, defaultValueCode:true
     required bool expandPropertyValues,
@@ -98,7 +98,7 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
   }) : super(
           groupName: groupName,
           summaryTree: summaryTree,
-          maxDescendentsTruncatableNode: maxDescendentsTruncatableNode,
+          maxDescendantsTruncatableNode: maxDescendantsTruncatableNode,
           expandPropertyValues: expandPropertyValues,
           subtreeDepth: subtreeDepth,
           includeProperties: includeProperties,
@@ -110,7 +110,7 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
       builder: (p) => InspectorSerializationDelegate$Mate(
         groupName: p.get('groupName').value,
         summaryTree: p.get('summaryTree').value,
-        maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').value,
+        maxDescendantsTruncatableNode: p.get('maxDescendantsTruncatableNode').value,
         expandPropertyValues: p.get('expandPropertyValues').value,
         subtreeDepth: p.get('subtreeDepth').value,
         includeProperties: p.get('includeProperties').value,
@@ -120,7 +120,7 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     );
     mateParams.put('groupName', groupName);
     mateParams.put('summaryTree', summaryTree);
-    mateParams.put('maxDescendentsTruncatableNode', maxDescendentsTruncatableNode);
+    mateParams.put('maxDescendantsTruncatableNode', maxDescendantsTruncatableNode);
     mateParams.put('expandPropertyValues', expandPropertyValues);
     mateParams.put('subtreeDepth', subtreeDepth);
     mateParams.put('includeProperties', includeProperties);

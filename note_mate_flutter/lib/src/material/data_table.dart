@@ -208,7 +208,7 @@ class DataCell$Mate extends DataCell with Mate<DataCell$Mate> {
 
 /// class DataTable extends StatelessWidget
 class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
-  /// DataTable DataTable({Key? key, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, bool showCheckboxColumn = true, bool showBottomBorder = false, double? dividerThickness, required List<DataRow> rows, double? checkboxHorizontalMargin, TableBorder? border, Clip clipBehavior = Clip.none})
+  /// DataTable DataTable({Key? key, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, bool showCheckboxColumn = true, bool showBottomBorder = false, double? dividerThickness, required List<DataRow> rows, double? checkboxHorizontalMargin, TableBorder? border, Clip clipBehavior = Clip.none})
   DataTable$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -231,8 +231,11 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
     /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , hasDefaultValue:false, defaultValueCode:null
     MaterialStateProperty<Color?>? dataRowColor,
 
-    /// optionalParameters: {double? dataRowHeight} , hasDefaultValue:false, defaultValueCode:null
-    double? dataRowHeight,
+    /// optionalParameters: {double? dataRowMinHeight} , hasDefaultValue:false, defaultValueCode:null
+    double? dataRowMinHeight,
+
+    /// optionalParameters: {double? dataRowMaxHeight} , hasDefaultValue:false, defaultValueCode:null
+    double? dataRowMaxHeight,
 
     /// optionalParameters: {TextStyle? dataTextStyle} , hasDefaultValue:false, defaultValueCode:null
     TextStyle? dataTextStyle,
@@ -280,7 +283,8 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
           onSelectAll: onSelectAll,
           decoration: decoration,
           dataRowColor: dataRowColor,
-          dataRowHeight: dataRowHeight,
+          dataRowMinHeight: dataRowMinHeight,
+          dataRowMaxHeight: dataRowMaxHeight,
           dataTextStyle: dataTextStyle,
           headingRowColor: headingRowColor,
           headingRowHeight: headingRowHeight,
@@ -305,7 +309,8 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
         onSelectAll: p.get('onSelectAll').value,
         decoration: p.get('decoration').value,
         dataRowColor: p.get('dataRowColor').value,
-        dataRowHeight: p.get('dataRowHeight').value,
+        dataRowMinHeight: p.get('dataRowMinHeight').value,
+        dataRowMaxHeight: p.get('dataRowMaxHeight').value,
         dataTextStyle: p.get('dataTextStyle').value,
         headingRowColor: p.get('headingRowColor').value,
         headingRowHeight: p.get('headingRowHeight').value,
@@ -328,7 +333,8 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
     mateParams.put('onSelectAll', onSelectAll);
     mateParams.put('decoration', decoration);
     mateParams.put('dataRowColor', dataRowColor);
-    mateParams.put('dataRowHeight', dataRowHeight);
+    mateParams.put('dataRowMinHeight', dataRowMinHeight);
+    mateParams.put('dataRowMaxHeight', dataRowMaxHeight);
     mateParams.put('dataTextStyle', dataTextStyle);
     mateParams.put('headingRowColor', headingRowColor);
     mateParams.put('headingRowHeight', headingRowHeight);

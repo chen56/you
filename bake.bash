@@ -137,8 +137,8 @@ option() {
   /get?shortHelp() { cat <<<"all: pub get"; }
   /get() {
     run flutter pub get --directory $BAKE_HOME/note
-    run flutter pub get --directory $BAKE_HOME/note_app
     run flutter pub get --directory $BAKE_HOME/note_mate_flutter
+    run flutter pub get --directory $BAKE_HOME/note_app
   }
 }
 

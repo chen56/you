@@ -9,7 +9,7 @@ import 'package:note/mate.dart';
 
 /// class BottomSheetThemeData with Diagnosticable
 class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate<BottomSheetThemeData$Mate> {
-  /// BottomSheetThemeData BottomSheetThemeData({Color? backgroundColor, Color? surfaceTintColor, double? elevation, Color? modalBackgroundColor, Color? modalBarrierColor, double? modalElevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints})
+  /// BottomSheetThemeData BottomSheetThemeData({Color? backgroundColor, Color? surfaceTintColor, double? elevation, Color? modalBackgroundColor, Color? modalBarrierColor, Color? shadowColor, double? modalElevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints})
   BottomSheetThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
     Color? backgroundColor,
@@ -25,6 +25,9 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate<BottomShe
 
     /// optionalParameters: {Color? modalBarrierColor} , hasDefaultValue:false, defaultValueCode:null
     Color? modalBarrierColor,
+
+    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? shadowColor,
 
     /// optionalParameters: {double? modalElevation} , hasDefaultValue:false, defaultValueCode:null
     double? modalElevation,
@@ -43,6 +46,7 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate<BottomShe
           elevation: elevation,
           modalBackgroundColor: modalBackgroundColor,
           modalBarrierColor: modalBarrierColor,
+          shadowColor: shadowColor,
           modalElevation: modalElevation,
           shape: shape,
           clipBehavior: clipBehavior,
@@ -56,6 +60,7 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate<BottomShe
         elevation: p.get('elevation').value,
         modalBackgroundColor: p.get('modalBackgroundColor').value,
         modalBarrierColor: p.get('modalBarrierColor').value,
+        shadowColor: p.get('shadowColor').value,
         modalElevation: p.get('modalElevation').value,
         shape: p.get('shape').value,
         clipBehavior: p.get('clipBehavior').value,
@@ -67,6 +72,7 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate<BottomShe
     mateParams.put('elevation', elevation);
     mateParams.put('modalBackgroundColor', modalBackgroundColor);
     mateParams.put('modalBarrierColor', modalBarrierColor);
+    mateParams.put('shadowColor', shadowColor);
     mateParams.put('modalElevation', modalElevation);
     mateParams.put('shape', shape);
     mateParams.put('clipBehavior', clipBehavior);

@@ -10,7 +10,7 @@ import 'package:note/mate.dart';
 
 /// class SnackBarThemeData with Diagnosticable
 class SnackBarThemeData$Mate extends SnackBarThemeData with Mate<SnackBarThemeData$Mate> {
-  /// SnackBarThemeData SnackBarThemeData({Color? backgroundColor, Color? actionTextColor, Color? disabledActionTextColor, TextStyle? contentTextStyle, double? elevation, ShapeBorder? shape, SnackBarBehavior? behavior, double? width, EdgeInsets? insetPadding, bool? showCloseIcon, Color? closeIconColor})
+  /// SnackBarThemeData SnackBarThemeData({Color? backgroundColor, Color? actionTextColor, Color? disabledActionTextColor, TextStyle? contentTextStyle, double? elevation, ShapeBorder? shape, SnackBarBehavior? behavior, double? width, EdgeInsets? insetPadding, bool? showCloseIcon, Color? closeIconColor, double? actionOverflowThreshold})
   SnackBarThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
     Color? backgroundColor,
@@ -44,6 +44,9 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate<SnackBarThemeDa
 
     /// optionalParameters: {Color? closeIconColor} , hasDefaultValue:false, defaultValueCode:null
     Color? closeIconColor,
+
+    /// optionalParameters: {double? actionOverflowThreshold} , hasDefaultValue:false, defaultValueCode:null
+    double? actionOverflowThreshold,
   }) : super(
           backgroundColor: backgroundColor,
           actionTextColor: actionTextColor,
@@ -56,6 +59,7 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate<SnackBarThemeDa
           insetPadding: insetPadding,
           showCloseIcon: showCloseIcon,
           closeIconColor: closeIconColor,
+          actionOverflowThreshold: actionOverflowThreshold,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -71,6 +75,7 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate<SnackBarThemeDa
         insetPadding: p.get('insetPadding').value,
         showCloseIcon: p.get('showCloseIcon').value,
         closeIconColor: p.get('closeIconColor').value,
+        actionOverflowThreshold: p.get('actionOverflowThreshold').value,
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);
@@ -84,5 +89,6 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate<SnackBarThemeDa
     mateParams.put('insetPadding', insetPadding);
     mateParams.put('showCloseIcon', showCloseIcon);
     mateParams.put('closeIconColor', closeIconColor);
+    mateParams.put('actionOverflowThreshold', actionOverflowThreshold);
   }
 }

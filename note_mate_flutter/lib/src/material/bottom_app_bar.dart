@@ -11,7 +11,7 @@ import 'package:note/mate.dart';
 
 /// class BottomAppBar extends StatefulWidget
 class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> {
-  /// BottomAppBar BottomAppBar({Key? key, Color? color, double? elevation, NotchedShape? shape, Clip clipBehavior = Clip.none, double notchMargin = 4.0, Widget? child, EdgeInsetsGeometry? padding, Color? surfaceTintColor, double? height})
+  /// BottomAppBar BottomAppBar({Key? key, Color? color, double? elevation, NotchedShape? shape, Clip clipBehavior = Clip.none, double notchMargin = 4.0, Widget? child, EdgeInsetsGeometry? padding, Color? surfaceTintColor, Color? shadowColor, double? height})
   BottomAppBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -40,6 +40,9 @@ class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> 
     /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
     Color? surfaceTintColor,
 
+    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? shadowColor,
+
     /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
     double? height,
   }) : super(
@@ -52,6 +55,7 @@ class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> 
           child: child,
           padding: padding,
           surfaceTintColor: surfaceTintColor,
+          shadowColor: shadowColor,
           height: height,
         ) {
     mateParams = ObjectParam(
@@ -66,6 +70,7 @@ class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> 
         child: p.get('child').value,
         padding: p.get('padding').value,
         surfaceTintColor: p.get('surfaceTintColor').value,
+        shadowColor: p.get('shadowColor').value,
         height: p.get('height').value,
       ),
     );
@@ -78,6 +83,7 @@ class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> 
     mateParams.put('child', child);
     mateParams.put('padding', padding);
     mateParams.put('surfaceTintColor', surfaceTintColor);
+    mateParams.put('shadowColor', shadowColor);
     mateParams.put('height', height);
   }
 }

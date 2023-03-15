@@ -29,7 +29,7 @@ class App extends StatelessWidget {
   }
 }
 
-class PageLocator extends Navigable {
+class PageLocator with Navigable {
   Path root;
   List<Path> rules;
 

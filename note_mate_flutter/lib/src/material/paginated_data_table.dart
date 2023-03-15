@@ -14,7 +14,7 @@ import 'package:note/mate.dart';
 
 /// class PaginatedDataTable extends StatefulWidget
 class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<PaginatedDataTable$Mate> {
-  /// PaginatedDataTable PaginatedDataTable({Key? key, Widget? header, List<Widget>? actions, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, double dataRowHeight = kMinInteractiveDimension, double headingRowHeight = 56.0, double horizontalMargin = 24.0, double columnSpacing = 56.0, bool showCheckboxColumn = true, bool showFirstLastButtons = false, int? initialFirstRowIndex = 0, void Function(int)? onPageChanged, int rowsPerPage = defaultRowsPerPage, List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10], void Function(int?)? onRowsPerPageChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? arrowHeadColor, required DataTableSource source, double? checkboxHorizontalMargin, ScrollController? controller, bool? primary})
+  /// PaginatedDataTable PaginatedDataTable({Key? key, Widget? header, List<Widget>? actions, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, double headingRowHeight = 56.0, double horizontalMargin = 24.0, double columnSpacing = 56.0, bool showCheckboxColumn = true, bool showFirstLastButtons = false, int? initialFirstRowIndex = 0, void Function(int)? onPageChanged, int rowsPerPage = defaultRowsPerPage, List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10], void Function(int?)? onRowsPerPageChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? arrowHeadColor, required DataTableSource source, double? checkboxHorizontalMargin, ScrollController? controller, bool? primary})
   PaginatedDataTable$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -37,8 +37,11 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<Paginat
     /// optionalParameters: {void Function(bool?)? onSelectAll} , hasDefaultValue:false, defaultValueCode:null
     ValueSetter<bool?>? onSelectAll,
 
-    /// optionalParameters: {double dataRowHeight = kMinInteractiveDimension} , hasDefaultValue:true, defaultValueCode:kMinInteractiveDimension
-    required double dataRowHeight,
+    /// optionalParameters: {double? dataRowMinHeight} , hasDefaultValue:false, defaultValueCode:null
+    double? dataRowMinHeight,
+
+    /// optionalParameters: {double? dataRowMaxHeight} , hasDefaultValue:false, defaultValueCode:null
+    double? dataRowMaxHeight,
 
     /// optionalParameters: {double headingRowHeight = 56.0} , hasDefaultValue:true, defaultValueCode:56.0
     required double headingRowHeight,
@@ -95,7 +98,8 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<Paginat
           sortColumnIndex: sortColumnIndex,
           sortAscending: sortAscending,
           onSelectAll: onSelectAll,
-          dataRowHeight: dataRowHeight,
+          dataRowMinHeight: dataRowMinHeight,
+          dataRowMaxHeight: dataRowMaxHeight,
           headingRowHeight: headingRowHeight,
           horizontalMargin: horizontalMargin,
           columnSpacing: columnSpacing,
@@ -123,7 +127,8 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<Paginat
         sortColumnIndex: p.get('sortColumnIndex').value,
         sortAscending: p.get('sortAscending').value,
         onSelectAll: p.get('onSelectAll').value,
-        dataRowHeight: p.get('dataRowHeight').value,
+        dataRowMinHeight: p.get('dataRowMinHeight').value,
+        dataRowMaxHeight: p.get('dataRowMaxHeight').value,
         headingRowHeight: p.get('headingRowHeight').value,
         horizontalMargin: p.get('horizontalMargin').value,
         columnSpacing: p.get('columnSpacing').value,
@@ -149,7 +154,8 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<Paginat
     mateParams.put('sortColumnIndex', sortColumnIndex);
     mateParams.put('sortAscending', sortAscending);
     mateParams.put('onSelectAll', onSelectAll);
-    mateParams.put('dataRowHeight', dataRowHeight);
+    mateParams.put('dataRowMinHeight', dataRowMinHeight);
+    mateParams.put('dataRowMaxHeight', dataRowMaxHeight);
     mateParams.put('headingRowHeight', headingRowHeight);
     mateParams.put('horizontalMargin', horizontalMargin);
     mateParams.put('columnSpacing', columnSpacing);

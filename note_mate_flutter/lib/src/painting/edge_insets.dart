@@ -110,20 +110,20 @@ class EdgeInsets$Mate extends EdgeInsets with Mate<EdgeInsets$Mate> {
     mateParams.put('horizontal', horizontal);
   }
 
-  /// EdgeInsets EdgeInsets.fromWindowPadding(WindowPadding padding, double devicePixelRatio)
-  EdgeInsets$Mate.fromWindowPadding(
-    /// requiredParameters: WindowPadding padding
-    WindowPadding padding,
+  /// EdgeInsets EdgeInsets.fromViewPadding(ViewPadding padding, double devicePixelRatio)
+  EdgeInsets$Mate.fromViewPadding(
+    /// requiredParameters: ViewPadding padding
+    ViewPadding padding,
 
     /// requiredParameters: double devicePixelRatio
     double devicePixelRatio,
-  ) : super.fromWindowPadding(
+  ) : super.fromViewPadding(
           padding,
           devicePixelRatio,
         ) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => EdgeInsets$Mate.fromWindowPadding(
+      builder: (p) => EdgeInsets$Mate.fromViewPadding(
         p.get('padding').value,
         p.get('devicePixelRatio').value,
       ),

@@ -4,18 +4,20 @@ import 'package:flutter/src/material/checkbox_list_tile.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/basic_types.dart';
+import 'package:flutter/src/services/mouse_cursor.dart';
 import 'dart:ui';
+import 'package:flutter/src/material/material_state.dart';
+import 'package:flutter/src/material/theme_data.dart';
+import 'package:flutter/src/widgets/focus_manager.dart';
+import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/material/list_tile.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
-import 'package:flutter/src/painting/borders.dart';
-import 'package:flutter/src/material/theme_data.dart';
-import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:note/mate.dart';
 
 /// class CheckboxListTile extends StatelessWidget
 class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxListTile$Mate> {
-  /// CheckboxListTile CheckboxListTile({Key? key, required bool? value, required void Function(bool?)? onChanged, Color? activeColor, Color? checkColor, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, bool autofocus = false, EdgeInsetsGeometry? contentPadding, bool tristate = false, ShapeBorder? shape, OutlinedBorder? checkboxShape, Color? selectedTileColor, BorderSide? side, VisualDensity? visualDensity, FocusNode? focusNode, void Function(bool)? onFocusChange, bool? enableFeedback})
+  /// CheckboxListTile CheckboxListTile({Key? key, required bool? value, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, ShapeBorder? shape, BorderSide? side, bool isError = false, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, EdgeInsetsGeometry? contentPadding, bool tristate = false, OutlinedBorder? checkboxShape, Color? selectedTileColor, void Function(bool)? onFocusChange, bool? enableFeedback})
   CheckboxListTile$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -26,11 +28,47 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
     /// optionalParameters: {required void Function(bool?)? onChanged} , hasDefaultValue:false, defaultValueCode:null
     required ValueChanged<bool?>? onChanged,
 
+    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    MouseCursor? mouseCursor,
+
     /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
     Color? activeColor,
 
+    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    MaterialStateProperty<Color?>? fillColor,
+
     /// optionalParameters: {Color? checkColor} , hasDefaultValue:false, defaultValueCode:null
     Color? checkColor,
+
+    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? hoverColor,
+
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    MaterialStateProperty<Color?>? overlayColor,
+
+    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    double? splashRadius,
+
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    MaterialTapTargetSize? materialTapTargetSize,
+
+    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    VisualDensity? visualDensity,
+
+    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    FocusNode? focusNode,
+
+    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
+    required bool autofocus,
+
+    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    ShapeBorder? shape,
+
+    /// optionalParameters: {BorderSide? side} , hasDefaultValue:false, defaultValueCode:null
+    BorderSide? side,
+
+    /// optionalParameters: {bool isError = false} , hasDefaultValue:true, defaultValueCode:false
+    required bool isError,
 
     /// optionalParameters: {bool? enabled} , hasDefaultValue:false, defaultValueCode:null
     bool? enabled,
@@ -59,32 +97,17 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
     /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , hasDefaultValue:true, defaultValueCode:ListTileControlAffinity.platform
     required ListTileControlAffinity controlAffinity,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
-
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
     EdgeInsetsGeometry? contentPadding,
 
     /// optionalParameters: {bool tristate = false} , hasDefaultValue:true, defaultValueCode:false
     required bool tristate,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
-    ShapeBorder? shape,
-
     /// optionalParameters: {OutlinedBorder? checkboxShape} , hasDefaultValue:false, defaultValueCode:null
     OutlinedBorder? checkboxShape,
 
     /// optionalParameters: {Color? selectedTileColor} , hasDefaultValue:false, defaultValueCode:null
     Color? selectedTileColor,
-
-    /// optionalParameters: {BorderSide? side} , hasDefaultValue:false, defaultValueCode:null
-    BorderSide? side,
-
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
-    VisualDensity? visualDensity,
-
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
-    FocusNode? focusNode,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
     ValueChanged<bool>? onFocusChange,
@@ -95,8 +118,20 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
           key: key,
           value: value,
           onChanged: onChanged,
+          mouseCursor: mouseCursor,
           activeColor: activeColor,
+          fillColor: fillColor,
           checkColor: checkColor,
+          hoverColor: hoverColor,
+          overlayColor: overlayColor,
+          splashRadius: splashRadius,
+          materialTapTargetSize: materialTapTargetSize,
+          visualDensity: visualDensity,
+          focusNode: focusNode,
+          autofocus: autofocus,
+          shape: shape,
+          side: side,
+          isError: isError,
           enabled: enabled,
           tileColor: tileColor,
           title: title,
@@ -106,15 +141,10 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
           secondary: secondary,
           selected: selected,
           controlAffinity: controlAffinity,
-          autofocus: autofocus,
           contentPadding: contentPadding,
           tristate: tristate,
-          shape: shape,
           checkboxShape: checkboxShape,
           selectedTileColor: selectedTileColor,
-          side: side,
-          visualDensity: visualDensity,
-          focusNode: focusNode,
           onFocusChange: onFocusChange,
           enableFeedback: enableFeedback,
         ) {
@@ -124,8 +154,20 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
         key: p.get('key').value,
         value: p.get('value').value,
         onChanged: p.get('onChanged').value,
+        mouseCursor: p.get('mouseCursor').value,
         activeColor: p.get('activeColor').value,
+        fillColor: p.get('fillColor').value,
         checkColor: p.get('checkColor').value,
+        hoverColor: p.get('hoverColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        visualDensity: p.get('visualDensity').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        shape: p.get('shape').value,
+        side: p.get('side').value,
+        isError: p.get('isError').value,
         enabled: p.get('enabled').value,
         tileColor: p.get('tileColor').value,
         title: p.get('title').value,
@@ -135,15 +177,10 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
         secondary: p.get('secondary').value,
         selected: p.get('selected').value,
         controlAffinity: p.get('controlAffinity').value,
-        autofocus: p.get('autofocus').value,
         contentPadding: p.get('contentPadding').value,
         tristate: p.get('tristate').value,
-        shape: p.get('shape').value,
         checkboxShape: p.get('checkboxShape').value,
         selectedTileColor: p.get('selectedTileColor').value,
-        side: p.get('side').value,
-        visualDensity: p.get('visualDensity').value,
-        focusNode: p.get('focusNode').value,
         onFocusChange: p.get('onFocusChange').value,
         enableFeedback: p.get('enableFeedback').value,
       ),
@@ -151,8 +188,20 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
     mateParams.put('key', key);
     mateParams.put('value', value);
     mateParams.put('onChanged', onChanged);
+    mateParams.put('mouseCursor', mouseCursor);
     mateParams.put('activeColor', activeColor);
+    mateParams.put('fillColor', fillColor);
     mateParams.put('checkColor', checkColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('overlayColor', overlayColor);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('materialTapTargetSize', materialTapTargetSize);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('shape', shape);
+    mateParams.put('side', side);
+    mateParams.put('isError', isError);
     mateParams.put('enabled', enabled);
     mateParams.put('tileColor', tileColor);
     mateParams.put('title', title);
@@ -162,15 +211,10 @@ class CheckboxListTile$Mate extends CheckboxListTile with WidgetMate<CheckboxLis
     mateParams.put('secondary', secondary);
     mateParams.put('selected', selected);
     mateParams.put('controlAffinity', controlAffinity);
-    mateParams.put('autofocus', autofocus);
     mateParams.put('contentPadding', contentPadding);
     mateParams.put('tristate', tristate);
-    mateParams.put('shape', shape);
     mateParams.put('checkboxShape', checkboxShape);
     mateParams.put('selectedTileColor', selectedTileColor);
-    mateParams.put('side', side);
-    mateParams.put('visualDensity', visualDensity);
-    mateParams.put('focusNode', focusNode);
     mateParams.put('onFocusChange', onFocusChange);
     mateParams.put('enableFeedback', enableFeedback);
   }

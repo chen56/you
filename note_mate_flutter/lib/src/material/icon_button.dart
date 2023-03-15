@@ -163,4 +163,448 @@ class IconButton$Mate extends IconButton with WidgetMate<IconButton$Mate> {
     mateParams.put('selectedIcon', selectedIcon);
     mateParams.put('icon', icon);
   }
+
+  /// IconButton IconButton.filled({Key? key, double? iconSize, VisualDensity? visualDensity, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, double? splashRadius, Color? color, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Color? disabledColor, required void Function()? onPressed, MouseCursor? mouseCursor, FocusNode? focusNode, bool autofocus = false, String? tooltip, bool? enableFeedback, BoxConstraints? constraints, ButtonStyle? style, bool? isSelected, Widget? selectedIcon, required Widget icon})
+  IconButton$Mate.filled({
+    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    Key? key,
+
+    /// optionalParameters: {double? iconSize} , hasDefaultValue:false, defaultValueCode:null
+    double? iconSize,
+
+    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    VisualDensity? visualDensity,
+
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    EdgeInsetsGeometry? padding,
+
+    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    AlignmentGeometry? alignment,
+
+    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    double? splashRadius,
+
+    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    Color? color,
+
+    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? focusColor,
+
+    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? hoverColor,
+
+    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? highlightColor,
+
+    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? splashColor,
+
+    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? disabledColor,
+
+    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    required VoidCallback? onPressed,
+
+    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    MouseCursor? mouseCursor,
+
+    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    FocusNode? focusNode,
+
+    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
+    required bool autofocus,
+
+    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    String? tooltip,
+
+    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    bool? enableFeedback,
+
+    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    BoxConstraints? constraints,
+
+    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    ButtonStyle? style,
+
+    /// optionalParameters: {bool? isSelected} , hasDefaultValue:false, defaultValueCode:null
+    bool? isSelected,
+
+    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    Widget? selectedIcon,
+
+    /// optionalParameters: {required Widget icon} , hasDefaultValue:false, defaultValueCode:null
+    required Widget icon,
+  }) : super.filled(
+          key: key,
+          iconSize: iconSize,
+          visualDensity: visualDensity,
+          padding: padding,
+          alignment: alignment,
+          splashRadius: splashRadius,
+          color: color,
+          focusColor: focusColor,
+          hoverColor: hoverColor,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
+          disabledColor: disabledColor,
+          onPressed: onPressed,
+          mouseCursor: mouseCursor,
+          focusNode: focusNode,
+          autofocus: autofocus,
+          tooltip: tooltip,
+          enableFeedback: enableFeedback,
+          constraints: constraints,
+          style: style,
+          isSelected: isSelected,
+          selectedIcon: selectedIcon,
+          icon: icon,
+        ) {
+    mateParams = ObjectParam(
+      init: this,
+      builder: (p) => IconButton$Mate.filled(
+        key: p.get('key').value,
+        iconSize: p.get('iconSize').value,
+        visualDensity: p.get('visualDensity').value,
+        padding: p.get('padding').value,
+        alignment: p.get('alignment').value,
+        splashRadius: p.get('splashRadius').value,
+        color: p.get('color').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        splashColor: p.get('splashColor').value,
+        disabledColor: p.get('disabledColor').value,
+        onPressed: p.get('onPressed').value,
+        mouseCursor: p.get('mouseCursor').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        tooltip: p.get('tooltip').value,
+        enableFeedback: p.get('enableFeedback').value,
+        constraints: p.get('constraints').value,
+        style: p.get('style').value,
+        isSelected: p.get('isSelected').value,
+        selectedIcon: p.get('selectedIcon').value,
+        icon: p.get('icon').value,
+      ),
+    );
+    mateParams.put('key', key);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('padding', padding);
+    mateParams.put('alignment', alignment);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('color', color);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('highlightColor', highlightColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('constraints', constraints);
+    mateParams.put('style', style);
+    mateParams.put('isSelected', isSelected);
+    mateParams.put('selectedIcon', selectedIcon);
+    mateParams.put('icon', icon);
+  }
+
+  /// IconButton IconButton.filledTonal({Key? key, double? iconSize, VisualDensity? visualDensity, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, double? splashRadius, Color? color, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Color? disabledColor, required void Function()? onPressed, MouseCursor? mouseCursor, FocusNode? focusNode, bool autofocus = false, String? tooltip, bool? enableFeedback, BoxConstraints? constraints, ButtonStyle? style, bool? isSelected, Widget? selectedIcon, required Widget icon})
+  IconButton$Mate.filledTonal({
+    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    Key? key,
+
+    /// optionalParameters: {double? iconSize} , hasDefaultValue:false, defaultValueCode:null
+    double? iconSize,
+
+    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    VisualDensity? visualDensity,
+
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    EdgeInsetsGeometry? padding,
+
+    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    AlignmentGeometry? alignment,
+
+    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    double? splashRadius,
+
+    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    Color? color,
+
+    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? focusColor,
+
+    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? hoverColor,
+
+    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? highlightColor,
+
+    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? splashColor,
+
+    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? disabledColor,
+
+    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    required VoidCallback? onPressed,
+
+    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    MouseCursor? mouseCursor,
+
+    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    FocusNode? focusNode,
+
+    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
+    required bool autofocus,
+
+    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    String? tooltip,
+
+    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    bool? enableFeedback,
+
+    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    BoxConstraints? constraints,
+
+    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    ButtonStyle? style,
+
+    /// optionalParameters: {bool? isSelected} , hasDefaultValue:false, defaultValueCode:null
+    bool? isSelected,
+
+    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    Widget? selectedIcon,
+
+    /// optionalParameters: {required Widget icon} , hasDefaultValue:false, defaultValueCode:null
+    required Widget icon,
+  }) : super.filledTonal(
+          key: key,
+          iconSize: iconSize,
+          visualDensity: visualDensity,
+          padding: padding,
+          alignment: alignment,
+          splashRadius: splashRadius,
+          color: color,
+          focusColor: focusColor,
+          hoverColor: hoverColor,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
+          disabledColor: disabledColor,
+          onPressed: onPressed,
+          mouseCursor: mouseCursor,
+          focusNode: focusNode,
+          autofocus: autofocus,
+          tooltip: tooltip,
+          enableFeedback: enableFeedback,
+          constraints: constraints,
+          style: style,
+          isSelected: isSelected,
+          selectedIcon: selectedIcon,
+          icon: icon,
+        ) {
+    mateParams = ObjectParam(
+      init: this,
+      builder: (p) => IconButton$Mate.filledTonal(
+        key: p.get('key').value,
+        iconSize: p.get('iconSize').value,
+        visualDensity: p.get('visualDensity').value,
+        padding: p.get('padding').value,
+        alignment: p.get('alignment').value,
+        splashRadius: p.get('splashRadius').value,
+        color: p.get('color').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        splashColor: p.get('splashColor').value,
+        disabledColor: p.get('disabledColor').value,
+        onPressed: p.get('onPressed').value,
+        mouseCursor: p.get('mouseCursor').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        tooltip: p.get('tooltip').value,
+        enableFeedback: p.get('enableFeedback').value,
+        constraints: p.get('constraints').value,
+        style: p.get('style').value,
+        isSelected: p.get('isSelected').value,
+        selectedIcon: p.get('selectedIcon').value,
+        icon: p.get('icon').value,
+      ),
+    );
+    mateParams.put('key', key);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('padding', padding);
+    mateParams.put('alignment', alignment);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('color', color);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('highlightColor', highlightColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('constraints', constraints);
+    mateParams.put('style', style);
+    mateParams.put('isSelected', isSelected);
+    mateParams.put('selectedIcon', selectedIcon);
+    mateParams.put('icon', icon);
+  }
+
+  /// IconButton IconButton.outlined({Key? key, double? iconSize, VisualDensity? visualDensity, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, double? splashRadius, Color? color, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Color? disabledColor, required void Function()? onPressed, MouseCursor? mouseCursor, FocusNode? focusNode, bool autofocus = false, String? tooltip, bool? enableFeedback, BoxConstraints? constraints, ButtonStyle? style, bool? isSelected, Widget? selectedIcon, required Widget icon})
+  IconButton$Mate.outlined({
+    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    Key? key,
+
+    /// optionalParameters: {double? iconSize} , hasDefaultValue:false, defaultValueCode:null
+    double? iconSize,
+
+    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    VisualDensity? visualDensity,
+
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    EdgeInsetsGeometry? padding,
+
+    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    AlignmentGeometry? alignment,
+
+    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    double? splashRadius,
+
+    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    Color? color,
+
+    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? focusColor,
+
+    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? hoverColor,
+
+    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? highlightColor,
+
+    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? splashColor,
+
+    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? disabledColor,
+
+    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    required VoidCallback? onPressed,
+
+    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    MouseCursor? mouseCursor,
+
+    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    FocusNode? focusNode,
+
+    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
+    required bool autofocus,
+
+    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    String? tooltip,
+
+    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    bool? enableFeedback,
+
+    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    BoxConstraints? constraints,
+
+    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    ButtonStyle? style,
+
+    /// optionalParameters: {bool? isSelected} , hasDefaultValue:false, defaultValueCode:null
+    bool? isSelected,
+
+    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    Widget? selectedIcon,
+
+    /// optionalParameters: {required Widget icon} , hasDefaultValue:false, defaultValueCode:null
+    required Widget icon,
+  }) : super.outlined(
+          key: key,
+          iconSize: iconSize,
+          visualDensity: visualDensity,
+          padding: padding,
+          alignment: alignment,
+          splashRadius: splashRadius,
+          color: color,
+          focusColor: focusColor,
+          hoverColor: hoverColor,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
+          disabledColor: disabledColor,
+          onPressed: onPressed,
+          mouseCursor: mouseCursor,
+          focusNode: focusNode,
+          autofocus: autofocus,
+          tooltip: tooltip,
+          enableFeedback: enableFeedback,
+          constraints: constraints,
+          style: style,
+          isSelected: isSelected,
+          selectedIcon: selectedIcon,
+          icon: icon,
+        ) {
+    mateParams = ObjectParam(
+      init: this,
+      builder: (p) => IconButton$Mate.outlined(
+        key: p.get('key').value,
+        iconSize: p.get('iconSize').value,
+        visualDensity: p.get('visualDensity').value,
+        padding: p.get('padding').value,
+        alignment: p.get('alignment').value,
+        splashRadius: p.get('splashRadius').value,
+        color: p.get('color').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        splashColor: p.get('splashColor').value,
+        disabledColor: p.get('disabledColor').value,
+        onPressed: p.get('onPressed').value,
+        mouseCursor: p.get('mouseCursor').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        tooltip: p.get('tooltip').value,
+        enableFeedback: p.get('enableFeedback').value,
+        constraints: p.get('constraints').value,
+        style: p.get('style').value,
+        isSelected: p.get('isSelected').value,
+        selectedIcon: p.get('selectedIcon').value,
+        icon: p.get('icon').value,
+      ),
+    );
+    mateParams.put('key', key);
+    mateParams.put('iconSize', iconSize);
+    mateParams.put('visualDensity', visualDensity);
+    mateParams.put('padding', padding);
+    mateParams.put('alignment', alignment);
+    mateParams.put('splashRadius', splashRadius);
+    mateParams.put('color', color);
+    mateParams.put('focusColor', focusColor);
+    mateParams.put('hoverColor', hoverColor);
+    mateParams.put('highlightColor', highlightColor);
+    mateParams.put('splashColor', splashColor);
+    mateParams.put('disabledColor', disabledColor);
+    mateParams.put('onPressed', onPressed);
+    mateParams.put('mouseCursor', mouseCursor);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('autofocus', autofocus);
+    mateParams.put('tooltip', tooltip);
+    mateParams.put('enableFeedback', enableFeedback);
+    mateParams.put('constraints', constraints);
+    mateParams.put('style', style);
+    mateParams.put('isSelected', isSelected);
+    mateParams.put('selectedIcon', selectedIcon);
+    mateParams.put('icon', icon);
+  }
 }

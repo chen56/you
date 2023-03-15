@@ -7,17 +7,25 @@ import 'package:flutter/src/foundation/platform.dart';
 
 /// class ZoomPageTransitionsBuilder extends PageTransitionsBuilder
 class ZoomPageTransitionsBuilder$Mate extends ZoomPageTransitionsBuilder with Mate<ZoomPageTransitionsBuilder$Mate> {
-  /// ZoomPageTransitionsBuilder ZoomPageTransitionsBuilder({bool allowEnterRouteSnapshotting = true})
-  ZoomPageTransitionsBuilder$Mate(
-      {
-      /// optionalParameters: {bool allowEnterRouteSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
-      required bool allowEnterRouteSnapshotting})
-      : super(allowEnterRouteSnapshotting: allowEnterRouteSnapshotting) {
+  /// ZoomPageTransitionsBuilder ZoomPageTransitionsBuilder({bool allowSnapshotting = true, bool allowEnterRouteSnapshotting = true})
+  ZoomPageTransitionsBuilder$Mate({
+    /// optionalParameters: {bool allowSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
+    required bool allowSnapshotting,
+
+    /// optionalParameters: {bool allowEnterRouteSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
+    required bool allowEnterRouteSnapshotting,
+  }) : super(
+          allowSnapshotting: allowSnapshotting,
+          allowEnterRouteSnapshotting: allowEnterRouteSnapshotting,
+        ) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) =>
-          ZoomPageTransitionsBuilder$Mate(allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').value),
+      builder: (p) => ZoomPageTransitionsBuilder$Mate(
+        allowSnapshotting: p.get('allowSnapshotting').value,
+        allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').value,
+      ),
     );
+    mateParams.put('allowSnapshotting', allowSnapshotting);
     mateParams.put('allowEnterRouteSnapshotting', allowEnterRouteSnapshotting);
   }
 }

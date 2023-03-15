@@ -173,7 +173,7 @@ mixin Screen<R> on Widget {
 }
 
 /// navigator_v2.dart 是更初级的包，用此类隔离其他包的依赖性
-abstract class Navigable {
+mixin Navigable {
   Screen parse(String location);
 }
 
