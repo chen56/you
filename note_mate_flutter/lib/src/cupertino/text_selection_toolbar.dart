@@ -33,20 +33,20 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar
           children: children,
           toolbarBuilder: toolbarBuilder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTextSelectionToolbar$Mate(
-        key: p.getValue('key'),
-        anchorAbove: p.getValue('anchorAbove'),
-        anchorBelow: p.getValue('anchorBelow'),
-        children: p.getValue('children'),
-        toolbarBuilder: p.getValue('toolbarBuilder'),
+        key: p.get('key').value,
+        anchorAbove: p.get('anchorAbove').value,
+        anchorBelow: p.get('anchorBelow').value,
+        children: p.get('children').value,
+        toolbarBuilder: p.get('toolbarBuilder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'anchorAbove', init: anchorAbove);
-    mateParams.set(name: 'anchorBelow', init: anchorBelow);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'toolbarBuilder', init: toolbarBuilder);
+    mateParams.put('key', init: key);
+    mateParams.put('anchorAbove', init: anchorAbove);
+    mateParams.put('anchorBelow', init: anchorBelow);
+    mateParams.put('children', init: children);
+    mateParams.put('toolbarBuilder', init: toolbarBuilder);
   }
 }

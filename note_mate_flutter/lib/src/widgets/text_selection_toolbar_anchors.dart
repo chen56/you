@@ -17,14 +17,14 @@ class TextSelectionToolbarAnchors$Mate extends TextSelectionToolbarAnchors with 
           primaryAnchor: primaryAnchor,
           secondaryAnchor: secondaryAnchor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionToolbarAnchors$Mate(
-        primaryAnchor: p.getValue('primaryAnchor'),
-        secondaryAnchor: p.getValue('secondaryAnchor'),
+        primaryAnchor: p.get('primaryAnchor').value,
+        secondaryAnchor: p.get('secondaryAnchor').value,
       ),
     );
-    mateParams.set(name: 'primaryAnchor', init: primaryAnchor);
-    mateParams.set(name: 'secondaryAnchor', init: secondaryAnchor);
+    mateParams.put('primaryAnchor', init: primaryAnchor);
+    mateParams.put('secondaryAnchor', init: secondaryAnchor);
   }
 }

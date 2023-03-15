@@ -64,36 +64,36 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate<Ren
           clipBehavior: clipBehavior,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderListWheelViewport$Mate(
-        childManager: p.getValue('childManager'),
-        offset: p.getValue('offset'),
-        diameterRatio: p.getValue('diameterRatio'),
-        perspective: p.getValue('perspective'),
-        offAxisFraction: p.getValue('offAxisFraction'),
-        useMagnifier: p.getValue('useMagnifier'),
-        magnification: p.getValue('magnification'),
-        overAndUnderCenterOpacity: p.getValue('overAndUnderCenterOpacity'),
-        itemExtent: p.getValue('itemExtent'),
-        squeeze: p.getValue('squeeze'),
-        renderChildrenOutsideViewport: p.getValue('renderChildrenOutsideViewport'),
-        clipBehavior: p.getValue('clipBehavior'),
-        children: p.getValue('children'),
+        childManager: p.get('childManager').value,
+        offset: p.get('offset').value,
+        diameterRatio: p.get('diameterRatio').value,
+        perspective: p.get('perspective').value,
+        offAxisFraction: p.get('offAxisFraction').value,
+        useMagnifier: p.get('useMagnifier').value,
+        magnification: p.get('magnification').value,
+        overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').value,
+        itemExtent: p.get('itemExtent').value,
+        squeeze: p.get('squeeze').value,
+        renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').value,
+        clipBehavior: p.get('clipBehavior').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'childManager', init: childManager);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'diameterRatio', init: diameterRatio);
-    mateParams.set(name: 'perspective', init: perspective);
-    mateParams.set(name: 'offAxisFraction', init: offAxisFraction);
-    mateParams.set(name: 'useMagnifier', init: useMagnifier);
-    mateParams.set(name: 'magnification', init: magnification);
-    mateParams.set(name: 'overAndUnderCenterOpacity', init: overAndUnderCenterOpacity);
-    mateParams.set(name: 'itemExtent', init: itemExtent);
-    mateParams.set(name: 'squeeze', init: squeeze);
-    mateParams.set(name: 'renderChildrenOutsideViewport', init: renderChildrenOutsideViewport);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('childManager', init: childManager);
+    mateParams.put('offset', init: offset);
+    mateParams.put('diameterRatio', init: diameterRatio);
+    mateParams.put('perspective', init: perspective);
+    mateParams.put('offAxisFraction', init: offAxisFraction);
+    mateParams.put('useMagnifier', init: useMagnifier);
+    mateParams.put('magnification', init: magnification);
+    mateParams.put('overAndUnderCenterOpacity', init: overAndUnderCenterOpacity);
+    mateParams.put('itemExtent', init: itemExtent);
+    mateParams.put('squeeze', init: squeeze);
+    mateParams.put('renderChildrenOutsideViewport', init: renderChildrenOutsideViewport);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('children', init: children);
   }
 }

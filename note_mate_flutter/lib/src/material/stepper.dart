@@ -31,19 +31,19 @@ class ControlsDetails$Mate extends ControlsDetails with Mate<ControlsDetails$Mat
           onStepCancel: onStepCancel,
           onStepContinue: onStepContinue,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ControlsDetails$Mate(
-        currentStep: p.getValue('currentStep'),
-        stepIndex: p.getValue('stepIndex'),
-        onStepCancel: p.getValue('onStepCancel'),
-        onStepContinue: p.getValue('onStepContinue'),
+        currentStep: p.get('currentStep').value,
+        stepIndex: p.get('stepIndex').value,
+        onStepCancel: p.get('onStepCancel').value,
+        onStepContinue: p.get('onStepContinue').value,
       ),
     );
-    mateParams.set(name: 'currentStep', init: currentStep);
-    mateParams.set(name: 'stepIndex', init: stepIndex);
-    mateParams.set(name: 'onStepCancel', init: onStepCancel);
-    mateParams.set(name: 'onStepContinue', init: onStepContinue);
+    mateParams.put('currentStep', init: currentStep);
+    mateParams.put('stepIndex', init: stepIndex);
+    mateParams.put('onStepCancel', init: onStepCancel);
+    mateParams.put('onStepContinue', init: onStepContinue);
   }
 }
 
@@ -76,23 +76,23 @@ class Step$Mate extends Step with Mate<Step$Mate> {
           isActive: isActive,
           label: label,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Step$Mate(
-        title: p.getValue('title'),
-        subtitle: p.getValue('subtitle'),
-        content: p.getValue('content'),
-        state: p.getValue('state'),
-        isActive: p.getValue('isActive'),
-        label: p.getValue('label'),
+        title: p.get('title').value,
+        subtitle: p.get('subtitle').value,
+        content: p.get('content').value,
+        state: p.get('state').value,
+        isActive: p.get('isActive').value,
+        label: p.get('label').value,
       ),
     );
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'subtitle', init: subtitle);
-    mateParams.set(name: 'content', init: content);
-    mateParams.set(name: 'state', init: state);
-    mateParams.set(name: 'isActive', init: isActive);
-    mateParams.set(name: 'label', init: label);
+    mateParams.put('title', init: title);
+    mateParams.put('subtitle', init: subtitle);
+    mateParams.put('content', init: content);
+    mateParams.put('state', init: state);
+    mateParams.put('isActive', init: isActive);
+    mateParams.put('label', init: label);
   }
 }
 
@@ -145,32 +145,32 @@ class Stepper$Mate extends Stepper with WidgetMate<Stepper$Mate> {
           elevation: elevation,
           margin: margin,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Stepper$Mate(
-        key: p.getValue('key'),
-        steps: p.getValue('steps'),
-        physics: p.getValue('physics'),
-        type: p.getValue('type'),
-        currentStep: p.getValue('currentStep'),
-        onStepTapped: p.getValue('onStepTapped'),
-        onStepContinue: p.getValue('onStepContinue'),
-        onStepCancel: p.getValue('onStepCancel'),
-        controlsBuilder: p.getValue('controlsBuilder'),
-        elevation: p.getValue('elevation'),
-        margin: p.getValue('margin'),
+        key: p.get('key').value,
+        steps: p.get('steps').value,
+        physics: p.get('physics').value,
+        type: p.get('type').value,
+        currentStep: p.get('currentStep').value,
+        onStepTapped: p.get('onStepTapped').value,
+        onStepContinue: p.get('onStepContinue').value,
+        onStepCancel: p.get('onStepCancel').value,
+        controlsBuilder: p.get('controlsBuilder').value,
+        elevation: p.get('elevation').value,
+        margin: p.get('margin').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'steps', init: steps);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'type', init: type);
-    mateParams.set(name: 'currentStep', init: currentStep);
-    mateParams.set(name: 'onStepTapped', init: onStepTapped);
-    mateParams.set(name: 'onStepContinue', init: onStepContinue);
-    mateParams.set(name: 'onStepCancel', init: onStepCancel);
-    mateParams.set(name: 'controlsBuilder', init: controlsBuilder);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'margin', init: margin);
+    mateParams.put('key', init: key);
+    mateParams.put('steps', init: steps);
+    mateParams.put('physics', init: physics);
+    mateParams.put('type', init: type);
+    mateParams.put('currentStep', init: currentStep);
+    mateParams.put('onStepTapped', init: onStepTapped);
+    mateParams.put('onStepContinue', init: onStepContinue);
+    mateParams.put('onStepCancel', init: onStepCancel);
+    mateParams.put('controlsBuilder', init: controlsBuilder);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('margin', init: margin);
   }
 }

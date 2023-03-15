@@ -23,16 +23,16 @@ class TextSelectionToolbarLayoutDelegate$Mate extends TextSelectionToolbarLayout
           anchorBelow: anchorBelow,
           fitsAbove: fitsAbove,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionToolbarLayoutDelegate$Mate(
-        anchorAbove: p.getValue('anchorAbove'),
-        anchorBelow: p.getValue('anchorBelow'),
-        fitsAbove: p.getValue('fitsAbove'),
+        anchorAbove: p.get('anchorAbove').value,
+        anchorBelow: p.get('anchorBelow').value,
+        fitsAbove: p.get('fitsAbove').value,
       ),
     );
-    mateParams.set(name: 'anchorAbove', init: anchorAbove);
-    mateParams.set(name: 'anchorBelow', init: anchorBelow);
-    mateParams.set(name: 'fitsAbove', init: fitsAbove);
+    mateParams.put('anchorAbove', init: anchorAbove);
+    mateParams.put('anchorBelow', init: anchorBelow);
+    mateParams.put('fitsAbove', init: fitsAbove);
   }
 }

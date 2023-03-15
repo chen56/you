@@ -48,28 +48,28 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate<BottomShe
           clipBehavior: clipBehavior,
           constraints: constraints,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomSheetThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        elevation: p.getValue('elevation'),
-        modalBackgroundColor: p.getValue('modalBackgroundColor'),
-        modalBarrierColor: p.getValue('modalBarrierColor'),
-        modalElevation: p.getValue('modalElevation'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        constraints: p.getValue('constraints'),
+        backgroundColor: p.get('backgroundColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        elevation: p.get('elevation').value,
+        modalBackgroundColor: p.get('modalBackgroundColor').value,
+        modalBarrierColor: p.get('modalBarrierColor').value,
+        modalElevation: p.get('modalElevation').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        constraints: p.get('constraints').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'modalBackgroundColor', init: modalBackgroundColor);
-    mateParams.set(name: 'modalBarrierColor', init: modalBarrierColor);
-    mateParams.set(name: 'modalElevation', init: modalElevation);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'constraints', init: constraints);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('modalBackgroundColor', init: modalBackgroundColor);
+    mateParams.put('modalBarrierColor', init: modalBarrierColor);
+    mateParams.put('modalElevation', init: modalElevation);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('constraints', init: constraints);
   }
 }

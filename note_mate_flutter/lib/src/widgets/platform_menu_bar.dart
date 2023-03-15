@@ -30,19 +30,19 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate<Shortcu
           control: control,
           meta: meta,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShortcutSerialization$Mate.character(
-        p.getValue('character'),
-        alt: p.getValue('alt'),
-        control: p.getValue('control'),
-        meta: p.getValue('meta'),
+        p.get('character').value,
+        alt: p.get('alt').value,
+        control: p.get('control').value,
+        meta: p.get('meta').value,
       ),
     );
-    mateParams.set(name: 'character', init: character);
-    mateParams.set(name: 'alt', init: alt);
-    mateParams.set(name: 'control', init: control);
-    mateParams.set(name: 'meta', init: meta);
+    mateParams.put('character', init: character);
+    mateParams.put('alt', init: alt);
+    mateParams.put('control', init: control);
+    mateParams.put('meta', init: meta);
   }
 
   /// ShortcutSerialization ShortcutSerialization.modifier(LogicalKeyboardKey trigger, {bool alt = false, bool control = false, bool meta = false, bool shift = false})
@@ -67,21 +67,21 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate<Shortcu
           meta: meta,
           shift: shift,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShortcutSerialization$Mate.modifier(
-        p.getValue('trigger'),
-        alt: p.getValue('alt'),
-        control: p.getValue('control'),
-        meta: p.getValue('meta'),
-        shift: p.getValue('shift'),
+        p.get('trigger').value,
+        alt: p.get('alt').value,
+        control: p.get('control').value,
+        meta: p.get('meta').value,
+        shift: p.get('shift').value,
       ),
     );
-    mateParams.set(name: 'trigger', init: trigger);
-    mateParams.set(name: 'alt', init: alt);
-    mateParams.set(name: 'control', init: control);
-    mateParams.set(name: 'meta', init: meta);
-    mateParams.set(name: 'shift', init: shift);
+    mateParams.put('trigger', init: trigger);
+    mateParams.put('alt', init: alt);
+    mateParams.put('control', init: control);
+    mateParams.put('meta', init: meta);
+    mateParams.put('shift', init: shift);
   }
 }
 
@@ -93,11 +93,11 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
       /// optionalParameters: {MethodChannel? channel} , hasDefaultValue:false, defaultValueCode:null
       MethodChannel? channel})
       : super(channel: channel) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DefaultPlatformMenuDelegate$Mate(channel: p.getValue('channel')),
+      builder: (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').value),
     );
-    mateParams.set(name: 'channel', init: channel);
+    mateParams.put('channel', init: channel);
   }
 }
 
@@ -118,17 +118,17 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with WidgetMate<PlatformMenuB
           menus: menus,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformMenuBar$Mate(
-        key: p.getValue('key'),
-        menus: p.getValue('menus'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        menus: p.get('menus').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'menus', init: menus);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('menus', init: menus);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -153,19 +153,19 @@ class PlatformMenu$Mate extends PlatformMenu with Mate<PlatformMenu$Mate> {
           onClose: onClose,
           menus: menus,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformMenu$Mate(
-        label: p.getValue('label'),
-        onOpen: p.getValue('onOpen'),
-        onClose: p.getValue('onClose'),
-        menus: p.getValue('menus'),
+        label: p.get('label').value,
+        onOpen: p.get('onOpen').value,
+        onClose: p.get('onClose').value,
+        menus: p.get('menus').value,
       ),
     );
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'onOpen', init: onOpen);
-    mateParams.set(name: 'onClose', init: onClose);
-    mateParams.set(name: 'menus', init: menus);
+    mateParams.put('label', init: label);
+    mateParams.put('onOpen', init: onOpen);
+    mateParams.put('onClose', init: onClose);
+    mateParams.put('menus', init: menus);
   }
 }
 
@@ -177,11 +177,11 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate<Platfor
       /// optionalParameters: {required List<PlatformMenuItem> members} , hasDefaultValue:false, defaultValueCode:null
       required List<PlatformMenuItem> members})
       : super(members: members) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => PlatformMenuItemGroup$Mate(members: p.getValue('members')),
+      builder: (p) => PlatformMenuItemGroup$Mate(members: p.get('members').value),
     );
-    mateParams.set(name: 'members', init: members);
+    mateParams.put('members', init: members);
   }
 }
 
@@ -206,19 +206,19 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate<PlatformMenuItem$
           onSelected: onSelected,
           onSelectedIntent: onSelectedIntent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformMenuItem$Mate(
-        label: p.getValue('label'),
-        shortcut: p.getValue('shortcut'),
-        onSelected: p.getValue('onSelected'),
-        onSelectedIntent: p.getValue('onSelectedIntent'),
+        label: p.get('label').value,
+        shortcut: p.get('shortcut').value,
+        onSelected: p.get('onSelected').value,
+        onSelectedIntent: p.get('onSelectedIntent').value,
       ),
     );
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'shortcut', init: shortcut);
-    mateParams.set(name: 'onSelected', init: onSelected);
-    mateParams.set(name: 'onSelectedIntent', init: onSelectedIntent);
+    mateParams.put('label', init: label);
+    mateParams.put('shortcut', init: shortcut);
+    mateParams.put('onSelected', init: onSelected);
+    mateParams.put('onSelectedIntent', init: onSelectedIntent);
   }
 }
 
@@ -235,14 +235,14 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate<P
           type: type,
           enabled: enabled,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformProvidedMenuItem$Mate(
-        type: p.getValue('type'),
-        enabled: p.getValue('enabled'),
+        type: p.get('type').value,
+        enabled: p.get('enabled').value,
       ),
     );
-    mateParams.set(name: 'type', init: type);
-    mateParams.set(name: 'enabled', init: enabled);
+    mateParams.put('type', init: type);
+    mateParams.put('enabled', init: enabled);
   }
 }

@@ -123,62 +123,62 @@ class ChoiceChip$Mate extends ChoiceChip with WidgetMate<ChoiceChip$Mate> {
           selectedShadowColor: selectedShadowColor,
           avatarBorder: avatarBorder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ChoiceChip$Mate(
-        key: p.getValue('key'),
-        avatar: p.getValue('avatar'),
-        label: p.getValue('label'),
-        labelStyle: p.getValue('labelStyle'),
-        labelPadding: p.getValue('labelPadding'),
-        onSelected: p.getValue('onSelected'),
-        pressElevation: p.getValue('pressElevation'),
-        selected: p.getValue('selected'),
-        selectedColor: p.getValue('selectedColor'),
-        disabledColor: p.getValue('disabledColor'),
-        tooltip: p.getValue('tooltip'),
-        side: p.getValue('side'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        backgroundColor: p.getValue('backgroundColor'),
-        padding: p.getValue('padding'),
-        visualDensity: p.getValue('visualDensity'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        iconTheme: p.getValue('iconTheme'),
-        selectedShadowColor: p.getValue('selectedShadowColor'),
-        avatarBorder: p.getValue('avatarBorder'),
+        key: p.get('key').value,
+        avatar: p.get('avatar').value,
+        label: p.get('label').value,
+        labelStyle: p.get('labelStyle').value,
+        labelPadding: p.get('labelPadding').value,
+        onSelected: p.get('onSelected').value,
+        pressElevation: p.get('pressElevation').value,
+        selected: p.get('selected').value,
+        selectedColor: p.get('selectedColor').value,
+        disabledColor: p.get('disabledColor').value,
+        tooltip: p.get('tooltip').value,
+        side: p.get('side').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        backgroundColor: p.get('backgroundColor').value,
+        padding: p.get('padding').value,
+        visualDensity: p.get('visualDensity').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        iconTheme: p.get('iconTheme').value,
+        selectedShadowColor: p.get('selectedShadowColor').value,
+        avatarBorder: p.get('avatarBorder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'avatar', init: avatar);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'labelStyle', init: labelStyle);
-    mateParams.set(name: 'labelPadding', init: labelPadding);
-    mateParams.set(name: 'onSelected', init: onSelected);
-    mateParams.set(name: 'pressElevation', init: pressElevation);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'tooltip', init: tooltip);
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
-    mateParams.set(name: 'selectedShadowColor', init: selectedShadowColor);
-    mateParams.set(name: 'avatarBorder', init: avatarBorder);
+    mateParams.put('key', init: key);
+    mateParams.put('avatar', init: avatar);
+    mateParams.put('label', init: label);
+    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('labelPadding', init: labelPadding);
+    mateParams.put('onSelected', init: onSelected);
+    mateParams.put('pressElevation', init: pressElevation);
+    mateParams.put('selected', init: selected);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('tooltip', init: tooltip);
+    mateParams.put('side', init: side);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('padding', init: padding);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('selectedShadowColor', init: selectedShadowColor);
+    mateParams.put('avatarBorder', init: avatarBorder);
   }
 }

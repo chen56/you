@@ -60,34 +60,34 @@ class TimePickerDialog$Mate extends TimePickerDialog with WidgetMate<TimePickerD
           orientation: orientation,
           onEntryModeChanged: onEntryModeChanged,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TimePickerDialog$Mate(
-        key: p.getValue('key'),
-        initialTime: p.getValue('initialTime'),
-        cancelText: p.getValue('cancelText'),
-        confirmText: p.getValue('confirmText'),
-        helpText: p.getValue('helpText'),
-        errorInvalidText: p.getValue('errorInvalidText'),
-        hourLabelText: p.getValue('hourLabelText'),
-        minuteLabelText: p.getValue('minuteLabelText'),
-        restorationId: p.getValue('restorationId'),
-        initialEntryMode: p.getValue('initialEntryMode'),
-        orientation: p.getValue('orientation'),
-        onEntryModeChanged: p.getValue('onEntryModeChanged'),
+        key: p.get('key').value,
+        initialTime: p.get('initialTime').value,
+        cancelText: p.get('cancelText').value,
+        confirmText: p.get('confirmText').value,
+        helpText: p.get('helpText').value,
+        errorInvalidText: p.get('errorInvalidText').value,
+        hourLabelText: p.get('hourLabelText').value,
+        minuteLabelText: p.get('minuteLabelText').value,
+        restorationId: p.get('restorationId').value,
+        initialEntryMode: p.get('initialEntryMode').value,
+        orientation: p.get('orientation').value,
+        onEntryModeChanged: p.get('onEntryModeChanged').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'initialTime', init: initialTime);
-    mateParams.set(name: 'cancelText', init: cancelText);
-    mateParams.set(name: 'confirmText', init: confirmText);
-    mateParams.set(name: 'helpText', init: helpText);
-    mateParams.set(name: 'errorInvalidText', init: errorInvalidText);
-    mateParams.set(name: 'hourLabelText', init: hourLabelText);
-    mateParams.set(name: 'minuteLabelText', init: minuteLabelText);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'initialEntryMode', init: initialEntryMode);
-    mateParams.set(name: 'orientation', init: orientation);
-    mateParams.set(name: 'onEntryModeChanged', init: onEntryModeChanged);
+    mateParams.put('key', init: key);
+    mateParams.put('initialTime', init: initialTime);
+    mateParams.put('cancelText', init: cancelText);
+    mateParams.put('confirmText', init: confirmText);
+    mateParams.put('helpText', init: helpText);
+    mateParams.put('errorInvalidText', init: errorInvalidText);
+    mateParams.put('hourLabelText', init: hourLabelText);
+    mateParams.put('minuteLabelText', init: minuteLabelText);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('initialEntryMode', init: initialEntryMode);
+    mateParams.put('orientation', init: orientation);
+    mateParams.put('onEntryModeChanged', init: onEntryModeChanged);
   }
 }

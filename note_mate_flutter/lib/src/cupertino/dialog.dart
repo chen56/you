@@ -47,27 +47,27 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with WidgetMate<Cup
           insetAnimationDuration: insetAnimationDuration,
           insetAnimationCurve: insetAnimationCurve,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAlertDialog$Mate(
-        key: p.getValue('key'),
-        title: p.getValue('title'),
-        content: p.getValue('content'),
-        actions: p.getValue('actions'),
-        scrollController: p.getValue('scrollController'),
-        actionScrollController: p.getValue('actionScrollController'),
-        insetAnimationDuration: p.getValue('insetAnimationDuration'),
-        insetAnimationCurve: p.getValue('insetAnimationCurve'),
+        key: p.get('key').value,
+        title: p.get('title').value,
+        content: p.get('content').value,
+        actions: p.get('actions').value,
+        scrollController: p.get('scrollController').value,
+        actionScrollController: p.get('actionScrollController').value,
+        insetAnimationDuration: p.get('insetAnimationDuration').value,
+        insetAnimationCurve: p.get('insetAnimationCurve').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'content', init: content);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'scrollController', init: scrollController);
-    mateParams.set(name: 'actionScrollController', init: actionScrollController);
-    mateParams.set(name: 'insetAnimationDuration', init: insetAnimationDuration);
-    mateParams.set(name: 'insetAnimationCurve', init: insetAnimationCurve);
+    mateParams.put('key', init: key);
+    mateParams.put('title', init: title);
+    mateParams.put('content', init: content);
+    mateParams.put('actions', init: actions);
+    mateParams.put('scrollController', init: scrollController);
+    mateParams.put('actionScrollController', init: actionScrollController);
+    mateParams.put('insetAnimationDuration', init: insetAnimationDuration);
+    mateParams.put('insetAnimationCurve', init: insetAnimationCurve);
   }
 }
 
@@ -88,17 +88,17 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with WidgetMate<C
           isSurfacePainted: isSurfacePainted,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPopupSurface$Mate(
-        key: p.getValue('key'),
-        isSurfacePainted: p.getValue('isSurfacePainted'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        isSurfacePainted: p.get('isSurfacePainted').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'isSurfacePainted', init: isSurfacePainted);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('isSurfacePainted', init: isSurfacePainted);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -135,25 +135,25 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with WidgetMate<Cup
           actionScrollController: actionScrollController,
           cancelButton: cancelButton,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoActionSheet$Mate(
-        key: p.getValue('key'),
-        title: p.getValue('title'),
-        message: p.getValue('message'),
-        actions: p.getValue('actions'),
-        messageScrollController: p.getValue('messageScrollController'),
-        actionScrollController: p.getValue('actionScrollController'),
-        cancelButton: p.getValue('cancelButton'),
+        key: p.get('key').value,
+        title: p.get('title').value,
+        message: p.get('message').value,
+        actions: p.get('actions').value,
+        messageScrollController: p.get('messageScrollController').value,
+        actionScrollController: p.get('actionScrollController').value,
+        cancelButton: p.get('cancelButton').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'message', init: message);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'messageScrollController', init: messageScrollController);
-    mateParams.set(name: 'actionScrollController', init: actionScrollController);
-    mateParams.set(name: 'cancelButton', init: cancelButton);
+    mateParams.put('key', init: key);
+    mateParams.put('title', init: title);
+    mateParams.put('message', init: message);
+    mateParams.put('actions', init: actions);
+    mateParams.put('messageScrollController', init: messageScrollController);
+    mateParams.put('actionScrollController', init: actionScrollController);
+    mateParams.put('cancelButton', init: cancelButton);
   }
 }
 
@@ -183,21 +183,21 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction
           isDestructiveAction: isDestructiveAction,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoActionSheetAction$Mate(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        isDefaultAction: p.getValue('isDefaultAction'),
-        isDestructiveAction: p.getValue('isDestructiveAction'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        isDefaultAction: p.get('isDefaultAction').value,
+        isDestructiveAction: p.get('isDestructiveAction').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'isDefaultAction', init: isDefaultAction);
-    mateParams.set(name: 'isDestructiveAction', init: isDestructiveAction);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('isDefaultAction', init: isDefaultAction);
+    mateParams.put('isDestructiveAction', init: isDestructiveAction);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -230,22 +230,22 @@ class CupertinoDialogAction$Mate extends CupertinoDialogAction with WidgetMate<C
           textStyle: textStyle,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDialogAction$Mate(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        isDefaultAction: p.getValue('isDefaultAction'),
-        isDestructiveAction: p.getValue('isDestructiveAction'),
-        textStyle: p.getValue('textStyle'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        isDefaultAction: p.get('isDefaultAction').value,
+        isDestructiveAction: p.get('isDestructiveAction').value,
+        textStyle: p.get('textStyle').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'isDefaultAction', init: isDefaultAction);
-    mateParams.set(name: 'isDestructiveAction', init: isDestructiveAction);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('isDefaultAction', init: isDefaultAction);
+    mateParams.put('isDestructiveAction', init: isDestructiveAction);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('child', init: child);
   }
 }

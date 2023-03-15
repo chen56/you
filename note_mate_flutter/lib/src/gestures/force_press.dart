@@ -23,17 +23,17 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate<ForcePressDetai
           localPosition: localPosition,
           pressure: pressure,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ForcePressDetails$Mate(
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
-        pressure: p.getValue('pressure'),
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
+        pressure: p.get('pressure').value,
       ),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'pressure', init: pressure);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('pressure', init: pressure);
   }
 }
 
@@ -66,22 +66,22 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ForcePressGestureRecognizer$Mate(
-        startPressure: p.getValue('startPressure'),
-        peakPressure: p.getValue('peakPressure'),
-        interpolation: p.getValue('interpolation'),
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        startPressure: p.get('startPressure').value,
+        peakPressure: p.get('peakPressure').value,
+        interpolation: p.get('interpolation').value,
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'startPressure', init: startPressure);
-    mateParams.set(name: 'peakPressure', init: peakPressure);
-    mateParams.set(name: 'interpolation', init: interpolation);
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('startPressure', init: startPressure);
+    mateParams.put('peakPressure', init: peakPressure);
+    mateParams.put('interpolation', init: interpolation);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }

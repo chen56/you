@@ -155,78 +155,78 @@ class InputChip$Mate extends InputChip with WidgetMate<InputChip$Mate> {
           checkmarkColor: checkmarkColor,
           avatarBorder: avatarBorder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InputChip$Mate(
-        key: p.getValue('key'),
-        avatar: p.getValue('avatar'),
-        label: p.getValue('label'),
-        labelStyle: p.getValue('labelStyle'),
-        labelPadding: p.getValue('labelPadding'),
-        selected: p.getValue('selected'),
-        isEnabled: p.getValue('isEnabled'),
-        onSelected: p.getValue('onSelected'),
-        deleteIcon: p.getValue('deleteIcon'),
-        onDeleted: p.getValue('onDeleted'),
-        deleteIconColor: p.getValue('deleteIconColor'),
-        deleteButtonTooltipMessage: p.getValue('deleteButtonTooltipMessage'),
-        onPressed: p.getValue('onPressed'),
-        pressElevation: p.getValue('pressElevation'),
-        disabledColor: p.getValue('disabledColor'),
-        selectedColor: p.getValue('selectedColor'),
-        tooltip: p.getValue('tooltip'),
-        side: p.getValue('side'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        backgroundColor: p.getValue('backgroundColor'),
-        padding: p.getValue('padding'),
-        visualDensity: p.getValue('visualDensity'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        iconTheme: p.getValue('iconTheme'),
-        selectedShadowColor: p.getValue('selectedShadowColor'),
-        showCheckmark: p.getValue('showCheckmark'),
-        checkmarkColor: p.getValue('checkmarkColor'),
-        avatarBorder: p.getValue('avatarBorder'),
+        key: p.get('key').value,
+        avatar: p.get('avatar').value,
+        label: p.get('label').value,
+        labelStyle: p.get('labelStyle').value,
+        labelPadding: p.get('labelPadding').value,
+        selected: p.get('selected').value,
+        isEnabled: p.get('isEnabled').value,
+        onSelected: p.get('onSelected').value,
+        deleteIcon: p.get('deleteIcon').value,
+        onDeleted: p.get('onDeleted').value,
+        deleteIconColor: p.get('deleteIconColor').value,
+        deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').value,
+        onPressed: p.get('onPressed').value,
+        pressElevation: p.get('pressElevation').value,
+        disabledColor: p.get('disabledColor').value,
+        selectedColor: p.get('selectedColor').value,
+        tooltip: p.get('tooltip').value,
+        side: p.get('side').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        backgroundColor: p.get('backgroundColor').value,
+        padding: p.get('padding').value,
+        visualDensity: p.get('visualDensity').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        iconTheme: p.get('iconTheme').value,
+        selectedShadowColor: p.get('selectedShadowColor').value,
+        showCheckmark: p.get('showCheckmark').value,
+        checkmarkColor: p.get('checkmarkColor').value,
+        avatarBorder: p.get('avatarBorder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'avatar', init: avatar);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'labelStyle', init: labelStyle);
-    mateParams.set(name: 'labelPadding', init: labelPadding);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'isEnabled', init: isEnabled);
-    mateParams.set(name: 'onSelected', init: onSelected);
-    mateParams.set(name: 'deleteIcon', init: deleteIcon);
-    mateParams.set(name: 'onDeleted', init: onDeleted);
-    mateParams.set(name: 'deleteIconColor', init: deleteIconColor);
-    mateParams.set(name: 'deleteButtonTooltipMessage', init: deleteButtonTooltipMessage);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'pressElevation', init: pressElevation);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'tooltip', init: tooltip);
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
-    mateParams.set(name: 'selectedShadowColor', init: selectedShadowColor);
-    mateParams.set(name: 'showCheckmark', init: showCheckmark);
-    mateParams.set(name: 'checkmarkColor', init: checkmarkColor);
-    mateParams.set(name: 'avatarBorder', init: avatarBorder);
+    mateParams.put('key', init: key);
+    mateParams.put('avatar', init: avatar);
+    mateParams.put('label', init: label);
+    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('labelPadding', init: labelPadding);
+    mateParams.put('selected', init: selected);
+    mateParams.put('isEnabled', init: isEnabled);
+    mateParams.put('onSelected', init: onSelected);
+    mateParams.put('deleteIcon', init: deleteIcon);
+    mateParams.put('onDeleted', init: onDeleted);
+    mateParams.put('deleteIconColor', init: deleteIconColor);
+    mateParams.put('deleteButtonTooltipMessage', init: deleteButtonTooltipMessage);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('pressElevation', init: pressElevation);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('tooltip', init: tooltip);
+    mateParams.put('side', init: side);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('padding', init: padding);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('selectedShadowColor', init: selectedShadowColor);
+    mateParams.put('showCheckmark', init: showCheckmark);
+    mateParams.put('checkmarkColor', init: checkmarkColor);
+    mateParams.put('avatarBorder', init: avatarBorder);
   }
 }

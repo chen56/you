@@ -24,17 +24,17 @@ class ImageInfo$Mate extends ImageInfo with Mate<ImageInfo$Mate> {
           scale: scale,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageInfo$Mate(
-        image: p.getValue('image'),
-        scale: p.getValue('scale'),
-        debugLabel: p.getValue('debugLabel'),
+        image: p.get('image').value,
+        scale: p.get('scale').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('image', init: image);
+    mateParams.put('scale', init: scale);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }
 
@@ -54,17 +54,17 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate<ImageStream
           onChunk: onChunk,
           onError: onError,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageStreamListener$Mate(
-        p.getValue('onImage'),
-        onChunk: p.getValue('onChunk'),
-        onError: p.getValue('onError'),
+        p.get('onImage').value,
+        onChunk: p.get('onChunk').value,
+        onError: p.get('onError').value,
       ),
     );
-    mateParams.set(name: 'onImage', init: onImage);
-    mateParams.set(name: 'onChunk', init: onChunk);
-    mateParams.set(name: 'onError', init: onError);
+    mateParams.put('onImage', init: onImage);
+    mateParams.put('onChunk', init: onChunk);
+    mateParams.put('onError', init: onError);
   }
 }
 
@@ -81,15 +81,15 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate<ImageChunkEvent$Mat
           cumulativeBytesLoaded: cumulativeBytesLoaded,
           expectedTotalBytes: expectedTotalBytes,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageChunkEvent$Mate(
-        cumulativeBytesLoaded: p.getValue('cumulativeBytesLoaded'),
-        expectedTotalBytes: p.getValue('expectedTotalBytes'),
+        cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').value,
+        expectedTotalBytes: p.get('expectedTotalBytes').value,
       ),
     );
-    mateParams.set(name: 'cumulativeBytesLoaded', init: cumulativeBytesLoaded);
-    mateParams.set(name: 'expectedTotalBytes', init: expectedTotalBytes);
+    mateParams.put('cumulativeBytesLoaded', init: cumulativeBytesLoaded);
+    mateParams.put('expectedTotalBytes', init: expectedTotalBytes);
   }
 }
 
@@ -106,15 +106,15 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter
           image,
           informationCollector: informationCollector,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => OneFrameImageStreamCompleter$Mate(
-        p.getValue('image'),
-        informationCollector: p.getValue('informationCollector'),
+        p.get('image').value,
+        informationCollector: p.get('informationCollector').value,
       ),
     );
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'informationCollector', init: informationCollector);
+    mateParams.put('image', init: image);
+    mateParams.put('informationCollector', init: informationCollector);
   }
 }
 
@@ -144,20 +144,20 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           chunkEvents: chunkEvents,
           informationCollector: informationCollector,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MultiFrameImageStreamCompleter$Mate(
-        codec: p.getValue('codec'),
-        scale: p.getValue('scale'),
-        debugLabel: p.getValue('debugLabel'),
-        chunkEvents: p.getValue('chunkEvents'),
-        informationCollector: p.getValue('informationCollector'),
+        codec: p.get('codec').value,
+        scale: p.get('scale').value,
+        debugLabel: p.get('debugLabel').value,
+        chunkEvents: p.get('chunkEvents').value,
+        informationCollector: p.get('informationCollector').value,
       ),
     );
-    mateParams.set(name: 'codec', init: codec);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
-    mateParams.set(name: 'chunkEvents', init: chunkEvents);
-    mateParams.set(name: 'informationCollector', init: informationCollector);
+    mateParams.put('codec', init: codec);
+    mateParams.put('scale', init: scale);
+    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('chunkEvents', init: chunkEvents);
+    mateParams.put('informationCollector', init: informationCollector);
   }
 }

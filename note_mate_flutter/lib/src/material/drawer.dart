@@ -50,29 +50,29 @@ class Drawer$Mate extends Drawer with WidgetMate<Drawer$Mate> {
           child: child,
           semanticLabel: semanticLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Drawer$Mate(
-        key: p.getValue('key'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        shape: p.getValue('shape'),
-        width: p.getValue('width'),
-        child: p.getValue('child'),
-        semanticLabel: p.getValue('semanticLabel'),
+        key: p.get('key').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        shape: p.get('shape').value,
+        width: p.get('width').value,
+        child: p.get('child').value,
+        semanticLabel: p.get('semanticLabel').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
+    mateParams.put('key', init: key);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('shape', init: shape);
+    mateParams.put('width', init: width);
+    mateParams.put('child', init: child);
+    mateParams.put('semanticLabel', init: semanticLabel);
   }
 }
 
@@ -117,28 +117,28 @@ class DrawerController$Mate extends DrawerController with WidgetMate<DrawerContr
           edgeDragWidth: edgeDragWidth,
           enableOpenDragGesture: enableOpenDragGesture,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerController$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        alignment: p.getValue('alignment'),
-        isDrawerOpen: p.getValue('isDrawerOpen'),
-        drawerCallback: p.getValue('drawerCallback'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        scrimColor: p.getValue('scrimColor'),
-        edgeDragWidth: p.getValue('edgeDragWidth'),
-        enableOpenDragGesture: p.getValue('enableOpenDragGesture'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        alignment: p.get('alignment').value,
+        isDrawerOpen: p.get('isDrawerOpen').value,
+        drawerCallback: p.get('drawerCallback').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        scrimColor: p.get('scrimColor').value,
+        edgeDragWidth: p.get('edgeDragWidth').value,
+        enableOpenDragGesture: p.get('enableOpenDragGesture').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'isDrawerOpen', init: isDrawerOpen);
-    mateParams.set(name: 'drawerCallback', init: drawerCallback);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'scrimColor', init: scrimColor);
-    mateParams.set(name: 'edgeDragWidth', init: edgeDragWidth);
-    mateParams.set(name: 'enableOpenDragGesture', init: enableOpenDragGesture);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('isDrawerOpen', init: isDrawerOpen);
+    mateParams.put('drawerCallback', init: drawerCallback);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('scrimColor', init: scrimColor);
+    mateParams.put('edgeDragWidth', init: edgeDragWidth);
+    mateParams.put('enableOpenDragGesture', init: enableOpenDragGesture);
   }
 }

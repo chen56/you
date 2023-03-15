@@ -84,45 +84,45 @@ class ButtonTheme$Mate extends ButtonTheme with WidgetMate<ButtonTheme$Mate> {
           materialTapTargetSize: materialTapTargetSize,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonTheme$Mate(
-        key: p.getValue('key'),
-        textTheme: p.getValue('textTheme'),
-        layoutBehavior: p.getValue('layoutBehavior'),
-        minWidth: p.getValue('minWidth'),
-        height: p.getValue('height'),
-        padding: p.getValue('padding'),
-        shape: p.getValue('shape'),
-        alignedDropdown: p.getValue('alignedDropdown'),
-        buttonColor: p.getValue('buttonColor'),
-        disabledColor: p.getValue('disabledColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        highlightColor: p.getValue('highlightColor'),
-        splashColor: p.getValue('splashColor'),
-        colorScheme: p.getValue('colorScheme'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        textTheme: p.get('textTheme').value,
+        layoutBehavior: p.get('layoutBehavior').value,
+        minWidth: p.get('minWidth').value,
+        height: p.get('height').value,
+        padding: p.get('padding').value,
+        shape: p.get('shape').value,
+        alignedDropdown: p.get('alignedDropdown').value,
+        buttonColor: p.get('buttonColor').value,
+        disabledColor: p.get('disabledColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        splashColor: p.get('splashColor').value,
+        colorScheme: p.get('colorScheme').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'textTheme', init: textTheme);
-    mateParams.set(name: 'layoutBehavior', init: layoutBehavior);
-    mateParams.set(name: 'minWidth', init: minWidth);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'alignedDropdown', init: alignedDropdown);
-    mateParams.set(name: 'buttonColor', init: buttonColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'colorScheme', init: colorScheme);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('textTheme', init: textTheme);
+    mateParams.put('layoutBehavior', init: layoutBehavior);
+    mateParams.put('minWidth', init: minWidth);
+    mateParams.put('height', init: height);
+    mateParams.put('padding', init: padding);
+    mateParams.put('shape', init: shape);
+    mateParams.put('alignedDropdown', init: alignedDropdown);
+    mateParams.put('buttonColor', init: buttonColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('colorScheme', init: colorScheme);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('child', init: child);
   }
 
   /// ButtonTheme ButtonTheme.fromButtonThemeData({Key? key, required ButtonThemeData data, required Widget child})
@@ -140,17 +140,17 @@ class ButtonTheme$Mate extends ButtonTheme with WidgetMate<ButtonTheme$Mate> {
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonTheme$Mate.fromButtonThemeData(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -219,40 +219,40 @@ class ButtonThemeData$Mate extends ButtonThemeData with Mate<ButtonThemeData$Mat
           colorScheme: colorScheme,
           materialTapTargetSize: materialTapTargetSize,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonThemeData$Mate(
-        textTheme: p.getValue('textTheme'),
-        minWidth: p.getValue('minWidth'),
-        height: p.getValue('height'),
-        padding: p.getValue('padding'),
-        shape: p.getValue('shape'),
-        layoutBehavior: p.getValue('layoutBehavior'),
-        alignedDropdown: p.getValue('alignedDropdown'),
-        buttonColor: p.getValue('buttonColor'),
-        disabledColor: p.getValue('disabledColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        highlightColor: p.getValue('highlightColor'),
-        splashColor: p.getValue('splashColor'),
-        colorScheme: p.getValue('colorScheme'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
+        textTheme: p.get('textTheme').value,
+        minWidth: p.get('minWidth').value,
+        height: p.get('height').value,
+        padding: p.get('padding').value,
+        shape: p.get('shape').value,
+        layoutBehavior: p.get('layoutBehavior').value,
+        alignedDropdown: p.get('alignedDropdown').value,
+        buttonColor: p.get('buttonColor').value,
+        disabledColor: p.get('disabledColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        splashColor: p.get('splashColor').value,
+        colorScheme: p.get('colorScheme').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
       ),
     );
-    mateParams.set(name: 'textTheme', init: textTheme);
-    mateParams.set(name: 'minWidth', init: minWidth);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'layoutBehavior', init: layoutBehavior);
-    mateParams.set(name: 'alignedDropdown', init: alignedDropdown);
-    mateParams.set(name: 'buttonColor', init: buttonColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'colorScheme', init: colorScheme);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('textTheme', init: textTheme);
+    mateParams.put('minWidth', init: minWidth);
+    mateParams.put('height', init: height);
+    mateParams.put('padding', init: padding);
+    mateParams.put('shape', init: shape);
+    mateParams.put('layoutBehavior', init: layoutBehavior);
+    mateParams.put('alignedDropdown', init: alignedDropdown);
+    mateParams.put('buttonColor', init: buttonColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('colorScheme', init: colorScheme);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
   }
 }

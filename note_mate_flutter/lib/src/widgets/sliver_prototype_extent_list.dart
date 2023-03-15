@@ -24,17 +24,17 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Widg
           delegate: delegate,
           prototypeItem: prototypeItem,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverPrototypeExtentList$Mate(
-        key: p.getValue('key'),
-        delegate: p.getValue('delegate'),
-        prototypeItem: p.getValue('prototypeItem'),
+        key: p.get('key').value,
+        delegate: p.get('delegate').value,
+        prototypeItem: p.get('prototypeItem').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'delegate', init: delegate);
-    mateParams.set(name: 'prototypeItem', init: prototypeItem);
+    mateParams.put('key', init: key);
+    mateParams.put('delegate', init: delegate);
+    mateParams.put('prototypeItem', init: prototypeItem);
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.builder({Key? key, required Widget? Function(BuildContext, int) itemBuilder, required Widget prototypeItem, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -72,27 +72,27 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Widg
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverPrototypeExtentList$Mate.builder(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        prototypeItem: p.getValue('prototypeItem'),
-        findChildIndexCallback: p.getValue('findChildIndexCallback'),
-        itemCount: p.getValue('itemCount'),
-        addAutomaticKeepAlives: p.getValue('addAutomaticKeepAlives'),
-        addRepaintBoundaries: p.getValue('addRepaintBoundaries'),
-        addSemanticIndexes: p.getValue('addSemanticIndexes'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        prototypeItem: p.get('prototypeItem').value,
+        findChildIndexCallback: p.get('findChildIndexCallback').value,
+        itemCount: p.get('itemCount').value,
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
+        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
+        addSemanticIndexes: p.get('addSemanticIndexes').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'prototypeItem', init: prototypeItem);
-    mateParams.set(name: 'findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.set(name: 'itemCount', init: itemCount);
-    mateParams.set(name: 'addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.set(name: 'addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.set(name: 'addSemanticIndexes', init: addSemanticIndexes);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('prototypeItem', init: prototypeItem);
+    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
+    mateParams.put('itemCount', init: itemCount);
+    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.list({Key? key, required List<Widget> children, required Widget prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -122,22 +122,22 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Widg
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverPrototypeExtentList$Mate.list(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        prototypeItem: p.getValue('prototypeItem'),
-        addAutomaticKeepAlives: p.getValue('addAutomaticKeepAlives'),
-        addRepaintBoundaries: p.getValue('addRepaintBoundaries'),
-        addSemanticIndexes: p.getValue('addSemanticIndexes'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        prototypeItem: p.get('prototypeItem').value,
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
+        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
+        addSemanticIndexes: p.get('addSemanticIndexes').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'prototypeItem', init: prototypeItem);
-    mateParams.set(name: 'addAutomaticKeepAlives', init: addAutomaticKeepAlives);
-    mateParams.set(name: 'addRepaintBoundaries', init: addRepaintBoundaries);
-    mateParams.set(name: 'addSemanticIndexes', init: addSemanticIndexes);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('prototypeItem', init: prototypeItem);
+    mateParams.put('addAutomaticKeepAlives', init: addAutomaticKeepAlives);
+    mateParams.put('addRepaintBoundaries', init: addRepaintBoundaries);
+    mateParams.put('addSemanticIndexes', init: addSemanticIndexes);
   }
 }

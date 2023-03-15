@@ -33,21 +33,21 @@ class TapDragDownDetails$Mate extends TapDragDownDetails with Mate<TapDragDownDe
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapDragDownDetails$Mate(
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
-        kind: p.getValue('kind'),
-        consecutiveTapCount: p.getValue('consecutiveTapCount'),
-        keysPressedOnDown: p.getValue('keysPressedOnDown'),
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
+        kind: p.get('kind').value,
+        consecutiveTapCount: p.get('consecutiveTapCount').value,
+        keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'kind', init: kind);
-    mateParams.set(name: 'consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.set(name: 'keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('kind', init: kind);
+    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
   }
 }
 
@@ -76,21 +76,21 @@ class TapDragUpDetails$Mate extends TapDragUpDetails with Mate<TapDragUpDetails$
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapDragUpDetails$Mate(
-        kind: p.getValue('kind'),
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
-        consecutiveTapCount: p.getValue('consecutiveTapCount'),
-        keysPressedOnDown: p.getValue('keysPressedOnDown'),
+        kind: p.get('kind').value,
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
+        consecutiveTapCount: p.get('consecutiveTapCount').value,
+        keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.set(name: 'kind', init: kind);
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.set(name: 'keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('kind', init: kind);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
   }
 }
 
@@ -123,23 +123,23 @@ class TapDragStartDetails$Mate extends TapDragStartDetails with Mate<TapDragStar
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapDragStartDetails$Mate(
-        sourceTimeStamp: p.getValue('sourceTimeStamp'),
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
-        kind: p.getValue('kind'),
-        consecutiveTapCount: p.getValue('consecutiveTapCount'),
-        keysPressedOnDown: p.getValue('keysPressedOnDown'),
+        sourceTimeStamp: p.get('sourceTimeStamp').value,
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
+        kind: p.get('kind').value,
+        consecutiveTapCount: p.get('consecutiveTapCount').value,
+        keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.set(name: 'sourceTimeStamp', init: sourceTimeStamp);
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'kind', init: kind);
-    mateParams.set(name: 'consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.set(name: 'keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('sourceTimeStamp', init: sourceTimeStamp);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('kind', init: kind);
+    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
   }
 }
 
@@ -188,31 +188,31 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate<TapDragUp
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapDragUpdateDetails$Mate(
-        sourceTimeStamp: p.getValue('sourceTimeStamp'),
-        delta: p.getValue('delta'),
-        primaryDelta: p.getValue('primaryDelta'),
-        globalPosition: p.getValue('globalPosition'),
-        kind: p.getValue('kind'),
-        localPosition: p.getValue('localPosition'),
-        offsetFromOrigin: p.getValue('offsetFromOrigin'),
-        localOffsetFromOrigin: p.getValue('localOffsetFromOrigin'),
-        consecutiveTapCount: p.getValue('consecutiveTapCount'),
-        keysPressedOnDown: p.getValue('keysPressedOnDown'),
+        sourceTimeStamp: p.get('sourceTimeStamp').value,
+        delta: p.get('delta').value,
+        primaryDelta: p.get('primaryDelta').value,
+        globalPosition: p.get('globalPosition').value,
+        kind: p.get('kind').value,
+        localPosition: p.get('localPosition').value,
+        offsetFromOrigin: p.get('offsetFromOrigin').value,
+        localOffsetFromOrigin: p.get('localOffsetFromOrigin').value,
+        consecutiveTapCount: p.get('consecutiveTapCount').value,
+        keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.set(name: 'sourceTimeStamp', init: sourceTimeStamp);
-    mateParams.set(name: 'delta', init: delta);
-    mateParams.set(name: 'primaryDelta', init: primaryDelta);
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'kind', init: kind);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'offsetFromOrigin', init: offsetFromOrigin);
-    mateParams.set(name: 'localOffsetFromOrigin', init: localOffsetFromOrigin);
-    mateParams.set(name: 'consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.set(name: 'keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('sourceTimeStamp', init: sourceTimeStamp);
+    mateParams.put('delta', init: delta);
+    mateParams.put('primaryDelta', init: primaryDelta);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('kind', init: kind);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('offsetFromOrigin', init: offsetFromOrigin);
+    mateParams.put('localOffsetFromOrigin', init: localOffsetFromOrigin);
+    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
   }
 }
 
@@ -237,19 +237,19 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate<TapDragEndDetai
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapDragEndDetails$Mate(
-        velocity: p.getValue('velocity'),
-        primaryVelocity: p.getValue('primaryVelocity'),
-        consecutiveTapCount: p.getValue('consecutiveTapCount'),
-        keysPressedOnDown: p.getValue('keysPressedOnDown'),
+        velocity: p.get('velocity').value,
+        primaryVelocity: p.get('primaryVelocity').value,
+        consecutiveTapCount: p.get('consecutiveTapCount').value,
+        keysPressedOnDown: p.get('keysPressedOnDown').value,
       ),
     );
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: 'primaryVelocity', init: primaryVelocity);
-    mateParams.set(name: 'consecutiveTapCount', init: consecutiveTapCount);
-    mateParams.set(name: 'keysPressedOnDown', init: keysPressedOnDown);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('primaryVelocity', init: primaryVelocity);
+    mateParams.put('consecutiveTapCount', init: consecutiveTapCount);
+    mateParams.put('keysPressedOnDown', init: keysPressedOnDown);
   }
 }
 
@@ -270,16 +270,16 @@ class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with 
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapAndDragGestureRecognizer$Mate(
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }

@@ -35,23 +35,23 @@ class Divider$Mate extends Divider with WidgetMate<Divider$Mate> {
           endIndent: endIndent,
           color: color,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Divider$Mate(
-        key: p.getValue('key'),
-        height: p.getValue('height'),
-        thickness: p.getValue('thickness'),
-        indent: p.getValue('indent'),
-        endIndent: p.getValue('endIndent'),
-        color: p.getValue('color'),
+        key: p.get('key').value,
+        height: p.get('height').value,
+        thickness: p.get('thickness').value,
+        indent: p.get('indent').value,
+        endIndent: p.get('endIndent').value,
+        color: p.get('color').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'thickness', init: thickness);
-    mateParams.set(name: 'indent', init: indent);
-    mateParams.set(name: 'endIndent', init: endIndent);
-    mateParams.set(name: 'color', init: color);
+    mateParams.put('key', init: key);
+    mateParams.put('height', init: height);
+    mateParams.put('thickness', init: thickness);
+    mateParams.put('indent', init: indent);
+    mateParams.put('endIndent', init: endIndent);
+    mateParams.put('color', init: color);
   }
 }
 
@@ -84,22 +84,22 @@ class VerticalDivider$Mate extends VerticalDivider with WidgetMate<VerticalDivid
           endIndent: endIndent,
           color: color,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => VerticalDivider$Mate(
-        key: p.getValue('key'),
-        width: p.getValue('width'),
-        thickness: p.getValue('thickness'),
-        indent: p.getValue('indent'),
-        endIndent: p.getValue('endIndent'),
-        color: p.getValue('color'),
+        key: p.get('key').value,
+        width: p.get('width').value,
+        thickness: p.get('thickness').value,
+        indent: p.get('indent').value,
+        endIndent: p.get('endIndent').value,
+        color: p.get('color').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'thickness', init: thickness);
-    mateParams.set(name: 'indent', init: indent);
-    mateParams.set(name: 'endIndent', init: endIndent);
-    mateParams.set(name: 'color', init: color);
+    mateParams.put('key', init: key);
+    mateParams.put('width', init: width);
+    mateParams.put('thickness', init: thickness);
+    mateParams.put('indent', init: indent);
+    mateParams.put('endIndent', init: endIndent);
+    mateParams.put('color', init: color);
   }
 }

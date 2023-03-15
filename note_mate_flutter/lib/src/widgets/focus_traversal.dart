@@ -15,11 +15,11 @@ class NumericFocusOrder$Mate extends NumericFocusOrder with Mate<NumericFocusOrd
       /// requiredParameters: double order
       double order)
       : super(order) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => NumericFocusOrder$Mate(p.getValue('order')),
+      builder: (p) => NumericFocusOrder$Mate(p.get('order').value),
     );
-    mateParams.set(name: 'order', init: order);
+    mateParams.put('order', init: order);
   }
 }
 
@@ -31,11 +31,11 @@ class LexicalFocusOrder$Mate extends LexicalFocusOrder with Mate<LexicalFocusOrd
       /// requiredParameters: String order
       String order)
       : super(order) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => LexicalFocusOrder$Mate(p.getValue('order')),
+      builder: (p) => LexicalFocusOrder$Mate(p.get('order').value),
     );
-    mateParams.set(name: 'order', init: order);
+    mateParams.put('order', init: order);
   }
 }
 
@@ -47,11 +47,11 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate<Order
       /// optionalParameters: {FocusTraversalPolicy? secondary} , hasDefaultValue:false, defaultValueCode:null
       FocusTraversalPolicy? secondary})
       : super(secondary: secondary) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => OrderedTraversalPolicy$Mate(secondary: p.getValue('secondary')),
+      builder: (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').value),
     );
-    mateParams.set(name: 'secondary', init: secondary);
+    mateParams.put('secondary', init: secondary);
   }
 }
 
@@ -72,17 +72,17 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with WidgetMate<Focus
           order: order,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusTraversalOrder$Mate(
-        key: p.getValue('key'),
-        order: p.getValue('order'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        order: p.get('order').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'order', init: order);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('order', init: order);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -111,21 +111,21 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with WidgetMate<Focus
           descendantsAreTraversable: descendantsAreTraversable,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusTraversalGroup$Mate(
-        key: p.getValue('key'),
-        policy: p.getValue('policy'),
-        descendantsAreFocusable: p.getValue('descendantsAreFocusable'),
-        descendantsAreTraversable: p.getValue('descendantsAreTraversable'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        policy: p.get('policy').value,
+        descendantsAreFocusable: p.get('descendantsAreFocusable').value,
+        descendantsAreTraversable: p.get('descendantsAreTraversable').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'policy', init: policy);
-    mateParams.set(name: 'descendantsAreFocusable', init: descendantsAreFocusable);
-    mateParams.set(name: 'descendantsAreTraversable', init: descendantsAreTraversable);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('policy', init: policy);
+    mateParams.put('descendantsAreFocusable', init: descendantsAreFocusable);
+    mateParams.put('descendantsAreTraversable', init: descendantsAreTraversable);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -137,11 +137,11 @@ class RequestFocusIntent$Mate extends RequestFocusIntent with Mate<RequestFocusI
       /// requiredParameters: FocusNode focusNode
       FocusNode focusNode)
       : super(focusNode) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RequestFocusIntent$Mate(p.getValue('focusNode')),
+      builder: (p) => RequestFocusIntent$Mate(p.get('focusNode').value),
     );
-    mateParams.set(name: 'focusNode', init: focusNode);
+    mateParams.put('focusNode', init: focusNode);
   }
 }
 
@@ -157,15 +157,15 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate<Direc
           direction,
           ignoreTextFields: ignoreTextFields,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DirectionalFocusIntent$Mate(
-        p.getValue('direction'),
-        ignoreTextFields: p.getValue('ignoreTextFields'),
+        p.get('direction').value,
+        ignoreTextFields: p.get('ignoreTextFields').value,
       ),
     );
-    mateParams.set(name: 'direction', init: direction);
-    mateParams.set(name: 'ignoreTextFields', init: ignoreTextFields);
+    mateParams.put('direction', init: direction);
+    mateParams.put('ignoreTextFields', init: ignoreTextFields);
   }
 }
 
@@ -186,16 +186,16 @@ class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with WidgetMate<E
           excluding: excluding,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExcludeFocusTraversal$Mate(
-        key: p.getValue('key'),
-        excluding: p.getValue('excluding'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        excluding: p.get('excluding').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'excluding', init: excluding);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('excluding', init: excluding);
+    mateParams.put('child', init: child);
   }
 }

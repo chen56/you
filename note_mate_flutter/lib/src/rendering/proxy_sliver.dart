@@ -23,17 +23,17 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate<RenderSlive
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverOpacity$Mate(
-        opacity: p.getValue('opacity'),
-        alwaysIncludeSemantics: p.getValue('alwaysIncludeSemantics'),
-        sliver: p.getValue('sliver'),
+        opacity: p.get('opacity').value,
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
+        sliver: p.get('sliver').value,
       ),
     );
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.set(name: 'sliver', init: sliver);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
+    mateParams.put('sliver', init: sliver);
   }
 }
 
@@ -54,17 +54,17 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
           ignoring: ignoring,
           ignoringSemantics: ignoringSemantics,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverIgnorePointer$Mate(
-        sliver: p.getValue('sliver'),
-        ignoring: p.getValue('ignoring'),
-        ignoringSemantics: p.getValue('ignoringSemantics'),
+        sliver: p.get('sliver').value,
+        ignoring: p.get('ignoring').value,
+        ignoringSemantics: p.get('ignoringSemantics').value,
       ),
     );
-    mateParams.set(name: 'sliver', init: sliver);
-    mateParams.set(name: 'ignoring', init: ignoring);
-    mateParams.set(name: 'ignoringSemantics', init: ignoringSemantics);
+    mateParams.put('sliver', init: sliver);
+    mateParams.put('ignoring', init: ignoring);
+    mateParams.put('ignoringSemantics', init: ignoringSemantics);
   }
 }
 
@@ -81,15 +81,15 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate<RenderSli
           offstage: offstage,
           sliver: sliver,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverOffstage$Mate(
-        offstage: p.getValue('offstage'),
-        sliver: p.getValue('sliver'),
+        offstage: p.get('offstage').value,
+        sliver: p.get('sliver').value,
       ),
     );
-    mateParams.set(name: 'offstage', init: offstage);
-    mateParams.set(name: 'sliver', init: sliver);
+    mateParams.put('offstage', init: offstage);
+    mateParams.put('sliver', init: sliver);
   }
 }
 
@@ -110,16 +110,16 @@ class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with 
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverAnimatedOpacity$Mate(
-        opacity: p.getValue('opacity'),
-        alwaysIncludeSemantics: p.getValue('alwaysIncludeSemantics'),
-        sliver: p.getValue('sliver'),
+        opacity: p.get('opacity').value,
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
+        sliver: p.get('sliver').value,
       ),
     );
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.set(name: 'sliver', init: sliver);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
+    mateParams.put('sliver', init: sliver);
   }
 }

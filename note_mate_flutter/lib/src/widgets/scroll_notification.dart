@@ -25,17 +25,17 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate<Scr
           context: context,
           dragDetails: dragDetails,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollStartNotification$Mate(
-        metrics: p.getValue('metrics'),
-        context: p.getValue('context'),
-        dragDetails: p.getValue('dragDetails'),
+        metrics: p.get('metrics').value,
+        context: p.get('context').value,
+        dragDetails: p.get('dragDetails').value,
       ),
     );
-    mateParams.set(name: 'metrics', init: metrics);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'dragDetails', init: dragDetails);
+    mateParams.put('metrics', init: metrics);
+    mateParams.put('context', init: context);
+    mateParams.put('dragDetails', init: dragDetails);
   }
 }
 
@@ -64,21 +64,21 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate<S
           scrollDelta: scrollDelta,
           depth: depth,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollUpdateNotification$Mate(
-        metrics: p.getValue('metrics'),
-        context: p.getValue('context'),
-        dragDetails: p.getValue('dragDetails'),
-        scrollDelta: p.getValue('scrollDelta'),
-        depth: p.getValue('depth'),
+        metrics: p.get('metrics').value,
+        context: p.get('context').value,
+        dragDetails: p.get('dragDetails').value,
+        scrollDelta: p.get('scrollDelta').value,
+        depth: p.get('depth').value,
       ),
     );
-    mateParams.set(name: 'metrics', init: metrics);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'dragDetails', init: dragDetails);
-    mateParams.set(name: 'scrollDelta', init: scrollDelta);
-    mateParams.set(name: 'depth', init: depth);
+    mateParams.put('metrics', init: metrics);
+    mateParams.put('context', init: context);
+    mateParams.put('dragDetails', init: dragDetails);
+    mateParams.put('scrollDelta', init: scrollDelta);
+    mateParams.put('depth', init: depth);
   }
 }
 
@@ -107,21 +107,21 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate<Overs
           overscroll: overscroll,
           velocity: velocity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => OverscrollNotification$Mate(
-        metrics: p.getValue('metrics'),
-        context: p.getValue('context'),
-        dragDetails: p.getValue('dragDetails'),
-        overscroll: p.getValue('overscroll'),
-        velocity: p.getValue('velocity'),
+        metrics: p.get('metrics').value,
+        context: p.get('context').value,
+        dragDetails: p.get('dragDetails').value,
+        overscroll: p.get('overscroll').value,
+        velocity: p.get('velocity').value,
       ),
     );
-    mateParams.set(name: 'metrics', init: metrics);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'dragDetails', init: dragDetails);
-    mateParams.set(name: 'overscroll', init: overscroll);
-    mateParams.set(name: 'velocity', init: velocity);
+    mateParams.put('metrics', init: metrics);
+    mateParams.put('context', init: context);
+    mateParams.put('dragDetails', init: dragDetails);
+    mateParams.put('overscroll', init: overscroll);
+    mateParams.put('velocity', init: velocity);
   }
 }
 
@@ -142,17 +142,17 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate<ScrollE
           context: context,
           dragDetails: dragDetails,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollEndNotification$Mate(
-        metrics: p.getValue('metrics'),
-        context: p.getValue('context'),
-        dragDetails: p.getValue('dragDetails'),
+        metrics: p.get('metrics').value,
+        context: p.get('context').value,
+        dragDetails: p.get('dragDetails').value,
       ),
     );
-    mateParams.set(name: 'metrics', init: metrics);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'dragDetails', init: dragDetails);
+    mateParams.put('metrics', init: metrics);
+    mateParams.put('context', init: context);
+    mateParams.put('dragDetails', init: dragDetails);
   }
 }
 
@@ -173,16 +173,16 @@ class UserScrollNotification$Mate extends UserScrollNotification with Mate<UserS
           context: context,
           direction: direction,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => UserScrollNotification$Mate(
-        metrics: p.getValue('metrics'),
-        context: p.getValue('context'),
-        direction: p.getValue('direction'),
+        metrics: p.get('metrics').value,
+        context: p.get('context').value,
+        direction: p.get('direction').value,
       ),
     );
-    mateParams.set(name: 'metrics', init: metrics);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'direction', init: direction);
+    mateParams.put('metrics', init: metrics);
+    mateParams.put('context', init: context);
+    mateParams.put('direction', init: direction);
   }
 }

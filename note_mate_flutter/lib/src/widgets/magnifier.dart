@@ -31,19 +31,19 @@ class MagnifierInfo$Mate extends MagnifierInfo with Mate<MagnifierInfo$Mate> {
           fieldBounds: fieldBounds,
           currentLineBoundaries: currentLineBoundaries,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MagnifierInfo$Mate(
-        globalGesturePosition: p.getValue('globalGesturePosition'),
-        caretRect: p.getValue('caretRect'),
-        fieldBounds: p.getValue('fieldBounds'),
-        currentLineBoundaries: p.getValue('currentLineBoundaries'),
+        globalGesturePosition: p.get('globalGesturePosition').value,
+        caretRect: p.get('caretRect').value,
+        fieldBounds: p.get('fieldBounds').value,
+        currentLineBoundaries: p.get('currentLineBoundaries').value,
       ),
     );
-    mateParams.set(name: 'globalGesturePosition', init: globalGesturePosition);
-    mateParams.set(name: 'caretRect', init: caretRect);
-    mateParams.set(name: 'fieldBounds', init: fieldBounds);
-    mateParams.set(name: 'currentLineBoundaries', init: currentLineBoundaries);
+    mateParams.put('globalGesturePosition', init: globalGesturePosition);
+    mateParams.put('caretRect', init: caretRect);
+    mateParams.put('fieldBounds', init: fieldBounds);
+    mateParams.put('currentLineBoundaries', init: currentLineBoundaries);
   }
 }
 
@@ -60,15 +60,15 @@ class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration with Ma
           magnifierBuilder: magnifierBuilder,
           shouldDisplayHandlesInMagnifier: shouldDisplayHandlesInMagnifier,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextMagnifierConfiguration$Mate(
-        magnifierBuilder: p.getValue('magnifierBuilder'),
-        shouldDisplayHandlesInMagnifier: p.getValue('shouldDisplayHandlesInMagnifier'),
+        magnifierBuilder: p.get('magnifierBuilder').value,
+        shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').value,
       ),
     );
-    mateParams.set(name: 'magnifierBuilder', init: magnifierBuilder);
-    mateParams.set(name: 'shouldDisplayHandlesInMagnifier', init: shouldDisplayHandlesInMagnifier);
+    mateParams.put('magnifierBuilder', init: magnifierBuilder);
+    mateParams.put('shouldDisplayHandlesInMagnifier', init: shouldDisplayHandlesInMagnifier);
   }
 }
 
@@ -80,11 +80,11 @@ class MagnifierController$Mate extends MagnifierController with Mate<MagnifierCo
       /// optionalParameters: {AnimationController? animationController} , hasDefaultValue:false, defaultValueCode:null
       AnimationController? animationController})
       : super(animationController: animationController) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => MagnifierController$Mate(animationController: p.getValue('animationController')),
+      builder: (p) => MagnifierController$Mate(animationController: p.get('animationController').value),
     );
-    mateParams.set(name: 'animationController', init: animationController);
+    mateParams.put('animationController', init: animationController);
   }
 }
 
@@ -105,17 +105,17 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate<MagnifierDe
           shadows: shadows,
           shape: shape,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MagnifierDecoration$Mate(
-        opacity: p.getValue('opacity'),
-        shadows: p.getValue('shadows'),
-        shape: p.getValue('shape'),
+        opacity: p.get('opacity').value,
+        shadows: p.get('shadows').value,
+        shape: p.get('shape').value,
       ),
     );
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'shadows', init: shadows);
-    mateParams.set(name: 'shape', init: shape);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('shadows', init: shadows);
+    mateParams.put('shape', init: shape);
   }
 }
 
@@ -148,22 +148,22 @@ class RawMagnifier$Mate extends RawMagnifier with WidgetMate<RawMagnifier$Mate> 
           magnificationScale: magnificationScale,
           size: size,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawMagnifier$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        decoration: p.getValue('decoration'),
-        focalPointOffset: p.getValue('focalPointOffset'),
-        magnificationScale: p.getValue('magnificationScale'),
-        size: p.getValue('size'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        decoration: p.get('decoration').value,
+        focalPointOffset: p.get('focalPointOffset').value,
+        magnificationScale: p.get('magnificationScale').value,
+        size: p.get('size').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'focalPointOffset', init: focalPointOffset);
-    mateParams.set(name: 'magnificationScale', init: magnificationScale);
-    mateParams.set(name: 'size', init: size);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('focalPointOffset', init: focalPointOffset);
+    mateParams.put('magnificationScale', init: magnificationScale);
+    mateParams.put('size', init: size);
   }
 }

@@ -47,27 +47,27 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate<BadgeThemeData$Mate> 
           alignment: alignment,
           offset: offset,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BadgeThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        textColor: p.getValue('textColor'),
-        smallSize: p.getValue('smallSize'),
-        largeSize: p.getValue('largeSize'),
-        textStyle: p.getValue('textStyle'),
-        padding: p.getValue('padding'),
-        alignment: p.getValue('alignment'),
-        offset: p.getValue('offset'),
+        backgroundColor: p.get('backgroundColor').value,
+        textColor: p.get('textColor').value,
+        smallSize: p.get('smallSize').value,
+        largeSize: p.get('largeSize').value,
+        textStyle: p.get('textStyle').value,
+        padding: p.get('padding').value,
+        alignment: p.get('alignment').value,
+        offset: p.get('offset').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'smallSize', init: smallSize);
-    mateParams.set(name: 'largeSize', init: largeSize);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'offset', init: offset);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('smallSize', init: smallSize);
+    mateParams.put('largeSize', init: largeSize);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('padding', init: padding);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('offset', init: offset);
   }
 }
 
@@ -88,16 +88,16 @@ class BadgeTheme$Mate extends BadgeTheme with WidgetMate<BadgeTheme$Mate> {
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BadgeTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

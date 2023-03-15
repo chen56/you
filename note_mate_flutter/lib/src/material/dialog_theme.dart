@@ -54,30 +54,30 @@ class DialogTheme$Mate extends DialogTheme with Mate<DialogTheme$Mate> {
           contentTextStyle: contentTextStyle,
           actionsPadding: actionsPadding,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DialogTheme$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        shape: p.getValue('shape'),
-        alignment: p.getValue('alignment'),
-        iconColor: p.getValue('iconColor'),
-        titleTextStyle: p.getValue('titleTextStyle'),
-        contentTextStyle: p.getValue('contentTextStyle'),
-        actionsPadding: p.getValue('actionsPadding'),
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        shape: p.get('shape').value,
+        alignment: p.get('alignment').value,
+        iconColor: p.get('iconColor').value,
+        titleTextStyle: p.get('titleTextStyle').value,
+        contentTextStyle: p.get('contentTextStyle').value,
+        actionsPadding: p.get('actionsPadding').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'titleTextStyle', init: titleTextStyle);
-    mateParams.set(name: 'contentTextStyle', init: contentTextStyle);
-    mateParams.set(name: 'actionsPadding', init: actionsPadding);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('shape', init: shape);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('titleTextStyle', init: titleTextStyle);
+    mateParams.put('contentTextStyle', init: contentTextStyle);
+    mateParams.put('actionsPadding', init: actionsPadding);
   }
 }

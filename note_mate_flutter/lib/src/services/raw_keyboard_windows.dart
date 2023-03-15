@@ -25,18 +25,18 @@ class RawKeyEventDataWindows$Mate extends RawKeyEventDataWindows with Mate<RawKe
           characterCodePoint: characterCodePoint,
           modifiers: modifiers,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyEventDataWindows$Mate(
-        keyCode: p.getValue('keyCode'),
-        scanCode: p.getValue('scanCode'),
-        characterCodePoint: p.getValue('characterCodePoint'),
-        modifiers: p.getValue('modifiers'),
+        keyCode: p.get('keyCode').value,
+        scanCode: p.get('scanCode').value,
+        characterCodePoint: p.get('characterCodePoint').value,
+        modifiers: p.get('modifiers').value,
       ),
     );
-    mateParams.set(name: 'keyCode', init: keyCode);
-    mateParams.set(name: 'scanCode', init: scanCode);
-    mateParams.set(name: 'characterCodePoint', init: characterCodePoint);
-    mateParams.set(name: 'modifiers', init: modifiers);
+    mateParams.put('keyCode', init: keyCode);
+    mateParams.put('scanCode', init: scanCode);
+    mateParams.put('characterCodePoint', init: characterCodePoint);
+    mateParams.put('modifiers', init: modifiers);
   }
 }

@@ -38,24 +38,24 @@ class TableBorder$Mate extends TableBorder with Mate<TableBorder$Mate> {
           verticalInside: verticalInside,
           borderRadius: borderRadius,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TableBorder$Mate(
-        top: p.getValue('top'),
-        right: p.getValue('right'),
-        bottom: p.getValue('bottom'),
-        left: p.getValue('left'),
-        horizontalInside: p.getValue('horizontalInside'),
-        verticalInside: p.getValue('verticalInside'),
-        borderRadius: p.getValue('borderRadius'),
+        top: p.get('top').value,
+        right: p.get('right').value,
+        bottom: p.get('bottom').value,
+        left: p.get('left').value,
+        horizontalInside: p.get('horizontalInside').value,
+        verticalInside: p.get('verticalInside').value,
+        borderRadius: p.get('borderRadius').value,
       ),
     );
-    mateParams.set(name: 'top', init: top);
-    mateParams.set(name: 'right', init: right);
-    mateParams.set(name: 'bottom', init: bottom);
-    mateParams.set(name: 'left', init: left);
-    mateParams.set(name: 'horizontalInside', init: horizontalInside);
-    mateParams.set(name: 'verticalInside', init: verticalInside);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
+    mateParams.put('top', init: top);
+    mateParams.put('right', init: right);
+    mateParams.put('bottom', init: bottom);
+    mateParams.put('left', init: left);
+    mateParams.put('horizontalInside', init: horizontalInside);
+    mateParams.put('verticalInside', init: verticalInside);
+    mateParams.put('borderRadius', init: borderRadius);
   }
 }

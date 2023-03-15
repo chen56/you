@@ -13,11 +13,11 @@ class Velocity$Mate extends Velocity with Mate<Velocity$Mate> {
       /// optionalParameters: {required Offset pixelsPerSecond} , hasDefaultValue:false, defaultValueCode:null
       required Offset pixelsPerSecond})
       : super(pixelsPerSecond: pixelsPerSecond) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => Velocity$Mate(pixelsPerSecond: p.getValue('pixelsPerSecond')),
+      builder: (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').value),
     );
-    mateParams.set(name: 'pixelsPerSecond', init: pixelsPerSecond);
+    mateParams.put('pixelsPerSecond', init: pixelsPerSecond);
   }
 }
 
@@ -42,19 +42,19 @@ class VelocityEstimate$Mate extends VelocityEstimate with Mate<VelocityEstimate$
           duration: duration,
           offset: offset,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => VelocityEstimate$Mate(
-        pixelsPerSecond: p.getValue('pixelsPerSecond'),
-        confidence: p.getValue('confidence'),
-        duration: p.getValue('duration'),
-        offset: p.getValue('offset'),
+        pixelsPerSecond: p.get('pixelsPerSecond').value,
+        confidence: p.get('confidence').value,
+        duration: p.get('duration').value,
+        offset: p.get('offset').value,
       ),
     );
-    mateParams.set(name: 'pixelsPerSecond', init: pixelsPerSecond);
-    mateParams.set(name: 'confidence', init: confidence);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'offset', init: offset);
+    mateParams.put('pixelsPerSecond', init: pixelsPerSecond);
+    mateParams.put('confidence', init: confidence);
+    mateParams.put('duration', init: duration);
+    mateParams.put('offset', init: offset);
   }
 }
 
@@ -66,11 +66,11 @@ class VelocityTracker$Mate extends VelocityTracker with Mate<VelocityTracker$Mat
       /// requiredParameters: PointerDeviceKind kind
       PointerDeviceKind kind)
       : super.withKind(kind) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => VelocityTracker$Mate.withKind(p.getValue('kind')),
+      builder: (p) => VelocityTracker$Mate.withKind(p.get('kind').value),
     );
-    mateParams.set(name: 'kind', init: kind);
+    mateParams.put('kind', init: kind);
   }
 }
 
@@ -83,11 +83,11 @@ class IOSScrollViewFlingVelocityTracker$Mate extends IOSScrollViewFlingVelocityT
       /// requiredParameters: PointerDeviceKind kind
       PointerDeviceKind kind)
       : super(kind) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => IOSScrollViewFlingVelocityTracker$Mate(p.getValue('kind')),
+      builder: (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value),
     );
-    mateParams.set(name: 'kind', init: kind);
+    mateParams.put('kind', init: kind);
   }
 }
 
@@ -100,10 +100,10 @@ class MacOSScrollViewFlingVelocityTracker$Mate extends MacOSScrollViewFlingVeloc
       /// requiredParameters: PointerDeviceKind kind
       PointerDeviceKind kind)
       : super(kind) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.getValue('kind')),
+      builder: (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value),
     );
-    mateParams.set(name: 'kind', init: kind);
+    mateParams.put('kind', init: kind);
   }
 }

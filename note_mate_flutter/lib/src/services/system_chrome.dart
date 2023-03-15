@@ -19,15 +19,15 @@ class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription
           label: label,
           primaryColor: primaryColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ApplicationSwitcherDescription$Mate(
-        label: p.getValue('label'),
-        primaryColor: p.getValue('primaryColor'),
+        label: p.get('label').value,
+        primaryColor: p.get('primaryColor').value,
       ),
     );
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'primaryColor', init: primaryColor);
+    mateParams.put('label', init: label);
+    mateParams.put('primaryColor', init: primaryColor);
   }
 }
 
@@ -68,26 +68,26 @@ class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate<SystemUiO
           statusBarIconBrightness: statusBarIconBrightness,
           systemStatusBarContrastEnforced: systemStatusBarContrastEnforced,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SystemUiOverlayStyle$Mate(
-        systemNavigationBarColor: p.getValue('systemNavigationBarColor'),
-        systemNavigationBarDividerColor: p.getValue('systemNavigationBarDividerColor'),
-        systemNavigationBarIconBrightness: p.getValue('systemNavigationBarIconBrightness'),
-        systemNavigationBarContrastEnforced: p.getValue('systemNavigationBarContrastEnforced'),
-        statusBarColor: p.getValue('statusBarColor'),
-        statusBarBrightness: p.getValue('statusBarBrightness'),
-        statusBarIconBrightness: p.getValue('statusBarIconBrightness'),
-        systemStatusBarContrastEnforced: p.getValue('systemStatusBarContrastEnforced'),
+        systemNavigationBarColor: p.get('systemNavigationBarColor').value,
+        systemNavigationBarDividerColor: p.get('systemNavigationBarDividerColor').value,
+        systemNavigationBarIconBrightness: p.get('systemNavigationBarIconBrightness').value,
+        systemNavigationBarContrastEnforced: p.get('systemNavigationBarContrastEnforced').value,
+        statusBarColor: p.get('statusBarColor').value,
+        statusBarBrightness: p.get('statusBarBrightness').value,
+        statusBarIconBrightness: p.get('statusBarIconBrightness').value,
+        systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').value,
       ),
     );
-    mateParams.set(name: 'systemNavigationBarColor', init: systemNavigationBarColor);
-    mateParams.set(name: 'systemNavigationBarDividerColor', init: systemNavigationBarDividerColor);
-    mateParams.set(name: 'systemNavigationBarIconBrightness', init: systemNavigationBarIconBrightness);
-    mateParams.set(name: 'systemNavigationBarContrastEnforced', init: systemNavigationBarContrastEnforced);
-    mateParams.set(name: 'statusBarColor', init: statusBarColor);
-    mateParams.set(name: 'statusBarBrightness', init: statusBarBrightness);
-    mateParams.set(name: 'statusBarIconBrightness', init: statusBarIconBrightness);
-    mateParams.set(name: 'systemStatusBarContrastEnforced', init: systemStatusBarContrastEnforced);
+    mateParams.put('systemNavigationBarColor', init: systemNavigationBarColor);
+    mateParams.put('systemNavigationBarDividerColor', init: systemNavigationBarDividerColor);
+    mateParams.put('systemNavigationBarIconBrightness', init: systemNavigationBarIconBrightness);
+    mateParams.put('systemNavigationBarContrastEnforced', init: systemNavigationBarContrastEnforced);
+    mateParams.put('statusBarColor', init: statusBarColor);
+    mateParams.put('statusBarBrightness', init: statusBarBrightness);
+    mateParams.put('statusBarIconBrightness', init: statusBarIconBrightness);
+    mateParams.put('systemStatusBarContrastEnforced', init: systemStatusBarContrastEnforced);
   }
 }

@@ -23,17 +23,17 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate<PartialStackFra
           className: className,
           method: method,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PartialStackFrame$Mate(
-        package: p.getValue('package'),
-        className: p.getValue('className'),
-        method: p.getValue('method'),
+        package: p.get('package').value,
+        className: p.get('className').value,
+        method: p.get('method').value,
       ),
     );
-    mateParams.set(name: 'package', init: package);
-    mateParams.set(name: 'className', init: className);
-    mateParams.set(name: 'method', init: method);
+    mateParams.put('package', init: package);
+    mateParams.put('className', init: className);
+    mateParams.put('method', init: method);
   }
 }
 
@@ -50,15 +50,15 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Ma
           frames: frames,
           replacement: replacement,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RepetitiveStackFrameFilter$Mate(
-        frames: p.getValue('frames'),
-        replacement: p.getValue('replacement'),
+        frames: p.get('frames').value,
+        replacement: p.get('replacement').value,
       ),
     );
-    mateParams.set(name: 'frames', init: frames);
-    mateParams.set(name: 'replacement', init: replacement);
+    mateParams.put('frames', init: frames);
+    mateParams.put('replacement', init: replacement);
   }
 }
 
@@ -70,11 +70,11 @@ class ErrorDescription$Mate extends ErrorDescription with Mate<ErrorDescription$
       /// requiredParameters: String message
       String message)
       : super(message) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ErrorDescription$Mate(p.getValue('message')),
+      builder: (p) => ErrorDescription$Mate(p.get('message').value),
     );
-    mateParams.set(name: 'message', init: message);
+    mateParams.put('message', init: message);
   }
 }
 
@@ -86,11 +86,11 @@ class ErrorSummary$Mate extends ErrorSummary with Mate<ErrorSummary$Mate> {
       /// requiredParameters: String message
       String message)
       : super(message) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ErrorSummary$Mate(p.getValue('message')),
+      builder: (p) => ErrorSummary$Mate(p.get('message').value),
     );
-    mateParams.set(name: 'message', init: message);
+    mateParams.put('message', init: message);
   }
 }
 
@@ -102,11 +102,11 @@ class ErrorHint$Mate extends ErrorHint with Mate<ErrorHint$Mate> {
       /// requiredParameters: String message
       String message)
       : super(message) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ErrorHint$Mate(p.getValue('message')),
+      builder: (p) => ErrorHint$Mate(p.get('message').value),
     );
-    mateParams.set(name: 'message', init: message);
+    mateParams.put('message', init: message);
   }
 }
 
@@ -143,25 +143,25 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate<FlutterErro
           informationCollector: informationCollector,
           silent: silent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FlutterErrorDetails$Mate(
-        exception: p.getValue('exception'),
-        stack: p.getValue('stack'),
-        library: p.getValue('library'),
-        context: p.getValue('context'),
-        stackFilter: p.getValue('stackFilter'),
-        informationCollector: p.getValue('informationCollector'),
-        silent: p.getValue('silent'),
+        exception: p.get('exception').value,
+        stack: p.get('stack').value,
+        library: p.get('library').value,
+        context: p.get('context').value,
+        stackFilter: p.get('stackFilter').value,
+        informationCollector: p.get('informationCollector').value,
+        silent: p.get('silent').value,
       ),
     );
-    mateParams.set(name: 'exception', init: exception);
-    mateParams.set(name: 'stack', init: stack);
-    mateParams.set(name: 'library', init: library);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'stackFilter', init: stackFilter);
-    mateParams.set(name: 'informationCollector', init: informationCollector);
-    mateParams.set(name: 'silent', init: silent);
+    mateParams.put('exception', init: exception);
+    mateParams.put('stack', init: stack);
+    mateParams.put('library', init: library);
+    mateParams.put('context', init: context);
+    mateParams.put('stackFilter', init: stackFilter);
+    mateParams.put('informationCollector', init: informationCollector);
+    mateParams.put('silent', init: silent);
   }
 }
 
@@ -173,11 +173,11 @@ class FlutterError$Mate extends FlutterError with Mate<FlutterError$Mate> {
       /// requiredParameters: List<DiagnosticsNode> diagnostics
       List<DiagnosticsNode> diagnostics)
       : super.fromParts(diagnostics) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => FlutterError$Mate.fromParts(p.getValue('diagnostics')),
+      builder: (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value),
     );
-    mateParams.set(name: 'diagnostics', init: diagnostics);
+    mateParams.put('diagnostics', init: diagnostics);
   }
 }
 
@@ -201,19 +201,19 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate<Diagnos
           stackFilter: stackFilter,
           showSeparator: showSeparator,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DiagnosticsStackTrace$Mate(
-        p.getValue('name'),
-        p.getValue('stack'),
-        stackFilter: p.getValue('stackFilter'),
-        showSeparator: p.getValue('showSeparator'),
+        p.get('name').value,
+        p.get('stack').value,
+        stackFilter: p.get('stackFilter').value,
+        showSeparator: p.get('showSeparator').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'stack', init: stack);
-    mateParams.set(name: 'stackFilter', init: stackFilter);
-    mateParams.set(name: 'showSeparator', init: showSeparator);
+    mateParams.put('name', init: name);
+    mateParams.put('stack', init: stack);
+    mateParams.put('stackFilter', init: stackFilter);
+    mateParams.put('showSeparator', init: showSeparator);
   }
 
   /// DiagnosticsStackTrace DiagnosticsStackTrace.singleFrame(String name, {required String frame, bool showSeparator = true})
@@ -230,16 +230,16 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate<Diagnos
           frame: frame,
           showSeparator: showSeparator,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DiagnosticsStackTrace$Mate.singleFrame(
-        p.getValue('name'),
-        frame: p.getValue('frame'),
-        showSeparator: p.getValue('showSeparator'),
+        p.get('name').value,
+        frame: p.get('frame').value,
+        showSeparator: p.get('showSeparator').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'frame', init: frame);
-    mateParams.set(name: 'showSeparator', init: showSeparator);
+    mateParams.put('name', init: name);
+    mateParams.put('frame', init: frame);
+    mateParams.put('showSeparator', init: showSeparator);
   }
 }

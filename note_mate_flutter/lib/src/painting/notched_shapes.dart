@@ -17,14 +17,14 @@ class AutomaticNotchedShape$Mate extends AutomaticNotchedShape with Mate<Automat
           host,
           guest,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AutomaticNotchedShape$Mate(
-        p.getValue('host'),
-        p.getValue('guest'),
+        p.get('host').value,
+        p.get('guest').value,
       ),
     );
-    mateParams.set(name: 'host', init: host);
-    mateParams.set(name: 'guest', init: guest);
+    mateParams.put('host', init: host);
+    mateParams.put('guest', init: guest);
   }
 }

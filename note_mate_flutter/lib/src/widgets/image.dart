@@ -99,51 +99,51 @@ class Image$Mate extends Image with WidgetMate<Image$Mate> {
           isAntiAlias: isAntiAlias,
           filterQuality: filterQuality,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Image$Mate(
-        key: p.getValue('key'),
-        image: p.getValue('image'),
-        frameBuilder: p.getValue('frameBuilder'),
-        loadingBuilder: p.getValue('loadingBuilder'),
-        errorBuilder: p.getValue('errorBuilder'),
-        semanticLabel: p.getValue('semanticLabel'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        color: p.getValue('color'),
-        opacity: p.getValue('opacity'),
-        colorBlendMode: p.getValue('colorBlendMode'),
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        centerSlice: p.getValue('centerSlice'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        gaplessPlayback: p.getValue('gaplessPlayback'),
-        isAntiAlias: p.getValue('isAntiAlias'),
-        filterQuality: p.getValue('filterQuality'),
+        key: p.get('key').value,
+        image: p.get('image').value,
+        frameBuilder: p.get('frameBuilder').value,
+        loadingBuilder: p.get('loadingBuilder').value,
+        errorBuilder: p.get('errorBuilder').value,
+        semanticLabel: p.get('semanticLabel').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        color: p.get('color').value,
+        opacity: p.get('opacity').value,
+        colorBlendMode: p.get('colorBlendMode').value,
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        centerSlice: p.get('centerSlice').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        gaplessPlayback: p.get('gaplessPlayback').value,
+        isAntiAlias: p.get('isAntiAlias').value,
+        filterQuality: p.get('filterQuality').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'frameBuilder', init: frameBuilder);
-    mateParams.set(name: 'loadingBuilder', init: loadingBuilder);
-    mateParams.set(name: 'errorBuilder', init: errorBuilder);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'colorBlendMode', init: colorBlendMode);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'centerSlice', init: centerSlice);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'gaplessPlayback', init: gaplessPlayback);
-    mateParams.set(name: 'isAntiAlias', init: isAntiAlias);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
+    mateParams.put('key', init: key);
+    mateParams.put('image', init: image);
+    mateParams.put('frameBuilder', init: frameBuilder);
+    mateParams.put('loadingBuilder', init: loadingBuilder);
+    mateParams.put('errorBuilder', init: errorBuilder);
+    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('color', init: color);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('colorBlendMode', init: colorBlendMode);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('centerSlice', init: centerSlice);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('gaplessPlayback', init: gaplessPlayback);
+    mateParams.put('isAntiAlias', init: isAntiAlias);
+    mateParams.put('filterQuality', init: filterQuality);
   }
 
   /// Image Image.network(String src, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, FilterQuality filterQuality = FilterQuality.low, bool isAntiAlias = false, Map<String, String>? headers, int? cacheWidth, int? cacheHeight})
@@ -244,59 +244,59 @@ class Image$Mate extends Image with WidgetMate<Image$Mate> {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Image$Mate.network(
-        p.getValue('src'),
-        key: p.getValue('key'),
-        scale: p.getValue('scale'),
-        frameBuilder: p.getValue('frameBuilder'),
-        loadingBuilder: p.getValue('loadingBuilder'),
-        errorBuilder: p.getValue('errorBuilder'),
-        semanticLabel: p.getValue('semanticLabel'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        color: p.getValue('color'),
-        opacity: p.getValue('opacity'),
-        colorBlendMode: p.getValue('colorBlendMode'),
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        centerSlice: p.getValue('centerSlice'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        gaplessPlayback: p.getValue('gaplessPlayback'),
-        filterQuality: p.getValue('filterQuality'),
-        isAntiAlias: p.getValue('isAntiAlias'),
-        headers: p.getValue('headers'),
-        cacheWidth: p.getValue('cacheWidth'),
-        cacheHeight: p.getValue('cacheHeight'),
+        p.get('src').value,
+        key: p.get('key').value,
+        scale: p.get('scale').value,
+        frameBuilder: p.get('frameBuilder').value,
+        loadingBuilder: p.get('loadingBuilder').value,
+        errorBuilder: p.get('errorBuilder').value,
+        semanticLabel: p.get('semanticLabel').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        color: p.get('color').value,
+        opacity: p.get('opacity').value,
+        colorBlendMode: p.get('colorBlendMode').value,
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        centerSlice: p.get('centerSlice').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        gaplessPlayback: p.get('gaplessPlayback').value,
+        filterQuality: p.get('filterQuality').value,
+        isAntiAlias: p.get('isAntiAlias').value,
+        headers: p.get('headers').value,
+        cacheWidth: p.get('cacheWidth').value,
+        cacheHeight: p.get('cacheHeight').value,
       ),
     );
-    mateParams.set(name: 'src', init: src);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'frameBuilder', init: frameBuilder);
-    mateParams.set(name: 'loadingBuilder', init: loadingBuilder);
-    mateParams.set(name: 'errorBuilder', init: errorBuilder);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'colorBlendMode', init: colorBlendMode);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'centerSlice', init: centerSlice);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'gaplessPlayback', init: gaplessPlayback);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'isAntiAlias', init: isAntiAlias);
-    mateParams.set(name: 'headers', init: headers);
-    mateParams.set(name: 'cacheWidth', init: cacheWidth);
-    mateParams.set(name: 'cacheHeight', init: cacheHeight);
+    mateParams.put('src', init: src);
+    mateParams.put('key', init: key);
+    mateParams.put('scale', init: scale);
+    mateParams.put('frameBuilder', init: frameBuilder);
+    mateParams.put('loadingBuilder', init: loadingBuilder);
+    mateParams.put('errorBuilder', init: errorBuilder);
+    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('color', init: color);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('colorBlendMode', init: colorBlendMode);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('centerSlice', init: centerSlice);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('gaplessPlayback', init: gaplessPlayback);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('isAntiAlias', init: isAntiAlias);
+    mateParams.put('headers', init: headers);
+    mateParams.put('cacheWidth', init: cacheWidth);
+    mateParams.put('cacheHeight', init: cacheHeight);
   }
 
   /// Image Image.file(File file, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
@@ -389,55 +389,55 @@ class Image$Mate extends Image with WidgetMate<Image$Mate> {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Image$Mate.file(
-        p.getValue('file'),
-        key: p.getValue('key'),
-        scale: p.getValue('scale'),
-        frameBuilder: p.getValue('frameBuilder'),
-        errorBuilder: p.getValue('errorBuilder'),
-        semanticLabel: p.getValue('semanticLabel'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        color: p.getValue('color'),
-        opacity: p.getValue('opacity'),
-        colorBlendMode: p.getValue('colorBlendMode'),
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        centerSlice: p.getValue('centerSlice'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        gaplessPlayback: p.getValue('gaplessPlayback'),
-        isAntiAlias: p.getValue('isAntiAlias'),
-        filterQuality: p.getValue('filterQuality'),
-        cacheWidth: p.getValue('cacheWidth'),
-        cacheHeight: p.getValue('cacheHeight'),
+        p.get('file').value,
+        key: p.get('key').value,
+        scale: p.get('scale').value,
+        frameBuilder: p.get('frameBuilder').value,
+        errorBuilder: p.get('errorBuilder').value,
+        semanticLabel: p.get('semanticLabel').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        color: p.get('color').value,
+        opacity: p.get('opacity').value,
+        colorBlendMode: p.get('colorBlendMode').value,
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        centerSlice: p.get('centerSlice').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        gaplessPlayback: p.get('gaplessPlayback').value,
+        isAntiAlias: p.get('isAntiAlias').value,
+        filterQuality: p.get('filterQuality').value,
+        cacheWidth: p.get('cacheWidth').value,
+        cacheHeight: p.get('cacheHeight').value,
       ),
     );
-    mateParams.set(name: 'file', init: file);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'frameBuilder', init: frameBuilder);
-    mateParams.set(name: 'errorBuilder', init: errorBuilder);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'colorBlendMode', init: colorBlendMode);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'centerSlice', init: centerSlice);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'gaplessPlayback', init: gaplessPlayback);
-    mateParams.set(name: 'isAntiAlias', init: isAntiAlias);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'cacheWidth', init: cacheWidth);
-    mateParams.set(name: 'cacheHeight', init: cacheHeight);
+    mateParams.put('file', init: file);
+    mateParams.put('key', init: key);
+    mateParams.put('scale', init: scale);
+    mateParams.put('frameBuilder', init: frameBuilder);
+    mateParams.put('errorBuilder', init: errorBuilder);
+    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('color', init: color);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('colorBlendMode', init: colorBlendMode);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('centerSlice', init: centerSlice);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('gaplessPlayback', init: gaplessPlayback);
+    mateParams.put('isAntiAlias', init: isAntiAlias);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('cacheWidth', init: cacheWidth);
+    mateParams.put('cacheHeight', init: cacheHeight);
   }
 
   /// Image Image.asset(String name, {Key? key, AssetBundle? bundle, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? scale, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, String? package, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
@@ -538,59 +538,59 @@ class Image$Mate extends Image with WidgetMate<Image$Mate> {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Image$Mate.asset(
-        p.getValue('name'),
-        key: p.getValue('key'),
-        bundle: p.getValue('bundle'),
-        frameBuilder: p.getValue('frameBuilder'),
-        errorBuilder: p.getValue('errorBuilder'),
-        semanticLabel: p.getValue('semanticLabel'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        scale: p.getValue('scale'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        color: p.getValue('color'),
-        opacity: p.getValue('opacity'),
-        colorBlendMode: p.getValue('colorBlendMode'),
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        centerSlice: p.getValue('centerSlice'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        gaplessPlayback: p.getValue('gaplessPlayback'),
-        isAntiAlias: p.getValue('isAntiAlias'),
-        package: p.getValue('package'),
-        filterQuality: p.getValue('filterQuality'),
-        cacheWidth: p.getValue('cacheWidth'),
-        cacheHeight: p.getValue('cacheHeight'),
+        p.get('name').value,
+        key: p.get('key').value,
+        bundle: p.get('bundle').value,
+        frameBuilder: p.get('frameBuilder').value,
+        errorBuilder: p.get('errorBuilder').value,
+        semanticLabel: p.get('semanticLabel').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        scale: p.get('scale').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        color: p.get('color').value,
+        opacity: p.get('opacity').value,
+        colorBlendMode: p.get('colorBlendMode').value,
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        centerSlice: p.get('centerSlice').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        gaplessPlayback: p.get('gaplessPlayback').value,
+        isAntiAlias: p.get('isAntiAlias').value,
+        package: p.get('package').value,
+        filterQuality: p.get('filterQuality').value,
+        cacheWidth: p.get('cacheWidth').value,
+        cacheHeight: p.get('cacheHeight').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'bundle', init: bundle);
-    mateParams.set(name: 'frameBuilder', init: frameBuilder);
-    mateParams.set(name: 'errorBuilder', init: errorBuilder);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'colorBlendMode', init: colorBlendMode);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'centerSlice', init: centerSlice);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'gaplessPlayback', init: gaplessPlayback);
-    mateParams.set(name: 'isAntiAlias', init: isAntiAlias);
-    mateParams.set(name: 'package', init: package);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'cacheWidth', init: cacheWidth);
-    mateParams.set(name: 'cacheHeight', init: cacheHeight);
+    mateParams.put('name', init: name);
+    mateParams.put('key', init: key);
+    mateParams.put('bundle', init: bundle);
+    mateParams.put('frameBuilder', init: frameBuilder);
+    mateParams.put('errorBuilder', init: errorBuilder);
+    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('scale', init: scale);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('color', init: color);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('colorBlendMode', init: colorBlendMode);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('centerSlice', init: centerSlice);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('gaplessPlayback', init: gaplessPlayback);
+    mateParams.put('isAntiAlias', init: isAntiAlias);
+    mateParams.put('package', init: package);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('cacheWidth', init: cacheWidth);
+    mateParams.put('cacheHeight', init: cacheHeight);
   }
 
   /// Image Image.memory(Uint8List bytes, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
@@ -683,54 +683,54 @@ class Image$Mate extends Image with WidgetMate<Image$Mate> {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Image$Mate.memory(
-        p.getValue('bytes'),
-        key: p.getValue('key'),
-        scale: p.getValue('scale'),
-        frameBuilder: p.getValue('frameBuilder'),
-        errorBuilder: p.getValue('errorBuilder'),
-        semanticLabel: p.getValue('semanticLabel'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        color: p.getValue('color'),
-        opacity: p.getValue('opacity'),
-        colorBlendMode: p.getValue('colorBlendMode'),
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        centerSlice: p.getValue('centerSlice'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        gaplessPlayback: p.getValue('gaplessPlayback'),
-        isAntiAlias: p.getValue('isAntiAlias'),
-        filterQuality: p.getValue('filterQuality'),
-        cacheWidth: p.getValue('cacheWidth'),
-        cacheHeight: p.getValue('cacheHeight'),
+        p.get('bytes').value,
+        key: p.get('key').value,
+        scale: p.get('scale').value,
+        frameBuilder: p.get('frameBuilder').value,
+        errorBuilder: p.get('errorBuilder').value,
+        semanticLabel: p.get('semanticLabel').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        color: p.get('color').value,
+        opacity: p.get('opacity').value,
+        colorBlendMode: p.get('colorBlendMode').value,
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        centerSlice: p.get('centerSlice').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        gaplessPlayback: p.get('gaplessPlayback').value,
+        isAntiAlias: p.get('isAntiAlias').value,
+        filterQuality: p.get('filterQuality').value,
+        cacheWidth: p.get('cacheWidth').value,
+        cacheHeight: p.get('cacheHeight').value,
       ),
     );
-    mateParams.set(name: 'bytes', init: bytes);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'frameBuilder', init: frameBuilder);
-    mateParams.set(name: 'errorBuilder', init: errorBuilder);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'colorBlendMode', init: colorBlendMode);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'centerSlice', init: centerSlice);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'gaplessPlayback', init: gaplessPlayback);
-    mateParams.set(name: 'isAntiAlias', init: isAntiAlias);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'cacheWidth', init: cacheWidth);
-    mateParams.set(name: 'cacheHeight', init: cacheHeight);
+    mateParams.put('bytes', init: bytes);
+    mateParams.put('key', init: key);
+    mateParams.put('scale', init: scale);
+    mateParams.put('frameBuilder', init: frameBuilder);
+    mateParams.put('errorBuilder', init: errorBuilder);
+    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('color', init: color);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('colorBlendMode', init: colorBlendMode);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('centerSlice', init: centerSlice);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('gaplessPlayback', init: gaplessPlayback);
+    mateParams.put('isAntiAlias', init: isAntiAlias);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('cacheWidth', init: cacheWidth);
+    mateParams.put('cacheHeight', init: cacheHeight);
   }
 }

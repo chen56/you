@@ -55,30 +55,30 @@ class Scrollbar$Mate extends Scrollbar with WidgetMate<Scrollbar$Mate> {
           interactive: interactive,
           scrollbarOrientation: scrollbarOrientation,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Scrollbar$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        controller: p.getValue('controller'),
-        thumbVisibility: p.getValue('thumbVisibility'),
-        trackVisibility: p.getValue('trackVisibility'),
-        thickness: p.getValue('thickness'),
-        radius: p.getValue('radius'),
-        notificationPredicate: p.getValue('notificationPredicate'),
-        interactive: p.getValue('interactive'),
-        scrollbarOrientation: p.getValue('scrollbarOrientation'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        controller: p.get('controller').value,
+        thumbVisibility: p.get('thumbVisibility').value,
+        trackVisibility: p.get('trackVisibility').value,
+        thickness: p.get('thickness').value,
+        radius: p.get('radius').value,
+        notificationPredicate: p.get('notificationPredicate').value,
+        interactive: p.get('interactive').value,
+        scrollbarOrientation: p.get('scrollbarOrientation').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'thumbVisibility', init: thumbVisibility);
-    mateParams.set(name: 'trackVisibility', init: trackVisibility);
-    mateParams.set(name: 'thickness', init: thickness);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'notificationPredicate', init: notificationPredicate);
-    mateParams.set(name: 'interactive', init: interactive);
-    mateParams.set(name: 'scrollbarOrientation', init: scrollbarOrientation);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('controller', init: controller);
+    mateParams.put('thumbVisibility', init: thumbVisibility);
+    mateParams.put('trackVisibility', init: trackVisibility);
+    mateParams.put('thickness', init: thickness);
+    mateParams.put('radius', init: radius);
+    mateParams.put('notificationPredicate', init: notificationPredicate);
+    mateParams.put('interactive', init: interactive);
+    mateParams.put('scrollbarOrientation', init: scrollbarOrientation);
   }
 }

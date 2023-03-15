@@ -108,56 +108,56 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with WidgetMate<Botto
           landscapeLayout: landscapeLayout,
           useLegacyColorScheme: useLegacyColorScheme,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomNavigationBar$Mate(
-        key: p.getValue('key'),
-        items: p.getValue('items'),
-        onTap: p.getValue('onTap'),
-        currentIndex: p.getValue('currentIndex'),
-        elevation: p.getValue('elevation'),
-        type: p.getValue('type'),
-        fixedColor: p.getValue('fixedColor'),
-        backgroundColor: p.getValue('backgroundColor'),
-        iconSize: p.getValue('iconSize'),
-        selectedItemColor: p.getValue('selectedItemColor'),
-        unselectedItemColor: p.getValue('unselectedItemColor'),
-        selectedIconTheme: p.getValue('selectedIconTheme'),
-        unselectedIconTheme: p.getValue('unselectedIconTheme'),
-        selectedFontSize: p.getValue('selectedFontSize'),
-        unselectedFontSize: p.getValue('unselectedFontSize'),
-        selectedLabelStyle: p.getValue('selectedLabelStyle'),
-        unselectedLabelStyle: p.getValue('unselectedLabelStyle'),
-        showSelectedLabels: p.getValue('showSelectedLabels'),
-        showUnselectedLabels: p.getValue('showUnselectedLabels'),
-        mouseCursor: p.getValue('mouseCursor'),
-        enableFeedback: p.getValue('enableFeedback'),
-        landscapeLayout: p.getValue('landscapeLayout'),
-        useLegacyColorScheme: p.getValue('useLegacyColorScheme'),
+        key: p.get('key').value,
+        items: p.get('items').value,
+        onTap: p.get('onTap').value,
+        currentIndex: p.get('currentIndex').value,
+        elevation: p.get('elevation').value,
+        type: p.get('type').value,
+        fixedColor: p.get('fixedColor').value,
+        backgroundColor: p.get('backgroundColor').value,
+        iconSize: p.get('iconSize').value,
+        selectedItemColor: p.get('selectedItemColor').value,
+        unselectedItemColor: p.get('unselectedItemColor').value,
+        selectedIconTheme: p.get('selectedIconTheme').value,
+        unselectedIconTheme: p.get('unselectedIconTheme').value,
+        selectedFontSize: p.get('selectedFontSize').value,
+        unselectedFontSize: p.get('unselectedFontSize').value,
+        selectedLabelStyle: p.get('selectedLabelStyle').value,
+        unselectedLabelStyle: p.get('unselectedLabelStyle').value,
+        showSelectedLabels: p.get('showSelectedLabels').value,
+        showUnselectedLabels: p.get('showUnselectedLabels').value,
+        mouseCursor: p.get('mouseCursor').value,
+        enableFeedback: p.get('enableFeedback').value,
+        landscapeLayout: p.get('landscapeLayout').value,
+        useLegacyColorScheme: p.get('useLegacyColorScheme').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'items', init: items);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'currentIndex', init: currentIndex);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'type', init: type);
-    mateParams.set(name: 'fixedColor', init: fixedColor);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'iconSize', init: iconSize);
-    mateParams.set(name: 'selectedItemColor', init: selectedItemColor);
-    mateParams.set(name: 'unselectedItemColor', init: unselectedItemColor);
-    mateParams.set(name: 'selectedIconTheme', init: selectedIconTheme);
-    mateParams.set(name: 'unselectedIconTheme', init: unselectedIconTheme);
-    mateParams.set(name: 'selectedFontSize', init: selectedFontSize);
-    mateParams.set(name: 'unselectedFontSize', init: unselectedFontSize);
-    mateParams.set(name: 'selectedLabelStyle', init: selectedLabelStyle);
-    mateParams.set(name: 'unselectedLabelStyle', init: unselectedLabelStyle);
-    mateParams.set(name: 'showSelectedLabels', init: showSelectedLabels);
-    mateParams.set(name: 'showUnselectedLabels', init: showUnselectedLabels);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'landscapeLayout', init: landscapeLayout);
-    mateParams.set(name: 'useLegacyColorScheme', init: useLegacyColorScheme);
+    mateParams.put('key', init: key);
+    mateParams.put('items', init: items);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('currentIndex', init: currentIndex);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('type', init: type);
+    mateParams.put('fixedColor', init: fixedColor);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('iconSize', init: iconSize);
+    mateParams.put('selectedItemColor', init: selectedItemColor);
+    mateParams.put('unselectedItemColor', init: unselectedItemColor);
+    mateParams.put('selectedIconTheme', init: selectedIconTheme);
+    mateParams.put('unselectedIconTheme', init: unselectedIconTheme);
+    mateParams.put('selectedFontSize', init: selectedFontSize);
+    mateParams.put('unselectedFontSize', init: unselectedFontSize);
+    mateParams.put('selectedLabelStyle', init: selectedLabelStyle);
+    mateParams.put('unselectedLabelStyle', init: unselectedLabelStyle);
+    mateParams.put('showSelectedLabels', init: showSelectedLabels);
+    mateParams.put('showUnselectedLabels', init: showUnselectedLabels);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('landscapeLayout', init: landscapeLayout);
+    mateParams.put('useLegacyColorScheme', init: useLegacyColorScheme);
   }
 }

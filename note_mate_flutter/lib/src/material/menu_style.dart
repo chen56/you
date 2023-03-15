@@ -68,36 +68,36 @@ class MenuStyle$Mate extends MenuStyle with Mate<MenuStyle$Mate> {
           visualDensity: visualDensity,
           alignment: alignment,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MenuStyle$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        elevation: p.getValue('elevation'),
-        padding: p.getValue('padding'),
-        minimumSize: p.getValue('minimumSize'),
-        fixedSize: p.getValue('fixedSize'),
-        maximumSize: p.getValue('maximumSize'),
-        side: p.getValue('side'),
-        shape: p.getValue('shape'),
-        mouseCursor: p.getValue('mouseCursor'),
-        visualDensity: p.getValue('visualDensity'),
-        alignment: p.getValue('alignment'),
+        backgroundColor: p.get('backgroundColor').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        elevation: p.get('elevation').value,
+        padding: p.get('padding').value,
+        minimumSize: p.get('minimumSize').value,
+        fixedSize: p.get('fixedSize').value,
+        maximumSize: p.get('maximumSize').value,
+        side: p.get('side').value,
+        shape: p.get('shape').value,
+        mouseCursor: p.get('mouseCursor').value,
+        visualDensity: p.get('visualDensity').value,
+        alignment: p.get('alignment').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'minimumSize', init: minimumSize);
-    mateParams.set(name: 'fixedSize', init: fixedSize);
-    mateParams.set(name: 'maximumSize', init: maximumSize);
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'alignment', init: alignment);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('padding', init: padding);
+    mateParams.put('minimumSize', init: minimumSize);
+    mateParams.put('fixedSize', init: fixedSize);
+    mateParams.put('maximumSize', init: maximumSize);
+    mateParams.put('side', init: side);
+    mateParams.put('shape', init: shape);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('alignment', init: alignment);
   }
 }

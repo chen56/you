@@ -28,19 +28,19 @@ class TabController$Mate extends TabController with Mate<TabController$Mate> {
           length: length,
           vsync: vsync,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TabController$Mate(
-        initialIndex: p.getValue('initialIndex'),
-        animationDuration: p.getValue('animationDuration'),
-        length: p.getValue('length'),
-        vsync: p.getValue('vsync'),
+        initialIndex: p.get('initialIndex').value,
+        animationDuration: p.get('animationDuration').value,
+        length: p.get('length').value,
+        vsync: p.get('vsync').value,
       ),
     );
-    mateParams.set(name: 'initialIndex', init: initialIndex);
-    mateParams.set(name: 'animationDuration', init: animationDuration);
-    mateParams.set(name: 'length', init: length);
-    mateParams.set(name: 'vsync', init: vsync);
+    mateParams.put('initialIndex', init: initialIndex);
+    mateParams.put('animationDuration', init: animationDuration);
+    mateParams.put('length', init: length);
+    mateParams.put('vsync', init: vsync);
   }
 }
 
@@ -69,20 +69,20 @@ class DefaultTabController$Mate extends DefaultTabController with WidgetMate<Def
           child: child,
           animationDuration: animationDuration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultTabController$Mate(
-        key: p.getValue('key'),
-        length: p.getValue('length'),
-        initialIndex: p.getValue('initialIndex'),
-        child: p.getValue('child'),
-        animationDuration: p.getValue('animationDuration'),
+        key: p.get('key').value,
+        length: p.get('length').value,
+        initialIndex: p.get('initialIndex').value,
+        child: p.get('child').value,
+        animationDuration: p.get('animationDuration').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'length', init: length);
-    mateParams.set(name: 'initialIndex', init: initialIndex);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'animationDuration', init: animationDuration);
+    mateParams.put('key', init: key);
+    mateParams.put('length', init: length);
+    mateParams.put('initialIndex', init: initialIndex);
+    mateParams.put('child', init: child);
+    mateParams.put('animationDuration', init: animationDuration);
   }
 }

@@ -38,23 +38,23 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate<ImageConfigur
           size: size,
           platform: platform,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageConfiguration$Mate(
-        bundle: p.getValue('bundle'),
-        devicePixelRatio: p.getValue('devicePixelRatio'),
-        locale: p.getValue('locale'),
-        textDirection: p.getValue('textDirection'),
-        size: p.getValue('size'),
-        platform: p.getValue('platform'),
+        bundle: p.get('bundle').value,
+        devicePixelRatio: p.get('devicePixelRatio').value,
+        locale: p.get('locale').value,
+        textDirection: p.get('textDirection').value,
+        size: p.get('size').value,
+        platform: p.get('platform').value,
       ),
     );
-    mateParams.set(name: 'bundle', init: bundle);
-    mateParams.set(name: 'devicePixelRatio', init: devicePixelRatio);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'platform', init: platform);
+    mateParams.put('bundle', init: bundle);
+    mateParams.put('devicePixelRatio', init: devicePixelRatio);
+    mateParams.put('locale', init: locale);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('size', init: size);
+    mateParams.put('platform', init: platform);
   }
 }
 
@@ -75,17 +75,17 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate<AssetBundle
           name: name,
           scale: scale,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AssetBundleImageKey$Mate(
-        bundle: p.getValue('bundle'),
-        name: p.getValue('name'),
-        scale: p.getValue('scale'),
+        bundle: p.get('bundle').value,
+        name: p.get('name').value,
+        scale: p.get('scale').value,
       ),
     );
-    mateParams.set(name: 'bundle', init: bundle);
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'scale', init: scale);
+    mateParams.put('bundle', init: bundle);
+    mateParams.put('name', init: name);
+    mateParams.put('scale', init: scale);
   }
 }
 
@@ -109,19 +109,19 @@ class ResizeImage$Mate extends ResizeImage with Mate<ResizeImage$Mate> {
           height: height,
           allowUpscaling: allowUpscaling,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ResizeImage$Mate(
-        p.getValue('imageProvider'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        allowUpscaling: p.getValue('allowUpscaling'),
+        p.get('imageProvider').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        allowUpscaling: p.get('allowUpscaling').value,
       ),
     );
-    mateParams.set(name: 'imageProvider', init: imageProvider);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'allowUpscaling', init: allowUpscaling);
+    mateParams.put('imageProvider', init: imageProvider);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('allowUpscaling', init: allowUpscaling);
   }
 }
 
@@ -137,15 +137,15 @@ class FileImage$Mate extends FileImage with Mate<FileImage$Mate> {
           file,
           scale: scale,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FileImage$Mate(
-        p.getValue('file'),
-        scale: p.getValue('scale'),
+        p.get('file').value,
+        scale: p.get('scale').value,
       ),
     );
-    mateParams.set(name: 'file', init: file);
-    mateParams.set(name: 'scale', init: scale);
+    mateParams.put('file', init: file);
+    mateParams.put('scale', init: scale);
   }
 }
 
@@ -161,15 +161,15 @@ class MemoryImage$Mate extends MemoryImage with Mate<MemoryImage$Mate> {
           bytes,
           scale: scale,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MemoryImage$Mate(
-        p.getValue('bytes'),
-        scale: p.getValue('scale'),
+        p.get('bytes').value,
+        scale: p.get('scale').value,
       ),
     );
-    mateParams.set(name: 'bytes', init: bytes);
-    mateParams.set(name: 'scale', init: scale);
+    mateParams.put('bytes', init: bytes);
+    mateParams.put('scale', init: scale);
   }
 }
 
@@ -193,19 +193,19 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate<ExactAssetImage$Mat
           bundle: bundle,
           package: package,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExactAssetImage$Mate(
-        p.getValue('assetName'),
-        scale: p.getValue('scale'),
-        bundle: p.getValue('bundle'),
-        package: p.getValue('package'),
+        p.get('assetName').value,
+        scale: p.get('scale').value,
+        bundle: p.get('bundle').value,
+        package: p.get('package').value,
       ),
     );
-    mateParams.set(name: 'assetName', init: assetName);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'bundle', init: bundle);
-    mateParams.set(name: 'package', init: package);
+    mateParams.put('assetName', init: assetName);
+    mateParams.put('scale', init: scale);
+    mateParams.put('bundle', init: bundle);
+    mateParams.put('package', init: package);
   }
 }
 
@@ -222,14 +222,14 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate
           statusCode: statusCode,
           uri: uri,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NetworkImageLoadException$Mate(
-        statusCode: p.getValue('statusCode'),
-        uri: p.getValue('uri'),
+        statusCode: p.get('statusCode').value,
+        uri: p.get('uri').value,
       ),
     );
-    mateParams.set(name: 'statusCode', init: statusCode);
-    mateParams.set(name: 'uri', init: uri);
+    mateParams.put('statusCode', init: statusCode);
+    mateParams.put('uri', init: uri);
   }
 }

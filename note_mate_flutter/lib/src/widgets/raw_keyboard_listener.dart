@@ -38,22 +38,22 @@ class RawKeyboardListener$Mate extends RawKeyboardListener with WidgetMate<RawKe
           onKey: onKey,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyboardListener$Mate(
-        key: p.getValue('key'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        includeSemantics: p.getValue('includeSemantics'),
-        onKey: p.getValue('onKey'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        includeSemantics: p.get('includeSemantics').value,
+        onKey: p.get('onKey').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'includeSemantics', init: includeSemantics);
-    mateParams.set(name: 'onKey', init: onKey);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('includeSemantics', init: includeSemantics);
+    mateParams.put('onKey', init: onKey);
+    mateParams.put('child', init: child);
   }
 }

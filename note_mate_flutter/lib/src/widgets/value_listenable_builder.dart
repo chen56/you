@@ -27,18 +27,18 @@ class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Widg
           builder: builder,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ValueListenableBuilder$Mate(
-        key: p.getValue('key'),
-        valueListenable: p.getValue('valueListenable'),
-        builder: p.getValue('builder'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        valueListenable: p.get('valueListenable').value,
+        builder: p.get('builder').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'valueListenable', init: valueListenable);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('valueListenable', init: valueListenable);
+    mateParams.put('builder', init: builder);
+    mateParams.put('child', init: child);
   }
 }

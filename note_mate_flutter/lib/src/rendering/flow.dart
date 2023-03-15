@@ -23,16 +23,16 @@ class RenderFlow$Mate extends RenderFlow with Mate<RenderFlow$Mate> {
           delegate: delegate,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFlow$Mate(
-        children: p.getValue('children'),
-        delegate: p.getValue('delegate'),
-        clipBehavior: p.getValue('clipBehavior'),
+        children: p.get('children').value,
+        delegate: p.get('delegate').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'delegate', init: delegate);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('children', init: children);
+    mateParams.put('delegate', init: delegate);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

@@ -27,19 +27,19 @@ class SelectionContainer$Mate extends SelectionContainer with WidgetMate<Selecti
           delegate: delegate,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionContainer$Mate(
-        key: p.getValue('key'),
-        registrar: p.getValue('registrar'),
-        delegate: p.getValue('delegate'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        registrar: p.get('registrar').value,
+        delegate: p.get('delegate').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'registrar', init: registrar);
-    mateParams.set(name: 'delegate', init: delegate);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('registrar', init: registrar);
+    mateParams.put('delegate', init: delegate);
+    mateParams.put('child', init: child);
   }
 
   /// SelectionContainer SelectionContainer.disabled({Key? key, required Widget child})
@@ -53,15 +53,15 @@ class SelectionContainer$Mate extends SelectionContainer with WidgetMate<Selecti
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionContainer$Mate.disabled(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -82,16 +82,16 @@ class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with WidgetMa
           registrar: registrar,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionRegistrarScope$Mate(
-        key: p.getValue('key'),
-        registrar: p.getValue('registrar'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        registrar: p.get('registrar').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'registrar', init: registrar);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('registrar', init: registrar);
+    mateParams.put('child', init: child);
   }
 }

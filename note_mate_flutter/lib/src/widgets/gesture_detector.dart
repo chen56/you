@@ -29,15 +29,15 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends GestureRecognizer>
           _constructor,
           _initializer,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => GestureRecognizerFactoryWithHandlers$Mate(
-        p.getValue('_constructor'),
-        p.getValue('_initializer'),
+        p.get('_constructor').value,
+        p.get('_initializer').value,
       ),
     );
-    mateParams.set(name: '_constructor', init: _constructor);
-    mateParams.set(name: '_initializer', init: _initializer);
+    mateParams.put('_constructor', init: _constructor);
+    mateParams.put('_initializer', init: _initializer);
   }
 }
 
@@ -306,141 +306,141 @@ class GestureDetector$Mate extends GestureDetector with WidgetMate<GestureDetect
           trackpadScrollToScaleFactor: trackpadScrollToScaleFactor,
           supportedDevices: supportedDevices,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => GestureDetector$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        onTapDown: p.getValue('onTapDown'),
-        onTapUp: p.getValue('onTapUp'),
-        onTap: p.getValue('onTap'),
-        onTapCancel: p.getValue('onTapCancel'),
-        onSecondaryTap: p.getValue('onSecondaryTap'),
-        onSecondaryTapDown: p.getValue('onSecondaryTapDown'),
-        onSecondaryTapUp: p.getValue('onSecondaryTapUp'),
-        onSecondaryTapCancel: p.getValue('onSecondaryTapCancel'),
-        onTertiaryTapDown: p.getValue('onTertiaryTapDown'),
-        onTertiaryTapUp: p.getValue('onTertiaryTapUp'),
-        onTertiaryTapCancel: p.getValue('onTertiaryTapCancel'),
-        onDoubleTapDown: p.getValue('onDoubleTapDown'),
-        onDoubleTap: p.getValue('onDoubleTap'),
-        onDoubleTapCancel: p.getValue('onDoubleTapCancel'),
-        onLongPressDown: p.getValue('onLongPressDown'),
-        onLongPressCancel: p.getValue('onLongPressCancel'),
-        onLongPress: p.getValue('onLongPress'),
-        onLongPressStart: p.getValue('onLongPressStart'),
-        onLongPressMoveUpdate: p.getValue('onLongPressMoveUpdate'),
-        onLongPressUp: p.getValue('onLongPressUp'),
-        onLongPressEnd: p.getValue('onLongPressEnd'),
-        onSecondaryLongPressDown: p.getValue('onSecondaryLongPressDown'),
-        onSecondaryLongPressCancel: p.getValue('onSecondaryLongPressCancel'),
-        onSecondaryLongPress: p.getValue('onSecondaryLongPress'),
-        onSecondaryLongPressStart: p.getValue('onSecondaryLongPressStart'),
-        onSecondaryLongPressMoveUpdate: p.getValue('onSecondaryLongPressMoveUpdate'),
-        onSecondaryLongPressUp: p.getValue('onSecondaryLongPressUp'),
-        onSecondaryLongPressEnd: p.getValue('onSecondaryLongPressEnd'),
-        onTertiaryLongPressDown: p.getValue('onTertiaryLongPressDown'),
-        onTertiaryLongPressCancel: p.getValue('onTertiaryLongPressCancel'),
-        onTertiaryLongPress: p.getValue('onTertiaryLongPress'),
-        onTertiaryLongPressStart: p.getValue('onTertiaryLongPressStart'),
-        onTertiaryLongPressMoveUpdate: p.getValue('onTertiaryLongPressMoveUpdate'),
-        onTertiaryLongPressUp: p.getValue('onTertiaryLongPressUp'),
-        onTertiaryLongPressEnd: p.getValue('onTertiaryLongPressEnd'),
-        onVerticalDragDown: p.getValue('onVerticalDragDown'),
-        onVerticalDragStart: p.getValue('onVerticalDragStart'),
-        onVerticalDragUpdate: p.getValue('onVerticalDragUpdate'),
-        onVerticalDragEnd: p.getValue('onVerticalDragEnd'),
-        onVerticalDragCancel: p.getValue('onVerticalDragCancel'),
-        onHorizontalDragDown: p.getValue('onHorizontalDragDown'),
-        onHorizontalDragStart: p.getValue('onHorizontalDragStart'),
-        onHorizontalDragUpdate: p.getValue('onHorizontalDragUpdate'),
-        onHorizontalDragEnd: p.getValue('onHorizontalDragEnd'),
-        onHorizontalDragCancel: p.getValue('onHorizontalDragCancel'),
-        onForcePressStart: p.getValue('onForcePressStart'),
-        onForcePressPeak: p.getValue('onForcePressPeak'),
-        onForcePressUpdate: p.getValue('onForcePressUpdate'),
-        onForcePressEnd: p.getValue('onForcePressEnd'),
-        onPanDown: p.getValue('onPanDown'),
-        onPanStart: p.getValue('onPanStart'),
-        onPanUpdate: p.getValue('onPanUpdate'),
-        onPanEnd: p.getValue('onPanEnd'),
-        onPanCancel: p.getValue('onPanCancel'),
-        onScaleStart: p.getValue('onScaleStart'),
-        onScaleUpdate: p.getValue('onScaleUpdate'),
-        onScaleEnd: p.getValue('onScaleEnd'),
-        behavior: p.getValue('behavior'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        trackpadScrollCausesScale: p.getValue('trackpadScrollCausesScale'),
-        trackpadScrollToScaleFactor: p.getValue('trackpadScrollToScaleFactor'),
-        supportedDevices: p.getValue('supportedDevices'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        onTapDown: p.get('onTapDown').value,
+        onTapUp: p.get('onTapUp').value,
+        onTap: p.get('onTap').value,
+        onTapCancel: p.get('onTapCancel').value,
+        onSecondaryTap: p.get('onSecondaryTap').value,
+        onSecondaryTapDown: p.get('onSecondaryTapDown').value,
+        onSecondaryTapUp: p.get('onSecondaryTapUp').value,
+        onSecondaryTapCancel: p.get('onSecondaryTapCancel').value,
+        onTertiaryTapDown: p.get('onTertiaryTapDown').value,
+        onTertiaryTapUp: p.get('onTertiaryTapUp').value,
+        onTertiaryTapCancel: p.get('onTertiaryTapCancel').value,
+        onDoubleTapDown: p.get('onDoubleTapDown').value,
+        onDoubleTap: p.get('onDoubleTap').value,
+        onDoubleTapCancel: p.get('onDoubleTapCancel').value,
+        onLongPressDown: p.get('onLongPressDown').value,
+        onLongPressCancel: p.get('onLongPressCancel').value,
+        onLongPress: p.get('onLongPress').value,
+        onLongPressStart: p.get('onLongPressStart').value,
+        onLongPressMoveUpdate: p.get('onLongPressMoveUpdate').value,
+        onLongPressUp: p.get('onLongPressUp').value,
+        onLongPressEnd: p.get('onLongPressEnd').value,
+        onSecondaryLongPressDown: p.get('onSecondaryLongPressDown').value,
+        onSecondaryLongPressCancel: p.get('onSecondaryLongPressCancel').value,
+        onSecondaryLongPress: p.get('onSecondaryLongPress').value,
+        onSecondaryLongPressStart: p.get('onSecondaryLongPressStart').value,
+        onSecondaryLongPressMoveUpdate: p.get('onSecondaryLongPressMoveUpdate').value,
+        onSecondaryLongPressUp: p.get('onSecondaryLongPressUp').value,
+        onSecondaryLongPressEnd: p.get('onSecondaryLongPressEnd').value,
+        onTertiaryLongPressDown: p.get('onTertiaryLongPressDown').value,
+        onTertiaryLongPressCancel: p.get('onTertiaryLongPressCancel').value,
+        onTertiaryLongPress: p.get('onTertiaryLongPress').value,
+        onTertiaryLongPressStart: p.get('onTertiaryLongPressStart').value,
+        onTertiaryLongPressMoveUpdate: p.get('onTertiaryLongPressMoveUpdate').value,
+        onTertiaryLongPressUp: p.get('onTertiaryLongPressUp').value,
+        onTertiaryLongPressEnd: p.get('onTertiaryLongPressEnd').value,
+        onVerticalDragDown: p.get('onVerticalDragDown').value,
+        onVerticalDragStart: p.get('onVerticalDragStart').value,
+        onVerticalDragUpdate: p.get('onVerticalDragUpdate').value,
+        onVerticalDragEnd: p.get('onVerticalDragEnd').value,
+        onVerticalDragCancel: p.get('onVerticalDragCancel').value,
+        onHorizontalDragDown: p.get('onHorizontalDragDown').value,
+        onHorizontalDragStart: p.get('onHorizontalDragStart').value,
+        onHorizontalDragUpdate: p.get('onHorizontalDragUpdate').value,
+        onHorizontalDragEnd: p.get('onHorizontalDragEnd').value,
+        onHorizontalDragCancel: p.get('onHorizontalDragCancel').value,
+        onForcePressStart: p.get('onForcePressStart').value,
+        onForcePressPeak: p.get('onForcePressPeak').value,
+        onForcePressUpdate: p.get('onForcePressUpdate').value,
+        onForcePressEnd: p.get('onForcePressEnd').value,
+        onPanDown: p.get('onPanDown').value,
+        onPanStart: p.get('onPanStart').value,
+        onPanUpdate: p.get('onPanUpdate').value,
+        onPanEnd: p.get('onPanEnd').value,
+        onPanCancel: p.get('onPanCancel').value,
+        onScaleStart: p.get('onScaleStart').value,
+        onScaleUpdate: p.get('onScaleUpdate').value,
+        onScaleEnd: p.get('onScaleEnd').value,
+        behavior: p.get('behavior').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').value,
+        trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').value,
+        supportedDevices: p.get('supportedDevices').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'onTapDown', init: onTapDown);
-    mateParams.set(name: 'onTapUp', init: onTapUp);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'onTapCancel', init: onTapCancel);
-    mateParams.set(name: 'onSecondaryTap', init: onSecondaryTap);
-    mateParams.set(name: 'onSecondaryTapDown', init: onSecondaryTapDown);
-    mateParams.set(name: 'onSecondaryTapUp', init: onSecondaryTapUp);
-    mateParams.set(name: 'onSecondaryTapCancel', init: onSecondaryTapCancel);
-    mateParams.set(name: 'onTertiaryTapDown', init: onTertiaryTapDown);
-    mateParams.set(name: 'onTertiaryTapUp', init: onTertiaryTapUp);
-    mateParams.set(name: 'onTertiaryTapCancel', init: onTertiaryTapCancel);
-    mateParams.set(name: 'onDoubleTapDown', init: onDoubleTapDown);
-    mateParams.set(name: 'onDoubleTap', init: onDoubleTap);
-    mateParams.set(name: 'onDoubleTapCancel', init: onDoubleTapCancel);
-    mateParams.set(name: 'onLongPressDown', init: onLongPressDown);
-    mateParams.set(name: 'onLongPressCancel', init: onLongPressCancel);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onLongPressStart', init: onLongPressStart);
-    mateParams.set(name: 'onLongPressMoveUpdate', init: onLongPressMoveUpdate);
-    mateParams.set(name: 'onLongPressUp', init: onLongPressUp);
-    mateParams.set(name: 'onLongPressEnd', init: onLongPressEnd);
-    mateParams.set(name: 'onSecondaryLongPressDown', init: onSecondaryLongPressDown);
-    mateParams.set(name: 'onSecondaryLongPressCancel', init: onSecondaryLongPressCancel);
-    mateParams.set(name: 'onSecondaryLongPress', init: onSecondaryLongPress);
-    mateParams.set(name: 'onSecondaryLongPressStart', init: onSecondaryLongPressStart);
-    mateParams.set(name: 'onSecondaryLongPressMoveUpdate', init: onSecondaryLongPressMoveUpdate);
-    mateParams.set(name: 'onSecondaryLongPressUp', init: onSecondaryLongPressUp);
-    mateParams.set(name: 'onSecondaryLongPressEnd', init: onSecondaryLongPressEnd);
-    mateParams.set(name: 'onTertiaryLongPressDown', init: onTertiaryLongPressDown);
-    mateParams.set(name: 'onTertiaryLongPressCancel', init: onTertiaryLongPressCancel);
-    mateParams.set(name: 'onTertiaryLongPress', init: onTertiaryLongPress);
-    mateParams.set(name: 'onTertiaryLongPressStart', init: onTertiaryLongPressStart);
-    mateParams.set(name: 'onTertiaryLongPressMoveUpdate', init: onTertiaryLongPressMoveUpdate);
-    mateParams.set(name: 'onTertiaryLongPressUp', init: onTertiaryLongPressUp);
-    mateParams.set(name: 'onTertiaryLongPressEnd', init: onTertiaryLongPressEnd);
-    mateParams.set(name: 'onVerticalDragDown', init: onVerticalDragDown);
-    mateParams.set(name: 'onVerticalDragStart', init: onVerticalDragStart);
-    mateParams.set(name: 'onVerticalDragUpdate', init: onVerticalDragUpdate);
-    mateParams.set(name: 'onVerticalDragEnd', init: onVerticalDragEnd);
-    mateParams.set(name: 'onVerticalDragCancel', init: onVerticalDragCancel);
-    mateParams.set(name: 'onHorizontalDragDown', init: onHorizontalDragDown);
-    mateParams.set(name: 'onHorizontalDragStart', init: onHorizontalDragStart);
-    mateParams.set(name: 'onHorizontalDragUpdate', init: onHorizontalDragUpdate);
-    mateParams.set(name: 'onHorizontalDragEnd', init: onHorizontalDragEnd);
-    mateParams.set(name: 'onHorizontalDragCancel', init: onHorizontalDragCancel);
-    mateParams.set(name: 'onForcePressStart', init: onForcePressStart);
-    mateParams.set(name: 'onForcePressPeak', init: onForcePressPeak);
-    mateParams.set(name: 'onForcePressUpdate', init: onForcePressUpdate);
-    mateParams.set(name: 'onForcePressEnd', init: onForcePressEnd);
-    mateParams.set(name: 'onPanDown', init: onPanDown);
-    mateParams.set(name: 'onPanStart', init: onPanStart);
-    mateParams.set(name: 'onPanUpdate', init: onPanUpdate);
-    mateParams.set(name: 'onPanEnd', init: onPanEnd);
-    mateParams.set(name: 'onPanCancel', init: onPanCancel);
-    mateParams.set(name: 'onScaleStart', init: onScaleStart);
-    mateParams.set(name: 'onScaleUpdate', init: onScaleUpdate);
-    mateParams.set(name: 'onScaleEnd', init: onScaleEnd);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'trackpadScrollCausesScale', init: trackpadScrollCausesScale);
-    mateParams.set(name: 'trackpadScrollToScaleFactor', init: trackpadScrollToScaleFactor);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('onTapDown', init: onTapDown);
+    mateParams.put('onTapUp', init: onTapUp);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('onTapCancel', init: onTapCancel);
+    mateParams.put('onSecondaryTap', init: onSecondaryTap);
+    mateParams.put('onSecondaryTapDown', init: onSecondaryTapDown);
+    mateParams.put('onSecondaryTapUp', init: onSecondaryTapUp);
+    mateParams.put('onSecondaryTapCancel', init: onSecondaryTapCancel);
+    mateParams.put('onTertiaryTapDown', init: onTertiaryTapDown);
+    mateParams.put('onTertiaryTapUp', init: onTertiaryTapUp);
+    mateParams.put('onTertiaryTapCancel', init: onTertiaryTapCancel);
+    mateParams.put('onDoubleTapDown', init: onDoubleTapDown);
+    mateParams.put('onDoubleTap', init: onDoubleTap);
+    mateParams.put('onDoubleTapCancel', init: onDoubleTapCancel);
+    mateParams.put('onLongPressDown', init: onLongPressDown);
+    mateParams.put('onLongPressCancel', init: onLongPressCancel);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onLongPressStart', init: onLongPressStart);
+    mateParams.put('onLongPressMoveUpdate', init: onLongPressMoveUpdate);
+    mateParams.put('onLongPressUp', init: onLongPressUp);
+    mateParams.put('onLongPressEnd', init: onLongPressEnd);
+    mateParams.put('onSecondaryLongPressDown', init: onSecondaryLongPressDown);
+    mateParams.put('onSecondaryLongPressCancel', init: onSecondaryLongPressCancel);
+    mateParams.put('onSecondaryLongPress', init: onSecondaryLongPress);
+    mateParams.put('onSecondaryLongPressStart', init: onSecondaryLongPressStart);
+    mateParams.put('onSecondaryLongPressMoveUpdate', init: onSecondaryLongPressMoveUpdate);
+    mateParams.put('onSecondaryLongPressUp', init: onSecondaryLongPressUp);
+    mateParams.put('onSecondaryLongPressEnd', init: onSecondaryLongPressEnd);
+    mateParams.put('onTertiaryLongPressDown', init: onTertiaryLongPressDown);
+    mateParams.put('onTertiaryLongPressCancel', init: onTertiaryLongPressCancel);
+    mateParams.put('onTertiaryLongPress', init: onTertiaryLongPress);
+    mateParams.put('onTertiaryLongPressStart', init: onTertiaryLongPressStart);
+    mateParams.put('onTertiaryLongPressMoveUpdate', init: onTertiaryLongPressMoveUpdate);
+    mateParams.put('onTertiaryLongPressUp', init: onTertiaryLongPressUp);
+    mateParams.put('onTertiaryLongPressEnd', init: onTertiaryLongPressEnd);
+    mateParams.put('onVerticalDragDown', init: onVerticalDragDown);
+    mateParams.put('onVerticalDragStart', init: onVerticalDragStart);
+    mateParams.put('onVerticalDragUpdate', init: onVerticalDragUpdate);
+    mateParams.put('onVerticalDragEnd', init: onVerticalDragEnd);
+    mateParams.put('onVerticalDragCancel', init: onVerticalDragCancel);
+    mateParams.put('onHorizontalDragDown', init: onHorizontalDragDown);
+    mateParams.put('onHorizontalDragStart', init: onHorizontalDragStart);
+    mateParams.put('onHorizontalDragUpdate', init: onHorizontalDragUpdate);
+    mateParams.put('onHorizontalDragEnd', init: onHorizontalDragEnd);
+    mateParams.put('onHorizontalDragCancel', init: onHorizontalDragCancel);
+    mateParams.put('onForcePressStart', init: onForcePressStart);
+    mateParams.put('onForcePressPeak', init: onForcePressPeak);
+    mateParams.put('onForcePressUpdate', init: onForcePressUpdate);
+    mateParams.put('onForcePressEnd', init: onForcePressEnd);
+    mateParams.put('onPanDown', init: onPanDown);
+    mateParams.put('onPanStart', init: onPanStart);
+    mateParams.put('onPanUpdate', init: onPanUpdate);
+    mateParams.put('onPanEnd', init: onPanEnd);
+    mateParams.put('onPanCancel', init: onPanCancel);
+    mateParams.put('onScaleStart', init: onScaleStart);
+    mateParams.put('onScaleUpdate', init: onScaleUpdate);
+    mateParams.put('onScaleEnd', init: onScaleEnd);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('trackpadScrollCausesScale', init: trackpadScrollCausesScale);
+    mateParams.put('trackpadScrollToScaleFactor', init: trackpadScrollToScaleFactor);
+    mateParams.put('supportedDevices', init: supportedDevices);
   }
 }
 
@@ -473,22 +473,22 @@ class RawGestureDetector$Mate extends RawGestureDetector with WidgetMate<RawGest
           excludeFromSemantics: excludeFromSemantics,
           semantics: semantics,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawGestureDetector$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        gestures: p.getValue('gestures'),
-        behavior: p.getValue('behavior'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        semantics: p.getValue('semantics'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        gestures: p.get('gestures').value,
+        behavior: p.get('behavior').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        semantics: p.get('semantics').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'gestures', init: gestures);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'semantics', init: semantics);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('gestures', init: gestures);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('semantics', init: semantics);
   }
 }

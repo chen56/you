@@ -92,49 +92,49 @@ class Slider$Mate extends Slider with WidgetMate<Slider$Mate> {
           focusNode: focusNode,
           autofocus: autofocus,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Slider$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        secondaryTrackValue: p.getValue('secondaryTrackValue'),
-        onChanged: p.getValue('onChanged'),
-        onChangeStart: p.getValue('onChangeStart'),
-        onChangeEnd: p.getValue('onChangeEnd'),
-        min: p.getValue('min'),
-        max: p.getValue('max'),
-        divisions: p.getValue('divisions'),
-        label: p.getValue('label'),
-        activeColor: p.getValue('activeColor'),
-        inactiveColor: p.getValue('inactiveColor'),
-        secondaryActiveColor: p.getValue('secondaryActiveColor'),
-        thumbColor: p.getValue('thumbColor'),
-        overlayColor: p.getValue('overlayColor'),
-        mouseCursor: p.getValue('mouseCursor'),
-        semanticFormatterCallback: p.getValue('semanticFormatterCallback'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        secondaryTrackValue: p.get('secondaryTrackValue').value,
+        onChanged: p.get('onChanged').value,
+        onChangeStart: p.get('onChangeStart').value,
+        onChangeEnd: p.get('onChangeEnd').value,
+        min: p.get('min').value,
+        max: p.get('max').value,
+        divisions: p.get('divisions').value,
+        label: p.get('label').value,
+        activeColor: p.get('activeColor').value,
+        inactiveColor: p.get('inactiveColor').value,
+        secondaryActiveColor: p.get('secondaryActiveColor').value,
+        thumbColor: p.get('thumbColor').value,
+        overlayColor: p.get('overlayColor').value,
+        mouseCursor: p.get('mouseCursor').value,
+        semanticFormatterCallback: p.get('semanticFormatterCallback').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'secondaryTrackValue', init: secondaryTrackValue);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'onChangeStart', init: onChangeStart);
-    mateParams.set(name: 'onChangeEnd', init: onChangeEnd);
-    mateParams.set(name: 'min', init: min);
-    mateParams.set(name: 'max', init: max);
-    mateParams.set(name: 'divisions', init: divisions);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'inactiveColor', init: inactiveColor);
-    mateParams.set(name: 'secondaryActiveColor', init: secondaryActiveColor);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'semanticFormatterCallback', init: semanticFormatterCallback);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('secondaryTrackValue', init: secondaryTrackValue);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('onChangeStart', init: onChangeStart);
+    mateParams.put('onChangeEnd', init: onChangeEnd);
+    mateParams.put('min', init: min);
+    mateParams.put('max', init: max);
+    mateParams.put('divisions', init: divisions);
+    mateParams.put('label', init: label);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('inactiveColor', init: inactiveColor);
+    mateParams.put('secondaryActiveColor', init: secondaryActiveColor);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('semanticFormatterCallback', init: semanticFormatterCallback);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
   }
 
   /// Slider Slider.adaptive({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, MouseCursor? mouseCursor, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
@@ -216,48 +216,48 @@ class Slider$Mate extends Slider with WidgetMate<Slider$Mate> {
           focusNode: focusNode,
           autofocus: autofocus,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Slider$Mate.adaptive(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        secondaryTrackValue: p.getValue('secondaryTrackValue'),
-        onChanged: p.getValue('onChanged'),
-        onChangeStart: p.getValue('onChangeStart'),
-        onChangeEnd: p.getValue('onChangeEnd'),
-        min: p.getValue('min'),
-        max: p.getValue('max'),
-        divisions: p.getValue('divisions'),
-        label: p.getValue('label'),
-        mouseCursor: p.getValue('mouseCursor'),
-        activeColor: p.getValue('activeColor'),
-        inactiveColor: p.getValue('inactiveColor'),
-        secondaryActiveColor: p.getValue('secondaryActiveColor'),
-        thumbColor: p.getValue('thumbColor'),
-        overlayColor: p.getValue('overlayColor'),
-        semanticFormatterCallback: p.getValue('semanticFormatterCallback'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        secondaryTrackValue: p.get('secondaryTrackValue').value,
+        onChanged: p.get('onChanged').value,
+        onChangeStart: p.get('onChangeStart').value,
+        onChangeEnd: p.get('onChangeEnd').value,
+        min: p.get('min').value,
+        max: p.get('max').value,
+        divisions: p.get('divisions').value,
+        label: p.get('label').value,
+        mouseCursor: p.get('mouseCursor').value,
+        activeColor: p.get('activeColor').value,
+        inactiveColor: p.get('inactiveColor').value,
+        secondaryActiveColor: p.get('secondaryActiveColor').value,
+        thumbColor: p.get('thumbColor').value,
+        overlayColor: p.get('overlayColor').value,
+        semanticFormatterCallback: p.get('semanticFormatterCallback').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'secondaryTrackValue', init: secondaryTrackValue);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'onChangeStart', init: onChangeStart);
-    mateParams.set(name: 'onChangeEnd', init: onChangeEnd);
-    mateParams.set(name: 'min', init: min);
-    mateParams.set(name: 'max', init: max);
-    mateParams.set(name: 'divisions', init: divisions);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'inactiveColor', init: inactiveColor);
-    mateParams.set(name: 'secondaryActiveColor', init: secondaryActiveColor);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'semanticFormatterCallback', init: semanticFormatterCallback);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('secondaryTrackValue', init: secondaryTrackValue);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('onChangeStart', init: onChangeStart);
+    mateParams.put('onChangeEnd', init: onChangeEnd);
+    mateParams.put('min', init: min);
+    mateParams.put('max', init: max);
+    mateParams.put('divisions', init: divisions);
+    mateParams.put('label', init: label);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('inactiveColor', init: inactiveColor);
+    mateParams.put('secondaryActiveColor', init: secondaryActiveColor);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('semanticFormatterCallback', init: semanticFormatterCallback);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
   }
 }

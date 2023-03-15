@@ -97,51 +97,51 @@ class NavigationRail$Mate extends NavigationRail with WidgetMate<NavigationRail$
           indicatorColor: indicatorColor,
           indicatorShape: indicatorShape,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationRail$Mate(
-        key: p.getValue('key'),
-        backgroundColor: p.getValue('backgroundColor'),
-        extended: p.getValue('extended'),
-        leading: p.getValue('leading'),
-        trailing: p.getValue('trailing'),
-        destinations: p.getValue('destinations'),
-        selectedIndex: p.getValue('selectedIndex'),
-        onDestinationSelected: p.getValue('onDestinationSelected'),
-        elevation: p.getValue('elevation'),
-        groupAlignment: p.getValue('groupAlignment'),
-        labelType: p.getValue('labelType'),
-        unselectedLabelTextStyle: p.getValue('unselectedLabelTextStyle'),
-        selectedLabelTextStyle: p.getValue('selectedLabelTextStyle'),
-        unselectedIconTheme: p.getValue('unselectedIconTheme'),
-        selectedIconTheme: p.getValue('selectedIconTheme'),
-        minWidth: p.getValue('minWidth'),
-        minExtendedWidth: p.getValue('minExtendedWidth'),
-        useIndicator: p.getValue('useIndicator'),
-        indicatorColor: p.getValue('indicatorColor'),
-        indicatorShape: p.getValue('indicatorShape'),
+        key: p.get('key').value,
+        backgroundColor: p.get('backgroundColor').value,
+        extended: p.get('extended').value,
+        leading: p.get('leading').value,
+        trailing: p.get('trailing').value,
+        destinations: p.get('destinations').value,
+        selectedIndex: p.get('selectedIndex').value,
+        onDestinationSelected: p.get('onDestinationSelected').value,
+        elevation: p.get('elevation').value,
+        groupAlignment: p.get('groupAlignment').value,
+        labelType: p.get('labelType').value,
+        unselectedLabelTextStyle: p.get('unselectedLabelTextStyle').value,
+        selectedLabelTextStyle: p.get('selectedLabelTextStyle').value,
+        unselectedIconTheme: p.get('unselectedIconTheme').value,
+        selectedIconTheme: p.get('selectedIconTheme').value,
+        minWidth: p.get('minWidth').value,
+        minExtendedWidth: p.get('minExtendedWidth').value,
+        useIndicator: p.get('useIndicator').value,
+        indicatorColor: p.get('indicatorColor').value,
+        indicatorShape: p.get('indicatorShape').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'extended', init: extended);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'trailing', init: trailing);
-    mateParams.set(name: 'destinations', init: destinations);
-    mateParams.set(name: 'selectedIndex', init: selectedIndex);
-    mateParams.set(name: 'onDestinationSelected', init: onDestinationSelected);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'groupAlignment', init: groupAlignment);
-    mateParams.set(name: 'labelType', init: labelType);
-    mateParams.set(name: 'unselectedLabelTextStyle', init: unselectedLabelTextStyle);
-    mateParams.set(name: 'selectedLabelTextStyle', init: selectedLabelTextStyle);
-    mateParams.set(name: 'unselectedIconTheme', init: unselectedIconTheme);
-    mateParams.set(name: 'selectedIconTheme', init: selectedIconTheme);
-    mateParams.set(name: 'minWidth', init: minWidth);
-    mateParams.set(name: 'minExtendedWidth', init: minExtendedWidth);
-    mateParams.set(name: 'useIndicator', init: useIndicator);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'indicatorShape', init: indicatorShape);
+    mateParams.put('key', init: key);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('extended', init: extended);
+    mateParams.put('leading', init: leading);
+    mateParams.put('trailing', init: trailing);
+    mateParams.put('destinations', init: destinations);
+    mateParams.put('selectedIndex', init: selectedIndex);
+    mateParams.put('onDestinationSelected', init: onDestinationSelected);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('groupAlignment', init: groupAlignment);
+    mateParams.put('labelType', init: labelType);
+    mateParams.put('unselectedLabelTextStyle', init: unselectedLabelTextStyle);
+    mateParams.put('selectedLabelTextStyle', init: selectedLabelTextStyle);
+    mateParams.put('unselectedIconTheme', init: unselectedIconTheme);
+    mateParams.put('selectedIconTheme', init: selectedIconTheme);
+    mateParams.put('minWidth', init: minWidth);
+    mateParams.put('minExtendedWidth', init: minExtendedWidth);
+    mateParams.put('useIndicator', init: useIndicator);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('indicatorShape', init: indicatorShape);
   }
 }
 
@@ -174,22 +174,22 @@ class NavigationRailDestination$Mate extends NavigationRailDestination with Mate
           label: label,
           padding: padding,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationRailDestination$Mate(
-        icon: p.getValue('icon'),
-        selectedIcon: p.getValue('selectedIcon'),
-        indicatorColor: p.getValue('indicatorColor'),
-        indicatorShape: p.getValue('indicatorShape'),
-        label: p.getValue('label'),
-        padding: p.getValue('padding'),
+        icon: p.get('icon').value,
+        selectedIcon: p.get('selectedIcon').value,
+        indicatorColor: p.get('indicatorColor').value,
+        indicatorShape: p.get('indicatorShape').value,
+        label: p.get('label').value,
+        padding: p.get('padding').value,
       ),
     );
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'selectedIcon', init: selectedIcon);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'indicatorShape', init: indicatorShape);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'padding', init: padding);
+    mateParams.put('icon', init: icon);
+    mateParams.put('selectedIcon', init: selectedIcon);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('indicatorShape', init: indicatorShape);
+    mateParams.put('label', init: label);
+    mateParams.put('padding', init: padding);
   }
 }

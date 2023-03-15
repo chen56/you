@@ -157,78 +157,78 @@ class ListTile$Mate extends ListTile with WidgetMate<ListTile$Mate> {
           minVerticalPadding: minVerticalPadding,
           minLeadingWidth: minLeadingWidth,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ListTile$Mate(
-        key: p.getValue('key'),
-        leading: p.getValue('leading'),
-        title: p.getValue('title'),
-        subtitle: p.getValue('subtitle'),
-        trailing: p.getValue('trailing'),
-        isThreeLine: p.getValue('isThreeLine'),
-        dense: p.getValue('dense'),
-        visualDensity: p.getValue('visualDensity'),
-        shape: p.getValue('shape'),
-        style: p.getValue('style'),
-        selectedColor: p.getValue('selectedColor'),
-        iconColor: p.getValue('iconColor'),
-        textColor: p.getValue('textColor'),
-        titleTextStyle: p.getValue('titleTextStyle'),
-        subtitleTextStyle: p.getValue('subtitleTextStyle'),
-        leadingAndTrailingTextStyle: p.getValue('leadingAndTrailingTextStyle'),
-        contentPadding: p.getValue('contentPadding'),
-        enabled: p.getValue('enabled'),
-        onTap: p.getValue('onTap'),
-        onLongPress: p.getValue('onLongPress'),
-        onFocusChange: p.getValue('onFocusChange'),
-        mouseCursor: p.getValue('mouseCursor'),
-        selected: p.getValue('selected'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        splashColor: p.getValue('splashColor'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        tileColor: p.getValue('tileColor'),
-        selectedTileColor: p.getValue('selectedTileColor'),
-        enableFeedback: p.getValue('enableFeedback'),
-        horizontalTitleGap: p.getValue('horizontalTitleGap'),
-        minVerticalPadding: p.getValue('minVerticalPadding'),
-        minLeadingWidth: p.getValue('minLeadingWidth'),
+        key: p.get('key').value,
+        leading: p.get('leading').value,
+        title: p.get('title').value,
+        subtitle: p.get('subtitle').value,
+        trailing: p.get('trailing').value,
+        isThreeLine: p.get('isThreeLine').value,
+        dense: p.get('dense').value,
+        visualDensity: p.get('visualDensity').value,
+        shape: p.get('shape').value,
+        style: p.get('style').value,
+        selectedColor: p.get('selectedColor').value,
+        iconColor: p.get('iconColor').value,
+        textColor: p.get('textColor').value,
+        titleTextStyle: p.get('titleTextStyle').value,
+        subtitleTextStyle: p.get('subtitleTextStyle').value,
+        leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').value,
+        contentPadding: p.get('contentPadding').value,
+        enabled: p.get('enabled').value,
+        onTap: p.get('onTap').value,
+        onLongPress: p.get('onLongPress').value,
+        onFocusChange: p.get('onFocusChange').value,
+        mouseCursor: p.get('mouseCursor').value,
+        selected: p.get('selected').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        splashColor: p.get('splashColor').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        tileColor: p.get('tileColor').value,
+        selectedTileColor: p.get('selectedTileColor').value,
+        enableFeedback: p.get('enableFeedback').value,
+        horizontalTitleGap: p.get('horizontalTitleGap').value,
+        minVerticalPadding: p.get('minVerticalPadding').value,
+        minLeadingWidth: p.get('minLeadingWidth').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'subtitle', init: subtitle);
-    mateParams.set(name: 'trailing', init: trailing);
-    mateParams.set(name: 'isThreeLine', init: isThreeLine);
-    mateParams.set(name: 'dense', init: dense);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'titleTextStyle', init: titleTextStyle);
-    mateParams.set(name: 'subtitleTextStyle', init: subtitleTextStyle);
-    mateParams.set(name: 'leadingAndTrailingTextStyle', init: leadingAndTrailingTextStyle);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'tileColor', init: tileColor);
-    mateParams.set(name: 'selectedTileColor', init: selectedTileColor);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'horizontalTitleGap', init: horizontalTitleGap);
-    mateParams.set(name: 'minVerticalPadding', init: minVerticalPadding);
-    mateParams.set(name: 'minLeadingWidth', init: minLeadingWidth);
+    mateParams.put('key', init: key);
+    mateParams.put('leading', init: leading);
+    mateParams.put('title', init: title);
+    mateParams.put('subtitle', init: subtitle);
+    mateParams.put('trailing', init: trailing);
+    mateParams.put('isThreeLine', init: isThreeLine);
+    mateParams.put('dense', init: dense);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('shape', init: shape);
+    mateParams.put('style', init: style);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('titleTextStyle', init: titleTextStyle);
+    mateParams.put('subtitleTextStyle', init: subtitleTextStyle);
+    mateParams.put('leadingAndTrailingTextStyle', init: leadingAndTrailingTextStyle);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('selected', init: selected);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('tileColor', init: tileColor);
+    mateParams.put('selectedTileColor', init: selectedTileColor);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('horizontalTitleGap', init: horizontalTitleGap);
+    mateParams.put('minVerticalPadding', init: minVerticalPadding);
+    mateParams.put('minLeadingWidth', init: minLeadingWidth);
   }
 }

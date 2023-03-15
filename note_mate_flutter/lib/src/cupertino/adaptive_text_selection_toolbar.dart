@@ -30,17 +30,17 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           children: children,
           anchors: anchors,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        anchors: p.getValue('anchors'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        anchors: p.get('anchors').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'anchors', init: anchors);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('anchors', init: anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
@@ -58,17 +58,17 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           buttonItems: buttonItems,
           anchors: anchors,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.buttonItems(
-        key: p.getValue('key'),
-        buttonItems: p.getValue('buttonItems'),
-        anchors: p.getValue('anchors'),
+        key: p.get('key').value,
+        buttonItems: p.get('buttonItems').value,
+        anchors: p.get('anchors').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'buttonItems', init: buttonItems);
-    mateParams.set(name: 'anchors', init: anchors);
+    mateParams.put('key', init: key);
+    mateParams.put('buttonItems', init: buttonItems);
+    mateParams.put('anchors', init: anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
@@ -102,25 +102,25 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           onSelectAll: onSelectAll,
           anchors: anchors,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editable(
-        key: p.getValue('key'),
-        clipboardStatus: p.getValue('clipboardStatus'),
-        onCopy: p.getValue('onCopy'),
-        onCut: p.getValue('onCut'),
-        onPaste: p.getValue('onPaste'),
-        onSelectAll: p.getValue('onSelectAll'),
-        anchors: p.getValue('anchors'),
+        key: p.get('key').value,
+        clipboardStatus: p.get('clipboardStatus').value,
+        onCopy: p.get('onCopy').value,
+        onCut: p.get('onCut').value,
+        onPaste: p.get('onPaste').value,
+        onSelectAll: p.get('onSelectAll').value,
+        anchors: p.get('anchors').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'clipboardStatus', init: clipboardStatus);
-    mateParams.set(name: 'onCopy', init: onCopy);
-    mateParams.set(name: 'onCut', init: onCut);
-    mateParams.set(name: 'onPaste', init: onPaste);
-    mateParams.set(name: 'onSelectAll', init: onSelectAll);
-    mateParams.set(name: 'anchors', init: anchors);
+    mateParams.put('key', init: key);
+    mateParams.put('clipboardStatus', init: clipboardStatus);
+    mateParams.put('onCopy', init: onCopy);
+    mateParams.put('onCut', init: onCut);
+    mateParams.put('onPaste', init: onPaste);
+    mateParams.put('onSelectAll', init: onSelectAll);
+    mateParams.put('anchors', init: anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
@@ -134,15 +134,15 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           key: key,
           editableTextState: editableTextState,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editableText(
-        key: p.getValue('key'),
-        editableTextState: p.getValue('editableTextState'),
+        key: p.get('key').value,
+        editableTextState: p.get('editableTextState').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'editableTextState', init: editableTextState);
+    mateParams.put('key', init: key);
+    mateParams.put('editableTextState', init: editableTextState);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
@@ -168,20 +168,20 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           selectionGeometry: selectionGeometry,
           anchors: anchors,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.selectable(
-        key: p.getValue('key'),
-        onCopy: p.getValue('onCopy'),
-        onSelectAll: p.getValue('onSelectAll'),
-        selectionGeometry: p.getValue('selectionGeometry'),
-        anchors: p.getValue('anchors'),
+        key: p.get('key').value,
+        onCopy: p.get('onCopy').value,
+        onSelectAll: p.get('onSelectAll').value,
+        selectionGeometry: p.get('selectionGeometry').value,
+        anchors: p.get('anchors').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onCopy', init: onCopy);
-    mateParams.set(name: 'onSelectAll', init: onSelectAll);
-    mateParams.set(name: 'selectionGeometry', init: selectionGeometry);
-    mateParams.set(name: 'anchors', init: anchors);
+    mateParams.put('key', init: key);
+    mateParams.put('onCopy', init: onCopy);
+    mateParams.put('onSelectAll', init: onSelectAll);
+    mateParams.put('selectionGeometry', init: selectionGeometry);
+    mateParams.put('anchors', init: anchors);
   }
 }

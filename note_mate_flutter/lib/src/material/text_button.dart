@@ -60,32 +60,32 @@ class TextButton$Mate extends TextButton with WidgetMate<TextButton$Mate> {
           statesController: statesController,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextButton$Mate(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        onLongPress: p.getValue('onLongPress'),
-        onHover: p.getValue('onHover'),
-        onFocusChange: p.getValue('onFocusChange'),
-        style: p.getValue('style'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        clipBehavior: p.getValue('clipBehavior'),
-        statesController: p.getValue('statesController'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        onLongPress: p.get('onLongPress').value,
+        onHover: p.get('onHover').value,
+        onFocusChange: p.get('onFocusChange').value,
+        style: p.get('style').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        clipBehavior: p.get('clipBehavior').value,
+        statesController: p.get('statesController').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onHover', init: onHover);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'statesController', init: statesController);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onHover', init: onHover);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('style', init: style);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('statesController', init: statesController);
+    mateParams.put('child', init: child);
   }
 }

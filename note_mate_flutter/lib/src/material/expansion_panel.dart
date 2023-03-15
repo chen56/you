@@ -33,21 +33,21 @@ class ExpansionPanel$Mate extends ExpansionPanel with Mate<ExpansionPanel$Mate> 
           canTapOnHeader: canTapOnHeader,
           backgroundColor: backgroundColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionPanel$Mate(
-        headerBuilder: p.getValue('headerBuilder'),
-        body: p.getValue('body'),
-        isExpanded: p.getValue('isExpanded'),
-        canTapOnHeader: p.getValue('canTapOnHeader'),
-        backgroundColor: p.getValue('backgroundColor'),
+        headerBuilder: p.get('headerBuilder').value,
+        body: p.get('body').value,
+        isExpanded: p.get('isExpanded').value,
+        canTapOnHeader: p.get('canTapOnHeader').value,
+        backgroundColor: p.get('backgroundColor').value,
       ),
     );
-    mateParams.set(name: 'headerBuilder', init: headerBuilder);
-    mateParams.set(name: 'body', init: body);
-    mateParams.set(name: 'isExpanded', init: isExpanded);
-    mateParams.set(name: 'canTapOnHeader', init: canTapOnHeader);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
+    mateParams.put('headerBuilder', init: headerBuilder);
+    mateParams.put('body', init: body);
+    mateParams.put('isExpanded', init: isExpanded);
+    mateParams.put('canTapOnHeader', init: canTapOnHeader);
+    mateParams.put('backgroundColor', init: backgroundColor);
   }
 }
 
@@ -76,21 +76,21 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate<ExpansionPa
           canTapOnHeader: canTapOnHeader,
           backgroundColor: backgroundColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionPanelRadio$Mate(
-        value: p.getValue('value'),
-        headerBuilder: p.getValue('headerBuilder'),
-        body: p.getValue('body'),
-        canTapOnHeader: p.getValue('canTapOnHeader'),
-        backgroundColor: p.getValue('backgroundColor'),
+        value: p.get('value').value,
+        headerBuilder: p.get('headerBuilder').value,
+        body: p.get('body').value,
+        canTapOnHeader: p.get('canTapOnHeader').value,
+        backgroundColor: p.get('backgroundColor').value,
       ),
     );
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'headerBuilder', init: headerBuilder);
-    mateParams.set(name: 'body', init: body);
-    mateParams.set(name: 'canTapOnHeader', init: canTapOnHeader);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
+    mateParams.put('value', init: value);
+    mateParams.put('headerBuilder', init: headerBuilder);
+    mateParams.put('body', init: body);
+    mateParams.put('canTapOnHeader', init: canTapOnHeader);
+    mateParams.put('backgroundColor', init: backgroundColor);
   }
 }
 
@@ -131,27 +131,27 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with WidgetMate<Expansi
           elevation: elevation,
           expandIconColor: expandIconColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionPanelList$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        expansionCallback: p.getValue('expansionCallback'),
-        animationDuration: p.getValue('animationDuration'),
-        expandedHeaderPadding: p.getValue('expandedHeaderPadding'),
-        dividerColor: p.getValue('dividerColor'),
-        elevation: p.getValue('elevation'),
-        expandIconColor: p.getValue('expandIconColor'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        expansionCallback: p.get('expansionCallback').value,
+        animationDuration: p.get('animationDuration').value,
+        expandedHeaderPadding: p.get('expandedHeaderPadding').value,
+        dividerColor: p.get('dividerColor').value,
+        elevation: p.get('elevation').value,
+        expandIconColor: p.get('expandIconColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'expansionCallback', init: expansionCallback);
-    mateParams.set(name: 'animationDuration', init: animationDuration);
-    mateParams.set(name: 'expandedHeaderPadding', init: expandedHeaderPadding);
-    mateParams.set(name: 'dividerColor', init: dividerColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'expandIconColor', init: expandIconColor);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('expansionCallback', init: expansionCallback);
+    mateParams.put('animationDuration', init: animationDuration);
+    mateParams.put('expandedHeaderPadding', init: expandedHeaderPadding);
+    mateParams.put('dividerColor', init: dividerColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('expandIconColor', init: expandIconColor);
   }
 
   /// ExpansionPanelList ExpansionPanelList.radio({Key? key, List<ExpansionPanel> children = const <ExpansionPanelRadio>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, Object? initialOpenPanelValue, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor})
@@ -193,28 +193,28 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with WidgetMate<Expansi
           elevation: elevation,
           expandIconColor: expandIconColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionPanelList$Mate.radio(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        expansionCallback: p.getValue('expansionCallback'),
-        animationDuration: p.getValue('animationDuration'),
-        initialOpenPanelValue: p.getValue('initialOpenPanelValue'),
-        expandedHeaderPadding: p.getValue('expandedHeaderPadding'),
-        dividerColor: p.getValue('dividerColor'),
-        elevation: p.getValue('elevation'),
-        expandIconColor: p.getValue('expandIconColor'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        expansionCallback: p.get('expansionCallback').value,
+        animationDuration: p.get('animationDuration').value,
+        initialOpenPanelValue: p.get('initialOpenPanelValue').value,
+        expandedHeaderPadding: p.get('expandedHeaderPadding').value,
+        dividerColor: p.get('dividerColor').value,
+        elevation: p.get('elevation').value,
+        expandIconColor: p.get('expandIconColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'expansionCallback', init: expansionCallback);
-    mateParams.set(name: 'animationDuration', init: animationDuration);
-    mateParams.set(name: 'initialOpenPanelValue', init: initialOpenPanelValue);
-    mateParams.set(name: 'expandedHeaderPadding', init: expandedHeaderPadding);
-    mateParams.set(name: 'dividerColor', init: dividerColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'expandIconColor', init: expandIconColor);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('expansionCallback', init: expansionCallback);
+    mateParams.put('animationDuration', init: animationDuration);
+    mateParams.put('initialOpenPanelValue', init: initialOpenPanelValue);
+    mateParams.put('expandedHeaderPadding', init: expandedHeaderPadding);
+    mateParams.put('dividerColor', init: dividerColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('expandIconColor', init: expandIconColor);
   }
 }

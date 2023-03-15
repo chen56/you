@@ -42,24 +42,24 @@ class DrawerHeader$Mate extends DrawerHeader with WidgetMate<DrawerHeader$Mate> 
           curve: curve,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerHeader$Mate(
-        key: p.getValue('key'),
-        decoration: p.getValue('decoration'),
-        margin: p.getValue('margin'),
-        padding: p.getValue('padding'),
-        duration: p.getValue('duration'),
-        curve: p.getValue('curve'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        decoration: p.get('decoration').value,
+        margin: p.get('margin').value,
+        padding: p.get('padding').value,
+        duration: p.get('duration').value,
+        curve: p.get('curve').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'curve', init: curve);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('margin', init: margin);
+    mateParams.put('padding', init: padding);
+    mateParams.put('duration', init: duration);
+    mateParams.put('curve', init: curve);
+    mateParams.put('child', init: child);
   }
 }

@@ -266,128 +266,128 @@ class TextField$Mate extends TextField with WidgetMate<TextField$Mate> {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextField$Mate(
-        key: p.getValue('key'),
-        controller: p.getValue('controller'),
-        focusNode: p.getValue('focusNode'),
-        decoration: p.getValue('decoration'),
-        keyboardType: p.getValue('keyboardType'),
-        textInputAction: p.getValue('textInputAction'),
-        textCapitalization: p.getValue('textCapitalization'),
-        style: p.getValue('style'),
-        strutStyle: p.getValue('strutStyle'),
-        textAlign: p.getValue('textAlign'),
-        textAlignVertical: p.getValue('textAlignVertical'),
-        textDirection: p.getValue('textDirection'),
-        readOnly: p.getValue('readOnly'),
-        showCursor: p.getValue('showCursor'),
-        autofocus: p.getValue('autofocus'),
-        obscuringCharacter: p.getValue('obscuringCharacter'),
-        obscureText: p.getValue('obscureText'),
-        autocorrect: p.getValue('autocorrect'),
-        smartDashesType: p.getValue('smartDashesType'),
-        smartQuotesType: p.getValue('smartQuotesType'),
-        enableSuggestions: p.getValue('enableSuggestions'),
-        maxLines: p.getValue('maxLines'),
-        minLines: p.getValue('minLines'),
-        expands: p.getValue('expands'),
-        maxLength: p.getValue('maxLength'),
-        maxLengthEnforcement: p.getValue('maxLengthEnforcement'),
-        onChanged: p.getValue('onChanged'),
-        onEditingComplete: p.getValue('onEditingComplete'),
-        onSubmitted: p.getValue('onSubmitted'),
-        onAppPrivateCommand: p.getValue('onAppPrivateCommand'),
-        inputFormatters: p.getValue('inputFormatters'),
-        enabled: p.getValue('enabled'),
-        cursorWidth: p.getValue('cursorWidth'),
-        cursorHeight: p.getValue('cursorHeight'),
-        cursorRadius: p.getValue('cursorRadius'),
-        cursorColor: p.getValue('cursorColor'),
-        selectionHeightStyle: p.getValue('selectionHeightStyle'),
-        selectionWidthStyle: p.getValue('selectionWidthStyle'),
-        keyboardAppearance: p.getValue('keyboardAppearance'),
-        scrollPadding: p.getValue('scrollPadding'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        enableInteractiveSelection: p.getValue('enableInteractiveSelection'),
-        selectionControls: p.getValue('selectionControls'),
-        onTap: p.getValue('onTap'),
-        onTapOutside: p.getValue('onTapOutside'),
-        mouseCursor: p.getValue('mouseCursor'),
-        buildCounter: p.getValue('buildCounter'),
-        scrollController: p.getValue('scrollController'),
-        scrollPhysics: p.getValue('scrollPhysics'),
-        autofillHints: p.getValue('autofillHints'),
-        contentInsertionConfiguration: p.getValue('contentInsertionConfiguration'),
-        clipBehavior: p.getValue('clipBehavior'),
-        restorationId: p.getValue('restorationId'),
-        scribbleEnabled: p.getValue('scribbleEnabled'),
-        enableIMEPersonalizedLearning: p.getValue('enableIMEPersonalizedLearning'),
-        contextMenuBuilder: p.getValue('contextMenuBuilder'),
-        canRequestFocus: p.getValue('canRequestFocus'),
-        spellCheckConfiguration: p.getValue('spellCheckConfiguration'),
-        magnifierConfiguration: p.getValue('magnifierConfiguration'),
+        key: p.get('key').value,
+        controller: p.get('controller').value,
+        focusNode: p.get('focusNode').value,
+        decoration: p.get('decoration').value,
+        keyboardType: p.get('keyboardType').value,
+        textInputAction: p.get('textInputAction').value,
+        textCapitalization: p.get('textCapitalization').value,
+        style: p.get('style').value,
+        strutStyle: p.get('strutStyle').value,
+        textAlign: p.get('textAlign').value,
+        textAlignVertical: p.get('textAlignVertical').value,
+        textDirection: p.get('textDirection').value,
+        readOnly: p.get('readOnly').value,
+        showCursor: p.get('showCursor').value,
+        autofocus: p.get('autofocus').value,
+        obscuringCharacter: p.get('obscuringCharacter').value,
+        obscureText: p.get('obscureText').value,
+        autocorrect: p.get('autocorrect').value,
+        smartDashesType: p.get('smartDashesType').value,
+        smartQuotesType: p.get('smartQuotesType').value,
+        enableSuggestions: p.get('enableSuggestions').value,
+        maxLines: p.get('maxLines').value,
+        minLines: p.get('minLines').value,
+        expands: p.get('expands').value,
+        maxLength: p.get('maxLength').value,
+        maxLengthEnforcement: p.get('maxLengthEnforcement').value,
+        onChanged: p.get('onChanged').value,
+        onEditingComplete: p.get('onEditingComplete').value,
+        onSubmitted: p.get('onSubmitted').value,
+        onAppPrivateCommand: p.get('onAppPrivateCommand').value,
+        inputFormatters: p.get('inputFormatters').value,
+        enabled: p.get('enabled').value,
+        cursorWidth: p.get('cursorWidth').value,
+        cursorHeight: p.get('cursorHeight').value,
+        cursorRadius: p.get('cursorRadius').value,
+        cursorColor: p.get('cursorColor').value,
+        selectionHeightStyle: p.get('selectionHeightStyle').value,
+        selectionWidthStyle: p.get('selectionWidthStyle').value,
+        keyboardAppearance: p.get('keyboardAppearance').value,
+        scrollPadding: p.get('scrollPadding').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        enableInteractiveSelection: p.get('enableInteractiveSelection').value,
+        selectionControls: p.get('selectionControls').value,
+        onTap: p.get('onTap').value,
+        onTapOutside: p.get('onTapOutside').value,
+        mouseCursor: p.get('mouseCursor').value,
+        buildCounter: p.get('buildCounter').value,
+        scrollController: p.get('scrollController').value,
+        scrollPhysics: p.get('scrollPhysics').value,
+        autofillHints: p.get('autofillHints').value,
+        contentInsertionConfiguration: p.get('contentInsertionConfiguration').value,
+        clipBehavior: p.get('clipBehavior').value,
+        restorationId: p.get('restorationId').value,
+        scribbleEnabled: p.get('scribbleEnabled').value,
+        enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').value,
+        contextMenuBuilder: p.get('contextMenuBuilder').value,
+        canRequestFocus: p.get('canRequestFocus').value,
+        spellCheckConfiguration: p.get('spellCheckConfiguration').value,
+        magnifierConfiguration: p.get('magnifierConfiguration').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'keyboardType', init: keyboardType);
-    mateParams.set(name: 'textInputAction', init: textInputAction);
-    mateParams.set(name: 'textCapitalization', init: textCapitalization);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'strutStyle', init: strutStyle);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'textAlignVertical', init: textAlignVertical);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'readOnly', init: readOnly);
-    mateParams.set(name: 'showCursor', init: showCursor);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'obscuringCharacter', init: obscuringCharacter);
-    mateParams.set(name: 'obscureText', init: obscureText);
-    mateParams.set(name: 'autocorrect', init: autocorrect);
-    mateParams.set(name: 'smartDashesType', init: smartDashesType);
-    mateParams.set(name: 'smartQuotesType', init: smartQuotesType);
-    mateParams.set(name: 'enableSuggestions', init: enableSuggestions);
-    mateParams.set(name: 'maxLines', init: maxLines);
-    mateParams.set(name: 'minLines', init: minLines);
-    mateParams.set(name: 'expands', init: expands);
-    mateParams.set(name: 'maxLength', init: maxLength);
-    mateParams.set(name: 'maxLengthEnforcement', init: maxLengthEnforcement);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'onEditingComplete', init: onEditingComplete);
-    mateParams.set(name: 'onSubmitted', init: onSubmitted);
-    mateParams.set(name: 'onAppPrivateCommand', init: onAppPrivateCommand);
-    mateParams.set(name: 'inputFormatters', init: inputFormatters);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'cursorWidth', init: cursorWidth);
-    mateParams.set(name: 'cursorHeight', init: cursorHeight);
-    mateParams.set(name: 'cursorRadius', init: cursorRadius);
-    mateParams.set(name: 'cursorColor', init: cursorColor);
-    mateParams.set(name: 'selectionHeightStyle', init: selectionHeightStyle);
-    mateParams.set(name: 'selectionWidthStyle', init: selectionWidthStyle);
-    mateParams.set(name: 'keyboardAppearance', init: keyboardAppearance);
-    mateParams.set(name: 'scrollPadding', init: scrollPadding);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'enableInteractiveSelection', init: enableInteractiveSelection);
-    mateParams.set(name: 'selectionControls', init: selectionControls);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'onTapOutside', init: onTapOutside);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'buildCounter', init: buildCounter);
-    mateParams.set(name: 'scrollController', init: scrollController);
-    mateParams.set(name: 'scrollPhysics', init: scrollPhysics);
-    mateParams.set(name: 'autofillHints', init: autofillHints);
-    mateParams.set(name: 'contentInsertionConfiguration', init: contentInsertionConfiguration);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'scribbleEnabled', init: scribbleEnabled);
-    mateParams.set(name: 'enableIMEPersonalizedLearning', init: enableIMEPersonalizedLearning);
-    mateParams.set(name: 'contextMenuBuilder', init: contextMenuBuilder);
-    mateParams.set(name: 'canRequestFocus', init: canRequestFocus);
-    mateParams.set(name: 'spellCheckConfiguration', init: spellCheckConfiguration);
-    mateParams.set(name: 'magnifierConfiguration', init: magnifierConfiguration);
+    mateParams.put('key', init: key);
+    mateParams.put('controller', init: controller);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('keyboardType', init: keyboardType);
+    mateParams.put('textInputAction', init: textInputAction);
+    mateParams.put('textCapitalization', init: textCapitalization);
+    mateParams.put('style', init: style);
+    mateParams.put('strutStyle', init: strutStyle);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('textAlignVertical', init: textAlignVertical);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('readOnly', init: readOnly);
+    mateParams.put('showCursor', init: showCursor);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('obscuringCharacter', init: obscuringCharacter);
+    mateParams.put('obscureText', init: obscureText);
+    mateParams.put('autocorrect', init: autocorrect);
+    mateParams.put('smartDashesType', init: smartDashesType);
+    mateParams.put('smartQuotesType', init: smartQuotesType);
+    mateParams.put('enableSuggestions', init: enableSuggestions);
+    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('minLines', init: minLines);
+    mateParams.put('expands', init: expands);
+    mateParams.put('maxLength', init: maxLength);
+    mateParams.put('maxLengthEnforcement', init: maxLengthEnforcement);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('onEditingComplete', init: onEditingComplete);
+    mateParams.put('onSubmitted', init: onSubmitted);
+    mateParams.put('onAppPrivateCommand', init: onAppPrivateCommand);
+    mateParams.put('inputFormatters', init: inputFormatters);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('cursorWidth', init: cursorWidth);
+    mateParams.put('cursorHeight', init: cursorHeight);
+    mateParams.put('cursorRadius', init: cursorRadius);
+    mateParams.put('cursorColor', init: cursorColor);
+    mateParams.put('selectionHeightStyle', init: selectionHeightStyle);
+    mateParams.put('selectionWidthStyle', init: selectionWidthStyle);
+    mateParams.put('keyboardAppearance', init: keyboardAppearance);
+    mateParams.put('scrollPadding', init: scrollPadding);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('enableInteractiveSelection', init: enableInteractiveSelection);
+    mateParams.put('selectionControls', init: selectionControls);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('onTapOutside', init: onTapOutside);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('buildCounter', init: buildCounter);
+    mateParams.put('scrollController', init: scrollController);
+    mateParams.put('scrollPhysics', init: scrollPhysics);
+    mateParams.put('autofillHints', init: autofillHints);
+    mateParams.put('contentInsertionConfiguration', init: contentInsertionConfiguration);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('scribbleEnabled', init: scribbleEnabled);
+    mateParams.put('enableIMEPersonalizedLearning', init: enableIMEPersonalizedLearning);
+    mateParams.put('contextMenuBuilder', init: contextMenuBuilder);
+    mateParams.put('canRequestFocus', init: canRequestFocus);
+    mateParams.put('spellCheckConfiguration', init: spellCheckConfiguration);
+    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
   }
 }

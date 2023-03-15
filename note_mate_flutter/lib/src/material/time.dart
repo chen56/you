@@ -17,15 +17,15 @@ class TimeOfDay$Mate extends TimeOfDay with Mate<TimeOfDay$Mate> {
           hour: hour,
           minute: minute,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TimeOfDay$Mate(
-        hour: p.getValue('hour'),
-        minute: p.getValue('minute'),
+        hour: p.get('hour').value,
+        minute: p.get('minute').value,
       ),
     );
-    mateParams.set(name: 'hour', init: hour);
-    mateParams.set(name: 'minute', init: minute);
+    mateParams.put('hour', init: hour);
+    mateParams.put('minute', init: minute);
   }
 
   /// TimeOfDay TimeOfDay.fromDateTime(DateTime time)
@@ -34,11 +34,11 @@ class TimeOfDay$Mate extends TimeOfDay with Mate<TimeOfDay$Mate> {
       /// requiredParameters: DateTime time
       DateTime time)
       : super.fromDateTime(time) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => TimeOfDay$Mate.fromDateTime(p.getValue('time')),
+      builder: (p) => TimeOfDay$Mate.fromDateTime(p.get('time').value),
     );
-    mateParams.set(name: 'time', init: time);
+    mateParams.put('time', init: time);
   }
 }
 
@@ -50,10 +50,10 @@ class RestorableTimeOfDay$Mate extends RestorableTimeOfDay with Mate<RestorableT
       /// requiredParameters: TimeOfDay defaultValue
       TimeOfDay defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableTimeOfDay$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableTimeOfDay$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }

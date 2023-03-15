@@ -23,16 +23,16 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate<Spe
           misspelledTextStyle: misspelledTextStyle,
           spellCheckSuggestionsToolbarBuilder: spellCheckSuggestionsToolbarBuilder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SpellCheckConfiguration$Mate(
-        spellCheckService: p.getValue('spellCheckService'),
-        misspelledTextStyle: p.getValue('misspelledTextStyle'),
-        spellCheckSuggestionsToolbarBuilder: p.getValue('spellCheckSuggestionsToolbarBuilder'),
+        spellCheckService: p.get('spellCheckService').value,
+        misspelledTextStyle: p.get('misspelledTextStyle').value,
+        spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').value,
       ),
     );
-    mateParams.set(name: 'spellCheckService', init: spellCheckService);
-    mateParams.set(name: 'misspelledTextStyle', init: misspelledTextStyle);
-    mateParams.set(name: 'spellCheckSuggestionsToolbarBuilder', init: spellCheckSuggestionsToolbarBuilder);
+    mateParams.put('spellCheckService', init: spellCheckService);
+    mateParams.put('misspelledTextStyle', init: misspelledTextStyle);
+    mateParams.put('spellCheckSuggestionsToolbarBuilder', init: spellCheckSuggestionsToolbarBuilder);
   }
 }

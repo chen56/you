@@ -27,19 +27,19 @@ class HSVColor$Mate extends HSVColor with Mate<HSVColor$Mate> {
           saturation,
           value,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => HSVColor$Mate.fromAHSV(
-        p.getValue('alpha'),
-        p.getValue('hue'),
-        p.getValue('saturation'),
-        p.getValue('value'),
+        p.get('alpha').value,
+        p.get('hue').value,
+        p.get('saturation').value,
+        p.get('value').value,
       ),
     );
-    mateParams.set(name: 'alpha', init: alpha);
-    mateParams.set(name: 'hue', init: hue);
-    mateParams.set(name: 'saturation', init: saturation);
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('alpha', init: alpha);
+    mateParams.put('hue', init: hue);
+    mateParams.put('saturation', init: saturation);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -64,19 +64,19 @@ class HSLColor$Mate extends HSLColor with Mate<HSLColor$Mate> {
           saturation,
           lightness,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => HSLColor$Mate.fromAHSL(
-        p.getValue('alpha'),
-        p.getValue('hue'),
-        p.getValue('saturation'),
-        p.getValue('lightness'),
+        p.get('alpha').value,
+        p.get('hue').value,
+        p.get('saturation').value,
+        p.get('lightness').value,
       ),
     );
-    mateParams.set(name: 'alpha', init: alpha);
-    mateParams.set(name: 'hue', init: hue);
-    mateParams.set(name: 'saturation', init: saturation);
-    mateParams.set(name: 'lightness', init: lightness);
+    mateParams.put('alpha', init: alpha);
+    mateParams.put('hue', init: hue);
+    mateParams.put('saturation', init: saturation);
+    mateParams.put('lightness', init: lightness);
   }
 }
 
@@ -93,15 +93,15 @@ class ColorSwatch$Mate<T> extends ColorSwatch<T> with Mate<ColorSwatch$Mate> {
           primary,
           _swatch,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorSwatch$Mate(
-        p.getValue('primary'),
-        p.getValue('_swatch'),
+        p.get('primary').value,
+        p.get('_swatch').value,
       ),
     );
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: '_swatch', init: _swatch);
+    mateParams.put('primary', init: primary);
+    mateParams.put('_swatch', init: _swatch);
   }
 }
 
@@ -133,22 +133,22 @@ class ColorProperty$Mate extends ColorProperty with Mate<ColorProperty$Mate> {
           style: style,
           level: level,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorProperty$Mate(
-        p.getValue('name'),
-        p.getValue('value'),
-        showName: p.getValue('showName'),
-        defaultValue: p.getValue('defaultValue'),
-        style: p.getValue('style'),
-        level: p.getValue('level'),
+        p.get('name').value,
+        p.get('value').value,
+        showName: p.get('showName').value,
+        defaultValue: p.get('defaultValue').value,
+        style: p.get('style').value,
+        level: p.get('level').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'showName', init: showName);
-    mateParams.set(name: 'defaultValue', init: defaultValue);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'level', init: level);
+    mateParams.put('name', init: name);
+    mateParams.put('value', init: value);
+    mateParams.put('showName', init: showName);
+    mateParams.put('defaultValue', init: defaultValue);
+    mateParams.put('style', init: style);
+    mateParams.put('level', init: level);
   }
 }

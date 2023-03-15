@@ -27,19 +27,19 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with WidgetMate<D
           selectionColor: selectionColor,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultSelectionStyle$Mate(
-        key: p.getValue('key'),
-        cursorColor: p.getValue('cursorColor'),
-        selectionColor: p.getValue('selectionColor'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        cursorColor: p.get('cursorColor').value,
+        selectionColor: p.get('selectionColor').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'cursorColor', init: cursorColor);
-    mateParams.set(name: 'selectionColor', init: selectionColor);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('cursorColor', init: cursorColor);
+    mateParams.put('selectionColor', init: selectionColor);
+    mateParams.put('child', init: child);
   }
 
   /// DefaultSelectionStyle DefaultSelectionStyle.fallback({Key? key})
@@ -48,10 +48,10 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with WidgetMate<D
       /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
       Key? key})
       : super.fallback(key: key) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DefaultSelectionStyle$Mate.fallback(key: p.getValue('key')),
+      builder: (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').value),
     );
-    mateParams.set(name: 'key', init: key);
+    mateParams.put('key', init: key);
   }
 }

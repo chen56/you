@@ -21,16 +21,16 @@ class Tolerance$Mate extends Tolerance with Mate<Tolerance$Mate> {
           time: time,
           velocity: velocity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Tolerance$Mate(
-        distance: p.getValue('distance'),
-        time: p.getValue('time'),
-        velocity: p.getValue('velocity'),
+        distance: p.get('distance').value,
+        time: p.get('time').value,
+        velocity: p.get('velocity').value,
       ),
     );
-    mateParams.set(name: 'distance', init: distance);
-    mateParams.set(name: 'time', init: time);
-    mateParams.set(name: 'velocity', init: velocity);
+    mateParams.put('distance', init: distance);
+    mateParams.put('time', init: time);
+    mateParams.put('velocity', init: velocity);
   }
 }

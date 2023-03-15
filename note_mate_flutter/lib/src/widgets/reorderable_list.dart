@@ -107,55 +107,55 @@ class ReorderableList$Mate extends ReorderableList with WidgetMate<ReorderableLi
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ReorderableList$Mate(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        itemCount: p.getValue('itemCount'),
-        onReorder: p.getValue('onReorder'),
-        onReorderStart: p.getValue('onReorderStart'),
-        onReorderEnd: p.getValue('onReorderEnd'),
-        itemExtent: p.getValue('itemExtent'),
-        prototypeItem: p.getValue('prototypeItem'),
-        proxyDecorator: p.getValue('proxyDecorator'),
-        padding: p.getValue('padding'),
-        scrollDirection: p.getValue('scrollDirection'),
-        reverse: p.getValue('reverse'),
-        controller: p.getValue('controller'),
-        primary: p.getValue('primary'),
-        physics: p.getValue('physics'),
-        shrinkWrap: p.getValue('shrinkWrap'),
-        anchor: p.getValue('anchor'),
-        cacheExtent: p.getValue('cacheExtent'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        keyboardDismissBehavior: p.getValue('keyboardDismissBehavior'),
-        restorationId: p.getValue('restorationId'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        itemCount: p.get('itemCount').value,
+        onReorder: p.get('onReorder').value,
+        onReorderStart: p.get('onReorderStart').value,
+        onReorderEnd: p.get('onReorderEnd').value,
+        itemExtent: p.get('itemExtent').value,
+        prototypeItem: p.get('prototypeItem').value,
+        proxyDecorator: p.get('proxyDecorator').value,
+        padding: p.get('padding').value,
+        scrollDirection: p.get('scrollDirection').value,
+        reverse: p.get('reverse').value,
+        controller: p.get('controller').value,
+        primary: p.get('primary').value,
+        physics: p.get('physics').value,
+        shrinkWrap: p.get('shrinkWrap').value,
+        anchor: p.get('anchor').value,
+        cacheExtent: p.get('cacheExtent').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        keyboardDismissBehavior: p.get('keyboardDismissBehavior').value,
+        restorationId: p.get('restorationId').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'itemCount', init: itemCount);
-    mateParams.set(name: 'onReorder', init: onReorder);
-    mateParams.set(name: 'onReorderStart', init: onReorderStart);
-    mateParams.set(name: 'onReorderEnd', init: onReorderEnd);
-    mateParams.set(name: 'itemExtent', init: itemExtent);
-    mateParams.set(name: 'prototypeItem', init: prototypeItem);
-    mateParams.set(name: 'proxyDecorator', init: proxyDecorator);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'scrollDirection', init: scrollDirection);
-    mateParams.set(name: 'reverse', init: reverse);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'shrinkWrap', init: shrinkWrap);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'cacheExtent', init: cacheExtent);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('itemCount', init: itemCount);
+    mateParams.put('onReorder', init: onReorder);
+    mateParams.put('onReorderStart', init: onReorderStart);
+    mateParams.put('onReorderEnd', init: onReorderEnd);
+    mateParams.put('itemExtent', init: itemExtent);
+    mateParams.put('prototypeItem', init: prototypeItem);
+    mateParams.put('proxyDecorator', init: proxyDecorator);
+    mateParams.put('padding', init: padding);
+    mateParams.put('scrollDirection', init: scrollDirection);
+    mateParams.put('reverse', init: reverse);
+    mateParams.put('controller', init: controller);
+    mateParams.put('primary', init: primary);
+    mateParams.put('physics', init: physics);
+    mateParams.put('shrinkWrap', init: shrinkWrap);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('cacheExtent', init: cacheExtent);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -204,31 +204,31 @@ class SliverReorderableList$Mate extends SliverReorderableList with WidgetMate<S
           prototypeItem: prototypeItem,
           proxyDecorator: proxyDecorator,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverReorderableList$Mate(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        findChildIndexCallback: p.getValue('findChildIndexCallback'),
-        itemCount: p.getValue('itemCount'),
-        onReorder: p.getValue('onReorder'),
-        onReorderStart: p.getValue('onReorderStart'),
-        onReorderEnd: p.getValue('onReorderEnd'),
-        itemExtent: p.getValue('itemExtent'),
-        prototypeItem: p.getValue('prototypeItem'),
-        proxyDecorator: p.getValue('proxyDecorator'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        findChildIndexCallback: p.get('findChildIndexCallback').value,
+        itemCount: p.get('itemCount').value,
+        onReorder: p.get('onReorder').value,
+        onReorderStart: p.get('onReorderStart').value,
+        onReorderEnd: p.get('onReorderEnd').value,
+        itemExtent: p.get('itemExtent').value,
+        prototypeItem: p.get('prototypeItem').value,
+        proxyDecorator: p.get('proxyDecorator').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.set(name: 'itemCount', init: itemCount);
-    mateParams.set(name: 'onReorder', init: onReorder);
-    mateParams.set(name: 'onReorderStart', init: onReorderStart);
-    mateParams.set(name: 'onReorderEnd', init: onReorderEnd);
-    mateParams.set(name: 'itemExtent', init: itemExtent);
-    mateParams.set(name: 'prototypeItem', init: prototypeItem);
-    mateParams.set(name: 'proxyDecorator', init: proxyDecorator);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
+    mateParams.put('itemCount', init: itemCount);
+    mateParams.put('onReorder', init: onReorder);
+    mateParams.put('onReorderStart', init: onReorderStart);
+    mateParams.put('onReorderEnd', init: onReorderEnd);
+    mateParams.put('itemExtent', init: itemExtent);
+    mateParams.put('prototypeItem', init: prototypeItem);
+    mateParams.put('proxyDecorator', init: proxyDecorator);
   }
 }
 
@@ -254,19 +254,19 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
           index: index,
           enabled: enabled,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ReorderableDragStartListener$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        index: p.getValue('index'),
-        enabled: p.getValue('enabled'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        index: p.get('index').value,
+        enabled: p.get('enabled').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'index', init: index);
-    mateParams.set(name: 'enabled', init: enabled);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('index', init: index);
+    mateParams.put('enabled', init: enabled);
   }
 }
 
@@ -292,18 +292,18 @@ class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragSta
           index: index,
           enabled: enabled,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ReorderableDelayedDragStartListener$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        index: p.getValue('index'),
-        enabled: p.getValue('enabled'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        index: p.get('index').value,
+        enabled: p.get('enabled').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'index', init: index);
-    mateParams.set(name: 'enabled', init: enabled);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('index', init: index);
+    mateParams.put('enabled', init: enabled);
   }
 }

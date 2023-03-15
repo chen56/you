@@ -138,68 +138,68 @@ class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Widget
           autocorrect: autocorrect,
           enabled: enabled,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSearchTextField$Mate(
-        key: p.getValue('key'),
-        controller: p.getValue('controller'),
-        onChanged: p.getValue('onChanged'),
-        onSubmitted: p.getValue('onSubmitted'),
-        style: p.getValue('style'),
-        placeholder: p.getValue('placeholder'),
-        placeholderStyle: p.getValue('placeholderStyle'),
-        decoration: p.getValue('decoration'),
-        backgroundColor: p.getValue('backgroundColor'),
-        borderRadius: p.getValue('borderRadius'),
-        keyboardType: p.getValue('keyboardType'),
-        padding: p.getValue('padding'),
-        itemColor: p.getValue('itemColor'),
-        itemSize: p.getValue('itemSize'),
-        prefixInsets: p.getValue('prefixInsets'),
-        prefixIcon: p.getValue('prefixIcon'),
-        suffixInsets: p.getValue('suffixInsets'),
-        suffixIcon: p.getValue('suffixIcon'),
-        suffixMode: p.getValue('suffixMode'),
-        onSuffixTap: p.getValue('onSuffixTap'),
-        restorationId: p.getValue('restorationId'),
-        focusNode: p.getValue('focusNode'),
-        smartQuotesType: p.getValue('smartQuotesType'),
-        smartDashesType: p.getValue('smartDashesType'),
-        enableIMEPersonalizedLearning: p.getValue('enableIMEPersonalizedLearning'),
-        autofocus: p.getValue('autofocus'),
-        onTap: p.getValue('onTap'),
-        autocorrect: p.getValue('autocorrect'),
-        enabled: p.getValue('enabled'),
+        key: p.get('key').value,
+        controller: p.get('controller').value,
+        onChanged: p.get('onChanged').value,
+        onSubmitted: p.get('onSubmitted').value,
+        style: p.get('style').value,
+        placeholder: p.get('placeholder').value,
+        placeholderStyle: p.get('placeholderStyle').value,
+        decoration: p.get('decoration').value,
+        backgroundColor: p.get('backgroundColor').value,
+        borderRadius: p.get('borderRadius').value,
+        keyboardType: p.get('keyboardType').value,
+        padding: p.get('padding').value,
+        itemColor: p.get('itemColor').value,
+        itemSize: p.get('itemSize').value,
+        prefixInsets: p.get('prefixInsets').value,
+        prefixIcon: p.get('prefixIcon').value,
+        suffixInsets: p.get('suffixInsets').value,
+        suffixIcon: p.get('suffixIcon').value,
+        suffixMode: p.get('suffixMode').value,
+        onSuffixTap: p.get('onSuffixTap').value,
+        restorationId: p.get('restorationId').value,
+        focusNode: p.get('focusNode').value,
+        smartQuotesType: p.get('smartQuotesType').value,
+        smartDashesType: p.get('smartDashesType').value,
+        enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').value,
+        autofocus: p.get('autofocus').value,
+        onTap: p.get('onTap').value,
+        autocorrect: p.get('autocorrect').value,
+        enabled: p.get('enabled').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'onSubmitted', init: onSubmitted);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'placeholder', init: placeholder);
-    mateParams.set(name: 'placeholderStyle', init: placeholderStyle);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'keyboardType', init: keyboardType);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'itemColor', init: itemColor);
-    mateParams.set(name: 'itemSize', init: itemSize);
-    mateParams.set(name: 'prefixInsets', init: prefixInsets);
-    mateParams.set(name: 'prefixIcon', init: prefixIcon);
-    mateParams.set(name: 'suffixInsets', init: suffixInsets);
-    mateParams.set(name: 'suffixIcon', init: suffixIcon);
-    mateParams.set(name: 'suffixMode', init: suffixMode);
-    mateParams.set(name: 'onSuffixTap', init: onSuffixTap);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'smartQuotesType', init: smartQuotesType);
-    mateParams.set(name: 'smartDashesType', init: smartDashesType);
-    mateParams.set(name: 'enableIMEPersonalizedLearning', init: enableIMEPersonalizedLearning);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'autocorrect', init: autocorrect);
-    mateParams.set(name: 'enabled', init: enabled);
+    mateParams.put('key', init: key);
+    mateParams.put('controller', init: controller);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('onSubmitted', init: onSubmitted);
+    mateParams.put('style', init: style);
+    mateParams.put('placeholder', init: placeholder);
+    mateParams.put('placeholderStyle', init: placeholderStyle);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('keyboardType', init: keyboardType);
+    mateParams.put('padding', init: padding);
+    mateParams.put('itemColor', init: itemColor);
+    mateParams.put('itemSize', init: itemSize);
+    mateParams.put('prefixInsets', init: prefixInsets);
+    mateParams.put('prefixIcon', init: prefixIcon);
+    mateParams.put('suffixInsets', init: suffixInsets);
+    mateParams.put('suffixIcon', init: suffixIcon);
+    mateParams.put('suffixMode', init: suffixMode);
+    mateParams.put('onSuffixTap', init: onSuffixTap);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('smartQuotesType', init: smartQuotesType);
+    mateParams.put('smartDashesType', init: smartDashesType);
+    mateParams.put('enableIMEPersonalizedLearning', init: enableIMEPersonalizedLearning);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('autocorrect', init: autocorrect);
+    mateParams.put('enabled', init: enabled);
   }
 }

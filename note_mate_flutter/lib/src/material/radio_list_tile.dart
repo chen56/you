@@ -132,66 +132,66 @@ class RadioListTile$Mate<T> extends RadioListTile<T> with WidgetMate<RadioListTi
           onFocusChange: onFocusChange,
           enableFeedback: enableFeedback,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RadioListTile$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        groupValue: p.getValue('groupValue'),
-        onChanged: p.getValue('onChanged'),
-        mouseCursor: p.getValue('mouseCursor'),
-        toggleable: p.getValue('toggleable'),
-        activeColor: p.getValue('activeColor'),
-        fillColor: p.getValue('fillColor'),
-        hoverColor: p.getValue('hoverColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashRadius: p.getValue('splashRadius'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        title: p.getValue('title'),
-        subtitle: p.getValue('subtitle'),
-        isThreeLine: p.getValue('isThreeLine'),
-        dense: p.getValue('dense'),
-        secondary: p.getValue('secondary'),
-        selected: p.getValue('selected'),
-        controlAffinity: p.getValue('controlAffinity'),
-        autofocus: p.getValue('autofocus'),
-        contentPadding: p.getValue('contentPadding'),
-        shape: p.getValue('shape'),
-        tileColor: p.getValue('tileColor'),
-        selectedTileColor: p.getValue('selectedTileColor'),
-        visualDensity: p.getValue('visualDensity'),
-        focusNode: p.getValue('focusNode'),
-        onFocusChange: p.getValue('onFocusChange'),
-        enableFeedback: p.getValue('enableFeedback'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        groupValue: p.get('groupValue').value,
+        onChanged: p.get('onChanged').value,
+        mouseCursor: p.get('mouseCursor').value,
+        toggleable: p.get('toggleable').value,
+        activeColor: p.get('activeColor').value,
+        fillColor: p.get('fillColor').value,
+        hoverColor: p.get('hoverColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        title: p.get('title').value,
+        subtitle: p.get('subtitle').value,
+        isThreeLine: p.get('isThreeLine').value,
+        dense: p.get('dense').value,
+        secondary: p.get('secondary').value,
+        selected: p.get('selected').value,
+        controlAffinity: p.get('controlAffinity').value,
+        autofocus: p.get('autofocus').value,
+        contentPadding: p.get('contentPadding').value,
+        shape: p.get('shape').value,
+        tileColor: p.get('tileColor').value,
+        selectedTileColor: p.get('selectedTileColor').value,
+        visualDensity: p.get('visualDensity').value,
+        focusNode: p.get('focusNode').value,
+        onFocusChange: p.get('onFocusChange').value,
+        enableFeedback: p.get('enableFeedback').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'groupValue', init: groupValue);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'toggleable', init: toggleable);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'subtitle', init: subtitle);
-    mateParams.set(name: 'isThreeLine', init: isThreeLine);
-    mateParams.set(name: 'dense', init: dense);
-    mateParams.set(name: 'secondary', init: secondary);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'controlAffinity', init: controlAffinity);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'tileColor', init: tileColor);
-    mateParams.set(name: 'selectedTileColor', init: selectedTileColor);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('groupValue', init: groupValue);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('toggleable', init: toggleable);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('title', init: title);
+    mateParams.put('subtitle', init: subtitle);
+    mateParams.put('isThreeLine', init: isThreeLine);
+    mateParams.put('dense', init: dense);
+    mateParams.put('secondary', init: secondary);
+    mateParams.put('selected', init: selected);
+    mateParams.put('controlAffinity', init: controlAffinity);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('shape', init: shape);
+    mateParams.put('tileColor', init: tileColor);
+    mateParams.put('selectedTileColor', init: selectedTileColor);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('enableFeedback', init: enableFeedback);
   }
 }

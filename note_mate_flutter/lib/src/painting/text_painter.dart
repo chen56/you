@@ -28,19 +28,19 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate<Placeho
           baseline: baseline,
           baselineOffset: baselineOffset,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PlaceholderDimensions$Mate(
-        size: p.getValue('size'),
-        alignment: p.getValue('alignment'),
-        baseline: p.getValue('baseline'),
-        baselineOffset: p.getValue('baselineOffset'),
+        size: p.get('size').value,
+        alignment: p.get('alignment').value,
+        baseline: p.get('baseline').value,
+        baselineOffset: p.get('baselineOffset').value,
       ),
     );
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'baseline', init: baseline);
-    mateParams.set(name: 'baselineOffset', init: baselineOffset);
+    mateParams.put('size', init: size);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('baseline', init: baseline);
+    mateParams.put('baselineOffset', init: baselineOffset);
   }
 }
 
@@ -89,30 +89,30 @@ class TextPainter$Mate extends TextPainter with Mate<TextPainter$Mate> {
           textWidthBasis: textWidthBasis,
           textHeightBehavior: textHeightBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextPainter$Mate(
-        text: p.getValue('text'),
-        textAlign: p.getValue('textAlign'),
-        textDirection: p.getValue('textDirection'),
-        textScaleFactor: p.getValue('textScaleFactor'),
-        maxLines: p.getValue('maxLines'),
-        ellipsis: p.getValue('ellipsis'),
-        locale: p.getValue('locale'),
-        strutStyle: p.getValue('strutStyle'),
-        textWidthBasis: p.getValue('textWidthBasis'),
-        textHeightBehavior: p.getValue('textHeightBehavior'),
+        text: p.get('text').value,
+        textAlign: p.get('textAlign').value,
+        textDirection: p.get('textDirection').value,
+        textScaleFactor: p.get('textScaleFactor').value,
+        maxLines: p.get('maxLines').value,
+        ellipsis: p.get('ellipsis').value,
+        locale: p.get('locale').value,
+        strutStyle: p.get('strutStyle').value,
+        textWidthBasis: p.get('textWidthBasis').value,
+        textHeightBehavior: p.get('textHeightBehavior').value,
       ),
     );
-    mateParams.set(name: 'text', init: text);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'textScaleFactor', init: textScaleFactor);
-    mateParams.set(name: 'maxLines', init: maxLines);
-    mateParams.set(name: 'ellipsis', init: ellipsis);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'strutStyle', init: strutStyle);
-    mateParams.set(name: 'textWidthBasis', init: textWidthBasis);
-    mateParams.set(name: 'textHeightBehavior', init: textHeightBehavior);
+    mateParams.put('text', init: text);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('textScaleFactor', init: textScaleFactor);
+    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('ellipsis', init: ellipsis);
+    mateParams.put('locale', init: locale);
+    mateParams.put('strutStyle', init: strutStyle);
+    mateParams.put('textWidthBasis', init: textWidthBasis);
+    mateParams.put('textHeightBehavior', init: textHeightBehavior);
   }
 }

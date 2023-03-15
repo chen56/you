@@ -14,11 +14,11 @@ class SnapshotController$Mate extends SnapshotController with Mate<SnapshotContr
       /// optionalParameters: {bool allowSnapshotting = false} , hasDefaultValue:true, defaultValueCode:false
       required bool allowSnapshotting})
       : super(allowSnapshotting: allowSnapshotting) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SnapshotController$Mate(allowSnapshotting: p.getValue('allowSnapshotting')),
+      builder: (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').value),
     );
-    mateParams.set(name: 'allowSnapshotting', init: allowSnapshotting);
+    mateParams.put('allowSnapshotting', init: allowSnapshotting);
   }
 }
 
@@ -51,22 +51,22 @@ class SnapshotWidget$Mate extends SnapshotWidget with WidgetMate<SnapshotWidget$
           controller: controller,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SnapshotWidget$Mate(
-        key: p.getValue('key'),
-        mode: p.getValue('mode'),
-        painter: p.getValue('painter'),
-        autoresize: p.getValue('autoresize'),
-        controller: p.getValue('controller'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        mode: p.get('mode').value,
+        painter: p.get('painter').value,
+        autoresize: p.get('autoresize').value,
+        controller: p.get('controller').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'mode', init: mode);
-    mateParams.set(name: 'painter', init: painter);
-    mateParams.set(name: 'autoresize', init: autoresize);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('mode', init: mode);
+    mateParams.put('painter', init: painter);
+    mateParams.put('autoresize', init: autoresize);
+    mateParams.put('controller', init: controller);
+    mateParams.put('child', init: child);
   }
 }

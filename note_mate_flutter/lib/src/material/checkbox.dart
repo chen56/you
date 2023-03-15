@@ -93,48 +93,48 @@ class Checkbox$Mate extends Checkbox with WidgetMate<Checkbox$Mate> {
           side: side,
           isError: isError,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Checkbox$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        tristate: p.getValue('tristate'),
-        onChanged: p.getValue('onChanged'),
-        mouseCursor: p.getValue('mouseCursor'),
-        activeColor: p.getValue('activeColor'),
-        fillColor: p.getValue('fillColor'),
-        checkColor: p.getValue('checkColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashRadius: p.getValue('splashRadius'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        visualDensity: p.getValue('visualDensity'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        shape: p.getValue('shape'),
-        side: p.getValue('side'),
-        isError: p.getValue('isError'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        tristate: p.get('tristate').value,
+        onChanged: p.get('onChanged').value,
+        mouseCursor: p.get('mouseCursor').value,
+        activeColor: p.get('activeColor').value,
+        fillColor: p.get('fillColor').value,
+        checkColor: p.get('checkColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        visualDensity: p.get('visualDensity').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        shape: p.get('shape').value,
+        side: p.get('side').value,
+        isError: p.get('isError').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'tristate', init: tristate);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'checkColor', init: checkColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'isError', init: isError);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('tristate', init: tristate);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('checkColor', init: checkColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('shape', init: shape);
+    mateParams.put('side', init: side);
+    mateParams.put('isError', init: isError);
   }
 }

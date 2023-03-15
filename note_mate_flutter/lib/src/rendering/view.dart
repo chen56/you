@@ -19,15 +19,15 @@ class ViewConfiguration$Mate extends ViewConfiguration with Mate<ViewConfigurati
           size: size,
           devicePixelRatio: devicePixelRatio,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ViewConfiguration$Mate(
-        size: p.getValue('size'),
-        devicePixelRatio: p.getValue('devicePixelRatio'),
+        size: p.get('size').value,
+        devicePixelRatio: p.get('devicePixelRatio').value,
       ),
     );
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'devicePixelRatio', init: devicePixelRatio);
+    mateParams.put('size', init: size);
+    mateParams.put('devicePixelRatio', init: devicePixelRatio);
   }
 }
 
@@ -48,16 +48,16 @@ class RenderView$Mate extends RenderView with Mate<RenderView$Mate> {
           configuration: configuration,
           window: window,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderView$Mate(
-        child: p.getValue('child'),
-        configuration: p.getValue('configuration'),
-        window: p.getValue('window'),
+        child: p.get('child').value,
+        configuration: p.get('configuration').value,
+        window: p.get('window').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'configuration', init: configuration);
-    mateParams.set(name: 'window', init: window);
+    mateParams.put('child', init: child);
+    mateParams.put('configuration', init: configuration);
+    mateParams.put('window', init: window);
   }
 }

@@ -56,31 +56,31 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate<PopupMenuThem
           mouseCursor: mouseCursor,
           position: position,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PopupMenuThemeData$Mate(
-        color: p.getValue('color'),
-        shape: p.getValue('shape'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        textStyle: p.getValue('textStyle'),
-        labelTextStyle: p.getValue('labelTextStyle'),
-        enableFeedback: p.getValue('enableFeedback'),
-        mouseCursor: p.getValue('mouseCursor'),
-        position: p.getValue('position'),
+        color: p.get('color').value,
+        shape: p.get('shape').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        textStyle: p.get('textStyle').value,
+        labelTextStyle: p.get('labelTextStyle').value,
+        enableFeedback: p.get('enableFeedback').value,
+        mouseCursor: p.get('mouseCursor').value,
+        position: p.get('position').value,
       ),
     );
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'labelTextStyle', init: labelTextStyle);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'position', init: position);
+    mateParams.put('color', init: color);
+    mateParams.put('shape', init: shape);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('labelTextStyle', init: labelTextStyle);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('position', init: position);
   }
 }
 
@@ -101,16 +101,16 @@ class PopupMenuTheme$Mate extends PopupMenuTheme with WidgetMate<PopupMenuTheme$
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PopupMenuTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

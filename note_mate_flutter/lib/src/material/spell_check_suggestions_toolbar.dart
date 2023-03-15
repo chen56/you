@@ -25,16 +25,16 @@ class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar
           anchor: anchor,
           buttonItems: buttonItems,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SpellCheckSuggestionsToolbar$Mate(
-        key: p.getValue('key'),
-        anchor: p.getValue('anchor'),
-        buttonItems: p.getValue('buttonItems'),
+        key: p.get('key').value,
+        anchor: p.get('anchor').value,
+        buttonItems: p.get('buttonItems').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'buttonItems', init: buttonItems);
+    mateParams.put('key', init: key);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('buttonItems', init: buttonItems);
   }
 }

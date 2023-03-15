@@ -66,37 +66,37 @@ class CupertinoPicker$Mate extends CupertinoPicker with WidgetMate<CupertinoPick
           selectionOverlay: selectionOverlay,
           looping: looping,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPicker$Mate(
-        key: p.getValue('key'),
-        diameterRatio: p.getValue('diameterRatio'),
-        backgroundColor: p.getValue('backgroundColor'),
-        offAxisFraction: p.getValue('offAxisFraction'),
-        useMagnifier: p.getValue('useMagnifier'),
-        magnification: p.getValue('magnification'),
-        scrollController: p.getValue('scrollController'),
-        squeeze: p.getValue('squeeze'),
-        itemExtent: p.getValue('itemExtent'),
-        onSelectedItemChanged: p.getValue('onSelectedItemChanged'),
-        children: p.getValue('children'),
-        selectionOverlay: p.getValue('selectionOverlay'),
-        looping: p.getValue('looping'),
+        key: p.get('key').value,
+        diameterRatio: p.get('diameterRatio').value,
+        backgroundColor: p.get('backgroundColor').value,
+        offAxisFraction: p.get('offAxisFraction').value,
+        useMagnifier: p.get('useMagnifier').value,
+        magnification: p.get('magnification').value,
+        scrollController: p.get('scrollController').value,
+        squeeze: p.get('squeeze').value,
+        itemExtent: p.get('itemExtent').value,
+        onSelectedItemChanged: p.get('onSelectedItemChanged').value,
+        children: p.get('children').value,
+        selectionOverlay: p.get('selectionOverlay').value,
+        looping: p.get('looping').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'diameterRatio', init: diameterRatio);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'offAxisFraction', init: offAxisFraction);
-    mateParams.set(name: 'useMagnifier', init: useMagnifier);
-    mateParams.set(name: 'magnification', init: magnification);
-    mateParams.set(name: 'scrollController', init: scrollController);
-    mateParams.set(name: 'squeeze', init: squeeze);
-    mateParams.set(name: 'itemExtent', init: itemExtent);
-    mateParams.set(name: 'onSelectedItemChanged', init: onSelectedItemChanged);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'selectionOverlay', init: selectionOverlay);
-    mateParams.set(name: 'looping', init: looping);
+    mateParams.put('key', init: key);
+    mateParams.put('diameterRatio', init: diameterRatio);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('offAxisFraction', init: offAxisFraction);
+    mateParams.put('useMagnifier', init: useMagnifier);
+    mateParams.put('magnification', init: magnification);
+    mateParams.put('scrollController', init: scrollController);
+    mateParams.put('squeeze', init: squeeze);
+    mateParams.put('itemExtent', init: itemExtent);
+    mateParams.put('onSelectedItemChanged', init: onSelectedItemChanged);
+    mateParams.put('children', init: children);
+    mateParams.put('selectionOverlay', init: selectionOverlay);
+    mateParams.put('looping', init: looping);
   }
 
   /// CupertinoPicker CupertinoPicker.builder({Key? key, double diameterRatio = _kDefaultDiameterRatio, Color? backgroundColor, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, FixedExtentScrollController? scrollController, double squeeze = _kSqueeze, required double itemExtent, required void Function(int)? onSelectedItemChanged, required Widget? Function(BuildContext, int) itemBuilder, int? childCount, Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()})
@@ -154,37 +154,37 @@ class CupertinoPicker$Mate extends CupertinoPicker with WidgetMate<CupertinoPick
           childCount: childCount,
           selectionOverlay: selectionOverlay,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPicker$Mate.builder(
-        key: p.getValue('key'),
-        diameterRatio: p.getValue('diameterRatio'),
-        backgroundColor: p.getValue('backgroundColor'),
-        offAxisFraction: p.getValue('offAxisFraction'),
-        useMagnifier: p.getValue('useMagnifier'),
-        magnification: p.getValue('magnification'),
-        scrollController: p.getValue('scrollController'),
-        squeeze: p.getValue('squeeze'),
-        itemExtent: p.getValue('itemExtent'),
-        onSelectedItemChanged: p.getValue('onSelectedItemChanged'),
-        itemBuilder: p.getValue('itemBuilder'),
-        childCount: p.getValue('childCount'),
-        selectionOverlay: p.getValue('selectionOverlay'),
+        key: p.get('key').value,
+        diameterRatio: p.get('diameterRatio').value,
+        backgroundColor: p.get('backgroundColor').value,
+        offAxisFraction: p.get('offAxisFraction').value,
+        useMagnifier: p.get('useMagnifier').value,
+        magnification: p.get('magnification').value,
+        scrollController: p.get('scrollController').value,
+        squeeze: p.get('squeeze').value,
+        itemExtent: p.get('itemExtent').value,
+        onSelectedItemChanged: p.get('onSelectedItemChanged').value,
+        itemBuilder: p.get('itemBuilder').value,
+        childCount: p.get('childCount').value,
+        selectionOverlay: p.get('selectionOverlay').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'diameterRatio', init: diameterRatio);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'offAxisFraction', init: offAxisFraction);
-    mateParams.set(name: 'useMagnifier', init: useMagnifier);
-    mateParams.set(name: 'magnification', init: magnification);
-    mateParams.set(name: 'scrollController', init: scrollController);
-    mateParams.set(name: 'squeeze', init: squeeze);
-    mateParams.set(name: 'itemExtent', init: itemExtent);
-    mateParams.set(name: 'onSelectedItemChanged', init: onSelectedItemChanged);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'childCount', init: childCount);
-    mateParams.set(name: 'selectionOverlay', init: selectionOverlay);
+    mateParams.put('key', init: key);
+    mateParams.put('diameterRatio', init: diameterRatio);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('offAxisFraction', init: offAxisFraction);
+    mateParams.put('useMagnifier', init: useMagnifier);
+    mateParams.put('magnification', init: magnification);
+    mateParams.put('scrollController', init: scrollController);
+    mateParams.put('squeeze', init: squeeze);
+    mateParams.put('itemExtent', init: itemExtent);
+    mateParams.put('onSelectedItemChanged', init: onSelectedItemChanged);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('childCount', init: childCount);
+    mateParams.put('selectionOverlay', init: selectionOverlay);
   }
 }
 
@@ -210,18 +210,18 @@ class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefault
           capStartEdge: capStartEdge,
           capEndEdge: capEndEdge,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPickerDefaultSelectionOverlay$Mate(
-        key: p.getValue('key'),
-        background: p.getValue('background'),
-        capStartEdge: p.getValue('capStartEdge'),
-        capEndEdge: p.getValue('capEndEdge'),
+        key: p.get('key').value,
+        background: p.get('background').value,
+        capStartEdge: p.get('capStartEdge').value,
+        capEndEdge: p.get('capEndEdge').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'capStartEdge', init: capStartEdge);
-    mateParams.set(name: 'capEndEdge', init: capEndEdge);
+    mateParams.put('key', init: key);
+    mateParams.put('background', init: background);
+    mateParams.put('capStartEdge', init: capStartEdge);
+    mateParams.put('capEndEdge', init: capEndEdge);
   }
 }

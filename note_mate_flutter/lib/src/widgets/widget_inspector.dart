@@ -24,17 +24,17 @@ class WidgetInspector$Mate extends WidgetInspector with WidgetMate<WidgetInspect
           child: child,
           selectButtonBuilder: selectButtonBuilder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => WidgetInspector$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        selectButtonBuilder: p.getValue('selectButtonBuilder'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        selectButtonBuilder: p.get('selectButtonBuilder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'selectButtonBuilder', init: selectButtonBuilder);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('selectButtonBuilder', init: selectButtonBuilder);
   }
 }
 
@@ -51,15 +51,15 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate<D
           description,
           url,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DevToolsDeepLinkProperty$Mate(
-        p.getValue('description'),
-        p.getValue('url'),
+        p.get('description').value,
+        p.get('url').value,
       ),
     );
-    mateParams.set(name: 'description', init: description);
-    mateParams.set(name: 'url', init: url);
+    mateParams.put('description', init: description);
+    mateParams.put('url', init: url);
   }
 }
 
@@ -105,26 +105,26 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
           service: service,
           addAdditionalPropertiesCallback: addAdditionalPropertiesCallback,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InspectorSerializationDelegate$Mate(
-        groupName: p.getValue('groupName'),
-        summaryTree: p.getValue('summaryTree'),
-        maxDescendentsTruncatableNode: p.getValue('maxDescendentsTruncatableNode'),
-        expandPropertyValues: p.getValue('expandPropertyValues'),
-        subtreeDepth: p.getValue('subtreeDepth'),
-        includeProperties: p.getValue('includeProperties'),
-        service: p.getValue('service'),
-        addAdditionalPropertiesCallback: p.getValue('addAdditionalPropertiesCallback'),
+        groupName: p.get('groupName').value,
+        summaryTree: p.get('summaryTree').value,
+        maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').value,
+        expandPropertyValues: p.get('expandPropertyValues').value,
+        subtreeDepth: p.get('subtreeDepth').value,
+        includeProperties: p.get('includeProperties').value,
+        service: p.get('service').value,
+        addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').value,
       ),
     );
-    mateParams.set(name: 'groupName', init: groupName);
-    mateParams.set(name: 'summaryTree', init: summaryTree);
-    mateParams.set(name: 'maxDescendentsTruncatableNode', init: maxDescendentsTruncatableNode);
-    mateParams.set(name: 'expandPropertyValues', init: expandPropertyValues);
-    mateParams.set(name: 'subtreeDepth', init: subtreeDepth);
-    mateParams.set(name: 'includeProperties', init: includeProperties);
-    mateParams.set(name: 'service', init: service);
-    mateParams.set(name: 'addAdditionalPropertiesCallback', init: addAdditionalPropertiesCallback);
+    mateParams.put('groupName', init: groupName);
+    mateParams.put('summaryTree', init: summaryTree);
+    mateParams.put('maxDescendentsTruncatableNode', init: maxDescendentsTruncatableNode);
+    mateParams.put('expandPropertyValues', init: expandPropertyValues);
+    mateParams.put('subtreeDepth', init: subtreeDepth);
+    mateParams.put('includeProperties', init: includeProperties);
+    mateParams.put('service', init: service);
+    mateParams.put('addAdditionalPropertiesCallback', init: addAdditionalPropertiesCallback);
   }
 }

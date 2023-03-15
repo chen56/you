@@ -13,11 +13,11 @@ class SelectedContent$Mate extends SelectedContent with Mate<SelectedContent$Mat
       /// optionalParameters: {required String plainText} , hasDefaultValue:false, defaultValueCode:null
       required String plainText})
       : super(plainText: plainText) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectedContent$Mate(plainText: p.getValue('plainText')),
+      builder: (p) => SelectedContent$Mate(plainText: p.get('plainText').value),
     );
-    mateParams.set(name: 'plainText', init: plainText);
+    mateParams.put('plainText', init: plainText);
   }
 }
 
@@ -29,11 +29,11 @@ class SelectWordSelectionEvent$Mate extends SelectWordSelectionEvent with Mate<S
       /// optionalParameters: {required Offset globalPosition} , hasDefaultValue:false, defaultValueCode:null
       required Offset globalPosition})
       : super(globalPosition: globalPosition) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectWordSelectionEvent$Mate(globalPosition: p.getValue('globalPosition')),
+      builder: (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').value),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
+    mateParams.put('globalPosition', init: globalPosition);
   }
 }
 
@@ -45,11 +45,11 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate<S
       /// optionalParameters: {required Offset globalPosition} , hasDefaultValue:false, defaultValueCode:null
       required Offset globalPosition})
       : super.forStart(globalPosition: globalPosition) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.getValue('globalPosition')),
+      builder: (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').value),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
+    mateParams.put('globalPosition', init: globalPosition);
   }
 
   /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forEnd({required Offset globalPosition})
@@ -58,11 +58,11 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate<S
       /// optionalParameters: {required Offset globalPosition} , hasDefaultValue:false, defaultValueCode:null
       required Offset globalPosition})
       : super.forEnd(globalPosition: globalPosition) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.getValue('globalPosition')),
+      builder: (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').value),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
+    mateParams.put('globalPosition', init: globalPosition);
   }
 }
 
@@ -84,17 +84,17 @@ class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
           isEnd: isEnd,
           granularity: granularity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => GranularlyExtendSelectionEvent$Mate(
-        forward: p.getValue('forward'),
-        isEnd: p.getValue('isEnd'),
-        granularity: p.getValue('granularity'),
+        forward: p.get('forward').value,
+        isEnd: p.get('isEnd').value,
+        granularity: p.get('granularity').value,
       ),
     );
-    mateParams.set(name: 'forward', init: forward);
-    mateParams.set(name: 'isEnd', init: isEnd);
-    mateParams.set(name: 'granularity', init: granularity);
+    mateParams.put('forward', init: forward);
+    mateParams.put('isEnd', init: isEnd);
+    mateParams.put('granularity', init: granularity);
   }
 }
 
@@ -116,17 +116,17 @@ class DirectionallyExtendSelectionEvent$Mate extends DirectionallyExtendSelectio
           isEnd: isEnd,
           direction: direction,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DirectionallyExtendSelectionEvent$Mate(
-        dx: p.getValue('dx'),
-        isEnd: p.getValue('isEnd'),
-        direction: p.getValue('direction'),
+        dx: p.get('dx').value,
+        isEnd: p.get('isEnd').value,
+        direction: p.get('direction').value,
       ),
     );
-    mateParams.set(name: 'dx', init: dx);
-    mateParams.set(name: 'isEnd', init: isEnd);
-    mateParams.set(name: 'direction', init: direction);
+    mateParams.put('dx', init: dx);
+    mateParams.put('isEnd', init: isEnd);
+    mateParams.put('direction', init: direction);
   }
 }
 
@@ -151,19 +151,19 @@ class SelectionGeometry$Mate extends SelectionGeometry with Mate<SelectionGeomet
           status: status,
           hasContent: hasContent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionGeometry$Mate(
-        startSelectionPoint: p.getValue('startSelectionPoint'),
-        endSelectionPoint: p.getValue('endSelectionPoint'),
-        status: p.getValue('status'),
-        hasContent: p.getValue('hasContent'),
+        startSelectionPoint: p.get('startSelectionPoint').value,
+        endSelectionPoint: p.get('endSelectionPoint').value,
+        status: p.get('status').value,
+        hasContent: p.get('hasContent').value,
       ),
     );
-    mateParams.set(name: 'startSelectionPoint', init: startSelectionPoint);
-    mateParams.set(name: 'endSelectionPoint', init: endSelectionPoint);
-    mateParams.set(name: 'status', init: status);
-    mateParams.set(name: 'hasContent', init: hasContent);
+    mateParams.put('startSelectionPoint', init: startSelectionPoint);
+    mateParams.put('endSelectionPoint', init: endSelectionPoint);
+    mateParams.put('status', init: status);
+    mateParams.put('hasContent', init: hasContent);
   }
 }
 
@@ -184,16 +184,16 @@ class SelectionPoint$Mate extends SelectionPoint with Mate<SelectionPoint$Mate> 
           lineHeight: lineHeight,
           handleType: handleType,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionPoint$Mate(
-        localPosition: p.getValue('localPosition'),
-        lineHeight: p.getValue('lineHeight'),
-        handleType: p.getValue('handleType'),
+        localPosition: p.get('localPosition').value,
+        lineHeight: p.get('lineHeight').value,
+        handleType: p.get('handleType').value,
       ),
     );
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'lineHeight', init: lineHeight);
-    mateParams.set(name: 'handleType', init: handleType);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('lineHeight', init: lineHeight);
+    mateParams.put('handleType', init: handleType);
   }
 }

@@ -21,16 +21,16 @@ class AssetImage$Mate extends AssetImage with Mate<AssetImage$Mate> {
           bundle: bundle,
           package: package,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AssetImage$Mate(
-        p.getValue('assetName'),
-        bundle: p.getValue('bundle'),
-        package: p.getValue('package'),
+        p.get('assetName').value,
+        bundle: p.get('bundle').value,
+        package: p.get('package').value,
       ),
     );
-    mateParams.set(name: 'assetName', init: assetName);
-    mateParams.set(name: 'bundle', init: bundle);
-    mateParams.set(name: 'package', init: package);
+    mateParams.put('assetName', init: assetName);
+    mateParams.put('bundle', init: bundle);
+    mateParams.put('package', init: package);
   }
 }

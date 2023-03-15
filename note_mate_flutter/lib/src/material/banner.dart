@@ -84,44 +84,44 @@ class MaterialBanner$Mate extends MaterialBanner with WidgetMate<MaterialBanner$
           animation: animation,
           onVisible: onVisible,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialBanner$Mate(
-        key: p.getValue('key'),
-        content: p.getValue('content'),
-        contentTextStyle: p.getValue('contentTextStyle'),
-        actions: p.getValue('actions'),
-        elevation: p.getValue('elevation'),
-        leading: p.getValue('leading'),
-        backgroundColor: p.getValue('backgroundColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        shadowColor: p.getValue('shadowColor'),
-        dividerColor: p.getValue('dividerColor'),
-        padding: p.getValue('padding'),
-        margin: p.getValue('margin'),
-        leadingPadding: p.getValue('leadingPadding'),
-        forceActionsBelow: p.getValue('forceActionsBelow'),
-        overflowAlignment: p.getValue('overflowAlignment'),
-        animation: p.getValue('animation'),
-        onVisible: p.getValue('onVisible'),
+        key: p.get('key').value,
+        content: p.get('content').value,
+        contentTextStyle: p.get('contentTextStyle').value,
+        actions: p.get('actions').value,
+        elevation: p.get('elevation').value,
+        leading: p.get('leading').value,
+        backgroundColor: p.get('backgroundColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        shadowColor: p.get('shadowColor').value,
+        dividerColor: p.get('dividerColor').value,
+        padding: p.get('padding').value,
+        margin: p.get('margin').value,
+        leadingPadding: p.get('leadingPadding').value,
+        forceActionsBelow: p.get('forceActionsBelow').value,
+        overflowAlignment: p.get('overflowAlignment').value,
+        animation: p.get('animation').value,
+        onVisible: p.get('onVisible').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'content', init: content);
-    mateParams.set(name: 'contentTextStyle', init: contentTextStyle);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'dividerColor', init: dividerColor);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'leadingPadding', init: leadingPadding);
-    mateParams.set(name: 'forceActionsBelow', init: forceActionsBelow);
-    mateParams.set(name: 'overflowAlignment', init: overflowAlignment);
-    mateParams.set(name: 'animation', init: animation);
-    mateParams.set(name: 'onVisible', init: onVisible);
+    mateParams.put('key', init: key);
+    mateParams.put('content', init: content);
+    mateParams.put('contentTextStyle', init: contentTextStyle);
+    mateParams.put('actions', init: actions);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('leading', init: leading);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('dividerColor', init: dividerColor);
+    mateParams.put('padding', init: padding);
+    mateParams.put('margin', init: margin);
+    mateParams.put('leadingPadding', init: leadingPadding);
+    mateParams.put('forceActionsBelow', init: forceActionsBelow);
+    mateParams.put('overflowAlignment', init: overflowAlignment);
+    mateParams.put('animation', init: animation);
+    mateParams.put('onVisible', init: onVisible);
   }
 }

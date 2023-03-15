@@ -52,29 +52,29 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate<CheckboxThemeDa
           shape: shape,
           side: side,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CheckboxThemeData$Mate(
-        mouseCursor: p.getValue('mouseCursor'),
-        fillColor: p.getValue('fillColor'),
-        checkColor: p.getValue('checkColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashRadius: p.getValue('splashRadius'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        visualDensity: p.getValue('visualDensity'),
-        shape: p.getValue('shape'),
-        side: p.getValue('side'),
+        mouseCursor: p.get('mouseCursor').value,
+        fillColor: p.get('fillColor').value,
+        checkColor: p.get('checkColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        visualDensity: p.get('visualDensity').value,
+        shape: p.get('shape').value,
+        side: p.get('side').value,
       ),
     );
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'checkColor', init: checkColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'side', init: side);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('checkColor', init: checkColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('shape', init: shape);
+    mateParams.put('side', init: side);
   }
 }
 
@@ -95,16 +95,16 @@ class CheckboxTheme$Mate extends CheckboxTheme with WidgetMate<CheckboxTheme$Mat
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CheckboxTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

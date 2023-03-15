@@ -120,61 +120,61 @@ class Switch$Mate extends Switch with WidgetMate<Switch$Mate> {
           onFocusChange: onFocusChange,
           autofocus: autofocus,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Switch$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        onChanged: p.getValue('onChanged'),
-        activeColor: p.getValue('activeColor'),
-        activeTrackColor: p.getValue('activeTrackColor'),
-        inactiveThumbColor: p.getValue('inactiveThumbColor'),
-        inactiveTrackColor: p.getValue('inactiveTrackColor'),
-        activeThumbImage: p.getValue('activeThumbImage'),
-        onActiveThumbImageError: p.getValue('onActiveThumbImageError'),
-        inactiveThumbImage: p.getValue('inactiveThumbImage'),
-        onInactiveThumbImageError: p.getValue('onInactiveThumbImageError'),
-        thumbColor: p.getValue('thumbColor'),
-        trackColor: p.getValue('trackColor'),
-        trackOutlineColor: p.getValue('trackOutlineColor'),
-        thumbIcon: p.getValue('thumbIcon'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        mouseCursor: p.getValue('mouseCursor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashRadius: p.getValue('splashRadius'),
-        focusNode: p.getValue('focusNode'),
-        onFocusChange: p.getValue('onFocusChange'),
-        autofocus: p.getValue('autofocus'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        onChanged: p.get('onChanged').value,
+        activeColor: p.get('activeColor').value,
+        activeTrackColor: p.get('activeTrackColor').value,
+        inactiveThumbColor: p.get('inactiveThumbColor').value,
+        inactiveTrackColor: p.get('inactiveTrackColor').value,
+        activeThumbImage: p.get('activeThumbImage').value,
+        onActiveThumbImageError: p.get('onActiveThumbImageError').value,
+        inactiveThumbImage: p.get('inactiveThumbImage').value,
+        onInactiveThumbImageError: p.get('onInactiveThumbImageError').value,
+        thumbColor: p.get('thumbColor').value,
+        trackColor: p.get('trackColor').value,
+        trackOutlineColor: p.get('trackOutlineColor').value,
+        thumbIcon: p.get('thumbIcon').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        mouseCursor: p.get('mouseCursor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        focusNode: p.get('focusNode').value,
+        onFocusChange: p.get('onFocusChange').value,
+        autofocus: p.get('autofocus').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'activeTrackColor', init: activeTrackColor);
-    mateParams.set(name: 'inactiveThumbColor', init: inactiveThumbColor);
-    mateParams.set(name: 'inactiveTrackColor', init: inactiveTrackColor);
-    mateParams.set(name: 'activeThumbImage', init: activeThumbImage);
-    mateParams.set(name: 'onActiveThumbImageError', init: onActiveThumbImageError);
-    mateParams.set(name: 'inactiveThumbImage', init: inactiveThumbImage);
-    mateParams.set(name: 'onInactiveThumbImageError', init: onInactiveThumbImageError);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'trackColor', init: trackColor);
-    mateParams.set(name: 'trackOutlineColor', init: trackOutlineColor);
-    mateParams.set(name: 'thumbIcon', init: thumbIcon);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'autofocus', init: autofocus);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('activeTrackColor', init: activeTrackColor);
+    mateParams.put('inactiveThumbColor', init: inactiveThumbColor);
+    mateParams.put('inactiveTrackColor', init: inactiveTrackColor);
+    mateParams.put('activeThumbImage', init: activeThumbImage);
+    mateParams.put('onActiveThumbImageError', init: onActiveThumbImageError);
+    mateParams.put('inactiveThumbImage', init: inactiveThumbImage);
+    mateParams.put('onInactiveThumbImageError', init: onInactiveThumbImageError);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('trackColor', init: trackColor);
+    mateParams.put('trackOutlineColor', init: trackOutlineColor);
+    mateParams.put('thumbIcon', init: thumbIcon);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('autofocus', init: autofocus);
   }
 
   /// Switch Switch.adaptive({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialTapTargetSize? materialTapTargetSize, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, bool? applyCupertinoTheme})
@@ -284,62 +284,62 @@ class Switch$Mate extends Switch with WidgetMate<Switch$Mate> {
           autofocus: autofocus,
           applyCupertinoTheme: applyCupertinoTheme,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Switch$Mate.adaptive(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        onChanged: p.getValue('onChanged'),
-        activeColor: p.getValue('activeColor'),
-        activeTrackColor: p.getValue('activeTrackColor'),
-        inactiveThumbColor: p.getValue('inactiveThumbColor'),
-        inactiveTrackColor: p.getValue('inactiveTrackColor'),
-        activeThumbImage: p.getValue('activeThumbImage'),
-        onActiveThumbImageError: p.getValue('onActiveThumbImageError'),
-        inactiveThumbImage: p.getValue('inactiveThumbImage'),
-        onInactiveThumbImageError: p.getValue('onInactiveThumbImageError'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        thumbColor: p.getValue('thumbColor'),
-        trackColor: p.getValue('trackColor'),
-        trackOutlineColor: p.getValue('trackOutlineColor'),
-        thumbIcon: p.getValue('thumbIcon'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        mouseCursor: p.getValue('mouseCursor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashRadius: p.getValue('splashRadius'),
-        focusNode: p.getValue('focusNode'),
-        onFocusChange: p.getValue('onFocusChange'),
-        autofocus: p.getValue('autofocus'),
-        applyCupertinoTheme: p.getValue('applyCupertinoTheme'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        onChanged: p.get('onChanged').value,
+        activeColor: p.get('activeColor').value,
+        activeTrackColor: p.get('activeTrackColor').value,
+        inactiveThumbColor: p.get('inactiveThumbColor').value,
+        inactiveTrackColor: p.get('inactiveTrackColor').value,
+        activeThumbImage: p.get('activeThumbImage').value,
+        onActiveThumbImageError: p.get('onActiveThumbImageError').value,
+        inactiveThumbImage: p.get('inactiveThumbImage').value,
+        onInactiveThumbImageError: p.get('onInactiveThumbImageError').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        thumbColor: p.get('thumbColor').value,
+        trackColor: p.get('trackColor').value,
+        trackOutlineColor: p.get('trackOutlineColor').value,
+        thumbIcon: p.get('thumbIcon').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        mouseCursor: p.get('mouseCursor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        focusNode: p.get('focusNode').value,
+        onFocusChange: p.get('onFocusChange').value,
+        autofocus: p.get('autofocus').value,
+        applyCupertinoTheme: p.get('applyCupertinoTheme').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'activeTrackColor', init: activeTrackColor);
-    mateParams.set(name: 'inactiveThumbColor', init: inactiveThumbColor);
-    mateParams.set(name: 'inactiveTrackColor', init: inactiveTrackColor);
-    mateParams.set(name: 'activeThumbImage', init: activeThumbImage);
-    mateParams.set(name: 'onActiveThumbImageError', init: onActiveThumbImageError);
-    mateParams.set(name: 'inactiveThumbImage', init: inactiveThumbImage);
-    mateParams.set(name: 'onInactiveThumbImageError', init: onInactiveThumbImageError);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'trackColor', init: trackColor);
-    mateParams.set(name: 'trackOutlineColor', init: trackOutlineColor);
-    mateParams.set(name: 'thumbIcon', init: thumbIcon);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'applyCupertinoTheme', init: applyCupertinoTheme);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('activeTrackColor', init: activeTrackColor);
+    mateParams.put('inactiveThumbColor', init: inactiveThumbColor);
+    mateParams.put('inactiveTrackColor', init: inactiveTrackColor);
+    mateParams.put('activeThumbImage', init: activeThumbImage);
+    mateParams.put('onActiveThumbImageError', init: onActiveThumbImageError);
+    mateParams.put('inactiveThumbImage', init: inactiveThumbImage);
+    mateParams.put('onInactiveThumbImageError', init: onInactiveThumbImageError);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('trackColor', init: trackColor);
+    mateParams.put('trackOutlineColor', init: trackOutlineColor);
+    mateParams.put('thumbIcon', init: thumbIcon);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('applyCupertinoTheme', init: applyCupertinoTheme);
   }
 }

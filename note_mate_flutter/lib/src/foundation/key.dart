@@ -11,10 +11,10 @@ class ValueKey$Mate<T> extends ValueKey<T> with Mate<ValueKey$Mate> {
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ValueKey$Mate(p.getValue('value')),
+      builder: (p) => ValueKey$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }

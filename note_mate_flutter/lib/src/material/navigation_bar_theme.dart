@@ -57,31 +57,31 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate<Navig
           iconTheme: iconTheme,
           labelBehavior: labelBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationBarThemeData$Mate(
-        height: p.getValue('height'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        indicatorColor: p.getValue('indicatorColor'),
-        indicatorShape: p.getValue('indicatorShape'),
-        labelTextStyle: p.getValue('labelTextStyle'),
-        iconTheme: p.getValue('iconTheme'),
-        labelBehavior: p.getValue('labelBehavior'),
+        height: p.get('height').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        indicatorColor: p.get('indicatorColor').value,
+        indicatorShape: p.get('indicatorShape').value,
+        labelTextStyle: p.get('labelTextStyle').value,
+        iconTheme: p.get('iconTheme').value,
+        labelBehavior: p.get('labelBehavior').value,
       ),
     );
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'indicatorShape', init: indicatorShape);
-    mateParams.set(name: 'labelTextStyle', init: labelTextStyle);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
-    mateParams.set(name: 'labelBehavior', init: labelBehavior);
+    mateParams.put('height', init: height);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('indicatorShape', init: indicatorShape);
+    mateParams.put('labelTextStyle', init: labelTextStyle);
+    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('labelBehavior', init: labelBehavior);
   }
 }
 
@@ -102,16 +102,16 @@ class NavigationBarTheme$Mate extends NavigationBarTheme with WidgetMate<Navigat
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationBarTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

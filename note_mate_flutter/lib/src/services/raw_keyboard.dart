@@ -21,17 +21,17 @@ class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate<RawKeyDownEvent$Mat
           character: character,
           repeat: repeat,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyDownEvent$Mate(
-        data: p.getValue('data'),
-        character: p.getValue('character'),
-        repeat: p.getValue('repeat'),
+        data: p.get('data').value,
+        character: p.get('character').value,
+        repeat: p.get('repeat').value,
       ),
     );
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'character', init: character);
-    mateParams.set(name: 'repeat', init: repeat);
+    mateParams.put('data', init: data);
+    mateParams.put('character', init: character);
+    mateParams.put('repeat', init: repeat);
   }
 }
 
@@ -48,14 +48,14 @@ class RawKeyUpEvent$Mate extends RawKeyUpEvent with Mate<RawKeyUpEvent$Mate> {
           data: data,
           character: character,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyUpEvent$Mate(
-        data: p.getValue('data'),
-        character: p.getValue('character'),
+        data: p.get('data').value,
+        character: p.get('character').value,
       ),
     );
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'character', init: character);
+    mateParams.put('data', init: data);
+    mateParams.put('character', init: character);
   }
 }

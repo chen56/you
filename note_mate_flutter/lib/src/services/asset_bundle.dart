@@ -12,10 +12,10 @@ class NetworkAssetBundle$Mate extends NetworkAssetBundle with Mate<NetworkAssetB
       /// requiredParameters: Uri baseUrl
       Uri baseUrl)
       : super(baseUrl) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => NetworkAssetBundle$Mate(p.getValue('baseUrl')),
+      builder: (p) => NetworkAssetBundle$Mate(p.get('baseUrl').value),
     );
-    mateParams.set(name: 'baseUrl', init: baseUrl);
+    mateParams.put('baseUrl', init: baseUrl);
   }
 }

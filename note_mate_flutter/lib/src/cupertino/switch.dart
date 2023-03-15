@@ -49,28 +49,28 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with WidgetMate<CupertinoSwit
           focusColor: focusColor,
           dragStartBehavior: dragStartBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSwitch$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        onChanged: p.getValue('onChanged'),
-        activeColor: p.getValue('activeColor'),
-        trackColor: p.getValue('trackColor'),
-        thumbColor: p.getValue('thumbColor'),
-        applyTheme: p.getValue('applyTheme'),
-        focusColor: p.getValue('focusColor'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        onChanged: p.get('onChanged').value,
+        activeColor: p.get('activeColor').value,
+        trackColor: p.get('trackColor').value,
+        thumbColor: p.get('thumbColor').value,
+        applyTheme: p.get('applyTheme').value,
+        focusColor: p.get('focusColor').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'trackColor', init: trackColor);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'applyTheme', init: applyTheme);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('trackColor', init: trackColor);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('applyTheme', init: applyTheme);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
   }
 }

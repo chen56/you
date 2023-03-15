@@ -59,33 +59,33 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThem
           dividerThickness: dividerThickness,
           checkboxHorizontalMargin: checkboxHorizontalMargin,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DataTableThemeData$Mate(
-        decoration: p.getValue('decoration'),
-        dataRowColor: p.getValue('dataRowColor'),
-        dataRowHeight: p.getValue('dataRowHeight'),
-        dataTextStyle: p.getValue('dataTextStyle'),
-        headingRowColor: p.getValue('headingRowColor'),
-        headingRowHeight: p.getValue('headingRowHeight'),
-        headingTextStyle: p.getValue('headingTextStyle'),
-        horizontalMargin: p.getValue('horizontalMargin'),
-        columnSpacing: p.getValue('columnSpacing'),
-        dividerThickness: p.getValue('dividerThickness'),
-        checkboxHorizontalMargin: p.getValue('checkboxHorizontalMargin'),
+        decoration: p.get('decoration').value,
+        dataRowColor: p.get('dataRowColor').value,
+        dataRowHeight: p.get('dataRowHeight').value,
+        dataTextStyle: p.get('dataTextStyle').value,
+        headingRowColor: p.get('headingRowColor').value,
+        headingRowHeight: p.get('headingRowHeight').value,
+        headingTextStyle: p.get('headingTextStyle').value,
+        horizontalMargin: p.get('horizontalMargin').value,
+        columnSpacing: p.get('columnSpacing').value,
+        dividerThickness: p.get('dividerThickness').value,
+        checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').value,
       ),
     );
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'dataRowColor', init: dataRowColor);
-    mateParams.set(name: 'dataRowHeight', init: dataRowHeight);
-    mateParams.set(name: 'dataTextStyle', init: dataTextStyle);
-    mateParams.set(name: 'headingRowColor', init: headingRowColor);
-    mateParams.set(name: 'headingRowHeight', init: headingRowHeight);
-    mateParams.set(name: 'headingTextStyle', init: headingTextStyle);
-    mateParams.set(name: 'horizontalMargin', init: horizontalMargin);
-    mateParams.set(name: 'columnSpacing', init: columnSpacing);
-    mateParams.set(name: 'dividerThickness', init: dividerThickness);
-    mateParams.set(name: 'checkboxHorizontalMargin', init: checkboxHorizontalMargin);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('dataRowColor', init: dataRowColor);
+    mateParams.put('dataRowHeight', init: dataRowHeight);
+    mateParams.put('dataTextStyle', init: dataTextStyle);
+    mateParams.put('headingRowColor', init: headingRowColor);
+    mateParams.put('headingRowHeight', init: headingRowHeight);
+    mateParams.put('headingTextStyle', init: headingTextStyle);
+    mateParams.put('horizontalMargin', init: horizontalMargin);
+    mateParams.put('columnSpacing', init: columnSpacing);
+    mateParams.put('dividerThickness', init: dividerThickness);
+    mateParams.put('checkboxHorizontalMargin', init: checkboxHorizontalMargin);
   }
 }
 
@@ -106,16 +106,16 @@ class DataTableTheme$Mate extends DataTableTheme with WidgetMate<DataTableTheme$
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DataTableTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

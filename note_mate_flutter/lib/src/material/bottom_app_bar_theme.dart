@@ -36,22 +36,22 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate<BottomAppBarThe
           surfaceTintColor: surfaceTintColor,
           padding: padding,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomAppBarTheme$Mate(
-        color: p.getValue('color'),
-        elevation: p.getValue('elevation'),
-        shape: p.getValue('shape'),
-        height: p.getValue('height'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        padding: p.getValue('padding'),
+        color: p.get('color').value,
+        elevation: p.get('elevation').value,
+        shape: p.get('shape').value,
+        height: p.get('height').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        padding: p.get('padding').value,
       ),
     );
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'padding', init: padding);
+    mateParams.put('color', init: color);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shape', init: shape);
+    mateParams.put('height', init: height);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('padding', init: padding);
   }
 }

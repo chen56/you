@@ -55,33 +55,33 @@ class StrutStyle$Mate extends StrutStyle with Mate<StrutStyle$Mate> {
           debugLabel: debugLabel,
           package: package,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => StrutStyle$Mate(
-        fontFamily: p.getValue('fontFamily'),
-        fontFamilyFallback: p.getValue('fontFamilyFallback'),
-        fontSize: p.getValue('fontSize'),
-        height: p.getValue('height'),
-        leadingDistribution: p.getValue('leadingDistribution'),
-        leading: p.getValue('leading'),
-        fontWeight: p.getValue('fontWeight'),
-        fontStyle: p.getValue('fontStyle'),
-        forceStrutHeight: p.getValue('forceStrutHeight'),
-        debugLabel: p.getValue('debugLabel'),
-        package: p.getValue('package'),
+        fontFamily: p.get('fontFamily').value,
+        fontFamilyFallback: p.get('fontFamilyFallback').value,
+        fontSize: p.get('fontSize').value,
+        height: p.get('height').value,
+        leadingDistribution: p.get('leadingDistribution').value,
+        leading: p.get('leading').value,
+        fontWeight: p.get('fontWeight').value,
+        fontStyle: p.get('fontStyle').value,
+        forceStrutHeight: p.get('forceStrutHeight').value,
+        debugLabel: p.get('debugLabel').value,
+        package: p.get('package').value,
       ),
     );
-    mateParams.set(name: 'fontFamily', init: fontFamily);
-    mateParams.set(name: 'fontFamilyFallback', init: fontFamilyFallback);
-    mateParams.set(name: 'fontSize', init: fontSize);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'leadingDistribution', init: leadingDistribution);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'fontWeight', init: fontWeight);
-    mateParams.set(name: 'fontStyle', init: fontStyle);
-    mateParams.set(name: 'forceStrutHeight', init: forceStrutHeight);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
-    mateParams.set(name: 'package', init: package);
+    mateParams.put('fontFamily', init: fontFamily);
+    mateParams.put('fontFamilyFallback', init: fontFamilyFallback);
+    mateParams.put('fontSize', init: fontSize);
+    mateParams.put('height', init: height);
+    mateParams.put('leadingDistribution', init: leadingDistribution);
+    mateParams.put('leading', init: leading);
+    mateParams.put('fontWeight', init: fontWeight);
+    mateParams.put('fontStyle', init: fontStyle);
+    mateParams.put('forceStrutHeight', init: forceStrutHeight);
+    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('package', init: package);
   }
 
   /// StrutStyle StrutStyle.fromTextStyle(TextStyle textStyle, {String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
@@ -134,34 +134,34 @@ class StrutStyle$Mate extends StrutStyle with Mate<StrutStyle$Mate> {
           debugLabel: debugLabel,
           package: package,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => StrutStyle$Mate.fromTextStyle(
-        p.getValue('textStyle'),
-        fontFamily: p.getValue('fontFamily'),
-        fontFamilyFallback: p.getValue('fontFamilyFallback'),
-        fontSize: p.getValue('fontSize'),
-        height: p.getValue('height'),
-        leadingDistribution: p.getValue('leadingDistribution'),
-        leading: p.getValue('leading'),
-        fontWeight: p.getValue('fontWeight'),
-        fontStyle: p.getValue('fontStyle'),
-        forceStrutHeight: p.getValue('forceStrutHeight'),
-        debugLabel: p.getValue('debugLabel'),
-        package: p.getValue('package'),
+        p.get('textStyle').value,
+        fontFamily: p.get('fontFamily').value,
+        fontFamilyFallback: p.get('fontFamilyFallback').value,
+        fontSize: p.get('fontSize').value,
+        height: p.get('height').value,
+        leadingDistribution: p.get('leadingDistribution').value,
+        leading: p.get('leading').value,
+        fontWeight: p.get('fontWeight').value,
+        fontStyle: p.get('fontStyle').value,
+        forceStrutHeight: p.get('forceStrutHeight').value,
+        debugLabel: p.get('debugLabel').value,
+        package: p.get('package').value,
       ),
     );
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'fontFamily', init: fontFamily);
-    mateParams.set(name: 'fontFamilyFallback', init: fontFamilyFallback);
-    mateParams.set(name: 'fontSize', init: fontSize);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'leadingDistribution', init: leadingDistribution);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'fontWeight', init: fontWeight);
-    mateParams.set(name: 'fontStyle', init: fontStyle);
-    mateParams.set(name: 'forceStrutHeight', init: forceStrutHeight);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
-    mateParams.set(name: 'package', init: package);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('fontFamily', init: fontFamily);
+    mateParams.put('fontFamilyFallback', init: fontFamilyFallback);
+    mateParams.put('fontSize', init: fontSize);
+    mateParams.put('height', init: height);
+    mateParams.put('leadingDistribution', init: leadingDistribution);
+    mateParams.put('leading', init: leading);
+    mateParams.put('fontWeight', init: fontWeight);
+    mateParams.put('fontStyle', init: fontStyle);
+    mateParams.put('forceStrutHeight', init: forceStrutHeight);
+    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('package', init: package);
   }
 }

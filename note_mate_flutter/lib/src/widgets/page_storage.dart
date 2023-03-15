@@ -13,11 +13,11 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate<PageStorageKey$
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => PageStorageKey$Mate(p.getValue('value')),
+      builder: (p) => PageStorageKey$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -38,16 +38,16 @@ class PageStorage$Mate extends PageStorage with WidgetMate<PageStorage$Mate> {
           bucket: bucket,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PageStorage$Mate(
-        key: p.getValue('key'),
-        bucket: p.getValue('bucket'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        bucket: p.get('bucket').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'bucket', init: bucket);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('bucket', init: bucket);
+    mateParams.put('child', init: child);
   }
 }

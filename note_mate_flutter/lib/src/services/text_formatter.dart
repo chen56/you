@@ -20,17 +20,17 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           allow: allow,
           replacementString: replacementString,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FilteringTextInputFormatter$Mate(
-        p.getValue('filterPattern'),
-        allow: p.getValue('allow'),
-        replacementString: p.getValue('replacementString'),
+        p.get('filterPattern').value,
+        allow: p.get('allow').value,
+        replacementString: p.get('replacementString').value,
       ),
     );
-    mateParams.set(name: 'filterPattern', init: filterPattern);
-    mateParams.set(name: 'allow', init: allow);
-    mateParams.set(name: 'replacementString', init: replacementString);
+    mateParams.put('filterPattern', init: filterPattern);
+    mateParams.put('allow', init: allow);
+    mateParams.put('replacementString', init: replacementString);
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.allow(Pattern filterPattern, {String replacementString = ''})
@@ -43,15 +43,15 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           filterPattern,
           replacementString: replacementString,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FilteringTextInputFormatter$Mate.allow(
-        p.getValue('filterPattern'),
-        replacementString: p.getValue('replacementString'),
+        p.get('filterPattern').value,
+        replacementString: p.get('replacementString').value,
       ),
     );
-    mateParams.set(name: 'filterPattern', init: filterPattern);
-    mateParams.set(name: 'replacementString', init: replacementString);
+    mateParams.put('filterPattern', init: filterPattern);
+    mateParams.put('replacementString', init: replacementString);
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.deny(Pattern filterPattern, {String replacementString = ''})
@@ -64,15 +64,15 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           filterPattern,
           replacementString: replacementString,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FilteringTextInputFormatter$Mate.deny(
-        p.getValue('filterPattern'),
-        replacementString: p.getValue('replacementString'),
+        p.get('filterPattern').value,
+        replacementString: p.get('replacementString').value,
       ),
     );
-    mateParams.set(name: 'filterPattern', init: filterPattern);
-    mateParams.set(name: 'replacementString', init: replacementString);
+    mateParams.put('filterPattern', init: filterPattern);
+    mateParams.put('replacementString', init: replacementString);
   }
 }
 
@@ -89,14 +89,14 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
           maxLength,
           maxLengthEnforcement: maxLengthEnforcement,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => LengthLimitingTextInputFormatter$Mate(
-        p.getValue('maxLength'),
-        maxLengthEnforcement: p.getValue('maxLengthEnforcement'),
+        p.get('maxLength').value,
+        maxLengthEnforcement: p.get('maxLengthEnforcement').value,
       ),
     );
-    mateParams.set(name: 'maxLength', init: maxLength);
-    mateParams.set(name: 'maxLengthEnforcement', init: maxLengthEnforcement);
+    mateParams.put('maxLength', init: maxLength);
+    mateParams.put('maxLengthEnforcement', init: maxLengthEnforcement);
   }
 }

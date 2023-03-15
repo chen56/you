@@ -16,11 +16,11 @@ class ObjectKey$Mate extends ObjectKey with Mate<ObjectKey$Mate> {
       /// requiredParameters: Object? value
       Object? value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ObjectKey$Mate(p.getValue('value')),
+      builder: (p) => ObjectKey$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -33,11 +33,11 @@ class LabeledGlobalKey$Mate<T extends State<StatefulWidget>> extends LabeledGlob
       /// requiredParameters: String? _debugLabel
       String? _debugLabel)
       : super(_debugLabel) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => LabeledGlobalKey$Mate(p.getValue('_debugLabel')),
+      builder: (p) => LabeledGlobalKey$Mate(p.get('_debugLabel').value),
     );
-    mateParams.set(name: '_debugLabel', init: _debugLabel);
+    mateParams.put('_debugLabel', init: _debugLabel);
   }
 }
 
@@ -49,11 +49,11 @@ class GlobalObjectKey$Mate<T extends State<StatefulWidget>> extends GlobalObject
       /// requiredParameters: Object value
       Object value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => GlobalObjectKey$Mate(p.getValue('value')),
+      builder: (p) => GlobalObjectKey$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -70,15 +70,15 @@ class BuildOwner$Mate extends BuildOwner with Mate<BuildOwner$Mate> {
           onBuildScheduled: onBuildScheduled,
           focusManager: focusManager,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BuildOwner$Mate(
-        onBuildScheduled: p.getValue('onBuildScheduled'),
-        focusManager: p.getValue('focusManager'),
+        onBuildScheduled: p.get('onBuildScheduled').value,
+        focusManager: p.get('focusManager').value,
       ),
     );
-    mateParams.set(name: 'onBuildScheduled', init: onBuildScheduled);
-    mateParams.set(name: 'focusManager', init: focusManager);
+    mateParams.put('onBuildScheduled', init: onBuildScheduled);
+    mateParams.put('focusManager', init: focusManager);
   }
 }
 
@@ -90,11 +90,11 @@ class ErrorWidget$Mate extends ErrorWidget with WidgetMate<ErrorWidget$Mate> {
       /// requiredParameters: Object exception
       Object exception)
       : super(exception) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ErrorWidget$Mate(p.getValue('exception')),
+      builder: (p) => ErrorWidget$Mate(p.get('exception').value),
     );
-    mateParams.set(name: 'exception', init: exception);
+    mateParams.put('exception', init: exception);
   }
 
   /// ErrorWidget ErrorWidget.withDetails({String message = '', FlutterError? error})
@@ -108,15 +108,15 @@ class ErrorWidget$Mate extends ErrorWidget with WidgetMate<ErrorWidget$Mate> {
           message: message,
           error: error,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ErrorWidget$Mate.withDetails(
-        message: p.getValue('message'),
-        error: p.getValue('error'),
+        message: p.get('message').value,
+        error: p.get('error').value,
       ),
     );
-    mateParams.set(name: 'message', init: message);
-    mateParams.set(name: 'error', init: error);
+    mateParams.put('message', init: message);
+    mateParams.put('error', init: error);
   }
 }
 
@@ -128,11 +128,11 @@ class StatelessElement$Mate extends StatelessElement with Mate<StatelessElement$
       /// requiredParameters: StatelessWidget widget
       StatelessWidget widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => StatelessElement$Mate(p.getValue('widget')),
+      builder: (p) => StatelessElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }
 
@@ -144,11 +144,11 @@ class StatefulElement$Mate extends StatefulElement with Mate<StatefulElement$Mat
       /// requiredParameters: StatefulWidget widget
       StatefulWidget widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => StatefulElement$Mate(p.getValue('widget')),
+      builder: (p) => StatefulElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }
 
@@ -160,11 +160,11 @@ class ParentDataElement$Mate<T extends ParentData> extends ParentDataElement<T> 
       /// requiredParameters: ParentDataWidget<T> widget
       ParentDataWidget<T> widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ParentDataElement$Mate(p.getValue('widget')),
+      builder: (p) => ParentDataElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }
 
@@ -176,11 +176,11 @@ class InheritedElement$Mate extends InheritedElement with Mate<InheritedElement$
       /// requiredParameters: InheritedWidget widget
       InheritedWidget widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => InheritedElement$Mate(p.getValue('widget')),
+      builder: (p) => InheritedElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }
 
@@ -192,11 +192,11 @@ class LeafRenderObjectElement$Mate extends LeafRenderObjectElement with Mate<Lea
       /// requiredParameters: LeafRenderObjectWidget widget
       LeafRenderObjectWidget widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => LeafRenderObjectElement$Mate(p.getValue('widget')),
+      builder: (p) => LeafRenderObjectElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }
 
@@ -209,11 +209,11 @@ class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement
       /// requiredParameters: SingleChildRenderObjectWidget widget
       SingleChildRenderObjectWidget widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SingleChildRenderObjectElement$Mate(p.getValue('widget')),
+      builder: (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }
 
@@ -226,11 +226,11 @@ class MultiChildRenderObjectElement$Mate extends MultiChildRenderObjectElement
       /// requiredParameters: MultiChildRenderObjectWidget widget
       MultiChildRenderObjectWidget widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => MultiChildRenderObjectElement$Mate(p.getValue('widget')),
+      builder: (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }
 
@@ -242,11 +242,11 @@ class DebugCreator$Mate extends DebugCreator with Mate<DebugCreator$Mate> {
       /// requiredParameters: Element element
       Element element)
       : super(element) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DebugCreator$Mate(p.getValue('element')),
+      builder: (p) => DebugCreator$Mate(p.get('element').value),
     );
-    mateParams.set(name: 'element', init: element);
+    mateParams.put('element', init: element);
   }
 }
 
@@ -263,14 +263,14 @@ class IndexedSlot$Mate<T extends Element?> extends IndexedSlot<T> with Mate<Inde
           index,
           value,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => IndexedSlot$Mate(
-        p.getValue('index'),
-        p.getValue('value'),
+        p.get('index').value,
+        p.get('value').value,
       ),
     );
-    mateParams.set(name: 'index', init: index);
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('index', init: index);
+    mateParams.put('value', init: value);
   }
 }

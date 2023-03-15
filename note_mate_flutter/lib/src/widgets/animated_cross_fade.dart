@@ -61,34 +61,34 @@ class AnimatedCrossFade$Mate extends AnimatedCrossFade with WidgetMate<AnimatedC
           layoutBuilder: layoutBuilder,
           excludeBottomFocus: excludeBottomFocus,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedCrossFade$Mate(
-        key: p.getValue('key'),
-        firstChild: p.getValue('firstChild'),
-        secondChild: p.getValue('secondChild'),
-        firstCurve: p.getValue('firstCurve'),
-        secondCurve: p.getValue('secondCurve'),
-        sizeCurve: p.getValue('sizeCurve'),
-        alignment: p.getValue('alignment'),
-        crossFadeState: p.getValue('crossFadeState'),
-        duration: p.getValue('duration'),
-        reverseDuration: p.getValue('reverseDuration'),
-        layoutBuilder: p.getValue('layoutBuilder'),
-        excludeBottomFocus: p.getValue('excludeBottomFocus'),
+        key: p.get('key').value,
+        firstChild: p.get('firstChild').value,
+        secondChild: p.get('secondChild').value,
+        firstCurve: p.get('firstCurve').value,
+        secondCurve: p.get('secondCurve').value,
+        sizeCurve: p.get('sizeCurve').value,
+        alignment: p.get('alignment').value,
+        crossFadeState: p.get('crossFadeState').value,
+        duration: p.get('duration').value,
+        reverseDuration: p.get('reverseDuration').value,
+        layoutBuilder: p.get('layoutBuilder').value,
+        excludeBottomFocus: p.get('excludeBottomFocus').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'firstChild', init: firstChild);
-    mateParams.set(name: 'secondChild', init: secondChild);
-    mateParams.set(name: 'firstCurve', init: firstCurve);
-    mateParams.set(name: 'secondCurve', init: secondCurve);
-    mateParams.set(name: 'sizeCurve', init: sizeCurve);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'crossFadeState', init: crossFadeState);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'reverseDuration', init: reverseDuration);
-    mateParams.set(name: 'layoutBuilder', init: layoutBuilder);
-    mateParams.set(name: 'excludeBottomFocus', init: excludeBottomFocus);
+    mateParams.put('key', init: key);
+    mateParams.put('firstChild', init: firstChild);
+    mateParams.put('secondChild', init: secondChild);
+    mateParams.put('firstCurve', init: firstCurve);
+    mateParams.put('secondCurve', init: secondCurve);
+    mateParams.put('sizeCurve', init: sizeCurve);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('crossFadeState', init: crossFadeState);
+    mateParams.put('duration', init: duration);
+    mateParams.put('reverseDuration', init: reverseDuration);
+    mateParams.put('layoutBuilder', init: layoutBuilder);
+    mateParams.put('excludeBottomFocus', init: excludeBottomFocus);
   }
 }

@@ -58,31 +58,31 @@ class InputDecorator$Mate extends InputDecorator with WidgetMate<InputDecorator$
           isEmpty: isEmpty,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InputDecorator$Mate(
-        key: p.getValue('key'),
-        decoration: p.getValue('decoration'),
-        baseStyle: p.getValue('baseStyle'),
-        textAlign: p.getValue('textAlign'),
-        textAlignVertical: p.getValue('textAlignVertical'),
-        isFocused: p.getValue('isFocused'),
-        isHovering: p.getValue('isHovering'),
-        expands: p.getValue('expands'),
-        isEmpty: p.getValue('isEmpty'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        decoration: p.get('decoration').value,
+        baseStyle: p.get('baseStyle').value,
+        textAlign: p.get('textAlign').value,
+        textAlignVertical: p.get('textAlignVertical').value,
+        isFocused: p.get('isFocused').value,
+        isHovering: p.get('isHovering').value,
+        expands: p.get('expands').value,
+        isEmpty: p.get('isEmpty').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'baseStyle', init: baseStyle);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'textAlignVertical', init: textAlignVertical);
-    mateParams.set(name: 'isFocused', init: isFocused);
-    mateParams.set(name: 'isHovering', init: isHovering);
-    mateParams.set(name: 'expands', init: expands);
-    mateParams.set(name: 'isEmpty', init: isEmpty);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('baseStyle', init: baseStyle);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('textAlignVertical', init: textAlignVertical);
+    mateParams.put('isFocused', init: isFocused);
+    mateParams.put('isHovering', init: isHovering);
+    mateParams.put('expands', init: expands);
+    mateParams.put('isEmpty', init: isEmpty);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -291,111 +291,111 @@ class InputDecoration$Mate extends InputDecoration with Mate<InputDecoration$Mat
           alignLabelWithHint: alignLabelWithHint,
           constraints: constraints,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InputDecoration$Mate(
-        icon: p.getValue('icon'),
-        iconColor: p.getValue('iconColor'),
-        label: p.getValue('label'),
-        labelText: p.getValue('labelText'),
-        labelStyle: p.getValue('labelStyle'),
-        floatingLabelStyle: p.getValue('floatingLabelStyle'),
-        helperText: p.getValue('helperText'),
-        helperStyle: p.getValue('helperStyle'),
-        helperMaxLines: p.getValue('helperMaxLines'),
-        hintText: p.getValue('hintText'),
-        hintStyle: p.getValue('hintStyle'),
-        hintTextDirection: p.getValue('hintTextDirection'),
-        hintMaxLines: p.getValue('hintMaxLines'),
-        errorText: p.getValue('errorText'),
-        errorStyle: p.getValue('errorStyle'),
-        errorMaxLines: p.getValue('errorMaxLines'),
-        floatingLabelBehavior: p.getValue('floatingLabelBehavior'),
-        floatingLabelAlignment: p.getValue('floatingLabelAlignment'),
-        isCollapsed: p.getValue('isCollapsed'),
-        isDense: p.getValue('isDense'),
-        contentPadding: p.getValue('contentPadding'),
-        prefixIcon: p.getValue('prefixIcon'),
-        prefixIconConstraints: p.getValue('prefixIconConstraints'),
-        prefix: p.getValue('prefix'),
-        prefixText: p.getValue('prefixText'),
-        prefixStyle: p.getValue('prefixStyle'),
-        prefixIconColor: p.getValue('prefixIconColor'),
-        suffixIcon: p.getValue('suffixIcon'),
-        suffix: p.getValue('suffix'),
-        suffixText: p.getValue('suffixText'),
-        suffixStyle: p.getValue('suffixStyle'),
-        suffixIconColor: p.getValue('suffixIconColor'),
-        suffixIconConstraints: p.getValue('suffixIconConstraints'),
-        counter: p.getValue('counter'),
-        counterText: p.getValue('counterText'),
-        counterStyle: p.getValue('counterStyle'),
-        filled: p.getValue('filled'),
-        fillColor: p.getValue('fillColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        errorBorder: p.getValue('errorBorder'),
-        focusedBorder: p.getValue('focusedBorder'),
-        focusedErrorBorder: p.getValue('focusedErrorBorder'),
-        disabledBorder: p.getValue('disabledBorder'),
-        enabledBorder: p.getValue('enabledBorder'),
-        border: p.getValue('border'),
-        enabled: p.getValue('enabled'),
-        semanticCounterText: p.getValue('semanticCounterText'),
-        alignLabelWithHint: p.getValue('alignLabelWithHint'),
-        constraints: p.getValue('constraints'),
+        icon: p.get('icon').value,
+        iconColor: p.get('iconColor').value,
+        label: p.get('label').value,
+        labelText: p.get('labelText').value,
+        labelStyle: p.get('labelStyle').value,
+        floatingLabelStyle: p.get('floatingLabelStyle').value,
+        helperText: p.get('helperText').value,
+        helperStyle: p.get('helperStyle').value,
+        helperMaxLines: p.get('helperMaxLines').value,
+        hintText: p.get('hintText').value,
+        hintStyle: p.get('hintStyle').value,
+        hintTextDirection: p.get('hintTextDirection').value,
+        hintMaxLines: p.get('hintMaxLines').value,
+        errorText: p.get('errorText').value,
+        errorStyle: p.get('errorStyle').value,
+        errorMaxLines: p.get('errorMaxLines').value,
+        floatingLabelBehavior: p.get('floatingLabelBehavior').value,
+        floatingLabelAlignment: p.get('floatingLabelAlignment').value,
+        isCollapsed: p.get('isCollapsed').value,
+        isDense: p.get('isDense').value,
+        contentPadding: p.get('contentPadding').value,
+        prefixIcon: p.get('prefixIcon').value,
+        prefixIconConstraints: p.get('prefixIconConstraints').value,
+        prefix: p.get('prefix').value,
+        prefixText: p.get('prefixText').value,
+        prefixStyle: p.get('prefixStyle').value,
+        prefixIconColor: p.get('prefixIconColor').value,
+        suffixIcon: p.get('suffixIcon').value,
+        suffix: p.get('suffix').value,
+        suffixText: p.get('suffixText').value,
+        suffixStyle: p.get('suffixStyle').value,
+        suffixIconColor: p.get('suffixIconColor').value,
+        suffixIconConstraints: p.get('suffixIconConstraints').value,
+        counter: p.get('counter').value,
+        counterText: p.get('counterText').value,
+        counterStyle: p.get('counterStyle').value,
+        filled: p.get('filled').value,
+        fillColor: p.get('fillColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        errorBorder: p.get('errorBorder').value,
+        focusedBorder: p.get('focusedBorder').value,
+        focusedErrorBorder: p.get('focusedErrorBorder').value,
+        disabledBorder: p.get('disabledBorder').value,
+        enabledBorder: p.get('enabledBorder').value,
+        border: p.get('border').value,
+        enabled: p.get('enabled').value,
+        semanticCounterText: p.get('semanticCounterText').value,
+        alignLabelWithHint: p.get('alignLabelWithHint').value,
+        constraints: p.get('constraints').value,
       ),
     );
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'labelText', init: labelText);
-    mateParams.set(name: 'labelStyle', init: labelStyle);
-    mateParams.set(name: 'floatingLabelStyle', init: floatingLabelStyle);
-    mateParams.set(name: 'helperText', init: helperText);
-    mateParams.set(name: 'helperStyle', init: helperStyle);
-    mateParams.set(name: 'helperMaxLines', init: helperMaxLines);
-    mateParams.set(name: 'hintText', init: hintText);
-    mateParams.set(name: 'hintStyle', init: hintStyle);
-    mateParams.set(name: 'hintTextDirection', init: hintTextDirection);
-    mateParams.set(name: 'hintMaxLines', init: hintMaxLines);
-    mateParams.set(name: 'errorText', init: errorText);
-    mateParams.set(name: 'errorStyle', init: errorStyle);
-    mateParams.set(name: 'errorMaxLines', init: errorMaxLines);
-    mateParams.set(name: 'floatingLabelBehavior', init: floatingLabelBehavior);
-    mateParams.set(name: 'floatingLabelAlignment', init: floatingLabelAlignment);
-    mateParams.set(name: 'isCollapsed', init: isCollapsed);
-    mateParams.set(name: 'isDense', init: isDense);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'prefixIcon', init: prefixIcon);
-    mateParams.set(name: 'prefixIconConstraints', init: prefixIconConstraints);
-    mateParams.set(name: 'prefix', init: prefix);
-    mateParams.set(name: 'prefixText', init: prefixText);
-    mateParams.set(name: 'prefixStyle', init: prefixStyle);
-    mateParams.set(name: 'prefixIconColor', init: prefixIconColor);
-    mateParams.set(name: 'suffixIcon', init: suffixIcon);
-    mateParams.set(name: 'suffix', init: suffix);
-    mateParams.set(name: 'suffixText', init: suffixText);
-    mateParams.set(name: 'suffixStyle', init: suffixStyle);
-    mateParams.set(name: 'suffixIconColor', init: suffixIconColor);
-    mateParams.set(name: 'suffixIconConstraints', init: suffixIconConstraints);
-    mateParams.set(name: 'counter', init: counter);
-    mateParams.set(name: 'counterText', init: counterText);
-    mateParams.set(name: 'counterStyle', init: counterStyle);
-    mateParams.set(name: 'filled', init: filled);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'errorBorder', init: errorBorder);
-    mateParams.set(name: 'focusedBorder', init: focusedBorder);
-    mateParams.set(name: 'focusedErrorBorder', init: focusedErrorBorder);
-    mateParams.set(name: 'disabledBorder', init: disabledBorder);
-    mateParams.set(name: 'enabledBorder', init: enabledBorder);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'semanticCounterText', init: semanticCounterText);
-    mateParams.set(name: 'alignLabelWithHint', init: alignLabelWithHint);
-    mateParams.set(name: 'constraints', init: constraints);
+    mateParams.put('icon', init: icon);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('label', init: label);
+    mateParams.put('labelText', init: labelText);
+    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('floatingLabelStyle', init: floatingLabelStyle);
+    mateParams.put('helperText', init: helperText);
+    mateParams.put('helperStyle', init: helperStyle);
+    mateParams.put('helperMaxLines', init: helperMaxLines);
+    mateParams.put('hintText', init: hintText);
+    mateParams.put('hintStyle', init: hintStyle);
+    mateParams.put('hintTextDirection', init: hintTextDirection);
+    mateParams.put('hintMaxLines', init: hintMaxLines);
+    mateParams.put('errorText', init: errorText);
+    mateParams.put('errorStyle', init: errorStyle);
+    mateParams.put('errorMaxLines', init: errorMaxLines);
+    mateParams.put('floatingLabelBehavior', init: floatingLabelBehavior);
+    mateParams.put('floatingLabelAlignment', init: floatingLabelAlignment);
+    mateParams.put('isCollapsed', init: isCollapsed);
+    mateParams.put('isDense', init: isDense);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('prefixIcon', init: prefixIcon);
+    mateParams.put('prefixIconConstraints', init: prefixIconConstraints);
+    mateParams.put('prefix', init: prefix);
+    mateParams.put('prefixText', init: prefixText);
+    mateParams.put('prefixStyle', init: prefixStyle);
+    mateParams.put('prefixIconColor', init: prefixIconColor);
+    mateParams.put('suffixIcon', init: suffixIcon);
+    mateParams.put('suffix', init: suffix);
+    mateParams.put('suffixText', init: suffixText);
+    mateParams.put('suffixStyle', init: suffixStyle);
+    mateParams.put('suffixIconColor', init: suffixIconColor);
+    mateParams.put('suffixIconConstraints', init: suffixIconConstraints);
+    mateParams.put('counter', init: counter);
+    mateParams.put('counterText', init: counterText);
+    mateParams.put('counterStyle', init: counterStyle);
+    mateParams.put('filled', init: filled);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('errorBorder', init: errorBorder);
+    mateParams.put('focusedBorder', init: focusedBorder);
+    mateParams.put('focusedErrorBorder', init: focusedErrorBorder);
+    mateParams.put('disabledBorder', init: disabledBorder);
+    mateParams.put('enabledBorder', init: enabledBorder);
+    mateParams.put('border', init: border);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('semanticCounterText', init: semanticCounterText);
+    mateParams.put('alignLabelWithHint', init: alignLabelWithHint);
+    mateParams.put('constraints', init: constraints);
   }
 
   /// InputDecoration InputDecoration.collapsed({required String? hintText, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, TextStyle? hintStyle, TextDirection? hintTextDirection, bool? filled = false, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? border = InputBorder.none, bool enabled = true})
@@ -445,33 +445,33 @@ class InputDecoration$Mate extends InputDecoration with Mate<InputDecoration$Mat
           border: border,
           enabled: enabled,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InputDecoration$Mate.collapsed(
-        hintText: p.getValue('hintText'),
-        floatingLabelBehavior: p.getValue('floatingLabelBehavior'),
-        floatingLabelAlignment: p.getValue('floatingLabelAlignment'),
-        hintStyle: p.getValue('hintStyle'),
-        hintTextDirection: p.getValue('hintTextDirection'),
-        filled: p.getValue('filled'),
-        fillColor: p.getValue('fillColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        border: p.getValue('border'),
-        enabled: p.getValue('enabled'),
+        hintText: p.get('hintText').value,
+        floatingLabelBehavior: p.get('floatingLabelBehavior').value,
+        floatingLabelAlignment: p.get('floatingLabelAlignment').value,
+        hintStyle: p.get('hintStyle').value,
+        hintTextDirection: p.get('hintTextDirection').value,
+        filled: p.get('filled').value,
+        fillColor: p.get('fillColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        border: p.get('border').value,
+        enabled: p.get('enabled').value,
       ),
     );
-    mateParams.set(name: 'hintText', init: hintText);
-    mateParams.set(name: 'floatingLabelBehavior', init: floatingLabelBehavior);
-    mateParams.set(name: 'floatingLabelAlignment', init: floatingLabelAlignment);
-    mateParams.set(name: 'hintStyle', init: hintStyle);
-    mateParams.set(name: 'hintTextDirection', init: hintTextDirection);
-    mateParams.set(name: 'filled', init: filled);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'enabled', init: enabled);
+    mateParams.put('hintText', init: hintText);
+    mateParams.put('floatingLabelBehavior', init: floatingLabelBehavior);
+    mateParams.put('floatingLabelAlignment', init: floatingLabelAlignment);
+    mateParams.put('hintStyle', init: hintStyle);
+    mateParams.put('hintTextDirection', init: hintTextDirection);
+    mateParams.put('filled', init: filled);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('border', init: border);
+    mateParams.put('enabled', init: enabled);
   }
 }
 
@@ -608,74 +608,74 @@ class InputDecorationTheme$Mate extends InputDecorationTheme with Mate<InputDeco
           alignLabelWithHint: alignLabelWithHint,
           constraints: constraints,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InputDecorationTheme$Mate(
-        labelStyle: p.getValue('labelStyle'),
-        floatingLabelStyle: p.getValue('floatingLabelStyle'),
-        helperStyle: p.getValue('helperStyle'),
-        helperMaxLines: p.getValue('helperMaxLines'),
-        hintStyle: p.getValue('hintStyle'),
-        errorStyle: p.getValue('errorStyle'),
-        errorMaxLines: p.getValue('errorMaxLines'),
-        floatingLabelBehavior: p.getValue('floatingLabelBehavior'),
-        floatingLabelAlignment: p.getValue('floatingLabelAlignment'),
-        isDense: p.getValue('isDense'),
-        contentPadding: p.getValue('contentPadding'),
-        isCollapsed: p.getValue('isCollapsed'),
-        iconColor: p.getValue('iconColor'),
-        prefixStyle: p.getValue('prefixStyle'),
-        prefixIconColor: p.getValue('prefixIconColor'),
-        suffixStyle: p.getValue('suffixStyle'),
-        suffixIconColor: p.getValue('suffixIconColor'),
-        counterStyle: p.getValue('counterStyle'),
-        filled: p.getValue('filled'),
-        fillColor: p.getValue('fillColor'),
-        activeIndicatorBorder: p.getValue('activeIndicatorBorder'),
-        outlineBorder: p.getValue('outlineBorder'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        errorBorder: p.getValue('errorBorder'),
-        focusedBorder: p.getValue('focusedBorder'),
-        focusedErrorBorder: p.getValue('focusedErrorBorder'),
-        disabledBorder: p.getValue('disabledBorder'),
-        enabledBorder: p.getValue('enabledBorder'),
-        border: p.getValue('border'),
-        alignLabelWithHint: p.getValue('alignLabelWithHint'),
-        constraints: p.getValue('constraints'),
+        labelStyle: p.get('labelStyle').value,
+        floatingLabelStyle: p.get('floatingLabelStyle').value,
+        helperStyle: p.get('helperStyle').value,
+        helperMaxLines: p.get('helperMaxLines').value,
+        hintStyle: p.get('hintStyle').value,
+        errorStyle: p.get('errorStyle').value,
+        errorMaxLines: p.get('errorMaxLines').value,
+        floatingLabelBehavior: p.get('floatingLabelBehavior').value,
+        floatingLabelAlignment: p.get('floatingLabelAlignment').value,
+        isDense: p.get('isDense').value,
+        contentPadding: p.get('contentPadding').value,
+        isCollapsed: p.get('isCollapsed').value,
+        iconColor: p.get('iconColor').value,
+        prefixStyle: p.get('prefixStyle').value,
+        prefixIconColor: p.get('prefixIconColor').value,
+        suffixStyle: p.get('suffixStyle').value,
+        suffixIconColor: p.get('suffixIconColor').value,
+        counterStyle: p.get('counterStyle').value,
+        filled: p.get('filled').value,
+        fillColor: p.get('fillColor').value,
+        activeIndicatorBorder: p.get('activeIndicatorBorder').value,
+        outlineBorder: p.get('outlineBorder').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        errorBorder: p.get('errorBorder').value,
+        focusedBorder: p.get('focusedBorder').value,
+        focusedErrorBorder: p.get('focusedErrorBorder').value,
+        disabledBorder: p.get('disabledBorder').value,
+        enabledBorder: p.get('enabledBorder').value,
+        border: p.get('border').value,
+        alignLabelWithHint: p.get('alignLabelWithHint').value,
+        constraints: p.get('constraints').value,
       ),
     );
-    mateParams.set(name: 'labelStyle', init: labelStyle);
-    mateParams.set(name: 'floatingLabelStyle', init: floatingLabelStyle);
-    mateParams.set(name: 'helperStyle', init: helperStyle);
-    mateParams.set(name: 'helperMaxLines', init: helperMaxLines);
-    mateParams.set(name: 'hintStyle', init: hintStyle);
-    mateParams.set(name: 'errorStyle', init: errorStyle);
-    mateParams.set(name: 'errorMaxLines', init: errorMaxLines);
-    mateParams.set(name: 'floatingLabelBehavior', init: floatingLabelBehavior);
-    mateParams.set(name: 'floatingLabelAlignment', init: floatingLabelAlignment);
-    mateParams.set(name: 'isDense', init: isDense);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'isCollapsed', init: isCollapsed);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'prefixStyle', init: prefixStyle);
-    mateParams.set(name: 'prefixIconColor', init: prefixIconColor);
-    mateParams.set(name: 'suffixStyle', init: suffixStyle);
-    mateParams.set(name: 'suffixIconColor', init: suffixIconColor);
-    mateParams.set(name: 'counterStyle', init: counterStyle);
-    mateParams.set(name: 'filled', init: filled);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'activeIndicatorBorder', init: activeIndicatorBorder);
-    mateParams.set(name: 'outlineBorder', init: outlineBorder);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'errorBorder', init: errorBorder);
-    mateParams.set(name: 'focusedBorder', init: focusedBorder);
-    mateParams.set(name: 'focusedErrorBorder', init: focusedErrorBorder);
-    mateParams.set(name: 'disabledBorder', init: disabledBorder);
-    mateParams.set(name: 'enabledBorder', init: enabledBorder);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'alignLabelWithHint', init: alignLabelWithHint);
-    mateParams.set(name: 'constraints', init: constraints);
+    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('floatingLabelStyle', init: floatingLabelStyle);
+    mateParams.put('helperStyle', init: helperStyle);
+    mateParams.put('helperMaxLines', init: helperMaxLines);
+    mateParams.put('hintStyle', init: hintStyle);
+    mateParams.put('errorStyle', init: errorStyle);
+    mateParams.put('errorMaxLines', init: errorMaxLines);
+    mateParams.put('floatingLabelBehavior', init: floatingLabelBehavior);
+    mateParams.put('floatingLabelAlignment', init: floatingLabelAlignment);
+    mateParams.put('isDense', init: isDense);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('isCollapsed', init: isCollapsed);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('prefixStyle', init: prefixStyle);
+    mateParams.put('prefixIconColor', init: prefixIconColor);
+    mateParams.put('suffixStyle', init: suffixStyle);
+    mateParams.put('suffixIconColor', init: suffixIconColor);
+    mateParams.put('counterStyle', init: counterStyle);
+    mateParams.put('filled', init: filled);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('activeIndicatorBorder', init: activeIndicatorBorder);
+    mateParams.put('outlineBorder', init: outlineBorder);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('errorBorder', init: errorBorder);
+    mateParams.put('focusedBorder', init: focusedBorder);
+    mateParams.put('focusedErrorBorder', init: focusedErrorBorder);
+    mateParams.put('disabledBorder', init: disabledBorder);
+    mateParams.put('enabledBorder', init: enabledBorder);
+    mateParams.put('border', init: border);
+    mateParams.put('alignLabelWithHint', init: alignLabelWithHint);
+    mateParams.put('constraints', init: constraints);
   }
 }

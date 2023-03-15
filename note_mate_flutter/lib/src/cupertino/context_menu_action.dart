@@ -38,22 +38,22 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction
           onPressed: onPressed,
           trailingIcon: trailingIcon,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoContextMenuAction$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        isDefaultAction: p.getValue('isDefaultAction'),
-        isDestructiveAction: p.getValue('isDestructiveAction'),
-        onPressed: p.getValue('onPressed'),
-        trailingIcon: p.getValue('trailingIcon'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        isDefaultAction: p.get('isDefaultAction').value,
+        isDestructiveAction: p.get('isDestructiveAction').value,
+        onPressed: p.get('onPressed').value,
+        trailingIcon: p.get('trailingIcon').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'isDefaultAction', init: isDefaultAction);
-    mateParams.set(name: 'isDestructiveAction', init: isDestructiveAction);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'trailingIcon', init: trailingIcon);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('isDefaultAction', init: isDefaultAction);
+    mateParams.put('isDestructiveAction', init: isDestructiveAction);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('trailingIcon', init: trailingIcon);
   }
 }

@@ -47,26 +47,26 @@ class BoxDecoration$Mate extends BoxDecoration with Mate<BoxDecoration$Mate> {
           backgroundBlendMode: backgroundBlendMode,
           shape: shape,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxDecoration$Mate(
-        color: p.getValue('color'),
-        image: p.getValue('image'),
-        border: p.getValue('border'),
-        borderRadius: p.getValue('borderRadius'),
-        boxShadow: p.getValue('boxShadow'),
-        gradient: p.getValue('gradient'),
-        backgroundBlendMode: p.getValue('backgroundBlendMode'),
-        shape: p.getValue('shape'),
+        color: p.get('color').value,
+        image: p.get('image').value,
+        border: p.get('border').value,
+        borderRadius: p.get('borderRadius').value,
+        boxShadow: p.get('boxShadow').value,
+        gradient: p.get('gradient').value,
+        backgroundBlendMode: p.get('backgroundBlendMode').value,
+        shape: p.get('shape').value,
       ),
     );
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'boxShadow', init: boxShadow);
-    mateParams.set(name: 'gradient', init: gradient);
-    mateParams.set(name: 'backgroundBlendMode', init: backgroundBlendMode);
-    mateParams.set(name: 'shape', init: shape);
+    mateParams.put('color', init: color);
+    mateParams.put('image', init: image);
+    mateParams.put('border', init: border);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('boxShadow', init: boxShadow);
+    mateParams.put('gradient', init: gradient);
+    mateParams.put('backgroundBlendMode', init: backgroundBlendMode);
+    mateParams.put('shape', init: shape);
   }
 }

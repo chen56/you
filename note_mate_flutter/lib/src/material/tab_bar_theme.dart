@@ -64,34 +64,34 @@ class TabBarTheme$Mate extends TabBarTheme with Mate<TabBarTheme$Mate> {
           splashFactory: splashFactory,
           mouseCursor: mouseCursor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TabBarTheme$Mate(
-        indicator: p.getValue('indicator'),
-        indicatorColor: p.getValue('indicatorColor'),
-        indicatorSize: p.getValue('indicatorSize'),
-        dividerColor: p.getValue('dividerColor'),
-        labelColor: p.getValue('labelColor'),
-        labelPadding: p.getValue('labelPadding'),
-        labelStyle: p.getValue('labelStyle'),
-        unselectedLabelColor: p.getValue('unselectedLabelColor'),
-        unselectedLabelStyle: p.getValue('unselectedLabelStyle'),
-        overlayColor: p.getValue('overlayColor'),
-        splashFactory: p.getValue('splashFactory'),
-        mouseCursor: p.getValue('mouseCursor'),
+        indicator: p.get('indicator').value,
+        indicatorColor: p.get('indicatorColor').value,
+        indicatorSize: p.get('indicatorSize').value,
+        dividerColor: p.get('dividerColor').value,
+        labelColor: p.get('labelColor').value,
+        labelPadding: p.get('labelPadding').value,
+        labelStyle: p.get('labelStyle').value,
+        unselectedLabelColor: p.get('unselectedLabelColor').value,
+        unselectedLabelStyle: p.get('unselectedLabelStyle').value,
+        overlayColor: p.get('overlayColor').value,
+        splashFactory: p.get('splashFactory').value,
+        mouseCursor: p.get('mouseCursor').value,
       ),
     );
-    mateParams.set(name: 'indicator', init: indicator);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'indicatorSize', init: indicatorSize);
-    mateParams.set(name: 'dividerColor', init: dividerColor);
-    mateParams.set(name: 'labelColor', init: labelColor);
-    mateParams.set(name: 'labelPadding', init: labelPadding);
-    mateParams.set(name: 'labelStyle', init: labelStyle);
-    mateParams.set(name: 'unselectedLabelColor', init: unselectedLabelColor);
-    mateParams.set(name: 'unselectedLabelStyle', init: unselectedLabelStyle);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashFactory', init: splashFactory);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
+    mateParams.put('indicator', init: indicator);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('indicatorSize', init: indicatorSize);
+    mateParams.put('dividerColor', init: dividerColor);
+    mateParams.put('labelColor', init: labelColor);
+    mateParams.put('labelPadding', init: labelPadding);
+    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('unselectedLabelColor', init: unselectedLabelColor);
+    mateParams.put('unselectedLabelStyle', init: unselectedLabelStyle);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashFactory', init: splashFactory);
+    mateParams.put('mouseCursor', init: mouseCursor);
   }
 }

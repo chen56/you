@@ -51,31 +51,31 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Widget
           controller: controller,
           builder: builder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DraggableScrollableSheet$Mate(
-        key: p.getValue('key'),
-        initialChildSize: p.getValue('initialChildSize'),
-        minChildSize: p.getValue('minChildSize'),
-        maxChildSize: p.getValue('maxChildSize'),
-        expand: p.getValue('expand'),
-        snap: p.getValue('snap'),
-        snapSizes: p.getValue('snapSizes'),
-        snapAnimationDuration: p.getValue('snapAnimationDuration'),
-        controller: p.getValue('controller'),
-        builder: p.getValue('builder'),
+        key: p.get('key').value,
+        initialChildSize: p.get('initialChildSize').value,
+        minChildSize: p.get('minChildSize').value,
+        maxChildSize: p.get('maxChildSize').value,
+        expand: p.get('expand').value,
+        snap: p.get('snap').value,
+        snapSizes: p.get('snapSizes').value,
+        snapAnimationDuration: p.get('snapAnimationDuration').value,
+        controller: p.get('controller').value,
+        builder: p.get('builder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'initialChildSize', init: initialChildSize);
-    mateParams.set(name: 'minChildSize', init: minChildSize);
-    mateParams.set(name: 'maxChildSize', init: maxChildSize);
-    mateParams.set(name: 'expand', init: expand);
-    mateParams.set(name: 'snap', init: snap);
-    mateParams.set(name: 'snapSizes', init: snapSizes);
-    mateParams.set(name: 'snapAnimationDuration', init: snapAnimationDuration);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'builder', init: builder);
+    mateParams.put('key', init: key);
+    mateParams.put('initialChildSize', init: initialChildSize);
+    mateParams.put('minChildSize', init: minChildSize);
+    mateParams.put('maxChildSize', init: maxChildSize);
+    mateParams.put('expand', init: expand);
+    mateParams.put('snap', init: snap);
+    mateParams.put('snapSizes', init: snapSizes);
+    mateParams.put('snapAnimationDuration', init: snapAnimationDuration);
+    mateParams.put('controller', init: controller);
+    mateParams.put('builder', init: builder);
   }
 }
 
@@ -105,21 +105,21 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
           initialExtent: initialExtent,
           context: context,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DraggableScrollableNotification$Mate(
-        extent: p.getValue('extent'),
-        minExtent: p.getValue('minExtent'),
-        maxExtent: p.getValue('maxExtent'),
-        initialExtent: p.getValue('initialExtent'),
-        context: p.getValue('context'),
+        extent: p.get('extent').value,
+        minExtent: p.get('minExtent').value,
+        maxExtent: p.get('maxExtent').value,
+        initialExtent: p.get('initialExtent').value,
+        context: p.get('context').value,
       ),
     );
-    mateParams.set(name: 'extent', init: extent);
-    mateParams.set(name: 'minExtent', init: minExtent);
-    mateParams.set(name: 'maxExtent', init: maxExtent);
-    mateParams.set(name: 'initialExtent', init: initialExtent);
-    mateParams.set(name: 'context', init: context);
+    mateParams.put('extent', init: extent);
+    mateParams.put('minExtent', init: minExtent);
+    mateParams.put('maxExtent', init: maxExtent);
+    mateParams.put('initialExtent', init: initialExtent);
+    mateParams.put('context', init: context);
   }
 }
 
@@ -137,14 +137,14 @@ class DraggableScrollableActuator$Mate extends DraggableScrollableActuator
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DraggableScrollableActuator$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }

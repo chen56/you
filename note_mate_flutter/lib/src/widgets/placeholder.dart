@@ -36,22 +36,22 @@ class Placeholder$Mate extends Placeholder with WidgetMate<Placeholder$Mate> {
           fallbackHeight: fallbackHeight,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Placeholder$Mate(
-        key: p.getValue('key'),
-        color: p.getValue('color'),
-        strokeWidth: p.getValue('strokeWidth'),
-        fallbackWidth: p.getValue('fallbackWidth'),
-        fallbackHeight: p.getValue('fallbackHeight'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        color: p.get('color').value,
+        strokeWidth: p.get('strokeWidth').value,
+        fallbackWidth: p.get('fallbackWidth').value,
+        fallbackHeight: p.get('fallbackHeight').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'strokeWidth', init: strokeWidth);
-    mateParams.set(name: 'fallbackWidth', init: fallbackWidth);
-    mateParams.set(name: 'fallbackHeight', init: fallbackHeight);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('color', init: color);
+    mateParams.put('strokeWidth', init: strokeWidth);
+    mateParams.put('fallbackWidth', init: fallbackWidth);
+    mateParams.put('fallbackHeight', init: fallbackHeight);
+    mateParams.put('child', init: child);
   }
 }

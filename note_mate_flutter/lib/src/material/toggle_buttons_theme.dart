@@ -75,41 +75,41 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate<Toggl
           borderRadius: borderRadius,
           borderWidth: borderWidth,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ToggleButtonsThemeData$Mate(
-        textStyle: p.getValue('textStyle'),
-        constraints: p.getValue('constraints'),
-        color: p.getValue('color'),
-        selectedColor: p.getValue('selectedColor'),
-        disabledColor: p.getValue('disabledColor'),
-        fillColor: p.getValue('fillColor'),
-        focusColor: p.getValue('focusColor'),
-        highlightColor: p.getValue('highlightColor'),
-        hoverColor: p.getValue('hoverColor'),
-        splashColor: p.getValue('splashColor'),
-        borderColor: p.getValue('borderColor'),
-        selectedBorderColor: p.getValue('selectedBorderColor'),
-        disabledBorderColor: p.getValue('disabledBorderColor'),
-        borderRadius: p.getValue('borderRadius'),
-        borderWidth: p.getValue('borderWidth'),
+        textStyle: p.get('textStyle').value,
+        constraints: p.get('constraints').value,
+        color: p.get('color').value,
+        selectedColor: p.get('selectedColor').value,
+        disabledColor: p.get('disabledColor').value,
+        fillColor: p.get('fillColor').value,
+        focusColor: p.get('focusColor').value,
+        highlightColor: p.get('highlightColor').value,
+        hoverColor: p.get('hoverColor').value,
+        splashColor: p.get('splashColor').value,
+        borderColor: p.get('borderColor').value,
+        selectedBorderColor: p.get('selectedBorderColor').value,
+        disabledBorderColor: p.get('disabledBorderColor').value,
+        borderRadius: p.get('borderRadius').value,
+        borderWidth: p.get('borderWidth').value,
       ),
     );
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'constraints', init: constraints);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'borderColor', init: borderColor);
-    mateParams.set(name: 'selectedBorderColor', init: selectedBorderColor);
-    mateParams.set(name: 'disabledBorderColor', init: disabledBorderColor);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'borderWidth', init: borderWidth);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('constraints', init: constraints);
+    mateParams.put('color', init: color);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('borderColor', init: borderColor);
+    mateParams.put('selectedBorderColor', init: selectedBorderColor);
+    mateParams.put('disabledBorderColor', init: disabledBorderColor);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('borderWidth', init: borderWidth);
   }
 }
 
@@ -130,16 +130,16 @@ class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with WidgetMate<ToggleB
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ToggleButtonsTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

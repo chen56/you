@@ -28,18 +28,18 @@ class ImageFiltered$Mate extends ImageFiltered with WidgetMate<ImageFiltered$Mat
           child: child,
           enabled: enabled,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageFiltered$Mate(
-        key: p.getValue('key'),
-        imageFilter: p.getValue('imageFilter'),
-        child: p.getValue('child'),
-        enabled: p.getValue('enabled'),
+        key: p.get('key').value,
+        imageFilter: p.get('imageFilter').value,
+        child: p.get('child').value,
+        enabled: p.get('enabled').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'imageFilter', init: imageFilter);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'enabled', init: enabled);
+    mateParams.put('key', init: key);
+    mateParams.put('imageFilter', init: imageFilter);
+    mateParams.put('child', init: child);
+    mateParams.put('enabled', init: enabled);
   }
 }

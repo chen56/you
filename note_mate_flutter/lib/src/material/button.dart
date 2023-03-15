@@ -128,64 +128,64 @@ class RawMaterialButton$Mate extends RawMaterialButton with WidgetMate<RawMateri
           child: child,
           enableFeedback: enableFeedback,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawMaterialButton$Mate(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        onLongPress: p.getValue('onLongPress'),
-        onHighlightChanged: p.getValue('onHighlightChanged'),
-        mouseCursor: p.getValue('mouseCursor'),
-        textStyle: p.getValue('textStyle'),
-        fillColor: p.getValue('fillColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        highlightColor: p.getValue('highlightColor'),
-        splashColor: p.getValue('splashColor'),
-        elevation: p.getValue('elevation'),
-        focusElevation: p.getValue('focusElevation'),
-        hoverElevation: p.getValue('hoverElevation'),
-        highlightElevation: p.getValue('highlightElevation'),
-        disabledElevation: p.getValue('disabledElevation'),
-        padding: p.getValue('padding'),
-        visualDensity: p.getValue('visualDensity'),
-        constraints: p.getValue('constraints'),
-        shape: p.getValue('shape'),
-        animationDuration: p.getValue('animationDuration'),
-        clipBehavior: p.getValue('clipBehavior'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        child: p.getValue('child'),
-        enableFeedback: p.getValue('enableFeedback'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        onLongPress: p.get('onLongPress').value,
+        onHighlightChanged: p.get('onHighlightChanged').value,
+        mouseCursor: p.get('mouseCursor').value,
+        textStyle: p.get('textStyle').value,
+        fillColor: p.get('fillColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        splashColor: p.get('splashColor').value,
+        elevation: p.get('elevation').value,
+        focusElevation: p.get('focusElevation').value,
+        hoverElevation: p.get('hoverElevation').value,
+        highlightElevation: p.get('highlightElevation').value,
+        disabledElevation: p.get('disabledElevation').value,
+        padding: p.get('padding').value,
+        visualDensity: p.get('visualDensity').value,
+        constraints: p.get('constraints').value,
+        shape: p.get('shape').value,
+        animationDuration: p.get('animationDuration').value,
+        clipBehavior: p.get('clipBehavior').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        child: p.get('child').value,
+        enableFeedback: p.get('enableFeedback').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onHighlightChanged', init: onHighlightChanged);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'focusElevation', init: focusElevation);
-    mateParams.set(name: 'hoverElevation', init: hoverElevation);
-    mateParams.set(name: 'highlightElevation', init: highlightElevation);
-    mateParams.set(name: 'disabledElevation', init: disabledElevation);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'constraints', init: constraints);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'animationDuration', init: animationDuration);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onHighlightChanged', init: onHighlightChanged);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('focusElevation', init: focusElevation);
+    mateParams.put('hoverElevation', init: hoverElevation);
+    mateParams.put('highlightElevation', init: highlightElevation);
+    mateParams.put('disabledElevation', init: disabledElevation);
+    mateParams.put('padding', init: padding);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('constraints', init: constraints);
+    mateParams.put('shape', init: shape);
+    mateParams.put('animationDuration', init: animationDuration);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('child', init: child);
+    mateParams.put('enableFeedback', init: enableFeedback);
   }
 }

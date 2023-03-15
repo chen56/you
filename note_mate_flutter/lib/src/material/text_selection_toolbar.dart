@@ -33,20 +33,20 @@ class TextSelectionToolbar$Mate extends TextSelectionToolbar with WidgetMate<Tex
           toolbarBuilder: toolbarBuilder,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionToolbar$Mate(
-        key: p.getValue('key'),
-        anchorAbove: p.getValue('anchorAbove'),
-        anchorBelow: p.getValue('anchorBelow'),
-        toolbarBuilder: p.getValue('toolbarBuilder'),
-        children: p.getValue('children'),
+        key: p.get('key').value,
+        anchorAbove: p.get('anchorAbove').value,
+        anchorBelow: p.get('anchorBelow').value,
+        toolbarBuilder: p.get('toolbarBuilder').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'anchorAbove', init: anchorAbove);
-    mateParams.set(name: 'anchorBelow', init: anchorBelow);
-    mateParams.set(name: 'toolbarBuilder', init: toolbarBuilder);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('key', init: key);
+    mateParams.put('anchorAbove', init: anchorAbove);
+    mateParams.put('anchorBelow', init: anchorBelow);
+    mateParams.put('toolbarBuilder', init: toolbarBuilder);
+    mateParams.put('children', init: children);
   }
 }

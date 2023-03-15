@@ -42,26 +42,26 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate<Cuper
           opacity: opacity,
           shadows: shadows,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoIconThemeData$Mate(
-        size: p.getValue('size'),
-        fill: p.getValue('fill'),
-        weight: p.getValue('weight'),
-        grade: p.getValue('grade'),
-        opticalSize: p.getValue('opticalSize'),
-        color: p.getValue('color'),
-        opacity: p.getValue('opacity'),
-        shadows: p.getValue('shadows'),
+        size: p.get('size').value,
+        fill: p.get('fill').value,
+        weight: p.get('weight').value,
+        grade: p.get('grade').value,
+        opticalSize: p.get('opticalSize').value,
+        color: p.get('color').value,
+        opacity: p.get('opacity').value,
+        shadows: p.get('shadows').value,
       ),
     );
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'fill', init: fill);
-    mateParams.set(name: 'weight', init: weight);
-    mateParams.set(name: 'grade', init: grade);
-    mateParams.set(name: 'opticalSize', init: opticalSize);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'shadows', init: shadows);
+    mateParams.put('size', init: size);
+    mateParams.put('fill', init: fill);
+    mateParams.put('weight', init: weight);
+    mateParams.put('grade', init: grade);
+    mateParams.put('opticalSize', init: opticalSize);
+    mateParams.put('color', init: color);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('shadows', init: shadows);
   }
 }

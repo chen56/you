@@ -51,29 +51,29 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate<ButtonBarThem
           layoutBehavior: layoutBehavior,
           overflowDirection: overflowDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonBarThemeData$Mate(
-        alignment: p.getValue('alignment'),
-        mainAxisSize: p.getValue('mainAxisSize'),
-        buttonTextTheme: p.getValue('buttonTextTheme'),
-        buttonMinWidth: p.getValue('buttonMinWidth'),
-        buttonHeight: p.getValue('buttonHeight'),
-        buttonPadding: p.getValue('buttonPadding'),
-        buttonAlignedDropdown: p.getValue('buttonAlignedDropdown'),
-        layoutBehavior: p.getValue('layoutBehavior'),
-        overflowDirection: p.getValue('overflowDirection'),
+        alignment: p.get('alignment').value,
+        mainAxisSize: p.get('mainAxisSize').value,
+        buttonTextTheme: p.get('buttonTextTheme').value,
+        buttonMinWidth: p.get('buttonMinWidth').value,
+        buttonHeight: p.get('buttonHeight').value,
+        buttonPadding: p.get('buttonPadding').value,
+        buttonAlignedDropdown: p.get('buttonAlignedDropdown').value,
+        layoutBehavior: p.get('layoutBehavior').value,
+        overflowDirection: p.get('overflowDirection').value,
       ),
     );
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'mainAxisSize', init: mainAxisSize);
-    mateParams.set(name: 'buttonTextTheme', init: buttonTextTheme);
-    mateParams.set(name: 'buttonMinWidth', init: buttonMinWidth);
-    mateParams.set(name: 'buttonHeight', init: buttonHeight);
-    mateParams.set(name: 'buttonPadding', init: buttonPadding);
-    mateParams.set(name: 'buttonAlignedDropdown', init: buttonAlignedDropdown);
-    mateParams.set(name: 'layoutBehavior', init: layoutBehavior);
-    mateParams.set(name: 'overflowDirection', init: overflowDirection);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('mainAxisSize', init: mainAxisSize);
+    mateParams.put('buttonTextTheme', init: buttonTextTheme);
+    mateParams.put('buttonMinWidth', init: buttonMinWidth);
+    mateParams.put('buttonHeight', init: buttonHeight);
+    mateParams.put('buttonPadding', init: buttonPadding);
+    mateParams.put('buttonAlignedDropdown', init: buttonAlignedDropdown);
+    mateParams.put('layoutBehavior', init: layoutBehavior);
+    mateParams.put('overflowDirection', init: overflowDirection);
   }
 }
 
@@ -94,16 +94,16 @@ class ButtonBarTheme$Mate extends ButtonBarTheme with WidgetMate<ButtonBarTheme$
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonBarTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

@@ -28,17 +28,17 @@ class ChipTheme$Mate extends ChipTheme with WidgetMate<ChipTheme$Mate> {
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ChipTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -127,50 +127,50 @@ class ChipThemeData$Mate extends ChipThemeData with Mate<ChipThemeData$Mate> {
           pressElevation: pressElevation,
           iconTheme: iconTheme,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ChipThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        deleteIconColor: p.getValue('deleteIconColor'),
-        disabledColor: p.getValue('disabledColor'),
-        selectedColor: p.getValue('selectedColor'),
-        secondarySelectedColor: p.getValue('secondarySelectedColor'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        selectedShadowColor: p.getValue('selectedShadowColor'),
-        showCheckmark: p.getValue('showCheckmark'),
-        checkmarkColor: p.getValue('checkmarkColor'),
-        labelPadding: p.getValue('labelPadding'),
-        padding: p.getValue('padding'),
-        side: p.getValue('side'),
-        shape: p.getValue('shape'),
-        labelStyle: p.getValue('labelStyle'),
-        secondaryLabelStyle: p.getValue('secondaryLabelStyle'),
-        brightness: p.getValue('brightness'),
-        elevation: p.getValue('elevation'),
-        pressElevation: p.getValue('pressElevation'),
-        iconTheme: p.getValue('iconTheme'),
+        backgroundColor: p.get('backgroundColor').value,
+        deleteIconColor: p.get('deleteIconColor').value,
+        disabledColor: p.get('disabledColor').value,
+        selectedColor: p.get('selectedColor').value,
+        secondarySelectedColor: p.get('secondarySelectedColor').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        selectedShadowColor: p.get('selectedShadowColor').value,
+        showCheckmark: p.get('showCheckmark').value,
+        checkmarkColor: p.get('checkmarkColor').value,
+        labelPadding: p.get('labelPadding').value,
+        padding: p.get('padding').value,
+        side: p.get('side').value,
+        shape: p.get('shape').value,
+        labelStyle: p.get('labelStyle').value,
+        secondaryLabelStyle: p.get('secondaryLabelStyle').value,
+        brightness: p.get('brightness').value,
+        elevation: p.get('elevation').value,
+        pressElevation: p.get('pressElevation').value,
+        iconTheme: p.get('iconTheme').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'deleteIconColor', init: deleteIconColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'secondarySelectedColor', init: secondarySelectedColor);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'selectedShadowColor', init: selectedShadowColor);
-    mateParams.set(name: 'showCheckmark', init: showCheckmark);
-    mateParams.set(name: 'checkmarkColor', init: checkmarkColor);
-    mateParams.set(name: 'labelPadding', init: labelPadding);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'labelStyle', init: labelStyle);
-    mateParams.set(name: 'secondaryLabelStyle', init: secondaryLabelStyle);
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'pressElevation', init: pressElevation);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('deleteIconColor', init: deleteIconColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('secondarySelectedColor', init: secondarySelectedColor);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('selectedShadowColor', init: selectedShadowColor);
+    mateParams.put('showCheckmark', init: showCheckmark);
+    mateParams.put('checkmarkColor', init: checkmarkColor);
+    mateParams.put('labelPadding', init: labelPadding);
+    mateParams.put('padding', init: padding);
+    mateParams.put('side', init: side);
+    mateParams.put('shape', init: shape);
+    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('secondaryLabelStyle', init: secondaryLabelStyle);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('pressElevation', init: pressElevation);
+    mateParams.put('iconTheme', init: iconTheme);
   }
 }

@@ -30,21 +30,21 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with WidgetMate<Perform
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PerformanceOverlay$Mate(
-        key: p.getValue('key'),
-        optionsMask: p.getValue('optionsMask'),
-        rasterizerThreshold: p.getValue('rasterizerThreshold'),
-        checkerboardRasterCacheImages: p.getValue('checkerboardRasterCacheImages'),
-        checkerboardOffscreenLayers: p.getValue('checkerboardOffscreenLayers'),
+        key: p.get('key').value,
+        optionsMask: p.get('optionsMask').value,
+        rasterizerThreshold: p.get('rasterizerThreshold').value,
+        checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').value,
+        checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'optionsMask', init: optionsMask);
-    mateParams.set(name: 'rasterizerThreshold', init: rasterizerThreshold);
-    mateParams.set(name: 'checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
-    mateParams.set(name: 'checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
+    mateParams.put('key', init: key);
+    mateParams.put('optionsMask', init: optionsMask);
+    mateParams.put('rasterizerThreshold', init: rasterizerThreshold);
+    mateParams.put('checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
+    mateParams.put('checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
   }
 
   /// PerformanceOverlay PerformanceOverlay.allEnabled({Key? key, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
@@ -66,18 +66,18 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with WidgetMate<Perform
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PerformanceOverlay$Mate.allEnabled(
-        key: p.getValue('key'),
-        rasterizerThreshold: p.getValue('rasterizerThreshold'),
-        checkerboardRasterCacheImages: p.getValue('checkerboardRasterCacheImages'),
-        checkerboardOffscreenLayers: p.getValue('checkerboardOffscreenLayers'),
+        key: p.get('key').value,
+        rasterizerThreshold: p.get('rasterizerThreshold').value,
+        checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').value,
+        checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'rasterizerThreshold', init: rasterizerThreshold);
-    mateParams.set(name: 'checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
-    mateParams.set(name: 'checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
+    mateParams.put('key', init: key);
+    mateParams.put('rasterizerThreshold', init: rasterizerThreshold);
+    mateParams.put('checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
+    mateParams.put('checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
   }
 }

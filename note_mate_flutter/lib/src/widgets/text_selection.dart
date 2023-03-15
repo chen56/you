@@ -86,41 +86,41 @@ class TextSelectionOverlay$Mate extends TextSelectionOverlay with Mate<TextSelec
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionOverlay$Mate(
-        value: p.getValue('value'),
-        context: p.getValue('context'),
-        debugRequiredFor: p.getValue('debugRequiredFor'),
-        toolbarLayerLink: p.getValue('toolbarLayerLink'),
-        startHandleLayerLink: p.getValue('startHandleLayerLink'),
-        endHandleLayerLink: p.getValue('endHandleLayerLink'),
-        renderObject: p.getValue('renderObject'),
-        selectionControls: p.getValue('selectionControls'),
-        handlesVisible: p.getValue('handlesVisible'),
-        selectionDelegate: p.getValue('selectionDelegate'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        onSelectionHandleTapped: p.getValue('onSelectionHandleTapped'),
-        clipboardStatus: p.getValue('clipboardStatus'),
-        contextMenuBuilder: p.getValue('contextMenuBuilder'),
-        magnifierConfiguration: p.getValue('magnifierConfiguration'),
+        value: p.get('value').value,
+        context: p.get('context').value,
+        debugRequiredFor: p.get('debugRequiredFor').value,
+        toolbarLayerLink: p.get('toolbarLayerLink').value,
+        startHandleLayerLink: p.get('startHandleLayerLink').value,
+        endHandleLayerLink: p.get('endHandleLayerLink').value,
+        renderObject: p.get('renderObject').value,
+        selectionControls: p.get('selectionControls').value,
+        handlesVisible: p.get('handlesVisible').value,
+        selectionDelegate: p.get('selectionDelegate').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        onSelectionHandleTapped: p.get('onSelectionHandleTapped').value,
+        clipboardStatus: p.get('clipboardStatus').value,
+        contextMenuBuilder: p.get('contextMenuBuilder').value,
+        magnifierConfiguration: p.get('magnifierConfiguration').value,
       ),
     );
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'debugRequiredFor', init: debugRequiredFor);
-    mateParams.set(name: 'toolbarLayerLink', init: toolbarLayerLink);
-    mateParams.set(name: 'startHandleLayerLink', init: startHandleLayerLink);
-    mateParams.set(name: 'endHandleLayerLink', init: endHandleLayerLink);
-    mateParams.set(name: 'renderObject', init: renderObject);
-    mateParams.set(name: 'selectionControls', init: selectionControls);
-    mateParams.set(name: 'handlesVisible', init: handlesVisible);
-    mateParams.set(name: 'selectionDelegate', init: selectionDelegate);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'onSelectionHandleTapped', init: onSelectionHandleTapped);
-    mateParams.set(name: 'clipboardStatus', init: clipboardStatus);
-    mateParams.set(name: 'contextMenuBuilder', init: contextMenuBuilder);
-    mateParams.set(name: 'magnifierConfiguration', init: magnifierConfiguration);
+    mateParams.put('value', init: value);
+    mateParams.put('context', init: context);
+    mateParams.put('debugRequiredFor', init: debugRequiredFor);
+    mateParams.put('toolbarLayerLink', init: toolbarLayerLink);
+    mateParams.put('startHandleLayerLink', init: startHandleLayerLink);
+    mateParams.put('endHandleLayerLink', init: endHandleLayerLink);
+    mateParams.put('renderObject', init: renderObject);
+    mateParams.put('selectionControls', init: selectionControls);
+    mateParams.put('handlesVisible', init: handlesVisible);
+    mateParams.put('selectionDelegate', init: selectionDelegate);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('onSelectionHandleTapped', init: onSelectionHandleTapped);
+    mateParams.put('clipboardStatus', init: clipboardStatus);
+    mateParams.put('contextMenuBuilder', init: contextMenuBuilder);
+    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
   }
 }
 
@@ -229,61 +229,61 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate<SelectionOverlay$
           onSelectionHandleTapped: onSelectionHandleTapped,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionOverlay$Mate(
-        context: p.getValue('context'),
-        debugRequiredFor: p.getValue('debugRequiredFor'),
-        startHandleType: p.getValue('startHandleType'),
-        lineHeightAtStart: p.getValue('lineHeightAtStart'),
-        startHandlesVisible: p.getValue('startHandlesVisible'),
-        onStartHandleDragStart: p.getValue('onStartHandleDragStart'),
-        onStartHandleDragUpdate: p.getValue('onStartHandleDragUpdate'),
-        onStartHandleDragEnd: p.getValue('onStartHandleDragEnd'),
-        endHandleType: p.getValue('endHandleType'),
-        lineHeightAtEnd: p.getValue('lineHeightAtEnd'),
-        endHandlesVisible: p.getValue('endHandlesVisible'),
-        onEndHandleDragStart: p.getValue('onEndHandleDragStart'),
-        onEndHandleDragUpdate: p.getValue('onEndHandleDragUpdate'),
-        onEndHandleDragEnd: p.getValue('onEndHandleDragEnd'),
-        toolbarVisible: p.getValue('toolbarVisible'),
-        selectionEndpoints: p.getValue('selectionEndpoints'),
-        selectionControls: p.getValue('selectionControls'),
-        selectionDelegate: p.getValue('selectionDelegate'),
-        clipboardStatus: p.getValue('clipboardStatus'),
-        startHandleLayerLink: p.getValue('startHandleLayerLink'),
-        endHandleLayerLink: p.getValue('endHandleLayerLink'),
-        toolbarLayerLink: p.getValue('toolbarLayerLink'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        onSelectionHandleTapped: p.getValue('onSelectionHandleTapped'),
-        magnifierConfiguration: p.getValue('magnifierConfiguration'),
+        context: p.get('context').value,
+        debugRequiredFor: p.get('debugRequiredFor').value,
+        startHandleType: p.get('startHandleType').value,
+        lineHeightAtStart: p.get('lineHeightAtStart').value,
+        startHandlesVisible: p.get('startHandlesVisible').value,
+        onStartHandleDragStart: p.get('onStartHandleDragStart').value,
+        onStartHandleDragUpdate: p.get('onStartHandleDragUpdate').value,
+        onStartHandleDragEnd: p.get('onStartHandleDragEnd').value,
+        endHandleType: p.get('endHandleType').value,
+        lineHeightAtEnd: p.get('lineHeightAtEnd').value,
+        endHandlesVisible: p.get('endHandlesVisible').value,
+        onEndHandleDragStart: p.get('onEndHandleDragStart').value,
+        onEndHandleDragUpdate: p.get('onEndHandleDragUpdate').value,
+        onEndHandleDragEnd: p.get('onEndHandleDragEnd').value,
+        toolbarVisible: p.get('toolbarVisible').value,
+        selectionEndpoints: p.get('selectionEndpoints').value,
+        selectionControls: p.get('selectionControls').value,
+        selectionDelegate: p.get('selectionDelegate').value,
+        clipboardStatus: p.get('clipboardStatus').value,
+        startHandleLayerLink: p.get('startHandleLayerLink').value,
+        endHandleLayerLink: p.get('endHandleLayerLink').value,
+        toolbarLayerLink: p.get('toolbarLayerLink').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        onSelectionHandleTapped: p.get('onSelectionHandleTapped').value,
+        magnifierConfiguration: p.get('magnifierConfiguration').value,
       ),
     );
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'debugRequiredFor', init: debugRequiredFor);
-    mateParams.set(name: 'startHandleType', init: startHandleType);
-    mateParams.set(name: 'lineHeightAtStart', init: lineHeightAtStart);
-    mateParams.set(name: 'startHandlesVisible', init: startHandlesVisible);
-    mateParams.set(name: 'onStartHandleDragStart', init: onStartHandleDragStart);
-    mateParams.set(name: 'onStartHandleDragUpdate', init: onStartHandleDragUpdate);
-    mateParams.set(name: 'onStartHandleDragEnd', init: onStartHandleDragEnd);
-    mateParams.set(name: 'endHandleType', init: endHandleType);
-    mateParams.set(name: 'lineHeightAtEnd', init: lineHeightAtEnd);
-    mateParams.set(name: 'endHandlesVisible', init: endHandlesVisible);
-    mateParams.set(name: 'onEndHandleDragStart', init: onEndHandleDragStart);
-    mateParams.set(name: 'onEndHandleDragUpdate', init: onEndHandleDragUpdate);
-    mateParams.set(name: 'onEndHandleDragEnd', init: onEndHandleDragEnd);
-    mateParams.set(name: 'toolbarVisible', init: toolbarVisible);
-    mateParams.set(name: 'selectionEndpoints', init: selectionEndpoints);
-    mateParams.set(name: 'selectionControls', init: selectionControls);
-    mateParams.set(name: 'selectionDelegate', init: selectionDelegate);
-    mateParams.set(name: 'clipboardStatus', init: clipboardStatus);
-    mateParams.set(name: 'startHandleLayerLink', init: startHandleLayerLink);
-    mateParams.set(name: 'endHandleLayerLink', init: endHandleLayerLink);
-    mateParams.set(name: 'toolbarLayerLink', init: toolbarLayerLink);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'onSelectionHandleTapped', init: onSelectionHandleTapped);
-    mateParams.set(name: 'magnifierConfiguration', init: magnifierConfiguration);
+    mateParams.put('context', init: context);
+    mateParams.put('debugRequiredFor', init: debugRequiredFor);
+    mateParams.put('startHandleType', init: startHandleType);
+    mateParams.put('lineHeightAtStart', init: lineHeightAtStart);
+    mateParams.put('startHandlesVisible', init: startHandlesVisible);
+    mateParams.put('onStartHandleDragStart', init: onStartHandleDragStart);
+    mateParams.put('onStartHandleDragUpdate', init: onStartHandleDragUpdate);
+    mateParams.put('onStartHandleDragEnd', init: onStartHandleDragEnd);
+    mateParams.put('endHandleType', init: endHandleType);
+    mateParams.put('lineHeightAtEnd', init: lineHeightAtEnd);
+    mateParams.put('endHandlesVisible', init: endHandlesVisible);
+    mateParams.put('onEndHandleDragStart', init: onEndHandleDragStart);
+    mateParams.put('onEndHandleDragUpdate', init: onEndHandleDragUpdate);
+    mateParams.put('onEndHandleDragEnd', init: onEndHandleDragEnd);
+    mateParams.put('toolbarVisible', init: toolbarVisible);
+    mateParams.put('selectionEndpoints', init: selectionEndpoints);
+    mateParams.put('selectionControls', init: selectionControls);
+    mateParams.put('selectionDelegate', init: selectionDelegate);
+    mateParams.put('clipboardStatus', init: clipboardStatus);
+    mateParams.put('startHandleLayerLink', init: startHandleLayerLink);
+    mateParams.put('endHandleLayerLink', init: endHandleLayerLink);
+    mateParams.put('toolbarLayerLink', init: toolbarLayerLink);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('onSelectionHandleTapped', init: onSelectionHandleTapped);
+    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
   }
 }
 
@@ -296,11 +296,11 @@ class TextSelectionGestureDetectorBuilder$Mate extends TextSelectionGestureDetec
       /// optionalParameters: {required TextSelectionGestureDetectorBuilderDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
       required TextSelectionGestureDetectorBuilderDelegate delegate})
       : super(delegate: delegate) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.getValue('delegate')),
+      builder: (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.get('delegate').value),
     );
-    mateParams.set(name: 'delegate', init: delegate);
+    mateParams.put('delegate', init: delegate);
   }
 }
 
@@ -378,45 +378,45 @@ class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector
           behavior: behavior,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionGestureDetector$Mate(
-        key: p.getValue('key'),
-        onTapDown: p.getValue('onTapDown'),
-        onForcePressStart: p.getValue('onForcePressStart'),
-        onForcePressEnd: p.getValue('onForcePressEnd'),
-        onSecondaryTap: p.getValue('onSecondaryTap'),
-        onSecondaryTapDown: p.getValue('onSecondaryTapDown'),
-        onSingleTapUp: p.getValue('onSingleTapUp'),
-        onSingleTapCancel: p.getValue('onSingleTapCancel'),
-        onSingleLongTapStart: p.getValue('onSingleLongTapStart'),
-        onSingleLongTapMoveUpdate: p.getValue('onSingleLongTapMoveUpdate'),
-        onSingleLongTapEnd: p.getValue('onSingleLongTapEnd'),
-        onDoubleTapDown: p.getValue('onDoubleTapDown'),
-        onDragSelectionStart: p.getValue('onDragSelectionStart'),
-        onDragSelectionUpdate: p.getValue('onDragSelectionUpdate'),
-        onDragSelectionEnd: p.getValue('onDragSelectionEnd'),
-        behavior: p.getValue('behavior'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onTapDown: p.get('onTapDown').value,
+        onForcePressStart: p.get('onForcePressStart').value,
+        onForcePressEnd: p.get('onForcePressEnd').value,
+        onSecondaryTap: p.get('onSecondaryTap').value,
+        onSecondaryTapDown: p.get('onSecondaryTapDown').value,
+        onSingleTapUp: p.get('onSingleTapUp').value,
+        onSingleTapCancel: p.get('onSingleTapCancel').value,
+        onSingleLongTapStart: p.get('onSingleLongTapStart').value,
+        onSingleLongTapMoveUpdate: p.get('onSingleLongTapMoveUpdate').value,
+        onSingleLongTapEnd: p.get('onSingleLongTapEnd').value,
+        onDoubleTapDown: p.get('onDoubleTapDown').value,
+        onDragSelectionStart: p.get('onDragSelectionStart').value,
+        onDragSelectionUpdate: p.get('onDragSelectionUpdate').value,
+        onDragSelectionEnd: p.get('onDragSelectionEnd').value,
+        behavior: p.get('behavior').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onTapDown', init: onTapDown);
-    mateParams.set(name: 'onForcePressStart', init: onForcePressStart);
-    mateParams.set(name: 'onForcePressEnd', init: onForcePressEnd);
-    mateParams.set(name: 'onSecondaryTap', init: onSecondaryTap);
-    mateParams.set(name: 'onSecondaryTapDown', init: onSecondaryTapDown);
-    mateParams.set(name: 'onSingleTapUp', init: onSingleTapUp);
-    mateParams.set(name: 'onSingleTapCancel', init: onSingleTapCancel);
-    mateParams.set(name: 'onSingleLongTapStart', init: onSingleLongTapStart);
-    mateParams.set(name: 'onSingleLongTapMoveUpdate', init: onSingleLongTapMoveUpdate);
-    mateParams.set(name: 'onSingleLongTapEnd', init: onSingleLongTapEnd);
-    mateParams.set(name: 'onDoubleTapDown', init: onDoubleTapDown);
-    mateParams.set(name: 'onDragSelectionStart', init: onDragSelectionStart);
-    mateParams.set(name: 'onDragSelectionUpdate', init: onDragSelectionUpdate);
-    mateParams.set(name: 'onDragSelectionEnd', init: onDragSelectionEnd);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onTapDown', init: onTapDown);
+    mateParams.put('onForcePressStart', init: onForcePressStart);
+    mateParams.put('onForcePressEnd', init: onForcePressEnd);
+    mateParams.put('onSecondaryTap', init: onSecondaryTap);
+    mateParams.put('onSecondaryTapDown', init: onSecondaryTapDown);
+    mateParams.put('onSingleTapUp', init: onSingleTapUp);
+    mateParams.put('onSingleTapCancel', init: onSingleTapCancel);
+    mateParams.put('onSingleLongTapStart', init: onSingleLongTapStart);
+    mateParams.put('onSingleLongTapMoveUpdate', init: onSingleLongTapMoveUpdate);
+    mateParams.put('onSingleLongTapEnd', init: onSingleLongTapEnd);
+    mateParams.put('onDoubleTapDown', init: onDoubleTapDown);
+    mateParams.put('onDragSelectionStart', init: onDragSelectionStart);
+    mateParams.put('onDragSelectionUpdate', init: onDragSelectionUpdate);
+    mateParams.put('onDragSelectionEnd', init: onDragSelectionEnd);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -428,10 +428,10 @@ class ClipboardStatusNotifier$Mate extends ClipboardStatusNotifier with Mate<Cli
       /// optionalParameters: {ClipboardStatus value = ClipboardStatus.unknown} , hasDefaultValue:true, defaultValueCode:ClipboardStatus.unknown
       required ClipboardStatus value})
       : super(value: value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ClipboardStatusNotifier$Mate(value: p.getValue('value')),
+      builder: (p) => ClipboardStatusNotifier$Mate(value: p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }

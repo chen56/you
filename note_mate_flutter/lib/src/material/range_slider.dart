@@ -71,38 +71,38 @@ class RangeSlider$Mate extends RangeSlider with WidgetMate<RangeSlider$Mate> {
           mouseCursor: mouseCursor,
           semanticFormatterCallback: semanticFormatterCallback,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RangeSlider$Mate(
-        key: p.getValue('key'),
-        values: p.getValue('values'),
-        onChanged: p.getValue('onChanged'),
-        onChangeStart: p.getValue('onChangeStart'),
-        onChangeEnd: p.getValue('onChangeEnd'),
-        min: p.getValue('min'),
-        max: p.getValue('max'),
-        divisions: p.getValue('divisions'),
-        labels: p.getValue('labels'),
-        activeColor: p.getValue('activeColor'),
-        inactiveColor: p.getValue('inactiveColor'),
-        overlayColor: p.getValue('overlayColor'),
-        mouseCursor: p.getValue('mouseCursor'),
-        semanticFormatterCallback: p.getValue('semanticFormatterCallback'),
+        key: p.get('key').value,
+        values: p.get('values').value,
+        onChanged: p.get('onChanged').value,
+        onChangeStart: p.get('onChangeStart').value,
+        onChangeEnd: p.get('onChangeEnd').value,
+        min: p.get('min').value,
+        max: p.get('max').value,
+        divisions: p.get('divisions').value,
+        labels: p.get('labels').value,
+        activeColor: p.get('activeColor').value,
+        inactiveColor: p.get('inactiveColor').value,
+        overlayColor: p.get('overlayColor').value,
+        mouseCursor: p.get('mouseCursor').value,
+        semanticFormatterCallback: p.get('semanticFormatterCallback').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'values', init: values);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'onChangeStart', init: onChangeStart);
-    mateParams.set(name: 'onChangeEnd', init: onChangeEnd);
-    mateParams.set(name: 'min', init: min);
-    mateParams.set(name: 'max', init: max);
-    mateParams.set(name: 'divisions', init: divisions);
-    mateParams.set(name: 'labels', init: labels);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'inactiveColor', init: inactiveColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'semanticFormatterCallback', init: semanticFormatterCallback);
+    mateParams.put('key', init: key);
+    mateParams.put('values', init: values);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('onChangeStart', init: onChangeStart);
+    mateParams.put('onChangeEnd', init: onChangeEnd);
+    mateParams.put('min', init: min);
+    mateParams.put('max', init: max);
+    mateParams.put('divisions', init: divisions);
+    mateParams.put('labels', init: labels);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('inactiveColor', init: inactiveColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('semanticFormatterCallback', init: semanticFormatterCallback);
   }
 }

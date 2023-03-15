@@ -26,18 +26,18 @@ class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate<Mouse
           cursor: cursor,
           validForMouseTracker: validForMouseTracker,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MouseTrackerAnnotation$Mate(
-        onEnter: p.getValue('onEnter'),
-        onExit: p.getValue('onExit'),
-        cursor: p.getValue('cursor'),
-        validForMouseTracker: p.getValue('validForMouseTracker'),
+        onEnter: p.get('onEnter').value,
+        onExit: p.get('onExit').value,
+        cursor: p.get('cursor').value,
+        validForMouseTracker: p.get('validForMouseTracker').value,
       ),
     );
-    mateParams.set(name: 'onEnter', init: onEnter);
-    mateParams.set(name: 'onExit', init: onExit);
-    mateParams.set(name: 'cursor', init: cursor);
-    mateParams.set(name: 'validForMouseTracker', init: validForMouseTracker);
+    mateParams.put('onEnter', init: onEnter);
+    mateParams.put('onExit', init: onExit);
+    mateParams.put('cursor', init: cursor);
+    mateParams.put('validForMouseTracker', init: validForMouseTracker);
   }
 }

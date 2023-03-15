@@ -137,69 +137,69 @@ class InkResponse$Mate extends InkResponse with WidgetMate<InkResponse$Mate> {
           autofocus: autofocus,
           statesController: statesController,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InkResponse$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        onTap: p.getValue('onTap'),
-        onTapDown: p.getValue('onTapDown'),
-        onTapUp: p.getValue('onTapUp'),
-        onTapCancel: p.getValue('onTapCancel'),
-        onDoubleTap: p.getValue('onDoubleTap'),
-        onLongPress: p.getValue('onLongPress'),
-        onHighlightChanged: p.getValue('onHighlightChanged'),
-        onHover: p.getValue('onHover'),
-        mouseCursor: p.getValue('mouseCursor'),
-        containedInkWell: p.getValue('containedInkWell'),
-        highlightShape: p.getValue('highlightShape'),
-        radius: p.getValue('radius'),
-        borderRadius: p.getValue('borderRadius'),
-        customBorder: p.getValue('customBorder'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        highlightColor: p.getValue('highlightColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashColor: p.getValue('splashColor'),
-        splashFactory: p.getValue('splashFactory'),
-        enableFeedback: p.getValue('enableFeedback'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        focusNode: p.getValue('focusNode'),
-        canRequestFocus: p.getValue('canRequestFocus'),
-        onFocusChange: p.getValue('onFocusChange'),
-        autofocus: p.getValue('autofocus'),
-        statesController: p.getValue('statesController'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        onTap: p.get('onTap').value,
+        onTapDown: p.get('onTapDown').value,
+        onTapUp: p.get('onTapUp').value,
+        onTapCancel: p.get('onTapCancel').value,
+        onDoubleTap: p.get('onDoubleTap').value,
+        onLongPress: p.get('onLongPress').value,
+        onHighlightChanged: p.get('onHighlightChanged').value,
+        onHover: p.get('onHover').value,
+        mouseCursor: p.get('mouseCursor').value,
+        containedInkWell: p.get('containedInkWell').value,
+        highlightShape: p.get('highlightShape').value,
+        radius: p.get('radius').value,
+        borderRadius: p.get('borderRadius').value,
+        customBorder: p.get('customBorder').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashColor: p.get('splashColor').value,
+        splashFactory: p.get('splashFactory').value,
+        enableFeedback: p.get('enableFeedback').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        focusNode: p.get('focusNode').value,
+        canRequestFocus: p.get('canRequestFocus').value,
+        onFocusChange: p.get('onFocusChange').value,
+        autofocus: p.get('autofocus').value,
+        statesController: p.get('statesController').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'onTapDown', init: onTapDown);
-    mateParams.set(name: 'onTapUp', init: onTapUp);
-    mateParams.set(name: 'onTapCancel', init: onTapCancel);
-    mateParams.set(name: 'onDoubleTap', init: onDoubleTap);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onHighlightChanged', init: onHighlightChanged);
-    mateParams.set(name: 'onHover', init: onHover);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'containedInkWell', init: containedInkWell);
-    mateParams.set(name: 'highlightShape', init: highlightShape);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'customBorder', init: customBorder);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'splashFactory', init: splashFactory);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'canRequestFocus', init: canRequestFocus);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'statesController', init: statesController);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('onTapDown', init: onTapDown);
+    mateParams.put('onTapUp', init: onTapUp);
+    mateParams.put('onTapCancel', init: onTapCancel);
+    mateParams.put('onDoubleTap', init: onDoubleTap);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onHighlightChanged', init: onHighlightChanged);
+    mateParams.put('onHover', init: onHover);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('containedInkWell', init: containedInkWell);
+    mateParams.put('highlightShape', init: highlightShape);
+    mateParams.put('radius', init: radius);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('customBorder', init: customBorder);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('splashFactory', init: splashFactory);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('canRequestFocus', init: canRequestFocus);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('statesController', init: statesController);
   }
 }
 
@@ -316,64 +316,64 @@ class InkWell$Mate extends InkWell with WidgetMate<InkWell$Mate> {
           autofocus: autofocus,
           statesController: statesController,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InkWell$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        onTap: p.getValue('onTap'),
-        onDoubleTap: p.getValue('onDoubleTap'),
-        onLongPress: p.getValue('onLongPress'),
-        onTapDown: p.getValue('onTapDown'),
-        onTapUp: p.getValue('onTapUp'),
-        onTapCancel: p.getValue('onTapCancel'),
-        onHighlightChanged: p.getValue('onHighlightChanged'),
-        onHover: p.getValue('onHover'),
-        mouseCursor: p.getValue('mouseCursor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        highlightColor: p.getValue('highlightColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashColor: p.getValue('splashColor'),
-        splashFactory: p.getValue('splashFactory'),
-        radius: p.getValue('radius'),
-        borderRadius: p.getValue('borderRadius'),
-        customBorder: p.getValue('customBorder'),
-        enableFeedback: p.getValue('enableFeedback'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        focusNode: p.getValue('focusNode'),
-        canRequestFocus: p.getValue('canRequestFocus'),
-        onFocusChange: p.getValue('onFocusChange'),
-        autofocus: p.getValue('autofocus'),
-        statesController: p.getValue('statesController'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        onTap: p.get('onTap').value,
+        onDoubleTap: p.get('onDoubleTap').value,
+        onLongPress: p.get('onLongPress').value,
+        onTapDown: p.get('onTapDown').value,
+        onTapUp: p.get('onTapUp').value,
+        onTapCancel: p.get('onTapCancel').value,
+        onHighlightChanged: p.get('onHighlightChanged').value,
+        onHover: p.get('onHover').value,
+        mouseCursor: p.get('mouseCursor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashColor: p.get('splashColor').value,
+        splashFactory: p.get('splashFactory').value,
+        radius: p.get('radius').value,
+        borderRadius: p.get('borderRadius').value,
+        customBorder: p.get('customBorder').value,
+        enableFeedback: p.get('enableFeedback').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        focusNode: p.get('focusNode').value,
+        canRequestFocus: p.get('canRequestFocus').value,
+        onFocusChange: p.get('onFocusChange').value,
+        autofocus: p.get('autofocus').value,
+        statesController: p.get('statesController').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'onDoubleTap', init: onDoubleTap);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onTapDown', init: onTapDown);
-    mateParams.set(name: 'onTapUp', init: onTapUp);
-    mateParams.set(name: 'onTapCancel', init: onTapCancel);
-    mateParams.set(name: 'onHighlightChanged', init: onHighlightChanged);
-    mateParams.set(name: 'onHover', init: onHover);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'splashFactory', init: splashFactory);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'customBorder', init: customBorder);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'canRequestFocus', init: canRequestFocus);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'statesController', init: statesController);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('onDoubleTap', init: onDoubleTap);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onTapDown', init: onTapDown);
+    mateParams.put('onTapUp', init: onTapUp);
+    mateParams.put('onTapCancel', init: onTapCancel);
+    mateParams.put('onHighlightChanged', init: onHighlightChanged);
+    mateParams.put('onHover', init: onHover);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('splashFactory', init: splashFactory);
+    mateParams.put('radius', init: radius);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('customBorder', init: customBorder);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('canRequestFocus', init: canRequestFocus);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('statesController', init: statesController);
   }
 }

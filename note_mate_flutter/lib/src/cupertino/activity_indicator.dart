@@ -28,19 +28,19 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
           animating: animating,
           radius: radius,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoActivityIndicator$Mate(
-        key: p.getValue('key'),
-        color: p.getValue('color'),
-        animating: p.getValue('animating'),
-        radius: p.getValue('radius'),
+        key: p.get('key').value,
+        color: p.get('color').value,
+        animating: p.get('animating').value,
+        radius: p.get('radius').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'animating', init: animating);
-    mateParams.set(name: 'radius', init: radius);
+    mateParams.put('key', init: key);
+    mateParams.put('color', init: color);
+    mateParams.put('animating', init: animating);
+    mateParams.put('radius', init: radius);
   }
 
   /// CupertinoActivityIndicator CupertinoActivityIndicator.partiallyRevealed({Key? key, Color? color, double radius = _kDefaultIndicatorRadius, double progress = 1.0})
@@ -62,18 +62,18 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
           radius: radius,
           progress: progress,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoActivityIndicator$Mate.partiallyRevealed(
-        key: p.getValue('key'),
-        color: p.getValue('color'),
-        radius: p.getValue('radius'),
-        progress: p.getValue('progress'),
+        key: p.get('key').value,
+        color: p.get('color').value,
+        radius: p.get('radius').value,
+        progress: p.get('progress').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'progress', init: progress);
+    mateParams.put('key', init: key);
+    mateParams.put('color', init: color);
+    mateParams.put('radius', init: radius);
+    mateParams.put('progress', init: progress);
   }
 }

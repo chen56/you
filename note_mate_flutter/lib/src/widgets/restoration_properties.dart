@@ -13,11 +13,11 @@ class RestorableNum$Mate<T extends num> extends RestorableNum<T> with Mate<Resto
       /// requiredParameters: T defaultValue
       T defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableNum$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableNum$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -29,11 +29,11 @@ class RestorableDouble$Mate extends RestorableDouble with Mate<RestorableDouble$
       /// requiredParameters: double defaultValue
       double defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableDouble$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableDouble$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -45,11 +45,11 @@ class RestorableInt$Mate extends RestorableInt with Mate<RestorableInt$Mate> {
       /// requiredParameters: int defaultValue
       int defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableInt$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableInt$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -61,11 +61,11 @@ class RestorableString$Mate extends RestorableString with Mate<RestorableString$
       /// requiredParameters: String defaultValue
       String defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableString$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableString$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -77,11 +77,11 @@ class RestorableBool$Mate extends RestorableBool with Mate<RestorableBool$Mate> 
       /// requiredParameters: bool defaultValue
       bool defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableBool$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableBool$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -93,11 +93,11 @@ class RestorableBoolN$Mate extends RestorableBoolN with Mate<RestorableBoolN$Mat
       /// requiredParameters: bool? defaultValue
       bool? defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableBoolN$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableBoolN$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -109,11 +109,11 @@ class RestorableNumN$Mate<T extends num?> extends RestorableNumN<T> with Mate<Re
       /// requiredParameters: T defaultValue
       T defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableNumN$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableNumN$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -125,11 +125,11 @@ class RestorableDoubleN$Mate extends RestorableDoubleN with Mate<RestorableDoubl
       /// requiredParameters: double? defaultValue
       double? defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableDoubleN$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableDoubleN$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -141,11 +141,11 @@ class RestorableIntN$Mate extends RestorableIntN with Mate<RestorableIntN$Mate> 
       /// requiredParameters: int? defaultValue
       int? defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableIntN$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableIntN$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -157,11 +157,11 @@ class RestorableStringN$Mate extends RestorableStringN with Mate<RestorableStrin
       /// requiredParameters: String? defaultValue
       String? defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableStringN$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableStringN$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -173,11 +173,11 @@ class RestorableDateTime$Mate extends RestorableDateTime with Mate<RestorableDat
       /// requiredParameters: DateTime defaultValue
       DateTime defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableDateTime$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableDateTime$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -189,11 +189,11 @@ class RestorableDateTimeN$Mate extends RestorableDateTimeN with Mate<RestorableD
       /// requiredParameters: DateTime? defaultValue
       DateTime? defaultValue)
       : super(defaultValue) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableDateTimeN$Mate(p.getValue('defaultValue')),
+      builder: (p) => RestorableDateTimeN$Mate(p.get('defaultValue').value),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
+    mateParams.put('defaultValue', init: defaultValue);
   }
 }
 
@@ -206,11 +206,11 @@ class RestorableTextEditingController$Mate extends RestorableTextEditingControll
       /// requiredParameters: TextEditingValue value
       TextEditingValue value)
       : super.fromValue(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableTextEditingController$Mate.fromValue(p.getValue('value')),
+      builder: (p) => RestorableTextEditingController$Mate.fromValue(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -226,15 +226,15 @@ class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate<
           defaultValue,
           values: values,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorableEnumN$Mate(
-        p.getValue('defaultValue'),
-        values: p.getValue('values'),
+        p.get('defaultValue').value,
+        values: p.get('values').value,
       ),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
-    mateParams.set(name: 'values', init: values);
+    mateParams.put('defaultValue', init: defaultValue);
+    mateParams.put('values', init: values);
   }
 }
 
@@ -250,14 +250,14 @@ class RestorableEnum$Mate<T extends Enum> extends RestorableEnum<T> with Mate<Re
           defaultValue,
           values: values,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorableEnum$Mate(
-        p.getValue('defaultValue'),
-        values: p.getValue('values'),
+        p.get('defaultValue').value,
+        values: p.get('values').value,
       ),
     );
-    mateParams.set(name: 'defaultValue', init: defaultValue);
-    mateParams.set(name: 'values', init: values);
+    mateParams.put('defaultValue', init: defaultValue);
+    mateParams.put('values', init: values);
   }
 }

@@ -55,30 +55,30 @@ class TextSpan$Mate extends TextSpan with Mate<TextSpan$Mate> {
           locale: locale,
           spellOut: spellOut,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSpan$Mate(
-        text: p.getValue('text'),
-        children: p.getValue('children'),
-        style: p.getValue('style'),
-        recognizer: p.getValue('recognizer'),
-        mouseCursor: p.getValue('mouseCursor'),
-        onEnter: p.getValue('onEnter'),
-        onExit: p.getValue('onExit'),
-        semanticsLabel: p.getValue('semanticsLabel'),
-        locale: p.getValue('locale'),
-        spellOut: p.getValue('spellOut'),
+        text: p.get('text').value,
+        children: p.get('children').value,
+        style: p.get('style').value,
+        recognizer: p.get('recognizer').value,
+        mouseCursor: p.get('mouseCursor').value,
+        onEnter: p.get('onEnter').value,
+        onExit: p.get('onExit').value,
+        semanticsLabel: p.get('semanticsLabel').value,
+        locale: p.get('locale').value,
+        spellOut: p.get('spellOut').value,
       ),
     );
-    mateParams.set(name: 'text', init: text);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'recognizer', init: recognizer);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'onEnter', init: onEnter);
-    mateParams.set(name: 'onExit', init: onExit);
-    mateParams.set(name: 'semanticsLabel', init: semanticsLabel);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'spellOut', init: spellOut);
+    mateParams.put('text', init: text);
+    mateParams.put('children', init: children);
+    mateParams.put('style', init: style);
+    mateParams.put('recognizer', init: recognizer);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('onEnter', init: onEnter);
+    mateParams.put('onExit', init: onExit);
+    mateParams.put('semanticsLabel', init: semanticsLabel);
+    mateParams.put('locale', init: locale);
+    mateParams.put('spellOut', init: spellOut);
   }
 }

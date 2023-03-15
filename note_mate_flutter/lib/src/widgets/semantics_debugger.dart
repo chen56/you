@@ -23,16 +23,16 @@ class SemanticsDebugger$Mate extends SemanticsDebugger with WidgetMate<Semantics
           child: child,
           labelStyle: labelStyle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SemanticsDebugger$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        labelStyle: p.getValue('labelStyle'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        labelStyle: p.get('labelStyle').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'labelStyle', init: labelStyle);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('labelStyle', init: labelStyle);
   }
 }

@@ -17,14 +17,14 @@ class FractionalOffset$Mate extends FractionalOffset with Mate<FractionalOffset$
           dx,
           dy,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FractionalOffset$Mate(
-        p.getValue('dx'),
-        p.getValue('dy'),
+        p.get('dx').value,
+        p.get('dy').value,
       ),
     );
-    mateParams.set(name: 'dx', init: dx);
-    mateParams.set(name: 'dy', init: dy);
+    mateParams.put('dx', init: dx);
+    mateParams.put('dy', init: dy);
   }
 }

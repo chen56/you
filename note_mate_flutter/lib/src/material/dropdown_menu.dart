@@ -41,23 +41,23 @@ class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate<DropdownM
           enabled: enabled,
           style: style,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownMenuEntry$Mate(
-        value: p.getValue('value'),
-        label: p.getValue('label'),
-        leadingIcon: p.getValue('leadingIcon'),
-        trailingIcon: p.getValue('trailingIcon'),
-        enabled: p.getValue('enabled'),
-        style: p.getValue('style'),
+        value: p.get('value').value,
+        label: p.get('label').value,
+        leadingIcon: p.get('leadingIcon').value,
+        trailingIcon: p.get('trailingIcon').value,
+        enabled: p.get('enabled').value,
+        style: p.get('style').value,
       ),
     );
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'leadingIcon', init: leadingIcon);
-    mateParams.set(name: 'trailingIcon', init: trailingIcon);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'style', init: style);
+    mateParams.put('value', init: value);
+    mateParams.put('label', init: label);
+    mateParams.put('leadingIcon', init: leadingIcon);
+    mateParams.put('trailingIcon', init: trailingIcon);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('style', init: style);
   }
 }
 
@@ -142,48 +142,48 @@ class DropdownMenu$Mate<T> extends DropdownMenu<T> with WidgetMate<DropdownMenu$
           requestFocusOnTap: requestFocusOnTap,
           dropdownMenuEntries: dropdownMenuEntries,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownMenu$Mate(
-        key: p.getValue('key'),
-        enabled: p.getValue('enabled'),
-        width: p.getValue('width'),
-        menuHeight: p.getValue('menuHeight'),
-        leadingIcon: p.getValue('leadingIcon'),
-        trailingIcon: p.getValue('trailingIcon'),
-        label: p.getValue('label'),
-        hintText: p.getValue('hintText'),
-        selectedTrailingIcon: p.getValue('selectedTrailingIcon'),
-        enableFilter: p.getValue('enableFilter'),
-        enableSearch: p.getValue('enableSearch'),
-        textStyle: p.getValue('textStyle'),
-        inputDecorationTheme: p.getValue('inputDecorationTheme'),
-        menuStyle: p.getValue('menuStyle'),
-        controller: p.getValue('controller'),
-        initialSelection: p.getValue('initialSelection'),
-        onSelected: p.getValue('onSelected'),
-        requestFocusOnTap: p.getValue('requestFocusOnTap'),
-        dropdownMenuEntries: p.getValue('dropdownMenuEntries'),
+        key: p.get('key').value,
+        enabled: p.get('enabled').value,
+        width: p.get('width').value,
+        menuHeight: p.get('menuHeight').value,
+        leadingIcon: p.get('leadingIcon').value,
+        trailingIcon: p.get('trailingIcon').value,
+        label: p.get('label').value,
+        hintText: p.get('hintText').value,
+        selectedTrailingIcon: p.get('selectedTrailingIcon').value,
+        enableFilter: p.get('enableFilter').value,
+        enableSearch: p.get('enableSearch').value,
+        textStyle: p.get('textStyle').value,
+        inputDecorationTheme: p.get('inputDecorationTheme').value,
+        menuStyle: p.get('menuStyle').value,
+        controller: p.get('controller').value,
+        initialSelection: p.get('initialSelection').value,
+        onSelected: p.get('onSelected').value,
+        requestFocusOnTap: p.get('requestFocusOnTap').value,
+        dropdownMenuEntries: p.get('dropdownMenuEntries').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'menuHeight', init: menuHeight);
-    mateParams.set(name: 'leadingIcon', init: leadingIcon);
-    mateParams.set(name: 'trailingIcon', init: trailingIcon);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'hintText', init: hintText);
-    mateParams.set(name: 'selectedTrailingIcon', init: selectedTrailingIcon);
-    mateParams.set(name: 'enableFilter', init: enableFilter);
-    mateParams.set(name: 'enableSearch', init: enableSearch);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'inputDecorationTheme', init: inputDecorationTheme);
-    mateParams.set(name: 'menuStyle', init: menuStyle);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'initialSelection', init: initialSelection);
-    mateParams.set(name: 'onSelected', init: onSelected);
-    mateParams.set(name: 'requestFocusOnTap', init: requestFocusOnTap);
-    mateParams.set(name: 'dropdownMenuEntries', init: dropdownMenuEntries);
+    mateParams.put('key', init: key);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('width', init: width);
+    mateParams.put('menuHeight', init: menuHeight);
+    mateParams.put('leadingIcon', init: leadingIcon);
+    mateParams.put('trailingIcon', init: trailingIcon);
+    mateParams.put('label', init: label);
+    mateParams.put('hintText', init: hintText);
+    mateParams.put('selectedTrailingIcon', init: selectedTrailingIcon);
+    mateParams.put('enableFilter', init: enableFilter);
+    mateParams.put('enableSearch', init: enableSearch);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('inputDecorationTheme', init: inputDecorationTheme);
+    mateParams.put('menuStyle', init: menuStyle);
+    mateParams.put('controller', init: controller);
+    mateParams.put('initialSelection', init: initialSelection);
+    mateParams.put('onSelected', init: onSelected);
+    mateParams.put('requestFocusOnTap', init: requestFocusOnTap);
+    mateParams.put('dropdownMenuEntries', init: dropdownMenuEntries);
   }
 }

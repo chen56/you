@@ -106,54 +106,54 @@ class ButtonStyle$Mate extends ButtonStyle with Mate<ButtonStyle$Mate> {
           alignment: alignment,
           splashFactory: splashFactory,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonStyle$Mate(
-        textStyle: p.getValue('textStyle'),
-        backgroundColor: p.getValue('backgroundColor'),
-        foregroundColor: p.getValue('foregroundColor'),
-        overlayColor: p.getValue('overlayColor'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        elevation: p.getValue('elevation'),
-        padding: p.getValue('padding'),
-        minimumSize: p.getValue('minimumSize'),
-        fixedSize: p.getValue('fixedSize'),
-        maximumSize: p.getValue('maximumSize'),
-        iconColor: p.getValue('iconColor'),
-        iconSize: p.getValue('iconSize'),
-        side: p.getValue('side'),
-        shape: p.getValue('shape'),
-        mouseCursor: p.getValue('mouseCursor'),
-        visualDensity: p.getValue('visualDensity'),
-        tapTargetSize: p.getValue('tapTargetSize'),
-        animationDuration: p.getValue('animationDuration'),
-        enableFeedback: p.getValue('enableFeedback'),
-        alignment: p.getValue('alignment'),
-        splashFactory: p.getValue('splashFactory'),
+        textStyle: p.get('textStyle').value,
+        backgroundColor: p.get('backgroundColor').value,
+        foregroundColor: p.get('foregroundColor').value,
+        overlayColor: p.get('overlayColor').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        elevation: p.get('elevation').value,
+        padding: p.get('padding').value,
+        minimumSize: p.get('minimumSize').value,
+        fixedSize: p.get('fixedSize').value,
+        maximumSize: p.get('maximumSize').value,
+        iconColor: p.get('iconColor').value,
+        iconSize: p.get('iconSize').value,
+        side: p.get('side').value,
+        shape: p.get('shape').value,
+        mouseCursor: p.get('mouseCursor').value,
+        visualDensity: p.get('visualDensity').value,
+        tapTargetSize: p.get('tapTargetSize').value,
+        animationDuration: p.get('animationDuration').value,
+        enableFeedback: p.get('enableFeedback').value,
+        alignment: p.get('alignment').value,
+        splashFactory: p.get('splashFactory').value,
       ),
     );
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'foregroundColor', init: foregroundColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'minimumSize', init: minimumSize);
-    mateParams.set(name: 'fixedSize', init: fixedSize);
-    mateParams.set(name: 'maximumSize', init: maximumSize);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'iconSize', init: iconSize);
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'tapTargetSize', init: tapTargetSize);
-    mateParams.set(name: 'animationDuration', init: animationDuration);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'splashFactory', init: splashFactory);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('foregroundColor', init: foregroundColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('padding', init: padding);
+    mateParams.put('minimumSize', init: minimumSize);
+    mateParams.put('fixedSize', init: fixedSize);
+    mateParams.put('maximumSize', init: maximumSize);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('iconSize', init: iconSize);
+    mateParams.put('side', init: side);
+    mateParams.put('shape', init: shape);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('tapTargetSize', init: tapTargetSize);
+    mateParams.put('animationDuration', init: animationDuration);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('splashFactory', init: splashFactory);
   }
 }

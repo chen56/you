@@ -60,34 +60,34 @@ class PageRouteBuilder$Mate<T> extends PageRouteBuilder<T> with Mate<PageRouteBu
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PageRouteBuilder$Mate(
-        settings: p.getValue('settings'),
-        pageBuilder: p.getValue('pageBuilder'),
-        transitionsBuilder: p.getValue('transitionsBuilder'),
-        transitionDuration: p.getValue('transitionDuration'),
-        reverseTransitionDuration: p.getValue('reverseTransitionDuration'),
-        opaque: p.getValue('opaque'),
-        barrierDismissible: p.getValue('barrierDismissible'),
-        barrierColor: p.getValue('barrierColor'),
-        barrierLabel: p.getValue('barrierLabel'),
-        maintainState: p.getValue('maintainState'),
-        fullscreenDialog: p.getValue('fullscreenDialog'),
-        allowSnapshotting: p.getValue('allowSnapshotting'),
+        settings: p.get('settings').value,
+        pageBuilder: p.get('pageBuilder').value,
+        transitionsBuilder: p.get('transitionsBuilder').value,
+        transitionDuration: p.get('transitionDuration').value,
+        reverseTransitionDuration: p.get('reverseTransitionDuration').value,
+        opaque: p.get('opaque').value,
+        barrierDismissible: p.get('barrierDismissible').value,
+        barrierColor: p.get('barrierColor').value,
+        barrierLabel: p.get('barrierLabel').value,
+        maintainState: p.get('maintainState').value,
+        fullscreenDialog: p.get('fullscreenDialog').value,
+        allowSnapshotting: p.get('allowSnapshotting').value,
       ),
     );
-    mateParams.set(name: 'settings', init: settings);
-    mateParams.set(name: 'pageBuilder', init: pageBuilder);
-    mateParams.set(name: 'transitionsBuilder', init: transitionsBuilder);
-    mateParams.set(name: 'transitionDuration', init: transitionDuration);
-    mateParams.set(name: 'reverseTransitionDuration', init: reverseTransitionDuration);
-    mateParams.set(name: 'opaque', init: opaque);
-    mateParams.set(name: 'barrierDismissible', init: barrierDismissible);
-    mateParams.set(name: 'barrierColor', init: barrierColor);
-    mateParams.set(name: 'barrierLabel', init: barrierLabel);
-    mateParams.set(name: 'maintainState', init: maintainState);
-    mateParams.set(name: 'fullscreenDialog', init: fullscreenDialog);
-    mateParams.set(name: 'allowSnapshotting', init: allowSnapshotting);
+    mateParams.put('settings', init: settings);
+    mateParams.put('pageBuilder', init: pageBuilder);
+    mateParams.put('transitionsBuilder', init: transitionsBuilder);
+    mateParams.put('transitionDuration', init: transitionDuration);
+    mateParams.put('reverseTransitionDuration', init: reverseTransitionDuration);
+    mateParams.put('opaque', init: opaque);
+    mateParams.put('barrierDismissible', init: barrierDismissible);
+    mateParams.put('barrierColor', init: barrierColor);
+    mateParams.put('barrierLabel', init: barrierLabel);
+    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('fullscreenDialog', init: fullscreenDialog);
+    mateParams.put('allowSnapshotting', init: allowSnapshotting);
   }
 }

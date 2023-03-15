@@ -29,20 +29,20 @@ class RawKeyEventDataWeb$Mate extends RawKeyEventDataWeb with Mate<RawKeyEventDa
           metaState: metaState,
           keyCode: keyCode,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyEventDataWeb$Mate(
-        code: p.getValue('code'),
-        key: p.getValue('key'),
-        location: p.getValue('location'),
-        metaState: p.getValue('metaState'),
-        keyCode: p.getValue('keyCode'),
+        code: p.get('code').value,
+        key: p.get('key').value,
+        location: p.get('location').value,
+        metaState: p.get('metaState').value,
+        keyCode: p.get('keyCode').value,
       ),
     );
-    mateParams.set(name: 'code', init: code);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'location', init: location);
-    mateParams.set(name: 'metaState', init: metaState);
-    mateParams.set(name: 'keyCode', init: keyCode);
+    mateParams.put('code', init: code);
+    mateParams.put('key', init: key);
+    mateParams.put('location', init: location);
+    mateParams.put('metaState', init: metaState);
+    mateParams.put('keyCode', init: keyCode);
   }
 }

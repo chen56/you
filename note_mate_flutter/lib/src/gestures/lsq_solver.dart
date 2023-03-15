@@ -12,11 +12,11 @@ class PolynomialFit$Mate extends PolynomialFit with Mate<PolynomialFit$Mate> {
       /// requiredParameters: int degree
       int degree)
       : super(degree) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => PolynomialFit$Mate(p.getValue('degree')),
+      builder: (p) => PolynomialFit$Mate(p.get('degree').value),
     );
-    mateParams.set(name: 'degree', init: degree);
+    mateParams.put('degree', init: degree);
   }
 }
 
@@ -37,16 +37,16 @@ class LeastSquaresSolver$Mate extends LeastSquaresSolver with Mate<LeastSquaresS
           y,
           w,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => LeastSquaresSolver$Mate(
-        p.getValue('x'),
-        p.getValue('y'),
-        p.getValue('w'),
+        p.get('x').value,
+        p.get('y').value,
+        p.get('w').value,
       ),
     );
-    mateParams.set(name: 'x', init: x);
-    mateParams.set(name: 'y', init: y);
-    mateParams.set(name: 'w', init: w);
+    mateParams.put('x', init: x);
+    mateParams.put('y', init: y);
+    mateParams.put('w', init: w);
   }
 }

@@ -46,28 +46,28 @@ class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate<Cuper
           pickerTextStyle: pickerTextStyle,
           dateTimePickerTextStyle: dateTimePickerTextStyle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTextThemeData$Mate(
-        primaryColor: p.getValue('primaryColor'),
-        textStyle: p.getValue('textStyle'),
-        actionTextStyle: p.getValue('actionTextStyle'),
-        tabLabelTextStyle: p.getValue('tabLabelTextStyle'),
-        navTitleTextStyle: p.getValue('navTitleTextStyle'),
-        navLargeTitleTextStyle: p.getValue('navLargeTitleTextStyle'),
-        navActionTextStyle: p.getValue('navActionTextStyle'),
-        pickerTextStyle: p.getValue('pickerTextStyle'),
-        dateTimePickerTextStyle: p.getValue('dateTimePickerTextStyle'),
+        primaryColor: p.get('primaryColor').value,
+        textStyle: p.get('textStyle').value,
+        actionTextStyle: p.get('actionTextStyle').value,
+        tabLabelTextStyle: p.get('tabLabelTextStyle').value,
+        navTitleTextStyle: p.get('navTitleTextStyle').value,
+        navLargeTitleTextStyle: p.get('navLargeTitleTextStyle').value,
+        navActionTextStyle: p.get('navActionTextStyle').value,
+        pickerTextStyle: p.get('pickerTextStyle').value,
+        dateTimePickerTextStyle: p.get('dateTimePickerTextStyle').value,
       ),
     );
-    mateParams.set(name: 'primaryColor', init: primaryColor);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'actionTextStyle', init: actionTextStyle);
-    mateParams.set(name: 'tabLabelTextStyle', init: tabLabelTextStyle);
-    mateParams.set(name: 'navTitleTextStyle', init: navTitleTextStyle);
-    mateParams.set(name: 'navLargeTitleTextStyle', init: navLargeTitleTextStyle);
-    mateParams.set(name: 'navActionTextStyle', init: navActionTextStyle);
-    mateParams.set(name: 'pickerTextStyle', init: pickerTextStyle);
-    mateParams.set(name: 'dateTimePickerTextStyle', init: dateTimePickerTextStyle);
+    mateParams.put('primaryColor', init: primaryColor);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('actionTextStyle', init: actionTextStyle);
+    mateParams.put('tabLabelTextStyle', init: tabLabelTextStyle);
+    mateParams.put('navTitleTextStyle', init: navTitleTextStyle);
+    mateParams.put('navLargeTitleTextStyle', init: navLargeTitleTextStyle);
+    mateParams.put('navActionTextStyle', init: navActionTextStyle);
+    mateParams.put('pickerTextStyle', init: pickerTextStyle);
+    mateParams.put('dateTimePickerTextStyle', init: dateTimePickerTextStyle);
   }
 }

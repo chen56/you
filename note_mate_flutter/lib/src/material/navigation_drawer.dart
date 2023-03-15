@@ -54,31 +54,31 @@ class NavigationDrawer$Mate extends NavigationDrawer with WidgetMate<NavigationD
           onDestinationSelected: onDestinationSelected,
           selectedIndex: selectedIndex,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDrawer$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        backgroundColor: p.getValue('backgroundColor'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        elevation: p.getValue('elevation'),
-        indicatorColor: p.getValue('indicatorColor'),
-        indicatorShape: p.getValue('indicatorShape'),
-        onDestinationSelected: p.getValue('onDestinationSelected'),
-        selectedIndex: p.getValue('selectedIndex'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        backgroundColor: p.get('backgroundColor').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        elevation: p.get('elevation').value,
+        indicatorColor: p.get('indicatorColor').value,
+        indicatorShape: p.get('indicatorShape').value,
+        onDestinationSelected: p.get('onDestinationSelected').value,
+        selectedIndex: p.get('selectedIndex').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'indicatorShape', init: indicatorShape);
-    mateParams.set(name: 'onDestinationSelected', init: onDestinationSelected);
-    mateParams.set(name: 'selectedIndex', init: selectedIndex);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('indicatorShape', init: indicatorShape);
+    mateParams.put('onDestinationSelected', init: onDestinationSelected);
+    mateParams.put('selectedIndex', init: selectedIndex);
   }
 }
 
@@ -108,20 +108,20 @@ class NavigationDrawerDestination$Mate extends NavigationDrawerDestination
           selectedIcon: selectedIcon,
           label: label,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDrawerDestination$Mate(
-        key: p.getValue('key'),
-        backgroundColor: p.getValue('backgroundColor'),
-        icon: p.getValue('icon'),
-        selectedIcon: p.getValue('selectedIcon'),
-        label: p.getValue('label'),
+        key: p.get('key').value,
+        backgroundColor: p.get('backgroundColor').value,
+        icon: p.get('icon').value,
+        selectedIcon: p.get('selectedIcon').value,
+        label: p.get('label').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'selectedIcon', init: selectedIcon);
-    mateParams.set(name: 'label', init: label);
+    mateParams.put('key', init: key);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('icon', init: icon);
+    mateParams.put('selectedIcon', init: selectedIcon);
+    mateParams.put('label', init: label);
   }
 }

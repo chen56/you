@@ -32,19 +32,19 @@ class ActionListener$Mate extends ActionListener with WidgetMate<ActionListener$
           action: action,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ActionListener$Mate(
-        key: p.getValue('key'),
-        listener: p.getValue('listener'),
-        action: p.getValue('action'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        listener: p.get('listener').value,
+        action: p.get('action').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'listener', init: listener);
-    mateParams.set(name: 'action', init: action);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('listener', init: listener);
+    mateParams.put('action', init: action);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -56,11 +56,11 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate<
       /// optionalParameters: {required Object? Function(T) onInvoke} , hasDefaultValue:false, defaultValueCode:null
       required OnInvokeCallback<T> onInvoke})
       : super(onInvoke: onInvoke) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => CallbackAction$Mate(onInvoke: p.getValue('onInvoke')),
+      builder: (p) => CallbackAction$Mate(onInvoke: p.get('onInvoke').value),
     );
-    mateParams.set(name: 'onInvoke', init: onInvoke);
+    mateParams.put('onInvoke', init: onInvoke);
   }
 }
 
@@ -85,19 +85,19 @@ class Actions$Mate extends Actions with WidgetMate<Actions$Mate> {
           actions: actions,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Actions$Mate(
-        key: p.getValue('key'),
-        dispatcher: p.getValue('dispatcher'),
-        actions: p.getValue('actions'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        dispatcher: p.get('dispatcher').value,
+        actions: p.get('actions').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'dispatcher', init: dispatcher);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('dispatcher', init: dispatcher);
+    mateParams.put('actions', init: actions);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -162,39 +162,39 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with WidgetMa
           includeFocusSemantics: includeFocusSemantics,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusableActionDetector$Mate(
-        key: p.getValue('key'),
-        enabled: p.getValue('enabled'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        descendantsAreFocusable: p.getValue('descendantsAreFocusable'),
-        descendantsAreTraversable: p.getValue('descendantsAreTraversable'),
-        shortcuts: p.getValue('shortcuts'),
-        actions: p.getValue('actions'),
-        onShowFocusHighlight: p.getValue('onShowFocusHighlight'),
-        onShowHoverHighlight: p.getValue('onShowHoverHighlight'),
-        onFocusChange: p.getValue('onFocusChange'),
-        mouseCursor: p.getValue('mouseCursor'),
-        includeFocusSemantics: p.getValue('includeFocusSemantics'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        enabled: p.get('enabled').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        descendantsAreFocusable: p.get('descendantsAreFocusable').value,
+        descendantsAreTraversable: p.get('descendantsAreTraversable').value,
+        shortcuts: p.get('shortcuts').value,
+        actions: p.get('actions').value,
+        onShowFocusHighlight: p.get('onShowFocusHighlight').value,
+        onShowHoverHighlight: p.get('onShowHoverHighlight').value,
+        onFocusChange: p.get('onFocusChange').value,
+        mouseCursor: p.get('mouseCursor').value,
+        includeFocusSemantics: p.get('includeFocusSemantics').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'descendantsAreFocusable', init: descendantsAreFocusable);
-    mateParams.set(name: 'descendantsAreTraversable', init: descendantsAreTraversable);
-    mateParams.set(name: 'shortcuts', init: shortcuts);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'onShowFocusHighlight', init: onShowFocusHighlight);
-    mateParams.set(name: 'onShowHoverHighlight', init: onShowHoverHighlight);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'includeFocusSemantics', init: includeFocusSemantics);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('descendantsAreFocusable', init: descendantsAreFocusable);
+    mateParams.put('descendantsAreTraversable', init: descendantsAreTraversable);
+    mateParams.put('shortcuts', init: shortcuts);
+    mateParams.put('actions', init: actions);
+    mateParams.put('onShowFocusHighlight', init: onShowFocusHighlight);
+    mateParams.put('onShowHoverHighlight', init: onShowHoverHighlight);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('includeFocusSemantics', init: includeFocusSemantics);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -206,11 +206,11 @@ class VoidCallbackIntent$Mate extends VoidCallbackIntent with Mate<VoidCallbackI
       /// requiredParameters: void Function() callback
       VoidCallback callback)
       : super(callback) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => VoidCallbackIntent$Mate(p.getValue('callback')),
+      builder: (p) => VoidCallbackIntent$Mate(p.get('callback').value),
     );
-    mateParams.set(name: 'callback', init: callback);
+    mateParams.put('callback', init: callback);
   }
 }
 
@@ -222,11 +222,11 @@ class DoNothingAction$Mate extends DoNothingAction with Mate<DoNothingAction$Mat
       /// optionalParameters: {bool consumesKey = true} , hasDefaultValue:true, defaultValueCode:true
       required bool consumesKey})
       : super(consumesKey: consumesKey) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DoNothingAction$Mate(consumesKey: p.getValue('consumesKey')),
+      builder: (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').value),
     );
-    mateParams.set(name: 'consumesKey', init: consumesKey);
+    mateParams.put('consumesKey', init: consumesKey);
   }
 }
 
@@ -238,10 +238,10 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate<PrioritizedIn
       /// optionalParameters: {required List<Intent> orderedIntents} , hasDefaultValue:false, defaultValueCode:null
       required List<Intent> orderedIntents})
       : super(orderedIntents: orderedIntents) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => PrioritizedIntents$Mate(orderedIntents: p.getValue('orderedIntents')),
+      builder: (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').value),
     );
-    mateParams.set(name: 'orderedIntents', init: orderedIntents);
+    mateParams.put('orderedIntents', init: orderedIntents);
   }
 }

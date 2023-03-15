@@ -17,14 +17,14 @@ class DateTimeRange$Mate extends DateTimeRange with Mate<DateTimeRange$Mate> {
           start: start,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DateTimeRange$Mate(
-        start: p.getValue('start'),
-        end: p.getValue('end'),
+        start: p.get('start').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'start', init: start);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('start', init: start);
+    mateParams.put('end', init: end);
   }
 }

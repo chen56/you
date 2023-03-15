@@ -26,17 +26,17 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           onPressed: onPressed,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDesktopTextSelectionToolbarButton$Mate(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('child', init: child);
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
@@ -58,19 +58,19 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           onPressed: onPressed,
           text: text,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.text(
-        key: p.getValue('key'),
-        context: p.getValue('context'),
-        onPressed: p.getValue('onPressed'),
-        text: p.getValue('text'),
+        key: p.get('key').value,
+        context: p.get('context').value,
+        onPressed: p.get('onPressed').value,
+        text: p.get('text').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'text', init: text);
+    mateParams.put('key', init: key);
+    mateParams.put('context', init: context);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('text', init: text);
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
@@ -84,14 +84,14 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           key: key,
           buttonItem: buttonItem,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.buttonItem(
-        key: p.getValue('key'),
-        buttonItem: p.getValue('buttonItem'),
+        key: p.get('key').value,
+        buttonItem: p.get('buttonItem').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'buttonItem', init: buttonItem);
+    mateParams.put('key', init: key);
+    mateParams.put('buttonItem', init: buttonItem);
   }
 }

@@ -49,25 +49,25 @@ class Ink$Mate extends Ink with WidgetMate<Ink$Mate> {
           height: height,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Ink$Mate(
-        key: p.getValue('key'),
-        padding: p.getValue('padding'),
-        color: p.getValue('color'),
-        decoration: p.getValue('decoration'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        padding: p.get('padding').value,
+        color: p.get('color').value,
+        decoration: p.get('decoration').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('padding', init: padding);
+    mateParams.put('color', init: color);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('child', init: child);
   }
 
   /// Ink Ink.image({Key? key, EdgeInsetsGeometry? padding, required ImageProvider<Object> image, void Function(Object, StackTrace?)? onImageError, ColorFilter? colorFilter, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, Rect? centerSlice, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, double? width, double? height, Widget? child})
@@ -125,37 +125,37 @@ class Ink$Mate extends Ink with WidgetMate<Ink$Mate> {
           height: height,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Ink$Mate.image(
-        key: p.getValue('key'),
-        padding: p.getValue('padding'),
-        image: p.getValue('image'),
-        onImageError: p.getValue('onImageError'),
-        colorFilter: p.getValue('colorFilter'),
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        centerSlice: p.getValue('centerSlice'),
-        repeat: p.getValue('repeat'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        padding: p.get('padding').value,
+        image: p.get('image').value,
+        onImageError: p.get('onImageError').value,
+        colorFilter: p.get('colorFilter').value,
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        centerSlice: p.get('centerSlice').value,
+        repeat: p.get('repeat').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'onImageError', init: onImageError);
-    mateParams.set(name: 'colorFilter', init: colorFilter);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'centerSlice', init: centerSlice);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('padding', init: padding);
+    mateParams.put('image', init: image);
+    mateParams.put('onImageError', init: onImageError);
+    mateParams.put('colorFilter', init: colorFilter);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('centerSlice', init: centerSlice);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -184,20 +184,20 @@ class InkDecoration$Mate extends InkDecoration with Mate<InkDecoration$Mate> {
           referenceBox: referenceBox,
           onRemoved: onRemoved,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InkDecoration$Mate(
-        decoration: p.getValue('decoration'),
-        configuration: p.getValue('configuration'),
-        controller: p.getValue('controller'),
-        referenceBox: p.getValue('referenceBox'),
-        onRemoved: p.getValue('onRemoved'),
+        decoration: p.get('decoration').value,
+        configuration: p.get('configuration').value,
+        controller: p.get('controller').value,
+        referenceBox: p.get('referenceBox').value,
+        onRemoved: p.get('onRemoved').value,
       ),
     );
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'configuration', init: configuration);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'referenceBox', init: referenceBox);
-    mateParams.set(name: 'onRemoved', init: onRemoved);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('configuration', init: configuration);
+    mateParams.put('controller', init: controller);
+    mateParams.put('referenceBox', init: referenceBox);
+    mateParams.put('onRemoved', init: onRemoved);
   }
 }

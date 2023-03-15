@@ -11,10 +11,10 @@ class MouseCursorManager$Mate extends MouseCursorManager with Mate<MouseCursorMa
       /// requiredParameters: MouseCursor fallbackMouseCursor
       MouseCursor fallbackMouseCursor)
       : super(fallbackMouseCursor) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => MouseCursorManager$Mate(p.getValue('fallbackMouseCursor')),
+      builder: (p) => MouseCursorManager$Mate(p.get('fallbackMouseCursor').value),
     );
-    mateParams.set(name: 'fallbackMouseCursor', init: fallbackMouseCursor);
+    mateParams.put('fallbackMouseCursor', init: fallbackMouseCursor);
   }
 }

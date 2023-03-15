@@ -24,17 +24,17 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate<ScaleStartDetai
           localFocalPoint: localFocalPoint,
           pointerCount: pointerCount,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleStartDetails$Mate(
-        focalPoint: p.getValue('focalPoint'),
-        localFocalPoint: p.getValue('localFocalPoint'),
-        pointerCount: p.getValue('pointerCount'),
+        focalPoint: p.get('focalPoint').value,
+        localFocalPoint: p.get('localFocalPoint').value,
+        pointerCount: p.get('pointerCount').value,
       ),
     );
-    mateParams.set(name: 'focalPoint', init: focalPoint);
-    mateParams.set(name: 'localFocalPoint', init: localFocalPoint);
-    mateParams.set(name: 'pointerCount', init: pointerCount);
+    mateParams.put('focalPoint', init: focalPoint);
+    mateParams.put('localFocalPoint', init: localFocalPoint);
+    mateParams.put('pointerCount', init: pointerCount);
   }
 }
 
@@ -75,27 +75,27 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate<ScaleUpdateDe
           pointerCount: pointerCount,
           focalPointDelta: focalPointDelta,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleUpdateDetails$Mate(
-        focalPoint: p.getValue('focalPoint'),
-        localFocalPoint: p.getValue('localFocalPoint'),
-        scale: p.getValue('scale'),
-        horizontalScale: p.getValue('horizontalScale'),
-        verticalScale: p.getValue('verticalScale'),
-        rotation: p.getValue('rotation'),
-        pointerCount: p.getValue('pointerCount'),
-        focalPointDelta: p.getValue('focalPointDelta'),
+        focalPoint: p.get('focalPoint').value,
+        localFocalPoint: p.get('localFocalPoint').value,
+        scale: p.get('scale').value,
+        horizontalScale: p.get('horizontalScale').value,
+        verticalScale: p.get('verticalScale').value,
+        rotation: p.get('rotation').value,
+        pointerCount: p.get('pointerCount').value,
+        focalPointDelta: p.get('focalPointDelta').value,
       ),
     );
-    mateParams.set(name: 'focalPoint', init: focalPoint);
-    mateParams.set(name: 'localFocalPoint', init: localFocalPoint);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'horizontalScale', init: horizontalScale);
-    mateParams.set(name: 'verticalScale', init: verticalScale);
-    mateParams.set(name: 'rotation', init: rotation);
-    mateParams.set(name: 'pointerCount', init: pointerCount);
-    mateParams.set(name: 'focalPointDelta', init: focalPointDelta);
+    mateParams.put('focalPoint', init: focalPoint);
+    mateParams.put('localFocalPoint', init: localFocalPoint);
+    mateParams.put('scale', init: scale);
+    mateParams.put('horizontalScale', init: horizontalScale);
+    mateParams.put('verticalScale', init: verticalScale);
+    mateParams.put('rotation', init: rotation);
+    mateParams.put('pointerCount', init: pointerCount);
+    mateParams.put('focalPointDelta', init: focalPointDelta);
   }
 }
 
@@ -116,17 +116,17 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate<ScaleEndDetails$Mat
           scaleVelocity: scaleVelocity,
           pointerCount: pointerCount,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleEndDetails$Mate(
-        velocity: p.getValue('velocity'),
-        scaleVelocity: p.getValue('scaleVelocity'),
-        pointerCount: p.getValue('pointerCount'),
+        velocity: p.get('velocity').value,
+        scaleVelocity: p.get('scaleVelocity').value,
+        pointerCount: p.get('pointerCount').value,
       ),
     );
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: 'scaleVelocity', init: scaleVelocity);
-    mateParams.set(name: 'pointerCount', init: pointerCount);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('scaleVelocity', init: scaleVelocity);
+    mateParams.put('pointerCount', init: pointerCount);
   }
 }
 
@@ -159,22 +159,22 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate<Scale
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           trackpadScrollToScaleFactor: trackpadScrollToScaleFactor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleGestureRecognizer$Mate(
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        trackpadScrollCausesScale: p.getValue('trackpadScrollCausesScale'),
-        trackpadScrollToScaleFactor: p.getValue('trackpadScrollToScaleFactor'),
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').value,
+        trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').value,
       ),
     );
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'trackpadScrollCausesScale', init: trackpadScrollCausesScale);
-    mateParams.set(name: 'trackpadScrollToScaleFactor', init: trackpadScrollToScaleFactor);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('trackpadScrollCausesScale', init: trackpadScrollCausesScale);
+    mateParams.put('trackpadScrollToScaleFactor', init: trackpadScrollToScaleFactor);
   }
 }

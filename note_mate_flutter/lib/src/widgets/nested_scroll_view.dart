@@ -67,35 +67,35 @@ class NestedScrollView$Mate extends NestedScrollView with WidgetMate<NestedScrol
           restorationId: restorationId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NestedScrollView$Mate(
-        key: p.getValue('key'),
-        controller: p.getValue('controller'),
-        scrollDirection: p.getValue('scrollDirection'),
-        reverse: p.getValue('reverse'),
-        physics: p.getValue('physics'),
-        headerSliverBuilder: p.getValue('headerSliverBuilder'),
-        body: p.getValue('body'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        floatHeaderSlivers: p.getValue('floatHeaderSlivers'),
-        clipBehavior: p.getValue('clipBehavior'),
-        restorationId: p.getValue('restorationId'),
-        scrollBehavior: p.getValue('scrollBehavior'),
+        key: p.get('key').value,
+        controller: p.get('controller').value,
+        scrollDirection: p.get('scrollDirection').value,
+        reverse: p.get('reverse').value,
+        physics: p.get('physics').value,
+        headerSliverBuilder: p.get('headerSliverBuilder').value,
+        body: p.get('body').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        floatHeaderSlivers: p.get('floatHeaderSlivers').value,
+        clipBehavior: p.get('clipBehavior').value,
+        restorationId: p.get('restorationId').value,
+        scrollBehavior: p.get('scrollBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'scrollDirection', init: scrollDirection);
-    mateParams.set(name: 'reverse', init: reverse);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'headerSliverBuilder', init: headerSliverBuilder);
-    mateParams.set(name: 'body', init: body);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'floatHeaderSlivers', init: floatHeaderSlivers);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'scrollBehavior', init: scrollBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('controller', init: controller);
+    mateParams.put('scrollDirection', init: scrollDirection);
+    mateParams.put('reverse', init: reverse);
+    mateParams.put('physics', init: physics);
+    mateParams.put('headerSliverBuilder', init: headerSliverBuilder);
+    mateParams.put('body', init: body);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('floatHeaderSlivers', init: floatHeaderSlivers);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('scrollBehavior', init: scrollBehavior);
   }
 }
 
@@ -116,17 +116,17 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with WidgetMate<S
           handle: handle,
           sliver: sliver,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverOverlapAbsorber$Mate(
-        key: p.getValue('key'),
-        handle: p.getValue('handle'),
-        sliver: p.getValue('sliver'),
+        key: p.get('key').value,
+        handle: p.get('handle').value,
+        sliver: p.get('sliver').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'handle', init: handle);
-    mateParams.set(name: 'sliver', init: sliver);
+    mateParams.put('key', init: key);
+    mateParams.put('handle', init: handle);
+    mateParams.put('sliver', init: sliver);
   }
 }
 
@@ -143,15 +143,15 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with 
           handle: handle,
           sliver: sliver,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverOverlapAbsorber$Mate(
-        handle: p.getValue('handle'),
-        sliver: p.getValue('sliver'),
+        handle: p.get('handle').value,
+        sliver: p.get('sliver').value,
       ),
     );
-    mateParams.set(name: 'handle', init: handle);
-    mateParams.set(name: 'sliver', init: sliver);
+    mateParams.put('handle', init: handle);
+    mateParams.put('sliver', init: sliver);
   }
 }
 
@@ -172,17 +172,17 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with WidgetMate<S
           handle: handle,
           sliver: sliver,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverOverlapInjector$Mate(
-        key: p.getValue('key'),
-        handle: p.getValue('handle'),
-        sliver: p.getValue('sliver'),
+        key: p.get('key').value,
+        handle: p.get('handle').value,
+        sliver: p.get('sliver').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'handle', init: handle);
-    mateParams.set(name: 'sliver', init: sliver);
+    mateParams.put('key', init: key);
+    mateParams.put('handle', init: handle);
+    mateParams.put('sliver', init: sliver);
   }
 }
 
@@ -194,11 +194,11 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with 
       /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , hasDefaultValue:false, defaultValueCode:null
       required SliverOverlapAbsorberHandle handle})
       : super(handle: handle) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverOverlapInjector$Mate(handle: p.getValue('handle')),
+      builder: (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').value),
     );
-    mateParams.set(name: 'handle', init: handle);
+    mateParams.put('handle', init: handle);
   }
 }
 
@@ -243,29 +243,29 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Widget
           handle: handle,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NestedScrollViewViewport$Mate(
-        key: p.getValue('key'),
-        axisDirection: p.getValue('axisDirection'),
-        crossAxisDirection: p.getValue('crossAxisDirection'),
-        anchor: p.getValue('anchor'),
-        offset: p.getValue('offset'),
-        center: p.getValue('center'),
-        slivers: p.getValue('slivers'),
-        handle: p.getValue('handle'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        axisDirection: p.get('axisDirection').value,
+        crossAxisDirection: p.get('crossAxisDirection').value,
+        anchor: p.get('anchor').value,
+        offset: p.get('offset').value,
+        center: p.get('center').value,
+        slivers: p.get('slivers').value,
+        handle: p.get('handle').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'crossAxisDirection', init: crossAxisDirection);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'center', init: center);
-    mateParams.set(name: 'slivers', init: slivers);
-    mateParams.set(name: 'handle', init: handle);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('crossAxisDirection', init: crossAxisDirection);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('offset', init: offset);
+    mateParams.put('center', init: center);
+    mateParams.put('slivers', init: slivers);
+    mateParams.put('handle', init: handle);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -307,26 +307,26 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
           handle: handle,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderNestedScrollViewViewport$Mate(
-        axisDirection: p.getValue('axisDirection'),
-        crossAxisDirection: p.getValue('crossAxisDirection'),
-        offset: p.getValue('offset'),
-        anchor: p.getValue('anchor'),
-        children: p.getValue('children'),
-        center: p.getValue('center'),
-        handle: p.getValue('handle'),
-        clipBehavior: p.getValue('clipBehavior'),
+        axisDirection: p.get('axisDirection').value,
+        crossAxisDirection: p.get('crossAxisDirection').value,
+        offset: p.get('offset').value,
+        anchor: p.get('anchor').value,
+        children: p.get('children').value,
+        center: p.get('center').value,
+        handle: p.get('handle').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'crossAxisDirection', init: crossAxisDirection);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'center', init: center);
-    mateParams.set(name: 'handle', init: handle);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('crossAxisDirection', init: crossAxisDirection);
+    mateParams.put('offset', init: offset);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('children', init: children);
+    mateParams.put('center', init: center);
+    mateParams.put('handle', init: handle);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

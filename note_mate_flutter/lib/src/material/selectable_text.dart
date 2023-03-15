@@ -137,69 +137,69 @@ class SelectableText$Mate extends SelectableText with WidgetMate<SelectableText$
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectableText$Mate(
-        p.getValue('data'),
-        key: p.getValue('key'),
-        focusNode: p.getValue('focusNode'),
-        style: p.getValue('style'),
-        strutStyle: p.getValue('strutStyle'),
-        textAlign: p.getValue('textAlign'),
-        textDirection: p.getValue('textDirection'),
-        textScaleFactor: p.getValue('textScaleFactor'),
-        showCursor: p.getValue('showCursor'),
-        autofocus: p.getValue('autofocus'),
-        minLines: p.getValue('minLines'),
-        maxLines: p.getValue('maxLines'),
-        cursorWidth: p.getValue('cursorWidth'),
-        cursorHeight: p.getValue('cursorHeight'),
-        cursorRadius: p.getValue('cursorRadius'),
-        cursorColor: p.getValue('cursorColor'),
-        selectionHeightStyle: p.getValue('selectionHeightStyle'),
-        selectionWidthStyle: p.getValue('selectionWidthStyle'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        enableInteractiveSelection: p.getValue('enableInteractiveSelection'),
-        selectionControls: p.getValue('selectionControls'),
-        onTap: p.getValue('onTap'),
-        scrollPhysics: p.getValue('scrollPhysics'),
-        semanticsLabel: p.getValue('semanticsLabel'),
-        textHeightBehavior: p.getValue('textHeightBehavior'),
-        textWidthBasis: p.getValue('textWidthBasis'),
-        onSelectionChanged: p.getValue('onSelectionChanged'),
-        contextMenuBuilder: p.getValue('contextMenuBuilder'),
-        magnifierConfiguration: p.getValue('magnifierConfiguration'),
+        p.get('data').value,
+        key: p.get('key').value,
+        focusNode: p.get('focusNode').value,
+        style: p.get('style').value,
+        strutStyle: p.get('strutStyle').value,
+        textAlign: p.get('textAlign').value,
+        textDirection: p.get('textDirection').value,
+        textScaleFactor: p.get('textScaleFactor').value,
+        showCursor: p.get('showCursor').value,
+        autofocus: p.get('autofocus').value,
+        minLines: p.get('minLines').value,
+        maxLines: p.get('maxLines').value,
+        cursorWidth: p.get('cursorWidth').value,
+        cursorHeight: p.get('cursorHeight').value,
+        cursorRadius: p.get('cursorRadius').value,
+        cursorColor: p.get('cursorColor').value,
+        selectionHeightStyle: p.get('selectionHeightStyle').value,
+        selectionWidthStyle: p.get('selectionWidthStyle').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        enableInteractiveSelection: p.get('enableInteractiveSelection').value,
+        selectionControls: p.get('selectionControls').value,
+        onTap: p.get('onTap').value,
+        scrollPhysics: p.get('scrollPhysics').value,
+        semanticsLabel: p.get('semanticsLabel').value,
+        textHeightBehavior: p.get('textHeightBehavior').value,
+        textWidthBasis: p.get('textWidthBasis').value,
+        onSelectionChanged: p.get('onSelectionChanged').value,
+        contextMenuBuilder: p.get('contextMenuBuilder').value,
+        magnifierConfiguration: p.get('magnifierConfiguration').value,
       ),
     );
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'strutStyle', init: strutStyle);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'textScaleFactor', init: textScaleFactor);
-    mateParams.set(name: 'showCursor', init: showCursor);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'minLines', init: minLines);
-    mateParams.set(name: 'maxLines', init: maxLines);
-    mateParams.set(name: 'cursorWidth', init: cursorWidth);
-    mateParams.set(name: 'cursorHeight', init: cursorHeight);
-    mateParams.set(name: 'cursorRadius', init: cursorRadius);
-    mateParams.set(name: 'cursorColor', init: cursorColor);
-    mateParams.set(name: 'selectionHeightStyle', init: selectionHeightStyle);
-    mateParams.set(name: 'selectionWidthStyle', init: selectionWidthStyle);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'enableInteractiveSelection', init: enableInteractiveSelection);
-    mateParams.set(name: 'selectionControls', init: selectionControls);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'scrollPhysics', init: scrollPhysics);
-    mateParams.set(name: 'semanticsLabel', init: semanticsLabel);
-    mateParams.set(name: 'textHeightBehavior', init: textHeightBehavior);
-    mateParams.set(name: 'textWidthBasis', init: textWidthBasis);
-    mateParams.set(name: 'onSelectionChanged', init: onSelectionChanged);
-    mateParams.set(name: 'contextMenuBuilder', init: contextMenuBuilder);
-    mateParams.set(name: 'magnifierConfiguration', init: magnifierConfiguration);
+    mateParams.put('data', init: data);
+    mateParams.put('key', init: key);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('style', init: style);
+    mateParams.put('strutStyle', init: strutStyle);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('textScaleFactor', init: textScaleFactor);
+    mateParams.put('showCursor', init: showCursor);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('minLines', init: minLines);
+    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('cursorWidth', init: cursorWidth);
+    mateParams.put('cursorHeight', init: cursorHeight);
+    mateParams.put('cursorRadius', init: cursorRadius);
+    mateParams.put('cursorColor', init: cursorColor);
+    mateParams.put('selectionHeightStyle', init: selectionHeightStyle);
+    mateParams.put('selectionWidthStyle', init: selectionWidthStyle);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('enableInteractiveSelection', init: enableInteractiveSelection);
+    mateParams.put('selectionControls', init: selectionControls);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('scrollPhysics', init: scrollPhysics);
+    mateParams.put('semanticsLabel', init: semanticsLabel);
+    mateParams.put('textHeightBehavior', init: textHeightBehavior);
+    mateParams.put('textWidthBasis', init: textWidthBasis);
+    mateParams.put('onSelectionChanged', init: onSelectionChanged);
+    mateParams.put('contextMenuBuilder', init: contextMenuBuilder);
+    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
   }
 
   /// SelectableText SelectableText.rich(TextSpan textSpan, {Key? key, FocusNode? focusNode, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, double? textScaleFactor, bool showCursor = false, bool autofocus = false, ToolbarOptions? toolbarOptions, int? minLines, int? maxLines, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, void Function()? onTap, ScrollPhysics? scrollPhysics, String? semanticsLabel, TextHeightBehavior? textHeightBehavior, TextWidthBasis? textWidthBasis, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration})
@@ -320,68 +320,68 @@ class SelectableText$Mate extends SelectableText with WidgetMate<SelectableText$
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectableText$Mate.rich(
-        p.getValue('textSpan'),
-        key: p.getValue('key'),
-        focusNode: p.getValue('focusNode'),
-        style: p.getValue('style'),
-        strutStyle: p.getValue('strutStyle'),
-        textAlign: p.getValue('textAlign'),
-        textDirection: p.getValue('textDirection'),
-        textScaleFactor: p.getValue('textScaleFactor'),
-        showCursor: p.getValue('showCursor'),
-        autofocus: p.getValue('autofocus'),
-        minLines: p.getValue('minLines'),
-        maxLines: p.getValue('maxLines'),
-        cursorWidth: p.getValue('cursorWidth'),
-        cursorHeight: p.getValue('cursorHeight'),
-        cursorRadius: p.getValue('cursorRadius'),
-        cursorColor: p.getValue('cursorColor'),
-        selectionHeightStyle: p.getValue('selectionHeightStyle'),
-        selectionWidthStyle: p.getValue('selectionWidthStyle'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        enableInteractiveSelection: p.getValue('enableInteractiveSelection'),
-        selectionControls: p.getValue('selectionControls'),
-        onTap: p.getValue('onTap'),
-        scrollPhysics: p.getValue('scrollPhysics'),
-        semanticsLabel: p.getValue('semanticsLabel'),
-        textHeightBehavior: p.getValue('textHeightBehavior'),
-        textWidthBasis: p.getValue('textWidthBasis'),
-        onSelectionChanged: p.getValue('onSelectionChanged'),
-        contextMenuBuilder: p.getValue('contextMenuBuilder'),
-        magnifierConfiguration: p.getValue('magnifierConfiguration'),
+        p.get('textSpan').value,
+        key: p.get('key').value,
+        focusNode: p.get('focusNode').value,
+        style: p.get('style').value,
+        strutStyle: p.get('strutStyle').value,
+        textAlign: p.get('textAlign').value,
+        textDirection: p.get('textDirection').value,
+        textScaleFactor: p.get('textScaleFactor').value,
+        showCursor: p.get('showCursor').value,
+        autofocus: p.get('autofocus').value,
+        minLines: p.get('minLines').value,
+        maxLines: p.get('maxLines').value,
+        cursorWidth: p.get('cursorWidth').value,
+        cursorHeight: p.get('cursorHeight').value,
+        cursorRadius: p.get('cursorRadius').value,
+        cursorColor: p.get('cursorColor').value,
+        selectionHeightStyle: p.get('selectionHeightStyle').value,
+        selectionWidthStyle: p.get('selectionWidthStyle').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        enableInteractiveSelection: p.get('enableInteractiveSelection').value,
+        selectionControls: p.get('selectionControls').value,
+        onTap: p.get('onTap').value,
+        scrollPhysics: p.get('scrollPhysics').value,
+        semanticsLabel: p.get('semanticsLabel').value,
+        textHeightBehavior: p.get('textHeightBehavior').value,
+        textWidthBasis: p.get('textWidthBasis').value,
+        onSelectionChanged: p.get('onSelectionChanged').value,
+        contextMenuBuilder: p.get('contextMenuBuilder').value,
+        magnifierConfiguration: p.get('magnifierConfiguration').value,
       ),
     );
-    mateParams.set(name: 'textSpan', init: textSpan);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'strutStyle', init: strutStyle);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'textScaleFactor', init: textScaleFactor);
-    mateParams.set(name: 'showCursor', init: showCursor);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'minLines', init: minLines);
-    mateParams.set(name: 'maxLines', init: maxLines);
-    mateParams.set(name: 'cursorWidth', init: cursorWidth);
-    mateParams.set(name: 'cursorHeight', init: cursorHeight);
-    mateParams.set(name: 'cursorRadius', init: cursorRadius);
-    mateParams.set(name: 'cursorColor', init: cursorColor);
-    mateParams.set(name: 'selectionHeightStyle', init: selectionHeightStyle);
-    mateParams.set(name: 'selectionWidthStyle', init: selectionWidthStyle);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'enableInteractiveSelection', init: enableInteractiveSelection);
-    mateParams.set(name: 'selectionControls', init: selectionControls);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'scrollPhysics', init: scrollPhysics);
-    mateParams.set(name: 'semanticsLabel', init: semanticsLabel);
-    mateParams.set(name: 'textHeightBehavior', init: textHeightBehavior);
-    mateParams.set(name: 'textWidthBasis', init: textWidthBasis);
-    mateParams.set(name: 'onSelectionChanged', init: onSelectionChanged);
-    mateParams.set(name: 'contextMenuBuilder', init: contextMenuBuilder);
-    mateParams.set(name: 'magnifierConfiguration', init: magnifierConfiguration);
+    mateParams.put('textSpan', init: textSpan);
+    mateParams.put('key', init: key);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('style', init: style);
+    mateParams.put('strutStyle', init: strutStyle);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('textScaleFactor', init: textScaleFactor);
+    mateParams.put('showCursor', init: showCursor);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('minLines', init: minLines);
+    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('cursorWidth', init: cursorWidth);
+    mateParams.put('cursorHeight', init: cursorHeight);
+    mateParams.put('cursorRadius', init: cursorRadius);
+    mateParams.put('cursorColor', init: cursorColor);
+    mateParams.put('selectionHeightStyle', init: selectionHeightStyle);
+    mateParams.put('selectionWidthStyle', init: selectionWidthStyle);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('enableInteractiveSelection', init: enableInteractiveSelection);
+    mateParams.put('selectionControls', init: selectionControls);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('scrollPhysics', init: scrollPhysics);
+    mateParams.put('semanticsLabel', init: semanticsLabel);
+    mateParams.put('textHeightBehavior', init: textHeightBehavior);
+    mateParams.put('textWidthBasis', init: textWidthBasis);
+    mateParams.put('onSelectionChanged', init: onSelectionChanged);
+    mateParams.put('contextMenuBuilder', init: contextMenuBuilder);
+    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
   }
 }

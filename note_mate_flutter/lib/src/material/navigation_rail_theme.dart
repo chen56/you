@@ -68,37 +68,37 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate<Nav
           minWidth: minWidth,
           minExtendedWidth: minExtendedWidth,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationRailThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        unselectedLabelTextStyle: p.getValue('unselectedLabelTextStyle'),
-        selectedLabelTextStyle: p.getValue('selectedLabelTextStyle'),
-        unselectedIconTheme: p.getValue('unselectedIconTheme'),
-        selectedIconTheme: p.getValue('selectedIconTheme'),
-        groupAlignment: p.getValue('groupAlignment'),
-        labelType: p.getValue('labelType'),
-        useIndicator: p.getValue('useIndicator'),
-        indicatorColor: p.getValue('indicatorColor'),
-        indicatorShape: p.getValue('indicatorShape'),
-        minWidth: p.getValue('minWidth'),
-        minExtendedWidth: p.getValue('minExtendedWidth'),
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        unselectedLabelTextStyle: p.get('unselectedLabelTextStyle').value,
+        selectedLabelTextStyle: p.get('selectedLabelTextStyle').value,
+        unselectedIconTheme: p.get('unselectedIconTheme').value,
+        selectedIconTheme: p.get('selectedIconTheme').value,
+        groupAlignment: p.get('groupAlignment').value,
+        labelType: p.get('labelType').value,
+        useIndicator: p.get('useIndicator').value,
+        indicatorColor: p.get('indicatorColor').value,
+        indicatorShape: p.get('indicatorShape').value,
+        minWidth: p.get('minWidth').value,
+        minExtendedWidth: p.get('minExtendedWidth').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'unselectedLabelTextStyle', init: unselectedLabelTextStyle);
-    mateParams.set(name: 'selectedLabelTextStyle', init: selectedLabelTextStyle);
-    mateParams.set(name: 'unselectedIconTheme', init: unselectedIconTheme);
-    mateParams.set(name: 'selectedIconTheme', init: selectedIconTheme);
-    mateParams.set(name: 'groupAlignment', init: groupAlignment);
-    mateParams.set(name: 'labelType', init: labelType);
-    mateParams.set(name: 'useIndicator', init: useIndicator);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'indicatorShape', init: indicatorShape);
-    mateParams.set(name: 'minWidth', init: minWidth);
-    mateParams.set(name: 'minExtendedWidth', init: minExtendedWidth);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('unselectedLabelTextStyle', init: unselectedLabelTextStyle);
+    mateParams.put('selectedLabelTextStyle', init: selectedLabelTextStyle);
+    mateParams.put('unselectedIconTheme', init: unselectedIconTheme);
+    mateParams.put('selectedIconTheme', init: selectedIconTheme);
+    mateParams.put('groupAlignment', init: groupAlignment);
+    mateParams.put('labelType', init: labelType);
+    mateParams.put('useIndicator', init: useIndicator);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('indicatorShape', init: indicatorShape);
+    mateParams.put('minWidth', init: minWidth);
+    mateParams.put('minExtendedWidth', init: minExtendedWidth);
   }
 }
 
@@ -119,16 +119,16 @@ class NavigationRailTheme$Mate extends NavigationRailTheme with WidgetMate<Navig
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationRailTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

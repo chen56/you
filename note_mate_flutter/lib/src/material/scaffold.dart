@@ -26,15 +26,15 @@ class ScaffoldMessenger$Mate extends ScaffoldMessenger with WidgetMate<ScaffoldM
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaffoldMessenger$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -83,31 +83,31 @@ class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry with Mate
           materialBannerSize: materialBannerSize,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaffoldPrelayoutGeometry$Mate(
-        bottomSheetSize: p.getValue('bottomSheetSize'),
-        contentBottom: p.getValue('contentBottom'),
-        contentTop: p.getValue('contentTop'),
-        floatingActionButtonSize: p.getValue('floatingActionButtonSize'),
-        minInsets: p.getValue('minInsets'),
-        minViewPadding: p.getValue('minViewPadding'),
-        scaffoldSize: p.getValue('scaffoldSize'),
-        snackBarSize: p.getValue('snackBarSize'),
-        materialBannerSize: p.getValue('materialBannerSize'),
-        textDirection: p.getValue('textDirection'),
+        bottomSheetSize: p.get('bottomSheetSize').value,
+        contentBottom: p.get('contentBottom').value,
+        contentTop: p.get('contentTop').value,
+        floatingActionButtonSize: p.get('floatingActionButtonSize').value,
+        minInsets: p.get('minInsets').value,
+        minViewPadding: p.get('minViewPadding').value,
+        scaffoldSize: p.get('scaffoldSize').value,
+        snackBarSize: p.get('snackBarSize').value,
+        materialBannerSize: p.get('materialBannerSize').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'bottomSheetSize', init: bottomSheetSize);
-    mateParams.set(name: 'contentBottom', init: contentBottom);
-    mateParams.set(name: 'contentTop', init: contentTop);
-    mateParams.set(name: 'floatingActionButtonSize', init: floatingActionButtonSize);
-    mateParams.set(name: 'minInsets', init: minInsets);
-    mateParams.set(name: 'minViewPadding', init: minViewPadding);
-    mateParams.set(name: 'scaffoldSize', init: scaffoldSize);
-    mateParams.set(name: 'snackBarSize', init: snackBarSize);
-    mateParams.set(name: 'materialBannerSize', init: materialBannerSize);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('bottomSheetSize', init: bottomSheetSize);
+    mateParams.put('contentBottom', init: contentBottom);
+    mateParams.put('contentTop', init: contentTop);
+    mateParams.put('floatingActionButtonSize', init: floatingActionButtonSize);
+    mateParams.put('minInsets', init: minInsets);
+    mateParams.put('minViewPadding', init: minViewPadding);
+    mateParams.put('scaffoldSize', init: scaffoldSize);
+    mateParams.put('snackBarSize', init: snackBarSize);
+    mateParams.put('materialBannerSize', init: materialBannerSize);
+    mateParams.put('textDirection', init: textDirection);
   }
 }
 
@@ -124,15 +124,15 @@ class ScaffoldGeometry$Mate extends ScaffoldGeometry with Mate<ScaffoldGeometry$
           bottomNavigationBarTop: bottomNavigationBarTop,
           floatingActionButtonArea: floatingActionButtonArea,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaffoldGeometry$Mate(
-        bottomNavigationBarTop: p.getValue('bottomNavigationBarTop'),
-        floatingActionButtonArea: p.getValue('floatingActionButtonArea'),
+        bottomNavigationBarTop: p.get('bottomNavigationBarTop').value,
+        floatingActionButtonArea: p.get('floatingActionButtonArea').value,
       ),
     );
-    mateParams.set(name: 'bottomNavigationBarTop', init: bottomNavigationBarTop);
-    mateParams.set(name: 'floatingActionButtonArea', init: floatingActionButtonArea);
+    mateParams.put('bottomNavigationBarTop', init: bottomNavigationBarTop);
+    mateParams.put('floatingActionButtonArea', init: floatingActionButtonArea);
   }
 }
 
@@ -241,60 +241,60 @@ class Scaffold$Mate extends Scaffold with WidgetMate<Scaffold$Mate> {
           endDrawerEnableOpenDragGesture: endDrawerEnableOpenDragGesture,
           restorationId: restorationId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Scaffold$Mate(
-        key: p.getValue('key'),
-        appBar: p.getValue('appBar'),
-        body: p.getValue('body'),
-        floatingActionButton: p.getValue('floatingActionButton'),
-        floatingActionButtonLocation: p.getValue('floatingActionButtonLocation'),
-        floatingActionButtonAnimator: p.getValue('floatingActionButtonAnimator'),
-        persistentFooterButtons: p.getValue('persistentFooterButtons'),
-        persistentFooterAlignment: p.getValue('persistentFooterAlignment'),
-        drawer: p.getValue('drawer'),
-        onDrawerChanged: p.getValue('onDrawerChanged'),
-        endDrawer: p.getValue('endDrawer'),
-        onEndDrawerChanged: p.getValue('onEndDrawerChanged'),
-        bottomNavigationBar: p.getValue('bottomNavigationBar'),
-        bottomSheet: p.getValue('bottomSheet'),
-        backgroundColor: p.getValue('backgroundColor'),
-        resizeToAvoidBottomInset: p.getValue('resizeToAvoidBottomInset'),
-        primary: p.getValue('primary'),
-        drawerDragStartBehavior: p.getValue('drawerDragStartBehavior'),
-        extendBody: p.getValue('extendBody'),
-        extendBodyBehindAppBar: p.getValue('extendBodyBehindAppBar'),
-        drawerScrimColor: p.getValue('drawerScrimColor'),
-        drawerEdgeDragWidth: p.getValue('drawerEdgeDragWidth'),
-        drawerEnableOpenDragGesture: p.getValue('drawerEnableOpenDragGesture'),
-        endDrawerEnableOpenDragGesture: p.getValue('endDrawerEnableOpenDragGesture'),
-        restorationId: p.getValue('restorationId'),
+        key: p.get('key').value,
+        appBar: p.get('appBar').value,
+        body: p.get('body').value,
+        floatingActionButton: p.get('floatingActionButton').value,
+        floatingActionButtonLocation: p.get('floatingActionButtonLocation').value,
+        floatingActionButtonAnimator: p.get('floatingActionButtonAnimator').value,
+        persistentFooterButtons: p.get('persistentFooterButtons').value,
+        persistentFooterAlignment: p.get('persistentFooterAlignment').value,
+        drawer: p.get('drawer').value,
+        onDrawerChanged: p.get('onDrawerChanged').value,
+        endDrawer: p.get('endDrawer').value,
+        onEndDrawerChanged: p.get('onEndDrawerChanged').value,
+        bottomNavigationBar: p.get('bottomNavigationBar').value,
+        bottomSheet: p.get('bottomSheet').value,
+        backgroundColor: p.get('backgroundColor').value,
+        resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').value,
+        primary: p.get('primary').value,
+        drawerDragStartBehavior: p.get('drawerDragStartBehavior').value,
+        extendBody: p.get('extendBody').value,
+        extendBodyBehindAppBar: p.get('extendBodyBehindAppBar').value,
+        drawerScrimColor: p.get('drawerScrimColor').value,
+        drawerEdgeDragWidth: p.get('drawerEdgeDragWidth').value,
+        drawerEnableOpenDragGesture: p.get('drawerEnableOpenDragGesture').value,
+        endDrawerEnableOpenDragGesture: p.get('endDrawerEnableOpenDragGesture').value,
+        restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'appBar', init: appBar);
-    mateParams.set(name: 'body', init: body);
-    mateParams.set(name: 'floatingActionButton', init: floatingActionButton);
-    mateParams.set(name: 'floatingActionButtonLocation', init: floatingActionButtonLocation);
-    mateParams.set(name: 'floatingActionButtonAnimator', init: floatingActionButtonAnimator);
-    mateParams.set(name: 'persistentFooterButtons', init: persistentFooterButtons);
-    mateParams.set(name: 'persistentFooterAlignment', init: persistentFooterAlignment);
-    mateParams.set(name: 'drawer', init: drawer);
-    mateParams.set(name: 'onDrawerChanged', init: onDrawerChanged);
-    mateParams.set(name: 'endDrawer', init: endDrawer);
-    mateParams.set(name: 'onEndDrawerChanged', init: onEndDrawerChanged);
-    mateParams.set(name: 'bottomNavigationBar', init: bottomNavigationBar);
-    mateParams.set(name: 'bottomSheet', init: bottomSheet);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'resizeToAvoidBottomInset', init: resizeToAvoidBottomInset);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'drawerDragStartBehavior', init: drawerDragStartBehavior);
-    mateParams.set(name: 'extendBody', init: extendBody);
-    mateParams.set(name: 'extendBodyBehindAppBar', init: extendBodyBehindAppBar);
-    mateParams.set(name: 'drawerScrimColor', init: drawerScrimColor);
-    mateParams.set(name: 'drawerEdgeDragWidth', init: drawerEdgeDragWidth);
-    mateParams.set(name: 'drawerEnableOpenDragGesture', init: drawerEnableOpenDragGesture);
-    mateParams.set(name: 'endDrawerEnableOpenDragGesture', init: endDrawerEnableOpenDragGesture);
-    mateParams.set(name: 'restorationId', init: restorationId);
+    mateParams.put('key', init: key);
+    mateParams.put('appBar', init: appBar);
+    mateParams.put('body', init: body);
+    mateParams.put('floatingActionButton', init: floatingActionButton);
+    mateParams.put('floatingActionButtonLocation', init: floatingActionButtonLocation);
+    mateParams.put('floatingActionButtonAnimator', init: floatingActionButtonAnimator);
+    mateParams.put('persistentFooterButtons', init: persistentFooterButtons);
+    mateParams.put('persistentFooterAlignment', init: persistentFooterAlignment);
+    mateParams.put('drawer', init: drawer);
+    mateParams.put('onDrawerChanged', init: onDrawerChanged);
+    mateParams.put('endDrawer', init: endDrawer);
+    mateParams.put('onEndDrawerChanged', init: onEndDrawerChanged);
+    mateParams.put('bottomNavigationBar', init: bottomNavigationBar);
+    mateParams.put('bottomSheet', init: bottomSheet);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('resizeToAvoidBottomInset', init: resizeToAvoidBottomInset);
+    mateParams.put('primary', init: primary);
+    mateParams.put('drawerDragStartBehavior', init: drawerDragStartBehavior);
+    mateParams.put('extendBody', init: extendBody);
+    mateParams.put('extendBodyBehindAppBar', init: extendBodyBehindAppBar);
+    mateParams.put('drawerScrimColor', init: drawerScrimColor);
+    mateParams.put('drawerEdgeDragWidth', init: drawerEdgeDragWidth);
+    mateParams.put('drawerEnableOpenDragGesture', init: drawerEnableOpenDragGesture);
+    mateParams.put('endDrawerEnableOpenDragGesture', init: endDrawerEnableOpenDragGesture);
+    mateParams.put('restorationId', init: restorationId);
   }
 }

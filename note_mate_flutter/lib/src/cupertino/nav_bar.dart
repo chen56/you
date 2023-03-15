@@ -66,37 +66,37 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with WidgetMate
           transitionBetweenRoutes: transitionBetweenRoutes,
           heroTag: heroTag,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoNavigationBar$Mate(
-        key: p.getValue('key'),
-        leading: p.getValue('leading'),
-        automaticallyImplyLeading: p.getValue('automaticallyImplyLeading'),
-        automaticallyImplyMiddle: p.getValue('automaticallyImplyMiddle'),
-        previousPageTitle: p.getValue('previousPageTitle'),
-        middle: p.getValue('middle'),
-        trailing: p.getValue('trailing'),
-        border: p.getValue('border'),
-        backgroundColor: p.getValue('backgroundColor'),
-        brightness: p.getValue('brightness'),
-        padding: p.getValue('padding'),
-        transitionBetweenRoutes: p.getValue('transitionBetweenRoutes'),
-        heroTag: p.getValue('heroTag'),
+        key: p.get('key').value,
+        leading: p.get('leading').value,
+        automaticallyImplyLeading: p.get('automaticallyImplyLeading').value,
+        automaticallyImplyMiddle: p.get('automaticallyImplyMiddle').value,
+        previousPageTitle: p.get('previousPageTitle').value,
+        middle: p.get('middle').value,
+        trailing: p.get('trailing').value,
+        border: p.get('border').value,
+        backgroundColor: p.get('backgroundColor').value,
+        brightness: p.get('brightness').value,
+        padding: p.get('padding').value,
+        transitionBetweenRoutes: p.get('transitionBetweenRoutes').value,
+        heroTag: p.get('heroTag').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'automaticallyImplyLeading', init: automaticallyImplyLeading);
-    mateParams.set(name: 'automaticallyImplyMiddle', init: automaticallyImplyMiddle);
-    mateParams.set(name: 'previousPageTitle', init: previousPageTitle);
-    mateParams.set(name: 'middle', init: middle);
-    mateParams.set(name: 'trailing', init: trailing);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'transitionBetweenRoutes', init: transitionBetweenRoutes);
-    mateParams.set(name: 'heroTag', init: heroTag);
+    mateParams.put('key', init: key);
+    mateParams.put('leading', init: leading);
+    mateParams.put('automaticallyImplyLeading', init: automaticallyImplyLeading);
+    mateParams.put('automaticallyImplyMiddle', init: automaticallyImplyMiddle);
+    mateParams.put('previousPageTitle', init: previousPageTitle);
+    mateParams.put('middle', init: middle);
+    mateParams.put('trailing', init: trailing);
+    mateParams.put('border', init: border);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('padding', init: padding);
+    mateParams.put('transitionBetweenRoutes', init: transitionBetweenRoutes);
+    mateParams.put('heroTag', init: heroTag);
   }
 }
 
@@ -170,43 +170,43 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar
           heroTag: heroTag,
           stretch: stretch,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSliverNavigationBar$Mate(
-        key: p.getValue('key'),
-        largeTitle: p.getValue('largeTitle'),
-        leading: p.getValue('leading'),
-        automaticallyImplyLeading: p.getValue('automaticallyImplyLeading'),
-        automaticallyImplyTitle: p.getValue('automaticallyImplyTitle'),
-        alwaysShowMiddle: p.getValue('alwaysShowMiddle'),
-        previousPageTitle: p.getValue('previousPageTitle'),
-        middle: p.getValue('middle'),
-        trailing: p.getValue('trailing'),
-        border: p.getValue('border'),
-        backgroundColor: p.getValue('backgroundColor'),
-        brightness: p.getValue('brightness'),
-        padding: p.getValue('padding'),
-        transitionBetweenRoutes: p.getValue('transitionBetweenRoutes'),
-        heroTag: p.getValue('heroTag'),
-        stretch: p.getValue('stretch'),
+        key: p.get('key').value,
+        largeTitle: p.get('largeTitle').value,
+        leading: p.get('leading').value,
+        automaticallyImplyLeading: p.get('automaticallyImplyLeading').value,
+        automaticallyImplyTitle: p.get('automaticallyImplyTitle').value,
+        alwaysShowMiddle: p.get('alwaysShowMiddle').value,
+        previousPageTitle: p.get('previousPageTitle').value,
+        middle: p.get('middle').value,
+        trailing: p.get('trailing').value,
+        border: p.get('border').value,
+        backgroundColor: p.get('backgroundColor').value,
+        brightness: p.get('brightness').value,
+        padding: p.get('padding').value,
+        transitionBetweenRoutes: p.get('transitionBetweenRoutes').value,
+        heroTag: p.get('heroTag').value,
+        stretch: p.get('stretch').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'largeTitle', init: largeTitle);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'automaticallyImplyLeading', init: automaticallyImplyLeading);
-    mateParams.set(name: 'automaticallyImplyTitle', init: automaticallyImplyTitle);
-    mateParams.set(name: 'alwaysShowMiddle', init: alwaysShowMiddle);
-    mateParams.set(name: 'previousPageTitle', init: previousPageTitle);
-    mateParams.set(name: 'middle', init: middle);
-    mateParams.set(name: 'trailing', init: trailing);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'transitionBetweenRoutes', init: transitionBetweenRoutes);
-    mateParams.set(name: 'heroTag', init: heroTag);
-    mateParams.set(name: 'stretch', init: stretch);
+    mateParams.put('key', init: key);
+    mateParams.put('largeTitle', init: largeTitle);
+    mateParams.put('leading', init: leading);
+    mateParams.put('automaticallyImplyLeading', init: automaticallyImplyLeading);
+    mateParams.put('automaticallyImplyTitle', init: automaticallyImplyTitle);
+    mateParams.put('alwaysShowMiddle', init: alwaysShowMiddle);
+    mateParams.put('previousPageTitle', init: previousPageTitle);
+    mateParams.put('middle', init: middle);
+    mateParams.put('trailing', init: trailing);
+    mateParams.put('border', init: border);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('padding', init: padding);
+    mateParams.put('transitionBetweenRoutes', init: transitionBetweenRoutes);
+    mateParams.put('heroTag', init: heroTag);
+    mateParams.put('stretch', init: stretch);
   }
 }
 
@@ -232,18 +232,18 @@ class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackBu
           previousPageTitle: previousPageTitle,
           onPressed: onPressed,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoNavigationBarBackButton$Mate(
-        key: p.getValue('key'),
-        color: p.getValue('color'),
-        previousPageTitle: p.getValue('previousPageTitle'),
-        onPressed: p.getValue('onPressed'),
+        key: p.get('key').value,
+        color: p.get('color').value,
+        previousPageTitle: p.get('previousPageTitle').value,
+        onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'previousPageTitle', init: previousPageTitle);
-    mateParams.set(name: 'onPressed', init: onPressed);
+    mateParams.put('key', init: key);
+    mateParams.put('color', init: color);
+    mateParams.put('previousPageTitle', init: previousPageTitle);
+    mateParams.put('onPressed', init: onPressed);
   }
 }

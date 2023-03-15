@@ -23,17 +23,17 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
           actions: actions,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoContextMenu$Mate(
-        key: p.getValue('key'),
-        actions: p.getValue('actions'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        actions: p.get('actions').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('actions', init: actions);
+    mateParams.put('child', init: child);
   }
 
   /// CupertinoContextMenu CupertinoContextMenu.builder({Key? key, required List<Widget> actions, required Widget Function(BuildContext, Animation<double>) builder})
@@ -51,16 +51,16 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
           actions: actions,
           builder: builder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoContextMenu$Mate.builder(
-        key: p.getValue('key'),
-        actions: p.getValue('actions'),
-        builder: p.getValue('builder'),
+        key: p.get('key').value,
+        actions: p.get('actions').value,
+        builder: p.get('builder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'builder', init: builder);
+    mateParams.put('key', init: key);
+    mateParams.put('actions', init: actions);
+    mateParams.put('builder', init: builder);
   }
 }

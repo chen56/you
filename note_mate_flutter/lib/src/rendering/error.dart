@@ -12,10 +12,10 @@ class RenderErrorBox$Mate extends RenderErrorBox with Mate<RenderErrorBox$Mate> 
       /// requiredParameters: [String message = '']
       String message)
       : super(message) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderErrorBox$Mate(p.getValue('message')),
+      builder: (p) => RenderErrorBox$Mate(p.get('message').value),
     );
-    mateParams.set(name: 'message', init: message);
+    mateParams.put('message', init: message);
   }
 }

@@ -12,10 +12,10 @@ class ReadBuffer$Mate extends ReadBuffer with Mate<ReadBuffer$Mate> {
       /// requiredParameters: ByteData data
       ByteData data)
       : super(data) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ReadBuffer$Mate(p.getValue('data')),
+      builder: (p) => ReadBuffer$Mate(p.get('data').value),
     );
-    mateParams.set(name: 'data', init: data);
+    mateParams.put('data', init: data);
   }
 }

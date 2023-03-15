@@ -39,23 +39,23 @@ class RadioThemeData$Mate extends RadioThemeData with Mate<RadioThemeData$Mate> 
           materialTapTargetSize: materialTapTargetSize,
           visualDensity: visualDensity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RadioThemeData$Mate(
-        mouseCursor: p.getValue('mouseCursor'),
-        fillColor: p.getValue('fillColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashRadius: p.getValue('splashRadius'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        visualDensity: p.getValue('visualDensity'),
+        mouseCursor: p.get('mouseCursor').value,
+        fillColor: p.get('fillColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        visualDensity: p.get('visualDensity').value,
       ),
     );
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('visualDensity', init: visualDensity);
   }
 }
 
@@ -76,16 +76,16 @@ class RadioTheme$Mate extends RadioTheme with WidgetMate<RadioTheme$Mate> {
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RadioTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

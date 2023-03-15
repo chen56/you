@@ -47,29 +47,29 @@ class AboutListTile$Mate extends AboutListTile with WidgetMate<AboutListTile$Mat
           aboutBoxChildren: aboutBoxChildren,
           dense: dense,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AboutListTile$Mate(
-        key: p.getValue('key'),
-        icon: p.getValue('icon'),
-        child: p.getValue('child'),
-        applicationName: p.getValue('applicationName'),
-        applicationVersion: p.getValue('applicationVersion'),
-        applicationIcon: p.getValue('applicationIcon'),
-        applicationLegalese: p.getValue('applicationLegalese'),
-        aboutBoxChildren: p.getValue('aboutBoxChildren'),
-        dense: p.getValue('dense'),
+        key: p.get('key').value,
+        icon: p.get('icon').value,
+        child: p.get('child').value,
+        applicationName: p.get('applicationName').value,
+        applicationVersion: p.get('applicationVersion').value,
+        applicationIcon: p.get('applicationIcon').value,
+        applicationLegalese: p.get('applicationLegalese').value,
+        aboutBoxChildren: p.get('aboutBoxChildren').value,
+        dense: p.get('dense').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'applicationName', init: applicationName);
-    mateParams.set(name: 'applicationVersion', init: applicationVersion);
-    mateParams.set(name: 'applicationIcon', init: applicationIcon);
-    mateParams.set(name: 'applicationLegalese', init: applicationLegalese);
-    mateParams.set(name: 'aboutBoxChildren', init: aboutBoxChildren);
-    mateParams.set(name: 'dense', init: dense);
+    mateParams.put('key', init: key);
+    mateParams.put('icon', init: icon);
+    mateParams.put('child', init: child);
+    mateParams.put('applicationName', init: applicationName);
+    mateParams.put('applicationVersion', init: applicationVersion);
+    mateParams.put('applicationIcon', init: applicationIcon);
+    mateParams.put('applicationLegalese', init: applicationLegalese);
+    mateParams.put('aboutBoxChildren', init: aboutBoxChildren);
+    mateParams.put('dense', init: dense);
   }
 }
 
@@ -102,23 +102,23 @@ class AboutDialog$Mate extends AboutDialog with WidgetMate<AboutDialog$Mate> {
           applicationLegalese: applicationLegalese,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AboutDialog$Mate(
-        key: p.getValue('key'),
-        applicationName: p.getValue('applicationName'),
-        applicationVersion: p.getValue('applicationVersion'),
-        applicationIcon: p.getValue('applicationIcon'),
-        applicationLegalese: p.getValue('applicationLegalese'),
-        children: p.getValue('children'),
+        key: p.get('key').value,
+        applicationName: p.get('applicationName').value,
+        applicationVersion: p.get('applicationVersion').value,
+        applicationIcon: p.get('applicationIcon').value,
+        applicationLegalese: p.get('applicationLegalese').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'applicationName', init: applicationName);
-    mateParams.set(name: 'applicationVersion', init: applicationVersion);
-    mateParams.set(name: 'applicationIcon', init: applicationIcon);
-    mateParams.set(name: 'applicationLegalese', init: applicationLegalese);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('key', init: key);
+    mateParams.put('applicationName', init: applicationName);
+    mateParams.put('applicationVersion', init: applicationVersion);
+    mateParams.put('applicationIcon', init: applicationIcon);
+    mateParams.put('applicationLegalese', init: applicationLegalese);
+    mateParams.put('children', init: children);
   }
 }
 
@@ -147,20 +147,20 @@ class LicensePage$Mate extends LicensePage with WidgetMate<LicensePage$Mate> {
           applicationIcon: applicationIcon,
           applicationLegalese: applicationLegalese,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => LicensePage$Mate(
-        key: p.getValue('key'),
-        applicationName: p.getValue('applicationName'),
-        applicationVersion: p.getValue('applicationVersion'),
-        applicationIcon: p.getValue('applicationIcon'),
-        applicationLegalese: p.getValue('applicationLegalese'),
+        key: p.get('key').value,
+        applicationName: p.get('applicationName').value,
+        applicationVersion: p.get('applicationVersion').value,
+        applicationIcon: p.get('applicationIcon').value,
+        applicationLegalese: p.get('applicationLegalese').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'applicationName', init: applicationName);
-    mateParams.set(name: 'applicationVersion', init: applicationVersion);
-    mateParams.set(name: 'applicationIcon', init: applicationIcon);
-    mateParams.set(name: 'applicationLegalese', init: applicationLegalese);
+    mateParams.put('key', init: key);
+    mateParams.put('applicationName', init: applicationName);
+    mateParams.put('applicationVersion', init: applicationVersion);
+    mateParams.put('applicationIcon', init: applicationIcon);
+    mateParams.put('applicationLegalese', init: applicationLegalese);
   }
 }

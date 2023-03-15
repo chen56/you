@@ -48,23 +48,23 @@ class Tab$Mate extends Tab with WidgetMate<Tab$Mate> {
           height: height,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Tab$Mate(
-        key: p.getValue('key'),
-        text: p.getValue('text'),
-        icon: p.getValue('icon'),
-        iconMargin: p.getValue('iconMargin'),
-        height: p.getValue('height'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        text: p.get('text').value,
+        icon: p.get('icon').value,
+        iconMargin: p.get('iconMargin').value,
+        height: p.get('height').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'text', init: text);
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'iconMargin', init: iconMargin);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('text', init: text);
+    mateParams.put('icon', init: icon);
+    mateParams.put('iconMargin', init: iconMargin);
+    mateParams.put('height', init: height);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -173,61 +173,61 @@ class TabBar$Mate extends TabBar with WidgetMate<TabBar$Mate> {
           splashFactory: splashFactory,
           splashBorderRadius: splashBorderRadius,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TabBar$Mate(
-        key: p.getValue('key'),
-        tabs: p.getValue('tabs'),
-        controller: p.getValue('controller'),
-        isScrollable: p.getValue('isScrollable'),
-        padding: p.getValue('padding'),
-        indicatorColor: p.getValue('indicatorColor'),
-        automaticIndicatorColorAdjustment: p.getValue('automaticIndicatorColorAdjustment'),
-        indicatorWeight: p.getValue('indicatorWeight'),
-        indicatorPadding: p.getValue('indicatorPadding'),
-        indicator: p.getValue('indicator'),
-        indicatorSize: p.getValue('indicatorSize'),
-        dividerColor: p.getValue('dividerColor'),
-        labelColor: p.getValue('labelColor'),
-        labelStyle: p.getValue('labelStyle'),
-        labelPadding: p.getValue('labelPadding'),
-        unselectedLabelColor: p.getValue('unselectedLabelColor'),
-        unselectedLabelStyle: p.getValue('unselectedLabelStyle'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        overlayColor: p.getValue('overlayColor'),
-        mouseCursor: p.getValue('mouseCursor'),
-        enableFeedback: p.getValue('enableFeedback'),
-        onTap: p.getValue('onTap'),
-        physics: p.getValue('physics'),
-        splashFactory: p.getValue('splashFactory'),
-        splashBorderRadius: p.getValue('splashBorderRadius'),
+        key: p.get('key').value,
+        tabs: p.get('tabs').value,
+        controller: p.get('controller').value,
+        isScrollable: p.get('isScrollable').value,
+        padding: p.get('padding').value,
+        indicatorColor: p.get('indicatorColor').value,
+        automaticIndicatorColorAdjustment: p.get('automaticIndicatorColorAdjustment').value,
+        indicatorWeight: p.get('indicatorWeight').value,
+        indicatorPadding: p.get('indicatorPadding').value,
+        indicator: p.get('indicator').value,
+        indicatorSize: p.get('indicatorSize').value,
+        dividerColor: p.get('dividerColor').value,
+        labelColor: p.get('labelColor').value,
+        labelStyle: p.get('labelStyle').value,
+        labelPadding: p.get('labelPadding').value,
+        unselectedLabelColor: p.get('unselectedLabelColor').value,
+        unselectedLabelStyle: p.get('unselectedLabelStyle').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        overlayColor: p.get('overlayColor').value,
+        mouseCursor: p.get('mouseCursor').value,
+        enableFeedback: p.get('enableFeedback').value,
+        onTap: p.get('onTap').value,
+        physics: p.get('physics').value,
+        splashFactory: p.get('splashFactory').value,
+        splashBorderRadius: p.get('splashBorderRadius').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'tabs', init: tabs);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'isScrollable', init: isScrollable);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'automaticIndicatorColorAdjustment', init: automaticIndicatorColorAdjustment);
-    mateParams.set(name: 'indicatorWeight', init: indicatorWeight);
-    mateParams.set(name: 'indicatorPadding', init: indicatorPadding);
-    mateParams.set(name: 'indicator', init: indicator);
-    mateParams.set(name: 'indicatorSize', init: indicatorSize);
-    mateParams.set(name: 'dividerColor', init: dividerColor);
-    mateParams.set(name: 'labelColor', init: labelColor);
-    mateParams.set(name: 'labelStyle', init: labelStyle);
-    mateParams.set(name: 'labelPadding', init: labelPadding);
-    mateParams.set(name: 'unselectedLabelColor', init: unselectedLabelColor);
-    mateParams.set(name: 'unselectedLabelStyle', init: unselectedLabelStyle);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'splashFactory', init: splashFactory);
-    mateParams.set(name: 'splashBorderRadius', init: splashBorderRadius);
+    mateParams.put('key', init: key);
+    mateParams.put('tabs', init: tabs);
+    mateParams.put('controller', init: controller);
+    mateParams.put('isScrollable', init: isScrollable);
+    mateParams.put('padding', init: padding);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('automaticIndicatorColorAdjustment', init: automaticIndicatorColorAdjustment);
+    mateParams.put('indicatorWeight', init: indicatorWeight);
+    mateParams.put('indicatorPadding', init: indicatorPadding);
+    mateParams.put('indicator', init: indicator);
+    mateParams.put('indicatorSize', init: indicatorSize);
+    mateParams.put('dividerColor', init: dividerColor);
+    mateParams.put('labelColor', init: labelColor);
+    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('labelPadding', init: labelPadding);
+    mateParams.put('unselectedLabelColor', init: unselectedLabelColor);
+    mateParams.put('unselectedLabelStyle', init: unselectedLabelStyle);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('physics', init: physics);
+    mateParams.put('splashFactory', init: splashFactory);
+    mateParams.put('splashBorderRadius', init: splashBorderRadius);
   }
 }
 
@@ -264,25 +264,25 @@ class TabBarView$Mate extends TabBarView with WidgetMate<TabBarView$Mate> {
           viewportFraction: viewportFraction,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TabBarView$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        controller: p.getValue('controller'),
-        physics: p.getValue('physics'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        viewportFraction: p.getValue('viewportFraction'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        controller: p.get('controller').value,
+        physics: p.get('physics').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        viewportFraction: p.get('viewportFraction').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'viewportFraction', init: viewportFraction);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('controller', init: controller);
+    mateParams.put('physics', init: physics);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('viewportFraction', init: viewportFraction);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -311,21 +311,21 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Widget
           size: size,
           borderStyle: borderStyle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TabPageSelectorIndicator$Mate(
-        key: p.getValue('key'),
-        backgroundColor: p.getValue('backgroundColor'),
-        borderColor: p.getValue('borderColor'),
-        size: p.getValue('size'),
-        borderStyle: p.getValue('borderStyle'),
+        key: p.get('key').value,
+        backgroundColor: p.get('backgroundColor').value,
+        borderColor: p.get('borderColor').value,
+        size: p.get('size').value,
+        borderStyle: p.get('borderStyle').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'borderColor', init: borderColor);
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'borderStyle', init: borderStyle);
+    mateParams.put('key', init: key);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('borderColor', init: borderColor);
+    mateParams.put('size', init: size);
+    mateParams.put('borderStyle', init: borderStyle);
   }
 }
 
@@ -358,22 +358,22 @@ class TabPageSelector$Mate extends TabPageSelector with WidgetMate<TabPageSelect
           selectedColor: selectedColor,
           borderStyle: borderStyle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TabPageSelector$Mate(
-        key: p.getValue('key'),
-        controller: p.getValue('controller'),
-        indicatorSize: p.getValue('indicatorSize'),
-        color: p.getValue('color'),
-        selectedColor: p.getValue('selectedColor'),
-        borderStyle: p.getValue('borderStyle'),
+        key: p.get('key').value,
+        controller: p.get('controller').value,
+        indicatorSize: p.get('indicatorSize').value,
+        color: p.get('color').value,
+        selectedColor: p.get('selectedColor').value,
+        borderStyle: p.get('borderStyle').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'indicatorSize', init: indicatorSize);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'borderStyle', init: borderStyle);
+    mateParams.put('key', init: key);
+    mateParams.put('controller', init: controller);
+    mateParams.put('indicatorSize', init: indicatorSize);
+    mateParams.put('color', init: color);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('borderStyle', init: borderStyle);
   }
 }

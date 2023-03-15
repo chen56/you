@@ -34,6 +34,7 @@ class Path<T> {
   final List<Path> _children = List.empty(growable: true);
   final Map<String, Path> _childrenMap = {};
   final Path? parent;
+
   final Map<String, Object> attributes = {};
   PageMeta<T>? _meta;
 
@@ -183,7 +184,7 @@ abstract class Pen {
 
   void widgetMate(WidgetMate widgetMate);
 
-  void widgetSnippet(WidgetMate Function(Params node) builder);
+  void widgetSnippet(WidgetMate Function(ObjectParam node) builder);
 }
 
 // markdown 的结构轮廓，主要用来显示TOC

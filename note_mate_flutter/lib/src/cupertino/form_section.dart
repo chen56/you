@@ -46,27 +46,27 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<Cup
           decoration: decoration,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoFormSection$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        header: p.getValue('header'),
-        footer: p.getValue('footer'),
-        margin: p.getValue('margin'),
-        backgroundColor: p.getValue('backgroundColor'),
-        decoration: p.getValue('decoration'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        header: p.get('header').value,
+        footer: p.get('footer').value,
+        margin: p.get('margin').value,
+        backgroundColor: p.get('backgroundColor').value,
+        decoration: p.get('decoration').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'header', init: header);
-    mateParams.set(name: 'footer', init: footer);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('header', init: header);
+    mateParams.put('footer', init: footer);
+    mateParams.put('margin', init: margin);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 
   /// CupertinoFormSection CupertinoFormSection.insetGrouped({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
@@ -104,26 +104,26 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<Cup
           decoration: decoration,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoFormSection$Mate.insetGrouped(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        header: p.getValue('header'),
-        footer: p.getValue('footer'),
-        margin: p.getValue('margin'),
-        backgroundColor: p.getValue('backgroundColor'),
-        decoration: p.getValue('decoration'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        header: p.get('header').value,
+        footer: p.get('footer').value,
+        margin: p.get('margin').value,
+        backgroundColor: p.get('backgroundColor').value,
+        decoration: p.get('decoration').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'header', init: header);
-    mateParams.set(name: 'footer', init: footer);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('header', init: header);
+    mateParams.put('footer', init: footer);
+    mateParams.put('margin', init: margin);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

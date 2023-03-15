@@ -27,18 +27,18 @@ class Texture$Mate extends Texture with WidgetMate<Texture$Mate> {
           freeze: freeze,
           filterQuality: filterQuality,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Texture$Mate(
-        key: p.getValue('key'),
-        textureId: p.getValue('textureId'),
-        freeze: p.getValue('freeze'),
-        filterQuality: p.getValue('filterQuality'),
+        key: p.get('key').value,
+        textureId: p.get('textureId').value,
+        freeze: p.get('freeze').value,
+        filterQuality: p.get('filterQuality').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'textureId', init: textureId);
-    mateParams.set(name: 'freeze', init: freeze);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
+    mateParams.put('key', init: key);
+    mateParams.put('textureId', init: textureId);
+    mateParams.put('freeze', init: freeze);
+    mateParams.put('filterQuality', init: filterQuality);
   }
 }

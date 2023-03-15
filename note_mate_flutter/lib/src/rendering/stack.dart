@@ -28,19 +28,19 @@ class RelativeRect$Mate extends RelativeRect with Mate<RelativeRect$Mate> {
           right,
           bottom,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RelativeRect$Mate.fromLTRB(
-        p.getValue('left'),
-        p.getValue('top'),
-        p.getValue('right'),
-        p.getValue('bottom'),
+        p.get('left').value,
+        p.get('top').value,
+        p.get('right').value,
+        p.get('bottom').value,
       ),
     );
-    mateParams.set(name: 'left', init: left);
-    mateParams.set(name: 'top', init: top);
-    mateParams.set(name: 'right', init: right);
-    mateParams.set(name: 'bottom', init: bottom);
+    mateParams.put('left', init: left);
+    mateParams.put('top', init: top);
+    mateParams.put('right', init: right);
+    mateParams.put('bottom', init: bottom);
   }
 }
 
@@ -69,21 +69,21 @@ class RenderStack$Mate extends RenderStack with Mate<RenderStack$Mate> {
           fit: fit,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderStack$Mate(
-        children: p.getValue('children'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
-        fit: p.getValue('fit'),
-        clipBehavior: p.getValue('clipBehavior'),
+        children: p.get('children').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
+        fit: p.get('fit').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('children', init: children);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('fit', init: fit);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -116,22 +116,22 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate<RenderIndexed
           clipBehavior: clipBehavior,
           index: index,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderIndexedStack$Mate(
-        children: p.getValue('children'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
-        fit: p.getValue('fit'),
-        clipBehavior: p.getValue('clipBehavior'),
-        index: p.getValue('index'),
+        children: p.get('children').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
+        fit: p.get('fit').value,
+        clipBehavior: p.get('clipBehavior').value,
+        index: p.get('index').value,
       ),
     );
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'index', init: index);
+    mateParams.put('children', init: children);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('fit', init: fit);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('index', init: index);
   }
 }

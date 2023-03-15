@@ -26,18 +26,18 @@ class BorderSide$Mate extends BorderSide with Mate<BorderSide$Mate> {
           style: style,
           strokeAlign: strokeAlign,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderSide$Mate(
-        color: p.getValue('color'),
-        width: p.getValue('width'),
-        style: p.getValue('style'),
-        strokeAlign: p.getValue('strokeAlign'),
+        color: p.get('color').value,
+        width: p.get('width').value,
+        style: p.get('style').value,
+        strokeAlign: p.get('strokeAlign').value,
       ),
     );
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'strokeAlign', init: strokeAlign);
+    mateParams.put('color', init: color);
+    mateParams.put('width', init: width);
+    mateParams.put('style', init: style);
+    mateParams.put('strokeAlign', init: strokeAlign);
   }
 }

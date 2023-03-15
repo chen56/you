@@ -65,35 +65,35 @@ class Scrollable$Mate extends Scrollable with WidgetMate<Scrollable$Mate> {
           scrollBehavior: scrollBehavior,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Scrollable$Mate(
-        key: p.getValue('key'),
-        axisDirection: p.getValue('axisDirection'),
-        controller: p.getValue('controller'),
-        physics: p.getValue('physics'),
-        viewportBuilder: p.getValue('viewportBuilder'),
-        incrementCalculator: p.getValue('incrementCalculator'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        semanticChildCount: p.getValue('semanticChildCount'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        restorationId: p.getValue('restorationId'),
-        scrollBehavior: p.getValue('scrollBehavior'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        axisDirection: p.get('axisDirection').value,
+        controller: p.get('controller').value,
+        physics: p.get('physics').value,
+        viewportBuilder: p.get('viewportBuilder').value,
+        incrementCalculator: p.get('incrementCalculator').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        semanticChildCount: p.get('semanticChildCount').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        restorationId: p.get('restorationId').value,
+        scrollBehavior: p.get('scrollBehavior').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'viewportBuilder', init: viewportBuilder);
-    mateParams.set(name: 'incrementCalculator', init: incrementCalculator);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'semanticChildCount', init: semanticChildCount);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'scrollBehavior', init: scrollBehavior);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('controller', init: controller);
+    mateParams.put('physics', init: physics);
+    mateParams.put('viewportBuilder', init: viewportBuilder);
+    mateParams.put('incrementCalculator', init: incrementCalculator);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('semanticChildCount', init: semanticChildCount);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('scrollBehavior', init: scrollBehavior);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -113,17 +113,17 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate<E
           onScrollViewScrolled: onScrollViewScrolled,
           velocityScalar: velocityScalar,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => EdgeDraggingAutoScroller$Mate(
-        p.getValue('scrollable'),
-        onScrollViewScrolled: p.getValue('onScrollViewScrolled'),
-        velocityScalar: p.getValue('velocityScalar'),
+        p.get('scrollable').value,
+        onScrollViewScrolled: p.get('onScrollViewScrolled').value,
+        velocityScalar: p.get('velocityScalar').value,
       ),
     );
-    mateParams.set(name: 'scrollable', init: scrollable);
-    mateParams.set(name: 'onScrollViewScrolled', init: onScrollViewScrolled);
-    mateParams.set(name: 'velocityScalar', init: velocityScalar);
+    mateParams.put('scrollable', init: scrollable);
+    mateParams.put('onScrollViewScrolled', init: onScrollViewScrolled);
+    mateParams.put('velocityScalar', init: velocityScalar);
   }
 }
 
@@ -144,17 +144,17 @@ class ScrollableDetails$Mate extends ScrollableDetails with Mate<ScrollableDetai
           controller: controller,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollableDetails$Mate(
-        direction: p.getValue('direction'),
-        controller: p.getValue('controller'),
-        clipBehavior: p.getValue('clipBehavior'),
+        direction: p.get('direction').value,
+        controller: p.get('controller').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'direction', init: direction);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('direction', init: direction);
+    mateParams.put('controller', init: controller);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -171,15 +171,15 @@ class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate<Scrol
           type: type,
           metrics: metrics,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollIncrementDetails$Mate(
-        type: p.getValue('type'),
-        metrics: p.getValue('metrics'),
+        type: p.get('type').value,
+        metrics: p.get('metrics').value,
       ),
     );
-    mateParams.set(name: 'type', init: type);
-    mateParams.set(name: 'metrics', init: metrics);
+    mateParams.put('type', init: type);
+    mateParams.put('metrics', init: metrics);
   }
 }
 
@@ -196,14 +196,14 @@ class ScrollIntent$Mate extends ScrollIntent with Mate<ScrollIntent$Mate> {
           direction: direction,
           type: type,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollIntent$Mate(
-        direction: p.getValue('direction'),
-        type: p.getValue('type'),
+        direction: p.get('direction').value,
+        type: p.get('type').value,
       ),
     );
-    mateParams.set(name: 'direction', init: direction);
-    mateParams.set(name: 'type', init: type);
+    mateParams.put('direction', init: direction);
+    mateParams.put('type', init: type);
   }
 }

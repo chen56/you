@@ -24,17 +24,17 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => VerticalDragGestureRecognizer$Mate(
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }
 
@@ -56,17 +56,17 @@ class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecogniz
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => HorizontalDragGestureRecognizer$Mate(
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }
 
@@ -87,16 +87,16 @@ class PanGestureRecognizer$Mate extends PanGestureRecognizer with Mate<PanGestur
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PanGestureRecognizer$Mate(
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }

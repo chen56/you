@@ -31,17 +31,17 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           children: children,
           anchors: anchors,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AdaptiveTextSelectionToolbar$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        anchors: p.getValue('anchors'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        anchors: p.get('anchors').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'anchors', init: anchors);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('anchors', init: anchors);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
@@ -59,17 +59,17 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           buttonItems: buttonItems,
           anchors: anchors,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AdaptiveTextSelectionToolbar$Mate.buttonItems(
-        key: p.getValue('key'),
-        buttonItems: p.getValue('buttonItems'),
-        anchors: p.getValue('anchors'),
+        key: p.get('key').value,
+        buttonItems: p.get('buttonItems').value,
+        anchors: p.get('anchors').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'buttonItems', init: buttonItems);
-    mateParams.set(name: 'anchors', init: anchors);
+    mateParams.put('key', init: key);
+    mateParams.put('buttonItems', init: buttonItems);
+    mateParams.put('anchors', init: anchors);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
@@ -103,25 +103,25 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           onSelectAll: onSelectAll,
           anchors: anchors,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AdaptiveTextSelectionToolbar$Mate.editable(
-        key: p.getValue('key'),
-        clipboardStatus: p.getValue('clipboardStatus'),
-        onCopy: p.getValue('onCopy'),
-        onCut: p.getValue('onCut'),
-        onPaste: p.getValue('onPaste'),
-        onSelectAll: p.getValue('onSelectAll'),
-        anchors: p.getValue('anchors'),
+        key: p.get('key').value,
+        clipboardStatus: p.get('clipboardStatus').value,
+        onCopy: p.get('onCopy').value,
+        onCut: p.get('onCut').value,
+        onPaste: p.get('onPaste').value,
+        onSelectAll: p.get('onSelectAll').value,
+        anchors: p.get('anchors').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'clipboardStatus', init: clipboardStatus);
-    mateParams.set(name: 'onCopy', init: onCopy);
-    mateParams.set(name: 'onCut', init: onCut);
-    mateParams.set(name: 'onPaste', init: onPaste);
-    mateParams.set(name: 'onSelectAll', init: onSelectAll);
-    mateParams.set(name: 'anchors', init: anchors);
+    mateParams.put('key', init: key);
+    mateParams.put('clipboardStatus', init: clipboardStatus);
+    mateParams.put('onCopy', init: onCopy);
+    mateParams.put('onCut', init: onCut);
+    mateParams.put('onPaste', init: onPaste);
+    mateParams.put('onSelectAll', init: onSelectAll);
+    mateParams.put('anchors', init: anchors);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
@@ -135,15 +135,15 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           key: key,
           editableTextState: editableTextState,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AdaptiveTextSelectionToolbar$Mate.editableText(
-        key: p.getValue('key'),
-        editableTextState: p.getValue('editableTextState'),
+        key: p.get('key').value,
+        editableTextState: p.get('editableTextState').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'editableTextState', init: editableTextState);
+    mateParams.put('key', init: key);
+    mateParams.put('editableTextState', init: editableTextState);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
@@ -169,21 +169,21 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           selectionGeometry: selectionGeometry,
           anchors: anchors,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AdaptiveTextSelectionToolbar$Mate.selectable(
-        key: p.getValue('key'),
-        onCopy: p.getValue('onCopy'),
-        onSelectAll: p.getValue('onSelectAll'),
-        selectionGeometry: p.getValue('selectionGeometry'),
-        anchors: p.getValue('anchors'),
+        key: p.get('key').value,
+        onCopy: p.get('onCopy').value,
+        onSelectAll: p.get('onSelectAll').value,
+        selectionGeometry: p.get('selectionGeometry').value,
+        anchors: p.get('anchors').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onCopy', init: onCopy);
-    mateParams.set(name: 'onSelectAll', init: onSelectAll);
-    mateParams.set(name: 'selectionGeometry', init: selectionGeometry);
-    mateParams.set(name: 'anchors', init: anchors);
+    mateParams.put('key', init: key);
+    mateParams.put('onCopy', init: onCopy);
+    mateParams.put('onSelectAll', init: onSelectAll);
+    mateParams.put('selectionGeometry', init: selectionGeometry);
+    mateParams.put('anchors', init: anchors);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectableRegion({Key? key, required SelectableRegionState selectableRegionState})
@@ -197,14 +197,14 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           key: key,
           selectableRegionState: selectableRegionState,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AdaptiveTextSelectionToolbar$Mate.selectableRegion(
-        key: p.getValue('key'),
-        selectableRegionState: p.getValue('selectableRegionState'),
+        key: p.get('key').value,
+        selectableRegionState: p.get('selectableRegionState').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'selectableRegionState', init: selectableRegionState);
+    mateParams.put('key', init: key);
+    mateParams.put('selectableRegionState', init: selectableRegionState);
   }
 }

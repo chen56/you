@@ -19,15 +19,15 @@ class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate<Underline
           borderSide: borderSide,
           borderRadius: borderRadius,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => UnderlineInputBorder$Mate(
-        borderSide: p.getValue('borderSide'),
-        borderRadius: p.getValue('borderRadius'),
+        borderSide: p.get('borderSide').value,
+        borderRadius: p.get('borderRadius').value,
       ),
     );
-    mateParams.set(name: 'borderSide', init: borderSide);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
+    mateParams.put('borderSide', init: borderSide);
+    mateParams.put('borderRadius', init: borderRadius);
   }
 }
 
@@ -48,16 +48,16 @@ class OutlineInputBorder$Mate extends OutlineInputBorder with Mate<OutlineInputB
           borderRadius: borderRadius,
           gapPadding: gapPadding,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => OutlineInputBorder$Mate(
-        borderSide: p.getValue('borderSide'),
-        borderRadius: p.getValue('borderRadius'),
-        gapPadding: p.getValue('gapPadding'),
+        borderSide: p.get('borderSide').value,
+        borderRadius: p.get('borderRadius').value,
+        gapPadding: p.get('gapPadding').value,
       ),
     );
-    mateParams.set(name: 'borderSide', init: borderSide);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'gapPadding', init: gapPadding);
+    mateParams.put('borderSide', init: borderSide);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('gapPadding', init: gapPadding);
   }
 }

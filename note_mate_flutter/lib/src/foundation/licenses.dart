@@ -17,15 +17,15 @@ class LicenseParagraph$Mate extends LicenseParagraph with Mate<LicenseParagraph$
           text,
           indent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => LicenseParagraph$Mate(
-        p.getValue('text'),
-        p.getValue('indent'),
+        p.get('text').value,
+        p.get('indent').value,
       ),
     );
-    mateParams.set(name: 'text', init: text);
-    mateParams.set(name: 'indent', init: indent);
+    mateParams.put('text', init: text);
+    mateParams.put('indent', init: indent);
   }
 }
 
@@ -42,14 +42,14 @@ class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks with Ma
           packages,
           text,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => LicenseEntryWithLineBreaks$Mate(
-        p.getValue('packages'),
-        p.getValue('text'),
+        p.get('packages').value,
+        p.get('text').value,
       ),
     );
-    mateParams.set(name: 'packages', init: packages);
-    mateParams.set(name: 'text', init: text);
+    mateParams.put('packages', init: packages);
+    mateParams.put('text', init: text);
   }
 }

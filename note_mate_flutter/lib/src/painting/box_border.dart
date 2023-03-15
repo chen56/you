@@ -25,19 +25,19 @@ class Border$Mate extends Border with Mate<Border$Mate> {
           bottom: bottom,
           left: left,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Border$Mate(
-        top: p.getValue('top'),
-        right: p.getValue('right'),
-        bottom: p.getValue('bottom'),
-        left: p.getValue('left'),
+        top: p.get('top').value,
+        right: p.get('right').value,
+        bottom: p.get('bottom').value,
+        left: p.get('left').value,
       ),
     );
-    mateParams.set(name: 'top', init: top);
-    mateParams.set(name: 'right', init: right);
-    mateParams.set(name: 'bottom', init: bottom);
-    mateParams.set(name: 'left', init: left);
+    mateParams.put('top', init: top);
+    mateParams.put('right', init: right);
+    mateParams.put('bottom', init: bottom);
+    mateParams.put('left', init: left);
   }
 
   /// Border Border.fromBorderSide(BorderSide side)
@@ -46,11 +46,11 @@ class Border$Mate extends Border with Mate<Border$Mate> {
       /// requiredParameters: BorderSide side
       BorderSide side)
       : super.fromBorderSide(side) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => Border$Mate.fromBorderSide(p.getValue('side')),
+      builder: (p) => Border$Mate.fromBorderSide(p.get('side').value),
     );
-    mateParams.set(name: 'side', init: side);
+    mateParams.put('side', init: side);
   }
 
   /// Border Border.symmetric({BorderSide vertical = BorderSide.none, BorderSide horizontal = BorderSide.none})
@@ -64,15 +64,15 @@ class Border$Mate extends Border with Mate<Border$Mate> {
           vertical: vertical,
           horizontal: horizontal,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Border$Mate.symmetric(
-        vertical: p.getValue('vertical'),
-        horizontal: p.getValue('horizontal'),
+        vertical: p.get('vertical').value,
+        horizontal: p.get('horizontal').value,
       ),
     );
-    mateParams.set(name: 'vertical', init: vertical);
-    mateParams.set(name: 'horizontal', init: horizontal);
+    mateParams.put('vertical', init: vertical);
+    mateParams.put('horizontal', init: horizontal);
   }
 }
 
@@ -97,18 +97,18 @@ class BorderDirectional$Mate extends BorderDirectional with Mate<BorderDirection
           end: end,
           bottom: bottom,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderDirectional$Mate(
-        top: p.getValue('top'),
-        start: p.getValue('start'),
-        end: p.getValue('end'),
-        bottom: p.getValue('bottom'),
+        top: p.get('top').value,
+        start: p.get('start').value,
+        end: p.get('end').value,
+        bottom: p.get('bottom').value,
       ),
     );
-    mateParams.set(name: 'top', init: top);
-    mateParams.set(name: 'start', init: start);
-    mateParams.set(name: 'end', init: end);
-    mateParams.set(name: 'bottom', init: bottom);
+    mateParams.put('top', init: top);
+    mateParams.put('start', init: start);
+    mateParams.put('end', init: end);
+    mateParams.put('bottom', init: bottom);
   }
 }

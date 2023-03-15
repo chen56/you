@@ -57,33 +57,33 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate<ScrollbarThem
           minThumbLength: minThumbLength,
           interactive: interactive,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollbarThemeData$Mate(
-        thumbVisibility: p.getValue('thumbVisibility'),
-        thickness: p.getValue('thickness'),
-        trackVisibility: p.getValue('trackVisibility'),
-        radius: p.getValue('radius'),
-        thumbColor: p.getValue('thumbColor'),
-        trackColor: p.getValue('trackColor'),
-        trackBorderColor: p.getValue('trackBorderColor'),
-        crossAxisMargin: p.getValue('crossAxisMargin'),
-        mainAxisMargin: p.getValue('mainAxisMargin'),
-        minThumbLength: p.getValue('minThumbLength'),
-        interactive: p.getValue('interactive'),
+        thumbVisibility: p.get('thumbVisibility').value,
+        thickness: p.get('thickness').value,
+        trackVisibility: p.get('trackVisibility').value,
+        radius: p.get('radius').value,
+        thumbColor: p.get('thumbColor').value,
+        trackColor: p.get('trackColor').value,
+        trackBorderColor: p.get('trackBorderColor').value,
+        crossAxisMargin: p.get('crossAxisMargin').value,
+        mainAxisMargin: p.get('mainAxisMargin').value,
+        minThumbLength: p.get('minThumbLength').value,
+        interactive: p.get('interactive').value,
       ),
     );
-    mateParams.set(name: 'thumbVisibility', init: thumbVisibility);
-    mateParams.set(name: 'thickness', init: thickness);
-    mateParams.set(name: 'trackVisibility', init: trackVisibility);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'trackColor', init: trackColor);
-    mateParams.set(name: 'trackBorderColor', init: trackBorderColor);
-    mateParams.set(name: 'crossAxisMargin', init: crossAxisMargin);
-    mateParams.set(name: 'mainAxisMargin', init: mainAxisMargin);
-    mateParams.set(name: 'minThumbLength', init: minThumbLength);
-    mateParams.set(name: 'interactive', init: interactive);
+    mateParams.put('thumbVisibility', init: thumbVisibility);
+    mateParams.put('thickness', init: thickness);
+    mateParams.put('trackVisibility', init: trackVisibility);
+    mateParams.put('radius', init: radius);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('trackColor', init: trackColor);
+    mateParams.put('trackBorderColor', init: trackBorderColor);
+    mateParams.put('crossAxisMargin', init: crossAxisMargin);
+    mateParams.put('mainAxisMargin', init: mainAxisMargin);
+    mateParams.put('minThumbLength', init: minThumbLength);
+    mateParams.put('interactive', init: interactive);
   }
 }
 
@@ -104,16 +104,16 @@ class ScrollbarTheme$Mate extends ScrollbarTheme with WidgetMate<ScrollbarTheme$
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollbarTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

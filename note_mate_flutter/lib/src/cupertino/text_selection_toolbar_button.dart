@@ -26,17 +26,17 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           onPressed: onPressed,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTextSelectionToolbarButton$Mate(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('child', init: child);
   }
 
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton.text({Key? key, void Function()? onPressed, required String? text})
@@ -54,17 +54,17 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           onPressed: onPressed,
           text: text,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTextSelectionToolbarButton$Mate.text(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        text: p.getValue('text'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        text: p.get('text').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'text', init: text);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('text', init: text);
   }
 
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
@@ -78,14 +78,14 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           key: key,
           buttonItem: buttonItem,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTextSelectionToolbarButton$Mate.buttonItem(
-        key: p.getValue('key'),
-        buttonItem: p.getValue('buttonItem'),
+        key: p.get('key').value,
+        buttonItem: p.get('buttonItem').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'buttonItem', init: buttonItem);
+    mateParams.put('key', init: key);
+    mateParams.put('buttonItem', init: buttonItem);
   }
 }

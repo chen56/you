@@ -29,21 +29,21 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate<FrictionSimul
           tolerance: tolerance,
           constantDeceleration: constantDeceleration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FrictionSimulation$Mate(
-        p.getValue('drag'),
-        p.getValue('position'),
-        p.getValue('velocity'),
-        tolerance: p.getValue('tolerance'),
-        constantDeceleration: p.getValue('constantDeceleration'),
+        p.get('drag').value,
+        p.get('position').value,
+        p.get('velocity').value,
+        tolerance: p.get('tolerance').value,
+        constantDeceleration: p.get('constantDeceleration').value,
       ),
     );
-    mateParams.set(name: 'drag', init: drag);
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: 'tolerance', init: tolerance);
-    mateParams.set(name: 'constantDeceleration', init: constantDeceleration);
+    mateParams.put('drag', init: drag);
+    mateParams.put('position', init: position);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('tolerance', init: tolerance);
+    mateParams.put('constantDeceleration', init: constantDeceleration);
   }
 }
 
@@ -72,20 +72,20 @@ class BoundedFrictionSimulation$Mate extends BoundedFrictionSimulation with Mate
           _minX,
           _maxX,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BoundedFrictionSimulation$Mate(
-        p.getValue('drag'),
-        p.getValue('position'),
-        p.getValue('velocity'),
-        p.getValue('_minX'),
-        p.getValue('_maxX'),
+        p.get('drag').value,
+        p.get('position').value,
+        p.get('velocity').value,
+        p.get('_minX').value,
+        p.get('_maxX').value,
       ),
     );
-    mateParams.set(name: 'drag', init: drag);
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: '_minX', init: _minX);
-    mateParams.set(name: '_maxX', init: _maxX);
+    mateParams.put('drag', init: drag);
+    mateParams.put('position', init: position);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('_minX', init: _minX);
+    mateParams.put('_maxX', init: _maxX);
   }
 }

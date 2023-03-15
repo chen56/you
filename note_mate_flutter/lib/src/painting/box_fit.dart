@@ -17,14 +17,14 @@ class FittedSizes$Mate extends FittedSizes with Mate<FittedSizes$Mate> {
           source,
           destination,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FittedSizes$Mate(
-        p.getValue('source'),
-        p.getValue('destination'),
+        p.get('source').value,
+        p.get('destination').value,
       ),
     );
-    mateParams.set(name: 'source', init: source);
-    mateParams.set(name: 'destination', init: destination);
+    mateParams.put('source', init: source);
+    mateParams.put('destination', init: destination);
   }
 }

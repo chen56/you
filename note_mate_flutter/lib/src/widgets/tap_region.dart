@@ -20,15 +20,15 @@ class TapRegionSurface$Mate extends TapRegionSurface with WidgetMate<TapRegionSu
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapRegionSurface$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -69,27 +69,27 @@ class TapRegion$Mate extends TapRegion with WidgetMate<TapRegion$Mate> {
           groupId: groupId,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapRegion$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        enabled: p.getValue('enabled'),
-        behavior: p.getValue('behavior'),
-        onTapOutside: p.getValue('onTapOutside'),
-        onTapInside: p.getValue('onTapInside'),
-        groupId: p.getValue('groupId'),
-        debugLabel: p.getValue('debugLabel'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        enabled: p.get('enabled').value,
+        behavior: p.get('behavior').value,
+        onTapOutside: p.get('onTapOutside').value,
+        onTapInside: p.get('onTapInside').value,
+        groupId: p.get('groupId').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'onTapOutside', init: onTapOutside);
-    mateParams.set(name: 'onTapInside', init: onTapInside);
-    mateParams.set(name: 'groupId', init: groupId);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('onTapOutside', init: onTapOutside);
+    mateParams.put('onTapInside', init: onTapInside);
+    mateParams.put('groupId', init: groupId);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }
 
@@ -126,25 +126,25 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate<RenderTapRegion$Mat
           groupId: groupId,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderTapRegion$Mate(
-        registry: p.getValue('registry'),
-        enabled: p.getValue('enabled'),
-        onTapOutside: p.getValue('onTapOutside'),
-        onTapInside: p.getValue('onTapInside'),
-        behavior: p.getValue('behavior'),
-        groupId: p.getValue('groupId'),
-        debugLabel: p.getValue('debugLabel'),
+        registry: p.get('registry').value,
+        enabled: p.get('enabled').value,
+        onTapOutside: p.get('onTapOutside').value,
+        onTapInside: p.get('onTapInside').value,
+        behavior: p.get('behavior').value,
+        groupId: p.get('groupId').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'registry', init: registry);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'onTapOutside', init: onTapOutside);
-    mateParams.set(name: 'onTapInside', init: onTapInside);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'groupId', init: groupId);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('registry', init: registry);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('onTapOutside', init: onTapOutside);
+    mateParams.put('onTapInside', init: onTapInside);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('groupId', init: groupId);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }
 
@@ -177,22 +177,22 @@ class TextFieldTapRegion$Mate extends TextFieldTapRegion with WidgetMate<TextFie
           onTapInside: onTapInside,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextFieldTapRegion$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        enabled: p.getValue('enabled'),
-        onTapOutside: p.getValue('onTapOutside'),
-        onTapInside: p.getValue('onTapInside'),
-        debugLabel: p.getValue('debugLabel'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        enabled: p.get('enabled').value,
+        onTapOutside: p.get('onTapOutside').value,
+        onTapInside: p.get('onTapInside').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'onTapOutside', init: onTapOutside);
-    mateParams.set(name: 'onTapInside', init: onTapInside);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('onTapOutside', init: onTapOutside);
+    mateParams.put('onTapInside', init: onTapInside);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }

@@ -19,14 +19,14 @@ class RenderCustomMultiChildLayoutBox$Mate extends RenderCustomMultiChildLayoutB
           children: children,
           delegate: delegate,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderCustomMultiChildLayoutBox$Mate(
-        children: p.getValue('children'),
-        delegate: p.getValue('delegate'),
+        children: p.get('children').value,
+        delegate: p.get('delegate').value,
       ),
     );
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'delegate', init: delegate);
+    mateParams.put('children', init: children);
+    mateParams.put('delegate', init: delegate);
   }
 }

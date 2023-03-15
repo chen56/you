@@ -119,60 +119,60 @@ class ToggleButtons$Mate extends ToggleButtons with WidgetMate<ToggleButtons$Mat
           direction: direction,
           verticalDirection: verticalDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ToggleButtons$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        isSelected: p.getValue('isSelected'),
-        onPressed: p.getValue('onPressed'),
-        mouseCursor: p.getValue('mouseCursor'),
-        tapTargetSize: p.getValue('tapTargetSize'),
-        textStyle: p.getValue('textStyle'),
-        constraints: p.getValue('constraints'),
-        color: p.getValue('color'),
-        selectedColor: p.getValue('selectedColor'),
-        disabledColor: p.getValue('disabledColor'),
-        fillColor: p.getValue('fillColor'),
-        focusColor: p.getValue('focusColor'),
-        highlightColor: p.getValue('highlightColor'),
-        hoverColor: p.getValue('hoverColor'),
-        splashColor: p.getValue('splashColor'),
-        focusNodes: p.getValue('focusNodes'),
-        renderBorder: p.getValue('renderBorder'),
-        borderColor: p.getValue('borderColor'),
-        selectedBorderColor: p.getValue('selectedBorderColor'),
-        disabledBorderColor: p.getValue('disabledBorderColor'),
-        borderRadius: p.getValue('borderRadius'),
-        borderWidth: p.getValue('borderWidth'),
-        direction: p.getValue('direction'),
-        verticalDirection: p.getValue('verticalDirection'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        isSelected: p.get('isSelected').value,
+        onPressed: p.get('onPressed').value,
+        mouseCursor: p.get('mouseCursor').value,
+        tapTargetSize: p.get('tapTargetSize').value,
+        textStyle: p.get('textStyle').value,
+        constraints: p.get('constraints').value,
+        color: p.get('color').value,
+        selectedColor: p.get('selectedColor').value,
+        disabledColor: p.get('disabledColor').value,
+        fillColor: p.get('fillColor').value,
+        focusColor: p.get('focusColor').value,
+        highlightColor: p.get('highlightColor').value,
+        hoverColor: p.get('hoverColor').value,
+        splashColor: p.get('splashColor').value,
+        focusNodes: p.get('focusNodes').value,
+        renderBorder: p.get('renderBorder').value,
+        borderColor: p.get('borderColor').value,
+        selectedBorderColor: p.get('selectedBorderColor').value,
+        disabledBorderColor: p.get('disabledBorderColor').value,
+        borderRadius: p.get('borderRadius').value,
+        borderWidth: p.get('borderWidth').value,
+        direction: p.get('direction').value,
+        verticalDirection: p.get('verticalDirection').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'isSelected', init: isSelected);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'tapTargetSize', init: tapTargetSize);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'constraints', init: constraints);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'focusNodes', init: focusNodes);
-    mateParams.set(name: 'renderBorder', init: renderBorder);
-    mateParams.set(name: 'borderColor', init: borderColor);
-    mateParams.set(name: 'selectedBorderColor', init: selectedBorderColor);
-    mateParams.set(name: 'disabledBorderColor', init: disabledBorderColor);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'borderWidth', init: borderWidth);
-    mateParams.set(name: 'direction', init: direction);
-    mateParams.set(name: 'verticalDirection', init: verticalDirection);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('isSelected', init: isSelected);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('tapTargetSize', init: tapTargetSize);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('constraints', init: constraints);
+    mateParams.put('color', init: color);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('focusNodes', init: focusNodes);
+    mateParams.put('renderBorder', init: renderBorder);
+    mateParams.put('borderColor', init: borderColor);
+    mateParams.put('selectedBorderColor', init: selectedBorderColor);
+    mateParams.put('disabledBorderColor', init: disabledBorderColor);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('borderWidth', init: borderWidth);
+    mateParams.put('direction', init: direction);
+    mateParams.put('verticalDirection', init: verticalDirection);
   }
 }

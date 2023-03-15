@@ -58,32 +58,32 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Widget
           onDetailsPressed: onDetailsPressed,
           arrowColor: arrowColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => UserAccountsDrawerHeader$Mate(
-        key: p.getValue('key'),
-        decoration: p.getValue('decoration'),
-        margin: p.getValue('margin'),
-        currentAccountPicture: p.getValue('currentAccountPicture'),
-        otherAccountsPictures: p.getValue('otherAccountsPictures'),
-        currentAccountPictureSize: p.getValue('currentAccountPictureSize'),
-        otherAccountsPicturesSize: p.getValue('otherAccountsPicturesSize'),
-        accountName: p.getValue('accountName'),
-        accountEmail: p.getValue('accountEmail'),
-        onDetailsPressed: p.getValue('onDetailsPressed'),
-        arrowColor: p.getValue('arrowColor'),
+        key: p.get('key').value,
+        decoration: p.get('decoration').value,
+        margin: p.get('margin').value,
+        currentAccountPicture: p.get('currentAccountPicture').value,
+        otherAccountsPictures: p.get('otherAccountsPictures').value,
+        currentAccountPictureSize: p.get('currentAccountPictureSize').value,
+        otherAccountsPicturesSize: p.get('otherAccountsPicturesSize').value,
+        accountName: p.get('accountName').value,
+        accountEmail: p.get('accountEmail').value,
+        onDetailsPressed: p.get('onDetailsPressed').value,
+        arrowColor: p.get('arrowColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'currentAccountPicture', init: currentAccountPicture);
-    mateParams.set(name: 'otherAccountsPictures', init: otherAccountsPictures);
-    mateParams.set(name: 'currentAccountPictureSize', init: currentAccountPictureSize);
-    mateParams.set(name: 'otherAccountsPicturesSize', init: otherAccountsPicturesSize);
-    mateParams.set(name: 'accountName', init: accountName);
-    mateParams.set(name: 'accountEmail', init: accountEmail);
-    mateParams.set(name: 'onDetailsPressed', init: onDetailsPressed);
-    mateParams.set(name: 'arrowColor', init: arrowColor);
+    mateParams.put('key', init: key);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('margin', init: margin);
+    mateParams.put('currentAccountPicture', init: currentAccountPicture);
+    mateParams.put('otherAccountsPictures', init: otherAccountsPictures);
+    mateParams.put('currentAccountPictureSize', init: currentAccountPictureSize);
+    mateParams.put('otherAccountsPicturesSize', init: otherAccountsPicturesSize);
+    mateParams.put('accountName', init: accountName);
+    mateParams.put('accountEmail', init: accountEmail);
+    mateParams.put('onDetailsPressed', init: onDetailsPressed);
+    mateParams.put('arrowColor', init: arrowColor);
   }
 }

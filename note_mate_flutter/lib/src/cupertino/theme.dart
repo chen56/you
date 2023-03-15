@@ -25,17 +25,17 @@ class CupertinoTheme$Mate extends CupertinoTheme with WidgetMate<CupertinoTheme$
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -72,25 +72,25 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate<CupertinoThem
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           applyThemeToAll: applyThemeToAll,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoThemeData$Mate(
-        brightness: p.getValue('brightness'),
-        primaryColor: p.getValue('primaryColor'),
-        primaryContrastingColor: p.getValue('primaryContrastingColor'),
-        textTheme: p.getValue('textTheme'),
-        barBackgroundColor: p.getValue('barBackgroundColor'),
-        scaffoldBackgroundColor: p.getValue('scaffoldBackgroundColor'),
-        applyThemeToAll: p.getValue('applyThemeToAll'),
+        brightness: p.get('brightness').value,
+        primaryColor: p.get('primaryColor').value,
+        primaryContrastingColor: p.get('primaryContrastingColor').value,
+        textTheme: p.get('textTheme').value,
+        barBackgroundColor: p.get('barBackgroundColor').value,
+        scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').value,
+        applyThemeToAll: p.get('applyThemeToAll').value,
       ),
     );
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'primaryColor', init: primaryColor);
-    mateParams.set(name: 'primaryContrastingColor', init: primaryContrastingColor);
-    mateParams.set(name: 'textTheme', init: textTheme);
-    mateParams.set(name: 'barBackgroundColor', init: barBackgroundColor);
-    mateParams.set(name: 'scaffoldBackgroundColor', init: scaffoldBackgroundColor);
-    mateParams.set(name: 'applyThemeToAll', init: applyThemeToAll);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('primaryColor', init: primaryColor);
+    mateParams.put('primaryContrastingColor', init: primaryContrastingColor);
+    mateParams.put('textTheme', init: textTheme);
+    mateParams.put('barBackgroundColor', init: barBackgroundColor);
+    mateParams.put('scaffoldBackgroundColor', init: scaffoldBackgroundColor);
+    mateParams.put('applyThemeToAll', init: applyThemeToAll);
   }
 
   /// CupertinoThemeData CupertinoThemeData.raw(Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll)
@@ -124,25 +124,25 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate<CupertinoThem
           scaffoldBackgroundColor,
           applyThemeToAll,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoThemeData$Mate.raw(
-        p.getValue('brightness'),
-        p.getValue('primaryColor'),
-        p.getValue('primaryContrastingColor'),
-        p.getValue('textTheme'),
-        p.getValue('barBackgroundColor'),
-        p.getValue('scaffoldBackgroundColor'),
-        p.getValue('applyThemeToAll'),
+        p.get('brightness').value,
+        p.get('primaryColor').value,
+        p.get('primaryContrastingColor').value,
+        p.get('textTheme').value,
+        p.get('barBackgroundColor').value,
+        p.get('scaffoldBackgroundColor').value,
+        p.get('applyThemeToAll').value,
       ),
     );
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'primaryColor', init: primaryColor);
-    mateParams.set(name: 'primaryContrastingColor', init: primaryContrastingColor);
-    mateParams.set(name: 'textTheme', init: textTheme);
-    mateParams.set(name: 'barBackgroundColor', init: barBackgroundColor);
-    mateParams.set(name: 'scaffoldBackgroundColor', init: scaffoldBackgroundColor);
-    mateParams.set(name: 'applyThemeToAll', init: applyThemeToAll);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('primaryColor', init: primaryColor);
+    mateParams.put('primaryContrastingColor', init: primaryContrastingColor);
+    mateParams.put('textTheme', init: textTheme);
+    mateParams.put('barBackgroundColor', init: barBackgroundColor);
+    mateParams.put('scaffoldBackgroundColor', init: scaffoldBackgroundColor);
+    mateParams.put('applyThemeToAll', init: applyThemeToAll);
   }
 }
 
@@ -179,24 +179,24 @@ class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with 
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           applyThemeToAll: applyThemeToAll,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NoDefaultCupertinoThemeData$Mate(
-        brightness: p.getValue('brightness'),
-        primaryColor: p.getValue('primaryColor'),
-        primaryContrastingColor: p.getValue('primaryContrastingColor'),
-        textTheme: p.getValue('textTheme'),
-        barBackgroundColor: p.getValue('barBackgroundColor'),
-        scaffoldBackgroundColor: p.getValue('scaffoldBackgroundColor'),
-        applyThemeToAll: p.getValue('applyThemeToAll'),
+        brightness: p.get('brightness').value,
+        primaryColor: p.get('primaryColor').value,
+        primaryContrastingColor: p.get('primaryContrastingColor').value,
+        textTheme: p.get('textTheme').value,
+        barBackgroundColor: p.get('barBackgroundColor').value,
+        scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').value,
+        applyThemeToAll: p.get('applyThemeToAll').value,
       ),
     );
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'primaryColor', init: primaryColor);
-    mateParams.set(name: 'primaryContrastingColor', init: primaryContrastingColor);
-    mateParams.set(name: 'textTheme', init: textTheme);
-    mateParams.set(name: 'barBackgroundColor', init: barBackgroundColor);
-    mateParams.set(name: 'scaffoldBackgroundColor', init: scaffoldBackgroundColor);
-    mateParams.set(name: 'applyThemeToAll', init: applyThemeToAll);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('primaryColor', init: primaryColor);
+    mateParams.put('primaryContrastingColor', init: primaryContrastingColor);
+    mateParams.put('textTheme', init: textTheme);
+    mateParams.put('barBackgroundColor', init: barBackgroundColor);
+    mateParams.put('scaffoldBackgroundColor', init: scaffoldBackgroundColor);
+    mateParams.put('applyThemeToAll', init: applyThemeToAll);
   }
 }

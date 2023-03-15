@@ -23,17 +23,17 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DoubleTapGestureRecognizer$Mate(
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }
 
@@ -58,19 +58,19 @@ class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MultiTapGestureRecognizer$Mate(
-        longTapDelay: p.getValue('longTapDelay'),
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        longTapDelay: p.get('longTapDelay').value,
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'longTapDelay', init: longTapDelay);
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('longTapDelay', init: longTapDelay);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }
 
@@ -99,21 +99,21 @@ class SerialTapDownDetails$Mate extends SerialTapDownDetails with Mate<SerialTap
           buttons: buttons,
           count: count,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SerialTapDownDetails$Mate(
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
-        kind: p.getValue('kind'),
-        buttons: p.getValue('buttons'),
-        count: p.getValue('count'),
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
+        kind: p.get('kind').value,
+        buttons: p.get('buttons').value,
+        count: p.get('count').value,
       ),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'kind', init: kind);
-    mateParams.set(name: 'buttons', init: buttons);
-    mateParams.set(name: 'count', init: count);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('kind', init: kind);
+    mateParams.put('buttons', init: buttons);
+    mateParams.put('count', init: count);
   }
 }
 
@@ -125,11 +125,11 @@ class SerialTapCancelDetails$Mate extends SerialTapCancelDetails with Mate<Seria
       /// optionalParameters: {int count = 1} , hasDefaultValue:true, defaultValueCode:1
       required int count})
       : super(count: count) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SerialTapCancelDetails$Mate(count: p.getValue('count')),
+      builder: (p) => SerialTapCancelDetails$Mate(count: p.get('count').value),
     );
-    mateParams.set(name: 'count', init: count);
+    mateParams.put('count', init: count);
   }
 }
 
@@ -154,19 +154,19 @@ class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate<SerialTapUpDe
           kind: kind,
           count: count,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SerialTapUpDetails$Mate(
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
-        kind: p.getValue('kind'),
-        count: p.getValue('count'),
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
+        kind: p.get('kind').value,
+        count: p.get('count').value,
       ),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'kind', init: kind);
-    mateParams.set(name: 'count', init: count);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('kind', init: kind);
+    mateParams.put('count', init: count);
   }
 }
 
@@ -187,16 +187,16 @@ class SerialTapGestureRecognizer$Mate extends SerialTapGestureRecognizer with Ma
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SerialTapGestureRecognizer$Mate(
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }

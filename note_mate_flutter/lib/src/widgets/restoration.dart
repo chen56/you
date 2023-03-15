@@ -24,17 +24,17 @@ class RestorationScope$Mate extends RestorationScope with WidgetMate<Restoration
           restorationId: restorationId,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorationScope$Mate(
-        key: p.getValue('key'),
-        restorationId: p.getValue('restorationId'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        restorationId: p.get('restorationId').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -55,17 +55,17 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Widg
           bucket: bucket,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => UnmanagedRestorationScope$Mate(
-        key: p.getValue('key'),
-        bucket: p.getValue('bucket'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        bucket: p.get('bucket').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'bucket', init: bucket);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('bucket', init: bucket);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -86,16 +86,16 @@ class RootRestorationScope$Mate extends RootRestorationScope with WidgetMate<Roo
           restorationId: restorationId,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RootRestorationScope$Mate(
-        key: p.getValue('key'),
-        restorationId: p.getValue('restorationId'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        restorationId: p.get('restorationId').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('child', init: child);
   }
 }

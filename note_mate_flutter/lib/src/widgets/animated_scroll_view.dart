@@ -61,33 +61,33 @@ class AnimatedList$Mate extends AnimatedList with WidgetMate<AnimatedList$Mate> 
           padding: padding,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedList$Mate(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        initialItemCount: p.getValue('initialItemCount'),
-        scrollDirection: p.getValue('scrollDirection'),
-        reverse: p.getValue('reverse'),
-        controller: p.getValue('controller'),
-        primary: p.getValue('primary'),
-        physics: p.getValue('physics'),
-        shrinkWrap: p.getValue('shrinkWrap'),
-        padding: p.getValue('padding'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        initialItemCount: p.get('initialItemCount').value,
+        scrollDirection: p.get('scrollDirection').value,
+        reverse: p.get('reverse').value,
+        controller: p.get('controller').value,
+        primary: p.get('primary').value,
+        physics: p.get('physics').value,
+        shrinkWrap: p.get('shrinkWrap').value,
+        padding: p.get('padding').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'initialItemCount', init: initialItemCount);
-    mateParams.set(name: 'scrollDirection', init: scrollDirection);
-    mateParams.set(name: 'reverse', init: reverse);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'shrinkWrap', init: shrinkWrap);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('initialItemCount', init: initialItemCount);
+    mateParams.put('scrollDirection', init: scrollDirection);
+    mateParams.put('reverse', init: reverse);
+    mateParams.put('controller', init: controller);
+    mateParams.put('primary', init: primary);
+    mateParams.put('physics', init: physics);
+    mateParams.put('shrinkWrap', init: shrinkWrap);
+    mateParams.put('padding', init: padding);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -140,33 +140,33 @@ class AnimatedGrid$Mate extends AnimatedGrid with WidgetMate<AnimatedGrid$Mate> 
           padding: padding,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedGrid$Mate(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        gridDelegate: p.getValue('gridDelegate'),
-        initialItemCount: p.getValue('initialItemCount'),
-        scrollDirection: p.getValue('scrollDirection'),
-        reverse: p.getValue('reverse'),
-        controller: p.getValue('controller'),
-        primary: p.getValue('primary'),
-        physics: p.getValue('physics'),
-        padding: p.getValue('padding'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        gridDelegate: p.get('gridDelegate').value,
+        initialItemCount: p.get('initialItemCount').value,
+        scrollDirection: p.get('scrollDirection').value,
+        reverse: p.get('reverse').value,
+        controller: p.get('controller').value,
+        primary: p.get('primary').value,
+        physics: p.get('physics').value,
+        padding: p.get('padding').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'gridDelegate', init: gridDelegate);
-    mateParams.set(name: 'initialItemCount', init: initialItemCount);
-    mateParams.set(name: 'scrollDirection', init: scrollDirection);
-    mateParams.set(name: 'reverse', init: reverse);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('gridDelegate', init: gridDelegate);
+    mateParams.put('initialItemCount', init: initialItemCount);
+    mateParams.put('scrollDirection', init: scrollDirection);
+    mateParams.put('reverse', init: reverse);
+    mateParams.put('controller', init: controller);
+    mateParams.put('primary', init: primary);
+    mateParams.put('physics', init: physics);
+    mateParams.put('padding', init: padding);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -191,19 +191,19 @@ class SliverAnimatedList$Mate extends SliverAnimatedList with WidgetMate<SliverA
           findChildIndexCallback: findChildIndexCallback,
           initialItemCount: initialItemCount,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverAnimatedList$Mate(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        findChildIndexCallback: p.getValue('findChildIndexCallback'),
-        initialItemCount: p.getValue('initialItemCount'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        findChildIndexCallback: p.get('findChildIndexCallback').value,
+        initialItemCount: p.get('initialItemCount').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.set(name: 'initialItemCount', init: initialItemCount);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
+    mateParams.put('initialItemCount', init: initialItemCount);
   }
 }
 
@@ -232,20 +232,20 @@ class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with WidgetMate<SliverA
           findChildIndexCallback: findChildIndexCallback,
           initialItemCount: initialItemCount,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverAnimatedGrid$Mate(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        gridDelegate: p.getValue('gridDelegate'),
-        findChildIndexCallback: p.getValue('findChildIndexCallback'),
-        initialItemCount: p.getValue('initialItemCount'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        gridDelegate: p.get('gridDelegate').value,
+        findChildIndexCallback: p.get('findChildIndexCallback').value,
+        initialItemCount: p.get('initialItemCount').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'gridDelegate', init: gridDelegate);
-    mateParams.set(name: 'findChildIndexCallback', init: findChildIndexCallback);
-    mateParams.set(name: 'initialItemCount', init: initialItemCount);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('gridDelegate', init: gridDelegate);
+    mateParams.put('findChildIndexCallback', init: findChildIndexCallback);
+    mateParams.put('initialItemCount', init: initialItemCount);
   }
 }

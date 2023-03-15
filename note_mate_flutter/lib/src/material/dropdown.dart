@@ -43,23 +43,23 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with WidgetMate<Dropd
           alignment: alignment,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownMenuItem$Mate(
-        key: p.getValue('key'),
-        onTap: p.getValue('onTap'),
-        value: p.getValue('value'),
-        enabled: p.getValue('enabled'),
-        alignment: p.getValue('alignment'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onTap: p.get('onTap').value,
+        value: p.get('value').value,
+        enabled: p.get('enabled').value,
+        alignment: p.get('alignment').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('value', init: value);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -77,15 +77,15 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownButtonHideUnderline$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -198,63 +198,63 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownB
           alignment: alignment,
           borderRadius: borderRadius,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownButton$Mate(
-        key: p.getValue('key'),
-        items: p.getValue('items'),
-        selectedItemBuilder: p.getValue('selectedItemBuilder'),
-        value: p.getValue('value'),
-        hint: p.getValue('hint'),
-        disabledHint: p.getValue('disabledHint'),
-        onChanged: p.getValue('onChanged'),
-        onTap: p.getValue('onTap'),
-        elevation: p.getValue('elevation'),
-        style: p.getValue('style'),
-        underline: p.getValue('underline'),
-        icon: p.getValue('icon'),
-        iconDisabledColor: p.getValue('iconDisabledColor'),
-        iconEnabledColor: p.getValue('iconEnabledColor'),
-        iconSize: p.getValue('iconSize'),
-        isDense: p.getValue('isDense'),
-        isExpanded: p.getValue('isExpanded'),
-        itemHeight: p.getValue('itemHeight'),
-        focusColor: p.getValue('focusColor'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        dropdownColor: p.getValue('dropdownColor'),
-        menuMaxHeight: p.getValue('menuMaxHeight'),
-        enableFeedback: p.getValue('enableFeedback'),
-        alignment: p.getValue('alignment'),
-        borderRadius: p.getValue('borderRadius'),
+        key: p.get('key').value,
+        items: p.get('items').value,
+        selectedItemBuilder: p.get('selectedItemBuilder').value,
+        value: p.get('value').value,
+        hint: p.get('hint').value,
+        disabledHint: p.get('disabledHint').value,
+        onChanged: p.get('onChanged').value,
+        onTap: p.get('onTap').value,
+        elevation: p.get('elevation').value,
+        style: p.get('style').value,
+        underline: p.get('underline').value,
+        icon: p.get('icon').value,
+        iconDisabledColor: p.get('iconDisabledColor').value,
+        iconEnabledColor: p.get('iconEnabledColor').value,
+        iconSize: p.get('iconSize').value,
+        isDense: p.get('isDense').value,
+        isExpanded: p.get('isExpanded').value,
+        itemHeight: p.get('itemHeight').value,
+        focusColor: p.get('focusColor').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        dropdownColor: p.get('dropdownColor').value,
+        menuMaxHeight: p.get('menuMaxHeight').value,
+        enableFeedback: p.get('enableFeedback').value,
+        alignment: p.get('alignment').value,
+        borderRadius: p.get('borderRadius').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'items', init: items);
-    mateParams.set(name: 'selectedItemBuilder', init: selectedItemBuilder);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'hint', init: hint);
-    mateParams.set(name: 'disabledHint', init: disabledHint);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'underline', init: underline);
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'iconDisabledColor', init: iconDisabledColor);
-    mateParams.set(name: 'iconEnabledColor', init: iconEnabledColor);
-    mateParams.set(name: 'iconSize', init: iconSize);
-    mateParams.set(name: 'isDense', init: isDense);
-    mateParams.set(name: 'isExpanded', init: isExpanded);
-    mateParams.set(name: 'itemHeight', init: itemHeight);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'dropdownColor', init: dropdownColor);
-    mateParams.set(name: 'menuMaxHeight', init: menuMaxHeight);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
+    mateParams.put('key', init: key);
+    mateParams.put('items', init: items);
+    mateParams.put('selectedItemBuilder', init: selectedItemBuilder);
+    mateParams.put('value', init: value);
+    mateParams.put('hint', init: hint);
+    mateParams.put('disabledHint', init: disabledHint);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('style', init: style);
+    mateParams.put('underline', init: underline);
+    mateParams.put('icon', init: icon);
+    mateParams.put('iconDisabledColor', init: iconDisabledColor);
+    mateParams.put('iconEnabledColor', init: iconEnabledColor);
+    mateParams.put('iconSize', init: iconSize);
+    mateParams.put('isDense', init: isDense);
+    mateParams.put('isExpanded', init: isExpanded);
+    mateParams.put('itemHeight', init: itemHeight);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('dropdownColor', init: dropdownColor);
+    mateParams.put('menuMaxHeight', init: menuMaxHeight);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('borderRadius', init: borderRadius);
   }
 }
 
@@ -379,68 +379,68 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Wi
           alignment: alignment,
           borderRadius: borderRadius,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownButtonFormField$Mate(
-        key: p.getValue('key'),
-        items: p.getValue('items'),
-        selectedItemBuilder: p.getValue('selectedItemBuilder'),
-        value: p.getValue('value'),
-        hint: p.getValue('hint'),
-        disabledHint: p.getValue('disabledHint'),
-        onChanged: p.getValue('onChanged'),
-        onTap: p.getValue('onTap'),
-        elevation: p.getValue('elevation'),
-        style: p.getValue('style'),
-        icon: p.getValue('icon'),
-        iconDisabledColor: p.getValue('iconDisabledColor'),
-        iconEnabledColor: p.getValue('iconEnabledColor'),
-        iconSize: p.getValue('iconSize'),
-        isDense: p.getValue('isDense'),
-        isExpanded: p.getValue('isExpanded'),
-        itemHeight: p.getValue('itemHeight'),
-        focusColor: p.getValue('focusColor'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        dropdownColor: p.getValue('dropdownColor'),
-        decoration: p.getValue('decoration'),
-        onSaved: p.getValue('onSaved'),
-        validator: p.getValue('validator'),
-        autovalidateMode: p.getValue('autovalidateMode'),
-        menuMaxHeight: p.getValue('menuMaxHeight'),
-        enableFeedback: p.getValue('enableFeedback'),
-        alignment: p.getValue('alignment'),
-        borderRadius: p.getValue('borderRadius'),
+        key: p.get('key').value,
+        items: p.get('items').value,
+        selectedItemBuilder: p.get('selectedItemBuilder').value,
+        value: p.get('value').value,
+        hint: p.get('hint').value,
+        disabledHint: p.get('disabledHint').value,
+        onChanged: p.get('onChanged').value,
+        onTap: p.get('onTap').value,
+        elevation: p.get('elevation').value,
+        style: p.get('style').value,
+        icon: p.get('icon').value,
+        iconDisabledColor: p.get('iconDisabledColor').value,
+        iconEnabledColor: p.get('iconEnabledColor').value,
+        iconSize: p.get('iconSize').value,
+        isDense: p.get('isDense').value,
+        isExpanded: p.get('isExpanded').value,
+        itemHeight: p.get('itemHeight').value,
+        focusColor: p.get('focusColor').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        dropdownColor: p.get('dropdownColor').value,
+        decoration: p.get('decoration').value,
+        onSaved: p.get('onSaved').value,
+        validator: p.get('validator').value,
+        autovalidateMode: p.get('autovalidateMode').value,
+        menuMaxHeight: p.get('menuMaxHeight').value,
+        enableFeedback: p.get('enableFeedback').value,
+        alignment: p.get('alignment').value,
+        borderRadius: p.get('borderRadius').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'items', init: items);
-    mateParams.set(name: 'selectedItemBuilder', init: selectedItemBuilder);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'hint', init: hint);
-    mateParams.set(name: 'disabledHint', init: disabledHint);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'iconDisabledColor', init: iconDisabledColor);
-    mateParams.set(name: 'iconEnabledColor', init: iconEnabledColor);
-    mateParams.set(name: 'iconSize', init: iconSize);
-    mateParams.set(name: 'isDense', init: isDense);
-    mateParams.set(name: 'isExpanded', init: isExpanded);
-    mateParams.set(name: 'itemHeight', init: itemHeight);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'dropdownColor', init: dropdownColor);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'onSaved', init: onSaved);
-    mateParams.set(name: 'validator', init: validator);
-    mateParams.set(name: 'autovalidateMode', init: autovalidateMode);
-    mateParams.set(name: 'menuMaxHeight', init: menuMaxHeight);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
+    mateParams.put('key', init: key);
+    mateParams.put('items', init: items);
+    mateParams.put('selectedItemBuilder', init: selectedItemBuilder);
+    mateParams.put('value', init: value);
+    mateParams.put('hint', init: hint);
+    mateParams.put('disabledHint', init: disabledHint);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('style', init: style);
+    mateParams.put('icon', init: icon);
+    mateParams.put('iconDisabledColor', init: iconDisabledColor);
+    mateParams.put('iconEnabledColor', init: iconEnabledColor);
+    mateParams.put('iconSize', init: iconSize);
+    mateParams.put('isDense', init: isDense);
+    mateParams.put('isExpanded', init: isExpanded);
+    mateParams.put('itemHeight', init: itemHeight);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('dropdownColor', init: dropdownColor);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('onSaved', init: onSaved);
+    mateParams.put('validator', init: validator);
+    mateParams.put('autovalidateMode', init: autovalidateMode);
+    mateParams.put('menuMaxHeight', init: menuMaxHeight);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('borderRadius', init: borderRadius);
   }
 }

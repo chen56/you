@@ -18,14 +18,14 @@ class View$Mate extends View with WidgetMate<View$Mate> {
           view: view,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => View$Mate(
-        view: p.getValue('view'),
-        child: p.getValue('child'),
+        view: p.get('view').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'view', init: view);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('view', init: view);
+    mateParams.put('child', init: child);
   }
 }

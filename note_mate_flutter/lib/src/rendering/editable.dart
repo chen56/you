@@ -28,15 +28,15 @@ class TextSelectionPoint$Mate extends TextSelectionPoint with Mate<TextSelection
           point,
           direction,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionPoint$Mate(
-        p.getValue('point'),
-        p.getValue('direction'),
+        p.get('point').value,
+        p.get('direction').value,
       ),
     );
-    mateParams.set(name: 'point', init: point);
-    mateParams.set(name: 'direction', init: direction);
+    mateParams.put('point', init: point);
+    mateParams.put('direction', init: direction);
   }
 }
 
@@ -217,96 +217,96 @@ class RenderEditable$Mate extends RenderEditable with Mate<RenderEditable$Mate> 
           foregroundPainter: foregroundPainter,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderEditable$Mate(
-        text: p.getValue('text'),
-        textDirection: p.getValue('textDirection'),
-        textAlign: p.getValue('textAlign'),
-        cursorColor: p.getValue('cursorColor'),
-        backgroundCursorColor: p.getValue('backgroundCursorColor'),
-        showCursor: p.getValue('showCursor'),
-        hasFocus: p.getValue('hasFocus'),
-        startHandleLayerLink: p.getValue('startHandleLayerLink'),
-        endHandleLayerLink: p.getValue('endHandleLayerLink'),
-        maxLines: p.getValue('maxLines'),
-        minLines: p.getValue('minLines'),
-        expands: p.getValue('expands'),
-        strutStyle: p.getValue('strutStyle'),
-        selectionColor: p.getValue('selectionColor'),
-        textScaleFactor: p.getValue('textScaleFactor'),
-        selection: p.getValue('selection'),
-        offset: p.getValue('offset'),
-        onCaretChanged: p.getValue('onCaretChanged'),
-        ignorePointer: p.getValue('ignorePointer'),
-        readOnly: p.getValue('readOnly'),
-        forceLine: p.getValue('forceLine'),
-        textHeightBehavior: p.getValue('textHeightBehavior'),
-        textWidthBasis: p.getValue('textWidthBasis'),
-        obscuringCharacter: p.getValue('obscuringCharacter'),
-        obscureText: p.getValue('obscureText'),
-        locale: p.getValue('locale'),
-        cursorWidth: p.getValue('cursorWidth'),
-        cursorHeight: p.getValue('cursorHeight'),
-        cursorRadius: p.getValue('cursorRadius'),
-        paintCursorAboveText: p.getValue('paintCursorAboveText'),
-        cursorOffset: p.getValue('cursorOffset'),
-        devicePixelRatio: p.getValue('devicePixelRatio'),
-        selectionHeightStyle: p.getValue('selectionHeightStyle'),
-        selectionWidthStyle: p.getValue('selectionWidthStyle'),
-        enableInteractiveSelection: p.getValue('enableInteractiveSelection'),
-        floatingCursorAddedMargin: p.getValue('floatingCursorAddedMargin'),
-        promptRectRange: p.getValue('promptRectRange'),
-        promptRectColor: p.getValue('promptRectColor'),
-        clipBehavior: p.getValue('clipBehavior'),
-        textSelectionDelegate: p.getValue('textSelectionDelegate'),
-        painter: p.getValue('painter'),
-        foregroundPainter: p.getValue('foregroundPainter'),
-        children: p.getValue('children'),
+        text: p.get('text').value,
+        textDirection: p.get('textDirection').value,
+        textAlign: p.get('textAlign').value,
+        cursorColor: p.get('cursorColor').value,
+        backgroundCursorColor: p.get('backgroundCursorColor').value,
+        showCursor: p.get('showCursor').value,
+        hasFocus: p.get('hasFocus').value,
+        startHandleLayerLink: p.get('startHandleLayerLink').value,
+        endHandleLayerLink: p.get('endHandleLayerLink').value,
+        maxLines: p.get('maxLines').value,
+        minLines: p.get('minLines').value,
+        expands: p.get('expands').value,
+        strutStyle: p.get('strutStyle').value,
+        selectionColor: p.get('selectionColor').value,
+        textScaleFactor: p.get('textScaleFactor').value,
+        selection: p.get('selection').value,
+        offset: p.get('offset').value,
+        onCaretChanged: p.get('onCaretChanged').value,
+        ignorePointer: p.get('ignorePointer').value,
+        readOnly: p.get('readOnly').value,
+        forceLine: p.get('forceLine').value,
+        textHeightBehavior: p.get('textHeightBehavior').value,
+        textWidthBasis: p.get('textWidthBasis').value,
+        obscuringCharacter: p.get('obscuringCharacter').value,
+        obscureText: p.get('obscureText').value,
+        locale: p.get('locale').value,
+        cursorWidth: p.get('cursorWidth').value,
+        cursorHeight: p.get('cursorHeight').value,
+        cursorRadius: p.get('cursorRadius').value,
+        paintCursorAboveText: p.get('paintCursorAboveText').value,
+        cursorOffset: p.get('cursorOffset').value,
+        devicePixelRatio: p.get('devicePixelRatio').value,
+        selectionHeightStyle: p.get('selectionHeightStyle').value,
+        selectionWidthStyle: p.get('selectionWidthStyle').value,
+        enableInteractiveSelection: p.get('enableInteractiveSelection').value,
+        floatingCursorAddedMargin: p.get('floatingCursorAddedMargin').value,
+        promptRectRange: p.get('promptRectRange').value,
+        promptRectColor: p.get('promptRectColor').value,
+        clipBehavior: p.get('clipBehavior').value,
+        textSelectionDelegate: p.get('textSelectionDelegate').value,
+        painter: p.get('painter').value,
+        foregroundPainter: p.get('foregroundPainter').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'text', init: text);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'cursorColor', init: cursorColor);
-    mateParams.set(name: 'backgroundCursorColor', init: backgroundCursorColor);
-    mateParams.set(name: 'showCursor', init: showCursor);
-    mateParams.set(name: 'hasFocus', init: hasFocus);
-    mateParams.set(name: 'startHandleLayerLink', init: startHandleLayerLink);
-    mateParams.set(name: 'endHandleLayerLink', init: endHandleLayerLink);
-    mateParams.set(name: 'maxLines', init: maxLines);
-    mateParams.set(name: 'minLines', init: minLines);
-    mateParams.set(name: 'expands', init: expands);
-    mateParams.set(name: 'strutStyle', init: strutStyle);
-    mateParams.set(name: 'selectionColor', init: selectionColor);
-    mateParams.set(name: 'textScaleFactor', init: textScaleFactor);
-    mateParams.set(name: 'selection', init: selection);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'onCaretChanged', init: onCaretChanged);
-    mateParams.set(name: 'ignorePointer', init: ignorePointer);
-    mateParams.set(name: 'readOnly', init: readOnly);
-    mateParams.set(name: 'forceLine', init: forceLine);
-    mateParams.set(name: 'textHeightBehavior', init: textHeightBehavior);
-    mateParams.set(name: 'textWidthBasis', init: textWidthBasis);
-    mateParams.set(name: 'obscuringCharacter', init: obscuringCharacter);
-    mateParams.set(name: 'obscureText', init: obscureText);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'cursorWidth', init: cursorWidth);
-    mateParams.set(name: 'cursorHeight', init: cursorHeight);
-    mateParams.set(name: 'cursorRadius', init: cursorRadius);
-    mateParams.set(name: 'paintCursorAboveText', init: paintCursorAboveText);
-    mateParams.set(name: 'cursorOffset', init: cursorOffset);
-    mateParams.set(name: 'devicePixelRatio', init: devicePixelRatio);
-    mateParams.set(name: 'selectionHeightStyle', init: selectionHeightStyle);
-    mateParams.set(name: 'selectionWidthStyle', init: selectionWidthStyle);
-    mateParams.set(name: 'enableInteractiveSelection', init: enableInteractiveSelection);
-    mateParams.set(name: 'floatingCursorAddedMargin', init: floatingCursorAddedMargin);
-    mateParams.set(name: 'promptRectRange', init: promptRectRange);
-    mateParams.set(name: 'promptRectColor', init: promptRectColor);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'textSelectionDelegate', init: textSelectionDelegate);
-    mateParams.set(name: 'painter', init: painter);
-    mateParams.set(name: 'foregroundPainter', init: foregroundPainter);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('text', init: text);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('cursorColor', init: cursorColor);
+    mateParams.put('backgroundCursorColor', init: backgroundCursorColor);
+    mateParams.put('showCursor', init: showCursor);
+    mateParams.put('hasFocus', init: hasFocus);
+    mateParams.put('startHandleLayerLink', init: startHandleLayerLink);
+    mateParams.put('endHandleLayerLink', init: endHandleLayerLink);
+    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('minLines', init: minLines);
+    mateParams.put('expands', init: expands);
+    mateParams.put('strutStyle', init: strutStyle);
+    mateParams.put('selectionColor', init: selectionColor);
+    mateParams.put('textScaleFactor', init: textScaleFactor);
+    mateParams.put('selection', init: selection);
+    mateParams.put('offset', init: offset);
+    mateParams.put('onCaretChanged', init: onCaretChanged);
+    mateParams.put('ignorePointer', init: ignorePointer);
+    mateParams.put('readOnly', init: readOnly);
+    mateParams.put('forceLine', init: forceLine);
+    mateParams.put('textHeightBehavior', init: textHeightBehavior);
+    mateParams.put('textWidthBasis', init: textWidthBasis);
+    mateParams.put('obscuringCharacter', init: obscuringCharacter);
+    mateParams.put('obscureText', init: obscureText);
+    mateParams.put('locale', init: locale);
+    mateParams.put('cursorWidth', init: cursorWidth);
+    mateParams.put('cursorHeight', init: cursorHeight);
+    mateParams.put('cursorRadius', init: cursorRadius);
+    mateParams.put('paintCursorAboveText', init: paintCursorAboveText);
+    mateParams.put('cursorOffset', init: cursorOffset);
+    mateParams.put('devicePixelRatio', init: devicePixelRatio);
+    mateParams.put('selectionHeightStyle', init: selectionHeightStyle);
+    mateParams.put('selectionWidthStyle', init: selectionWidthStyle);
+    mateParams.put('enableInteractiveSelection', init: enableInteractiveSelection);
+    mateParams.put('floatingCursorAddedMargin', init: floatingCursorAddedMargin);
+    mateParams.put('promptRectRange', init: promptRectRange);
+    mateParams.put('promptRectColor', init: promptRectColor);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('textSelectionDelegate', init: textSelectionDelegate);
+    mateParams.put('painter', init: painter);
+    mateParams.put('foregroundPainter', init: foregroundPainter);
+    mateParams.put('children', init: children);
   }
 }

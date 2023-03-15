@@ -27,15 +27,15 @@ class PopupMenuDivider$Mate extends PopupMenuDivider with WidgetMate<PopupMenuDi
           key: key,
           height: height,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PopupMenuDivider$Mate(
-        key: p.getValue('key'),
-        height: p.getValue('height'),
+        key: p.get('key').value,
+        height: p.get('height').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'height', init: height);
+    mateParams.put('key', init: key);
+    mateParams.put('height', init: height);
   }
 }
 
@@ -84,31 +84,31 @@ class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with WidgetMate<PopupMenuIt
           mouseCursor: mouseCursor,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PopupMenuItem$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        onTap: p.getValue('onTap'),
-        enabled: p.getValue('enabled'),
-        height: p.getValue('height'),
-        padding: p.getValue('padding'),
-        textStyle: p.getValue('textStyle'),
-        labelTextStyle: p.getValue('labelTextStyle'),
-        mouseCursor: p.getValue('mouseCursor'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        onTap: p.get('onTap').value,
+        enabled: p.get('enabled').value,
+        height: p.get('height').value,
+        padding: p.get('padding').value,
+        textStyle: p.get('textStyle').value,
+        labelTextStyle: p.get('labelTextStyle').value,
+        mouseCursor: p.get('mouseCursor').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'labelTextStyle', init: labelTextStyle);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('height', init: height);
+    mateParams.put('padding', init: padding);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('labelTextStyle', init: labelTextStyle);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -149,27 +149,27 @@ class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with WidgetMa
           mouseCursor: mouseCursor,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CheckedPopupMenuItem$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        checked: p.getValue('checked'),
-        enabled: p.getValue('enabled'),
-        padding: p.getValue('padding'),
-        height: p.getValue('height'),
-        mouseCursor: p.getValue('mouseCursor'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        checked: p.get('checked').value,
+        enabled: p.get('enabled').value,
+        padding: p.get('padding').value,
+        height: p.get('height').value,
+        mouseCursor: p.get('mouseCursor').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'checked', init: checked);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('checked', init: checked);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('padding', init: padding);
+    mateParams.put('height', init: height);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -270,56 +270,56 @@ class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with WidgetMate<PopupMe
           position: position,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PopupMenuButton$Mate(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        initialValue: p.getValue('initialValue'),
-        onOpened: p.getValue('onOpened'),
-        onSelected: p.getValue('onSelected'),
-        onCanceled: p.getValue('onCanceled'),
-        tooltip: p.getValue('tooltip'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        padding: p.getValue('padding'),
-        child: p.getValue('child'),
-        splashRadius: p.getValue('splashRadius'),
-        icon: p.getValue('icon'),
-        iconSize: p.getValue('iconSize'),
-        offset: p.getValue('offset'),
-        enabled: p.getValue('enabled'),
-        shape: p.getValue('shape'),
-        color: p.getValue('color'),
-        enableFeedback: p.getValue('enableFeedback'),
-        constraints: p.getValue('constraints'),
-        position: p.getValue('position'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        initialValue: p.get('initialValue').value,
+        onOpened: p.get('onOpened').value,
+        onSelected: p.get('onSelected').value,
+        onCanceled: p.get('onCanceled').value,
+        tooltip: p.get('tooltip').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        padding: p.get('padding').value,
+        child: p.get('child').value,
+        splashRadius: p.get('splashRadius').value,
+        icon: p.get('icon').value,
+        iconSize: p.get('iconSize').value,
+        offset: p.get('offset').value,
+        enabled: p.get('enabled').value,
+        shape: p.get('shape').value,
+        color: p.get('color').value,
+        enableFeedback: p.get('enableFeedback').value,
+        constraints: p.get('constraints').value,
+        position: p.get('position').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'initialValue', init: initialValue);
-    mateParams.set(name: 'onOpened', init: onOpened);
-    mateParams.set(name: 'onSelected', init: onSelected);
-    mateParams.set(name: 'onCanceled', init: onCanceled);
-    mateParams.set(name: 'tooltip', init: tooltip);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'iconSize', init: iconSize);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'constraints', init: constraints);
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('initialValue', init: initialValue);
+    mateParams.put('onOpened', init: onOpened);
+    mateParams.put('onSelected', init: onSelected);
+    mateParams.put('onCanceled', init: onCanceled);
+    mateParams.put('tooltip', init: tooltip);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('padding', init: padding);
+    mateParams.put('child', init: child);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('icon', init: icon);
+    mateParams.put('iconSize', init: iconSize);
+    mateParams.put('offset', init: offset);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('shape', init: shape);
+    mateParams.put('color', init: color);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('constraints', init: constraints);
+    mateParams.put('position', init: position);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

@@ -18,15 +18,15 @@ class MaterialColor$Mate extends MaterialColor with Mate<MaterialColor$Mate> {
           primary,
           swatch,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialColor$Mate(
-        p.getValue('primary'),
-        p.getValue('swatch'),
+        p.get('primary').value,
+        p.get('swatch').value,
       ),
     );
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'swatch', init: swatch);
+    mateParams.put('primary', init: primary);
+    mateParams.put('swatch', init: swatch);
   }
 }
 
@@ -43,14 +43,14 @@ class MaterialAccentColor$Mate extends MaterialAccentColor with Mate<MaterialAcc
           primary,
           swatch,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialAccentColor$Mate(
-        p.getValue('primary'),
-        p.getValue('swatch'),
+        p.get('primary').value,
+        p.get('swatch').value,
       ),
     );
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'swatch', init: swatch);
+    mateParams.put('primary', init: primary);
+    mateParams.put('swatch', init: swatch);
   }
 }

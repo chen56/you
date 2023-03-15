@@ -13,10 +13,10 @@ class SpellCheckSuggestionsToolbarLayoutDelegate$Mate extends SpellCheckSuggesti
       /// optionalParameters: {required Offset anchor} , hasDefaultValue:false, defaultValueCode:null
       required Offset anchor})
       : super(anchor: anchor) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.getValue('anchor')),
+      builder: (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.get('anchor').value),
     );
-    mateParams.set(name: 'anchor', init: anchor);
+    mateParams.put('anchor', init: anchor);
   }
 }

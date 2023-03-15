@@ -28,19 +28,19 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate<ButtonSegment$Mat
           label: label,
           enabled: enabled,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonSegment$Mate(
-        value: p.getValue('value'),
-        icon: p.getValue('icon'),
-        label: p.getValue('label'),
-        enabled: p.getValue('enabled'),
+        value: p.get('value').value,
+        icon: p.get('icon').value,
+        label: p.get('label').value,
+        enabled: p.get('enabled').value,
       ),
     );
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'enabled', init: enabled);
+    mateParams.put('value', init: value);
+    mateParams.put('icon', init: icon);
+    mateParams.put('label', init: label);
+    mateParams.put('enabled', init: enabled);
   }
 }
 
@@ -85,28 +85,28 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with WidgetMate<Segment
           showSelectedIcon: showSelectedIcon,
           selectedIcon: selectedIcon,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SegmentedButton$Mate(
-        key: p.getValue('key'),
-        segments: p.getValue('segments'),
-        selected: p.getValue('selected'),
-        onSelectionChanged: p.getValue('onSelectionChanged'),
-        multiSelectionEnabled: p.getValue('multiSelectionEnabled'),
-        emptySelectionAllowed: p.getValue('emptySelectionAllowed'),
-        style: p.getValue('style'),
-        showSelectedIcon: p.getValue('showSelectedIcon'),
-        selectedIcon: p.getValue('selectedIcon'),
+        key: p.get('key').value,
+        segments: p.get('segments').value,
+        selected: p.get('selected').value,
+        onSelectionChanged: p.get('onSelectionChanged').value,
+        multiSelectionEnabled: p.get('multiSelectionEnabled').value,
+        emptySelectionAllowed: p.get('emptySelectionAllowed').value,
+        style: p.get('style').value,
+        showSelectedIcon: p.get('showSelectedIcon').value,
+        selectedIcon: p.get('selectedIcon').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'segments', init: segments);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'onSelectionChanged', init: onSelectionChanged);
-    mateParams.set(name: 'multiSelectionEnabled', init: multiSelectionEnabled);
-    mateParams.set(name: 'emptySelectionAllowed', init: emptySelectionAllowed);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'showSelectedIcon', init: showSelectedIcon);
-    mateParams.set(name: 'selectedIcon', init: selectedIcon);
+    mateParams.put('key', init: key);
+    mateParams.put('segments', init: segments);
+    mateParams.put('selected', init: selected);
+    mateParams.put('onSelectionChanged', init: onSelectionChanged);
+    mateParams.put('multiSelectionEnabled', init: multiSelectionEnabled);
+    mateParams.put('emptySelectionAllowed', init: emptySelectionAllowed);
+    mateParams.put('style', init: style);
+    mateParams.put('showSelectedIcon', init: showSelectedIcon);
+    mateParams.put('selectedIcon', init: selectedIcon);
   }
 }

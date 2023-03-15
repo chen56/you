@@ -12,10 +12,10 @@ class DeviceGestureSettings$Mate extends DeviceGestureSettings with Mate<DeviceG
       /// optionalParameters: {double? touchSlop} , hasDefaultValue:false, defaultValueCode:null
       double? touchSlop})
       : super(touchSlop: touchSlop) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DeviceGestureSettings$Mate(touchSlop: p.getValue('touchSlop')),
+      builder: (p) => DeviceGestureSettings$Mate(touchSlop: p.get('touchSlop').value),
     );
-    mateParams.set(name: 'touchSlop', init: touchSlop);
+    mateParams.put('touchSlop', init: touchSlop);
   }
 }

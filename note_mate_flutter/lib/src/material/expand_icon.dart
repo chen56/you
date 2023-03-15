@@ -45,26 +45,26 @@ class ExpandIcon$Mate extends ExpandIcon with WidgetMate<ExpandIcon$Mate> {
           disabledColor: disabledColor,
           expandedColor: expandedColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpandIcon$Mate(
-        key: p.getValue('key'),
-        isExpanded: p.getValue('isExpanded'),
-        size: p.getValue('size'),
-        onPressed: p.getValue('onPressed'),
-        padding: p.getValue('padding'),
-        color: p.getValue('color'),
-        disabledColor: p.getValue('disabledColor'),
-        expandedColor: p.getValue('expandedColor'),
+        key: p.get('key').value,
+        isExpanded: p.get('isExpanded').value,
+        size: p.get('size').value,
+        onPressed: p.get('onPressed').value,
+        padding: p.get('padding').value,
+        color: p.get('color').value,
+        disabledColor: p.get('disabledColor').value,
+        expandedColor: p.get('expandedColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'isExpanded', init: isExpanded);
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'expandedColor', init: expandedColor);
+    mateParams.put('key', init: key);
+    mateParams.put('isExpanded', init: isExpanded);
+    mateParams.put('size', init: size);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('padding', init: padding);
+    mateParams.put('color', init: color);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('expandedColor', init: expandedColor);
   }
 }

@@ -18,14 +18,14 @@ class RenderRotatedBox$Mate extends RenderRotatedBox with Mate<RenderRotatedBox$
           quarterTurns: quarterTurns,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderRotatedBox$Mate(
-        quarterTurns: p.getValue('quarterTurns'),
-        child: p.getValue('child'),
+        quarterTurns: p.get('quarterTurns').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'quarterTurns', init: quarterTurns);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('quarterTurns', init: quarterTurns);
+    mateParams.put('child', init: child);
   }
 }

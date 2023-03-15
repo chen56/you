@@ -17,15 +17,15 @@ class MethodCall$Mate extends MethodCall with Mate<MethodCall$Mate> {
           method,
           arguments,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MethodCall$Mate(
-        p.getValue('method'),
-        p.getValue('arguments'),
+        p.get('method').value,
+        p.get('arguments').value,
       ),
     );
-    mateParams.set(name: 'method', init: method);
-    mateParams.set(name: 'arguments', init: arguments);
+    mateParams.put('method', init: method);
+    mateParams.put('arguments', init: arguments);
   }
 }
 
@@ -50,19 +50,19 @@ class PlatformException$Mate extends PlatformException with Mate<PlatformExcepti
           details: details,
           stacktrace: stacktrace,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformException$Mate(
-        code: p.getValue('code'),
-        message: p.getValue('message'),
-        details: p.getValue('details'),
-        stacktrace: p.getValue('stacktrace'),
+        code: p.get('code').value,
+        message: p.get('message').value,
+        details: p.get('details').value,
+        stacktrace: p.get('stacktrace').value,
       ),
     );
-    mateParams.set(name: 'code', init: code);
-    mateParams.set(name: 'message', init: message);
-    mateParams.set(name: 'details', init: details);
-    mateParams.set(name: 'stacktrace', init: stacktrace);
+    mateParams.put('code', init: code);
+    mateParams.put('message', init: message);
+    mateParams.put('details', init: details);
+    mateParams.put('stacktrace', init: stacktrace);
   }
 }
 
@@ -74,10 +74,10 @@ class MissingPluginException$Mate extends MissingPluginException with Mate<Missi
       /// requiredParameters: [String? message]
       String? message)
       : super(message) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => MissingPluginException$Mate(p.getValue('message')),
+      builder: (p) => MissingPluginException$Mate(p.get('message').value),
     );
-    mateParams.set(name: 'message', init: message);
+    mateParams.put('message', init: message);
   }
 }

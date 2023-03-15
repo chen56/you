@@ -16,15 +16,15 @@ class Ticker$Mate extends Ticker with Mate<Ticker$Mate> {
           _onTick,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Ticker$Mate(
-        p.getValue('_onTick'),
-        debugLabel: p.getValue('debugLabel'),
+        p.get('_onTick').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: '_onTick', init: _onTick);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('_onTick', init: _onTick);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }
 
@@ -36,10 +36,10 @@ class TickerCanceled$Mate extends TickerCanceled with Mate<TickerCanceled$Mate> 
       /// requiredParameters: [Ticker? ticker]
       Ticker? ticker)
       : super(ticker) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => TickerCanceled$Mate(p.getValue('ticker')),
+      builder: (p) => TickerCanceled$Mate(p.get('ticker').value),
     );
-    mateParams.set(name: 'ticker', init: ticker);
+    mateParams.put('ticker', init: ticker);
   }
 }

@@ -30,11 +30,11 @@ class RenderProxyBox$Mate extends RenderProxyBox with Mate<RenderProxyBox$Mate> 
       /// requiredParameters: [RenderBox? child]
       RenderBox? child)
       : super(child) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderProxyBox$Mate(p.getValue('child')),
+      builder: (p) => RenderProxyBox$Mate(p.get('child').value),
     );
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -51,15 +51,15 @@ class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate<RenderCon
           child: child,
           additionalConstraints: additionalConstraints,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderConstrainedBox$Mate(
-        child: p.getValue('child'),
-        additionalConstraints: p.getValue('additionalConstraints'),
+        child: p.get('child').value,
+        additionalConstraints: p.get('additionalConstraints').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'additionalConstraints', init: additionalConstraints);
+    mateParams.put('child', init: child);
+    mateParams.put('additionalConstraints', init: additionalConstraints);
   }
 }
 
@@ -80,17 +80,17 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate<RenderLimitedBox$
           maxWidth: maxWidth,
           maxHeight: maxHeight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderLimitedBox$Mate(
-        child: p.getValue('child'),
-        maxWidth: p.getValue('maxWidth'),
-        maxHeight: p.getValue('maxHeight'),
+        child: p.get('child').value,
+        maxWidth: p.get('maxWidth').value,
+        maxHeight: p.get('maxHeight').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'maxWidth', init: maxWidth);
-    mateParams.set(name: 'maxHeight', init: maxHeight);
+    mateParams.put('child', init: child);
+    mateParams.put('maxWidth', init: maxWidth);
+    mateParams.put('maxHeight', init: maxHeight);
   }
 }
 
@@ -107,15 +107,15 @@ class RenderAspectRatio$Mate extends RenderAspectRatio with Mate<RenderAspectRat
           child: child,
           aspectRatio: aspectRatio,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAspectRatio$Mate(
-        child: p.getValue('child'),
-        aspectRatio: p.getValue('aspectRatio'),
+        child: p.get('child').value,
+        aspectRatio: p.get('aspectRatio').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'aspectRatio', init: aspectRatio);
+    mateParams.put('child', init: child);
+    mateParams.put('aspectRatio', init: aspectRatio);
   }
 }
 
@@ -136,17 +136,17 @@ class RenderIntrinsicWidth$Mate extends RenderIntrinsicWidth with Mate<RenderInt
           stepHeight: stepHeight,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderIntrinsicWidth$Mate(
-        stepWidth: p.getValue('stepWidth'),
-        stepHeight: p.getValue('stepHeight'),
-        child: p.getValue('child'),
+        stepWidth: p.get('stepWidth').value,
+        stepHeight: p.get('stepHeight').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'stepWidth', init: stepWidth);
-    mateParams.set(name: 'stepHeight', init: stepHeight);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('stepWidth', init: stepWidth);
+    mateParams.put('stepHeight', init: stepHeight);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -158,11 +158,11 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate<RenderI
       /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
       RenderBox? child})
       : super(child: child) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderIntrinsicHeight$Mate(child: p.getValue('child')),
+      builder: (p) => RenderIntrinsicHeight$Mate(child: p.get('child').value),
     );
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -183,17 +183,17 @@ class RenderOpacity$Mate extends RenderOpacity with Mate<RenderOpacity$Mate> {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderOpacity$Mate(
-        opacity: p.getValue('opacity'),
-        alwaysIncludeSemantics: p.getValue('alwaysIncludeSemantics'),
-        child: p.getValue('child'),
+        opacity: p.get('opacity').value,
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -214,17 +214,17 @@ class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate<RenderA
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAnimatedOpacity$Mate(
-        opacity: p.getValue('opacity'),
-        alwaysIncludeSemantics: p.getValue('alwaysIncludeSemantics'),
-        child: p.getValue('child'),
+        opacity: p.get('opacity').value,
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -245,17 +245,17 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate<RenderShaderMask$
           shaderCallback: shaderCallback,
           blendMode: blendMode,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderShaderMask$Mate(
-        child: p.getValue('child'),
-        shaderCallback: p.getValue('shaderCallback'),
-        blendMode: p.getValue('blendMode'),
+        child: p.get('child').value,
+        shaderCallback: p.get('shaderCallback').value,
+        blendMode: p.get('blendMode').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'shaderCallback', init: shaderCallback);
-    mateParams.set(name: 'blendMode', init: blendMode);
+    mateParams.put('child', init: child);
+    mateParams.put('shaderCallback', init: shaderCallback);
+    mateParams.put('blendMode', init: blendMode);
   }
 }
 
@@ -276,17 +276,17 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate<RenderBac
           filter: filter,
           blendMode: blendMode,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderBackdropFilter$Mate(
-        child: p.getValue('child'),
-        filter: p.getValue('filter'),
-        blendMode: p.getValue('blendMode'),
+        child: p.get('child').value,
+        filter: p.get('filter').value,
+        blendMode: p.get('blendMode').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'filter', init: filter);
-    mateParams.set(name: 'blendMode', init: blendMode);
+    mateParams.put('child', init: child);
+    mateParams.put('filter', init: filter);
+    mateParams.put('blendMode', init: blendMode);
   }
 }
 
@@ -303,15 +303,15 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate<ShapeBorderCl
           shape: shape,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShapeBorderClipper$Mate(
-        shape: p.getValue('shape'),
-        textDirection: p.getValue('textDirection'),
+        shape: p.get('shape').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('shape', init: shape);
+    mateParams.put('textDirection', init: textDirection);
   }
 }
 
@@ -332,17 +332,17 @@ class RenderClipRect$Mate extends RenderClipRect with Mate<RenderClipRect$Mate> 
           clipper: clipper,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderClipRect$Mate(
-        child: p.getValue('child'),
-        clipper: p.getValue('clipper'),
-        clipBehavior: p.getValue('clipBehavior'),
+        child: p.get('child').value,
+        clipper: p.get('clipper').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'clipper', init: clipper);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('child', init: child);
+    mateParams.put('clipper', init: clipper);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -371,21 +371,21 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate<RenderClipRRect$Mat
           clipBehavior: clipBehavior,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderClipRRect$Mate(
-        child: p.getValue('child'),
-        borderRadius: p.getValue('borderRadius'),
-        clipper: p.getValue('clipper'),
-        clipBehavior: p.getValue('clipBehavior'),
-        textDirection: p.getValue('textDirection'),
+        child: p.get('child').value,
+        borderRadius: p.get('borderRadius').value,
+        clipper: p.get('clipper').value,
+        clipBehavior: p.get('clipBehavior').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'clipper', init: clipper);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('child', init: child);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('clipper', init: clipper);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('textDirection', init: textDirection);
   }
 }
 
@@ -406,17 +406,17 @@ class RenderClipOval$Mate extends RenderClipOval with Mate<RenderClipOval$Mate> 
           clipper: clipper,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderClipOval$Mate(
-        child: p.getValue('child'),
-        clipper: p.getValue('clipper'),
-        clipBehavior: p.getValue('clipBehavior'),
+        child: p.get('child').value,
+        clipper: p.get('clipper').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'clipper', init: clipper);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('child', init: child);
+    mateParams.put('clipper', init: clipper);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -437,17 +437,17 @@ class RenderClipPath$Mate extends RenderClipPath with Mate<RenderClipPath$Mate> 
           clipper: clipper,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderClipPath$Mate(
-        child: p.getValue('child'),
-        clipper: p.getValue('clipper'),
-        clipBehavior: p.getValue('clipBehavior'),
+        child: p.get('child').value,
+        clipper: p.get('clipper').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'clipper', init: clipper);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('child', init: child);
+    mateParams.put('clipper', init: clipper);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -484,25 +484,25 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate<RenderPhysi
           color: color,
           shadowColor: shadowColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPhysicalModel$Mate(
-        child: p.getValue('child'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        borderRadius: p.getValue('borderRadius'),
-        elevation: p.getValue('elevation'),
-        color: p.getValue('color'),
-        shadowColor: p.getValue('shadowColor'),
+        child: p.get('child').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        borderRadius: p.get('borderRadius').value,
+        elevation: p.get('elevation').value,
+        color: p.get('color').value,
+        shadowColor: p.get('shadowColor').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
+    mateParams.put('child', init: child);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('color', init: color);
+    mateParams.put('shadowColor', init: shadowColor);
   }
 }
 
@@ -535,23 +535,23 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate<RenderPhysi
           color: color,
           shadowColor: shadowColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPhysicalShape$Mate(
-        child: p.getValue('child'),
-        clipper: p.getValue('clipper'),
-        clipBehavior: p.getValue('clipBehavior'),
-        elevation: p.getValue('elevation'),
-        color: p.getValue('color'),
-        shadowColor: p.getValue('shadowColor'),
+        child: p.get('child').value,
+        clipper: p.get('clipper').value,
+        clipBehavior: p.get('clipBehavior').value,
+        elevation: p.get('elevation').value,
+        color: p.get('color').value,
+        shadowColor: p.get('shadowColor').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'clipper', init: clipper);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
+    mateParams.put('child', init: child);
+    mateParams.put('clipper', init: clipper);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('color', init: color);
+    mateParams.put('shadowColor', init: shadowColor);
   }
 }
 
@@ -576,19 +576,19 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate<RenderDecorat
           configuration: configuration,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderDecoratedBox$Mate(
-        decoration: p.getValue('decoration'),
-        position: p.getValue('position'),
-        configuration: p.getValue('configuration'),
-        child: p.getValue('child'),
+        decoration: p.get('decoration').value,
+        position: p.get('position').value,
+        configuration: p.get('configuration').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'configuration', init: configuration);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('position', init: position);
+    mateParams.put('configuration', init: configuration);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -625,25 +625,25 @@ class RenderTransform$Mate extends RenderTransform with Mate<RenderTransform$Mat
           filterQuality: filterQuality,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderTransform$Mate(
-        transform: p.getValue('transform'),
-        origin: p.getValue('origin'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
-        transformHitTests: p.getValue('transformHitTests'),
-        filterQuality: p.getValue('filterQuality'),
-        child: p.getValue('child'),
+        transform: p.get('transform').value,
+        origin: p.get('origin').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
+        transformHitTests: p.get('transformHitTests').value,
+        filterQuality: p.get('filterQuality').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'transform', init: transform);
-    mateParams.set(name: 'origin', init: origin);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'transformHitTests', init: transformHitTests);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('transform', init: transform);
+    mateParams.put('origin', init: origin);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('transformHitTests', init: transformHitTests);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -672,21 +672,21 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate<RenderFittedBox$Mat
           child: child,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFittedBox$Mate(
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
-        child: p.getValue('child'),
-        clipBehavior: p.getValue('clipBehavior'),
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
+        child: p.get('child').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', init: child);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -707,17 +707,17 @@ class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with 
           transformHitTests: transformHitTests,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFractionalTranslation$Mate(
-        translation: p.getValue('translation'),
-        transformHitTests: p.getValue('transformHitTests'),
-        child: p.getValue('child'),
+        translation: p.get('translation').value,
+        transformHitTests: p.get('transformHitTests').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'translation', init: translation);
-    mateParams.set(name: 'transformHitTests', init: transformHitTests);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('translation', init: translation);
+    mateParams.put('transformHitTests', init: transformHitTests);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -770,33 +770,33 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate<RenderP
           behavior: behavior,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPointerListener$Mate(
-        onPointerDown: p.getValue('onPointerDown'),
-        onPointerMove: p.getValue('onPointerMove'),
-        onPointerUp: p.getValue('onPointerUp'),
-        onPointerHover: p.getValue('onPointerHover'),
-        onPointerCancel: p.getValue('onPointerCancel'),
-        onPointerPanZoomStart: p.getValue('onPointerPanZoomStart'),
-        onPointerPanZoomUpdate: p.getValue('onPointerPanZoomUpdate'),
-        onPointerPanZoomEnd: p.getValue('onPointerPanZoomEnd'),
-        onPointerSignal: p.getValue('onPointerSignal'),
-        behavior: p.getValue('behavior'),
-        child: p.getValue('child'),
+        onPointerDown: p.get('onPointerDown').value,
+        onPointerMove: p.get('onPointerMove').value,
+        onPointerUp: p.get('onPointerUp').value,
+        onPointerHover: p.get('onPointerHover').value,
+        onPointerCancel: p.get('onPointerCancel').value,
+        onPointerPanZoomStart: p.get('onPointerPanZoomStart').value,
+        onPointerPanZoomUpdate: p.get('onPointerPanZoomUpdate').value,
+        onPointerPanZoomEnd: p.get('onPointerPanZoomEnd').value,
+        onPointerSignal: p.get('onPointerSignal').value,
+        behavior: p.get('behavior').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'onPointerDown', init: onPointerDown);
-    mateParams.set(name: 'onPointerMove', init: onPointerMove);
-    mateParams.set(name: 'onPointerUp', init: onPointerUp);
-    mateParams.set(name: 'onPointerHover', init: onPointerHover);
-    mateParams.set(name: 'onPointerCancel', init: onPointerCancel);
-    mateParams.set(name: 'onPointerPanZoomStart', init: onPointerPanZoomStart);
-    mateParams.set(name: 'onPointerPanZoomUpdate', init: onPointerPanZoomUpdate);
-    mateParams.set(name: 'onPointerPanZoomEnd', init: onPointerPanZoomEnd);
-    mateParams.set(name: 'onPointerSignal', init: onPointerSignal);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('onPointerDown', init: onPointerDown);
+    mateParams.put('onPointerMove', init: onPointerMove);
+    mateParams.put('onPointerUp', init: onPointerUp);
+    mateParams.put('onPointerHover', init: onPointerHover);
+    mateParams.put('onPointerCancel', init: onPointerCancel);
+    mateParams.put('onPointerPanZoomStart', init: onPointerPanZoomStart);
+    mateParams.put('onPointerPanZoomUpdate', init: onPointerPanZoomUpdate);
+    mateParams.put('onPointerPanZoomEnd', init: onPointerPanZoomEnd);
+    mateParams.put('onPointerSignal', init: onPointerSignal);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -837,27 +837,27 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate<RenderMouseRegi
           child: child,
           hitTestBehavior: hitTestBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderMouseRegion$Mate(
-        onEnter: p.getValue('onEnter'),
-        onHover: p.getValue('onHover'),
-        onExit: p.getValue('onExit'),
-        cursor: p.getValue('cursor'),
-        validForMouseTracker: p.getValue('validForMouseTracker'),
-        opaque: p.getValue('opaque'),
-        child: p.getValue('child'),
-        hitTestBehavior: p.getValue('hitTestBehavior'),
+        onEnter: p.get('onEnter').value,
+        onHover: p.get('onHover').value,
+        onExit: p.get('onExit').value,
+        cursor: p.get('cursor').value,
+        validForMouseTracker: p.get('validForMouseTracker').value,
+        opaque: p.get('opaque').value,
+        child: p.get('child').value,
+        hitTestBehavior: p.get('hitTestBehavior').value,
       ),
     );
-    mateParams.set(name: 'onEnter', init: onEnter);
-    mateParams.set(name: 'onHover', init: onHover);
-    mateParams.set(name: 'onExit', init: onExit);
-    mateParams.set(name: 'cursor', init: cursor);
-    mateParams.set(name: 'validForMouseTracker', init: validForMouseTracker);
-    mateParams.set(name: 'opaque', init: opaque);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'hitTestBehavior', init: hitTestBehavior);
+    mateParams.put('onEnter', init: onEnter);
+    mateParams.put('onHover', init: onHover);
+    mateParams.put('onExit', init: onExit);
+    mateParams.put('cursor', init: cursor);
+    mateParams.put('validForMouseTracker', init: validForMouseTracker);
+    mateParams.put('opaque', init: opaque);
+    mateParams.put('child', init: child);
+    mateParams.put('hitTestBehavior', init: hitTestBehavior);
   }
 }
 
@@ -869,11 +869,11 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate<RenderR
       /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
       RenderBox? child})
       : super(child: child) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderRepaintBoundary$Mate(child: p.getValue('child')),
+      builder: (p) => RenderRepaintBoundary$Mate(child: p.get('child').value),
     );
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -894,17 +894,17 @@ class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate<RenderIgnor
           ignoring: ignoring,
           ignoringSemantics: ignoringSemantics,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderIgnorePointer$Mate(
-        child: p.getValue('child'),
-        ignoring: p.getValue('ignoring'),
-        ignoringSemantics: p.getValue('ignoringSemantics'),
+        child: p.get('child').value,
+        ignoring: p.get('ignoring').value,
+        ignoringSemantics: p.get('ignoringSemantics').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'ignoring', init: ignoring);
-    mateParams.set(name: 'ignoringSemantics', init: ignoringSemantics);
+    mateParams.put('child', init: child);
+    mateParams.put('ignoring', init: ignoring);
+    mateParams.put('ignoringSemantics', init: ignoringSemantics);
   }
 }
 
@@ -921,15 +921,15 @@ class RenderOffstage$Mate extends RenderOffstage with Mate<RenderOffstage$Mate> 
           offstage: offstage,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderOffstage$Mate(
-        offstage: p.getValue('offstage'),
-        child: p.getValue('child'),
+        offstage: p.get('offstage').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'offstage', init: offstage);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('offstage', init: offstage);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -950,17 +950,17 @@ class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate<RenderAbsor
           absorbing: absorbing,
           ignoringSemantics: ignoringSemantics,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAbsorbPointer$Mate(
-        child: p.getValue('child'),
-        absorbing: p.getValue('absorbing'),
-        ignoringSemantics: p.getValue('ignoringSemantics'),
+        child: p.get('child').value,
+        absorbing: p.get('absorbing').value,
+        ignoringSemantics: p.get('ignoringSemantics').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'absorbing', init: absorbing);
-    mateParams.set(name: 'ignoringSemantics', init: ignoringSemantics);
+    mateParams.put('child', init: child);
+    mateParams.put('absorbing', init: absorbing);
+    mateParams.put('ignoringSemantics', init: ignoringSemantics);
   }
 }
 
@@ -981,17 +981,17 @@ class RenderMetaData$Mate extends RenderMetaData with Mate<RenderMetaData$Mate> 
           behavior: behavior,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderMetaData$Mate(
-        metaData: p.getValue('metaData'),
-        behavior: p.getValue('behavior'),
-        child: p.getValue('child'),
+        metaData: p.get('metaData').value,
+        behavior: p.get('behavior').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'metaData', init: metaData);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('metaData', init: metaData);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -1029,25 +1029,25 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
           scrollFactor: scrollFactor,
           behavior: behavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSemanticsGestureHandler$Mate(
-        child: p.getValue('child'),
-        onTap: p.getValue('onTap'),
-        onLongPress: p.getValue('onLongPress'),
-        onHorizontalDragUpdate: p.getValue('onHorizontalDragUpdate'),
-        onVerticalDragUpdate: p.getValue('onVerticalDragUpdate'),
-        scrollFactor: p.getValue('scrollFactor'),
-        behavior: p.getValue('behavior'),
+        child: p.get('child').value,
+        onTap: p.get('onTap').value,
+        onLongPress: p.get('onLongPress').value,
+        onHorizontalDragUpdate: p.get('onHorizontalDragUpdate').value,
+        onVerticalDragUpdate: p.get('onVerticalDragUpdate').value,
+        scrollFactor: p.get('scrollFactor').value,
+        behavior: p.get('behavior').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onHorizontalDragUpdate', init: onHorizontalDragUpdate);
-    mateParams.set(name: 'onVerticalDragUpdate', init: onVerticalDragUpdate);
-    mateParams.set(name: 'scrollFactor', init: scrollFactor);
-    mateParams.set(name: 'behavior', init: behavior);
+    mateParams.put('child', init: child);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onHorizontalDragUpdate', init: onHorizontalDragUpdate);
+    mateParams.put('onVerticalDragUpdate', init: onVerticalDragUpdate);
+    mateParams.put('scrollFactor', init: scrollFactor);
+    mateParams.put('behavior', init: behavior);
   }
 }
 
@@ -1080,23 +1080,23 @@ class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Ma
           excludeSemantics: excludeSemantics,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSemanticsAnnotations$Mate(
-        child: p.getValue('child'),
-        properties: p.getValue('properties'),
-        container: p.getValue('container'),
-        explicitChildNodes: p.getValue('explicitChildNodes'),
-        excludeSemantics: p.getValue('excludeSemantics'),
-        textDirection: p.getValue('textDirection'),
+        child: p.get('child').value,
+        properties: p.get('properties').value,
+        container: p.get('container').value,
+        explicitChildNodes: p.get('explicitChildNodes').value,
+        excludeSemantics: p.get('excludeSemantics').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'properties', init: properties);
-    mateParams.set(name: 'container', init: container);
-    mateParams.set(name: 'explicitChildNodes', init: explicitChildNodes);
-    mateParams.set(name: 'excludeSemantics', init: excludeSemantics);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('child', init: child);
+    mateParams.put('properties', init: properties);
+    mateParams.put('container', init: container);
+    mateParams.put('explicitChildNodes', init: explicitChildNodes);
+    mateParams.put('excludeSemantics', init: excludeSemantics);
+    mateParams.put('textDirection', init: textDirection);
   }
 }
 
@@ -1113,15 +1113,15 @@ class RenderBlockSemantics$Mate extends RenderBlockSemantics with Mate<RenderBlo
           child: child,
           blocking: blocking,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderBlockSemantics$Mate(
-        child: p.getValue('child'),
-        blocking: p.getValue('blocking'),
+        child: p.get('child').value,
+        blocking: p.get('blocking').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'blocking', init: blocking);
+    mateParams.put('child', init: child);
+    mateParams.put('blocking', init: blocking);
   }
 }
 
@@ -1133,11 +1133,11 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate<RenderMer
       /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
       RenderBox? child})
       : super(child: child) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderMergeSemantics$Mate(child: p.getValue('child')),
+      builder: (p) => RenderMergeSemantics$Mate(child: p.get('child').value),
     );
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -1154,15 +1154,15 @@ class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate<Rende
           child: child,
           excluding: excluding,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderExcludeSemantics$Mate(
-        child: p.getValue('child'),
-        excluding: p.getValue('excluding'),
+        child: p.get('child').value,
+        excluding: p.get('excluding').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'excluding', init: excluding);
+    mateParams.put('child', init: child);
+    mateParams.put('excluding', init: excluding);
   }
 }
 
@@ -1179,15 +1179,15 @@ class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate<Rende
           child: child,
           index: index,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderIndexedSemantics$Mate(
-        child: p.getValue('child'),
-        index: p.getValue('index'),
+        child: p.get('child').value,
+        index: p.get('index').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'index', init: index);
+    mateParams.put('child', init: child);
+    mateParams.put('index', init: index);
   }
 }
 
@@ -1204,15 +1204,15 @@ class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate<RenderLeaderLay
           link: link,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderLeaderLayer$Mate(
-        link: p.getValue('link'),
-        child: p.getValue('child'),
+        link: p.get('link').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'link', init: link);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('link', init: link);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -1245,23 +1245,23 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate<RenderFollo
           followerAnchor: followerAnchor,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFollowerLayer$Mate(
-        link: p.getValue('link'),
-        showWhenUnlinked: p.getValue('showWhenUnlinked'),
-        offset: p.getValue('offset'),
-        leaderAnchor: p.getValue('leaderAnchor'),
-        followerAnchor: p.getValue('followerAnchor'),
-        child: p.getValue('child'),
+        link: p.get('link').value,
+        showWhenUnlinked: p.get('showWhenUnlinked').value,
+        offset: p.get('offset').value,
+        leaderAnchor: p.get('leaderAnchor').value,
+        followerAnchor: p.get('followerAnchor').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'link', init: link);
-    mateParams.set(name: 'showWhenUnlinked', init: showWhenUnlinked);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'leaderAnchor', init: leaderAnchor);
-    mateParams.set(name: 'followerAnchor', init: followerAnchor);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('link', init: link);
+    mateParams.put('showWhenUnlinked', init: showWhenUnlinked);
+    mateParams.put('offset', init: offset);
+    mateParams.put('leaderAnchor', init: leaderAnchor);
+    mateParams.put('followerAnchor', init: followerAnchor);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -1283,16 +1283,16 @@ class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion
           sized: sized,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAnnotatedRegion$Mate(
-        value: p.getValue('value'),
-        sized: p.getValue('sized'),
-        child: p.getValue('child'),
+        value: p.get('value').value,
+        sized: p.get('sized').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'sized', init: sized);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('value', init: value);
+    mateParams.put('sized', init: sized);
+    mateParams.put('child', init: child);
   }
 }

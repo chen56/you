@@ -53,32 +53,32 @@ class RawKeyEventDataAndroid$Mate extends RawKeyEventDataAndroid with Mate<RawKe
           deviceId: deviceId,
           repeatCount: repeatCount,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyEventDataAndroid$Mate(
-        flags: p.getValue('flags'),
-        codePoint: p.getValue('codePoint'),
-        plainCodePoint: p.getValue('plainCodePoint'),
-        keyCode: p.getValue('keyCode'),
-        scanCode: p.getValue('scanCode'),
-        metaState: p.getValue('metaState'),
-        eventSource: p.getValue('eventSource'),
-        vendorId: p.getValue('vendorId'),
-        productId: p.getValue('productId'),
-        deviceId: p.getValue('deviceId'),
-        repeatCount: p.getValue('repeatCount'),
+        flags: p.get('flags').value,
+        codePoint: p.get('codePoint').value,
+        plainCodePoint: p.get('plainCodePoint').value,
+        keyCode: p.get('keyCode').value,
+        scanCode: p.get('scanCode').value,
+        metaState: p.get('metaState').value,
+        eventSource: p.get('eventSource').value,
+        vendorId: p.get('vendorId').value,
+        productId: p.get('productId').value,
+        deviceId: p.get('deviceId').value,
+        repeatCount: p.get('repeatCount').value,
       ),
     );
-    mateParams.set(name: 'flags', init: flags);
-    mateParams.set(name: 'codePoint', init: codePoint);
-    mateParams.set(name: 'plainCodePoint', init: plainCodePoint);
-    mateParams.set(name: 'keyCode', init: keyCode);
-    mateParams.set(name: 'scanCode', init: scanCode);
-    mateParams.set(name: 'metaState', init: metaState);
-    mateParams.set(name: 'eventSource', init: eventSource);
-    mateParams.set(name: 'vendorId', init: vendorId);
-    mateParams.set(name: 'productId', init: productId);
-    mateParams.set(name: 'deviceId', init: deviceId);
-    mateParams.set(name: 'repeatCount', init: repeatCount);
+    mateParams.put('flags', init: flags);
+    mateParams.put('codePoint', init: codePoint);
+    mateParams.put('plainCodePoint', init: plainCodePoint);
+    mateParams.put('keyCode', init: keyCode);
+    mateParams.put('scanCode', init: scanCode);
+    mateParams.put('metaState', init: metaState);
+    mateParams.put('eventSource', init: eventSource);
+    mateParams.put('vendorId', init: vendorId);
+    mateParams.put('productId', init: productId);
+    mateParams.put('deviceId', init: deviceId);
+    mateParams.put('repeatCount', init: repeatCount);
   }
 }

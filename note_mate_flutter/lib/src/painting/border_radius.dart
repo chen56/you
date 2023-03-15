@@ -13,11 +13,11 @@ class BorderRadius$Mate extends BorderRadius with Mate<BorderRadius$Mate> {
       /// requiredParameters: Radius radius
       Radius radius)
       : super.all(radius) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => BorderRadius$Mate.all(p.getValue('radius')),
+      builder: (p) => BorderRadius$Mate.all(p.get('radius').value),
     );
-    mateParams.set(name: 'radius', init: radius);
+    mateParams.put('radius', init: radius);
   }
 
   /// BorderRadius BorderRadius.circular(double radius)
@@ -26,11 +26,11 @@ class BorderRadius$Mate extends BorderRadius with Mate<BorderRadius$Mate> {
       /// requiredParameters: double radius
       double radius)
       : super.circular(radius) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => BorderRadius$Mate.circular(p.getValue('radius')),
+      builder: (p) => BorderRadius$Mate.circular(p.get('radius').value),
     );
-    mateParams.set(name: 'radius', init: radius);
+    mateParams.put('radius', init: radius);
   }
 
   /// BorderRadius BorderRadius.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})
@@ -44,15 +44,15 @@ class BorderRadius$Mate extends BorderRadius with Mate<BorderRadius$Mate> {
           top: top,
           bottom: bottom,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadius$Mate.vertical(
-        top: p.getValue('top'),
-        bottom: p.getValue('bottom'),
+        top: p.get('top').value,
+        bottom: p.get('bottom').value,
       ),
     );
-    mateParams.set(name: 'top', init: top);
-    mateParams.set(name: 'bottom', init: bottom);
+    mateParams.put('top', init: top);
+    mateParams.put('bottom', init: bottom);
   }
 
   /// BorderRadius BorderRadius.horizontal({Radius left = Radius.zero, Radius right = Radius.zero})
@@ -66,15 +66,15 @@ class BorderRadius$Mate extends BorderRadius with Mate<BorderRadius$Mate> {
           left: left,
           right: right,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadius$Mate.horizontal(
-        left: p.getValue('left'),
-        right: p.getValue('right'),
+        left: p.get('left').value,
+        right: p.get('right').value,
       ),
     );
-    mateParams.set(name: 'left', init: left);
-    mateParams.set(name: 'right', init: right);
+    mateParams.put('left', init: left);
+    mateParams.put('right', init: right);
   }
 
   /// BorderRadius BorderRadius.only({Radius topLeft = Radius.zero, Radius topRight = Radius.zero, Radius bottomLeft = Radius.zero, Radius bottomRight = Radius.zero})
@@ -96,19 +96,19 @@ class BorderRadius$Mate extends BorderRadius with Mate<BorderRadius$Mate> {
           bottomLeft: bottomLeft,
           bottomRight: bottomRight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadius$Mate.only(
-        topLeft: p.getValue('topLeft'),
-        topRight: p.getValue('topRight'),
-        bottomLeft: p.getValue('bottomLeft'),
-        bottomRight: p.getValue('bottomRight'),
+        topLeft: p.get('topLeft').value,
+        topRight: p.get('topRight').value,
+        bottomLeft: p.get('bottomLeft').value,
+        bottomRight: p.get('bottomRight').value,
       ),
     );
-    mateParams.set(name: 'topLeft', init: topLeft);
-    mateParams.set(name: 'topRight', init: topRight);
-    mateParams.set(name: 'bottomLeft', init: bottomLeft);
-    mateParams.set(name: 'bottomRight', init: bottomRight);
+    mateParams.put('topLeft', init: topLeft);
+    mateParams.put('topRight', init: topRight);
+    mateParams.put('bottomLeft', init: bottomLeft);
+    mateParams.put('bottomRight', init: bottomRight);
   }
 }
 
@@ -120,11 +120,11 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate<Bor
       /// requiredParameters: Radius radius
       Radius radius)
       : super.all(radius) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => BorderRadiusDirectional$Mate.all(p.getValue('radius')),
+      builder: (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value),
     );
-    mateParams.set(name: 'radius', init: radius);
+    mateParams.put('radius', init: radius);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.circular(double radius)
@@ -133,11 +133,11 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate<Bor
       /// requiredParameters: double radius
       double radius)
       : super.circular(radius) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => BorderRadiusDirectional$Mate.circular(p.getValue('radius')),
+      builder: (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value),
     );
-    mateParams.set(name: 'radius', init: radius);
+    mateParams.put('radius', init: radius);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})
@@ -151,15 +151,15 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate<Bor
           top: top,
           bottom: bottom,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadiusDirectional$Mate.vertical(
-        top: p.getValue('top'),
-        bottom: p.getValue('bottom'),
+        top: p.get('top').value,
+        bottom: p.get('bottom').value,
       ),
     );
-    mateParams.set(name: 'top', init: top);
-    mateParams.set(name: 'bottom', init: bottom);
+    mateParams.put('top', init: top);
+    mateParams.put('bottom', init: bottom);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.horizontal({Radius start = Radius.zero, Radius end = Radius.zero})
@@ -173,15 +173,15 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate<Bor
           start: start,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadiusDirectional$Mate.horizontal(
-        start: p.getValue('start'),
-        end: p.getValue('end'),
+        start: p.get('start').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'start', init: start);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('start', init: start);
+    mateParams.put('end', init: end);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.only({Radius topStart = Radius.zero, Radius topEnd = Radius.zero, Radius bottomStart = Radius.zero, Radius bottomEnd = Radius.zero})
@@ -203,18 +203,18 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate<Bor
           bottomStart: bottomStart,
           bottomEnd: bottomEnd,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadiusDirectional$Mate.only(
-        topStart: p.getValue('topStart'),
-        topEnd: p.getValue('topEnd'),
-        bottomStart: p.getValue('bottomStart'),
-        bottomEnd: p.getValue('bottomEnd'),
+        topStart: p.get('topStart').value,
+        topEnd: p.get('topEnd').value,
+        bottomStart: p.get('bottomStart').value,
+        bottomEnd: p.get('bottomEnd').value,
       ),
     );
-    mateParams.set(name: 'topStart', init: topStart);
-    mateParams.set(name: 'topEnd', init: topEnd);
-    mateParams.set(name: 'bottomStart', init: bottomStart);
-    mateParams.set(name: 'bottomEnd', init: bottomEnd);
+    mateParams.put('topStart', init: topStart);
+    mateParams.put('topEnd', init: topEnd);
+    mateParams.put('bottomStart', init: bottomStart);
+    mateParams.put('bottomEnd', init: bottomEnd);
   }
 }

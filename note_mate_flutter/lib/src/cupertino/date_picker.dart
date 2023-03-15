@@ -62,35 +62,35 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<Cuper
           dateOrder: dateOrder,
           backgroundColor: backgroundColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDatePicker$Mate(
-        key: p.getValue('key'),
-        mode: p.getValue('mode'),
-        onDateTimeChanged: p.getValue('onDateTimeChanged'),
-        initialDateTime: p.getValue('initialDateTime'),
-        minimumDate: p.getValue('minimumDate'),
-        maximumDate: p.getValue('maximumDate'),
-        minimumYear: p.getValue('minimumYear'),
-        maximumYear: p.getValue('maximumYear'),
-        minuteInterval: p.getValue('minuteInterval'),
-        use24hFormat: p.getValue('use24hFormat'),
-        dateOrder: p.getValue('dateOrder'),
-        backgroundColor: p.getValue('backgroundColor'),
+        key: p.get('key').value,
+        mode: p.get('mode').value,
+        onDateTimeChanged: p.get('onDateTimeChanged').value,
+        initialDateTime: p.get('initialDateTime').value,
+        minimumDate: p.get('minimumDate').value,
+        maximumDate: p.get('maximumDate').value,
+        minimumYear: p.get('minimumYear').value,
+        maximumYear: p.get('maximumYear').value,
+        minuteInterval: p.get('minuteInterval').value,
+        use24hFormat: p.get('use24hFormat').value,
+        dateOrder: p.get('dateOrder').value,
+        backgroundColor: p.get('backgroundColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'mode', init: mode);
-    mateParams.set(name: 'onDateTimeChanged', init: onDateTimeChanged);
-    mateParams.set(name: 'initialDateTime', init: initialDateTime);
-    mateParams.set(name: 'minimumDate', init: minimumDate);
-    mateParams.set(name: 'maximumDate', init: maximumDate);
-    mateParams.set(name: 'minimumYear', init: minimumYear);
-    mateParams.set(name: 'maximumYear', init: maximumYear);
-    mateParams.set(name: 'minuteInterval', init: minuteInterval);
-    mateParams.set(name: 'use24hFormat', init: use24hFormat);
-    mateParams.set(name: 'dateOrder', init: dateOrder);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
+    mateParams.put('key', init: key);
+    mateParams.put('mode', init: mode);
+    mateParams.put('onDateTimeChanged', init: onDateTimeChanged);
+    mateParams.put('initialDateTime', init: initialDateTime);
+    mateParams.put('minimumDate', init: minimumDate);
+    mateParams.put('maximumDate', init: maximumDate);
+    mateParams.put('minimumYear', init: minimumYear);
+    mateParams.put('maximumYear', init: maximumYear);
+    mateParams.put('minuteInterval', init: minuteInterval);
+    mateParams.put('use24hFormat', init: use24hFormat);
+    mateParams.put('dateOrder', init: dateOrder);
+    mateParams.put('backgroundColor', init: backgroundColor);
   }
 }
 
@@ -131,26 +131,26 @@ class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with WidgetMate<Cup
           backgroundColor: backgroundColor,
           onTimerDurationChanged: onTimerDurationChanged,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTimerPicker$Mate(
-        key: p.getValue('key'),
-        mode: p.getValue('mode'),
-        initialTimerDuration: p.getValue('initialTimerDuration'),
-        minuteInterval: p.getValue('minuteInterval'),
-        secondInterval: p.getValue('secondInterval'),
-        alignment: p.getValue('alignment'),
-        backgroundColor: p.getValue('backgroundColor'),
-        onTimerDurationChanged: p.getValue('onTimerDurationChanged'),
+        key: p.get('key').value,
+        mode: p.get('mode').value,
+        initialTimerDuration: p.get('initialTimerDuration').value,
+        minuteInterval: p.get('minuteInterval').value,
+        secondInterval: p.get('secondInterval').value,
+        alignment: p.get('alignment').value,
+        backgroundColor: p.get('backgroundColor').value,
+        onTimerDurationChanged: p.get('onTimerDurationChanged').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'mode', init: mode);
-    mateParams.set(name: 'initialTimerDuration', init: initialTimerDuration);
-    mateParams.set(name: 'minuteInterval', init: minuteInterval);
-    mateParams.set(name: 'secondInterval', init: secondInterval);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'onTimerDurationChanged', init: onTimerDurationChanged);
+    mateParams.put('key', init: key);
+    mateParams.put('mode', init: mode);
+    mateParams.put('initialTimerDuration', init: initialTimerDuration);
+    mateParams.put('minuteInterval', init: minuteInterval);
+    mateParams.put('secondInterval', init: secondInterval);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('onTimerDurationChanged', init: onTimerDurationChanged);
   }
 }

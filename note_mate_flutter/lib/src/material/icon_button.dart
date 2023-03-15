@@ -111,56 +111,56 @@ class IconButton$Mate extends IconButton with WidgetMate<IconButton$Mate> {
           selectedIcon: selectedIcon,
           icon: icon,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => IconButton$Mate(
-        key: p.getValue('key'),
-        iconSize: p.getValue('iconSize'),
-        visualDensity: p.getValue('visualDensity'),
-        padding: p.getValue('padding'),
-        alignment: p.getValue('alignment'),
-        splashRadius: p.getValue('splashRadius'),
-        color: p.getValue('color'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        highlightColor: p.getValue('highlightColor'),
-        splashColor: p.getValue('splashColor'),
-        disabledColor: p.getValue('disabledColor'),
-        onPressed: p.getValue('onPressed'),
-        mouseCursor: p.getValue('mouseCursor'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        tooltip: p.getValue('tooltip'),
-        enableFeedback: p.getValue('enableFeedback'),
-        constraints: p.getValue('constraints'),
-        style: p.getValue('style'),
-        isSelected: p.getValue('isSelected'),
-        selectedIcon: p.getValue('selectedIcon'),
-        icon: p.getValue('icon'),
+        key: p.get('key').value,
+        iconSize: p.get('iconSize').value,
+        visualDensity: p.get('visualDensity').value,
+        padding: p.get('padding').value,
+        alignment: p.get('alignment').value,
+        splashRadius: p.get('splashRadius').value,
+        color: p.get('color').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        splashColor: p.get('splashColor').value,
+        disabledColor: p.get('disabledColor').value,
+        onPressed: p.get('onPressed').value,
+        mouseCursor: p.get('mouseCursor').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        tooltip: p.get('tooltip').value,
+        enableFeedback: p.get('enableFeedback').value,
+        constraints: p.get('constraints').value,
+        style: p.get('style').value,
+        isSelected: p.get('isSelected').value,
+        selectedIcon: p.get('selectedIcon').value,
+        icon: p.get('icon').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'iconSize', init: iconSize);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'tooltip', init: tooltip);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'constraints', init: constraints);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'isSelected', init: isSelected);
-    mateParams.set(name: 'selectedIcon', init: selectedIcon);
-    mateParams.set(name: 'icon', init: icon);
+    mateParams.put('key', init: key);
+    mateParams.put('iconSize', init: iconSize);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('padding', init: padding);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('color', init: color);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('tooltip', init: tooltip);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('constraints', init: constraints);
+    mateParams.put('style', init: style);
+    mateParams.put('isSelected', init: isSelected);
+    mateParams.put('selectedIcon', init: selectedIcon);
+    mateParams.put('icon', init: icon);
   }
 }

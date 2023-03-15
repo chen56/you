@@ -27,18 +27,18 @@ class NoSplash$Mate extends NoSplash with Mate<NoSplash$Mate> {
           color: color,
           onRemoved: onRemoved,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NoSplash$Mate(
-        controller: p.getValue('controller'),
-        referenceBox: p.getValue('referenceBox'),
-        color: p.getValue('color'),
-        onRemoved: p.getValue('onRemoved'),
+        controller: p.get('controller').value,
+        referenceBox: p.get('referenceBox').value,
+        color: p.get('color').value,
+        onRemoved: p.get('onRemoved').value,
       ),
     );
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'referenceBox', init: referenceBox);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'onRemoved', init: onRemoved);
+    mateParams.put('controller', init: controller);
+    mateParams.put('referenceBox', init: referenceBox);
+    mateParams.put('color', init: color);
+    mateParams.put('onRemoved', init: onRemoved);
   }
 }

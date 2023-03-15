@@ -20,15 +20,15 @@ class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchC
           stretchTriggerOffset: stretchTriggerOffset,
           onStretchTrigger: onStretchTrigger,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => OverScrollHeaderStretchConfiguration$Mate(
-        stretchTriggerOffset: p.getValue('stretchTriggerOffset'),
-        onStretchTrigger: p.getValue('onStretchTrigger'),
+        stretchTriggerOffset: p.get('stretchTriggerOffset').value,
+        onStretchTrigger: p.get('onStretchTrigger').value,
       ),
     );
-    mateParams.set(name: 'stretchTriggerOffset', init: stretchTriggerOffset);
-    mateParams.set(name: 'onStretchTrigger', init: onStretchTrigger);
+    mateParams.put('stretchTriggerOffset', init: stretchTriggerOffset);
+    mateParams.put('onStretchTrigger', init: onStretchTrigger);
   }
 }
 
@@ -46,15 +46,15 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderSho
           minShowOnScreenExtent: minShowOnScreenExtent,
           maxShowOnScreenExtent: maxShowOnScreenExtent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PersistentHeaderShowOnScreenConfiguration$Mate(
-        minShowOnScreenExtent: p.getValue('minShowOnScreenExtent'),
-        maxShowOnScreenExtent: p.getValue('maxShowOnScreenExtent'),
+        minShowOnScreenExtent: p.get('minShowOnScreenExtent').value,
+        maxShowOnScreenExtent: p.get('maxShowOnScreenExtent').value,
       ),
     );
-    mateParams.set(name: 'minShowOnScreenExtent', init: minShowOnScreenExtent);
-    mateParams.set(name: 'maxShowOnScreenExtent', init: maxShowOnScreenExtent);
+    mateParams.put('minShowOnScreenExtent', init: minShowOnScreenExtent);
+    mateParams.put('maxShowOnScreenExtent', init: maxShowOnScreenExtent);
   }
 }
 
@@ -72,14 +72,14 @@ class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfigurati
           curve: curve,
           duration: duration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FloatingHeaderSnapConfiguration$Mate(
-        curve: p.getValue('curve'),
-        duration: p.getValue('duration'),
+        curve: p.get('curve').value,
+        duration: p.get('duration').value,
       ),
     );
-    mateParams.set(name: 'curve', init: curve);
-    mateParams.set(name: 'duration', init: duration);
+    mateParams.put('curve', init: curve);
+    mateParams.put('duration', init: duration);
   }
 }

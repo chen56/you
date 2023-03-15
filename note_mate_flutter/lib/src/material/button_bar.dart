@@ -63,34 +63,34 @@ class ButtonBar$Mate extends ButtonBar with WidgetMate<ButtonBar$Mate> {
           overflowButtonSpacing: overflowButtonSpacing,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonBar$Mate(
-        key: p.getValue('key'),
-        alignment: p.getValue('alignment'),
-        mainAxisSize: p.getValue('mainAxisSize'),
-        buttonTextTheme: p.getValue('buttonTextTheme'),
-        buttonMinWidth: p.getValue('buttonMinWidth'),
-        buttonHeight: p.getValue('buttonHeight'),
-        buttonPadding: p.getValue('buttonPadding'),
-        buttonAlignedDropdown: p.getValue('buttonAlignedDropdown'),
-        layoutBehavior: p.getValue('layoutBehavior'),
-        overflowDirection: p.getValue('overflowDirection'),
-        overflowButtonSpacing: p.getValue('overflowButtonSpacing'),
-        children: p.getValue('children'),
+        key: p.get('key').value,
+        alignment: p.get('alignment').value,
+        mainAxisSize: p.get('mainAxisSize').value,
+        buttonTextTheme: p.get('buttonTextTheme').value,
+        buttonMinWidth: p.get('buttonMinWidth').value,
+        buttonHeight: p.get('buttonHeight').value,
+        buttonPadding: p.get('buttonPadding').value,
+        buttonAlignedDropdown: p.get('buttonAlignedDropdown').value,
+        layoutBehavior: p.get('layoutBehavior').value,
+        overflowDirection: p.get('overflowDirection').value,
+        overflowButtonSpacing: p.get('overflowButtonSpacing').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'mainAxisSize', init: mainAxisSize);
-    mateParams.set(name: 'buttonTextTheme', init: buttonTextTheme);
-    mateParams.set(name: 'buttonMinWidth', init: buttonMinWidth);
-    mateParams.set(name: 'buttonHeight', init: buttonHeight);
-    mateParams.set(name: 'buttonPadding', init: buttonPadding);
-    mateParams.set(name: 'buttonAlignedDropdown', init: buttonAlignedDropdown);
-    mateParams.set(name: 'layoutBehavior', init: layoutBehavior);
-    mateParams.set(name: 'overflowDirection', init: overflowDirection);
-    mateParams.set(name: 'overflowButtonSpacing', init: overflowButtonSpacing);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('key', init: key);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('mainAxisSize', init: mainAxisSize);
+    mateParams.put('buttonTextTheme', init: buttonTextTheme);
+    mateParams.put('buttonMinWidth', init: buttonMinWidth);
+    mateParams.put('buttonHeight', init: buttonHeight);
+    mateParams.put('buttonPadding', init: buttonPadding);
+    mateParams.put('buttonAlignedDropdown', init: buttonAlignedDropdown);
+    mateParams.put('layoutBehavior', init: layoutBehavior);
+    mateParams.put('overflowDirection', init: overflowDirection);
+    mateParams.put('overflowButtonSpacing', init: overflowButtonSpacing);
+    mateParams.put('children', init: children);
   }
 }

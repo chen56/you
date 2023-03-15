@@ -35,22 +35,22 @@ class NavigationToolbar$Mate extends NavigationToolbar with WidgetMate<Navigatio
           centerMiddle: centerMiddle,
           middleSpacing: middleSpacing,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationToolbar$Mate(
-        key: p.getValue('key'),
-        leading: p.getValue('leading'),
-        middle: p.getValue('middle'),
-        trailing: p.getValue('trailing'),
-        centerMiddle: p.getValue('centerMiddle'),
-        middleSpacing: p.getValue('middleSpacing'),
+        key: p.get('key').value,
+        leading: p.get('leading').value,
+        middle: p.get('middle').value,
+        trailing: p.get('trailing').value,
+        centerMiddle: p.get('centerMiddle').value,
+        middleSpacing: p.get('middleSpacing').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'middle', init: middle);
-    mateParams.set(name: 'trailing', init: trailing);
-    mateParams.set(name: 'centerMiddle', init: centerMiddle);
-    mateParams.set(name: 'middleSpacing', init: middleSpacing);
+    mateParams.put('key', init: key);
+    mateParams.put('leading', init: leading);
+    mateParams.put('middle', init: middle);
+    mateParams.put('trailing', init: trailing);
+    mateParams.put('centerMiddle', init: centerMiddle);
+    mateParams.put('middleSpacing', init: middleSpacing);
   }
 }

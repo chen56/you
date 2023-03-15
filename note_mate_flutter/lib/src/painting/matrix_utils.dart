@@ -30,20 +30,20 @@ class TransformProperty$Mate extends TransformProperty with Mate<TransformProper
           defaultValue: defaultValue,
           level: level,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TransformProperty$Mate(
-        p.getValue('name'),
-        p.getValue('value'),
-        showName: p.getValue('showName'),
-        defaultValue: p.getValue('defaultValue'),
-        level: p.getValue('level'),
+        p.get('name').value,
+        p.get('value').value,
+        showName: p.get('showName').value,
+        defaultValue: p.get('defaultValue').value,
+        level: p.get('level').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'showName', init: showName);
-    mateParams.set(name: 'defaultValue', init: defaultValue);
-    mateParams.set(name: 'level', init: level);
+    mateParams.put('name', init: name);
+    mateParams.put('value', init: value);
+    mateParams.put('showName', init: showName);
+    mateParams.put('defaultValue', init: defaultValue);
+    mateParams.put('level', init: level);
   }
 }

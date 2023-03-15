@@ -48,28 +48,28 @@ class RenderFlex$Mate extends RenderFlex with Mate<RenderFlex$Mate> {
           textBaseline: textBaseline,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFlex$Mate(
-        children: p.getValue('children'),
-        direction: p.getValue('direction'),
-        mainAxisSize: p.getValue('mainAxisSize'),
-        mainAxisAlignment: p.getValue('mainAxisAlignment'),
-        crossAxisAlignment: p.getValue('crossAxisAlignment'),
-        textDirection: p.getValue('textDirection'),
-        verticalDirection: p.getValue('verticalDirection'),
-        textBaseline: p.getValue('textBaseline'),
-        clipBehavior: p.getValue('clipBehavior'),
+        children: p.get('children').value,
+        direction: p.get('direction').value,
+        mainAxisSize: p.get('mainAxisSize').value,
+        mainAxisAlignment: p.get('mainAxisAlignment').value,
+        crossAxisAlignment: p.get('crossAxisAlignment').value,
+        textDirection: p.get('textDirection').value,
+        verticalDirection: p.get('verticalDirection').value,
+        textBaseline: p.get('textBaseline').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'direction', init: direction);
-    mateParams.set(name: 'mainAxisSize', init: mainAxisSize);
-    mateParams.set(name: 'mainAxisAlignment', init: mainAxisAlignment);
-    mateParams.set(name: 'crossAxisAlignment', init: crossAxisAlignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'verticalDirection', init: verticalDirection);
-    mateParams.set(name: 'textBaseline', init: textBaseline);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('children', init: children);
+    mateParams.put('direction', init: direction);
+    mateParams.put('mainAxisSize', init: mainAxisSize);
+    mateParams.put('mainAxisAlignment', init: mainAxisAlignment);
+    mateParams.put('crossAxisAlignment', init: crossAxisAlignment);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('verticalDirection', init: verticalDirection);
+    mateParams.put('textBaseline', init: textBaseline);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

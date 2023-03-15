@@ -34,19 +34,19 @@ class DecoratedBox$Mate extends DecoratedBox with WidgetMate<DecoratedBox$Mate> 
           position: position,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DecoratedBox$Mate(
-        key: p.getValue('key'),
-        decoration: p.getValue('decoration'),
-        position: p.getValue('position'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        decoration: p.get('decoration').value,
+        position: p.get('position').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('position', init: position);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -111,38 +111,38 @@ class Container$Mate extends Container with WidgetMate<Container$Mate> {
           child: child,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Container$Mate(
-        key: p.getValue('key'),
-        alignment: p.getValue('alignment'),
-        padding: p.getValue('padding'),
-        color: p.getValue('color'),
-        decoration: p.getValue('decoration'),
-        foregroundDecoration: p.getValue('foregroundDecoration'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        constraints: p.getValue('constraints'),
-        margin: p.getValue('margin'),
-        transform: p.getValue('transform'),
-        transformAlignment: p.getValue('transformAlignment'),
-        child: p.getValue('child'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        alignment: p.get('alignment').value,
+        padding: p.get('padding').value,
+        color: p.get('color').value,
+        decoration: p.get('decoration').value,
+        foregroundDecoration: p.get('foregroundDecoration').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        constraints: p.get('constraints').value,
+        margin: p.get('margin').value,
+        transform: p.get('transform').value,
+        transformAlignment: p.get('transformAlignment').value,
+        child: p.get('child').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'foregroundDecoration', init: foregroundDecoration);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'constraints', init: constraints);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'transform', init: transform);
-    mateParams.set(name: 'transformAlignment', init: transformAlignment);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('padding', init: padding);
+    mateParams.put('color', init: color);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('foregroundDecoration', init: foregroundDecoration);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('constraints', init: constraints);
+    mateParams.put('margin', init: margin);
+    mateParams.put('transform', init: transform);
+    mateParams.put('transformAlignment', init: transformAlignment);
+    mateParams.put('child', init: child);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

@@ -55,31 +55,31 @@ class Viewport$Mate extends Viewport with WidgetMate<Viewport$Mate> {
           clipBehavior: clipBehavior,
           slivers: slivers,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Viewport$Mate(
-        key: p.getValue('key'),
-        axisDirection: p.getValue('axisDirection'),
-        crossAxisDirection: p.getValue('crossAxisDirection'),
-        anchor: p.getValue('anchor'),
-        offset: p.getValue('offset'),
-        center: p.getValue('center'),
-        cacheExtent: p.getValue('cacheExtent'),
-        cacheExtentStyle: p.getValue('cacheExtentStyle'),
-        clipBehavior: p.getValue('clipBehavior'),
-        slivers: p.getValue('slivers'),
+        key: p.get('key').value,
+        axisDirection: p.get('axisDirection').value,
+        crossAxisDirection: p.get('crossAxisDirection').value,
+        anchor: p.get('anchor').value,
+        offset: p.get('offset').value,
+        center: p.get('center').value,
+        cacheExtent: p.get('cacheExtent').value,
+        cacheExtentStyle: p.get('cacheExtentStyle').value,
+        clipBehavior: p.get('clipBehavior').value,
+        slivers: p.get('slivers').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'crossAxisDirection', init: crossAxisDirection);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'center', init: center);
-    mateParams.set(name: 'cacheExtent', init: cacheExtent);
-    mateParams.set(name: 'cacheExtentStyle', init: cacheExtentStyle);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'slivers', init: slivers);
+    mateParams.put('key', init: key);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('crossAxisDirection', init: crossAxisDirection);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('offset', init: offset);
+    mateParams.put('center', init: center);
+    mateParams.put('cacheExtent', init: cacheExtent);
+    mateParams.put('cacheExtentStyle', init: cacheExtentStyle);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('slivers', init: slivers);
   }
 }
 
@@ -112,22 +112,22 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with WidgetMate
           clipBehavior: clipBehavior,
           slivers: slivers,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShrinkWrappingViewport$Mate(
-        key: p.getValue('key'),
-        axisDirection: p.getValue('axisDirection'),
-        crossAxisDirection: p.getValue('crossAxisDirection'),
-        offset: p.getValue('offset'),
-        clipBehavior: p.getValue('clipBehavior'),
-        slivers: p.getValue('slivers'),
+        key: p.get('key').value,
+        axisDirection: p.get('axisDirection').value,
+        crossAxisDirection: p.get('crossAxisDirection').value,
+        offset: p.get('offset').value,
+        clipBehavior: p.get('clipBehavior').value,
+        slivers: p.get('slivers').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'crossAxisDirection', init: crossAxisDirection);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'slivers', init: slivers);
+    mateParams.put('key', init: key);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('crossAxisDirection', init: crossAxisDirection);
+    mateParams.put('offset', init: offset);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('slivers', init: slivers);
   }
 }

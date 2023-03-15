@@ -58,32 +58,32 @@ class CircleAvatar$Mate extends CircleAvatar with WidgetMate<CircleAvatar$Mate> 
           minRadius: minRadius,
           maxRadius: maxRadius,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CircleAvatar$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        backgroundColor: p.getValue('backgroundColor'),
-        backgroundImage: p.getValue('backgroundImage'),
-        foregroundImage: p.getValue('foregroundImage'),
-        onBackgroundImageError: p.getValue('onBackgroundImageError'),
-        onForegroundImageError: p.getValue('onForegroundImageError'),
-        foregroundColor: p.getValue('foregroundColor'),
-        radius: p.getValue('radius'),
-        minRadius: p.getValue('minRadius'),
-        maxRadius: p.getValue('maxRadius'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        backgroundColor: p.get('backgroundColor').value,
+        backgroundImage: p.get('backgroundImage').value,
+        foregroundImage: p.get('foregroundImage').value,
+        onBackgroundImageError: p.get('onBackgroundImageError').value,
+        onForegroundImageError: p.get('onForegroundImageError').value,
+        foregroundColor: p.get('foregroundColor').value,
+        radius: p.get('radius').value,
+        minRadius: p.get('minRadius').value,
+        maxRadius: p.get('maxRadius').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'backgroundImage', init: backgroundImage);
-    mateParams.set(name: 'foregroundImage', init: foregroundImage);
-    mateParams.set(name: 'onBackgroundImageError', init: onBackgroundImageError);
-    mateParams.set(name: 'onForegroundImageError', init: onForegroundImageError);
-    mateParams.set(name: 'foregroundColor', init: foregroundColor);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'minRadius', init: minRadius);
-    mateParams.set(name: 'maxRadius', init: maxRadius);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('backgroundImage', init: backgroundImage);
+    mateParams.put('foregroundImage', init: foregroundImage);
+    mateParams.put('onBackgroundImageError', init: onBackgroundImageError);
+    mateParams.put('onForegroundImageError', init: onForegroundImageError);
+    mateParams.put('foregroundColor', init: foregroundColor);
+    mateParams.put('radius', init: radius);
+    mateParams.put('minRadius', init: minRadius);
+    mateParams.put('maxRadius', init: maxRadius);
   }
 }

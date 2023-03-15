@@ -26,17 +26,17 @@ class Theme$Mate extends Theme with WidgetMate<Theme$Mate> {
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Theme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -53,15 +53,15 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate<ThemeDataTween$Mate> 
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ThemeDataTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -94,22 +94,22 @@ class AnimatedTheme$Mate extends AnimatedTheme with WidgetMate<AnimatedTheme$Mat
           onEnd: onEnd,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        curve: p.getValue('curve'),
-        duration: p.getValue('duration'),
-        onEnd: p.getValue('onEnd'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        curve: p.get('curve').value,
+        duration: p.get('duration').value,
+        onEnd: p.get('onEnd').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'curve', init: curve);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'onEnd', init: onEnd);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('curve', init: curve);
+    mateParams.put('duration', init: duration);
+    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('child', init: child);
   }
 }

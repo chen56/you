@@ -55,32 +55,32 @@ class Icon$Mate extends Icon with WidgetMate<Icon$Mate> {
           semanticLabel: semanticLabel,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Icon$Mate(
-        p.getValue('icon'),
-        key: p.getValue('key'),
-        size: p.getValue('size'),
-        fill: p.getValue('fill'),
-        weight: p.getValue('weight'),
-        grade: p.getValue('grade'),
-        opticalSize: p.getValue('opticalSize'),
-        color: p.getValue('color'),
-        shadows: p.getValue('shadows'),
-        semanticLabel: p.getValue('semanticLabel'),
-        textDirection: p.getValue('textDirection'),
+        p.get('icon').value,
+        key: p.get('key').value,
+        size: p.get('size').value,
+        fill: p.get('fill').value,
+        weight: p.get('weight').value,
+        grade: p.get('grade').value,
+        opticalSize: p.get('opticalSize').value,
+        color: p.get('color').value,
+        shadows: p.get('shadows').value,
+        semanticLabel: p.get('semanticLabel').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'fill', init: fill);
-    mateParams.set(name: 'weight', init: weight);
-    mateParams.set(name: 'grade', init: grade);
-    mateParams.set(name: 'opticalSize', init: opticalSize);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'shadows', init: shadows);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('icon', init: icon);
+    mateParams.put('key', init: key);
+    mateParams.put('size', init: size);
+    mateParams.put('fill', init: fill);
+    mateParams.put('weight', init: weight);
+    mateParams.put('grade', init: grade);
+    mateParams.put('opticalSize', init: opticalSize);
+    mateParams.put('color', init: color);
+    mateParams.put('shadows', init: shadows);
+    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('textDirection', init: textDirection);
   }
 }

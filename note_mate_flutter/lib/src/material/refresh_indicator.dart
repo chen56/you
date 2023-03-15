@@ -61,34 +61,34 @@ class RefreshIndicator$Mate extends RefreshIndicator with WidgetMate<RefreshIndi
           strokeWidth: strokeWidth,
           triggerMode: triggerMode,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RefreshIndicator$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        displacement: p.getValue('displacement'),
-        edgeOffset: p.getValue('edgeOffset'),
-        onRefresh: p.getValue('onRefresh'),
-        color: p.getValue('color'),
-        backgroundColor: p.getValue('backgroundColor'),
-        notificationPredicate: p.getValue('notificationPredicate'),
-        semanticsLabel: p.getValue('semanticsLabel'),
-        semanticsValue: p.getValue('semanticsValue'),
-        strokeWidth: p.getValue('strokeWidth'),
-        triggerMode: p.getValue('triggerMode'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        displacement: p.get('displacement').value,
+        edgeOffset: p.get('edgeOffset').value,
+        onRefresh: p.get('onRefresh').value,
+        color: p.get('color').value,
+        backgroundColor: p.get('backgroundColor').value,
+        notificationPredicate: p.get('notificationPredicate').value,
+        semanticsLabel: p.get('semanticsLabel').value,
+        semanticsValue: p.get('semanticsValue').value,
+        strokeWidth: p.get('strokeWidth').value,
+        triggerMode: p.get('triggerMode').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'displacement', init: displacement);
-    mateParams.set(name: 'edgeOffset', init: edgeOffset);
-    mateParams.set(name: 'onRefresh', init: onRefresh);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'notificationPredicate', init: notificationPredicate);
-    mateParams.set(name: 'semanticsLabel', init: semanticsLabel);
-    mateParams.set(name: 'semanticsValue', init: semanticsValue);
-    mateParams.set(name: 'strokeWidth', init: strokeWidth);
-    mateParams.set(name: 'triggerMode', init: triggerMode);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('displacement', init: displacement);
+    mateParams.put('edgeOffset', init: edgeOffset);
+    mateParams.put('onRefresh', init: onRefresh);
+    mateParams.put('color', init: color);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('notificationPredicate', init: notificationPredicate);
+    mateParams.put('semanticsLabel', init: semanticsLabel);
+    mateParams.put('semanticsValue', init: semanticsValue);
+    mateParams.put('strokeWidth', init: strokeWidth);
+    mateParams.put('triggerMode', init: triggerMode);
   }
 }

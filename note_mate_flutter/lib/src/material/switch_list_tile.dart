@@ -128,65 +128,65 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
           hoverColor: hoverColor,
           trackOutlineColor: trackOutlineColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SwitchListTile$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        onChanged: p.getValue('onChanged'),
-        tileColor: p.getValue('tileColor'),
-        activeColor: p.getValue('activeColor'),
-        activeTrackColor: p.getValue('activeTrackColor'),
-        inactiveThumbColor: p.getValue('inactiveThumbColor'),
-        inactiveTrackColor: p.getValue('inactiveTrackColor'),
-        activeThumbImage: p.getValue('activeThumbImage'),
-        inactiveThumbImage: p.getValue('inactiveThumbImage'),
-        title: p.getValue('title'),
-        subtitle: p.getValue('subtitle'),
-        isThreeLine: p.getValue('isThreeLine'),
-        dense: p.getValue('dense'),
-        contentPadding: p.getValue('contentPadding'),
-        secondary: p.getValue('secondary'),
-        selected: p.getValue('selected'),
-        autofocus: p.getValue('autofocus'),
-        controlAffinity: p.getValue('controlAffinity'),
-        shape: p.getValue('shape'),
-        selectedTileColor: p.getValue('selectedTileColor'),
-        visualDensity: p.getValue('visualDensity'),
-        focusNode: p.getValue('focusNode'),
-        onFocusChange: p.getValue('onFocusChange'),
-        enableFeedback: p.getValue('enableFeedback'),
-        hoverColor: p.getValue('hoverColor'),
-        trackOutlineColor: p.getValue('trackOutlineColor'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        onChanged: p.get('onChanged').value,
+        tileColor: p.get('tileColor').value,
+        activeColor: p.get('activeColor').value,
+        activeTrackColor: p.get('activeTrackColor').value,
+        inactiveThumbColor: p.get('inactiveThumbColor').value,
+        inactiveTrackColor: p.get('inactiveTrackColor').value,
+        activeThumbImage: p.get('activeThumbImage').value,
+        inactiveThumbImage: p.get('inactiveThumbImage').value,
+        title: p.get('title').value,
+        subtitle: p.get('subtitle').value,
+        isThreeLine: p.get('isThreeLine').value,
+        dense: p.get('dense').value,
+        contentPadding: p.get('contentPadding').value,
+        secondary: p.get('secondary').value,
+        selected: p.get('selected').value,
+        autofocus: p.get('autofocus').value,
+        controlAffinity: p.get('controlAffinity').value,
+        shape: p.get('shape').value,
+        selectedTileColor: p.get('selectedTileColor').value,
+        visualDensity: p.get('visualDensity').value,
+        focusNode: p.get('focusNode').value,
+        onFocusChange: p.get('onFocusChange').value,
+        enableFeedback: p.get('enableFeedback').value,
+        hoverColor: p.get('hoverColor').value,
+        trackOutlineColor: p.get('trackOutlineColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'tileColor', init: tileColor);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'activeTrackColor', init: activeTrackColor);
-    mateParams.set(name: 'inactiveThumbColor', init: inactiveThumbColor);
-    mateParams.set(name: 'inactiveTrackColor', init: inactiveTrackColor);
-    mateParams.set(name: 'activeThumbImage', init: activeThumbImage);
-    mateParams.set(name: 'inactiveThumbImage', init: inactiveThumbImage);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'subtitle', init: subtitle);
-    mateParams.set(name: 'isThreeLine', init: isThreeLine);
-    mateParams.set(name: 'dense', init: dense);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'secondary', init: secondary);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'controlAffinity', init: controlAffinity);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'selectedTileColor', init: selectedTileColor);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'trackOutlineColor', init: trackOutlineColor);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('tileColor', init: tileColor);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('activeTrackColor', init: activeTrackColor);
+    mateParams.put('inactiveThumbColor', init: inactiveThumbColor);
+    mateParams.put('inactiveTrackColor', init: inactiveTrackColor);
+    mateParams.put('activeThumbImage', init: activeThumbImage);
+    mateParams.put('inactiveThumbImage', init: inactiveThumbImage);
+    mateParams.put('title', init: title);
+    mateParams.put('subtitle', init: subtitle);
+    mateParams.put('isThreeLine', init: isThreeLine);
+    mateParams.put('dense', init: dense);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('secondary', init: secondary);
+    mateParams.put('selected', init: selected);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('controlAffinity', init: controlAffinity);
+    mateParams.put('shape', init: shape);
+    mateParams.put('selectedTileColor', init: selectedTileColor);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('trackOutlineColor', init: trackOutlineColor);
   }
 
   /// SwitchListTile SwitchListTile.adaptive({Key? key, required bool value, required void Function(bool)? onChanged, Color? tileColor, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, ImageProvider<Object>? inactiveThumbImage, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, EdgeInsetsGeometry? contentPadding, Widget? secondary, bool selected = false, bool autofocus = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, ShapeBorder? shape, Color? selectedTileColor, VisualDensity? visualDensity, FocusNode? focusNode, void Function(bool)? onFocusChange, bool? enableFeedback, Color? hoverColor, MaterialStateProperty<Color?>? trackOutlineColor})
@@ -300,64 +300,64 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
           hoverColor: hoverColor,
           trackOutlineColor: trackOutlineColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SwitchListTile$Mate.adaptive(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        onChanged: p.getValue('onChanged'),
-        tileColor: p.getValue('tileColor'),
-        activeColor: p.getValue('activeColor'),
-        activeTrackColor: p.getValue('activeTrackColor'),
-        inactiveThumbColor: p.getValue('inactiveThumbColor'),
-        inactiveTrackColor: p.getValue('inactiveTrackColor'),
-        activeThumbImage: p.getValue('activeThumbImage'),
-        inactiveThumbImage: p.getValue('inactiveThumbImage'),
-        title: p.getValue('title'),
-        subtitle: p.getValue('subtitle'),
-        isThreeLine: p.getValue('isThreeLine'),
-        dense: p.getValue('dense'),
-        contentPadding: p.getValue('contentPadding'),
-        secondary: p.getValue('secondary'),
-        selected: p.getValue('selected'),
-        autofocus: p.getValue('autofocus'),
-        controlAffinity: p.getValue('controlAffinity'),
-        shape: p.getValue('shape'),
-        selectedTileColor: p.getValue('selectedTileColor'),
-        visualDensity: p.getValue('visualDensity'),
-        focusNode: p.getValue('focusNode'),
-        onFocusChange: p.getValue('onFocusChange'),
-        enableFeedback: p.getValue('enableFeedback'),
-        hoverColor: p.getValue('hoverColor'),
-        trackOutlineColor: p.getValue('trackOutlineColor'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        onChanged: p.get('onChanged').value,
+        tileColor: p.get('tileColor').value,
+        activeColor: p.get('activeColor').value,
+        activeTrackColor: p.get('activeTrackColor').value,
+        inactiveThumbColor: p.get('inactiveThumbColor').value,
+        inactiveTrackColor: p.get('inactiveTrackColor').value,
+        activeThumbImage: p.get('activeThumbImage').value,
+        inactiveThumbImage: p.get('inactiveThumbImage').value,
+        title: p.get('title').value,
+        subtitle: p.get('subtitle').value,
+        isThreeLine: p.get('isThreeLine').value,
+        dense: p.get('dense').value,
+        contentPadding: p.get('contentPadding').value,
+        secondary: p.get('secondary').value,
+        selected: p.get('selected').value,
+        autofocus: p.get('autofocus').value,
+        controlAffinity: p.get('controlAffinity').value,
+        shape: p.get('shape').value,
+        selectedTileColor: p.get('selectedTileColor').value,
+        visualDensity: p.get('visualDensity').value,
+        focusNode: p.get('focusNode').value,
+        onFocusChange: p.get('onFocusChange').value,
+        enableFeedback: p.get('enableFeedback').value,
+        hoverColor: p.get('hoverColor').value,
+        trackOutlineColor: p.get('trackOutlineColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'tileColor', init: tileColor);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'activeTrackColor', init: activeTrackColor);
-    mateParams.set(name: 'inactiveThumbColor', init: inactiveThumbColor);
-    mateParams.set(name: 'inactiveTrackColor', init: inactiveTrackColor);
-    mateParams.set(name: 'activeThumbImage', init: activeThumbImage);
-    mateParams.set(name: 'inactiveThumbImage', init: inactiveThumbImage);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'subtitle', init: subtitle);
-    mateParams.set(name: 'isThreeLine', init: isThreeLine);
-    mateParams.set(name: 'dense', init: dense);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'secondary', init: secondary);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'controlAffinity', init: controlAffinity);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'selectedTileColor', init: selectedTileColor);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'onFocusChange', init: onFocusChange);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'trackOutlineColor', init: trackOutlineColor);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('tileColor', init: tileColor);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('activeTrackColor', init: activeTrackColor);
+    mateParams.put('inactiveThumbColor', init: inactiveThumbColor);
+    mateParams.put('inactiveTrackColor', init: inactiveTrackColor);
+    mateParams.put('activeThumbImage', init: activeThumbImage);
+    mateParams.put('inactiveThumbImage', init: inactiveThumbImage);
+    mateParams.put('title', init: title);
+    mateParams.put('subtitle', init: subtitle);
+    mateParams.put('isThreeLine', init: isThreeLine);
+    mateParams.put('dense', init: dense);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('secondary', init: secondary);
+    mateParams.put('selected', init: selected);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('controlAffinity', init: controlAffinity);
+    mateParams.put('shape', init: shape);
+    mateParams.put('selectedTileColor', init: selectedTileColor);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('onFocusChange', init: onFocusChange);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('trackOutlineColor', init: trackOutlineColor);
   }
 }

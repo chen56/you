@@ -19,15 +19,15 @@ class RenderSliverFillViewport$Mate extends RenderSliverFillViewport with Mate<R
           childManager: childManager,
           viewportFraction: viewportFraction,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverFillViewport$Mate(
-        childManager: p.getValue('childManager'),
-        viewportFraction: p.getValue('viewportFraction'),
+        childManager: p.get('childManager').value,
+        viewportFraction: p.get('viewportFraction').value,
       ),
     );
-    mateParams.set(name: 'childManager', init: childManager);
-    mateParams.set(name: 'viewportFraction', init: viewportFraction);
+    mateParams.put('childManager', init: childManager);
+    mateParams.put('viewportFraction', init: viewportFraction);
   }
 }
 
@@ -40,11 +40,11 @@ class RenderSliverFillRemainingWithScrollable$Mate extends RenderSliverFillRemai
       /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
       RenderBox? child})
       : super(child: child) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverFillRemainingWithScrollable$Mate(child: p.getValue('child')),
+      builder: (p) => RenderSliverFillRemainingWithScrollable$Mate(child: p.get('child').value),
     );
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -56,11 +56,11 @@ class RenderSliverFillRemaining$Mate extends RenderSliverFillRemaining with Mate
       /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
       RenderBox? child})
       : super(child: child) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverFillRemaining$Mate(child: p.getValue('child')),
+      builder: (p) => RenderSliverFillRemaining$Mate(child: p.get('child').value),
     );
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -73,10 +73,10 @@ class RenderSliverFillRemainingAndOverscroll$Mate extends RenderSliverFillRemain
       /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
       RenderBox? child})
       : super(child: child) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverFillRemainingAndOverscroll$Mate(child: p.getValue('child')),
+      builder: (p) => RenderSliverFillRemainingAndOverscroll$Mate(child: p.get('child').value),
     );
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('child', init: child);
   }
 }

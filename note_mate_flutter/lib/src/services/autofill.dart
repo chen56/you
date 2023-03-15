@@ -26,18 +26,18 @@ class AutofillConfiguration$Mate extends AutofillConfiguration with Mate<Autofil
           currentEditingValue: currentEditingValue,
           hintText: hintText,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AutofillConfiguration$Mate(
-        uniqueIdentifier: p.getValue('uniqueIdentifier'),
-        autofillHints: p.getValue('autofillHints'),
-        currentEditingValue: p.getValue('currentEditingValue'),
-        hintText: p.getValue('hintText'),
+        uniqueIdentifier: p.get('uniqueIdentifier').value,
+        autofillHints: p.get('autofillHints').value,
+        currentEditingValue: p.get('currentEditingValue').value,
+        hintText: p.get('hintText').value,
       ),
     );
-    mateParams.set(name: 'uniqueIdentifier', init: uniqueIdentifier);
-    mateParams.set(name: 'autofillHints', init: autofillHints);
-    mateParams.set(name: 'currentEditingValue', init: currentEditingValue);
-    mateParams.set(name: 'hintText', init: hintText);
+    mateParams.put('uniqueIdentifier', init: uniqueIdentifier);
+    mateParams.put('autofillHints', init: autofillHints);
+    mateParams.put('currentEditingValue', init: currentEditingValue);
+    mateParams.put('hintText', init: hintText);
   }
 }

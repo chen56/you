@@ -12,10 +12,10 @@ class StadiumBorder$Mate extends StadiumBorder with Mate<StadiumBorder$Mate> {
       /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
       required BorderSide side})
       : super(side: side) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => StadiumBorder$Mate(side: p.getValue('side')),
+      builder: (p) => StadiumBorder$Mate(side: p.get('side').value),
     );
-    mateParams.set(name: 'side', init: side);
+    mateParams.put('side', init: side);
   }
 }

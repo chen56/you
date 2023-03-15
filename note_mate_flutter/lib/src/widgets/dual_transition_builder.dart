@@ -32,20 +32,20 @@ class DualTransitionBuilder$Mate extends DualTransitionBuilder with WidgetMate<D
           reverseBuilder: reverseBuilder,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DualTransitionBuilder$Mate(
-        key: p.getValue('key'),
-        animation: p.getValue('animation'),
-        forwardBuilder: p.getValue('forwardBuilder'),
-        reverseBuilder: p.getValue('reverseBuilder'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        animation: p.get('animation').value,
+        forwardBuilder: p.get('forwardBuilder').value,
+        reverseBuilder: p.get('reverseBuilder').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'animation', init: animation);
-    mateParams.set(name: 'forwardBuilder', init: forwardBuilder);
-    mateParams.set(name: 'reverseBuilder', init: reverseBuilder);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('animation', init: animation);
+    mateParams.put('forwardBuilder', init: forwardBuilder);
+    mateParams.put('reverseBuilder', init: reverseBuilder);
+    mateParams.put('child', init: child);
   }
 }

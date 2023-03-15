@@ -74,39 +74,39 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData
           landscapeLayout: landscapeLayout,
           mouseCursor: mouseCursor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomNavigationBarThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        selectedIconTheme: p.getValue('selectedIconTheme'),
-        unselectedIconTheme: p.getValue('unselectedIconTheme'),
-        selectedItemColor: p.getValue('selectedItemColor'),
-        unselectedItemColor: p.getValue('unselectedItemColor'),
-        selectedLabelStyle: p.getValue('selectedLabelStyle'),
-        unselectedLabelStyle: p.getValue('unselectedLabelStyle'),
-        showSelectedLabels: p.getValue('showSelectedLabels'),
-        showUnselectedLabels: p.getValue('showUnselectedLabels'),
-        type: p.getValue('type'),
-        enableFeedback: p.getValue('enableFeedback'),
-        landscapeLayout: p.getValue('landscapeLayout'),
-        mouseCursor: p.getValue('mouseCursor'),
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        selectedIconTheme: p.get('selectedIconTheme').value,
+        unselectedIconTheme: p.get('unselectedIconTheme').value,
+        selectedItemColor: p.get('selectedItemColor').value,
+        unselectedItemColor: p.get('unselectedItemColor').value,
+        selectedLabelStyle: p.get('selectedLabelStyle').value,
+        unselectedLabelStyle: p.get('unselectedLabelStyle').value,
+        showSelectedLabels: p.get('showSelectedLabels').value,
+        showUnselectedLabels: p.get('showUnselectedLabels').value,
+        type: p.get('type').value,
+        enableFeedback: p.get('enableFeedback').value,
+        landscapeLayout: p.get('landscapeLayout').value,
+        mouseCursor: p.get('mouseCursor').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'selectedIconTheme', init: selectedIconTheme);
-    mateParams.set(name: 'unselectedIconTheme', init: unselectedIconTheme);
-    mateParams.set(name: 'selectedItemColor', init: selectedItemColor);
-    mateParams.set(name: 'unselectedItemColor', init: unselectedItemColor);
-    mateParams.set(name: 'selectedLabelStyle', init: selectedLabelStyle);
-    mateParams.set(name: 'unselectedLabelStyle', init: unselectedLabelStyle);
-    mateParams.set(name: 'showSelectedLabels', init: showSelectedLabels);
-    mateParams.set(name: 'showUnselectedLabels', init: showUnselectedLabels);
-    mateParams.set(name: 'type', init: type);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'landscapeLayout', init: landscapeLayout);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('selectedIconTheme', init: selectedIconTheme);
+    mateParams.put('unselectedIconTheme', init: unselectedIconTheme);
+    mateParams.put('selectedItemColor', init: selectedItemColor);
+    mateParams.put('unselectedItemColor', init: unselectedItemColor);
+    mateParams.put('selectedLabelStyle', init: selectedLabelStyle);
+    mateParams.put('unselectedLabelStyle', init: unselectedLabelStyle);
+    mateParams.put('showSelectedLabels', init: showSelectedLabels);
+    mateParams.put('showUnselectedLabels', init: showUnselectedLabels);
+    mateParams.put('type', init: type);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('landscapeLayout', init: landscapeLayout);
+    mateParams.put('mouseCursor', init: mouseCursor);
   }
 }
 
@@ -127,16 +127,16 @@ class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Widget
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomNavigationBarTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

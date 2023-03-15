@@ -31,21 +31,21 @@ class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate
           selection: selection,
           composing: composing,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextEditingDeltaInsertion$Mate(
-        oldText: p.getValue('oldText'),
-        textInserted: p.getValue('textInserted'),
-        insertionOffset: p.getValue('insertionOffset'),
-        selection: p.getValue('selection'),
-        composing: p.getValue('composing'),
+        oldText: p.get('oldText').value,
+        textInserted: p.get('textInserted').value,
+        insertionOffset: p.get('insertionOffset').value,
+        selection: p.get('selection').value,
+        composing: p.get('composing').value,
       ),
     );
-    mateParams.set(name: 'oldText', init: oldText);
-    mateParams.set(name: 'textInserted', init: textInserted);
-    mateParams.set(name: 'insertionOffset', init: insertionOffset);
-    mateParams.set(name: 'selection', init: selection);
-    mateParams.set(name: 'composing', init: composing);
+    mateParams.put('oldText', init: oldText);
+    mateParams.put('textInserted', init: textInserted);
+    mateParams.put('insertionOffset', init: insertionOffset);
+    mateParams.put('selection', init: selection);
+    mateParams.put('composing', init: composing);
   }
 }
 
@@ -70,19 +70,19 @@ class TextEditingDeltaDeletion$Mate extends TextEditingDeltaDeletion with Mate<T
           selection: selection,
           composing: composing,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextEditingDeltaDeletion$Mate(
-        oldText: p.getValue('oldText'),
-        deletedRange: p.getValue('deletedRange'),
-        selection: p.getValue('selection'),
-        composing: p.getValue('composing'),
+        oldText: p.get('oldText').value,
+        deletedRange: p.get('deletedRange').value,
+        selection: p.get('selection').value,
+        composing: p.get('composing').value,
       ),
     );
-    mateParams.set(name: 'oldText', init: oldText);
-    mateParams.set(name: 'deletedRange', init: deletedRange);
-    mateParams.set(name: 'selection', init: selection);
-    mateParams.set(name: 'composing', init: composing);
+    mateParams.put('oldText', init: oldText);
+    mateParams.put('deletedRange', init: deletedRange);
+    mateParams.put('selection', init: selection);
+    mateParams.put('composing', init: composing);
   }
 }
 
@@ -111,21 +111,21 @@ class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with 
           selection: selection,
           composing: composing,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextEditingDeltaReplacement$Mate(
-        oldText: p.getValue('oldText'),
-        replacementText: p.getValue('replacementText'),
-        replacedRange: p.getValue('replacedRange'),
-        selection: p.getValue('selection'),
-        composing: p.getValue('composing'),
+        oldText: p.get('oldText').value,
+        replacementText: p.get('replacementText').value,
+        replacedRange: p.get('replacedRange').value,
+        selection: p.get('selection').value,
+        composing: p.get('composing').value,
       ),
     );
-    mateParams.set(name: 'oldText', init: oldText);
-    mateParams.set(name: 'replacementText', init: replacementText);
-    mateParams.set(name: 'replacedRange', init: replacedRange);
-    mateParams.set(name: 'selection', init: selection);
-    mateParams.set(name: 'composing', init: composing);
+    mateParams.put('oldText', init: oldText);
+    mateParams.put('replacementText', init: replacementText);
+    mateParams.put('replacedRange', init: replacedRange);
+    mateParams.put('selection', init: selection);
+    mateParams.put('composing', init: composing);
   }
 }
 
@@ -147,16 +147,16 @@ class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate
           selection: selection,
           composing: composing,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextEditingDeltaNonTextUpdate$Mate(
-        oldText: p.getValue('oldText'),
-        selection: p.getValue('selection'),
-        composing: p.getValue('composing'),
+        oldText: p.get('oldText').value,
+        selection: p.get('selection').value,
+        composing: p.get('composing').value,
       ),
     );
-    mateParams.set(name: 'oldText', init: oldText);
-    mateParams.set(name: 'selection', init: selection);
-    mateParams.set(name: 'composing', init: composing);
+    mateParams.put('oldText', init: oldText);
+    mateParams.put('selection', init: selection);
+    mateParams.put('composing', init: composing);
   }
 }

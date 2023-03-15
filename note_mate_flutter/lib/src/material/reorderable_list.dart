@@ -115,59 +115,59 @@ class ReorderableListView$Mate extends ReorderableListView with WidgetMate<Reord
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ReorderableListView$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        onReorder: p.getValue('onReorder'),
-        onReorderStart: p.getValue('onReorderStart'),
-        onReorderEnd: p.getValue('onReorderEnd'),
-        itemExtent: p.getValue('itemExtent'),
-        prototypeItem: p.getValue('prototypeItem'),
-        proxyDecorator: p.getValue('proxyDecorator'),
-        buildDefaultDragHandles: p.getValue('buildDefaultDragHandles'),
-        padding: p.getValue('padding'),
-        header: p.getValue('header'),
-        footer: p.getValue('footer'),
-        scrollDirection: p.getValue('scrollDirection'),
-        reverse: p.getValue('reverse'),
-        scrollController: p.getValue('scrollController'),
-        primary: p.getValue('primary'),
-        physics: p.getValue('physics'),
-        shrinkWrap: p.getValue('shrinkWrap'),
-        anchor: p.getValue('anchor'),
-        cacheExtent: p.getValue('cacheExtent'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        keyboardDismissBehavior: p.getValue('keyboardDismissBehavior'),
-        restorationId: p.getValue('restorationId'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        onReorder: p.get('onReorder').value,
+        onReorderStart: p.get('onReorderStart').value,
+        onReorderEnd: p.get('onReorderEnd').value,
+        itemExtent: p.get('itemExtent').value,
+        prototypeItem: p.get('prototypeItem').value,
+        proxyDecorator: p.get('proxyDecorator').value,
+        buildDefaultDragHandles: p.get('buildDefaultDragHandles').value,
+        padding: p.get('padding').value,
+        header: p.get('header').value,
+        footer: p.get('footer').value,
+        scrollDirection: p.get('scrollDirection').value,
+        reverse: p.get('reverse').value,
+        scrollController: p.get('scrollController').value,
+        primary: p.get('primary').value,
+        physics: p.get('physics').value,
+        shrinkWrap: p.get('shrinkWrap').value,
+        anchor: p.get('anchor').value,
+        cacheExtent: p.get('cacheExtent').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        keyboardDismissBehavior: p.get('keyboardDismissBehavior').value,
+        restorationId: p.get('restorationId').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'onReorder', init: onReorder);
-    mateParams.set(name: 'onReorderStart', init: onReorderStart);
-    mateParams.set(name: 'onReorderEnd', init: onReorderEnd);
-    mateParams.set(name: 'itemExtent', init: itemExtent);
-    mateParams.set(name: 'prototypeItem', init: prototypeItem);
-    mateParams.set(name: 'proxyDecorator', init: proxyDecorator);
-    mateParams.set(name: 'buildDefaultDragHandles', init: buildDefaultDragHandles);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'header', init: header);
-    mateParams.set(name: 'footer', init: footer);
-    mateParams.set(name: 'scrollDirection', init: scrollDirection);
-    mateParams.set(name: 'reverse', init: reverse);
-    mateParams.set(name: 'scrollController', init: scrollController);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'shrinkWrap', init: shrinkWrap);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'cacheExtent', init: cacheExtent);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('onReorder', init: onReorder);
+    mateParams.put('onReorderStart', init: onReorderStart);
+    mateParams.put('onReorderEnd', init: onReorderEnd);
+    mateParams.put('itemExtent', init: itemExtent);
+    mateParams.put('prototypeItem', init: prototypeItem);
+    mateParams.put('proxyDecorator', init: proxyDecorator);
+    mateParams.put('buildDefaultDragHandles', init: buildDefaultDragHandles);
+    mateParams.put('padding', init: padding);
+    mateParams.put('header', init: header);
+    mateParams.put('footer', init: footer);
+    mateParams.put('scrollDirection', init: scrollDirection);
+    mateParams.put('reverse', init: reverse);
+    mateParams.put('scrollController', init: scrollController);
+    mateParams.put('primary', init: primary);
+    mateParams.put('physics', init: physics);
+    mateParams.put('shrinkWrap', init: shrinkWrap);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('cacheExtent', init: cacheExtent);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 
   /// ReorderableListView ReorderableListView.builder({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -273,60 +273,60 @@ class ReorderableListView$Mate extends ReorderableListView with WidgetMate<Reord
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ReorderableListView$Mate.builder(
-        key: p.getValue('key'),
-        itemBuilder: p.getValue('itemBuilder'),
-        itemCount: p.getValue('itemCount'),
-        onReorder: p.getValue('onReorder'),
-        onReorderStart: p.getValue('onReorderStart'),
-        onReorderEnd: p.getValue('onReorderEnd'),
-        itemExtent: p.getValue('itemExtent'),
-        prototypeItem: p.getValue('prototypeItem'),
-        proxyDecorator: p.getValue('proxyDecorator'),
-        buildDefaultDragHandles: p.getValue('buildDefaultDragHandles'),
-        padding: p.getValue('padding'),
-        header: p.getValue('header'),
-        footer: p.getValue('footer'),
-        scrollDirection: p.getValue('scrollDirection'),
-        reverse: p.getValue('reverse'),
-        scrollController: p.getValue('scrollController'),
-        primary: p.getValue('primary'),
-        physics: p.getValue('physics'),
-        shrinkWrap: p.getValue('shrinkWrap'),
-        anchor: p.getValue('anchor'),
-        cacheExtent: p.getValue('cacheExtent'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        keyboardDismissBehavior: p.getValue('keyboardDismissBehavior'),
-        restorationId: p.getValue('restorationId'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        itemBuilder: p.get('itemBuilder').value,
+        itemCount: p.get('itemCount').value,
+        onReorder: p.get('onReorder').value,
+        onReorderStart: p.get('onReorderStart').value,
+        onReorderEnd: p.get('onReorderEnd').value,
+        itemExtent: p.get('itemExtent').value,
+        prototypeItem: p.get('prototypeItem').value,
+        proxyDecorator: p.get('proxyDecorator').value,
+        buildDefaultDragHandles: p.get('buildDefaultDragHandles').value,
+        padding: p.get('padding').value,
+        header: p.get('header').value,
+        footer: p.get('footer').value,
+        scrollDirection: p.get('scrollDirection').value,
+        reverse: p.get('reverse').value,
+        scrollController: p.get('scrollController').value,
+        primary: p.get('primary').value,
+        physics: p.get('physics').value,
+        shrinkWrap: p.get('shrinkWrap').value,
+        anchor: p.get('anchor').value,
+        cacheExtent: p.get('cacheExtent').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        keyboardDismissBehavior: p.get('keyboardDismissBehavior').value,
+        restorationId: p.get('restorationId').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'itemBuilder', init: itemBuilder);
-    mateParams.set(name: 'itemCount', init: itemCount);
-    mateParams.set(name: 'onReorder', init: onReorder);
-    mateParams.set(name: 'onReorderStart', init: onReorderStart);
-    mateParams.set(name: 'onReorderEnd', init: onReorderEnd);
-    mateParams.set(name: 'itemExtent', init: itemExtent);
-    mateParams.set(name: 'prototypeItem', init: prototypeItem);
-    mateParams.set(name: 'proxyDecorator', init: proxyDecorator);
-    mateParams.set(name: 'buildDefaultDragHandles', init: buildDefaultDragHandles);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'header', init: header);
-    mateParams.set(name: 'footer', init: footer);
-    mateParams.set(name: 'scrollDirection', init: scrollDirection);
-    mateParams.set(name: 'reverse', init: reverse);
-    mateParams.set(name: 'scrollController', init: scrollController);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'shrinkWrap', init: shrinkWrap);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'cacheExtent', init: cacheExtent);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'keyboardDismissBehavior', init: keyboardDismissBehavior);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('itemBuilder', init: itemBuilder);
+    mateParams.put('itemCount', init: itemCount);
+    mateParams.put('onReorder', init: onReorder);
+    mateParams.put('onReorderStart', init: onReorderStart);
+    mateParams.put('onReorderEnd', init: onReorderEnd);
+    mateParams.put('itemExtent', init: itemExtent);
+    mateParams.put('prototypeItem', init: prototypeItem);
+    mateParams.put('proxyDecorator', init: proxyDecorator);
+    mateParams.put('buildDefaultDragHandles', init: buildDefaultDragHandles);
+    mateParams.put('padding', init: padding);
+    mateParams.put('header', init: header);
+    mateParams.put('footer', init: footer);
+    mateParams.put('scrollDirection', init: scrollDirection);
+    mateParams.put('reverse', init: reverse);
+    mateParams.put('scrollController', init: scrollController);
+    mateParams.put('primary', init: primary);
+    mateParams.put('physics', init: physics);
+    mateParams.put('shrinkWrap', init: shrinkWrap);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('cacheExtent', init: cacheExtent);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

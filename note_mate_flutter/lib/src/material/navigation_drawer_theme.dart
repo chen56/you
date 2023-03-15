@@ -56,31 +56,31 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
           labelTextStyle: labelTextStyle,
           iconTheme: iconTheme,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDrawerThemeData$Mate(
-        tileHeight: p.getValue('tileHeight'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        indicatorColor: p.getValue('indicatorColor'),
-        indicatorShape: p.getValue('indicatorShape'),
-        indicatorSize: p.getValue('indicatorSize'),
-        labelTextStyle: p.getValue('labelTextStyle'),
-        iconTheme: p.getValue('iconTheme'),
+        tileHeight: p.get('tileHeight').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        indicatorColor: p.get('indicatorColor').value,
+        indicatorShape: p.get('indicatorShape').value,
+        indicatorSize: p.get('indicatorSize').value,
+        labelTextStyle: p.get('labelTextStyle').value,
+        iconTheme: p.get('iconTheme').value,
       ),
     );
-    mateParams.set(name: 'tileHeight', init: tileHeight);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'indicatorShape', init: indicatorShape);
-    mateParams.set(name: 'indicatorSize', init: indicatorSize);
-    mateParams.set(name: 'labelTextStyle', init: labelTextStyle);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
+    mateParams.put('tileHeight', init: tileHeight);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('indicatorShape', init: indicatorShape);
+    mateParams.put('indicatorSize', init: indicatorSize);
+    mateParams.put('labelTextStyle', init: labelTextStyle);
+    mateParams.put('iconTheme', init: iconTheme);
   }
 }
 
@@ -101,16 +101,16 @@ class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with WidgetMate<N
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDrawerTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

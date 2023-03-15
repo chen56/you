@@ -29,19 +29,19 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate<RenderAndroidVi
           gestureRecognizers: gestureRecognizers,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAndroidView$Mate(
-        viewController: p.getValue('viewController'),
-        hitTestBehavior: p.getValue('hitTestBehavior'),
-        gestureRecognizers: p.getValue('gestureRecognizers'),
-        clipBehavior: p.getValue('clipBehavior'),
+        viewController: p.get('viewController').value,
+        hitTestBehavior: p.get('hitTestBehavior').value,
+        gestureRecognizers: p.get('gestureRecognizers').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'viewController', init: viewController);
-    mateParams.set(name: 'hitTestBehavior', init: hitTestBehavior);
-    mateParams.set(name: 'gestureRecognizers', init: gestureRecognizers);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('viewController', init: viewController);
+    mateParams.put('hitTestBehavior', init: hitTestBehavior);
+    mateParams.put('gestureRecognizers', init: gestureRecognizers);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -62,17 +62,17 @@ class RenderUiKitView$Mate extends RenderUiKitView with Mate<RenderUiKitView$Mat
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderUiKitView$Mate(
-        viewController: p.getValue('viewController'),
-        hitTestBehavior: p.getValue('hitTestBehavior'),
-        gestureRecognizers: p.getValue('gestureRecognizers'),
+        viewController: p.get('viewController').value,
+        hitTestBehavior: p.get('hitTestBehavior').value,
+        gestureRecognizers: p.get('gestureRecognizers').value,
       ),
     );
-    mateParams.set(name: 'viewController', init: viewController);
-    mateParams.set(name: 'hitTestBehavior', init: hitTestBehavior);
-    mateParams.set(name: 'gestureRecognizers', init: gestureRecognizers);
+    mateParams.put('viewController', init: viewController);
+    mateParams.put('hitTestBehavior', init: hitTestBehavior);
+    mateParams.put('gestureRecognizers', init: gestureRecognizers);
   }
 }
 
@@ -93,16 +93,16 @@ class PlatformViewRenderBox$Mate extends PlatformViewRenderBox with Mate<Platfor
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformViewRenderBox$Mate(
-        controller: p.getValue('controller'),
-        hitTestBehavior: p.getValue('hitTestBehavior'),
-        gestureRecognizers: p.getValue('gestureRecognizers'),
+        controller: p.get('controller').value,
+        hitTestBehavior: p.get('hitTestBehavior').value,
+        gestureRecognizers: p.get('gestureRecognizers').value,
       ),
     );
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'hitTestBehavior', init: hitTestBehavior);
-    mateParams.set(name: 'gestureRecognizers', init: gestureRecognizers);
+    mateParams.put('controller', init: controller);
+    mateParams.put('hitTestBehavior', init: hitTestBehavior);
+    mateParams.put('gestureRecognizers', init: gestureRecognizers);
   }
 }

@@ -23,17 +23,17 @@ class TapDownDetails$Mate extends TapDownDetails with Mate<TapDownDetails$Mate> 
           localPosition: localPosition,
           kind: kind,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapDownDetails$Mate(
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
-        kind: p.getValue('kind'),
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
+        kind: p.get('kind').value,
       ),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'kind', init: kind);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('kind', init: kind);
   }
 }
 
@@ -54,17 +54,17 @@ class TapUpDetails$Mate extends TapUpDetails with Mate<TapUpDetails$Mate> {
           globalPosition: globalPosition,
           localPosition: localPosition,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapUpDetails$Mate(
-        kind: p.getValue('kind'),
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
+        kind: p.get('kind').value,
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
       ),
     );
-    mateParams.set(name: 'kind', init: kind);
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
+    mateParams.put('kind', init: kind);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
   }
 }
 
@@ -85,16 +85,16 @@ class TapGestureRecognizer$Mate extends TapGestureRecognizer with Mate<TapGestur
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TapGestureRecognizer$Mate(
-        debugOwner: p.getValue('debugOwner'),
-        supportedDevices: p.getValue('supportedDevices'),
-        allowedButtonsFilter: p.getValue('allowedButtonsFilter'),
+        debugOwner: p.get('debugOwner').value,
+        supportedDevices: p.get('supportedDevices').value,
+        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
       ),
     );
-    mateParams.set(name: 'debugOwner', init: debugOwner);
-    mateParams.set(name: 'supportedDevices', init: supportedDevices);
-    mateParams.set(name: 'allowedButtonsFilter', init: allowedButtonsFilter);
+    mateParams.put('debugOwner', init: debugOwner);
+    mateParams.put('supportedDevices', init: supportedDevices);
+    mateParams.put('allowedButtonsFilter', init: allowedButtonsFilter);
   }
 }

@@ -44,24 +44,24 @@ class SelectionArea$Mate extends SelectionArea with WidgetMate<SelectionArea$Mat
           onSelectionChanged: onSelectionChanged,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionArea$Mate(
-        key: p.getValue('key'),
-        focusNode: p.getValue('focusNode'),
-        selectionControls: p.getValue('selectionControls'),
-        contextMenuBuilder: p.getValue('contextMenuBuilder'),
-        magnifierConfiguration: p.getValue('magnifierConfiguration'),
-        onSelectionChanged: p.getValue('onSelectionChanged'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        focusNode: p.get('focusNode').value,
+        selectionControls: p.get('selectionControls').value,
+        contextMenuBuilder: p.get('contextMenuBuilder').value,
+        magnifierConfiguration: p.get('magnifierConfiguration').value,
+        onSelectionChanged: p.get('onSelectionChanged').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'selectionControls', init: selectionControls);
-    mateParams.set(name: 'contextMenuBuilder', init: contextMenuBuilder);
-    mateParams.set(name: 'magnifierConfiguration', init: magnifierConfiguration);
-    mateParams.set(name: 'onSelectionChanged', init: onSelectionChanged);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('selectionControls', init: selectionControls);
+    mateParams.put('contextMenuBuilder', init: contextMenuBuilder);
+    mateParams.put('magnifierConfiguration', init: magnifierConfiguration);
+    mateParams.put('onSelectionChanged', init: onSelectionChanged);
+    mateParams.put('child', init: child);
   }
 }

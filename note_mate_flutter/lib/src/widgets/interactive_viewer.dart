@@ -88,47 +88,47 @@ class InteractiveViewer$Mate extends InteractiveViewer with WidgetMate<Interacti
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InteractiveViewer$Mate(
-        key: p.getValue('key'),
-        clipBehavior: p.getValue('clipBehavior'),
-        panAxis: p.getValue('panAxis'),
-        boundaryMargin: p.getValue('boundaryMargin'),
-        constrained: p.getValue('constrained'),
-        maxScale: p.getValue('maxScale'),
-        minScale: p.getValue('minScale'),
-        interactionEndFrictionCoefficient: p.getValue('interactionEndFrictionCoefficient'),
-        onInteractionEnd: p.getValue('onInteractionEnd'),
-        onInteractionStart: p.getValue('onInteractionStart'),
-        onInteractionUpdate: p.getValue('onInteractionUpdate'),
-        panEnabled: p.getValue('panEnabled'),
-        scaleEnabled: p.getValue('scaleEnabled'),
-        scaleFactor: p.getValue('scaleFactor'),
-        transformationController: p.getValue('transformationController'),
-        alignment: p.getValue('alignment'),
-        trackpadScrollCausesScale: p.getValue('trackpadScrollCausesScale'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        clipBehavior: p.get('clipBehavior').value,
+        panAxis: p.get('panAxis').value,
+        boundaryMargin: p.get('boundaryMargin').value,
+        constrained: p.get('constrained').value,
+        maxScale: p.get('maxScale').value,
+        minScale: p.get('minScale').value,
+        interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').value,
+        onInteractionEnd: p.get('onInteractionEnd').value,
+        onInteractionStart: p.get('onInteractionStart').value,
+        onInteractionUpdate: p.get('onInteractionUpdate').value,
+        panEnabled: p.get('panEnabled').value,
+        scaleEnabled: p.get('scaleEnabled').value,
+        scaleFactor: p.get('scaleFactor').value,
+        transformationController: p.get('transformationController').value,
+        alignment: p.get('alignment').value,
+        trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'panAxis', init: panAxis);
-    mateParams.set(name: 'boundaryMargin', init: boundaryMargin);
-    mateParams.set(name: 'constrained', init: constrained);
-    mateParams.set(name: 'maxScale', init: maxScale);
-    mateParams.set(name: 'minScale', init: minScale);
-    mateParams.set(name: 'interactionEndFrictionCoefficient', init: interactionEndFrictionCoefficient);
-    mateParams.set(name: 'onInteractionEnd', init: onInteractionEnd);
-    mateParams.set(name: 'onInteractionStart', init: onInteractionStart);
-    mateParams.set(name: 'onInteractionUpdate', init: onInteractionUpdate);
-    mateParams.set(name: 'panEnabled', init: panEnabled);
-    mateParams.set(name: 'scaleEnabled', init: scaleEnabled);
-    mateParams.set(name: 'scaleFactor', init: scaleFactor);
-    mateParams.set(name: 'transformationController', init: transformationController);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'trackpadScrollCausesScale', init: trackpadScrollCausesScale);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('panAxis', init: panAxis);
+    mateParams.put('boundaryMargin', init: boundaryMargin);
+    mateParams.put('constrained', init: constrained);
+    mateParams.put('maxScale', init: maxScale);
+    mateParams.put('minScale', init: minScale);
+    mateParams.put('interactionEndFrictionCoefficient', init: interactionEndFrictionCoefficient);
+    mateParams.put('onInteractionEnd', init: onInteractionEnd);
+    mateParams.put('onInteractionStart', init: onInteractionStart);
+    mateParams.put('onInteractionUpdate', init: onInteractionUpdate);
+    mateParams.put('panEnabled', init: panEnabled);
+    mateParams.put('scaleEnabled', init: scaleEnabled);
+    mateParams.put('scaleFactor', init: scaleFactor);
+    mateParams.put('transformationController', init: transformationController);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('trackpadScrollCausesScale', init: trackpadScrollCausesScale);
+    mateParams.put('child', init: child);
   }
 
   /// InteractiveViewer InteractiveViewer.builder({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = 200.0, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget Function(BuildContext, Quad) builder})
@@ -202,45 +202,45 @@ class InteractiveViewer$Mate extends InteractiveViewer with WidgetMate<Interacti
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           builder: builder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InteractiveViewer$Mate.builder(
-        key: p.getValue('key'),
-        clipBehavior: p.getValue('clipBehavior'),
-        panAxis: p.getValue('panAxis'),
-        boundaryMargin: p.getValue('boundaryMargin'),
-        maxScale: p.getValue('maxScale'),
-        minScale: p.getValue('minScale'),
-        interactionEndFrictionCoefficient: p.getValue('interactionEndFrictionCoefficient'),
-        onInteractionEnd: p.getValue('onInteractionEnd'),
-        onInteractionStart: p.getValue('onInteractionStart'),
-        onInteractionUpdate: p.getValue('onInteractionUpdate'),
-        panEnabled: p.getValue('panEnabled'),
-        scaleEnabled: p.getValue('scaleEnabled'),
-        scaleFactor: p.getValue('scaleFactor'),
-        transformationController: p.getValue('transformationController'),
-        alignment: p.getValue('alignment'),
-        trackpadScrollCausesScale: p.getValue('trackpadScrollCausesScale'),
-        builder: p.getValue('builder'),
+        key: p.get('key').value,
+        clipBehavior: p.get('clipBehavior').value,
+        panAxis: p.get('panAxis').value,
+        boundaryMargin: p.get('boundaryMargin').value,
+        maxScale: p.get('maxScale').value,
+        minScale: p.get('minScale').value,
+        interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').value,
+        onInteractionEnd: p.get('onInteractionEnd').value,
+        onInteractionStart: p.get('onInteractionStart').value,
+        onInteractionUpdate: p.get('onInteractionUpdate').value,
+        panEnabled: p.get('panEnabled').value,
+        scaleEnabled: p.get('scaleEnabled').value,
+        scaleFactor: p.get('scaleFactor').value,
+        transformationController: p.get('transformationController').value,
+        alignment: p.get('alignment').value,
+        trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').value,
+        builder: p.get('builder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'panAxis', init: panAxis);
-    mateParams.set(name: 'boundaryMargin', init: boundaryMargin);
-    mateParams.set(name: 'maxScale', init: maxScale);
-    mateParams.set(name: 'minScale', init: minScale);
-    mateParams.set(name: 'interactionEndFrictionCoefficient', init: interactionEndFrictionCoefficient);
-    mateParams.set(name: 'onInteractionEnd', init: onInteractionEnd);
-    mateParams.set(name: 'onInteractionStart', init: onInteractionStart);
-    mateParams.set(name: 'onInteractionUpdate', init: onInteractionUpdate);
-    mateParams.set(name: 'panEnabled', init: panEnabled);
-    mateParams.set(name: 'scaleEnabled', init: scaleEnabled);
-    mateParams.set(name: 'scaleFactor', init: scaleFactor);
-    mateParams.set(name: 'transformationController', init: transformationController);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'trackpadScrollCausesScale', init: trackpadScrollCausesScale);
-    mateParams.set(name: 'builder', init: builder);
+    mateParams.put('key', init: key);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('panAxis', init: panAxis);
+    mateParams.put('boundaryMargin', init: boundaryMargin);
+    mateParams.put('maxScale', init: maxScale);
+    mateParams.put('minScale', init: minScale);
+    mateParams.put('interactionEndFrictionCoefficient', init: interactionEndFrictionCoefficient);
+    mateParams.put('onInteractionEnd', init: onInteractionEnd);
+    mateParams.put('onInteractionStart', init: onInteractionStart);
+    mateParams.put('onInteractionUpdate', init: onInteractionUpdate);
+    mateParams.put('panEnabled', init: panEnabled);
+    mateParams.put('scaleEnabled', init: scaleEnabled);
+    mateParams.put('scaleFactor', init: scaleFactor);
+    mateParams.put('transformationController', init: transformationController);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('trackpadScrollCausesScale', init: trackpadScrollCausesScale);
+    mateParams.put('builder', init: builder);
   }
 }
 
@@ -252,10 +252,10 @@ class TransformationController$Mate extends TransformationController with Mate<T
       /// requiredParameters: [Matrix4? value]
       Matrix4? value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => TransformationController$Mate(p.getValue('value')),
+      builder: (p) => TransformationController$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }

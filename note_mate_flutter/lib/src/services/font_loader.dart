@@ -12,10 +12,10 @@ class FontLoader$Mate extends FontLoader with Mate<FontLoader$Mate> {
       /// requiredParameters: String family
       String family)
       : super(family) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => FontLoader$Mate(p.getValue('family')),
+      builder: (p) => FontLoader$Mate(p.get('family').value),
     );
-    mateParams.set(name: 'family', init: family);
+    mateParams.put('family', init: family);
   }
 }

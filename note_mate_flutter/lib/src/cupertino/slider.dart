@@ -52,30 +52,30 @@ class CupertinoSlider$Mate extends CupertinoSlider with WidgetMate<CupertinoSlid
           activeColor: activeColor,
           thumbColor: thumbColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSlider$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        onChanged: p.getValue('onChanged'),
-        onChangeStart: p.getValue('onChangeStart'),
-        onChangeEnd: p.getValue('onChangeEnd'),
-        min: p.getValue('min'),
-        max: p.getValue('max'),
-        divisions: p.getValue('divisions'),
-        activeColor: p.getValue('activeColor'),
-        thumbColor: p.getValue('thumbColor'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        onChanged: p.get('onChanged').value,
+        onChangeStart: p.get('onChangeStart').value,
+        onChangeEnd: p.get('onChangeEnd').value,
+        min: p.get('min').value,
+        max: p.get('max').value,
+        divisions: p.get('divisions').value,
+        activeColor: p.get('activeColor').value,
+        thumbColor: p.get('thumbColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'onChangeStart', init: onChangeStart);
-    mateParams.set(name: 'onChangeEnd', init: onChangeEnd);
-    mateParams.set(name: 'min', init: min);
-    mateParams.set(name: 'max', init: max);
-    mateParams.set(name: 'divisions', init: divisions);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('onChangeStart', init: onChangeStart);
+    mateParams.put('onChangeEnd', init: onChangeEnd);
+    mateParams.put('min', init: min);
+    mateParams.put('max', init: max);
+    mateParams.put('divisions', init: divisions);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('thumbColor', init: thumbColor);
   }
 }

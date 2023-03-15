@@ -41,21 +41,21 @@ class SlideTransition$Mate extends SlideTransition with WidgetMate<SlideTransiti
           textDirection: textDirection,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SlideTransition$Mate(
-        key: p.getValue('key'),
-        position: p.getValue('position'),
-        transformHitTests: p.getValue('transformHitTests'),
-        textDirection: p.getValue('textDirection'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        position: p.get('position').value,
+        transformHitTests: p.get('transformHitTests').value,
+        textDirection: p.get('textDirection').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'transformHitTests', init: transformHitTests);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('position', init: position);
+    mateParams.put('transformHitTests', init: transformHitTests);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -84,21 +84,21 @@ class ScaleTransition$Mate extends ScaleTransition with WidgetMate<ScaleTransiti
           filterQuality: filterQuality,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleTransition$Mate(
-        key: p.getValue('key'),
-        scale: p.getValue('scale'),
-        alignment: p.getValue('alignment'),
-        filterQuality: p.getValue('filterQuality'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        scale: p.get('scale').value,
+        alignment: p.get('alignment').value,
+        filterQuality: p.get('filterQuality').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('scale', init: scale);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -127,21 +127,21 @@ class RotationTransition$Mate extends RotationTransition with WidgetMate<Rotatio
           filterQuality: filterQuality,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RotationTransition$Mate(
-        key: p.getValue('key'),
-        turns: p.getValue('turns'),
-        alignment: p.getValue('alignment'),
-        filterQuality: p.getValue('filterQuality'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        turns: p.get('turns').value,
+        alignment: p.get('alignment').value,
+        filterQuality: p.get('filterQuality').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'turns', init: turns);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('turns', init: turns);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -170,21 +170,21 @@ class SizeTransition$Mate extends SizeTransition with WidgetMate<SizeTransition$
           axisAlignment: axisAlignment,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SizeTransition$Mate(
-        key: p.getValue('key'),
-        axis: p.getValue('axis'),
-        sizeFactor: p.getValue('sizeFactor'),
-        axisAlignment: p.getValue('axisAlignment'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        axis: p.get('axis').value,
+        sizeFactor: p.get('sizeFactor').value,
+        axisAlignment: p.get('axisAlignment').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'axis', init: axis);
-    mateParams.set(name: 'sizeFactor', init: sizeFactor);
-    mateParams.set(name: 'axisAlignment', init: axisAlignment);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('axis', init: axis);
+    mateParams.put('sizeFactor', init: sizeFactor);
+    mateParams.put('axisAlignment', init: axisAlignment);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -209,19 +209,19 @@ class FadeTransition$Mate extends FadeTransition with WidgetMate<FadeTransition$
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FadeTransition$Mate(
-        key: p.getValue('key'),
-        opacity: p.getValue('opacity'),
-        alwaysIncludeSemantics: p.getValue('alwaysIncludeSemantics'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        opacity: p.get('opacity').value,
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -246,19 +246,19 @@ class SliverFadeTransition$Mate extends SliverFadeTransition with WidgetMate<Sli
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFadeTransition$Mate(
-        key: p.getValue('key'),
-        opacity: p.getValue('opacity'),
-        alwaysIncludeSemantics: p.getValue('alwaysIncludeSemantics'),
-        sliver: p.getValue('sliver'),
+        key: p.get('key').value,
+        opacity: p.get('opacity').value,
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
+        sliver: p.get('sliver').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'alwaysIncludeSemantics', init: alwaysIncludeSemantics);
-    mateParams.set(name: 'sliver', init: sliver);
+    mateParams.put('key', init: key);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('alwaysIncludeSemantics', init: alwaysIncludeSemantics);
+    mateParams.put('sliver', init: sliver);
   }
 }
 
@@ -275,15 +275,15 @@ class RelativeRectTween$Mate extends RelativeRectTween with Mate<RelativeRectTwe
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RelativeRectTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -304,17 +304,17 @@ class PositionedTransition$Mate extends PositionedTransition with WidgetMate<Pos
           rect: rect,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PositionedTransition$Mate(
-        key: p.getValue('key'),
-        rect: p.getValue('rect'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        rect: p.get('rect').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'rect', init: rect);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('rect', init: rect);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -340,19 +340,19 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition
           size: size,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RelativePositionedTransition$Mate(
-        key: p.getValue('key'),
-        rect: p.getValue('rect'),
-        size: p.getValue('size'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        rect: p.get('rect').value,
+        size: p.get('size').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'rect', init: rect);
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('rect', init: rect);
+    mateParams.put('size', init: size);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -377,19 +377,19 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with WidgetMate
           position: position,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DecoratedBoxTransition$Mate(
-        key: p.getValue('key'),
-        decoration: p.getValue('decoration'),
-        position: p.getValue('position'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        decoration: p.get('decoration').value,
+        position: p.get('position').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('position', init: position);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -418,21 +418,21 @@ class AlignTransition$Mate extends AlignTransition with WidgetMate<AlignTransiti
           widthFactor: widthFactor,
           heightFactor: heightFactor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AlignTransition$Mate(
-        key: p.getValue('key'),
-        alignment: p.getValue('alignment'),
-        child: p.getValue('child'),
-        widthFactor: p.getValue('widthFactor'),
-        heightFactor: p.getValue('heightFactor'),
+        key: p.get('key').value,
+        alignment: p.get('alignment').value,
+        child: p.get('child').value,
+        widthFactor: p.get('widthFactor').value,
+        heightFactor: p.get('heightFactor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'widthFactor', init: widthFactor);
-    mateParams.set(name: 'heightFactor', init: heightFactor);
+    mateParams.put('key', init: key);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('child', init: child);
+    mateParams.put('widthFactor', init: widthFactor);
+    mateParams.put('heightFactor', init: heightFactor);
   }
 }
 
@@ -470,25 +470,25 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition
           overflow: overflow,
           maxLines: maxLines,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultTextStyleTransition$Mate(
-        key: p.getValue('key'),
-        style: p.getValue('style'),
-        child: p.getValue('child'),
-        textAlign: p.getValue('textAlign'),
-        softWrap: p.getValue('softWrap'),
-        overflow: p.getValue('overflow'),
-        maxLines: p.getValue('maxLines'),
+        key: p.get('key').value,
+        style: p.get('style').value,
+        child: p.get('child').value,
+        textAlign: p.get('textAlign').value,
+        softWrap: p.get('softWrap').value,
+        overflow: p.get('overflow').value,
+        maxLines: p.get('maxLines').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'softWrap', init: softWrap);
-    mateParams.set(name: 'overflow', init: overflow);
-    mateParams.set(name: 'maxLines', init: maxLines);
+    mateParams.put('key', init: key);
+    mateParams.put('style', init: style);
+    mateParams.put('child', init: child);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('softWrap', init: softWrap);
+    mateParams.put('overflow', init: overflow);
+    mateParams.put('maxLines', init: maxLines);
   }
 }
 
@@ -513,19 +513,19 @@ class ListenableBuilder$Mate extends ListenableBuilder with WidgetMate<Listenabl
           builder: builder,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ListenableBuilder$Mate(
-        key: p.getValue('key'),
-        listenable: p.getValue('listenable'),
-        builder: p.getValue('builder'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        listenable: p.get('listenable').value,
+        builder: p.get('builder').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'listenable', init: listenable);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('listenable', init: listenable);
+    mateParams.put('builder', init: builder);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -550,18 +550,18 @@ class AnimatedBuilder$Mate extends AnimatedBuilder with WidgetMate<AnimatedBuild
           builder: builder,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedBuilder$Mate(
-        key: p.getValue('key'),
-        animation: p.getValue('animation'),
-        builder: p.getValue('builder'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        animation: p.get('animation').value,
+        builder: p.get('builder').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'animation', init: animation);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('animation', init: animation);
+    mateParams.put('builder', init: builder);
+    mateParams.put('child', init: child);
   }
 }

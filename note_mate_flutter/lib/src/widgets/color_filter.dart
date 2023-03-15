@@ -23,16 +23,16 @@ class ColorFiltered$Mate extends ColorFiltered with WidgetMate<ColorFiltered$Mat
           child: child,
           key: key,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorFiltered$Mate(
-        colorFilter: p.getValue('colorFilter'),
-        child: p.getValue('child'),
-        key: p.getValue('key'),
+        colorFilter: p.get('colorFilter').value,
+        child: p.get('child').value,
+        key: p.get('key').value,
       ),
     );
-    mateParams.set(name: 'colorFilter', init: colorFilter);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'key', init: key);
+    mateParams.put('colorFilter', init: colorFilter);
+    mateParams.put('child', init: child);
+    mateParams.put('key', init: key);
   }
 }

@@ -11,10 +11,10 @@ class InheritedModelElement$Mate<T> extends InheritedModelElement<T> with Mate<I
       /// requiredParameters: InheritedModel<T> widget
       InheritedModel<T> widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => InheritedModelElement$Mate(p.getValue('widget')),
+      builder: (p) => InheritedModelElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }

@@ -54,30 +54,30 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with WidgetMate<CupertinoTabB
           height: height,
           border: border,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTabBar$Mate(
-        key: p.getValue('key'),
-        items: p.getValue('items'),
-        onTap: p.getValue('onTap'),
-        currentIndex: p.getValue('currentIndex'),
-        backgroundColor: p.getValue('backgroundColor'),
-        activeColor: p.getValue('activeColor'),
-        inactiveColor: p.getValue('inactiveColor'),
-        iconSize: p.getValue('iconSize'),
-        height: p.getValue('height'),
-        border: p.getValue('border'),
+        key: p.get('key').value,
+        items: p.get('items').value,
+        onTap: p.get('onTap').value,
+        currentIndex: p.get('currentIndex').value,
+        backgroundColor: p.get('backgroundColor').value,
+        activeColor: p.get('activeColor').value,
+        inactiveColor: p.get('inactiveColor').value,
+        iconSize: p.get('iconSize').value,
+        height: p.get('height').value,
+        border: p.get('border').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'items', init: items);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'currentIndex', init: currentIndex);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'inactiveColor', init: inactiveColor);
-    mateParams.set(name: 'iconSize', init: iconSize);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'border', init: border);
+    mateParams.put('key', init: key);
+    mateParams.put('items', init: items);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('currentIndex', init: currentIndex);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('inactiveColor', init: inactiveColor);
+    mateParams.put('iconSize', init: iconSize);
+    mateParams.put('height', init: height);
+    mateParams.put('border', init: border);
   }
 }

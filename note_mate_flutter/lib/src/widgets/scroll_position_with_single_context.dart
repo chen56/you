@@ -37,22 +37,22 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
           oldPosition: oldPosition,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollPositionWithSingleContext$Mate(
-        physics: p.getValue('physics'),
-        context: p.getValue('context'),
-        initialPixels: p.getValue('initialPixels'),
-        keepScrollOffset: p.getValue('keepScrollOffset'),
-        oldPosition: p.getValue('oldPosition'),
-        debugLabel: p.getValue('debugLabel'),
+        physics: p.get('physics').value,
+        context: p.get('context').value,
+        initialPixels: p.get('initialPixels').value,
+        keepScrollOffset: p.get('keepScrollOffset').value,
+        oldPosition: p.get('oldPosition').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'initialPixels', init: initialPixels);
-    mateParams.set(name: 'keepScrollOffset', init: keepScrollOffset);
-    mateParams.set(name: 'oldPosition', init: oldPosition);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('physics', init: physics);
+    mateParams.put('context', init: context);
+    mateParams.put('initialPixels', init: initialPixels);
+    mateParams.put('keepScrollOffset', init: keepScrollOffset);
+    mateParams.put('oldPosition', init: oldPosition);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }

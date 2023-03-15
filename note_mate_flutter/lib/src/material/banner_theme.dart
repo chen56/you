@@ -46,27 +46,27 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate<Mat
           padding: padding,
           leadingPadding: leadingPadding,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialBannerThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        shadowColor: p.getValue('shadowColor'),
-        dividerColor: p.getValue('dividerColor'),
-        contentTextStyle: p.getValue('contentTextStyle'),
-        elevation: p.getValue('elevation'),
-        padding: p.getValue('padding'),
-        leadingPadding: p.getValue('leadingPadding'),
+        backgroundColor: p.get('backgroundColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        shadowColor: p.get('shadowColor').value,
+        dividerColor: p.get('dividerColor').value,
+        contentTextStyle: p.get('contentTextStyle').value,
+        elevation: p.get('elevation').value,
+        padding: p.get('padding').value,
+        leadingPadding: p.get('leadingPadding').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'dividerColor', init: dividerColor);
-    mateParams.set(name: 'contentTextStyle', init: contentTextStyle);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'leadingPadding', init: leadingPadding);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('dividerColor', init: dividerColor);
+    mateParams.put('contentTextStyle', init: contentTextStyle);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('padding', init: padding);
+    mateParams.put('leadingPadding', init: leadingPadding);
   }
 }
 
@@ -87,16 +87,16 @@ class MaterialBannerTheme$Mate extends MaterialBannerTheme with WidgetMate<Mater
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialBannerTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

@@ -82,45 +82,45 @@ class MediaQueryData$Mate extends MediaQueryData with Mate<MediaQueryData$Mate> 
           gestureSettings: gestureSettings,
           displayFeatures: displayFeatures,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MediaQueryData$Mate(
-        size: p.getValue('size'),
-        devicePixelRatio: p.getValue('devicePixelRatio'),
-        textScaleFactor: p.getValue('textScaleFactor'),
-        platformBrightness: p.getValue('platformBrightness'),
-        padding: p.getValue('padding'),
-        viewInsets: p.getValue('viewInsets'),
-        systemGestureInsets: p.getValue('systemGestureInsets'),
-        viewPadding: p.getValue('viewPadding'),
-        alwaysUse24HourFormat: p.getValue('alwaysUse24HourFormat'),
-        accessibleNavigation: p.getValue('accessibleNavigation'),
-        invertColors: p.getValue('invertColors'),
-        highContrast: p.getValue('highContrast'),
-        disableAnimations: p.getValue('disableAnimations'),
-        boldText: p.getValue('boldText'),
-        navigationMode: p.getValue('navigationMode'),
-        gestureSettings: p.getValue('gestureSettings'),
-        displayFeatures: p.getValue('displayFeatures'),
+        size: p.get('size').value,
+        devicePixelRatio: p.get('devicePixelRatio').value,
+        textScaleFactor: p.get('textScaleFactor').value,
+        platformBrightness: p.get('platformBrightness').value,
+        padding: p.get('padding').value,
+        viewInsets: p.get('viewInsets').value,
+        systemGestureInsets: p.get('systemGestureInsets').value,
+        viewPadding: p.get('viewPadding').value,
+        alwaysUse24HourFormat: p.get('alwaysUse24HourFormat').value,
+        accessibleNavigation: p.get('accessibleNavigation').value,
+        invertColors: p.get('invertColors').value,
+        highContrast: p.get('highContrast').value,
+        disableAnimations: p.get('disableAnimations').value,
+        boldText: p.get('boldText').value,
+        navigationMode: p.get('navigationMode').value,
+        gestureSettings: p.get('gestureSettings').value,
+        displayFeatures: p.get('displayFeatures').value,
       ),
     );
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'devicePixelRatio', init: devicePixelRatio);
-    mateParams.set(name: 'textScaleFactor', init: textScaleFactor);
-    mateParams.set(name: 'platformBrightness', init: platformBrightness);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'viewInsets', init: viewInsets);
-    mateParams.set(name: 'systemGestureInsets', init: systemGestureInsets);
-    mateParams.set(name: 'viewPadding', init: viewPadding);
-    mateParams.set(name: 'alwaysUse24HourFormat', init: alwaysUse24HourFormat);
-    mateParams.set(name: 'accessibleNavigation', init: accessibleNavigation);
-    mateParams.set(name: 'invertColors', init: invertColors);
-    mateParams.set(name: 'highContrast', init: highContrast);
-    mateParams.set(name: 'disableAnimations', init: disableAnimations);
-    mateParams.set(name: 'boldText', init: boldText);
-    mateParams.set(name: 'navigationMode', init: navigationMode);
-    mateParams.set(name: 'gestureSettings', init: gestureSettings);
-    mateParams.set(name: 'displayFeatures', init: displayFeatures);
+    mateParams.put('size', init: size);
+    mateParams.put('devicePixelRatio', init: devicePixelRatio);
+    mateParams.put('textScaleFactor', init: textScaleFactor);
+    mateParams.put('platformBrightness', init: platformBrightness);
+    mateParams.put('padding', init: padding);
+    mateParams.put('viewInsets', init: viewInsets);
+    mateParams.put('systemGestureInsets', init: systemGestureInsets);
+    mateParams.put('viewPadding', init: viewPadding);
+    mateParams.put('alwaysUse24HourFormat', init: alwaysUse24HourFormat);
+    mateParams.put('accessibleNavigation', init: accessibleNavigation);
+    mateParams.put('invertColors', init: invertColors);
+    mateParams.put('highContrast', init: highContrast);
+    mateParams.put('disableAnimations', init: disableAnimations);
+    mateParams.put('boldText', init: boldText);
+    mateParams.put('navigationMode', init: navigationMode);
+    mateParams.put('gestureSettings', init: gestureSettings);
+    mateParams.put('displayFeatures', init: displayFeatures);
   }
 
   /// MediaQueryData MediaQueryData.fromView(FlutterView view, {MediaQueryData? platformData})
@@ -133,15 +133,15 @@ class MediaQueryData$Mate extends MediaQueryData with Mate<MediaQueryData$Mate> 
           view,
           platformData: platformData,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MediaQueryData$Mate.fromView(
-        p.getValue('view'),
-        platformData: p.getValue('platformData'),
+        p.get('view').value,
+        platformData: p.get('platformData').value,
       ),
     );
-    mateParams.set(name: 'view', init: view);
-    mateParams.set(name: 'platformData', init: platformData);
+    mateParams.put('view', init: view);
+    mateParams.put('platformData', init: platformData);
   }
 }
 
@@ -162,16 +162,16 @@ class MediaQuery$Mate extends MediaQuery with WidgetMate<MediaQuery$Mate> {
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MediaQuery$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

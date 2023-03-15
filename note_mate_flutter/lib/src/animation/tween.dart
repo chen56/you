@@ -19,15 +19,15 @@ class Tween$Mate<T extends Object?> extends Tween<T> with Mate<Tween$Mate> {
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Tween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -39,11 +39,11 @@ class ReverseTween$Mate<T extends Object?> extends ReverseTween<T> with Mate<Rev
       /// requiredParameters: Tween<T> parent
       Tween<T> parent)
       : super(parent) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ReverseTween$Mate(p.getValue('parent')),
+      builder: (p) => ReverseTween$Mate(p.get('parent').value),
     );
-    mateParams.set(name: 'parent', init: parent);
+    mateParams.put('parent', init: parent);
   }
 }
 
@@ -60,15 +60,15 @@ class ColorTween$Mate extends ColorTween with Mate<ColorTween$Mate> {
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -85,15 +85,15 @@ class SizeTween$Mate extends SizeTween with Mate<SizeTween$Mate> {
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SizeTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -110,15 +110,15 @@ class RectTween$Mate extends RectTween with Mate<RectTween$Mate> {
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RectTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -135,15 +135,15 @@ class IntTween$Mate extends IntTween with Mate<IntTween$Mate> {
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => IntTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -160,15 +160,15 @@ class StepTween$Mate extends StepTween with Mate<StepTween$Mate> {
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => StepTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -180,11 +180,11 @@ class ConstantTween$Mate<T> extends ConstantTween<T> with Mate<ConstantTween$Mat
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ConstantTween$Mate(p.getValue('value')),
+      builder: (p) => ConstantTween$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -196,10 +196,10 @@ class CurveTween$Mate extends CurveTween with Mate<CurveTween$Mate> {
       /// optionalParameters: {required Curve curve} , hasDefaultValue:false, defaultValueCode:null
       required Curve curve})
       : super(curve: curve) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => CurveTween$Mate(curve: p.getValue('curve')),
+      builder: (p) => CurveTween$Mate(curve: p.get('curve').value),
     );
-    mateParams.set(name: 'curve', init: curve);
+    mateParams.put('curve', init: curve);
   }
 }

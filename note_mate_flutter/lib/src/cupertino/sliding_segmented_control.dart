@@ -43,24 +43,24 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmented
           padding: padding,
           backgroundColor: backgroundColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSlidingSegmentedControl$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        onValueChanged: p.getValue('onValueChanged'),
-        groupValue: p.getValue('groupValue'),
-        thumbColor: p.getValue('thumbColor'),
-        padding: p.getValue('padding'),
-        backgroundColor: p.getValue('backgroundColor'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        onValueChanged: p.get('onValueChanged').value,
+        groupValue: p.get('groupValue').value,
+        thumbColor: p.get('thumbColor').value,
+        padding: p.get('padding').value,
+        backgroundColor: p.get('backgroundColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'onValueChanged', init: onValueChanged);
-    mateParams.set(name: 'groupValue', init: groupValue);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('onValueChanged', init: onValueChanged);
+    mateParams.put('groupValue', init: groupValue);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('padding', init: padding);
+    mateParams.put('backgroundColor', init: backgroundColor);
   }
 }

@@ -26,19 +26,19 @@ class TextSelection$Mate extends TextSelection with Mate<TextSelection$Mate> {
           affinity: affinity,
           isDirectional: isDirectional,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelection$Mate(
-        baseOffset: p.getValue('baseOffset'),
-        extentOffset: p.getValue('extentOffset'),
-        affinity: p.getValue('affinity'),
-        isDirectional: p.getValue('isDirectional'),
+        baseOffset: p.get('baseOffset').value,
+        extentOffset: p.get('extentOffset').value,
+        affinity: p.get('affinity').value,
+        isDirectional: p.get('isDirectional').value,
       ),
     );
-    mateParams.set(name: 'baseOffset', init: baseOffset);
-    mateParams.set(name: 'extentOffset', init: extentOffset);
-    mateParams.set(name: 'affinity', init: affinity);
-    mateParams.set(name: 'isDirectional', init: isDirectional);
+    mateParams.put('baseOffset', init: baseOffset);
+    mateParams.put('extentOffset', init: extentOffset);
+    mateParams.put('affinity', init: affinity);
+    mateParams.put('isDirectional', init: isDirectional);
   }
 
   /// TextSelection TextSelection.collapsed({required int offset, TextAffinity affinity = TextAffinity.downstream})
@@ -52,15 +52,15 @@ class TextSelection$Mate extends TextSelection with Mate<TextSelection$Mate> {
           offset: offset,
           affinity: affinity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelection$Mate.collapsed(
-        offset: p.getValue('offset'),
-        affinity: p.getValue('affinity'),
+        offset: p.get('offset').value,
+        affinity: p.get('affinity').value,
       ),
     );
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'affinity', init: affinity);
+    mateParams.put('offset', init: offset);
+    mateParams.put('affinity', init: affinity);
   }
 
   /// TextSelection TextSelection.fromPosition(TextPosition position)
@@ -69,10 +69,10 @@ class TextSelection$Mate extends TextSelection with Mate<TextSelection$Mate> {
       /// requiredParameters: TextPosition position
       TextPosition position)
       : super.fromPosition(position) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => TextSelection$Mate.fromPosition(p.getValue('position')),
+      builder: (p) => TextSelection$Mate.fromPosition(p.get('position').value),
     );
-    mateParams.set(name: 'position', init: position);
+    mateParams.put('position', init: position);
   }
 }

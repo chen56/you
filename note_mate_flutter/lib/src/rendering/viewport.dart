@@ -21,15 +21,15 @@ class RevealedOffset$Mate extends RevealedOffset with Mate<RevealedOffset$Mate> 
           offset: offset,
           rect: rect,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RevealedOffset$Mate(
-        offset: p.getValue('offset'),
-        rect: p.getValue('rect'),
+        offset: p.get('offset').value,
+        rect: p.get('rect').value,
       ),
     );
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'rect', init: rect);
+    mateParams.put('offset', init: offset);
+    mateParams.put('rect', init: rect);
   }
 }
 
@@ -74,29 +74,29 @@ class RenderViewport$Mate extends RenderViewport with Mate<RenderViewport$Mate> 
           cacheExtentStyle: cacheExtentStyle,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderViewport$Mate(
-        axisDirection: p.getValue('axisDirection'),
-        crossAxisDirection: p.getValue('crossAxisDirection'),
-        offset: p.getValue('offset'),
-        anchor: p.getValue('anchor'),
-        children: p.getValue('children'),
-        center: p.getValue('center'),
-        cacheExtent: p.getValue('cacheExtent'),
-        cacheExtentStyle: p.getValue('cacheExtentStyle'),
-        clipBehavior: p.getValue('clipBehavior'),
+        axisDirection: p.get('axisDirection').value,
+        crossAxisDirection: p.get('crossAxisDirection').value,
+        offset: p.get('offset').value,
+        anchor: p.get('anchor').value,
+        children: p.get('children').value,
+        center: p.get('center').value,
+        cacheExtent: p.get('cacheExtent').value,
+        cacheExtentStyle: p.get('cacheExtentStyle').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'crossAxisDirection', init: crossAxisDirection);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'center', init: center);
-    mateParams.set(name: 'cacheExtent', init: cacheExtent);
-    mateParams.set(name: 'cacheExtentStyle', init: cacheExtentStyle);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('crossAxisDirection', init: crossAxisDirection);
+    mateParams.put('offset', init: offset);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('children', init: children);
+    mateParams.put('center', init: center);
+    mateParams.put('cacheExtent', init: cacheExtent);
+    mateParams.put('cacheExtentStyle', init: cacheExtentStyle);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -126,20 +126,20 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport
           clipBehavior: clipBehavior,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderShrinkWrappingViewport$Mate(
-        axisDirection: p.getValue('axisDirection'),
-        crossAxisDirection: p.getValue('crossAxisDirection'),
-        offset: p.getValue('offset'),
-        clipBehavior: p.getValue('clipBehavior'),
-        children: p.getValue('children'),
+        axisDirection: p.get('axisDirection').value,
+        crossAxisDirection: p.get('crossAxisDirection').value,
+        offset: p.get('offset').value,
+        clipBehavior: p.get('clipBehavior').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'crossAxisDirection', init: crossAxisDirection);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('crossAxisDirection', init: crossAxisDirection);
+    mateParams.put('offset', init: offset);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('children', init: children);
   }
 }

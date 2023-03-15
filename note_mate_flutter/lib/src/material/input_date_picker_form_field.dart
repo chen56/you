@@ -65,36 +65,36 @@ class InputDatePickerFormField$Mate extends InputDatePickerFormField with Widget
           keyboardType: keyboardType,
           autofocus: autofocus,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InputDatePickerFormField$Mate(
-        key: p.getValue('key'),
-        initialDate: p.getValue('initialDate'),
-        firstDate: p.getValue('firstDate'),
-        lastDate: p.getValue('lastDate'),
-        onDateSubmitted: p.getValue('onDateSubmitted'),
-        onDateSaved: p.getValue('onDateSaved'),
-        selectableDayPredicate: p.getValue('selectableDayPredicate'),
-        errorFormatText: p.getValue('errorFormatText'),
-        errorInvalidText: p.getValue('errorInvalidText'),
-        fieldHintText: p.getValue('fieldHintText'),
-        fieldLabelText: p.getValue('fieldLabelText'),
-        keyboardType: p.getValue('keyboardType'),
-        autofocus: p.getValue('autofocus'),
+        key: p.get('key').value,
+        initialDate: p.get('initialDate').value,
+        firstDate: p.get('firstDate').value,
+        lastDate: p.get('lastDate').value,
+        onDateSubmitted: p.get('onDateSubmitted').value,
+        onDateSaved: p.get('onDateSaved').value,
+        selectableDayPredicate: p.get('selectableDayPredicate').value,
+        errorFormatText: p.get('errorFormatText').value,
+        errorInvalidText: p.get('errorInvalidText').value,
+        fieldHintText: p.get('fieldHintText').value,
+        fieldLabelText: p.get('fieldLabelText').value,
+        keyboardType: p.get('keyboardType').value,
+        autofocus: p.get('autofocus').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'initialDate', init: initialDate);
-    mateParams.set(name: 'firstDate', init: firstDate);
-    mateParams.set(name: 'lastDate', init: lastDate);
-    mateParams.set(name: 'onDateSubmitted', init: onDateSubmitted);
-    mateParams.set(name: 'onDateSaved', init: onDateSaved);
-    mateParams.set(name: 'selectableDayPredicate', init: selectableDayPredicate);
-    mateParams.set(name: 'errorFormatText', init: errorFormatText);
-    mateParams.set(name: 'errorInvalidText', init: errorInvalidText);
-    mateParams.set(name: 'fieldHintText', init: fieldHintText);
-    mateParams.set(name: 'fieldLabelText', init: fieldLabelText);
-    mateParams.set(name: 'keyboardType', init: keyboardType);
-    mateParams.set(name: 'autofocus', init: autofocus);
+    mateParams.put('key', init: key);
+    mateParams.put('initialDate', init: initialDate);
+    mateParams.put('firstDate', init: firstDate);
+    mateParams.put('lastDate', init: lastDate);
+    mateParams.put('onDateSubmitted', init: onDateSubmitted);
+    mateParams.put('onDateSaved', init: onDateSaved);
+    mateParams.put('selectableDayPredicate', init: selectableDayPredicate);
+    mateParams.put('errorFormatText', init: errorFormatText);
+    mateParams.put('errorInvalidText', init: errorInvalidText);
+    mateParams.put('fieldHintText', init: fieldHintText);
+    mateParams.put('fieldLabelText', init: fieldLabelText);
+    mateParams.put('keyboardType', init: keyboardType);
+    mateParams.put('autofocus', init: autofocus);
   }
 }

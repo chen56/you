@@ -23,17 +23,17 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate<Basic
           codec,
           binaryMessenger: binaryMessenger,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BasicMessageChannel$Mate(
-        p.getValue('name'),
-        p.getValue('codec'),
-        binaryMessenger: p.getValue('binaryMessenger'),
+        p.get('name').value,
+        p.get('codec').value,
+        binaryMessenger: p.get('binaryMessenger').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'codec', init: codec);
-    mateParams.set(name: 'binaryMessenger', init: binaryMessenger);
+    mateParams.put('name', init: name);
+    mateParams.put('codec', init: codec);
+    mateParams.put('binaryMessenger', init: binaryMessenger);
   }
 }
 
@@ -54,17 +54,17 @@ class MethodChannel$Mate extends MethodChannel with Mate<MethodChannel$Mate> {
           codec,
           binaryMessenger,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MethodChannel$Mate(
-        p.getValue('name'),
-        p.getValue('codec'),
-        p.getValue('binaryMessenger'),
+        p.get('name').value,
+        p.get('codec').value,
+        p.get('binaryMessenger').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'codec', init: codec);
-    mateParams.set(name: 'binaryMessenger', init: binaryMessenger);
+    mateParams.put('name', init: name);
+    mateParams.put('codec', init: codec);
+    mateParams.put('binaryMessenger', init: binaryMessenger);
   }
 }
 
@@ -85,17 +85,17 @@ class OptionalMethodChannel$Mate extends OptionalMethodChannel with Mate<Optiona
           codec,
           binaryMessenger,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => OptionalMethodChannel$Mate(
-        p.getValue('name'),
-        p.getValue('codec'),
-        p.getValue('binaryMessenger'),
+        p.get('name').value,
+        p.get('codec').value,
+        p.get('binaryMessenger').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'codec', init: codec);
-    mateParams.set(name: 'binaryMessenger', init: binaryMessenger);
+    mateParams.put('name', init: name);
+    mateParams.put('codec', init: codec);
+    mateParams.put('binaryMessenger', init: binaryMessenger);
   }
 }
 
@@ -116,16 +116,16 @@ class EventChannel$Mate extends EventChannel with Mate<EventChannel$Mate> {
           codec,
           binaryMessenger,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => EventChannel$Mate(
-        p.getValue('name'),
-        p.getValue('codec'),
-        p.getValue('binaryMessenger'),
+        p.get('name').value,
+        p.get('codec').value,
+        p.get('binaryMessenger').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'codec', init: codec);
-    mateParams.set(name: 'binaryMessenger', init: binaryMessenger);
+    mateParams.put('name', init: name);
+    mateParams.put('codec', init: codec);
+    mateParams.put('binaryMessenger', init: binaryMessenger);
   }
 }

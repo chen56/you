@@ -31,19 +31,19 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate<KeySet$Mate
           key3,
           key4,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => KeySet$Mate(
-        p.getValue('key1'),
-        p.getValue('key2'),
-        p.getValue('key3'),
-        p.getValue('key4'),
+        p.get('key1').value,
+        p.get('key2').value,
+        p.get('key3').value,
+        p.get('key4').value,
       ),
     );
-    mateParams.set(name: 'key1', init: key1);
-    mateParams.set(name: 'key2', init: key2);
-    mateParams.set(name: 'key3', init: key3);
-    mateParams.set(name: 'key4', init: key4);
+    mateParams.put('key1', init: key1);
+    mateParams.put('key2', init: key2);
+    mateParams.put('key3', init: key3);
+    mateParams.put('key4', init: key4);
   }
 
   /// KeySet<T> KeySet.fromSet(Set<T> keys)
@@ -52,11 +52,11 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate<KeySet$Mate
       /// requiredParameters: Set<T> keys
       Set<T> keys)
       : super.fromSet(keys) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => KeySet$Mate.fromSet(p.getValue('keys')),
+      builder: (p) => KeySet$Mate.fromSet(p.get('keys').value),
     );
-    mateParams.set(name: 'keys', init: keys);
+    mateParams.put('keys', init: keys);
   }
 }
 
@@ -81,19 +81,19 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate<LogicalKeySet$Mate> {
           key3,
           key4,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => LogicalKeySet$Mate(
-        p.getValue('key1'),
-        p.getValue('key2'),
-        p.getValue('key3'),
-        p.getValue('key4'),
+        p.get('key1').value,
+        p.get('key2').value,
+        p.get('key3').value,
+        p.get('key4').value,
       ),
     );
-    mateParams.set(name: 'key1', init: key1);
-    mateParams.set(name: 'key2', init: key2);
-    mateParams.set(name: 'key3', init: key3);
-    mateParams.set(name: 'key4', init: key4);
+    mateParams.put('key1', init: key1);
+    mateParams.put('key2', init: key2);
+    mateParams.put('key3', init: key3);
+    mateParams.put('key4', init: key4);
   }
 
   /// LogicalKeySet LogicalKeySet.fromSet(Set<LogicalKeyboardKey> keys)
@@ -102,11 +102,11 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate<LogicalKeySet$Mate> {
       /// requiredParameters: Set<LogicalKeyboardKey> keys
       Set<LogicalKeyboardKey> keys)
       : super.fromSet(keys) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => LogicalKeySet$Mate.fromSet(p.getValue('keys')),
+      builder: (p) => LogicalKeySet$Mate.fromSet(p.get('keys').value),
     );
-    mateParams.set(name: 'keys', init: keys);
+    mateParams.put('keys', init: keys);
   }
 }
 
@@ -138,23 +138,23 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate<ShortcutMap
           level: level,
           description: description,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShortcutMapProperty$Mate(
-        p.getValue('name'),
-        p.getValue('value'),
-        showName: p.getValue('showName'),
-        defaultValue: p.getValue('defaultValue'),
-        level: p.getValue('level'),
-        description: p.getValue('description'),
+        p.get('name').value,
+        p.get('value').value,
+        showName: p.get('showName').value,
+        defaultValue: p.get('defaultValue').value,
+        level: p.get('level').value,
+        description: p.get('description').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'showName', init: showName);
-    mateParams.set(name: 'defaultValue', init: defaultValue);
-    mateParams.set(name: 'level', init: level);
-    mateParams.set(name: 'description', init: description);
+    mateParams.put('name', init: name);
+    mateParams.put('value', init: value);
+    mateParams.put('showName', init: showName);
+    mateParams.put('defaultValue', init: defaultValue);
+    mateParams.put('level', init: level);
+    mateParams.put('description', init: description);
   }
 }
 
@@ -186,23 +186,23 @@ class SingleActivator$Mate extends SingleActivator with Mate<SingleActivator$Mat
           meta: meta,
           includeRepeats: includeRepeats,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SingleActivator$Mate(
-        p.getValue('trigger'),
-        control: p.getValue('control'),
-        shift: p.getValue('shift'),
-        alt: p.getValue('alt'),
-        meta: p.getValue('meta'),
-        includeRepeats: p.getValue('includeRepeats'),
+        p.get('trigger').value,
+        control: p.get('control').value,
+        shift: p.get('shift').value,
+        alt: p.get('alt').value,
+        meta: p.get('meta').value,
+        includeRepeats: p.get('includeRepeats').value,
       ),
     );
-    mateParams.set(name: 'trigger', init: trigger);
-    mateParams.set(name: 'control', init: control);
-    mateParams.set(name: 'shift', init: shift);
-    mateParams.set(name: 'alt', init: alt);
-    mateParams.set(name: 'meta', init: meta);
-    mateParams.set(name: 'includeRepeats', init: includeRepeats);
+    mateParams.put('trigger', init: trigger);
+    mateParams.put('control', init: control);
+    mateParams.put('shift', init: shift);
+    mateParams.put('alt', init: alt);
+    mateParams.put('meta', init: meta);
+    mateParams.put('includeRepeats', init: includeRepeats);
   }
 }
 
@@ -230,21 +230,21 @@ class CharacterActivator$Mate extends CharacterActivator with Mate<CharacterActi
           meta: meta,
           includeRepeats: includeRepeats,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CharacterActivator$Mate(
-        p.getValue('character'),
-        alt: p.getValue('alt'),
-        control: p.getValue('control'),
-        meta: p.getValue('meta'),
-        includeRepeats: p.getValue('includeRepeats'),
+        p.get('character').value,
+        alt: p.get('alt').value,
+        control: p.get('control').value,
+        meta: p.get('meta').value,
+        includeRepeats: p.get('includeRepeats').value,
       ),
     );
-    mateParams.set(name: 'character', init: character);
-    mateParams.set(name: 'alt', init: alt);
-    mateParams.set(name: 'control', init: control);
-    mateParams.set(name: 'meta', init: meta);
-    mateParams.set(name: 'includeRepeats', init: includeRepeats);
+    mateParams.put('character', init: character);
+    mateParams.put('alt', init: alt);
+    mateParams.put('control', init: control);
+    mateParams.put('meta', init: meta);
+    mateParams.put('includeRepeats', init: includeRepeats);
   }
 }
 
@@ -261,15 +261,15 @@ class ShortcutManager$Mate extends ShortcutManager with Mate<ShortcutManager$Mat
           shortcuts: shortcuts,
           modal: modal,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShortcutManager$Mate(
-        shortcuts: p.getValue('shortcuts'),
-        modal: p.getValue('modal'),
+        shortcuts: p.get('shortcuts').value,
+        modal: p.get('modal').value,
       ),
     );
-    mateParams.set(name: 'shortcuts', init: shortcuts);
-    mateParams.set(name: 'modal', init: modal);
+    mateParams.put('shortcuts', init: shortcuts);
+    mateParams.put('modal', init: modal);
   }
 }
 
@@ -294,19 +294,19 @@ class Shortcuts$Mate extends Shortcuts with WidgetMate<Shortcuts$Mate> {
           child: child,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Shortcuts$Mate(
-        key: p.getValue('key'),
-        shortcuts: p.getValue('shortcuts'),
-        child: p.getValue('child'),
-        debugLabel: p.getValue('debugLabel'),
+        key: p.get('key').value,
+        shortcuts: p.get('shortcuts').value,
+        child: p.get('child').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'shortcuts', init: shortcuts);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('key', init: key);
+    mateParams.put('shortcuts', init: shortcuts);
+    mateParams.put('child', init: child);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 
   /// Shortcuts Shortcuts.manager({Key? key, required ShortcutManager manager, required Widget child, String? debugLabel})
@@ -328,19 +328,19 @@ class Shortcuts$Mate extends Shortcuts with WidgetMate<Shortcuts$Mate> {
           child: child,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Shortcuts$Mate.manager(
-        key: p.getValue('key'),
-        manager: p.getValue('manager'),
-        child: p.getValue('child'),
-        debugLabel: p.getValue('debugLabel'),
+        key: p.get('key').value,
+        manager: p.get('manager').value,
+        child: p.get('child').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'manager', init: manager);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('key', init: key);
+    mateParams.put('manager', init: manager);
+    mateParams.put('child', init: child);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }
 
@@ -361,17 +361,17 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with WidgetMate<CallbackS
           bindings: bindings,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CallbackShortcuts$Mate(
-        key: p.getValue('key'),
-        bindings: p.getValue('bindings'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        bindings: p.get('bindings').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'bindings', init: bindings);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('bindings', init: bindings);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -388,14 +388,14 @@ class ShortcutRegistrar$Mate extends ShortcutRegistrar with WidgetMate<ShortcutR
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShortcutRegistrar$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }

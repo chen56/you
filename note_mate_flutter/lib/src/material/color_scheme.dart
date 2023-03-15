@@ -133,73 +133,73 @@ class ColorScheme$Mate extends ColorScheme with Mate<ColorScheme$Mate> {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorScheme$Mate(
-        brightness: p.getValue('brightness'),
-        primary: p.getValue('primary'),
-        onPrimary: p.getValue('onPrimary'),
-        primaryContainer: p.getValue('primaryContainer'),
-        onPrimaryContainer: p.getValue('onPrimaryContainer'),
-        secondary: p.getValue('secondary'),
-        onSecondary: p.getValue('onSecondary'),
-        secondaryContainer: p.getValue('secondaryContainer'),
-        onSecondaryContainer: p.getValue('onSecondaryContainer'),
-        tertiary: p.getValue('tertiary'),
-        onTertiary: p.getValue('onTertiary'),
-        tertiaryContainer: p.getValue('tertiaryContainer'),
-        onTertiaryContainer: p.getValue('onTertiaryContainer'),
-        error: p.getValue('error'),
-        onError: p.getValue('onError'),
-        errorContainer: p.getValue('errorContainer'),
-        onErrorContainer: p.getValue('onErrorContainer'),
-        background: p.getValue('background'),
-        onBackground: p.getValue('onBackground'),
-        surface: p.getValue('surface'),
-        onSurface: p.getValue('onSurface'),
-        surfaceVariant: p.getValue('surfaceVariant'),
-        onSurfaceVariant: p.getValue('onSurfaceVariant'),
-        outline: p.getValue('outline'),
-        outlineVariant: p.getValue('outlineVariant'),
-        shadow: p.getValue('shadow'),
-        scrim: p.getValue('scrim'),
-        inverseSurface: p.getValue('inverseSurface'),
-        onInverseSurface: p.getValue('onInverseSurface'),
-        inversePrimary: p.getValue('inversePrimary'),
-        surfaceTint: p.getValue('surfaceTint'),
+        brightness: p.get('brightness').value,
+        primary: p.get('primary').value,
+        onPrimary: p.get('onPrimary').value,
+        primaryContainer: p.get('primaryContainer').value,
+        onPrimaryContainer: p.get('onPrimaryContainer').value,
+        secondary: p.get('secondary').value,
+        onSecondary: p.get('onSecondary').value,
+        secondaryContainer: p.get('secondaryContainer').value,
+        onSecondaryContainer: p.get('onSecondaryContainer').value,
+        tertiary: p.get('tertiary').value,
+        onTertiary: p.get('onTertiary').value,
+        tertiaryContainer: p.get('tertiaryContainer').value,
+        onTertiaryContainer: p.get('onTertiaryContainer').value,
+        error: p.get('error').value,
+        onError: p.get('onError').value,
+        errorContainer: p.get('errorContainer').value,
+        onErrorContainer: p.get('onErrorContainer').value,
+        background: p.get('background').value,
+        onBackground: p.get('onBackground').value,
+        surface: p.get('surface').value,
+        onSurface: p.get('onSurface').value,
+        surfaceVariant: p.get('surfaceVariant').value,
+        onSurfaceVariant: p.get('onSurfaceVariant').value,
+        outline: p.get('outline').value,
+        outlineVariant: p.get('outlineVariant').value,
+        shadow: p.get('shadow').value,
+        scrim: p.get('scrim').value,
+        inverseSurface: p.get('inverseSurface').value,
+        onInverseSurface: p.get('onInverseSurface').value,
+        inversePrimary: p.get('inversePrimary').value,
+        surfaceTint: p.get('surfaceTint').value,
       ),
     );
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'onPrimary', init: onPrimary);
-    mateParams.set(name: 'primaryContainer', init: primaryContainer);
-    mateParams.set(name: 'onPrimaryContainer', init: onPrimaryContainer);
-    mateParams.set(name: 'secondary', init: secondary);
-    mateParams.set(name: 'onSecondary', init: onSecondary);
-    mateParams.set(name: 'secondaryContainer', init: secondaryContainer);
-    mateParams.set(name: 'onSecondaryContainer', init: onSecondaryContainer);
-    mateParams.set(name: 'tertiary', init: tertiary);
-    mateParams.set(name: 'onTertiary', init: onTertiary);
-    mateParams.set(name: 'tertiaryContainer', init: tertiaryContainer);
-    mateParams.set(name: 'onTertiaryContainer', init: onTertiaryContainer);
-    mateParams.set(name: 'error', init: error);
-    mateParams.set(name: 'onError', init: onError);
-    mateParams.set(name: 'errorContainer', init: errorContainer);
-    mateParams.set(name: 'onErrorContainer', init: onErrorContainer);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'onBackground', init: onBackground);
-    mateParams.set(name: 'surface', init: surface);
-    mateParams.set(name: 'onSurface', init: onSurface);
-    mateParams.set(name: 'surfaceVariant', init: surfaceVariant);
-    mateParams.set(name: 'onSurfaceVariant', init: onSurfaceVariant);
-    mateParams.set(name: 'outline', init: outline);
-    mateParams.set(name: 'outlineVariant', init: outlineVariant);
-    mateParams.set(name: 'shadow', init: shadow);
-    mateParams.set(name: 'scrim', init: scrim);
-    mateParams.set(name: 'inverseSurface', init: inverseSurface);
-    mateParams.set(name: 'onInverseSurface', init: onInverseSurface);
-    mateParams.set(name: 'inversePrimary', init: inversePrimary);
-    mateParams.set(name: 'surfaceTint', init: surfaceTint);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('primary', init: primary);
+    mateParams.put('onPrimary', init: onPrimary);
+    mateParams.put('primaryContainer', init: primaryContainer);
+    mateParams.put('onPrimaryContainer', init: onPrimaryContainer);
+    mateParams.put('secondary', init: secondary);
+    mateParams.put('onSecondary', init: onSecondary);
+    mateParams.put('secondaryContainer', init: secondaryContainer);
+    mateParams.put('onSecondaryContainer', init: onSecondaryContainer);
+    mateParams.put('tertiary', init: tertiary);
+    mateParams.put('onTertiary', init: onTertiary);
+    mateParams.put('tertiaryContainer', init: tertiaryContainer);
+    mateParams.put('onTertiaryContainer', init: onTertiaryContainer);
+    mateParams.put('error', init: error);
+    mateParams.put('onError', init: onError);
+    mateParams.put('errorContainer', init: errorContainer);
+    mateParams.put('onErrorContainer', init: onErrorContainer);
+    mateParams.put('background', init: background);
+    mateParams.put('onBackground', init: onBackground);
+    mateParams.put('surface', init: surface);
+    mateParams.put('onSurface', init: onSurface);
+    mateParams.put('surfaceVariant', init: surfaceVariant);
+    mateParams.put('onSurfaceVariant', init: onSurfaceVariant);
+    mateParams.put('outline', init: outline);
+    mateParams.put('outlineVariant', init: outlineVariant);
+    mateParams.put('shadow', init: shadow);
+    mateParams.put('scrim', init: scrim);
+    mateParams.put('inverseSurface', init: inverseSurface);
+    mateParams.put('onInverseSurface', init: onInverseSurface);
+    mateParams.put('inversePrimary', init: inversePrimary);
+    mateParams.put('surfaceTint', init: surfaceTint);
   }
 
   /// ColorScheme ColorScheme.light({Brightness brightness = Brightness.light, Color primary = const Color(0xff6200ee), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffb00020), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700b3), Color? secondaryVariant = const Color(0xff018786)})
@@ -329,73 +329,73 @@ class ColorScheme$Mate extends ColorScheme with Mate<ColorScheme$Mate> {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorScheme$Mate.light(
-        brightness: p.getValue('brightness'),
-        primary: p.getValue('primary'),
-        onPrimary: p.getValue('onPrimary'),
-        primaryContainer: p.getValue('primaryContainer'),
-        onPrimaryContainer: p.getValue('onPrimaryContainer'),
-        secondary: p.getValue('secondary'),
-        onSecondary: p.getValue('onSecondary'),
-        secondaryContainer: p.getValue('secondaryContainer'),
-        onSecondaryContainer: p.getValue('onSecondaryContainer'),
-        tertiary: p.getValue('tertiary'),
-        onTertiary: p.getValue('onTertiary'),
-        tertiaryContainer: p.getValue('tertiaryContainer'),
-        onTertiaryContainer: p.getValue('onTertiaryContainer'),
-        error: p.getValue('error'),
-        onError: p.getValue('onError'),
-        errorContainer: p.getValue('errorContainer'),
-        onErrorContainer: p.getValue('onErrorContainer'),
-        background: p.getValue('background'),
-        onBackground: p.getValue('onBackground'),
-        surface: p.getValue('surface'),
-        onSurface: p.getValue('onSurface'),
-        surfaceVariant: p.getValue('surfaceVariant'),
-        onSurfaceVariant: p.getValue('onSurfaceVariant'),
-        outline: p.getValue('outline'),
-        outlineVariant: p.getValue('outlineVariant'),
-        shadow: p.getValue('shadow'),
-        scrim: p.getValue('scrim'),
-        inverseSurface: p.getValue('inverseSurface'),
-        onInverseSurface: p.getValue('onInverseSurface'),
-        inversePrimary: p.getValue('inversePrimary'),
-        surfaceTint: p.getValue('surfaceTint'),
+        brightness: p.get('brightness').value,
+        primary: p.get('primary').value,
+        onPrimary: p.get('onPrimary').value,
+        primaryContainer: p.get('primaryContainer').value,
+        onPrimaryContainer: p.get('onPrimaryContainer').value,
+        secondary: p.get('secondary').value,
+        onSecondary: p.get('onSecondary').value,
+        secondaryContainer: p.get('secondaryContainer').value,
+        onSecondaryContainer: p.get('onSecondaryContainer').value,
+        tertiary: p.get('tertiary').value,
+        onTertiary: p.get('onTertiary').value,
+        tertiaryContainer: p.get('tertiaryContainer').value,
+        onTertiaryContainer: p.get('onTertiaryContainer').value,
+        error: p.get('error').value,
+        onError: p.get('onError').value,
+        errorContainer: p.get('errorContainer').value,
+        onErrorContainer: p.get('onErrorContainer').value,
+        background: p.get('background').value,
+        onBackground: p.get('onBackground').value,
+        surface: p.get('surface').value,
+        onSurface: p.get('onSurface').value,
+        surfaceVariant: p.get('surfaceVariant').value,
+        onSurfaceVariant: p.get('onSurfaceVariant').value,
+        outline: p.get('outline').value,
+        outlineVariant: p.get('outlineVariant').value,
+        shadow: p.get('shadow').value,
+        scrim: p.get('scrim').value,
+        inverseSurface: p.get('inverseSurface').value,
+        onInverseSurface: p.get('onInverseSurface').value,
+        inversePrimary: p.get('inversePrimary').value,
+        surfaceTint: p.get('surfaceTint').value,
       ),
     );
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'onPrimary', init: onPrimary);
-    mateParams.set(name: 'primaryContainer', init: primaryContainer);
-    mateParams.set(name: 'onPrimaryContainer', init: onPrimaryContainer);
-    mateParams.set(name: 'secondary', init: secondary);
-    mateParams.set(name: 'onSecondary', init: onSecondary);
-    mateParams.set(name: 'secondaryContainer', init: secondaryContainer);
-    mateParams.set(name: 'onSecondaryContainer', init: onSecondaryContainer);
-    mateParams.set(name: 'tertiary', init: tertiary);
-    mateParams.set(name: 'onTertiary', init: onTertiary);
-    mateParams.set(name: 'tertiaryContainer', init: tertiaryContainer);
-    mateParams.set(name: 'onTertiaryContainer', init: onTertiaryContainer);
-    mateParams.set(name: 'error', init: error);
-    mateParams.set(name: 'onError', init: onError);
-    mateParams.set(name: 'errorContainer', init: errorContainer);
-    mateParams.set(name: 'onErrorContainer', init: onErrorContainer);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'onBackground', init: onBackground);
-    mateParams.set(name: 'surface', init: surface);
-    mateParams.set(name: 'onSurface', init: onSurface);
-    mateParams.set(name: 'surfaceVariant', init: surfaceVariant);
-    mateParams.set(name: 'onSurfaceVariant', init: onSurfaceVariant);
-    mateParams.set(name: 'outline', init: outline);
-    mateParams.set(name: 'outlineVariant', init: outlineVariant);
-    mateParams.set(name: 'shadow', init: shadow);
-    mateParams.set(name: 'scrim', init: scrim);
-    mateParams.set(name: 'inverseSurface', init: inverseSurface);
-    mateParams.set(name: 'onInverseSurface', init: onInverseSurface);
-    mateParams.set(name: 'inversePrimary', init: inversePrimary);
-    mateParams.set(name: 'surfaceTint', init: surfaceTint);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('primary', init: primary);
+    mateParams.put('onPrimary', init: onPrimary);
+    mateParams.put('primaryContainer', init: primaryContainer);
+    mateParams.put('onPrimaryContainer', init: onPrimaryContainer);
+    mateParams.put('secondary', init: secondary);
+    mateParams.put('onSecondary', init: onSecondary);
+    mateParams.put('secondaryContainer', init: secondaryContainer);
+    mateParams.put('onSecondaryContainer', init: onSecondaryContainer);
+    mateParams.put('tertiary', init: tertiary);
+    mateParams.put('onTertiary', init: onTertiary);
+    mateParams.put('tertiaryContainer', init: tertiaryContainer);
+    mateParams.put('onTertiaryContainer', init: onTertiaryContainer);
+    mateParams.put('error', init: error);
+    mateParams.put('onError', init: onError);
+    mateParams.put('errorContainer', init: errorContainer);
+    mateParams.put('onErrorContainer', init: onErrorContainer);
+    mateParams.put('background', init: background);
+    mateParams.put('onBackground', init: onBackground);
+    mateParams.put('surface', init: surface);
+    mateParams.put('onSurface', init: onSurface);
+    mateParams.put('surfaceVariant', init: surfaceVariant);
+    mateParams.put('onSurfaceVariant', init: onSurfaceVariant);
+    mateParams.put('outline', init: outline);
+    mateParams.put('outlineVariant', init: outlineVariant);
+    mateParams.put('shadow', init: shadow);
+    mateParams.put('scrim', init: scrim);
+    mateParams.put('inverseSurface', init: inverseSurface);
+    mateParams.put('onInverseSurface', init: onInverseSurface);
+    mateParams.put('inversePrimary', init: inversePrimary);
+    mateParams.put('surfaceTint', init: surfaceTint);
   }
 
   /// ColorScheme ColorScheme.dark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffbb86fc), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffcf6679), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700B3), Color? secondaryVariant = const Color(0xff03dac6)})
@@ -525,73 +525,73 @@ class ColorScheme$Mate extends ColorScheme with Mate<ColorScheme$Mate> {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorScheme$Mate.dark(
-        brightness: p.getValue('brightness'),
-        primary: p.getValue('primary'),
-        onPrimary: p.getValue('onPrimary'),
-        primaryContainer: p.getValue('primaryContainer'),
-        onPrimaryContainer: p.getValue('onPrimaryContainer'),
-        secondary: p.getValue('secondary'),
-        onSecondary: p.getValue('onSecondary'),
-        secondaryContainer: p.getValue('secondaryContainer'),
-        onSecondaryContainer: p.getValue('onSecondaryContainer'),
-        tertiary: p.getValue('tertiary'),
-        onTertiary: p.getValue('onTertiary'),
-        tertiaryContainer: p.getValue('tertiaryContainer'),
-        onTertiaryContainer: p.getValue('onTertiaryContainer'),
-        error: p.getValue('error'),
-        onError: p.getValue('onError'),
-        errorContainer: p.getValue('errorContainer'),
-        onErrorContainer: p.getValue('onErrorContainer'),
-        background: p.getValue('background'),
-        onBackground: p.getValue('onBackground'),
-        surface: p.getValue('surface'),
-        onSurface: p.getValue('onSurface'),
-        surfaceVariant: p.getValue('surfaceVariant'),
-        onSurfaceVariant: p.getValue('onSurfaceVariant'),
-        outline: p.getValue('outline'),
-        outlineVariant: p.getValue('outlineVariant'),
-        shadow: p.getValue('shadow'),
-        scrim: p.getValue('scrim'),
-        inverseSurface: p.getValue('inverseSurface'),
-        onInverseSurface: p.getValue('onInverseSurface'),
-        inversePrimary: p.getValue('inversePrimary'),
-        surfaceTint: p.getValue('surfaceTint'),
+        brightness: p.get('brightness').value,
+        primary: p.get('primary').value,
+        onPrimary: p.get('onPrimary').value,
+        primaryContainer: p.get('primaryContainer').value,
+        onPrimaryContainer: p.get('onPrimaryContainer').value,
+        secondary: p.get('secondary').value,
+        onSecondary: p.get('onSecondary').value,
+        secondaryContainer: p.get('secondaryContainer').value,
+        onSecondaryContainer: p.get('onSecondaryContainer').value,
+        tertiary: p.get('tertiary').value,
+        onTertiary: p.get('onTertiary').value,
+        tertiaryContainer: p.get('tertiaryContainer').value,
+        onTertiaryContainer: p.get('onTertiaryContainer').value,
+        error: p.get('error').value,
+        onError: p.get('onError').value,
+        errorContainer: p.get('errorContainer').value,
+        onErrorContainer: p.get('onErrorContainer').value,
+        background: p.get('background').value,
+        onBackground: p.get('onBackground').value,
+        surface: p.get('surface').value,
+        onSurface: p.get('onSurface').value,
+        surfaceVariant: p.get('surfaceVariant').value,
+        onSurfaceVariant: p.get('onSurfaceVariant').value,
+        outline: p.get('outline').value,
+        outlineVariant: p.get('outlineVariant').value,
+        shadow: p.get('shadow').value,
+        scrim: p.get('scrim').value,
+        inverseSurface: p.get('inverseSurface').value,
+        onInverseSurface: p.get('onInverseSurface').value,
+        inversePrimary: p.get('inversePrimary').value,
+        surfaceTint: p.get('surfaceTint').value,
       ),
     );
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'onPrimary', init: onPrimary);
-    mateParams.set(name: 'primaryContainer', init: primaryContainer);
-    mateParams.set(name: 'onPrimaryContainer', init: onPrimaryContainer);
-    mateParams.set(name: 'secondary', init: secondary);
-    mateParams.set(name: 'onSecondary', init: onSecondary);
-    mateParams.set(name: 'secondaryContainer', init: secondaryContainer);
-    mateParams.set(name: 'onSecondaryContainer', init: onSecondaryContainer);
-    mateParams.set(name: 'tertiary', init: tertiary);
-    mateParams.set(name: 'onTertiary', init: onTertiary);
-    mateParams.set(name: 'tertiaryContainer', init: tertiaryContainer);
-    mateParams.set(name: 'onTertiaryContainer', init: onTertiaryContainer);
-    mateParams.set(name: 'error', init: error);
-    mateParams.set(name: 'onError', init: onError);
-    mateParams.set(name: 'errorContainer', init: errorContainer);
-    mateParams.set(name: 'onErrorContainer', init: onErrorContainer);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'onBackground', init: onBackground);
-    mateParams.set(name: 'surface', init: surface);
-    mateParams.set(name: 'onSurface', init: onSurface);
-    mateParams.set(name: 'surfaceVariant', init: surfaceVariant);
-    mateParams.set(name: 'onSurfaceVariant', init: onSurfaceVariant);
-    mateParams.set(name: 'outline', init: outline);
-    mateParams.set(name: 'outlineVariant', init: outlineVariant);
-    mateParams.set(name: 'shadow', init: shadow);
-    mateParams.set(name: 'scrim', init: scrim);
-    mateParams.set(name: 'inverseSurface', init: inverseSurface);
-    mateParams.set(name: 'onInverseSurface', init: onInverseSurface);
-    mateParams.set(name: 'inversePrimary', init: inversePrimary);
-    mateParams.set(name: 'surfaceTint', init: surfaceTint);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('primary', init: primary);
+    mateParams.put('onPrimary', init: onPrimary);
+    mateParams.put('primaryContainer', init: primaryContainer);
+    mateParams.put('onPrimaryContainer', init: onPrimaryContainer);
+    mateParams.put('secondary', init: secondary);
+    mateParams.put('onSecondary', init: onSecondary);
+    mateParams.put('secondaryContainer', init: secondaryContainer);
+    mateParams.put('onSecondaryContainer', init: onSecondaryContainer);
+    mateParams.put('tertiary', init: tertiary);
+    mateParams.put('onTertiary', init: onTertiary);
+    mateParams.put('tertiaryContainer', init: tertiaryContainer);
+    mateParams.put('onTertiaryContainer', init: onTertiaryContainer);
+    mateParams.put('error', init: error);
+    mateParams.put('onError', init: onError);
+    mateParams.put('errorContainer', init: errorContainer);
+    mateParams.put('onErrorContainer', init: onErrorContainer);
+    mateParams.put('background', init: background);
+    mateParams.put('onBackground', init: onBackground);
+    mateParams.put('surface', init: surface);
+    mateParams.put('onSurface', init: onSurface);
+    mateParams.put('surfaceVariant', init: surfaceVariant);
+    mateParams.put('onSurfaceVariant', init: onSurfaceVariant);
+    mateParams.put('outline', init: outline);
+    mateParams.put('outlineVariant', init: outlineVariant);
+    mateParams.put('shadow', init: shadow);
+    mateParams.put('scrim', init: scrim);
+    mateParams.put('inverseSurface', init: inverseSurface);
+    mateParams.put('onInverseSurface', init: onInverseSurface);
+    mateParams.put('inversePrimary', init: inversePrimary);
+    mateParams.put('surfaceTint', init: surfaceTint);
   }
 
   /// ColorScheme ColorScheme.highContrastLight({Brightness brightness = Brightness.light, Color primary = const Color(0xff0000ba), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff790000), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff000088), Color? secondaryVariant = const Color(0xff018786)})
@@ -721,73 +721,73 @@ class ColorScheme$Mate extends ColorScheme with Mate<ColorScheme$Mate> {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorScheme$Mate.highContrastLight(
-        brightness: p.getValue('brightness'),
-        primary: p.getValue('primary'),
-        onPrimary: p.getValue('onPrimary'),
-        primaryContainer: p.getValue('primaryContainer'),
-        onPrimaryContainer: p.getValue('onPrimaryContainer'),
-        secondary: p.getValue('secondary'),
-        onSecondary: p.getValue('onSecondary'),
-        secondaryContainer: p.getValue('secondaryContainer'),
-        onSecondaryContainer: p.getValue('onSecondaryContainer'),
-        tertiary: p.getValue('tertiary'),
-        onTertiary: p.getValue('onTertiary'),
-        tertiaryContainer: p.getValue('tertiaryContainer'),
-        onTertiaryContainer: p.getValue('onTertiaryContainer'),
-        error: p.getValue('error'),
-        onError: p.getValue('onError'),
-        errorContainer: p.getValue('errorContainer'),
-        onErrorContainer: p.getValue('onErrorContainer'),
-        background: p.getValue('background'),
-        onBackground: p.getValue('onBackground'),
-        surface: p.getValue('surface'),
-        onSurface: p.getValue('onSurface'),
-        surfaceVariant: p.getValue('surfaceVariant'),
-        onSurfaceVariant: p.getValue('onSurfaceVariant'),
-        outline: p.getValue('outline'),
-        outlineVariant: p.getValue('outlineVariant'),
-        shadow: p.getValue('shadow'),
-        scrim: p.getValue('scrim'),
-        inverseSurface: p.getValue('inverseSurface'),
-        onInverseSurface: p.getValue('onInverseSurface'),
-        inversePrimary: p.getValue('inversePrimary'),
-        surfaceTint: p.getValue('surfaceTint'),
+        brightness: p.get('brightness').value,
+        primary: p.get('primary').value,
+        onPrimary: p.get('onPrimary').value,
+        primaryContainer: p.get('primaryContainer').value,
+        onPrimaryContainer: p.get('onPrimaryContainer').value,
+        secondary: p.get('secondary').value,
+        onSecondary: p.get('onSecondary').value,
+        secondaryContainer: p.get('secondaryContainer').value,
+        onSecondaryContainer: p.get('onSecondaryContainer').value,
+        tertiary: p.get('tertiary').value,
+        onTertiary: p.get('onTertiary').value,
+        tertiaryContainer: p.get('tertiaryContainer').value,
+        onTertiaryContainer: p.get('onTertiaryContainer').value,
+        error: p.get('error').value,
+        onError: p.get('onError').value,
+        errorContainer: p.get('errorContainer').value,
+        onErrorContainer: p.get('onErrorContainer').value,
+        background: p.get('background').value,
+        onBackground: p.get('onBackground').value,
+        surface: p.get('surface').value,
+        onSurface: p.get('onSurface').value,
+        surfaceVariant: p.get('surfaceVariant').value,
+        onSurfaceVariant: p.get('onSurfaceVariant').value,
+        outline: p.get('outline').value,
+        outlineVariant: p.get('outlineVariant').value,
+        shadow: p.get('shadow').value,
+        scrim: p.get('scrim').value,
+        inverseSurface: p.get('inverseSurface').value,
+        onInverseSurface: p.get('onInverseSurface').value,
+        inversePrimary: p.get('inversePrimary').value,
+        surfaceTint: p.get('surfaceTint').value,
       ),
     );
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'onPrimary', init: onPrimary);
-    mateParams.set(name: 'primaryContainer', init: primaryContainer);
-    mateParams.set(name: 'onPrimaryContainer', init: onPrimaryContainer);
-    mateParams.set(name: 'secondary', init: secondary);
-    mateParams.set(name: 'onSecondary', init: onSecondary);
-    mateParams.set(name: 'secondaryContainer', init: secondaryContainer);
-    mateParams.set(name: 'onSecondaryContainer', init: onSecondaryContainer);
-    mateParams.set(name: 'tertiary', init: tertiary);
-    mateParams.set(name: 'onTertiary', init: onTertiary);
-    mateParams.set(name: 'tertiaryContainer', init: tertiaryContainer);
-    mateParams.set(name: 'onTertiaryContainer', init: onTertiaryContainer);
-    mateParams.set(name: 'error', init: error);
-    mateParams.set(name: 'onError', init: onError);
-    mateParams.set(name: 'errorContainer', init: errorContainer);
-    mateParams.set(name: 'onErrorContainer', init: onErrorContainer);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'onBackground', init: onBackground);
-    mateParams.set(name: 'surface', init: surface);
-    mateParams.set(name: 'onSurface', init: onSurface);
-    mateParams.set(name: 'surfaceVariant', init: surfaceVariant);
-    mateParams.set(name: 'onSurfaceVariant', init: onSurfaceVariant);
-    mateParams.set(name: 'outline', init: outline);
-    mateParams.set(name: 'outlineVariant', init: outlineVariant);
-    mateParams.set(name: 'shadow', init: shadow);
-    mateParams.set(name: 'scrim', init: scrim);
-    mateParams.set(name: 'inverseSurface', init: inverseSurface);
-    mateParams.set(name: 'onInverseSurface', init: onInverseSurface);
-    mateParams.set(name: 'inversePrimary', init: inversePrimary);
-    mateParams.set(name: 'surfaceTint', init: surfaceTint);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('primary', init: primary);
+    mateParams.put('onPrimary', init: onPrimary);
+    mateParams.put('primaryContainer', init: primaryContainer);
+    mateParams.put('onPrimaryContainer', init: onPrimaryContainer);
+    mateParams.put('secondary', init: secondary);
+    mateParams.put('onSecondary', init: onSecondary);
+    mateParams.put('secondaryContainer', init: secondaryContainer);
+    mateParams.put('onSecondaryContainer', init: onSecondaryContainer);
+    mateParams.put('tertiary', init: tertiary);
+    mateParams.put('onTertiary', init: onTertiary);
+    mateParams.put('tertiaryContainer', init: tertiaryContainer);
+    mateParams.put('onTertiaryContainer', init: onTertiaryContainer);
+    mateParams.put('error', init: error);
+    mateParams.put('onError', init: onError);
+    mateParams.put('errorContainer', init: errorContainer);
+    mateParams.put('onErrorContainer', init: onErrorContainer);
+    mateParams.put('background', init: background);
+    mateParams.put('onBackground', init: onBackground);
+    mateParams.put('surface', init: surface);
+    mateParams.put('onSurface', init: onSurface);
+    mateParams.put('surfaceVariant', init: surfaceVariant);
+    mateParams.put('onSurfaceVariant', init: onSurfaceVariant);
+    mateParams.put('outline', init: outline);
+    mateParams.put('outlineVariant', init: outlineVariant);
+    mateParams.put('shadow', init: shadow);
+    mateParams.put('scrim', init: scrim);
+    mateParams.put('inverseSurface', init: inverseSurface);
+    mateParams.put('onInverseSurface', init: onInverseSurface);
+    mateParams.put('inversePrimary', init: inversePrimary);
+    mateParams.put('surfaceTint', init: surfaceTint);
   }
 
   /// ColorScheme ColorScheme.highContrastDark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffefb7ff), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff9b374d), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xffbe9eff), Color? secondaryVariant = const Color(0xff66fff9)})
@@ -917,72 +917,72 @@ class ColorScheme$Mate extends ColorScheme with Mate<ColorScheme$Mate> {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorScheme$Mate.highContrastDark(
-        brightness: p.getValue('brightness'),
-        primary: p.getValue('primary'),
-        onPrimary: p.getValue('onPrimary'),
-        primaryContainer: p.getValue('primaryContainer'),
-        onPrimaryContainer: p.getValue('onPrimaryContainer'),
-        secondary: p.getValue('secondary'),
-        onSecondary: p.getValue('onSecondary'),
-        secondaryContainer: p.getValue('secondaryContainer'),
-        onSecondaryContainer: p.getValue('onSecondaryContainer'),
-        tertiary: p.getValue('tertiary'),
-        onTertiary: p.getValue('onTertiary'),
-        tertiaryContainer: p.getValue('tertiaryContainer'),
-        onTertiaryContainer: p.getValue('onTertiaryContainer'),
-        error: p.getValue('error'),
-        onError: p.getValue('onError'),
-        errorContainer: p.getValue('errorContainer'),
-        onErrorContainer: p.getValue('onErrorContainer'),
-        background: p.getValue('background'),
-        onBackground: p.getValue('onBackground'),
-        surface: p.getValue('surface'),
-        onSurface: p.getValue('onSurface'),
-        surfaceVariant: p.getValue('surfaceVariant'),
-        onSurfaceVariant: p.getValue('onSurfaceVariant'),
-        outline: p.getValue('outline'),
-        outlineVariant: p.getValue('outlineVariant'),
-        shadow: p.getValue('shadow'),
-        scrim: p.getValue('scrim'),
-        inverseSurface: p.getValue('inverseSurface'),
-        onInverseSurface: p.getValue('onInverseSurface'),
-        inversePrimary: p.getValue('inversePrimary'),
-        surfaceTint: p.getValue('surfaceTint'),
+        brightness: p.get('brightness').value,
+        primary: p.get('primary').value,
+        onPrimary: p.get('onPrimary').value,
+        primaryContainer: p.get('primaryContainer').value,
+        onPrimaryContainer: p.get('onPrimaryContainer').value,
+        secondary: p.get('secondary').value,
+        onSecondary: p.get('onSecondary').value,
+        secondaryContainer: p.get('secondaryContainer').value,
+        onSecondaryContainer: p.get('onSecondaryContainer').value,
+        tertiary: p.get('tertiary').value,
+        onTertiary: p.get('onTertiary').value,
+        tertiaryContainer: p.get('tertiaryContainer').value,
+        onTertiaryContainer: p.get('onTertiaryContainer').value,
+        error: p.get('error').value,
+        onError: p.get('onError').value,
+        errorContainer: p.get('errorContainer').value,
+        onErrorContainer: p.get('onErrorContainer').value,
+        background: p.get('background').value,
+        onBackground: p.get('onBackground').value,
+        surface: p.get('surface').value,
+        onSurface: p.get('onSurface').value,
+        surfaceVariant: p.get('surfaceVariant').value,
+        onSurfaceVariant: p.get('onSurfaceVariant').value,
+        outline: p.get('outline').value,
+        outlineVariant: p.get('outlineVariant').value,
+        shadow: p.get('shadow').value,
+        scrim: p.get('scrim').value,
+        inverseSurface: p.get('inverseSurface').value,
+        onInverseSurface: p.get('onInverseSurface').value,
+        inversePrimary: p.get('inversePrimary').value,
+        surfaceTint: p.get('surfaceTint').value,
       ),
     );
-    mateParams.set(name: 'brightness', init: brightness);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'onPrimary', init: onPrimary);
-    mateParams.set(name: 'primaryContainer', init: primaryContainer);
-    mateParams.set(name: 'onPrimaryContainer', init: onPrimaryContainer);
-    mateParams.set(name: 'secondary', init: secondary);
-    mateParams.set(name: 'onSecondary', init: onSecondary);
-    mateParams.set(name: 'secondaryContainer', init: secondaryContainer);
-    mateParams.set(name: 'onSecondaryContainer', init: onSecondaryContainer);
-    mateParams.set(name: 'tertiary', init: tertiary);
-    mateParams.set(name: 'onTertiary', init: onTertiary);
-    mateParams.set(name: 'tertiaryContainer', init: tertiaryContainer);
-    mateParams.set(name: 'onTertiaryContainer', init: onTertiaryContainer);
-    mateParams.set(name: 'error', init: error);
-    mateParams.set(name: 'onError', init: onError);
-    mateParams.set(name: 'errorContainer', init: errorContainer);
-    mateParams.set(name: 'onErrorContainer', init: onErrorContainer);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'onBackground', init: onBackground);
-    mateParams.set(name: 'surface', init: surface);
-    mateParams.set(name: 'onSurface', init: onSurface);
-    mateParams.set(name: 'surfaceVariant', init: surfaceVariant);
-    mateParams.set(name: 'onSurfaceVariant', init: onSurfaceVariant);
-    mateParams.set(name: 'outline', init: outline);
-    mateParams.set(name: 'outlineVariant', init: outlineVariant);
-    mateParams.set(name: 'shadow', init: shadow);
-    mateParams.set(name: 'scrim', init: scrim);
-    mateParams.set(name: 'inverseSurface', init: inverseSurface);
-    mateParams.set(name: 'onInverseSurface', init: onInverseSurface);
-    mateParams.set(name: 'inversePrimary', init: inversePrimary);
-    mateParams.set(name: 'surfaceTint', init: surfaceTint);
+    mateParams.put('brightness', init: brightness);
+    mateParams.put('primary', init: primary);
+    mateParams.put('onPrimary', init: onPrimary);
+    mateParams.put('primaryContainer', init: primaryContainer);
+    mateParams.put('onPrimaryContainer', init: onPrimaryContainer);
+    mateParams.put('secondary', init: secondary);
+    mateParams.put('onSecondary', init: onSecondary);
+    mateParams.put('secondaryContainer', init: secondaryContainer);
+    mateParams.put('onSecondaryContainer', init: onSecondaryContainer);
+    mateParams.put('tertiary', init: tertiary);
+    mateParams.put('onTertiary', init: onTertiary);
+    mateParams.put('tertiaryContainer', init: tertiaryContainer);
+    mateParams.put('onTertiaryContainer', init: onTertiaryContainer);
+    mateParams.put('error', init: error);
+    mateParams.put('onError', init: onError);
+    mateParams.put('errorContainer', init: errorContainer);
+    mateParams.put('onErrorContainer', init: onErrorContainer);
+    mateParams.put('background', init: background);
+    mateParams.put('onBackground', init: onBackground);
+    mateParams.put('surface', init: surface);
+    mateParams.put('onSurface', init: onSurface);
+    mateParams.put('surfaceVariant', init: surfaceVariant);
+    mateParams.put('onSurfaceVariant', init: onSurfaceVariant);
+    mateParams.put('outline', init: outline);
+    mateParams.put('outlineVariant', init: outlineVariant);
+    mateParams.put('shadow', init: shadow);
+    mateParams.put('scrim', init: scrim);
+    mateParams.put('inverseSurface', init: inverseSurface);
+    mateParams.put('onInverseSurface', init: onInverseSurface);
+    mateParams.put('inversePrimary', init: inversePrimary);
+    mateParams.put('surfaceTint', init: surfaceTint);
   }
 }

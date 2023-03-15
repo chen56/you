@@ -58,32 +58,32 @@ class InkRipple$Mate extends InkRipple with Mate<InkRipple$Mate> {
           radius: radius,
           onRemoved: onRemoved,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InkRipple$Mate(
-        controller: p.getValue('controller'),
-        referenceBox: p.getValue('referenceBox'),
-        position: p.getValue('position'),
-        color: p.getValue('color'),
-        textDirection: p.getValue('textDirection'),
-        containedInkWell: p.getValue('containedInkWell'),
-        rectCallback: p.getValue('rectCallback'),
-        borderRadius: p.getValue('borderRadius'),
-        customBorder: p.getValue('customBorder'),
-        radius: p.getValue('radius'),
-        onRemoved: p.getValue('onRemoved'),
+        controller: p.get('controller').value,
+        referenceBox: p.get('referenceBox').value,
+        position: p.get('position').value,
+        color: p.get('color').value,
+        textDirection: p.get('textDirection').value,
+        containedInkWell: p.get('containedInkWell').value,
+        rectCallback: p.get('rectCallback').value,
+        borderRadius: p.get('borderRadius').value,
+        customBorder: p.get('customBorder').value,
+        radius: p.get('radius').value,
+        onRemoved: p.get('onRemoved').value,
       ),
     );
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'referenceBox', init: referenceBox);
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'containedInkWell', init: containedInkWell);
-    mateParams.set(name: 'rectCallback', init: rectCallback);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'customBorder', init: customBorder);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'onRemoved', init: onRemoved);
+    mateParams.put('controller', init: controller);
+    mateParams.put('referenceBox', init: referenceBox);
+    mateParams.put('position', init: position);
+    mateParams.put('color', init: color);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('containedInkWell', init: containedInkWell);
+    mateParams.put('rectCallback', init: rectCallback);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('customBorder', init: customBorder);
+    mateParams.put('radius', init: radius);
+    mateParams.put('onRemoved', init: onRemoved);
   }
 }

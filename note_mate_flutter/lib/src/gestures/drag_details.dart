@@ -19,15 +19,15 @@ class DragDownDetails$Mate extends DragDownDetails with Mate<DragDownDetails$Mat
           globalPosition: globalPosition,
           localPosition: localPosition,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DragDownDetails$Mate(
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
       ),
     );
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
   }
 }
 
@@ -52,19 +52,19 @@ class DragStartDetails$Mate extends DragStartDetails with Mate<DragStartDetails$
           localPosition: localPosition,
           kind: kind,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DragStartDetails$Mate(
-        sourceTimeStamp: p.getValue('sourceTimeStamp'),
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
-        kind: p.getValue('kind'),
+        sourceTimeStamp: p.get('sourceTimeStamp').value,
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
+        kind: p.get('kind').value,
       ),
     );
-    mateParams.set(name: 'sourceTimeStamp', init: sourceTimeStamp);
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
-    mateParams.set(name: 'kind', init: kind);
+    mateParams.put('sourceTimeStamp', init: sourceTimeStamp);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
+    mateParams.put('kind', init: kind);
   }
 }
 
@@ -93,21 +93,21 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate<DragUpdateDetai
           globalPosition: globalPosition,
           localPosition: localPosition,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DragUpdateDetails$Mate(
-        sourceTimeStamp: p.getValue('sourceTimeStamp'),
-        delta: p.getValue('delta'),
-        primaryDelta: p.getValue('primaryDelta'),
-        globalPosition: p.getValue('globalPosition'),
-        localPosition: p.getValue('localPosition'),
+        sourceTimeStamp: p.get('sourceTimeStamp').value,
+        delta: p.get('delta').value,
+        primaryDelta: p.get('primaryDelta').value,
+        globalPosition: p.get('globalPosition').value,
+        localPosition: p.get('localPosition').value,
       ),
     );
-    mateParams.set(name: 'sourceTimeStamp', init: sourceTimeStamp);
-    mateParams.set(name: 'delta', init: delta);
-    mateParams.set(name: 'primaryDelta', init: primaryDelta);
-    mateParams.set(name: 'globalPosition', init: globalPosition);
-    mateParams.set(name: 'localPosition', init: localPosition);
+    mateParams.put('sourceTimeStamp', init: sourceTimeStamp);
+    mateParams.put('delta', init: delta);
+    mateParams.put('primaryDelta', init: primaryDelta);
+    mateParams.put('globalPosition', init: globalPosition);
+    mateParams.put('localPosition', init: localPosition);
   }
 }
 
@@ -124,14 +124,14 @@ class DragEndDetails$Mate extends DragEndDetails with Mate<DragEndDetails$Mate> 
           velocity: velocity,
           primaryVelocity: primaryVelocity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DragEndDetails$Mate(
-        velocity: p.getValue('velocity'),
-        primaryVelocity: p.getValue('primaryVelocity'),
+        velocity: p.get('velocity').value,
+        primaryVelocity: p.get('primaryVelocity').value,
       ),
     );
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: 'primaryVelocity', init: primaryVelocity);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('primaryVelocity', init: primaryVelocity);
   }
 }

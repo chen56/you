@@ -15,11 +15,11 @@ class DeleteCharacterIntent$Mate extends DeleteCharacterIntent with Mate<DeleteC
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DeleteCharacterIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -32,11 +32,11 @@ class DeleteToNextWordBoundaryIntent$Mate extends DeleteToNextWordBoundaryIntent
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -48,11 +48,11 @@ class DeleteToLineBreakIntent$Mate extends DeleteToLineBreakIntent with Mate<Del
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DeleteToLineBreakIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -70,15 +70,15 @@ class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIn
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionByCharacterIntent$Mate(
-        forward: p.getValue('forward'),
-        collapseSelection: p.getValue('collapseSelection'),
+        forward: p.get('forward').value,
+        collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.set(name: 'forward', init: forward);
-    mateParams.set(name: 'collapseSelection', init: collapseSelection);
+    mateParams.put('forward', init: forward);
+    mateParams.put('collapseSelection', init: collapseSelection);
   }
 }
 
@@ -96,15 +96,15 @@ class ExtendSelectionToNextWordBoundaryIntent$Mate extends ExtendSelectionToNext
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionToNextWordBoundaryIntent$Mate(
-        forward: p.getValue('forward'),
-        collapseSelection: p.getValue('collapseSelection'),
+        forward: p.get('forward').value,
+        collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.set(name: 'forward', init: forward);
-    mateParams.set(name: 'collapseSelection', init: collapseSelection);
+    mateParams.put('forward', init: forward);
+    mateParams.put('collapseSelection', init: collapseSelection);
   }
 }
 
@@ -118,11 +118,11 @@ class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -135,11 +135,11 @@ class ExpandSelectionToDocumentBoundaryIntent$Mate extends ExpandSelectionToDocu
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -152,11 +152,11 @@ class ExpandSelectionToLineBreakIntent$Mate extends ExpandSelectionToLineBreakIn
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -182,19 +182,19 @@ class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIn
           collapseAtReversal: collapseAtReversal,
           continuesAtWrap: continuesAtWrap,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionToLineBreakIntent$Mate(
-        forward: p.getValue('forward'),
-        collapseSelection: p.getValue('collapseSelection'),
-        collapseAtReversal: p.getValue('collapseAtReversal'),
-        continuesAtWrap: p.getValue('continuesAtWrap'),
+        forward: p.get('forward').value,
+        collapseSelection: p.get('collapseSelection').value,
+        collapseAtReversal: p.get('collapseAtReversal').value,
+        continuesAtWrap: p.get('continuesAtWrap').value,
       ),
     );
-    mateParams.set(name: 'forward', init: forward);
-    mateParams.set(name: 'collapseSelection', init: collapseSelection);
-    mateParams.set(name: 'collapseAtReversal', init: collapseAtReversal);
-    mateParams.set(name: 'continuesAtWrap', init: continuesAtWrap);
+    mateParams.put('forward', init: forward);
+    mateParams.put('collapseSelection', init: collapseSelection);
+    mateParams.put('collapseAtReversal', init: collapseAtReversal);
+    mateParams.put('continuesAtWrap', init: continuesAtWrap);
   }
 }
 
@@ -212,15 +212,15 @@ class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelection
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionVerticallyToAdjacentLineIntent$Mate(
-        forward: p.getValue('forward'),
-        collapseSelection: p.getValue('collapseSelection'),
+        forward: p.get('forward').value,
+        collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.set(name: 'forward', init: forward);
-    mateParams.set(name: 'collapseSelection', init: collapseSelection);
+    mateParams.put('forward', init: forward);
+    mateParams.put('collapseSelection', init: collapseSelection);
   }
 }
 
@@ -238,15 +238,15 @@ class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelection
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionVerticallyToAdjacentPageIntent$Mate(
-        forward: p.getValue('forward'),
-        collapseSelection: p.getValue('collapseSelection'),
+        forward: p.get('forward').value,
+        collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.set(name: 'forward', init: forward);
-    mateParams.set(name: 'collapseSelection', init: collapseSelection);
+    mateParams.put('forward', init: forward);
+    mateParams.put('collapseSelection', init: collapseSelection);
   }
 }
 
@@ -264,15 +264,15 @@ class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionT
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionToNextParagraphBoundaryIntent$Mate(
-        forward: p.getValue('forward'),
-        collapseSelection: p.getValue('collapseSelection'),
+        forward: p.get('forward').value,
+        collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.set(name: 'forward', init: forward);
-    mateParams.set(name: 'collapseSelection', init: collapseSelection);
+    mateParams.put('forward', init: forward);
+    mateParams.put('collapseSelection', init: collapseSelection);
   }
 }
 
@@ -286,11 +286,11 @@ class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -308,15 +308,15 @@ class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocu
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionToDocumentBoundaryIntent$Mate(
-        forward: p.getValue('forward'),
-        collapseSelection: p.getValue('collapseSelection'),
+        forward: p.get('forward').value,
+        collapseSelection: p.get('collapseSelection').value,
       ),
     );
-    mateParams.set(name: 'forward', init: forward);
-    mateParams.set(name: 'collapseSelection', init: collapseSelection);
+    mateParams.put('forward', init: forward);
+    mateParams.put('collapseSelection', init: collapseSelection);
   }
 }
 
@@ -329,11 +329,11 @@ class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -345,11 +345,11 @@ class ExtendSelectionByPageIntent$Mate extends ExtendSelectionByPageIntent with 
       /// optionalParameters: {required bool forward} , hasDefaultValue:false, defaultValueCode:null
       required bool forward})
       : super(forward: forward) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExtendSelectionByPageIntent$Mate(forward: p.getValue('forward')),
+      builder: (p) => ExtendSelectionByPageIntent$Mate(forward: p.get('forward').value),
     );
-    mateParams.set(name: 'forward', init: forward);
+    mateParams.put('forward', init: forward);
   }
 }
 
@@ -361,11 +361,11 @@ class SelectAllTextIntent$Mate extends SelectAllTextIntent with Mate<SelectAllTe
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super(cause) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectAllTextIntent$Mate(p.getValue('cause')),
+      builder: (p) => SelectAllTextIntent$Mate(p.get('cause').value),
     );
-    mateParams.set(name: 'cause', init: cause);
+    mateParams.put('cause', init: cause);
   }
 }
 
@@ -377,11 +377,11 @@ class CopySelectionTextIntent$Mate extends CopySelectionTextIntent with Mate<Cop
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super.cut(cause) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => CopySelectionTextIntent$Mate.cut(p.getValue('cause')),
+      builder: (p) => CopySelectionTextIntent$Mate.cut(p.get('cause').value),
     );
-    mateParams.set(name: 'cause', init: cause);
+    mateParams.put('cause', init: cause);
   }
 }
 
@@ -393,11 +393,11 @@ class PasteTextIntent$Mate extends PasteTextIntent with Mate<PasteTextIntent$Mat
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super(cause) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => PasteTextIntent$Mate(p.getValue('cause')),
+      builder: (p) => PasteTextIntent$Mate(p.get('cause').value),
     );
-    mateParams.set(name: 'cause', init: cause);
+    mateParams.put('cause', init: cause);
   }
 }
 
@@ -409,11 +409,11 @@ class RedoTextIntent$Mate extends RedoTextIntent with Mate<RedoTextIntent$Mate> 
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super(cause) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RedoTextIntent$Mate(p.getValue('cause')),
+      builder: (p) => RedoTextIntent$Mate(p.get('cause').value),
     );
-    mateParams.set(name: 'cause', init: cause);
+    mateParams.put('cause', init: cause);
   }
 }
 
@@ -438,19 +438,19 @@ class ReplaceTextIntent$Mate extends ReplaceTextIntent with Mate<ReplaceTextInte
           replacementRange,
           cause,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ReplaceTextIntent$Mate(
-        p.getValue('currentTextEditingValue'),
-        p.getValue('replacementText'),
-        p.getValue('replacementRange'),
-        p.getValue('cause'),
+        p.get('currentTextEditingValue').value,
+        p.get('replacementText').value,
+        p.get('replacementRange').value,
+        p.get('cause').value,
       ),
     );
-    mateParams.set(name: 'currentTextEditingValue', init: currentTextEditingValue);
-    mateParams.set(name: 'replacementText', init: replacementText);
-    mateParams.set(name: 'replacementRange', init: replacementRange);
-    mateParams.set(name: 'cause', init: cause);
+    mateParams.put('currentTextEditingValue', init: currentTextEditingValue);
+    mateParams.put('replacementText', init: replacementText);
+    mateParams.put('replacementRange', init: replacementRange);
+    mateParams.put('cause', init: cause);
   }
 }
 
@@ -462,11 +462,11 @@ class UndoTextIntent$Mate extends UndoTextIntent with Mate<UndoTextIntent$Mate> 
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super(cause) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => UndoTextIntent$Mate(p.getValue('cause')),
+      builder: (p) => UndoTextIntent$Mate(p.get('cause').value),
     );
-    mateParams.set(name: 'cause', init: cause);
+    mateParams.put('cause', init: cause);
   }
 }
 
@@ -487,16 +487,16 @@ class UpdateSelectionIntent$Mate extends UpdateSelectionIntent with Mate<UpdateS
           newSelection,
           cause,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => UpdateSelectionIntent$Mate(
-        p.getValue('currentTextEditingValue'),
-        p.getValue('newSelection'),
-        p.getValue('cause'),
+        p.get('currentTextEditingValue').value,
+        p.get('newSelection').value,
+        p.get('cause').value,
       ),
     );
-    mateParams.set(name: 'currentTextEditingValue', init: currentTextEditingValue);
-    mateParams.set(name: 'newSelection', init: newSelection);
-    mateParams.set(name: 'cause', init: cause);
+    mateParams.put('currentTextEditingValue', init: currentTextEditingValue);
+    mateParams.put('newSelection', init: newSelection);
+    mateParams.put('cause', init: cause);
   }
 }

@@ -37,24 +37,24 @@ class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate<RawKeyEve
           isDown: isDown,
           specifiedLogicalKey: specifiedLogicalKey,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyEventDataLinux$Mate(
-        keyHelper: p.getValue('keyHelper'),
-        unicodeScalarValues: p.getValue('unicodeScalarValues'),
-        scanCode: p.getValue('scanCode'),
-        keyCode: p.getValue('keyCode'),
-        modifiers: p.getValue('modifiers'),
-        isDown: p.getValue('isDown'),
-        specifiedLogicalKey: p.getValue('specifiedLogicalKey'),
+        keyHelper: p.get('keyHelper').value,
+        unicodeScalarValues: p.get('unicodeScalarValues').value,
+        scanCode: p.get('scanCode').value,
+        keyCode: p.get('keyCode').value,
+        modifiers: p.get('modifiers').value,
+        isDown: p.get('isDown').value,
+        specifiedLogicalKey: p.get('specifiedLogicalKey').value,
       ),
     );
-    mateParams.set(name: 'keyHelper', init: keyHelper);
-    mateParams.set(name: 'unicodeScalarValues', init: unicodeScalarValues);
-    mateParams.set(name: 'scanCode', init: scanCode);
-    mateParams.set(name: 'keyCode', init: keyCode);
-    mateParams.set(name: 'modifiers', init: modifiers);
-    mateParams.set(name: 'isDown', init: isDown);
-    mateParams.set(name: 'specifiedLogicalKey', init: specifiedLogicalKey);
+    mateParams.put('keyHelper', init: keyHelper);
+    mateParams.put('unicodeScalarValues', init: unicodeScalarValues);
+    mateParams.put('scanCode', init: scanCode);
+    mateParams.put('keyCode', init: keyCode);
+    mateParams.put('modifiers', init: modifiers);
+    mateParams.put('isDown', init: isDown);
+    mateParams.put('specifiedLogicalKey', init: specifiedLogicalKey);
   }
 }

@@ -37,21 +37,21 @@ class SnackBarAction$Mate extends SnackBarAction with WidgetMate<SnackBarAction$
           label: label,
           onPressed: onPressed,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SnackBarAction$Mate(
-        key: p.getValue('key'),
-        textColor: p.getValue('textColor'),
-        disabledTextColor: p.getValue('disabledTextColor'),
-        label: p.getValue('label'),
-        onPressed: p.getValue('onPressed'),
+        key: p.get('key').value,
+        textColor: p.get('textColor').value,
+        disabledTextColor: p.get('disabledTextColor').value,
+        label: p.get('label').value,
+        onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'disabledTextColor', init: disabledTextColor);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'onPressed', init: onPressed);
+    mateParams.put('key', init: key);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('disabledTextColor', init: disabledTextColor);
+    mateParams.put('label', init: label);
+    mateParams.put('onPressed', init: onPressed);
   }
 }
 
@@ -128,44 +128,44 @@ class SnackBar$Mate extends SnackBar with WidgetMate<SnackBar$Mate> {
           dismissDirection: dismissDirection,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SnackBar$Mate(
-        key: p.getValue('key'),
-        content: p.getValue('content'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        margin: p.getValue('margin'),
-        padding: p.getValue('padding'),
-        width: p.getValue('width'),
-        shape: p.getValue('shape'),
-        behavior: p.getValue('behavior'),
-        action: p.getValue('action'),
-        showCloseIcon: p.getValue('showCloseIcon'),
-        closeIconColor: p.getValue('closeIconColor'),
-        duration: p.getValue('duration'),
-        animation: p.getValue('animation'),
-        onVisible: p.getValue('onVisible'),
-        dismissDirection: p.getValue('dismissDirection'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        content: p.get('content').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        margin: p.get('margin').value,
+        padding: p.get('padding').value,
+        width: p.get('width').value,
+        shape: p.get('shape').value,
+        behavior: p.get('behavior').value,
+        action: p.get('action').value,
+        showCloseIcon: p.get('showCloseIcon').value,
+        closeIconColor: p.get('closeIconColor').value,
+        duration: p.get('duration').value,
+        animation: p.get('animation').value,
+        onVisible: p.get('onVisible').value,
+        dismissDirection: p.get('dismissDirection').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'content', init: content);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'action', init: action);
-    mateParams.set(name: 'showCloseIcon', init: showCloseIcon);
-    mateParams.set(name: 'closeIconColor', init: closeIconColor);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'animation', init: animation);
-    mateParams.set(name: 'onVisible', init: onVisible);
-    mateParams.set(name: 'dismissDirection', init: dismissDirection);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('content', init: content);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('margin', init: margin);
+    mateParams.put('padding', init: padding);
+    mateParams.put('width', init: width);
+    mateParams.put('shape', init: shape);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('action', init: action);
+    mateParams.put('showCloseIcon', init: showCloseIcon);
+    mateParams.put('closeIconColor', init: closeIconColor);
+    mateParams.put('duration', init: duration);
+    mateParams.put('animation', init: animation);
+    mateParams.put('onVisible', init: onVisible);
+    mateParams.put('dismissDirection', init: dismissDirection);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

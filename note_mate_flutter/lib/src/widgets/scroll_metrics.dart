@@ -34,22 +34,22 @@ class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate<FixedScrollMe
           axisDirection: axisDirection,
           devicePixelRatio: devicePixelRatio,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FixedScrollMetrics$Mate(
-        minScrollExtent: p.getValue('minScrollExtent'),
-        maxScrollExtent: p.getValue('maxScrollExtent'),
-        pixels: p.getValue('pixels'),
-        viewportDimension: p.getValue('viewportDimension'),
-        axisDirection: p.getValue('axisDirection'),
-        devicePixelRatio: p.getValue('devicePixelRatio'),
+        minScrollExtent: p.get('minScrollExtent').value,
+        maxScrollExtent: p.get('maxScrollExtent').value,
+        pixels: p.get('pixels').value,
+        viewportDimension: p.get('viewportDimension').value,
+        axisDirection: p.get('axisDirection').value,
+        devicePixelRatio: p.get('devicePixelRatio').value,
       ),
     );
-    mateParams.set(name: 'minScrollExtent', init: minScrollExtent);
-    mateParams.set(name: 'maxScrollExtent', init: maxScrollExtent);
-    mateParams.set(name: 'pixels', init: pixels);
-    mateParams.set(name: 'viewportDimension', init: viewportDimension);
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'devicePixelRatio', init: devicePixelRatio);
+    mateParams.put('minScrollExtent', init: minScrollExtent);
+    mateParams.put('maxScrollExtent', init: maxScrollExtent);
+    mateParams.put('pixels', init: pixels);
+    mateParams.put('viewportDimension', init: viewportDimension);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('devicePixelRatio', init: devicePixelRatio);
   }
 }

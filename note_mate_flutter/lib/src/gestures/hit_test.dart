@@ -11,11 +11,11 @@ class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T> with Ma
       /// requiredParameters: T target
       T target)
       : super(target) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => HitTestEntry$Mate(p.getValue('target')),
+      builder: (p) => HitTestEntry$Mate(p.get('target').value),
     );
-    mateParams.set(name: 'target', init: target);
+    mateParams.put('target', init: target);
   }
 }
 
@@ -27,10 +27,10 @@ class HitTestResult$Mate extends HitTestResult with Mate<HitTestResult$Mate> {
       /// requiredParameters: HitTestResult result
       HitTestResult result)
       : super.wrap(result) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => HitTestResult$Mate.wrap(p.getValue('result')),
+      builder: (p) => HitTestResult$Mate.wrap(p.get('result').value),
     );
-    mateParams.set(name: 'result', init: result);
+    mateParams.put('result', init: result);
   }
 }

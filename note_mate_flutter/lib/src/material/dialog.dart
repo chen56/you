@@ -71,35 +71,35 @@ class Dialog$Mate extends Dialog with WidgetMate<Dialog$Mate> {
           alignment: alignment,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Dialog$Mate(
-        key: p.getValue('key'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        insetAnimationDuration: p.getValue('insetAnimationDuration'),
-        insetAnimationCurve: p.getValue('insetAnimationCurve'),
-        insetPadding: p.getValue('insetPadding'),
-        clipBehavior: p.getValue('clipBehavior'),
-        shape: p.getValue('shape'),
-        alignment: p.getValue('alignment'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        insetAnimationDuration: p.get('insetAnimationDuration').value,
+        insetAnimationCurve: p.get('insetAnimationCurve').value,
+        insetPadding: p.get('insetPadding').value,
+        clipBehavior: p.get('clipBehavior').value,
+        shape: p.get('shape').value,
+        alignment: p.get('alignment').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'insetAnimationDuration', init: insetAnimationDuration);
-    mateParams.set(name: 'insetAnimationCurve', init: insetAnimationCurve);
-    mateParams.set(name: 'insetPadding', init: insetPadding);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('insetAnimationDuration', init: insetAnimationDuration);
+    mateParams.put('insetAnimationCurve', init: insetAnimationCurve);
+    mateParams.put('insetPadding', init: insetPadding);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('shape', init: shape);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('child', init: child);
   }
 
   /// Dialog Dialog.fullscreen({Key? key, Color? backgroundColor, Duration insetAnimationDuration = Duration.zero, Curve insetAnimationCurve = Curves.decelerate, Widget? child})
@@ -125,21 +125,21 @@ class Dialog$Mate extends Dialog with WidgetMate<Dialog$Mate> {
           insetAnimationCurve: insetAnimationCurve,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Dialog$Mate.fullscreen(
-        key: p.getValue('key'),
-        backgroundColor: p.getValue('backgroundColor'),
-        insetAnimationDuration: p.getValue('insetAnimationDuration'),
-        insetAnimationCurve: p.getValue('insetAnimationCurve'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        backgroundColor: p.get('backgroundColor').value,
+        insetAnimationDuration: p.get('insetAnimationDuration').value,
+        insetAnimationCurve: p.get('insetAnimationCurve').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'insetAnimationDuration', init: insetAnimationDuration);
-    mateParams.set(name: 'insetAnimationCurve', init: insetAnimationCurve);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('insetAnimationDuration', init: insetAnimationDuration);
+    mateParams.put('insetAnimationCurve', init: insetAnimationCurve);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -256,65 +256,65 @@ class AlertDialog$Mate extends AlertDialog with WidgetMate<AlertDialog$Mate> {
           alignment: alignment,
           scrollable: scrollable,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AlertDialog$Mate(
-        key: p.getValue('key'),
-        icon: p.getValue('icon'),
-        iconPadding: p.getValue('iconPadding'),
-        iconColor: p.getValue('iconColor'),
-        title: p.getValue('title'),
-        titlePadding: p.getValue('titlePadding'),
-        titleTextStyle: p.getValue('titleTextStyle'),
-        content: p.getValue('content'),
-        contentPadding: p.getValue('contentPadding'),
-        contentTextStyle: p.getValue('contentTextStyle'),
-        actions: p.getValue('actions'),
-        actionsPadding: p.getValue('actionsPadding'),
-        actionsAlignment: p.getValue('actionsAlignment'),
-        actionsOverflowAlignment: p.getValue('actionsOverflowAlignment'),
-        actionsOverflowDirection: p.getValue('actionsOverflowDirection'),
-        actionsOverflowButtonSpacing: p.getValue('actionsOverflowButtonSpacing'),
-        buttonPadding: p.getValue('buttonPadding'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        semanticLabel: p.getValue('semanticLabel'),
-        insetPadding: p.getValue('insetPadding'),
-        clipBehavior: p.getValue('clipBehavior'),
-        shape: p.getValue('shape'),
-        alignment: p.getValue('alignment'),
-        scrollable: p.getValue('scrollable'),
+        key: p.get('key').value,
+        icon: p.get('icon').value,
+        iconPadding: p.get('iconPadding').value,
+        iconColor: p.get('iconColor').value,
+        title: p.get('title').value,
+        titlePadding: p.get('titlePadding').value,
+        titleTextStyle: p.get('titleTextStyle').value,
+        content: p.get('content').value,
+        contentPadding: p.get('contentPadding').value,
+        contentTextStyle: p.get('contentTextStyle').value,
+        actions: p.get('actions').value,
+        actionsPadding: p.get('actionsPadding').value,
+        actionsAlignment: p.get('actionsAlignment').value,
+        actionsOverflowAlignment: p.get('actionsOverflowAlignment').value,
+        actionsOverflowDirection: p.get('actionsOverflowDirection').value,
+        actionsOverflowButtonSpacing: p.get('actionsOverflowButtonSpacing').value,
+        buttonPadding: p.get('buttonPadding').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        semanticLabel: p.get('semanticLabel').value,
+        insetPadding: p.get('insetPadding').value,
+        clipBehavior: p.get('clipBehavior').value,
+        shape: p.get('shape').value,
+        alignment: p.get('alignment').value,
+        scrollable: p.get('scrollable').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'icon', init: icon);
-    mateParams.set(name: 'iconPadding', init: iconPadding);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'titlePadding', init: titlePadding);
-    mateParams.set(name: 'titleTextStyle', init: titleTextStyle);
-    mateParams.set(name: 'content', init: content);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'contentTextStyle', init: contentTextStyle);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'actionsPadding', init: actionsPadding);
-    mateParams.set(name: 'actionsAlignment', init: actionsAlignment);
-    mateParams.set(name: 'actionsOverflowAlignment', init: actionsOverflowAlignment);
-    mateParams.set(name: 'actionsOverflowDirection', init: actionsOverflowDirection);
-    mateParams.set(name: 'actionsOverflowButtonSpacing', init: actionsOverflowButtonSpacing);
-    mateParams.set(name: 'buttonPadding', init: buttonPadding);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
-    mateParams.set(name: 'insetPadding', init: insetPadding);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'scrollable', init: scrollable);
+    mateParams.put('key', init: key);
+    mateParams.put('icon', init: icon);
+    mateParams.put('iconPadding', init: iconPadding);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('title', init: title);
+    mateParams.put('titlePadding', init: titlePadding);
+    mateParams.put('titleTextStyle', init: titleTextStyle);
+    mateParams.put('content', init: content);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('contentTextStyle', init: contentTextStyle);
+    mateParams.put('actions', init: actions);
+    mateParams.put('actionsPadding', init: actionsPadding);
+    mateParams.put('actionsAlignment', init: actionsAlignment);
+    mateParams.put('actionsOverflowAlignment', init: actionsOverflowAlignment);
+    mateParams.put('actionsOverflowDirection', init: actionsOverflowDirection);
+    mateParams.put('actionsOverflowButtonSpacing', init: actionsOverflowButtonSpacing);
+    mateParams.put('buttonPadding', init: buttonPadding);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('insetPadding', init: insetPadding);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('shape', init: shape);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('scrollable', init: scrollable);
   }
 }
 
@@ -339,19 +339,19 @@ class SimpleDialogOption$Mate extends SimpleDialogOption with WidgetMate<SimpleD
           padding: padding,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SimpleDialogOption$Mate(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        padding: p.getValue('padding'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        padding: p.get('padding').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('padding', init: padding);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -420,41 +420,41 @@ class SimpleDialog$Mate extends SimpleDialog with WidgetMate<SimpleDialog$Mate> 
           shape: shape,
           alignment: alignment,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SimpleDialog$Mate(
-        key: p.getValue('key'),
-        title: p.getValue('title'),
-        titlePadding: p.getValue('titlePadding'),
-        titleTextStyle: p.getValue('titleTextStyle'),
-        children: p.getValue('children'),
-        contentPadding: p.getValue('contentPadding'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        semanticLabel: p.getValue('semanticLabel'),
-        insetPadding: p.getValue('insetPadding'),
-        clipBehavior: p.getValue('clipBehavior'),
-        shape: p.getValue('shape'),
-        alignment: p.getValue('alignment'),
+        key: p.get('key').value,
+        title: p.get('title').value,
+        titlePadding: p.get('titlePadding').value,
+        titleTextStyle: p.get('titleTextStyle').value,
+        children: p.get('children').value,
+        contentPadding: p.get('contentPadding').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        semanticLabel: p.get('semanticLabel').value,
+        insetPadding: p.get('insetPadding').value,
+        clipBehavior: p.get('clipBehavior').value,
+        shape: p.get('shape').value,
+        alignment: p.get('alignment').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'titlePadding', init: titlePadding);
-    mateParams.set(name: 'titleTextStyle', init: titleTextStyle);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
-    mateParams.set(name: 'insetPadding', init: insetPadding);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'alignment', init: alignment);
+    mateParams.put('key', init: key);
+    mateParams.put('title', init: title);
+    mateParams.put('titlePadding', init: titlePadding);
+    mateParams.put('titleTextStyle', init: titleTextStyle);
+    mateParams.put('children', init: children);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('semanticLabel', init: semanticLabel);
+    mateParams.put('insetPadding', init: insetPadding);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('shape', init: shape);
+    mateParams.put('alignment', init: alignment);
   }
 }
 
@@ -503,30 +503,30 @@ class DialogRoute$Mate<T> extends DialogRoute<T> with Mate<DialogRoute$Mate> {
           anchorPoint: anchorPoint,
           traversalEdgeBehavior: traversalEdgeBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DialogRoute$Mate(
-        context: p.getValue('context'),
-        builder: p.getValue('builder'),
-        themes: p.getValue('themes'),
-        barrierColor: p.getValue('barrierColor'),
-        barrierDismissible: p.getValue('barrierDismissible'),
-        barrierLabel: p.getValue('barrierLabel'),
-        useSafeArea: p.getValue('useSafeArea'),
-        settings: p.getValue('settings'),
-        anchorPoint: p.getValue('anchorPoint'),
-        traversalEdgeBehavior: p.getValue('traversalEdgeBehavior'),
+        context: p.get('context').value,
+        builder: p.get('builder').value,
+        themes: p.get('themes').value,
+        barrierColor: p.get('barrierColor').value,
+        barrierDismissible: p.get('barrierDismissible').value,
+        barrierLabel: p.get('barrierLabel').value,
+        useSafeArea: p.get('useSafeArea').value,
+        settings: p.get('settings').value,
+        anchorPoint: p.get('anchorPoint').value,
+        traversalEdgeBehavior: p.get('traversalEdgeBehavior').value,
       ),
     );
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'themes', init: themes);
-    mateParams.set(name: 'barrierColor', init: barrierColor);
-    mateParams.set(name: 'barrierDismissible', init: barrierDismissible);
-    mateParams.set(name: 'barrierLabel', init: barrierLabel);
-    mateParams.set(name: 'useSafeArea', init: useSafeArea);
-    mateParams.set(name: 'settings', init: settings);
-    mateParams.set(name: 'anchorPoint', init: anchorPoint);
-    mateParams.set(name: 'traversalEdgeBehavior', init: traversalEdgeBehavior);
+    mateParams.put('context', init: context);
+    mateParams.put('builder', init: builder);
+    mateParams.put('themes', init: themes);
+    mateParams.put('barrierColor', init: barrierColor);
+    mateParams.put('barrierDismissible', init: barrierDismissible);
+    mateParams.put('barrierLabel', init: barrierLabel);
+    mateParams.put('useSafeArea', init: useSafeArea);
+    mateParams.put('settings', init: settings);
+    mateParams.put('anchorPoint', init: anchorPoint);
+    mateParams.put('traversalEdgeBehavior', init: traversalEdgeBehavior);
   }
 }

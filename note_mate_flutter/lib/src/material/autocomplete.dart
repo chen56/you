@@ -44,26 +44,26 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with WidgetMat
           optionsViewBuilder: optionsViewBuilder,
           initialValue: initialValue,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Autocomplete$Mate(
-        key: p.getValue('key'),
-        optionsBuilder: p.getValue('optionsBuilder'),
-        displayStringForOption: p.getValue('displayStringForOption'),
-        fieldViewBuilder: p.getValue('fieldViewBuilder'),
-        onSelected: p.getValue('onSelected'),
-        optionsMaxHeight: p.getValue('optionsMaxHeight'),
-        optionsViewBuilder: p.getValue('optionsViewBuilder'),
-        initialValue: p.getValue('initialValue'),
+        key: p.get('key').value,
+        optionsBuilder: p.get('optionsBuilder').value,
+        displayStringForOption: p.get('displayStringForOption').value,
+        fieldViewBuilder: p.get('fieldViewBuilder').value,
+        onSelected: p.get('onSelected').value,
+        optionsMaxHeight: p.get('optionsMaxHeight').value,
+        optionsViewBuilder: p.get('optionsViewBuilder').value,
+        initialValue: p.get('initialValue').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'optionsBuilder', init: optionsBuilder);
-    mateParams.set(name: 'displayStringForOption', init: displayStringForOption);
-    mateParams.set(name: 'fieldViewBuilder', init: fieldViewBuilder);
-    mateParams.set(name: 'onSelected', init: onSelected);
-    mateParams.set(name: 'optionsMaxHeight', init: optionsMaxHeight);
-    mateParams.set(name: 'optionsViewBuilder', init: optionsViewBuilder);
-    mateParams.set(name: 'initialValue', init: initialValue);
+    mateParams.put('key', init: key);
+    mateParams.put('optionsBuilder', init: optionsBuilder);
+    mateParams.put('displayStringForOption', init: displayStringForOption);
+    mateParams.put('fieldViewBuilder', init: fieldViewBuilder);
+    mateParams.put('onSelected', init: onSelected);
+    mateParams.put('optionsMaxHeight', init: optionsMaxHeight);
+    mateParams.put('optionsViewBuilder', init: optionsViewBuilder);
+    mateParams.put('initialValue', init: initialValue);
   }
 }

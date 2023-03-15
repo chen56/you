@@ -438,22 +438,22 @@ void _genLibMate({
               // ref: package:note/lib/experiment_mates.dart
               ..body = Block.of([
                 refer("mateParams")
-                    .assign(refer("Params", "package:note/mate.dart").call([], {
+                    .assign(refer("ObjectParam", "package:note/mate.dart").call([], {
                       "init": refer("this"),
                       "builder": Method((b) => b
                         ..name = ''
                         ..requiredParameters.add(Parameter((b) => b.name = "p"))
                         ..body = refer(mateConstructorCallName)
                             .call(
-                                parameters
-                                    .where((e) => e.isPositional)
-                                    .map((e) => refer("p.getValue").call([code.literal(e.name)])),
+                                parameters.where((e) => e.isPositional).map((e) =>
+                                    refer("p.get").call([code.literal(e.name)]).property("value")),
                                 Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
-                                    MapEntry(e.name, refer("p.getValue").call([literal(e.name)])))))
+                                    MapEntry(e.name,
+                                        refer("p.get").call([literal(e.name)]).property("value")))))
                             .code).closure,
                     }))
                     .statement,
-                ...parameters.map((e) => Code("mateParams.set(name:'${e.name}',init:${e.name});")),
+                ...parameters.map((e) => Code("mateParams.put('${e.name}',init:${e.name});")),
               ]);
           });
         })));

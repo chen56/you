@@ -16,11 +16,11 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate<Cuper
       /// optionalParameters: {int initialIndex = 0} , hasDefaultValue:true, defaultValueCode:0
       required int initialIndex})
       : super(initialIndex: initialIndex) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => CupertinoTabController$Mate(initialIndex: p.getValue('initialIndex')),
+      builder: (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').value),
     );
-    mateParams.set(name: 'initialIndex', init: initialIndex);
+    mateParams.put('initialIndex', init: initialIndex);
   }
 }
 
@@ -57,25 +57,25 @@ class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with WidgetMate<Cup
           resizeToAvoidBottomInset: resizeToAvoidBottomInset,
           restorationId: restorationId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTabScaffold$Mate(
-        key: p.getValue('key'),
-        tabBar: p.getValue('tabBar'),
-        tabBuilder: p.getValue('tabBuilder'),
-        controller: p.getValue('controller'),
-        backgroundColor: p.getValue('backgroundColor'),
-        resizeToAvoidBottomInset: p.getValue('resizeToAvoidBottomInset'),
-        restorationId: p.getValue('restorationId'),
+        key: p.get('key').value,
+        tabBar: p.get('tabBar').value,
+        tabBuilder: p.get('tabBuilder').value,
+        controller: p.get('controller').value,
+        backgroundColor: p.get('backgroundColor').value,
+        resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').value,
+        restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'tabBar', init: tabBar);
-    mateParams.set(name: 'tabBuilder', init: tabBuilder);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'resizeToAvoidBottomInset', init: resizeToAvoidBottomInset);
-    mateParams.set(name: 'restorationId', init: restorationId);
+    mateParams.put('key', init: key);
+    mateParams.put('tabBar', init: tabBar);
+    mateParams.put('tabBuilder', init: tabBuilder);
+    mateParams.put('controller', init: controller);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('resizeToAvoidBottomInset', init: resizeToAvoidBottomInset);
+    mateParams.put('restorationId', init: restorationId);
   }
 }
 
@@ -88,10 +88,10 @@ class RestorableCupertinoTabController$Mate extends RestorableCupertinoTabContro
       /// optionalParameters: {int initialIndex = 0} , hasDefaultValue:true, defaultValueCode:0
       required int initialIndex})
       : super(initialIndex: initialIndex) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RestorableCupertinoTabController$Mate(initialIndex: p.getValue('initialIndex')),
+      builder: (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').value),
     );
-    mateParams.set(name: 'initialIndex', init: initialIndex);
+    mateParams.put('initialIndex', init: initialIndex);
   }
 }

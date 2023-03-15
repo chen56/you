@@ -66,34 +66,34 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with WidgetMate<S
           restorationId: restorationId,
           keyboardDismissBehavior: keyboardDismissBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SingleChildScrollView$Mate(
-        key: p.getValue('key'),
-        scrollDirection: p.getValue('scrollDirection'),
-        reverse: p.getValue('reverse'),
-        padding: p.getValue('padding'),
-        primary: p.getValue('primary'),
-        physics: p.getValue('physics'),
-        controller: p.getValue('controller'),
-        child: p.getValue('child'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        clipBehavior: p.getValue('clipBehavior'),
-        restorationId: p.getValue('restorationId'),
-        keyboardDismissBehavior: p.getValue('keyboardDismissBehavior'),
+        key: p.get('key').value,
+        scrollDirection: p.get('scrollDirection').value,
+        reverse: p.get('reverse').value,
+        padding: p.get('padding').value,
+        primary: p.get('primary').value,
+        physics: p.get('physics').value,
+        controller: p.get('controller').value,
+        child: p.get('child').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        clipBehavior: p.get('clipBehavior').value,
+        restorationId: p.get('restorationId').value,
+        keyboardDismissBehavior: p.get('keyboardDismissBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'scrollDirection', init: scrollDirection);
-    mateParams.set(name: 'reverse', init: reverse);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'physics', init: physics);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'keyboardDismissBehavior', init: keyboardDismissBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('scrollDirection', init: scrollDirection);
+    mateParams.put('reverse', init: reverse);
+    mateParams.put('padding', init: padding);
+    mateParams.put('primary', init: primary);
+    mateParams.put('physics', init: physics);
+    mateParams.put('controller', init: controller);
+    mateParams.put('child', init: child);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('keyboardDismissBehavior', init: keyboardDismissBehavior);
   }
 }

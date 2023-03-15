@@ -22,16 +22,16 @@ class AutofillGroup$Mate extends AutofillGroup with WidgetMate<AutofillGroup$Mat
           child: child,
           onDisposeAction: onDisposeAction,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AutofillGroup$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        onDisposeAction: p.getValue('onDisposeAction'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        onDisposeAction: p.get('onDisposeAction').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'onDisposeAction', init: onDisposeAction);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('onDisposeAction', init: onDisposeAction);
   }
 }

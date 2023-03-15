@@ -25,18 +25,18 @@ class RenderPerformanceOverlay$Mate extends RenderPerformanceOverlay with Mate<R
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPerformanceOverlay$Mate(
-        optionsMask: p.getValue('optionsMask'),
-        rasterizerThreshold: p.getValue('rasterizerThreshold'),
-        checkerboardRasterCacheImages: p.getValue('checkerboardRasterCacheImages'),
-        checkerboardOffscreenLayers: p.getValue('checkerboardOffscreenLayers'),
+        optionsMask: p.get('optionsMask').value,
+        rasterizerThreshold: p.get('rasterizerThreshold').value,
+        checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').value,
+        checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').value,
       ),
     );
-    mateParams.set(name: 'optionsMask', init: optionsMask);
-    mateParams.set(name: 'rasterizerThreshold', init: rasterizerThreshold);
-    mateParams.set(name: 'checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
-    mateParams.set(name: 'checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
+    mateParams.put('optionsMask', init: optionsMask);
+    mateParams.put('rasterizerThreshold', init: rasterizerThreshold);
+    mateParams.put('checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
+    mateParams.put('checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
   }
 }

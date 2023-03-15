@@ -21,15 +21,15 @@ class RouteInformation$Mate extends RouteInformation with Mate<RouteInformation$
           location: location,
           state: state,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RouteInformation$Mate(
-        location: p.getValue('location'),
-        state: p.getValue('state'),
+        location: p.get('location').value,
+        state: p.get('state').value,
       ),
     );
-    mateParams.set(name: 'location', init: location);
-    mateParams.set(name: 'state', init: state);
+    mateParams.put('location', init: location);
+    mateParams.put('state', init: state);
   }
 }
 
@@ -54,19 +54,19 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate<RouterConfig$Mate> 
           routerDelegate: routerDelegate,
           backButtonDispatcher: backButtonDispatcher,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RouterConfig$Mate(
-        routeInformationProvider: p.getValue('routeInformationProvider'),
-        routeInformationParser: p.getValue('routeInformationParser'),
-        routerDelegate: p.getValue('routerDelegate'),
-        backButtonDispatcher: p.getValue('backButtonDispatcher'),
+        routeInformationProvider: p.get('routeInformationProvider').value,
+        routeInformationParser: p.get('routeInformationParser').value,
+        routerDelegate: p.get('routerDelegate').value,
+        backButtonDispatcher: p.get('backButtonDispatcher').value,
       ),
     );
-    mateParams.set(name: 'routeInformationProvider', init: routeInformationProvider);
-    mateParams.set(name: 'routeInformationParser', init: routeInformationParser);
-    mateParams.set(name: 'routerDelegate', init: routerDelegate);
-    mateParams.set(name: 'backButtonDispatcher', init: backButtonDispatcher);
+    mateParams.put('routeInformationProvider', init: routeInformationProvider);
+    mateParams.put('routeInformationParser', init: routeInformationParser);
+    mateParams.put('routerDelegate', init: routerDelegate);
+    mateParams.put('backButtonDispatcher', init: backButtonDispatcher);
   }
 }
 
@@ -99,23 +99,23 @@ class Router$Mate<T> extends Router<T> with WidgetMate<Router$Mate> {
           backButtonDispatcher: backButtonDispatcher,
           restorationScopeId: restorationScopeId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Router$Mate(
-        key: p.getValue('key'),
-        routeInformationProvider: p.getValue('routeInformationProvider'),
-        routeInformationParser: p.getValue('routeInformationParser'),
-        routerDelegate: p.getValue('routerDelegate'),
-        backButtonDispatcher: p.getValue('backButtonDispatcher'),
-        restorationScopeId: p.getValue('restorationScopeId'),
+        key: p.get('key').value,
+        routeInformationProvider: p.get('routeInformationProvider').value,
+        routeInformationParser: p.get('routeInformationParser').value,
+        routerDelegate: p.get('routerDelegate').value,
+        backButtonDispatcher: p.get('backButtonDispatcher').value,
+        restorationScopeId: p.get('restorationScopeId').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'routeInformationProvider', init: routeInformationProvider);
-    mateParams.set(name: 'routeInformationParser', init: routeInformationParser);
-    mateParams.set(name: 'routerDelegate', init: routerDelegate);
-    mateParams.set(name: 'backButtonDispatcher', init: backButtonDispatcher);
-    mateParams.set(name: 'restorationScopeId', init: restorationScopeId);
+    mateParams.put('key', init: key);
+    mateParams.put('routeInformationProvider', init: routeInformationProvider);
+    mateParams.put('routeInformationParser', init: routeInformationParser);
+    mateParams.put('routerDelegate', init: routerDelegate);
+    mateParams.put('backButtonDispatcher', init: backButtonDispatcher);
+    mateParams.put('restorationScopeId', init: restorationScopeId);
   }
 }
 
@@ -127,11 +127,11 @@ class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate
       /// requiredParameters: BackButtonDispatcher parent
       BackButtonDispatcher parent)
       : super(parent) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ChildBackButtonDispatcher$Mate(p.getValue('parent')),
+      builder: (p) => ChildBackButtonDispatcher$Mate(p.get('parent').value),
     );
-    mateParams.set(name: 'parent', init: parent);
+    mateParams.put('parent', init: parent);
   }
 }
 
@@ -152,17 +152,17 @@ class BackButtonListener$Mate extends BackButtonListener with WidgetMate<BackBut
           child: child,
           onBackButtonPressed: onBackButtonPressed,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BackButtonListener$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        onBackButtonPressed: p.getValue('onBackButtonPressed'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        onBackButtonPressed: p.get('onBackButtonPressed').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'onBackButtonPressed', init: onBackButtonPressed);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('onBackButtonPressed', init: onBackButtonPressed);
   }
 }
 
@@ -175,11 +175,11 @@ class PlatformRouteInformationProvider$Mate extends PlatformRouteInformationProv
       /// optionalParameters: {required RouteInformation initialRouteInformation} , hasDefaultValue:false, defaultValueCode:null
       required RouteInformation initialRouteInformation})
       : super(initialRouteInformation: initialRouteInformation) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) =>
-          PlatformRouteInformationProvider$Mate(initialRouteInformation: p.getValue('initialRouteInformation')),
+          PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').value),
     );
-    mateParams.set(name: 'initialRouteInformation', init: initialRouteInformation);
+    mateParams.put('initialRouteInformation', init: initialRouteInformation);
   }
 }

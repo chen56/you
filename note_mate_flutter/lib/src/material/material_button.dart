@@ -147,74 +147,74 @@ class MaterialButton$Mate extends MaterialButton with WidgetMate<MaterialButton$
           enableFeedback: enableFeedback,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialButton$Mate(
-        key: p.getValue('key'),
-        onPressed: p.getValue('onPressed'),
-        onLongPress: p.getValue('onLongPress'),
-        onHighlightChanged: p.getValue('onHighlightChanged'),
-        mouseCursor: p.getValue('mouseCursor'),
-        textTheme: p.getValue('textTheme'),
-        textColor: p.getValue('textColor'),
-        disabledTextColor: p.getValue('disabledTextColor'),
-        color: p.getValue('color'),
-        disabledColor: p.getValue('disabledColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        highlightColor: p.getValue('highlightColor'),
-        splashColor: p.getValue('splashColor'),
-        colorBrightness: p.getValue('colorBrightness'),
-        elevation: p.getValue('elevation'),
-        focusElevation: p.getValue('focusElevation'),
-        hoverElevation: p.getValue('hoverElevation'),
-        highlightElevation: p.getValue('highlightElevation'),
-        disabledElevation: p.getValue('disabledElevation'),
-        padding: p.getValue('padding'),
-        visualDensity: p.getValue('visualDensity'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        animationDuration: p.getValue('animationDuration'),
-        minWidth: p.getValue('minWidth'),
-        height: p.getValue('height'),
-        enableFeedback: p.getValue('enableFeedback'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        onPressed: p.get('onPressed').value,
+        onLongPress: p.get('onLongPress').value,
+        onHighlightChanged: p.get('onHighlightChanged').value,
+        mouseCursor: p.get('mouseCursor').value,
+        textTheme: p.get('textTheme').value,
+        textColor: p.get('textColor').value,
+        disabledTextColor: p.get('disabledTextColor').value,
+        color: p.get('color').value,
+        disabledColor: p.get('disabledColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        highlightColor: p.get('highlightColor').value,
+        splashColor: p.get('splashColor').value,
+        colorBrightness: p.get('colorBrightness').value,
+        elevation: p.get('elevation').value,
+        focusElevation: p.get('focusElevation').value,
+        hoverElevation: p.get('hoverElevation').value,
+        highlightElevation: p.get('highlightElevation').value,
+        disabledElevation: p.get('disabledElevation').value,
+        padding: p.get('padding').value,
+        visualDensity: p.get('visualDensity').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        animationDuration: p.get('animationDuration').value,
+        minWidth: p.get('minWidth').value,
+        height: p.get('height').value,
+        enableFeedback: p.get('enableFeedback').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onHighlightChanged', init: onHighlightChanged);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'textTheme', init: textTheme);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'disabledTextColor', init: disabledTextColor);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'colorBrightness', init: colorBrightness);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'focusElevation', init: focusElevation);
-    mateParams.set(name: 'hoverElevation', init: hoverElevation);
-    mateParams.set(name: 'highlightElevation', init: highlightElevation);
-    mateParams.set(name: 'disabledElevation', init: disabledElevation);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'animationDuration', init: animationDuration);
-    mateParams.set(name: 'minWidth', init: minWidth);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onHighlightChanged', init: onHighlightChanged);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('textTheme', init: textTheme);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('disabledTextColor', init: disabledTextColor);
+    mateParams.put('color', init: color);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('colorBrightness', init: colorBrightness);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('focusElevation', init: focusElevation);
+    mateParams.put('hoverElevation', init: hoverElevation);
+    mateParams.put('highlightElevation', init: highlightElevation);
+    mateParams.put('disabledElevation', init: disabledElevation);
+    mateParams.put('padding', init: padding);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('animationDuration', init: animationDuration);
+    mateParams.put('minWidth', init: minWidth);
+    mateParams.put('height', init: height);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('child', init: child);
   }
 }

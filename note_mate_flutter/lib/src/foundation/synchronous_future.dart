@@ -11,10 +11,10 @@ class SynchronousFuture$Mate<T> extends SynchronousFuture<T> with Mate<Synchrono
       /// requiredParameters: T _value
       T _value)
       : super(_value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SynchronousFuture$Mate(p.getValue('_value')),
+      builder: (p) => SynchronousFuture$Mate(p.get('_value').value),
     );
-    mateParams.set(name: '_value', init: _value);
+    mateParams.put('_value', init: _value);
   }
 }

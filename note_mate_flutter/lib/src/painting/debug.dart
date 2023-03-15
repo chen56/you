@@ -22,16 +22,16 @@ class ImageSizeInfo$Mate extends ImageSizeInfo with Mate<ImageSizeInfo$Mate> {
           displaySize: displaySize,
           imageSize: imageSize,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageSizeInfo$Mate(
-        source: p.getValue('source'),
-        displaySize: p.getValue('displaySize'),
-        imageSize: p.getValue('imageSize'),
+        source: p.get('source').value,
+        displaySize: p.get('displaySize').value,
+        imageSize: p.get('imageSize').value,
       ),
     );
-    mateParams.set(name: 'source', init: source);
-    mateParams.set(name: 'displaySize', init: displaySize);
-    mateParams.set(name: 'imageSize', init: imageSize);
+    mateParams.put('source', init: source);
+    mateParams.put('displaySize', init: displaySize);
+    mateParams.put('imageSize', init: imageSize);
   }
 }

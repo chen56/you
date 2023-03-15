@@ -28,18 +28,18 @@ class Title$Mate extends Title with WidgetMate<Title$Mate> {
           color: color,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Title$Mate(
-        key: p.getValue('key'),
-        title: p.getValue('title'),
-        color: p.getValue('color'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        title: p.get('title').value,
+        color: p.get('color').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('title', init: title);
+    mateParams.put('color', init: color);
+    mateParams.put('child', init: child);
   }
 }

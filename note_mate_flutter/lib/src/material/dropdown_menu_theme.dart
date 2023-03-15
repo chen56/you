@@ -25,17 +25,17 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate<Dropdow
           inputDecorationTheme: inputDecorationTheme,
           menuStyle: menuStyle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownMenuThemeData$Mate(
-        textStyle: p.getValue('textStyle'),
-        inputDecorationTheme: p.getValue('inputDecorationTheme'),
-        menuStyle: p.getValue('menuStyle'),
+        textStyle: p.get('textStyle').value,
+        inputDecorationTheme: p.get('inputDecorationTheme').value,
+        menuStyle: p.get('menuStyle').value,
       ),
     );
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'inputDecorationTheme', init: inputDecorationTheme);
-    mateParams.set(name: 'menuStyle', init: menuStyle);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('inputDecorationTheme', init: inputDecorationTheme);
+    mateParams.put('menuStyle', init: menuStyle);
   }
 }
 
@@ -56,16 +56,16 @@ class DropdownMenuTheme$Mate extends DropdownMenuTheme with WidgetMate<DropdownM
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownMenuTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

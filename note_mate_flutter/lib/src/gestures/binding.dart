@@ -46,26 +46,26 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
           informationCollector: informationCollector,
           silent: silent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FlutterErrorDetailsForPointerEventDispatcher$Mate(
-        exception: p.getValue('exception'),
-        stack: p.getValue('stack'),
-        library: p.getValue('library'),
-        context: p.getValue('context'),
-        event: p.getValue('event'),
-        hitTestEntry: p.getValue('hitTestEntry'),
-        informationCollector: p.getValue('informationCollector'),
-        silent: p.getValue('silent'),
+        exception: p.get('exception').value,
+        stack: p.get('stack').value,
+        library: p.get('library').value,
+        context: p.get('context').value,
+        event: p.get('event').value,
+        hitTestEntry: p.get('hitTestEntry').value,
+        informationCollector: p.get('informationCollector').value,
+        silent: p.get('silent').value,
       ),
     );
-    mateParams.set(name: 'exception', init: exception);
-    mateParams.set(name: 'stack', init: stack);
-    mateParams.set(name: 'library', init: library);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'event', init: event);
-    mateParams.set(name: 'hitTestEntry', init: hitTestEntry);
-    mateParams.set(name: 'informationCollector', init: informationCollector);
-    mateParams.set(name: 'silent', init: silent);
+    mateParams.put('exception', init: exception);
+    mateParams.put('stack', init: stack);
+    mateParams.put('library', init: library);
+    mateParams.put('context', init: context);
+    mateParams.put('event', init: event);
+    mateParams.put('hitTestEntry', init: hitTestEntry);
+    mateParams.put('informationCollector', init: informationCollector);
+    mateParams.put('silent', init: silent);
   }
 }

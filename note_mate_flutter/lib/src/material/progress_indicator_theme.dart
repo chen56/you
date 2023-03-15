@@ -32,21 +32,21 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
           circularTrackColor: circularTrackColor,
           refreshBackgroundColor: refreshBackgroundColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ProgressIndicatorThemeData$Mate(
-        color: p.getValue('color'),
-        linearTrackColor: p.getValue('linearTrackColor'),
-        linearMinHeight: p.getValue('linearMinHeight'),
-        circularTrackColor: p.getValue('circularTrackColor'),
-        refreshBackgroundColor: p.getValue('refreshBackgroundColor'),
+        color: p.get('color').value,
+        linearTrackColor: p.get('linearTrackColor').value,
+        linearMinHeight: p.get('linearMinHeight').value,
+        circularTrackColor: p.get('circularTrackColor').value,
+        refreshBackgroundColor: p.get('refreshBackgroundColor').value,
       ),
     );
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'linearTrackColor', init: linearTrackColor);
-    mateParams.set(name: 'linearMinHeight', init: linearMinHeight);
-    mateParams.set(name: 'circularTrackColor', init: circularTrackColor);
-    mateParams.set(name: 'refreshBackgroundColor', init: refreshBackgroundColor);
+    mateParams.put('color', init: color);
+    mateParams.put('linearTrackColor', init: linearTrackColor);
+    mateParams.put('linearMinHeight', init: linearMinHeight);
+    mateParams.put('circularTrackColor', init: circularTrackColor);
+    mateParams.put('refreshBackgroundColor', init: refreshBackgroundColor);
   }
 }
 
@@ -67,16 +67,16 @@ class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with WidgetMate
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ProgressIndicatorTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

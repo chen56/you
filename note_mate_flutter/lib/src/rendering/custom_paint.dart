@@ -34,21 +34,21 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate<Custo
           transform: transform,
           tags: tags,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CustomPainterSemantics$Mate(
-        key: p.getValue('key'),
-        rect: p.getValue('rect'),
-        properties: p.getValue('properties'),
-        transform: p.getValue('transform'),
-        tags: p.getValue('tags'),
+        key: p.get('key').value,
+        rect: p.get('rect').value,
+        properties: p.get('properties').value,
+        transform: p.get('transform').value,
+        tags: p.get('tags').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'rect', init: rect);
-    mateParams.set(name: 'properties', init: properties);
-    mateParams.set(name: 'transform', init: transform);
-    mateParams.set(name: 'tags', init: tags);
+    mateParams.put('key', init: key);
+    mateParams.put('rect', init: rect);
+    mateParams.put('properties', init: properties);
+    mateParams.put('transform', init: transform);
+    mateParams.put('tags', init: tags);
   }
 }
 
@@ -81,22 +81,22 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate<RenderCustomPai
           willChange: willChange,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderCustomPaint$Mate(
-        painter: p.getValue('painter'),
-        foregroundPainter: p.getValue('foregroundPainter'),
-        preferredSize: p.getValue('preferredSize'),
-        isComplex: p.getValue('isComplex'),
-        willChange: p.getValue('willChange'),
-        child: p.getValue('child'),
+        painter: p.get('painter').value,
+        foregroundPainter: p.get('foregroundPainter').value,
+        preferredSize: p.get('preferredSize').value,
+        isComplex: p.get('isComplex').value,
+        willChange: p.get('willChange').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'painter', init: painter);
-    mateParams.set(name: 'foregroundPainter', init: foregroundPainter);
-    mateParams.set(name: 'preferredSize', init: preferredSize);
-    mateParams.set(name: 'isComplex', init: isComplex);
-    mateParams.set(name: 'willChange', init: willChange);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('painter', init: painter);
+    mateParams.put('foregroundPainter', init: foregroundPainter);
+    mateParams.put('preferredSize', init: preferredSize);
+    mateParams.put('isComplex', init: isComplex);
+    mateParams.put('willChange', init: willChange);
+    mateParams.put('child', init: child);
   }
 }

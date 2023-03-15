@@ -39,25 +39,25 @@ class Hero$Mate extends Hero with WidgetMate<Hero$Mate> {
           transitionOnUserGestures: transitionOnUserGestures,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Hero$Mate(
-        key: p.getValue('key'),
-        tag: p.getValue('tag'),
-        createRectTween: p.getValue('createRectTween'),
-        flightShuttleBuilder: p.getValue('flightShuttleBuilder'),
-        placeholderBuilder: p.getValue('placeholderBuilder'),
-        transitionOnUserGestures: p.getValue('transitionOnUserGestures'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        tag: p.get('tag').value,
+        createRectTween: p.get('createRectTween').value,
+        flightShuttleBuilder: p.get('flightShuttleBuilder').value,
+        placeholderBuilder: p.get('placeholderBuilder').value,
+        transitionOnUserGestures: p.get('transitionOnUserGestures').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'tag', init: tag);
-    mateParams.set(name: 'createRectTween', init: createRectTween);
-    mateParams.set(name: 'flightShuttleBuilder', init: flightShuttleBuilder);
-    mateParams.set(name: 'placeholderBuilder', init: placeholderBuilder);
-    mateParams.set(name: 'transitionOnUserGestures', init: transitionOnUserGestures);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('tag', init: tag);
+    mateParams.put('createRectTween', init: createRectTween);
+    mateParams.put('flightShuttleBuilder', init: flightShuttleBuilder);
+    mateParams.put('placeholderBuilder', init: placeholderBuilder);
+    mateParams.put('transitionOnUserGestures', init: transitionOnUserGestures);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -69,11 +69,11 @@ class HeroController$Mate extends HeroController with Mate<HeroController$Mate> 
       /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , hasDefaultValue:false, defaultValueCode:null
       CreateRectTween? createRectTween})
       : super(createRectTween: createRectTween) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => HeroController$Mate(createRectTween: p.getValue('createRectTween')),
+      builder: (p) => HeroController$Mate(createRectTween: p.get('createRectTween').value),
     );
-    mateParams.set(name: 'createRectTween', init: createRectTween);
+    mateParams.put('createRectTween', init: createRectTween);
   }
 }
 
@@ -94,16 +94,16 @@ class HeroMode$Mate extends HeroMode with WidgetMate<HeroMode$Mate> {
           child: child,
           enabled: enabled,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => HeroMode$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        enabled: p.getValue('enabled'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        enabled: p.get('enabled').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'enabled', init: enabled);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('enabled', init: enabled);
   }
 }

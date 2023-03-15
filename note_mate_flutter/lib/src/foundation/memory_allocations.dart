@@ -21,17 +21,17 @@ class ObjectCreated$Mate extends ObjectCreated with Mate<ObjectCreated$Mate> {
           className: className,
           object: object,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ObjectCreated$Mate(
-        library: p.getValue('library'),
-        className: p.getValue('className'),
-        object: p.getValue('object'),
+        library: p.get('library').value,
+        className: p.get('className').value,
+        object: p.get('object').value,
       ),
     );
-    mateParams.set(name: 'library', init: library);
-    mateParams.set(name: 'className', init: className);
-    mateParams.set(name: 'object', init: object);
+    mateParams.put('library', init: library);
+    mateParams.put('className', init: className);
+    mateParams.put('object', init: object);
   }
 }
 
@@ -43,10 +43,10 @@ class ObjectDisposed$Mate extends ObjectDisposed with Mate<ObjectDisposed$Mate> 
       /// optionalParameters: {required Object object} , hasDefaultValue:false, defaultValueCode:null
       required Object object})
       : super(object: object) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ObjectDisposed$Mate(object: p.getValue('object')),
+      builder: (p) => ObjectDisposed$Mate(object: p.get('object').value),
     );
-    mateParams.set(name: 'object', init: object);
+    mateParams.put('object', init: object);
   }
 }

@@ -80,42 +80,42 @@ class Radio$Mate<T> extends Radio<T> with WidgetMate<Radio$Mate> {
           focusNode: focusNode,
           autofocus: autofocus,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Radio$Mate(
-        key: p.getValue('key'),
-        value: p.getValue('value'),
-        groupValue: p.getValue('groupValue'),
-        onChanged: p.getValue('onChanged'),
-        mouseCursor: p.getValue('mouseCursor'),
-        toggleable: p.getValue('toggleable'),
-        activeColor: p.getValue('activeColor'),
-        fillColor: p.getValue('fillColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashRadius: p.getValue('splashRadius'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        visualDensity: p.getValue('visualDensity'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
+        key: p.get('key').value,
+        value: p.get('value').value,
+        groupValue: p.get('groupValue').value,
+        onChanged: p.get('onChanged').value,
+        mouseCursor: p.get('mouseCursor').value,
+        toggleable: p.get('toggleable').value,
+        activeColor: p.get('activeColor').value,
+        fillColor: p.get('fillColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        visualDensity: p.get('visualDensity').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'groupValue', init: groupValue);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'toggleable', init: toggleable);
-    mateParams.set(name: 'activeColor', init: activeColor);
-    mateParams.set(name: 'fillColor', init: fillColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
+    mateParams.put('key', init: key);
+    mateParams.put('value', init: value);
+    mateParams.put('groupValue', init: groupValue);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('toggleable', init: toggleable);
+    mateParams.put('activeColor', init: activeColor);
+    mateParams.put('fillColor', init: fillColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
   }
 }

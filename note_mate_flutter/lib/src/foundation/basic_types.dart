@@ -12,11 +12,11 @@ class CachingIterable$Mate<E> extends CachingIterable<E> with Mate<CachingIterab
       /// requiredParameters: Iterator<E> _prefillIterator
       Iterator<E> _prefillIterator)
       : super(_prefillIterator) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => CachingIterable$Mate(p.getValue('_prefillIterator')),
+      builder: (p) => CachingIterable$Mate(p.get('_prefillIterator').value),
     );
-    mateParams.set(name: '_prefillIterator', init: _prefillIterator);
+    mateParams.put('_prefillIterator', init: _prefillIterator);
   }
 }
 
@@ -28,10 +28,10 @@ class Factory$Mate<T> extends Factory<T> with Mate<Factory$Mate> {
       /// requiredParameters: T Function() constructor
       ValueGetter<T> constructor)
       : super(constructor) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => Factory$Mate(p.getValue('constructor')),
+      builder: (p) => Factory$Mate(p.get('constructor').value),
     );
-    mateParams.set(name: 'constructor', init: constructor);
+    mateParams.put('constructor', init: constructor);
   }
 }

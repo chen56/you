@@ -17,15 +17,15 @@ class MaterialPointArcTween$Mate extends MaterialPointArcTween with Mate<Materia
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialPointArcTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -42,15 +42,15 @@ class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate<MaterialR
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialRectArcTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }
 
@@ -67,14 +67,14 @@ class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween with Ma
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialRectCenterArcTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }

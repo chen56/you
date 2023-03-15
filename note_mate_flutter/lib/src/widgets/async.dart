@@ -19,15 +19,15 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate<AsyncSnapshot$Mat
           state,
           data,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AsyncSnapshot$Mate.withData(
-        p.getValue('state'),
-        p.getValue('data'),
+        p.get('state').value,
+        p.get('data').value,
       ),
     );
-    mateParams.set(name: 'state', init: state);
-    mateParams.set(name: 'data', init: data);
+    mateParams.put('state', init: state);
+    mateParams.put('data', init: data);
   }
 
   /// AsyncSnapshot<T> AsyncSnapshot.withError(ConnectionState state, Object error, [StackTrace stackTrace = StackTrace.empty])
@@ -45,17 +45,17 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate<AsyncSnapshot$Mat
           error,
           stackTrace,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AsyncSnapshot$Mate.withError(
-        p.getValue('state'),
-        p.getValue('error'),
-        p.getValue('stackTrace'),
+        p.get('state').value,
+        p.get('error').value,
+        p.get('stackTrace').value,
       ),
     );
-    mateParams.set(name: 'state', init: state);
-    mateParams.set(name: 'error', init: error);
-    mateParams.set(name: 'stackTrace', init: stackTrace);
+    mateParams.put('state', init: state);
+    mateParams.put('error', init: error);
+    mateParams.put('stackTrace', init: stackTrace);
   }
 }
 
@@ -80,19 +80,19 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with WidgetMate<StreamBuild
           stream: stream,
           builder: builder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => StreamBuilder$Mate(
-        key: p.getValue('key'),
-        initialData: p.getValue('initialData'),
-        stream: p.getValue('stream'),
-        builder: p.getValue('builder'),
+        key: p.get('key').value,
+        initialData: p.get('initialData').value,
+        stream: p.get('stream').value,
+        builder: p.get('builder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'initialData', init: initialData);
-    mateParams.set(name: 'stream', init: stream);
-    mateParams.set(name: 'builder', init: builder);
+    mateParams.put('key', init: key);
+    mateParams.put('initialData', init: initialData);
+    mateParams.put('stream', init: stream);
+    mateParams.put('builder', init: builder);
   }
 }
 
@@ -117,18 +117,18 @@ class FutureBuilder$Mate<T> extends FutureBuilder<T> with WidgetMate<FutureBuild
           initialData: initialData,
           builder: builder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FutureBuilder$Mate(
-        key: p.getValue('key'),
-        future: p.getValue('future'),
-        initialData: p.getValue('initialData'),
-        builder: p.getValue('builder'),
+        key: p.get('key').value,
+        future: p.get('future').value,
+        initialData: p.get('initialData').value,
+        builder: p.get('builder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'future', init: future);
-    mateParams.set(name: 'initialData', init: initialData);
-    mateParams.set(name: 'builder', init: builder);
+    mateParams.put('key', init: key);
+    mateParams.put('future', init: future);
+    mateParams.put('initialData', init: initialData);
+    mateParams.put('builder', init: builder);
   }
 }

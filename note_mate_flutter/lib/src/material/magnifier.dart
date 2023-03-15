@@ -23,15 +23,15 @@ class TextMagnifier$Mate extends TextMagnifier with WidgetMate<TextMagnifier$Mat
           key: key,
           magnifierInfo: magnifierInfo,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextMagnifier$Mate(
-        key: p.getValue('key'),
-        magnifierInfo: p.getValue('magnifierInfo'),
+        key: p.get('key').value,
+        magnifierInfo: p.get('magnifierInfo').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'magnifierInfo', init: magnifierInfo);
+    mateParams.put('key', init: key);
+    mateParams.put('magnifierInfo', init: magnifierInfo);
   }
 }
 
@@ -64,22 +64,22 @@ class Magnifier$Mate extends Magnifier with WidgetMate<Magnifier$Mate> {
           shadows: shadows,
           size: size,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Magnifier$Mate(
-        key: p.getValue('key'),
-        additionalFocalPointOffset: p.getValue('additionalFocalPointOffset'),
-        borderRadius: p.getValue('borderRadius'),
-        filmColor: p.getValue('filmColor'),
-        shadows: p.getValue('shadows'),
-        size: p.getValue('size'),
+        key: p.get('key').value,
+        additionalFocalPointOffset: p.get('additionalFocalPointOffset').value,
+        borderRadius: p.get('borderRadius').value,
+        filmColor: p.get('filmColor').value,
+        shadows: p.get('shadows').value,
+        size: p.get('size').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'additionalFocalPointOffset', init: additionalFocalPointOffset);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'filmColor', init: filmColor);
-    mateParams.set(name: 'shadows', init: shadows);
-    mateParams.set(name: 'size', init: size);
+    mateParams.put('key', init: key);
+    mateParams.put('additionalFocalPointOffset', init: additionalFocalPointOffset);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('filmColor', init: filmColor);
+    mateParams.put('shadows', init: shadows);
+    mateParams.put('size', init: size);
   }
 }

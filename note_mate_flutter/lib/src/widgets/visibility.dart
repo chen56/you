@@ -47,29 +47,29 @@ class Visibility$Mate extends Visibility with WidgetMate<Visibility$Mate> {
           maintainSemantics: maintainSemantics,
           maintainInteractivity: maintainInteractivity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Visibility$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        replacement: p.getValue('replacement'),
-        visible: p.getValue('visible'),
-        maintainState: p.getValue('maintainState'),
-        maintainAnimation: p.getValue('maintainAnimation'),
-        maintainSize: p.getValue('maintainSize'),
-        maintainSemantics: p.getValue('maintainSemantics'),
-        maintainInteractivity: p.getValue('maintainInteractivity'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        replacement: p.get('replacement').value,
+        visible: p.get('visible').value,
+        maintainState: p.get('maintainState').value,
+        maintainAnimation: p.get('maintainAnimation').value,
+        maintainSize: p.get('maintainSize').value,
+        maintainSemantics: p.get('maintainSemantics').value,
+        maintainInteractivity: p.get('maintainInteractivity').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'replacement', init: replacement);
-    mateParams.set(name: 'visible', init: visible);
-    mateParams.set(name: 'maintainState', init: maintainState);
-    mateParams.set(name: 'maintainAnimation', init: maintainAnimation);
-    mateParams.set(name: 'maintainSize', init: maintainSize);
-    mateParams.set(name: 'maintainSemantics', init: maintainSemantics);
-    mateParams.set(name: 'maintainInteractivity', init: maintainInteractivity);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('replacement', init: replacement);
+    mateParams.put('visible', init: visible);
+    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('maintainAnimation', init: maintainAnimation);
+    mateParams.put('maintainSize', init: maintainSize);
+    mateParams.put('maintainSemantics', init: maintainSemantics);
+    mateParams.put('maintainInteractivity', init: maintainInteractivity);
   }
 
   /// Visibility Visibility.maintain({Key? key, required Widget child, Widget replacement = const SizedBox.shrink(), bool visible = true})
@@ -91,19 +91,19 @@ class Visibility$Mate extends Visibility with WidgetMate<Visibility$Mate> {
           replacement: replacement,
           visible: visible,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Visibility$Mate.maintain(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        replacement: p.getValue('replacement'),
-        visible: p.getValue('visible'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        replacement: p.get('replacement').value,
+        visible: p.get('visible').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'replacement', init: replacement);
-    mateParams.set(name: 'visible', init: visible);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('replacement', init: replacement);
+    mateParams.put('visible', init: visible);
   }
 }
 
@@ -148,29 +148,29 @@ class SliverVisibility$Mate extends SliverVisibility with WidgetMate<SliverVisib
           maintainSemantics: maintainSemantics,
           maintainInteractivity: maintainInteractivity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverVisibility$Mate(
-        key: p.getValue('key'),
-        sliver: p.getValue('sliver'),
-        replacementSliver: p.getValue('replacementSliver'),
-        visible: p.getValue('visible'),
-        maintainState: p.getValue('maintainState'),
-        maintainAnimation: p.getValue('maintainAnimation'),
-        maintainSize: p.getValue('maintainSize'),
-        maintainSemantics: p.getValue('maintainSemantics'),
-        maintainInteractivity: p.getValue('maintainInteractivity'),
+        key: p.get('key').value,
+        sliver: p.get('sliver').value,
+        replacementSliver: p.get('replacementSliver').value,
+        visible: p.get('visible').value,
+        maintainState: p.get('maintainState').value,
+        maintainAnimation: p.get('maintainAnimation').value,
+        maintainSize: p.get('maintainSize').value,
+        maintainSemantics: p.get('maintainSemantics').value,
+        maintainInteractivity: p.get('maintainInteractivity').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'sliver', init: sliver);
-    mateParams.set(name: 'replacementSliver', init: replacementSliver);
-    mateParams.set(name: 'visible', init: visible);
-    mateParams.set(name: 'maintainState', init: maintainState);
-    mateParams.set(name: 'maintainAnimation', init: maintainAnimation);
-    mateParams.set(name: 'maintainSize', init: maintainSize);
-    mateParams.set(name: 'maintainSemantics', init: maintainSemantics);
-    mateParams.set(name: 'maintainInteractivity', init: maintainInteractivity);
+    mateParams.put('key', init: key);
+    mateParams.put('sliver', init: sliver);
+    mateParams.put('replacementSliver', init: replacementSliver);
+    mateParams.put('visible', init: visible);
+    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('maintainAnimation', init: maintainAnimation);
+    mateParams.put('maintainSize', init: maintainSize);
+    mateParams.put('maintainSemantics', init: maintainSemantics);
+    mateParams.put('maintainInteractivity', init: maintainInteractivity);
   }
 
   /// SliverVisibility SliverVisibility.maintain({Key? key, required Widget sliver, Widget replacementSliver = const SliverToBoxAdapter(), bool visible = true})
@@ -192,18 +192,18 @@ class SliverVisibility$Mate extends SliverVisibility with WidgetMate<SliverVisib
           replacementSliver: replacementSliver,
           visible: visible,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverVisibility$Mate.maintain(
-        key: p.getValue('key'),
-        sliver: p.getValue('sliver'),
-        replacementSliver: p.getValue('replacementSliver'),
-        visible: p.getValue('visible'),
+        key: p.get('key').value,
+        sliver: p.get('sliver').value,
+        replacementSliver: p.get('replacementSliver').value,
+        visible: p.get('visible').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'sliver', init: sliver);
-    mateParams.set(name: 'replacementSliver', init: replacementSliver);
-    mateParams.set(name: 'visible', init: visible);
+    mateParams.put('key', init: key);
+    mateParams.put('sliver', init: sliver);
+    mateParams.put('replacementSliver', init: replacementSliver);
+    mateParams.put('visible', init: visible);
   }
 }

@@ -12,11 +12,11 @@ class MaterialStatePropertyAll$Mate<T> extends MaterialStatePropertyAll<T> with 
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => MaterialStatePropertyAll$Mate(p.getValue('value')),
+      builder: (p) => MaterialStatePropertyAll$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -28,10 +28,10 @@ class MaterialStatesController$Mate extends MaterialStatesController with Mate<M
       /// requiredParameters: [Set<MaterialState>? value]
       Set<MaterialState>? value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => MaterialStatesController$Mate(p.getValue('value')),
+      builder: (p) => MaterialStatesController$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }

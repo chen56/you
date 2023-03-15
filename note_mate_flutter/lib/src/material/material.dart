@@ -67,37 +67,37 @@ class Material$Mate extends Material with WidgetMate<Material$Mate> {
           animationDuration: animationDuration,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Material$Mate(
-        key: p.getValue('key'),
-        type: p.getValue('type'),
-        elevation: p.getValue('elevation'),
-        color: p.getValue('color'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        textStyle: p.getValue('textStyle'),
-        borderRadius: p.getValue('borderRadius'),
-        shape: p.getValue('shape'),
-        borderOnForeground: p.getValue('borderOnForeground'),
-        clipBehavior: p.getValue('clipBehavior'),
-        animationDuration: p.getValue('animationDuration'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        type: p.get('type').value,
+        elevation: p.get('elevation').value,
+        color: p.get('color').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        textStyle: p.get('textStyle').value,
+        borderRadius: p.get('borderRadius').value,
+        shape: p.get('shape').value,
+        borderOnForeground: p.get('borderOnForeground').value,
+        clipBehavior: p.get('clipBehavior').value,
+        animationDuration: p.get('animationDuration').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'type', init: type);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'borderOnForeground', init: borderOnForeground);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'animationDuration', init: animationDuration);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('type', init: type);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('color', init: color);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('shape', init: shape);
+    mateParams.put('borderOnForeground', init: borderOnForeground);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('animationDuration', init: animationDuration);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -114,14 +114,14 @@ class ShapeBorderTween$Mate extends ShapeBorderTween with Mate<ShapeBorderTween$
           begin: begin,
           end: end,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShapeBorderTween$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
   }
 }

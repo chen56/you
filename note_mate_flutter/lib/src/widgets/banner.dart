@@ -37,23 +37,23 @@ class BannerPainter$Mate extends BannerPainter with Mate<BannerPainter$Mate> {
           color: color,
           textStyle: textStyle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BannerPainter$Mate(
-        message: p.getValue('message'),
-        textDirection: p.getValue('textDirection'),
-        location: p.getValue('location'),
-        layoutDirection: p.getValue('layoutDirection'),
-        color: p.getValue('color'),
-        textStyle: p.getValue('textStyle'),
+        message: p.get('message').value,
+        textDirection: p.get('textDirection').value,
+        location: p.get('location').value,
+        layoutDirection: p.get('layoutDirection').value,
+        color: p.get('color').value,
+        textStyle: p.get('textStyle').value,
       ),
     );
-    mateParams.set(name: 'message', init: message);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'location', init: location);
-    mateParams.set(name: 'layoutDirection', init: layoutDirection);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'textStyle', init: textStyle);
+    mateParams.put('message', init: message);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('location', init: location);
+    mateParams.put('layoutDirection', init: layoutDirection);
+    mateParams.put('color', init: color);
+    mateParams.put('textStyle', init: textStyle);
   }
 }
 
@@ -94,27 +94,27 @@ class Banner$Mate extends Banner with WidgetMate<Banner$Mate> {
           color: color,
           textStyle: textStyle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Banner$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        message: p.getValue('message'),
-        textDirection: p.getValue('textDirection'),
-        location: p.getValue('location'),
-        layoutDirection: p.getValue('layoutDirection'),
-        color: p.getValue('color'),
-        textStyle: p.getValue('textStyle'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        message: p.get('message').value,
+        textDirection: p.get('textDirection').value,
+        location: p.get('location').value,
+        layoutDirection: p.get('layoutDirection').value,
+        color: p.get('color').value,
+        textStyle: p.get('textStyle').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'message', init: message);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'location', init: location);
-    mateParams.set(name: 'layoutDirection', init: layoutDirection);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'textStyle', init: textStyle);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('message', init: message);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('location', init: location);
+    mateParams.put('layoutDirection', init: layoutDirection);
+    mateParams.put('color', init: color);
+    mateParams.put('textStyle', init: textStyle);
   }
 }
 
@@ -131,14 +131,14 @@ class CheckedModeBanner$Mate extends CheckedModeBanner with WidgetMate<CheckedMo
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CheckedModeBanner$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }

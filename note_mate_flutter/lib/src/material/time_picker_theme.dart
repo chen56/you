@@ -105,55 +105,55 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate<TimePickerT
           padding: padding,
           shape: shape,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TimePickerThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        cancelButtonStyle: p.getValue('cancelButtonStyle'),
-        confirmButtonStyle: p.getValue('confirmButtonStyle'),
-        dayPeriodBorderSide: p.getValue('dayPeriodBorderSide'),
-        dayPeriodColor: p.getValue('dayPeriodColor'),
-        dayPeriodShape: p.getValue('dayPeriodShape'),
-        dayPeriodTextColor: p.getValue('dayPeriodTextColor'),
-        dayPeriodTextStyle: p.getValue('dayPeriodTextStyle'),
-        dialBackgroundColor: p.getValue('dialBackgroundColor'),
-        dialHandColor: p.getValue('dialHandColor'),
-        dialTextColor: p.getValue('dialTextColor'),
-        dialTextStyle: p.getValue('dialTextStyle'),
-        elevation: p.getValue('elevation'),
-        entryModeIconColor: p.getValue('entryModeIconColor'),
-        helpTextStyle: p.getValue('helpTextStyle'),
-        hourMinuteColor: p.getValue('hourMinuteColor'),
-        hourMinuteShape: p.getValue('hourMinuteShape'),
-        hourMinuteTextColor: p.getValue('hourMinuteTextColor'),
-        hourMinuteTextStyle: p.getValue('hourMinuteTextStyle'),
-        inputDecorationTheme: p.getValue('inputDecorationTheme'),
-        padding: p.getValue('padding'),
-        shape: p.getValue('shape'),
+        backgroundColor: p.get('backgroundColor').value,
+        cancelButtonStyle: p.get('cancelButtonStyle').value,
+        confirmButtonStyle: p.get('confirmButtonStyle').value,
+        dayPeriodBorderSide: p.get('dayPeriodBorderSide').value,
+        dayPeriodColor: p.get('dayPeriodColor').value,
+        dayPeriodShape: p.get('dayPeriodShape').value,
+        dayPeriodTextColor: p.get('dayPeriodTextColor').value,
+        dayPeriodTextStyle: p.get('dayPeriodTextStyle').value,
+        dialBackgroundColor: p.get('dialBackgroundColor').value,
+        dialHandColor: p.get('dialHandColor').value,
+        dialTextColor: p.get('dialTextColor').value,
+        dialTextStyle: p.get('dialTextStyle').value,
+        elevation: p.get('elevation').value,
+        entryModeIconColor: p.get('entryModeIconColor').value,
+        helpTextStyle: p.get('helpTextStyle').value,
+        hourMinuteColor: p.get('hourMinuteColor').value,
+        hourMinuteShape: p.get('hourMinuteShape').value,
+        hourMinuteTextColor: p.get('hourMinuteTextColor').value,
+        hourMinuteTextStyle: p.get('hourMinuteTextStyle').value,
+        inputDecorationTheme: p.get('inputDecorationTheme').value,
+        padding: p.get('padding').value,
+        shape: p.get('shape').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'cancelButtonStyle', init: cancelButtonStyle);
-    mateParams.set(name: 'confirmButtonStyle', init: confirmButtonStyle);
-    mateParams.set(name: 'dayPeriodBorderSide', init: dayPeriodBorderSide);
-    mateParams.set(name: 'dayPeriodColor', init: dayPeriodColor);
-    mateParams.set(name: 'dayPeriodShape', init: dayPeriodShape);
-    mateParams.set(name: 'dayPeriodTextColor', init: dayPeriodTextColor);
-    mateParams.set(name: 'dayPeriodTextStyle', init: dayPeriodTextStyle);
-    mateParams.set(name: 'dialBackgroundColor', init: dialBackgroundColor);
-    mateParams.set(name: 'dialHandColor', init: dialHandColor);
-    mateParams.set(name: 'dialTextColor', init: dialTextColor);
-    mateParams.set(name: 'dialTextStyle', init: dialTextStyle);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'entryModeIconColor', init: entryModeIconColor);
-    mateParams.set(name: 'helpTextStyle', init: helpTextStyle);
-    mateParams.set(name: 'hourMinuteColor', init: hourMinuteColor);
-    mateParams.set(name: 'hourMinuteShape', init: hourMinuteShape);
-    mateParams.set(name: 'hourMinuteTextColor', init: hourMinuteTextColor);
-    mateParams.set(name: 'hourMinuteTextStyle', init: hourMinuteTextStyle);
-    mateParams.set(name: 'inputDecorationTheme', init: inputDecorationTheme);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'shape', init: shape);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('cancelButtonStyle', init: cancelButtonStyle);
+    mateParams.put('confirmButtonStyle', init: confirmButtonStyle);
+    mateParams.put('dayPeriodBorderSide', init: dayPeriodBorderSide);
+    mateParams.put('dayPeriodColor', init: dayPeriodColor);
+    mateParams.put('dayPeriodShape', init: dayPeriodShape);
+    mateParams.put('dayPeriodTextColor', init: dayPeriodTextColor);
+    mateParams.put('dayPeriodTextStyle', init: dayPeriodTextStyle);
+    mateParams.put('dialBackgroundColor', init: dialBackgroundColor);
+    mateParams.put('dialHandColor', init: dialHandColor);
+    mateParams.put('dialTextColor', init: dialTextColor);
+    mateParams.put('dialTextStyle', init: dialTextStyle);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('entryModeIconColor', init: entryModeIconColor);
+    mateParams.put('helpTextStyle', init: helpTextStyle);
+    mateParams.put('hourMinuteColor', init: hourMinuteColor);
+    mateParams.put('hourMinuteShape', init: hourMinuteShape);
+    mateParams.put('hourMinuteTextColor', init: hourMinuteTextColor);
+    mateParams.put('hourMinuteTextStyle', init: hourMinuteTextStyle);
+    mateParams.put('inputDecorationTheme', init: inputDecorationTheme);
+    mateParams.put('padding', init: padding);
+    mateParams.put('shape', init: shape);
   }
 }
 
@@ -174,16 +174,16 @@ class TimePickerTheme$Mate extends TimePickerTheme with WidgetMate<TimePickerThe
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TimePickerTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

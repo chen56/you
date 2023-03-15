@@ -35,19 +35,19 @@ class DataColumn$Mate extends DataColumn with Mate<DataColumn$Mate> {
           numeric: numeric,
           onSort: onSort,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DataColumn$Mate(
-        label: p.getValue('label'),
-        tooltip: p.getValue('tooltip'),
-        numeric: p.getValue('numeric'),
-        onSort: p.getValue('onSort'),
+        label: p.get('label').value,
+        tooltip: p.get('tooltip').value,
+        numeric: p.get('numeric').value,
+        onSort: p.get('onSort').value,
       ),
     );
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'tooltip', init: tooltip);
-    mateParams.set(name: 'numeric', init: numeric);
-    mateParams.set(name: 'onSort', init: onSort);
+    mateParams.put('label', init: label);
+    mateParams.put('tooltip', init: tooltip);
+    mateParams.put('numeric', init: numeric);
+    mateParams.put('onSort', init: onSort);
   }
 }
 
@@ -80,23 +80,23 @@ class DataRow$Mate extends DataRow with Mate<DataRow$Mate> {
           color: color,
           cells: cells,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DataRow$Mate(
-        key: p.getValue('key'),
-        selected: p.getValue('selected'),
-        onSelectChanged: p.getValue('onSelectChanged'),
-        onLongPress: p.getValue('onLongPress'),
-        color: p.getValue('color'),
-        cells: p.getValue('cells'),
+        key: p.get('key').value,
+        selected: p.get('selected').value,
+        onSelectChanged: p.get('onSelectChanged').value,
+        onLongPress: p.get('onLongPress').value,
+        color: p.get('color').value,
+        cells: p.get('cells').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'onSelectChanged', init: onSelectChanged);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'cells', init: cells);
+    mateParams.put('key', init: key);
+    mateParams.put('selected', init: selected);
+    mateParams.put('onSelectChanged', init: onSelectChanged);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('color', init: color);
+    mateParams.put('cells', init: cells);
   }
 
   /// DataRow DataRow.byIndex({int? index, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
@@ -126,23 +126,23 @@ class DataRow$Mate extends DataRow with Mate<DataRow$Mate> {
           color: color,
           cells: cells,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DataRow$Mate.byIndex(
-        index: p.getValue('index'),
-        selected: p.getValue('selected'),
-        onSelectChanged: p.getValue('onSelectChanged'),
-        onLongPress: p.getValue('onLongPress'),
-        color: p.getValue('color'),
-        cells: p.getValue('cells'),
+        index: p.get('index').value,
+        selected: p.get('selected').value,
+        onSelectChanged: p.get('onSelectChanged').value,
+        onLongPress: p.get('onLongPress').value,
+        color: p.get('color').value,
+        cells: p.get('cells').value,
       ),
     );
-    mateParams.set(name: 'index', init: index);
-    mateParams.set(name: 'selected', init: selected);
-    mateParams.set(name: 'onSelectChanged', init: onSelectChanged);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'cells', init: cells);
+    mateParams.put('index', init: index);
+    mateParams.put('selected', init: selected);
+    mateParams.put('onSelectChanged', init: onSelectChanged);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('color', init: color);
+    mateParams.put('cells', init: cells);
   }
 }
 
@@ -182,27 +182,27 @@ class DataCell$Mate extends DataCell with Mate<DataCell$Mate> {
           onDoubleTap: onDoubleTap,
           onTapCancel: onTapCancel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DataCell$Mate(
-        p.getValue('child'),
-        placeholder: p.getValue('placeholder'),
-        showEditIcon: p.getValue('showEditIcon'),
-        onTap: p.getValue('onTap'),
-        onLongPress: p.getValue('onLongPress'),
-        onTapDown: p.getValue('onTapDown'),
-        onDoubleTap: p.getValue('onDoubleTap'),
-        onTapCancel: p.getValue('onTapCancel'),
+        p.get('child').value,
+        placeholder: p.get('placeholder').value,
+        showEditIcon: p.get('showEditIcon').value,
+        onTap: p.get('onTap').value,
+        onLongPress: p.get('onLongPress').value,
+        onTapDown: p.get('onTapDown').value,
+        onDoubleTap: p.get('onDoubleTap').value,
+        onTapCancel: p.get('onTapCancel').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'placeholder', init: placeholder);
-    mateParams.set(name: 'showEditIcon', init: showEditIcon);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onTapDown', init: onTapDown);
-    mateParams.set(name: 'onDoubleTap', init: onDoubleTap);
-    mateParams.set(name: 'onTapCancel', init: onTapCancel);
+    mateParams.put('child', init: child);
+    mateParams.put('placeholder', init: placeholder);
+    mateParams.put('showEditIcon', init: showEditIcon);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onTapDown', init: onTapDown);
+    mateParams.put('onDoubleTap', init: onDoubleTap);
+    mateParams.put('onTapCancel', init: onTapCancel);
   }
 }
 
@@ -295,53 +295,53 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
           border: border,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DataTable$Mate(
-        key: p.getValue('key'),
-        columns: p.getValue('columns'),
-        sortColumnIndex: p.getValue('sortColumnIndex'),
-        sortAscending: p.getValue('sortAscending'),
-        onSelectAll: p.getValue('onSelectAll'),
-        decoration: p.getValue('decoration'),
-        dataRowColor: p.getValue('dataRowColor'),
-        dataRowHeight: p.getValue('dataRowHeight'),
-        dataTextStyle: p.getValue('dataTextStyle'),
-        headingRowColor: p.getValue('headingRowColor'),
-        headingRowHeight: p.getValue('headingRowHeight'),
-        headingTextStyle: p.getValue('headingTextStyle'),
-        horizontalMargin: p.getValue('horizontalMargin'),
-        columnSpacing: p.getValue('columnSpacing'),
-        showCheckboxColumn: p.getValue('showCheckboxColumn'),
-        showBottomBorder: p.getValue('showBottomBorder'),
-        dividerThickness: p.getValue('dividerThickness'),
-        rows: p.getValue('rows'),
-        checkboxHorizontalMargin: p.getValue('checkboxHorizontalMargin'),
-        border: p.getValue('border'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        columns: p.get('columns').value,
+        sortColumnIndex: p.get('sortColumnIndex').value,
+        sortAscending: p.get('sortAscending').value,
+        onSelectAll: p.get('onSelectAll').value,
+        decoration: p.get('decoration').value,
+        dataRowColor: p.get('dataRowColor').value,
+        dataRowHeight: p.get('dataRowHeight').value,
+        dataTextStyle: p.get('dataTextStyle').value,
+        headingRowColor: p.get('headingRowColor').value,
+        headingRowHeight: p.get('headingRowHeight').value,
+        headingTextStyle: p.get('headingTextStyle').value,
+        horizontalMargin: p.get('horizontalMargin').value,
+        columnSpacing: p.get('columnSpacing').value,
+        showCheckboxColumn: p.get('showCheckboxColumn').value,
+        showBottomBorder: p.get('showBottomBorder').value,
+        dividerThickness: p.get('dividerThickness').value,
+        rows: p.get('rows').value,
+        checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').value,
+        border: p.get('border').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'columns', init: columns);
-    mateParams.set(name: 'sortColumnIndex', init: sortColumnIndex);
-    mateParams.set(name: 'sortAscending', init: sortAscending);
-    mateParams.set(name: 'onSelectAll', init: onSelectAll);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'dataRowColor', init: dataRowColor);
-    mateParams.set(name: 'dataRowHeight', init: dataRowHeight);
-    mateParams.set(name: 'dataTextStyle', init: dataTextStyle);
-    mateParams.set(name: 'headingRowColor', init: headingRowColor);
-    mateParams.set(name: 'headingRowHeight', init: headingRowHeight);
-    mateParams.set(name: 'headingTextStyle', init: headingTextStyle);
-    mateParams.set(name: 'horizontalMargin', init: horizontalMargin);
-    mateParams.set(name: 'columnSpacing', init: columnSpacing);
-    mateParams.set(name: 'showCheckboxColumn', init: showCheckboxColumn);
-    mateParams.set(name: 'showBottomBorder', init: showBottomBorder);
-    mateParams.set(name: 'dividerThickness', init: dividerThickness);
-    mateParams.set(name: 'rows', init: rows);
-    mateParams.set(name: 'checkboxHorizontalMargin', init: checkboxHorizontalMargin);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('columns', init: columns);
+    mateParams.put('sortColumnIndex', init: sortColumnIndex);
+    mateParams.put('sortAscending', init: sortAscending);
+    mateParams.put('onSelectAll', init: onSelectAll);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('dataRowColor', init: dataRowColor);
+    mateParams.put('dataRowHeight', init: dataRowHeight);
+    mateParams.put('dataTextStyle', init: dataTextStyle);
+    mateParams.put('headingRowColor', init: headingRowColor);
+    mateParams.put('headingRowHeight', init: headingRowHeight);
+    mateParams.put('headingTextStyle', init: headingTextStyle);
+    mateParams.put('horizontalMargin', init: horizontalMargin);
+    mateParams.put('columnSpacing', init: columnSpacing);
+    mateParams.put('showCheckboxColumn', init: showCheckboxColumn);
+    mateParams.put('showBottomBorder', init: showBottomBorder);
+    mateParams.put('dividerThickness', init: dividerThickness);
+    mateParams.put('rows', init: rows);
+    mateParams.put('checkboxHorizontalMargin', init: checkboxHorizontalMargin);
+    mateParams.put('border', init: border);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -378,24 +378,24 @@ class TableRowInkWell$Mate extends TableRowInkWell with WidgetMate<TableRowInkWe
           onHighlightChanged: onHighlightChanged,
           overlayColor: overlayColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TableRowInkWell$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        onTap: p.getValue('onTap'),
-        onDoubleTap: p.getValue('onDoubleTap'),
-        onLongPress: p.getValue('onLongPress'),
-        onHighlightChanged: p.getValue('onHighlightChanged'),
-        overlayColor: p.getValue('overlayColor'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        onTap: p.get('onTap').value,
+        onDoubleTap: p.get('onDoubleTap').value,
+        onLongPress: p.get('onLongPress').value,
+        onHighlightChanged: p.get('onHighlightChanged').value,
+        overlayColor: p.get('overlayColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'onDoubleTap', init: onDoubleTap);
-    mateParams.set(name: 'onLongPress', init: onLongPress);
-    mateParams.set(name: 'onHighlightChanged', init: onHighlightChanged);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('onDoubleTap', init: onDoubleTap);
+    mateParams.put('onLongPress', init: onLongPress);
+    mateParams.put('onHighlightChanged', init: onHighlightChanged);
+    mateParams.put('overlayColor', init: overlayColor);
   }
 }

@@ -50,28 +50,28 @@ class OverflowBar$Mate extends OverflowBar with WidgetMate<OverflowBar$Mate> {
           clipBehavior: clipBehavior,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => OverflowBar$Mate(
-        key: p.getValue('key'),
-        spacing: p.getValue('spacing'),
-        alignment: p.getValue('alignment'),
-        overflowSpacing: p.getValue('overflowSpacing'),
-        overflowAlignment: p.getValue('overflowAlignment'),
-        overflowDirection: p.getValue('overflowDirection'),
-        textDirection: p.getValue('textDirection'),
-        clipBehavior: p.getValue('clipBehavior'),
-        children: p.getValue('children'),
+        key: p.get('key').value,
+        spacing: p.get('spacing').value,
+        alignment: p.get('alignment').value,
+        overflowSpacing: p.get('overflowSpacing').value,
+        overflowAlignment: p.get('overflowAlignment').value,
+        overflowDirection: p.get('overflowDirection').value,
+        textDirection: p.get('textDirection').value,
+        clipBehavior: p.get('clipBehavior').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'spacing', init: spacing);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'overflowSpacing', init: overflowSpacing);
-    mateParams.set(name: 'overflowAlignment', init: overflowAlignment);
-    mateParams.set(name: 'overflowDirection', init: overflowDirection);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('key', init: key);
+    mateParams.put('spacing', init: spacing);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('overflowSpacing', init: overflowSpacing);
+    mateParams.put('overflowAlignment', init: overflowAlignment);
+    mateParams.put('overflowDirection', init: overflowDirection);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('children', init: children);
   }
 }

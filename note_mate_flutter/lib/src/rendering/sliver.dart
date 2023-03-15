@@ -61,35 +61,35 @@ class SliverConstraints$Mate extends SliverConstraints with Mate<SliverConstrain
           remainingCacheExtent: remainingCacheExtent,
           cacheOrigin: cacheOrigin,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverConstraints$Mate(
-        axisDirection: p.getValue('axisDirection'),
-        growthDirection: p.getValue('growthDirection'),
-        userScrollDirection: p.getValue('userScrollDirection'),
-        scrollOffset: p.getValue('scrollOffset'),
-        precedingScrollExtent: p.getValue('precedingScrollExtent'),
-        overlap: p.getValue('overlap'),
-        remainingPaintExtent: p.getValue('remainingPaintExtent'),
-        crossAxisExtent: p.getValue('crossAxisExtent'),
-        crossAxisDirection: p.getValue('crossAxisDirection'),
-        viewportMainAxisExtent: p.getValue('viewportMainAxisExtent'),
-        remainingCacheExtent: p.getValue('remainingCacheExtent'),
-        cacheOrigin: p.getValue('cacheOrigin'),
+        axisDirection: p.get('axisDirection').value,
+        growthDirection: p.get('growthDirection').value,
+        userScrollDirection: p.get('userScrollDirection').value,
+        scrollOffset: p.get('scrollOffset').value,
+        precedingScrollExtent: p.get('precedingScrollExtent').value,
+        overlap: p.get('overlap').value,
+        remainingPaintExtent: p.get('remainingPaintExtent').value,
+        crossAxisExtent: p.get('crossAxisExtent').value,
+        crossAxisDirection: p.get('crossAxisDirection').value,
+        viewportMainAxisExtent: p.get('viewportMainAxisExtent').value,
+        remainingCacheExtent: p.get('remainingCacheExtent').value,
+        cacheOrigin: p.get('cacheOrigin').value,
       ),
     );
-    mateParams.set(name: 'axisDirection', init: axisDirection);
-    mateParams.set(name: 'growthDirection', init: growthDirection);
-    mateParams.set(name: 'userScrollDirection', init: userScrollDirection);
-    mateParams.set(name: 'scrollOffset', init: scrollOffset);
-    mateParams.set(name: 'precedingScrollExtent', init: precedingScrollExtent);
-    mateParams.set(name: 'overlap', init: overlap);
-    mateParams.set(name: 'remainingPaintExtent', init: remainingPaintExtent);
-    mateParams.set(name: 'crossAxisExtent', init: crossAxisExtent);
-    mateParams.set(name: 'crossAxisDirection', init: crossAxisDirection);
-    mateParams.set(name: 'viewportMainAxisExtent', init: viewportMainAxisExtent);
-    mateParams.set(name: 'remainingCacheExtent', init: remainingCacheExtent);
-    mateParams.set(name: 'cacheOrigin', init: cacheOrigin);
+    mateParams.put('axisDirection', init: axisDirection);
+    mateParams.put('growthDirection', init: growthDirection);
+    mateParams.put('userScrollDirection', init: userScrollDirection);
+    mateParams.put('scrollOffset', init: scrollOffset);
+    mateParams.put('precedingScrollExtent', init: precedingScrollExtent);
+    mateParams.put('overlap', init: overlap);
+    mateParams.put('remainingPaintExtent', init: remainingPaintExtent);
+    mateParams.put('crossAxisExtent', init: crossAxisExtent);
+    mateParams.put('crossAxisDirection', init: crossAxisDirection);
+    mateParams.put('viewportMainAxisExtent', init: viewportMainAxisExtent);
+    mateParams.put('remainingCacheExtent', init: remainingCacheExtent);
+    mateParams.put('cacheOrigin', init: cacheOrigin);
   }
 }
 
@@ -142,33 +142,33 @@ class SliverGeometry$Mate extends SliverGeometry with Mate<SliverGeometry$Mate> 
           scrollOffsetCorrection: scrollOffsetCorrection,
           cacheExtent: cacheExtent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGeometry$Mate(
-        scrollExtent: p.getValue('scrollExtent'),
-        paintExtent: p.getValue('paintExtent'),
-        paintOrigin: p.getValue('paintOrigin'),
-        layoutExtent: p.getValue('layoutExtent'),
-        maxPaintExtent: p.getValue('maxPaintExtent'),
-        maxScrollObstructionExtent: p.getValue('maxScrollObstructionExtent'),
-        hitTestExtent: p.getValue('hitTestExtent'),
-        visible: p.getValue('visible'),
-        hasVisualOverflow: p.getValue('hasVisualOverflow'),
-        scrollOffsetCorrection: p.getValue('scrollOffsetCorrection'),
-        cacheExtent: p.getValue('cacheExtent'),
+        scrollExtent: p.get('scrollExtent').value,
+        paintExtent: p.get('paintExtent').value,
+        paintOrigin: p.get('paintOrigin').value,
+        layoutExtent: p.get('layoutExtent').value,
+        maxPaintExtent: p.get('maxPaintExtent').value,
+        maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').value,
+        hitTestExtent: p.get('hitTestExtent').value,
+        visible: p.get('visible').value,
+        hasVisualOverflow: p.get('hasVisualOverflow').value,
+        scrollOffsetCorrection: p.get('scrollOffsetCorrection').value,
+        cacheExtent: p.get('cacheExtent').value,
       ),
     );
-    mateParams.set(name: 'scrollExtent', init: scrollExtent);
-    mateParams.set(name: 'paintExtent', init: paintExtent);
-    mateParams.set(name: 'paintOrigin', init: paintOrigin);
-    mateParams.set(name: 'layoutExtent', init: layoutExtent);
-    mateParams.set(name: 'maxPaintExtent', init: maxPaintExtent);
-    mateParams.set(name: 'maxScrollObstructionExtent', init: maxScrollObstructionExtent);
-    mateParams.set(name: 'hitTestExtent', init: hitTestExtent);
-    mateParams.set(name: 'visible', init: visible);
-    mateParams.set(name: 'hasVisualOverflow', init: hasVisualOverflow);
-    mateParams.set(name: 'scrollOffsetCorrection', init: scrollOffsetCorrection);
-    mateParams.set(name: 'cacheExtent', init: cacheExtent);
+    mateParams.put('scrollExtent', init: scrollExtent);
+    mateParams.put('paintExtent', init: paintExtent);
+    mateParams.put('paintOrigin', init: paintOrigin);
+    mateParams.put('layoutExtent', init: layoutExtent);
+    mateParams.put('maxPaintExtent', init: maxPaintExtent);
+    mateParams.put('maxScrollObstructionExtent', init: maxScrollObstructionExtent);
+    mateParams.put('hitTestExtent', init: hitTestExtent);
+    mateParams.put('visible', init: visible);
+    mateParams.put('hasVisualOverflow', init: hasVisualOverflow);
+    mateParams.put('scrollOffsetCorrection', init: scrollOffsetCorrection);
+    mateParams.put('cacheExtent', init: cacheExtent);
   }
 }
 
@@ -180,11 +180,11 @@ class SliverHitTestResult$Mate extends SliverHitTestResult with Mate<SliverHitTe
       /// requiredParameters: HitTestResult result
       HitTestResult result)
       : super.wrap(result) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SliverHitTestResult$Mate.wrap(p.getValue('result')),
+      builder: (p) => SliverHitTestResult$Mate.wrap(p.get('result').value),
     );
-    mateParams.set(name: 'result', init: result);
+    mateParams.put('result', init: result);
   }
 }
 
@@ -204,17 +204,17 @@ class SliverHitTestEntry$Mate extends SliverHitTestEntry with Mate<SliverHitTest
           mainAxisPosition: mainAxisPosition,
           crossAxisPosition: crossAxisPosition,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverHitTestEntry$Mate(
-        p.getValue('target'),
-        mainAxisPosition: p.getValue('mainAxisPosition'),
-        crossAxisPosition: p.getValue('crossAxisPosition'),
+        p.get('target').value,
+        mainAxisPosition: p.get('mainAxisPosition').value,
+        crossAxisPosition: p.get('crossAxisPosition').value,
       ),
     );
-    mateParams.set(name: 'target', init: target);
-    mateParams.set(name: 'mainAxisPosition', init: mainAxisPosition);
-    mateParams.set(name: 'crossAxisPosition', init: crossAxisPosition);
+    mateParams.put('target', init: target);
+    mateParams.put('mainAxisPosition', init: mainAxisPosition);
+    mateParams.put('crossAxisPosition', init: crossAxisPosition);
   }
 }
 
@@ -226,10 +226,10 @@ class RenderSliverToBoxAdapter$Mate extends RenderSliverToBoxAdapter with Mate<R
       /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
       RenderBox? child})
       : super(child: child) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverToBoxAdapter$Mate(child: p.getValue('child')),
+      builder: (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').value),
     );
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('child', init: child);
   }
 }

@@ -12,11 +12,11 @@ class Category$Mate extends Category with Mate<Category$Mate> {
       /// requiredParameters: List<String> sections
       List<String> sections)
       : super(sections) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => Category$Mate(p.getValue('sections')),
+      builder: (p) => Category$Mate(p.get('sections').value),
     );
-    mateParams.set(name: 'sections', init: sections);
+    mateParams.put('sections', init: sections);
   }
 }
 
@@ -28,11 +28,11 @@ class DocumentationIcon$Mate extends DocumentationIcon with Mate<DocumentationIc
       /// requiredParameters: String url
       String url)
       : super(url) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DocumentationIcon$Mate(p.getValue('url')),
+      builder: (p) => DocumentationIcon$Mate(p.get('url').value),
     );
-    mateParams.set(name: 'url', init: url);
+    mateParams.put('url', init: url);
   }
 }
 
@@ -44,10 +44,10 @@ class Summary$Mate extends Summary with Mate<Summary$Mate> {
       /// requiredParameters: String text
       String text)
       : super(text) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => Summary$Mate(p.getValue('text')),
+      builder: (p) => Summary$Mate(p.get('text').value),
     );
-    mateParams.set(name: 'text', init: text);
+    mateParams.put('text', init: text);
   }
 }

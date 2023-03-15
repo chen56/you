@@ -46,26 +46,26 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate<RenderAnimate
           child: child,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAnimatedSize$Mate(
-        vsync: p.getValue('vsync'),
-        duration: p.getValue('duration'),
-        reverseDuration: p.getValue('reverseDuration'),
-        curve: p.getValue('curve'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
-        child: p.getValue('child'),
-        clipBehavior: p.getValue('clipBehavior'),
+        vsync: p.get('vsync').value,
+        duration: p.get('duration').value,
+        reverseDuration: p.get('reverseDuration').value,
+        curve: p.get('curve').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
+        child: p.get('child').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'vsync', init: vsync);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'reverseDuration', init: reverseDuration);
-    mateParams.set(name: 'curve', init: curve);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('vsync', init: vsync);
+    mateParams.put('duration', init: duration);
+    mateParams.put('reverseDuration', init: reverseDuration);
+    mateParams.put('curve', init: curve);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', init: child);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

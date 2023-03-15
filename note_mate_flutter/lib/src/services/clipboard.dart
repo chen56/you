@@ -12,10 +12,10 @@ class ClipboardData$Mate extends ClipboardData with Mate<ClipboardData$Mate> {
       /// optionalParameters: {String? text} , hasDefaultValue:false, defaultValueCode:null
       String? text})
       : super(text: text) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ClipboardData$Mate(text: p.getValue('text')),
+      builder: (p) => ClipboardData$Mate(text: p.get('text').value),
     );
-    mateParams.set(name: 'text', init: text);
+    mateParams.put('text', init: text);
   }
 }

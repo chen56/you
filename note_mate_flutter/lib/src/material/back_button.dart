@@ -13,11 +13,11 @@ class BackButtonIcon$Mate extends BackButtonIcon with WidgetMate<BackButtonIcon$
       /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
       Key? key})
       : super(key: key) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => BackButtonIcon$Mate(key: p.getValue('key')),
+      builder: (p) => BackButtonIcon$Mate(key: p.get('key').value),
     );
-    mateParams.set(name: 'key', init: key);
+    mateParams.put('key', init: key);
   }
 }
 
@@ -38,17 +38,17 @@ class BackButton$Mate extends BackButton with WidgetMate<BackButton$Mate> {
           color: color,
           onPressed: onPressed,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BackButton$Mate(
-        key: p.getValue('key'),
-        color: p.getValue('color'),
-        onPressed: p.getValue('onPressed'),
+        key: p.get('key').value,
+        color: p.get('color').value,
+        onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'onPressed', init: onPressed);
+    mateParams.put('key', init: key);
+    mateParams.put('color', init: color);
+    mateParams.put('onPressed', init: onPressed);
   }
 }
 
@@ -69,16 +69,16 @@ class CloseButton$Mate extends CloseButton with WidgetMate<CloseButton$Mate> {
           color: color,
           onPressed: onPressed,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CloseButton$Mate(
-        key: p.getValue('key'),
-        color: p.getValue('color'),
-        onPressed: p.getValue('onPressed'),
+        key: p.get('key').value,
+        color: p.get('color').value,
+        onPressed: p.get('onPressed').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'onPressed', init: onPressed);
+    mateParams.put('key', init: key);
+    mateParams.put('color', init: color);
+    mateParams.put('onPressed', init: onPressed);
   }
 }

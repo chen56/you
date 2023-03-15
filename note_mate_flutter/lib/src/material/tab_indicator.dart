@@ -23,16 +23,16 @@ class UnderlineTabIndicator$Mate extends UnderlineTabIndicator with Mate<Underli
           borderSide: borderSide,
           insets: insets,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => UnderlineTabIndicator$Mate(
-        borderRadius: p.getValue('borderRadius'),
-        borderSide: p.getValue('borderSide'),
-        insets: p.getValue('insets'),
+        borderRadius: p.get('borderRadius').value,
+        borderSide: p.get('borderSide').value,
+        insets: p.get('insets').value,
       ),
     );
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'borderSide', init: borderSide);
-    mateParams.set(name: 'insets', init: insets);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('borderSide', init: borderSide);
+    mateParams.put('insets', init: insets);
   }
 }

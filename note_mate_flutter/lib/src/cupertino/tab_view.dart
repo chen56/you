@@ -48,28 +48,28 @@ class CupertinoTabView$Mate extends CupertinoTabView with WidgetMate<CupertinoTa
           navigatorObservers: navigatorObservers,
           restorationScopeId: restorationScopeId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTabView$Mate(
-        key: p.getValue('key'),
-        builder: p.getValue('builder'),
-        navigatorKey: p.getValue('navigatorKey'),
-        defaultTitle: p.getValue('defaultTitle'),
-        routes: p.getValue('routes'),
-        onGenerateRoute: p.getValue('onGenerateRoute'),
-        onUnknownRoute: p.getValue('onUnknownRoute'),
-        navigatorObservers: p.getValue('navigatorObservers'),
-        restorationScopeId: p.getValue('restorationScopeId'),
+        key: p.get('key').value,
+        builder: p.get('builder').value,
+        navigatorKey: p.get('navigatorKey').value,
+        defaultTitle: p.get('defaultTitle').value,
+        routes: p.get('routes').value,
+        onGenerateRoute: p.get('onGenerateRoute').value,
+        onUnknownRoute: p.get('onUnknownRoute').value,
+        navigatorObservers: p.get('navigatorObservers').value,
+        restorationScopeId: p.get('restorationScopeId').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'navigatorKey', init: navigatorKey);
-    mateParams.set(name: 'defaultTitle', init: defaultTitle);
-    mateParams.set(name: 'routes', init: routes);
-    mateParams.set(name: 'onGenerateRoute', init: onGenerateRoute);
-    mateParams.set(name: 'onUnknownRoute', init: onUnknownRoute);
-    mateParams.set(name: 'navigatorObservers', init: navigatorObservers);
-    mateParams.set(name: 'restorationScopeId', init: restorationScopeId);
+    mateParams.put('key', init: key);
+    mateParams.put('builder', init: builder);
+    mateParams.put('navigatorKey', init: navigatorKey);
+    mateParams.put('defaultTitle', init: defaultTitle);
+    mateParams.put('routes', init: routes);
+    mateParams.put('onGenerateRoute', init: onGenerateRoute);
+    mateParams.put('onUnknownRoute', init: onUnknownRoute);
+    mateParams.put('navigatorObservers', init: navigatorObservers);
+    mateParams.put('restorationScopeId', init: restorationScopeId);
   }
 }

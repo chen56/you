@@ -27,17 +27,17 @@ class TableRow$Mate extends TableRow with Mate<TableRow$Mate> {
           decoration: decoration,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TableRow$Mate(
-        key: p.getValue('key'),
-        decoration: p.getValue('decoration'),
-        children: p.getValue('children'),
+        key: p.get('key').value,
+        decoration: p.get('decoration').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('key', init: key);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('children', init: children);
   }
 }
 
@@ -78,27 +78,27 @@ class Table$Mate extends Table with WidgetMate<Table$Mate> {
           defaultVerticalAlignment: defaultVerticalAlignment,
           textBaseline: textBaseline,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Table$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        columnWidths: p.getValue('columnWidths'),
-        defaultColumnWidth: p.getValue('defaultColumnWidth'),
-        textDirection: p.getValue('textDirection'),
-        border: p.getValue('border'),
-        defaultVerticalAlignment: p.getValue('defaultVerticalAlignment'),
-        textBaseline: p.getValue('textBaseline'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        columnWidths: p.get('columnWidths').value,
+        defaultColumnWidth: p.get('defaultColumnWidth').value,
+        textDirection: p.get('textDirection').value,
+        border: p.get('border').value,
+        defaultVerticalAlignment: p.get('defaultVerticalAlignment').value,
+        textBaseline: p.get('textBaseline').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'columnWidths', init: columnWidths);
-    mateParams.set(name: 'defaultColumnWidth', init: defaultColumnWidth);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'defaultVerticalAlignment', init: defaultVerticalAlignment);
-    mateParams.set(name: 'textBaseline', init: textBaseline);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('columnWidths', init: columnWidths);
+    mateParams.put('defaultColumnWidth', init: defaultColumnWidth);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('border', init: border);
+    mateParams.put('defaultVerticalAlignment', init: defaultVerticalAlignment);
+    mateParams.put('textBaseline', init: textBaseline);
   }
 }
 
@@ -119,16 +119,16 @@ class TableCell$Mate extends TableCell with WidgetMate<TableCell$Mate> {
           verticalAlignment: verticalAlignment,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TableCell$Mate(
-        key: p.getValue('key'),
-        verticalAlignment: p.getValue('verticalAlignment'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        verticalAlignment: p.get('verticalAlignment').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'verticalAlignment', init: verticalAlignment);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('verticalAlignment', init: verticalAlignment);
+    mateParams.put('child', init: child);
   }
 }

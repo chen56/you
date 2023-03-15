@@ -25,16 +25,16 @@ class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar
           anchor: anchor,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DesktopTextSelectionToolbar$Mate(
-        key: p.getValue('key'),
-        anchor: p.getValue('anchor'),
-        children: p.getValue('children'),
+        key: p.get('key').value,
+        anchor: p.get('anchor').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'anchor', init: anchor);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('key', init: key);
+    mateParams.put('anchor', init: anchor);
+    mateParams.put('children', init: children);
   }
 }

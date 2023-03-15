@@ -11,10 +11,10 @@ class StandardMethodCodec$Mate extends StandardMethodCodec with Mate<StandardMet
       /// requiredParameters: [StandardMessageCodec messageCodec = const StandardMessageCodec()]
       StandardMessageCodec messageCodec)
       : super(messageCodec) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => StandardMethodCodec$Mate(p.getValue('messageCodec')),
+      builder: (p) => StandardMethodCodec$Mate(p.get('messageCodec').value),
     );
-    mateParams.set(name: 'messageCodec', init: messageCodec);
+    mateParams.put('messageCodec', init: messageCodec);
   }
 }

@@ -17,15 +17,15 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
           restorationId: restorationId,
           debugOwner: debugOwner,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorationBucket$Mate.empty(
-        restorationId: p.getValue('restorationId'),
-        debugOwner: p.getValue('debugOwner'),
+        restorationId: p.get('restorationId').value,
+        debugOwner: p.get('debugOwner').value,
       ),
     );
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'debugOwner', init: debugOwner);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('debugOwner', init: debugOwner);
   }
 
   /// RestorationBucket RestorationBucket.root({required RestorationManager manager, required Map<Object?, Object?>? rawData})
@@ -39,15 +39,15 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
           manager: manager,
           rawData: rawData,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorationBucket$Mate.root(
-        manager: p.getValue('manager'),
-        rawData: p.getValue('rawData'),
+        manager: p.get('manager').value,
+        rawData: p.get('rawData').value,
       ),
     );
-    mateParams.set(name: 'manager', init: manager);
-    mateParams.set(name: 'rawData', init: rawData);
+    mateParams.put('manager', init: manager);
+    mateParams.put('rawData', init: rawData);
   }
 
   /// RestorationBucket RestorationBucket.child({required String restorationId, required RestorationBucket parent, required Object? debugOwner})
@@ -65,16 +65,16 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
           parent: parent,
           debugOwner: debugOwner,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorationBucket$Mate.child(
-        restorationId: p.getValue('restorationId'),
-        parent: p.getValue('parent'),
-        debugOwner: p.getValue('debugOwner'),
+        restorationId: p.get('restorationId').value,
+        parent: p.get('parent').value,
+        debugOwner: p.get('debugOwner').value,
       ),
     );
-    mateParams.set(name: 'restorationId', init: restorationId);
-    mateParams.set(name: 'parent', init: parent);
-    mateParams.set(name: 'debugOwner', init: debugOwner);
+    mateParams.put('restorationId', init: restorationId);
+    mateParams.put('parent', init: parent);
+    mateParams.put('debugOwner', init: debugOwner);
   }
 }

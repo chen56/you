@@ -45,27 +45,27 @@ class DrawerThemeData$Mate extends DrawerThemeData with Mate<DrawerThemeData$Mat
           endShape: endShape,
           width: width,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        scrimColor: p.getValue('scrimColor'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        shape: p.getValue('shape'),
-        endShape: p.getValue('endShape'),
-        width: p.getValue('width'),
+        backgroundColor: p.get('backgroundColor').value,
+        scrimColor: p.get('scrimColor').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        shape: p.get('shape').value,
+        endShape: p.get('endShape').value,
+        width: p.get('width').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'scrimColor', init: scrimColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'endShape', init: endShape);
-    mateParams.set(name: 'width', init: width);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('scrimColor', init: scrimColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('shape', init: shape);
+    mateParams.put('endShape', init: endShape);
+    mateParams.put('width', init: width);
   }
 }
 
@@ -86,16 +86,16 @@ class DrawerTheme$Mate extends DrawerTheme with WidgetMate<DrawerTheme$Mate> {
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

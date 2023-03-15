@@ -31,21 +31,21 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate<KeyDownEvent$Mate> {
           timeStamp: timeStamp,
           synthesized: synthesized,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyDownEvent$Mate(
-        physicalKey: p.getValue('physicalKey'),
-        logicalKey: p.getValue('logicalKey'),
-        character: p.getValue('character'),
-        timeStamp: p.getValue('timeStamp'),
-        synthesized: p.getValue('synthesized'),
+        physicalKey: p.get('physicalKey').value,
+        logicalKey: p.get('logicalKey').value,
+        character: p.get('character').value,
+        timeStamp: p.get('timeStamp').value,
+        synthesized: p.get('synthesized').value,
       ),
     );
-    mateParams.set(name: 'physicalKey', init: physicalKey);
-    mateParams.set(name: 'logicalKey', init: logicalKey);
-    mateParams.set(name: 'character', init: character);
-    mateParams.set(name: 'timeStamp', init: timeStamp);
-    mateParams.set(name: 'synthesized', init: synthesized);
+    mateParams.put('physicalKey', init: physicalKey);
+    mateParams.put('logicalKey', init: logicalKey);
+    mateParams.put('character', init: character);
+    mateParams.put('timeStamp', init: timeStamp);
+    mateParams.put('synthesized', init: synthesized);
   }
 }
 
@@ -70,19 +70,19 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate<KeyUpEvent$Mate> {
           timeStamp: timeStamp,
           synthesized: synthesized,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyUpEvent$Mate(
-        physicalKey: p.getValue('physicalKey'),
-        logicalKey: p.getValue('logicalKey'),
-        timeStamp: p.getValue('timeStamp'),
-        synthesized: p.getValue('synthesized'),
+        physicalKey: p.get('physicalKey').value,
+        logicalKey: p.get('logicalKey').value,
+        timeStamp: p.get('timeStamp').value,
+        synthesized: p.get('synthesized').value,
       ),
     );
-    mateParams.set(name: 'physicalKey', init: physicalKey);
-    mateParams.set(name: 'logicalKey', init: logicalKey);
-    mateParams.set(name: 'timeStamp', init: timeStamp);
-    mateParams.set(name: 'synthesized', init: synthesized);
+    mateParams.put('physicalKey', init: physicalKey);
+    mateParams.put('logicalKey', init: logicalKey);
+    mateParams.put('timeStamp', init: timeStamp);
+    mateParams.put('synthesized', init: synthesized);
   }
 }
 
@@ -107,19 +107,19 @@ class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate<KeyRepeatEvent$Mate> 
           character: character,
           timeStamp: timeStamp,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyRepeatEvent$Mate(
-        physicalKey: p.getValue('physicalKey'),
-        logicalKey: p.getValue('logicalKey'),
-        character: p.getValue('character'),
-        timeStamp: p.getValue('timeStamp'),
+        physicalKey: p.get('physicalKey').value,
+        logicalKey: p.get('logicalKey').value,
+        character: p.get('character').value,
+        timeStamp: p.get('timeStamp').value,
       ),
     );
-    mateParams.set(name: 'physicalKey', init: physicalKey);
-    mateParams.set(name: 'logicalKey', init: logicalKey);
-    mateParams.set(name: 'character', init: character);
-    mateParams.set(name: 'timeStamp', init: timeStamp);
+    mateParams.put('physicalKey', init: physicalKey);
+    mateParams.put('logicalKey', init: logicalKey);
+    mateParams.put('character', init: character);
+    mateParams.put('timeStamp', init: timeStamp);
   }
 }
 
@@ -136,15 +136,15 @@ class KeyMessage$Mate extends KeyMessage with Mate<KeyMessage$Mate> {
           events,
           rawEvent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyMessage$Mate(
-        p.getValue('events'),
-        p.getValue('rawEvent'),
+        p.get('events').value,
+        p.get('rawEvent').value,
       ),
     );
-    mateParams.set(name: 'events', init: events);
-    mateParams.set(name: 'rawEvent', init: rawEvent);
+    mateParams.put('events', init: events);
+    mateParams.put('rawEvent', init: rawEvent);
   }
 }
 
@@ -161,14 +161,14 @@ class KeyEventManager$Mate extends KeyEventManager with Mate<KeyEventManager$Mat
           _hardwareKeyboard,
           _rawKeyboard,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyEventManager$Mate(
-        p.getValue('_hardwareKeyboard'),
-        p.getValue('_rawKeyboard'),
+        p.get('_hardwareKeyboard').value,
+        p.get('_rawKeyboard').value,
       ),
     );
-    mateParams.set(name: '_hardwareKeyboard', init: _hardwareKeyboard);
-    mateParams.set(name: '_rawKeyboard', init: _rawKeyboard);
+    mateParams.put('_hardwareKeyboard', init: _hardwareKeyboard);
+    mateParams.put('_rawKeyboard', init: _rawKeyboard);
   }
 }

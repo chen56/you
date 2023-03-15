@@ -34,20 +34,20 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate<ShapeDecoration$Mat
           shadows: shadows,
           shape: shape,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ShapeDecoration$Mate(
-        color: p.getValue('color'),
-        image: p.getValue('image'),
-        gradient: p.getValue('gradient'),
-        shadows: p.getValue('shadows'),
-        shape: p.getValue('shape'),
+        color: p.get('color').value,
+        image: p.get('image').value,
+        gradient: p.get('gradient').value,
+        shadows: p.get('shadows').value,
+        shape: p.get('shape').value,
       ),
     );
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'gradient', init: gradient);
-    mateParams.set(name: 'shadows', init: shadows);
-    mateParams.set(name: 'shape', init: shape);
+    mateParams.put('color', init: color);
+    mateParams.put('image', init: image);
+    mateParams.put('gradient', init: gradient);
+    mateParams.put('shadows', init: shadows);
+    mateParams.put('shape', init: shape);
   }
 }

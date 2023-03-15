@@ -22,17 +22,17 @@ class SpringDescription$Mate extends SpringDescription with Mate<SpringDescripti
           stiffness: stiffness,
           damping: damping,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SpringDescription$Mate(
-        mass: p.getValue('mass'),
-        stiffness: p.getValue('stiffness'),
-        damping: p.getValue('damping'),
+        mass: p.get('mass').value,
+        stiffness: p.get('stiffness').value,
+        damping: p.get('damping').value,
       ),
     );
-    mateParams.set(name: 'mass', init: mass);
-    mateParams.set(name: 'stiffness', init: stiffness);
-    mateParams.set(name: 'damping', init: damping);
+    mateParams.put('mass', init: mass);
+    mateParams.put('stiffness', init: stiffness);
+    mateParams.put('damping', init: damping);
   }
 
   /// SpringDescription SpringDescription.withDampingRatio({required double mass, required double stiffness, double ratio = 1.0})
@@ -50,17 +50,17 @@ class SpringDescription$Mate extends SpringDescription with Mate<SpringDescripti
           stiffness: stiffness,
           ratio: ratio,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SpringDescription$Mate.withDampingRatio(
-        mass: p.getValue('mass'),
-        stiffness: p.getValue('stiffness'),
-        ratio: p.getValue('ratio'),
+        mass: p.get('mass').value,
+        stiffness: p.get('stiffness').value,
+        ratio: p.get('ratio').value,
       ),
     );
-    mateParams.set(name: 'mass', init: mass);
-    mateParams.set(name: 'stiffness', init: stiffness);
-    mateParams.set(name: 'ratio', init: ratio);
+    mateParams.put('mass', init: mass);
+    mateParams.put('stiffness', init: stiffness);
+    mateParams.put('ratio', init: ratio);
   }
 }
 
@@ -88,21 +88,21 @@ class SpringSimulation$Mate extends SpringSimulation with Mate<SpringSimulation$
           velocity,
           tolerance: tolerance,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SpringSimulation$Mate(
-        p.getValue('spring'),
-        p.getValue('start'),
-        p.getValue('end'),
-        p.getValue('velocity'),
-        tolerance: p.getValue('tolerance'),
+        p.get('spring').value,
+        p.get('start').value,
+        p.get('end').value,
+        p.get('velocity').value,
+        tolerance: p.get('tolerance').value,
       ),
     );
-    mateParams.set(name: 'spring', init: spring);
-    mateParams.set(name: 'start', init: start);
-    mateParams.set(name: 'end', init: end);
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: 'tolerance', init: tolerance);
+    mateParams.put('spring', init: spring);
+    mateParams.put('start', init: start);
+    mateParams.put('end', init: end);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('tolerance', init: tolerance);
   }
 }
 
@@ -130,20 +130,20 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate<Scrol
           velocity,
           tolerance: tolerance,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollSpringSimulation$Mate(
-        p.getValue('spring'),
-        p.getValue('start'),
-        p.getValue('end'),
-        p.getValue('velocity'),
-        tolerance: p.getValue('tolerance'),
+        p.get('spring').value,
+        p.get('start').value,
+        p.get('end').value,
+        p.get('velocity').value,
+        tolerance: p.get('tolerance').value,
       ),
     );
-    mateParams.set(name: 'spring', init: spring);
-    mateParams.set(name: 'start', init: start);
-    mateParams.set(name: 'end', init: end);
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: 'tolerance', init: tolerance);
+    mateParams.put('spring', init: spring);
+    mateParams.put('start', init: start);
+    mateParams.put('end', init: end);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('tolerance', init: tolerance);
   }
 }

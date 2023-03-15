@@ -17,15 +17,15 @@ class Alignment$Mate extends Alignment with Mate<Alignment$Mate> {
           x,
           y,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Alignment$Mate(
-        p.getValue('x'),
-        p.getValue('y'),
+        p.get('x').value,
+        p.get('y').value,
       ),
     );
-    mateParams.set(name: 'x', init: x);
-    mateParams.set(name: 'y', init: y);
+    mateParams.put('x', init: x);
+    mateParams.put('y', init: y);
   }
 }
 
@@ -42,15 +42,15 @@ class AlignmentDirectional$Mate extends AlignmentDirectional with Mate<Alignment
           start,
           y,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AlignmentDirectional$Mate(
-        p.getValue('start'),
-        p.getValue('y'),
+        p.get('start').value,
+        p.get('y').value,
       ),
     );
-    mateParams.set(name: 'start', init: start);
-    mateParams.set(name: 'y', init: y);
+    mateParams.put('start', init: start);
+    mateParams.put('y', init: y);
   }
 }
 
@@ -62,10 +62,10 @@ class TextAlignVertical$Mate extends TextAlignVertical with Mate<TextAlignVertic
       /// optionalParameters: {required double y} , hasDefaultValue:false, defaultValueCode:null
       required double y})
       : super(y: y) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => TextAlignVertical$Mate(y: p.getValue('y')),
+      builder: (p) => TextAlignVertical$Mate(y: p.get('y').value),
     );
-    mateParams.set(name: 'y', init: y);
+    mateParams.put('y', init: y);
   }
 }

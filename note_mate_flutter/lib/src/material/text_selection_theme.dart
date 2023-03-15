@@ -23,17 +23,17 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate<TextS
           selectionColor: selectionColor,
           selectionHandleColor: selectionHandleColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionThemeData$Mate(
-        cursorColor: p.getValue('cursorColor'),
-        selectionColor: p.getValue('selectionColor'),
-        selectionHandleColor: p.getValue('selectionHandleColor'),
+        cursorColor: p.get('cursorColor').value,
+        selectionColor: p.get('selectionColor').value,
+        selectionHandleColor: p.get('selectionHandleColor').value,
       ),
     );
-    mateParams.set(name: 'cursorColor', init: cursorColor);
-    mateParams.set(name: 'selectionColor', init: selectionColor);
-    mateParams.set(name: 'selectionHandleColor', init: selectionHandleColor);
+    mateParams.put('cursorColor', init: cursorColor);
+    mateParams.put('selectionColor', init: selectionColor);
+    mateParams.put('selectionHandleColor', init: selectionHandleColor);
   }
 }
 
@@ -54,16 +54,16 @@ class TextSelectionTheme$Mate extends TextSelectionTheme with WidgetMate<TextSel
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

@@ -14,11 +14,11 @@ class GradientRotation$Mate extends GradientRotation with Mate<GradientRotation$
       /// requiredParameters: double radians
       double radians)
       : super(radians) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => GradientRotation$Mate(p.getValue('radians')),
+      builder: (p) => GradientRotation$Mate(p.get('radians').value),
     );
-    mateParams.set(name: 'radians', init: radians);
+    mateParams.put('radians', init: radians);
   }
 }
 
@@ -51,23 +51,23 @@ class LinearGradient$Mate extends LinearGradient with Mate<LinearGradient$Mate> 
           tileMode: tileMode,
           transform: transform,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearGradient$Mate(
-        begin: p.getValue('begin'),
-        end: p.getValue('end'),
-        colors: p.getValue('colors'),
-        stops: p.getValue('stops'),
-        tileMode: p.getValue('tileMode'),
-        transform: p.getValue('transform'),
+        begin: p.get('begin').value,
+        end: p.get('end').value,
+        colors: p.get('colors').value,
+        stops: p.get('stops').value,
+        tileMode: p.get('tileMode').value,
+        transform: p.get('transform').value,
       ),
     );
-    mateParams.set(name: 'begin', init: begin);
-    mateParams.set(name: 'end', init: end);
-    mateParams.set(name: 'colors', init: colors);
-    mateParams.set(name: 'stops', init: stops);
-    mateParams.set(name: 'tileMode', init: tileMode);
-    mateParams.set(name: 'transform', init: transform);
+    mateParams.put('begin', init: begin);
+    mateParams.put('end', init: end);
+    mateParams.put('colors', init: colors);
+    mateParams.put('stops', init: stops);
+    mateParams.put('tileMode', init: tileMode);
+    mateParams.put('transform', init: transform);
   }
 }
 
@@ -108,27 +108,27 @@ class RadialGradient$Mate extends RadialGradient with Mate<RadialGradient$Mate> 
           focalRadius: focalRadius,
           transform: transform,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RadialGradient$Mate(
-        center: p.getValue('center'),
-        radius: p.getValue('radius'),
-        colors: p.getValue('colors'),
-        stops: p.getValue('stops'),
-        tileMode: p.getValue('tileMode'),
-        focal: p.getValue('focal'),
-        focalRadius: p.getValue('focalRadius'),
-        transform: p.getValue('transform'),
+        center: p.get('center').value,
+        radius: p.get('radius').value,
+        colors: p.get('colors').value,
+        stops: p.get('stops').value,
+        tileMode: p.get('tileMode').value,
+        focal: p.get('focal').value,
+        focalRadius: p.get('focalRadius').value,
+        transform: p.get('transform').value,
       ),
     );
-    mateParams.set(name: 'center', init: center);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'colors', init: colors);
-    mateParams.set(name: 'stops', init: stops);
-    mateParams.set(name: 'tileMode', init: tileMode);
-    mateParams.set(name: 'focal', init: focal);
-    mateParams.set(name: 'focalRadius', init: focalRadius);
-    mateParams.set(name: 'transform', init: transform);
+    mateParams.put('center', init: center);
+    mateParams.put('radius', init: radius);
+    mateParams.put('colors', init: colors);
+    mateParams.put('stops', init: stops);
+    mateParams.put('tileMode', init: tileMode);
+    mateParams.put('focal', init: focal);
+    mateParams.put('focalRadius', init: focalRadius);
+    mateParams.put('transform', init: transform);
   }
 }
 
@@ -165,24 +165,24 @@ class SweepGradient$Mate extends SweepGradient with Mate<SweepGradient$Mate> {
           tileMode: tileMode,
           transform: transform,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SweepGradient$Mate(
-        center: p.getValue('center'),
-        startAngle: p.getValue('startAngle'),
-        endAngle: p.getValue('endAngle'),
-        colors: p.getValue('colors'),
-        stops: p.getValue('stops'),
-        tileMode: p.getValue('tileMode'),
-        transform: p.getValue('transform'),
+        center: p.get('center').value,
+        startAngle: p.get('startAngle').value,
+        endAngle: p.get('endAngle').value,
+        colors: p.get('colors').value,
+        stops: p.get('stops').value,
+        tileMode: p.get('tileMode').value,
+        transform: p.get('transform').value,
       ),
     );
-    mateParams.set(name: 'center', init: center);
-    mateParams.set(name: 'startAngle', init: startAngle);
-    mateParams.set(name: 'endAngle', init: endAngle);
-    mateParams.set(name: 'colors', init: colors);
-    mateParams.set(name: 'stops', init: stops);
-    mateParams.set(name: 'tileMode', init: tileMode);
-    mateParams.set(name: 'transform', init: transform);
+    mateParams.put('center', init: center);
+    mateParams.put('startAngle', init: startAngle);
+    mateParams.put('endAngle', init: endAngle);
+    mateParams.put('colors', init: colors);
+    mateParams.put('stops', init: stops);
+    mateParams.put('tileMode', init: tileMode);
+    mateParams.put('transform', init: transform);
   }
 }

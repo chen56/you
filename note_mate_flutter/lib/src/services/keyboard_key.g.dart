@@ -12,11 +12,11 @@ class LogicalKeyboardKey$Mate extends LogicalKeyboardKey with Mate<LogicalKeyboa
       /// requiredParameters: int keyId
       int keyId)
       : super(keyId) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => LogicalKeyboardKey$Mate(p.getValue('keyId')),
+      builder: (p) => LogicalKeyboardKey$Mate(p.get('keyId').value),
     );
-    mateParams.set(name: 'keyId', init: keyId);
+    mateParams.put('keyId', init: keyId);
   }
 }
 
@@ -28,10 +28,10 @@ class PhysicalKeyboardKey$Mate extends PhysicalKeyboardKey with Mate<PhysicalKey
       /// requiredParameters: int usbHidUsage
       int usbHidUsage)
       : super(usbHidUsage) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => PhysicalKeyboardKey$Mate(p.getValue('usbHidUsage')),
+      builder: (p) => PhysicalKeyboardKey$Mate(p.get('usbHidUsage').value),
     );
-    mateParams.set(name: 'usbHidUsage', init: usbHidUsage);
+    mateParams.put('usbHidUsage', init: usbHidUsage);
   }
 }

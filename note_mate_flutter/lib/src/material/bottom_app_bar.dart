@@ -54,30 +54,30 @@ class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> 
           surfaceTintColor: surfaceTintColor,
           height: height,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomAppBar$Mate(
-        key: p.getValue('key'),
-        color: p.getValue('color'),
-        elevation: p.getValue('elevation'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        notchMargin: p.getValue('notchMargin'),
-        child: p.getValue('child'),
-        padding: p.getValue('padding'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        height: p.getValue('height'),
+        key: p.get('key').value,
+        color: p.get('color').value,
+        elevation: p.get('elevation').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        notchMargin: p.get('notchMargin').value,
+        child: p.get('child').value,
+        padding: p.get('padding').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        height: p.get('height').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'notchMargin', init: notchMargin);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'height', init: height);
+    mateParams.put('key', init: key);
+    mateParams.put('color', init: color);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('notchMargin', init: notchMargin);
+    mateParams.put('child', init: child);
+    mateParams.put('padding', init: padding);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('height', init: height);
   }
 }

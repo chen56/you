@@ -110,56 +110,56 @@ class ExpansionTile$Mate extends ExpansionTile with WidgetMate<ExpansionTile$Mat
           clipBehavior: clipBehavior,
           controlAffinity: controlAffinity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionTile$Mate(
-        key: p.getValue('key'),
-        leading: p.getValue('leading'),
-        title: p.getValue('title'),
-        subtitle: p.getValue('subtitle'),
-        onExpansionChanged: p.getValue('onExpansionChanged'),
-        children: p.getValue('children'),
-        trailing: p.getValue('trailing'),
-        initiallyExpanded: p.getValue('initiallyExpanded'),
-        maintainState: p.getValue('maintainState'),
-        tilePadding: p.getValue('tilePadding'),
-        expandedCrossAxisAlignment: p.getValue('expandedCrossAxisAlignment'),
-        expandedAlignment: p.getValue('expandedAlignment'),
-        childrenPadding: p.getValue('childrenPadding'),
-        backgroundColor: p.getValue('backgroundColor'),
-        collapsedBackgroundColor: p.getValue('collapsedBackgroundColor'),
-        textColor: p.getValue('textColor'),
-        collapsedTextColor: p.getValue('collapsedTextColor'),
-        iconColor: p.getValue('iconColor'),
-        collapsedIconColor: p.getValue('collapsedIconColor'),
-        shape: p.getValue('shape'),
-        collapsedShape: p.getValue('collapsedShape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        controlAffinity: p.getValue('controlAffinity'),
+        key: p.get('key').value,
+        leading: p.get('leading').value,
+        title: p.get('title').value,
+        subtitle: p.get('subtitle').value,
+        onExpansionChanged: p.get('onExpansionChanged').value,
+        children: p.get('children').value,
+        trailing: p.get('trailing').value,
+        initiallyExpanded: p.get('initiallyExpanded').value,
+        maintainState: p.get('maintainState').value,
+        tilePadding: p.get('tilePadding').value,
+        expandedCrossAxisAlignment: p.get('expandedCrossAxisAlignment').value,
+        expandedAlignment: p.get('expandedAlignment').value,
+        childrenPadding: p.get('childrenPadding').value,
+        backgroundColor: p.get('backgroundColor').value,
+        collapsedBackgroundColor: p.get('collapsedBackgroundColor').value,
+        textColor: p.get('textColor').value,
+        collapsedTextColor: p.get('collapsedTextColor').value,
+        iconColor: p.get('iconColor').value,
+        collapsedIconColor: p.get('collapsedIconColor').value,
+        shape: p.get('shape').value,
+        collapsedShape: p.get('collapsedShape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        controlAffinity: p.get('controlAffinity').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'subtitle', init: subtitle);
-    mateParams.set(name: 'onExpansionChanged', init: onExpansionChanged);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'trailing', init: trailing);
-    mateParams.set(name: 'initiallyExpanded', init: initiallyExpanded);
-    mateParams.set(name: 'maintainState', init: maintainState);
-    mateParams.set(name: 'tilePadding', init: tilePadding);
-    mateParams.set(name: 'expandedCrossAxisAlignment', init: expandedCrossAxisAlignment);
-    mateParams.set(name: 'expandedAlignment', init: expandedAlignment);
-    mateParams.set(name: 'childrenPadding', init: childrenPadding);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'collapsedBackgroundColor', init: collapsedBackgroundColor);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'collapsedTextColor', init: collapsedTextColor);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'collapsedIconColor', init: collapsedIconColor);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'collapsedShape', init: collapsedShape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'controlAffinity', init: controlAffinity);
+    mateParams.put('key', init: key);
+    mateParams.put('leading', init: leading);
+    mateParams.put('title', init: title);
+    mateParams.put('subtitle', init: subtitle);
+    mateParams.put('onExpansionChanged', init: onExpansionChanged);
+    mateParams.put('children', init: children);
+    mateParams.put('trailing', init: trailing);
+    mateParams.put('initiallyExpanded', init: initiallyExpanded);
+    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('tilePadding', init: tilePadding);
+    mateParams.put('expandedCrossAxisAlignment', init: expandedCrossAxisAlignment);
+    mateParams.put('expandedAlignment', init: expandedAlignment);
+    mateParams.put('childrenPadding', init: childrenPadding);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('collapsedBackgroundColor', init: collapsedBackgroundColor);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('collapsedTextColor', init: collapsedTextColor);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('collapsedIconColor', init: collapsedIconColor);
+    mateParams.put('shape', init: shape);
+    mateParams.put('collapsedShape', init: collapsedShape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('controlAffinity', init: controlAffinity);
   }
 }

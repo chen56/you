@@ -27,19 +27,19 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
           minHeight: minHeight,
           maxHeight: maxHeight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraints$Mate(
-        minWidth: p.getValue('minWidth'),
-        maxWidth: p.getValue('maxWidth'),
-        minHeight: p.getValue('minHeight'),
-        maxHeight: p.getValue('maxHeight'),
+        minWidth: p.get('minWidth').value,
+        maxWidth: p.get('maxWidth').value,
+        minHeight: p.get('minHeight').value,
+        maxHeight: p.get('maxHeight').value,
       ),
     );
-    mateParams.set(name: 'minWidth', init: minWidth);
-    mateParams.set(name: 'maxWidth', init: maxWidth);
-    mateParams.set(name: 'minHeight', init: minHeight);
-    mateParams.set(name: 'maxHeight', init: maxHeight);
+    mateParams.put('minWidth', init: minWidth);
+    mateParams.put('maxWidth', init: maxWidth);
+    mateParams.put('minHeight', init: minHeight);
+    mateParams.put('maxHeight', init: maxHeight);
   }
 
   /// BoxConstraints BoxConstraints.tight(Size size)
@@ -48,11 +48,11 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
       /// requiredParameters: Size size
       Size size)
       : super.tight(size) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => BoxConstraints$Mate.tight(p.getValue('size')),
+      builder: (p) => BoxConstraints$Mate.tight(p.get('size').value),
     );
-    mateParams.set(name: 'size', init: size);
+    mateParams.put('size', init: size);
   }
 
   /// BoxConstraints BoxConstraints.tightFor({double? width, double? height})
@@ -66,15 +66,15 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
           width: width,
           height: height,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraints$Mate.tightFor(
-        width: p.getValue('width'),
-        height: p.getValue('height'),
+        width: p.get('width').value,
+        height: p.get('height').value,
       ),
     );
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
   }
 
   /// BoxConstraints BoxConstraints.tightForFinite({double width = double.infinity, double height = double.infinity})
@@ -88,15 +88,15 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
           width: width,
           height: height,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraints$Mate.tightForFinite(
-        width: p.getValue('width'),
-        height: p.getValue('height'),
+        width: p.get('width').value,
+        height: p.get('height').value,
       ),
     );
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
   }
 
   /// BoxConstraints BoxConstraints.loose(Size size)
@@ -105,11 +105,11 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
       /// requiredParameters: Size size
       Size size)
       : super.loose(size) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => BoxConstraints$Mate.loose(p.getValue('size')),
+      builder: (p) => BoxConstraints$Mate.loose(p.get('size').value),
     );
-    mateParams.set(name: 'size', init: size);
+    mateParams.put('size', init: size);
   }
 
   /// BoxConstraints BoxConstraints.expand({double? width, double? height})
@@ -123,15 +123,15 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
           width: width,
           height: height,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraints$Mate.expand(
-        width: p.getValue('width'),
-        height: p.getValue('height'),
+        width: p.get('width').value,
+        height: p.get('height').value,
       ),
     );
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
   }
 }
 
@@ -143,11 +143,11 @@ class BoxHitTestResult$Mate extends BoxHitTestResult with Mate<BoxHitTestResult$
       /// requiredParameters: HitTestResult result
       HitTestResult result)
       : super.wrap(result) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => BoxHitTestResult$Mate.wrap(p.getValue('result')),
+      builder: (p) => BoxHitTestResult$Mate.wrap(p.get('result').value),
     );
-    mateParams.set(name: 'result', init: result);
+    mateParams.put('result', init: result);
   }
 }
 
@@ -164,14 +164,14 @@ class BoxHitTestEntry$Mate extends BoxHitTestEntry with Mate<BoxHitTestEntry$Mat
           target,
           localPosition,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxHitTestEntry$Mate(
-        p.getValue('target'),
-        p.getValue('localPosition'),
+        p.get('target').value,
+        p.get('localPosition').value,
       ),
     );
-    mateParams.set(name: 'target', init: target);
-    mateParams.set(name: 'localPosition', init: localPosition);
+    mateParams.put('target', init: target);
+    mateParams.put('localPosition', init: localPosition);
   }
 }

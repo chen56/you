@@ -25,18 +25,18 @@ class GravitySimulation$Mate extends GravitySimulation with Mate<GravitySimulati
           endDistance,
           velocity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => GravitySimulation$Mate(
-        p.getValue('acceleration'),
-        p.getValue('distance'),
-        p.getValue('endDistance'),
-        p.getValue('velocity'),
+        p.get('acceleration').value,
+        p.get('distance').value,
+        p.get('endDistance').value,
+        p.get('velocity').value,
       ),
     );
-    mateParams.set(name: 'acceleration', init: acceleration);
-    mateParams.set(name: 'distance', init: distance);
-    mateParams.set(name: 'endDistance', init: endDistance);
-    mateParams.set(name: 'velocity', init: velocity);
+    mateParams.put('acceleration', init: acceleration);
+    mateParams.put('distance', init: distance);
+    mateParams.put('endDistance', init: endDistance);
+    mateParams.put('velocity', init: velocity);
   }
 }

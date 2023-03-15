@@ -99,51 +99,51 @@ class FadeInImage$Mate extends FadeInImage with WidgetMate<FadeInImage$Mate> {
           repeat: repeat,
           matchTextDirection: matchTextDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FadeInImage$Mate(
-        key: p.getValue('key'),
-        placeholder: p.getValue('placeholder'),
-        placeholderErrorBuilder: p.getValue('placeholderErrorBuilder'),
-        image: p.getValue('image'),
-        imageErrorBuilder: p.getValue('imageErrorBuilder'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        imageSemanticLabel: p.getValue('imageSemanticLabel'),
-        fadeOutDuration: p.getValue('fadeOutDuration'),
-        fadeOutCurve: p.getValue('fadeOutCurve'),
-        fadeInDuration: p.getValue('fadeInDuration'),
-        fadeInCurve: p.getValue('fadeInCurve'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        fit: p.getValue('fit'),
-        placeholderFit: p.getValue('placeholderFit'),
-        filterQuality: p.getValue('filterQuality'),
-        placeholderFilterQuality: p.getValue('placeholderFilterQuality'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        matchTextDirection: p.getValue('matchTextDirection'),
+        key: p.get('key').value,
+        placeholder: p.get('placeholder').value,
+        placeholderErrorBuilder: p.get('placeholderErrorBuilder').value,
+        image: p.get('image').value,
+        imageErrorBuilder: p.get('imageErrorBuilder').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        imageSemanticLabel: p.get('imageSemanticLabel').value,
+        fadeOutDuration: p.get('fadeOutDuration').value,
+        fadeOutCurve: p.get('fadeOutCurve').value,
+        fadeInDuration: p.get('fadeInDuration').value,
+        fadeInCurve: p.get('fadeInCurve').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        fit: p.get('fit').value,
+        placeholderFit: p.get('placeholderFit').value,
+        filterQuality: p.get('filterQuality').value,
+        placeholderFilterQuality: p.get('placeholderFilterQuality').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        matchTextDirection: p.get('matchTextDirection').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'placeholder', init: placeholder);
-    mateParams.set(name: 'placeholderErrorBuilder', init: placeholderErrorBuilder);
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'imageErrorBuilder', init: imageErrorBuilder);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'imageSemanticLabel', init: imageSemanticLabel);
-    mateParams.set(name: 'fadeOutDuration', init: fadeOutDuration);
-    mateParams.set(name: 'fadeOutCurve', init: fadeOutCurve);
-    mateParams.set(name: 'fadeInDuration', init: fadeInDuration);
-    mateParams.set(name: 'fadeInCurve', init: fadeInCurve);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'placeholderFit', init: placeholderFit);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'placeholderFilterQuality', init: placeholderFilterQuality);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
+    mateParams.put('key', init: key);
+    mateParams.put('placeholder', init: placeholder);
+    mateParams.put('placeholderErrorBuilder', init: placeholderErrorBuilder);
+    mateParams.put('image', init: image);
+    mateParams.put('imageErrorBuilder', init: imageErrorBuilder);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('imageSemanticLabel', init: imageSemanticLabel);
+    mateParams.put('fadeOutDuration', init: fadeOutDuration);
+    mateParams.put('fadeOutCurve', init: fadeOutCurve);
+    mateParams.put('fadeInDuration', init: fadeInDuration);
+    mateParams.put('fadeInCurve', init: fadeInCurve);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('fit', init: fit);
+    mateParams.put('placeholderFit', init: placeholderFit);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('placeholderFilterQuality', init: placeholderFilterQuality);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
   }
 
   /// FadeInImage FadeInImage.memoryNetwork({Key? key, required Uint8List placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, double placeholderScale = 1.0, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
@@ -253,63 +253,63 @@ class FadeInImage$Mate extends FadeInImage with WidgetMate<FadeInImage$Mate> {
           imageCacheWidth: imageCacheWidth,
           imageCacheHeight: imageCacheHeight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FadeInImage$Mate.memoryNetwork(
-        key: p.getValue('key'),
-        placeholder: p.getValue('placeholder'),
-        placeholderErrorBuilder: p.getValue('placeholderErrorBuilder'),
-        image: p.getValue('image'),
-        imageErrorBuilder: p.getValue('imageErrorBuilder'),
-        placeholderScale: p.getValue('placeholderScale'),
-        imageScale: p.getValue('imageScale'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        imageSemanticLabel: p.getValue('imageSemanticLabel'),
-        fadeOutDuration: p.getValue('fadeOutDuration'),
-        fadeOutCurve: p.getValue('fadeOutCurve'),
-        fadeInDuration: p.getValue('fadeInDuration'),
-        fadeInCurve: p.getValue('fadeInCurve'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        fit: p.getValue('fit'),
-        placeholderFit: p.getValue('placeholderFit'),
-        filterQuality: p.getValue('filterQuality'),
-        placeholderFilterQuality: p.getValue('placeholderFilterQuality'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        placeholderCacheWidth: p.getValue('placeholderCacheWidth'),
-        placeholderCacheHeight: p.getValue('placeholderCacheHeight'),
-        imageCacheWidth: p.getValue('imageCacheWidth'),
-        imageCacheHeight: p.getValue('imageCacheHeight'),
+        key: p.get('key').value,
+        placeholder: p.get('placeholder').value,
+        placeholderErrorBuilder: p.get('placeholderErrorBuilder').value,
+        image: p.get('image').value,
+        imageErrorBuilder: p.get('imageErrorBuilder').value,
+        placeholderScale: p.get('placeholderScale').value,
+        imageScale: p.get('imageScale').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        imageSemanticLabel: p.get('imageSemanticLabel').value,
+        fadeOutDuration: p.get('fadeOutDuration').value,
+        fadeOutCurve: p.get('fadeOutCurve').value,
+        fadeInDuration: p.get('fadeInDuration').value,
+        fadeInCurve: p.get('fadeInCurve').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        fit: p.get('fit').value,
+        placeholderFit: p.get('placeholderFit').value,
+        filterQuality: p.get('filterQuality').value,
+        placeholderFilterQuality: p.get('placeholderFilterQuality').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        placeholderCacheWidth: p.get('placeholderCacheWidth').value,
+        placeholderCacheHeight: p.get('placeholderCacheHeight').value,
+        imageCacheWidth: p.get('imageCacheWidth').value,
+        imageCacheHeight: p.get('imageCacheHeight').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'placeholder', init: placeholder);
-    mateParams.set(name: 'placeholderErrorBuilder', init: placeholderErrorBuilder);
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'imageErrorBuilder', init: imageErrorBuilder);
-    mateParams.set(name: 'placeholderScale', init: placeholderScale);
-    mateParams.set(name: 'imageScale', init: imageScale);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'imageSemanticLabel', init: imageSemanticLabel);
-    mateParams.set(name: 'fadeOutDuration', init: fadeOutDuration);
-    mateParams.set(name: 'fadeOutCurve', init: fadeOutCurve);
-    mateParams.set(name: 'fadeInDuration', init: fadeInDuration);
-    mateParams.set(name: 'fadeInCurve', init: fadeInCurve);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'placeholderFit', init: placeholderFit);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'placeholderFilterQuality', init: placeholderFilterQuality);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'placeholderCacheWidth', init: placeholderCacheWidth);
-    mateParams.set(name: 'placeholderCacheHeight', init: placeholderCacheHeight);
-    mateParams.set(name: 'imageCacheWidth', init: imageCacheWidth);
-    mateParams.set(name: 'imageCacheHeight', init: imageCacheHeight);
+    mateParams.put('key', init: key);
+    mateParams.put('placeholder', init: placeholder);
+    mateParams.put('placeholderErrorBuilder', init: placeholderErrorBuilder);
+    mateParams.put('image', init: image);
+    mateParams.put('imageErrorBuilder', init: imageErrorBuilder);
+    mateParams.put('placeholderScale', init: placeholderScale);
+    mateParams.put('imageScale', init: imageScale);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('imageSemanticLabel', init: imageSemanticLabel);
+    mateParams.put('fadeOutDuration', init: fadeOutDuration);
+    mateParams.put('fadeOutCurve', init: fadeOutCurve);
+    mateParams.put('fadeInDuration', init: fadeInDuration);
+    mateParams.put('fadeInCurve', init: fadeInCurve);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('fit', init: fit);
+    mateParams.put('placeholderFit', init: placeholderFit);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('placeholderFilterQuality', init: placeholderFilterQuality);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('placeholderCacheWidth', init: placeholderCacheWidth);
+    mateParams.put('placeholderCacheHeight', init: placeholderCacheHeight);
+    mateParams.put('imageCacheWidth', init: imageCacheWidth);
+    mateParams.put('imageCacheHeight', init: imageCacheHeight);
   }
 
   /// FadeInImage FadeInImage.assetNetwork({Key? key, required String placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, AssetBundle? bundle, double? placeholderScale, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
@@ -423,64 +423,64 @@ class FadeInImage$Mate extends FadeInImage with WidgetMate<FadeInImage$Mate> {
           imageCacheWidth: imageCacheWidth,
           imageCacheHeight: imageCacheHeight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FadeInImage$Mate.assetNetwork(
-        key: p.getValue('key'),
-        placeholder: p.getValue('placeholder'),
-        placeholderErrorBuilder: p.getValue('placeholderErrorBuilder'),
-        image: p.getValue('image'),
-        imageErrorBuilder: p.getValue('imageErrorBuilder'),
-        bundle: p.getValue('bundle'),
-        placeholderScale: p.getValue('placeholderScale'),
-        imageScale: p.getValue('imageScale'),
-        excludeFromSemantics: p.getValue('excludeFromSemantics'),
-        imageSemanticLabel: p.getValue('imageSemanticLabel'),
-        fadeOutDuration: p.getValue('fadeOutDuration'),
-        fadeOutCurve: p.getValue('fadeOutCurve'),
-        fadeInDuration: p.getValue('fadeInDuration'),
-        fadeInCurve: p.getValue('fadeInCurve'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        fit: p.getValue('fit'),
-        placeholderFit: p.getValue('placeholderFit'),
-        filterQuality: p.getValue('filterQuality'),
-        placeholderFilterQuality: p.getValue('placeholderFilterQuality'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        placeholderCacheWidth: p.getValue('placeholderCacheWidth'),
-        placeholderCacheHeight: p.getValue('placeholderCacheHeight'),
-        imageCacheWidth: p.getValue('imageCacheWidth'),
-        imageCacheHeight: p.getValue('imageCacheHeight'),
+        key: p.get('key').value,
+        placeholder: p.get('placeholder').value,
+        placeholderErrorBuilder: p.get('placeholderErrorBuilder').value,
+        image: p.get('image').value,
+        imageErrorBuilder: p.get('imageErrorBuilder').value,
+        bundle: p.get('bundle').value,
+        placeholderScale: p.get('placeholderScale').value,
+        imageScale: p.get('imageScale').value,
+        excludeFromSemantics: p.get('excludeFromSemantics').value,
+        imageSemanticLabel: p.get('imageSemanticLabel').value,
+        fadeOutDuration: p.get('fadeOutDuration').value,
+        fadeOutCurve: p.get('fadeOutCurve').value,
+        fadeInDuration: p.get('fadeInDuration').value,
+        fadeInCurve: p.get('fadeInCurve').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        fit: p.get('fit').value,
+        placeholderFit: p.get('placeholderFit').value,
+        filterQuality: p.get('filterQuality').value,
+        placeholderFilterQuality: p.get('placeholderFilterQuality').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        placeholderCacheWidth: p.get('placeholderCacheWidth').value,
+        placeholderCacheHeight: p.get('placeholderCacheHeight').value,
+        imageCacheWidth: p.get('imageCacheWidth').value,
+        imageCacheHeight: p.get('imageCacheHeight').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'placeholder', init: placeholder);
-    mateParams.set(name: 'placeholderErrorBuilder', init: placeholderErrorBuilder);
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'imageErrorBuilder', init: imageErrorBuilder);
-    mateParams.set(name: 'bundle', init: bundle);
-    mateParams.set(name: 'placeholderScale', init: placeholderScale);
-    mateParams.set(name: 'imageScale', init: imageScale);
-    mateParams.set(name: 'excludeFromSemantics', init: excludeFromSemantics);
-    mateParams.set(name: 'imageSemanticLabel', init: imageSemanticLabel);
-    mateParams.set(name: 'fadeOutDuration', init: fadeOutDuration);
-    mateParams.set(name: 'fadeOutCurve', init: fadeOutCurve);
-    mateParams.set(name: 'fadeInDuration', init: fadeInDuration);
-    mateParams.set(name: 'fadeInCurve', init: fadeInCurve);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'placeholderFit', init: placeholderFit);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'placeholderFilterQuality', init: placeholderFilterQuality);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'placeholderCacheWidth', init: placeholderCacheWidth);
-    mateParams.set(name: 'placeholderCacheHeight', init: placeholderCacheHeight);
-    mateParams.set(name: 'imageCacheWidth', init: imageCacheWidth);
-    mateParams.set(name: 'imageCacheHeight', init: imageCacheHeight);
+    mateParams.put('key', init: key);
+    mateParams.put('placeholder', init: placeholder);
+    mateParams.put('placeholderErrorBuilder', init: placeholderErrorBuilder);
+    mateParams.put('image', init: image);
+    mateParams.put('imageErrorBuilder', init: imageErrorBuilder);
+    mateParams.put('bundle', init: bundle);
+    mateParams.put('placeholderScale', init: placeholderScale);
+    mateParams.put('imageScale', init: imageScale);
+    mateParams.put('excludeFromSemantics', init: excludeFromSemantics);
+    mateParams.put('imageSemanticLabel', init: imageSemanticLabel);
+    mateParams.put('fadeOutDuration', init: fadeOutDuration);
+    mateParams.put('fadeOutCurve', init: fadeOutCurve);
+    mateParams.put('fadeInDuration', init: fadeInDuration);
+    mateParams.put('fadeInCurve', init: fadeInCurve);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('fit', init: fit);
+    mateParams.put('placeholderFit', init: placeholderFit);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('placeholderFilterQuality', init: placeholderFilterQuality);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('placeholderCacheWidth', init: placeholderCacheWidth);
+    mateParams.put('placeholderCacheHeight', init: placeholderCacheHeight);
+    mateParams.put('imageCacheWidth', init: imageCacheWidth);
+    mateParams.put('imageCacheHeight', init: imageCacheHeight);
   }
 }

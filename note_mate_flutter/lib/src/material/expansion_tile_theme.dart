@@ -62,35 +62,35 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate<Expan
           collapsedShape: collapsedShape,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionTileThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        collapsedBackgroundColor: p.getValue('collapsedBackgroundColor'),
-        tilePadding: p.getValue('tilePadding'),
-        expandedAlignment: p.getValue('expandedAlignment'),
-        childrenPadding: p.getValue('childrenPadding'),
-        iconColor: p.getValue('iconColor'),
-        collapsedIconColor: p.getValue('collapsedIconColor'),
-        textColor: p.getValue('textColor'),
-        collapsedTextColor: p.getValue('collapsedTextColor'),
-        shape: p.getValue('shape'),
-        collapsedShape: p.getValue('collapsedShape'),
-        clipBehavior: p.getValue('clipBehavior'),
+        backgroundColor: p.get('backgroundColor').value,
+        collapsedBackgroundColor: p.get('collapsedBackgroundColor').value,
+        tilePadding: p.get('tilePadding').value,
+        expandedAlignment: p.get('expandedAlignment').value,
+        childrenPadding: p.get('childrenPadding').value,
+        iconColor: p.get('iconColor').value,
+        collapsedIconColor: p.get('collapsedIconColor').value,
+        textColor: p.get('textColor').value,
+        collapsedTextColor: p.get('collapsedTextColor').value,
+        shape: p.get('shape').value,
+        collapsedShape: p.get('collapsedShape').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'collapsedBackgroundColor', init: collapsedBackgroundColor);
-    mateParams.set(name: 'tilePadding', init: tilePadding);
-    mateParams.set(name: 'expandedAlignment', init: expandedAlignment);
-    mateParams.set(name: 'childrenPadding', init: childrenPadding);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'collapsedIconColor', init: collapsedIconColor);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'collapsedTextColor', init: collapsedTextColor);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'collapsedShape', init: collapsedShape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('collapsedBackgroundColor', init: collapsedBackgroundColor);
+    mateParams.put('tilePadding', init: tilePadding);
+    mateParams.put('expandedAlignment', init: expandedAlignment);
+    mateParams.put('childrenPadding', init: childrenPadding);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('collapsedIconColor', init: collapsedIconColor);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('collapsedTextColor', init: collapsedTextColor);
+    mateParams.put('shape', init: shape);
+    mateParams.put('collapsedShape', init: collapsedShape);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -111,16 +111,16 @@ class ExpansionTileTheme$Mate extends ExpansionTileTheme with WidgetMate<Expansi
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionTileTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

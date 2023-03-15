@@ -19,15 +19,15 @@ class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with WidgetMate<Automat
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AutomaticKeepAlive$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -39,10 +39,10 @@ class KeepAliveNotification$Mate extends KeepAliveNotification with Mate<KeepAli
       /// requiredParameters: Listenable handle
       Listenable handle)
       : super(handle) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => KeepAliveNotification$Mate(p.getValue('handle')),
+      builder: (p) => KeepAliveNotification$Mate(p.get('handle').value),
     );
-    mateParams.set(name: 'handle', init: handle);
+    mateParams.put('handle', init: handle);
   }
 }

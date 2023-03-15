@@ -24,17 +24,17 @@ class OverlayEntry$Mate extends OverlayEntry with Mate<OverlayEntry$Mate> {
           opaque: opaque,
           maintainState: maintainState,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => OverlayEntry$Mate(
-        builder: p.getValue('builder'),
-        opaque: p.getValue('opaque'),
-        maintainState: p.getValue('maintainState'),
+        builder: p.get('builder').value,
+        opaque: p.get('opaque').value,
+        maintainState: p.get('maintainState').value,
       ),
     );
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'opaque', init: opaque);
-    mateParams.set(name: 'maintainState', init: maintainState);
+    mateParams.put('builder', init: builder);
+    mateParams.put('opaque', init: opaque);
+    mateParams.put('maintainState', init: maintainState);
   }
 }
 
@@ -55,16 +55,16 @@ class Overlay$Mate extends Overlay with WidgetMate<Overlay$Mate> {
           initialEntries: initialEntries,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Overlay$Mate(
-        key: p.getValue('key'),
-        initialEntries: p.getValue('initialEntries'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        initialEntries: p.get('initialEntries').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'initialEntries', init: initialEntries);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('initialEntries', init: initialEntries);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

@@ -63,35 +63,35 @@ class Badge$Mate extends Badge with WidgetMate<Badge$Mate> {
           isLabelVisible: isLabelVisible,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Badge$Mate(
-        key: p.getValue('key'),
-        backgroundColor: p.getValue('backgroundColor'),
-        textColor: p.getValue('textColor'),
-        smallSize: p.getValue('smallSize'),
-        largeSize: p.getValue('largeSize'),
-        textStyle: p.getValue('textStyle'),
-        padding: p.getValue('padding'),
-        alignment: p.getValue('alignment'),
-        offset: p.getValue('offset'),
-        label: p.getValue('label'),
-        isLabelVisible: p.getValue('isLabelVisible'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        backgroundColor: p.get('backgroundColor').value,
+        textColor: p.get('textColor').value,
+        smallSize: p.get('smallSize').value,
+        largeSize: p.get('largeSize').value,
+        textStyle: p.get('textStyle').value,
+        padding: p.get('padding').value,
+        alignment: p.get('alignment').value,
+        offset: p.get('offset').value,
+        label: p.get('label').value,
+        isLabelVisible: p.get('isLabelVisible').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'smallSize', init: smallSize);
-    mateParams.set(name: 'largeSize', init: largeSize);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'isLabelVisible', init: isLabelVisible);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('smallSize', init: smallSize);
+    mateParams.put('largeSize', init: largeSize);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('padding', init: padding);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('offset', init: offset);
+    mateParams.put('label', init: label);
+    mateParams.put('isLabelVisible', init: isLabelVisible);
+    mateParams.put('child', init: child);
   }
 
   /// Badge Badge.count({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, required int count, bool isLabelVisible = true, Widget? child})
@@ -145,34 +145,34 @@ class Badge$Mate extends Badge with WidgetMate<Badge$Mate> {
           isLabelVisible: isLabelVisible,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Badge$Mate.count(
-        key: p.getValue('key'),
-        backgroundColor: p.getValue('backgroundColor'),
-        textColor: p.getValue('textColor'),
-        smallSize: p.getValue('smallSize'),
-        largeSize: p.getValue('largeSize'),
-        textStyle: p.getValue('textStyle'),
-        padding: p.getValue('padding'),
-        alignment: p.getValue('alignment'),
-        offset: p.getValue('offset'),
-        count: p.getValue('count'),
-        isLabelVisible: p.getValue('isLabelVisible'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        backgroundColor: p.get('backgroundColor').value,
+        textColor: p.get('textColor').value,
+        smallSize: p.get('smallSize').value,
+        largeSize: p.get('largeSize').value,
+        textStyle: p.get('textStyle').value,
+        padding: p.get('padding').value,
+        alignment: p.get('alignment').value,
+        offset: p.get('offset').value,
+        count: p.get('count').value,
+        isLabelVisible: p.get('isLabelVisible').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'smallSize', init: smallSize);
-    mateParams.set(name: 'largeSize', init: largeSize);
-    mateParams.set(name: 'textStyle', init: textStyle);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'offset', init: offset);
-    mateParams.set(name: 'count', init: count);
-    mateParams.set(name: 'isLabelVisible', init: isLabelVisible);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('smallSize', init: smallSize);
+    mateParams.put('largeSize', init: largeSize);
+    mateParams.put('textStyle', init: textStyle);
+    mateParams.put('padding', init: padding);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('offset', init: offset);
+    mateParams.put('count', init: count);
+    mateParams.put('isLabelVisible', init: isLabelVisible);
+    mateParams.put('child', init: child);
   }
 }

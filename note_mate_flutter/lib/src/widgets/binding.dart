@@ -24,17 +24,17 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObj
           container: container,
           debugShortDescription: debugShortDescription,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderObjectToWidgetAdapter$Mate(
-        child: p.getValue('child'),
-        container: p.getValue('container'),
-        debugShortDescription: p.getValue('debugShortDescription'),
+        child: p.get('child').value,
+        container: p.get('container').value,
+        debugShortDescription: p.get('debugShortDescription').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'container', init: container);
-    mateParams.set(name: 'debugShortDescription', init: debugShortDescription);
+    mateParams.put('child', init: child);
+    mateParams.put('container', init: container);
+    mateParams.put('debugShortDescription', init: debugShortDescription);
   }
 }
 
@@ -47,10 +47,10 @@ class RenderObjectToWidgetElement$Mate<T extends RenderObject> extends RenderObj
       /// requiredParameters: RenderObjectToWidgetAdapter<T> widget
       RenderObjectToWidgetAdapter<T> widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderObjectToWidgetElement$Mate(p.getValue('widget')),
+      builder: (p) => RenderObjectToWidgetElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }

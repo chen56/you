@@ -15,11 +15,11 @@ class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T> with Mate
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => AlwaysStoppedAnimation$Mate(p.getValue('value')),
+      builder: (p) => AlwaysStoppedAnimation$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -31,11 +31,11 @@ class ProxyAnimation$Mate extends ProxyAnimation with Mate<ProxyAnimation$Mate> 
       /// requiredParameters: [Animation<double>? animation]
       Animation<double>? animation)
       : super(animation) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ProxyAnimation$Mate(p.getValue('animation')),
+      builder: (p) => ProxyAnimation$Mate(p.get('animation').value),
     );
-    mateParams.set(name: 'animation', init: animation);
+    mateParams.put('animation', init: animation);
   }
 }
 
@@ -47,11 +47,11 @@ class ReverseAnimation$Mate extends ReverseAnimation with Mate<ReverseAnimation$
       /// requiredParameters: Animation<double> parent
       Animation<double> parent)
       : super(parent) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ReverseAnimation$Mate(p.getValue('parent')),
+      builder: (p) => ReverseAnimation$Mate(p.get('parent').value),
     );
-    mateParams.set(name: 'parent', init: parent);
+    mateParams.put('parent', init: parent);
   }
 }
 
@@ -72,17 +72,17 @@ class CurvedAnimation$Mate extends CurvedAnimation with Mate<CurvedAnimation$Mat
           curve: curve,
           reverseCurve: reverseCurve,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CurvedAnimation$Mate(
-        parent: p.getValue('parent'),
-        curve: p.getValue('curve'),
-        reverseCurve: p.getValue('reverseCurve'),
+        parent: p.get('parent').value,
+        curve: p.get('curve').value,
+        reverseCurve: p.get('reverseCurve').value,
       ),
     );
-    mateParams.set(name: 'parent', init: parent);
-    mateParams.set(name: 'curve', init: curve);
-    mateParams.set(name: 'reverseCurve', init: reverseCurve);
+    mateParams.put('parent', init: parent);
+    mateParams.put('curve', init: curve);
+    mateParams.put('reverseCurve', init: reverseCurve);
   }
 }
 
@@ -102,17 +102,17 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate<TrainHo
           _nextTrain,
           onSwitchedTrain: onSwitchedTrain,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TrainHoppingAnimation$Mate(
-        p.getValue('_currentTrain'),
-        p.getValue('_nextTrain'),
-        onSwitchedTrain: p.getValue('onSwitchedTrain'),
+        p.get('_currentTrain').value,
+        p.get('_nextTrain').value,
+        onSwitchedTrain: p.get('onSwitchedTrain').value,
       ),
     );
-    mateParams.set(name: '_currentTrain', init: _currentTrain);
-    mateParams.set(name: '_nextTrain', init: _nextTrain);
-    mateParams.set(name: 'onSwitchedTrain', init: onSwitchedTrain);
+    mateParams.put('_currentTrain', init: _currentTrain);
+    mateParams.put('_nextTrain', init: _nextTrain);
+    mateParams.put('onSwitchedTrain', init: onSwitchedTrain);
   }
 }
 
@@ -129,15 +129,15 @@ class AnimationMean$Mate extends AnimationMean with Mate<AnimationMean$Mate> {
           left: left,
           right: right,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimationMean$Mate(
-        left: p.getValue('left'),
-        right: p.getValue('right'),
+        left: p.get('left').value,
+        right: p.get('right').value,
       ),
     );
-    mateParams.set(name: 'left', init: left);
-    mateParams.set(name: 'right', init: right);
+    mateParams.put('left', init: left);
+    mateParams.put('right', init: right);
   }
 }
 
@@ -154,15 +154,15 @@ class AnimationMax$Mate<T extends num> extends AnimationMax<T> with Mate<Animati
           first,
           next,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimationMax$Mate(
-        p.getValue('first'),
-        p.getValue('next'),
+        p.get('first').value,
+        p.get('next').value,
       ),
     );
-    mateParams.set(name: 'first', init: first);
-    mateParams.set(name: 'next', init: next);
+    mateParams.put('first', init: first);
+    mateParams.put('next', init: next);
   }
 }
 
@@ -179,14 +179,14 @@ class AnimationMin$Mate<T extends num> extends AnimationMin<T> with Mate<Animati
           first,
           next,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimationMin$Mate(
-        p.getValue('first'),
-        p.getValue('next'),
+        p.get('first').value,
+        p.get('next').value,
       ),
     );
-    mateParams.set(name: 'first', init: first);
-    mateParams.set(name: 'next', init: next);
+    mateParams.put('first', init: first);
+    mateParams.put('next', init: next);
   }
 }

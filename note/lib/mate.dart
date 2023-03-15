@@ -1,32 +1,60 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:note/utils.dart' as utils;
 
 abstract class Param<T> {
-  T get init;
-  T get value;
-}
-
-class Params<T> extends Param<T> {
-  final Map<String, Params> _paramMap = {};
-  final T Function(Params<T> mate)? builder;
-
-  @override
+  Param? parent;
   final T init;
-
   final T _value;
 
-  Params({required this.init, this.builder}) : _value = init;
-
-  bool get isNullable => utils.isNullable<T>();
-
-  @override
   T get value => _value;
 
-  Param<C> set<C>({required String name, required C init}) {
+  Param({required this.init}) : _value = init;
+
+  bool get isNullable => utils.isNullable<T>();
+}
+
+class ValueParam<T> extends Param<T> {
+  ValueParam({required super.init});
+}
+
+class ArrayParam<T> extends Param<List<T>> with ListMixin<T> {
+  List<T> array = List.empty(growable: true);
+
+  ArrayParam({required super.init});
+
+  @override
+  int get length => array.length;
+
+  @override
+  set length(newLength) {
+    array.length = newLength;
+  }
+
+  @override
+  T operator [](int index) {
+    return array[index];
+  }
+
+  @override
+  void operator []=(int index, T value) {
+    array[index] = value;
+  }
+}
+
+class ObjectParam<T> extends Param<T> with MapMixin<String, T> {
+  final Map<String, ObjectParam> _paramMap = {};
+  final T Function(ObjectParam<T> mate)? builder;
+
+  ObjectParam({required super.init, this.builder});
+
+  Param<C> put<C>(String name, {required C init}) {
     assert(
         !_paramMap.containsKey(name), "error:duplicate param name: $name , old:${_paramMap[name]}");
 
-    var result = Params(init: init);
+    var result = ObjectParam(init: init);
+    result.parent = this;
     return _paramMap[name] = result;
   }
 
@@ -34,24 +62,43 @@ class Params<T> extends Param<T> {
     return _paramMap[name] as Param<C>;
   }
 
-  C getValue<C>(String name) {
-    return (_paramMap[name] as Param<C>).value;
+  @override
+  T? operator [](Object? key) {
+    return _paramMap[key]?.value;
+  }
+
+  @override
+  void operator []=(String key, T value) {
+    put(key, init: value);
+  }
+
+  @override
+  void clear() {
+    _paramMap.clear();
+  }
+
+  @override
+  Iterable<String> get keys => _paramMap.keys;
+
+  @override
+  T? remove(Object? key) {
+    var p = _paramMap.remove(key);
+    return p?.value;
   }
 }
 
 mixin Mate<T> {
-  late final Params<T> mateParams;
+  late final ObjectParam<T> mateParams;
 }
 
 mixin WidgetMate<T> on Widget implements Mate<T> {
   @override
-  late final Params<T> mateParams;
+  late final ObjectParam<T> mateParams;
 }
-
-class A with Mate<String> {}
 
 abstract class Editor<T> {
   final String name;
   final T init;
+
   Editor({required this.name, required this.init});
 }

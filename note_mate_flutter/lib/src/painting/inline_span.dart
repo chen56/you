@@ -14,11 +14,11 @@ class Accumulator$Mate extends Accumulator with Mate<Accumulator$Mate> {
       /// requiredParameters: [int _value = 0]
       int _value)
       : super(_value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => Accumulator$Mate(p.getValue('_value')),
+      builder: (p) => Accumulator$Mate(p.get('_value').value),
     );
-    mateParams.set(name: '_value', init: _value);
+    mateParams.put('_value', init: _value);
   }
 }
 
@@ -47,20 +47,20 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
           stringAttributes: stringAttributes,
           recognizer: recognizer,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InlineSpanSemanticsInformation$Mate(
-        p.getValue('text'),
-        isPlaceholder: p.getValue('isPlaceholder'),
-        semanticsLabel: p.getValue('semanticsLabel'),
-        stringAttributes: p.getValue('stringAttributes'),
-        recognizer: p.getValue('recognizer'),
+        p.get('text').value,
+        isPlaceholder: p.get('isPlaceholder').value,
+        semanticsLabel: p.get('semanticsLabel').value,
+        stringAttributes: p.get('stringAttributes').value,
+        recognizer: p.get('recognizer').value,
       ),
     );
-    mateParams.set(name: 'text', init: text);
-    mateParams.set(name: 'isPlaceholder', init: isPlaceholder);
-    mateParams.set(name: 'semanticsLabel', init: semanticsLabel);
-    mateParams.set(name: 'stringAttributes', init: stringAttributes);
-    mateParams.set(name: 'recognizer', init: recognizer);
+    mateParams.put('text', init: text);
+    mateParams.put('isPlaceholder', init: isPlaceholder);
+    mateParams.put('semanticsLabel', init: semanticsLabel);
+    mateParams.put('stringAttributes', init: stringAttributes);
+    mateParams.put('recognizer', init: recognizer);
   }
 }

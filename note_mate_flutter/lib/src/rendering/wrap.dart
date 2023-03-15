@@ -52,30 +52,30 @@ class RenderWrap$Mate extends RenderWrap with Mate<RenderWrap$Mate> {
           verticalDirection: verticalDirection,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderWrap$Mate(
-        children: p.getValue('children'),
-        direction: p.getValue('direction'),
-        alignment: p.getValue('alignment'),
-        spacing: p.getValue('spacing'),
-        runAlignment: p.getValue('runAlignment'),
-        runSpacing: p.getValue('runSpacing'),
-        crossAxisAlignment: p.getValue('crossAxisAlignment'),
-        textDirection: p.getValue('textDirection'),
-        verticalDirection: p.getValue('verticalDirection'),
-        clipBehavior: p.getValue('clipBehavior'),
+        children: p.get('children').value,
+        direction: p.get('direction').value,
+        alignment: p.get('alignment').value,
+        spacing: p.get('spacing').value,
+        runAlignment: p.get('runAlignment').value,
+        runSpacing: p.get('runSpacing').value,
+        crossAxisAlignment: p.get('crossAxisAlignment').value,
+        textDirection: p.get('textDirection').value,
+        verticalDirection: p.get('verticalDirection').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'direction', init: direction);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'spacing', init: spacing);
-    mateParams.set(name: 'runAlignment', init: runAlignment);
-    mateParams.set(name: 'runSpacing', init: runSpacing);
-    mateParams.set(name: 'crossAxisAlignment', init: crossAxisAlignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'verticalDirection', init: verticalDirection);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('children', init: children);
+    mateParams.put('direction', init: direction);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('spacing', init: spacing);
+    mateParams.put('runAlignment', init: runAlignment);
+    mateParams.put('runSpacing', init: runSpacing);
+    mateParams.put('crossAxisAlignment', init: crossAxisAlignment);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('verticalDirection', init: verticalDirection);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

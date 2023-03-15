@@ -13,10 +13,10 @@ class DesktopTextSelectionToolbarLayoutDelegate$Mate extends DesktopTextSelectio
       /// optionalParameters: {required Offset anchor} , hasDefaultValue:false, defaultValueCode:null
       required Offset anchor})
       : super(anchor: anchor) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(anchor: p.getValue('anchor')),
+      builder: (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(anchor: p.get('anchor').value),
     );
-    mateParams.set(name: 'anchor', init: anchor);
+    mateParams.put('anchor', init: anchor);
   }
 }

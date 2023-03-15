@@ -39,23 +39,23 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate<Cuperti
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPageRoute$Mate(
-        builder: p.getValue('builder'),
-        title: p.getValue('title'),
-        settings: p.getValue('settings'),
-        maintainState: p.getValue('maintainState'),
-        fullscreenDialog: p.getValue('fullscreenDialog'),
-        allowSnapshotting: p.getValue('allowSnapshotting'),
+        builder: p.get('builder').value,
+        title: p.get('title').value,
+        settings: p.get('settings').value,
+        maintainState: p.get('maintainState').value,
+        fullscreenDialog: p.get('fullscreenDialog').value,
+        allowSnapshotting: p.get('allowSnapshotting').value,
       ),
     );
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'settings', init: settings);
-    mateParams.set(name: 'maintainState', init: maintainState);
-    mateParams.set(name: 'fullscreenDialog', init: fullscreenDialog);
-    mateParams.set(name: 'allowSnapshotting', init: allowSnapshotting);
+    mateParams.put('builder', init: builder);
+    mateParams.put('title', init: title);
+    mateParams.put('settings', init: settings);
+    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('fullscreenDialog', init: fullscreenDialog);
+    mateParams.put('allowSnapshotting', init: allowSnapshotting);
   }
 }
 
@@ -100,29 +100,29 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate<CupertinoPage$Mat
           arguments: arguments,
           restorationId: restorationId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPage$Mate(
-        child: p.getValue('child'),
-        maintainState: p.getValue('maintainState'),
-        title: p.getValue('title'),
-        fullscreenDialog: p.getValue('fullscreenDialog'),
-        allowSnapshotting: p.getValue('allowSnapshotting'),
-        key: p.getValue('key'),
-        name: p.getValue('name'),
-        arguments: p.getValue('arguments'),
-        restorationId: p.getValue('restorationId'),
+        child: p.get('child').value,
+        maintainState: p.get('maintainState').value,
+        title: p.get('title').value,
+        fullscreenDialog: p.get('fullscreenDialog').value,
+        allowSnapshotting: p.get('allowSnapshotting').value,
+        key: p.get('key').value,
+        name: p.get('name').value,
+        arguments: p.get('arguments').value,
+        restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'maintainState', init: maintainState);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'fullscreenDialog', init: fullscreenDialog);
-    mateParams.set(name: 'allowSnapshotting', init: allowSnapshotting);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'arguments', init: arguments);
-    mateParams.set(name: 'restorationId', init: restorationId);
+    mateParams.put('child', init: child);
+    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('title', init: title);
+    mateParams.put('fullscreenDialog', init: fullscreenDialog);
+    mateParams.put('allowSnapshotting', init: allowSnapshotting);
+    mateParams.put('key', init: key);
+    mateParams.put('name', init: name);
+    mateParams.put('arguments', init: arguments);
+    mateParams.put('restorationId', init: restorationId);
   }
 }
 
@@ -151,21 +151,21 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with WidgetMa
           child: child,
           linearTransition: linearTransition,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPageTransition$Mate(
-        key: p.getValue('key'),
-        primaryRouteAnimation: p.getValue('primaryRouteAnimation'),
-        secondaryRouteAnimation: p.getValue('secondaryRouteAnimation'),
-        child: p.getValue('child'),
-        linearTransition: p.getValue('linearTransition'),
+        key: p.get('key').value,
+        primaryRouteAnimation: p.get('primaryRouteAnimation').value,
+        secondaryRouteAnimation: p.get('secondaryRouteAnimation').value,
+        child: p.get('child').value,
+        linearTransition: p.get('linearTransition').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'primaryRouteAnimation', init: primaryRouteAnimation);
-    mateParams.set(name: 'secondaryRouteAnimation', init: secondaryRouteAnimation);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'linearTransition', init: linearTransition);
+    mateParams.put('key', init: key);
+    mateParams.put('primaryRouteAnimation', init: primaryRouteAnimation);
+    mateParams.put('secondaryRouteAnimation', init: secondaryRouteAnimation);
+    mateParams.put('child', init: child);
+    mateParams.put('linearTransition', init: linearTransition);
   }
 }
 
@@ -195,21 +195,21 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
           child: child,
           linearTransition: linearTransition,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoFullscreenDialogTransition$Mate(
-        key: p.getValue('key'),
-        primaryRouteAnimation: p.getValue('primaryRouteAnimation'),
-        secondaryRouteAnimation: p.getValue('secondaryRouteAnimation'),
-        child: p.getValue('child'),
-        linearTransition: p.getValue('linearTransition'),
+        key: p.get('key').value,
+        primaryRouteAnimation: p.get('primaryRouteAnimation').value,
+        secondaryRouteAnimation: p.get('secondaryRouteAnimation').value,
+        child: p.get('child').value,
+        linearTransition: p.get('linearTransition').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'primaryRouteAnimation', init: primaryRouteAnimation);
-    mateParams.set(name: 'secondaryRouteAnimation', init: secondaryRouteAnimation);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'linearTransition', init: linearTransition);
+    mateParams.put('key', init: key);
+    mateParams.put('primaryRouteAnimation', init: primaryRouteAnimation);
+    mateParams.put('secondaryRouteAnimation', init: secondaryRouteAnimation);
+    mateParams.put('child', init: child);
+    mateParams.put('linearTransition', init: linearTransition);
   }
 }
 
@@ -250,27 +250,27 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
           settings: settings,
           anchorPoint: anchorPoint,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoModalPopupRoute$Mate(
-        builder: p.getValue('builder'),
-        barrierLabel: p.getValue('barrierLabel'),
-        barrierColor: p.getValue('barrierColor'),
-        barrierDismissible: p.getValue('barrierDismissible'),
-        semanticsDismissible: p.getValue('semanticsDismissible'),
-        filter: p.getValue('filter'),
-        settings: p.getValue('settings'),
-        anchorPoint: p.getValue('anchorPoint'),
+        builder: p.get('builder').value,
+        barrierLabel: p.get('barrierLabel').value,
+        barrierColor: p.get('barrierColor').value,
+        barrierDismissible: p.get('barrierDismissible').value,
+        semanticsDismissible: p.get('semanticsDismissible').value,
+        filter: p.get('filter').value,
+        settings: p.get('settings').value,
+        anchorPoint: p.get('anchorPoint').value,
       ),
     );
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'barrierLabel', init: barrierLabel);
-    mateParams.set(name: 'barrierColor', init: barrierColor);
-    mateParams.set(name: 'barrierDismissible', init: barrierDismissible);
-    mateParams.set(name: 'semanticsDismissible', init: semanticsDismissible);
-    mateParams.set(name: 'filter', init: filter);
-    mateParams.set(name: 'settings', init: settings);
-    mateParams.set(name: 'anchorPoint', init: anchorPoint);
+    mateParams.put('builder', init: builder);
+    mateParams.put('barrierLabel', init: barrierLabel);
+    mateParams.put('barrierColor', init: barrierColor);
+    mateParams.put('barrierDismissible', init: barrierDismissible);
+    mateParams.put('semanticsDismissible', init: semanticsDismissible);
+    mateParams.put('filter', init: filter);
+    mateParams.put('settings', init: settings);
+    mateParams.put('anchorPoint', init: anchorPoint);
   }
 }
 
@@ -315,28 +315,28 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate<Cup
           settings: settings,
           anchorPoint: anchorPoint,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDialogRoute$Mate(
-        builder: p.getValue('builder'),
-        context: p.getValue('context'),
-        barrierDismissible: p.getValue('barrierDismissible'),
-        barrierColor: p.getValue('barrierColor'),
-        barrierLabel: p.getValue('barrierLabel'),
-        transitionDuration: p.getValue('transitionDuration'),
-        transitionBuilder: p.getValue('transitionBuilder'),
-        settings: p.getValue('settings'),
-        anchorPoint: p.getValue('anchorPoint'),
+        builder: p.get('builder').value,
+        context: p.get('context').value,
+        barrierDismissible: p.get('barrierDismissible').value,
+        barrierColor: p.get('barrierColor').value,
+        barrierLabel: p.get('barrierLabel').value,
+        transitionDuration: p.get('transitionDuration').value,
+        transitionBuilder: p.get('transitionBuilder').value,
+        settings: p.get('settings').value,
+        anchorPoint: p.get('anchorPoint').value,
       ),
     );
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'context', init: context);
-    mateParams.set(name: 'barrierDismissible', init: barrierDismissible);
-    mateParams.set(name: 'barrierColor', init: barrierColor);
-    mateParams.set(name: 'barrierLabel', init: barrierLabel);
-    mateParams.set(name: 'transitionDuration', init: transitionDuration);
-    mateParams.set(name: 'transitionBuilder', init: transitionBuilder);
-    mateParams.set(name: 'settings', init: settings);
-    mateParams.set(name: 'anchorPoint', init: anchorPoint);
+    mateParams.put('builder', init: builder);
+    mateParams.put('context', init: context);
+    mateParams.put('barrierDismissible', init: barrierDismissible);
+    mateParams.put('barrierColor', init: barrierColor);
+    mateParams.put('barrierLabel', init: barrierLabel);
+    mateParams.put('transitionDuration', init: transitionDuration);
+    mateParams.put('transitionBuilder', init: transitionBuilder);
+    mateParams.put('settings', init: settings);
+    mateParams.put('anchorPoint', init: anchorPoint);
   }
 }

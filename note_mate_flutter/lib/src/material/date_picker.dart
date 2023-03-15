@@ -80,45 +80,45 @@ class DatePickerDialog$Mate extends DatePickerDialog with WidgetMate<DatePickerD
           keyboardType: keyboardType,
           restorationId: restorationId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DatePickerDialog$Mate(
-        key: p.getValue('key'),
-        initialDate: p.getValue('initialDate'),
-        firstDate: p.getValue('firstDate'),
-        lastDate: p.getValue('lastDate'),
-        currentDate: p.getValue('currentDate'),
-        initialEntryMode: p.getValue('initialEntryMode'),
-        selectableDayPredicate: p.getValue('selectableDayPredicate'),
-        cancelText: p.getValue('cancelText'),
-        confirmText: p.getValue('confirmText'),
-        helpText: p.getValue('helpText'),
-        initialCalendarMode: p.getValue('initialCalendarMode'),
-        errorFormatText: p.getValue('errorFormatText'),
-        errorInvalidText: p.getValue('errorInvalidText'),
-        fieldHintText: p.getValue('fieldHintText'),
-        fieldLabelText: p.getValue('fieldLabelText'),
-        keyboardType: p.getValue('keyboardType'),
-        restorationId: p.getValue('restorationId'),
+        key: p.get('key').value,
+        initialDate: p.get('initialDate').value,
+        firstDate: p.get('firstDate').value,
+        lastDate: p.get('lastDate').value,
+        currentDate: p.get('currentDate').value,
+        initialEntryMode: p.get('initialEntryMode').value,
+        selectableDayPredicate: p.get('selectableDayPredicate').value,
+        cancelText: p.get('cancelText').value,
+        confirmText: p.get('confirmText').value,
+        helpText: p.get('helpText').value,
+        initialCalendarMode: p.get('initialCalendarMode').value,
+        errorFormatText: p.get('errorFormatText').value,
+        errorInvalidText: p.get('errorInvalidText').value,
+        fieldHintText: p.get('fieldHintText').value,
+        fieldLabelText: p.get('fieldLabelText').value,
+        keyboardType: p.get('keyboardType').value,
+        restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'initialDate', init: initialDate);
-    mateParams.set(name: 'firstDate', init: firstDate);
-    mateParams.set(name: 'lastDate', init: lastDate);
-    mateParams.set(name: 'currentDate', init: currentDate);
-    mateParams.set(name: 'initialEntryMode', init: initialEntryMode);
-    mateParams.set(name: 'selectableDayPredicate', init: selectableDayPredicate);
-    mateParams.set(name: 'cancelText', init: cancelText);
-    mateParams.set(name: 'confirmText', init: confirmText);
-    mateParams.set(name: 'helpText', init: helpText);
-    mateParams.set(name: 'initialCalendarMode', init: initialCalendarMode);
-    mateParams.set(name: 'errorFormatText', init: errorFormatText);
-    mateParams.set(name: 'errorInvalidText', init: errorInvalidText);
-    mateParams.set(name: 'fieldHintText', init: fieldHintText);
-    mateParams.set(name: 'fieldLabelText', init: fieldLabelText);
-    mateParams.set(name: 'keyboardType', init: keyboardType);
-    mateParams.set(name: 'restorationId', init: restorationId);
+    mateParams.put('key', init: key);
+    mateParams.put('initialDate', init: initialDate);
+    mateParams.put('firstDate', init: firstDate);
+    mateParams.put('lastDate', init: lastDate);
+    mateParams.put('currentDate', init: currentDate);
+    mateParams.put('initialEntryMode', init: initialEntryMode);
+    mateParams.put('selectableDayPredicate', init: selectableDayPredicate);
+    mateParams.put('cancelText', init: cancelText);
+    mateParams.put('confirmText', init: confirmText);
+    mateParams.put('helpText', init: helpText);
+    mateParams.put('initialCalendarMode', init: initialCalendarMode);
+    mateParams.put('errorFormatText', init: errorFormatText);
+    mateParams.put('errorInvalidText', init: errorInvalidText);
+    mateParams.put('fieldHintText', init: fieldHintText);
+    mateParams.put('fieldLabelText', init: fieldLabelText);
+    mateParams.put('keyboardType', init: keyboardType);
+    mateParams.put('restorationId', init: restorationId);
   }
 }
 
@@ -199,46 +199,46 @@ class DateRangePickerDialog$Mate extends DateRangePickerDialog with WidgetMate<D
           fieldEndLabelText: fieldEndLabelText,
           restorationId: restorationId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DateRangePickerDialog$Mate(
-        key: p.getValue('key'),
-        initialDateRange: p.getValue('initialDateRange'),
-        firstDate: p.getValue('firstDate'),
-        lastDate: p.getValue('lastDate'),
-        currentDate: p.getValue('currentDate'),
-        initialEntryMode: p.getValue('initialEntryMode'),
-        helpText: p.getValue('helpText'),
-        cancelText: p.getValue('cancelText'),
-        confirmText: p.getValue('confirmText'),
-        saveText: p.getValue('saveText'),
-        errorInvalidRangeText: p.getValue('errorInvalidRangeText'),
-        errorFormatText: p.getValue('errorFormatText'),
-        errorInvalidText: p.getValue('errorInvalidText'),
-        fieldStartHintText: p.getValue('fieldStartHintText'),
-        fieldEndHintText: p.getValue('fieldEndHintText'),
-        fieldStartLabelText: p.getValue('fieldStartLabelText'),
-        fieldEndLabelText: p.getValue('fieldEndLabelText'),
-        restorationId: p.getValue('restorationId'),
+        key: p.get('key').value,
+        initialDateRange: p.get('initialDateRange').value,
+        firstDate: p.get('firstDate').value,
+        lastDate: p.get('lastDate').value,
+        currentDate: p.get('currentDate').value,
+        initialEntryMode: p.get('initialEntryMode').value,
+        helpText: p.get('helpText').value,
+        cancelText: p.get('cancelText').value,
+        confirmText: p.get('confirmText').value,
+        saveText: p.get('saveText').value,
+        errorInvalidRangeText: p.get('errorInvalidRangeText').value,
+        errorFormatText: p.get('errorFormatText').value,
+        errorInvalidText: p.get('errorInvalidText').value,
+        fieldStartHintText: p.get('fieldStartHintText').value,
+        fieldEndHintText: p.get('fieldEndHintText').value,
+        fieldStartLabelText: p.get('fieldStartLabelText').value,
+        fieldEndLabelText: p.get('fieldEndLabelText').value,
+        restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'initialDateRange', init: initialDateRange);
-    mateParams.set(name: 'firstDate', init: firstDate);
-    mateParams.set(name: 'lastDate', init: lastDate);
-    mateParams.set(name: 'currentDate', init: currentDate);
-    mateParams.set(name: 'initialEntryMode', init: initialEntryMode);
-    mateParams.set(name: 'helpText', init: helpText);
-    mateParams.set(name: 'cancelText', init: cancelText);
-    mateParams.set(name: 'confirmText', init: confirmText);
-    mateParams.set(name: 'saveText', init: saveText);
-    mateParams.set(name: 'errorInvalidRangeText', init: errorInvalidRangeText);
-    mateParams.set(name: 'errorFormatText', init: errorFormatText);
-    mateParams.set(name: 'errorInvalidText', init: errorInvalidText);
-    mateParams.set(name: 'fieldStartHintText', init: fieldStartHintText);
-    mateParams.set(name: 'fieldEndHintText', init: fieldEndHintText);
-    mateParams.set(name: 'fieldStartLabelText', init: fieldStartLabelText);
-    mateParams.set(name: 'fieldEndLabelText', init: fieldEndLabelText);
-    mateParams.set(name: 'restorationId', init: restorationId);
+    mateParams.put('key', init: key);
+    mateParams.put('initialDateRange', init: initialDateRange);
+    mateParams.put('firstDate', init: firstDate);
+    mateParams.put('lastDate', init: lastDate);
+    mateParams.put('currentDate', init: currentDate);
+    mateParams.put('initialEntryMode', init: initialEntryMode);
+    mateParams.put('helpText', init: helpText);
+    mateParams.put('cancelText', init: cancelText);
+    mateParams.put('confirmText', init: confirmText);
+    mateParams.put('saveText', init: saveText);
+    mateParams.put('errorInvalidRangeText', init: errorInvalidRangeText);
+    mateParams.put('errorFormatText', init: errorFormatText);
+    mateParams.put('errorInvalidText', init: errorInvalidText);
+    mateParams.put('fieldStartHintText', init: fieldStartHintText);
+    mateParams.put('fieldEndHintText', init: fieldEndHintText);
+    mateParams.put('fieldStartLabelText', init: fieldStartLabelText);
+    mateParams.put('fieldEndLabelText', init: fieldEndLabelText);
+    mateParams.put('restorationId', init: restorationId);
   }
 }

@@ -32,21 +32,21 @@ class MaterialPageRoute$Mate<T> extends MaterialPageRoute<T> with Mate<MaterialP
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialPageRoute$Mate(
-        builder: p.getValue('builder'),
-        settings: p.getValue('settings'),
-        maintainState: p.getValue('maintainState'),
-        fullscreenDialog: p.getValue('fullscreenDialog'),
-        allowSnapshotting: p.getValue('allowSnapshotting'),
+        builder: p.get('builder').value,
+        settings: p.get('settings').value,
+        maintainState: p.get('maintainState').value,
+        fullscreenDialog: p.get('fullscreenDialog').value,
+        allowSnapshotting: p.get('allowSnapshotting').value,
       ),
     );
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'settings', init: settings);
-    mateParams.set(name: 'maintainState', init: maintainState);
-    mateParams.set(name: 'fullscreenDialog', init: fullscreenDialog);
-    mateParams.set(name: 'allowSnapshotting', init: allowSnapshotting);
+    mateParams.put('builder', init: builder);
+    mateParams.put('settings', init: settings);
+    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('fullscreenDialog', init: fullscreenDialog);
+    mateParams.put('allowSnapshotting', init: allowSnapshotting);
   }
 }
 
@@ -87,26 +87,26 @@ class MaterialPage$Mate<T> extends MaterialPage<T> with Mate<MaterialPage$Mate> 
           arguments: arguments,
           restorationId: restorationId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialPage$Mate(
-        child: p.getValue('child'),
-        maintainState: p.getValue('maintainState'),
-        fullscreenDialog: p.getValue('fullscreenDialog'),
-        allowSnapshotting: p.getValue('allowSnapshotting'),
-        key: p.getValue('key'),
-        name: p.getValue('name'),
-        arguments: p.getValue('arguments'),
-        restorationId: p.getValue('restorationId'),
+        child: p.get('child').value,
+        maintainState: p.get('maintainState').value,
+        fullscreenDialog: p.get('fullscreenDialog').value,
+        allowSnapshotting: p.get('allowSnapshotting').value,
+        key: p.get('key').value,
+        name: p.get('name').value,
+        arguments: p.get('arguments').value,
+        restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'maintainState', init: maintainState);
-    mateParams.set(name: 'fullscreenDialog', init: fullscreenDialog);
-    mateParams.set(name: 'allowSnapshotting', init: allowSnapshotting);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'arguments', init: arguments);
-    mateParams.set(name: 'restorationId', init: restorationId);
+    mateParams.put('child', init: child);
+    mateParams.put('maintainState', init: maintainState);
+    mateParams.put('fullscreenDialog', init: fullscreenDialog);
+    mateParams.put('allowSnapshotting', init: allowSnapshotting);
+    mateParams.put('key', init: key);
+    mateParams.put('name', init: name);
+    mateParams.put('arguments', init: arguments);
+    mateParams.put('restorationId', init: restorationId);
   }
 }

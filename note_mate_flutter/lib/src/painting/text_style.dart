@@ -115,62 +115,62 @@ class TextStyle$Mate extends TextStyle with Mate<TextStyle$Mate> {
           package: package,
           overflow: overflow,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TextStyle$Mate(
-        inherit: p.getValue('inherit'),
-        color: p.getValue('color'),
-        backgroundColor: p.getValue('backgroundColor'),
-        fontSize: p.getValue('fontSize'),
-        fontWeight: p.getValue('fontWeight'),
-        fontStyle: p.getValue('fontStyle'),
-        letterSpacing: p.getValue('letterSpacing'),
-        wordSpacing: p.getValue('wordSpacing'),
-        textBaseline: p.getValue('textBaseline'),
-        height: p.getValue('height'),
-        leadingDistribution: p.getValue('leadingDistribution'),
-        locale: p.getValue('locale'),
-        foreground: p.getValue('foreground'),
-        background: p.getValue('background'),
-        shadows: p.getValue('shadows'),
-        fontFeatures: p.getValue('fontFeatures'),
-        fontVariations: p.getValue('fontVariations'),
-        decoration: p.getValue('decoration'),
-        decorationColor: p.getValue('decorationColor'),
-        decorationStyle: p.getValue('decorationStyle'),
-        decorationThickness: p.getValue('decorationThickness'),
-        debugLabel: p.getValue('debugLabel'),
-        fontFamily: p.getValue('fontFamily'),
-        fontFamilyFallback: p.getValue('fontFamilyFallback'),
-        package: p.getValue('package'),
-        overflow: p.getValue('overflow'),
+        inherit: p.get('inherit').value,
+        color: p.get('color').value,
+        backgroundColor: p.get('backgroundColor').value,
+        fontSize: p.get('fontSize').value,
+        fontWeight: p.get('fontWeight').value,
+        fontStyle: p.get('fontStyle').value,
+        letterSpacing: p.get('letterSpacing').value,
+        wordSpacing: p.get('wordSpacing').value,
+        textBaseline: p.get('textBaseline').value,
+        height: p.get('height').value,
+        leadingDistribution: p.get('leadingDistribution').value,
+        locale: p.get('locale').value,
+        foreground: p.get('foreground').value,
+        background: p.get('background').value,
+        shadows: p.get('shadows').value,
+        fontFeatures: p.get('fontFeatures').value,
+        fontVariations: p.get('fontVariations').value,
+        decoration: p.get('decoration').value,
+        decorationColor: p.get('decorationColor').value,
+        decorationStyle: p.get('decorationStyle').value,
+        decorationThickness: p.get('decorationThickness').value,
+        debugLabel: p.get('debugLabel').value,
+        fontFamily: p.get('fontFamily').value,
+        fontFamilyFallback: p.get('fontFamilyFallback').value,
+        package: p.get('package').value,
+        overflow: p.get('overflow').value,
       ),
     );
-    mateParams.set(name: 'inherit', init: inherit);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'fontSize', init: fontSize);
-    mateParams.set(name: 'fontWeight', init: fontWeight);
-    mateParams.set(name: 'fontStyle', init: fontStyle);
-    mateParams.set(name: 'letterSpacing', init: letterSpacing);
-    mateParams.set(name: 'wordSpacing', init: wordSpacing);
-    mateParams.set(name: 'textBaseline', init: textBaseline);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'leadingDistribution', init: leadingDistribution);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'foreground', init: foreground);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'shadows', init: shadows);
-    mateParams.set(name: 'fontFeatures', init: fontFeatures);
-    mateParams.set(name: 'fontVariations', init: fontVariations);
-    mateParams.set(name: 'decoration', init: decoration);
-    mateParams.set(name: 'decorationColor', init: decorationColor);
-    mateParams.set(name: 'decorationStyle', init: decorationStyle);
-    mateParams.set(name: 'decorationThickness', init: decorationThickness);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
-    mateParams.set(name: 'fontFamily', init: fontFamily);
-    mateParams.set(name: 'fontFamilyFallback', init: fontFamilyFallback);
-    mateParams.set(name: 'package', init: package);
-    mateParams.set(name: 'overflow', init: overflow);
+    mateParams.put('inherit', init: inherit);
+    mateParams.put('color', init: color);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('fontSize', init: fontSize);
+    mateParams.put('fontWeight', init: fontWeight);
+    mateParams.put('fontStyle', init: fontStyle);
+    mateParams.put('letterSpacing', init: letterSpacing);
+    mateParams.put('wordSpacing', init: wordSpacing);
+    mateParams.put('textBaseline', init: textBaseline);
+    mateParams.put('height', init: height);
+    mateParams.put('leadingDistribution', init: leadingDistribution);
+    mateParams.put('locale', init: locale);
+    mateParams.put('foreground', init: foreground);
+    mateParams.put('background', init: background);
+    mateParams.put('shadows', init: shadows);
+    mateParams.put('fontFeatures', init: fontFeatures);
+    mateParams.put('fontVariations', init: fontVariations);
+    mateParams.put('decoration', init: decoration);
+    mateParams.put('decorationColor', init: decorationColor);
+    mateParams.put('decorationStyle', init: decorationStyle);
+    mateParams.put('decorationThickness', init: decorationThickness);
+    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('fontFamily', init: fontFamily);
+    mateParams.put('fontFamilyFallback', init: fontFamilyFallback);
+    mateParams.put('package', init: package);
+    mateParams.put('overflow', init: overflow);
   }
 }

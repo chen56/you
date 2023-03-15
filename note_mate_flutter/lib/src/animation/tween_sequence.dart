@@ -13,11 +13,11 @@ class TweenSequence$Mate<T> extends TweenSequence<T> with Mate<TweenSequence$Mat
       /// requiredParameters: List<TweenSequenceItem<T>> items
       List<TweenSequenceItem<T>> items)
       : super(items) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => TweenSequence$Mate(p.getValue('items')),
+      builder: (p) => TweenSequence$Mate(p.get('items').value),
     );
-    mateParams.set(name: 'items', init: items);
+    mateParams.put('items', init: items);
   }
 }
 
@@ -29,11 +29,11 @@ class FlippedTweenSequence$Mate extends FlippedTweenSequence with Mate<FlippedTw
       /// requiredParameters: List<TweenSequenceItem<double>> items
       List<TweenSequenceItem<double>> items)
       : super(items) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => FlippedTweenSequence$Mate(p.getValue('items')),
+      builder: (p) => FlippedTweenSequence$Mate(p.get('items').value),
     );
-    mateParams.set(name: 'items', init: items);
+    mateParams.put('items', init: items);
   }
 }
 
@@ -50,14 +50,14 @@ class TweenSequenceItem$Mate<T> extends TweenSequenceItem<T> with Mate<TweenSequ
           tween: tween,
           weight: weight,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TweenSequenceItem$Mate(
-        tween: p.getValue('tween'),
-        weight: p.getValue('weight'),
+        tween: p.get('tween').value,
+        weight: p.get('weight').value,
       ),
     );
-    mateParams.set(name: 'tween', init: tween);
-    mateParams.set(name: 'weight', init: weight);
+    mateParams.put('tween', init: tween);
+    mateParams.put('weight', init: weight);
   }
 }

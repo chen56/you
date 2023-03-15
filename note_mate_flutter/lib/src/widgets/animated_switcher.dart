@@ -44,26 +44,26 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with WidgetMate<AnimatedSwi
           transitionBuilder: transitionBuilder,
           layoutBuilder: layoutBuilder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedSwitcher$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        duration: p.getValue('duration'),
-        reverseDuration: p.getValue('reverseDuration'),
-        switchInCurve: p.getValue('switchInCurve'),
-        switchOutCurve: p.getValue('switchOutCurve'),
-        transitionBuilder: p.getValue('transitionBuilder'),
-        layoutBuilder: p.getValue('layoutBuilder'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        duration: p.get('duration').value,
+        reverseDuration: p.get('reverseDuration').value,
+        switchInCurve: p.get('switchInCurve').value,
+        switchOutCurve: p.get('switchOutCurve').value,
+        transitionBuilder: p.get('transitionBuilder').value,
+        layoutBuilder: p.get('layoutBuilder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'reverseDuration', init: reverseDuration);
-    mateParams.set(name: 'switchInCurve', init: switchInCurve);
-    mateParams.set(name: 'switchOutCurve', init: switchOutCurve);
-    mateParams.set(name: 'transitionBuilder', init: transitionBuilder);
-    mateParams.set(name: 'layoutBuilder', init: layoutBuilder);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('duration', init: duration);
+    mateParams.put('reverseDuration', init: reverseDuration);
+    mateParams.put('switchInCurve', init: switchInCurve);
+    mateParams.put('switchOutCurve', init: switchOutCurve);
+    mateParams.put('transitionBuilder', init: transitionBuilder);
+    mateParams.put('layoutBuilder', init: layoutBuilder);
   }
 }

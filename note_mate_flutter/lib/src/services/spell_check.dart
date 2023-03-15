@@ -18,15 +18,15 @@ class SuggestionSpan$Mate extends SuggestionSpan with Mate<SuggestionSpan$Mate> 
           range,
           suggestions,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SuggestionSpan$Mate(
-        p.getValue('range'),
-        p.getValue('suggestions'),
+        p.get('range').value,
+        p.get('suggestions').value,
       ),
     );
-    mateParams.set(name: 'range', init: range);
-    mateParams.set(name: 'suggestions', init: suggestions);
+    mateParams.put('range', init: range);
+    mateParams.put('suggestions', init: suggestions);
   }
 }
 
@@ -43,14 +43,14 @@ class SpellCheckResults$Mate extends SpellCheckResults with Mate<SpellCheckResul
           spellCheckedText,
           suggestionSpans,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SpellCheckResults$Mate(
-        p.getValue('spellCheckedText'),
-        p.getValue('suggestionSpans'),
+        p.get('spellCheckedText').value,
+        p.get('suggestionSpans').value,
       ),
     );
-    mateParams.set(name: 'spellCheckedText', init: spellCheckedText);
-    mateParams.set(name: 'suggestionSpans', init: suggestionSpans);
+    mateParams.put('spellCheckedText', init: spellCheckedText);
+    mateParams.put('suggestionSpans', init: suggestionSpans);
   }
 }

@@ -58,32 +58,32 @@ class Card$Mate extends Card with WidgetMate<Card$Mate> {
           child: child,
           semanticContainer: semanticContainer,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Card$Mate(
-        key: p.getValue('key'),
-        color: p.getValue('color'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        elevation: p.getValue('elevation'),
-        shape: p.getValue('shape'),
-        borderOnForeground: p.getValue('borderOnForeground'),
-        margin: p.getValue('margin'),
-        clipBehavior: p.getValue('clipBehavior'),
-        child: p.getValue('child'),
-        semanticContainer: p.getValue('semanticContainer'),
+        key: p.get('key').value,
+        color: p.get('color').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        elevation: p.get('elevation').value,
+        shape: p.get('shape').value,
+        borderOnForeground: p.get('borderOnForeground').value,
+        margin: p.get('margin').value,
+        clipBehavior: p.get('clipBehavior').value,
+        child: p.get('child').value,
+        semanticContainer: p.get('semanticContainer').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'borderOnForeground', init: borderOnForeground);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'semanticContainer', init: semanticContainer);
+    mateParams.put('key', init: key);
+    mateParams.put('color', init: color);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shape', init: shape);
+    mateParams.put('borderOnForeground', init: borderOnForeground);
+    mateParams.put('margin', init: margin);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('child', init: child);
+    mateParams.put('semanticContainer', init: semanticContainer);
   }
 }

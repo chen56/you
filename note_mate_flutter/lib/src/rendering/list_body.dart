@@ -19,14 +19,14 @@ class RenderListBody$Mate extends RenderListBody with Mate<RenderListBody$Mate> 
           children: children,
           axisDirection: axisDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderListBody$Mate(
-        children: p.getValue('children'),
-        axisDirection: p.getValue('axisDirection'),
+        children: p.get('children').value,
+        axisDirection: p.get('axisDirection').value,
       ),
     );
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'axisDirection', init: axisDirection);
+    mateParams.put('children', init: children);
+    mateParams.put('axisDirection', init: axisDirection);
   }
 }

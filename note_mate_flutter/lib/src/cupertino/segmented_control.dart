@@ -51,28 +51,28 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmente
           pressedColor: pressedColor,
           padding: padding,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSegmentedControl$Mate(
-        key: p.getValue('key'),
-        children: p.getValue('children'),
-        onValueChanged: p.getValue('onValueChanged'),
-        groupValue: p.getValue('groupValue'),
-        unselectedColor: p.getValue('unselectedColor'),
-        selectedColor: p.getValue('selectedColor'),
-        borderColor: p.getValue('borderColor'),
-        pressedColor: p.getValue('pressedColor'),
-        padding: p.getValue('padding'),
+        key: p.get('key').value,
+        children: p.get('children').value,
+        onValueChanged: p.get('onValueChanged').value,
+        groupValue: p.get('groupValue').value,
+        unselectedColor: p.get('unselectedColor').value,
+        selectedColor: p.get('selectedColor').value,
+        borderColor: p.get('borderColor').value,
+        pressedColor: p.get('pressedColor').value,
+        padding: p.get('padding').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'onValueChanged', init: onValueChanged);
-    mateParams.set(name: 'groupValue', init: groupValue);
-    mateParams.set(name: 'unselectedColor', init: unselectedColor);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'borderColor', init: borderColor);
-    mateParams.set(name: 'pressedColor', init: pressedColor);
-    mateParams.set(name: 'padding', init: padding);
+    mateParams.put('key', init: key);
+    mateParams.put('children', init: children);
+    mateParams.put('onValueChanged', init: onValueChanged);
+    mateParams.put('groupValue', init: groupValue);
+    mateParams.put('unselectedColor', init: unselectedColor);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('borderColor', init: borderColor);
+    mateParams.put('pressedColor', init: pressedColor);
+    mateParams.put('padding', init: padding);
   }
 }

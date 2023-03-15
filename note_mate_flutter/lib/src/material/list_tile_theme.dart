@@ -91,47 +91,47 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate<ListTileThemeDa
           mouseCursor: mouseCursor,
           visualDensity: visualDensity,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ListTileThemeData$Mate(
-        dense: p.getValue('dense'),
-        shape: p.getValue('shape'),
-        style: p.getValue('style'),
-        selectedColor: p.getValue('selectedColor'),
-        iconColor: p.getValue('iconColor'),
-        textColor: p.getValue('textColor'),
-        titleTextStyle: p.getValue('titleTextStyle'),
-        subtitleTextStyle: p.getValue('subtitleTextStyle'),
-        leadingAndTrailingTextStyle: p.getValue('leadingAndTrailingTextStyle'),
-        contentPadding: p.getValue('contentPadding'),
-        tileColor: p.getValue('tileColor'),
-        selectedTileColor: p.getValue('selectedTileColor'),
-        horizontalTitleGap: p.getValue('horizontalTitleGap'),
-        minVerticalPadding: p.getValue('minVerticalPadding'),
-        minLeadingWidth: p.getValue('minLeadingWidth'),
-        enableFeedback: p.getValue('enableFeedback'),
-        mouseCursor: p.getValue('mouseCursor'),
-        visualDensity: p.getValue('visualDensity'),
+        dense: p.get('dense').value,
+        shape: p.get('shape').value,
+        style: p.get('style').value,
+        selectedColor: p.get('selectedColor').value,
+        iconColor: p.get('iconColor').value,
+        textColor: p.get('textColor').value,
+        titleTextStyle: p.get('titleTextStyle').value,
+        subtitleTextStyle: p.get('subtitleTextStyle').value,
+        leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').value,
+        contentPadding: p.get('contentPadding').value,
+        tileColor: p.get('tileColor').value,
+        selectedTileColor: p.get('selectedTileColor').value,
+        horizontalTitleGap: p.get('horizontalTitleGap').value,
+        minVerticalPadding: p.get('minVerticalPadding').value,
+        minLeadingWidth: p.get('minLeadingWidth').value,
+        enableFeedback: p.get('enableFeedback').value,
+        mouseCursor: p.get('mouseCursor').value,
+        visualDensity: p.get('visualDensity').value,
       ),
     );
-    mateParams.set(name: 'dense', init: dense);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'titleTextStyle', init: titleTextStyle);
-    mateParams.set(name: 'subtitleTextStyle', init: subtitleTextStyle);
-    mateParams.set(name: 'leadingAndTrailingTextStyle', init: leadingAndTrailingTextStyle);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'tileColor', init: tileColor);
-    mateParams.set(name: 'selectedTileColor', init: selectedTileColor);
-    mateParams.set(name: 'horizontalTitleGap', init: horizontalTitleGap);
-    mateParams.set(name: 'minVerticalPadding', init: minVerticalPadding);
-    mateParams.set(name: 'minLeadingWidth', init: minLeadingWidth);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
+    mateParams.put('dense', init: dense);
+    mateParams.put('shape', init: shape);
+    mateParams.put('style', init: style);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('titleTextStyle', init: titleTextStyle);
+    mateParams.put('subtitleTextStyle', init: subtitleTextStyle);
+    mateParams.put('leadingAndTrailingTextStyle', init: leadingAndTrailingTextStyle);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('tileColor', init: tileColor);
+    mateParams.put('selectedTileColor', init: selectedTileColor);
+    mateParams.put('horizontalTitleGap', init: horizontalTitleGap);
+    mateParams.put('minVerticalPadding', init: minVerticalPadding);
+    mateParams.put('minLeadingWidth', init: minLeadingWidth);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('visualDensity', init: visualDensity);
   }
 }
 
@@ -208,44 +208,44 @@ class ListTileTheme$Mate extends ListTileTheme with WidgetMate<ListTileTheme$Mat
           minLeadingWidth: minLeadingWidth,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ListTileTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        dense: p.getValue('dense'),
-        shape: p.getValue('shape'),
-        style: p.getValue('style'),
-        selectedColor: p.getValue('selectedColor'),
-        iconColor: p.getValue('iconColor'),
-        textColor: p.getValue('textColor'),
-        contentPadding: p.getValue('contentPadding'),
-        tileColor: p.getValue('tileColor'),
-        selectedTileColor: p.getValue('selectedTileColor'),
-        enableFeedback: p.getValue('enableFeedback'),
-        mouseCursor: p.getValue('mouseCursor'),
-        horizontalTitleGap: p.getValue('horizontalTitleGap'),
-        minVerticalPadding: p.getValue('minVerticalPadding'),
-        minLeadingWidth: p.getValue('minLeadingWidth'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        dense: p.get('dense').value,
+        shape: p.get('shape').value,
+        style: p.get('style').value,
+        selectedColor: p.get('selectedColor').value,
+        iconColor: p.get('iconColor').value,
+        textColor: p.get('textColor').value,
+        contentPadding: p.get('contentPadding').value,
+        tileColor: p.get('tileColor').value,
+        selectedTileColor: p.get('selectedTileColor').value,
+        enableFeedback: p.get('enableFeedback').value,
+        mouseCursor: p.get('mouseCursor').value,
+        horizontalTitleGap: p.get('horizontalTitleGap').value,
+        minVerticalPadding: p.get('minVerticalPadding').value,
+        minLeadingWidth: p.get('minLeadingWidth').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'dense', init: dense);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'selectedColor', init: selectedColor);
-    mateParams.set(name: 'iconColor', init: iconColor);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'contentPadding', init: contentPadding);
-    mateParams.set(name: 'tileColor', init: tileColor);
-    mateParams.set(name: 'selectedTileColor', init: selectedTileColor);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'horizontalTitleGap', init: horizontalTitleGap);
-    mateParams.set(name: 'minVerticalPadding', init: minVerticalPadding);
-    mateParams.set(name: 'minLeadingWidth', init: minLeadingWidth);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('dense', init: dense);
+    mateParams.put('shape', init: shape);
+    mateParams.put('style', init: style);
+    mateParams.put('selectedColor', init: selectedColor);
+    mateParams.put('iconColor', init: iconColor);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('contentPadding', init: contentPadding);
+    mateParams.put('tileColor', init: tileColor);
+    mateParams.put('selectedTileColor', init: selectedTileColor);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('horizontalTitleGap', init: horizontalTitleGap);
+    mateParams.put('minVerticalPadding', init: minVerticalPadding);
+    mateParams.put('minLeadingWidth', init: minLeadingWidth);
+    mateParams.put('child', init: child);
   }
 }

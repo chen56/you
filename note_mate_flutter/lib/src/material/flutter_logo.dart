@@ -37,22 +37,22 @@ class FlutterLogo$Mate extends FlutterLogo with WidgetMate<FlutterLogo$Mate> {
           duration: duration,
           curve: curve,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FlutterLogo$Mate(
-        key: p.getValue('key'),
-        size: p.getValue('size'),
-        textColor: p.getValue('textColor'),
-        style: p.getValue('style'),
-        duration: p.getValue('duration'),
-        curve: p.getValue('curve'),
+        key: p.get('key').value,
+        size: p.get('size').value,
+        textColor: p.get('textColor').value,
+        style: p.get('style').value,
+        duration: p.get('duration').value,
+        curve: p.get('curve').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'curve', init: curve);
+    mateParams.put('key', init: key);
+    mateParams.put('size', init: size);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('style', init: style);
+    mateParams.put('duration', init: duration);
+    mateParams.put('curve', init: curve);
   }
 }

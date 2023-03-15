@@ -25,17 +25,17 @@ class MaterialSlice$Mate extends MaterialSlice with Mate<MaterialSlice$Mate> {
           child: child,
           color: color,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialSlice$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        color: p.getValue('color'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        color: p.get('color').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'color', init: color);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('color', init: color);
   }
 }
 
@@ -52,15 +52,15 @@ class MaterialGap$Mate extends MaterialGap with Mate<MaterialGap$Mate> {
           key: key,
           size: size,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialGap$Mate(
-        key: p.getValue('key'),
-        size: p.getValue('size'),
+        key: p.get('key').value,
+        size: p.get('size').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'size', init: size);
+    mateParams.put('key', init: key);
+    mateParams.put('size', init: size);
   }
 }
 
@@ -93,22 +93,22 @@ class MergeableMaterial$Mate extends MergeableMaterial with WidgetMate<Mergeable
           children: children,
           dividerColor: dividerColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MergeableMaterial$Mate(
-        key: p.getValue('key'),
-        mainAxis: p.getValue('mainAxis'),
-        elevation: p.getValue('elevation'),
-        hasDividers: p.getValue('hasDividers'),
-        children: p.getValue('children'),
-        dividerColor: p.getValue('dividerColor'),
+        key: p.get('key').value,
+        mainAxis: p.get('mainAxis').value,
+        elevation: p.get('elevation').value,
+        hasDividers: p.get('hasDividers').value,
+        children: p.get('children').value,
+        dividerColor: p.get('dividerColor').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'mainAxis', init: mainAxis);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'hasDividers', init: hasDividers);
-    mateParams.set(name: 'children', init: children);
-    mateParams.set(name: 'dividerColor', init: dividerColor);
+    mateParams.put('key', init: key);
+    mateParams.put('mainAxis', init: mainAxis);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('hasDividers', init: hasDividers);
+    mateParams.put('children', init: children);
+    mateParams.put('dividerColor', init: dividerColor);
   }
 }

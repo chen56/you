@@ -11,10 +11,10 @@ class ValueNotifier$Mate<T> extends ValueNotifier<T> with Mate<ValueNotifier$Mat
       /// requiredParameters: T _value
       T _value)
       : super(_value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ValueNotifier$Mate(p.getValue('_value')),
+      builder: (p) => ValueNotifier$Mate(p.get('_value').value),
     );
-    mateParams.set(name: '_value', init: _value);
+    mateParams.put('_value', init: _value);
   }
 }

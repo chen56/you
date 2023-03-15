@@ -25,19 +25,19 @@ class IconData$Mate extends IconData with Mate<IconData$Mate> {
           fontPackage: fontPackage,
           matchTextDirection: matchTextDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => IconData$Mate(
-        p.getValue('codePoint'),
-        fontFamily: p.getValue('fontFamily'),
-        fontPackage: p.getValue('fontPackage'),
-        matchTextDirection: p.getValue('matchTextDirection'),
+        p.get('codePoint').value,
+        fontFamily: p.get('fontFamily').value,
+        fontPackage: p.get('fontPackage').value,
+        matchTextDirection: p.get('matchTextDirection').value,
       ),
     );
-    mateParams.set(name: 'codePoint', init: codePoint);
-    mateParams.set(name: 'fontFamily', init: fontFamily);
-    mateParams.set(name: 'fontPackage', init: fontPackage);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
+    mateParams.put('codePoint', init: codePoint);
+    mateParams.put('fontFamily', init: fontFamily);
+    mateParams.put('fontPackage', init: fontPackage);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
   }
 }
 
@@ -69,22 +69,22 @@ class IconDataProperty$Mate extends IconDataProperty with Mate<IconDataProperty$
           style: style,
           level: level,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => IconDataProperty$Mate(
-        p.getValue('name'),
-        p.getValue('value'),
-        ifNull: p.getValue('ifNull'),
-        showName: p.getValue('showName'),
-        style: p.getValue('style'),
-        level: p.getValue('level'),
+        p.get('name').value,
+        p.get('value').value,
+        ifNull: p.get('ifNull').value,
+        showName: p.get('showName').value,
+        style: p.get('style').value,
+        level: p.get('level').value,
       ),
     );
-    mateParams.set(name: 'name', init: name);
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'ifNull', init: ifNull);
-    mateParams.set(name: 'showName', init: showName);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'level', init: level);
+    mateParams.put('name', init: name);
+    mateParams.put('value', init: value);
+    mateParams.put('ifNull', init: ifNull);
+    mateParams.put('showName', init: showName);
+    mateParams.put('style', init: style);
+    mateParams.put('level', init: level);
   }
 }

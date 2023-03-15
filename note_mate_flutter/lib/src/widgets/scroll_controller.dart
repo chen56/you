@@ -21,17 +21,17 @@ class ScrollController$Mate extends ScrollController with Mate<ScrollController$
           keepScrollOffset: keepScrollOffset,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollController$Mate(
-        initialScrollOffset: p.getValue('initialScrollOffset'),
-        keepScrollOffset: p.getValue('keepScrollOffset'),
-        debugLabel: p.getValue('debugLabel'),
+        initialScrollOffset: p.get('initialScrollOffset').value,
+        keepScrollOffset: p.get('keepScrollOffset').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'initialScrollOffset', init: initialScrollOffset);
-    mateParams.set(name: 'keepScrollOffset', init: keepScrollOffset);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('initialScrollOffset', init: initialScrollOffset);
+    mateParams.put('keepScrollOffset', init: keepScrollOffset);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }
 
@@ -52,16 +52,16 @@ class TrackingScrollController$Mate extends TrackingScrollController with Mate<T
           keepScrollOffset: keepScrollOffset,
           debugLabel: debugLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TrackingScrollController$Mate(
-        initialScrollOffset: p.getValue('initialScrollOffset'),
-        keepScrollOffset: p.getValue('keepScrollOffset'),
-        debugLabel: p.getValue('debugLabel'),
+        initialScrollOffset: p.get('initialScrollOffset').value,
+        keepScrollOffset: p.get('keepScrollOffset').value,
+        debugLabel: p.get('debugLabel').value,
       ),
     );
-    mateParams.set(name: 'initialScrollOffset', init: initialScrollOffset);
-    mateParams.set(name: 'keepScrollOffset', init: keepScrollOffset);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
+    mateParams.put('initialScrollOffset', init: initialScrollOffset);
+    mateParams.put('keepScrollOffset', init: keepScrollOffset);
+    mateParams.put('debugLabel', init: debugLabel);
   }
 }

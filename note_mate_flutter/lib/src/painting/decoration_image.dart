@@ -67,37 +67,37 @@ class DecorationImage$Mate extends DecorationImage with Mate<DecorationImage$Mat
           invertColors: invertColors,
           isAntiAlias: isAntiAlias,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DecorationImage$Mate(
-        image: p.getValue('image'),
-        onError: p.getValue('onError'),
-        colorFilter: p.getValue('colorFilter'),
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        centerSlice: p.getValue('centerSlice'),
-        repeat: p.getValue('repeat'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        scale: p.getValue('scale'),
-        opacity: p.getValue('opacity'),
-        filterQuality: p.getValue('filterQuality'),
-        invertColors: p.getValue('invertColors'),
-        isAntiAlias: p.getValue('isAntiAlias'),
+        image: p.get('image').value,
+        onError: p.get('onError').value,
+        colorFilter: p.get('colorFilter').value,
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        centerSlice: p.get('centerSlice').value,
+        repeat: p.get('repeat').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        scale: p.get('scale').value,
+        opacity: p.get('opacity').value,
+        filterQuality: p.get('filterQuality').value,
+        invertColors: p.get('invertColors').value,
+        isAntiAlias: p.get('isAntiAlias').value,
       ),
     );
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'onError', init: onError);
-    mateParams.set(name: 'colorFilter', init: colorFilter);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'centerSlice', init: centerSlice);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
-    mateParams.set(name: 'invertColors', init: invertColors);
-    mateParams.set(name: 'isAntiAlias', init: isAntiAlias);
+    mateParams.put('image', init: image);
+    mateParams.put('onError', init: onError);
+    mateParams.put('colorFilter', init: colorFilter);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('centerSlice', init: centerSlice);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('scale', init: scale);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('filterQuality', init: filterQuality);
+    mateParams.put('invertColors', init: invertColors);
+    mateParams.put('isAntiAlias', init: isAntiAlias);
   }
 }
 
@@ -118,16 +118,16 @@ class ImageTilingInfo$Mate extends ImageTilingInfo with Mate<ImageTilingInfo$Mat
           tmy: tmy,
           transform: transform,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageTilingInfo$Mate(
-        tmx: p.getValue('tmx'),
-        tmy: p.getValue('tmy'),
-        transform: p.getValue('transform'),
+        tmx: p.get('tmx').value,
+        tmy: p.get('tmy').value,
+        transform: p.get('transform').value,
       ),
     );
-    mateParams.set(name: 'tmx', init: tmx);
-    mateParams.set(name: 'tmy', init: tmy);
-    mateParams.set(name: 'transform', init: transform);
+    mateParams.put('tmx', init: tmx);
+    mateParams.put('tmy', init: tmy);
+    mateParams.put('transform', init: transform);
   }
 }

@@ -28,19 +28,19 @@ class SliverFillViewport$Mate extends SliverFillViewport with WidgetMate<SliverF
           viewportFraction: viewportFraction,
           padEnds: padEnds,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFillViewport$Mate(
-        key: p.getValue('key'),
-        delegate: p.getValue('delegate'),
-        viewportFraction: p.getValue('viewportFraction'),
-        padEnds: p.getValue('padEnds'),
+        key: p.get('key').value,
+        delegate: p.get('delegate').value,
+        viewportFraction: p.get('viewportFraction').value,
+        padEnds: p.get('padEnds').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'delegate', init: delegate);
-    mateParams.set(name: 'viewportFraction', init: viewportFraction);
-    mateParams.set(name: 'padEnds', init: padEnds);
+    mateParams.put('key', init: key);
+    mateParams.put('delegate', init: delegate);
+    mateParams.put('viewportFraction', init: viewportFraction);
+    mateParams.put('padEnds', init: padEnds);
   }
 }
 
@@ -65,18 +65,18 @@ class SliverFillRemaining$Mate extends SliverFillRemaining with WidgetMate<Slive
           hasScrollBody: hasScrollBody,
           fillOverscroll: fillOverscroll,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFillRemaining$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        hasScrollBody: p.getValue('hasScrollBody'),
-        fillOverscroll: p.getValue('fillOverscroll'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        hasScrollBody: p.get('hasScrollBody').value,
+        fillOverscroll: p.get('fillOverscroll').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'hasScrollBody', init: hasScrollBody);
-    mateParams.set(name: 'fillOverscroll', init: fillOverscroll);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('hasScrollBody', init: hasScrollBody);
+    mateParams.put('fillOverscroll', init: fillOverscroll);
   }
 }

@@ -375,167 +375,167 @@ class ThemeData$Mate extends ThemeData with Mate<ThemeData$Mate> {
           toggleButtonsTheme: toggleButtonsTheme,
           tooltipTheme: tooltipTheme,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ThemeData$Mate.raw(
-        applyElevationOverlayColor: p.getValue('applyElevationOverlayColor'),
-        cupertinoOverrideTheme: p.getValue('cupertinoOverrideTheme'),
-        extensions: p.getValue('extensions'),
-        inputDecorationTheme: p.getValue('inputDecorationTheme'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        pageTransitionsTheme: p.getValue('pageTransitionsTheme'),
-        platform: p.getValue('platform'),
-        scrollbarTheme: p.getValue('scrollbarTheme'),
-        splashFactory: p.getValue('splashFactory'),
-        useMaterial3: p.getValue('useMaterial3'),
-        visualDensity: p.getValue('visualDensity'),
-        canvasColor: p.getValue('canvasColor'),
-        cardColor: p.getValue('cardColor'),
-        colorScheme: p.getValue('colorScheme'),
-        dialogBackgroundColor: p.getValue('dialogBackgroundColor'),
-        disabledColor: p.getValue('disabledColor'),
-        dividerColor: p.getValue('dividerColor'),
-        focusColor: p.getValue('focusColor'),
-        highlightColor: p.getValue('highlightColor'),
-        hintColor: p.getValue('hintColor'),
-        hoverColor: p.getValue('hoverColor'),
-        indicatorColor: p.getValue('indicatorColor'),
-        primaryColor: p.getValue('primaryColor'),
-        primaryColorDark: p.getValue('primaryColorDark'),
-        primaryColorLight: p.getValue('primaryColorLight'),
-        scaffoldBackgroundColor: p.getValue('scaffoldBackgroundColor'),
-        secondaryHeaderColor: p.getValue('secondaryHeaderColor'),
-        shadowColor: p.getValue('shadowColor'),
-        splashColor: p.getValue('splashColor'),
-        unselectedWidgetColor: p.getValue('unselectedWidgetColor'),
-        iconTheme: p.getValue('iconTheme'),
-        primaryIconTheme: p.getValue('primaryIconTheme'),
-        primaryTextTheme: p.getValue('primaryTextTheme'),
-        textTheme: p.getValue('textTheme'),
-        typography: p.getValue('typography'),
-        appBarTheme: p.getValue('appBarTheme'),
-        badgeTheme: p.getValue('badgeTheme'),
-        bannerTheme: p.getValue('bannerTheme'),
-        bottomAppBarTheme: p.getValue('bottomAppBarTheme'),
-        bottomNavigationBarTheme: p.getValue('bottomNavigationBarTheme'),
-        bottomSheetTheme: p.getValue('bottomSheetTheme'),
-        buttonBarTheme: p.getValue('buttonBarTheme'),
-        buttonTheme: p.getValue('buttonTheme'),
-        cardTheme: p.getValue('cardTheme'),
-        checkboxTheme: p.getValue('checkboxTheme'),
-        chipTheme: p.getValue('chipTheme'),
-        dataTableTheme: p.getValue('dataTableTheme'),
-        datePickerTheme: p.getValue('datePickerTheme'),
-        dialogTheme: p.getValue('dialogTheme'),
-        dividerTheme: p.getValue('dividerTheme'),
-        drawerTheme: p.getValue('drawerTheme'),
-        dropdownMenuTheme: p.getValue('dropdownMenuTheme'),
-        elevatedButtonTheme: p.getValue('elevatedButtonTheme'),
-        expansionTileTheme: p.getValue('expansionTileTheme'),
-        filledButtonTheme: p.getValue('filledButtonTheme'),
-        floatingActionButtonTheme: p.getValue('floatingActionButtonTheme'),
-        iconButtonTheme: p.getValue('iconButtonTheme'),
-        listTileTheme: p.getValue('listTileTheme'),
-        menuBarTheme: p.getValue('menuBarTheme'),
-        menuButtonTheme: p.getValue('menuButtonTheme'),
-        menuTheme: p.getValue('menuTheme'),
-        navigationBarTheme: p.getValue('navigationBarTheme'),
-        navigationDrawerTheme: p.getValue('navigationDrawerTheme'),
-        navigationRailTheme: p.getValue('navigationRailTheme'),
-        outlinedButtonTheme: p.getValue('outlinedButtonTheme'),
-        popupMenuTheme: p.getValue('popupMenuTheme'),
-        progressIndicatorTheme: p.getValue('progressIndicatorTheme'),
-        radioTheme: p.getValue('radioTheme'),
-        segmentedButtonTheme: p.getValue('segmentedButtonTheme'),
-        sliderTheme: p.getValue('sliderTheme'),
-        snackBarTheme: p.getValue('snackBarTheme'),
-        switchTheme: p.getValue('switchTheme'),
-        tabBarTheme: p.getValue('tabBarTheme'),
-        textButtonTheme: p.getValue('textButtonTheme'),
-        textSelectionTheme: p.getValue('textSelectionTheme'),
-        timePickerTheme: p.getValue('timePickerTheme'),
-        toggleButtonsTheme: p.getValue('toggleButtonsTheme'),
-        tooltipTheme: p.getValue('tooltipTheme'),
+        applyElevationOverlayColor: p.get('applyElevationOverlayColor').value,
+        cupertinoOverrideTheme: p.get('cupertinoOverrideTheme').value,
+        extensions: p.get('extensions').value,
+        inputDecorationTheme: p.get('inputDecorationTheme').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        pageTransitionsTheme: p.get('pageTransitionsTheme').value,
+        platform: p.get('platform').value,
+        scrollbarTheme: p.get('scrollbarTheme').value,
+        splashFactory: p.get('splashFactory').value,
+        useMaterial3: p.get('useMaterial3').value,
+        visualDensity: p.get('visualDensity').value,
+        canvasColor: p.get('canvasColor').value,
+        cardColor: p.get('cardColor').value,
+        colorScheme: p.get('colorScheme').value,
+        dialogBackgroundColor: p.get('dialogBackgroundColor').value,
+        disabledColor: p.get('disabledColor').value,
+        dividerColor: p.get('dividerColor').value,
+        focusColor: p.get('focusColor').value,
+        highlightColor: p.get('highlightColor').value,
+        hintColor: p.get('hintColor').value,
+        hoverColor: p.get('hoverColor').value,
+        indicatorColor: p.get('indicatorColor').value,
+        primaryColor: p.get('primaryColor').value,
+        primaryColorDark: p.get('primaryColorDark').value,
+        primaryColorLight: p.get('primaryColorLight').value,
+        scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').value,
+        secondaryHeaderColor: p.get('secondaryHeaderColor').value,
+        shadowColor: p.get('shadowColor').value,
+        splashColor: p.get('splashColor').value,
+        unselectedWidgetColor: p.get('unselectedWidgetColor').value,
+        iconTheme: p.get('iconTheme').value,
+        primaryIconTheme: p.get('primaryIconTheme').value,
+        primaryTextTheme: p.get('primaryTextTheme').value,
+        textTheme: p.get('textTheme').value,
+        typography: p.get('typography').value,
+        appBarTheme: p.get('appBarTheme').value,
+        badgeTheme: p.get('badgeTheme').value,
+        bannerTheme: p.get('bannerTheme').value,
+        bottomAppBarTheme: p.get('bottomAppBarTheme').value,
+        bottomNavigationBarTheme: p.get('bottomNavigationBarTheme').value,
+        bottomSheetTheme: p.get('bottomSheetTheme').value,
+        buttonBarTheme: p.get('buttonBarTheme').value,
+        buttonTheme: p.get('buttonTheme').value,
+        cardTheme: p.get('cardTheme').value,
+        checkboxTheme: p.get('checkboxTheme').value,
+        chipTheme: p.get('chipTheme').value,
+        dataTableTheme: p.get('dataTableTheme').value,
+        datePickerTheme: p.get('datePickerTheme').value,
+        dialogTheme: p.get('dialogTheme').value,
+        dividerTheme: p.get('dividerTheme').value,
+        drawerTheme: p.get('drawerTheme').value,
+        dropdownMenuTheme: p.get('dropdownMenuTheme').value,
+        elevatedButtonTheme: p.get('elevatedButtonTheme').value,
+        expansionTileTheme: p.get('expansionTileTheme').value,
+        filledButtonTheme: p.get('filledButtonTheme').value,
+        floatingActionButtonTheme: p.get('floatingActionButtonTheme').value,
+        iconButtonTheme: p.get('iconButtonTheme').value,
+        listTileTheme: p.get('listTileTheme').value,
+        menuBarTheme: p.get('menuBarTheme').value,
+        menuButtonTheme: p.get('menuButtonTheme').value,
+        menuTheme: p.get('menuTheme').value,
+        navigationBarTheme: p.get('navigationBarTheme').value,
+        navigationDrawerTheme: p.get('navigationDrawerTheme').value,
+        navigationRailTheme: p.get('navigationRailTheme').value,
+        outlinedButtonTheme: p.get('outlinedButtonTheme').value,
+        popupMenuTheme: p.get('popupMenuTheme').value,
+        progressIndicatorTheme: p.get('progressIndicatorTheme').value,
+        radioTheme: p.get('radioTheme').value,
+        segmentedButtonTheme: p.get('segmentedButtonTheme').value,
+        sliderTheme: p.get('sliderTheme').value,
+        snackBarTheme: p.get('snackBarTheme').value,
+        switchTheme: p.get('switchTheme').value,
+        tabBarTheme: p.get('tabBarTheme').value,
+        textButtonTheme: p.get('textButtonTheme').value,
+        textSelectionTheme: p.get('textSelectionTheme').value,
+        timePickerTheme: p.get('timePickerTheme').value,
+        toggleButtonsTheme: p.get('toggleButtonsTheme').value,
+        tooltipTheme: p.get('tooltipTheme').value,
       ),
     );
-    mateParams.set(name: 'applyElevationOverlayColor', init: applyElevationOverlayColor);
-    mateParams.set(name: 'cupertinoOverrideTheme', init: cupertinoOverrideTheme);
-    mateParams.set(name: 'extensions', init: extensions);
-    mateParams.set(name: 'inputDecorationTheme', init: inputDecorationTheme);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'pageTransitionsTheme', init: pageTransitionsTheme);
-    mateParams.set(name: 'platform', init: platform);
-    mateParams.set(name: 'scrollbarTheme', init: scrollbarTheme);
-    mateParams.set(name: 'splashFactory', init: splashFactory);
-    mateParams.set(name: 'useMaterial3', init: useMaterial3);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'canvasColor', init: canvasColor);
-    mateParams.set(name: 'cardColor', init: cardColor);
-    mateParams.set(name: 'colorScheme', init: colorScheme);
-    mateParams.set(name: 'dialogBackgroundColor', init: dialogBackgroundColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'dividerColor', init: dividerColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'highlightColor', init: highlightColor);
-    mateParams.set(name: 'hintColor', init: hintColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'indicatorColor', init: indicatorColor);
-    mateParams.set(name: 'primaryColor', init: primaryColor);
-    mateParams.set(name: 'primaryColorDark', init: primaryColorDark);
-    mateParams.set(name: 'primaryColorLight', init: primaryColorLight);
-    mateParams.set(name: 'scaffoldBackgroundColor', init: scaffoldBackgroundColor);
-    mateParams.set(name: 'secondaryHeaderColor', init: secondaryHeaderColor);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'unselectedWidgetColor', init: unselectedWidgetColor);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
-    mateParams.set(name: 'primaryIconTheme', init: primaryIconTheme);
-    mateParams.set(name: 'primaryTextTheme', init: primaryTextTheme);
-    mateParams.set(name: 'textTheme', init: textTheme);
-    mateParams.set(name: 'typography', init: typography);
-    mateParams.set(name: 'appBarTheme', init: appBarTheme);
-    mateParams.set(name: 'badgeTheme', init: badgeTheme);
-    mateParams.set(name: 'bannerTheme', init: bannerTheme);
-    mateParams.set(name: 'bottomAppBarTheme', init: bottomAppBarTheme);
-    mateParams.set(name: 'bottomNavigationBarTheme', init: bottomNavigationBarTheme);
-    mateParams.set(name: 'bottomSheetTheme', init: bottomSheetTheme);
-    mateParams.set(name: 'buttonBarTheme', init: buttonBarTheme);
-    mateParams.set(name: 'buttonTheme', init: buttonTheme);
-    mateParams.set(name: 'cardTheme', init: cardTheme);
-    mateParams.set(name: 'checkboxTheme', init: checkboxTheme);
-    mateParams.set(name: 'chipTheme', init: chipTheme);
-    mateParams.set(name: 'dataTableTheme', init: dataTableTheme);
-    mateParams.set(name: 'datePickerTheme', init: datePickerTheme);
-    mateParams.set(name: 'dialogTheme', init: dialogTheme);
-    mateParams.set(name: 'dividerTheme', init: dividerTheme);
-    mateParams.set(name: 'drawerTheme', init: drawerTheme);
-    mateParams.set(name: 'dropdownMenuTheme', init: dropdownMenuTheme);
-    mateParams.set(name: 'elevatedButtonTheme', init: elevatedButtonTheme);
-    mateParams.set(name: 'expansionTileTheme', init: expansionTileTheme);
-    mateParams.set(name: 'filledButtonTheme', init: filledButtonTheme);
-    mateParams.set(name: 'floatingActionButtonTheme', init: floatingActionButtonTheme);
-    mateParams.set(name: 'iconButtonTheme', init: iconButtonTheme);
-    mateParams.set(name: 'listTileTheme', init: listTileTheme);
-    mateParams.set(name: 'menuBarTheme', init: menuBarTheme);
-    mateParams.set(name: 'menuButtonTheme', init: menuButtonTheme);
-    mateParams.set(name: 'menuTheme', init: menuTheme);
-    mateParams.set(name: 'navigationBarTheme', init: navigationBarTheme);
-    mateParams.set(name: 'navigationDrawerTheme', init: navigationDrawerTheme);
-    mateParams.set(name: 'navigationRailTheme', init: navigationRailTheme);
-    mateParams.set(name: 'outlinedButtonTheme', init: outlinedButtonTheme);
-    mateParams.set(name: 'popupMenuTheme', init: popupMenuTheme);
-    mateParams.set(name: 'progressIndicatorTheme', init: progressIndicatorTheme);
-    mateParams.set(name: 'radioTheme', init: radioTheme);
-    mateParams.set(name: 'segmentedButtonTheme', init: segmentedButtonTheme);
-    mateParams.set(name: 'sliderTheme', init: sliderTheme);
-    mateParams.set(name: 'snackBarTheme', init: snackBarTheme);
-    mateParams.set(name: 'switchTheme', init: switchTheme);
-    mateParams.set(name: 'tabBarTheme', init: tabBarTheme);
-    mateParams.set(name: 'textButtonTheme', init: textButtonTheme);
-    mateParams.set(name: 'textSelectionTheme', init: textSelectionTheme);
-    mateParams.set(name: 'timePickerTheme', init: timePickerTheme);
-    mateParams.set(name: 'toggleButtonsTheme', init: toggleButtonsTheme);
-    mateParams.set(name: 'tooltipTheme', init: tooltipTheme);
+    mateParams.put('applyElevationOverlayColor', init: applyElevationOverlayColor);
+    mateParams.put('cupertinoOverrideTheme', init: cupertinoOverrideTheme);
+    mateParams.put('extensions', init: extensions);
+    mateParams.put('inputDecorationTheme', init: inputDecorationTheme);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('pageTransitionsTheme', init: pageTransitionsTheme);
+    mateParams.put('platform', init: platform);
+    mateParams.put('scrollbarTheme', init: scrollbarTheme);
+    mateParams.put('splashFactory', init: splashFactory);
+    mateParams.put('useMaterial3', init: useMaterial3);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('canvasColor', init: canvasColor);
+    mateParams.put('cardColor', init: cardColor);
+    mateParams.put('colorScheme', init: colorScheme);
+    mateParams.put('dialogBackgroundColor', init: dialogBackgroundColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('dividerColor', init: dividerColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('highlightColor', init: highlightColor);
+    mateParams.put('hintColor', init: hintColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('indicatorColor', init: indicatorColor);
+    mateParams.put('primaryColor', init: primaryColor);
+    mateParams.put('primaryColorDark', init: primaryColorDark);
+    mateParams.put('primaryColorLight', init: primaryColorLight);
+    mateParams.put('scaffoldBackgroundColor', init: scaffoldBackgroundColor);
+    mateParams.put('secondaryHeaderColor', init: secondaryHeaderColor);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('unselectedWidgetColor', init: unselectedWidgetColor);
+    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('primaryIconTheme', init: primaryIconTheme);
+    mateParams.put('primaryTextTheme', init: primaryTextTheme);
+    mateParams.put('textTheme', init: textTheme);
+    mateParams.put('typography', init: typography);
+    mateParams.put('appBarTheme', init: appBarTheme);
+    mateParams.put('badgeTheme', init: badgeTheme);
+    mateParams.put('bannerTheme', init: bannerTheme);
+    mateParams.put('bottomAppBarTheme', init: bottomAppBarTheme);
+    mateParams.put('bottomNavigationBarTheme', init: bottomNavigationBarTheme);
+    mateParams.put('bottomSheetTheme', init: bottomSheetTheme);
+    mateParams.put('buttonBarTheme', init: buttonBarTheme);
+    mateParams.put('buttonTheme', init: buttonTheme);
+    mateParams.put('cardTheme', init: cardTheme);
+    mateParams.put('checkboxTheme', init: checkboxTheme);
+    mateParams.put('chipTheme', init: chipTheme);
+    mateParams.put('dataTableTheme', init: dataTableTheme);
+    mateParams.put('datePickerTheme', init: datePickerTheme);
+    mateParams.put('dialogTheme', init: dialogTheme);
+    mateParams.put('dividerTheme', init: dividerTheme);
+    mateParams.put('drawerTheme', init: drawerTheme);
+    mateParams.put('dropdownMenuTheme', init: dropdownMenuTheme);
+    mateParams.put('elevatedButtonTheme', init: elevatedButtonTheme);
+    mateParams.put('expansionTileTheme', init: expansionTileTheme);
+    mateParams.put('filledButtonTheme', init: filledButtonTheme);
+    mateParams.put('floatingActionButtonTheme', init: floatingActionButtonTheme);
+    mateParams.put('iconButtonTheme', init: iconButtonTheme);
+    mateParams.put('listTileTheme', init: listTileTheme);
+    mateParams.put('menuBarTheme', init: menuBarTheme);
+    mateParams.put('menuButtonTheme', init: menuButtonTheme);
+    mateParams.put('menuTheme', init: menuTheme);
+    mateParams.put('navigationBarTheme', init: navigationBarTheme);
+    mateParams.put('navigationDrawerTheme', init: navigationDrawerTheme);
+    mateParams.put('navigationRailTheme', init: navigationRailTheme);
+    mateParams.put('outlinedButtonTheme', init: outlinedButtonTheme);
+    mateParams.put('popupMenuTheme', init: popupMenuTheme);
+    mateParams.put('progressIndicatorTheme', init: progressIndicatorTheme);
+    mateParams.put('radioTheme', init: radioTheme);
+    mateParams.put('segmentedButtonTheme', init: segmentedButtonTheme);
+    mateParams.put('sliderTheme', init: sliderTheme);
+    mateParams.put('snackBarTheme', init: snackBarTheme);
+    mateParams.put('switchTheme', init: switchTheme);
+    mateParams.put('tabBarTheme', init: tabBarTheme);
+    mateParams.put('textButtonTheme', init: textButtonTheme);
+    mateParams.put('textSelectionTheme', init: textSelectionTheme);
+    mateParams.put('timePickerTheme', init: timePickerTheme);
+    mateParams.put('toggleButtonsTheme', init: toggleButtonsTheme);
+    mateParams.put('tooltipTheme', init: tooltipTheme);
   }
 }
 
@@ -548,11 +548,11 @@ class MaterialBasedCupertinoThemeData$Mate extends MaterialBasedCupertinoThemeDa
       /// optionalParameters: {required ThemeData materialTheme} , hasDefaultValue:false, defaultValueCode:null
       required ThemeData materialTheme})
       : super(materialTheme: materialTheme) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => MaterialBasedCupertinoThemeData$Mate(materialTheme: p.getValue('materialTheme')),
+      builder: (p) => MaterialBasedCupertinoThemeData$Mate(materialTheme: p.get('materialTheme').value),
     );
-    mateParams.set(name: 'materialTheme', init: materialTheme);
+    mateParams.put('materialTheme', init: materialTheme);
   }
 }
 
@@ -569,14 +569,14 @@ class VisualDensity$Mate extends VisualDensity with Mate<VisualDensity$Mate> {
           horizontal: horizontal,
           vertical: vertical,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => VisualDensity$Mate(
-        horizontal: p.getValue('horizontal'),
-        vertical: p.getValue('vertical'),
+        horizontal: p.get('horizontal').value,
+        vertical: p.get('vertical').value,
       ),
     );
-    mateParams.set(name: 'horizontal', init: horizontal);
-    mateParams.set(name: 'vertical', init: vertical);
+    mateParams.put('horizontal', init: horizontal);
+    mateParams.put('vertical', init: vertical);
   }
 }

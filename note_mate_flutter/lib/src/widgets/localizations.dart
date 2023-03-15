@@ -28,18 +28,18 @@ class Localizations$Mate extends Localizations with WidgetMate<Localizations$Mat
           delegates: delegates,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Localizations$Mate(
-        key: p.getValue('key'),
-        locale: p.getValue('locale'),
-        delegates: p.getValue('delegates'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        locale: p.get('locale').value,
+        delegates: p.get('delegates').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'delegates', init: delegates);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('locale', init: locale);
+    mateParams.put('delegates', init: delegates);
+    mateParams.put('child', init: child);
   }
 }

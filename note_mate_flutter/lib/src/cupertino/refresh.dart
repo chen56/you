@@ -31,20 +31,20 @@ class CupertinoSliverRefreshControl$Mate extends CupertinoSliverRefreshControl
           builder: builder,
           onRefresh: onRefresh,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSliverRefreshControl$Mate(
-        key: p.getValue('key'),
-        refreshTriggerPullDistance: p.getValue('refreshTriggerPullDistance'),
-        refreshIndicatorExtent: p.getValue('refreshIndicatorExtent'),
-        builder: p.getValue('builder'),
-        onRefresh: p.getValue('onRefresh'),
+        key: p.get('key').value,
+        refreshTriggerPullDistance: p.get('refreshTriggerPullDistance').value,
+        refreshIndicatorExtent: p.get('refreshIndicatorExtent').value,
+        builder: p.get('builder').value,
+        onRefresh: p.get('onRefresh').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'refreshTriggerPullDistance', init: refreshTriggerPullDistance);
-    mateParams.set(name: 'refreshIndicatorExtent', init: refreshIndicatorExtent);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'onRefresh', init: onRefresh);
+    mateParams.put('key', init: key);
+    mateParams.put('refreshTriggerPullDistance', init: refreshTriggerPullDistance);
+    mateParams.put('refreshIndicatorExtent', init: refreshIndicatorExtent);
+    mateParams.put('builder', init: builder);
+    mateParams.put('onRefresh', init: onRefresh);
   }
 }

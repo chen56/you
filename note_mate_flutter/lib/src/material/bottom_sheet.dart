@@ -65,35 +65,35 @@ class BottomSheet$Mate extends BottomSheet with WidgetMate<BottomSheet$Mate> {
           onClosing: onClosing,
           builder: builder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomSheet$Mate(
-        key: p.getValue('key'),
-        animationController: p.getValue('animationController'),
-        enableDrag: p.getValue('enableDrag'),
-        onDragStart: p.getValue('onDragStart'),
-        onDragEnd: p.getValue('onDragEnd'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        constraints: p.getValue('constraints'),
-        onClosing: p.getValue('onClosing'),
-        builder: p.getValue('builder'),
+        key: p.get('key').value,
+        animationController: p.get('animationController').value,
+        enableDrag: p.get('enableDrag').value,
+        onDragStart: p.get('onDragStart').value,
+        onDragEnd: p.get('onDragEnd').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        constraints: p.get('constraints').value,
+        onClosing: p.get('onClosing').value,
+        builder: p.get('builder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'animationController', init: animationController);
-    mateParams.set(name: 'enableDrag', init: enableDrag);
-    mateParams.set(name: 'onDragStart', init: onDragStart);
-    mateParams.set(name: 'onDragEnd', init: onDragEnd);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'constraints', init: constraints);
-    mateParams.set(name: 'onClosing', init: onClosing);
-    mateParams.set(name: 'builder', init: builder);
+    mateParams.put('key', init: key);
+    mateParams.put('animationController', init: animationController);
+    mateParams.put('enableDrag', init: enableDrag);
+    mateParams.put('onDragStart', init: onDragStart);
+    mateParams.put('onDragEnd', init: onDragEnd);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('constraints', init: constraints);
+    mateParams.put('onClosing', init: onClosing);
+    mateParams.put('builder', init: builder);
   }
 }
 
@@ -170,44 +170,44 @@ class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate<M
           anchorPoint: anchorPoint,
           useSafeArea: useSafeArea,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ModalBottomSheetRoute$Mate(
-        builder: p.getValue('builder'),
-        capturedThemes: p.getValue('capturedThemes'),
-        barrierLabel: p.getValue('barrierLabel'),
-        barrierOnTapHint: p.getValue('barrierOnTapHint'),
-        backgroundColor: p.getValue('backgroundColor'),
-        elevation: p.getValue('elevation'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        constraints: p.getValue('constraints'),
-        modalBarrierColor: p.getValue('modalBarrierColor'),
-        isDismissible: p.getValue('isDismissible'),
-        enableDrag: p.getValue('enableDrag'),
-        isScrollControlled: p.getValue('isScrollControlled'),
-        settings: p.getValue('settings'),
-        transitionAnimationController: p.getValue('transitionAnimationController'),
-        anchorPoint: p.getValue('anchorPoint'),
-        useSafeArea: p.getValue('useSafeArea'),
+        builder: p.get('builder').value,
+        capturedThemes: p.get('capturedThemes').value,
+        barrierLabel: p.get('barrierLabel').value,
+        barrierOnTapHint: p.get('barrierOnTapHint').value,
+        backgroundColor: p.get('backgroundColor').value,
+        elevation: p.get('elevation').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        constraints: p.get('constraints').value,
+        modalBarrierColor: p.get('modalBarrierColor').value,
+        isDismissible: p.get('isDismissible').value,
+        enableDrag: p.get('enableDrag').value,
+        isScrollControlled: p.get('isScrollControlled').value,
+        settings: p.get('settings').value,
+        transitionAnimationController: p.get('transitionAnimationController').value,
+        anchorPoint: p.get('anchorPoint').value,
+        useSafeArea: p.get('useSafeArea').value,
       ),
     );
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'capturedThemes', init: capturedThemes);
-    mateParams.set(name: 'barrierLabel', init: barrierLabel);
-    mateParams.set(name: 'barrierOnTapHint', init: barrierOnTapHint);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'constraints', init: constraints);
-    mateParams.set(name: 'modalBarrierColor', init: modalBarrierColor);
-    mateParams.set(name: 'isDismissible', init: isDismissible);
-    mateParams.set(name: 'enableDrag', init: enableDrag);
-    mateParams.set(name: 'isScrollControlled', init: isScrollControlled);
-    mateParams.set(name: 'settings', init: settings);
-    mateParams.set(name: 'transitionAnimationController', init: transitionAnimationController);
-    mateParams.set(name: 'anchorPoint', init: anchorPoint);
-    mateParams.set(name: 'useSafeArea', init: useSafeArea);
+    mateParams.put('builder', init: builder);
+    mateParams.put('capturedThemes', init: capturedThemes);
+    mateParams.put('barrierLabel', init: barrierLabel);
+    mateParams.put('barrierOnTapHint', init: barrierOnTapHint);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('constraints', init: constraints);
+    mateParams.put('modalBarrierColor', init: modalBarrierColor);
+    mateParams.put('isDismissible', init: isDismissible);
+    mateParams.put('enableDrag', init: enableDrag);
+    mateParams.put('isScrollControlled', init: isScrollControlled);
+    mateParams.put('settings', init: settings);
+    mateParams.put('transitionAnimationController', init: transitionAnimationController);
+    mateParams.put('anchorPoint', init: anchorPoint);
+    mateParams.put('useSafeArea', init: useSafeArea);
   }
 }

@@ -101,52 +101,52 @@ class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData
           extendedTextStyle: extendedTextStyle,
           mouseCursor: mouseCursor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FloatingActionButtonThemeData$Mate(
-        foregroundColor: p.getValue('foregroundColor'),
-        backgroundColor: p.getValue('backgroundColor'),
-        focusColor: p.getValue('focusColor'),
-        hoverColor: p.getValue('hoverColor'),
-        splashColor: p.getValue('splashColor'),
-        elevation: p.getValue('elevation'),
-        focusElevation: p.getValue('focusElevation'),
-        hoverElevation: p.getValue('hoverElevation'),
-        disabledElevation: p.getValue('disabledElevation'),
-        highlightElevation: p.getValue('highlightElevation'),
-        shape: p.getValue('shape'),
-        enableFeedback: p.getValue('enableFeedback'),
-        iconSize: p.getValue('iconSize'),
-        sizeConstraints: p.getValue('sizeConstraints'),
-        smallSizeConstraints: p.getValue('smallSizeConstraints'),
-        largeSizeConstraints: p.getValue('largeSizeConstraints'),
-        extendedSizeConstraints: p.getValue('extendedSizeConstraints'),
-        extendedIconLabelSpacing: p.getValue('extendedIconLabelSpacing'),
-        extendedPadding: p.getValue('extendedPadding'),
-        extendedTextStyle: p.getValue('extendedTextStyle'),
-        mouseCursor: p.getValue('mouseCursor'),
+        foregroundColor: p.get('foregroundColor').value,
+        backgroundColor: p.get('backgroundColor').value,
+        focusColor: p.get('focusColor').value,
+        hoverColor: p.get('hoverColor').value,
+        splashColor: p.get('splashColor').value,
+        elevation: p.get('elevation').value,
+        focusElevation: p.get('focusElevation').value,
+        hoverElevation: p.get('hoverElevation').value,
+        disabledElevation: p.get('disabledElevation').value,
+        highlightElevation: p.get('highlightElevation').value,
+        shape: p.get('shape').value,
+        enableFeedback: p.get('enableFeedback').value,
+        iconSize: p.get('iconSize').value,
+        sizeConstraints: p.get('sizeConstraints').value,
+        smallSizeConstraints: p.get('smallSizeConstraints').value,
+        largeSizeConstraints: p.get('largeSizeConstraints').value,
+        extendedSizeConstraints: p.get('extendedSizeConstraints').value,
+        extendedIconLabelSpacing: p.get('extendedIconLabelSpacing').value,
+        extendedPadding: p.get('extendedPadding').value,
+        extendedTextStyle: p.get('extendedTextStyle').value,
+        mouseCursor: p.get('mouseCursor').value,
       ),
     );
-    mateParams.set(name: 'foregroundColor', init: foregroundColor);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'focusColor', init: focusColor);
-    mateParams.set(name: 'hoverColor', init: hoverColor);
-    mateParams.set(name: 'splashColor', init: splashColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'focusElevation', init: focusElevation);
-    mateParams.set(name: 'hoverElevation', init: hoverElevation);
-    mateParams.set(name: 'disabledElevation', init: disabledElevation);
-    mateParams.set(name: 'highlightElevation', init: highlightElevation);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'enableFeedback', init: enableFeedback);
-    mateParams.set(name: 'iconSize', init: iconSize);
-    mateParams.set(name: 'sizeConstraints', init: sizeConstraints);
-    mateParams.set(name: 'smallSizeConstraints', init: smallSizeConstraints);
-    mateParams.set(name: 'largeSizeConstraints', init: largeSizeConstraints);
-    mateParams.set(name: 'extendedSizeConstraints', init: extendedSizeConstraints);
-    mateParams.set(name: 'extendedIconLabelSpacing', init: extendedIconLabelSpacing);
-    mateParams.set(name: 'extendedPadding', init: extendedPadding);
-    mateParams.set(name: 'extendedTextStyle', init: extendedTextStyle);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
+    mateParams.put('foregroundColor', init: foregroundColor);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('focusColor', init: focusColor);
+    mateParams.put('hoverColor', init: hoverColor);
+    mateParams.put('splashColor', init: splashColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('focusElevation', init: focusElevation);
+    mateParams.put('hoverElevation', init: hoverElevation);
+    mateParams.put('disabledElevation', init: disabledElevation);
+    mateParams.put('highlightElevation', init: highlightElevation);
+    mateParams.put('shape', init: shape);
+    mateParams.put('enableFeedback', init: enableFeedback);
+    mateParams.put('iconSize', init: iconSize);
+    mateParams.put('sizeConstraints', init: sizeConstraints);
+    mateParams.put('smallSizeConstraints', init: smallSizeConstraints);
+    mateParams.put('largeSizeConstraints', init: largeSizeConstraints);
+    mateParams.put('extendedSizeConstraints', init: extendedSizeConstraints);
+    mateParams.put('extendedIconLabelSpacing', init: extendedIconLabelSpacing);
+    mateParams.put('extendedPadding', init: extendedPadding);
+    mateParams.put('extendedTextStyle', init: extendedTextStyle);
+    mateParams.put('mouseCursor', init: mouseCursor);
   }
 }

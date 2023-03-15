@@ -13,11 +13,11 @@ class CharacterBoundary$Mate extends CharacterBoundary with Mate<CharacterBounda
       /// requiredParameters: String _text
       String _text)
       : super(_text) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => CharacterBoundary$Mate(p.getValue('_text')),
+      builder: (p) => CharacterBoundary$Mate(p.get('_text').value),
     );
-    mateParams.set(name: '_text', init: _text);
+    mateParams.put('_text', init: _text);
   }
 }
 
@@ -29,11 +29,11 @@ class LineBoundary$Mate extends LineBoundary with Mate<LineBoundary$Mate> {
       /// requiredParameters: TextLayoutMetrics _textLayout
       TextLayoutMetrics _textLayout)
       : super(_textLayout) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => LineBoundary$Mate(p.getValue('_textLayout')),
+      builder: (p) => LineBoundary$Mate(p.get('_textLayout').value),
     );
-    mateParams.set(name: '_textLayout', init: _textLayout);
+    mateParams.put('_textLayout', init: _textLayout);
   }
 }
 
@@ -45,11 +45,11 @@ class ParagraphBoundary$Mate extends ParagraphBoundary with Mate<ParagraphBounda
       /// requiredParameters: String _text
       String _text)
       : super(_text) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => ParagraphBoundary$Mate(p.getValue('_text')),
+      builder: (p) => ParagraphBoundary$Mate(p.get('_text').value),
     );
-    mateParams.set(name: '_text', init: _text);
+    mateParams.put('_text', init: _text);
   }
 }
 
@@ -61,10 +61,10 @@ class DocumentBoundary$Mate extends DocumentBoundary with Mate<DocumentBoundary$
       /// requiredParameters: String _text
       String _text)
       : super(_text) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DocumentBoundary$Mate(p.getValue('_text')),
+      builder: (p) => DocumentBoundary$Mate(p.get('_text').value),
     );
-    mateParams.set(name: '_text', init: _text);
+    mateParams.put('_text', init: _text);
   }
 }

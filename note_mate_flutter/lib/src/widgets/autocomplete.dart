@@ -51,29 +51,29 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Wid
           textEditingController: textEditingController,
           initialValue: initialValue,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawAutocomplete$Mate(
-        key: p.getValue('key'),
-        optionsViewBuilder: p.getValue('optionsViewBuilder'),
-        optionsBuilder: p.getValue('optionsBuilder'),
-        displayStringForOption: p.getValue('displayStringForOption'),
-        fieldViewBuilder: p.getValue('fieldViewBuilder'),
-        focusNode: p.getValue('focusNode'),
-        onSelected: p.getValue('onSelected'),
-        textEditingController: p.getValue('textEditingController'),
-        initialValue: p.getValue('initialValue'),
+        key: p.get('key').value,
+        optionsViewBuilder: p.get('optionsViewBuilder').value,
+        optionsBuilder: p.get('optionsBuilder').value,
+        displayStringForOption: p.get('displayStringForOption').value,
+        fieldViewBuilder: p.get('fieldViewBuilder').value,
+        focusNode: p.get('focusNode').value,
+        onSelected: p.get('onSelected').value,
+        textEditingController: p.get('textEditingController').value,
+        initialValue: p.get('initialValue').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'optionsViewBuilder', init: optionsViewBuilder);
-    mateParams.set(name: 'optionsBuilder', init: optionsBuilder);
-    mateParams.set(name: 'displayStringForOption', init: displayStringForOption);
-    mateParams.set(name: 'fieldViewBuilder', init: fieldViewBuilder);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'onSelected', init: onSelected);
-    mateParams.set(name: 'textEditingController', init: textEditingController);
-    mateParams.set(name: 'initialValue', init: initialValue);
+    mateParams.put('key', init: key);
+    mateParams.put('optionsViewBuilder', init: optionsViewBuilder);
+    mateParams.put('optionsBuilder', init: optionsBuilder);
+    mateParams.put('displayStringForOption', init: displayStringForOption);
+    mateParams.put('fieldViewBuilder', init: fieldViewBuilder);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('onSelected', init: onSelected);
+    mateParams.put('textEditingController', init: textEditingController);
+    mateParams.put('initialValue', init: initialValue);
   }
 }
 
@@ -95,16 +95,16 @@ class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption
           highlightIndexNotifier: highlightIndexNotifier,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AutocompleteHighlightedOption$Mate(
-        key: p.getValue('key'),
-        highlightIndexNotifier: p.getValue('highlightIndexNotifier'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        highlightIndexNotifier: p.get('highlightIndexNotifier').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'highlightIndexNotifier', init: highlightIndexNotifier);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('highlightIndexNotifier', init: highlightIndexNotifier);
+    mateParams.put('child', init: child);
   }
 }

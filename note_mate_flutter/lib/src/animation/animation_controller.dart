@@ -42,27 +42,27 @@ class AnimationController$Mate extends AnimationController with Mate<AnimationCo
           animationBehavior: animationBehavior,
           vsync: vsync,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimationController$Mate(
-        value: p.getValue('value'),
-        duration: p.getValue('duration'),
-        reverseDuration: p.getValue('reverseDuration'),
-        debugLabel: p.getValue('debugLabel'),
-        lowerBound: p.getValue('lowerBound'),
-        upperBound: p.getValue('upperBound'),
-        animationBehavior: p.getValue('animationBehavior'),
-        vsync: p.getValue('vsync'),
+        value: p.get('value').value,
+        duration: p.get('duration').value,
+        reverseDuration: p.get('reverseDuration').value,
+        debugLabel: p.get('debugLabel').value,
+        lowerBound: p.get('lowerBound').value,
+        upperBound: p.get('upperBound').value,
+        animationBehavior: p.get('animationBehavior').value,
+        vsync: p.get('vsync').value,
       ),
     );
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'reverseDuration', init: reverseDuration);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
-    mateParams.set(name: 'lowerBound', init: lowerBound);
-    mateParams.set(name: 'upperBound', init: upperBound);
-    mateParams.set(name: 'animationBehavior', init: animationBehavior);
-    mateParams.set(name: 'vsync', init: vsync);
+    mateParams.put('value', init: value);
+    mateParams.put('duration', init: duration);
+    mateParams.put('reverseDuration', init: reverseDuration);
+    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('lowerBound', init: lowerBound);
+    mateParams.put('upperBound', init: upperBound);
+    mateParams.put('animationBehavior', init: animationBehavior);
+    mateParams.put('vsync', init: vsync);
   }
 
   /// AnimationController AnimationController.unbounded({double value = 0.0, Duration? duration, Duration? reverseDuration, String? debugLabel, required TickerProvider vsync, AnimationBehavior animationBehavior = AnimationBehavior.preserve})
@@ -92,22 +92,22 @@ class AnimationController$Mate extends AnimationController with Mate<AnimationCo
           vsync: vsync,
           animationBehavior: animationBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimationController$Mate.unbounded(
-        value: p.getValue('value'),
-        duration: p.getValue('duration'),
-        reverseDuration: p.getValue('reverseDuration'),
-        debugLabel: p.getValue('debugLabel'),
-        vsync: p.getValue('vsync'),
-        animationBehavior: p.getValue('animationBehavior'),
+        value: p.get('value').value,
+        duration: p.get('duration').value,
+        reverseDuration: p.get('reverseDuration').value,
+        debugLabel: p.get('debugLabel').value,
+        vsync: p.get('vsync').value,
+        animationBehavior: p.get('animationBehavior').value,
       ),
     );
-    mateParams.set(name: 'value', init: value);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'reverseDuration', init: reverseDuration);
-    mateParams.set(name: 'debugLabel', init: debugLabel);
-    mateParams.set(name: 'vsync', init: vsync);
-    mateParams.set(name: 'animationBehavior', init: animationBehavior);
+    mateParams.put('value', init: value);
+    mateParams.put('duration', init: duration);
+    mateParams.put('reverseDuration', init: reverseDuration);
+    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('vsync', init: vsync);
+    mateParams.put('animationBehavior', init: animationBehavior);
   }
 }

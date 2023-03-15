@@ -132,67 +132,67 @@ class CupertinoApp$Mate extends CupertinoApp with WidgetMate<CupertinoApp$Mate> 
           restorationScopeId: restorationScopeId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoApp$Mate(
-        key: p.getValue('key'),
-        navigatorKey: p.getValue('navigatorKey'),
-        home: p.getValue('home'),
-        theme: p.getValue('theme'),
-        routes: p.getValue('routes'),
-        initialRoute: p.getValue('initialRoute'),
-        onGenerateRoute: p.getValue('onGenerateRoute'),
-        onGenerateInitialRoutes: p.getValue('onGenerateInitialRoutes'),
-        onUnknownRoute: p.getValue('onUnknownRoute'),
-        navigatorObservers: p.getValue('navigatorObservers'),
-        builder: p.getValue('builder'),
-        title: p.getValue('title'),
-        onGenerateTitle: p.getValue('onGenerateTitle'),
-        color: p.getValue('color'),
-        locale: p.getValue('locale'),
-        localizationsDelegates: p.getValue('localizationsDelegates'),
-        localeListResolutionCallback: p.getValue('localeListResolutionCallback'),
-        localeResolutionCallback: p.getValue('localeResolutionCallback'),
-        supportedLocales: p.getValue('supportedLocales'),
-        showPerformanceOverlay: p.getValue('showPerformanceOverlay'),
-        checkerboardRasterCacheImages: p.getValue('checkerboardRasterCacheImages'),
-        checkerboardOffscreenLayers: p.getValue('checkerboardOffscreenLayers'),
-        showSemanticsDebugger: p.getValue('showSemanticsDebugger'),
-        debugShowCheckedModeBanner: p.getValue('debugShowCheckedModeBanner'),
-        shortcuts: p.getValue('shortcuts'),
-        actions: p.getValue('actions'),
-        restorationScopeId: p.getValue('restorationScopeId'),
-        scrollBehavior: p.getValue('scrollBehavior'),
+        key: p.get('key').value,
+        navigatorKey: p.get('navigatorKey').value,
+        home: p.get('home').value,
+        theme: p.get('theme').value,
+        routes: p.get('routes').value,
+        initialRoute: p.get('initialRoute').value,
+        onGenerateRoute: p.get('onGenerateRoute').value,
+        onGenerateInitialRoutes: p.get('onGenerateInitialRoutes').value,
+        onUnknownRoute: p.get('onUnknownRoute').value,
+        navigatorObservers: p.get('navigatorObservers').value,
+        builder: p.get('builder').value,
+        title: p.get('title').value,
+        onGenerateTitle: p.get('onGenerateTitle').value,
+        color: p.get('color').value,
+        locale: p.get('locale').value,
+        localizationsDelegates: p.get('localizationsDelegates').value,
+        localeListResolutionCallback: p.get('localeListResolutionCallback').value,
+        localeResolutionCallback: p.get('localeResolutionCallback').value,
+        supportedLocales: p.get('supportedLocales').value,
+        showPerformanceOverlay: p.get('showPerformanceOverlay').value,
+        checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').value,
+        checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').value,
+        showSemanticsDebugger: p.get('showSemanticsDebugger').value,
+        debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').value,
+        shortcuts: p.get('shortcuts').value,
+        actions: p.get('actions').value,
+        restorationScopeId: p.get('restorationScopeId').value,
+        scrollBehavior: p.get('scrollBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'navigatorKey', init: navigatorKey);
-    mateParams.set(name: 'home', init: home);
-    mateParams.set(name: 'theme', init: theme);
-    mateParams.set(name: 'routes', init: routes);
-    mateParams.set(name: 'initialRoute', init: initialRoute);
-    mateParams.set(name: 'onGenerateRoute', init: onGenerateRoute);
-    mateParams.set(name: 'onGenerateInitialRoutes', init: onGenerateInitialRoutes);
-    mateParams.set(name: 'onUnknownRoute', init: onUnknownRoute);
-    mateParams.set(name: 'navigatorObservers', init: navigatorObservers);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'onGenerateTitle', init: onGenerateTitle);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'localizationsDelegates', init: localizationsDelegates);
-    mateParams.set(name: 'localeListResolutionCallback', init: localeListResolutionCallback);
-    mateParams.set(name: 'localeResolutionCallback', init: localeResolutionCallback);
-    mateParams.set(name: 'supportedLocales', init: supportedLocales);
-    mateParams.set(name: 'showPerformanceOverlay', init: showPerformanceOverlay);
-    mateParams.set(name: 'checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
-    mateParams.set(name: 'checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
-    mateParams.set(name: 'showSemanticsDebugger', init: showSemanticsDebugger);
-    mateParams.set(name: 'debugShowCheckedModeBanner', init: debugShowCheckedModeBanner);
-    mateParams.set(name: 'shortcuts', init: shortcuts);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'restorationScopeId', init: restorationScopeId);
-    mateParams.set(name: 'scrollBehavior', init: scrollBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('navigatorKey', init: navigatorKey);
+    mateParams.put('home', init: home);
+    mateParams.put('theme', init: theme);
+    mateParams.put('routes', init: routes);
+    mateParams.put('initialRoute', init: initialRoute);
+    mateParams.put('onGenerateRoute', init: onGenerateRoute);
+    mateParams.put('onGenerateInitialRoutes', init: onGenerateInitialRoutes);
+    mateParams.put('onUnknownRoute', init: onUnknownRoute);
+    mateParams.put('navigatorObservers', init: navigatorObservers);
+    mateParams.put('builder', init: builder);
+    mateParams.put('title', init: title);
+    mateParams.put('onGenerateTitle', init: onGenerateTitle);
+    mateParams.put('color', init: color);
+    mateParams.put('locale', init: locale);
+    mateParams.put('localizationsDelegates', init: localizationsDelegates);
+    mateParams.put('localeListResolutionCallback', init: localeListResolutionCallback);
+    mateParams.put('localeResolutionCallback', init: localeResolutionCallback);
+    mateParams.put('supportedLocales', init: supportedLocales);
+    mateParams.put('showPerformanceOverlay', init: showPerformanceOverlay);
+    mateParams.put('checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
+    mateParams.put('checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
+    mateParams.put('showSemanticsDebugger', init: showSemanticsDebugger);
+    mateParams.put('debugShowCheckedModeBanner', init: debugShowCheckedModeBanner);
+    mateParams.put('shortcuts', init: shortcuts);
+    mateParams.put('actions', init: actions);
+    mateParams.put('restorationScopeId', init: restorationScopeId);
+    mateParams.put('scrollBehavior', init: scrollBehavior);
   }
 
   /// CupertinoApp CupertinoApp.router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, BackButtonDispatcher? backButtonDispatcher, RouterConfig<Object>? routerConfig, CupertinoThemeData? theme, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
@@ -298,60 +298,60 @@ class CupertinoApp$Mate extends CupertinoApp with WidgetMate<CupertinoApp$Mate> 
           restorationScopeId: restorationScopeId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoApp$Mate.router(
-        key: p.getValue('key'),
-        routeInformationProvider: p.getValue('routeInformationProvider'),
-        routeInformationParser: p.getValue('routeInformationParser'),
-        routerDelegate: p.getValue('routerDelegate'),
-        backButtonDispatcher: p.getValue('backButtonDispatcher'),
-        routerConfig: p.getValue('routerConfig'),
-        theme: p.getValue('theme'),
-        builder: p.getValue('builder'),
-        title: p.getValue('title'),
-        onGenerateTitle: p.getValue('onGenerateTitle'),
-        color: p.getValue('color'),
-        locale: p.getValue('locale'),
-        localizationsDelegates: p.getValue('localizationsDelegates'),
-        localeListResolutionCallback: p.getValue('localeListResolutionCallback'),
-        localeResolutionCallback: p.getValue('localeResolutionCallback'),
-        supportedLocales: p.getValue('supportedLocales'),
-        showPerformanceOverlay: p.getValue('showPerformanceOverlay'),
-        checkerboardRasterCacheImages: p.getValue('checkerboardRasterCacheImages'),
-        checkerboardOffscreenLayers: p.getValue('checkerboardOffscreenLayers'),
-        showSemanticsDebugger: p.getValue('showSemanticsDebugger'),
-        debugShowCheckedModeBanner: p.getValue('debugShowCheckedModeBanner'),
-        shortcuts: p.getValue('shortcuts'),
-        actions: p.getValue('actions'),
-        restorationScopeId: p.getValue('restorationScopeId'),
-        scrollBehavior: p.getValue('scrollBehavior'),
+        key: p.get('key').value,
+        routeInformationProvider: p.get('routeInformationProvider').value,
+        routeInformationParser: p.get('routeInformationParser').value,
+        routerDelegate: p.get('routerDelegate').value,
+        backButtonDispatcher: p.get('backButtonDispatcher').value,
+        routerConfig: p.get('routerConfig').value,
+        theme: p.get('theme').value,
+        builder: p.get('builder').value,
+        title: p.get('title').value,
+        onGenerateTitle: p.get('onGenerateTitle').value,
+        color: p.get('color').value,
+        locale: p.get('locale').value,
+        localizationsDelegates: p.get('localizationsDelegates').value,
+        localeListResolutionCallback: p.get('localeListResolutionCallback').value,
+        localeResolutionCallback: p.get('localeResolutionCallback').value,
+        supportedLocales: p.get('supportedLocales').value,
+        showPerformanceOverlay: p.get('showPerformanceOverlay').value,
+        checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').value,
+        checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').value,
+        showSemanticsDebugger: p.get('showSemanticsDebugger').value,
+        debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').value,
+        shortcuts: p.get('shortcuts').value,
+        actions: p.get('actions').value,
+        restorationScopeId: p.get('restorationScopeId').value,
+        scrollBehavior: p.get('scrollBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'routeInformationProvider', init: routeInformationProvider);
-    mateParams.set(name: 'routeInformationParser', init: routeInformationParser);
-    mateParams.set(name: 'routerDelegate', init: routerDelegate);
-    mateParams.set(name: 'backButtonDispatcher', init: backButtonDispatcher);
-    mateParams.set(name: 'routerConfig', init: routerConfig);
-    mateParams.set(name: 'theme', init: theme);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'onGenerateTitle', init: onGenerateTitle);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'localizationsDelegates', init: localizationsDelegates);
-    mateParams.set(name: 'localeListResolutionCallback', init: localeListResolutionCallback);
-    mateParams.set(name: 'localeResolutionCallback', init: localeResolutionCallback);
-    mateParams.set(name: 'supportedLocales', init: supportedLocales);
-    mateParams.set(name: 'showPerformanceOverlay', init: showPerformanceOverlay);
-    mateParams.set(name: 'checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
-    mateParams.set(name: 'checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
-    mateParams.set(name: 'showSemanticsDebugger', init: showSemanticsDebugger);
-    mateParams.set(name: 'debugShowCheckedModeBanner', init: debugShowCheckedModeBanner);
-    mateParams.set(name: 'shortcuts', init: shortcuts);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'restorationScopeId', init: restorationScopeId);
-    mateParams.set(name: 'scrollBehavior', init: scrollBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('routeInformationProvider', init: routeInformationProvider);
+    mateParams.put('routeInformationParser', init: routeInformationParser);
+    mateParams.put('routerDelegate', init: routerDelegate);
+    mateParams.put('backButtonDispatcher', init: backButtonDispatcher);
+    mateParams.put('routerConfig', init: routerConfig);
+    mateParams.put('theme', init: theme);
+    mateParams.put('builder', init: builder);
+    mateParams.put('title', init: title);
+    mateParams.put('onGenerateTitle', init: onGenerateTitle);
+    mateParams.put('color', init: color);
+    mateParams.put('locale', init: locale);
+    mateParams.put('localizationsDelegates', init: localizationsDelegates);
+    mateParams.put('localeListResolutionCallback', init: localeListResolutionCallback);
+    mateParams.put('localeResolutionCallback', init: localeResolutionCallback);
+    mateParams.put('supportedLocales', init: supportedLocales);
+    mateParams.put('showPerformanceOverlay', init: showPerformanceOverlay);
+    mateParams.put('checkerboardRasterCacheImages', init: checkerboardRasterCacheImages);
+    mateParams.put('checkerboardOffscreenLayers', init: checkerboardOffscreenLayers);
+    mateParams.put('showSemanticsDebugger', init: showSemanticsDebugger);
+    mateParams.put('debugShowCheckedModeBanner', init: debugShowCheckedModeBanner);
+    mateParams.put('shortcuts', init: shortcuts);
+    mateParams.put('actions', init: actions);
+    mateParams.put('restorationScopeId', init: restorationScopeId);
+    mateParams.put('scrollBehavior', init: scrollBehavior);
   }
 }

@@ -48,27 +48,27 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate<SwitchThemeData$Mat
           splashRadius: splashRadius,
           thumbIcon: thumbIcon,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SwitchThemeData$Mate(
-        thumbColor: p.getValue('thumbColor'),
-        trackColor: p.getValue('trackColor'),
-        trackOutlineColor: p.getValue('trackOutlineColor'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        mouseCursor: p.getValue('mouseCursor'),
-        overlayColor: p.getValue('overlayColor'),
-        splashRadius: p.getValue('splashRadius'),
-        thumbIcon: p.getValue('thumbIcon'),
+        thumbColor: p.get('thumbColor').value,
+        trackColor: p.get('trackColor').value,
+        trackOutlineColor: p.get('trackOutlineColor').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        mouseCursor: p.get('mouseCursor').value,
+        overlayColor: p.get('overlayColor').value,
+        splashRadius: p.get('splashRadius').value,
+        thumbIcon: p.get('thumbIcon').value,
       ),
     );
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'trackColor', init: trackColor);
-    mateParams.set(name: 'trackOutlineColor', init: trackOutlineColor);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'mouseCursor', init: mouseCursor);
-    mateParams.set(name: 'overlayColor', init: overlayColor);
-    mateParams.set(name: 'splashRadius', init: splashRadius);
-    mateParams.set(name: 'thumbIcon', init: thumbIcon);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('trackColor', init: trackColor);
+    mateParams.put('trackOutlineColor', init: trackOutlineColor);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('mouseCursor', init: mouseCursor);
+    mateParams.put('overlayColor', init: overlayColor);
+    mateParams.put('splashRadius', init: splashRadius);
+    mateParams.put('thumbIcon', init: thumbIcon);
   }
 }
 
@@ -89,16 +89,16 @@ class SwitchTheme$Mate extends SwitchTheme with WidgetMate<SwitchTheme$Mate> {
           data: data,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SwitchTheme$Mate(
-        key: p.getValue('key'),
-        data: p.getValue('data'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        data: p.get('data').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('data', init: data);
+    mateParams.put('child', init: child);
   }
 }

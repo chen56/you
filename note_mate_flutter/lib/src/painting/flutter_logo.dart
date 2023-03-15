@@ -22,16 +22,16 @@ class FlutterLogoDecoration$Mate extends FlutterLogoDecoration with Mate<Flutter
           style: style,
           margin: margin,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FlutterLogoDecoration$Mate(
-        textColor: p.getValue('textColor'),
-        style: p.getValue('style'),
-        margin: p.getValue('margin'),
+        textColor: p.get('textColor').value,
+        style: p.get('style').value,
+        margin: p.get('margin').value,
       ),
     );
-    mateParams.set(name: 'textColor', init: textColor);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'margin', init: margin);
+    mateParams.put('textColor', init: textColor);
+    mateParams.put('style', init: style);
+    mateParams.put('margin', init: margin);
   }
 }

@@ -44,27 +44,27 @@ class SafeArea$Mate extends SafeArea with WidgetMate<SafeArea$Mate> {
           maintainBottomViewPadding: maintainBottomViewPadding,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SafeArea$Mate(
-        key: p.getValue('key'),
-        left: p.getValue('left'),
-        top: p.getValue('top'),
-        right: p.getValue('right'),
-        bottom: p.getValue('bottom'),
-        minimum: p.getValue('minimum'),
-        maintainBottomViewPadding: p.getValue('maintainBottomViewPadding'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        left: p.get('left').value,
+        top: p.get('top').value,
+        right: p.get('right').value,
+        bottom: p.get('bottom').value,
+        minimum: p.get('minimum').value,
+        maintainBottomViewPadding: p.get('maintainBottomViewPadding').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'left', init: left);
-    mateParams.set(name: 'top', init: top);
-    mateParams.set(name: 'right', init: right);
-    mateParams.set(name: 'bottom', init: bottom);
-    mateParams.set(name: 'minimum', init: minimum);
-    mateParams.set(name: 'maintainBottomViewPadding', init: maintainBottomViewPadding);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('left', init: left);
+    mateParams.put('top', init: top);
+    mateParams.put('right', init: right);
+    mateParams.put('bottom', init: bottom);
+    mateParams.put('minimum', init: minimum);
+    mateParams.put('maintainBottomViewPadding', init: maintainBottomViewPadding);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -101,24 +101,24 @@ class SliverSafeArea$Mate extends SliverSafeArea with WidgetMate<SliverSafeArea$
           minimum: minimum,
           sliver: sliver,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverSafeArea$Mate(
-        key: p.getValue('key'),
-        left: p.getValue('left'),
-        top: p.getValue('top'),
-        right: p.getValue('right'),
-        bottom: p.getValue('bottom'),
-        minimum: p.getValue('minimum'),
-        sliver: p.getValue('sliver'),
+        key: p.get('key').value,
+        left: p.get('left').value,
+        top: p.get('top').value,
+        right: p.get('right').value,
+        bottom: p.get('bottom').value,
+        minimum: p.get('minimum').value,
+        sliver: p.get('sliver').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'left', init: left);
-    mateParams.set(name: 'top', init: top);
-    mateParams.set(name: 'right', init: right);
-    mateParams.set(name: 'bottom', init: bottom);
-    mateParams.set(name: 'minimum', init: minimum);
-    mateParams.set(name: 'sliver', init: sliver);
+    mateParams.put('key', init: key);
+    mateParams.put('left', init: left);
+    mateParams.put('top', init: top);
+    mateParams.put('right', init: right);
+    mateParams.put('bottom', init: bottom);
+    mateParams.put('minimum', init: minimum);
+    mateParams.put('sliver', init: sliver);
   }
 }

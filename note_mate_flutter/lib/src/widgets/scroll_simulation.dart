@@ -39,25 +39,25 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate<B
           constantDeceleration: constantDeceleration,
           tolerance: tolerance,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => BouncingScrollSimulation$Mate(
-        position: p.getValue('position'),
-        velocity: p.getValue('velocity'),
-        leadingExtent: p.getValue('leadingExtent'),
-        trailingExtent: p.getValue('trailingExtent'),
-        spring: p.getValue('spring'),
-        constantDeceleration: p.getValue('constantDeceleration'),
-        tolerance: p.getValue('tolerance'),
+        position: p.get('position').value,
+        velocity: p.get('velocity').value,
+        leadingExtent: p.get('leadingExtent').value,
+        trailingExtent: p.get('trailingExtent').value,
+        spring: p.get('spring').value,
+        constantDeceleration: p.get('constantDeceleration').value,
+        tolerance: p.get('tolerance').value,
       ),
     );
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: 'leadingExtent', init: leadingExtent);
-    mateParams.set(name: 'trailingExtent', init: trailingExtent);
-    mateParams.set(name: 'spring', init: spring);
-    mateParams.set(name: 'constantDeceleration', init: constantDeceleration);
-    mateParams.set(name: 'tolerance', init: tolerance);
+    mateParams.put('position', init: position);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('leadingExtent', init: leadingExtent);
+    mateParams.put('trailingExtent', init: trailingExtent);
+    mateParams.put('spring', init: spring);
+    mateParams.put('constantDeceleration', init: constantDeceleration);
+    mateParams.put('tolerance', init: tolerance);
   }
 }
 
@@ -82,18 +82,18 @@ class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate<C
           friction: friction,
           tolerance: tolerance,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ClampingScrollSimulation$Mate(
-        position: p.getValue('position'),
-        velocity: p.getValue('velocity'),
-        friction: p.getValue('friction'),
-        tolerance: p.getValue('tolerance'),
+        position: p.get('position').value,
+        velocity: p.get('velocity').value,
+        friction: p.get('friction').value,
+        tolerance: p.get('tolerance').value,
       ),
     );
-    mateParams.set(name: 'position', init: position);
-    mateParams.set(name: 'velocity', init: velocity);
-    mateParams.set(name: 'friction', init: friction);
-    mateParams.set(name: 'tolerance', init: tolerance);
+    mateParams.put('position', init: position);
+    mateParams.put('velocity', init: velocity);
+    mateParams.put('friction', init: friction);
+    mateParams.put('tolerance', init: tolerance);
   }
 }

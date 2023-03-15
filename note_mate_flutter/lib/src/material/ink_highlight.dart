@@ -59,32 +59,32 @@ class InkHighlight$Mate extends InkHighlight with Mate<InkHighlight$Mate> {
           onRemoved: onRemoved,
           fadeDuration: fadeDuration,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => InkHighlight$Mate(
-        controller: p.getValue('controller'),
-        referenceBox: p.getValue('referenceBox'),
-        color: p.getValue('color'),
-        textDirection: p.getValue('textDirection'),
-        shape: p.getValue('shape'),
-        radius: p.getValue('radius'),
-        borderRadius: p.getValue('borderRadius'),
-        customBorder: p.getValue('customBorder'),
-        rectCallback: p.getValue('rectCallback'),
-        onRemoved: p.getValue('onRemoved'),
-        fadeDuration: p.getValue('fadeDuration'),
+        controller: p.get('controller').value,
+        referenceBox: p.get('referenceBox').value,
+        color: p.get('color').value,
+        textDirection: p.get('textDirection').value,
+        shape: p.get('shape').value,
+        radius: p.get('radius').value,
+        borderRadius: p.get('borderRadius').value,
+        customBorder: p.get('customBorder').value,
+        rectCallback: p.get('rectCallback').value,
+        onRemoved: p.get('onRemoved').value,
+        fadeDuration: p.get('fadeDuration').value,
       ),
     );
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'referenceBox', init: referenceBox);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'borderRadius', init: borderRadius);
-    mateParams.set(name: 'customBorder', init: customBorder);
-    mateParams.set(name: 'rectCallback', init: rectCallback);
-    mateParams.set(name: 'onRemoved', init: onRemoved);
-    mateParams.set(name: 'fadeDuration', init: fadeDuration);
+    mateParams.put('controller', init: controller);
+    mateParams.put('referenceBox', init: referenceBox);
+    mateParams.put('color', init: color);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('shape', init: shape);
+    mateParams.put('radius', init: radius);
+    mateParams.put('borderRadius', init: borderRadius);
+    mateParams.put('customBorder', init: customBorder);
+    mateParams.put('rectCallback', init: rectCallback);
+    mateParams.put('onRemoved', init: onRemoved);
+    mateParams.put('fadeDuration', init: fadeDuration);
   }
 }

@@ -17,14 +17,14 @@ class OrientationBuilder$Mate extends OrientationBuilder with WidgetMate<Orienta
           key: key,
           builder: builder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => OrientationBuilder$Mate(
-        key: p.getValue('key'),
-        builder: p.getValue('builder'),
+        key: p.get('key').value,
+        builder: p.get('builder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'builder', init: builder);
+    mateParams.put('key', init: key);
+    mateParams.put('builder', init: builder);
   }
 }

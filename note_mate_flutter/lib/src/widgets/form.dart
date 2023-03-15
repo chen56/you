@@ -33,21 +33,21 @@ class Form$Mate extends Form with WidgetMate<Form$Mate> {
           onChanged: onChanged,
           autovalidateMode: autovalidateMode,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Form$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        onWillPop: p.getValue('onWillPop'),
-        onChanged: p.getValue('onChanged'),
-        autovalidateMode: p.getValue('autovalidateMode'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        onWillPop: p.get('onWillPop').value,
+        onChanged: p.get('onChanged').value,
+        autovalidateMode: p.get('autovalidateMode').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'onWillPop', init: onWillPop);
-    mateParams.set(name: 'onChanged', init: onChanged);
-    mateParams.set(name: 'autovalidateMode', init: autovalidateMode);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('onWillPop', init: onWillPop);
+    mateParams.put('onChanged', init: onChanged);
+    mateParams.put('autovalidateMode', init: autovalidateMode);
   }
 }
 
@@ -88,26 +88,26 @@ class FormField$Mate<T> extends FormField<T> with WidgetMate<FormField$Mate> {
           autovalidateMode: autovalidateMode,
           restorationId: restorationId,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FormField$Mate(
-        key: p.getValue('key'),
-        builder: p.getValue('builder'),
-        onSaved: p.getValue('onSaved'),
-        validator: p.getValue('validator'),
-        initialValue: p.getValue('initialValue'),
-        enabled: p.getValue('enabled'),
-        autovalidateMode: p.getValue('autovalidateMode'),
-        restorationId: p.getValue('restorationId'),
+        key: p.get('key').value,
+        builder: p.get('builder').value,
+        onSaved: p.get('onSaved').value,
+        validator: p.get('validator').value,
+        initialValue: p.get('initialValue').value,
+        enabled: p.get('enabled').value,
+        autovalidateMode: p.get('autovalidateMode').value,
+        restorationId: p.get('restorationId').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'onSaved', init: onSaved);
-    mateParams.set(name: 'validator', init: validator);
-    mateParams.set(name: 'initialValue', init: initialValue);
-    mateParams.set(name: 'enabled', init: enabled);
-    mateParams.set(name: 'autovalidateMode', init: autovalidateMode);
-    mateParams.set(name: 'restorationId', init: restorationId);
+    mateParams.put('key', init: key);
+    mateParams.put('builder', init: builder);
+    mateParams.put('onSaved', init: onSaved);
+    mateParams.put('validator', init: validator);
+    mateParams.put('initialValue', init: initialValue);
+    mateParams.put('enabled', init: enabled);
+    mateParams.put('autovalidateMode', init: autovalidateMode);
+    mateParams.put('restorationId', init: restorationId);
   }
 }

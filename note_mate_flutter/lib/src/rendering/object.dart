@@ -21,15 +21,15 @@ class PaintingContext$Mate extends PaintingContext with Mate<PaintingContext$Mat
           _containerLayer,
           estimatedBounds,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PaintingContext$Mate(
-        p.getValue('_containerLayer'),
-        p.getValue('estimatedBounds'),
+        p.get('_containerLayer').value,
+        p.get('estimatedBounds').value,
       ),
     );
-    mateParams.set(name: '_containerLayer', init: _containerLayer);
-    mateParams.set(name: 'estimatedBounds', init: estimatedBounds);
+    mateParams.put('_containerLayer', init: _containerLayer);
+    mateParams.put('estimatedBounds', init: estimatedBounds);
   }
 }
 
@@ -54,19 +54,19 @@ class PipelineOwner$Mate extends PipelineOwner with Mate<PipelineOwner$Mate> {
           onSemanticsUpdate: onSemanticsUpdate,
           onSemanticsOwnerDisposed: onSemanticsOwnerDisposed,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PipelineOwner$Mate(
-        onNeedVisualUpdate: p.getValue('onNeedVisualUpdate'),
-        onSemanticsOwnerCreated: p.getValue('onSemanticsOwnerCreated'),
-        onSemanticsUpdate: p.getValue('onSemanticsUpdate'),
-        onSemanticsOwnerDisposed: p.getValue('onSemanticsOwnerDisposed'),
+        onNeedVisualUpdate: p.get('onNeedVisualUpdate').value,
+        onSemanticsOwnerCreated: p.get('onSemanticsOwnerCreated').value,
+        onSemanticsUpdate: p.get('onSemanticsUpdate').value,
+        onSemanticsOwnerDisposed: p.get('onSemanticsOwnerDisposed').value,
       ),
     );
-    mateParams.set(name: 'onNeedVisualUpdate', init: onNeedVisualUpdate);
-    mateParams.set(name: 'onSemanticsOwnerCreated', init: onSemanticsOwnerCreated);
-    mateParams.set(name: 'onSemanticsUpdate', init: onSemanticsUpdate);
-    mateParams.set(name: 'onSemanticsOwnerDisposed', init: onSemanticsOwnerDisposed);
+    mateParams.put('onNeedVisualUpdate', init: onNeedVisualUpdate);
+    mateParams.put('onSemanticsOwnerCreated', init: onSemanticsOwnerCreated);
+    mateParams.put('onSemanticsUpdate', init: onSemanticsUpdate);
+    mateParams.put('onSemanticsOwnerDisposed', init: onSemanticsOwnerDisposed);
   }
 }
 
@@ -78,10 +78,10 @@ class DiagnosticsDebugCreator$Mate extends DiagnosticsDebugCreator with Mate<Dia
       /// requiredParameters: Object value
       Object value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DiagnosticsDebugCreator$Mate(p.getValue('value')),
+      builder: (p) => DiagnosticsDebugCreator$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }

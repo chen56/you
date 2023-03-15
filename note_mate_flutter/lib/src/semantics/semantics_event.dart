@@ -21,17 +21,17 @@ class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate<Annou
           textDirection,
           assertiveness: assertiveness,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnnounceSemanticsEvent$Mate(
-        p.getValue('message'),
-        p.getValue('textDirection'),
-        assertiveness: p.getValue('assertiveness'),
+        p.get('message').value,
+        p.get('textDirection').value,
+        assertiveness: p.get('assertiveness').value,
       ),
     );
-    mateParams.set(name: 'message', init: message);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'assertiveness', init: assertiveness);
+    mateParams.put('message', init: message);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('assertiveness', init: assertiveness);
   }
 }
 
@@ -43,10 +43,10 @@ class TooltipSemanticsEvent$Mate extends TooltipSemanticsEvent with Mate<Tooltip
       /// requiredParameters: String message
       String message)
       : super(message) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => TooltipSemanticsEvent$Mate(p.getValue('message')),
+      builder: (p) => TooltipSemanticsEvent$Mate(p.get('message').value),
     );
-    mateParams.set(name: 'message', init: message);
+    mateParams.put('message', init: message);
   }
 }

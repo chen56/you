@@ -22,17 +22,17 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate<Key
           uri: uri,
           data: data,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyboardInsertedContent$Mate(
-        mimeType: p.getValue('mimeType'),
-        uri: p.getValue('uri'),
-        data: p.getValue('data'),
+        mimeType: p.get('mimeType').value,
+        uri: p.get('uri').value,
+        data: p.get('data').value,
       ),
     );
-    mateParams.set(name: 'mimeType', init: mimeType);
-    mateParams.set(name: 'uri', init: uri);
-    mateParams.set(name: 'data', init: data);
+    mateParams.put('mimeType', init: mimeType);
+    mateParams.put('uri', init: uri);
+    mateParams.put('data', init: data);
   }
 
   /// KeyboardInsertedContent KeyboardInsertedContent.fromJson(Map<String, dynamic> metadata)
@@ -41,10 +41,10 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate<Key
       /// requiredParameters: Map<String, dynamic> metadata
       Map<String, dynamic> metadata)
       : super.fromJson(metadata) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => KeyboardInsertedContent$Mate.fromJson(p.getValue('metadata')),
+      builder: (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value),
     );
-    mateParams.set(name: 'metadata', init: metadata);
+    mateParams.put('metadata', init: metadata);
   }
 }

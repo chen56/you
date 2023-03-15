@@ -40,24 +40,24 @@ class CardTheme$Mate extends CardTheme with Mate<CardTheme$Mate> {
           margin: margin,
           shape: shape,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CardTheme$Mate(
-        clipBehavior: p.getValue('clipBehavior'),
-        color: p.getValue('color'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        elevation: p.getValue('elevation'),
-        margin: p.getValue('margin'),
-        shape: p.getValue('shape'),
+        clipBehavior: p.get('clipBehavior').value,
+        color: p.get('color').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        elevation: p.get('elevation').value,
+        margin: p.get('margin').value,
+        shape: p.get('shape').value,
       ),
     );
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'margin', init: margin);
-    mateParams.set(name: 'shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('color', init: color);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('margin', init: margin);
+    mateParams.put('shape', init: shape);
   }
 }

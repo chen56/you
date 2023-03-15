@@ -21,16 +21,16 @@ class AssetMetadata$Mate extends AssetMetadata with Mate<AssetMetadata$Mate> {
           targetDevicePixelRatio: targetDevicePixelRatio,
           main: main,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AssetMetadata$Mate(
-        key: p.getValue('key'),
-        targetDevicePixelRatio: p.getValue('targetDevicePixelRatio'),
-        main: p.getValue('main'),
+        key: p.get('key').value,
+        targetDevicePixelRatio: p.get('targetDevicePixelRatio').value,
+        main: p.get('main').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'targetDevicePixelRatio', init: targetDevicePixelRatio);
-    mateParams.set(name: 'main', init: main);
+    mateParams.put('key', init: key);
+    mateParams.put('targetDevicePixelRatio', init: targetDevicePixelRatio);
+    mateParams.put('main', init: main);
   }
 }

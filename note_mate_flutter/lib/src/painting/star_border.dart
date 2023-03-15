@@ -38,25 +38,25 @@ class StarBorder$Mate extends StarBorder with Mate<StarBorder$Mate> {
           rotation: rotation,
           squash: squash,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => StarBorder$Mate(
-        side: p.getValue('side'),
-        points: p.getValue('points'),
-        innerRadiusRatio: p.getValue('innerRadiusRatio'),
-        pointRounding: p.getValue('pointRounding'),
-        valleyRounding: p.getValue('valleyRounding'),
-        rotation: p.getValue('rotation'),
-        squash: p.getValue('squash'),
+        side: p.get('side').value,
+        points: p.get('points').value,
+        innerRadiusRatio: p.get('innerRadiusRatio').value,
+        pointRounding: p.get('pointRounding').value,
+        valleyRounding: p.get('valleyRounding').value,
+        rotation: p.get('rotation').value,
+        squash: p.get('squash').value,
       ),
     );
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'points', init: points);
-    mateParams.set(name: 'innerRadiusRatio', init: innerRadiusRatio);
-    mateParams.set(name: 'pointRounding', init: pointRounding);
-    mateParams.set(name: 'valleyRounding', init: valleyRounding);
-    mateParams.set(name: 'rotation', init: rotation);
-    mateParams.set(name: 'squash', init: squash);
+    mateParams.put('side', init: side);
+    mateParams.put('points', init: points);
+    mateParams.put('innerRadiusRatio', init: innerRadiusRatio);
+    mateParams.put('pointRounding', init: pointRounding);
+    mateParams.put('valleyRounding', init: valleyRounding);
+    mateParams.put('rotation', init: rotation);
+    mateParams.put('squash', init: squash);
   }
 
   /// StarBorder StarBorder.polygon({BorderSide side = BorderSide.none, double sides = 5, double pointRounding = 0, double rotation = 0, double squash = 0})
@@ -82,20 +82,20 @@ class StarBorder$Mate extends StarBorder with Mate<StarBorder$Mate> {
           rotation: rotation,
           squash: squash,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => StarBorder$Mate.polygon(
-        side: p.getValue('side'),
-        sides: p.getValue('sides'),
-        pointRounding: p.getValue('pointRounding'),
-        rotation: p.getValue('rotation'),
-        squash: p.getValue('squash'),
+        side: p.get('side').value,
+        sides: p.get('sides').value,
+        pointRounding: p.get('pointRounding').value,
+        rotation: p.get('rotation').value,
+        squash: p.get('squash').value,
       ),
     );
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'sides', init: sides);
-    mateParams.set(name: 'pointRounding', init: pointRounding);
-    mateParams.set(name: 'rotation', init: rotation);
-    mateParams.set(name: 'squash', init: squash);
+    mateParams.put('side', init: side);
+    mateParams.put('sides', init: sides);
+    mateParams.put('pointRounding', init: pointRounding);
+    mateParams.put('rotation', init: rotation);
+    mateParams.put('squash', init: squash);
   }
 }

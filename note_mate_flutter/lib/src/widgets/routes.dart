@@ -20,15 +20,15 @@ class LocalHistoryEntry$Mate extends LocalHistoryEntry with Mate<LocalHistoryEnt
           onRemove: onRemove,
           impliesAppBarDismissal: impliesAppBarDismissal,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => LocalHistoryEntry$Mate(
-        onRemove: p.getValue('onRemove'),
-        impliesAppBarDismissal: p.getValue('impliesAppBarDismissal'),
+        onRemove: p.get('onRemove').value,
+        impliesAppBarDismissal: p.get('impliesAppBarDismissal').value,
       ),
     );
-    mateParams.set(name: 'onRemove', init: onRemove);
-    mateParams.set(name: 'impliesAppBarDismissal', init: impliesAppBarDismissal);
+    mateParams.put('onRemove', init: onRemove);
+    mateParams.put('impliesAppBarDismissal', init: impliesAppBarDismissal);
   }
 }
 
@@ -73,28 +73,28 @@ class RawDialogRoute$Mate<T> extends RawDialogRoute<T> with Mate<RawDialogRoute$
           anchorPoint: anchorPoint,
           traversalEdgeBehavior: traversalEdgeBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawDialogRoute$Mate(
-        pageBuilder: p.getValue('pageBuilder'),
-        barrierDismissible: p.getValue('barrierDismissible'),
-        barrierColor: p.getValue('barrierColor'),
-        barrierLabel: p.getValue('barrierLabel'),
-        transitionDuration: p.getValue('transitionDuration'),
-        transitionBuilder: p.getValue('transitionBuilder'),
-        settings: p.getValue('settings'),
-        anchorPoint: p.getValue('anchorPoint'),
-        traversalEdgeBehavior: p.getValue('traversalEdgeBehavior'),
+        pageBuilder: p.get('pageBuilder').value,
+        barrierDismissible: p.get('barrierDismissible').value,
+        barrierColor: p.get('barrierColor').value,
+        barrierLabel: p.get('barrierLabel').value,
+        transitionDuration: p.get('transitionDuration').value,
+        transitionBuilder: p.get('transitionBuilder').value,
+        settings: p.get('settings').value,
+        anchorPoint: p.get('anchorPoint').value,
+        traversalEdgeBehavior: p.get('traversalEdgeBehavior').value,
       ),
     );
-    mateParams.set(name: 'pageBuilder', init: pageBuilder);
-    mateParams.set(name: 'barrierDismissible', init: barrierDismissible);
-    mateParams.set(name: 'barrierColor', init: barrierColor);
-    mateParams.set(name: 'barrierLabel', init: barrierLabel);
-    mateParams.set(name: 'transitionDuration', init: transitionDuration);
-    mateParams.set(name: 'transitionBuilder', init: transitionBuilder);
-    mateParams.set(name: 'settings', init: settings);
-    mateParams.set(name: 'anchorPoint', init: anchorPoint);
-    mateParams.set(name: 'traversalEdgeBehavior', init: traversalEdgeBehavior);
+    mateParams.put('pageBuilder', init: pageBuilder);
+    mateParams.put('barrierDismissible', init: barrierDismissible);
+    mateParams.put('barrierColor', init: barrierColor);
+    mateParams.put('barrierLabel', init: barrierLabel);
+    mateParams.put('transitionDuration', init: transitionDuration);
+    mateParams.put('transitionBuilder', init: transitionBuilder);
+    mateParams.put('settings', init: settings);
+    mateParams.put('anchorPoint', init: anchorPoint);
+    mateParams.put('traversalEdgeBehavior', init: traversalEdgeBehavior);
   }
 }

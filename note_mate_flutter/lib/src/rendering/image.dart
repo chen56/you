@@ -82,44 +82,44 @@ class RenderImage$Mate extends RenderImage with Mate<RenderImage$Mate> {
           isAntiAlias: isAntiAlias,
           filterQuality: filterQuality,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderImage$Mate(
-        image: p.getValue('image'),
-        debugImageLabel: p.getValue('debugImageLabel'),
-        width: p.getValue('width'),
-        height: p.getValue('height'),
-        scale: p.getValue('scale'),
-        color: p.getValue('color'),
-        opacity: p.getValue('opacity'),
-        colorBlendMode: p.getValue('colorBlendMode'),
-        fit: p.getValue('fit'),
-        alignment: p.getValue('alignment'),
-        repeat: p.getValue('repeat'),
-        centerSlice: p.getValue('centerSlice'),
-        matchTextDirection: p.getValue('matchTextDirection'),
-        textDirection: p.getValue('textDirection'),
-        invertColors: p.getValue('invertColors'),
-        isAntiAlias: p.getValue('isAntiAlias'),
-        filterQuality: p.getValue('filterQuality'),
+        image: p.get('image').value,
+        debugImageLabel: p.get('debugImageLabel').value,
+        width: p.get('width').value,
+        height: p.get('height').value,
+        scale: p.get('scale').value,
+        color: p.get('color').value,
+        opacity: p.get('opacity').value,
+        colorBlendMode: p.get('colorBlendMode').value,
+        fit: p.get('fit').value,
+        alignment: p.get('alignment').value,
+        repeat: p.get('repeat').value,
+        centerSlice: p.get('centerSlice').value,
+        matchTextDirection: p.get('matchTextDirection').value,
+        textDirection: p.get('textDirection').value,
+        invertColors: p.get('invertColors').value,
+        isAntiAlias: p.get('isAntiAlias').value,
+        filterQuality: p.get('filterQuality').value,
       ),
     );
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'debugImageLabel', init: debugImageLabel);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'height', init: height);
-    mateParams.set(name: 'scale', init: scale);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'opacity', init: opacity);
-    mateParams.set(name: 'colorBlendMode', init: colorBlendMode);
-    mateParams.set(name: 'fit', init: fit);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'repeat', init: repeat);
-    mateParams.set(name: 'centerSlice', init: centerSlice);
-    mateParams.set(name: 'matchTextDirection', init: matchTextDirection);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'invertColors', init: invertColors);
-    mateParams.set(name: 'isAntiAlias', init: isAntiAlias);
-    mateParams.set(name: 'filterQuality', init: filterQuality);
+    mateParams.put('image', init: image);
+    mateParams.put('debugImageLabel', init: debugImageLabel);
+    mateParams.put('width', init: width);
+    mateParams.put('height', init: height);
+    mateParams.put('scale', init: scale);
+    mateParams.put('color', init: color);
+    mateParams.put('opacity', init: opacity);
+    mateParams.put('colorBlendMode', init: colorBlendMode);
+    mateParams.put('fit', init: fit);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('repeat', init: repeat);
+    mateParams.put('centerSlice', init: centerSlice);
+    mateParams.put('matchTextDirection', init: matchTextDirection);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('invertColors', init: invertColors);
+    mateParams.put('isAntiAlias', init: isAntiAlias);
+    mateParams.put('filterQuality', init: filterQuality);
   }
 }

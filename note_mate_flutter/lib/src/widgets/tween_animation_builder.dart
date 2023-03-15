@@ -44,24 +44,24 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
           onEnd: onEnd,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => TweenAnimationBuilder$Mate(
-        key: p.getValue('key'),
-        tween: p.getValue('tween'),
-        duration: p.getValue('duration'),
-        curve: p.getValue('curve'),
-        builder: p.getValue('builder'),
-        onEnd: p.getValue('onEnd'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        tween: p.get('tween').value,
+        duration: p.get('duration').value,
+        curve: p.get('curve').value,
+        builder: p.get('builder').value,
+        onEnd: p.get('onEnd').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'tween', init: tween);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'curve', init: curve);
-    mateParams.set(name: 'builder', init: builder);
-    mateParams.set(name: 'onEnd', init: onEnd);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('tween', init: tween);
+    mateParams.put('duration', init: duration);
+    mateParams.put('curve', init: curve);
+    mateParams.put('builder', init: builder);
+    mateParams.put('onEnd', init: onEnd);
+    mateParams.put('child', init: child);
   }
 }

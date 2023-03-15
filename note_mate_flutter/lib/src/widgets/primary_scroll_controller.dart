@@ -34,21 +34,21 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with WidgetMa
           scrollDirection: scrollDirection,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PrimaryScrollController$Mate(
-        key: p.getValue('key'),
-        controller: p.getValue('controller'),
-        automaticallyInheritForPlatforms: p.getValue('automaticallyInheritForPlatforms'),
-        scrollDirection: p.getValue('scrollDirection'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        controller: p.get('controller').value,
+        automaticallyInheritForPlatforms: p.get('automaticallyInheritForPlatforms').value,
+        scrollDirection: p.get('scrollDirection').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'automaticallyInheritForPlatforms', init: automaticallyInheritForPlatforms);
-    mateParams.set(name: 'scrollDirection', init: scrollDirection);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('controller', init: controller);
+    mateParams.put('automaticallyInheritForPlatforms', init: automaticallyInheritForPlatforms);
+    mateParams.put('scrollDirection', init: scrollDirection);
+    mateParams.put('child', init: child);
   }
 
   /// PrimaryScrollController PrimaryScrollController.none({Key? key, required Widget child})
@@ -62,14 +62,14 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with WidgetMa
           key: key,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => PrimaryScrollController$Mate.none(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
   }
 }

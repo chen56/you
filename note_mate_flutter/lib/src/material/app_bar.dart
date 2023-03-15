@@ -135,69 +135,69 @@ class AppBar$Mate extends AppBar with WidgetMate<AppBar$Mate> {
           systemOverlayStyle: systemOverlayStyle,
           forceMaterialTransparency: forceMaterialTransparency,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AppBar$Mate(
-        key: p.getValue('key'),
-        leading: p.getValue('leading'),
-        automaticallyImplyLeading: p.getValue('automaticallyImplyLeading'),
-        title: p.getValue('title'),
-        actions: p.getValue('actions'),
-        flexibleSpace: p.getValue('flexibleSpace'),
-        bottom: p.getValue('bottom'),
-        elevation: p.getValue('elevation'),
-        scrolledUnderElevation: p.getValue('scrolledUnderElevation'),
-        notificationPredicate: p.getValue('notificationPredicate'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        shape: p.getValue('shape'),
-        backgroundColor: p.getValue('backgroundColor'),
-        foregroundColor: p.getValue('foregroundColor'),
-        iconTheme: p.getValue('iconTheme'),
-        actionsIconTheme: p.getValue('actionsIconTheme'),
-        primary: p.getValue('primary'),
-        centerTitle: p.getValue('centerTitle'),
-        excludeHeaderSemantics: p.getValue('excludeHeaderSemantics'),
-        titleSpacing: p.getValue('titleSpacing'),
-        toolbarOpacity: p.getValue('toolbarOpacity'),
-        bottomOpacity: p.getValue('bottomOpacity'),
-        toolbarHeight: p.getValue('toolbarHeight'),
-        leadingWidth: p.getValue('leadingWidth'),
-        toolbarTextStyle: p.getValue('toolbarTextStyle'),
-        titleTextStyle: p.getValue('titleTextStyle'),
-        systemOverlayStyle: p.getValue('systemOverlayStyle'),
-        forceMaterialTransparency: p.getValue('forceMaterialTransparency'),
+        key: p.get('key').value,
+        leading: p.get('leading').value,
+        automaticallyImplyLeading: p.get('automaticallyImplyLeading').value,
+        title: p.get('title').value,
+        actions: p.get('actions').value,
+        flexibleSpace: p.get('flexibleSpace').value,
+        bottom: p.get('bottom').value,
+        elevation: p.get('elevation').value,
+        scrolledUnderElevation: p.get('scrolledUnderElevation').value,
+        notificationPredicate: p.get('notificationPredicate').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        shape: p.get('shape').value,
+        backgroundColor: p.get('backgroundColor').value,
+        foregroundColor: p.get('foregroundColor').value,
+        iconTheme: p.get('iconTheme').value,
+        actionsIconTheme: p.get('actionsIconTheme').value,
+        primary: p.get('primary').value,
+        centerTitle: p.get('centerTitle').value,
+        excludeHeaderSemantics: p.get('excludeHeaderSemantics').value,
+        titleSpacing: p.get('titleSpacing').value,
+        toolbarOpacity: p.get('toolbarOpacity').value,
+        bottomOpacity: p.get('bottomOpacity').value,
+        toolbarHeight: p.get('toolbarHeight').value,
+        leadingWidth: p.get('leadingWidth').value,
+        toolbarTextStyle: p.get('toolbarTextStyle').value,
+        titleTextStyle: p.get('titleTextStyle').value,
+        systemOverlayStyle: p.get('systemOverlayStyle').value,
+        forceMaterialTransparency: p.get('forceMaterialTransparency').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'automaticallyImplyLeading', init: automaticallyImplyLeading);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'flexibleSpace', init: flexibleSpace);
-    mateParams.set(name: 'bottom', init: bottom);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'scrolledUnderElevation', init: scrolledUnderElevation);
-    mateParams.set(name: 'notificationPredicate', init: notificationPredicate);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'foregroundColor', init: foregroundColor);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
-    mateParams.set(name: 'actionsIconTheme', init: actionsIconTheme);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'centerTitle', init: centerTitle);
-    mateParams.set(name: 'excludeHeaderSemantics', init: excludeHeaderSemantics);
-    mateParams.set(name: 'titleSpacing', init: titleSpacing);
-    mateParams.set(name: 'toolbarOpacity', init: toolbarOpacity);
-    mateParams.set(name: 'bottomOpacity', init: bottomOpacity);
-    mateParams.set(name: 'toolbarHeight', init: toolbarHeight);
-    mateParams.set(name: 'leadingWidth', init: leadingWidth);
-    mateParams.set(name: 'toolbarTextStyle', init: toolbarTextStyle);
-    mateParams.set(name: 'titleTextStyle', init: titleTextStyle);
-    mateParams.set(name: 'systemOverlayStyle', init: systemOverlayStyle);
-    mateParams.set(name: 'forceMaterialTransparency', init: forceMaterialTransparency);
+    mateParams.put('key', init: key);
+    mateParams.put('leading', init: leading);
+    mateParams.put('automaticallyImplyLeading', init: automaticallyImplyLeading);
+    mateParams.put('title', init: title);
+    mateParams.put('actions', init: actions);
+    mateParams.put('flexibleSpace', init: flexibleSpace);
+    mateParams.put('bottom', init: bottom);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('scrolledUnderElevation', init: scrolledUnderElevation);
+    mateParams.put('notificationPredicate', init: notificationPredicate);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('shape', init: shape);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('foregroundColor', init: foregroundColor);
+    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('actionsIconTheme', init: actionsIconTheme);
+    mateParams.put('primary', init: primary);
+    mateParams.put('centerTitle', init: centerTitle);
+    mateParams.put('excludeHeaderSemantics', init: excludeHeaderSemantics);
+    mateParams.put('titleSpacing', init: titleSpacing);
+    mateParams.put('toolbarOpacity', init: toolbarOpacity);
+    mateParams.put('bottomOpacity', init: bottomOpacity);
+    mateParams.put('toolbarHeight', init: toolbarHeight);
+    mateParams.put('leadingWidth', init: leadingWidth);
+    mateParams.put('toolbarTextStyle', init: toolbarTextStyle);
+    mateParams.put('titleTextStyle', init: titleTextStyle);
+    mateParams.put('systemOverlayStyle', init: systemOverlayStyle);
+    mateParams.put('forceMaterialTransparency', init: forceMaterialTransparency);
   }
 }
 
@@ -346,80 +346,80 @@ class SliverAppBar$Mate extends SliverAppBar with WidgetMate<SliverAppBar$Mate> 
           systemOverlayStyle: systemOverlayStyle,
           forceMaterialTransparency: forceMaterialTransparency,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverAppBar$Mate(
-        key: p.getValue('key'),
-        leading: p.getValue('leading'),
-        automaticallyImplyLeading: p.getValue('automaticallyImplyLeading'),
-        title: p.getValue('title'),
-        actions: p.getValue('actions'),
-        flexibleSpace: p.getValue('flexibleSpace'),
-        bottom: p.getValue('bottom'),
-        elevation: p.getValue('elevation'),
-        scrolledUnderElevation: p.getValue('scrolledUnderElevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        forceElevated: p.getValue('forceElevated'),
-        backgroundColor: p.getValue('backgroundColor'),
-        foregroundColor: p.getValue('foregroundColor'),
-        iconTheme: p.getValue('iconTheme'),
-        actionsIconTheme: p.getValue('actionsIconTheme'),
-        primary: p.getValue('primary'),
-        centerTitle: p.getValue('centerTitle'),
-        excludeHeaderSemantics: p.getValue('excludeHeaderSemantics'),
-        titleSpacing: p.getValue('titleSpacing'),
-        collapsedHeight: p.getValue('collapsedHeight'),
-        expandedHeight: p.getValue('expandedHeight'),
-        floating: p.getValue('floating'),
-        pinned: p.getValue('pinned'),
-        snap: p.getValue('snap'),
-        stretch: p.getValue('stretch'),
-        stretchTriggerOffset: p.getValue('stretchTriggerOffset'),
-        onStretchTrigger: p.getValue('onStretchTrigger'),
-        shape: p.getValue('shape'),
-        toolbarHeight: p.getValue('toolbarHeight'),
-        leadingWidth: p.getValue('leadingWidth'),
-        toolbarTextStyle: p.getValue('toolbarTextStyle'),
-        titleTextStyle: p.getValue('titleTextStyle'),
-        systemOverlayStyle: p.getValue('systemOverlayStyle'),
-        forceMaterialTransparency: p.getValue('forceMaterialTransparency'),
+        key: p.get('key').value,
+        leading: p.get('leading').value,
+        automaticallyImplyLeading: p.get('automaticallyImplyLeading').value,
+        title: p.get('title').value,
+        actions: p.get('actions').value,
+        flexibleSpace: p.get('flexibleSpace').value,
+        bottom: p.get('bottom').value,
+        elevation: p.get('elevation').value,
+        scrolledUnderElevation: p.get('scrolledUnderElevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        forceElevated: p.get('forceElevated').value,
+        backgroundColor: p.get('backgroundColor').value,
+        foregroundColor: p.get('foregroundColor').value,
+        iconTheme: p.get('iconTheme').value,
+        actionsIconTheme: p.get('actionsIconTheme').value,
+        primary: p.get('primary').value,
+        centerTitle: p.get('centerTitle').value,
+        excludeHeaderSemantics: p.get('excludeHeaderSemantics').value,
+        titleSpacing: p.get('titleSpacing').value,
+        collapsedHeight: p.get('collapsedHeight').value,
+        expandedHeight: p.get('expandedHeight').value,
+        floating: p.get('floating').value,
+        pinned: p.get('pinned').value,
+        snap: p.get('snap').value,
+        stretch: p.get('stretch').value,
+        stretchTriggerOffset: p.get('stretchTriggerOffset').value,
+        onStretchTrigger: p.get('onStretchTrigger').value,
+        shape: p.get('shape').value,
+        toolbarHeight: p.get('toolbarHeight').value,
+        leadingWidth: p.get('leadingWidth').value,
+        toolbarTextStyle: p.get('toolbarTextStyle').value,
+        titleTextStyle: p.get('titleTextStyle').value,
+        systemOverlayStyle: p.get('systemOverlayStyle').value,
+        forceMaterialTransparency: p.get('forceMaterialTransparency').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'automaticallyImplyLeading', init: automaticallyImplyLeading);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'actions', init: actions);
-    mateParams.set(name: 'flexibleSpace', init: flexibleSpace);
-    mateParams.set(name: 'bottom', init: bottom);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'scrolledUnderElevation', init: scrolledUnderElevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'forceElevated', init: forceElevated);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'foregroundColor', init: foregroundColor);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
-    mateParams.set(name: 'actionsIconTheme', init: actionsIconTheme);
-    mateParams.set(name: 'primary', init: primary);
-    mateParams.set(name: 'centerTitle', init: centerTitle);
-    mateParams.set(name: 'excludeHeaderSemantics', init: excludeHeaderSemantics);
-    mateParams.set(name: 'titleSpacing', init: titleSpacing);
-    mateParams.set(name: 'collapsedHeight', init: collapsedHeight);
-    mateParams.set(name: 'expandedHeight', init: expandedHeight);
-    mateParams.set(name: 'floating', init: floating);
-    mateParams.set(name: 'pinned', init: pinned);
-    mateParams.set(name: 'snap', init: snap);
-    mateParams.set(name: 'stretch', init: stretch);
-    mateParams.set(name: 'stretchTriggerOffset', init: stretchTriggerOffset);
-    mateParams.set(name: 'onStretchTrigger', init: onStretchTrigger);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'toolbarHeight', init: toolbarHeight);
-    mateParams.set(name: 'leadingWidth', init: leadingWidth);
-    mateParams.set(name: 'toolbarTextStyle', init: toolbarTextStyle);
-    mateParams.set(name: 'titleTextStyle', init: titleTextStyle);
-    mateParams.set(name: 'systemOverlayStyle', init: systemOverlayStyle);
-    mateParams.set(name: 'forceMaterialTransparency', init: forceMaterialTransparency);
+    mateParams.put('key', init: key);
+    mateParams.put('leading', init: leading);
+    mateParams.put('automaticallyImplyLeading', init: automaticallyImplyLeading);
+    mateParams.put('title', init: title);
+    mateParams.put('actions', init: actions);
+    mateParams.put('flexibleSpace', init: flexibleSpace);
+    mateParams.put('bottom', init: bottom);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('scrolledUnderElevation', init: scrolledUnderElevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('forceElevated', init: forceElevated);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('foregroundColor', init: foregroundColor);
+    mateParams.put('iconTheme', init: iconTheme);
+    mateParams.put('actionsIconTheme', init: actionsIconTheme);
+    mateParams.put('primary', init: primary);
+    mateParams.put('centerTitle', init: centerTitle);
+    mateParams.put('excludeHeaderSemantics', init: excludeHeaderSemantics);
+    mateParams.put('titleSpacing', init: titleSpacing);
+    mateParams.put('collapsedHeight', init: collapsedHeight);
+    mateParams.put('expandedHeight', init: expandedHeight);
+    mateParams.put('floating', init: floating);
+    mateParams.put('pinned', init: pinned);
+    mateParams.put('snap', init: snap);
+    mateParams.put('stretch', init: stretch);
+    mateParams.put('stretchTriggerOffset', init: stretchTriggerOffset);
+    mateParams.put('onStretchTrigger', init: onStretchTrigger);
+    mateParams.put('shape', init: shape);
+    mateParams.put('toolbarHeight', init: toolbarHeight);
+    mateParams.put('leadingWidth', init: leadingWidth);
+    mateParams.put('toolbarTextStyle', init: toolbarTextStyle);
+    mateParams.put('titleTextStyle', init: titleTextStyle);
+    mateParams.put('systemOverlayStyle', init: systemOverlayStyle);
+    mateParams.put('forceMaterialTransparency', init: forceMaterialTransparency);
   }
 }

@@ -17,11 +17,11 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate<Intrinsic
       /// optionalParameters: {double? flex} , hasDefaultValue:false, defaultValueCode:null
       double? flex})
       : super(flex: flex) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => IntrinsicColumnWidth$Mate(flex: p.getValue('flex')),
+      builder: (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').value),
     );
-    mateParams.set(name: 'flex', init: flex);
+    mateParams.put('flex', init: flex);
   }
 }
 
@@ -33,11 +33,11 @@ class FixedColumnWidth$Mate extends FixedColumnWidth with Mate<FixedColumnWidth$
       /// requiredParameters: double value
       double value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => FixedColumnWidth$Mate(p.getValue('value')),
+      builder: (p) => FixedColumnWidth$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -49,11 +49,11 @@ class FractionColumnWidth$Mate extends FractionColumnWidth with Mate<FractionCol
       /// requiredParameters: double value
       double value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => FractionColumnWidth$Mate(p.getValue('value')),
+      builder: (p) => FractionColumnWidth$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -65,11 +65,11 @@ class FlexColumnWidth$Mate extends FlexColumnWidth with Mate<FlexColumnWidth$Mat
       /// requiredParameters: [double value = 1.0]
       double value)
       : super(value) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => FlexColumnWidth$Mate(p.getValue('value')),
+      builder: (p) => FlexColumnWidth$Mate(p.get('value').value),
     );
-    mateParams.set(name: 'value', init: value);
+    mateParams.put('value', init: value);
   }
 }
 
@@ -86,15 +86,15 @@ class MaxColumnWidth$Mate extends MaxColumnWidth with Mate<MaxColumnWidth$Mate> 
           a,
           b,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MaxColumnWidth$Mate(
-        p.getValue('a'),
-        p.getValue('b'),
+        p.get('a').value,
+        p.get('b').value,
       ),
     );
-    mateParams.set(name: 'a', init: a);
-    mateParams.set(name: 'b', init: b);
+    mateParams.put('a', init: a);
+    mateParams.put('b', init: b);
   }
 }
 
@@ -111,15 +111,15 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate<MinColumnWidth$Mate> 
           a,
           b,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => MinColumnWidth$Mate(
-        p.getValue('a'),
-        p.getValue('b'),
+        p.get('a').value,
+        p.get('b').value,
       ),
     );
-    mateParams.set(name: 'a', init: a);
-    mateParams.set(name: 'b', init: b);
+    mateParams.put('a', init: a);
+    mateParams.put('b', init: b);
   }
 }
 
@@ -172,32 +172,32 @@ class RenderTable$Mate extends RenderTable with Mate<RenderTable$Mate> {
           textBaseline: textBaseline,
           children: children,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderTable$Mate(
-        columns: p.getValue('columns'),
-        rows: p.getValue('rows'),
-        columnWidths: p.getValue('columnWidths'),
-        defaultColumnWidth: p.getValue('defaultColumnWidth'),
-        textDirection: p.getValue('textDirection'),
-        border: p.getValue('border'),
-        rowDecorations: p.getValue('rowDecorations'),
-        configuration: p.getValue('configuration'),
-        defaultVerticalAlignment: p.getValue('defaultVerticalAlignment'),
-        textBaseline: p.getValue('textBaseline'),
-        children: p.getValue('children'),
+        columns: p.get('columns').value,
+        rows: p.get('rows').value,
+        columnWidths: p.get('columnWidths').value,
+        defaultColumnWidth: p.get('defaultColumnWidth').value,
+        textDirection: p.get('textDirection').value,
+        border: p.get('border').value,
+        rowDecorations: p.get('rowDecorations').value,
+        configuration: p.get('configuration').value,
+        defaultVerticalAlignment: p.get('defaultVerticalAlignment').value,
+        textBaseline: p.get('textBaseline').value,
+        children: p.get('children').value,
       ),
     );
-    mateParams.set(name: 'columns', init: columns);
-    mateParams.set(name: 'rows', init: rows);
-    mateParams.set(name: 'columnWidths', init: columnWidths);
-    mateParams.set(name: 'defaultColumnWidth', init: defaultColumnWidth);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'border', init: border);
-    mateParams.set(name: 'rowDecorations', init: rowDecorations);
-    mateParams.set(name: 'configuration', init: configuration);
-    mateParams.set(name: 'defaultVerticalAlignment', init: defaultVerticalAlignment);
-    mateParams.set(name: 'textBaseline', init: textBaseline);
-    mateParams.set(name: 'children', init: children);
+    mateParams.put('columns', init: columns);
+    mateParams.put('rows', init: rows);
+    mateParams.put('columnWidths', init: columnWidths);
+    mateParams.put('defaultColumnWidth', init: defaultColumnWidth);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('border', init: border);
+    mateParams.put('rowDecorations', init: rowDecorations);
+    mateParams.put('configuration', init: configuration);
+    mateParams.put('defaultVerticalAlignment', init: defaultVerticalAlignment);
+    mateParams.put('textBaseline', init: textBaseline);
+    mateParams.put('children', init: children);
   }
 }

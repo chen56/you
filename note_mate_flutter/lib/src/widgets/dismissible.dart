@@ -74,41 +74,41 @@ class Dismissible$Mate extends Dismissible with WidgetMate<Dismissible$Mate> {
           dragStartBehavior: dragStartBehavior,
           behavior: behavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Dismissible$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        background: p.getValue('background'),
-        secondaryBackground: p.getValue('secondaryBackground'),
-        confirmDismiss: p.getValue('confirmDismiss'),
-        onResize: p.getValue('onResize'),
-        onUpdate: p.getValue('onUpdate'),
-        onDismissed: p.getValue('onDismissed'),
-        direction: p.getValue('direction'),
-        resizeDuration: p.getValue('resizeDuration'),
-        dismissThresholds: p.getValue('dismissThresholds'),
-        movementDuration: p.getValue('movementDuration'),
-        crossAxisEndOffset: p.getValue('crossAxisEndOffset'),
-        dragStartBehavior: p.getValue('dragStartBehavior'),
-        behavior: p.getValue('behavior'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        background: p.get('background').value,
+        secondaryBackground: p.get('secondaryBackground').value,
+        confirmDismiss: p.get('confirmDismiss').value,
+        onResize: p.get('onResize').value,
+        onUpdate: p.get('onUpdate').value,
+        onDismissed: p.get('onDismissed').value,
+        direction: p.get('direction').value,
+        resizeDuration: p.get('resizeDuration').value,
+        dismissThresholds: p.get('dismissThresholds').value,
+        movementDuration: p.get('movementDuration').value,
+        crossAxisEndOffset: p.get('crossAxisEndOffset').value,
+        dragStartBehavior: p.get('dragStartBehavior').value,
+        behavior: p.get('behavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'secondaryBackground', init: secondaryBackground);
-    mateParams.set(name: 'confirmDismiss', init: confirmDismiss);
-    mateParams.set(name: 'onResize', init: onResize);
-    mateParams.set(name: 'onUpdate', init: onUpdate);
-    mateParams.set(name: 'onDismissed', init: onDismissed);
-    mateParams.set(name: 'direction', init: direction);
-    mateParams.set(name: 'resizeDuration', init: resizeDuration);
-    mateParams.set(name: 'dismissThresholds', init: dismissThresholds);
-    mateParams.set(name: 'movementDuration', init: movementDuration);
-    mateParams.set(name: 'crossAxisEndOffset', init: crossAxisEndOffset);
-    mateParams.set(name: 'dragStartBehavior', init: dragStartBehavior);
-    mateParams.set(name: 'behavior', init: behavior);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('background', init: background);
+    mateParams.put('secondaryBackground', init: secondaryBackground);
+    mateParams.put('confirmDismiss', init: confirmDismiss);
+    mateParams.put('onResize', init: onResize);
+    mateParams.put('onUpdate', init: onUpdate);
+    mateParams.put('onDismissed', init: onDismissed);
+    mateParams.put('direction', init: direction);
+    mateParams.put('resizeDuration', init: resizeDuration);
+    mateParams.put('dismissThresholds', init: dismissThresholds);
+    mateParams.put('movementDuration', init: movementDuration);
+    mateParams.put('crossAxisEndOffset', init: crossAxisEndOffset);
+    mateParams.put('dragStartBehavior', init: dragStartBehavior);
+    mateParams.put('behavior', init: behavior);
   }
 }
 
@@ -133,18 +133,18 @@ class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate<DismissUp
           previousReached: previousReached,
           progress: progress,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DismissUpdateDetails$Mate(
-        direction: p.getValue('direction'),
-        reached: p.getValue('reached'),
-        previousReached: p.getValue('previousReached'),
-        progress: p.getValue('progress'),
+        direction: p.get('direction').value,
+        reached: p.get('reached').value,
+        previousReached: p.get('previousReached').value,
+        progress: p.get('progress').value,
       ),
     );
-    mateParams.set(name: 'direction', init: direction);
-    mateParams.set(name: 'reached', init: reached);
-    mateParams.set(name: 'previousReached', init: previousReached);
-    mateParams.set(name: 'progress', init: progress);
+    mateParams.put('direction', init: direction);
+    mateParams.put('reached', init: reached);
+    mateParams.put('previousReached', init: previousReached);
+    mateParams.put('progress', init: progress);
   }
 }

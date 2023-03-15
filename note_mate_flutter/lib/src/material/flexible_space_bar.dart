@@ -44,27 +44,27 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with WidgetMate<FlexibleSpa
           stretchModes: stretchModes,
           expandedTitleScale: expandedTitleScale,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FlexibleSpaceBar$Mate(
-        key: p.getValue('key'),
-        title: p.getValue('title'),
-        background: p.getValue('background'),
-        centerTitle: p.getValue('centerTitle'),
-        titlePadding: p.getValue('titlePadding'),
-        collapseMode: p.getValue('collapseMode'),
-        stretchModes: p.getValue('stretchModes'),
-        expandedTitleScale: p.getValue('expandedTitleScale'),
+        key: p.get('key').value,
+        title: p.get('title').value,
+        background: p.get('background').value,
+        centerTitle: p.get('centerTitle').value,
+        titlePadding: p.get('titlePadding').value,
+        collapseMode: p.get('collapseMode').value,
+        stretchModes: p.get('stretchModes').value,
+        expandedTitleScale: p.get('expandedTitleScale').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'background', init: background);
-    mateParams.set(name: 'centerTitle', init: centerTitle);
-    mateParams.set(name: 'titlePadding', init: titlePadding);
-    mateParams.set(name: 'collapseMode', init: collapseMode);
-    mateParams.set(name: 'stretchModes', init: stretchModes);
-    mateParams.set(name: 'expandedTitleScale', init: expandedTitleScale);
+    mateParams.put('key', init: key);
+    mateParams.put('title', init: title);
+    mateParams.put('background', init: background);
+    mateParams.put('centerTitle', init: centerTitle);
+    mateParams.put('titlePadding', init: titlePadding);
+    mateParams.put('collapseMode', init: collapseMode);
+    mateParams.put('stretchModes', init: stretchModes);
+    mateParams.put('expandedTitleScale', init: expandedTitleScale);
   }
 }
 
@@ -101,24 +101,24 @@ class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Widget
           child: child,
           isScrolledUnder: isScrolledUnder,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FlexibleSpaceBarSettings$Mate(
-        key: p.getValue('key'),
-        toolbarOpacity: p.getValue('toolbarOpacity'),
-        minExtent: p.getValue('minExtent'),
-        maxExtent: p.getValue('maxExtent'),
-        currentExtent: p.getValue('currentExtent'),
-        child: p.getValue('child'),
-        isScrolledUnder: p.getValue('isScrolledUnder'),
+        key: p.get('key').value,
+        toolbarOpacity: p.get('toolbarOpacity').value,
+        minExtent: p.get('minExtent').value,
+        maxExtent: p.get('maxExtent').value,
+        currentExtent: p.get('currentExtent').value,
+        child: p.get('child').value,
+        isScrolledUnder: p.get('isScrolledUnder').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'toolbarOpacity', init: toolbarOpacity);
-    mateParams.set(name: 'minExtent', init: minExtent);
-    mateParams.set(name: 'maxExtent', init: maxExtent);
-    mateParams.set(name: 'currentExtent', init: currentExtent);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'isScrolledUnder', init: isScrolledUnder);
+    mateParams.put('key', init: key);
+    mateParams.put('toolbarOpacity', init: toolbarOpacity);
+    mateParams.put('minExtent', init: minExtent);
+    mateParams.put('maxExtent', init: maxExtent);
+    mateParams.put('currentExtent', init: currentExtent);
+    mateParams.put('child', init: child);
+    mateParams.put('isScrolledUnder', init: isScrolledUnder);
   }
 }

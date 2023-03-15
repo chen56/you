@@ -106,54 +106,54 @@ class ActionChip$Mate extends ActionChip with WidgetMate<ActionChip$Mate> {
           surfaceTintColor: surfaceTintColor,
           iconTheme: iconTheme,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ActionChip$Mate(
-        key: p.getValue('key'),
-        avatar: p.getValue('avatar'),
-        label: p.getValue('label'),
-        labelStyle: p.getValue('labelStyle'),
-        labelPadding: p.getValue('labelPadding'),
-        onPressed: p.getValue('onPressed'),
-        pressElevation: p.getValue('pressElevation'),
-        tooltip: p.getValue('tooltip'),
-        side: p.getValue('side'),
-        shape: p.getValue('shape'),
-        clipBehavior: p.getValue('clipBehavior'),
-        focusNode: p.getValue('focusNode'),
-        autofocus: p.getValue('autofocus'),
-        backgroundColor: p.getValue('backgroundColor'),
-        disabledColor: p.getValue('disabledColor'),
-        padding: p.getValue('padding'),
-        visualDensity: p.getValue('visualDensity'),
-        materialTapTargetSize: p.getValue('materialTapTargetSize'),
-        elevation: p.getValue('elevation'),
-        shadowColor: p.getValue('shadowColor'),
-        surfaceTintColor: p.getValue('surfaceTintColor'),
-        iconTheme: p.getValue('iconTheme'),
+        key: p.get('key').value,
+        avatar: p.get('avatar').value,
+        label: p.get('label').value,
+        labelStyle: p.get('labelStyle').value,
+        labelPadding: p.get('labelPadding').value,
+        onPressed: p.get('onPressed').value,
+        pressElevation: p.get('pressElevation').value,
+        tooltip: p.get('tooltip').value,
+        side: p.get('side').value,
+        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').value,
+        focusNode: p.get('focusNode').value,
+        autofocus: p.get('autofocus').value,
+        backgroundColor: p.get('backgroundColor').value,
+        disabledColor: p.get('disabledColor').value,
+        padding: p.get('padding').value,
+        visualDensity: p.get('visualDensity').value,
+        materialTapTargetSize: p.get('materialTapTargetSize').value,
+        elevation: p.get('elevation').value,
+        shadowColor: p.get('shadowColor').value,
+        surfaceTintColor: p.get('surfaceTintColor').value,
+        iconTheme: p.get('iconTheme').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'avatar', init: avatar);
-    mateParams.set(name: 'label', init: label);
-    mateParams.set(name: 'labelStyle', init: labelStyle);
-    mateParams.set(name: 'labelPadding', init: labelPadding);
-    mateParams.set(name: 'onPressed', init: onPressed);
-    mateParams.set(name: 'pressElevation', init: pressElevation);
-    mateParams.set(name: 'tooltip', init: tooltip);
-    mateParams.set(name: 'side', init: side);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
-    mateParams.set(name: 'focusNode', init: focusNode);
-    mateParams.set(name: 'autofocus', init: autofocus);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'disabledColor', init: disabledColor);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'visualDensity', init: visualDensity);
-    mateParams.set(name: 'materialTapTargetSize', init: materialTapTargetSize);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shadowColor', init: shadowColor);
-    mateParams.set(name: 'surfaceTintColor', init: surfaceTintColor);
-    mateParams.set(name: 'iconTheme', init: iconTheme);
+    mateParams.put('key', init: key);
+    mateParams.put('avatar', init: avatar);
+    mateParams.put('label', init: label);
+    mateParams.put('labelStyle', init: labelStyle);
+    mateParams.put('labelPadding', init: labelPadding);
+    mateParams.put('onPressed', init: onPressed);
+    mateParams.put('pressElevation', init: pressElevation);
+    mateParams.put('tooltip', init: tooltip);
+    mateParams.put('side', init: side);
+    mateParams.put('shape', init: shape);
+    mateParams.put('clipBehavior', init: clipBehavior);
+    mateParams.put('focusNode', init: focusNode);
+    mateParams.put('autofocus', init: autofocus);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('disabledColor', init: disabledColor);
+    mateParams.put('padding', init: padding);
+    mateParams.put('visualDensity', init: visualDensity);
+    mateParams.put('materialTapTargetSize', init: materialTapTargetSize);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shadowColor', init: shadowColor);
+    mateParams.put('surfaceTintColor', init: surfaceTintColor);
+    mateParams.put('iconTheme', init: iconTheme);
   }
 }

@@ -12,10 +12,10 @@ class SlottedRenderObjectElement$Mate<S> extends SlottedRenderObjectElement<S>
       /// requiredParameters: SlottedMultiChildRenderObjectWidgetMixin<S> widget
       SlottedMultiChildRenderObjectWidgetMixin<S> widget)
       : super(widget) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => SlottedRenderObjectElement$Mate(p.getValue('widget')),
+      builder: (p) => SlottedRenderObjectElement$Mate(p.get('widget').value),
     );
-    mateParams.set(name: 'widget', init: widget);
+    mateParams.put('widget', init: widget);
   }
 }

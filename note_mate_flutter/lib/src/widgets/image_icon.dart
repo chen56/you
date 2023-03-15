@@ -31,20 +31,20 @@ class ImageIcon$Mate extends ImageIcon with WidgetMate<ImageIcon$Mate> {
           color: color,
           semanticLabel: semanticLabel,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageIcon$Mate(
-        p.getValue('image'),
-        key: p.getValue('key'),
-        size: p.getValue('size'),
-        color: p.getValue('color'),
-        semanticLabel: p.getValue('semanticLabel'),
+        p.get('image').value,
+        key: p.get('key').value,
+        size: p.get('size').value,
+        color: p.get('color').value,
+        semanticLabel: p.get('semanticLabel').value,
       ),
     );
-    mateParams.set(name: 'image', init: image);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'size', init: size);
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'semanticLabel', init: semanticLabel);
+    mateParams.put('image', init: image);
+    mateParams.put('key', init: key);
+    mateParams.put('size', init: size);
+    mateParams.put('color', init: color);
+    mateParams.put('semanticLabel', init: semanticLabel);
   }
 }

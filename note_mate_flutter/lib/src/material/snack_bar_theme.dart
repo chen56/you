@@ -57,32 +57,32 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate<SnackBarThemeDa
           showCloseIcon: showCloseIcon,
           closeIconColor: closeIconColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => SnackBarThemeData$Mate(
-        backgroundColor: p.getValue('backgroundColor'),
-        actionTextColor: p.getValue('actionTextColor'),
-        disabledActionTextColor: p.getValue('disabledActionTextColor'),
-        contentTextStyle: p.getValue('contentTextStyle'),
-        elevation: p.getValue('elevation'),
-        shape: p.getValue('shape'),
-        behavior: p.getValue('behavior'),
-        width: p.getValue('width'),
-        insetPadding: p.getValue('insetPadding'),
-        showCloseIcon: p.getValue('showCloseIcon'),
-        closeIconColor: p.getValue('closeIconColor'),
+        backgroundColor: p.get('backgroundColor').value,
+        actionTextColor: p.get('actionTextColor').value,
+        disabledActionTextColor: p.get('disabledActionTextColor').value,
+        contentTextStyle: p.get('contentTextStyle').value,
+        elevation: p.get('elevation').value,
+        shape: p.get('shape').value,
+        behavior: p.get('behavior').value,
+        width: p.get('width').value,
+        insetPadding: p.get('insetPadding').value,
+        showCloseIcon: p.get('showCloseIcon').value,
+        closeIconColor: p.get('closeIconColor').value,
       ),
     );
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'actionTextColor', init: actionTextColor);
-    mateParams.set(name: 'disabledActionTextColor', init: disabledActionTextColor);
-    mateParams.set(name: 'contentTextStyle', init: contentTextStyle);
-    mateParams.set(name: 'elevation', init: elevation);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'behavior', init: behavior);
-    mateParams.set(name: 'width', init: width);
-    mateParams.set(name: 'insetPadding', init: insetPadding);
-    mateParams.set(name: 'showCloseIcon', init: showCloseIcon);
-    mateParams.set(name: 'closeIconColor', init: closeIconColor);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('actionTextColor', init: actionTextColor);
+    mateParams.put('disabledActionTextColor', init: disabledActionTextColor);
+    mateParams.put('contentTextStyle', init: contentTextStyle);
+    mateParams.put('elevation', init: elevation);
+    mateParams.put('shape', init: shape);
+    mateParams.put('behavior', init: behavior);
+    mateParams.put('width', init: width);
+    mateParams.put('insetPadding', init: insetPadding);
+    mateParams.put('showCloseIcon', init: showCloseIcon);
+    mateParams.put('closeIconColor', init: closeIconColor);
   }
 }

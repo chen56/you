@@ -52,29 +52,29 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with WidgetMate<DefaultText
           textHeightBehavior: textHeightBehavior,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultTextStyle$Mate(
-        key: p.getValue('key'),
-        style: p.getValue('style'),
-        textAlign: p.getValue('textAlign'),
-        softWrap: p.getValue('softWrap'),
-        overflow: p.getValue('overflow'),
-        maxLines: p.getValue('maxLines'),
-        textWidthBasis: p.getValue('textWidthBasis'),
-        textHeightBehavior: p.getValue('textHeightBehavior'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        style: p.get('style').value,
+        textAlign: p.get('textAlign').value,
+        softWrap: p.get('softWrap').value,
+        overflow: p.get('overflow').value,
+        maxLines: p.get('maxLines').value,
+        textWidthBasis: p.get('textWidthBasis').value,
+        textHeightBehavior: p.get('textHeightBehavior').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'softWrap', init: softWrap);
-    mateParams.set(name: 'overflow', init: overflow);
-    mateParams.set(name: 'maxLines', init: maxLines);
-    mateParams.set(name: 'textWidthBasis', init: textWidthBasis);
-    mateParams.set(name: 'textHeightBehavior', init: textHeightBehavior);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('style', init: style);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('softWrap', init: softWrap);
+    mateParams.put('overflow', init: overflow);
+    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('textWidthBasis', init: textWidthBasis);
+    mateParams.put('textHeightBehavior', init: textHeightBehavior);
+    mateParams.put('child', init: child);
   }
 
   /// DefaultTextStyle DefaultTextStyle.fallback({Key? key})
@@ -83,11 +83,11 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with WidgetMate<DefaultText
       /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
       Key? key})
       : super.fallback(key: key) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => DefaultTextStyle$Mate.fallback(key: p.getValue('key')),
+      builder: (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').value),
     );
-    mateParams.set(name: 'key', init: key);
+    mateParams.put('key', init: key);
   }
 }
 
@@ -108,17 +108,17 @@ class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Widg
           textHeightBehavior: textHeightBehavior,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultTextHeightBehavior$Mate(
-        key: p.getValue('key'),
-        textHeightBehavior: p.getValue('textHeightBehavior'),
-        child: p.getValue('child'),
+        key: p.get('key').value,
+        textHeightBehavior: p.get('textHeightBehavior').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'textHeightBehavior', init: textHeightBehavior);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('key', init: key);
+    mateParams.put('textHeightBehavior', init: textHeightBehavior);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -186,41 +186,41 @@ class Text$Mate extends Text with WidgetMate<Text$Mate> {
           textHeightBehavior: textHeightBehavior,
           selectionColor: selectionColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Text$Mate(
-        p.getValue('data'),
-        key: p.getValue('key'),
-        style: p.getValue('style'),
-        strutStyle: p.getValue('strutStyle'),
-        textAlign: p.getValue('textAlign'),
-        textDirection: p.getValue('textDirection'),
-        locale: p.getValue('locale'),
-        softWrap: p.getValue('softWrap'),
-        overflow: p.getValue('overflow'),
-        textScaleFactor: p.getValue('textScaleFactor'),
-        maxLines: p.getValue('maxLines'),
-        semanticsLabel: p.getValue('semanticsLabel'),
-        textWidthBasis: p.getValue('textWidthBasis'),
-        textHeightBehavior: p.getValue('textHeightBehavior'),
-        selectionColor: p.getValue('selectionColor'),
+        p.get('data').value,
+        key: p.get('key').value,
+        style: p.get('style').value,
+        strutStyle: p.get('strutStyle').value,
+        textAlign: p.get('textAlign').value,
+        textDirection: p.get('textDirection').value,
+        locale: p.get('locale').value,
+        softWrap: p.get('softWrap').value,
+        overflow: p.get('overflow').value,
+        textScaleFactor: p.get('textScaleFactor').value,
+        maxLines: p.get('maxLines').value,
+        semanticsLabel: p.get('semanticsLabel').value,
+        textWidthBasis: p.get('textWidthBasis').value,
+        textHeightBehavior: p.get('textHeightBehavior').value,
+        selectionColor: p.get('selectionColor').value,
       ),
     );
-    mateParams.set(name: 'data', init: data);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'strutStyle', init: strutStyle);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'softWrap', init: softWrap);
-    mateParams.set(name: 'overflow', init: overflow);
-    mateParams.set(name: 'textScaleFactor', init: textScaleFactor);
-    mateParams.set(name: 'maxLines', init: maxLines);
-    mateParams.set(name: 'semanticsLabel', init: semanticsLabel);
-    mateParams.set(name: 'textWidthBasis', init: textWidthBasis);
-    mateParams.set(name: 'textHeightBehavior', init: textHeightBehavior);
-    mateParams.set(name: 'selectionColor', init: selectionColor);
+    mateParams.put('data', init: data);
+    mateParams.put('key', init: key);
+    mateParams.put('style', init: style);
+    mateParams.put('strutStyle', init: strutStyle);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('locale', init: locale);
+    mateParams.put('softWrap', init: softWrap);
+    mateParams.put('overflow', init: overflow);
+    mateParams.put('textScaleFactor', init: textScaleFactor);
+    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('semanticsLabel', init: semanticsLabel);
+    mateParams.put('textWidthBasis', init: textWidthBasis);
+    mateParams.put('textHeightBehavior', init: textHeightBehavior);
+    mateParams.put('selectionColor', init: selectionColor);
   }
 
   /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
@@ -285,40 +285,40 @@ class Text$Mate extends Text with WidgetMate<Text$Mate> {
           textHeightBehavior: textHeightBehavior,
           selectionColor: selectionColor,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => Text$Mate.rich(
-        p.getValue('textSpan'),
-        key: p.getValue('key'),
-        style: p.getValue('style'),
-        strutStyle: p.getValue('strutStyle'),
-        textAlign: p.getValue('textAlign'),
-        textDirection: p.getValue('textDirection'),
-        locale: p.getValue('locale'),
-        softWrap: p.getValue('softWrap'),
-        overflow: p.getValue('overflow'),
-        textScaleFactor: p.getValue('textScaleFactor'),
-        maxLines: p.getValue('maxLines'),
-        semanticsLabel: p.getValue('semanticsLabel'),
-        textWidthBasis: p.getValue('textWidthBasis'),
-        textHeightBehavior: p.getValue('textHeightBehavior'),
-        selectionColor: p.getValue('selectionColor'),
+        p.get('textSpan').value,
+        key: p.get('key').value,
+        style: p.get('style').value,
+        strutStyle: p.get('strutStyle').value,
+        textAlign: p.get('textAlign').value,
+        textDirection: p.get('textDirection').value,
+        locale: p.get('locale').value,
+        softWrap: p.get('softWrap').value,
+        overflow: p.get('overflow').value,
+        textScaleFactor: p.get('textScaleFactor').value,
+        maxLines: p.get('maxLines').value,
+        semanticsLabel: p.get('semanticsLabel').value,
+        textWidthBasis: p.get('textWidthBasis').value,
+        textHeightBehavior: p.get('textHeightBehavior').value,
+        selectionColor: p.get('selectionColor').value,
       ),
     );
-    mateParams.set(name: 'textSpan', init: textSpan);
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'style', init: style);
-    mateParams.set(name: 'strutStyle', init: strutStyle);
-    mateParams.set(name: 'textAlign', init: textAlign);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'locale', init: locale);
-    mateParams.set(name: 'softWrap', init: softWrap);
-    mateParams.set(name: 'overflow', init: overflow);
-    mateParams.set(name: 'textScaleFactor', init: textScaleFactor);
-    mateParams.set(name: 'maxLines', init: maxLines);
-    mateParams.set(name: 'semanticsLabel', init: semanticsLabel);
-    mateParams.set(name: 'textWidthBasis', init: textWidthBasis);
-    mateParams.set(name: 'textHeightBehavior', init: textHeightBehavior);
-    mateParams.set(name: 'selectionColor', init: selectionColor);
+    mateParams.put('textSpan', init: textSpan);
+    mateParams.put('key', init: key);
+    mateParams.put('style', init: style);
+    mateParams.put('strutStyle', init: strutStyle);
+    mateParams.put('textAlign', init: textAlign);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('locale', init: locale);
+    mateParams.put('softWrap', init: softWrap);
+    mateParams.put('overflow', init: overflow);
+    mateParams.put('textScaleFactor', init: textScaleFactor);
+    mateParams.put('maxLines', init: maxLines);
+    mateParams.put('semanticsLabel', init: semanticsLabel);
+    mateParams.put('textWidthBasis', init: textWidthBasis);
+    mateParams.put('textHeightBehavior', init: textHeightBehavior);
+    mateParams.put('selectionColor', init: selectionColor);
   }
 }

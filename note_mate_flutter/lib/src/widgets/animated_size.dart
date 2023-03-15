@@ -42,24 +42,24 @@ class AnimatedSize$Mate extends AnimatedSize with WidgetMate<AnimatedSize$Mate> 
           reverseDuration: reverseDuration,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedSize$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        alignment: p.getValue('alignment'),
-        curve: p.getValue('curve'),
-        duration: p.getValue('duration'),
-        reverseDuration: p.getValue('reverseDuration'),
-        clipBehavior: p.getValue('clipBehavior'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        alignment: p.get('alignment').value,
+        curve: p.get('curve').value,
+        duration: p.get('duration').value,
+        reverseDuration: p.get('reverseDuration').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'curve', init: curve);
-    mateParams.set(name: 'duration', init: duration);
-    mateParams.set(name: 'reverseDuration', init: reverseDuration);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('curve', init: curve);
+    mateParams.put('duration', init: duration);
+    mateParams.put('reverseDuration', init: reverseDuration);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }

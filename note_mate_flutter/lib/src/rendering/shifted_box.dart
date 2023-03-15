@@ -25,17 +25,17 @@ class RenderPadding$Mate extends RenderPadding with Mate<RenderPadding$Mate> {
           textDirection: textDirection,
           child: child,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPadding$Mate(
-        padding: p.getValue('padding'),
-        textDirection: p.getValue('textDirection'),
-        child: p.getValue('child'),
+        padding: p.get('padding').value,
+        textDirection: p.get('textDirection').value,
+        child: p.get('child').value,
       ),
     );
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'child', init: child);
+    mateParams.put('padding', init: padding);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('child', init: child);
   }
 }
 
@@ -64,21 +64,21 @@ class RenderPositionedBox$Mate extends RenderPositionedBox with Mate<RenderPosit
           alignment: alignment,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPositionedBox$Mate(
-        child: p.getValue('child'),
-        widthFactor: p.getValue('widthFactor'),
-        heightFactor: p.getValue('heightFactor'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
+        child: p.get('child').value,
+        widthFactor: p.get('widthFactor').value,
+        heightFactor: p.get('heightFactor').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'widthFactor', init: widthFactor);
-    mateParams.set(name: 'heightFactor', init: heightFactor);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('child', init: child);
+    mateParams.put('widthFactor', init: widthFactor);
+    mateParams.put('heightFactor', init: heightFactor);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
   }
 }
 
@@ -116,25 +116,25 @@ class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox
           alignment: alignment,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderConstrainedOverflowBox$Mate(
-        child: p.getValue('child'),
-        minWidth: p.getValue('minWidth'),
-        maxWidth: p.getValue('maxWidth'),
-        minHeight: p.getValue('minHeight'),
-        maxHeight: p.getValue('maxHeight'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
+        child: p.get('child').value,
+        minWidth: p.get('minWidth').value,
+        maxWidth: p.get('maxWidth').value,
+        minHeight: p.get('minHeight').value,
+        maxHeight: p.get('maxHeight').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'minWidth', init: minWidth);
-    mateParams.set(name: 'maxWidth', init: maxWidth);
-    mateParams.set(name: 'minHeight', init: minHeight);
-    mateParams.set(name: 'maxHeight', init: maxHeight);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('child', init: child);
+    mateParams.put('minWidth', init: minWidth);
+    mateParams.put('maxWidth', init: maxWidth);
+    mateParams.put('minHeight', init: minHeight);
+    mateParams.put('maxHeight', init: maxHeight);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
   }
 }
 
@@ -164,21 +164,21 @@ class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox
           child: child,
           clipBehavior: clipBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderConstraintsTransformBox$Mate(
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
-        constraintsTransform: p.getValue('constraintsTransform'),
-        child: p.getValue('child'),
-        clipBehavior: p.getValue('clipBehavior'),
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
+        constraintsTransform: p.get('constraintsTransform').value,
+        child: p.get('child').value,
+        clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'constraintsTransform', init: constraintsTransform);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'clipBehavior', init: clipBehavior);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('constraintsTransform', init: constraintsTransform);
+    mateParams.put('child', init: child);
+    mateParams.put('clipBehavior', init: clipBehavior);
   }
 }
 
@@ -203,19 +203,19 @@ class RenderSizedOverflowBox$Mate extends RenderSizedOverflowBox with Mate<Rende
           alignment: alignment,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSizedOverflowBox$Mate(
-        child: p.getValue('child'),
-        requestedSize: p.getValue('requestedSize'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
+        child: p.get('child').value,
+        requestedSize: p.get('requestedSize').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'requestedSize', init: requestedSize);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('child', init: child);
+    mateParams.put('requestedSize', init: requestedSize);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
   }
 }
 
@@ -245,21 +245,21 @@ class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOve
           alignment: alignment,
           textDirection: textDirection,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFractionallySizedOverflowBox$Mate(
-        child: p.getValue('child'),
-        widthFactor: p.getValue('widthFactor'),
-        heightFactor: p.getValue('heightFactor'),
-        alignment: p.getValue('alignment'),
-        textDirection: p.getValue('textDirection'),
+        child: p.get('child').value,
+        widthFactor: p.get('widthFactor').value,
+        heightFactor: p.get('heightFactor').value,
+        alignment: p.get('alignment').value,
+        textDirection: p.get('textDirection').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'widthFactor', init: widthFactor);
-    mateParams.set(name: 'heightFactor', init: heightFactor);
-    mateParams.set(name: 'alignment', init: alignment);
-    mateParams.set(name: 'textDirection', init: textDirection);
+    mateParams.put('child', init: child);
+    mateParams.put('widthFactor', init: widthFactor);
+    mateParams.put('heightFactor', init: heightFactor);
+    mateParams.put('alignment', init: alignment);
+    mateParams.put('textDirection', init: textDirection);
   }
 }
 
@@ -277,15 +277,15 @@ class RenderCustomSingleChildLayoutBox$Mate extends RenderCustomSingleChildLayou
           child: child,
           delegate: delegate,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderCustomSingleChildLayoutBox$Mate(
-        child: p.getValue('child'),
-        delegate: p.getValue('delegate'),
+        child: p.get('child').value,
+        delegate: p.get('delegate').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'delegate', init: delegate);
+    mateParams.put('child', init: child);
+    mateParams.put('delegate', init: delegate);
   }
 }
 
@@ -306,16 +306,16 @@ class RenderBaseline$Mate extends RenderBaseline with Mate<RenderBaseline$Mate> 
           baseline: baseline,
           baselineType: baselineType,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderBaseline$Mate(
-        child: p.getValue('child'),
-        baseline: p.getValue('baseline'),
-        baselineType: p.getValue('baselineType'),
+        child: p.get('child').value,
+        baseline: p.get('baseline').value,
+        baselineType: p.get('baselineType').value,
       ),
     );
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'baseline', init: baseline);
-    mateParams.set(name: 'baselineType', init: baselineType);
+    mateParams.put('child', init: child);
+    mateParams.put('baseline', init: baseline);
+    mateParams.put('baselineType', init: baselineType);
   }
 }

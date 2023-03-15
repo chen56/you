@@ -49,30 +49,30 @@ class StackFrame$Mate extends StackFrame with Mate<StackFrame$Mate> {
           isConstructor: isConstructor,
           source: source,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => StackFrame$Mate(
-        number: p.getValue('number'),
-        column: p.getValue('column'),
-        line: p.getValue('line'),
-        packageScheme: p.getValue('packageScheme'),
-        package: p.getValue('package'),
-        packagePath: p.getValue('packagePath'),
-        className: p.getValue('className'),
-        method: p.getValue('method'),
-        isConstructor: p.getValue('isConstructor'),
-        source: p.getValue('source'),
+        number: p.get('number').value,
+        column: p.get('column').value,
+        line: p.get('line').value,
+        packageScheme: p.get('packageScheme').value,
+        package: p.get('package').value,
+        packagePath: p.get('packagePath').value,
+        className: p.get('className').value,
+        method: p.get('method').value,
+        isConstructor: p.get('isConstructor').value,
+        source: p.get('source').value,
       ),
     );
-    mateParams.set(name: 'number', init: number);
-    mateParams.set(name: 'column', init: column);
-    mateParams.set(name: 'line', init: line);
-    mateParams.set(name: 'packageScheme', init: packageScheme);
-    mateParams.set(name: 'package', init: package);
-    mateParams.set(name: 'packagePath', init: packagePath);
-    mateParams.set(name: 'className', init: className);
-    mateParams.set(name: 'method', init: method);
-    mateParams.set(name: 'isConstructor', init: isConstructor);
-    mateParams.set(name: 'source', init: source);
+    mateParams.put('number', init: number);
+    mateParams.put('column', init: column);
+    mateParams.put('line', init: line);
+    mateParams.put('packageScheme', init: packageScheme);
+    mateParams.put('package', init: package);
+    mateParams.put('packagePath', init: packagePath);
+    mateParams.put('className', init: className);
+    mateParams.put('method', init: method);
+    mateParams.put('isConstructor', init: isConstructor);
+    mateParams.put('source', init: source);
   }
 }

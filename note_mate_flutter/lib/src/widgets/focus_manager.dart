@@ -38,25 +38,25 @@ class FocusNode$Mate extends FocusNode with Mate<FocusNode$Mate> {
           descendantsAreFocusable: descendantsAreFocusable,
           descendantsAreTraversable: descendantsAreTraversable,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusNode$Mate(
-        debugLabel: p.getValue('debugLabel'),
-        onKey: p.getValue('onKey'),
-        onKeyEvent: p.getValue('onKeyEvent'),
-        skipTraversal: p.getValue('skipTraversal'),
-        canRequestFocus: p.getValue('canRequestFocus'),
-        descendantsAreFocusable: p.getValue('descendantsAreFocusable'),
-        descendantsAreTraversable: p.getValue('descendantsAreTraversable'),
+        debugLabel: p.get('debugLabel').value,
+        onKey: p.get('onKey').value,
+        onKeyEvent: p.get('onKeyEvent').value,
+        skipTraversal: p.get('skipTraversal').value,
+        canRequestFocus: p.get('canRequestFocus').value,
+        descendantsAreFocusable: p.get('descendantsAreFocusable').value,
+        descendantsAreTraversable: p.get('descendantsAreTraversable').value,
       ),
     );
-    mateParams.set(name: 'debugLabel', init: debugLabel);
-    mateParams.set(name: 'onKey', init: onKey);
-    mateParams.set(name: 'onKeyEvent', init: onKeyEvent);
-    mateParams.set(name: 'skipTraversal', init: skipTraversal);
-    mateParams.set(name: 'canRequestFocus', init: canRequestFocus);
-    mateParams.set(name: 'descendantsAreFocusable', init: descendantsAreFocusable);
-    mateParams.set(name: 'descendantsAreTraversable', init: descendantsAreTraversable);
+    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('onKey', init: onKey);
+    mateParams.put('onKeyEvent', init: onKeyEvent);
+    mateParams.put('skipTraversal', init: skipTraversal);
+    mateParams.put('canRequestFocus', init: canRequestFocus);
+    mateParams.put('descendantsAreFocusable', init: descendantsAreFocusable);
+    mateParams.put('descendantsAreTraversable', init: descendantsAreTraversable);
   }
 }
 
@@ -89,22 +89,22 @@ class FocusScopeNode$Mate extends FocusScopeNode with Mate<FocusScopeNode$Mate> 
           canRequestFocus: canRequestFocus,
           traversalEdgeBehavior: traversalEdgeBehavior,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusScopeNode$Mate(
-        debugLabel: p.getValue('debugLabel'),
-        onKeyEvent: p.getValue('onKeyEvent'),
-        onKey: p.getValue('onKey'),
-        skipTraversal: p.getValue('skipTraversal'),
-        canRequestFocus: p.getValue('canRequestFocus'),
-        traversalEdgeBehavior: p.getValue('traversalEdgeBehavior'),
+        debugLabel: p.get('debugLabel').value,
+        onKeyEvent: p.get('onKeyEvent').value,
+        onKey: p.get('onKey').value,
+        skipTraversal: p.get('skipTraversal').value,
+        canRequestFocus: p.get('canRequestFocus').value,
+        traversalEdgeBehavior: p.get('traversalEdgeBehavior').value,
       ),
     );
-    mateParams.set(name: 'debugLabel', init: debugLabel);
-    mateParams.set(name: 'onKeyEvent', init: onKeyEvent);
-    mateParams.set(name: 'onKey', init: onKey);
-    mateParams.set(name: 'skipTraversal', init: skipTraversal);
-    mateParams.set(name: 'canRequestFocus', init: canRequestFocus);
-    mateParams.set(name: 'traversalEdgeBehavior', init: traversalEdgeBehavior);
+    mateParams.put('debugLabel', init: debugLabel);
+    mateParams.put('onKeyEvent', init: onKeyEvent);
+    mateParams.put('onKey', init: onKey);
+    mateParams.put('skipTraversal', init: skipTraversal);
+    mateParams.put('canRequestFocus', init: canRequestFocus);
+    mateParams.put('traversalEdgeBehavior', init: traversalEdgeBehavior);
   }
 }

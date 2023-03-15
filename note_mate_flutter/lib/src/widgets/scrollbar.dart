@@ -81,43 +81,43 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate<ScrollbarPainter$
           scrollbarOrientation: scrollbarOrientation,
           ignorePointer: ignorePointer,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollbarPainter$Mate(
-        color: p.getValue('color'),
-        fadeoutOpacityAnimation: p.getValue('fadeoutOpacityAnimation'),
-        trackColor: p.getValue('trackColor'),
-        trackBorderColor: p.getValue('trackBorderColor'),
-        textDirection: p.getValue('textDirection'),
-        thickness: p.getValue('thickness'),
-        padding: p.getValue('padding'),
-        mainAxisMargin: p.getValue('mainAxisMargin'),
-        crossAxisMargin: p.getValue('crossAxisMargin'),
-        radius: p.getValue('radius'),
-        trackRadius: p.getValue('trackRadius'),
-        shape: p.getValue('shape'),
-        minLength: p.getValue('minLength'),
-        minOverscrollLength: p.getValue('minOverscrollLength'),
-        scrollbarOrientation: p.getValue('scrollbarOrientation'),
-        ignorePointer: p.getValue('ignorePointer'),
+        color: p.get('color').value,
+        fadeoutOpacityAnimation: p.get('fadeoutOpacityAnimation').value,
+        trackColor: p.get('trackColor').value,
+        trackBorderColor: p.get('trackBorderColor').value,
+        textDirection: p.get('textDirection').value,
+        thickness: p.get('thickness').value,
+        padding: p.get('padding').value,
+        mainAxisMargin: p.get('mainAxisMargin').value,
+        crossAxisMargin: p.get('crossAxisMargin').value,
+        radius: p.get('radius').value,
+        trackRadius: p.get('trackRadius').value,
+        shape: p.get('shape').value,
+        minLength: p.get('minLength').value,
+        minOverscrollLength: p.get('minOverscrollLength').value,
+        scrollbarOrientation: p.get('scrollbarOrientation').value,
+        ignorePointer: p.get('ignorePointer').value,
       ),
     );
-    mateParams.set(name: 'color', init: color);
-    mateParams.set(name: 'fadeoutOpacityAnimation', init: fadeoutOpacityAnimation);
-    mateParams.set(name: 'trackColor', init: trackColor);
-    mateParams.set(name: 'trackBorderColor', init: trackBorderColor);
-    mateParams.set(name: 'textDirection', init: textDirection);
-    mateParams.set(name: 'thickness', init: thickness);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'mainAxisMargin', init: mainAxisMargin);
-    mateParams.set(name: 'crossAxisMargin', init: crossAxisMargin);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'trackRadius', init: trackRadius);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'minLength', init: minLength);
-    mateParams.set(name: 'minOverscrollLength', init: minOverscrollLength);
-    mateParams.set(name: 'scrollbarOrientation', init: scrollbarOrientation);
-    mateParams.set(name: 'ignorePointer', init: ignorePointer);
+    mateParams.put('color', init: color);
+    mateParams.put('fadeoutOpacityAnimation', init: fadeoutOpacityAnimation);
+    mateParams.put('trackColor', init: trackColor);
+    mateParams.put('trackBorderColor', init: trackBorderColor);
+    mateParams.put('textDirection', init: textDirection);
+    mateParams.put('thickness', init: thickness);
+    mateParams.put('padding', init: padding);
+    mateParams.put('mainAxisMargin', init: mainAxisMargin);
+    mateParams.put('crossAxisMargin', init: crossAxisMargin);
+    mateParams.put('radius', init: radius);
+    mateParams.put('trackRadius', init: trackRadius);
+    mateParams.put('shape', init: shape);
+    mateParams.put('minLength', init: minLength);
+    mateParams.put('minOverscrollLength', init: minOverscrollLength);
+    mateParams.put('scrollbarOrientation', init: scrollbarOrientation);
+    mateParams.put('ignorePointer', init: ignorePointer);
   }
 }
 
@@ -218,56 +218,56 @@ class RawScrollbar$Mate extends RawScrollbar with WidgetMate<RawScrollbar$Mate> 
           crossAxisMargin: crossAxisMargin,
           padding: padding,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RawScrollbar$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        controller: p.getValue('controller'),
-        thumbVisibility: p.getValue('thumbVisibility'),
-        shape: p.getValue('shape'),
-        radius: p.getValue('radius'),
-        thickness: p.getValue('thickness'),
-        thumbColor: p.getValue('thumbColor'),
-        minThumbLength: p.getValue('minThumbLength'),
-        minOverscrollLength: p.getValue('minOverscrollLength'),
-        trackVisibility: p.getValue('trackVisibility'),
-        trackRadius: p.getValue('trackRadius'),
-        trackColor: p.getValue('trackColor'),
-        trackBorderColor: p.getValue('trackBorderColor'),
-        fadeDuration: p.getValue('fadeDuration'),
-        timeToFade: p.getValue('timeToFade'),
-        pressDuration: p.getValue('pressDuration'),
-        notificationPredicate: p.getValue('notificationPredicate'),
-        interactive: p.getValue('interactive'),
-        scrollbarOrientation: p.getValue('scrollbarOrientation'),
-        mainAxisMargin: p.getValue('mainAxisMargin'),
-        crossAxisMargin: p.getValue('crossAxisMargin'),
-        padding: p.getValue('padding'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        controller: p.get('controller').value,
+        thumbVisibility: p.get('thumbVisibility').value,
+        shape: p.get('shape').value,
+        radius: p.get('radius').value,
+        thickness: p.get('thickness').value,
+        thumbColor: p.get('thumbColor').value,
+        minThumbLength: p.get('minThumbLength').value,
+        minOverscrollLength: p.get('minOverscrollLength').value,
+        trackVisibility: p.get('trackVisibility').value,
+        trackRadius: p.get('trackRadius').value,
+        trackColor: p.get('trackColor').value,
+        trackBorderColor: p.get('trackBorderColor').value,
+        fadeDuration: p.get('fadeDuration').value,
+        timeToFade: p.get('timeToFade').value,
+        pressDuration: p.get('pressDuration').value,
+        notificationPredicate: p.get('notificationPredicate').value,
+        interactive: p.get('interactive').value,
+        scrollbarOrientation: p.get('scrollbarOrientation').value,
+        mainAxisMargin: p.get('mainAxisMargin').value,
+        crossAxisMargin: p.get('crossAxisMargin').value,
+        padding: p.get('padding').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'thumbVisibility', init: thumbVisibility);
-    mateParams.set(name: 'shape', init: shape);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'thickness', init: thickness);
-    mateParams.set(name: 'thumbColor', init: thumbColor);
-    mateParams.set(name: 'minThumbLength', init: minThumbLength);
-    mateParams.set(name: 'minOverscrollLength', init: minOverscrollLength);
-    mateParams.set(name: 'trackVisibility', init: trackVisibility);
-    mateParams.set(name: 'trackRadius', init: trackRadius);
-    mateParams.set(name: 'trackColor', init: trackColor);
-    mateParams.set(name: 'trackBorderColor', init: trackBorderColor);
-    mateParams.set(name: 'fadeDuration', init: fadeDuration);
-    mateParams.set(name: 'timeToFade', init: timeToFade);
-    mateParams.set(name: 'pressDuration', init: pressDuration);
-    mateParams.set(name: 'notificationPredicate', init: notificationPredicate);
-    mateParams.set(name: 'interactive', init: interactive);
-    mateParams.set(name: 'scrollbarOrientation', init: scrollbarOrientation);
-    mateParams.set(name: 'mainAxisMargin', init: mainAxisMargin);
-    mateParams.set(name: 'crossAxisMargin', init: crossAxisMargin);
-    mateParams.set(name: 'padding', init: padding);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('controller', init: controller);
+    mateParams.put('thumbVisibility', init: thumbVisibility);
+    mateParams.put('shape', init: shape);
+    mateParams.put('radius', init: radius);
+    mateParams.put('thickness', init: thickness);
+    mateParams.put('thumbColor', init: thumbColor);
+    mateParams.put('minThumbLength', init: minThumbLength);
+    mateParams.put('minOverscrollLength', init: minOverscrollLength);
+    mateParams.put('trackVisibility', init: trackVisibility);
+    mateParams.put('trackRadius', init: trackRadius);
+    mateParams.put('trackColor', init: trackColor);
+    mateParams.put('trackBorderColor', init: trackBorderColor);
+    mateParams.put('fadeDuration', init: fadeDuration);
+    mateParams.put('timeToFade', init: timeToFade);
+    mateParams.put('pressDuration', init: pressDuration);
+    mateParams.put('notificationPredicate', init: notificationPredicate);
+    mateParams.put('interactive', init: interactive);
+    mateParams.put('scrollbarOrientation', init: scrollbarOrientation);
+    mateParams.put('mainAxisMargin', init: mainAxisMargin);
+    mateParams.put('crossAxisMargin', init: crossAxisMargin);
+    mateParams.put('padding', init: padding);
   }
 }

@@ -18,14 +18,14 @@ class RenderSliverFixedExtentList$Mate extends RenderSliverFixedExtentList with 
           childManager: childManager,
           itemExtent: itemExtent,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverFixedExtentList$Mate(
-        childManager: p.getValue('childManager'),
-        itemExtent: p.getValue('itemExtent'),
+        childManager: p.get('childManager').value,
+        itemExtent: p.get('itemExtent').value,
       ),
     );
-    mateParams.set(name: 'childManager', init: childManager);
-    mateParams.set(name: 'itemExtent', init: itemExtent);
+    mateParams.put('childManager', init: childManager);
+    mateParams.put('itemExtent', init: itemExtent);
   }
 }

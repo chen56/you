@@ -55,30 +55,30 @@ class CupertinoScrollbar$Mate extends CupertinoScrollbar with WidgetMate<Cuperti
           notificationPredicate: notificationPredicate,
           scrollbarOrientation: scrollbarOrientation,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoScrollbar$Mate(
-        key: p.getValue('key'),
-        child: p.getValue('child'),
-        controller: p.getValue('controller'),
-        thumbVisibility: p.getValue('thumbVisibility'),
-        thickness: p.getValue('thickness'),
-        thicknessWhileDragging: p.getValue('thicknessWhileDragging'),
-        radius: p.getValue('radius'),
-        radiusWhileDragging: p.getValue('radiusWhileDragging'),
-        notificationPredicate: p.getValue('notificationPredicate'),
-        scrollbarOrientation: p.getValue('scrollbarOrientation'),
+        key: p.get('key').value,
+        child: p.get('child').value,
+        controller: p.get('controller').value,
+        thumbVisibility: p.get('thumbVisibility').value,
+        thickness: p.get('thickness').value,
+        thicknessWhileDragging: p.get('thicknessWhileDragging').value,
+        radius: p.get('radius').value,
+        radiusWhileDragging: p.get('radiusWhileDragging').value,
+        notificationPredicate: p.get('notificationPredicate').value,
+        scrollbarOrientation: p.get('scrollbarOrientation').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'child', init: child);
-    mateParams.set(name: 'controller', init: controller);
-    mateParams.set(name: 'thumbVisibility', init: thumbVisibility);
-    mateParams.set(name: 'thickness', init: thickness);
-    mateParams.set(name: 'thicknessWhileDragging', init: thicknessWhileDragging);
-    mateParams.set(name: 'radius', init: radius);
-    mateParams.set(name: 'radiusWhileDragging', init: radiusWhileDragging);
-    mateParams.set(name: 'notificationPredicate', init: notificationPredicate);
-    mateParams.set(name: 'scrollbarOrientation', init: scrollbarOrientation);
+    mateParams.put('key', init: key);
+    mateParams.put('child', init: child);
+    mateParams.put('controller', init: controller);
+    mateParams.put('thumbVisibility', init: thumbVisibility);
+    mateParams.put('thickness', init: thickness);
+    mateParams.put('thicknessWhileDragging', init: thicknessWhileDragging);
+    mateParams.put('radius', init: radius);
+    mateParams.put('radiusWhileDragging', init: radiusWhileDragging);
+    mateParams.put('notificationPredicate', init: notificationPredicate);
+    mateParams.put('scrollbarOrientation', init: scrollbarOrientation);
   }
 }

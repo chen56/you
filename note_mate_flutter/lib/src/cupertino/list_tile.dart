@@ -62,35 +62,35 @@ class CupertinoListTile$Mate extends CupertinoListTile with WidgetMate<Cupertino
           leadingSize: leadingSize,
           leadingToTitle: leadingToTitle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoListTile$Mate(
-        key: p.getValue('key'),
-        title: p.getValue('title'),
-        subtitle: p.getValue('subtitle'),
-        additionalInfo: p.getValue('additionalInfo'),
-        leading: p.getValue('leading'),
-        trailing: p.getValue('trailing'),
-        onTap: p.getValue('onTap'),
-        backgroundColor: p.getValue('backgroundColor'),
-        backgroundColorActivated: p.getValue('backgroundColorActivated'),
-        padding: p.getValue('padding'),
-        leadingSize: p.getValue('leadingSize'),
-        leadingToTitle: p.getValue('leadingToTitle'),
+        key: p.get('key').value,
+        title: p.get('title').value,
+        subtitle: p.get('subtitle').value,
+        additionalInfo: p.get('additionalInfo').value,
+        leading: p.get('leading').value,
+        trailing: p.get('trailing').value,
+        onTap: p.get('onTap').value,
+        backgroundColor: p.get('backgroundColor').value,
+        backgroundColorActivated: p.get('backgroundColorActivated').value,
+        padding: p.get('padding').value,
+        leadingSize: p.get('leadingSize').value,
+        leadingToTitle: p.get('leadingToTitle').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'subtitle', init: subtitle);
-    mateParams.set(name: 'additionalInfo', init: additionalInfo);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'trailing', init: trailing);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'backgroundColorActivated', init: backgroundColorActivated);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'leadingSize', init: leadingSize);
-    mateParams.set(name: 'leadingToTitle', init: leadingToTitle);
+    mateParams.put('key', init: key);
+    mateParams.put('title', init: title);
+    mateParams.put('subtitle', init: subtitle);
+    mateParams.put('additionalInfo', init: additionalInfo);
+    mateParams.put('leading', init: leading);
+    mateParams.put('trailing', init: trailing);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('backgroundColorActivated', init: backgroundColorActivated);
+    mateParams.put('padding', init: padding);
+    mateParams.put('leadingSize', init: leadingSize);
+    mateParams.put('leadingToTitle', init: leadingToTitle);
   }
 
   /// CupertinoListTile CupertinoListTile.notched({Key? key, required Widget title, Widget? subtitle, Widget? additionalInfo, Widget? leading, Widget? trailing, FutureOr<void> Function()? onTap, Color? backgroundColor, Color? backgroundColorActivated, EdgeInsetsGeometry? padding, double leadingSize = _kNotchedLeadingSize, double leadingToTitle = _kNotchedLeadingToTitle})
@@ -144,35 +144,35 @@ class CupertinoListTile$Mate extends CupertinoListTile with WidgetMate<Cupertino
           leadingSize: leadingSize,
           leadingToTitle: leadingToTitle,
         ) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoListTile$Mate.notched(
-        key: p.getValue('key'),
-        title: p.getValue('title'),
-        subtitle: p.getValue('subtitle'),
-        additionalInfo: p.getValue('additionalInfo'),
-        leading: p.getValue('leading'),
-        trailing: p.getValue('trailing'),
-        onTap: p.getValue('onTap'),
-        backgroundColor: p.getValue('backgroundColor'),
-        backgroundColorActivated: p.getValue('backgroundColorActivated'),
-        padding: p.getValue('padding'),
-        leadingSize: p.getValue('leadingSize'),
-        leadingToTitle: p.getValue('leadingToTitle'),
+        key: p.get('key').value,
+        title: p.get('title').value,
+        subtitle: p.get('subtitle').value,
+        additionalInfo: p.get('additionalInfo').value,
+        leading: p.get('leading').value,
+        trailing: p.get('trailing').value,
+        onTap: p.get('onTap').value,
+        backgroundColor: p.get('backgroundColor').value,
+        backgroundColorActivated: p.get('backgroundColorActivated').value,
+        padding: p.get('padding').value,
+        leadingSize: p.get('leadingSize').value,
+        leadingToTitle: p.get('leadingToTitle').value,
       ),
     );
-    mateParams.set(name: 'key', init: key);
-    mateParams.set(name: 'title', init: title);
-    mateParams.set(name: 'subtitle', init: subtitle);
-    mateParams.set(name: 'additionalInfo', init: additionalInfo);
-    mateParams.set(name: 'leading', init: leading);
-    mateParams.set(name: 'trailing', init: trailing);
-    mateParams.set(name: 'onTap', init: onTap);
-    mateParams.set(name: 'backgroundColor', init: backgroundColor);
-    mateParams.set(name: 'backgroundColorActivated', init: backgroundColorActivated);
-    mateParams.set(name: 'padding', init: padding);
-    mateParams.set(name: 'leadingSize', init: leadingSize);
-    mateParams.set(name: 'leadingToTitle', init: leadingToTitle);
+    mateParams.put('key', init: key);
+    mateParams.put('title', init: title);
+    mateParams.put('subtitle', init: subtitle);
+    mateParams.put('additionalInfo', init: additionalInfo);
+    mateParams.put('leading', init: leading);
+    mateParams.put('trailing', init: trailing);
+    mateParams.put('onTap', init: onTap);
+    mateParams.put('backgroundColor', init: backgroundColor);
+    mateParams.put('backgroundColorActivated', init: backgroundColorActivated);
+    mateParams.put('padding', init: padding);
+    mateParams.put('leadingSize', init: leadingSize);
+    mateParams.put('leadingToTitle', init: leadingToTitle);
   }
 }
 
@@ -184,10 +184,10 @@ class CupertinoListTileChevron$Mate extends CupertinoListTileChevron with Widget
       /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
       Key? key})
       : super(key: key) {
-    mateParams = Params(
+    mateParams = ObjectParam(
       init: this,
-      builder: (p) => CupertinoListTileChevron$Mate(key: p.getValue('key')),
+      builder: (p) => CupertinoListTileChevron$Mate(key: p.get('key').value),
     );
-    mateParams.set(name: 'key', init: key);
+    mateParams.put('key', init: key);
   }
 }
