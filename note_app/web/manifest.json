@@ -1,6 +1,6 @@
 {
-    "name": "note_app",
-    "short_name": "note_app",
+    "name": "web",
+    "short_name": "web",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
