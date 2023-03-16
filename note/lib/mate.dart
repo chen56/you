@@ -136,6 +136,7 @@ class ParamNode {
   final Param param;
   final ParamNode? parent;
   late final Iterable<ParamNode> _children;
+  final Map<String, Object> attributes = {};
 
   ParamNode._({required this.name, required this.param, required ParamNode this.parent}) {
     _children = param._childrenNodes(this);
