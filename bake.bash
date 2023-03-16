@@ -171,7 +171,9 @@ option() {
   /build() {
     (
       run cd note_app;
-      run flutter build web --release --web-renderer html --base-href='/' "$@";
+      run flutter build web  --enable-experiment=records \
+                             --enable-experiment=patterns \
+                             --release --web-renderer html --base-href='/' "$@";
     )
   }
 }
