@@ -1,11 +1,11 @@
 
-# flutter-note
+# note
 
-## flutter-note 是干啥的？
+## note 是干啥的？
 
 除了作为自己学习flutter的笔记，更希望能帮助其他初学者。
 
-目前我遇到的学习问题，也是flutter-note想改善的：
+目前我遇到的学习问题，也是note想改善的：
 
 - flutter学习资源，以文档居多，demo混杂凌乱，没有一个可以所见即所得速查各组件外观及用法的便宜地儿，比如[官网samples](https://flutter.github.io/samples/#)真心凌乱
 - 官网的Sample用dartpad展示，加载极慢，在耐心丧失前的加载成功率为13%   o(一︿一+)o
@@ -26,10 +26,10 @@
 
 ## 下载本项目自己运行
 
-项目已发布在<https://chen56.github.io/flutter-note>, 若要自己跑，这样搞：
+项目已发布在<https://chen56.github.io/note>, 若要自己跑，这样搞：
 
 ```bash
-git clone git@github.com:chen56/flutter-note.git
+git clone git@github.com:chen56/note.git
 flutter run --web-renderer html --device-id chrome 
 ```
 
@@ -45,35 +45,35 @@ environment:
     sdk: '>=3.0.0-204.0.dev <4.0.0'
 ```
 
-本项目可能会使用一些dart 3.0的体验特性， 已配置analysis_options.yaml，告诉ide别报错，比如idea/vscode, 按<https://dart.dev/tools/experiment-flags>
+本项目可能会使用一些dart 3.0的体验特性， 已配置analysis_options.yaml，告诉ide别报错，比如idea/vscode, 参考：<https://dart.dev/tools/experiment-flags>
 
 ```yaml
 analyzer:
   enable-experiment:
-    - super-mixins
-    - no-slow-checks
+    - patterns
+    - records
 ```
 
-若报错，flutter run可能没开体验特性参数：
+flutter run/build需开体验特性参数：
 
 ```bash
-flutter run --enable-experiment=records
+flutter run --enable-experiment=records --enable-experiment=patterns 
+flutter build --enable-experiment=records --enable-experiment=patterns 
 ```
 
 
 ## project workflow
 
 ```text
-当前workflow：
+# s当前workflow：
 PR---->main
          | 
-         |-----> deploy : https://chen56.github.com/flutter-note/
+         |-----> deploy : https://chen56.github.com/note/
 
 # 待后面功能稳定了，可以加个prod分支（暂时没有）：
 PR---->main--->prod
-         |       |-----> deploy prod: https://chen56.github.com/flutter-note
+         |       |-----> deploy prod: https://chen56.github.com/note
          | 
-         |-----> deploy main(inner review) : https://chen56.github.com/flutter-note/main
-
+         |-----> deploy main(inner review) : https://chen56.github.com/note/main
 ```
 

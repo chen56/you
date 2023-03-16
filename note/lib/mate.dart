@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 import 'package:note/utils.dart' as utils;
+import 'package:note/utils.dart';
 
 abstract class Param<T> {
   Param? parent;
@@ -53,26 +54,39 @@ class ObjectParam<T> extends Param<T> with MapMixin<String, T> {
 
   ObjectParam({required super.init, this.builder});
 
+  /// [ObjectParam.put] :
+  /// - value is Mate -> use Mate.mateParams
+  /// - value is atom value -> ValueParam
+  /// - value is null -> ValueParam
+  /// - others -> ValueParam
   Param<C> put<C>(String name, C init) {
     assert(
         !_paramMap.containsKey(name), "error:duplicate param name: $name , old:${_paramMap[name]}");
 
-    var result = _convert<C>(init);
+    var result = _convertUseDart3Patterns<C>(init);
     result.parent = this;
     _paramMap[name] = result;
     return result;
   }
 
-  Param<C> _convert<C>(C init) {
-    // if (init is Param) return init as Param<C>;
-    // if (init is Mate) return init.mateParams as Param<C>;
-    // return ValueParam(init: init);
-    // dart3 switch parttens ide点击跳不到源代码，支持还不行
+  Param<T> asParam() {
+    return this;
+  }
+
+  // dart3 switch patterns : use idea, click class name can not navigation to source
+  Param<C> _convertUseDart3Patterns<C>(C init) {
     return switch (init) {
       Mate() => init.mateParams as Param<C>,
       Param() => init as Param<C>,
       _ => Param.newValue(init: init),
     };
+  }
+
+  // ignore: unused_element
+  Param<C> _convertUseDart2<C>(C init) {
+    if (init is Param) return init as Param<C>;
+    if (isSubtype<Mate, C>()) return (init as Mate<C>).mateParams;
+    return ValueParam(init: init);
   }
 
   Param<C> get<C>(String name) {

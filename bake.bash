@@ -59,7 +59,7 @@ function follow_links() (
   done
   echo "$file"
 )
-export BAKE_HOME=$(dirname "$(follow_links $BASH_SOURCE)")
+export BAKE_HOME=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
 
 /test1?() {
   /test1?shortHelp() {
@@ -146,8 +146,8 @@ option() {
   /build?shortHelp() { cat <<<"构建命令,可附加flutter build的参数"; }
   /build() {
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
-    # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/flutter-note
-    run flutter build web --release --web-renderer html --base-href='/flutter-note/' "$@"
+    # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
+    run flutter build web --release --web-renderer html --base-href='/note/' "$@"
   }
 }
 
@@ -198,7 +198,7 @@ option() {
 /run?() {
   /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
   /run() {
-    run flutter run --web-renderer html --device-id chrome --enable-experiment=records;
+    run flutter run --web-renderer html --device-id chrome --enable-experiment=records --enable-experiment=patterns;
   }
 }
 
@@ -256,7 +256,7 @@ run() {
 
 run_from_stdin() { while read cmd; do "$cmd"; done; }
 initCommands(){
-    run_from_stdin <<< $(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')
+    run_from_stdin <<< "$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')"
 }
 
 print_commands() {
@@ -338,6 +338,5 @@ fi
 # 比如"./bike build" ,执行的是"/build"函数
 # shellcheck disable=SC2145
 # 先跑外层注册命令
-$cmdSetup
 # 再执行命令
 $cmdFullName "$@"

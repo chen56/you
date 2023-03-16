@@ -71,12 +71,12 @@ log(Object? o) {
 }
 
 /// 包名平整化：
-/// package:flutter-note/pages/note/1.welcome/1.note-self/page.dart
+/// package:note/pages/note/1.welcome/1.note-self/page.dart
 /// --->
 /// note$welcome$note_self
 ///
 /// 规则：
-/// - 去掉package:flutter-note前缀
+/// - 去掉package:note前缀
 /// - 去掉用来排序的数字前缀"1."
 /// - '/'换成'$'
 /// - 其他特殊字符换成'_'
