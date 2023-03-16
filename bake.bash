@@ -176,7 +176,7 @@ option() {
 #      Target web_release_bundle failed: Exception: Avoid non-constant invocations of IconData or try to build again with --no-tree-shake-icons.
       run flutter build web  --enable-experiment=records \
                              --enable-experiment=patterns \
-                             --release --web-renderer html --base-href='/' "$@";
+                             --release --web-renderer html --base-href='/note/' "$@";
     )
   }
 }
