@@ -30,7 +30,8 @@ jobs:
           # The Flutter version to make available on the path
           #flutter-version: # optional, default is any
           # The Flutter build release channel
-          channel: master # optional, default is stable
+          channel: beta # optional, default is stable
+          flutter-version: '3.8.0-10.1.pre'
           # Cache the Flutter SDK
           cache: true # optional
           # Identifier for the Flutter SDK cache
@@ -43,14 +44,10 @@ jobs:
       - name: checkout main
         uses: actions/checkout@v3
 
-      # test
-      - name: test main
-        run:  ./bake test
-
       # build
-      - name: Build
+      - name: CI
         run: |
-          ./bake build
+          ./bake ci
           ls ./note_app/build/web/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
