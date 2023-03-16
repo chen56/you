@@ -2,44 +2,8 @@
 
 import 'package:flutter/src/widgets/icon_data.dart';
 import 'dart:core';
-import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
-
-// /// class IconData
-// class IconData$Mate extends IconData with Mate<IconData$Mate> {
-//   /// IconData IconData(int codePoint, {String? fontFamily, String? fontPackage, bool matchTextDirection = false})
-//   IconData$Mate(
-//     /// requiredParameters: int codePoint
-//     int codePoint, {
-//     /// optionalParameters: {String? fontFamily} , hasDefaultValue:false, defaultValueCode:null
-//     String? fontFamily,
-//
-//     /// optionalParameters: {String? fontPackage} , hasDefaultValue:false, defaultValueCode:null
-//     String? fontPackage,
-//
-//     /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-//     required bool matchTextDirection,
-//   }) : super(
-//           codePoint,
-//           fontFamily: fontFamily,
-//           fontPackage: fontPackage,
-//           matchTextDirection: matchTextDirection,
-//         ) {
-//     mateParams = ObjectParam(
-//       init: this,
-//       builder: (p) => IconData$Mate(
-//         p.get('codePoint').value,
-//         fontFamily: p.get('fontFamily').value,
-//         fontPackage: p.get('fontPackage').value,
-//         matchTextDirection: p.get('matchTextDirection').value,
-//       ),
-//     );
-//     mateParams.put('codePoint', codePoint);
-//     mateParams.put('fontFamily', fontFamily);
-//     mateParams.put('fontPackage', fontPackage);
-//     mateParams.put('matchTextDirection', matchTextDirection);
-//   }
-// }
+import 'package:note/mate.dart';
 
 /// class IconDataProperty extends DiagnosticsProperty<IconData>
 class IconDataProperty$Mate extends IconDataProperty with Mate<IconDataProperty$Mate> {
