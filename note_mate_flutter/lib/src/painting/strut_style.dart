@@ -72,7 +72,7 @@ class StrutStyle$Mate extends StrutStyle with Mate<StrutStyle$Mate> {
       ),
     );
     mateParams.put('fontFamily', fontFamily);
-    mateParams.put('fontFamilyFallback', fontFamilyFallback);
+    mateParams.putList('fontFamilyFallback', fontFamilyFallback);
     mateParams.put('fontSize', fontSize);
     mateParams.put('height', height);
     mateParams.put('leadingDistribution', leadingDistribution);
@@ -153,7 +153,7 @@ class StrutStyle$Mate extends StrutStyle with Mate<StrutStyle$Mate> {
     );
     mateParams.put('textStyle', textStyle);
     mateParams.put('fontFamily', fontFamily);
-    mateParams.put('fontFamilyFallback', fontFamilyFallback);
+    mateParams.putList('fontFamilyFallback', fontFamilyFallback);
     mateParams.put('fontSize', fontSize);
     mateParams.put('height', height);
     mateParams.put('leadingDistribution', leadingDistribution);

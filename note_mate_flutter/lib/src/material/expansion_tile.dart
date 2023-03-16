@@ -143,7 +143,7 @@ class ExpansionTile$Mate extends ExpansionTile with WidgetMate<ExpansionTile$Mat
     mateParams.put('title', title);
     mateParams.put('subtitle', subtitle);
     mateParams.put('onExpansionChanged', onExpansionChanged);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('trailing', trailing);
     mateParams.put('initiallyExpanded', initiallyExpanded);
     mateParams.put('maintainState', maintainState);

@@ -39,7 +39,7 @@ class Localizations$Mate extends Localizations with WidgetMate<Localizations$Mat
     );
     mateParams.put('key', key);
     mateParams.put('locale', locale);
-    mateParams.put('delegates', delegates);
+    mateParams.putList('delegates', delegates);
     mateParams.put('child', child);
   }
 }

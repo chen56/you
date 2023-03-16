@@ -94,6 +94,6 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate<Ren
     mateParams.put('squeeze', squeeze);
     mateParams.put('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }

@@ -91,6 +91,6 @@ class ButtonBar$Mate extends ButtonBar with WidgetMate<ButtonBar$Mate> {
     mateParams.put('layoutBehavior', layoutBehavior);
     mateParams.put('overflowDirection', overflowDirection);
     mateParams.put('overflowButtonSpacing', overflowButtonSpacing);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }

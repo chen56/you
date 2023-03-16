@@ -72,7 +72,7 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Widget
     mateParams.put('maxChildSize', maxChildSize);
     mateParams.put('expand', expand);
     mateParams.put('snap', snap);
-    mateParams.put('snapSizes', snapSizes);
+    mateParams.putList('snapSizes', snapSizes);
     mateParams.put('snapAnimationDuration', snapAnimationDuration);
     mateParams.put('controller', controller);
     mateParams.put('builder', builder);

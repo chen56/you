@@ -22,7 +22,7 @@ main() async {
   _log("## main");
   List<String> include = [
     "package:flutter/",
-    // "package:flutter/src/rendering/editable.dart",
+    "package:flutter/src/rendering/editable.dart",
     // "package:flutter/src/foundation/bitfield.dart",
     "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
@@ -453,7 +453,11 @@ void _genLibMate({
                             .code).closure,
                     }))
                     .statement,
-                ...parameters.map((e) => Code("mateParams.put('${e.name}', ${e.name});")),
+                ...parameters.map((e) {
+                  var method = e.type.isDartCoreList ? "putList" : "put";
+                  var name = e.name;
+                  return Code("mateParams.$method('$name', $name);");
+                }),
               ]);
           });
         })));

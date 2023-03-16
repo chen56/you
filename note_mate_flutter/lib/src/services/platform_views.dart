@@ -185,8 +185,8 @@ class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate<AndroidMotion
     mateParams.put('eventTime', eventTime);
     mateParams.put('action', action);
     mateParams.put('pointerCount', pointerCount);
-    mateParams.put('pointerProperties', pointerProperties);
-    mateParams.put('pointerCoords', pointerCoords);
+    mateParams.putList('pointerProperties', pointerProperties);
+    mateParams.putList('pointerCoords', pointerCoords);
     mateParams.put('metaState', metaState);
     mateParams.put('buttonState', buttonState);
     mateParams.put('xPrecision', xPrecision);

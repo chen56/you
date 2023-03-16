@@ -242,6 +242,6 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate<PrioritizedIn
       init: this,
       builder: (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').value),
     );
-    mateParams.put('orderedIntents', orderedIntents);
+    mateParams.putList('orderedIntents', orderedIntents);
   }
 }

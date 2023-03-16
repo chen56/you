@@ -1110,7 +1110,7 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with 
       init: this,
       builder: (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value),
     );
-    mateParams.put('properties', properties);
+    mateParams.putList('properties', properties);
   }
 }
 
@@ -1188,7 +1188,7 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate<DiagnosticsBlock$
     mateParams.put('description', description);
     mateParams.put('level', level);
     mateParams.put('allowTruncate', allowTruncate);
-    mateParams.put('children', children);
-    mateParams.put('properties', properties);
+    mateParams.putList('children', children);
+    mateParams.putList('properties', properties);
   }
 }

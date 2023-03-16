@@ -49,7 +49,7 @@ class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks with Ma
         p.get('text').value,
       ),
     );
-    mateParams.put('packages', packages);
+    mateParams.putList('packages', packages);
     mateParams.put('text', text);
   }
 }

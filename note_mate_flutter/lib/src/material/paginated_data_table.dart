@@ -149,8 +149,8 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<Paginat
     );
     mateParams.put('key', key);
     mateParams.put('header', header);
-    mateParams.put('actions', actions);
-    mateParams.put('columns', columns);
+    mateParams.putList('actions', actions);
+    mateParams.putList('columns', columns);
     mateParams.put('sortColumnIndex', sortColumnIndex);
     mateParams.put('sortAscending', sortAscending);
     mateParams.put('onSelectAll', onSelectAll);
@@ -164,7 +164,7 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<Paginat
     mateParams.put('initialFirstRowIndex', initialFirstRowIndex);
     mateParams.put('onPageChanged', onPageChanged);
     mateParams.put('rowsPerPage', rowsPerPage);
-    mateParams.put('availableRowsPerPage', availableRowsPerPage);
+    mateParams.putList('availableRowsPerPage', availableRowsPerPage);
     mateParams.put('onRowsPerPageChanged', onRowsPerPageChanged);
     mateParams.put('dragStartBehavior', dragStartBehavior);
     mateParams.put('arrowHeadColor', arrowHeadColor);

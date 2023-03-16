@@ -184,6 +184,6 @@ class DropdownMenu$Mate<T> extends DropdownMenu<T> with WidgetMate<DropdownMenu$
     mateParams.put('initialSelection', initialSelection);
     mateParams.put('onSelected', onSelected);
     mateParams.put('requestFocusOnTap', requestFocusOnTap);
-    mateParams.put('dropdownMenuEntries', dropdownMenuEntries);
+    mateParams.putList('dropdownMenuEntries', dropdownMenuEntries);
   }
 }

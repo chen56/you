@@ -98,7 +98,7 @@ class MenuAnchor$Mate extends MenuAnchor with WidgetMate<MenuAnchor$Mate> {
     mateParams.put('onOpen', onOpen);
     mateParams.put('onClose', onClose);
     mateParams.put('crossAxisUnconstrained', crossAxisUnconstrained);
-    mateParams.put('menuChildren', menuChildren);
+    mateParams.putList('menuChildren', menuChildren);
     mateParams.put('builder', builder);
     mateParams.put('child', child);
   }
@@ -143,7 +143,7 @@ class MenuBar$Mate extends MenuBar with WidgetMate<MenuBar$Mate> {
     mateParams.put('style', style);
     mateParams.put('clipBehavior', clipBehavior);
     mateParams.put('controller', controller);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -530,7 +530,7 @@ class SubmenuButton$Mate extends SubmenuButton with WidgetMate<SubmenuButton$Mat
     mateParams.put('statesController', statesController);
     mateParams.put('leadingIcon', leadingIcon);
     mateParams.put('trailingIcon', trailingIcon);
-    mateParams.put('menuChildren', menuChildren);
+    mateParams.putList('menuChildren', menuChildren);
     mateParams.put('child', child);
   }
 }

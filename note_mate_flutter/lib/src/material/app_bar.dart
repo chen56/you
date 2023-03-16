@@ -173,7 +173,7 @@ class AppBar$Mate extends AppBar with WidgetMate<AppBar$Mate> {
     mateParams.put('leading', leading);
     mateParams.put('automaticallyImplyLeading', automaticallyImplyLeading);
     mateParams.put('title', title);
-    mateParams.put('actions', actions);
+    mateParams.putList('actions', actions);
     mateParams.put('flexibleSpace', flexibleSpace);
     mateParams.put('bottom', bottom);
     mateParams.put('elevation', elevation);
@@ -390,7 +390,7 @@ class SliverAppBar$Mate extends SliverAppBar with WidgetMate<SliverAppBar$Mate> 
     mateParams.put('leading', leading);
     mateParams.put('automaticallyImplyLeading', automaticallyImplyLeading);
     mateParams.put('title', title);
-    mateParams.put('actions', actions);
+    mateParams.putList('actions', actions);
     mateParams.put('flexibleSpace', flexibleSpace);
     mateParams.put('bottom', bottom);
     mateParams.put('elevation', elevation);

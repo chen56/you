@@ -64,8 +64,8 @@ class LinearGradient$Mate extends LinearGradient with Mate<LinearGradient$Mate> 
     );
     mateParams.put('begin', begin);
     mateParams.put('end', end);
-    mateParams.put('colors', colors);
-    mateParams.put('stops', stops);
+    mateParams.putList('colors', colors);
+    mateParams.putList('stops', stops);
     mateParams.put('tileMode', tileMode);
     mateParams.put('transform', transform);
   }
@@ -123,8 +123,8 @@ class RadialGradient$Mate extends RadialGradient with Mate<RadialGradient$Mate> 
     );
     mateParams.put('center', center);
     mateParams.put('radius', radius);
-    mateParams.put('colors', colors);
-    mateParams.put('stops', stops);
+    mateParams.putList('colors', colors);
+    mateParams.putList('stops', stops);
     mateParams.put('tileMode', tileMode);
     mateParams.put('focal', focal);
     mateParams.put('focalRadius', focalRadius);
@@ -180,8 +180,8 @@ class SweepGradient$Mate extends SweepGradient with Mate<SweepGradient$Mate> {
     mateParams.put('center', center);
     mateParams.put('startAngle', startAngle);
     mateParams.put('endAngle', endAngle);
-    mateParams.put('colors', colors);
-    mateParams.put('stops', stops);
+    mateParams.putList('colors', colors);
+    mateParams.putList('stops', stops);
     mateParams.put('tileMode', tileMode);
     mateParams.put('transform', transform);
   }

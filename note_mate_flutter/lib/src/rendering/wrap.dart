@@ -67,7 +67,7 @@ class RenderWrap$Mate extends RenderWrap with Mate<RenderWrap$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('direction', direction);
     mateParams.put('alignment', alignment);
     mateParams.put('spacing', spacing);

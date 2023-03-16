@@ -339,7 +339,7 @@ class TextFormField$Mate extends TextFormField with WidgetMate<TextFormField$Mat
     mateParams.put('onFieldSubmitted', onFieldSubmitted);
     mateParams.put('onSaved', onSaved);
     mateParams.put('validator', validator);
-    mateParams.put('inputFormatters', inputFormatters);
+    mateParams.putList('inputFormatters', inputFormatters);
     mateParams.put('enabled', enabled);
     mateParams.put('cursorWidth', cursorWidth);
     mateParams.put('cursorHeight', cursorHeight);

@@ -16,7 +16,7 @@ class Category$Mate extends Category with Mate<Category$Mate> {
       init: this,
       builder: (p) => Category$Mate(p.get('sections').value),
     );
-    mateParams.put('sections', sections);
+    mateParams.putList('sections', sections);
   }
 }
 

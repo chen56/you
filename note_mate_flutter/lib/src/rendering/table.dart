@@ -194,10 +194,10 @@ class RenderTable$Mate extends RenderTable with Mate<RenderTable$Mate> {
     mateParams.put('defaultColumnWidth', defaultColumnWidth);
     mateParams.put('textDirection', textDirection);
     mateParams.put('border', border);
-    mateParams.put('rowDecorations', rowDecorations);
+    mateParams.putList('rowDecorations', rowDecorations);
     mateParams.put('configuration', configuration);
     mateParams.put('defaultVerticalAlignment', defaultVerticalAlignment);
     mateParams.put('textBaseline', textBaseline);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }

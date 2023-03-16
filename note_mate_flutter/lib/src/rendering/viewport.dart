@@ -92,7 +92,7 @@ class RenderViewport$Mate extends RenderViewport with Mate<RenderViewport$Mate> 
     mateParams.put('crossAxisDirection', crossAxisDirection);
     mateParams.put('offset', offset);
     mateParams.put('anchor', anchor);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('center', center);
     mateParams.put('cacheExtent', cacheExtent);
     mateParams.put('cacheExtentStyle', cacheExtentStyle);
@@ -140,6 +140,6 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport
     mateParams.put('crossAxisDirection', crossAxisDirection);
     mateParams.put('offset', offset);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }

@@ -108,7 +108,7 @@ class MergeableMaterial$Mate extends MergeableMaterial with WidgetMate<Mergeable
     mateParams.put('mainAxis', mainAxis);
     mateParams.put('elevation', elevation);
     mateParams.put('hasDividers', hasDividers);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('dividerColor', dividerColor);
   }
 }

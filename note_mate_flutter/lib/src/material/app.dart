@@ -216,7 +216,7 @@ class MaterialApp$Mate extends MaterialApp with WidgetMate<MaterialApp$Mate> {
     mateParams.put('onGenerateRoute', onGenerateRoute);
     mateParams.put('onGenerateInitialRoutes', onGenerateInitialRoutes);
     mateParams.put('onUnknownRoute', onUnknownRoute);
-    mateParams.put('navigatorObservers', navigatorObservers);
+    mateParams.putList('navigatorObservers', navigatorObservers);
     mateParams.put('builder', builder);
     mateParams.put('title', title);
     mateParams.put('onGenerateTitle', onGenerateTitle);

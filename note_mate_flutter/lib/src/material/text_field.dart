@@ -367,7 +367,7 @@ class TextField$Mate extends TextField with WidgetMate<TextField$Mate> {
     mateParams.put('onEditingComplete', onEditingComplete);
     mateParams.put('onSubmitted', onSubmitted);
     mateParams.put('onAppPrivateCommand', onAppPrivateCommand);
-    mateParams.put('inputFormatters', inputFormatters);
+    mateParams.putList('inputFormatters', inputFormatters);
     mateParams.put('enabled', enabled);
     mateParams.put('cursorWidth', cursorWidth);
     mateParams.put('cursorHeight', cursorHeight);

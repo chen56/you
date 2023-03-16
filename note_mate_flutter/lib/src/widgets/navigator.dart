@@ -168,7 +168,7 @@ class Navigator$Mate extends Navigator with WidgetMate<Navigator$Mate> {
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('pages', pages);
+    mateParams.putList('pages', pages);
     mateParams.put('onPopPage', onPopPage);
     mateParams.put('initialRoute', initialRoute);
     mateParams.put('onGenerateInitialRoutes', onGenerateInitialRoutes);
@@ -177,7 +177,7 @@ class Navigator$Mate extends Navigator with WidgetMate<Navigator$Mate> {
     mateParams.put('transitionDelegate', transitionDelegate);
     mateParams.put('reportsRouteUpdateToEngine', reportsRouteUpdateToEngine);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('observers', observers);
+    mateParams.putList('observers', observers);
     mateParams.put('requestFocus', requestFocus);
     mateParams.put('restorationScopeId', restorationScopeId);
     mateParams.put('routeTraversalEdgeBehavior', routeTraversalEdgeBehavior);

@@ -89,7 +89,7 @@ class NavigationBar$Mate extends NavigationBar with WidgetMate<NavigationBar$Mat
     mateParams.put('key', key);
     mateParams.put('animationDuration', animationDuration);
     mateParams.put('selectedIndex', selectedIndex);
-    mateParams.put('destinations', destinations);
+    mateParams.putList('destinations', destinations);
     mateParams.put('onDestinationSelected', onDestinationSelected);
     mateParams.put('backgroundColor', backgroundColor);
     mateParams.put('elevation', elevation);

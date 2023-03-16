@@ -80,7 +80,7 @@ class CupertinoListSection$Mate extends CupertinoListSection with WidgetMate<Cup
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('header', header);
     mateParams.put('footer', footer);
     mateParams.put('margin', margin);
@@ -162,7 +162,7 @@ class CupertinoListSection$Mate extends CupertinoListSection with WidgetMate<Cup
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('header', header);
     mateParams.put('footer', footer);
     mateParams.put('margin', margin);

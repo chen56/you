@@ -60,7 +60,7 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
     mateParams.put('text', text);
     mateParams.put('isPlaceholder', isPlaceholder);
     mateParams.put('semanticsLabel', semanticsLabel);
-    mateParams.put('stringAttributes', stringAttributes);
+    mateParams.putList('stringAttributes', stringAttributes);
     mateParams.put('recognizer', recognizer);
   }
 }

@@ -162,7 +162,7 @@ class Stepper$Mate extends Stepper with WidgetMate<Stepper$Mate> {
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('steps', steps);
+    mateParams.putList('steps', steps);
     mateParams.put('physics', physics);
     mateParams.put('type', type);
     mateParams.put('currentStep', currentStep);

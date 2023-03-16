@@ -298,7 +298,7 @@ class AlertDialog$Mate extends AlertDialog with WidgetMate<AlertDialog$Mate> {
     mateParams.put('content', content);
     mateParams.put('contentPadding', contentPadding);
     mateParams.put('contentTextStyle', contentTextStyle);
-    mateParams.put('actions', actions);
+    mateParams.putList('actions', actions);
     mateParams.put('actionsPadding', actionsPadding);
     mateParams.put('actionsAlignment', actionsAlignment);
     mateParams.put('actionsOverflowAlignment', actionsOverflowAlignment);
@@ -444,7 +444,7 @@ class SimpleDialog$Mate extends SimpleDialog with WidgetMate<SimpleDialog$Mate> 
     mateParams.put('title', title);
     mateParams.put('titlePadding', titlePadding);
     mateParams.put('titleTextStyle', titleTextStyle);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('contentPadding', contentPadding);
     mateParams.put('backgroundColor', backgroundColor);
     mateParams.put('elevation', elevation);

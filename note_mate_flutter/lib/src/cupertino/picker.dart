@@ -94,7 +94,7 @@ class CupertinoPicker$Mate extends CupertinoPicker with WidgetMate<CupertinoPick
     mateParams.put('squeeze', squeeze);
     mateParams.put('itemExtent', itemExtent);
     mateParams.put('onSelectedItemChanged', onSelectedItemChanged);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('selectionOverlay', selectionOverlay);
     mateParams.put('looping', looping);
   }

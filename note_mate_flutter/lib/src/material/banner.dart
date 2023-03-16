@@ -109,7 +109,7 @@ class MaterialBanner$Mate extends MaterialBanner with WidgetMate<MaterialBanner$
     mateParams.put('key', key);
     mateParams.put('content', content);
     mateParams.put('contentTextStyle', contentTextStyle);
-    mateParams.put('actions', actions);
+    mateParams.putList('actions', actions);
     mateParams.put('elevation', elevation);
     mateParams.put('leading', leading);
     mateParams.put('backgroundColor', backgroundColor);

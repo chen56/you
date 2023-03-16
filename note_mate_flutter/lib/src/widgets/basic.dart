@@ -1164,7 +1164,7 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with WidgetMate
     );
     mateParams.put('key', key);
     mateParams.put('delegate', delegate);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -1862,7 +1862,7 @@ class ListBody$Mate extends ListBody with WidgetMate<ListBody$Mate> {
     mateParams.put('key', key);
     mateParams.put('mainAxis', mainAxis);
     mateParams.put('reverse', reverse);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -1911,7 +1911,7 @@ class Stack$Mate extends Stack with WidgetMate<Stack$Mate> {
     mateParams.put('textDirection', textDirection);
     mateParams.put('fit', fit);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -1966,7 +1966,7 @@ class IndexedStack$Mate extends IndexedStack with WidgetMate<IndexedStack$Mate> 
     mateParams.put('clipBehavior', clipBehavior);
     mateParams.put('sizing', sizing);
     mateParams.put('index', index);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -2263,7 +2263,7 @@ class Flex$Mate extends Flex with WidgetMate<Flex$Mate> {
     mateParams.put('verticalDirection', verticalDirection);
     mateParams.put('textBaseline', textBaseline);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -2324,7 +2324,7 @@ class Row$Mate extends Row with WidgetMate<Row$Mate> {
     mateParams.put('textDirection', textDirection);
     mateParams.put('verticalDirection', verticalDirection);
     mateParams.put('textBaseline', textBaseline);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -2385,7 +2385,7 @@ class Column$Mate extends Column with WidgetMate<Column$Mate> {
     mateParams.put('textDirection', textDirection);
     mateParams.put('verticalDirection', verticalDirection);
     mateParams.put('textBaseline', textBaseline);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -2532,7 +2532,7 @@ class Wrap$Mate extends Wrap with WidgetMate<Wrap$Mate> {
     mateParams.put('textDirection', textDirection);
     mateParams.put('verticalDirection', verticalDirection);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -2568,7 +2568,7 @@ class Flow$Mate extends Flow with WidgetMate<Flow$Mate> {
     );
     mateParams.put('key', key);
     mateParams.put('delegate', delegate);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('clipBehavior', clipBehavior);
   }
 
@@ -2602,7 +2602,7 @@ class Flow$Mate extends Flow with WidgetMate<Flow$Mate> {
     );
     mateParams.put('key', key);
     mateParams.put('delegate', delegate);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('clipBehavior', clipBehavior);
   }
 }

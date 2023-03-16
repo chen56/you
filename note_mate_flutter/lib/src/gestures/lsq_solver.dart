@@ -45,8 +45,8 @@ class LeastSquaresSolver$Mate extends LeastSquaresSolver with Mate<LeastSquaresS
         p.get('w').value,
       ),
     );
-    mateParams.put('x', x);
-    mateParams.put('y', y);
-    mateParams.put('w', w);
+    mateParams.putList('x', x);
+    mateParams.putList('y', y);
+    mateParams.putList('w', w);
   }
 }

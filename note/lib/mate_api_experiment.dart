@@ -60,7 +60,7 @@ class ColumnMate extends Column with WidgetMate<ColumnMate> {
 
     mateParams.put("key", key);
     mateParams.put("mainAxisAlignment", mainAxisAlignment);
-    mateParams.put("children", children);
+    mateParams.putList("children", children);
   }
 }
 

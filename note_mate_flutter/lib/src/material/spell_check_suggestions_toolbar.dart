@@ -35,6 +35,6 @@ class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar
     );
     mateParams.put('key', key);
     mateParams.put('anchor', anchor);
-    mateParams.put('buttonItems', buttonItems);
+    mateParams.putList('buttonItems', buttonItems);
   }
 }

@@ -35,6 +35,6 @@ class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSele
     );
     mateParams.put('key', key);
     mateParams.put('anchor', anchor);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }

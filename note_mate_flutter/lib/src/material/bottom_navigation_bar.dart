@@ -137,7 +137,7 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with WidgetMate<Botto
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('items', items);
+    mateParams.putList('items', items);
     mateParams.put('onTap', onTap);
     mateParams.put('currentIndex', currentIndex);
     mateParams.put('elevation', elevation);

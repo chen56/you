@@ -114,7 +114,7 @@ class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration
       ),
     );
     mateParams.put('onContentInserted', onContentInserted);
-    mateParams.put('allowedMimeTypes', allowedMimeTypes);
+    mateParams.putList('allowedMimeTypes', allowedMimeTypes);
   }
 }
 
@@ -512,7 +512,7 @@ class EditableText$Mate extends EditableText with WidgetMate<EditableText$Mate> 
     mateParams.put('onSelectionChanged', onSelectionChanged);
     mateParams.put('onSelectionHandleTapped', onSelectionHandleTapped);
     mateParams.put('onTapOutside', onTapOutside);
-    mateParams.put('inputFormatters', inputFormatters);
+    mateParams.putList('inputFormatters', inputFormatters);
     mateParams.put('mouseCursor', mouseCursor);
     mateParams.put('rendererIgnoresPointer', rendererIgnoresPointer);
     mateParams.put('cursorWidth', cursorWidth);

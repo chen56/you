@@ -134,7 +134,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Widg
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('prototypeItem', prototypeItem);
     mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);

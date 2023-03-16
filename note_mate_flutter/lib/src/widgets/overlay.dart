@@ -64,7 +64,7 @@ class Overlay$Mate extends Overlay with WidgetMate<Overlay$Mate> {
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('initialEntries', initialEntries);
+    mateParams.putList('initialEntries', initialEntries);
     mateParams.put('clipBehavior', clipBehavior);
   }
 }

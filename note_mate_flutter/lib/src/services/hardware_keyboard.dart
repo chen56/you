@@ -143,7 +143,7 @@ class KeyMessage$Mate extends KeyMessage with Mate<KeyMessage$Mate> {
         p.get('rawEvent').value,
       ),
     );
-    mateParams.put('events', events);
+    mateParams.putList('events', events);
     mateParams.put('rawEvent', rawEvent);
   }
 }

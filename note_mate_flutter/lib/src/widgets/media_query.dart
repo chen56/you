@@ -120,7 +120,7 @@ class MediaQueryData$Mate extends MediaQueryData with Mate<MediaQueryData$Mate> 
     mateParams.put('boldText', boldText);
     mateParams.put('navigationMode', navigationMode);
     mateParams.put('gestureSettings', gestureSettings);
-    mateParams.put('displayFeatures', displayFeatures);
+    mateParams.putList('displayFeatures', displayFeatures);
   }
 
   /// MediaQueryData MediaQueryData.fromView(FlutterView view, {MediaQueryData? platformData})

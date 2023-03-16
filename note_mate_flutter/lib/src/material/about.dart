@@ -68,7 +68,7 @@ class AboutListTile$Mate extends AboutListTile with WidgetMate<AboutListTile$Mat
     mateParams.put('applicationVersion', applicationVersion);
     mateParams.put('applicationIcon', applicationIcon);
     mateParams.put('applicationLegalese', applicationLegalese);
-    mateParams.put('aboutBoxChildren', aboutBoxChildren);
+    mateParams.putList('aboutBoxChildren', aboutBoxChildren);
     mateParams.put('dense', dense);
   }
 }
@@ -118,7 +118,7 @@ class AboutDialog$Mate extends AboutDialog with WidgetMate<AboutDialog$Mate> {
     mateParams.put('applicationVersion', applicationVersion);
     mateParams.put('applicationIcon', applicationIcon);
     mateParams.put('applicationLegalese', applicationLegalese);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 

@@ -127,7 +127,7 @@ class NavigationRail$Mate extends NavigationRail with WidgetMate<NavigationRail$
     mateParams.put('extended', extended);
     mateParams.put('leading', leading);
     mateParams.put('trailing', trailing);
-    mateParams.put('destinations', destinations);
+    mateParams.putList('destinations', destinations);
     mateParams.put('selectedIndex', selectedIndex);
     mateParams.put('onDestinationSelected', onDestinationSelected);
     mateParams.put('elevation', elevation);

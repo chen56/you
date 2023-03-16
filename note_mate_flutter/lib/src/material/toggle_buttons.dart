@@ -150,8 +150,8 @@ class ToggleButtons$Mate extends ToggleButtons with WidgetMate<ToggleButtons$Mat
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
-    mateParams.put('isSelected', isSelected);
+    mateParams.putList('children', children);
+    mateParams.putList('isSelected', isSelected);
     mateParams.put('onPressed', onPressed);
     mateParams.put('mouseCursor', mouseCursor);
     mateParams.put('tapTargetSize', tapTargetSize);
@@ -165,7 +165,7 @@ class ToggleButtons$Mate extends ToggleButtons with WidgetMate<ToggleButtons$Mat
     mateParams.put('highlightColor', highlightColor);
     mateParams.put('hoverColor', hoverColor);
     mateParams.put('splashColor', splashColor);
-    mateParams.put('focusNodes', focusNodes);
+    mateParams.putList('focusNodes', focusNodes);
     mateParams.put('renderBorder', renderBorder);
     mateParams.put('borderColor', borderColor);
     mateParams.put('selectedBorderColor', selectedBorderColor);

@@ -25,7 +25,7 @@ class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Ma
       init: this,
       builder: (p) => ListWheelChildListDelegate$Mate(children: p.get('children').value),
     );
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -42,7 +42,7 @@ class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDe
       init: this,
       builder: (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').value),
     );
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -270,7 +270,7 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with WidgetMate<ListW
     mateParams.put('clipBehavior', clipBehavior);
     mateParams.put('restorationId', restorationId);
     mateParams.put('scrollBehavior', scrollBehavior);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 
   /// ListWheelScrollView ListWheelScrollView.useDelegate({Key? key, ScrollController? controller, ScrollPhysics? physics, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, void Function(int)? onSelectedItemChanged, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, required ListWheelChildDelegate childDelegate})

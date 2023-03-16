@@ -69,7 +69,7 @@ class CupertinoTabView$Mate extends CupertinoTabView with WidgetMate<CupertinoTa
     mateParams.put('routes', routes);
     mateParams.put('onGenerateRoute', onGenerateRoute);
     mateParams.put('onUnknownRoute', onUnknownRoute);
-    mateParams.put('navigatorObservers', navigatorObservers);
+    mateParams.putList('navigatorObservers', navigatorObservers);
     mateParams.put('restorationScopeId', restorationScopeId);
   }
 }

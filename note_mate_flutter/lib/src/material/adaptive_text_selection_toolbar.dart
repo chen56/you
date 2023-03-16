@@ -40,7 +40,7 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('anchors', anchors);
   }
 
@@ -68,7 +68,7 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('buttonItems', buttonItems);
+    mateParams.putList('buttonItems', buttonItems);
     mateParams.put('anchors', anchors);
   }
 

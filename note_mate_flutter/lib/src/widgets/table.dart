@@ -37,7 +37,7 @@ class TableRow$Mate extends TableRow with Mate<TableRow$Mate> {
     );
     mateParams.put('key', key);
     mateParams.put('decoration', decoration);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 
@@ -92,7 +92,7 @@ class Table$Mate extends Table with WidgetMate<Table$Mate> {
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('columnWidths', columnWidths);
     mateParams.put('defaultColumnWidth', defaultColumnWidth);
     mateParams.put('textDirection', textDirection);

@@ -46,7 +46,7 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar
     mateParams.put('key', key);
     mateParams.put('anchorAbove', anchorAbove);
     mateParams.put('anchorBelow', anchorBelow);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('toolbarBuilder', toolbarBuilder);
   }
 }

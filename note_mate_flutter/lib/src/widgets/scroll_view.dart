@@ -121,7 +121,7 @@ class CustomScrollView$Mate extends CustomScrollView with WidgetMate<CustomScrol
     mateParams.put('center', center);
     mateParams.put('anchor', anchor);
     mateParams.put('cacheExtent', cacheExtent);
-    mateParams.put('slivers', slivers);
+    mateParams.putList('slivers', slivers);
     mateParams.put('semanticChildCount', semanticChildCount);
     mateParams.put('dragStartBehavior', dragStartBehavior);
     mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
@@ -254,7 +254,7 @@ class ListView$Mate extends ListView with WidgetMate<ListView$Mate> {
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
     mateParams.put('addSemanticIndexes', addSemanticIndexes);
     mateParams.put('cacheExtent', cacheExtent);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('semanticChildCount', semanticChildCount);
     mateParams.put('dragStartBehavior', dragStartBehavior);
     mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
@@ -765,7 +765,7 @@ class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
     mateParams.put('addSemanticIndexes', addSemanticIndexes);
     mateParams.put('cacheExtent', cacheExtent);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('semanticChildCount', semanticChildCount);
     mateParams.put('dragStartBehavior', dragStartBehavior);
     mateParams.put('clipBehavior', clipBehavior);
@@ -1149,7 +1149,7 @@ class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
     mateParams.put('addSemanticIndexes', addSemanticIndexes);
     mateParams.put('cacheExtent', cacheExtent);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('semanticChildCount', semanticChildCount);
     mateParams.put('dragStartBehavior', dragStartBehavior);
     mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);
@@ -1291,7 +1291,7 @@ class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
     mateParams.put('addSemanticIndexes', addSemanticIndexes);
     mateParams.put('cacheExtent', cacheExtent);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('semanticChildCount', semanticChildCount);
     mateParams.put('dragStartBehavior', dragStartBehavior);
     mateParams.put('keyboardDismissBehavior', keyboardDismissBehavior);

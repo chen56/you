@@ -202,7 +202,7 @@ class PageView$Mate extends PageView with WidgetMate<PageView$Mate> {
     mateParams.put('physics', physics);
     mateParams.put('pageSnapping', pageSnapping);
     mateParams.put('onPageChanged', onPageChanged);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('dragStartBehavior', dragStartBehavior);
     mateParams.put('allowImplicitScrolling', allowImplicitScrolling);
     mateParams.put('restorationId', restorationId);

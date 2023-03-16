@@ -63,7 +63,7 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with WidgetMate<FlexibleSpa
     mateParams.put('centerTitle', centerTitle);
     mateParams.put('titlePadding', titlePadding);
     mateParams.put('collapseMode', collapseMode);
-    mateParams.put('stretchModes', stretchModes);
+    mateParams.putList('stretchModes', stretchModes);
     mateParams.put('expandedTitleScale', expandedTitleScale);
   }
 }

@@ -79,7 +79,7 @@ class Viewport$Mate extends Viewport with WidgetMate<Viewport$Mate> {
     mateParams.put('cacheExtent', cacheExtent);
     mateParams.put('cacheExtentStyle', cacheExtentStyle);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('slivers', slivers);
+    mateParams.putList('slivers', slivers);
   }
 }
 
@@ -128,6 +128,6 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with WidgetMate
     mateParams.put('crossAxisDirection', crossAxisDirection);
     mateParams.put('offset', offset);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('slivers', slivers);
+    mateParams.putList('slivers', slivers);
   }
 }

@@ -236,7 +236,7 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownB
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('items', items);
+    mateParams.putList('items', items);
     mateParams.put('selectedItemBuilder', selectedItemBuilder);
     mateParams.put('value', value);
     mateParams.put('hint', hint);
@@ -426,7 +426,7 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Wi
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('items', items);
+    mateParams.putList('items', items);
     mateParams.put('selectedItemBuilder', selectedItemBuilder);
     mateParams.put('value', value);
     mateParams.put('hint', hint);

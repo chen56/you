@@ -57,7 +57,7 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Ma
         replacement: p.get('replacement').value,
       ),
     );
-    mateParams.put('frames', frames);
+    mateParams.putList('frames', frames);
     mateParams.put('replacement', replacement);
   }
 }
@@ -177,7 +177,7 @@ class FlutterError$Mate extends FlutterError with Mate<FlutterError$Mate> {
       init: this,
       builder: (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value),
     );
-    mateParams.put('diagnostics', diagnostics);
+    mateParams.putList('diagnostics', diagnostics);
   }
 }
 

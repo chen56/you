@@ -160,16 +160,16 @@ class TextStyle$Mate extends TextStyle with Mate<TextStyle$Mate> {
     mateParams.put('locale', locale);
     mateParams.put('foreground', foreground);
     mateParams.put('background', background);
-    mateParams.put('shadows', shadows);
-    mateParams.put('fontFeatures', fontFeatures);
-    mateParams.put('fontVariations', fontVariations);
+    mateParams.putList('shadows', shadows);
+    mateParams.putList('fontFeatures', fontFeatures);
+    mateParams.putList('fontVariations', fontVariations);
     mateParams.put('decoration', decoration);
     mateParams.put('decorationColor', decorationColor);
     mateParams.put('decorationStyle', decorationStyle);
     mateParams.put('decorationThickness', decorationThickness);
     mateParams.put('debugLabel', debugLabel);
     mateParams.put('fontFamily', fontFamily);
-    mateParams.put('fontFamilyFallback', fontFamilyFallback);
+    mateParams.putList('fontFamilyFallback', fontFamilyFallback);
     mateParams.put('package', package);
     mateParams.put('overflow', overflow);
   }

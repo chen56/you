@@ -72,6 +72,6 @@ class OverflowBar$Mate extends OverflowBar with WidgetMate<OverflowBar$Mate> {
     mateParams.put('overflowDirection', overflowDirection);
     mateParams.put('textDirection', textDirection);
     mateParams.put('clipBehavior', clipBehavior);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }

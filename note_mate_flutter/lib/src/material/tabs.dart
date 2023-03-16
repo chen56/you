@@ -204,7 +204,7 @@ class TabBar$Mate extends TabBar with WidgetMate<TabBar$Mate> {
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('tabs', tabs);
+    mateParams.putList('tabs', tabs);
     mateParams.put('controller', controller);
     mateParams.put('isScrollable', isScrollable);
     mateParams.put('padding', padding);
@@ -277,7 +277,7 @@ class TabBarView$Mate extends TabBarView with WidgetMate<TabBarView$Mate> {
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('controller', controller);
     mateParams.put('physics', physics);
     mateParams.put('dragStartBehavior', dragStartBehavior);

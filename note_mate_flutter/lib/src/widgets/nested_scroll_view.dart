@@ -263,7 +263,7 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Widget
     mateParams.put('anchor', anchor);
     mateParams.put('offset', offset);
     mateParams.put('center', center);
-    mateParams.put('slivers', slivers);
+    mateParams.putList('slivers', slivers);
     mateParams.put('handle', handle);
     mateParams.put('clipBehavior', clipBehavior);
   }
@@ -324,7 +324,7 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
     mateParams.put('crossAxisDirection', crossAxisDirection);
     mateParams.put('offset', offset);
     mateParams.put('anchor', anchor);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('center', center);
     mateParams.put('handle', handle);
     mateParams.put('clipBehavior', clipBehavior);

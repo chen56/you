@@ -78,7 +78,7 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Widget
     mateParams.put('decoration', decoration);
     mateParams.put('margin', margin);
     mateParams.put('currentAccountPicture', currentAccountPicture);
-    mateParams.put('otherAccountsPictures', otherAccountsPictures);
+    mateParams.putList('otherAccountsPictures', otherAccountsPictures);
     mateParams.put('currentAccountPictureSize', currentAccountPictureSize);
     mateParams.put('otherAccountsPicturesSize', otherAccountsPicturesSize);
     mateParams.put('accountName', accountName);

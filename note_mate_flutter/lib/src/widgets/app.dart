@@ -179,7 +179,7 @@ class WidgetsApp$Mate extends WidgetsApp with WidgetMate<WidgetsApp$Mate> {
     mateParams.put('onGenerateRoute', onGenerateRoute);
     mateParams.put('onGenerateInitialRoutes', onGenerateInitialRoutes);
     mateParams.put('onUnknownRoute', onUnknownRoute);
-    mateParams.put('navigatorObservers', navigatorObservers);
+    mateParams.putList('navigatorObservers', navigatorObservers);
     mateParams.put('initialRoute', initialRoute);
     mateParams.put('pageRouteBuilder', pageRouteBuilder);
     mateParams.put('home', home);

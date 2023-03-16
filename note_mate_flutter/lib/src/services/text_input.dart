@@ -136,7 +136,7 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate<TextI
     mateParams.put('textCapitalization', textCapitalization);
     mateParams.put('autofillConfiguration', autofillConfiguration);
     mateParams.put('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    mateParams.put('allowedMimeTypes', allowedMimeTypes);
+    mateParams.putList('allowedMimeTypes', allowedMimeTypes);
     mateParams.put('enableDeltaModel', enableDeltaModel);
   }
 }

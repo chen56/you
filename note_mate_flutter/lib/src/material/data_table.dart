@@ -96,7 +96,7 @@ class DataRow$Mate extends DataRow with Mate<DataRow$Mate> {
     mateParams.put('onSelectChanged', onSelectChanged);
     mateParams.put('onLongPress', onLongPress);
     mateParams.put('color', color);
-    mateParams.put('cells', cells);
+    mateParams.putList('cells', cells);
   }
 
   /// DataRow DataRow.byIndex({int? index, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
@@ -142,7 +142,7 @@ class DataRow$Mate extends DataRow with Mate<DataRow$Mate> {
     mateParams.put('onSelectChanged', onSelectChanged);
     mateParams.put('onLongPress', onLongPress);
     mateParams.put('color', color);
-    mateParams.put('cells', cells);
+    mateParams.putList('cells', cells);
   }
 }
 
@@ -327,7 +327,7 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('columns', columns);
+    mateParams.putList('columns', columns);
     mateParams.put('sortColumnIndex', sortColumnIndex);
     mateParams.put('sortAscending', sortAscending);
     mateParams.put('onSelectAll', onSelectAll);
@@ -344,7 +344,7 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
     mateParams.put('showCheckboxColumn', showCheckboxColumn);
     mateParams.put('showBottomBorder', showBottomBorder);
     mateParams.put('dividerThickness', dividerThickness);
-    mateParams.put('rows', rows);
+    mateParams.putList('rows', rows);
     mateParams.put('checkboxHorizontalMargin', checkboxHorizontalMargin);
     mateParams.put('border', border);
     mateParams.put('clipBehavior', clipBehavior);

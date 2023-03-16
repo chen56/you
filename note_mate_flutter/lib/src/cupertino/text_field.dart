@@ -395,7 +395,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
     mateParams.put('onEditingComplete', onEditingComplete);
     mateParams.put('onSubmitted', onSubmitted);
     mateParams.put('onTapOutside', onTapOutside);
-    mateParams.put('inputFormatters', inputFormatters);
+    mateParams.putList('inputFormatters', inputFormatters);
     mateParams.put('enabled', enabled);
     mateParams.put('cursorWidth', cursorWidth);
     mateParams.put('cursorHeight', cursorHeight);
@@ -789,7 +789,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
     mateParams.put('onEditingComplete', onEditingComplete);
     mateParams.put('onSubmitted', onSubmitted);
     mateParams.put('onTapOutside', onTapOutside);
-    mateParams.put('inputFormatters', inputFormatters);
+    mateParams.putList('inputFormatters', inputFormatters);
     mateParams.put('enabled', enabled);
     mateParams.put('cursorWidth', cursorWidth);
     mateParams.put('cursorHeight', cursorHeight);

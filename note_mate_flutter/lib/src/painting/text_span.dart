@@ -71,7 +71,7 @@ class TextSpan$Mate extends TextSpan with Mate<TextSpan$Mate> {
       ),
     );
     mateParams.put('text', text);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('style', style);
     mateParams.put('recognizer', recognizer);
     mateParams.put('mouseCursor', mouseCursor);

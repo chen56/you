@@ -79,7 +79,7 @@ class Icon$Mate extends Icon with WidgetMate<Icon$Mate> {
     mateParams.put('grade', grade);
     mateParams.put('opticalSize', opticalSize);
     mateParams.put('color', color);
-    mateParams.put('shadows', shadows);
+    mateParams.putList('shadows', shadows);
     mateParams.put('semanticLabel', semanticLabel);
     mateParams.put('textDirection', textDirection);
   }

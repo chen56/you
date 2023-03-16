@@ -307,6 +307,6 @@ class RenderEditable$Mate extends RenderEditable with Mate<RenderEditable$Mate> 
     mateParams.put('textSelectionDelegate', textSelectionDelegate);
     mateParams.put('painter', painter);
     mateParams.put('foregroundPainter', foregroundPainter);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }

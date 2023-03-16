@@ -60,7 +60,7 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<Cup
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('header', header);
     mateParams.put('footer', footer);
     mateParams.put('margin', margin);
@@ -118,7 +118,7 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<Cup
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('header', header);
     mateParams.put('footer', footer);
     mateParams.put('margin', margin);

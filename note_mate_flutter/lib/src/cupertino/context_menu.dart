@@ -37,7 +37,7 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('actions', actions);
+    mateParams.putList('actions', actions);
     mateParams.put('child', child);
     mateParams.put('enableHapticFeedback', enableHapticFeedback);
   }
@@ -71,7 +71,7 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('actions', actions);
+    mateParams.putList('actions', actions);
     mateParams.put('builder', builder);
     mateParams.put('enableHapticFeedback', enableHapticFeedback);
   }

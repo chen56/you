@@ -106,7 +106,7 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate<Sli
         semanticIndexOffset: p.get('semanticIndexOffset').value,
       ),
     );
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
     mateParams.put('addSemanticIndexes', addSemanticIndexes);
@@ -151,7 +151,7 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate<Sli
         semanticIndexOffset: p.get('semanticIndexOffset').value,
       ),
     );
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
     mateParams.put('addSemanticIndexes', addSemanticIndexes);
@@ -328,7 +328,7 @@ class SliverList$Mate extends SliverList with WidgetMate<SliverList$Mate> {
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
     mateParams.put('addSemanticIndexes', addSemanticIndexes);
@@ -462,7 +462,7 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with WidgetMate<S
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('itemExtent', itemExtent);
     mateParams.put('addAutomaticKeepAlives', addAutomaticKeepAlives);
     mateParams.put('addRepaintBoundaries', addRepaintBoundaries);
@@ -601,7 +601,7 @@ class SliverGrid$Mate extends SliverGrid with WidgetMate<SliverGrid$Mate> {
     mateParams.put('mainAxisSpacing', mainAxisSpacing);
     mateParams.put('crossAxisSpacing', crossAxisSpacing);
     mateParams.put('childAspectRatio', childAspectRatio);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 
   /// SliverGrid SliverGrid.extent({Key? key, required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, List<Widget> children = const <Widget>[]})
@@ -647,7 +647,7 @@ class SliverGrid$Mate extends SliverGrid with WidgetMate<SliverGrid$Mate> {
     mateParams.put('mainAxisSpacing', mainAxisSpacing);
     mateParams.put('crossAxisSpacing', crossAxisSpacing);
     mateParams.put('childAspectRatio', childAspectRatio);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }
 

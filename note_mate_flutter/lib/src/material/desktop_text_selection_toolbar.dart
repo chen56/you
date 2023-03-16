@@ -35,6 +35,6 @@ class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar
     );
     mateParams.put('key', key);
     mateParams.put('anchor', anchor);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
   }
 }

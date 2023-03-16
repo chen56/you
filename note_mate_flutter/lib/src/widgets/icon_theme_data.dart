@@ -62,6 +62,6 @@ class IconThemeData$Mate extends IconThemeData with Mate<IconThemeData$Mate> {
     mateParams.put('opticalSize', opticalSize);
     mateParams.put('color', color);
     mateParams.put('opacity', opacity);
-    mateParams.put('shadows', shadows);
+    mateParams.putList('shadows', shadows);
   }
 }

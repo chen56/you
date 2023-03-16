@@ -117,7 +117,7 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with WidgetMate<Cuperti
     mateParams.put('size', size);
     mateParams.put('borderRadius', borderRadius);
     mateParams.put('additionalFocalPointOffset', additionalFocalPointOffset);
-    mateParams.put('shadows', shadows);
+    mateParams.putList('shadows', shadows);
     mateParams.put('borderSide', borderSide);
     mateParams.put('inOutAnimation', inOutAnimation);
   }

@@ -83,7 +83,7 @@ class AttributedString$Mate extends AttributedString with Mate<AttributedString$
       ),
     );
     mateParams.put('string', string);
-    mateParams.put('attributes', attributes);
+    mateParams.putList('attributes', attributes);
   }
 }
 
@@ -294,7 +294,7 @@ class SemanticsData$Mate extends SemanticsData with Mate<SemanticsData$Mate> {
     mateParams.put('currentValueLength', currentValueLength);
     mateParams.put('tags', tags);
     mateParams.put('transform', transform);
-    mateParams.put('customSemanticsActionIds', customSemanticsActionIds);
+    mateParams.putList('customSemanticsActionIds', customSemanticsActionIds);
   }
 }
 

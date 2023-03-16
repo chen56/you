@@ -70,7 +70,7 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with WidgetMate<CupertinoTabB
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('items', items);
+    mateParams.putList('items', items);
     mateParams.put('onTap', onTap);
     mateParams.put('currentIndex', currentIndex);
     mateParams.put('backgroundColor', backgroundColor);

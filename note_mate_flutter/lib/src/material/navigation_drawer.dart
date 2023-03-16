@@ -70,7 +70,7 @@ class NavigationDrawer$Mate extends NavigationDrawer with WidgetMate<NavigationD
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('backgroundColor', backgroundColor);
     mateParams.put('shadowColor', shadowColor);
     mateParams.put('surfaceTintColor', surfaceTintColor);

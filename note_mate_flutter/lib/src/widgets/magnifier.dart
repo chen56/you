@@ -114,7 +114,7 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate<MagnifierDe
       ),
     );
     mateParams.put('opacity', opacity);
-    mateParams.put('shadows', shadows);
+    mateParams.putList('shadows', shadows);
     mateParams.put('shape', shape);
   }
 }

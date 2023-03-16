@@ -17,7 +17,7 @@ class TweenSequence$Mate<T> extends TweenSequence<T> with Mate<TweenSequence$Mat
       init: this,
       builder: (p) => TweenSequence$Mate(p.get('items').value),
     );
-    mateParams.put('items', items);
+    mateParams.putList('items', items);
   }
 }
 
@@ -33,7 +33,7 @@ class FlippedTweenSequence$Mate extends FlippedTweenSequence with Mate<FlippedTw
       init: this,
       builder: (p) => FlippedTweenSequence$Mate(p.get('items').value),
     );
-    mateParams.put('items', items);
+    mateParams.putList('items', items);
   }
 }
 

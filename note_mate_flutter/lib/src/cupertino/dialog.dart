@@ -63,7 +63,7 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with WidgetMate<Cup
     mateParams.put('key', key);
     mateParams.put('title', title);
     mateParams.put('content', content);
-    mateParams.put('actions', actions);
+    mateParams.putList('actions', actions);
     mateParams.put('scrollController', scrollController);
     mateParams.put('actionScrollController', actionScrollController);
     mateParams.put('insetAnimationDuration', insetAnimationDuration);
@@ -150,7 +150,7 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with WidgetMate<Cup
     mateParams.put('key', key);
     mateParams.put('title', title);
     mateParams.put('message', message);
-    mateParams.put('actions', actions);
+    mateParams.putList('actions', actions);
     mateParams.put('messageScrollController', messageScrollController);
     mateParams.put('actionScrollController', actionScrollController);
     mateParams.put('cancelButton', cancelButton);

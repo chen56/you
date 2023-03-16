@@ -127,7 +127,7 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with WidgetMate<PlatformMenuB
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('menus', menus);
+    mateParams.putList('menus', menus);
     mateParams.put('child', child);
   }
 }
@@ -165,7 +165,7 @@ class PlatformMenu$Mate extends PlatformMenu with Mate<PlatformMenu$Mate> {
     mateParams.put('label', label);
     mateParams.put('onOpen', onOpen);
     mateParams.put('onClose', onClose);
-    mateParams.put('menus', menus);
+    mateParams.putList('menus', menus);
   }
 }
 
@@ -181,7 +181,7 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate<Platfor
       init: this,
       builder: (p) => PlatformMenuItemGroup$Mate(members: p.get('members').value),
     );
-    mateParams.put('members', members);
+    mateParams.putList('members', members);
   }
 }
 

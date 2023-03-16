@@ -117,7 +117,7 @@ class RenderParagraph$Mate extends RenderParagraph with Mate<RenderParagraph$Mat
     mateParams.put('strutStyle', strutStyle);
     mateParams.put('textWidthBasis', textWidthBasis);
     mateParams.put('textHeightBehavior', textHeightBehavior);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('selectionColor', selectionColor);
     mateParams.put('registrar', registrar);
   }

@@ -277,7 +277,7 @@ class Scaffold$Mate extends Scaffold with WidgetMate<Scaffold$Mate> {
     mateParams.put('floatingActionButton', floatingActionButton);
     mateParams.put('floatingActionButtonLocation', floatingActionButtonLocation);
     mateParams.put('floatingActionButtonAnimator', floatingActionButtonAnimator);
-    mateParams.put('persistentFooterButtons', persistentFooterButtons);
+    mateParams.putList('persistentFooterButtons', persistentFooterButtons);
     mateParams.put('persistentFooterAlignment', persistentFooterAlignment);
     mateParams.put('drawer', drawer);
     mateParams.put('onDrawerChanged', onDrawerChanged);

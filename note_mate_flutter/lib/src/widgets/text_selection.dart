@@ -274,7 +274,7 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate<SelectionOverlay$
     mateParams.put('onEndHandleDragUpdate', onEndHandleDragUpdate);
     mateParams.put('onEndHandleDragEnd', onEndHandleDragEnd);
     mateParams.put('toolbarVisible', toolbarVisible);
-    mateParams.put('selectionEndpoints', selectionEndpoints);
+    mateParams.putList('selectionEndpoints', selectionEndpoints);
     mateParams.put('selectionControls', selectionControls);
     mateParams.put('selectionDelegate', selectionDelegate);
     mateParams.put('clipboardStatus', clipboardStatus);

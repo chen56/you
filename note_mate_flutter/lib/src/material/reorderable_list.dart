@@ -145,7 +145,7 @@ class ReorderableListView$Mate extends ReorderableListView with WidgetMate<Reord
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('onReorder', onReorder);
     mateParams.put('onReorderStart', onReorderStart);
     mateParams.put('onReorderEnd', onReorderEnd);

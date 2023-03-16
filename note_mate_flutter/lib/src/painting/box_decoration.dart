@@ -64,7 +64,7 @@ class BoxDecoration$Mate extends BoxDecoration with Mate<BoxDecoration$Mate> {
     mateParams.put('image', image);
     mateParams.put('border', border);
     mateParams.put('borderRadius', borderRadius);
-    mateParams.put('boxShadow', boxShadow);
+    mateParams.putList('boxShadow', boxShadow);
     mateParams.put('gradient', gradient);
     mateParams.put('backgroundBlendMode', backgroundBlendMode);
     mateParams.put('shape', shape);

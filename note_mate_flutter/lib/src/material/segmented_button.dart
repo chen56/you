@@ -100,7 +100,7 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with WidgetMate<Segment
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('segments', segments);
+    mateParams.putList('segments', segments);
     mateParams.put('selected', selected);
     mateParams.put('onSelectionChanged', onSelectionChanged);
     mateParams.put('multiSelectionEnabled', multiSelectionEnabled);

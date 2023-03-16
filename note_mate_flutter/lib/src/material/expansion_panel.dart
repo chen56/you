@@ -145,7 +145,7 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with WidgetMate<Expansi
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('expansionCallback', expansionCallback);
     mateParams.put('animationDuration', animationDuration);
     mateParams.put('expandedHeaderPadding', expandedHeaderPadding);
@@ -208,7 +208,7 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with WidgetMate<Expansi
       ),
     );
     mateParams.put('key', key);
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('expansionCallback', expansionCallback);
     mateParams.put('animationDuration', animationDuration);
     mateParams.put('initialOpenPanelValue', initialOpenPanelValue);

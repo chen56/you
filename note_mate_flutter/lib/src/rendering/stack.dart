@@ -79,7 +79,7 @@ class RenderStack$Mate extends RenderStack with Mate<RenderStack$Mate> {
         clipBehavior: p.get('clipBehavior').value,
       ),
     );
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('alignment', alignment);
     mateParams.put('textDirection', textDirection);
     mateParams.put('fit', fit);
@@ -127,7 +127,7 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate<RenderIndexed
         index: p.get('index').value,
       ),
     );
-    mateParams.put('children', children);
+    mateParams.putList('children', children);
     mateParams.put('alignment', alignment);
     mateParams.put('textDirection', textDirection);
     mateParams.put('fit', fit);

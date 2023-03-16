@@ -62,6 +62,6 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate<Cuper
     mateParams.put('opticalSize', opticalSize);
     mateParams.put('color', color);
     mateParams.put('opacity', opacity);
-    mateParams.put('shadows', shadows);
+    mateParams.putList('shadows', shadows);
   }
 }

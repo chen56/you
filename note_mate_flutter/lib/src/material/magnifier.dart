@@ -79,7 +79,7 @@ class Magnifier$Mate extends Magnifier with WidgetMate<Magnifier$Mate> {
     mateParams.put('additionalFocalPointOffset', additionalFocalPointOffset);
     mateParams.put('borderRadius', borderRadius);
     mateParams.put('filmColor', filmColor);
-    mateParams.put('shadows', shadows);
+    mateParams.putList('shadows', shadows);
     mateParams.put('size', size);
   }
 }
