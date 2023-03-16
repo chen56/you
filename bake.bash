@@ -160,16 +160,21 @@ option() {
   /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
   /preview() {
     echo "bake preview"
-    flutter build web --release --web-renderer html --base-href='/' "$@"
-    # 	npx http-server ./build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./build/web --port 8000
+    /build "$@"
+    # 	npx http-server ./app_note/build/web --port 8000
+    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./app_note/build/web --port 8000
   }
 }
 
 /build?() {
   /build?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
-  /build?run() {
-    run flutter build web --release --web-renderer html --base-href='/' "$@"
+  /build() {
+    (
+      run cd note_app;
+      run flutter build web  --enable-experiment=records \
+                             --enable-experiment=patterns \
+                             --release --web-renderer html --base-href='/' "$@";
+    )
   }
 }
 
@@ -190,7 +195,7 @@ option() {
 
 /gen_mate?() {
   /gen_mate?shortHelp() { cat <<<"build_runner，代码生成"; }
-  /gen_mate?run() {
+  /gen_mate() {
     run dart run build_runner build -o lib:build/bulid_runner -c mate "$@"
   }
 }

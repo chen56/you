@@ -51,8 +51,8 @@ jobs:
       - name: Build
         run: |
           ./bake build
-          ls ./build/web/
+          ls ./note_app/build/web/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./build/web
+          path: ./note_app/build/web
