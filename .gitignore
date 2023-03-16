@@ -1,7 +1,19 @@
 # See https://www.dartlang.org/guides/libraries/private-files
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
 
-# idea 
-.idea
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
 
 # Files and directories created by pub
 .dart_tool/
@@ -22,6 +34,3 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
-
-# macbook
-.DS_Store
