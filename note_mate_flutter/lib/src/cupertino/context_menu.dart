@@ -8,7 +8,7 @@ import 'package:note/mate.dart';
 
 /// class CupertinoContextMenu extends StatefulWidget
 class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<CupertinoContextMenu$Mate> {
-  /// CupertinoContextMenu CupertinoContextMenu({Key? key, required List<Widget> actions, required Widget child, bool enableHapticFeedback = false, Widget Function(BuildContext, Animation<double>, Widget)? previewBuilder = _defaultPreviewBuilder})
+  /// CupertinoContextMenu CupertinoContextMenu({Key? key, required List<Widget> actions, required Widget child, Widget Function(BuildContext, Animation<double>, Widget)? previewBuilder = _defaultPreviewBuilder})
   CupertinoContextMenu$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -18,14 +18,10 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
 
     /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
     required Widget child,
-
-    /// optionalParameters: {bool enableHapticFeedback = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool enableHapticFeedback,
   }) : super(
           key: key,
           actions: actions,
           child: child,
-          enableHapticFeedback: enableHapticFeedback,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -33,16 +29,14 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
         key: p.get('key').value,
         actions: p.get('actions').value,
         child: p.get('child').value,
-        enableHapticFeedback: p.get('enableHapticFeedback').value,
       ),
     );
     mateParams.put('key', key);
     mateParams.putList('actions', actions);
     mateParams.put('child', child);
-    mateParams.put('enableHapticFeedback', enableHapticFeedback);
   }
 
-  /// CupertinoContextMenu CupertinoContextMenu.builder({Key? key, required List<Widget> actions, required Widget Function(BuildContext, Animation<double>) builder, bool enableHapticFeedback = false})
+  /// CupertinoContextMenu CupertinoContextMenu.builder({Key? key, required List<Widget> actions, required Widget Function(BuildContext, Animation<double>) builder})
   CupertinoContextMenu$Mate.builder({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -52,14 +46,10 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
 
     /// optionalParameters: {required Widget Function(BuildContext, Animation<double>) builder} , hasDefaultValue:false, defaultValueCode:null
     required CupertinoContextMenuBuilder builder,
-
-    /// optionalParameters: {bool enableHapticFeedback = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool enableHapticFeedback,
   }) : super.builder(
           key: key,
           actions: actions,
           builder: builder,
-          enableHapticFeedback: enableHapticFeedback,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -67,12 +57,10 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
         key: p.get('key').value,
         actions: p.get('actions').value,
         builder: p.get('builder').value,
-        enableHapticFeedback: p.get('enableHapticFeedback').value,
       ),
     );
     mateParams.put('key', key);
     mateParams.putList('actions', actions);
     mateParams.put('builder', builder);
-    mateParams.put('enableHapticFeedback', enableHapticFeedback);
   }
 }

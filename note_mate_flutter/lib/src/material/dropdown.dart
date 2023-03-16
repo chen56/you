@@ -11,7 +11,6 @@ import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/painting/border_radius.dart';
-import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/material/input_decorator.dart';
 import 'package:flutter/src/widgets/form.dart';
 
@@ -92,7 +91,7 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
 
 /// class DropdownButton<T> extends StatefulWidget
 class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownButton$Mate> {
-  /// DropdownButton<T> DropdownButton({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? underline, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = false, bool isExpanded = false, double? itemHeight = kMinInteractiveDimension, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
+  /// DropdownButton<T> DropdownButton({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? underline, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = false, bool isExpanded = false, double? itemHeight = kMinInteractiveDimension, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius})
   DropdownButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -171,9 +170,6 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownB
 
     /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
     BorderRadius? borderRadius,
-
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
-    EdgeInsetsGeometry? padding,
   }) : super(
           key: key,
           items: items,
@@ -201,7 +197,6 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownB
           enableFeedback: enableFeedback,
           alignment: alignment,
           borderRadius: borderRadius,
-          padding: padding,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -232,7 +227,6 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownB
         enableFeedback: p.get('enableFeedback').value,
         alignment: p.get('alignment').value,
         borderRadius: p.get('borderRadius').value,
-        padding: p.get('padding').value,
       ),
     );
     mateParams.put('key', key);
@@ -261,13 +255,12 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownB
     mateParams.put('enableFeedback', enableFeedback);
     mateParams.put('alignment', alignment);
     mateParams.put('borderRadius', borderRadius);
-    mateParams.put('padding', padding);
   }
 }
 
 /// class DropdownButtonFormField<T> extends FormField<T>
 class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with WidgetMate<DropdownButtonFormField$Mate> {
-  /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
+  /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius})
   DropdownButtonFormField$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -355,9 +348,6 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Wi
 
     /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
     BorderRadius? borderRadius,
-
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
-    EdgeInsetsGeometry? padding,
   }) : super(
           key: key,
           items: items,
@@ -388,7 +378,6 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Wi
           enableFeedback: enableFeedback,
           alignment: alignment,
           borderRadius: borderRadius,
-          padding: padding,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -422,7 +411,6 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Wi
         enableFeedback: p.get('enableFeedback').value,
         alignment: p.get('alignment').value,
         borderRadius: p.get('borderRadius').value,
-        padding: p.get('padding').value,
       ),
     );
     mateParams.put('key', key);
@@ -454,6 +442,5 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Wi
     mateParams.put('enableFeedback', enableFeedback);
     mateParams.put('alignment', alignment);
     mateParams.put('borderRadius', borderRadius);
-    mateParams.put('padding', padding);
   }
 }

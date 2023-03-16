@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 /// class DataTableThemeData with Diagnosticable
 class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThemeData$Mate> {
-  /// DataTableThemeData DataTableThemeData({Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, double? dividerThickness, double? checkboxHorizontalMargin})
+  /// DataTableThemeData DataTableThemeData({Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, double? dividerThickness, double? checkboxHorizontalMargin})
   DataTableThemeData$Mate({
     /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
     Decoration? decoration,
@@ -20,11 +20,8 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThem
     /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , hasDefaultValue:false, defaultValueCode:null
     MaterialStateProperty<Color?>? dataRowColor,
 
-    /// optionalParameters: {double? dataRowMinHeight} , hasDefaultValue:false, defaultValueCode:null
-    double? dataRowMinHeight,
-
-    /// optionalParameters: {double? dataRowMaxHeight} , hasDefaultValue:false, defaultValueCode:null
-    double? dataRowMaxHeight,
+    /// optionalParameters: {double? dataRowHeight} , hasDefaultValue:false, defaultValueCode:null
+    double? dataRowHeight,
 
     /// optionalParameters: {TextStyle? dataTextStyle} , hasDefaultValue:false, defaultValueCode:null
     TextStyle? dataTextStyle,
@@ -52,8 +49,7 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThem
   }) : super(
           decoration: decoration,
           dataRowColor: dataRowColor,
-          dataRowMinHeight: dataRowMinHeight,
-          dataRowMaxHeight: dataRowMaxHeight,
+          dataRowHeight: dataRowHeight,
           dataTextStyle: dataTextStyle,
           headingRowColor: headingRowColor,
           headingRowHeight: headingRowHeight,
@@ -68,8 +64,7 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThem
       builder: (p) => DataTableThemeData$Mate(
         decoration: p.get('decoration').value,
         dataRowColor: p.get('dataRowColor').value,
-        dataRowMinHeight: p.get('dataRowMinHeight').value,
-        dataRowMaxHeight: p.get('dataRowMaxHeight').value,
+        dataRowHeight: p.get('dataRowHeight').value,
         dataTextStyle: p.get('dataTextStyle').value,
         headingRowColor: p.get('headingRowColor').value,
         headingRowHeight: p.get('headingRowHeight').value,
@@ -82,8 +77,7 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThem
     );
     mateParams.put('decoration', decoration);
     mateParams.put('dataRowColor', dataRowColor);
-    mateParams.put('dataRowMinHeight', dataRowMinHeight);
-    mateParams.put('dataRowMaxHeight', dataRowMaxHeight);
+    mateParams.put('dataRowHeight', dataRowHeight);
     mateParams.put('dataTextStyle', dataTextStyle);
     mateParams.put('headingRowColor', headingRowColor);
     mateParams.put('headingRowHeight', headingRowHeight);

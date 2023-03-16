@@ -16,7 +16,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 /// class ListTileThemeData with Diagnosticable
 class ListTileThemeData$Mate extends ListTileThemeData with Mate<ListTileThemeData$Mate> {
-  /// ListTileThemeData ListTileThemeData({bool? dense, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, Color? tileColor, Color? selectedTileColor, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, VisualDensity? visualDensity, ListTileTitleAlignment? titleAlignment})
+  /// ListTileThemeData ListTileThemeData({bool? dense, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, Color? tileColor, Color? selectedTileColor, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, VisualDensity? visualDensity})
   ListTileThemeData$Mate({
     /// optionalParameters: {bool? dense} , hasDefaultValue:false, defaultValueCode:null
     bool? dense,
@@ -71,9 +71,6 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate<ListTileThemeDa
 
     /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
     VisualDensity? visualDensity,
-
-    /// optionalParameters: {ListTileTitleAlignment? titleAlignment} , hasDefaultValue:false, defaultValueCode:null
-    ListTileTitleAlignment? titleAlignment,
   }) : super(
           dense: dense,
           shape: shape,
@@ -93,7 +90,6 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate<ListTileThemeDa
           enableFeedback: enableFeedback,
           mouseCursor: mouseCursor,
           visualDensity: visualDensity,
-          titleAlignment: titleAlignment,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -116,7 +112,6 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate<ListTileThemeDa
         enableFeedback: p.get('enableFeedback').value,
         mouseCursor: p.get('mouseCursor').value,
         visualDensity: p.get('visualDensity').value,
-        titleAlignment: p.get('titleAlignment').value,
       ),
     );
     mateParams.put('dense', dense);
@@ -137,7 +132,6 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate<ListTileThemeDa
     mateParams.put('enableFeedback', enableFeedback);
     mateParams.put('mouseCursor', mouseCursor);
     mateParams.put('visualDensity', visualDensity);
-    mateParams.put('titleAlignment', titleAlignment);
   }
 }
 

@@ -4,7 +4,6 @@ import 'package:flutter/src/cupertino/text_field.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/editable_text.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
-import 'package:flutter/src/widgets/undo_history.dart';
 import 'package:flutter/src/painting/box_decoration.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'dart:core';
@@ -28,7 +27,7 @@ import 'package:note/mate.dart';
 
 /// class CupertinoTextField extends StatefulWidget
 class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<CupertinoTextField$Mate> {
-  /// CupertinoTextField CupertinoTextField({Key? key, TextEditingController? controller, FocusNode? focusNode, UndoHistoryController? undoController, BoxDecoration? decoration = _kDefaultRoundedBorderDecoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText), Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
+  /// CupertinoTextField CupertinoTextField({Key? key, TextEditingController? controller, FocusNode? focusNode, BoxDecoration? decoration = _kDefaultRoundedBorderDecoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText), Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
   CupertinoTextField$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -38,9 +37,6 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
 
     /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
     FocusNode? focusNode,
-
-    /// optionalParameters: {UndoHistoryController? undoController} , hasDefaultValue:false, defaultValueCode:null
-    UndoHistoryController? undoController,
 
     /// optionalParameters: {BoxDecoration? decoration = _kDefaultRoundedBorderDecoration} , hasDefaultValue:true, defaultValueCode:_kDefaultRoundedBorderDecoration
     BoxDecoration? decoration,
@@ -225,7 +221,6 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
           key: key,
           controller: controller,
           focusNode: focusNode,
-          undoController: undoController,
           decoration: decoration,
           padding: padding,
           placeholder: placeholder,
@@ -293,7 +288,6 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
         key: p.get('key').value,
         controller: p.get('controller').value,
         focusNode: p.get('focusNode').value,
-        undoController: p.get('undoController').value,
         decoration: p.get('decoration').value,
         padding: p.get('padding').value,
         placeholder: p.get('placeholder').value,
@@ -359,7 +353,6 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
     mateParams.put('key', key);
     mateParams.put('controller', controller);
     mateParams.put('focusNode', focusNode);
-    mateParams.put('undoController', undoController);
     mateParams.put('decoration', decoration);
     mateParams.put('padding', padding);
     mateParams.put('placeholder', placeholder);
@@ -422,7 +415,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
     mateParams.put('magnifierConfiguration', magnifierConfiguration);
   }
 
-  /// CupertinoTextField CupertinoTextField.borderless({Key? key, TextEditingController? controller, FocusNode? focusNode, UndoHistoryController? undoController, BoxDecoration? decoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = _kDefaultPlaceholderStyle, Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
+  /// CupertinoTextField CupertinoTextField.borderless({Key? key, TextEditingController? controller, FocusNode? focusNode, BoxDecoration? decoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = _kDefaultPlaceholderStyle, Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
   CupertinoTextField$Mate.borderless({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -432,9 +425,6 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
 
     /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
     FocusNode? focusNode,
-
-    /// optionalParameters: {UndoHistoryController? undoController} , hasDefaultValue:false, defaultValueCode:null
-    UndoHistoryController? undoController,
 
     /// optionalParameters: {BoxDecoration? decoration} , hasDefaultValue:false, defaultValueCode:null
     BoxDecoration? decoration,
@@ -619,7 +609,6 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
           key: key,
           controller: controller,
           focusNode: focusNode,
-          undoController: undoController,
           decoration: decoration,
           padding: padding,
           placeholder: placeholder,
@@ -687,7 +676,6 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
         key: p.get('key').value,
         controller: p.get('controller').value,
         focusNode: p.get('focusNode').value,
-        undoController: p.get('undoController').value,
         decoration: p.get('decoration').value,
         padding: p.get('padding').value,
         placeholder: p.get('placeholder').value,
@@ -753,7 +741,6 @@ class CupertinoTextField$Mate extends CupertinoTextField with WidgetMate<Cuperti
     mateParams.put('key', key);
     mateParams.put('controller', controller);
     mateParams.put('focusNode', focusNode);
-    mateParams.put('undoController', undoController);
     mateParams.put('decoration', decoration);
     mateParams.put('padding', padding);
     mateParams.put('placeholder', placeholder);

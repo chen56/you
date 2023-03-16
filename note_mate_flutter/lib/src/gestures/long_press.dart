@@ -133,7 +133,7 @@ class LongPressEndDetails$Mate extends LongPressEndDetails with Mate<LongPressEn
 
 /// class LongPressGestureRecognizer extends PrimaryPointerGestureRecognizer
 class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Mate<LongPressGestureRecognizer$Mate> {
-  /// LongPressGestureRecognizer LongPressGestureRecognizer({Duration? duration, double? postAcceptSlopTolerance = null, Set<PointerDeviceKind>? supportedDevices, Object? debugOwner, bool Function(int)? allowedButtonsFilter})
+  /// LongPressGestureRecognizer LongPressGestureRecognizer({Duration? duration, double? postAcceptSlopTolerance = null, Set<PointerDeviceKind>? supportedDevices, Object? debugOwner, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   LongPressGestureRecognizer$Mate({
     /// optionalParameters: {Duration? duration} , hasDefaultValue:false, defaultValueCode:null
     Duration? duration,
@@ -147,7 +147,7 @@ class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Ma
     /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
     Object? debugOwner,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           duration: duration,

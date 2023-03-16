@@ -9,7 +9,7 @@ import 'package:note/mate.dart';
 
 /// class BottomAppBarTheme with Diagnosticable
 class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate<BottomAppBarTheme$Mate> {
-  /// BottomAppBarTheme BottomAppBarTheme({Color? color, double? elevation, NotchedShape? shape, double? height, Color? surfaceTintColor, Color? shadowColor, EdgeInsetsGeometry? padding})
+  /// BottomAppBarTheme BottomAppBarTheme({Color? color, double? elevation, NotchedShape? shape, double? height, Color? surfaceTintColor, EdgeInsetsGeometry? padding})
   BottomAppBarTheme$Mate({
     /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
     Color? color,
@@ -26,9 +26,6 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate<BottomAppBarThe
     /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
-    Color? shadowColor,
-
     /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
     EdgeInsetsGeometry? padding,
   }) : super(
@@ -37,7 +34,6 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate<BottomAppBarThe
           shape: shape,
           height: height,
           surfaceTintColor: surfaceTintColor,
-          shadowColor: shadowColor,
           padding: padding,
         ) {
     mateParams = ObjectParam(
@@ -48,7 +44,6 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate<BottomAppBarThe
         shape: p.get('shape').value,
         height: p.get('height').value,
         surfaceTintColor: p.get('surfaceTintColor').value,
-        shadowColor: p.get('shadowColor').value,
         padding: p.get('padding').value,
       ),
     );
@@ -57,7 +52,6 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate<BottomAppBarThe
     mateParams.put('shape', shape);
     mateParams.put('height', height);
     mateParams.put('surfaceTintColor', surfaceTintColor);
-    mateParams.put('shadowColor', shadowColor);
     mateParams.put('padding', padding);
   }
 }

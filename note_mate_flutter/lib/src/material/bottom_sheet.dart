@@ -14,7 +14,7 @@ import 'package:flutter/src/widgets/navigator.dart';
 
 /// class BottomSheet extends StatefulWidget
 class BottomSheet$Mate extends BottomSheet with WidgetMate<BottomSheet$Mate> {
-  /// BottomSheet BottomSheet({Key? key, AnimationController? animationController, bool enableDrag = true, void Function(DragStartDetails)? onDragStart, void Function(DragEndDetails, {required bool isClosing})? onDragEnd, Color? backgroundColor, Color? shadowColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, required void Function() onClosing, required Widget Function(BuildContext) builder})
+  /// BottomSheet BottomSheet({Key? key, AnimationController? animationController, bool enableDrag = true, void Function(DragStartDetails)? onDragStart, void Function(DragEndDetails, {required bool isClosing})? onDragEnd, Color? backgroundColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, required void Function() onClosing, required Widget Function(BuildContext) builder})
   BottomSheet$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -33,9 +33,6 @@ class BottomSheet$Mate extends BottomSheet with WidgetMate<BottomSheet$Mate> {
 
     /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
     Color? backgroundColor,
-
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
-    Color? shadowColor,
 
     /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
     double? elevation,
@@ -61,7 +58,6 @@ class BottomSheet$Mate extends BottomSheet with WidgetMate<BottomSheet$Mate> {
           onDragStart: onDragStart,
           onDragEnd: onDragEnd,
           backgroundColor: backgroundColor,
-          shadowColor: shadowColor,
           elevation: elevation,
           shape: shape,
           clipBehavior: clipBehavior,
@@ -78,7 +74,6 @@ class BottomSheet$Mate extends BottomSheet with WidgetMate<BottomSheet$Mate> {
         onDragStart: p.get('onDragStart').value,
         onDragEnd: p.get('onDragEnd').value,
         backgroundColor: p.get('backgroundColor').value,
-        shadowColor: p.get('shadowColor').value,
         elevation: p.get('elevation').value,
         shape: p.get('shape').value,
         clipBehavior: p.get('clipBehavior').value,
@@ -93,7 +88,6 @@ class BottomSheet$Mate extends BottomSheet with WidgetMate<BottomSheet$Mate> {
     mateParams.put('onDragStart', onDragStart);
     mateParams.put('onDragEnd', onDragEnd);
     mateParams.put('backgroundColor', backgroundColor);
-    mateParams.put('shadowColor', shadowColor);
     mateParams.put('elevation', elevation);
     mateParams.put('shape', shape);
     mateParams.put('clipBehavior', clipBehavior);

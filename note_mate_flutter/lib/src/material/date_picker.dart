@@ -5,12 +5,11 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/material/date.dart';
 import 'package:flutter/src/services/text_input.dart';
-import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:note/mate.dart';
 
 /// class DatePickerDialog extends StatefulWidget
 class DatePickerDialog$Mate extends DatePickerDialog with WidgetMate<DatePickerDialog$Mate> {
-  /// DatePickerDialog DatePickerDialog({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId, void Function(DatePickerEntryMode)? onDatePickerModeChange})
+  /// DatePickerDialog DatePickerDialog({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId})
   DatePickerDialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -62,9 +61,6 @@ class DatePickerDialog$Mate extends DatePickerDialog with WidgetMate<DatePickerD
 
     /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
     String? restorationId,
-
-    /// optionalParameters: {void Function(DatePickerEntryMode)? onDatePickerModeChange} , hasDefaultValue:false, defaultValueCode:null
-    ValueChanged<DatePickerEntryMode>? onDatePickerModeChange,
   }) : super(
           key: key,
           initialDate: initialDate,
@@ -83,7 +79,6 @@ class DatePickerDialog$Mate extends DatePickerDialog with WidgetMate<DatePickerD
           fieldLabelText: fieldLabelText,
           keyboardType: keyboardType,
           restorationId: restorationId,
-          onDatePickerModeChange: onDatePickerModeChange,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -105,7 +100,6 @@ class DatePickerDialog$Mate extends DatePickerDialog with WidgetMate<DatePickerD
         fieldLabelText: p.get('fieldLabelText').value,
         keyboardType: p.get('keyboardType').value,
         restorationId: p.get('restorationId').value,
-        onDatePickerModeChange: p.get('onDatePickerModeChange').value,
       ),
     );
     mateParams.put('key', key);
@@ -125,7 +119,6 @@ class DatePickerDialog$Mate extends DatePickerDialog with WidgetMate<DatePickerD
     mateParams.put('fieldLabelText', fieldLabelText);
     mateParams.put('keyboardType', keyboardType);
     mateParams.put('restorationId', restorationId);
-    mateParams.put('onDatePickerModeChange', onDatePickerModeChange);
   }
 }
 

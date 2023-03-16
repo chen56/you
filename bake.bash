@@ -171,32 +171,33 @@ option() {
   /build() {
     (
       run cd note_app;
+#      This application cannot tree shake icons fonts. It has non-constant instances of IconData at the following locations:
+#        - file:///Users/cccc/git/chen56/note/note_mate_flutter/lib/src/widgets/icon_data.dart:30:23
+#      Target web_release_bundle failed: Exception: Avoid non-constant invocations of IconData or try to build again with --no-tree-shake-icons.
       run flutter build web  --enable-experiment=records \
                              --enable-experiment=patterns \
                              --release --web-renderer html --base-href='/' "$@";
     )
   }
 }
+/ci?() {
+  /ci?shortHelp() { cat <<<"ci重建"; }
+  /ci() {
+    (
+      flutter --version
+#      /clean
+      /get
+      /build
+      /test
+    )
+  }
+}
 
 /gen?() {
-  /gen?shortHelp() { cat <<<"build_runner，代码生成"; }
+  /gen?shortHelp() { cat <<<"代码生成"; }
   /gen() {
-    /gen_pages
-    /gen_mate
-  }
-}
-
-/gen_pages?() {
-  /gen_pages?shortHelp() { cat <<<"build_runner，代码生成"; }
-  /gen_pages() {
-    run dart run build_runner build -o lib:build/bulid_runner -c pages "$@"
-  }
-}
-
-/gen_mate?() {
-  /gen_mate?shortHelp() { cat <<<"build_runner，代码生成"; }
-  /gen_mate() {
-    run dart run build_runner build -o lib:build/bulid_runner -c mate "$@"
+    (run cd note_app ;          run dart run tools/gen_pages.dart; )
+    (run cd note_mate_flutter ; run dart run tools/gen_mates.dart; )
   }
 }
 
@@ -211,9 +212,9 @@ option() {
 /clean?() {
   /clean?shortHelp() { cat <<<"清理项目目录"; }
   /clean() {
-    echo "bake clean"
-    run flutter clean
-    run dart run build_runner clean
+     (run cd note; run  run flutter clean;)
+     (run cd note_mate_flutter; run  run flutter clean;)
+     (run cd note_app; run  run flutter clean;)
   }
 }
 

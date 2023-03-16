@@ -8,7 +8,7 @@ import 'package:note/mate.dart';
 
 /// class DoubleTapGestureRecognizer extends GestureRecognizer
 class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Mate<DoubleTapGestureRecognizer$Mate> {
-  /// DoubleTapGestureRecognizer DoubleTapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
+  /// DoubleTapGestureRecognizer DoubleTapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   DoubleTapGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
     Object? debugOwner,
@@ -16,7 +16,7 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,

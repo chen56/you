@@ -91,7 +91,7 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate<AssetBundle
 
 /// class ResizeImage extends ImageProvider<ResizeImageKey>
 class ResizeImage$Mate extends ResizeImage with Mate<ResizeImage$Mate> {
-  /// ResizeImage ResizeImage(ImageProvider<Object> imageProvider, {int? width, int? height, ResizeImagePolicy policy = ResizeImagePolicy.exact, bool allowUpscaling = false})
+  /// ResizeImage ResizeImage(ImageProvider<Object> imageProvider, {int? width, int? height, bool allowUpscaling = false})
   ResizeImage$Mate(
     /// requiredParameters: ImageProvider<Object> imageProvider
     ImageProvider<Object> imageProvider, {
@@ -101,16 +101,12 @@ class ResizeImage$Mate extends ResizeImage with Mate<ResizeImage$Mate> {
     /// optionalParameters: {int? height} , hasDefaultValue:false, defaultValueCode:null
     int? height,
 
-    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , hasDefaultValue:true, defaultValueCode:ResizeImagePolicy.exact
-    required ResizeImagePolicy policy,
-
     /// optionalParameters: {bool allowUpscaling = false} , hasDefaultValue:true, defaultValueCode:false
     required bool allowUpscaling,
   }) : super(
           imageProvider,
           width: width,
           height: height,
-          policy: policy,
           allowUpscaling: allowUpscaling,
         ) {
     mateParams = ObjectParam(
@@ -119,14 +115,12 @@ class ResizeImage$Mate extends ResizeImage with Mate<ResizeImage$Mate> {
         p.get('imageProvider').value,
         width: p.get('width').value,
         height: p.get('height').value,
-        policy: p.get('policy').value,
         allowUpscaling: p.get('allowUpscaling').value,
       ),
     );
     mateParams.put('imageProvider', imageProvider);
     mateParams.put('width', width);
     mateParams.put('height', height);
-    mateParams.put('policy', policy);
     mateParams.put('allowUpscaling', allowUpscaling);
   }
 }

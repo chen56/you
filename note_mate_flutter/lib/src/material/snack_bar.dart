@@ -57,7 +57,7 @@ class SnackBarAction$Mate extends SnackBarAction with WidgetMate<SnackBarAction$
 
 /// class SnackBar extends StatefulWidget
 class SnackBar$Mate extends SnackBar with WidgetMate<SnackBar$Mate> {
-  /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, SnackBarBehavior? behavior, SnackBarAction? action, double? actionOverflowThreshold, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection dismissDirection = DismissDirection.down, Clip clipBehavior = Clip.hardEdge})
+  /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, SnackBarBehavior? behavior, SnackBarAction? action, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection dismissDirection = DismissDirection.down, Clip clipBehavior = Clip.hardEdge})
   SnackBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -88,9 +88,6 @@ class SnackBar$Mate extends SnackBar with WidgetMate<SnackBar$Mate> {
 
     /// optionalParameters: {SnackBarAction? action} , hasDefaultValue:false, defaultValueCode:null
     SnackBarAction? action,
-
-    /// optionalParameters: {double? actionOverflowThreshold} , hasDefaultValue:false, defaultValueCode:null
-    double? actionOverflowThreshold,
 
     /// optionalParameters: {bool? showCloseIcon} , hasDefaultValue:false, defaultValueCode:null
     bool? showCloseIcon,
@@ -123,7 +120,6 @@ class SnackBar$Mate extends SnackBar with WidgetMate<SnackBar$Mate> {
           shape: shape,
           behavior: behavior,
           action: action,
-          actionOverflowThreshold: actionOverflowThreshold,
           showCloseIcon: showCloseIcon,
           closeIconColor: closeIconColor,
           duration: duration,
@@ -145,7 +141,6 @@ class SnackBar$Mate extends SnackBar with WidgetMate<SnackBar$Mate> {
         shape: p.get('shape').value,
         behavior: p.get('behavior').value,
         action: p.get('action').value,
-        actionOverflowThreshold: p.get('actionOverflowThreshold').value,
         showCloseIcon: p.get('showCloseIcon').value,
         closeIconColor: p.get('closeIconColor').value,
         duration: p.get('duration').value,
@@ -165,7 +160,6 @@ class SnackBar$Mate extends SnackBar with WidgetMate<SnackBar$Mate> {
     mateParams.put('shape', shape);
     mateParams.put('behavior', behavior);
     mateParams.put('action', action);
-    mateParams.put('actionOverflowThreshold', actionOverflowThreshold);
     mateParams.put('showCloseIcon', showCloseIcon);
     mateParams.put('closeIconColor', closeIconColor);
     mateParams.put('duration', duration);

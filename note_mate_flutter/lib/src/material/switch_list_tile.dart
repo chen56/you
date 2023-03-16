@@ -6,22 +6,18 @@ import 'dart:core';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/image_provider.dart';
-import 'package:flutter/src/painting/image_stream.dart';
-import 'package:flutter/src/material/material_state.dart';
-import 'package:flutter/src/widgets/icon.dart';
-import 'package:flutter/src/material/theme_data.dart';
-import 'package:flutter/src/gestures/recognizer.dart';
-import 'package:flutter/src/services/mouse_cursor.dart';
-import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/material/list_tile.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/src/material/theme_data.dart';
+import 'package:flutter/src/widgets/focus_manager.dart';
+import 'package:flutter/src/material/material_state.dart';
 import 'package:note/mate.dart';
 
 /// class SwitchListTile extends StatelessWidget
 class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$Mate> {
-  /// SwitchListTile SwitchListTile({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, EdgeInsetsGeometry? contentPadding, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, ShapeBorder? shape, Color? selectedTileColor, VisualDensity? visualDensity, bool? enableFeedback, Color? hoverColor})
+  /// SwitchListTile SwitchListTile({Key? key, required bool value, required void Function(bool)? onChanged, Color? tileColor, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, ImageProvider<Object>? inactiveThumbImage, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, EdgeInsetsGeometry? contentPadding, Widget? secondary, bool selected = false, bool autofocus = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, ShapeBorder? shape, Color? selectedTileColor, VisualDensity? visualDensity, FocusNode? focusNode, void Function(bool)? onFocusChange, bool? enableFeedback, Color? hoverColor, MaterialStateProperty<Color?>? trackOutlineColor})
   SwitchListTile$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -32,6 +28,9 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     /// optionalParameters: {required void Function(bool)? onChanged} , hasDefaultValue:false, defaultValueCode:null
     required ValueChanged<bool>? onChanged,
 
+    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? tileColor,
+
     /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
     Color? activeColor,
 
@@ -47,53 +46,8 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     /// optionalParameters: {ImageProvider<Object>? activeThumbImage} , hasDefaultValue:false, defaultValueCode:null
     ImageProvider<Object>? activeThumbImage,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onActiveThumbImageError} , hasDefaultValue:false, defaultValueCode:null
-    ImageErrorListener? onActiveThumbImageError,
-
     /// optionalParameters: {ImageProvider<Object>? inactiveThumbImage} , hasDefaultValue:false, defaultValueCode:null
     ImageProvider<Object>? inactiveThumbImage,
-
-    /// optionalParameters: {void Function(Object, StackTrace?)? onInactiveThumbImageError} , hasDefaultValue:false, defaultValueCode:null
-    ImageErrorListener? onInactiveThumbImageError,
-
-    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Color?>? thumbColor,
-
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Color?>? trackColor,
-
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Color?>? trackOutlineColor,
-
-    /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Icon?>? thumbIcon,
-
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
-    MaterialTapTargetSize? materialTapTargetSize,
-
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
-
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
-    MouseCursor? mouseCursor,
-
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Color?>? overlayColor,
-
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
-    double? splashRadius,
-
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
-    FocusNode? focusNode,
-
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
-    ValueChanged<bool>? onFocusChange,
-
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
-
-    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
-    Color? tileColor,
 
     /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
     Widget? title,
@@ -116,6 +70,9 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
     required bool selected,
 
+    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
+    required bool autofocus,
+
     /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , hasDefaultValue:true, defaultValueCode:ListTileControlAffinity.platform
     required ListTileControlAffinity controlAffinity,
 
@@ -128,36 +85,31 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
     VisualDensity? visualDensity,
 
+    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    FocusNode? focusNode,
+
+    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    ValueChanged<bool>? onFocusChange,
+
     /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
     bool? enableFeedback,
 
     /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
     Color? hoverColor,
+
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , hasDefaultValue:false, defaultValueCode:null
+    MaterialStateProperty<Color?>? trackOutlineColor,
   }) : super(
           key: key,
           value: value,
           onChanged: onChanged,
+          tileColor: tileColor,
           activeColor: activeColor,
           activeTrackColor: activeTrackColor,
           inactiveThumbColor: inactiveThumbColor,
           inactiveTrackColor: inactiveTrackColor,
           activeThumbImage: activeThumbImage,
-          onActiveThumbImageError: onActiveThumbImageError,
           inactiveThumbImage: inactiveThumbImage,
-          onInactiveThumbImageError: onInactiveThumbImageError,
-          thumbColor: thumbColor,
-          trackColor: trackColor,
-          trackOutlineColor: trackOutlineColor,
-          thumbIcon: thumbIcon,
-          materialTapTargetSize: materialTapTargetSize,
-          dragStartBehavior: dragStartBehavior,
-          mouseCursor: mouseCursor,
-          overlayColor: overlayColor,
-          splashRadius: splashRadius,
-          focusNode: focusNode,
-          onFocusChange: onFocusChange,
-          autofocus: autofocus,
-          tileColor: tileColor,
           title: title,
           subtitle: subtitle,
           isThreeLine: isThreeLine,
@@ -165,12 +117,16 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
           contentPadding: contentPadding,
           secondary: secondary,
           selected: selected,
+          autofocus: autofocus,
           controlAffinity: controlAffinity,
           shape: shape,
           selectedTileColor: selectedTileColor,
           visualDensity: visualDensity,
+          focusNode: focusNode,
+          onFocusChange: onFocusChange,
           enableFeedback: enableFeedback,
           hoverColor: hoverColor,
+          trackOutlineColor: trackOutlineColor,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -178,27 +134,13 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
         key: p.get('key').value,
         value: p.get('value').value,
         onChanged: p.get('onChanged').value,
+        tileColor: p.get('tileColor').value,
         activeColor: p.get('activeColor').value,
         activeTrackColor: p.get('activeTrackColor').value,
         inactiveThumbColor: p.get('inactiveThumbColor').value,
         inactiveTrackColor: p.get('inactiveTrackColor').value,
         activeThumbImage: p.get('activeThumbImage').value,
-        onActiveThumbImageError: p.get('onActiveThumbImageError').value,
         inactiveThumbImage: p.get('inactiveThumbImage').value,
-        onInactiveThumbImageError: p.get('onInactiveThumbImageError').value,
-        thumbColor: p.get('thumbColor').value,
-        trackColor: p.get('trackColor').value,
-        trackOutlineColor: p.get('trackOutlineColor').value,
-        thumbIcon: p.get('thumbIcon').value,
-        materialTapTargetSize: p.get('materialTapTargetSize').value,
-        dragStartBehavior: p.get('dragStartBehavior').value,
-        mouseCursor: p.get('mouseCursor').value,
-        overlayColor: p.get('overlayColor').value,
-        splashRadius: p.get('splashRadius').value,
-        focusNode: p.get('focusNode').value,
-        onFocusChange: p.get('onFocusChange').value,
-        autofocus: p.get('autofocus').value,
-        tileColor: p.get('tileColor').value,
         title: p.get('title').value,
         subtitle: p.get('subtitle').value,
         isThreeLine: p.get('isThreeLine').value,
@@ -206,38 +148,28 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
         contentPadding: p.get('contentPadding').value,
         secondary: p.get('secondary').value,
         selected: p.get('selected').value,
+        autofocus: p.get('autofocus').value,
         controlAffinity: p.get('controlAffinity').value,
         shape: p.get('shape').value,
         selectedTileColor: p.get('selectedTileColor').value,
         visualDensity: p.get('visualDensity').value,
+        focusNode: p.get('focusNode').value,
+        onFocusChange: p.get('onFocusChange').value,
         enableFeedback: p.get('enableFeedback').value,
         hoverColor: p.get('hoverColor').value,
+        trackOutlineColor: p.get('trackOutlineColor').value,
       ),
     );
     mateParams.put('key', key);
     mateParams.put('value', value);
     mateParams.put('onChanged', onChanged);
+    mateParams.put('tileColor', tileColor);
     mateParams.put('activeColor', activeColor);
     mateParams.put('activeTrackColor', activeTrackColor);
     mateParams.put('inactiveThumbColor', inactiveThumbColor);
     mateParams.put('inactiveTrackColor', inactiveTrackColor);
     mateParams.put('activeThumbImage', activeThumbImage);
-    mateParams.put('onActiveThumbImageError', onActiveThumbImageError);
     mateParams.put('inactiveThumbImage', inactiveThumbImage);
-    mateParams.put('onInactiveThumbImageError', onInactiveThumbImageError);
-    mateParams.put('thumbColor', thumbColor);
-    mateParams.put('trackColor', trackColor);
-    mateParams.put('trackOutlineColor', trackOutlineColor);
-    mateParams.put('thumbIcon', thumbIcon);
-    mateParams.put('materialTapTargetSize', materialTapTargetSize);
-    mateParams.put('dragStartBehavior', dragStartBehavior);
-    mateParams.put('mouseCursor', mouseCursor);
-    mateParams.put('overlayColor', overlayColor);
-    mateParams.put('splashRadius', splashRadius);
-    mateParams.put('focusNode', focusNode);
-    mateParams.put('onFocusChange', onFocusChange);
-    mateParams.put('autofocus', autofocus);
-    mateParams.put('tileColor', tileColor);
     mateParams.put('title', title);
     mateParams.put('subtitle', subtitle);
     mateParams.put('isThreeLine', isThreeLine);
@@ -245,15 +177,19 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     mateParams.put('contentPadding', contentPadding);
     mateParams.put('secondary', secondary);
     mateParams.put('selected', selected);
+    mateParams.put('autofocus', autofocus);
     mateParams.put('controlAffinity', controlAffinity);
     mateParams.put('shape', shape);
     mateParams.put('selectedTileColor', selectedTileColor);
     mateParams.put('visualDensity', visualDensity);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('onFocusChange', onFocusChange);
     mateParams.put('enableFeedback', enableFeedback);
     mateParams.put('hoverColor', hoverColor);
+    mateParams.put('trackOutlineColor', trackOutlineColor);
   }
 
-  /// SwitchListTile SwitchListTile.adaptive({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, bool? applyCupertinoTheme, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, EdgeInsetsGeometry? contentPadding, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, ShapeBorder? shape, Color? selectedTileColor, VisualDensity? visualDensity, bool? enableFeedback, Color? hoverColor})
+  /// SwitchListTile SwitchListTile.adaptive({Key? key, required bool value, required void Function(bool)? onChanged, Color? tileColor, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, ImageProvider<Object>? inactiveThumbImage, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, EdgeInsetsGeometry? contentPadding, Widget? secondary, bool selected = false, bool autofocus = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, ShapeBorder? shape, Color? selectedTileColor, VisualDensity? visualDensity, FocusNode? focusNode, void Function(bool)? onFocusChange, bool? enableFeedback, Color? hoverColor, MaterialStateProperty<Color?>? trackOutlineColor})
   SwitchListTile$Mate.adaptive({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -264,6 +200,9 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     /// optionalParameters: {required void Function(bool)? onChanged} , hasDefaultValue:false, defaultValueCode:null
     required ValueChanged<bool>? onChanged,
 
+    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
+    Color? tileColor,
+
     /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
     Color? activeColor,
 
@@ -279,56 +218,8 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     /// optionalParameters: {ImageProvider<Object>? activeThumbImage} , hasDefaultValue:false, defaultValueCode:null
     ImageProvider<Object>? activeThumbImage,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onActiveThumbImageError} , hasDefaultValue:false, defaultValueCode:null
-    ImageErrorListener? onActiveThumbImageError,
-
     /// optionalParameters: {ImageProvider<Object>? inactiveThumbImage} , hasDefaultValue:false, defaultValueCode:null
     ImageProvider<Object>? inactiveThumbImage,
-
-    /// optionalParameters: {void Function(Object, StackTrace?)? onInactiveThumbImageError} , hasDefaultValue:false, defaultValueCode:null
-    ImageErrorListener? onInactiveThumbImageError,
-
-    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Color?>? thumbColor,
-
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Color?>? trackColor,
-
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Color?>? trackOutlineColor,
-
-    /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Icon?>? thumbIcon,
-
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
-    MaterialTapTargetSize? materialTapTargetSize,
-
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
-
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
-    MouseCursor? mouseCursor,
-
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
-    MaterialStateProperty<Color?>? overlayColor,
-
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
-    double? splashRadius,
-
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
-    FocusNode? focusNode,
-
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
-    ValueChanged<bool>? onFocusChange,
-
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
-
-    /// optionalParameters: {bool? applyCupertinoTheme} , hasDefaultValue:false, defaultValueCode:null
-    bool? applyCupertinoTheme,
-
-    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
-    Color? tileColor,
 
     /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
     Widget? title,
@@ -351,6 +242,9 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
     required bool selected,
 
+    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
+    required bool autofocus,
+
     /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , hasDefaultValue:true, defaultValueCode:ListTileControlAffinity.platform
     required ListTileControlAffinity controlAffinity,
 
@@ -363,37 +257,31 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
     VisualDensity? visualDensity,
 
+    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    FocusNode? focusNode,
+
+    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    ValueChanged<bool>? onFocusChange,
+
     /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
     bool? enableFeedback,
 
     /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
     Color? hoverColor,
+
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , hasDefaultValue:false, defaultValueCode:null
+    MaterialStateProperty<Color?>? trackOutlineColor,
   }) : super.adaptive(
           key: key,
           value: value,
           onChanged: onChanged,
+          tileColor: tileColor,
           activeColor: activeColor,
           activeTrackColor: activeTrackColor,
           inactiveThumbColor: inactiveThumbColor,
           inactiveTrackColor: inactiveTrackColor,
           activeThumbImage: activeThumbImage,
-          onActiveThumbImageError: onActiveThumbImageError,
           inactiveThumbImage: inactiveThumbImage,
-          onInactiveThumbImageError: onInactiveThumbImageError,
-          thumbColor: thumbColor,
-          trackColor: trackColor,
-          trackOutlineColor: trackOutlineColor,
-          thumbIcon: thumbIcon,
-          materialTapTargetSize: materialTapTargetSize,
-          dragStartBehavior: dragStartBehavior,
-          mouseCursor: mouseCursor,
-          overlayColor: overlayColor,
-          splashRadius: splashRadius,
-          focusNode: focusNode,
-          onFocusChange: onFocusChange,
-          autofocus: autofocus,
-          applyCupertinoTheme: applyCupertinoTheme,
-          tileColor: tileColor,
           title: title,
           subtitle: subtitle,
           isThreeLine: isThreeLine,
@@ -401,12 +289,16 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
           contentPadding: contentPadding,
           secondary: secondary,
           selected: selected,
+          autofocus: autofocus,
           controlAffinity: controlAffinity,
           shape: shape,
           selectedTileColor: selectedTileColor,
           visualDensity: visualDensity,
+          focusNode: focusNode,
+          onFocusChange: onFocusChange,
           enableFeedback: enableFeedback,
           hoverColor: hoverColor,
+          trackOutlineColor: trackOutlineColor,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -414,28 +306,13 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
         key: p.get('key').value,
         value: p.get('value').value,
         onChanged: p.get('onChanged').value,
+        tileColor: p.get('tileColor').value,
         activeColor: p.get('activeColor').value,
         activeTrackColor: p.get('activeTrackColor').value,
         inactiveThumbColor: p.get('inactiveThumbColor').value,
         inactiveTrackColor: p.get('inactiveTrackColor').value,
         activeThumbImage: p.get('activeThumbImage').value,
-        onActiveThumbImageError: p.get('onActiveThumbImageError').value,
         inactiveThumbImage: p.get('inactiveThumbImage').value,
-        onInactiveThumbImageError: p.get('onInactiveThumbImageError').value,
-        thumbColor: p.get('thumbColor').value,
-        trackColor: p.get('trackColor').value,
-        trackOutlineColor: p.get('trackOutlineColor').value,
-        thumbIcon: p.get('thumbIcon').value,
-        materialTapTargetSize: p.get('materialTapTargetSize').value,
-        dragStartBehavior: p.get('dragStartBehavior').value,
-        mouseCursor: p.get('mouseCursor').value,
-        overlayColor: p.get('overlayColor').value,
-        splashRadius: p.get('splashRadius').value,
-        focusNode: p.get('focusNode').value,
-        onFocusChange: p.get('onFocusChange').value,
-        autofocus: p.get('autofocus').value,
-        applyCupertinoTheme: p.get('applyCupertinoTheme').value,
-        tileColor: p.get('tileColor').value,
         title: p.get('title').value,
         subtitle: p.get('subtitle').value,
         isThreeLine: p.get('isThreeLine').value,
@@ -443,39 +320,28 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
         contentPadding: p.get('contentPadding').value,
         secondary: p.get('secondary').value,
         selected: p.get('selected').value,
+        autofocus: p.get('autofocus').value,
         controlAffinity: p.get('controlAffinity').value,
         shape: p.get('shape').value,
         selectedTileColor: p.get('selectedTileColor').value,
         visualDensity: p.get('visualDensity').value,
+        focusNode: p.get('focusNode').value,
+        onFocusChange: p.get('onFocusChange').value,
         enableFeedback: p.get('enableFeedback').value,
         hoverColor: p.get('hoverColor').value,
+        trackOutlineColor: p.get('trackOutlineColor').value,
       ),
     );
     mateParams.put('key', key);
     mateParams.put('value', value);
     mateParams.put('onChanged', onChanged);
+    mateParams.put('tileColor', tileColor);
     mateParams.put('activeColor', activeColor);
     mateParams.put('activeTrackColor', activeTrackColor);
     mateParams.put('inactiveThumbColor', inactiveThumbColor);
     mateParams.put('inactiveTrackColor', inactiveTrackColor);
     mateParams.put('activeThumbImage', activeThumbImage);
-    mateParams.put('onActiveThumbImageError', onActiveThumbImageError);
     mateParams.put('inactiveThumbImage', inactiveThumbImage);
-    mateParams.put('onInactiveThumbImageError', onInactiveThumbImageError);
-    mateParams.put('thumbColor', thumbColor);
-    mateParams.put('trackColor', trackColor);
-    mateParams.put('trackOutlineColor', trackOutlineColor);
-    mateParams.put('thumbIcon', thumbIcon);
-    mateParams.put('materialTapTargetSize', materialTapTargetSize);
-    mateParams.put('dragStartBehavior', dragStartBehavior);
-    mateParams.put('mouseCursor', mouseCursor);
-    mateParams.put('overlayColor', overlayColor);
-    mateParams.put('splashRadius', splashRadius);
-    mateParams.put('focusNode', focusNode);
-    mateParams.put('onFocusChange', onFocusChange);
-    mateParams.put('autofocus', autofocus);
-    mateParams.put('applyCupertinoTheme', applyCupertinoTheme);
-    mateParams.put('tileColor', tileColor);
     mateParams.put('title', title);
     mateParams.put('subtitle', subtitle);
     mateParams.put('isThreeLine', isThreeLine);
@@ -483,11 +349,15 @@ class SwitchListTile$Mate extends SwitchListTile with WidgetMate<SwitchListTile$
     mateParams.put('contentPadding', contentPadding);
     mateParams.put('secondary', secondary);
     mateParams.put('selected', selected);
+    mateParams.put('autofocus', autofocus);
     mateParams.put('controlAffinity', controlAffinity);
     mateParams.put('shape', shape);
     mateParams.put('selectedTileColor', selectedTileColor);
     mateParams.put('visualDensity', visualDensity);
+    mateParams.put('focusNode', focusNode);
+    mateParams.put('onFocusChange', onFocusChange);
     mateParams.put('enableFeedback', enableFeedback);
     mateParams.put('hoverColor', hoverColor);
+    mateParams.put('trackOutlineColor', trackOutlineColor);
   }
 }

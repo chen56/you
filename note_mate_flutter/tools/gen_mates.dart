@@ -295,7 +295,11 @@ bool classFilter(ClassElement clazz) {
   return !clazz.isAbstract &&
       !clazz.name.startsWith("_") &&
       !clazz.library.typeProvider.isNonSubtypableClass(clazz) &&
-      clazz.constructors.where(constructorFilter).isNotEmpty;
+      clazz.constructors.where(constructorFilter).isNotEmpty &&
+      // This application cannot tree shake icons fonts. It has non-constant instances of IconData at the following locations:
+      // file:///Users/cccc/git/chen56/note/note_mate_flutter/lib/src/widgets/icon_data.dart:30:23
+      // Target web_release_bundle failed: Exception: Avoid non-constant invocations of IconData or try to build again with --no-tree-shake-icons.
+      !clazz.name.endsWith("IconData");
 }
 
 bool libFilter(LibraryElement lib) {
