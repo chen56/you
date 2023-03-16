@@ -109,4 +109,30 @@ void main() {
       expect(true, p.isList);
     });
   });
+
+  group("toList()", () {
+    test('print', () {
+      var x = ColumnMate(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          ContainerMate(
+            width: 100,
+            child: CenterMate(
+              widthFactor: 100,
+            ),
+          ),
+          ContainerMate(
+            width: 100,
+            child: CenterMate(
+              widthFactor: 100,
+            ),
+          ),
+        ],
+      );
+      x.mateParams.toList(test: (e) => e.param.init != null).forEach((e) {
+        // ignore: avoid_print
+        print("${"  " * e.level} ${e.name}");
+      });
+    });
+  });
 }

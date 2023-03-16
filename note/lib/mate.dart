@@ -22,6 +22,8 @@ abstract class Param<T> {
   bool get isObject => this is ObjectParam;
 
   bool get isList => this is ListParam;
+
+  Iterable<ParamNode> _childrenNodes(ParamNode parent);
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
@@ -44,6 +46,9 @@ Param<C> _convertUseDart2<C>(C init) {
 
 class ValueParam<T> extends Param<T> {
   ValueParam({required super.init});
+
+  @override
+  Iterable<ParamNode> _childrenNodes(ParamNode parent) => List.empty();
 }
 
 class ListParam<T, E> extends Param<T> {
@@ -59,6 +64,12 @@ class ListParam<T, E> extends Param<T> {
 
   List<E> toValueList() {
     return params.map((e) => e.value).toList();
+  }
+
+  @override
+  Iterable<ParamNode> _childrenNodes(ParamNode parent) {
+    int i = 0;
+    return params.map((e) => ParamNode._(name: "${i++}", param: e, parent: parent));
   }
 }
 
@@ -107,8 +118,57 @@ class ObjectParam<T> extends Param<T> {
     return _paramMap[name] as Param<C>;
   }
 
-  List<MapEntry<Object, Param>> toList() {
-    return List.empty();
+  ParamNode toParamNode() {
+    return ParamNode._root(name: "", param: this);
+  }
+
+  List<ParamNode> toList({bool Function(ParamNode element)? test}) {
+    return toParamNode().toList(test: test);
+  }
+
+  @override
+  Iterable<ParamNode> _childrenNodes(ParamNode parent) =>
+      _paramMap.entries.map((e) => ParamNode._(name: e.key, param: e.value, parent: parent));
+}
+
+class ParamNode {
+  final String name;
+  final Param param;
+  final ParamNode? parent;
+  late final Iterable<ParamNode> _children;
+
+  ParamNode._({required this.name, required this.param, required ParamNode this.parent}) {
+    _children = param._childrenNodes(this);
+  }
+  ParamNode._root({required this.name, required this.param}) : parent = null {
+    _children = param._childrenNodes(this);
+  }
+
+  @override
+  String toString() {
+    return path;
+  }
+
+  List<ParamNode> toList({bool Function(ParamNode element)? test}) {
+    return [this, ..._children.where(test ?? (e) => true).expand((e) => e.toList(test: test))];
+  }
+
+  bool get isLeaf => _children.isEmpty;
+
+  int get level => isRoot ? 0 : parent!.level + 1;
+
+  int levelTo(ParamNode parent) => this.level - parent.level;
+
+  List<ParamNode> get parents => isRoot ? [this] : [this, ...parent!.parents];
+
+  bool get isRoot => parent == null;
+
+  ParamNode get root => isRoot ? this : parent!.root;
+
+  String get path {
+    if (isRoot) return "/";
+    var parentPath = parent!.path;
+    return parentPath == "/" ? "/$name" : "$parentPath/$name";
   }
 }
 
