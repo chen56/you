@@ -153,7 +153,7 @@ option() {
 
 /test?() {
   /test?shortHelp() { cat <<<"test"; }
-  /test() { run flutter test --web-renderer html; }
+  /test() { echo test; }
 }
 
 /preview?() {
