@@ -28,13 +28,21 @@ abstract class Param<T> {
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
 Param<C> _convertUseDart3Patterns<C>(C init) {
-  return switch (init) {
-    /// Mate 不直接 return [Mate.mateParams] 而复制一份ObjectParam的原因是 C可能是可空类型，而Mate.mateParams不是
-    List() => throw Exception("List type please use putList()"),
-    Mate<C>() => ObjectParam.copy(init.mateParams),
-    Param() => init as Param<C>,
-    _ => Param.newValue(init: init),
-  };
+  if (init is List) throw Exception("List type please use putList()");
+  if (init is Mate<C>) return ObjectParam.copy(init.mateParams);
+  if (init is Param) return init as Param<C>;
+  return Param.newValue(init: init);
+
+  // flutter build fail:
+  // Target dart2js failed: Exception: ../note/lib/mate.dart:31:10:
+  // Error: Expected an identifier, but got 'switch'.
+  // return switch (init) {
+  //   /// Mate 不直接 return [Mate.mateParams] 而复制一份ObjectParam的原因是 C可能是可空类型，而Mate.mateParams不是
+  //   List() => throw Exception("List type please use putList()"),
+  //   Mate<C>() => ObjectParam.copy(init.mateParams),
+  //   Param() => init as Param<C>,
+  //   _ => Param.newValue(init: init),
+  // };
 }
 
 // ignore: unused_element
