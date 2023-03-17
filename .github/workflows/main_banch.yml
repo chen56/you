@@ -1,10 +1,15 @@
-# except main branch, other branch is issue branch , only run ci ,don't deploy.
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
 
-name: other_branch.yml
+name: main_banch.yml
 
 on:
+  push:
+    branches: [ "main"]
   pull_request:
-    branches: [ "!main" ]
+    branches: [ "main"  ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -22,6 +27,7 @@ jobs:
       - name: Flutter action
         # You may pin to the exact commit or the version.
         # uses: subosito/flutter-action@dbf1fa04f4d2e52c33185153d06cdb5443aa189d
+        # https://github.com/subosito/flutter-action
         uses: subosito/flutter-action@v2.8.0
         with:
           # The Flutter version to make available on the path
@@ -38,14 +44,31 @@ jobs:
           # The architecture of Flutter SDK executable (x64 or arm64)
           # architecture: # optional, default is ${{ runner.arch }}        
 
-      - name: checkout
+      - name: checkout main
         uses: actions/checkout@v3
 
       # build
       - name: CI
         run: |
           ./bake ci
-#      - name: Upload Pages artifact
-#        uses: actions/upload-pages-artifact@v1
-#        with:
-#          path: ./note_app/build/web
+          ls ./note_app/build/web/
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./note_app/build/web
+
+  # Deployment job
+  deploy:
+    needs: build
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    environment:
+      name: prod
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
