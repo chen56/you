@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 
-import '1.1.hello.dart' as stateful_hello;
+import 'package:note_app/note/state/1.vanilla_state/1.1.hello.dart' as stateful_hello;
 
 PageMeta page = PageMeta(
   shortTitle: "最原始的状态管理",
@@ -53,6 +53,26 @@ State
 多个状态管理，需要aspect，或每个状态一个nheritedWidget
 
 觉得自己写注册listener麻烦，怕写错，可以用ListenableBuilder或ValueListenableBuilder替代。
+
+平台中重要的组件使用了InheritedWidget，特点是每个组件只管理一种数据
+
+Theme.of(context)
+Localizations.localeOf(context)
+
+，但业务应用可能没必要每种数据都搞一个组件：
+
+UserInheritedWidget
+OrderInheritedWidget
+ProductInheritedWidget
+xxxxInheritedWidget
+
+集中存放是不是更简单：
+
+ParentWidget
+   users
+   orders
+   products
+   xxx
 
   ''');
 }
