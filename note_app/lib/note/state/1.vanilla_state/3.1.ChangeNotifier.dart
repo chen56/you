@@ -7,6 +7,12 @@ main() {
 }
 
 /*
+
+继承关系：
+- Listenable 接口
+  - ChangeNotifier 实现
+
+
 父组件维护状态，子组件使用状态
 ----------------------------------------------------------
 App                      : StatelessWidget，state 数据在这里,提供读写方法
@@ -21,11 +27,9 @@ class App extends StatefulWidget {
   @override
   State<App> createState() => AppState();
 
-
   static AppState of(BuildContext context) {
     return context.findAncestorStateOfType<AppState>()!;
   }
-
 }
 
 class AppState extends State<App> {
@@ -63,6 +67,7 @@ class ChildWrite extends StatelessWidget {
   Widget build(BuildContext context) {
     AppState state = App.of(context);
     return ElevatedButton(
-        child: Text("大大大！ 因未监听状态，导致【size=${state.size.value}】无变化"), onPressed: () => state.size.value += 10);
+        child: Text("大大大！ 因未监听状态，导致【size=${state.size.value}】无变化"),
+        onPressed: () => state.size.value += 10);
   }
 }

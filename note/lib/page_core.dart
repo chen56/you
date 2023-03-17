@@ -44,7 +44,7 @@ class Path<T> {
   });
 
   Path.root()
-      : name = "/",
+      : name = "",
         parent = null;
 
   bool get hasPage => _meta != null;

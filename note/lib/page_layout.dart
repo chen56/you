@@ -292,11 +292,38 @@ class MateCodeState extends State<MateCode> {
 
   @override
   Widget build(BuildContext context) {
-    DataRow row(Param param) {
+    Widget valueWidget(ParamNode node) {
+      if (node.param.isValue) {
+        print("${node.name} ${node.param.init is double}");
+        if (node.param.init is double?) {
+          return TextFormField(
+            initialValue: "${node.param.init}",
+            autofocus: true,
+            decoration: const InputDecoration(
+              // labelText: "Text#data",
+              hintText: "Text#data",
+              prefixIcon: Icon(Icons.ac_unit),
+            ),
+            onChanged: (value) {
+              setState(() {
+                node.param.value = double.parse("$value");
+                // node.param.value = value;
+                print(value);
+              });
+            },
+          );
+        }
+
+        return Text("${node.param.value}");
+      }
+      return Text("${node.param.value.runtimeType}".replaceAll("\$Mate", ""));
+    }
+
+    DataRow row(ParamNode node) {
       return DataRow(
         cells: <DataCell>[
-          DataCell(Text('Sarah')),
-          DataCell(Text('19')),
+          DataCell(Text('${"  " * node.level}${node.displayName}')),
+          DataCell(valueWidget(node)),
         ],
       );
     }
@@ -335,26 +362,10 @@ class MateCodeState extends State<MateCode> {
                     ),
                   ),
                 ],
-                rows: const <DataRow>[
-                  DataRow(
-                    cells: <DataCell>[
-                      DataCell(Text('Sarah')),
-                      DataCell(Text('19')),
-                    ],
-                  ),
-                  DataRow(
-                    cells: <DataCell>[
-                      DataCell(Text('Janine')),
-                      DataCell(Text('43')),
-                    ],
-                  ),
-                  DataRow(
-                    cells: <DataCell>[
-                      DataCell(Text('William')),
-                      DataCell(Text('27')),
-                    ],
-                  ),
-                ],
+                rows: widget.widgetMate.mateParams
+                    .toList(test: (node) => node.param.init != null)
+                    .map(row)
+                    .toList(),
               )
             ],
           ),

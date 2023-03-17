@@ -5,9 +5,13 @@ import 'package:note/utils.dart';
 abstract class Param<T> {
   Param? parent;
   final T init;
-  final T _value;
+  T _value;
 
   T get value => _value;
+  // todo 临时产物，待删除
+  set value(T newValue) {
+    _value = newValue;
+  }
 
   Param({required this.init}) : _value = init;
 
@@ -152,6 +156,11 @@ class ParamNode {
   }
   ParamNode._root({required this.name, required this.param}) : parent = null {
     _children = param._childrenNodes(this);
+  }
+
+  String get displayName {
+    if (isRoot) return "root";
+    return name;
   }
 
   @override

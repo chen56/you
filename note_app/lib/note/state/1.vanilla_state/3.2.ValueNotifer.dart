@@ -8,6 +8,14 @@ main() {
 }
 
 /*
+
+继承关系：
+- interface Listenable
+  - ChangeNotifier implement Listenable
+  - interface ValueListenable extends Listenable
+    - ValueNotifier implement ValueListenable
+
+
 父组件维护状态，子组件使用状态,父组件可以是StatelessWidget，因为状态变化由各
 子组件的ValueListenableBuilder完成，父组件已不需要setState了。
 ----------------------------------------------------------
@@ -64,7 +72,7 @@ class ChildWrite extends StatelessWidget {
       valueListenable: state.size,
       builder: (context, value, child) => ElevatedButton(
           child: Text("大大大！【size=${state.size.value}】无变化"),
-          onPressed: (){
+          onPressed: () {
             state.size.value += 10;
 
             print(WidgetInspectorService.instance.getRootWidgetSummaryTree("groupName"));

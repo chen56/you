@@ -30,9 +30,25 @@ build(Pen pen, BuildContext context) {
   ''');
 
   pen.widgetMate(Container$Mate(
-    height: 50,
+    key: const ValueKey("c"),
+    width: 100,
+    height: 250,
     color: Colors.green,
     clipBehavior: Clip.none,
+    child: Row$Mate(
+      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      verticalDirection: VerticalDirection.down,
+      children: [
+        ElevatedButton$Mate(
+          autofocus: true,
+          clipBehavior: Clip.hardEdge,
+          onPressed: null,
+          child: Text$Mate("s"),
+        )
+      ],
+    ),
   ));
 
   pen.markdown(r'''

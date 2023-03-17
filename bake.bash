@@ -19,8 +19,8 @@ set -o functrace #trap inherited in function
 # bake命令规则：
 # 1. 定义以斜杠"/"为前缀的function作为子命令，/build、/run、/assets/list、
 #    表示命令的其父子关系，执行时去掉斜杠/, 构成父子命令：./bake assets list -x -y -z
-# 2. 命令function上方的一行注释作为命令的帮助，显示在命令列表
-# 3. 除bash外，不依赖其他，包括linux coreutils,以便跨平台更简单
+# 2. 命令的帮助从命令后跟?shortHelp的函数提取，比如/build?shortHelp
+# 3. 除bash外，尽量不依赖其他工具，包括linux coreutils,以便跨平台更简单
 # 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
 # ------------------------------------------------------------------------------
 
@@ -185,7 +185,6 @@ option() {
   /ci() {
     (
       flutter --version
-#      /clean
       /get
       /build
       /test
@@ -260,9 +259,9 @@ run() {
 }
 
 
-run_from_stdin() { while read cmd; do "$cmd"; done; }
+exec_from_stdin() { while read cmd; do "$cmd"; done; }
 initCommands(){
-    run_from_stdin <<< "$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')"
+    exec_from_stdin <<< "$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')"
 }
 
 print_commands() {

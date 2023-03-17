@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 
-import '1.hello.dart' as stateful_hello;
+import '1.1.hello.dart' as stateful_hello;
 
 PageMeta page = PageMeta(
   shortTitle: "最原始的状态管理",
@@ -48,7 +48,11 @@ State
   pen.sample(const stateful_hello.App());
 
   pen.markdown(r'''
-## 范例1 普通文本 
+## InheritedWidget有点麻烦 
+
+多个状态管理，需要aspect，或每个状态一个nheritedWidget
+
+觉得自己写注册listener麻烦，怕写错，可以用ListenableBuilder或ValueListenableBuilder替代。
 
   ''');
 }
