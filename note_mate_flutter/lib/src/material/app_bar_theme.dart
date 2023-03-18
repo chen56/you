@@ -11,7 +11,7 @@ import 'package:note/mate.dart';
 
 /// class AppBarTheme with Diagnosticable
 class AppBarTheme$Mate extends AppBarTheme with Mate<AppBarTheme$Mate> {
-  /// AppBarTheme AppBarTheme({Brightness? brightness, Color? color, Color? backgroundColor, Color? foregroundColor, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool? centerTitle, double? titleSpacing, double? toolbarHeight, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool? backwardsCompatibility})
+  /// AppBarTheme AppBarTheme({Color? color, Color? backgroundColor, Color? foregroundColor, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool? centerTitle, double? titleSpacing, double? toolbarHeight, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle})
   AppBarTheme$Mate({
     /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
     Color? color,

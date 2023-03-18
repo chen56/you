@@ -31,14 +31,15 @@ abstract class Param<T> {
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
-Param<C> _convertUseDart3Patterns<C>(C init) {
+Param<C> convertUseDart3Patterns<C>(C init) {
   if (init is List) throw Exception("List type please use putList()");
   if (init is Mate<C>) return ObjectParam.copy(init.mateParams);
   if (init is Param) return init as Param<C>;
   return Param.newValue(init: init);
 
-  // flutter build fail:
-  // Target dart2js failed: Exception: ../note/lib/mate.dart:31:10:
+  // flutter build error - Flutter 3.9.0-1.0.pre.2 • channel beta
+  // Target dart2js failed: Exception: Warning: The 'dart2js' entrypoint script is deprecated, please use 'dart compile js' instead.
+  // ../note/lib/mate.dart:39:10:
   // Error: Expected an identifier, but got 'switch'.
   // return switch (init) {
   //   /// Mate 不直接 return [Mate.mateParams] 而复制一份ObjectParam的原因是 C可能是可空类型，而Mate.mateParams不是
@@ -68,7 +69,7 @@ class ListParam<T, E> extends Param<T> {
 
   ListParam({required super.init}) {
     if (init != null) {
-      params = (init as List<E>).map((e) => _convertUseDart3Patterns(e)).toList(growable: true);
+      params = (init as List<E>).map((e) => convertUseDart3Patterns(e)).toList(growable: true);
     }
   }
 
@@ -105,7 +106,7 @@ class ObjectParam<T> extends Param<T> {
   /// generic V : value type
   Param<V> put<V>(String name, V init) {
     _checkName(name);
-    var param = _convertUseDart3Patterns(init);
+    var param = convertUseDart3Patterns(init);
     param.parent = this;
     _paramMap[name] = param;
     return param;

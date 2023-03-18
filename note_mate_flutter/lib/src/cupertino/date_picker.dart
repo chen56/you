@@ -11,7 +11,7 @@ import 'package:flutter/src/painting/alignment.dart';
 
 /// class CupertinoDatePicker extends StatefulWidget
 class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<CupertinoDatePicker$Mate> {
-  /// CupertinoDatePicker CupertinoDatePicker({Key? key, CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime, required void Function(DateTime) onDateTimeChanged, DateTime? initialDateTime, DateTime? minimumDate, DateTime? maximumDate, int minimumYear = 1, int? maximumYear, int minuteInterval = 1, bool use24hFormat = false, DatePickerDateOrder? dateOrder, Color? backgroundColor})
+  /// CupertinoDatePicker CupertinoDatePicker({Key? key, CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime, required void Function(DateTime) onDateTimeChanged, DateTime? initialDateTime, DateTime? minimumDate, DateTime? maximumDate, int minimumYear = 1, int? maximumYear, int minuteInterval = 1, bool use24hFormat = false, DatePickerDateOrder? dateOrder, Color? backgroundColor, bool showDayOfWeek = false})
   CupertinoDatePicker$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
     Key? key,
@@ -48,6 +48,9 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<Cuper
 
     /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
     Color? backgroundColor,
+
+    /// optionalParameters: {bool showDayOfWeek = false} , hasDefaultValue:true, defaultValueCode:false
+    required bool showDayOfWeek,
   }) : super(
           key: key,
           mode: mode,
@@ -61,6 +64,7 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<Cuper
           use24hFormat: use24hFormat,
           dateOrder: dateOrder,
           backgroundColor: backgroundColor,
+          showDayOfWeek: showDayOfWeek,
         ) {
     mateParams = ObjectParam(
       init: this,
@@ -77,6 +81,7 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<Cuper
         use24hFormat: p.get('use24hFormat').value,
         dateOrder: p.get('dateOrder').value,
         backgroundColor: p.get('backgroundColor').value,
+        showDayOfWeek: p.get('showDayOfWeek').value,
       ),
     );
     mateParams.put('key', key);
@@ -91,6 +96,7 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<Cuper
     mateParams.put('use24hFormat', use24hFormat);
     mateParams.put('dateOrder', dateOrder);
     mateParams.put('backgroundColor', backgroundColor);
+    mateParams.put('showDayOfWeek', showDayOfWeek);
   }
 }
 

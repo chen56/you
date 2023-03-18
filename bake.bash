@@ -142,18 +142,37 @@ option() {
   }
 }
 
+# patterns 无法使用，error：flutter build web
+#  // flutter build error - Flutter 3.9.0-1.0.pre.2 • channel beta
+#  // Target dart2js failed: Exception: Warning: The 'dart2js' entrypoint script is deprecated, please use 'dart compile js' instead.
+#  // ../note/lib/mate.dart:39:10:
+#  // Error: Expected an identifier, but got 'switch'.
+#  // return switch (init) {
+#  //   /// Mate 不直接 return [Mate.mateParams] 而复制一份ObjectParam的原因是 C可能是可空类型，而Mate.mateParams不是
+#  //   List() => throw Exception("List type please use putList()"),
+#  //   Mate<C>() => ObjectParam.copy(init.mateParams),
+#  //   Param() => init as Param<C>,
+#  //   _ => Param.newValue(init: init),
+#  // };
+enable_experiment="--enable-experiment=records,patterns"
 /build?() {
-  /build?shortHelp() { cat <<<"构建命令,可附加flutter build的参数"; }
+  /build?shortHelp() { cat <<<"生产build"; }
   /build() {
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
-    run flutter build web --release --web-renderer html --base-href='/note/' "$@"
+#    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
+    ( cd note_app; run flutter build web -v $enable_experiment --release --web-renderer html ; )
+
   }
 }
 
 /test?() {
   /test?shortHelp() { cat <<<"test"; }
-  /test() { echo test; }
+  /test() {
+        (run cd note ;              run flutter test; )
+        (run cd note_mate_flutter ; run flutter test; )
+        (run cd note_app ;          run flutter test; )
+   }
 }
 
 /preview?() {
@@ -166,20 +185,7 @@ option() {
   }
 }
 
-/build?() {
-  /build?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
-  /build() {
-    (
-      run cd note_app;
-#      This application cannot tree shake icons fonts. It has non-constant instances of IconData at the following locations:
-#        - file:///Users/cccc/git/chen56/note/note_mate_flutter/lib/src/widgets/icon_data.dart:30:23
-#      Target web_release_bundle failed: Exception: Avoid non-constant invocations of IconData or try to build again with --no-tree-shake-icons.
-      run flutter build web  --enable-experiment=records \
-                             --enable-experiment=patterns \
-                             --release --web-renderer html --base-href='/note/' "$@";
-    )
-  }
-}
+
 /ci?() {
   /ci?shortHelp() { cat <<<"ci重建"; }
   /ci() {
@@ -199,11 +205,22 @@ option() {
     (run cd note_mate_flutter ; run dart run tools/gen_mates.dart; )
   }
 }
+/regen?() {
+  /regen?shortHelp() { cat <<<"先删除old, 再代码生成"; }
+  /regen() {
+    run rm note_app/lib/pages.g.dart
+    run rm -rf note_mate_flutter/lib
+    (run cd note_app ;          run dart run tools/gen_pages.dart ; )
+    (run cd note_mate_flutter ; run dart run tools/gen_mates.dart ; )
+  }
+}
 
 /run?() {
   /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
   /run() {
-    run flutter run --web-renderer html --device-id chrome --enable-experiment=records --enable-experiment=patterns;
+    (
+      cd note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment ;
+    )
   }
 }
 

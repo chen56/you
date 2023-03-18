@@ -68,3 +68,90 @@ class Overlay$Mate extends Overlay with WidgetMate<Overlay$Mate> {
     mateParams.put('clipBehavior', clipBehavior);
   }
 }
+
+/// class OverlayPortalController
+class OverlayPortalController$Mate extends OverlayPortalController with Mate<OverlayPortalController$Mate> {
+  /// OverlayPortalController OverlayPortalController({String? debugLabel})
+  OverlayPortalController$Mate(
+      {
+      /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+      String? debugLabel})
+      : super(debugLabel: debugLabel) {
+    mateParams = ObjectParam(
+      init: this,
+      builder: (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').value),
+    );
+    mateParams.put('debugLabel', debugLabel);
+  }
+}
+
+/// class OverlayPortal extends StatefulWidget
+class OverlayPortal$Mate extends OverlayPortal with WidgetMate<OverlayPortal$Mate> {
+  /// OverlayPortal OverlayPortal({Key? key, required OverlayPortalController controller, required Widget Function(BuildContext) overlayChildBuilder, Widget? child})
+  OverlayPortal$Mate({
+    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    Key? key,
+
+    /// optionalParameters: {required OverlayPortalController controller} , hasDefaultValue:false, defaultValueCode:null
+    required OverlayPortalController controller,
+
+    /// optionalParameters: {required Widget Function(BuildContext) overlayChildBuilder} , hasDefaultValue:false, defaultValueCode:null
+    required WidgetBuilder overlayChildBuilder,
+
+    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    Widget? child,
+  }) : super(
+          key: key,
+          controller: controller,
+          overlayChildBuilder: overlayChildBuilder,
+          child: child,
+        ) {
+    mateParams = ObjectParam(
+      init: this,
+      builder: (p) => OverlayPortal$Mate(
+        key: p.get('key').value,
+        controller: p.get('controller').value,
+        overlayChildBuilder: p.get('overlayChildBuilder').value,
+        child: p.get('child').value,
+      ),
+    );
+    mateParams.put('key', key);
+    mateParams.put('controller', controller);
+    mateParams.put('overlayChildBuilder', overlayChildBuilder);
+    mateParams.put('child', child);
+  }
+
+  /// OverlayPortal OverlayPortal.targetsRootOverlay({Key? key, required OverlayPortalController controller, required Widget Function(BuildContext) overlayChildBuilder, Widget? child})
+  OverlayPortal$Mate.targetsRootOverlay({
+    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    Key? key,
+
+    /// optionalParameters: {required OverlayPortalController controller} , hasDefaultValue:false, defaultValueCode:null
+    required OverlayPortalController controller,
+
+    /// optionalParameters: {required Widget Function(BuildContext) overlayChildBuilder} , hasDefaultValue:false, defaultValueCode:null
+    required WidgetBuilder overlayChildBuilder,
+
+    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    Widget? child,
+  }) : super.targetsRootOverlay(
+          key: key,
+          controller: controller,
+          overlayChildBuilder: overlayChildBuilder,
+          child: child,
+        ) {
+    mateParams = ObjectParam(
+      init: this,
+      builder: (p) => OverlayPortal$Mate.targetsRootOverlay(
+        key: p.get('key').value,
+        controller: p.get('controller').value,
+        overlayChildBuilder: p.get('overlayChildBuilder').value,
+        child: p.get('child').value,
+      ),
+    );
+    mateParams.put('key', key);
+    mateParams.put('controller', controller);
+    mateParams.put('overlayChildBuilder', overlayChildBuilder);
+    mateParams.put('child', child);
+  }
+}

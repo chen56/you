@@ -4,9 +4,7 @@ version: 0.0.1
 homepage: https://github.com/chen56/note
 
 environment:
-  sdk: '>=3.0.0-218.1.beta <4.0.0'
-#  flutter: ">=1.17.0"
-#  sdk: ">=2.18.0 <3.0.0"
+  sdk: '>=3.0.0-290.1.beta <4.0.0'
 
 dependencies:
   flutter:
