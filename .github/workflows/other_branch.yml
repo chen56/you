@@ -31,7 +31,7 @@ jobs:
           #flutter-version: # optional, default is any
           # The Flutter build release channel
           channel: beta # optional, default is stable
-          flutter-version: '3.8.0-10.1.pre'
+          flutter-version: '3.9.0-1.0.pre.2'
           # Cache the Flutter SDK
           cache: true # optional
           # Identifier for the Flutter SDK cache
