@@ -20,7 +20,11 @@ build(Pen pen, BuildContext context) {
   ''');
 
   pen.markdown(r'''
-## 范例2 Meta 
+## 空间填充 
+
+Spacer 空间填充
+SizedBox
+Placeholder
 
   ''');
 }

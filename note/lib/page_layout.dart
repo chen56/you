@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/page_core.dart';
@@ -264,7 +265,7 @@ class _PagePen extends Pen {
 
   @override
   void widgetMate(WidgetMate widgetMate) {
-    _contents.add(MateCode(
+    _contents.add(_MateCode(
       widgetMate: widgetMate,
     ));
   }
@@ -276,58 +277,22 @@ class _PagePen extends Pen {
   }
 }
 
-class MateCode extends StatefulWidget {
+class _MateCode extends StatefulWidget {
   final WidgetMate widgetMate;
 
-  const MateCode({super.key, required this.widgetMate});
+  const _MateCode({super.key, required this.widgetMate});
 
   @override
   State<StatefulWidget> createState() {
-    return MateCodeState();
+    return _MateCodeState();
   }
 }
 
-class MateCodeState extends State<MateCode> {
+class _MateCodeState extends State<_MateCode> {
   bool isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
-    Widget valueWidget(ParamNode node) {
-      if (node.param.isValue) {
-        print("${node.name} ${node.param.init is double}");
-        if (node.param.init is double?) {
-          return TextFormField(
-            initialValue: "${node.param.init}",
-            autofocus: true,
-            decoration: const InputDecoration(
-              // labelText: "Text#data",
-              hintText: "Text#data",
-              prefixIcon: Icon(Icons.ac_unit),
-            ),
-            onChanged: (value) {
-              setState(() {
-                node.param.value = double.parse("$value");
-                // node.param.value = value;
-                print(value);
-              });
-            },
-          );
-        }
-
-        return Text("${node.param.value}");
-      }
-      return Text("${node.param.value.runtimeType}".replaceAll("\$Mate", ""));
-    }
-
-    DataRow row(ParamNode node) {
-      return DataRow(
-        cells: <DataCell>[
-          DataCell(Text('${"  " * node.level}${node.displayName}')),
-          DataCell(valueWidget(node)),
-        ],
-      );
-    }
-
     var card = Card(
       elevation: 2,
       child: Column(
@@ -336,37 +301,33 @@ class MateCodeState extends State<MateCode> {
         children: [
           widget.widgetMate,
           ExpansionTile(
-            expandedAlignment: Alignment.centerLeft,
+            initiallyExpanded: true,
+            expandedAlignment: Alignment.topLeft,
+            expandedCrossAxisAlignment: CrossAxisAlignment.start,
             title: const Row(
               children: [
                 Text("参数设置&代码"),
               ],
             ),
             children: [
-              DataTable(
-                columns: const <DataColumn>[
-                  DataColumn(
-                    label: Expanded(
-                      child: Text(
-                        'param',
-                        style: TextStyle(fontStyle: FontStyle.italic),
-                      ),
-                    ),
-                  ),
-                  DataColumn(
-                    label: Expanded(
-                      child: Text(
-                        'value',
-                        style: TextStyle(fontStyle: FontStyle.italic),
-                      ),
-                    ),
-                  ),
-                ],
-                rows: widget.widgetMate.mateParams
+              DataTable(columns: const [
+                DataColumn(label: Text("")),
+                DataColumn(label: Text("")),
+              ], rows: [
+                ...widget.widgetMate.mateParams
                     .toList(test: (node) => node.param.init != null)
-                    .map(row)
-                    .toList(),
-              )
+                    .map(
+                      (e) => DataRow(
+                        cells: [
+                          DataCell(e.mainWidget(context)),
+                          DataCell(Row(
+                            children: [Expanded(child: e.extWidget(context))],
+                          )),
+                        ],
+                      ),
+                    )
+                    .toList()
+              ]),
             ],
           ),
         ],
@@ -377,7 +338,7 @@ class MateCodeState extends State<MateCode> {
       data: Theme.of(context).copyWith(
         dataTableTheme: theme.dataTableTheme.copyWith(
           headingRowHeight: 24,
-          dataRowHeight: 24,
+          dataRowMinHeight: 24,
         ),
       ),
       child: card,
