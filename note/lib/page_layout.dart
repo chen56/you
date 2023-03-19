@@ -264,32 +264,23 @@ class _PagePen extends Pen {
   }
 
   @override
-  void widgetMate(WidgetMate widgetMate) {
+  void widgetMate<T>(WidgetMate<T> widgetMate) {
     _contents.add(_MateCode(
       widgetMate: widgetMate,
     ));
   }
 
   @override
-  void widgetSnippet(WidgetMate Function(ObjectParam node) builder) {
-    ObjectParam<void> node = ObjectParam<void>(init: null, builder: (p) => builder(p));
+  void widgetSnippet(Widget Function(ObjectParam node) builder) {
+    ObjectParam node = ObjectParam(init: null, builder: (p) => builder(p));
     widgetMate(builder(node));
   }
 }
 
-class _MateCode extends StatefulWidget {
-  final WidgetMate widgetMate;
+class _MateCode<T> extends StatelessWidget {
+  final WidgetMate<T> widgetMate;
 
   const _MateCode({super.key, required this.widgetMate});
-
-  @override
-  State<StatefulWidget> createState() {
-    return _MateCodeState();
-  }
-}
-
-class _MateCodeState extends State<_MateCode> {
-  bool isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -299,7 +290,11 @@ class _MateCodeState extends State<_MateCode> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          widget.widgetMate,
+          ListenableBuilder(
+            listenable: widgetMate.mateParams,
+            builder: (context, child) =>
+                widgetMate.mateParams.builder(widgetMate.mateParams) as Widget,
+          ),
           ExpansionTile(
             initiallyExpanded: true,
             expandedAlignment: Alignment.topLeft,
@@ -310,11 +305,11 @@ class _MateCodeState extends State<_MateCode> {
               ],
             ),
             children: [
-              DataTable(columns: const [
+              DataTable(dataRowMaxHeight: 25, columns: const [
                 DataColumn(label: Text("")),
                 DataColumn(label: Text("")),
               ], rows: [
-                ...widget.widgetMate.mateParams
+                ...widgetMate.mateParams
                     .toList(test: (node) => node.param.init != null)
                     .map(
                       (e) => DataRow(
@@ -333,15 +328,6 @@ class _MateCodeState extends State<_MateCode> {
         ],
       ),
     );
-    var theme = Theme.of(context);
-    return Theme(
-      data: Theme.of(context).copyWith(
-        dataTableTheme: theme.dataTableTheme.copyWith(
-          headingRowHeight: 24,
-          dataRowMinHeight: 24,
-        ),
-      ),
-      child: card,
-    );
+    return card;
   }
 }

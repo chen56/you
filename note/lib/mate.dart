@@ -1,17 +1,20 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/utils.dart' as utils;
 import 'package:note/utils.dart';
 
-abstract class Param<T> {
+abstract class Param<T> extends ChangeNotifier {
   Param? parent;
   final T init;
   T _value;
 
   T get value => _value;
 
-  // todo 临时产物，待删除
   set value(T newValue) {
     _value = newValue;
+    notifyListeners();
+    //冒泡通知
+    parent?.notifyListeners();
   }
 
   Param({required this.init}) : _value = init;
@@ -89,7 +92,7 @@ class ListParam<T, E> extends Param<T> {
 
 class ObjectParam<T> extends Param<T> {
   final Map<String, Param> _paramMap = {};
-  late final T Function(ObjectParam<T> mate) builder;
+  late final T Function(ObjectParam<T> param) builder;
 
   ObjectParam({required super.init, required this.builder});
 
@@ -151,7 +154,7 @@ class ParamNode {
   final Param param;
   final ParamNode? parent;
   late final Iterable<ParamNode> _children;
-  final Map<String, Object> attributes = {};
+  final Map<String, Object> extAttributes = {};
 
   ParamNode._({required this.name, required this.param, required ParamNode this.parent}) {
     _children = param._childrenNodes(this);
@@ -196,26 +199,26 @@ class ParamNode {
   Widget mainWidget(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: level * 15),
-      child: getEditor(this).mainWidget(context, this),
+      child: getEditor(this).nameWidget(context, this),
     );
   }
 
   Widget extWidget(BuildContext context) {
-    return getEditor(this).extWidget(context, this);
+    return getEditor(this).valueWidget(context, this);
   }
 }
 
 Editor getEditor(ParamNode node) {
   if (node.param.init is double) return DoubleEditor();
   if (node.param.init is Enum) return EnumEditor();
-  return NoEditor();
+  return ReadonlyEditor();
 }
 
 class DoubleEditor extends Editor<double> {
   DoubleEditor();
 
   @override
-  Widget extWidget(BuildContext context, ParamNode node) {
+  Widget valueWidget(BuildContext context, ParamNode node) {
     return TextFormField(
       initialValue: "${node.param.init}",
       autofocus: true,
@@ -233,7 +236,7 @@ class EnumEditor extends Editor {
   EnumEditor();
 
   @override
-  Widget extWidget(BuildContext context, ParamNode node) {
+  Widget valueWidget(BuildContext context, ParamNode node) {
     return DropdownButton<Enum>(
       alignment: Alignment.topLeft,
       value: node.param.value,
@@ -253,8 +256,8 @@ class EnumEditor extends Editor {
   }
 }
 
-class NoEditor extends Editor<double> {
-  NoEditor();
+class ReadonlyEditor extends Editor<double> {
+  ReadonlyEditor();
 }
 
 mixin Mate<T> {
@@ -269,7 +272,7 @@ mixin WidgetMate<T> on Widget implements Mate<T> {
 abstract class Editor<T> {
   Editor();
 
-  Widget mainWidget(BuildContext context, ParamNode node) {
+  Widget nameWidget(BuildContext context, ParamNode node) {
     String type = "${node.param.init.runtimeType}".replaceAll("\$Mate", "");
     if (node.isRoot) return Text(type);
     if (node.param.isValue) {
@@ -279,14 +282,14 @@ abstract class Editor<T> {
     }
   }
 
-  Widget extWidget(BuildContext context, ParamNode node) {
+  Widget valueWidget(BuildContext context, ParamNode node) {
     return const Text("");
   }
 }
 
 class Editors {}
 
-// 暂时这样，要用代码生成，并放到note_app里
+// todo 暂时这样，要用代码生成，并放到note_app里
 class Enums {
   static final Enums _instance = Enums._();
   final Map<Type, List<Enum>> enums = {};

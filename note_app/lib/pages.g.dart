@@ -19,8 +19,8 @@ import 'package:note_app/note/scrollable/Dismissible/page.dart' as note_scrollab
 import 'package:note_app/note/selectable/page.dart' as note_selectable_;
 import 'package:note_app/note/state/1.vanilla_state/page.dart' as note_state_vanilla_state_;
 import 'package:note_app/note/state/StatefulBuilder/page.dart' as note_state_StatefulBuilder_;
+import 'package:note_app/note_app.dart';
 import 'package:note_app/page.dart' as root_;
-import 'package:note_app/pages.dart';
 
 mixin PathsMixin {
   final Path draft_dart3 = put("/draft/dart3", draft_dart3_.page);

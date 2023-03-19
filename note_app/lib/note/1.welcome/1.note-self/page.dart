@@ -29,25 +29,17 @@ build(Pen pen, BuildContext context) {
 ## xxx
   ''');
 
-  pen.widgetMate(Container$Mate(
-    key: const ValueKey("c"),
-    width: 100,
-    height: 250,
-    color: Colors.green,
-    clipBehavior: Clip.none,
-    child: Row$Mate(
-      mainAxisAlignment: MainAxisAlignment.start,
-      mainAxisSize: MainAxisSize.max,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      verticalDirection: VerticalDirection.down,
-      children: [
-        ElevatedButton$Mate(
-          autofocus: true,
-          clipBehavior: Clip.hardEdge,
-          onPressed: null,
-          child: Text$Mate("s"),
-        )
-      ],
+  pen.widgetMate(Center$Mate(
+    child: Container$Mate(
+      width: 200,
+      height: 100,
+      color: Colors.red.shade400,
+      clipBehavior: Clip.none,
+      child: Center$Mate(
+        widthFactor: 1,
+        heightFactor: 1,
+        child: const Text("s"),
+      ),
     ),
   ));
 
@@ -65,15 +57,15 @@ build(Pen pen, BuildContext context) {
     Param<double> width = params.put("width", 200.0);
     Param<double> height = params.put("height", 200.0);
 
-    return Container$Mate(
+    return Container(
       width: width.value,
       height: height.value,
       color: Colors.green,
       clipBehavior: Clip.none,
-      child: Container$Mate(
+      child: Container(
         width: width.value,
         height: height.value,
-        color: Colors.green,
+        color: Colors.blue,
         clipBehavior: Clip.none,
       ),
     );

@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   note:
+    path: ../note
 
 dev_dependencies:
   lints: ^2.0.0
@@ -23,6 +24,4 @@ dev_dependencies:
   dart_style: ^2.0.0
   path: ^1.8.3
 
-dependency_overrides:
-  note:
-    path: ../note
+#dependency_overrides:

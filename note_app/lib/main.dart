@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/log.dart';
 import 'package:note/page_core.dart';
-import 'package:note_app/pages.dart';
+import 'package:note_app/note_app.dart';
 import 'package:note/navigator_v2.dart';
 
 void main() {
