@@ -136,9 +136,7 @@ option() {
 /get?() {
   /get?shortHelp() { cat <<<"all: pub get"; }
   /get() {
-    run flutter pub get --directory $BAKE_HOME/note
-    run flutter pub get --directory $BAKE_HOME/note_mate_flutter
-    run flutter pub get --directory $BAKE_HOME/note_app
+     /exec flutter pub get
   }
 }
 
@@ -161,7 +159,7 @@ enable_experiment="--enable-experiment=records,patterns"
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
 #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
-    ( cd note_app; run flutter build web -v $enable_experiment --release --web-renderer html ; )
+    ( cd $BAKE_HOME/packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html ; )
 
   }
 }
@@ -169,9 +167,7 @@ enable_experiment="--enable-experiment=records,patterns"
 /test?() {
   /test?shortHelp() { cat <<<"test"; }
   /test() {
-        (run cd note ;              run flutter test; )
-        (run cd note_mate_flutter ; run flutter test; )
-        (run cd note_app ;          run flutter test; )
+     /exec flutter test
    }
 }
 
@@ -181,7 +177,7 @@ enable_experiment="--enable-experiment=records,patterns"
     echo "bake preview"
     /build "$@"
     # 	npx http-server ./app_note/build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./app_note/build/web --port 8000
+    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./$BAKE_HOME/packages/app_note/build/web --port 8000
   }
 }
 
@@ -202,17 +198,17 @@ enable_experiment="--enable-experiment=records,patterns"
 /gen?() {
   /gen?shortHelp() { cat <<<"代码生成"; }
   /gen() {
-    (run cd note_app ;          run dart run tools/gen_pages.dart; )
-    (run cd note_mate_flutter ; run dart run tools/gen_mates.dart; )
+    (run cd $BAKE_HOME/packages/note_app ;          run dart run tools/gen_pages.dart; )
+    (run cd $BAKE_HOME/packages/note_mate_flutter ; run dart run tools/gen_mates.dart; )
   }
 }
 /regen?() {
   /regen?shortHelp() { cat <<<"先删除old, 再代码生成"; }
   /regen() {
-    run rm note_app/lib/pages.g.dart
-    run rm -rf note_mate_flutter/lib
-    (run cd note_app ;          run dart run tools/gen_pages.dart ; )
-    (run cd note_mate_flutter ; run dart run tools/gen_mates.dart ; )
+    run rm $BAKE_HOME/packages/note_app/lib/pages.g.dart
+    run rm -rf $BAKE_HOME/packages/note_mate_flutter/lib
+    (run cd $BAKE_HOME/packages/note_app ;          run dart run tools/gen_pages.dart ; )
+    (run cd $BAKE_HOME/packages/note_mate_flutter ; run dart run tools/gen_mates.dart ; )
   }
 }
 
@@ -220,18 +216,27 @@ enable_experiment="--enable-experiment=records,patterns"
   /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
   /run() {
     (
-      cd note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment ;
+      cd $BAKE_HOME/packages/note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment ;
     )
   }
 }
+
+/exec?() {
+  /exec?shortHelp() { cat <<<"test"; }
+  /exec() {
+        (run cd $BAKE_HOME/packages/note ;              run "$@" ; )
+        (run cd $BAKE_HOME/packages/note_mate_flutter ; run "$@" ; )
+        (run cd $BAKE_HOME/packages/note_app ;          run "$@" ; )
+        (run cd $BAKE_HOME/packages/learn_dart ;        run "$@" ; )
+   }
+}
+
 
 # 清理
 /clean?() {
   /clean?shortHelp() { cat <<<"清理项目目录"; }
   /clean() {
-     (run cd note;              run flutter clean;)
-     (run cd note_mate_flutter; run flutter clean;)
-     (run cd note_app;          run flutter clean;)
+     /exec flutter clean
   }
 }
 

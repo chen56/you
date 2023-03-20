@@ -1,0 +1,9 @@
+name: note_workspace
+version: 1.0.0
+
+
+environment:
+  sdk: '>=3.0.0-290.1.beta <4.0.0'
+
+dev_dependencies:
+ melos: ^3.0.0
