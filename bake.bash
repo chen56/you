@@ -191,6 +191,7 @@ enable_experiment="--enable-experiment=records,patterns"
   /ci() {
     (
       flutter --version
+      /clean
       /get
       /build
       /test
@@ -228,9 +229,9 @@ enable_experiment="--enable-experiment=records,patterns"
 /clean?() {
   /clean?shortHelp() { cat <<<"清理项目目录"; }
   /clean() {
-     (run cd note; run  run flutter clean;)
-     (run cd note_mate_flutter; run  run flutter clean;)
-     (run cd note_app; run  run flutter clean;)
+     (run cd note;              run flutter clean;)
+     (run cd note_mate_flutter; run flutter clean;)
+     (run cd note_app;          run flutter clean;)
   }
 }
 
