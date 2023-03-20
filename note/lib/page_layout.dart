@@ -246,15 +246,6 @@ class _PagePen extends Pen {
   List<Content> get contents => List.unmodifiable(_contents);
 
   @override
-  void sample(Widget sample) {
-    _contents.add(ConstrainedBox(
-      key: ValueKey(i++),
-      constraints: const BoxConstraints.tightFor(width: 200, height: 200),
-      child: sample,
-    ));
-  }
-
-  @override
   void markdown(String content) {
     _contents.add(MarkdownContent(
       key: ValueKey(i++),
@@ -264,36 +255,44 @@ class _PagePen extends Pen {
   }
 
   @override
-  void widgetMate<T>(WidgetMate<T> widgetMate) {
-    _contents.add(_MateCode(
-      widgetMate: widgetMate,
+  void widget(Widget Function(ObjectParam node) builder) {
+    // ObjectParam node = ObjectParam(init: null, builder: (p) => builder(p));
+    // sampleMate(builder(node));
+  }
+
+  @override
+  void sampleFile(Widget sample) {
+    _contents.add(ConstrainedBox(
+      key: ValueKey(i++),
+      constraints: const BoxConstraints.tightFor(width: 200, height: 200),
+      child: sample,
     ));
   }
 
   @override
-  void widgetSnippet(Widget Function(ObjectParam node) builder) {
-    ObjectParam node = ObjectParam(init: null, builder: (p) => builder(p));
-    widgetMate(builder(node));
+  void sampleMate<T>(WidgetMate<T> widgetMate) {
+    _contents.add(_MateSample(
+      mate: widgetMate,
+    ));
   }
 }
 
-class _MateCode<T> extends StatelessWidget {
-  final WidgetMate<T> widgetMate;
+class _MateSample<T> extends StatelessWidget {
+  final WidgetMate<T> mate;
 
-  const _MateCode({super.key, required this.widgetMate});
+  const _MateSample({super.key, required this.mate});
 
   @override
   Widget build(BuildContext context) {
     var card = Card(
       elevation: 2,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ListenableBuilder(
-            listenable: widgetMate.mateParams,
-            builder: (context, child) =>
-                widgetMate.mateParams.builder(widgetMate.mateParams) as Widget,
+            listenable: mate.mateParams,
+            builder: (context, child) => mate.mateParams.builder(mate.mateParams) as Widget,
           ),
           ExpansionTile(
             initiallyExpanded: true,
@@ -305,24 +304,29 @@ class _MateCode<T> extends StatelessWidget {
               ],
             ),
             children: [
-              DataTable(dataRowMaxHeight: 25, columns: const [
-                DataColumn(label: Text("")),
-                DataColumn(label: Text("")),
-              ], rows: [
-                ...widgetMate.mateParams
-                    .toList(test: (node) => node.param.init != null)
-                    .map(
-                      (e) => DataRow(
-                        cells: [
-                          DataCell(e.mainWidget(context)),
-                          DataCell(Row(
-                            children: [Expanded(child: e.extWidget(context))],
-                          )),
-                        ],
-                      ),
-                    )
-                    .toList()
-              ]),
+              DataTable(
+                dataRowMaxHeight: 25,
+                dataRowMinHeight: 25,
+                columns: const [
+                  DataColumn(label: Text("")),
+                  DataColumn(label: Text("")),
+                ],
+                rows: [
+                  ...mate.mateParams
+                      .toList(test: (node) => node.param.init != null)
+                      .map(
+                        (e) => DataRow(
+                          cells: [
+                            DataCell(e.mainWidget(context)),
+                            DataCell(Row(
+                              children: [Expanded(child: e.extWidget(context))],
+                            )),
+                          ],
+                        ),
+                      )
+                      .toList()
+                ],
+              ),
             ],
           ),
         ],

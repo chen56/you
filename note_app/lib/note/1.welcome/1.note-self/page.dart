@@ -29,7 +29,7 @@ build(Pen pen, BuildContext context) {
 ## xxx
   ''');
 
-  pen.widgetMate(Center$Mate(
+  pen.sampleMate(Center$Mate(
     child: Container$Mate(
       width: 200,
       height: 100,
@@ -53,7 +53,7 @@ build(Pen pen, BuildContext context) {
   //     child: Container.new
   //       width
   // 这里可以放一些比较复杂的共享MateNode的场景，比如多个组件同width
-  pen.widgetSnippet((params) {
+  pen.widget((params) {
     Param<double> width = params.put("width", 200.0);
     Param<double> height = params.put("height", 200.0);
 

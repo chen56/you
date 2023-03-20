@@ -21,7 +21,7 @@ build(Pen pen, BuildContext context) {
 
   ''');
 
-  pen.sample(const Sample1());
+  pen.sampleFile(const Sample1());
 
   pen.markdown(r'''
 ## 范例2 Meta 

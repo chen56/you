@@ -45,7 +45,7 @@ State
 
   ''');
 
-  pen.sample(const stateful_hello.App());
+  pen.sampleFile(const stateful_hello.App());
 
   pen.markdown(r'''
 ## InheritedWidget有点麻烦 

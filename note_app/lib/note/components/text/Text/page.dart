@@ -17,7 +17,7 @@ Text.new()
 
   ''');
 
-  pen.sample(const NormalTextSample());
+  pen.sampleFile(const NormalTextSample());
 
   pen.markdown(r'''
 ## 范例1 富文本 
@@ -26,5 +26,5 @@ Text.rich()
 
   ''');
 
-  pen.sample(const RichTextSample());
+  pen.sampleFile(const RichTextSample());
 }

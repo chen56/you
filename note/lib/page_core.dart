@@ -178,13 +178,13 @@ class Content {
 }
 
 abstract class Pen {
-  void sample(Widget sample);
+  void sampleFile(Widget sample);
 
   void markdown(String content);
 
-  void widgetMate<T>(WidgetMate<T> widgetMate);
+  void sampleMate<T>(WidgetMate<T> widgetMate);
 
-  void widgetSnippet(Widget Function(ObjectParam node) builder);
+  void widget(Widget Function(ObjectParam node) builder);
 }
 
 // markdown 的结构轮廓，主要用来显示TOC
