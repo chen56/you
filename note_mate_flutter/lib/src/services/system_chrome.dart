@@ -22,8 +22,8 @@ class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ApplicationSwitcherDescription$Mate(
-        label: p.get('label').value,
-        primaryColor: p.get('primaryColor').value,
+        label: p.get('label').build(),
+        primaryColor: p.get('primaryColor').build(),
       ),
     );
     mateParams.put('label', label);
@@ -71,14 +71,14 @@ class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate<SystemUiO
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SystemUiOverlayStyle$Mate(
-        systemNavigationBarColor: p.get('systemNavigationBarColor').value,
-        systemNavigationBarDividerColor: p.get('systemNavigationBarDividerColor').value,
-        systemNavigationBarIconBrightness: p.get('systemNavigationBarIconBrightness').value,
-        systemNavigationBarContrastEnforced: p.get('systemNavigationBarContrastEnforced').value,
-        statusBarColor: p.get('statusBarColor').value,
-        statusBarBrightness: p.get('statusBarBrightness').value,
-        statusBarIconBrightness: p.get('statusBarIconBrightness').value,
-        systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').value,
+        systemNavigationBarColor: p.get('systemNavigationBarColor').build(),
+        systemNavigationBarDividerColor: p.get('systemNavigationBarDividerColor').build(),
+        systemNavigationBarIconBrightness: p.get('systemNavigationBarIconBrightness').build(),
+        systemNavigationBarContrastEnforced: p.get('systemNavigationBarContrastEnforced').build(),
+        statusBarColor: p.get('statusBarColor').build(),
+        statusBarBrightness: p.get('statusBarBrightness').build(),
+        statusBarIconBrightness: p.get('statusBarIconBrightness').build(),
+        systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').build(),
       ),
     );
     mateParams.put('systemNavigationBarColor', systemNavigationBarColor);

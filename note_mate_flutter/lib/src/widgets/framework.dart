@@ -73,8 +73,8 @@ class BuildOwner$Mate extends BuildOwner with Mate<BuildOwner$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BuildOwner$Mate(
-        onBuildScheduled: p.get('onBuildScheduled').value,
-        focusManager: p.get('focusManager').value,
+        onBuildScheduled: p.get('onBuildScheduled').build(),
+        focusManager: p.get('focusManager').build(),
       ),
     );
     mateParams.put('onBuildScheduled', onBuildScheduled);
@@ -111,8 +111,8 @@ class ErrorWidget$Mate extends ErrorWidget with WidgetMate<ErrorWidget$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ErrorWidget$Mate.withDetails(
-        message: p.get('message').value,
-        error: p.get('error').value,
+        message: p.get('message').build(),
+        error: p.get('error').build(),
       ),
     );
     mateParams.put('message', message);

@@ -37,12 +37,12 @@ class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate<FixedScrollMe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FixedScrollMetrics$Mate(
-        minScrollExtent: p.get('minScrollExtent').value,
-        maxScrollExtent: p.get('maxScrollExtent').value,
-        pixels: p.get('pixels').value,
-        viewportDimension: p.get('viewportDimension').value,
-        axisDirection: p.get('axisDirection').value,
-        devicePixelRatio: p.get('devicePixelRatio').value,
+        minScrollExtent: p.get('minScrollExtent').build(),
+        maxScrollExtent: p.get('maxScrollExtent').build(),
+        pixels: p.get('pixels').build(),
+        viewportDimension: p.get('viewportDimension').build(),
+        axisDirection: p.get('axisDirection').build(),
+        devicePixelRatio: p.get('devicePixelRatio').build(),
       ),
     );
     mateParams.put('minScrollExtent', minScrollExtent);

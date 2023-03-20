@@ -35,11 +35,11 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ProgressIndicatorThemeData$Mate(
-        color: p.get('color').value,
-        linearTrackColor: p.get('linearTrackColor').value,
-        linearMinHeight: p.get('linearMinHeight').value,
-        circularTrackColor: p.get('circularTrackColor').value,
-        refreshBackgroundColor: p.get('refreshBackgroundColor').value,
+        color: p.get('color').build(),
+        linearTrackColor: p.get('linearTrackColor').build(),
+        linearMinHeight: p.get('linearMinHeight').build(),
+        circularTrackColor: p.get('circularTrackColor').build(),
+        refreshBackgroundColor: p.get('refreshBackgroundColor').build(),
       ),
     );
     mateParams.put('color', color);
@@ -70,9 +70,9 @@ class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with WidgetMate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ProgressIndicatorTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

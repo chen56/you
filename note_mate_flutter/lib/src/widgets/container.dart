@@ -37,10 +37,10 @@ class DecoratedBox$Mate extends DecoratedBox with WidgetMate<DecoratedBox$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DecoratedBox$Mate(
-        key: p.get('key').value,
-        decoration: p.get('decoration').value,
-        position: p.get('position').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        decoration: p.get('decoration').build(),
+        position: p.get('position').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -114,20 +114,20 @@ class Container$Mate extends Container with WidgetMate<Container$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Container$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        padding: p.get('padding').value,
-        color: p.get('color').value,
-        decoration: p.get('decoration').value,
-        foregroundDecoration: p.get('foregroundDecoration').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        constraints: p.get('constraints').value,
-        margin: p.get('margin').value,
-        transform: p.get('transform').value,
-        transformAlignment: p.get('transformAlignment').value,
-        child: p.get('child').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        padding: p.get('padding').build(),
+        color: p.get('color').build(),
+        decoration: p.get('decoration').build(),
+        foregroundDecoration: p.get('foregroundDecoration').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        constraints: p.get('constraints').build(),
+        margin: p.get('margin').build(),
+        transform: p.get('transform').build(),
+        transformAlignment: p.get('transformAlignment').build(),
+        child: p.get('child').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);

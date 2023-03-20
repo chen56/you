@@ -44,11 +44,11 @@ class SlideTransition$Mate extends SlideTransition with WidgetMate<SlideTransiti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SlideTransition$Mate(
-        key: p.get('key').value,
-        position: p.get('position').value,
-        transformHitTests: p.get('transformHitTests').value,
-        textDirection: p.get('textDirection').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        position: p.get('position').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        textDirection: p.get('textDirection').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -87,11 +87,11 @@ class ScaleTransition$Mate extends ScaleTransition with WidgetMate<ScaleTransiti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleTransition$Mate(
-        key: p.get('key').value,
-        scale: p.get('scale').value,
-        alignment: p.get('alignment').value,
-        filterQuality: p.get('filterQuality').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        scale: p.get('scale').build(),
+        alignment: p.get('alignment').build(),
+        filterQuality: p.get('filterQuality').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -130,11 +130,11 @@ class RotationTransition$Mate extends RotationTransition with WidgetMate<Rotatio
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RotationTransition$Mate(
-        key: p.get('key').value,
-        turns: p.get('turns').value,
-        alignment: p.get('alignment').value,
-        filterQuality: p.get('filterQuality').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        turns: p.get('turns').build(),
+        alignment: p.get('alignment').build(),
+        filterQuality: p.get('filterQuality').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -173,11 +173,11 @@ class SizeTransition$Mate extends SizeTransition with WidgetMate<SizeTransition$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizeTransition$Mate(
-        key: p.get('key').value,
-        axis: p.get('axis').value,
-        sizeFactor: p.get('sizeFactor').value,
-        axisAlignment: p.get('axisAlignment').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        axis: p.get('axis').build(),
+        sizeFactor: p.get('sizeFactor').build(),
+        axisAlignment: p.get('axisAlignment').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -212,10 +212,10 @@ class FadeTransition$Mate extends FadeTransition with WidgetMate<FadeTransition$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FadeTransition$Mate(
-        key: p.get('key').value,
-        opacity: p.get('opacity').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        opacity: p.get('opacity').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -249,10 +249,10 @@ class SliverFadeTransition$Mate extends SliverFadeTransition with WidgetMate<Sli
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFadeTransition$Mate(
-        key: p.get('key').value,
-        opacity: p.get('opacity').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
-        sliver: p.get('sliver').value,
+        key: p.get('key').build(),
+        opacity: p.get('opacity').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('key', key);
@@ -278,8 +278,8 @@ class RelativeRectTween$Mate extends RelativeRectTween with Mate<RelativeRectTwe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RelativeRectTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -307,9 +307,9 @@ class PositionedTransition$Mate extends PositionedTransition with WidgetMate<Pos
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PositionedTransition$Mate(
-        key: p.get('key').value,
-        rect: p.get('rect').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        rect: p.get('rect').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -343,10 +343,10 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RelativePositionedTransition$Mate(
-        key: p.get('key').value,
-        rect: p.get('rect').value,
-        size: p.get('size').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        rect: p.get('rect').build(),
+        size: p.get('size').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -380,10 +380,10 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with WidgetMate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DecoratedBoxTransition$Mate(
-        key: p.get('key').value,
-        decoration: p.get('decoration').value,
-        position: p.get('position').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        decoration: p.get('decoration').build(),
+        position: p.get('position').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -421,11 +421,11 @@ class AlignTransition$Mate extends AlignTransition with WidgetMate<AlignTransiti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AlignTransition$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        child: p.get('child').value,
-        widthFactor: p.get('widthFactor').value,
-        heightFactor: p.get('heightFactor').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        child: p.get('child').build(),
+        widthFactor: p.get('widthFactor').build(),
+        heightFactor: p.get('heightFactor').build(),
       ),
     );
     mateParams.put('key', key);
@@ -473,13 +473,13 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultTextStyleTransition$Mate(
-        key: p.get('key').value,
-        style: p.get('style').value,
-        child: p.get('child').value,
-        textAlign: p.get('textAlign').value,
-        softWrap: p.get('softWrap').value,
-        overflow: p.get('overflow').value,
-        maxLines: p.get('maxLines').value,
+        key: p.get('key').build(),
+        style: p.get('style').build(),
+        child: p.get('child').build(),
+        textAlign: p.get('textAlign').build(),
+        softWrap: p.get('softWrap').build(),
+        overflow: p.get('overflow').build(),
+        maxLines: p.get('maxLines').build(),
       ),
     );
     mateParams.put('key', key);
@@ -516,10 +516,10 @@ class ListenableBuilder$Mate extends ListenableBuilder with WidgetMate<Listenabl
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ListenableBuilder$Mate(
-        key: p.get('key').value,
-        listenable: p.get('listenable').value,
-        builder: p.get('builder').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        listenable: p.get('listenable').build(),
+        builder: p.get('builder').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -553,10 +553,10 @@ class AnimatedBuilder$Mate extends AnimatedBuilder with WidgetMate<AnimatedBuild
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedBuilder$Mate(
-        key: p.get('key').value,
-        animation: p.get('animation').value,
-        builder: p.get('builder').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        animation: p.get('animation').build(),
+        builder: p.get('builder').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

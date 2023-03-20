@@ -25,9 +25,9 @@ class SemanticsActionEvent$Mate extends SemanticsActionEvent with Mate<Semantics
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SemanticsActionEvent$Mate(
-        type: p.get('type').value,
-        nodeId: p.get('nodeId').value,
-        arguments: p.get('arguments').value,
+        type: p.get('type').build(),
+        nodeId: p.get('nodeId').build(),
+        arguments: p.get('arguments').build(),
       ),
     );
     mateParams.put('type', type);

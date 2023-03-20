@@ -16,7 +16,7 @@ class BackButtonIcon$Mate extends BackButtonIcon with WidgetMate<BackButtonIcon$
       : super(key: key) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => BackButtonIcon$Mate(key: p.get('key').value),
+      builder: (p) => BackButtonIcon$Mate(key: p.get('key').build()),
     );
     mateParams.put('key', key);
   }
@@ -46,10 +46,10 @@ class BackButton$Mate extends BackButton with WidgetMate<BackButton$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BackButton$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        style: p.get('style').value,
-        onPressed: p.get('onPressed').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        style: p.get('style').build(),
+        onPressed: p.get('onPressed').build(),
       ),
     );
     mateParams.put('key', key);
@@ -69,7 +69,7 @@ class CloseButtonIcon$Mate extends CloseButtonIcon with WidgetMate<CloseButtonIc
       : super(key: key) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => CloseButtonIcon$Mate(key: p.get('key').value),
+      builder: (p) => CloseButtonIcon$Mate(key: p.get('key').build()),
     );
     mateParams.put('key', key);
   }
@@ -99,10 +99,10 @@ class CloseButton$Mate extends CloseButton with WidgetMate<CloseButton$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CloseButton$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        onPressed: p.get('onPressed').value,
-        style: p.get('style').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        onPressed: p.get('onPressed').build(),
+        style: p.get('style').build(),
       ),
     );
     mateParams.put('key', key);
@@ -122,7 +122,7 @@ class DrawerButtonIcon$Mate extends DrawerButtonIcon with WidgetMate<DrawerButto
       : super(key: key) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => DrawerButtonIcon$Mate(key: p.get('key').value),
+      builder: (p) => DrawerButtonIcon$Mate(key: p.get('key').build()),
     );
     mateParams.put('key', key);
   }
@@ -148,9 +148,9 @@ class DrawerButton$Mate extends DrawerButton with WidgetMate<DrawerButton$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerButton$Mate(
-        key: p.get('key').value,
-        style: p.get('style').value,
-        onPressed: p.get('onPressed').value,
+        key: p.get('key').build(),
+        style: p.get('style').build(),
+        onPressed: p.get('onPressed').build(),
       ),
     );
     mateParams.put('key', key);
@@ -169,7 +169,7 @@ class EndDrawerButtonIcon$Mate extends EndDrawerButtonIcon with WidgetMate<EndDr
       : super(key: key) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => EndDrawerButtonIcon$Mate(key: p.get('key').value),
+      builder: (p) => EndDrawerButtonIcon$Mate(key: p.get('key').build()),
     );
     mateParams.put('key', key);
   }
@@ -195,9 +195,9 @@ class EndDrawerButton$Mate extends EndDrawerButton with WidgetMate<EndDrawerButt
     mateParams = ObjectParam(
       init: this,
       builder: (p) => EndDrawerButton$Mate(
-        key: p.get('key').value,
-        style: p.get('style').value,
-        onPressed: p.get('onPressed').value,
+        key: p.get('key').build(),
+        style: p.get('style').build(),
+        onPressed: p.get('onPressed').build(),
       ),
     );
     mateParams.put('key', key);

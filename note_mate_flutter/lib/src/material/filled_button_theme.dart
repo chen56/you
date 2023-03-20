@@ -16,7 +16,7 @@ class FilledButtonThemeData$Mate extends FilledButtonThemeData with Mate<FilledB
       : super(style: style) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => FilledButtonThemeData$Mate(style: p.get('style').value),
+      builder: (p) => FilledButtonThemeData$Mate(style: p.get('style').build()),
     );
     mateParams.put('style', style);
   }
@@ -42,9 +42,9 @@ class FilledButtonTheme$Mate extends FilledButtonTheme with WidgetMate<FilledBut
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FilledButtonTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

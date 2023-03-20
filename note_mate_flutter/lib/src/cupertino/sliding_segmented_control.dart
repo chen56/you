@@ -46,13 +46,13 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmented
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSlidingSegmentedControl$Mate(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        onValueChanged: p.get('onValueChanged').value,
-        groupValue: p.get('groupValue').value,
-        thumbColor: p.get('thumbColor').value,
-        padding: p.get('padding').value,
-        backgroundColor: p.get('backgroundColor').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        onValueChanged: p.get('onValueChanged').build(),
+        groupValue: p.get('groupValue').build(),
+        thumbColor: p.get('thumbColor').build(),
+        padding: p.get('padding').build(),
+        backgroundColor: p.get('backgroundColor').build(),
       ),
     );
     mateParams.put('key', key);

@@ -28,9 +28,9 @@ class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SpellCheckSuggestionsToolbar$Mate(
-        key: p.get('key').value,
-        anchor: p.get('anchor').value,
-        buttonItems: p.get('buttonItems').value,
+        key: p.get('key').build(),
+        anchor: p.get('anchor').build(),
+        buttonItems: p.get('buttonItems').build(),
       ),
     );
     mateParams.put('key', key);

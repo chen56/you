@@ -21,8 +21,8 @@ class RoundedRectangleBorder$Mate extends RoundedRectangleBorder with Mate<Round
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RoundedRectangleBorder$Mate(
-        side: p.get('side').value,
-        borderRadius: p.get('borderRadius').value,
+        side: p.get('side').build(),
+        borderRadius: p.get('borderRadius').build(),
       ),
     );
     mateParams.put('side', side);

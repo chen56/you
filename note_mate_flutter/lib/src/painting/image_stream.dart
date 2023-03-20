@@ -27,9 +27,9 @@ class ImageInfo$Mate extends ImageInfo with Mate<ImageInfo$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageInfo$Mate(
-        image: p.get('image').value,
-        scale: p.get('scale').value,
-        debugLabel: p.get('debugLabel').value,
+        image: p.get('image').build(),
+        scale: p.get('scale').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('image', image);
@@ -58,8 +58,8 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate<ImageStream
       init: this,
       builder: (p) => ImageStreamListener$Mate(
         p.get('onImage').value,
-        onChunk: p.get('onChunk').value,
-        onError: p.get('onError').value,
+        onChunk: p.get('onChunk').build(),
+        onError: p.get('onError').build(),
       ),
     );
     mateParams.put('onImage', onImage);
@@ -84,8 +84,8 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate<ImageChunkEvent$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageChunkEvent$Mate(
-        cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').value,
-        expectedTotalBytes: p.get('expectedTotalBytes').value,
+        cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
+        expectedTotalBytes: p.get('expectedTotalBytes').build(),
       ),
     );
     mateParams.put('cumulativeBytesLoaded', cumulativeBytesLoaded);
@@ -110,7 +110,7 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter
       init: this,
       builder: (p) => OneFrameImageStreamCompleter$Mate(
         p.get('image').value,
-        informationCollector: p.get('informationCollector').value,
+        informationCollector: p.get('informationCollector').build(),
       ),
     );
     mateParams.put('image', image);
@@ -147,11 +147,11 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MultiFrameImageStreamCompleter$Mate(
-        codec: p.get('codec').value,
-        scale: p.get('scale').value,
-        debugLabel: p.get('debugLabel').value,
-        chunkEvents: p.get('chunkEvents').value,
-        informationCollector: p.get('informationCollector').value,
+        codec: p.get('codec').build(),
+        scale: p.get('scale').build(),
+        debugLabel: p.get('debugLabel').build(),
+        chunkEvents: p.get('chunkEvents').build(),
+        informationCollector: p.get('informationCollector').build(),
       ),
     );
     mateParams.put('codec', codec);

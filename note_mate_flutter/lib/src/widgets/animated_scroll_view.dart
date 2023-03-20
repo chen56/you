@@ -64,17 +64,17 @@ class AnimatedList$Mate extends AnimatedList with WidgetMate<AnimatedList$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedList$Mate(
-        key: p.get('key').value,
-        itemBuilder: p.get('itemBuilder').value,
-        initialItemCount: p.get('initialItemCount').value,
-        scrollDirection: p.get('scrollDirection').value,
-        reverse: p.get('reverse').value,
-        controller: p.get('controller').value,
-        primary: p.get('primary').value,
-        physics: p.get('physics').value,
-        shrinkWrap: p.get('shrinkWrap').value,
-        padding: p.get('padding').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        itemBuilder: p.get('itemBuilder').build(),
+        initialItemCount: p.get('initialItemCount').build(),
+        scrollDirection: p.get('scrollDirection').build(),
+        reverse: p.get('reverse').build(),
+        controller: p.get('controller').build(),
+        primary: p.get('primary').build(),
+        physics: p.get('physics').build(),
+        shrinkWrap: p.get('shrinkWrap').build(),
+        padding: p.get('padding').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -143,17 +143,17 @@ class AnimatedGrid$Mate extends AnimatedGrid with WidgetMate<AnimatedGrid$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedGrid$Mate(
-        key: p.get('key').value,
-        itemBuilder: p.get('itemBuilder').value,
-        gridDelegate: p.get('gridDelegate').value,
-        initialItemCount: p.get('initialItemCount').value,
-        scrollDirection: p.get('scrollDirection').value,
-        reverse: p.get('reverse').value,
-        controller: p.get('controller').value,
-        primary: p.get('primary').value,
-        physics: p.get('physics').value,
-        padding: p.get('padding').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        itemBuilder: p.get('itemBuilder').build(),
+        gridDelegate: p.get('gridDelegate').build(),
+        initialItemCount: p.get('initialItemCount').build(),
+        scrollDirection: p.get('scrollDirection').build(),
+        reverse: p.get('reverse').build(),
+        controller: p.get('controller').build(),
+        primary: p.get('primary').build(),
+        physics: p.get('physics').build(),
+        padding: p.get('padding').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -194,10 +194,10 @@ class SliverAnimatedList$Mate extends SliverAnimatedList with WidgetMate<SliverA
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverAnimatedList$Mate(
-        key: p.get('key').value,
-        itemBuilder: p.get('itemBuilder').value,
-        findChildIndexCallback: p.get('findChildIndexCallback').value,
-        initialItemCount: p.get('initialItemCount').value,
+        key: p.get('key').build(),
+        itemBuilder: p.get('itemBuilder').build(),
+        findChildIndexCallback: p.get('findChildIndexCallback').build(),
+        initialItemCount: p.get('initialItemCount').build(),
       ),
     );
     mateParams.put('key', key);
@@ -235,11 +235,11 @@ class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with WidgetMate<SliverA
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverAnimatedGrid$Mate(
-        key: p.get('key').value,
-        itemBuilder: p.get('itemBuilder').value,
-        gridDelegate: p.get('gridDelegate').value,
-        findChildIndexCallback: p.get('findChildIndexCallback').value,
-        initialItemCount: p.get('initialItemCount').value,
+        key: p.get('key').build(),
+        itemBuilder: p.get('itemBuilder').build(),
+        gridDelegate: p.get('gridDelegate').build(),
+        findChildIndexCallback: p.get('findChildIndexCallback').build(),
+        initialItemCount: p.get('initialItemCount').build(),
       ),
     );
     mateParams.put('key', key);

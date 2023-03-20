@@ -34,11 +34,11 @@ class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate<Bot
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomNavigationBarItem$Mate(
-        icon: p.get('icon').value,
-        label: p.get('label').value,
-        activeIcon: p.get('activeIcon').value,
-        backgroundColor: p.get('backgroundColor').value,
-        tooltip: p.get('tooltip').value,
+        icon: p.get('icon').build(),
+        label: p.get('label').build(),
+        activeIcon: p.get('activeIcon').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        tooltip: p.get('tooltip').build(),
       ),
     );
     mateParams.put('icon', icon);

@@ -30,10 +30,10 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with WidgetMate<D
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultSelectionStyle$Mate(
-        key: p.get('key').value,
-        cursorColor: p.get('cursorColor').value,
-        selectionColor: p.get('selectionColor').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        cursorColor: p.get('cursorColor').build(),
+        selectionColor: p.get('selectionColor').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -50,7 +50,7 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with WidgetMate<D
       : super.fallback(key: key) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').value),
+      builder: (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build()),
     );
     mateParams.put('key', key);
   }

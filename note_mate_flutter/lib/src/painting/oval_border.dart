@@ -21,8 +21,8 @@ class OvalBorder$Mate extends OvalBorder with Mate<OvalBorder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OvalBorder$Mate(
-        side: p.get('side').value,
-        eccentricity: p.get('eccentricity').value,
+        side: p.get('side').build(),
+        eccentricity: p.get('eccentricity').build(),
       ),
     );
     mateParams.put('side', side);

@@ -45,13 +45,13 @@ class DrawerHeader$Mate extends DrawerHeader with WidgetMate<DrawerHeader$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerHeader$Mate(
-        key: p.get('key').value,
-        decoration: p.get('decoration').value,
-        margin: p.get('margin').value,
-        padding: p.get('padding').value,
-        duration: p.get('duration').value,
-        curve: p.get('curve').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        decoration: p.get('decoration').build(),
+        margin: p.get('margin').build(),
+        padding: p.get('padding').build(),
+        duration: p.get('duration').build(),
+        curve: p.get('curve').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -39,12 +39,12 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate<BottomAppBarThe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomAppBarTheme$Mate(
-        color: p.get('color').value,
-        elevation: p.get('elevation').value,
-        shape: p.get('shape').value,
-        height: p.get('height').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        padding: p.get('padding').value,
+        color: p.get('color').build(),
+        elevation: p.get('elevation').build(),
+        shape: p.get('shape').build(),
+        height: p.get('height').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        padding: p.get('padding').build(),
       ),
     );
     mateParams.put('color', color);

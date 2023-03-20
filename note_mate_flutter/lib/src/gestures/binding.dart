@@ -49,14 +49,14 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FlutterErrorDetailsForPointerEventDispatcher$Mate(
-        exception: p.get('exception').value,
-        stack: p.get('stack').value,
-        library: p.get('library').value,
-        context: p.get('context').value,
-        event: p.get('event').value,
-        hitTestEntry: p.get('hitTestEntry').value,
-        informationCollector: p.get('informationCollector').value,
-        silent: p.get('silent').value,
+        exception: p.get('exception').build(),
+        stack: p.get('stack').build(),
+        library: p.get('library').build(),
+        context: p.get('context').build(),
+        event: p.get('event').build(),
+        hitTestEntry: p.get('hitTestEntry').build(),
+        informationCollector: p.get('informationCollector').build(),
+        silent: p.get('silent').build(),
       ),
     );
     mateParams.put('exception', exception);

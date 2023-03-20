@@ -20,8 +20,8 @@ class TextSelectionToolbarAnchors$Mate extends TextSelectionToolbarAnchors with 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionToolbarAnchors$Mate(
-        primaryAnchor: p.get('primaryAnchor').value,
-        secondaryAnchor: p.get('secondaryAnchor').value,
+        primaryAnchor: p.get('primaryAnchor').build(),
+        secondaryAnchor: p.get('secondaryAnchor').build(),
       ),
     );
     mateParams.put('primaryAnchor', primaryAnchor);

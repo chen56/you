@@ -50,14 +50,14 @@ class BoxDecoration$Mate extends BoxDecoration with Mate<BoxDecoration$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxDecoration$Mate(
-        color: p.get('color').value,
-        image: p.get('image').value,
-        border: p.get('border').value,
-        borderRadius: p.get('borderRadius').value,
-        boxShadow: p.get('boxShadow').value,
-        gradient: p.get('gradient').value,
-        backgroundBlendMode: p.get('backgroundBlendMode').value,
-        shape: p.get('shape').value,
+        color: p.get('color').build(),
+        image: p.get('image').build(),
+        border: p.get('border').build(),
+        borderRadius: p.get('borderRadius').build(),
+        boxShadow: p.get('boxShadow').build(),
+        gradient: p.get('gradient').build(),
+        backgroundBlendMode: p.get('backgroundBlendMode').build(),
+        shape: p.get('shape').build(),
       ),
     );
     mateParams.put('color', color);

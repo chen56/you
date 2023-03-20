@@ -64,7 +64,7 @@ class TextAlignVertical$Mate extends TextAlignVertical with Mate<TextAlignVertic
       : super(y: y) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => TextAlignVertical$Mate(y: p.get('y').value),
+      builder: (p) => TextAlignVertical$Mate(y: p.get('y').build()),
     );
     mateParams.put('y', y);
   }

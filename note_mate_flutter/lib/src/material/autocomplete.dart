@@ -47,14 +47,14 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with WidgetMat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Autocomplete$Mate(
-        key: p.get('key').value,
-        optionsBuilder: p.get('optionsBuilder').value,
-        displayStringForOption: p.get('displayStringForOption').value,
-        fieldViewBuilder: p.get('fieldViewBuilder').value,
-        onSelected: p.get('onSelected').value,
-        optionsMaxHeight: p.get('optionsMaxHeight').value,
-        optionsViewBuilder: p.get('optionsViewBuilder').value,
-        initialValue: p.get('initialValue').value,
+        key: p.get('key').build(),
+        optionsBuilder: p.get('optionsBuilder').build(),
+        displayStringForOption: p.get('displayStringForOption').build(),
+        fieldViewBuilder: p.get('fieldViewBuilder').build(),
+        onSelected: p.get('onSelected').build(),
+        optionsMaxHeight: p.get('optionsMaxHeight').build(),
+        optionsViewBuilder: p.get('optionsViewBuilder').build(),
+        initialValue: p.get('initialValue').build(),
       ),
     );
     mateParams.put('key', key);

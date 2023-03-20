@@ -41,9 +41,9 @@ class PageStorage$Mate extends PageStorage with WidgetMate<PageStorage$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PageStorage$Mate(
-        key: p.get('key').value,
-        bucket: p.get('bucket').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        bucket: p.get('bucket').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

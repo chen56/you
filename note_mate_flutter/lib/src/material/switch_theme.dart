@@ -51,14 +51,14 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate<SwitchThemeData$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SwitchThemeData$Mate(
-        thumbColor: p.get('thumbColor').value,
-        trackColor: p.get('trackColor').value,
-        trackOutlineColor: p.get('trackOutlineColor').value,
-        materialTapTargetSize: p.get('materialTapTargetSize').value,
-        mouseCursor: p.get('mouseCursor').value,
-        overlayColor: p.get('overlayColor').value,
-        splashRadius: p.get('splashRadius').value,
-        thumbIcon: p.get('thumbIcon').value,
+        thumbColor: p.get('thumbColor').build(),
+        trackColor: p.get('trackColor').build(),
+        trackOutlineColor: p.get('trackOutlineColor').build(),
+        materialTapTargetSize: p.get('materialTapTargetSize').build(),
+        mouseCursor: p.get('mouseCursor').build(),
+        overlayColor: p.get('overlayColor').build(),
+        splashRadius: p.get('splashRadius').build(),
+        thumbIcon: p.get('thumbIcon').build(),
       ),
     );
     mateParams.put('thumbColor', thumbColor);
@@ -92,9 +92,9 @@ class SwitchTheme$Mate extends SwitchTheme with WidgetMate<SwitchTheme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SwitchTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -42,12 +42,12 @@ class RadioThemeData$Mate extends RadioThemeData with Mate<RadioThemeData$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RadioThemeData$Mate(
-        mouseCursor: p.get('mouseCursor').value,
-        fillColor: p.get('fillColor').value,
-        overlayColor: p.get('overlayColor').value,
-        splashRadius: p.get('splashRadius').value,
-        materialTapTargetSize: p.get('materialTapTargetSize').value,
-        visualDensity: p.get('visualDensity').value,
+        mouseCursor: p.get('mouseCursor').build(),
+        fillColor: p.get('fillColor').build(),
+        overlayColor: p.get('overlayColor').build(),
+        splashRadius: p.get('splashRadius').build(),
+        materialTapTargetSize: p.get('materialTapTargetSize').build(),
+        visualDensity: p.get('visualDensity').build(),
       ),
     );
     mateParams.put('mouseCursor', mouseCursor);
@@ -79,9 +79,9 @@ class RadioTheme$Mate extends RadioTheme with WidgetMate<RadioTheme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RadioTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

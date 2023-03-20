@@ -33,11 +33,11 @@ class BoxShadow$Mate extends BoxShadow with Mate<BoxShadow$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxShadow$Mate(
-        color: p.get('color').value,
-        offset: p.get('offset').value,
-        blurRadius: p.get('blurRadius').value,
-        spreadRadius: p.get('spreadRadius').value,
-        blurStyle: p.get('blurStyle').value,
+        color: p.get('color').build(),
+        offset: p.get('offset').build(),
+        blurRadius: p.get('blurRadius').build(),
+        spreadRadius: p.get('spreadRadius').build(),
+        blurStyle: p.get('blurStyle').build(),
       ),
     );
     mateParams.put('color', color);

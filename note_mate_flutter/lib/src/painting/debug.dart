@@ -25,9 +25,9 @@ class ImageSizeInfo$Mate extends ImageSizeInfo with Mate<ImageSizeInfo$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageSizeInfo$Mate(
-        source: p.get('source').value,
-        displaySize: p.get('displaySize').value,
-        imageSize: p.get('imageSize').value,
+        source: p.get('source').build(),
+        displaySize: p.get('displaySize').build(),
+        imageSize: p.get('imageSize').build(),
       ),
     );
     mateParams.put('source', source);

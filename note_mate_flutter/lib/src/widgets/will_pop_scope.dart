@@ -26,9 +26,9 @@ class WillPopScope$Mate extends WillPopScope with WidgetMate<WillPopScope$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => WillPopScope$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        onWillPop: p.get('onWillPop').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        onWillPop: p.get('onWillPop').build(),
       ),
     );
     mateParams.put('key', key);

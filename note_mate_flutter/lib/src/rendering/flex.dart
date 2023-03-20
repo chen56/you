@@ -51,15 +51,15 @@ class RenderFlex$Mate extends RenderFlex with Mate<RenderFlex$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFlex$Mate(
-        children: p.get('children').value,
-        direction: p.get('direction').value,
-        mainAxisSize: p.get('mainAxisSize').value,
-        mainAxisAlignment: p.get('mainAxisAlignment').value,
-        crossAxisAlignment: p.get('crossAxisAlignment').value,
-        textDirection: p.get('textDirection').value,
-        verticalDirection: p.get('verticalDirection').value,
-        textBaseline: p.get('textBaseline').value,
-        clipBehavior: p.get('clipBehavior').value,
+        children: p.get('children').build(),
+        direction: p.get('direction').build(),
+        mainAxisSize: p.get('mainAxisSize').build(),
+        mainAxisAlignment: p.get('mainAxisAlignment').build(),
+        crossAxisAlignment: p.get('crossAxisAlignment').build(),
+        textDirection: p.get('textDirection').build(),
+        verticalDirection: p.get('verticalDirection').build(),
+        textBaseline: p.get('textBaseline').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.putList('children', children);

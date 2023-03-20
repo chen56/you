@@ -58,16 +58,16 @@ class CupertinoButton$Mate extends CupertinoButton with WidgetMate<CupertinoButt
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoButton$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        padding: p.get('padding').value,
-        color: p.get('color').value,
-        disabledColor: p.get('disabledColor').value,
-        minSize: p.get('minSize').value,
-        pressedOpacity: p.get('pressedOpacity').value,
-        borderRadius: p.get('borderRadius').value,
-        alignment: p.get('alignment').value,
-        onPressed: p.get('onPressed').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        padding: p.get('padding').build(),
+        color: p.get('color').build(),
+        disabledColor: p.get('disabledColor').build(),
+        minSize: p.get('minSize').build(),
+        pressedOpacity: p.get('pressedOpacity').build(),
+        borderRadius: p.get('borderRadius').build(),
+        alignment: p.get('alignment').build(),
+        onPressed: p.get('onPressed').build(),
       ),
     );
     mateParams.put('key', key);
@@ -124,15 +124,15 @@ class CupertinoButton$Mate extends CupertinoButton with WidgetMate<CupertinoButt
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoButton$Mate.filled(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        padding: p.get('padding').value,
-        disabledColor: p.get('disabledColor').value,
-        minSize: p.get('minSize').value,
-        pressedOpacity: p.get('pressedOpacity').value,
-        borderRadius: p.get('borderRadius').value,
-        alignment: p.get('alignment').value,
-        onPressed: p.get('onPressed').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        padding: p.get('padding').build(),
+        disabledColor: p.get('disabledColor').build(),
+        minSize: p.get('minSize').build(),
+        pressedOpacity: p.get('pressedOpacity').build(),
+        borderRadius: p.get('borderRadius').build(),
+        alignment: p.get('alignment').build(),
+        onPressed: p.get('onPressed').build(),
       ),
     );
     mateParams.put('key', key);

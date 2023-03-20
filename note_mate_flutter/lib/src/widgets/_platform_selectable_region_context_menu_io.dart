@@ -22,8 +22,8 @@ class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionC
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformSelectableRegionContextMenu$Mate(
-        child: p.get('child').value,
-        key: p.get('key').value,
+        child: p.get('child').build(),
+        key: p.get('key').build(),
       ),
     );
     mateParams.put('child', child);

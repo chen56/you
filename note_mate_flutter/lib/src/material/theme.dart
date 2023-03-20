@@ -29,9 +29,9 @@ class Theme$Mate extends Theme with WidgetMate<Theme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Theme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -56,8 +56,8 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate<ThemeDataTween$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ThemeDataTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -97,12 +97,12 @@ class AnimatedTheme$Mate extends AnimatedTheme with WidgetMate<AnimatedTheme$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

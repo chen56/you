@@ -21,8 +21,8 @@ class ScrollMetricsNotification$Mate extends ScrollMetricsNotification with Mate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollMetricsNotification$Mate(
-        metrics: p.get('metrics').value,
-        context: p.get('context').value,
+        metrics: p.get('metrics').build(),
+        context: p.get('context').build(),
       ),
     );
     mateParams.put('metrics', metrics);

@@ -42,13 +42,13 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate<B
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BouncingScrollSimulation$Mate(
-        position: p.get('position').value,
-        velocity: p.get('velocity').value,
-        leadingExtent: p.get('leadingExtent').value,
-        trailingExtent: p.get('trailingExtent').value,
-        spring: p.get('spring').value,
-        constantDeceleration: p.get('constantDeceleration').value,
-        tolerance: p.get('tolerance').value,
+        position: p.get('position').build(),
+        velocity: p.get('velocity').build(),
+        leadingExtent: p.get('leadingExtent').build(),
+        trailingExtent: p.get('trailingExtent').build(),
+        spring: p.get('spring').build(),
+        constantDeceleration: p.get('constantDeceleration').build(),
+        tolerance: p.get('tolerance').build(),
       ),
     );
     mateParams.put('position', position);
@@ -85,10 +85,10 @@ class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate<C
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ClampingScrollSimulation$Mate(
-        position: p.get('position').value,
-        velocity: p.get('velocity').value,
-        friction: p.get('friction').value,
-        tolerance: p.get('tolerance').value,
+        position: p.get('position').build(),
+        velocity: p.get('velocity').build(),
+        friction: p.get('friction').build(),
+        tolerance: p.get('tolerance').build(),
       ),
     );
     mateParams.put('position', position);

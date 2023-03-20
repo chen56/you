@@ -28,10 +28,10 @@ class Border$Mate extends Border with Mate<Border$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Border$Mate(
-        top: p.get('top').value,
-        right: p.get('right').value,
-        bottom: p.get('bottom').value,
-        left: p.get('left').value,
+        top: p.get('top').build(),
+        right: p.get('right').build(),
+        bottom: p.get('bottom').build(),
+        left: p.get('left').build(),
       ),
     );
     mateParams.put('top', top);
@@ -67,8 +67,8 @@ class Border$Mate extends Border with Mate<Border$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Border$Mate.symmetric(
-        vertical: p.get('vertical').value,
-        horizontal: p.get('horizontal').value,
+        vertical: p.get('vertical').build(),
+        horizontal: p.get('horizontal').build(),
       ),
     );
     mateParams.put('vertical', vertical);
@@ -100,10 +100,10 @@ class BorderDirectional$Mate extends BorderDirectional with Mate<BorderDirection
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderDirectional$Mate(
-        top: p.get('top').value,
-        start: p.get('start').value,
-        end: p.get('end').value,
-        bottom: p.get('bottom').value,
+        top: p.get('top').build(),
+        start: p.get('start').build(),
+        end: p.get('end').build(),
+        bottom: p.get('bottom').build(),
       ),
     );
     mateParams.put('top', top);

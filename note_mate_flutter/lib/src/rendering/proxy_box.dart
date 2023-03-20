@@ -54,8 +54,8 @@ class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate<RenderCon
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderConstrainedBox$Mate(
-        child: p.get('child').value,
-        additionalConstraints: p.get('additionalConstraints').value,
+        child: p.get('child').build(),
+        additionalConstraints: p.get('additionalConstraints').build(),
       ),
     );
     mateParams.put('child', child);
@@ -83,9 +83,9 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate<RenderLimitedBox$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderLimitedBox$Mate(
-        child: p.get('child').value,
-        maxWidth: p.get('maxWidth').value,
-        maxHeight: p.get('maxHeight').value,
+        child: p.get('child').build(),
+        maxWidth: p.get('maxWidth').build(),
+        maxHeight: p.get('maxHeight').build(),
       ),
     );
     mateParams.put('child', child);
@@ -110,8 +110,8 @@ class RenderAspectRatio$Mate extends RenderAspectRatio with Mate<RenderAspectRat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAspectRatio$Mate(
-        child: p.get('child').value,
-        aspectRatio: p.get('aspectRatio').value,
+        child: p.get('child').build(),
+        aspectRatio: p.get('aspectRatio').build(),
       ),
     );
     mateParams.put('child', child);
@@ -139,9 +139,9 @@ class RenderIntrinsicWidth$Mate extends RenderIntrinsicWidth with Mate<RenderInt
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderIntrinsicWidth$Mate(
-        stepWidth: p.get('stepWidth').value,
-        stepHeight: p.get('stepHeight').value,
-        child: p.get('child').value,
+        stepWidth: p.get('stepWidth').build(),
+        stepHeight: p.get('stepHeight').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('stepWidth', stepWidth);
@@ -160,7 +160,7 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate<RenderI
       : super(child: child) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderIntrinsicHeight$Mate(child: p.get('child').value),
+      builder: (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build()),
     );
     mateParams.put('child', child);
   }
@@ -186,9 +186,9 @@ class RenderOpacity$Mate extends RenderOpacity with Mate<RenderOpacity$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderOpacity$Mate(
-        opacity: p.get('opacity').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
-        child: p.get('child').value,
+        opacity: p.get('opacity').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('opacity', opacity);
@@ -217,9 +217,9 @@ class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate<RenderA
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAnimatedOpacity$Mate(
-        opacity: p.get('opacity').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
-        child: p.get('child').value,
+        opacity: p.get('opacity').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('opacity', opacity);
@@ -248,9 +248,9 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate<RenderShaderMask$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderShaderMask$Mate(
-        child: p.get('child').value,
-        shaderCallback: p.get('shaderCallback').value,
-        blendMode: p.get('blendMode').value,
+        child: p.get('child').build(),
+        shaderCallback: p.get('shaderCallback').build(),
+        blendMode: p.get('blendMode').build(),
       ),
     );
     mateParams.put('child', child);
@@ -279,9 +279,9 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate<RenderBac
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderBackdropFilter$Mate(
-        child: p.get('child').value,
-        filter: p.get('filter').value,
-        blendMode: p.get('blendMode').value,
+        child: p.get('child').build(),
+        filter: p.get('filter').build(),
+        blendMode: p.get('blendMode').build(),
       ),
     );
     mateParams.put('child', child);
@@ -306,8 +306,8 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate<ShapeBorderCl
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ShapeBorderClipper$Mate(
-        shape: p.get('shape').value,
-        textDirection: p.get('textDirection').value,
+        shape: p.get('shape').build(),
+        textDirection: p.get('textDirection').build(),
       ),
     );
     mateParams.put('shape', shape);
@@ -335,9 +335,9 @@ class RenderClipRect$Mate extends RenderClipRect with Mate<RenderClipRect$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderClipRect$Mate(
-        child: p.get('child').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
+        child: p.get('child').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('child', child);
@@ -374,11 +374,11 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate<RenderClipRRect$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderClipRRect$Mate(
-        child: p.get('child').value,
-        borderRadius: p.get('borderRadius').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
-        textDirection: p.get('textDirection').value,
+        child: p.get('child').build(),
+        borderRadius: p.get('borderRadius').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        textDirection: p.get('textDirection').build(),
       ),
     );
     mateParams.put('child', child);
@@ -409,9 +409,9 @@ class RenderClipOval$Mate extends RenderClipOval with Mate<RenderClipOval$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderClipOval$Mate(
-        child: p.get('child').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
+        child: p.get('child').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('child', child);
@@ -440,9 +440,9 @@ class RenderClipPath$Mate extends RenderClipPath with Mate<RenderClipPath$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderClipPath$Mate(
-        child: p.get('child').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
+        child: p.get('child').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('child', child);
@@ -487,13 +487,13 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate<RenderPhysi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPhysicalModel$Mate(
-        child: p.get('child').value,
-        shape: p.get('shape').value,
-        clipBehavior: p.get('clipBehavior').value,
-        borderRadius: p.get('borderRadius').value,
-        elevation: p.get('elevation').value,
-        color: p.get('color').value,
-        shadowColor: p.get('shadowColor').value,
+        child: p.get('child').build(),
+        shape: p.get('shape').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        borderRadius: p.get('borderRadius').build(),
+        elevation: p.get('elevation').build(),
+        color: p.get('color').build(),
+        shadowColor: p.get('shadowColor').build(),
       ),
     );
     mateParams.put('child', child);
@@ -538,12 +538,12 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate<RenderPhysi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPhysicalShape$Mate(
-        child: p.get('child').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
-        elevation: p.get('elevation').value,
-        color: p.get('color').value,
-        shadowColor: p.get('shadowColor').value,
+        child: p.get('child').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        elevation: p.get('elevation').build(),
+        color: p.get('color').build(),
+        shadowColor: p.get('shadowColor').build(),
       ),
     );
     mateParams.put('child', child);
@@ -579,10 +579,10 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate<RenderDecorat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderDecoratedBox$Mate(
-        decoration: p.get('decoration').value,
-        position: p.get('position').value,
-        configuration: p.get('configuration').value,
-        child: p.get('child').value,
+        decoration: p.get('decoration').build(),
+        position: p.get('position').build(),
+        configuration: p.get('configuration').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('decoration', decoration);
@@ -628,13 +628,13 @@ class RenderTransform$Mate extends RenderTransform with Mate<RenderTransform$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderTransform$Mate(
-        transform: p.get('transform').value,
-        origin: p.get('origin').value,
-        alignment: p.get('alignment').value,
-        textDirection: p.get('textDirection').value,
-        transformHitTests: p.get('transformHitTests').value,
-        filterQuality: p.get('filterQuality').value,
-        child: p.get('child').value,
+        transform: p.get('transform').build(),
+        origin: p.get('origin').build(),
+        alignment: p.get('alignment').build(),
+        textDirection: p.get('textDirection').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        filterQuality: p.get('filterQuality').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('transform', transform);
@@ -675,11 +675,11 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate<RenderFittedBox$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFittedBox$Mate(
-        fit: p.get('fit').value,
-        alignment: p.get('alignment').value,
-        textDirection: p.get('textDirection').value,
-        child: p.get('child').value,
-        clipBehavior: p.get('clipBehavior').value,
+        fit: p.get('fit').build(),
+        alignment: p.get('alignment').build(),
+        textDirection: p.get('textDirection').build(),
+        child: p.get('child').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('fit', fit);
@@ -710,9 +710,9 @@ class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFractionalTranslation$Mate(
-        translation: p.get('translation').value,
-        transformHitTests: p.get('transformHitTests').value,
-        child: p.get('child').value,
+        translation: p.get('translation').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('translation', translation);
@@ -773,17 +773,17 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate<RenderP
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderPointerListener$Mate(
-        onPointerDown: p.get('onPointerDown').value,
-        onPointerMove: p.get('onPointerMove').value,
-        onPointerUp: p.get('onPointerUp').value,
-        onPointerHover: p.get('onPointerHover').value,
-        onPointerCancel: p.get('onPointerCancel').value,
-        onPointerPanZoomStart: p.get('onPointerPanZoomStart').value,
-        onPointerPanZoomUpdate: p.get('onPointerPanZoomUpdate').value,
-        onPointerPanZoomEnd: p.get('onPointerPanZoomEnd').value,
-        onPointerSignal: p.get('onPointerSignal').value,
-        behavior: p.get('behavior').value,
-        child: p.get('child').value,
+        onPointerDown: p.get('onPointerDown').build(),
+        onPointerMove: p.get('onPointerMove').build(),
+        onPointerUp: p.get('onPointerUp').build(),
+        onPointerHover: p.get('onPointerHover').build(),
+        onPointerCancel: p.get('onPointerCancel').build(),
+        onPointerPanZoomStart: p.get('onPointerPanZoomStart').build(),
+        onPointerPanZoomUpdate: p.get('onPointerPanZoomUpdate').build(),
+        onPointerPanZoomEnd: p.get('onPointerPanZoomEnd').build(),
+        onPointerSignal: p.get('onPointerSignal').build(),
+        behavior: p.get('behavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('onPointerDown', onPointerDown);
@@ -840,14 +840,14 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate<RenderMouseRegi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderMouseRegion$Mate(
-        onEnter: p.get('onEnter').value,
-        onHover: p.get('onHover').value,
-        onExit: p.get('onExit').value,
-        cursor: p.get('cursor').value,
-        validForMouseTracker: p.get('validForMouseTracker').value,
-        opaque: p.get('opaque').value,
-        child: p.get('child').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
+        onEnter: p.get('onEnter').build(),
+        onHover: p.get('onHover').build(),
+        onExit: p.get('onExit').build(),
+        cursor: p.get('cursor').build(),
+        validForMouseTracker: p.get('validForMouseTracker').build(),
+        opaque: p.get('opaque').build(),
+        child: p.get('child').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
       ),
     );
     mateParams.put('onEnter', onEnter);
@@ -871,7 +871,7 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate<RenderR
       : super(child: child) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderRepaintBoundary$Mate(child: p.get('child').value),
+      builder: (p) => RenderRepaintBoundary$Mate(child: p.get('child').build()),
     );
     mateParams.put('child', child);
   }
@@ -897,9 +897,9 @@ class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate<RenderIgnor
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderIgnorePointer$Mate(
-        child: p.get('child').value,
-        ignoring: p.get('ignoring').value,
-        ignoringSemantics: p.get('ignoringSemantics').value,
+        child: p.get('child').build(),
+        ignoring: p.get('ignoring').build(),
+        ignoringSemantics: p.get('ignoringSemantics').build(),
       ),
     );
     mateParams.put('child', child);
@@ -924,8 +924,8 @@ class RenderOffstage$Mate extends RenderOffstage with Mate<RenderOffstage$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderOffstage$Mate(
-        offstage: p.get('offstage').value,
-        child: p.get('child').value,
+        offstage: p.get('offstage').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('offstage', offstage);
@@ -953,9 +953,9 @@ class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate<RenderAbsor
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAbsorbPointer$Mate(
-        child: p.get('child').value,
-        absorbing: p.get('absorbing').value,
-        ignoringSemantics: p.get('ignoringSemantics').value,
+        child: p.get('child').build(),
+        absorbing: p.get('absorbing').build(),
+        ignoringSemantics: p.get('ignoringSemantics').build(),
       ),
     );
     mateParams.put('child', child);
@@ -984,9 +984,9 @@ class RenderMetaData$Mate extends RenderMetaData with Mate<RenderMetaData$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderMetaData$Mate(
-        metaData: p.get('metaData').value,
-        behavior: p.get('behavior').value,
-        child: p.get('child').value,
+        metaData: p.get('metaData').build(),
+        behavior: p.get('behavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('metaData', metaData);
@@ -1032,13 +1032,13 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSemanticsGestureHandler$Mate(
-        child: p.get('child').value,
-        onTap: p.get('onTap').value,
-        onLongPress: p.get('onLongPress').value,
-        onHorizontalDragUpdate: p.get('onHorizontalDragUpdate').value,
-        onVerticalDragUpdate: p.get('onVerticalDragUpdate').value,
-        scrollFactor: p.get('scrollFactor').value,
-        behavior: p.get('behavior').value,
+        child: p.get('child').build(),
+        onTap: p.get('onTap').build(),
+        onLongPress: p.get('onLongPress').build(),
+        onHorizontalDragUpdate: p.get('onHorizontalDragUpdate').build(),
+        onVerticalDragUpdate: p.get('onVerticalDragUpdate').build(),
+        scrollFactor: p.get('scrollFactor').build(),
+        behavior: p.get('behavior').build(),
       ),
     );
     mateParams.put('child', child);
@@ -1083,12 +1083,12 @@ class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSemanticsAnnotations$Mate(
-        child: p.get('child').value,
-        properties: p.get('properties').value,
-        container: p.get('container').value,
-        explicitChildNodes: p.get('explicitChildNodes').value,
-        excludeSemantics: p.get('excludeSemantics').value,
-        textDirection: p.get('textDirection').value,
+        child: p.get('child').build(),
+        properties: p.get('properties').build(),
+        container: p.get('container').build(),
+        explicitChildNodes: p.get('explicitChildNodes').build(),
+        excludeSemantics: p.get('excludeSemantics').build(),
+        textDirection: p.get('textDirection').build(),
       ),
     );
     mateParams.put('child', child);
@@ -1116,8 +1116,8 @@ class RenderBlockSemantics$Mate extends RenderBlockSemantics with Mate<RenderBlo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderBlockSemantics$Mate(
-        child: p.get('child').value,
-        blocking: p.get('blocking').value,
+        child: p.get('child').build(),
+        blocking: p.get('blocking').build(),
       ),
     );
     mateParams.put('child', child);
@@ -1135,7 +1135,7 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate<RenderMer
       : super(child: child) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderMergeSemantics$Mate(child: p.get('child').value),
+      builder: (p) => RenderMergeSemantics$Mate(child: p.get('child').build()),
     );
     mateParams.put('child', child);
   }
@@ -1157,8 +1157,8 @@ class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate<Rende
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderExcludeSemantics$Mate(
-        child: p.get('child').value,
-        excluding: p.get('excluding').value,
+        child: p.get('child').build(),
+        excluding: p.get('excluding').build(),
       ),
     );
     mateParams.put('child', child);
@@ -1182,8 +1182,8 @@ class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate<Rende
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderIndexedSemantics$Mate(
-        child: p.get('child').value,
-        index: p.get('index').value,
+        child: p.get('child').build(),
+        index: p.get('index').build(),
       ),
     );
     mateParams.put('child', child);
@@ -1207,8 +1207,8 @@ class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate<RenderLeaderLay
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderLeaderLayer$Mate(
-        link: p.get('link').value,
-        child: p.get('child').value,
+        link: p.get('link').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('link', link);
@@ -1248,12 +1248,12 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate<RenderFollo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFollowerLayer$Mate(
-        link: p.get('link').value,
-        showWhenUnlinked: p.get('showWhenUnlinked').value,
-        offset: p.get('offset').value,
-        leaderAnchor: p.get('leaderAnchor').value,
-        followerAnchor: p.get('followerAnchor').value,
-        child: p.get('child').value,
+        link: p.get('link').build(),
+        showWhenUnlinked: p.get('showWhenUnlinked').build(),
+        offset: p.get('offset').build(),
+        leaderAnchor: p.get('leaderAnchor').build(),
+        followerAnchor: p.get('followerAnchor').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('link', link);
@@ -1286,9 +1286,9 @@ class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAnnotatedRegion$Mate(
-        value: p.get('value').value,
-        sized: p.get('sized').value,
-        child: p.get('child').value,
+        value: p.get('value').build(),
+        sized: p.get('sized').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('value', value);

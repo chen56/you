@@ -76,10 +76,10 @@ class EdgeInsets$Mate extends EdgeInsets with Mate<EdgeInsets$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => EdgeInsets$Mate.only(
-        left: p.get('left').value,
-        top: p.get('top').value,
-        right: p.get('right').value,
-        bottom: p.get('bottom').value,
+        left: p.get('left').build(),
+        top: p.get('top').build(),
+        right: p.get('right').build(),
+        bottom: p.get('bottom').build(),
       ),
     );
     mateParams.put('left', left);
@@ -102,8 +102,8 @@ class EdgeInsets$Mate extends EdgeInsets with Mate<EdgeInsets$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => EdgeInsets$Mate.symmetric(
-        vertical: p.get('vertical').value,
-        horizontal: p.get('horizontal').value,
+        vertical: p.get('vertical').build(),
+        horizontal: p.get('horizontal').build(),
       ),
     );
     mateParams.put('vertical', vertical);
@@ -191,10 +191,10 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate<EdgeIns
     mateParams = ObjectParam(
       init: this,
       builder: (p) => EdgeInsetsDirectional$Mate.only(
-        start: p.get('start').value,
-        top: p.get('top').value,
-        end: p.get('end').value,
-        bottom: p.get('bottom').value,
+        start: p.get('start').build(),
+        top: p.get('top').build(),
+        end: p.get('end').build(),
+        bottom: p.get('bottom').build(),
       ),
     );
     mateParams.put('start', start);
@@ -217,8 +217,8 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate<EdgeIns
     mateParams = ObjectParam(
       init: this,
       builder: (p) => EdgeInsetsDirectional$Mate.symmetric(
-        horizontal: p.get('horizontal').value,
-        vertical: p.get('vertical').value,
+        horizontal: p.get('horizontal').build(),
+        vertical: p.get('vertical').build(),
       ),
     );
     mateParams.put('horizontal', horizontal);

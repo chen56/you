@@ -25,9 +25,9 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate<Key
     mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyboardInsertedContent$Mate(
-        mimeType: p.get('mimeType').value,
-        uri: p.get('uri').value,
-        data: p.get('data').value,
+        mimeType: p.get('mimeType').build(),
+        uri: p.get('uri').build(),
+        data: p.get('data').build(),
       ),
     );
     mateParams.put('mimeType', mimeType);

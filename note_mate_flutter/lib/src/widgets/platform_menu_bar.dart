@@ -34,9 +34,9 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate<Shortcu
       init: this,
       builder: (p) => ShortcutSerialization$Mate.character(
         p.get('character').value,
-        alt: p.get('alt').value,
-        control: p.get('control').value,
-        meta: p.get('meta').value,
+        alt: p.get('alt').build(),
+        control: p.get('control').build(),
+        meta: p.get('meta').build(),
       ),
     );
     mateParams.put('character', character);
@@ -71,10 +71,10 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate<Shortcu
       init: this,
       builder: (p) => ShortcutSerialization$Mate.modifier(
         p.get('trigger').value,
-        alt: p.get('alt').value,
-        control: p.get('control').value,
-        meta: p.get('meta').value,
-        shift: p.get('shift').value,
+        alt: p.get('alt').build(),
+        control: p.get('control').build(),
+        meta: p.get('meta').build(),
+        shift: p.get('shift').build(),
       ),
     );
     mateParams.put('trigger', trigger);
@@ -95,7 +95,7 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
       : super(channel: channel) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').value),
+      builder: (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build()),
     );
     mateParams.put('channel', channel);
   }
@@ -121,9 +121,9 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with WidgetMate<PlatformMenuB
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformMenuBar$Mate(
-        key: p.get('key').value,
-        menus: p.get('menus').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        menus: p.get('menus').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -156,10 +156,10 @@ class PlatformMenu$Mate extends PlatformMenu with Mate<PlatformMenu$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformMenu$Mate(
-        label: p.get('label').value,
-        onOpen: p.get('onOpen').value,
-        onClose: p.get('onClose').value,
-        menus: p.get('menus').value,
+        label: p.get('label').build(),
+        onOpen: p.get('onOpen').build(),
+        onClose: p.get('onClose').build(),
+        menus: p.get('menus').build(),
       ),
     );
     mateParams.put('label', label);
@@ -179,7 +179,7 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate<Platfor
       : super(members: members) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => PlatformMenuItemGroup$Mate(members: p.get('members').value),
+      builder: (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build()),
     );
     mateParams.putList('members', members);
   }
@@ -209,10 +209,10 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate<PlatformMenuItem$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformMenuItem$Mate(
-        label: p.get('label').value,
-        shortcut: p.get('shortcut').value,
-        onSelected: p.get('onSelected').value,
-        onSelectedIntent: p.get('onSelectedIntent').value,
+        label: p.get('label').build(),
+        shortcut: p.get('shortcut').build(),
+        onSelected: p.get('onSelected').build(),
+        onSelectedIntent: p.get('onSelectedIntent').build(),
       ),
     );
     mateParams.put('label', label);
@@ -238,8 +238,8 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate<P
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformProvidedMenuItem$Mate(
-        type: p.get('type').value,
-        enabled: p.get('enabled').value,
+        type: p.get('type').build(),
+        enabled: p.get('enabled').build(),
       ),
     );
     mateParams.put('type', type);

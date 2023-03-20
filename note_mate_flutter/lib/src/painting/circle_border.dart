@@ -21,8 +21,8 @@ class CircleBorder$Mate extends CircleBorder with Mate<CircleBorder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CircleBorder$Mate(
-        side: p.get('side').value,
-        eccentricity: p.get('eccentricity').value,
+        side: p.get('side').build(),
+        eccentricity: p.get('eccentricity').build(),
       ),
     );
     mateParams.put('side', side);

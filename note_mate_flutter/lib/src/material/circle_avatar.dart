@@ -61,17 +61,17 @@ class CircleAvatar$Mate extends CircleAvatar with WidgetMate<CircleAvatar$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CircleAvatar$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        backgroundColor: p.get('backgroundColor').value,
-        backgroundImage: p.get('backgroundImage').value,
-        foregroundImage: p.get('foregroundImage').value,
-        onBackgroundImageError: p.get('onBackgroundImageError').value,
-        onForegroundImageError: p.get('onForegroundImageError').value,
-        foregroundColor: p.get('foregroundColor').value,
-        radius: p.get('radius').value,
-        minRadius: p.get('minRadius').value,
-        maxRadius: p.get('maxRadius').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        backgroundImage: p.get('backgroundImage').build(),
+        foregroundImage: p.get('foregroundImage').build(),
+        onBackgroundImageError: p.get('onBackgroundImageError').build(),
+        onForegroundImageError: p.get('onForegroundImageError').build(),
+        foregroundColor: p.get('foregroundColor').build(),
+        radius: p.get('radius').build(),
+        minRadius: p.get('minRadius').build(),
+        maxRadius: p.get('maxRadius').build(),
       ),
     );
     mateParams.put('key', key);

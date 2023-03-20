@@ -38,12 +38,12 @@ class GridTileBar$Mate extends GridTileBar with WidgetMate<GridTileBar$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => GridTileBar$Mate(
-        key: p.get('key').value,
-        backgroundColor: p.get('backgroundColor').value,
-        leading: p.get('leading').value,
-        title: p.get('title').value,
-        subtitle: p.get('subtitle').value,
-        trailing: p.get('trailing').value,
+        key: p.get('key').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        leading: p.get('leading').build(),
+        title: p.get('title').build(),
+        subtitle: p.get('subtitle').build(),
+        trailing: p.get('trailing').build(),
       ),
     );
     mateParams.put('key', key);

@@ -60,17 +60,17 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate<ScrollbarThem
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollbarThemeData$Mate(
-        thumbVisibility: p.get('thumbVisibility').value,
-        thickness: p.get('thickness').value,
-        trackVisibility: p.get('trackVisibility').value,
-        radius: p.get('radius').value,
-        thumbColor: p.get('thumbColor').value,
-        trackColor: p.get('trackColor').value,
-        trackBorderColor: p.get('trackBorderColor').value,
-        crossAxisMargin: p.get('crossAxisMargin').value,
-        mainAxisMargin: p.get('mainAxisMargin').value,
-        minThumbLength: p.get('minThumbLength').value,
-        interactive: p.get('interactive').value,
+        thumbVisibility: p.get('thumbVisibility').build(),
+        thickness: p.get('thickness').build(),
+        trackVisibility: p.get('trackVisibility').build(),
+        radius: p.get('radius').build(),
+        thumbColor: p.get('thumbColor').build(),
+        trackColor: p.get('trackColor').build(),
+        trackBorderColor: p.get('trackBorderColor').build(),
+        crossAxisMargin: p.get('crossAxisMargin').build(),
+        mainAxisMargin: p.get('mainAxisMargin').build(),
+        minThumbLength: p.get('minThumbLength').build(),
+        interactive: p.get('interactive').build(),
       ),
     );
     mateParams.put('thumbVisibility', thumbVisibility);
@@ -107,9 +107,9 @@ class ScrollbarTheme$Mate extends ScrollbarTheme with WidgetMate<ScrollbarTheme$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollbarTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

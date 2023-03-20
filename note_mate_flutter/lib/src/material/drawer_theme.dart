@@ -48,14 +48,14 @@ class DrawerThemeData$Mate extends DrawerThemeData with Mate<DrawerThemeData$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerThemeData$Mate(
-        backgroundColor: p.get('backgroundColor').value,
-        scrimColor: p.get('scrimColor').value,
-        elevation: p.get('elevation').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        shape: p.get('shape').value,
-        endShape: p.get('endShape').value,
-        width: p.get('width').value,
+        backgroundColor: p.get('backgroundColor').build(),
+        scrimColor: p.get('scrimColor').build(),
+        elevation: p.get('elevation').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        shape: p.get('shape').build(),
+        endShape: p.get('endShape').build(),
+        width: p.get('width').build(),
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);
@@ -89,9 +89,9 @@ class DrawerTheme$Mate extends DrawerTheme with WidgetMate<DrawerTheme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -35,10 +35,10 @@ class ImageIcon$Mate extends ImageIcon with WidgetMate<ImageIcon$Mate> {
       init: this,
       builder: (p) => ImageIcon$Mate(
         p.get('image').value,
-        key: p.get('key').value,
-        size: p.get('size').value,
-        color: p.get('color').value,
-        semanticLabel: p.get('semanticLabel').value,
+        key: p.get('key').build(),
+        size: p.get('size').build(),
+        color: p.get('color').build(),
+        semanticLabel: p.get('semanticLabel').build(),
       ),
     );
     mateParams.put('image', image);

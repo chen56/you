@@ -40,12 +40,12 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollPositionWithSingleContext$Mate(
-        physics: p.get('physics').value,
-        context: p.get('context').value,
-        initialPixels: p.get('initialPixels').value,
-        keepScrollOffset: p.get('keepScrollOffset').value,
-        oldPosition: p.get('oldPosition').value,
-        debugLabel: p.get('debugLabel').value,
+        physics: p.get('physics').build(),
+        context: p.get('context').build(),
+        initialPixels: p.get('initialPixels').build(),
+        keepScrollOffset: p.get('keepScrollOffset').build(),
+        oldPosition: p.get('oldPosition').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('physics', physics);

@@ -15,7 +15,7 @@ class Velocity$Mate extends Velocity with Mate<Velocity$Mate> {
       : super(pixelsPerSecond: pixelsPerSecond) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').value),
+      builder: (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build()),
     );
     mateParams.put('pixelsPerSecond', pixelsPerSecond);
   }
@@ -45,10 +45,10 @@ class VelocityEstimate$Mate extends VelocityEstimate with Mate<VelocityEstimate$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => VelocityEstimate$Mate(
-        pixelsPerSecond: p.get('pixelsPerSecond').value,
-        confidence: p.get('confidence').value,
-        duration: p.get('duration').value,
-        offset: p.get('offset').value,
+        pixelsPerSecond: p.get('pixelsPerSecond').build(),
+        confidence: p.get('confidence').build(),
+        duration: p.get('duration').build(),
+        offset: p.get('offset').build(),
       ),
     );
     mateParams.put('pixelsPerSecond', pixelsPerSecond);

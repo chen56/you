@@ -42,12 +42,12 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate<Cuperti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPageRoute$Mate(
-        builder: p.get('builder').value,
-        title: p.get('title').value,
-        settings: p.get('settings').value,
-        maintainState: p.get('maintainState').value,
-        fullscreenDialog: p.get('fullscreenDialog').value,
-        allowSnapshotting: p.get('allowSnapshotting').value,
+        builder: p.get('builder').build(),
+        title: p.get('title').build(),
+        settings: p.get('settings').build(),
+        maintainState: p.get('maintainState').build(),
+        fullscreenDialog: p.get('fullscreenDialog').build(),
+        allowSnapshotting: p.get('allowSnapshotting').build(),
       ),
     );
     mateParams.put('builder', builder);
@@ -103,15 +103,15 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate<CupertinoPage$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPage$Mate(
-        child: p.get('child').value,
-        maintainState: p.get('maintainState').value,
-        title: p.get('title').value,
-        fullscreenDialog: p.get('fullscreenDialog').value,
-        allowSnapshotting: p.get('allowSnapshotting').value,
-        key: p.get('key').value,
-        name: p.get('name').value,
-        arguments: p.get('arguments').value,
-        restorationId: p.get('restorationId').value,
+        child: p.get('child').build(),
+        maintainState: p.get('maintainState').build(),
+        title: p.get('title').build(),
+        fullscreenDialog: p.get('fullscreenDialog').build(),
+        allowSnapshotting: p.get('allowSnapshotting').build(),
+        key: p.get('key').build(),
+        name: p.get('name').build(),
+        arguments: p.get('arguments').build(),
+        restorationId: p.get('restorationId').build(),
       ),
     );
     mateParams.put('child', child);
@@ -154,11 +154,11 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPageTransition$Mate(
-        key: p.get('key').value,
-        primaryRouteAnimation: p.get('primaryRouteAnimation').value,
-        secondaryRouteAnimation: p.get('secondaryRouteAnimation').value,
-        child: p.get('child').value,
-        linearTransition: p.get('linearTransition').value,
+        key: p.get('key').build(),
+        primaryRouteAnimation: p.get('primaryRouteAnimation').build(),
+        secondaryRouteAnimation: p.get('secondaryRouteAnimation').build(),
+        child: p.get('child').build(),
+        linearTransition: p.get('linearTransition').build(),
       ),
     );
     mateParams.put('key', key);
@@ -198,11 +198,11 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoFullscreenDialogTransition$Mate(
-        key: p.get('key').value,
-        primaryRouteAnimation: p.get('primaryRouteAnimation').value,
-        secondaryRouteAnimation: p.get('secondaryRouteAnimation').value,
-        child: p.get('child').value,
-        linearTransition: p.get('linearTransition').value,
+        key: p.get('key').build(),
+        primaryRouteAnimation: p.get('primaryRouteAnimation').build(),
+        secondaryRouteAnimation: p.get('secondaryRouteAnimation').build(),
+        child: p.get('child').build(),
+        linearTransition: p.get('linearTransition').build(),
       ),
     );
     mateParams.put('key', key);
@@ -253,14 +253,14 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoModalPopupRoute$Mate(
-        builder: p.get('builder').value,
-        barrierLabel: p.get('barrierLabel').value,
-        barrierColor: p.get('barrierColor').value,
-        barrierDismissible: p.get('barrierDismissible').value,
-        semanticsDismissible: p.get('semanticsDismissible').value,
-        filter: p.get('filter').value,
-        settings: p.get('settings').value,
-        anchorPoint: p.get('anchorPoint').value,
+        builder: p.get('builder').build(),
+        barrierLabel: p.get('barrierLabel').build(),
+        barrierColor: p.get('barrierColor').build(),
+        barrierDismissible: p.get('barrierDismissible').build(),
+        semanticsDismissible: p.get('semanticsDismissible').build(),
+        filter: p.get('filter').build(),
+        settings: p.get('settings').build(),
+        anchorPoint: p.get('anchorPoint').build(),
       ),
     );
     mateParams.put('builder', builder);
@@ -318,15 +318,15 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate<Cup
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDialogRoute$Mate(
-        builder: p.get('builder').value,
-        context: p.get('context').value,
-        barrierDismissible: p.get('barrierDismissible').value,
-        barrierColor: p.get('barrierColor').value,
-        barrierLabel: p.get('barrierLabel').value,
-        transitionDuration: p.get('transitionDuration').value,
-        transitionBuilder: p.get('transitionBuilder').value,
-        settings: p.get('settings').value,
-        anchorPoint: p.get('anchorPoint').value,
+        builder: p.get('builder').build(),
+        context: p.get('context').build(),
+        barrierDismissible: p.get('barrierDismissible').build(),
+        barrierColor: p.get('barrierColor').build(),
+        barrierLabel: p.get('barrierLabel').build(),
+        transitionDuration: p.get('transitionDuration').build(),
+        transitionBuilder: p.get('transitionBuilder').build(),
+        settings: p.get('settings').build(),
+        anchorPoint: p.get('anchorPoint').build(),
       ),
     );
     mateParams.put('builder', builder);

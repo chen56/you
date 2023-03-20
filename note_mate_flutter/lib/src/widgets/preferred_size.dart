@@ -26,9 +26,9 @@ class PreferredSize$Mate extends PreferredSize with WidgetMate<PreferredSize$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PreferredSize$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        preferredSize: p.get('preferredSize').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        preferredSize: p.get('preferredSize').build(),
       ),
     );
     mateParams.put('key', key);

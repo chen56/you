@@ -47,8 +47,8 @@ class BorderRadius$Mate extends BorderRadius with Mate<BorderRadius$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadius$Mate.vertical(
-        top: p.get('top').value,
-        bottom: p.get('bottom').value,
+        top: p.get('top').build(),
+        bottom: p.get('bottom').build(),
       ),
     );
     mateParams.put('top', top);
@@ -69,8 +69,8 @@ class BorderRadius$Mate extends BorderRadius with Mate<BorderRadius$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadius$Mate.horizontal(
-        left: p.get('left').value,
-        right: p.get('right').value,
+        left: p.get('left').build(),
+        right: p.get('right').build(),
       ),
     );
     mateParams.put('left', left);
@@ -99,10 +99,10 @@ class BorderRadius$Mate extends BorderRadius with Mate<BorderRadius$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadius$Mate.only(
-        topLeft: p.get('topLeft').value,
-        topRight: p.get('topRight').value,
-        bottomLeft: p.get('bottomLeft').value,
-        bottomRight: p.get('bottomRight').value,
+        topLeft: p.get('topLeft').build(),
+        topRight: p.get('topRight').build(),
+        bottomLeft: p.get('bottomLeft').build(),
+        bottomRight: p.get('bottomRight').build(),
       ),
     );
     mateParams.put('topLeft', topLeft);
@@ -154,8 +154,8 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate<Bor
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadiusDirectional$Mate.vertical(
-        top: p.get('top').value,
-        bottom: p.get('bottom').value,
+        top: p.get('top').build(),
+        bottom: p.get('bottom').build(),
       ),
     );
     mateParams.put('top', top);
@@ -176,8 +176,8 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate<Bor
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadiusDirectional$Mate.horizontal(
-        start: p.get('start').value,
-        end: p.get('end').value,
+        start: p.get('start').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('start', start);
@@ -206,10 +206,10 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate<Bor
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadiusDirectional$Mate.only(
-        topStart: p.get('topStart').value,
-        topEnd: p.get('topEnd').value,
-        bottomStart: p.get('bottomStart').value,
-        bottomEnd: p.get('bottomEnd').value,
+        topStart: p.get('topStart').build(),
+        topEnd: p.get('topEnd').build(),
+        bottomStart: p.get('bottomStart').build(),
+        bottomEnd: p.get('bottomEnd').build(),
       ),
     );
     mateParams.put('topStart', topStart);

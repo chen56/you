@@ -54,16 +54,16 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Widget
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DraggableScrollableSheet$Mate(
-        key: p.get('key').value,
-        initialChildSize: p.get('initialChildSize').value,
-        minChildSize: p.get('minChildSize').value,
-        maxChildSize: p.get('maxChildSize').value,
-        expand: p.get('expand').value,
-        snap: p.get('snap').value,
-        snapSizes: p.get('snapSizes').value,
-        snapAnimationDuration: p.get('snapAnimationDuration').value,
-        controller: p.get('controller').value,
-        builder: p.get('builder').value,
+        key: p.get('key').build(),
+        initialChildSize: p.get('initialChildSize').build(),
+        minChildSize: p.get('minChildSize').build(),
+        maxChildSize: p.get('maxChildSize').build(),
+        expand: p.get('expand').build(),
+        snap: p.get('snap').build(),
+        snapSizes: p.get('snapSizes').build(),
+        snapAnimationDuration: p.get('snapAnimationDuration').build(),
+        controller: p.get('controller').build(),
+        builder: p.get('builder').build(),
       ),
     );
     mateParams.put('key', key);
@@ -108,11 +108,11 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DraggableScrollableNotification$Mate(
-        extent: p.get('extent').value,
-        minExtent: p.get('minExtent').value,
-        maxExtent: p.get('maxExtent').value,
-        initialExtent: p.get('initialExtent').value,
-        context: p.get('context').value,
+        extent: p.get('extent').build(),
+        minExtent: p.get('minExtent').build(),
+        maxExtent: p.get('maxExtent').build(),
+        initialExtent: p.get('initialExtent').build(),
+        context: p.get('context').build(),
       ),
     );
     mateParams.put('extent', extent);
@@ -140,8 +140,8 @@ class DraggableScrollableActuator$Mate extends DraggableScrollableActuator
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DraggableScrollableActuator$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

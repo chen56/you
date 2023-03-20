@@ -23,8 +23,8 @@ class LocalHistoryEntry$Mate extends LocalHistoryEntry with Mate<LocalHistoryEnt
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LocalHistoryEntry$Mate(
-        onRemove: p.get('onRemove').value,
-        impliesAppBarDismissal: p.get('impliesAppBarDismissal').value,
+        onRemove: p.get('onRemove').build(),
+        impliesAppBarDismissal: p.get('impliesAppBarDismissal').build(),
       ),
     );
     mateParams.put('onRemove', onRemove);
@@ -76,15 +76,15 @@ class RawDialogRoute$Mate<T> extends RawDialogRoute<T> with Mate<RawDialogRoute$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawDialogRoute$Mate(
-        pageBuilder: p.get('pageBuilder').value,
-        barrierDismissible: p.get('barrierDismissible').value,
-        barrierColor: p.get('barrierColor').value,
-        barrierLabel: p.get('barrierLabel').value,
-        transitionDuration: p.get('transitionDuration').value,
-        transitionBuilder: p.get('transitionBuilder').value,
-        settings: p.get('settings').value,
-        anchorPoint: p.get('anchorPoint').value,
-        traversalEdgeBehavior: p.get('traversalEdgeBehavior').value,
+        pageBuilder: p.get('pageBuilder').build(),
+        barrierDismissible: p.get('barrierDismissible').build(),
+        barrierColor: p.get('barrierColor').build(),
+        barrierLabel: p.get('barrierLabel').build(),
+        transitionDuration: p.get('transitionDuration').build(),
+        transitionBuilder: p.get('transitionBuilder').build(),
+        settings: p.get('settings').build(),
+        anchorPoint: p.get('anchorPoint').build(),
+        traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),
       ),
     );
     mateParams.put('pageBuilder', pageBuilder);

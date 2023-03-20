@@ -42,13 +42,13 @@ class Hero$Mate extends Hero with WidgetMate<Hero$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Hero$Mate(
-        key: p.get('key').value,
-        tag: p.get('tag').value,
-        createRectTween: p.get('createRectTween').value,
-        flightShuttleBuilder: p.get('flightShuttleBuilder').value,
-        placeholderBuilder: p.get('placeholderBuilder').value,
-        transitionOnUserGestures: p.get('transitionOnUserGestures').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        tag: p.get('tag').build(),
+        createRectTween: p.get('createRectTween').build(),
+        flightShuttleBuilder: p.get('flightShuttleBuilder').build(),
+        placeholderBuilder: p.get('placeholderBuilder').build(),
+        transitionOnUserGestures: p.get('transitionOnUserGestures').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -71,7 +71,7 @@ class HeroController$Mate extends HeroController with Mate<HeroController$Mate> 
       : super(createRectTween: createRectTween) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => HeroController$Mate(createRectTween: p.get('createRectTween').value),
+      builder: (p) => HeroController$Mate(createRectTween: p.get('createRectTween').build()),
     );
     mateParams.put('createRectTween', createRectTween);
   }
@@ -97,9 +97,9 @@ class HeroMode$Mate extends HeroMode with WidgetMate<HeroMode$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => HeroMode$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        enabled: p.get('enabled').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        enabled: p.get('enabled').build(),
       ),
     );
     mateParams.put('key', key);

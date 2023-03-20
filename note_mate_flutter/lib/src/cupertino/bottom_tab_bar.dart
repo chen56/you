@@ -57,16 +57,16 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with WidgetMate<CupertinoTabB
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTabBar$Mate(
-        key: p.get('key').value,
-        items: p.get('items').value,
-        onTap: p.get('onTap').value,
-        currentIndex: p.get('currentIndex').value,
-        backgroundColor: p.get('backgroundColor').value,
-        activeColor: p.get('activeColor').value,
-        inactiveColor: p.get('inactiveColor').value,
-        iconSize: p.get('iconSize').value,
-        height: p.get('height').value,
-        border: p.get('border').value,
+        key: p.get('key').build(),
+        items: p.get('items').build(),
+        onTap: p.get('onTap').build(),
+        currentIndex: p.get('currentIndex').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        activeColor: p.get('activeColor').build(),
+        inactiveColor: p.get('inactiveColor').build(),
+        iconSize: p.get('iconSize').build(),
+        height: p.get('height').build(),
+        border: p.get('border').build(),
       ),
     );
     mateParams.put('key', key);

@@ -46,13 +46,13 @@ class SelectableRegion$Mate extends SelectableRegion with WidgetMate<SelectableR
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectableRegion$Mate(
-        key: p.get('key').value,
-        contextMenuBuilder: p.get('contextMenuBuilder').value,
-        focusNode: p.get('focusNode').value,
-        selectionControls: p.get('selectionControls').value,
-        child: p.get('child').value,
-        magnifierConfiguration: p.get('magnifierConfiguration').value,
-        onSelectionChanged: p.get('onSelectionChanged').value,
+        key: p.get('key').build(),
+        contextMenuBuilder: p.get('contextMenuBuilder').build(),
+        focusNode: p.get('focusNode').build(),
+        selectionControls: p.get('selectionControls').build(),
+        child: p.get('child').build(),
+        magnifierConfiguration: p.get('magnifierConfiguration').build(),
+        onSelectionChanged: p.get('onSelectionChanged').build(),
       ),
     );
     mateParams.put('key', key);

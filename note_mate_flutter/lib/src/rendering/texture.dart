@@ -25,9 +25,9 @@ class TextureBox$Mate extends TextureBox with Mate<TextureBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextureBox$Mate(
-        textureId: p.get('textureId').value,
-        freeze: p.get('freeze').value,
-        filterQuality: p.get('filterQuality').value,
+        textureId: p.get('textureId').build(),
+        freeze: p.get('freeze').build(),
+        filterQuality: p.get('filterQuality').build(),
       ),
     );
     mateParams.put('textureId', textureId);

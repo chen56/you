@@ -28,9 +28,9 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate<Scr
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollStartNotification$Mate(
-        metrics: p.get('metrics').value,
-        context: p.get('context').value,
-        dragDetails: p.get('dragDetails').value,
+        metrics: p.get('metrics').build(),
+        context: p.get('context').build(),
+        dragDetails: p.get('dragDetails').build(),
       ),
     );
     mateParams.put('metrics', metrics);
@@ -67,11 +67,11 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate<S
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollUpdateNotification$Mate(
-        metrics: p.get('metrics').value,
-        context: p.get('context').value,
-        dragDetails: p.get('dragDetails').value,
-        scrollDelta: p.get('scrollDelta').value,
-        depth: p.get('depth').value,
+        metrics: p.get('metrics').build(),
+        context: p.get('context').build(),
+        dragDetails: p.get('dragDetails').build(),
+        scrollDelta: p.get('scrollDelta').build(),
+        depth: p.get('depth').build(),
       ),
     );
     mateParams.put('metrics', metrics);
@@ -110,11 +110,11 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate<Overs
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OverscrollNotification$Mate(
-        metrics: p.get('metrics').value,
-        context: p.get('context').value,
-        dragDetails: p.get('dragDetails').value,
-        overscroll: p.get('overscroll').value,
-        velocity: p.get('velocity').value,
+        metrics: p.get('metrics').build(),
+        context: p.get('context').build(),
+        dragDetails: p.get('dragDetails').build(),
+        overscroll: p.get('overscroll').build(),
+        velocity: p.get('velocity').build(),
       ),
     );
     mateParams.put('metrics', metrics);
@@ -145,9 +145,9 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate<ScrollE
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollEndNotification$Mate(
-        metrics: p.get('metrics').value,
-        context: p.get('context').value,
-        dragDetails: p.get('dragDetails').value,
+        metrics: p.get('metrics').build(),
+        context: p.get('context').build(),
+        dragDetails: p.get('dragDetails').build(),
       ),
     );
     mateParams.put('metrics', metrics);
@@ -176,9 +176,9 @@ class UserScrollNotification$Mate extends UserScrollNotification with Mate<UserS
     mateParams = ObjectParam(
       init: this,
       builder: (p) => UserScrollNotification$Mate(
-        metrics: p.get('metrics').value,
-        context: p.get('context').value,
-        direction: p.get('direction').value,
+        metrics: p.get('metrics').build(),
+        context: p.get('context').build(),
+        direction: p.get('direction').build(),
       ),
     );
     mateParams.put('metrics', metrics);

@@ -30,10 +30,10 @@ class Texture$Mate extends Texture with WidgetMate<Texture$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Texture$Mate(
-        key: p.get('key').value,
-        textureId: p.get('textureId').value,
-        freeze: p.get('freeze').value,
-        filterQuality: p.get('filterQuality').value,
+        key: p.get('key').build(),
+        textureId: p.get('textureId').build(),
+        freeze: p.get('freeze').build(),
+        filterQuality: p.get('filterQuality').build(),
       ),
     );
     mateParams.put('key', key);

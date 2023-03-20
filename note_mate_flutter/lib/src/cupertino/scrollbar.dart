@@ -58,16 +58,16 @@ class CupertinoScrollbar$Mate extends CupertinoScrollbar with WidgetMate<Cuperti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoScrollbar$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        controller: p.get('controller').value,
-        thumbVisibility: p.get('thumbVisibility').value,
-        thickness: p.get('thickness').value,
-        thicknessWhileDragging: p.get('thicknessWhileDragging').value,
-        radius: p.get('radius').value,
-        radiusWhileDragging: p.get('radiusWhileDragging').value,
-        notificationPredicate: p.get('notificationPredicate').value,
-        scrollbarOrientation: p.get('scrollbarOrientation').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        controller: p.get('controller').build(),
+        thumbVisibility: p.get('thumbVisibility').build(),
+        thickness: p.get('thickness').build(),
+        thicknessWhileDragging: p.get('thicknessWhileDragging').build(),
+        radius: p.get('radius').build(),
+        radiusWhileDragging: p.get('radiusWhileDragging').build(),
+        notificationPredicate: p.get('notificationPredicate').build(),
+        scrollbarOrientation: p.get('scrollbarOrientation').build(),
       ),
     );
     mateParams.put('key', key);

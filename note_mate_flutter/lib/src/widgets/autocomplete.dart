@@ -54,15 +54,15 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Wid
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawAutocomplete$Mate(
-        key: p.get('key').value,
-        optionsViewBuilder: p.get('optionsViewBuilder').value,
-        optionsBuilder: p.get('optionsBuilder').value,
-        displayStringForOption: p.get('displayStringForOption').value,
-        fieldViewBuilder: p.get('fieldViewBuilder').value,
-        focusNode: p.get('focusNode').value,
-        onSelected: p.get('onSelected').value,
-        textEditingController: p.get('textEditingController').value,
-        initialValue: p.get('initialValue').value,
+        key: p.get('key').build(),
+        optionsViewBuilder: p.get('optionsViewBuilder').build(),
+        optionsBuilder: p.get('optionsBuilder').build(),
+        displayStringForOption: p.get('displayStringForOption').build(),
+        fieldViewBuilder: p.get('fieldViewBuilder').build(),
+        focusNode: p.get('focusNode').build(),
+        onSelected: p.get('onSelected').build(),
+        textEditingController: p.get('textEditingController').build(),
+        initialValue: p.get('initialValue').build(),
       ),
     );
     mateParams.put('key', key);
@@ -98,9 +98,9 @@ class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AutocompleteHighlightedOption$Mate(
-        key: p.get('key').value,
-        highlightIndexNotifier: p.get('highlightIndexNotifier').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        highlightIndexNotifier: p.get('highlightIndexNotifier').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

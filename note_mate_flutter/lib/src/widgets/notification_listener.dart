@@ -26,9 +26,9 @@ class NotificationListener$Mate<T extends Notification> extends NotificationList
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NotificationListener$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        onNotification: p.get('onNotification').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        onNotification: p.get('onNotification').build(),
       ),
     );
     mateParams.put('key', key);

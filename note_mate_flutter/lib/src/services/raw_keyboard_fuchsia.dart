@@ -24,9 +24,9 @@ class RawKeyEventDataFuchsia$Mate extends RawKeyEventDataFuchsia with Mate<RawKe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyEventDataFuchsia$Mate(
-        hidUsage: p.get('hidUsage').value,
-        codePoint: p.get('codePoint').value,
-        modifiers: p.get('modifiers').value,
+        hidUsage: p.get('hidUsage').build(),
+        codePoint: p.get('codePoint').build(),
+        modifiers: p.get('modifiers').build(),
       ),
     );
     mateParams.put('hidUsage', hidUsage);

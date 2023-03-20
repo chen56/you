@@ -49,14 +49,14 @@ class ModalBarrier$Mate extends ModalBarrier with WidgetMate<ModalBarrier$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ModalBarrier$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        dismissible: p.get('dismissible').value,
-        onDismiss: p.get('onDismiss').value,
-        semanticsLabel: p.get('semanticsLabel').value,
-        barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').value,
-        clipDetailsNotifier: p.get('clipDetailsNotifier').value,
-        semanticsOnTapHint: p.get('semanticsOnTapHint').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        dismissible: p.get('dismissible').build(),
+        onDismiss: p.get('onDismiss').build(),
+        semanticsLabel: p.get('semanticsLabel').build(),
+        barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
+        clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
+        semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
       ),
     );
     mateParams.put('key', key);
@@ -110,14 +110,14 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with WidgetMate<Ani
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedModalBarrier$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        dismissible: p.get('dismissible').value,
-        semanticsLabel: p.get('semanticsLabel').value,
-        barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').value,
-        onDismiss: p.get('onDismiss').value,
-        clipDetailsNotifier: p.get('clipDetailsNotifier').value,
-        semanticsOnTapHint: p.get('semanticsOnTapHint').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        dismissible: p.get('dismissible').build(),
+        semanticsLabel: p.get('semanticsLabel').build(),
+        barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
+        onDismiss: p.get('onDismiss').build(),
+        clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
+        semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
       ),
     );
     mateParams.put('key', key);

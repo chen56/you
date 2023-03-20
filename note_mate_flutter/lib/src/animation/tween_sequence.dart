@@ -53,8 +53,8 @@ class TweenSequenceItem$Mate<T> extends TweenSequenceItem<T> with Mate<TweenSequ
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TweenSequenceItem$Mate(
-        tween: p.get('tween').value,
-        weight: p.get('weight').value,
+        tween: p.get('tween').build(),
+        weight: p.get('weight').build(),
       ),
     );
     mateParams.put('tween', tween);

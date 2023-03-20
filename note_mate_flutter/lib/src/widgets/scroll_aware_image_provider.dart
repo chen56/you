@@ -24,8 +24,8 @@ class ScrollAwareImageProvider$Mate<T extends Object> extends ScrollAwareImagePr
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollAwareImageProvider$Mate(
-        context: p.get('context').value,
-        imageProvider: p.get('imageProvider').value,
+        context: p.get('context').build(),
+        imageProvider: p.get('imageProvider').build(),
       ),
     );
     mateParams.put('context', context);

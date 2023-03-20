@@ -143,10 +143,10 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate<ShortcutMap
       builder: (p) => ShortcutMapProperty$Mate(
         p.get('name').value,
         p.get('value').value,
-        showName: p.get('showName').value,
-        defaultValue: p.get('defaultValue').value,
-        level: p.get('level').value,
-        description: p.get('description').value,
+        showName: p.get('showName').build(),
+        defaultValue: p.get('defaultValue').build(),
+        level: p.get('level').build(),
+        description: p.get('description').build(),
       ),
     );
     mateParams.put('name', name);
@@ -190,11 +190,11 @@ class SingleActivator$Mate extends SingleActivator with Mate<SingleActivator$Mat
       init: this,
       builder: (p) => SingleActivator$Mate(
         p.get('trigger').value,
-        control: p.get('control').value,
-        shift: p.get('shift').value,
-        alt: p.get('alt').value,
-        meta: p.get('meta').value,
-        includeRepeats: p.get('includeRepeats').value,
+        control: p.get('control').build(),
+        shift: p.get('shift').build(),
+        alt: p.get('alt').build(),
+        meta: p.get('meta').build(),
+        includeRepeats: p.get('includeRepeats').build(),
       ),
     );
     mateParams.put('trigger', trigger);
@@ -234,10 +234,10 @@ class CharacterActivator$Mate extends CharacterActivator with Mate<CharacterActi
       init: this,
       builder: (p) => CharacterActivator$Mate(
         p.get('character').value,
-        alt: p.get('alt').value,
-        control: p.get('control').value,
-        meta: p.get('meta').value,
-        includeRepeats: p.get('includeRepeats').value,
+        alt: p.get('alt').build(),
+        control: p.get('control').build(),
+        meta: p.get('meta').build(),
+        includeRepeats: p.get('includeRepeats').build(),
       ),
     );
     mateParams.put('character', character);
@@ -264,8 +264,8 @@ class ShortcutManager$Mate extends ShortcutManager with Mate<ShortcutManager$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ShortcutManager$Mate(
-        shortcuts: p.get('shortcuts').value,
-        modal: p.get('modal').value,
+        shortcuts: p.get('shortcuts').build(),
+        modal: p.get('modal').build(),
       ),
     );
     mateParams.put('shortcuts', shortcuts);
@@ -297,10 +297,10 @@ class Shortcuts$Mate extends Shortcuts with WidgetMate<Shortcuts$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Shortcuts$Mate(
-        key: p.get('key').value,
-        shortcuts: p.get('shortcuts').value,
-        child: p.get('child').value,
-        debugLabel: p.get('debugLabel').value,
+        key: p.get('key').build(),
+        shortcuts: p.get('shortcuts').build(),
+        child: p.get('child').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('key', key);
@@ -331,10 +331,10 @@ class Shortcuts$Mate extends Shortcuts with WidgetMate<Shortcuts$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Shortcuts$Mate.manager(
-        key: p.get('key').value,
-        manager: p.get('manager').value,
-        child: p.get('child').value,
-        debugLabel: p.get('debugLabel').value,
+        key: p.get('key').build(),
+        manager: p.get('manager').build(),
+        child: p.get('child').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('key', key);
@@ -364,9 +364,9 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with WidgetMate<CallbackS
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CallbackShortcuts$Mate(
-        key: p.get('key').value,
-        bindings: p.get('bindings').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        bindings: p.get('bindings').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -391,8 +391,8 @@ class ShortcutRegistrar$Mate extends ShortcutRegistrar with WidgetMate<ShortcutR
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ShortcutRegistrar$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

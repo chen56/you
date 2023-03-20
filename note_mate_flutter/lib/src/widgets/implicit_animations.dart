@@ -33,8 +33,8 @@ class BoxConstraintsTween$Mate extends BoxConstraintsTween with Mate<BoxConstrai
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraintsTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -58,8 +58,8 @@ class DecorationTween$Mate extends DecorationTween with Mate<DecorationTween$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DecorationTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -83,8 +83,8 @@ class EdgeInsetsTween$Mate extends EdgeInsetsTween with Mate<EdgeInsetsTween$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => EdgeInsetsTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -108,8 +108,8 @@ class EdgeInsetsGeometryTween$Mate extends EdgeInsetsGeometryTween with Mate<Edg
     mateParams = ObjectParam(
       init: this,
       builder: (p) => EdgeInsetsGeometryTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -133,8 +133,8 @@ class BorderRadiusTween$Mate extends BorderRadiusTween with Mate<BorderRadiusTwe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderRadiusTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -158,8 +158,8 @@ class BorderTween$Mate extends BorderTween with Mate<BorderTween$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -183,8 +183,8 @@ class Matrix4Tween$Mate extends Matrix4Tween with Mate<Matrix4Tween$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Matrix4Tween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -208,8 +208,8 @@ class TextStyleTween$Mate extends TextStyleTween with Mate<TextStyleTween$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextStyleTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -293,23 +293,23 @@ class AnimatedContainer$Mate extends AnimatedContainer with WidgetMate<AnimatedC
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedContainer$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        padding: p.get('padding').value,
-        color: p.get('color').value,
-        decoration: p.get('decoration').value,
-        foregroundDecoration: p.get('foregroundDecoration').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        constraints: p.get('constraints').value,
-        margin: p.get('margin').value,
-        transform: p.get('transform').value,
-        transformAlignment: p.get('transformAlignment').value,
-        child: p.get('child').value,
-        clipBehavior: p.get('clipBehavior').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        padding: p.get('padding').build(),
+        color: p.get('color').build(),
+        decoration: p.get('decoration').build(),
+        foregroundDecoration: p.get('foregroundDecoration').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        constraints: p.get('constraints').build(),
+        margin: p.get('margin').build(),
+        transform: p.get('transform').build(),
+        transformAlignment: p.get('transformAlignment').build(),
+        child: p.get('child').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -364,12 +364,12 @@ class AnimatedPadding$Mate extends AnimatedPadding with WidgetMate<AnimatedPaddi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedPadding$Mate(
-        key: p.get('key').value,
-        padding: p.get('padding').value,
-        child: p.get('child').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        padding: p.get('padding').build(),
+        child: p.get('child').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -421,14 +421,14 @@ class AnimatedAlign$Mate extends AnimatedAlign with WidgetMate<AnimatedAlign$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedAlign$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        child: p.get('child').value,
-        heightFactor: p.get('heightFactor').value,
-        widthFactor: p.get('widthFactor').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        child: p.get('child').build(),
+        heightFactor: p.get('heightFactor').build(),
+        widthFactor: p.get('widthFactor').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -494,17 +494,17 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with WidgetMate<Animate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedPositioned$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        left: p.get('left').value,
-        top: p.get('top').value,
-        right: p.get('right').value,
-        bottom: p.get('bottom').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        left: p.get('left').build(),
+        top: p.get('top').build(),
+        right: p.get('right').build(),
+        bottom: p.get('bottom').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -550,12 +550,12 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with WidgetMate<Animate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedPositioned$Mate.fromRect(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        rect: p.get('rect').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        rect: p.get('rect').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -620,17 +620,17 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedPositionedDirectional$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        start: p.get('start').value,
-        top: p.get('top').value,
-        end: p.get('end').value,
-        bottom: p.get('bottom').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        start: p.get('start').build(),
+        top: p.get('top').build(),
+        end: p.get('end').build(),
+        bottom: p.get('bottom').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -687,14 +687,14 @@ class AnimatedScale$Mate extends AnimatedScale with WidgetMate<AnimatedScale$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedScale$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        scale: p.get('scale').value,
-        alignment: p.get('alignment').value,
-        filterQuality: p.get('filterQuality').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        scale: p.get('scale').build(),
+        alignment: p.get('alignment').build(),
+        filterQuality: p.get('filterQuality').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -748,14 +748,14 @@ class AnimatedRotation$Mate extends AnimatedRotation with WidgetMate<AnimatedRot
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedRotation$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        turns: p.get('turns').value,
-        alignment: p.get('alignment').value,
-        filterQuality: p.get('filterQuality').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        turns: p.get('turns').build(),
+        alignment: p.get('alignment').build(),
+        filterQuality: p.get('filterQuality').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -801,12 +801,12 @@ class AnimatedSlide$Mate extends AnimatedSlide with WidgetMate<AnimatedSlide$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedSlide$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        offset: p.get('offset').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        offset: p.get('offset').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -854,13 +854,13 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with WidgetMate<AnimatedOpaci
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedOpacity$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        opacity: p.get('opacity').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        opacity: p.get('opacity').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
       ),
     );
     mateParams.put('key', key);
@@ -909,13 +909,13 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with WidgetMate<S
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverAnimatedOpacity$Mate(
-        key: p.get('key').value,
-        sliver: p.get('sliver').value,
-        opacity: p.get('opacity').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
+        key: p.get('key').build(),
+        sliver: p.get('sliver').build(),
+        opacity: p.get('opacity').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
       ),
     );
     mateParams.put('key', key);
@@ -984,18 +984,18 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Widget
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedDefaultTextStyle$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        style: p.get('style').value,
-        textAlign: p.get('textAlign').value,
-        softWrap: p.get('softWrap').value,
-        overflow: p.get('overflow').value,
-        maxLines: p.get('maxLines').value,
-        textWidthBasis: p.get('textWidthBasis').value,
-        textHeightBehavior: p.get('textHeightBehavior').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        style: p.get('style').build(),
+        textAlign: p.get('textAlign').build(),
+        softWrap: p.get('softWrap').build(),
+        overflow: p.get('overflow').build(),
+        maxLines: p.get('maxLines').build(),
+        textWidthBasis: p.get('textWidthBasis').build(),
+        textHeightBehavior: p.get('textHeightBehavior').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1073,19 +1073,19 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with WidgetMate<A
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedPhysicalModel$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        shape: p.get('shape').value,
-        clipBehavior: p.get('clipBehavior').value,
-        borderRadius: p.get('borderRadius').value,
-        elevation: p.get('elevation').value,
-        color: p.get('color').value,
-        animateColor: p.get('animateColor').value,
-        shadowColor: p.get('shadowColor').value,
-        animateShadowColor: p.get('animateShadowColor').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        shape: p.get('shape').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        borderRadius: p.get('borderRadius').build(),
+        elevation: p.get('elevation').build(),
+        color: p.get('color').build(),
+        animateColor: p.get('animateColor').build(),
+        shadowColor: p.get('shadowColor').build(),
+        animateShadowColor: p.get('animateShadowColor').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1145,14 +1145,14 @@ class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedFractionallySizedBox$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        child: p.get('child').value,
-        heightFactor: p.get('heightFactor').value,
-        widthFactor: p.get('widthFactor').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        onEnd: p.get('onEnd').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        child: p.get('child').build(),
+        heightFactor: p.get('heightFactor').build(),
+        widthFactor: p.get('widthFactor').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        onEnd: p.get('onEnd').build(),
       ),
     );
     mateParams.put('key', key);

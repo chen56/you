@@ -31,10 +31,10 @@ class ImageFiltered$Mate extends ImageFiltered with WidgetMate<ImageFiltered$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageFiltered$Mate(
-        key: p.get('key').value,
-        imageFilter: p.get('imageFilter').value,
-        child: p.get('child').value,
-        enabled: p.get('enabled').value,
+        key: p.get('key').build(),
+        imageFilter: p.get('imageFilter').build(),
+        child: p.get('child').build(),
+        enabled: p.get('enabled').build(),
       ),
     );
     mateParams.put('key', key);

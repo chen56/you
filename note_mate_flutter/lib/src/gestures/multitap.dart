@@ -26,9 +26,9 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DoubleTapGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);
@@ -61,10 +61,10 @@ class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MultiTapGestureRecognizer$Mate(
-        longTapDelay: p.get('longTapDelay').value,
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        longTapDelay: p.get('longTapDelay').build(),
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('longTapDelay', longTapDelay);
@@ -102,11 +102,11 @@ class SerialTapDownDetails$Mate extends SerialTapDownDetails with Mate<SerialTap
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SerialTapDownDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
-        kind: p.get('kind').value,
-        buttons: p.get('buttons').value,
-        count: p.get('count').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
+        kind: p.get('kind').build(),
+        buttons: p.get('buttons').build(),
+        count: p.get('count').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -127,7 +127,7 @@ class SerialTapCancelDetails$Mate extends SerialTapCancelDetails with Mate<Seria
       : super(count: count) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => SerialTapCancelDetails$Mate(count: p.get('count').value),
+      builder: (p) => SerialTapCancelDetails$Mate(count: p.get('count').build()),
     );
     mateParams.put('count', count);
   }
@@ -157,10 +157,10 @@ class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate<SerialTapUpDe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SerialTapUpDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
-        kind: p.get('kind').value,
-        count: p.get('count').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
+        kind: p.get('kind').build(),
+        count: p.get('count').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -190,9 +190,9 @@ class SerialTapGestureRecognizer$Mate extends SerialTapGestureRecognizer with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SerialTapGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);

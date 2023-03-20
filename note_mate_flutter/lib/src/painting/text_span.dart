@@ -58,16 +58,16 @@ class TextSpan$Mate extends TextSpan with Mate<TextSpan$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSpan$Mate(
-        text: p.get('text').value,
-        children: p.get('children').value,
-        style: p.get('style').value,
-        recognizer: p.get('recognizer').value,
-        mouseCursor: p.get('mouseCursor').value,
-        onEnter: p.get('onEnter').value,
-        onExit: p.get('onExit').value,
-        semanticsLabel: p.get('semanticsLabel').value,
-        locale: p.get('locale').value,
-        spellOut: p.get('spellOut').value,
+        text: p.get('text').build(),
+        children: p.get('children').build(),
+        style: p.get('style').build(),
+        recognizer: p.get('recognizer').build(),
+        mouseCursor: p.get('mouseCursor').build(),
+        onEnter: p.get('onEnter').build(),
+        onExit: p.get('onExit').build(),
+        semanticsLabel: p.get('semanticsLabel').build(),
+        locale: p.get('locale').build(),
+        spellOut: p.get('spellOut').build(),
       ),
     );
     mateParams.put('text', text);

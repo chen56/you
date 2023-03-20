@@ -52,15 +52,15 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with WidgetMate<CupertinoSwit
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSwitch$Mate(
-        key: p.get('key').value,
-        value: p.get('value').value,
-        onChanged: p.get('onChanged').value,
-        activeColor: p.get('activeColor').value,
-        trackColor: p.get('trackColor').value,
-        thumbColor: p.get('thumbColor').value,
-        applyTheme: p.get('applyTheme').value,
-        focusColor: p.get('focusColor').value,
-        dragStartBehavior: p.get('dragStartBehavior').value,
+        key: p.get('key').build(),
+        value: p.get('value').build(),
+        onChanged: p.get('onChanged').build(),
+        activeColor: p.get('activeColor').build(),
+        trackColor: p.get('trackColor').build(),
+        thumbColor: p.get('thumbColor').build(),
+        applyTheme: p.get('applyTheme').build(),
+        focusColor: p.get('focusColor').build(),
+        dragStartBehavior: p.get('dragStartBehavior').build(),
       ),
     );
     mateParams.put('key', key);

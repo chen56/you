@@ -21,8 +21,8 @@ class FractionalOffsetTween$Mate extends FractionalOffsetTween with Mate<Fractio
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FractionalOffsetTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -46,8 +46,8 @@ class AlignmentTween$Mate extends AlignmentTween with Mate<AlignmentTween$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AlignmentTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -71,8 +71,8 @@ class AlignmentGeometryTween$Mate extends AlignmentGeometryTween with Mate<Align
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AlignmentGeometryTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);

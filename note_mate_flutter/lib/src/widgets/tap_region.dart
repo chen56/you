@@ -23,8 +23,8 @@ class TapRegionSurface$Mate extends TapRegionSurface with WidgetMate<TapRegionSu
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TapRegionSurface$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -72,14 +72,14 @@ class TapRegion$Mate extends TapRegion with WidgetMate<TapRegion$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TapRegion$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        enabled: p.get('enabled').value,
-        behavior: p.get('behavior').value,
-        onTapOutside: p.get('onTapOutside').value,
-        onTapInside: p.get('onTapInside').value,
-        groupId: p.get('groupId').value,
-        debugLabel: p.get('debugLabel').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        enabled: p.get('enabled').build(),
+        behavior: p.get('behavior').build(),
+        onTapOutside: p.get('onTapOutside').build(),
+        onTapInside: p.get('onTapInside').build(),
+        groupId: p.get('groupId').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('key', key);
@@ -129,13 +129,13 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate<RenderTapRegion$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderTapRegion$Mate(
-        registry: p.get('registry').value,
-        enabled: p.get('enabled').value,
-        onTapOutside: p.get('onTapOutside').value,
-        onTapInside: p.get('onTapInside').value,
-        behavior: p.get('behavior').value,
-        groupId: p.get('groupId').value,
-        debugLabel: p.get('debugLabel').value,
+        registry: p.get('registry').build(),
+        enabled: p.get('enabled').build(),
+        onTapOutside: p.get('onTapOutside').build(),
+        onTapInside: p.get('onTapInside').build(),
+        behavior: p.get('behavior').build(),
+        groupId: p.get('groupId').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('registry', registry);
@@ -180,12 +180,12 @@ class TextFieldTapRegion$Mate extends TextFieldTapRegion with WidgetMate<TextFie
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextFieldTapRegion$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        enabled: p.get('enabled').value,
-        onTapOutside: p.get('onTapOutside').value,
-        onTapInside: p.get('onTapInside').value,
-        debugLabel: p.get('debugLabel').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        enabled: p.get('enabled').build(),
+        onTapOutside: p.get('onTapOutside').build(),
+        onTapInside: p.get('onTapInside').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('key', key);

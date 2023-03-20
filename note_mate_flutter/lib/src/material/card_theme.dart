@@ -43,13 +43,13 @@ class CardTheme$Mate extends CardTheme with Mate<CardTheme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CardTheme$Mate(
-        clipBehavior: p.get('clipBehavior').value,
-        color: p.get('color').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        elevation: p.get('elevation').value,
-        margin: p.get('margin').value,
-        shape: p.get('shape').value,
+        clipBehavior: p.get('clipBehavior').build(),
+        color: p.get('color').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        elevation: p.get('elevation').build(),
+        margin: p.get('margin').build(),
+        shape: p.get('shape').build(),
       ),
     );
     mateParams.put('clipBehavior', clipBehavior);

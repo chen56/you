@@ -22,8 +22,8 @@ class RenderSliverFillViewport$Mate extends RenderSliverFillViewport with Mate<R
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverFillViewport$Mate(
-        childManager: p.get('childManager').value,
-        viewportFraction: p.get('viewportFraction').value,
+        childManager: p.get('childManager').build(),
+        viewportFraction: p.get('viewportFraction').build(),
       ),
     );
     mateParams.put('childManager', childManager);
@@ -42,7 +42,7 @@ class RenderSliverFillRemainingWithScrollable$Mate extends RenderSliverFillRemai
       : super(child: child) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverFillRemainingWithScrollable$Mate(child: p.get('child').value),
+      builder: (p) => RenderSliverFillRemainingWithScrollable$Mate(child: p.get('child').build()),
     );
     mateParams.put('child', child);
   }
@@ -58,7 +58,7 @@ class RenderSliverFillRemaining$Mate extends RenderSliverFillRemaining with Mate
       : super(child: child) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverFillRemaining$Mate(child: p.get('child').value),
+      builder: (p) => RenderSliverFillRemaining$Mate(child: p.get('child').build()),
     );
     mateParams.put('child', child);
   }
@@ -75,7 +75,7 @@ class RenderSliverFillRemainingAndOverscroll$Mate extends RenderSliverFillRemain
       : super(child: child) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverFillRemainingAndOverscroll$Mate(child: p.get('child').value),
+      builder: (p) => RenderSliverFillRemainingAndOverscroll$Mate(child: p.get('child').build()),
     );
     mateParams.put('child', child);
   }

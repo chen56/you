@@ -26,8 +26,8 @@ class TextMagnifier$Mate extends TextMagnifier with WidgetMate<TextMagnifier$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextMagnifier$Mate(
-        key: p.get('key').value,
-        magnifierInfo: p.get('magnifierInfo').value,
+        key: p.get('key').build(),
+        magnifierInfo: p.get('magnifierInfo').build(),
       ),
     );
     mateParams.put('key', key);
@@ -67,12 +67,12 @@ class Magnifier$Mate extends Magnifier with WidgetMate<Magnifier$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Magnifier$Mate(
-        key: p.get('key').value,
-        additionalFocalPointOffset: p.get('additionalFocalPointOffset').value,
-        borderRadius: p.get('borderRadius').value,
-        filmColor: p.get('filmColor').value,
-        shadows: p.get('shadows').value,
-        size: p.get('size').value,
+        key: p.get('key').build(),
+        additionalFocalPointOffset: p.get('additionalFocalPointOffset').build(),
+        borderRadius: p.get('borderRadius').build(),
+        filmColor: p.get('filmColor').build(),
+        shadows: p.get('shadows').build(),
+        size: p.get('size').build(),
       ),
     );
     mateParams.put('key', key);

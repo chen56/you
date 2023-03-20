@@ -29,10 +29,10 @@ class SliverPersistentHeader$Mate extends SliverPersistentHeader with WidgetMate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverPersistentHeader$Mate(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
-        pinned: p.get('pinned').value,
-        floating: p.get('floating').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
+        pinned: p.get('pinned').build(),
+        floating: p.get('floating').build(),
       ),
     );
     mateParams.put('key', key);

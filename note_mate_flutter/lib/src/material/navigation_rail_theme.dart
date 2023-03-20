@@ -71,19 +71,19 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate<Nav
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationRailThemeData$Mate(
-        backgroundColor: p.get('backgroundColor').value,
-        elevation: p.get('elevation').value,
-        unselectedLabelTextStyle: p.get('unselectedLabelTextStyle').value,
-        selectedLabelTextStyle: p.get('selectedLabelTextStyle').value,
-        unselectedIconTheme: p.get('unselectedIconTheme').value,
-        selectedIconTheme: p.get('selectedIconTheme').value,
-        groupAlignment: p.get('groupAlignment').value,
-        labelType: p.get('labelType').value,
-        useIndicator: p.get('useIndicator').value,
-        indicatorColor: p.get('indicatorColor').value,
-        indicatorShape: p.get('indicatorShape').value,
-        minWidth: p.get('minWidth').value,
-        minExtendedWidth: p.get('minExtendedWidth').value,
+        backgroundColor: p.get('backgroundColor').build(),
+        elevation: p.get('elevation').build(),
+        unselectedLabelTextStyle: p.get('unselectedLabelTextStyle').build(),
+        selectedLabelTextStyle: p.get('selectedLabelTextStyle').build(),
+        unselectedIconTheme: p.get('unselectedIconTheme').build(),
+        selectedIconTheme: p.get('selectedIconTheme').build(),
+        groupAlignment: p.get('groupAlignment').build(),
+        labelType: p.get('labelType').build(),
+        useIndicator: p.get('useIndicator').build(),
+        indicatorColor: p.get('indicatorColor').build(),
+        indicatorShape: p.get('indicatorShape').build(),
+        minWidth: p.get('minWidth').build(),
+        minExtendedWidth: p.get('minExtendedWidth').build(),
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);
@@ -122,9 +122,9 @@ class NavigationRailTheme$Mate extends NavigationRailTheme with WidgetMate<Navig
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationRailTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

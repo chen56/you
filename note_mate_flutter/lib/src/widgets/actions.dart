@@ -35,10 +35,10 @@ class ActionListener$Mate extends ActionListener with WidgetMate<ActionListener$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ActionListener$Mate(
-        key: p.get('key').value,
-        listener: p.get('listener').value,
-        action: p.get('action').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        listener: p.get('listener').build(),
+        action: p.get('action').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -58,7 +58,7 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate<
       : super(onInvoke: onInvoke) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => CallbackAction$Mate(onInvoke: p.get('onInvoke').value),
+      builder: (p) => CallbackAction$Mate(onInvoke: p.get('onInvoke').build()),
     );
     mateParams.put('onInvoke', onInvoke);
   }
@@ -88,10 +88,10 @@ class Actions$Mate extends Actions with WidgetMate<Actions$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Actions$Mate(
-        key: p.get('key').value,
-        dispatcher: p.get('dispatcher').value,
-        actions: p.get('actions').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        dispatcher: p.get('dispatcher').build(),
+        actions: p.get('actions').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -165,20 +165,20 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusableActionDetector$Mate(
-        key: p.get('key').value,
-        enabled: p.get('enabled').value,
-        focusNode: p.get('focusNode').value,
-        autofocus: p.get('autofocus').value,
-        descendantsAreFocusable: p.get('descendantsAreFocusable').value,
-        descendantsAreTraversable: p.get('descendantsAreTraversable').value,
-        shortcuts: p.get('shortcuts').value,
-        actions: p.get('actions').value,
-        onShowFocusHighlight: p.get('onShowFocusHighlight').value,
-        onShowHoverHighlight: p.get('onShowHoverHighlight').value,
-        onFocusChange: p.get('onFocusChange').value,
-        mouseCursor: p.get('mouseCursor').value,
-        includeFocusSemantics: p.get('includeFocusSemantics').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        enabled: p.get('enabled').build(),
+        focusNode: p.get('focusNode').build(),
+        autofocus: p.get('autofocus').build(),
+        descendantsAreFocusable: p.get('descendantsAreFocusable').build(),
+        descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
+        shortcuts: p.get('shortcuts').build(),
+        actions: p.get('actions').build(),
+        onShowFocusHighlight: p.get('onShowFocusHighlight').build(),
+        onShowHoverHighlight: p.get('onShowHoverHighlight').build(),
+        onFocusChange: p.get('onFocusChange').build(),
+        mouseCursor: p.get('mouseCursor').build(),
+        includeFocusSemantics: p.get('includeFocusSemantics').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -224,7 +224,7 @@ class DoNothingAction$Mate extends DoNothingAction with Mate<DoNothingAction$Mat
       : super(consumesKey: consumesKey) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').value),
+      builder: (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build()),
     );
     mateParams.put('consumesKey', consumesKey);
   }
@@ -240,7 +240,7 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate<PrioritizedIn
       : super(orderedIntents: orderedIntents) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').value),
+      builder: (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build()),
     );
     mateParams.putList('orderedIntents', orderedIntents);
   }

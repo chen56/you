@@ -47,14 +47,14 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with WidgetMate<AnimatedSwi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedSwitcher$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        duration: p.get('duration').value,
-        reverseDuration: p.get('reverseDuration').value,
-        switchInCurve: p.get('switchInCurve').value,
-        switchOutCurve: p.get('switchOutCurve').value,
-        transitionBuilder: p.get('transitionBuilder').value,
-        layoutBuilder: p.get('layoutBuilder').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        duration: p.get('duration').build(),
+        reverseDuration: p.get('reverseDuration').build(),
+        switchInCurve: p.get('switchInCurve').build(),
+        switchOutCurve: p.get('switchOutCurve').build(),
+        transitionBuilder: p.get('transitionBuilder').build(),
+        layoutBuilder: p.get('layoutBuilder').build(),
       ),
     );
     mateParams.put('key', key);

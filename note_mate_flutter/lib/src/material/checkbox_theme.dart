@@ -55,15 +55,15 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate<CheckboxThemeDa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CheckboxThemeData$Mate(
-        mouseCursor: p.get('mouseCursor').value,
-        fillColor: p.get('fillColor').value,
-        checkColor: p.get('checkColor').value,
-        overlayColor: p.get('overlayColor').value,
-        splashRadius: p.get('splashRadius').value,
-        materialTapTargetSize: p.get('materialTapTargetSize').value,
-        visualDensity: p.get('visualDensity').value,
-        shape: p.get('shape').value,
-        side: p.get('side').value,
+        mouseCursor: p.get('mouseCursor').build(),
+        fillColor: p.get('fillColor').build(),
+        checkColor: p.get('checkColor').build(),
+        overlayColor: p.get('overlayColor').build(),
+        splashRadius: p.get('splashRadius').build(),
+        materialTapTargetSize: p.get('materialTapTargetSize').build(),
+        visualDensity: p.get('visualDensity').build(),
+        shape: p.get('shape').build(),
+        side: p.get('side').build(),
       ),
     );
     mateParams.put('mouseCursor', mouseCursor);
@@ -98,9 +98,9 @@ class CheckboxTheme$Mate extends CheckboxTheme with WidgetMate<CheckboxTheme$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CheckboxTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

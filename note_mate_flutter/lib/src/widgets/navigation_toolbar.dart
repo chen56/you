@@ -38,12 +38,12 @@ class NavigationToolbar$Mate extends NavigationToolbar with WidgetMate<Navigatio
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationToolbar$Mate(
-        key: p.get('key').value,
-        leading: p.get('leading').value,
-        middle: p.get('middle').value,
-        trailing: p.get('trailing').value,
-        centerMiddle: p.get('centerMiddle').value,
-        middleSpacing: p.get('middleSpacing').value,
+        key: p.get('key').build(),
+        leading: p.get('leading').build(),
+        middle: p.get('middle').build(),
+        trailing: p.get('trailing').build(),
+        centerMiddle: p.get('centerMiddle').build(),
+        middleSpacing: p.get('middleSpacing').build(),
       ),
     );
     mateParams.put('key', key);

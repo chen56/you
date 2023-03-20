@@ -56,9 +56,9 @@ class Directionality$Mate extends Directionality with WidgetMate<Directionality$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Directionality$Mate(
-        key: p.get('key').value,
-        textDirection: p.get('textDirection').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        textDirection: p.get('textDirection').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -91,10 +91,10 @@ class Opacity$Mate extends Opacity with WidgetMate<Opacity$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Opacity$Mate(
-        key: p.get('key').value,
-        opacity: p.get('opacity').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        opacity: p.get('opacity').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -128,10 +128,10 @@ class ShaderMask$Mate extends ShaderMask with WidgetMate<ShaderMask$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ShaderMask$Mate(
-        key: p.get('key').value,
-        shaderCallback: p.get('shaderCallback').value,
-        blendMode: p.get('blendMode').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        shaderCallback: p.get('shaderCallback').build(),
+        blendMode: p.get('blendMode').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -165,10 +165,10 @@ class BackdropFilter$Mate extends BackdropFilter with WidgetMate<BackdropFilter$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BackdropFilter$Mate(
-        key: p.get('key').value,
-        filter: p.get('filter').value,
-        child: p.get('child').value,
-        blendMode: p.get('blendMode').value,
+        key: p.get('key').build(),
+        filter: p.get('filter').build(),
+        child: p.get('child').build(),
+        blendMode: p.get('blendMode').build(),
       ),
     );
     mateParams.put('key', key);
@@ -214,13 +214,13 @@ class CustomPaint$Mate extends CustomPaint with WidgetMate<CustomPaint$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CustomPaint$Mate(
-        key: p.get('key').value,
-        painter: p.get('painter').value,
-        foregroundPainter: p.get('foregroundPainter').value,
-        size: p.get('size').value,
-        isComplex: p.get('isComplex').value,
-        willChange: p.get('willChange').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        painter: p.get('painter').build(),
+        foregroundPainter: p.get('foregroundPainter').build(),
+        size: p.get('size').build(),
+        isComplex: p.get('isComplex').build(),
+        willChange: p.get('willChange').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -257,10 +257,10 @@ class ClipRect$Mate extends ClipRect with WidgetMate<ClipRect$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ClipRect$Mate(
-        key: p.get('key').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -298,11 +298,11 @@ class ClipRRect$Mate extends ClipRRect with WidgetMate<ClipRRect$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ClipRRect$Mate(
-        key: p.get('key').value,
-        borderRadius: p.get('borderRadius').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        borderRadius: p.get('borderRadius').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -337,10 +337,10 @@ class ClipOval$Mate extends ClipOval with WidgetMate<ClipOval$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ClipOval$Mate(
-        key: p.get('key').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -374,10 +374,10 @@ class ClipPath$Mate extends ClipPath with WidgetMate<ClipPath$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ClipPath$Mate(
-        key: p.get('key').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -427,14 +427,14 @@ class PhysicalModel$Mate extends PhysicalModel with WidgetMate<PhysicalModel$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PhysicalModel$Mate(
-        key: p.get('key').value,
-        shape: p.get('shape').value,
-        clipBehavior: p.get('clipBehavior').value,
-        borderRadius: p.get('borderRadius').value,
-        elevation: p.get('elevation').value,
-        color: p.get('color').value,
-        shadowColor: p.get('shadowColor').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        shape: p.get('shape').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        borderRadius: p.get('borderRadius').build(),
+        elevation: p.get('elevation').build(),
+        color: p.get('color').build(),
+        shadowColor: p.get('shadowColor').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -484,13 +484,13 @@ class PhysicalShape$Mate extends PhysicalShape with WidgetMate<PhysicalShape$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PhysicalShape$Mate(
-        key: p.get('key').value,
-        clipper: p.get('clipper').value,
-        clipBehavior: p.get('clipBehavior').value,
-        elevation: p.get('elevation').value,
-        color: p.get('color').value,
-        shadowColor: p.get('shadowColor').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        clipper: p.get('clipper').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        elevation: p.get('elevation').build(),
+        color: p.get('color').build(),
+        shadowColor: p.get('shadowColor').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -539,13 +539,13 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Transform$Mate(
-        key: p.get('key').value,
-        transform: p.get('transform').value,
-        origin: p.get('origin').value,
-        alignment: p.get('alignment').value,
-        transformHitTests: p.get('transformHitTests').value,
-        filterQuality: p.get('filterQuality').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        transform: p.get('transform').build(),
+        origin: p.get('origin').build(),
+        alignment: p.get('alignment').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        filterQuality: p.get('filterQuality').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -591,13 +591,13 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Transform$Mate.rotate(
-        key: p.get('key').value,
-        angle: p.get('angle').value,
-        origin: p.get('origin').value,
-        alignment: p.get('alignment').value,
-        transformHitTests: p.get('transformHitTests').value,
-        filterQuality: p.get('filterQuality').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        angle: p.get('angle').build(),
+        origin: p.get('origin').build(),
+        alignment: p.get('alignment').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        filterQuality: p.get('filterQuality').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -635,11 +635,11 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Transform$Mate.translate(
-        key: p.get('key').value,
-        offset: p.get('offset').value,
-        transformHitTests: p.get('transformHitTests').value,
-        filterQuality: p.get('filterQuality').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        offset: p.get('offset').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        filterQuality: p.get('filterQuality').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -691,15 +691,15 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Transform$Mate.scale(
-        key: p.get('key').value,
-        scale: p.get('scale').value,
-        scaleX: p.get('scaleX').value,
-        scaleY: p.get('scaleY').value,
-        origin: p.get('origin').value,
-        alignment: p.get('alignment').value,
-        transformHitTests: p.get('transformHitTests').value,
-        filterQuality: p.get('filterQuality').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        scale: p.get('scale').build(),
+        scaleX: p.get('scaleX').build(),
+        scaleY: p.get('scaleY').build(),
+        origin: p.get('origin').build(),
+        alignment: p.get('alignment').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        filterQuality: p.get('filterQuality').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -747,13 +747,13 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Transform$Mate.flip(
-        key: p.get('key').value,
-        flipX: p.get('flipX').value,
-        flipY: p.get('flipY').value,
-        origin: p.get('origin').value,
-        transformHitTests: p.get('transformHitTests').value,
-        filterQuality: p.get('filterQuality').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        flipX: p.get('flipX').build(),
+        flipY: p.get('flipY').build(),
+        origin: p.get('origin').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        filterQuality: p.get('filterQuality').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -786,9 +786,9 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Widg
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CompositedTransformTarget$Mate(
-        key: p.get('key').value,
-        link: p.get('link').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        link: p.get('link').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -834,13 +834,13 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CompositedTransformFollower$Mate(
-        key: p.get('key').value,
-        link: p.get('link').value,
-        showWhenUnlinked: p.get('showWhenUnlinked').value,
-        offset: p.get('offset').value,
-        targetAnchor: p.get('targetAnchor').value,
-        followerAnchor: p.get('followerAnchor').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        link: p.get('link').build(),
+        showWhenUnlinked: p.get('showWhenUnlinked').build(),
+        offset: p.get('offset').build(),
+        targetAnchor: p.get('targetAnchor').build(),
+        followerAnchor: p.get('followerAnchor').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -881,11 +881,11 @@ class FittedBox$Mate extends FittedBox with WidgetMate<FittedBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FittedBox$Mate(
-        key: p.get('key').value,
-        fit: p.get('fit').value,
-        alignment: p.get('alignment').value,
-        clipBehavior: p.get('clipBehavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        fit: p.get('fit').build(),
+        alignment: p.get('alignment').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -920,10 +920,10 @@ class FractionalTranslation$Mate extends FractionalTranslation with WidgetMate<F
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FractionalTranslation$Mate(
-        key: p.get('key').value,
-        translation: p.get('translation').value,
-        transformHitTests: p.get('transformHitTests').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        translation: p.get('translation').build(),
+        transformHitTests: p.get('transformHitTests').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -953,9 +953,9 @@ class RotatedBox$Mate extends RotatedBox with WidgetMate<RotatedBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RotatedBox$Mate(
-        key: p.get('key').value,
-        quarterTurns: p.get('quarterTurns').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        quarterTurns: p.get('quarterTurns').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -984,9 +984,9 @@ class Padding$Mate extends Padding with WidgetMate<Padding$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Padding$Mate(
-        key: p.get('key').value,
-        padding: p.get('padding').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        padding: p.get('padding').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1023,11 +1023,11 @@ class Align$Mate extends Align with WidgetMate<Align$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Align$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        widthFactor: p.get('widthFactor').value,
-        heightFactor: p.get('heightFactor').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        widthFactor: p.get('widthFactor').build(),
+        heightFactor: p.get('heightFactor').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1062,10 +1062,10 @@ class Center$Mate extends Center with WidgetMate<Center$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Center$Mate(
-        key: p.get('key').value,
-        widthFactor: p.get('widthFactor').value,
-        heightFactor: p.get('heightFactor').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        widthFactor: p.get('widthFactor').build(),
+        heightFactor: p.get('heightFactor').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1095,9 +1095,9 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CustomSingleChildLayout$Mate(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1126,9 +1126,9 @@ class LayoutId$Mate extends LayoutId with WidgetMate<LayoutId$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LayoutId$Mate(
-        key: p.get('key').value,
-        id: p.get('id').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        id: p.get('id').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1157,9 +1157,9 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with WidgetMate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CustomMultiChildLayout$Mate(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1192,10 +1192,10 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizedBox$Mate(
-        key: p.get('key').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1218,8 +1218,8 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizedBox$Mate.expand(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1240,8 +1240,8 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizedBox$Mate.shrink(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1266,9 +1266,9 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizedBox$Mate.fromSize(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        size: p.get('size').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        size: p.get('size').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1294,9 +1294,9 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizedBox$Mate.square(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        dimension: p.get('dimension').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        dimension: p.get('dimension').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1325,9 +1325,9 @@ class ConstrainedBox$Mate extends ConstrainedBox with WidgetMate<ConstrainedBox$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ConstrainedBox$Mate(
-        key: p.get('key').value,
-        constraints: p.get('constraints').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        constraints: p.get('constraints').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1372,13 +1372,13 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ConstraintsTransformBox$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        textDirection: p.get('textDirection').value,
-        alignment: p.get('alignment').value,
-        constraintsTransform: p.get('constraintsTransform').value,
-        clipBehavior: p.get('clipBehavior').value,
-        debugTransformType: p.get('debugTransformType').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        textDirection: p.get('textDirection').build(),
+        alignment: p.get('alignment').build(),
+        constraintsTransform: p.get('constraintsTransform').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        debugTransformType: p.get('debugTransformType').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1423,12 +1423,12 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with WidgetMate<Unconstrain
     mateParams = ObjectParam(
       init: this,
       builder: (p) => UnconstrainedBox$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        textDirection: p.get('textDirection').value,
-        alignment: p.get('alignment').value,
-        constrainedAxis: p.get('constrainedAxis').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        textDirection: p.get('textDirection').build(),
+        alignment: p.get('alignment').build(),
+        constrainedAxis: p.get('constrainedAxis').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1468,11 +1468,11 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with WidgetMate<Fra
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FractionallySizedBox$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        widthFactor: p.get('widthFactor').value,
-        heightFactor: p.get('heightFactor').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        widthFactor: p.get('widthFactor').build(),
+        heightFactor: p.get('heightFactor').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1507,10 +1507,10 @@ class LimitedBox$Mate extends LimitedBox with WidgetMate<LimitedBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LimitedBox$Mate(
-        key: p.get('key').value,
-        maxWidth: p.get('maxWidth').value,
-        maxHeight: p.get('maxHeight').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        maxWidth: p.get('maxWidth').build(),
+        maxHeight: p.get('maxHeight').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1556,13 +1556,13 @@ class OverflowBox$Mate extends OverflowBox with WidgetMate<OverflowBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OverflowBox$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        minWidth: p.get('minWidth').value,
-        maxWidth: p.get('maxWidth').value,
-        minHeight: p.get('minHeight').value,
-        maxHeight: p.get('maxHeight').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        minWidth: p.get('minWidth').build(),
+        maxWidth: p.get('maxWidth').build(),
+        minHeight: p.get('minHeight').build(),
+        maxHeight: p.get('maxHeight').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1599,10 +1599,10 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with WidgetMate<SizedOverfl
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizedOverflowBox$Mate(
-        key: p.get('key').value,
-        size: p.get('size').value,
-        alignment: p.get('alignment').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        size: p.get('size').build(),
+        alignment: p.get('alignment').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1632,9 +1632,9 @@ class Offstage$Mate extends Offstage with WidgetMate<Offstage$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Offstage$Mate(
-        key: p.get('key').value,
-        offstage: p.get('offstage').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        offstage: p.get('offstage').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1663,9 +1663,9 @@ class AspectRatio$Mate extends AspectRatio with WidgetMate<AspectRatio$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AspectRatio$Mate(
-        key: p.get('key').value,
-        aspectRatio: p.get('aspectRatio').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        aspectRatio: p.get('aspectRatio').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1698,10 +1698,10 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with WidgetMate<IntrinsicWidth$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => IntrinsicWidth$Mate(
-        key: p.get('key').value,
-        stepWidth: p.get('stepWidth').value,
-        stepHeight: p.get('stepHeight').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        stepWidth: p.get('stepWidth').build(),
+        stepHeight: p.get('stepHeight').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1727,8 +1727,8 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with WidgetMate<IntrinsicHeig
     mateParams = ObjectParam(
       init: this,
       builder: (p) => IntrinsicHeight$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1760,10 +1760,10 @@ class Baseline$Mate extends Baseline with WidgetMate<Baseline$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Baseline$Mate(
-        key: p.get('key').value,
-        baseline: p.get('baseline').value,
-        baselineType: p.get('baselineType').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        baseline: p.get('baseline').build(),
+        baselineType: p.get('baselineType').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1789,8 +1789,8 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with WidgetMate<SliverT
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverToBoxAdapter$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1818,9 +1818,9 @@ class SliverPadding$Mate extends SliverPadding with WidgetMate<SliverPadding$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverPadding$Mate(
-        key: p.get('key').value,
-        padding: p.get('padding').value,
-        sliver: p.get('sliver').value,
+        key: p.get('key').build(),
+        padding: p.get('padding').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1853,10 +1853,10 @@ class ListBody$Mate extends ListBody with WidgetMate<ListBody$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ListBody$Mate(
-        key: p.get('key').value,
-        mainAxis: p.get('mainAxis').value,
-        reverse: p.get('reverse').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        mainAxis: p.get('mainAxis').build(),
+        reverse: p.get('reverse').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1898,12 +1898,12 @@ class Stack$Mate extends Stack with WidgetMate<Stack$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Stack$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        textDirection: p.get('textDirection').value,
-        fit: p.get('fit').value,
-        clipBehavior: p.get('clipBehavior').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        textDirection: p.get('textDirection').build(),
+        fit: p.get('fit').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -1951,13 +1951,13 @@ class IndexedStack$Mate extends IndexedStack with WidgetMate<IndexedStack$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => IndexedStack$Mate(
-        key: p.get('key').value,
-        alignment: p.get('alignment').value,
-        textDirection: p.get('textDirection').value,
-        clipBehavior: p.get('clipBehavior').value,
-        sizing: p.get('sizing').value,
-        index: p.get('index').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        alignment: p.get('alignment').build(),
+        textDirection: p.get('textDirection').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        sizing: p.get('sizing').build(),
+        index: p.get('index').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2010,14 +2010,14 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Positioned$Mate(
-        key: p.get('key').value,
-        left: p.get('left').value,
-        top: p.get('top').value,
-        right: p.get('right').value,
-        bottom: p.get('bottom').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        left: p.get('left').build(),
+        top: p.get('top').build(),
+        right: p.get('right').build(),
+        bottom: p.get('bottom').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2048,9 +2048,9 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Positioned$Mate.fromRect(
-        key: p.get('key').value,
-        rect: p.get('rect').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        rect: p.get('rect').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2076,9 +2076,9 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Positioned$Mate.fromRelativeRect(
-        key: p.get('key').value,
-        rect: p.get('rect').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        rect: p.get('rect').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2116,12 +2116,12 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Positioned$Mate.fill(
-        key: p.get('key').value,
-        left: p.get('left').value,
-        top: p.get('top').value,
-        right: p.get('right').value,
-        bottom: p.get('bottom').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        left: p.get('left').build(),
+        top: p.get('top').build(),
+        right: p.get('right').build(),
+        bottom: p.get('bottom').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2173,14 +2173,14 @@ class PositionedDirectional$Mate extends PositionedDirectional with WidgetMate<P
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PositionedDirectional$Mate(
-        key: p.get('key').value,
-        start: p.get('start').value,
-        top: p.get('top').value,
-        end: p.get('end').value,
-        bottom: p.get('bottom').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        start: p.get('start').build(),
+        top: p.get('top').build(),
+        end: p.get('end').build(),
+        bottom: p.get('bottom').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2242,16 +2242,16 @@ class Flex$Mate extends Flex with WidgetMate<Flex$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Flex$Mate(
-        key: p.get('key').value,
-        direction: p.get('direction').value,
-        mainAxisAlignment: p.get('mainAxisAlignment').value,
-        mainAxisSize: p.get('mainAxisSize').value,
-        crossAxisAlignment: p.get('crossAxisAlignment').value,
-        textDirection: p.get('textDirection').value,
-        verticalDirection: p.get('verticalDirection').value,
-        textBaseline: p.get('textBaseline').value,
-        clipBehavior: p.get('clipBehavior').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        direction: p.get('direction').build(),
+        mainAxisAlignment: p.get('mainAxisAlignment').build(),
+        mainAxisSize: p.get('mainAxisSize').build(),
+        crossAxisAlignment: p.get('crossAxisAlignment').build(),
+        textDirection: p.get('textDirection').build(),
+        verticalDirection: p.get('verticalDirection').build(),
+        textBaseline: p.get('textBaseline').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2307,14 +2307,14 @@ class Row$Mate extends Row with WidgetMate<Row$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Row$Mate(
-        key: p.get('key').value,
-        mainAxisAlignment: p.get('mainAxisAlignment').value,
-        mainAxisSize: p.get('mainAxisSize').value,
-        crossAxisAlignment: p.get('crossAxisAlignment').value,
-        textDirection: p.get('textDirection').value,
-        verticalDirection: p.get('verticalDirection').value,
-        textBaseline: p.get('textBaseline').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        mainAxisAlignment: p.get('mainAxisAlignment').build(),
+        mainAxisSize: p.get('mainAxisSize').build(),
+        crossAxisAlignment: p.get('crossAxisAlignment').build(),
+        textDirection: p.get('textDirection').build(),
+        verticalDirection: p.get('verticalDirection').build(),
+        textBaseline: p.get('textBaseline').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2368,14 +2368,14 @@ class Column$Mate extends Column with WidgetMate<Column$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Column$Mate(
-        key: p.get('key').value,
-        mainAxisAlignment: p.get('mainAxisAlignment').value,
-        mainAxisSize: p.get('mainAxisSize').value,
-        crossAxisAlignment: p.get('crossAxisAlignment').value,
-        textDirection: p.get('textDirection').value,
-        verticalDirection: p.get('verticalDirection').value,
-        textBaseline: p.get('textBaseline').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        mainAxisAlignment: p.get('mainAxisAlignment').build(),
+        mainAxisSize: p.get('mainAxisSize').build(),
+        crossAxisAlignment: p.get('crossAxisAlignment').build(),
+        textDirection: p.get('textDirection').build(),
+        verticalDirection: p.get('verticalDirection').build(),
+        textBaseline: p.get('textBaseline').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2413,10 +2413,10 @@ class Flexible$Mate extends Flexible with WidgetMate<Flexible$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Flexible$Mate(
-        key: p.get('key').value,
-        flex: p.get('flex').value,
-        fit: p.get('fit').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        flex: p.get('flex').build(),
+        fit: p.get('fit').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2446,9 +2446,9 @@ class Expanded$Mate extends Expanded with WidgetMate<Expanded$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Expanded$Mate(
-        key: p.get('key').value,
-        flex: p.get('flex').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        flex: p.get('flex').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2509,17 +2509,17 @@ class Wrap$Mate extends Wrap with WidgetMate<Wrap$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Wrap$Mate(
-        key: p.get('key').value,
-        direction: p.get('direction').value,
-        alignment: p.get('alignment').value,
-        spacing: p.get('spacing').value,
-        runAlignment: p.get('runAlignment').value,
-        runSpacing: p.get('runSpacing').value,
-        crossAxisAlignment: p.get('crossAxisAlignment').value,
-        textDirection: p.get('textDirection').value,
-        verticalDirection: p.get('verticalDirection').value,
-        clipBehavior: p.get('clipBehavior').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        direction: p.get('direction').build(),
+        alignment: p.get('alignment').build(),
+        spacing: p.get('spacing').build(),
+        runAlignment: p.get('runAlignment').build(),
+        runSpacing: p.get('runSpacing').build(),
+        crossAxisAlignment: p.get('crossAxisAlignment').build(),
+        textDirection: p.get('textDirection').build(),
+        verticalDirection: p.get('verticalDirection').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2560,10 +2560,10 @@ class Flow$Mate extends Flow with WidgetMate<Flow$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Flow$Mate(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
-        children: p.get('children').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
+        children: p.get('children').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2594,10 +2594,10 @@ class Flow$Mate extends Flow with WidgetMate<Flow$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Flow$Mate.unwrapped(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
-        children: p.get('children').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
+        children: p.get('children').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2671,20 +2671,20 @@ class RichText$Mate extends RichText with WidgetMate<RichText$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RichText$Mate(
-        key: p.get('key').value,
-        text: p.get('text').value,
-        textAlign: p.get('textAlign').value,
-        textDirection: p.get('textDirection').value,
-        softWrap: p.get('softWrap').value,
-        overflow: p.get('overflow').value,
-        textScaleFactor: p.get('textScaleFactor').value,
-        maxLines: p.get('maxLines').value,
-        locale: p.get('locale').value,
-        strutStyle: p.get('strutStyle').value,
-        textWidthBasis: p.get('textWidthBasis').value,
-        textHeightBehavior: p.get('textHeightBehavior').value,
-        selectionRegistrar: p.get('selectionRegistrar').value,
-        selectionColor: p.get('selectionColor').value,
+        key: p.get('key').build(),
+        text: p.get('text').build(),
+        textAlign: p.get('textAlign').build(),
+        textDirection: p.get('textDirection').build(),
+        softWrap: p.get('softWrap').build(),
+        overflow: p.get('overflow').build(),
+        textScaleFactor: p.get('textScaleFactor').build(),
+        maxLines: p.get('maxLines').build(),
+        locale: p.get('locale').build(),
+        strutStyle: p.get('strutStyle').build(),
+        textWidthBasis: p.get('textWidthBasis').build(),
+        textHeightBehavior: p.get('textHeightBehavior').build(),
+        selectionRegistrar: p.get('selectionRegistrar').build(),
+        selectionColor: p.get('selectionColor').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2780,23 +2780,23 @@ class RawImage$Mate extends RawImage with WidgetMate<RawImage$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawImage$Mate(
-        key: p.get('key').value,
-        image: p.get('image').value,
-        debugImageLabel: p.get('debugImageLabel').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        scale: p.get('scale').value,
-        color: p.get('color').value,
-        opacity: p.get('opacity').value,
-        colorBlendMode: p.get('colorBlendMode').value,
-        fit: p.get('fit').value,
-        alignment: p.get('alignment').value,
-        repeat: p.get('repeat').value,
-        centerSlice: p.get('centerSlice').value,
-        matchTextDirection: p.get('matchTextDirection').value,
-        invertColors: p.get('invertColors').value,
-        filterQuality: p.get('filterQuality').value,
-        isAntiAlias: p.get('isAntiAlias').value,
+        key: p.get('key').build(),
+        image: p.get('image').build(),
+        debugImageLabel: p.get('debugImageLabel').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        scale: p.get('scale').build(),
+        color: p.get('color').build(),
+        opacity: p.get('opacity').build(),
+        colorBlendMode: p.get('colorBlendMode').build(),
+        fit: p.get('fit').build(),
+        alignment: p.get('alignment').build(),
+        repeat: p.get('repeat').build(),
+        centerSlice: p.get('centerSlice').build(),
+        matchTextDirection: p.get('matchTextDirection').build(),
+        invertColors: p.get('invertColors').build(),
+        filterQuality: p.get('filterQuality').build(),
+        isAntiAlias: p.get('isAntiAlias').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2839,9 +2839,9 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with WidgetMate<Default
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultAssetBundle$Mate(
-        key: p.get('key').value,
-        bundle: p.get('bundle').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        bundle: p.get('bundle').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -2870,9 +2870,9 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Widget
     mateParams = ObjectParam(
       init: this,
       builder: (p) => WidgetToRenderBoxAdapter$Mate(
-        renderBox: p.get('renderBox').value,
-        onBuild: p.get('onBuild').value,
-        onUnmount: p.get('onUnmount').value,
+        renderBox: p.get('renderBox').build(),
+        onBuild: p.get('onBuild').build(),
+        onUnmount: p.get('onUnmount').build(),
       ),
     );
     mateParams.put('renderBox', renderBox);
@@ -2937,18 +2937,18 @@ class Listener$Mate extends Listener with WidgetMate<Listener$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Listener$Mate(
-        key: p.get('key').value,
-        onPointerDown: p.get('onPointerDown').value,
-        onPointerMove: p.get('onPointerMove').value,
-        onPointerUp: p.get('onPointerUp').value,
-        onPointerHover: p.get('onPointerHover').value,
-        onPointerCancel: p.get('onPointerCancel').value,
-        onPointerPanZoomStart: p.get('onPointerPanZoomStart').value,
-        onPointerPanZoomUpdate: p.get('onPointerPanZoomUpdate').value,
-        onPointerPanZoomEnd: p.get('onPointerPanZoomEnd').value,
-        onPointerSignal: p.get('onPointerSignal').value,
-        behavior: p.get('behavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        onPointerDown: p.get('onPointerDown').build(),
+        onPointerMove: p.get('onPointerMove').build(),
+        onPointerUp: p.get('onPointerUp').build(),
+        onPointerHover: p.get('onPointerHover').build(),
+        onPointerCancel: p.get('onPointerCancel').build(),
+        onPointerPanZoomStart: p.get('onPointerPanZoomStart').build(),
+        onPointerPanZoomUpdate: p.get('onPointerPanZoomUpdate').build(),
+        onPointerPanZoomEnd: p.get('onPointerPanZoomEnd').build(),
+        onPointerSignal: p.get('onPointerSignal').build(),
+        behavior: p.get('behavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3006,14 +3006,14 @@ class MouseRegion$Mate extends MouseRegion with WidgetMate<MouseRegion$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MouseRegion$Mate(
-        key: p.get('key').value,
-        onEnter: p.get('onEnter').value,
-        onExit: p.get('onExit').value,
-        onHover: p.get('onHover').value,
-        cursor: p.get('cursor').value,
-        opaque: p.get('opaque').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        onEnter: p.get('onEnter').build(),
+        onExit: p.get('onExit').build(),
+        onHover: p.get('onHover').build(),
+        cursor: p.get('cursor').build(),
+        opaque: p.get('opaque').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3043,8 +3043,8 @@ class RepaintBoundary$Mate extends RepaintBoundary with WidgetMate<RepaintBounda
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RepaintBoundary$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3076,10 +3076,10 @@ class IgnorePointer$Mate extends IgnorePointer with WidgetMate<IgnorePointer$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => IgnorePointer$Mate(
-        key: p.get('key').value,
-        ignoring: p.get('ignoring').value,
-        ignoringSemantics: p.get('ignoringSemantics').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        ignoring: p.get('ignoring').build(),
+        ignoringSemantics: p.get('ignoringSemantics').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3113,10 +3113,10 @@ class AbsorbPointer$Mate extends AbsorbPointer with WidgetMate<AbsorbPointer$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AbsorbPointer$Mate(
-        key: p.get('key').value,
-        absorbing: p.get('absorbing').value,
-        child: p.get('child').value,
-        ignoringSemantics: p.get('ignoringSemantics').value,
+        key: p.get('key').build(),
+        absorbing: p.get('absorbing').build(),
+        child: p.get('child').build(),
+        ignoringSemantics: p.get('ignoringSemantics').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3150,10 +3150,10 @@ class MetaData$Mate extends MetaData with WidgetMate<MetaData$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MetaData$Mate(
-        key: p.get('key').value,
-        metaData: p.get('metaData').value,
-        behavior: p.get('behavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        metaData: p.get('metaData').build(),
+        behavior: p.get('behavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3427,70 +3427,70 @@ class Semantics$Mate extends Semantics with WidgetMate<Semantics$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Semantics$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        container: p.get('container').value,
-        explicitChildNodes: p.get('explicitChildNodes').value,
-        excludeSemantics: p.get('excludeSemantics').value,
-        enabled: p.get('enabled').value,
-        checked: p.get('checked').value,
-        mixed: p.get('mixed').value,
-        selected: p.get('selected').value,
-        toggled: p.get('toggled').value,
-        button: p.get('button').value,
-        slider: p.get('slider').value,
-        keyboardKey: p.get('keyboardKey').value,
-        link: p.get('link').value,
-        header: p.get('header').value,
-        textField: p.get('textField').value,
-        readOnly: p.get('readOnly').value,
-        focusable: p.get('focusable').value,
-        focused: p.get('focused').value,
-        inMutuallyExclusiveGroup: p.get('inMutuallyExclusiveGroup').value,
-        obscured: p.get('obscured').value,
-        multiline: p.get('multiline').value,
-        scopesRoute: p.get('scopesRoute').value,
-        namesRoute: p.get('namesRoute').value,
-        hidden: p.get('hidden').value,
-        image: p.get('image').value,
-        liveRegion: p.get('liveRegion').value,
-        maxValueLength: p.get('maxValueLength').value,
-        currentValueLength: p.get('currentValueLength').value,
-        label: p.get('label').value,
-        attributedLabel: p.get('attributedLabel').value,
-        value: p.get('value').value,
-        attributedValue: p.get('attributedValue').value,
-        increasedValue: p.get('increasedValue').value,
-        attributedIncreasedValue: p.get('attributedIncreasedValue').value,
-        decreasedValue: p.get('decreasedValue').value,
-        attributedDecreasedValue: p.get('attributedDecreasedValue').value,
-        hint: p.get('hint').value,
-        attributedHint: p.get('attributedHint').value,
-        tooltip: p.get('tooltip').value,
-        onTapHint: p.get('onTapHint').value,
-        onLongPressHint: p.get('onLongPressHint').value,
-        textDirection: p.get('textDirection').value,
-        sortKey: p.get('sortKey').value,
-        tagForChildren: p.get('tagForChildren').value,
-        onTap: p.get('onTap').value,
-        onLongPress: p.get('onLongPress').value,
-        onScrollLeft: p.get('onScrollLeft').value,
-        onScrollRight: p.get('onScrollRight').value,
-        onScrollUp: p.get('onScrollUp').value,
-        onScrollDown: p.get('onScrollDown').value,
-        onIncrease: p.get('onIncrease').value,
-        onDecrease: p.get('onDecrease').value,
-        onCopy: p.get('onCopy').value,
-        onCut: p.get('onCut').value,
-        onPaste: p.get('onPaste').value,
-        onDismiss: p.get('onDismiss').value,
-        onMoveCursorForwardByCharacter: p.get('onMoveCursorForwardByCharacter').value,
-        onMoveCursorBackwardByCharacter: p.get('onMoveCursorBackwardByCharacter').value,
-        onSetSelection: p.get('onSetSelection').value,
-        onSetText: p.get('onSetText').value,
-        onDidGainAccessibilityFocus: p.get('onDidGainAccessibilityFocus').value,
-        onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').value,
-        customSemanticsActions: p.get('customSemanticsActions').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        container: p.get('container').build(),
+        explicitChildNodes: p.get('explicitChildNodes').build(),
+        excludeSemantics: p.get('excludeSemantics').build(),
+        enabled: p.get('enabled').build(),
+        checked: p.get('checked').build(),
+        mixed: p.get('mixed').build(),
+        selected: p.get('selected').build(),
+        toggled: p.get('toggled').build(),
+        button: p.get('button').build(),
+        slider: p.get('slider').build(),
+        keyboardKey: p.get('keyboardKey').build(),
+        link: p.get('link').build(),
+        header: p.get('header').build(),
+        textField: p.get('textField').build(),
+        readOnly: p.get('readOnly').build(),
+        focusable: p.get('focusable').build(),
+        focused: p.get('focused').build(),
+        inMutuallyExclusiveGroup: p.get('inMutuallyExclusiveGroup').build(),
+        obscured: p.get('obscured').build(),
+        multiline: p.get('multiline').build(),
+        scopesRoute: p.get('scopesRoute').build(),
+        namesRoute: p.get('namesRoute').build(),
+        hidden: p.get('hidden').build(),
+        image: p.get('image').build(),
+        liveRegion: p.get('liveRegion').build(),
+        maxValueLength: p.get('maxValueLength').build(),
+        currentValueLength: p.get('currentValueLength').build(),
+        label: p.get('label').build(),
+        attributedLabel: p.get('attributedLabel').build(),
+        value: p.get('value').build(),
+        attributedValue: p.get('attributedValue').build(),
+        increasedValue: p.get('increasedValue').build(),
+        attributedIncreasedValue: p.get('attributedIncreasedValue').build(),
+        decreasedValue: p.get('decreasedValue').build(),
+        attributedDecreasedValue: p.get('attributedDecreasedValue').build(),
+        hint: p.get('hint').build(),
+        attributedHint: p.get('attributedHint').build(),
+        tooltip: p.get('tooltip').build(),
+        onTapHint: p.get('onTapHint').build(),
+        onLongPressHint: p.get('onLongPressHint').build(),
+        textDirection: p.get('textDirection').build(),
+        sortKey: p.get('sortKey').build(),
+        tagForChildren: p.get('tagForChildren').build(),
+        onTap: p.get('onTap').build(),
+        onLongPress: p.get('onLongPress').build(),
+        onScrollLeft: p.get('onScrollLeft').build(),
+        onScrollRight: p.get('onScrollRight').build(),
+        onScrollUp: p.get('onScrollUp').build(),
+        onScrollDown: p.get('onScrollDown').build(),
+        onIncrease: p.get('onIncrease').build(),
+        onDecrease: p.get('onDecrease').build(),
+        onCopy: p.get('onCopy').build(),
+        onCut: p.get('onCut').build(),
+        onPaste: p.get('onPaste').build(),
+        onDismiss: p.get('onDismiss').build(),
+        onMoveCursorForwardByCharacter: p.get('onMoveCursorForwardByCharacter').build(),
+        onMoveCursorBackwardByCharacter: p.get('onMoveCursorBackwardByCharacter').build(),
+        onSetSelection: p.get('onSetSelection').build(),
+        onSetText: p.get('onSetText').build(),
+        onDidGainAccessibilityFocus: p.get('onDidGainAccessibilityFocus').build(),
+        onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
+        customSemanticsActions: p.get('customSemanticsActions').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3589,12 +3589,12 @@ class Semantics$Mate extends Semantics with WidgetMate<Semantics$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Semantics$Mate.fromProperties(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        container: p.get('container').value,
-        explicitChildNodes: p.get('explicitChildNodes').value,
-        excludeSemantics: p.get('excludeSemantics').value,
-        properties: p.get('properties').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        container: p.get('container').build(),
+        explicitChildNodes: p.get('explicitChildNodes').build(),
+        excludeSemantics: p.get('excludeSemantics').build(),
+        properties: p.get('properties').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3622,8 +3622,8 @@ class MergeSemantics$Mate extends MergeSemantics with WidgetMate<MergeSemantics$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MergeSemantics$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3651,9 +3651,9 @@ class BlockSemantics$Mate extends BlockSemantics with WidgetMate<BlockSemantics$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BlockSemantics$Mate(
-        key: p.get('key').value,
-        blocking: p.get('blocking').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        blocking: p.get('blocking').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3682,9 +3682,9 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with WidgetMate<ExcludeSema
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExcludeSemantics$Mate(
-        key: p.get('key').value,
-        excluding: p.get('excluding').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        excluding: p.get('excluding').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3713,9 +3713,9 @@ class IndexedSemantics$Mate extends IndexedSemantics with WidgetMate<IndexedSema
     mateParams = ObjectParam(
       init: this,
       builder: (p) => IndexedSemantics$Mate(
-        key: p.get('key').value,
-        index: p.get('index').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        index: p.get('index').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3740,8 +3740,8 @@ class KeyedSubtree$Mate extends KeyedSubtree with WidgetMate<KeyedSubtree$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyedSubtree$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3765,8 +3765,8 @@ class Builder$Mate extends Builder with WidgetMate<Builder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Builder$Mate(
-        key: p.get('key').value,
-        builder: p.get('builder').value,
+        key: p.get('key').build(),
+        builder: p.get('builder').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3790,8 +3790,8 @@ class StatefulBuilder$Mate extends StatefulBuilder with WidgetMate<StatefulBuild
     mateParams = ObjectParam(
       init: this,
       builder: (p) => StatefulBuilder$Mate(
-        key: p.get('key').value,
-        builder: p.get('builder').value,
+        key: p.get('key').build(),
+        builder: p.get('builder').build(),
       ),
     );
     mateParams.put('key', key);
@@ -3819,9 +3819,9 @@ class ColoredBox$Mate extends ColoredBox with WidgetMate<ColoredBox$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ColoredBox$Mate(
-        color: p.get('color').value,
-        child: p.get('child').value,
-        key: p.get('key').value,
+        color: p.get('color').build(),
+        child: p.get('child').build(),
+        key: p.get('key').build(),
       ),
     );
     mateParams.put('color', color);

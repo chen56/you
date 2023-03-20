@@ -26,9 +26,9 @@ class TooltipVisibility$Mate extends TooltipVisibility with WidgetMate<TooltipVi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TooltipVisibility$Mate(
-        key: p.get('key').value,
-        visible: p.get('visible').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        visible: p.get('visible').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

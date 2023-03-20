@@ -23,8 +23,8 @@ class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchC
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OverScrollHeaderStretchConfiguration$Mate(
-        stretchTriggerOffset: p.get('stretchTriggerOffset').value,
-        onStretchTrigger: p.get('onStretchTrigger').value,
+        stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
+        onStretchTrigger: p.get('onStretchTrigger').build(),
       ),
     );
     mateParams.put('stretchTriggerOffset', stretchTriggerOffset);
@@ -49,8 +49,8 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderSho
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PersistentHeaderShowOnScreenConfiguration$Mate(
-        minShowOnScreenExtent: p.get('minShowOnScreenExtent').value,
-        maxShowOnScreenExtent: p.get('maxShowOnScreenExtent').value,
+        minShowOnScreenExtent: p.get('minShowOnScreenExtent').build(),
+        maxShowOnScreenExtent: p.get('maxShowOnScreenExtent').build(),
       ),
     );
     mateParams.put('minShowOnScreenExtent', minShowOnScreenExtent);
@@ -75,8 +75,8 @@ class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfigurati
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FloatingHeaderSnapConfiguration$Mate(
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
       ),
     );
     mateParams.put('curve', curve);

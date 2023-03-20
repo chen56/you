@@ -61,17 +61,17 @@ class InkSplash$Mate extends InkSplash with Mate<InkSplash$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => InkSplash$Mate(
-        controller: p.get('controller').value,
-        referenceBox: p.get('referenceBox').value,
-        textDirection: p.get('textDirection').value,
-        position: p.get('position').value,
-        color: p.get('color').value,
-        containedInkWell: p.get('containedInkWell').value,
-        rectCallback: p.get('rectCallback').value,
-        borderRadius: p.get('borderRadius').value,
-        customBorder: p.get('customBorder').value,
-        radius: p.get('radius').value,
-        onRemoved: p.get('onRemoved').value,
+        controller: p.get('controller').build(),
+        referenceBox: p.get('referenceBox').build(),
+        textDirection: p.get('textDirection').build(),
+        position: p.get('position').build(),
+        color: p.get('color').build(),
+        containedInkWell: p.get('containedInkWell').build(),
+        rectCallback: p.get('rectCallback').build(),
+        borderRadius: p.get('borderRadius').build(),
+        customBorder: p.get('customBorder').build(),
+        radius: p.get('radius').build(),
+        onRemoved: p.get('onRemoved').build(),
       ),
     );
     mateParams.put('controller', controller);

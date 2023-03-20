@@ -29,15 +29,17 @@ build(Pen pen, BuildContext context) {
 ## xxx
   ''');
 
-  pen.sampleMate(Center$Mate(
-    child: Container$Mate(
-      width: 200,
-      height: 100,
-      color: Colors.red.shade400,
-      clipBehavior: Clip.none,
-      child: Center$Mate(
-        widthFactor: 1,
-        heightFactor: 1,
+  pen.sampleMate(Container$Mate(
+    width: 200,
+    height: 100,
+    color: Colors.green.shade400,
+    clipBehavior: Clip.none,
+    child: Center$Mate(
+      child: Container$Mate(
+        width: 100,
+        height: 100,
+        color: Colors.red.shade400,
+        clipBehavior: Clip.none,
         child: const Text("s"),
       ),
     ),

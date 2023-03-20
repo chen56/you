@@ -37,11 +37,11 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PrimaryScrollController$Mate(
-        key: p.get('key').value,
-        controller: p.get('controller').value,
-        automaticallyInheritForPlatforms: p.get('automaticallyInheritForPlatforms').value,
-        scrollDirection: p.get('scrollDirection').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        controller: p.get('controller').build(),
+        automaticallyInheritForPlatforms: p.get('automaticallyInheritForPlatforms').build(),
+        scrollDirection: p.get('scrollDirection').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -65,8 +65,8 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PrimaryScrollController$Mate.none(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

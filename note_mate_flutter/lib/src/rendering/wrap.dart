@@ -55,16 +55,16 @@ class RenderWrap$Mate extends RenderWrap with Mate<RenderWrap$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderWrap$Mate(
-        children: p.get('children').value,
-        direction: p.get('direction').value,
-        alignment: p.get('alignment').value,
-        spacing: p.get('spacing').value,
-        runAlignment: p.get('runAlignment').value,
-        runSpacing: p.get('runSpacing').value,
-        crossAxisAlignment: p.get('crossAxisAlignment').value,
-        textDirection: p.get('textDirection').value,
-        verticalDirection: p.get('verticalDirection').value,
-        clipBehavior: p.get('clipBehavior').value,
+        children: p.get('children').build(),
+        direction: p.get('direction').build(),
+        alignment: p.get('alignment').build(),
+        spacing: p.get('spacing').build(),
+        runAlignment: p.get('runAlignment').build(),
+        runSpacing: p.get('runSpacing').build(),
+        crossAxisAlignment: p.get('crossAxisAlignment').build(),
+        textDirection: p.get('textDirection').build(),
+        verticalDirection: p.get('verticalDirection').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.putList('children', children);

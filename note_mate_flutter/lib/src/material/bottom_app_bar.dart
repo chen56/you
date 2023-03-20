@@ -57,16 +57,16 @@ class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomAppBar$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        elevation: p.get('elevation').value,
-        shape: p.get('shape').value,
-        clipBehavior: p.get('clipBehavior').value,
-        notchMargin: p.get('notchMargin').value,
-        child: p.get('child').value,
-        padding: p.get('padding').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        height: p.get('height').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        elevation: p.get('elevation').build(),
+        shape: p.get('shape').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        notchMargin: p.get('notchMargin').build(),
+        child: p.get('child').build(),
+        padding: p.get('padding').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        height: p.get('height').build(),
       ),
     );
     mateParams.put('key', key);

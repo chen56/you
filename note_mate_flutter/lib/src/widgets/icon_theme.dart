@@ -26,9 +26,9 @@ class IconTheme$Mate extends IconTheme with WidgetMate<IconTheme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => IconTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

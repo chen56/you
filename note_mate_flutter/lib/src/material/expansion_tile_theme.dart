@@ -65,18 +65,18 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate<Expan
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionTileThemeData$Mate(
-        backgroundColor: p.get('backgroundColor').value,
-        collapsedBackgroundColor: p.get('collapsedBackgroundColor').value,
-        tilePadding: p.get('tilePadding').value,
-        expandedAlignment: p.get('expandedAlignment').value,
-        childrenPadding: p.get('childrenPadding').value,
-        iconColor: p.get('iconColor').value,
-        collapsedIconColor: p.get('collapsedIconColor').value,
-        textColor: p.get('textColor').value,
-        collapsedTextColor: p.get('collapsedTextColor').value,
-        shape: p.get('shape').value,
-        collapsedShape: p.get('collapsedShape').value,
-        clipBehavior: p.get('clipBehavior').value,
+        backgroundColor: p.get('backgroundColor').build(),
+        collapsedBackgroundColor: p.get('collapsedBackgroundColor').build(),
+        tilePadding: p.get('tilePadding').build(),
+        expandedAlignment: p.get('expandedAlignment').build(),
+        childrenPadding: p.get('childrenPadding').build(),
+        iconColor: p.get('iconColor').build(),
+        collapsedIconColor: p.get('collapsedIconColor').build(),
+        textColor: p.get('textColor').build(),
+        collapsedTextColor: p.get('collapsedTextColor').build(),
+        shape: p.get('shape').build(),
+        collapsedShape: p.get('collapsedShape').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);
@@ -114,9 +114,9 @@ class ExpansionTileTheme$Mate extends ExpansionTileTheme with WidgetMate<Expansi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpansionTileTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

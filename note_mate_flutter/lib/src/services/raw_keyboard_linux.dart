@@ -40,13 +40,13 @@ class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate<RawKeyEve
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyEventDataLinux$Mate(
-        keyHelper: p.get('keyHelper').value,
-        unicodeScalarValues: p.get('unicodeScalarValues').value,
-        scanCode: p.get('scanCode').value,
-        keyCode: p.get('keyCode').value,
-        modifiers: p.get('modifiers').value,
-        isDown: p.get('isDown').value,
-        specifiedLogicalKey: p.get('specifiedLogicalKey').value,
+        keyHelper: p.get('keyHelper').build(),
+        unicodeScalarValues: p.get('unicodeScalarValues').build(),
+        scanCode: p.get('scanCode').build(),
+        keyCode: p.get('keyCode').build(),
+        modifiers: p.get('modifiers').build(),
+        isDown: p.get('isDown').build(),
+        specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
       ),
     );
     mateParams.put('keyHelper', keyHelper);

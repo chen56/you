@@ -58,16 +58,16 @@ class Viewport$Mate extends Viewport with WidgetMate<Viewport$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Viewport$Mate(
-        key: p.get('key').value,
-        axisDirection: p.get('axisDirection').value,
-        crossAxisDirection: p.get('crossAxisDirection').value,
-        anchor: p.get('anchor').value,
-        offset: p.get('offset').value,
-        center: p.get('center').value,
-        cacheExtent: p.get('cacheExtent').value,
-        cacheExtentStyle: p.get('cacheExtentStyle').value,
-        clipBehavior: p.get('clipBehavior').value,
-        slivers: p.get('slivers').value,
+        key: p.get('key').build(),
+        axisDirection: p.get('axisDirection').build(),
+        crossAxisDirection: p.get('crossAxisDirection').build(),
+        anchor: p.get('anchor').build(),
+        offset: p.get('offset').build(),
+        center: p.get('center').build(),
+        cacheExtent: p.get('cacheExtent').build(),
+        cacheExtentStyle: p.get('cacheExtentStyle').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        slivers: p.get('slivers').build(),
       ),
     );
     mateParams.put('key', key);
@@ -115,12 +115,12 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with WidgetMate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ShrinkWrappingViewport$Mate(
-        key: p.get('key').value,
-        axisDirection: p.get('axisDirection').value,
-        crossAxisDirection: p.get('crossAxisDirection').value,
-        offset: p.get('offset').value,
-        clipBehavior: p.get('clipBehavior').value,
-        slivers: p.get('slivers').value,
+        key: p.get('key').build(),
+        axisDirection: p.get('axisDirection').build(),
+        crossAxisDirection: p.get('crossAxisDirection').build(),
+        offset: p.get('offset').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        slivers: p.get('slivers').build(),
       ),
     );
     mateParams.put('key', key);

@@ -26,9 +26,9 @@ class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DisplayFeatureSubScreen$Mate(
-        key: p.get('key').value,
-        anchorPoint: p.get('anchorPoint').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        anchorPoint: p.get('anchorPoint').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

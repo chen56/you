@@ -38,10 +38,10 @@ class IconDataProperty$Mate extends IconDataProperty with Mate<IconDataProperty$
       builder: (p) => IconDataProperty$Mate(
         p.get('name').value,
         p.get('value').value,
-        ifNull: p.get('ifNull').value,
-        showName: p.get('showName').value,
-        style: p.get('style').value,
-        level: p.get('level').value,
+        ifNull: p.get('ifNull').build(),
+        showName: p.get('showName').build(),
+        style: p.get('style').build(),
+        level: p.get('level').build(),
       ),
     );
     mateParams.put('name', name);

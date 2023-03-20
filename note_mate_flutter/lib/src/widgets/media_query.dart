@@ -85,23 +85,23 @@ class MediaQueryData$Mate extends MediaQueryData with Mate<MediaQueryData$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MediaQueryData$Mate(
-        size: p.get('size').value,
-        devicePixelRatio: p.get('devicePixelRatio').value,
-        textScaleFactor: p.get('textScaleFactor').value,
-        platformBrightness: p.get('platformBrightness').value,
-        padding: p.get('padding').value,
-        viewInsets: p.get('viewInsets').value,
-        systemGestureInsets: p.get('systemGestureInsets').value,
-        viewPadding: p.get('viewPadding').value,
-        alwaysUse24HourFormat: p.get('alwaysUse24HourFormat').value,
-        accessibleNavigation: p.get('accessibleNavigation').value,
-        invertColors: p.get('invertColors').value,
-        highContrast: p.get('highContrast').value,
-        disableAnimations: p.get('disableAnimations').value,
-        boldText: p.get('boldText').value,
-        navigationMode: p.get('navigationMode').value,
-        gestureSettings: p.get('gestureSettings').value,
-        displayFeatures: p.get('displayFeatures').value,
+        size: p.get('size').build(),
+        devicePixelRatio: p.get('devicePixelRatio').build(),
+        textScaleFactor: p.get('textScaleFactor').build(),
+        platformBrightness: p.get('platformBrightness').build(),
+        padding: p.get('padding').build(),
+        viewInsets: p.get('viewInsets').build(),
+        systemGestureInsets: p.get('systemGestureInsets').build(),
+        viewPadding: p.get('viewPadding').build(),
+        alwaysUse24HourFormat: p.get('alwaysUse24HourFormat').build(),
+        accessibleNavigation: p.get('accessibleNavigation').build(),
+        invertColors: p.get('invertColors').build(),
+        highContrast: p.get('highContrast').build(),
+        disableAnimations: p.get('disableAnimations').build(),
+        boldText: p.get('boldText').build(),
+        navigationMode: p.get('navigationMode').build(),
+        gestureSettings: p.get('gestureSettings').build(),
+        displayFeatures: p.get('displayFeatures').build(),
       ),
     );
     mateParams.put('size', size);
@@ -137,7 +137,7 @@ class MediaQueryData$Mate extends MediaQueryData with Mate<MediaQueryData$Mate> 
       init: this,
       builder: (p) => MediaQueryData$Mate.fromView(
         p.get('view').value,
-        platformData: p.get('platformData').value,
+        platformData: p.get('platformData').build(),
       ),
     );
     mateParams.put('view', view);
@@ -165,9 +165,9 @@ class MediaQuery$Mate extends MediaQuery with WidgetMate<MediaQuery$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MediaQuery$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

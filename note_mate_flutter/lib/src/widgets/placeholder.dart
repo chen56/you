@@ -39,12 +39,12 @@ class Placeholder$Mate extends Placeholder with WidgetMate<Placeholder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Placeholder$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        strokeWidth: p.get('strokeWidth').value,
-        fallbackWidth: p.get('fallbackWidth').value,
-        fallbackHeight: p.get('fallbackHeight').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        strokeWidth: p.get('strokeWidth').build(),
+        fallbackWidth: p.get('fallbackWidth').build(),
+        fallbackHeight: p.get('fallbackHeight').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

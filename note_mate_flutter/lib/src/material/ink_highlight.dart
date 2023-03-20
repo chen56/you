@@ -62,17 +62,17 @@ class InkHighlight$Mate extends InkHighlight with Mate<InkHighlight$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => InkHighlight$Mate(
-        controller: p.get('controller').value,
-        referenceBox: p.get('referenceBox').value,
-        color: p.get('color').value,
-        textDirection: p.get('textDirection').value,
-        shape: p.get('shape').value,
-        radius: p.get('radius').value,
-        borderRadius: p.get('borderRadius').value,
-        customBorder: p.get('customBorder').value,
-        rectCallback: p.get('rectCallback').value,
-        onRemoved: p.get('onRemoved').value,
-        fadeDuration: p.get('fadeDuration').value,
+        controller: p.get('controller').build(),
+        referenceBox: p.get('referenceBox').build(),
+        color: p.get('color').build(),
+        textDirection: p.get('textDirection').build(),
+        shape: p.get('shape').build(),
+        radius: p.get('radius').build(),
+        borderRadius: p.get('borderRadius').build(),
+        customBorder: p.get('customBorder').build(),
+        rectCallback: p.get('rectCallback').build(),
+        onRemoved: p.get('onRemoved').build(),
+        fadeDuration: p.get('fadeDuration').build(),
       ),
     );
     mateParams.put('controller', controller);

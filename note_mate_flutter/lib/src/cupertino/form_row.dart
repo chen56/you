@@ -38,12 +38,12 @@ class CupertinoFormRow$Mate extends CupertinoFormRow with WidgetMate<CupertinoFo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoFormRow$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        prefix: p.get('prefix').value,
-        padding: p.get('padding').value,
-        helper: p.get('helper').value,
-        error: p.get('error').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        prefix: p.get('prefix').build(),
+        padding: p.get('padding').build(),
+        helper: p.get('helper').build(),
+        error: p.get('error').build(),
       ),
     );
     mateParams.put('key', key);

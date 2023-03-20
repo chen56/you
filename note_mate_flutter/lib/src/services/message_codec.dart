@@ -53,10 +53,10 @@ class PlatformException$Mate extends PlatformException with Mate<PlatformExcepti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformException$Mate(
-        code: p.get('code').value,
-        message: p.get('message').value,
-        details: p.get('details').value,
-        stacktrace: p.get('stacktrace').value,
+        code: p.get('code').build(),
+        message: p.get('message').build(),
+        details: p.get('details').build(),
+        stacktrace: p.get('stacktrace').build(),
       ),
     );
     mateParams.put('code', code);

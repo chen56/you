@@ -29,10 +29,10 @@ class GridTile$Mate extends GridTile with WidgetMate<GridTile$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => GridTile$Mate(
-        key: p.get('key').value,
-        header: p.get('header').value,
-        footer: p.get('footer').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        header: p.get('header').build(),
+        footer: p.get('footer').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -35,8 +35,8 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate<FrictionSimul
         p.get('drag').value,
         p.get('position').value,
         p.get('velocity').value,
-        tolerance: p.get('tolerance').value,
-        constantDeceleration: p.get('constantDeceleration').value,
+        tolerance: p.get('tolerance').build(),
+        constantDeceleration: p.get('constantDeceleration').build(),
       ),
     );
     mateParams.put('drag', drag);

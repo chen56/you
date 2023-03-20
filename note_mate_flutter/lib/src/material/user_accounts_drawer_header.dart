@@ -61,17 +61,17 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Widget
     mateParams = ObjectParam(
       init: this,
       builder: (p) => UserAccountsDrawerHeader$Mate(
-        key: p.get('key').value,
-        decoration: p.get('decoration').value,
-        margin: p.get('margin').value,
-        currentAccountPicture: p.get('currentAccountPicture').value,
-        otherAccountsPictures: p.get('otherAccountsPictures').value,
-        currentAccountPictureSize: p.get('currentAccountPictureSize').value,
-        otherAccountsPicturesSize: p.get('otherAccountsPicturesSize').value,
-        accountName: p.get('accountName').value,
-        accountEmail: p.get('accountEmail').value,
-        onDetailsPressed: p.get('onDetailsPressed').value,
-        arrowColor: p.get('arrowColor').value,
+        key: p.get('key').build(),
+        decoration: p.get('decoration').build(),
+        margin: p.get('margin').build(),
+        currentAccountPicture: p.get('currentAccountPicture').build(),
+        otherAccountsPictures: p.get('otherAccountsPictures').build(),
+        currentAccountPictureSize: p.get('currentAccountPictureSize').build(),
+        otherAccountsPicturesSize: p.get('otherAccountsPicturesSize').build(),
+        accountName: p.get('accountName').build(),
+        accountEmail: p.get('accountEmail').build(),
+        onDetailsPressed: p.get('onDetailsPressed').build(),
+        arrowColor: p.get('arrowColor').build(),
       ),
     );
     mateParams.put('key', key);

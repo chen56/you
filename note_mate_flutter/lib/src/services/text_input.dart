@@ -23,8 +23,8 @@ class TextInputType$Mate extends TextInputType with Mate<TextInputType$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextInputType$Mate.numberWithOptions(
-        signed: p.get('signed').value,
-        decimal: p.get('decimal').value,
+        signed: p.get('signed').build(),
+        decimal: p.get('decimal').build(),
       ),
     );
     mateParams.put('signed', signed);
@@ -104,22 +104,22 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate<TextI
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextInputConfiguration$Mate(
-        inputType: p.get('inputType').value,
-        readOnly: p.get('readOnly').value,
-        obscureText: p.get('obscureText').value,
-        autocorrect: p.get('autocorrect').value,
-        smartDashesType: p.get('smartDashesType').value,
-        smartQuotesType: p.get('smartQuotesType').value,
-        enableSuggestions: p.get('enableSuggestions').value,
-        enableInteractiveSelection: p.get('enableInteractiveSelection').value,
-        actionLabel: p.get('actionLabel').value,
-        inputAction: p.get('inputAction').value,
-        keyboardAppearance: p.get('keyboardAppearance').value,
-        textCapitalization: p.get('textCapitalization').value,
-        autofillConfiguration: p.get('autofillConfiguration').value,
-        enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').value,
-        allowedMimeTypes: p.get('allowedMimeTypes').value,
-        enableDeltaModel: p.get('enableDeltaModel').value,
+        inputType: p.get('inputType').build(),
+        readOnly: p.get('readOnly').build(),
+        obscureText: p.get('obscureText').build(),
+        autocorrect: p.get('autocorrect').build(),
+        smartDashesType: p.get('smartDashesType').build(),
+        smartQuotesType: p.get('smartQuotesType').build(),
+        enableSuggestions: p.get('enableSuggestions').build(),
+        enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+        actionLabel: p.get('actionLabel').build(),
+        inputAction: p.get('inputAction').build(),
+        keyboardAppearance: p.get('keyboardAppearance').build(),
+        textCapitalization: p.get('textCapitalization').build(),
+        autofillConfiguration: p.get('autofillConfiguration').build(),
+        enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+        allowedMimeTypes: p.get('allowedMimeTypes').build(),
+        enableDeltaModel: p.get('enableDeltaModel').build(),
       ),
     );
     mateParams.put('inputType', inputType);
@@ -157,8 +157,8 @@ class RawFloatingCursorPoint$Mate extends RawFloatingCursorPoint with Mate<RawFl
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawFloatingCursorPoint$Mate(
-        offset: p.get('offset').value,
-        state: p.get('state').value,
+        offset: p.get('offset').build(),
+        state: p.get('state').build(),
       ),
     );
     mateParams.put('offset', offset);
@@ -186,9 +186,9 @@ class TextEditingValue$Mate extends TextEditingValue with Mate<TextEditingValue$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextEditingValue$Mate(
-        text: p.get('text').value,
-        selection: p.get('selection').value,
-        composing: p.get('composing').value,
+        text: p.get('text').build(),
+        selection: p.get('selection').build(),
+        composing: p.get('composing').build(),
       ),
     );
     mateParams.put('text', text);
@@ -217,9 +217,9 @@ class SelectionRect$Mate extends SelectionRect with Mate<SelectionRect$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionRect$Mate(
-        position: p.get('position').value,
-        bounds: p.get('bounds').value,
-        direction: p.get('direction').value,
+        position: p.get('position').build(),
+        bounds: p.get('bounds').build(),
+        direction: p.get('direction').build(),
       ),
     );
     mateParams.put('position', position);

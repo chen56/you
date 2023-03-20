@@ -22,8 +22,8 @@ class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate<Underline
     mateParams = ObjectParam(
       init: this,
       builder: (p) => UnderlineInputBorder$Mate(
-        borderSide: p.get('borderSide').value,
-        borderRadius: p.get('borderRadius').value,
+        borderSide: p.get('borderSide').build(),
+        borderRadius: p.get('borderRadius').build(),
       ),
     );
     mateParams.put('borderSide', borderSide);
@@ -51,9 +51,9 @@ class OutlineInputBorder$Mate extends OutlineInputBorder with Mate<OutlineInputB
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OutlineInputBorder$Mate(
-        borderSide: p.get('borderSide').value,
-        borderRadius: p.get('borderRadius').value,
-        gapPadding: p.get('gapPadding').value,
+        borderSide: p.get('borderSide').build(),
+        borderRadius: p.get('borderRadius').build(),
+        gapPadding: p.get('gapPadding').build(),
       ),
     );
     mateParams.put('borderSide', borderSide);

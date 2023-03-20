@@ -28,10 +28,10 @@ class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate<RawKeyEventDa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyEventDataIos$Mate(
-        characters: p.get('characters').value,
-        charactersIgnoringModifiers: p.get('charactersIgnoringModifiers').value,
-        keyCode: p.get('keyCode').value,
-        modifiers: p.get('modifiers').value,
+        characters: p.get('characters').build(),
+        charactersIgnoringModifiers: p.get('charactersIgnoringModifiers').build(),
+        keyCode: p.get('keyCode').build(),
+        modifiers: p.get('modifiers').build(),
       ),
     );
     mateParams.put('characters', characters);

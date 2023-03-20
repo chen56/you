@@ -24,8 +24,8 @@ class RouteInformation$Mate extends RouteInformation with Mate<RouteInformation$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RouteInformation$Mate(
-        location: p.get('location').value,
-        state: p.get('state').value,
+        location: p.get('location').build(),
+        state: p.get('state').build(),
       ),
     );
     mateParams.put('location', location);
@@ -57,10 +57,10 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate<RouterConfig$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RouterConfig$Mate(
-        routeInformationProvider: p.get('routeInformationProvider').value,
-        routeInformationParser: p.get('routeInformationParser').value,
-        routerDelegate: p.get('routerDelegate').value,
-        backButtonDispatcher: p.get('backButtonDispatcher').value,
+        routeInformationProvider: p.get('routeInformationProvider').build(),
+        routeInformationParser: p.get('routeInformationParser').build(),
+        routerDelegate: p.get('routerDelegate').build(),
+        backButtonDispatcher: p.get('backButtonDispatcher').build(),
       ),
     );
     mateParams.put('routeInformationProvider', routeInformationProvider);
@@ -102,12 +102,12 @@ class Router$Mate<T> extends Router<T> with WidgetMate<Router$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Router$Mate(
-        key: p.get('key').value,
-        routeInformationProvider: p.get('routeInformationProvider').value,
-        routeInformationParser: p.get('routeInformationParser').value,
-        routerDelegate: p.get('routerDelegate').value,
-        backButtonDispatcher: p.get('backButtonDispatcher').value,
-        restorationScopeId: p.get('restorationScopeId').value,
+        key: p.get('key').build(),
+        routeInformationProvider: p.get('routeInformationProvider').build(),
+        routeInformationParser: p.get('routeInformationParser').build(),
+        routerDelegate: p.get('routerDelegate').build(),
+        backButtonDispatcher: p.get('backButtonDispatcher').build(),
+        restorationScopeId: p.get('restorationScopeId').build(),
       ),
     );
     mateParams.put('key', key);
@@ -155,9 +155,9 @@ class BackButtonListener$Mate extends BackButtonListener with WidgetMate<BackBut
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BackButtonListener$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        onBackButtonPressed: p.get('onBackButtonPressed').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        onBackButtonPressed: p.get('onBackButtonPressed').build(),
       ),
     );
     mateParams.put('key', key);
@@ -178,7 +178,7 @@ class PlatformRouteInformationProvider$Mate extends PlatformRouteInformationProv
     mateParams = ObjectParam(
       init: this,
       builder: (p) =>
-          PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').value),
+          PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build()),
     );
     mateParams.put('initialRouteInformation', initialRouteInformation);
   }

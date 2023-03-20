@@ -25,9 +25,9 @@ class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate<Context
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ContextMenuButtonItem$Mate(
-        onPressed: p.get('onPressed').value,
-        type: p.get('type').value,
-        label: p.get('label').value,
+        onPressed: p.get('onPressed').build(),
+        type: p.get('type').build(),
+        label: p.get('label').build(),
       ),
     );
     mateParams.put('onPressed', onPressed);

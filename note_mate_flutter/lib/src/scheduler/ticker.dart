@@ -20,7 +20,7 @@ class Ticker$Mate extends Ticker with Mate<Ticker$Mate> {
       init: this,
       builder: (p) => Ticker$Mate(
         p.get('_onTick').value,
-        debugLabel: p.get('debugLabel').value,
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('_onTick', _onTick);

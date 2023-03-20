@@ -48,14 +48,14 @@ class ExpandIcon$Mate extends ExpandIcon with WidgetMate<ExpandIcon$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExpandIcon$Mate(
-        key: p.get('key').value,
-        isExpanded: p.get('isExpanded').value,
-        size: p.get('size').value,
-        onPressed: p.get('onPressed').value,
-        padding: p.get('padding').value,
-        color: p.get('color').value,
-        disabledColor: p.get('disabledColor').value,
-        expandedColor: p.get('expandedColor').value,
+        key: p.get('key').build(),
+        isExpanded: p.get('isExpanded').build(),
+        size: p.get('size').build(),
+        onPressed: p.get('onPressed').build(),
+        padding: p.get('padding').build(),
+        color: p.get('color').build(),
+        disabledColor: p.get('disabledColor').build(),
+        expandedColor: p.get('expandedColor').build(),
       ),
     );
     mateParams.put('key', key);

@@ -60,16 +60,16 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate<Navig
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationBarThemeData$Mate(
-        height: p.get('height').value,
-        backgroundColor: p.get('backgroundColor').value,
-        elevation: p.get('elevation').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        indicatorColor: p.get('indicatorColor').value,
-        indicatorShape: p.get('indicatorShape').value,
-        labelTextStyle: p.get('labelTextStyle').value,
-        iconTheme: p.get('iconTheme').value,
-        labelBehavior: p.get('labelBehavior').value,
+        height: p.get('height').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        elevation: p.get('elevation').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        indicatorColor: p.get('indicatorColor').build(),
+        indicatorShape: p.get('indicatorShape').build(),
+        labelTextStyle: p.get('labelTextStyle').build(),
+        iconTheme: p.get('iconTheme').build(),
+        labelBehavior: p.get('labelBehavior').build(),
       ),
     );
     mateParams.put('height', height);
@@ -105,9 +105,9 @@ class NavigationBarTheme$Mate extends NavigationBarTheme with WidgetMate<Navigat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationBarTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

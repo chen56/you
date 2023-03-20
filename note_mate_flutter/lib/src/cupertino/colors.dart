@@ -49,15 +49,15 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate<Cuperti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDynamicColor$Mate(
-        debugLabel: p.get('debugLabel').value,
-        color: p.get('color').value,
-        darkColor: p.get('darkColor').value,
-        highContrastColor: p.get('highContrastColor').value,
-        darkHighContrastColor: p.get('darkHighContrastColor').value,
-        elevatedColor: p.get('elevatedColor').value,
-        darkElevatedColor: p.get('darkElevatedColor').value,
-        highContrastElevatedColor: p.get('highContrastElevatedColor').value,
-        darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').value,
+        debugLabel: p.get('debugLabel').build(),
+        color: p.get('color').build(),
+        darkColor: p.get('darkColor').build(),
+        highContrastColor: p.get('highContrastColor').build(),
+        darkHighContrastColor: p.get('darkHighContrastColor').build(),
+        elevatedColor: p.get('elevatedColor').build(),
+        darkElevatedColor: p.get('darkElevatedColor').build(),
+        highContrastElevatedColor: p.get('highContrastElevatedColor').build(),
+        darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').build(),
       ),
     );
     mateParams.put('debugLabel', debugLabel);
@@ -97,11 +97,11 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate<Cuperti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDynamicColor$Mate.withBrightnessAndContrast(
-        debugLabel: p.get('debugLabel').value,
-        color: p.get('color').value,
-        darkColor: p.get('darkColor').value,
-        highContrastColor: p.get('highContrastColor').value,
-        darkHighContrastColor: p.get('darkHighContrastColor').value,
+        debugLabel: p.get('debugLabel').build(),
+        color: p.get('color').build(),
+        darkColor: p.get('darkColor').build(),
+        highContrastColor: p.get('highContrastColor').build(),
+        darkHighContrastColor: p.get('darkHighContrastColor').build(),
       ),
     );
     mateParams.put('debugLabel', debugLabel);
@@ -129,9 +129,9 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate<Cuperti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDynamicColor$Mate.withBrightness(
-        debugLabel: p.get('debugLabel').value,
-        color: p.get('color').value,
-        darkColor: p.get('darkColor').value,
+        debugLabel: p.get('debugLabel').build(),
+        color: p.get('color').build(),
+        darkColor: p.get('darkColor').build(),
       ),
     );
     mateParams.put('debugLabel', debugLabel);

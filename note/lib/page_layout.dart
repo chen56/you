@@ -284,54 +284,57 @@ class _MateSample<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var card = Card(
-      elevation: 2,
-      child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          ListenableBuilder(
-            listenable: mate.mateParams,
-            builder: (context, child) => mate.mateParams.builder(mate.mateParams) as Widget,
-          ),
-          ExpansionTile(
-            initiallyExpanded: true,
-            expandedAlignment: Alignment.topLeft,
-            expandedCrossAxisAlignment: CrossAxisAlignment.start,
-            title: const Row(
-              children: [
-                Text("参数设置&代码"),
-              ],
-            ),
-            children: [
-              DataTable(
-                dataRowMaxHeight: 25,
-                dataRowMinHeight: 25,
-                columns: const [
-                  DataColumn(label: Text("")),
-                  DataColumn(label: Text("")),
-                ],
-                rows: [
-                  ...mate.mateParams
-                      .toList(test: (node) => node.param.init != null)
-                      .map(
-                        (e) => DataRow(
-                          cells: [
-                            DataCell(e.mainWidget(context)),
-                            DataCell(Row(
-                              children: [Expanded(child: e.extWidget(context))],
-                            )),
-                          ],
-                        ),
-                      )
-                      .toList()
+    var listenableBuilder = ListenableBuilder(
+      listenable: mate.mateParams,
+      builder: (context, child) {
+        var dataTable = DataTable(
+          dataRowMaxHeight: 25,
+          dataRowMinHeight: 25,
+          headingRowHeight: 0,
+          columns: const [
+            DataColumn(label: Text("")),
+            DataColumn(label: Text("")),
+          ],
+          rows: [
+            ...mate.mateParams
+                .toList(test: (node) => node.param.init != null)
+                .map(
+                  (e) => DataRow(
+                    cells: [
+                      DataCell(e.mainWidget(context)),
+                      DataCell(Row(
+                        children: [Expanded(child: e.extWidget(context))],
+                      )),
+                    ],
+                  ),
+                )
+                .toList()
+          ],
+        );
+        return Column(
+          children: [
+            mate.mateParams.build() as Widget,
+            ExpansionTile(
+              initiallyExpanded: true,
+              expandedAlignment: Alignment.topLeft,
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              title: const Row(
+                children: [
+                  Text("参数设置&代码"),
                 ],
               ),
-            ],
-          ),
-        ],
-      ),
+              children: [
+                dataTable,
+              ],
+            ),
+          ],
+        );
+      },
     );
-    return card;
+
+    return Card(
+      elevation: 2,
+      child: listenableBuilder,
+    );
   }
 }

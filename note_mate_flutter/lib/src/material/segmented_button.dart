@@ -31,10 +31,10 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate<ButtonSegment$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonSegment$Mate(
-        value: p.get('value').value,
-        icon: p.get('icon').value,
-        label: p.get('label').value,
-        enabled: p.get('enabled').value,
+        value: p.get('value').build(),
+        icon: p.get('icon').build(),
+        label: p.get('label').build(),
+        enabled: p.get('enabled').build(),
       ),
     );
     mateParams.put('value', value);
@@ -88,15 +88,15 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with WidgetMate<Segment
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SegmentedButton$Mate(
-        key: p.get('key').value,
-        segments: p.get('segments').value,
-        selected: p.get('selected').value,
-        onSelectionChanged: p.get('onSelectionChanged').value,
-        multiSelectionEnabled: p.get('multiSelectionEnabled').value,
-        emptySelectionAllowed: p.get('emptySelectionAllowed').value,
-        style: p.get('style').value,
-        showSelectedIcon: p.get('showSelectedIcon').value,
-        selectedIcon: p.get('selectedIcon').value,
+        key: p.get('key').build(),
+        segments: p.get('segments').build(),
+        selected: p.get('selected').build(),
+        onSelectionChanged: p.get('onSelectionChanged').build(),
+        multiSelectionEnabled: p.get('multiSelectionEnabled').build(),
+        emptySelectionAllowed: p.get('emptySelectionAllowed').build(),
+        style: p.get('style').build(),
+        showSelectedIcon: p.get('showSelectedIcon').build(),
+        selectedIcon: p.get('selectedIcon').build(),
       ),
     );
     mateParams.put('key', key);

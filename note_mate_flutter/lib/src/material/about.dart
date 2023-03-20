@@ -50,15 +50,15 @@ class AboutListTile$Mate extends AboutListTile with WidgetMate<AboutListTile$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AboutListTile$Mate(
-        key: p.get('key').value,
-        icon: p.get('icon').value,
-        child: p.get('child').value,
-        applicationName: p.get('applicationName').value,
-        applicationVersion: p.get('applicationVersion').value,
-        applicationIcon: p.get('applicationIcon').value,
-        applicationLegalese: p.get('applicationLegalese').value,
-        aboutBoxChildren: p.get('aboutBoxChildren').value,
-        dense: p.get('dense').value,
+        key: p.get('key').build(),
+        icon: p.get('icon').build(),
+        child: p.get('child').build(),
+        applicationName: p.get('applicationName').build(),
+        applicationVersion: p.get('applicationVersion').build(),
+        applicationIcon: p.get('applicationIcon').build(),
+        applicationLegalese: p.get('applicationLegalese').build(),
+        aboutBoxChildren: p.get('aboutBoxChildren').build(),
+        dense: p.get('dense').build(),
       ),
     );
     mateParams.put('key', key);
@@ -105,12 +105,12 @@ class AboutDialog$Mate extends AboutDialog with WidgetMate<AboutDialog$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AboutDialog$Mate(
-        key: p.get('key').value,
-        applicationName: p.get('applicationName').value,
-        applicationVersion: p.get('applicationVersion').value,
-        applicationIcon: p.get('applicationIcon').value,
-        applicationLegalese: p.get('applicationLegalese').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        applicationName: p.get('applicationName').build(),
+        applicationVersion: p.get('applicationVersion').build(),
+        applicationIcon: p.get('applicationIcon').build(),
+        applicationLegalese: p.get('applicationLegalese').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -150,11 +150,11 @@ class LicensePage$Mate extends LicensePage with WidgetMate<LicensePage$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LicensePage$Mate(
-        key: p.get('key').value,
-        applicationName: p.get('applicationName').value,
-        applicationVersion: p.get('applicationVersion').value,
-        applicationIcon: p.get('applicationIcon').value,
-        applicationLegalese: p.get('applicationLegalese').value,
+        key: p.get('key').build(),
+        applicationName: p.get('applicationName').build(),
+        applicationVersion: p.get('applicationVersion').build(),
+        applicationIcon: p.get('applicationIcon').build(),
+        applicationLegalese: p.get('applicationLegalese').build(),
       ),
     );
     mateParams.put('key', key);

@@ -47,13 +47,13 @@ class SliverChildBuilderDelegate$Mate extends SliverChildBuilderDelegate with Ma
       init: this,
       builder: (p) => SliverChildBuilderDelegate$Mate(
         p.get('builder').value,
-        findChildIndexCallback: p.get('findChildIndexCallback').value,
-        childCount: p.get('childCount').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
-        semanticIndexCallback: p.get('semanticIndexCallback').value,
-        semanticIndexOffset: p.get('semanticIndexOffset').value,
+        findChildIndexCallback: p.get('findChildIndexCallback').build(),
+        childCount: p.get('childCount').build(),
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
+        semanticIndexCallback: p.get('semanticIndexCallback').build(),
+        semanticIndexOffset: p.get('semanticIndexOffset').build(),
       ),
     );
     mateParams.put('builder', builder);
@@ -99,11 +99,11 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate<Sli
       init: this,
       builder: (p) => SliverChildListDelegate$Mate(
         p.get('children').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
-        semanticIndexCallback: p.get('semanticIndexCallback').value,
-        semanticIndexOffset: p.get('semanticIndexOffset').value,
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
+        semanticIndexCallback: p.get('semanticIndexCallback').build(),
+        semanticIndexOffset: p.get('semanticIndexOffset').build(),
       ),
     );
     mateParams.putList('children', children);
@@ -144,11 +144,11 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate<Sli
       init: this,
       builder: (p) => SliverChildListDelegate$Mate.fixed(
         p.get('children').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
-        semanticIndexCallback: p.get('semanticIndexCallback').value,
-        semanticIndexOffset: p.get('semanticIndexOffset').value,
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
+        semanticIndexCallback: p.get('semanticIndexCallback').build(),
+        semanticIndexOffset: p.get('semanticIndexOffset').build(),
       ),
     );
     mateParams.putList('children', children);
@@ -176,8 +176,8 @@ class SliverList$Mate extends SliverList with WidgetMate<SliverList$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverList$Mate(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
       ),
     );
     mateParams.put('key', key);
@@ -218,13 +218,13 @@ class SliverList$Mate extends SliverList with WidgetMate<SliverList$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverList$Mate.builder(
-        key: p.get('key').value,
-        itemBuilder: p.get('itemBuilder').value,
-        findChildIndexCallback: p.get('findChildIndexCallback').value,
-        itemCount: p.get('itemCount').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
+        key: p.get('key').build(),
+        itemBuilder: p.get('itemBuilder').build(),
+        findChildIndexCallback: p.get('findChildIndexCallback').build(),
+        itemCount: p.get('itemCount').build(),
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
       ),
     );
     mateParams.put('key', key);
@@ -274,14 +274,14 @@ class SliverList$Mate extends SliverList with WidgetMate<SliverList$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverList$Mate.separated(
-        key: p.get('key').value,
-        itemBuilder: p.get('itemBuilder').value,
-        findChildIndexCallback: p.get('findChildIndexCallback').value,
-        separatorBuilder: p.get('separatorBuilder').value,
-        itemCount: p.get('itemCount').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
+        key: p.get('key').build(),
+        itemBuilder: p.get('itemBuilder').build(),
+        findChildIndexCallback: p.get('findChildIndexCallback').build(),
+        separatorBuilder: p.get('separatorBuilder').build(),
+        itemCount: p.get('itemCount').build(),
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
       ),
     );
     mateParams.put('key', key);
@@ -320,11 +320,11 @@ class SliverList$Mate extends SliverList with WidgetMate<SliverList$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverList$Mate.list(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
       ),
     );
     mateParams.put('key', key);
@@ -355,9 +355,9 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with WidgetMate<S
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFixedExtentList$Mate(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
-        itemExtent: p.get('itemExtent').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
+        itemExtent: p.get('itemExtent').build(),
       ),
     );
     mateParams.put('key', key);
@@ -403,14 +403,14 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with WidgetMate<S
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFixedExtentList$Mate.builder(
-        key: p.get('key').value,
-        itemBuilder: p.get('itemBuilder').value,
-        itemExtent: p.get('itemExtent').value,
-        findChildIndexCallback: p.get('findChildIndexCallback').value,
-        itemCount: p.get('itemCount').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
+        key: p.get('key').build(),
+        itemBuilder: p.get('itemBuilder').build(),
+        itemExtent: p.get('itemExtent').build(),
+        findChildIndexCallback: p.get('findChildIndexCallback').build(),
+        itemCount: p.get('itemCount').build(),
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
       ),
     );
     mateParams.put('key', key);
@@ -453,12 +453,12 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with WidgetMate<S
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFixedExtentList$Mate.list(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        itemExtent: p.get('itemExtent').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        itemExtent: p.get('itemExtent').build(),
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
       ),
     );
     mateParams.put('key', key);
@@ -490,9 +490,9 @@ class SliverGrid$Mate extends SliverGrid with WidgetMate<SliverGrid$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGrid$Mate(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
-        gridDelegate: p.get('gridDelegate').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
+        gridDelegate: p.get('gridDelegate').build(),
       ),
     );
     mateParams.put('key', key);
@@ -538,14 +538,14 @@ class SliverGrid$Mate extends SliverGrid with WidgetMate<SliverGrid$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGrid$Mate.builder(
-        key: p.get('key').value,
-        gridDelegate: p.get('gridDelegate').value,
-        itemBuilder: p.get('itemBuilder').value,
-        findChildIndexCallback: p.get('findChildIndexCallback').value,
-        itemCount: p.get('itemCount').value,
-        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').value,
-        addRepaintBoundaries: p.get('addRepaintBoundaries').value,
-        addSemanticIndexes: p.get('addSemanticIndexes').value,
+        key: p.get('key').build(),
+        gridDelegate: p.get('gridDelegate').build(),
+        itemBuilder: p.get('itemBuilder').build(),
+        findChildIndexCallback: p.get('findChildIndexCallback').build(),
+        itemCount: p.get('itemCount').build(),
+        addAutomaticKeepAlives: p.get('addAutomaticKeepAlives').build(),
+        addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
+        addSemanticIndexes: p.get('addSemanticIndexes').build(),
       ),
     );
     mateParams.put('key', key);
@@ -588,12 +588,12 @@ class SliverGrid$Mate extends SliverGrid with WidgetMate<SliverGrid$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGrid$Mate.count(
-        key: p.get('key').value,
-        crossAxisCount: p.get('crossAxisCount').value,
-        mainAxisSpacing: p.get('mainAxisSpacing').value,
-        crossAxisSpacing: p.get('crossAxisSpacing').value,
-        childAspectRatio: p.get('childAspectRatio').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        crossAxisCount: p.get('crossAxisCount').build(),
+        mainAxisSpacing: p.get('mainAxisSpacing').build(),
+        crossAxisSpacing: p.get('crossAxisSpacing').build(),
+        childAspectRatio: p.get('childAspectRatio').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -634,12 +634,12 @@ class SliverGrid$Mate extends SliverGrid with WidgetMate<SliverGrid$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGrid$Mate.extent(
-        key: p.get('key').value,
-        maxCrossAxisExtent: p.get('maxCrossAxisExtent').value,
-        mainAxisSpacing: p.get('mainAxisSpacing').value,
-        crossAxisSpacing: p.get('crossAxisSpacing').value,
-        childAspectRatio: p.get('childAspectRatio').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        maxCrossAxisExtent: p.get('maxCrossAxisExtent').build(),
+        mainAxisSpacing: p.get('mainAxisSpacing').build(),
+        crossAxisSpacing: p.get('crossAxisSpacing').build(),
+        childAspectRatio: p.get('childAspectRatio').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -668,7 +668,7 @@ class SliverMultiBoxAdaptorElement$Mate extends SliverMultiBoxAdaptorElement
       init: this,
       builder: (p) => SliverMultiBoxAdaptorElement$Mate(
         p.get('widget').value,
-        replaceMovedChildren: p.get('replaceMovedChildren').value,
+        replaceMovedChildren: p.get('replaceMovedChildren').build(),
       ),
     );
     mateParams.put('widget', widget);
@@ -700,10 +700,10 @@ class SliverOpacity$Mate extends SliverOpacity with WidgetMate<SliverOpacity$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverOpacity$Mate(
-        key: p.get('key').value,
-        opacity: p.get('opacity').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
-        sliver: p.get('sliver').value,
+        key: p.get('key').build(),
+        opacity: p.get('opacity').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('key', key);
@@ -737,10 +737,10 @@ class SliverIgnorePointer$Mate extends SliverIgnorePointer with WidgetMate<Slive
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverIgnorePointer$Mate(
-        key: p.get('key').value,
-        ignoring: p.get('ignoring').value,
-        ignoringSemantics: p.get('ignoringSemantics').value,
-        sliver: p.get('sliver').value,
+        key: p.get('key').build(),
+        ignoring: p.get('ignoring').build(),
+        ignoringSemantics: p.get('ignoringSemantics').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('key', key);
@@ -770,9 +770,9 @@ class SliverOffstage$Mate extends SliverOffstage with WidgetMate<SliverOffstage$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverOffstage$Mate(
-        key: p.get('key').value,
-        offstage: p.get('offstage').value,
-        sliver: p.get('sliver').value,
+        key: p.get('key').build(),
+        offstage: p.get('offstage').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('key', key);
@@ -801,9 +801,9 @@ class KeepAlive$Mate extends KeepAlive with WidgetMate<KeepAlive$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => KeepAlive$Mate(
-        key: p.get('key').value,
-        keepAlive: p.get('keepAlive').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        keepAlive: p.get('keepAlive').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

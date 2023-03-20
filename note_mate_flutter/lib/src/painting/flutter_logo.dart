@@ -25,9 +25,9 @@ class FlutterLogoDecoration$Mate extends FlutterLogoDecoration with Mate<Flutter
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FlutterLogoDecoration$Mate(
-        textColor: p.get('textColor').value,
-        style: p.get('style').value,
-        margin: p.get('margin').value,
+        textColor: p.get('textColor').build(),
+        style: p.get('style').build(),
+        margin: p.get('margin').build(),
       ),
     );
     mateParams.put('textColor', textColor);

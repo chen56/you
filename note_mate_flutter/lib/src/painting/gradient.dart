@@ -54,12 +54,12 @@ class LinearGradient$Mate extends LinearGradient with Mate<LinearGradient$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearGradient$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
-        colors: p.get('colors').value,
-        stops: p.get('stops').value,
-        tileMode: p.get('tileMode').value,
-        transform: p.get('transform').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
+        colors: p.get('colors').build(),
+        stops: p.get('stops').build(),
+        tileMode: p.get('tileMode').build(),
+        transform: p.get('transform').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -111,14 +111,14 @@ class RadialGradient$Mate extends RadialGradient with Mate<RadialGradient$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RadialGradient$Mate(
-        center: p.get('center').value,
-        radius: p.get('radius').value,
-        colors: p.get('colors').value,
-        stops: p.get('stops').value,
-        tileMode: p.get('tileMode').value,
-        focal: p.get('focal').value,
-        focalRadius: p.get('focalRadius').value,
-        transform: p.get('transform').value,
+        center: p.get('center').build(),
+        radius: p.get('radius').build(),
+        colors: p.get('colors').build(),
+        stops: p.get('stops').build(),
+        tileMode: p.get('tileMode').build(),
+        focal: p.get('focal').build(),
+        focalRadius: p.get('focalRadius').build(),
+        transform: p.get('transform').build(),
       ),
     );
     mateParams.put('center', center);
@@ -168,13 +168,13 @@ class SweepGradient$Mate extends SweepGradient with Mate<SweepGradient$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SweepGradient$Mate(
-        center: p.get('center').value,
-        startAngle: p.get('startAngle').value,
-        endAngle: p.get('endAngle').value,
-        colors: p.get('colors').value,
-        stops: p.get('stops').value,
-        tileMode: p.get('tileMode').value,
-        transform: p.get('transform').value,
+        center: p.get('center').build(),
+        startAngle: p.get('startAngle').build(),
+        endAngle: p.get('endAngle').build(),
+        colors: p.get('colors').build(),
+        stops: p.get('stops').build(),
+        tileMode: p.get('tileMode').build(),
+        transform: p.get('transform').build(),
       ),
     );
     mateParams.put('center', center);

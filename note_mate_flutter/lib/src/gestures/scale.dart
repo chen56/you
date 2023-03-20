@@ -27,9 +27,9 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate<ScaleStartDetai
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleStartDetails$Mate(
-        focalPoint: p.get('focalPoint').value,
-        localFocalPoint: p.get('localFocalPoint').value,
-        pointerCount: p.get('pointerCount').value,
+        focalPoint: p.get('focalPoint').build(),
+        localFocalPoint: p.get('localFocalPoint').build(),
+        pointerCount: p.get('pointerCount').build(),
       ),
     );
     mateParams.put('focalPoint', focalPoint);
@@ -78,14 +78,14 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate<ScaleUpdateDe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleUpdateDetails$Mate(
-        focalPoint: p.get('focalPoint').value,
-        localFocalPoint: p.get('localFocalPoint').value,
-        scale: p.get('scale').value,
-        horizontalScale: p.get('horizontalScale').value,
-        verticalScale: p.get('verticalScale').value,
-        rotation: p.get('rotation').value,
-        pointerCount: p.get('pointerCount').value,
-        focalPointDelta: p.get('focalPointDelta').value,
+        focalPoint: p.get('focalPoint').build(),
+        localFocalPoint: p.get('localFocalPoint').build(),
+        scale: p.get('scale').build(),
+        horizontalScale: p.get('horizontalScale').build(),
+        verticalScale: p.get('verticalScale').build(),
+        rotation: p.get('rotation').build(),
+        pointerCount: p.get('pointerCount').build(),
+        focalPointDelta: p.get('focalPointDelta').build(),
       ),
     );
     mateParams.put('focalPoint', focalPoint);
@@ -119,9 +119,9 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate<ScaleEndDetails$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleEndDetails$Mate(
-        velocity: p.get('velocity').value,
-        scaleVelocity: p.get('scaleVelocity').value,
-        pointerCount: p.get('pointerCount').value,
+        velocity: p.get('velocity').build(),
+        scaleVelocity: p.get('scaleVelocity').build(),
+        pointerCount: p.get('pointerCount').build(),
       ),
     );
     mateParams.put('velocity', velocity);
@@ -162,12 +162,12 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate<Scale
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScaleGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
-        dragStartBehavior: p.get('dragStartBehavior').value,
-        trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').value,
-        trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
+        dragStartBehavior: p.get('dragStartBehavior').build(),
+        trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
+        trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);

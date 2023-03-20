@@ -49,13 +49,13 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with WidgetMate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTextMagnifier$Mate(
-        key: p.get('key').value,
-        animationCurve: p.get('animationCurve').value,
-        controller: p.get('controller').value,
-        dragResistance: p.get('dragResistance').value,
-        hideBelowThreshold: p.get('hideBelowThreshold').value,
-        horizontalScreenEdgePadding: p.get('horizontalScreenEdgePadding').value,
-        magnifierInfo: p.get('magnifierInfo').value,
+        key: p.get('key').build(),
+        animationCurve: p.get('animationCurve').build(),
+        controller: p.get('controller').build(),
+        dragResistance: p.get('dragResistance').build(),
+        hideBelowThreshold: p.get('hideBelowThreshold').build(),
+        horizontalScreenEdgePadding: p.get('horizontalScreenEdgePadding').build(),
+        magnifierInfo: p.get('magnifierInfo').build(),
       ),
     );
     mateParams.put('key', key);
@@ -104,13 +104,13 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with WidgetMate<Cuperti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoMagnifier$Mate(
-        key: p.get('key').value,
-        size: p.get('size').value,
-        borderRadius: p.get('borderRadius').value,
-        additionalFocalPointOffset: p.get('additionalFocalPointOffset').value,
-        shadows: p.get('shadows').value,
-        borderSide: p.get('borderSide').value,
-        inOutAnimation: p.get('inOutAnimation').value,
+        key: p.get('key').build(),
+        size: p.get('size').build(),
+        borderRadius: p.get('borderRadius').build(),
+        additionalFocalPointOffset: p.get('additionalFocalPointOffset').build(),
+        shadows: p.get('shadows').build(),
+        borderSide: p.get('borderSide').build(),
+        inOutAnimation: p.get('inOutAnimation').build(),
       ),
     );
     mateParams.put('key', key);

@@ -24,9 +24,9 @@ class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate<RawKeyDownEvent$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyDownEvent$Mate(
-        data: p.get('data').value,
-        character: p.get('character').value,
-        repeat: p.get('repeat').value,
+        data: p.get('data').build(),
+        character: p.get('character').build(),
+        repeat: p.get('repeat').build(),
       ),
     );
     mateParams.put('data', data);
@@ -51,8 +51,8 @@ class RawKeyUpEvent$Mate extends RawKeyUpEvent with Mate<RawKeyUpEvent$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyUpEvent$Mate(
-        data: p.get('data').value,
-        character: p.get('character').value,
+        data: p.get('data').build(),
+        character: p.get('character').build(),
       ),
     );
     mateParams.put('data', data);

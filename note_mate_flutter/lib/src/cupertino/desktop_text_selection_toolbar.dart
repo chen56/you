@@ -28,9 +28,9 @@ class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSele
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDesktopTextSelectionToolbar$Mate(
-        key: p.get('key').value,
-        anchor: p.get('anchor').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        anchor: p.get('anchor').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);

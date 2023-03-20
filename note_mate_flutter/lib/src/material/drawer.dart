@@ -53,15 +53,15 @@ class Drawer$Mate extends Drawer with WidgetMate<Drawer$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Drawer$Mate(
-        key: p.get('key').value,
-        backgroundColor: p.get('backgroundColor').value,
-        elevation: p.get('elevation').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        shape: p.get('shape').value,
-        width: p.get('width').value,
-        child: p.get('child').value,
-        semanticLabel: p.get('semanticLabel').value,
+        key: p.get('key').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        elevation: p.get('elevation').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        shape: p.get('shape').build(),
+        width: p.get('width').build(),
+        child: p.get('child').build(),
+        semanticLabel: p.get('semanticLabel').build(),
       ),
     );
     mateParams.put('key', key);
@@ -120,15 +120,15 @@ class DrawerController$Mate extends DrawerController with WidgetMate<DrawerContr
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DrawerController$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        alignment: p.get('alignment').value,
-        isDrawerOpen: p.get('isDrawerOpen').value,
-        drawerCallback: p.get('drawerCallback').value,
-        dragStartBehavior: p.get('dragStartBehavior').value,
-        scrimColor: p.get('scrimColor').value,
-        edgeDragWidth: p.get('edgeDragWidth').value,
-        enableOpenDragGesture: p.get('enableOpenDragGesture').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        alignment: p.get('alignment').build(),
+        isDrawerOpen: p.get('isDrawerOpen').build(),
+        drawerCallback: p.get('drawerCallback').build(),
+        dragStartBehavior: p.get('dragStartBehavior').build(),
+        scrimColor: p.get('scrimColor').build(),
+        edgeDragWidth: p.get('edgeDragWidth').build(),
+        enableOpenDragGesture: p.get('enableOpenDragGesture').build(),
       ),
     );
     mateParams.put('key', key);

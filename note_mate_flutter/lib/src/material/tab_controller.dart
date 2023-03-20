@@ -31,10 +31,10 @@ class TabController$Mate extends TabController with Mate<TabController$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TabController$Mate(
-        initialIndex: p.get('initialIndex').value,
-        animationDuration: p.get('animationDuration').value,
-        length: p.get('length').value,
-        vsync: p.get('vsync').value,
+        initialIndex: p.get('initialIndex').build(),
+        animationDuration: p.get('animationDuration').build(),
+        length: p.get('length').build(),
+        vsync: p.get('vsync').build(),
       ),
     );
     mateParams.put('initialIndex', initialIndex);
@@ -72,11 +72,11 @@ class DefaultTabController$Mate extends DefaultTabController with WidgetMate<Def
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DefaultTabController$Mate(
-        key: p.get('key').value,
-        length: p.get('length').value,
-        initialIndex: p.get('initialIndex').value,
-        child: p.get('child').value,
-        animationDuration: p.get('animationDuration').value,
+        key: p.get('key').build(),
+        length: p.get('length').build(),
+        initialIndex: p.get('initialIndex').build(),
+        child: p.get('child').build(),
+        animationDuration: p.get('animationDuration').build(),
       ),
     );
     mateParams.put('key', key);

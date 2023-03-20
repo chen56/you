@@ -14,7 +14,7 @@ class RenderSliverList$Mate extends RenderSliverList with Mate<RenderSliverList$
       : super(childManager: childManager) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverList$Mate(childManager: p.get('childManager').value),
+      builder: (p) => RenderSliverList$Mate(childManager: p.get('childManager').build()),
     );
     mateParams.put('childManager', childManager);
   }

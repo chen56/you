@@ -64,18 +64,18 @@ class SliverConstraints$Mate extends SliverConstraints with Mate<SliverConstrain
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverConstraints$Mate(
-        axisDirection: p.get('axisDirection').value,
-        growthDirection: p.get('growthDirection').value,
-        userScrollDirection: p.get('userScrollDirection').value,
-        scrollOffset: p.get('scrollOffset').value,
-        precedingScrollExtent: p.get('precedingScrollExtent').value,
-        overlap: p.get('overlap').value,
-        remainingPaintExtent: p.get('remainingPaintExtent').value,
-        crossAxisExtent: p.get('crossAxisExtent').value,
-        crossAxisDirection: p.get('crossAxisDirection').value,
-        viewportMainAxisExtent: p.get('viewportMainAxisExtent').value,
-        remainingCacheExtent: p.get('remainingCacheExtent').value,
-        cacheOrigin: p.get('cacheOrigin').value,
+        axisDirection: p.get('axisDirection').build(),
+        growthDirection: p.get('growthDirection').build(),
+        userScrollDirection: p.get('userScrollDirection').build(),
+        scrollOffset: p.get('scrollOffset').build(),
+        precedingScrollExtent: p.get('precedingScrollExtent').build(),
+        overlap: p.get('overlap').build(),
+        remainingPaintExtent: p.get('remainingPaintExtent').build(),
+        crossAxisExtent: p.get('crossAxisExtent').build(),
+        crossAxisDirection: p.get('crossAxisDirection').build(),
+        viewportMainAxisExtent: p.get('viewportMainAxisExtent').build(),
+        remainingCacheExtent: p.get('remainingCacheExtent').build(),
+        cacheOrigin: p.get('cacheOrigin').build(),
       ),
     );
     mateParams.put('axisDirection', axisDirection);
@@ -145,17 +145,17 @@ class SliverGeometry$Mate extends SliverGeometry with Mate<SliverGeometry$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGeometry$Mate(
-        scrollExtent: p.get('scrollExtent').value,
-        paintExtent: p.get('paintExtent').value,
-        paintOrigin: p.get('paintOrigin').value,
-        layoutExtent: p.get('layoutExtent').value,
-        maxPaintExtent: p.get('maxPaintExtent').value,
-        maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').value,
-        hitTestExtent: p.get('hitTestExtent').value,
-        visible: p.get('visible').value,
-        hasVisualOverflow: p.get('hasVisualOverflow').value,
-        scrollOffsetCorrection: p.get('scrollOffsetCorrection').value,
-        cacheExtent: p.get('cacheExtent').value,
+        scrollExtent: p.get('scrollExtent').build(),
+        paintExtent: p.get('paintExtent').build(),
+        paintOrigin: p.get('paintOrigin').build(),
+        layoutExtent: p.get('layoutExtent').build(),
+        maxPaintExtent: p.get('maxPaintExtent').build(),
+        maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').build(),
+        hitTestExtent: p.get('hitTestExtent').build(),
+        visible: p.get('visible').build(),
+        hasVisualOverflow: p.get('hasVisualOverflow').build(),
+        scrollOffsetCorrection: p.get('scrollOffsetCorrection').build(),
+        cacheExtent: p.get('cacheExtent').build(),
       ),
     );
     mateParams.put('scrollExtent', scrollExtent);
@@ -208,8 +208,8 @@ class SliverHitTestEntry$Mate extends SliverHitTestEntry with Mate<SliverHitTest
       init: this,
       builder: (p) => SliverHitTestEntry$Mate(
         p.get('target').value,
-        mainAxisPosition: p.get('mainAxisPosition').value,
-        crossAxisPosition: p.get('crossAxisPosition').value,
+        mainAxisPosition: p.get('mainAxisPosition').build(),
+        crossAxisPosition: p.get('crossAxisPosition').build(),
       ),
     );
     mateParams.put('target', target);
@@ -228,7 +228,7 @@ class RenderSliverToBoxAdapter$Mate extends RenderSliverToBoxAdapter with Mate<R
       : super(child: child) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').value),
+      builder: (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build()),
     );
     mateParams.put('child', child);
   }

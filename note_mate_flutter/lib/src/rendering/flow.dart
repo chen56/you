@@ -26,9 +26,9 @@ class RenderFlow$Mate extends RenderFlow with Mate<RenderFlow$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderFlow$Mate(
-        children: p.get('children').value,
-        delegate: p.get('delegate').value,
-        clipBehavior: p.get('clipBehavior').value,
+        children: p.get('children').build(),
+        delegate: p.get('delegate').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.putList('children', children);

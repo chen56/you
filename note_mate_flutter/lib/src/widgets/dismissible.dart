@@ -77,21 +77,21 @@ class Dismissible$Mate extends Dismissible with WidgetMate<Dismissible$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Dismissible$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        background: p.get('background').value,
-        secondaryBackground: p.get('secondaryBackground').value,
-        confirmDismiss: p.get('confirmDismiss').value,
-        onResize: p.get('onResize').value,
-        onUpdate: p.get('onUpdate').value,
-        onDismissed: p.get('onDismissed').value,
-        direction: p.get('direction').value,
-        resizeDuration: p.get('resizeDuration').value,
-        dismissThresholds: p.get('dismissThresholds').value,
-        movementDuration: p.get('movementDuration').value,
-        crossAxisEndOffset: p.get('crossAxisEndOffset').value,
-        dragStartBehavior: p.get('dragStartBehavior').value,
-        behavior: p.get('behavior').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        background: p.get('background').build(),
+        secondaryBackground: p.get('secondaryBackground').build(),
+        confirmDismiss: p.get('confirmDismiss').build(),
+        onResize: p.get('onResize').build(),
+        onUpdate: p.get('onUpdate').build(),
+        onDismissed: p.get('onDismissed').build(),
+        direction: p.get('direction').build(),
+        resizeDuration: p.get('resizeDuration').build(),
+        dismissThresholds: p.get('dismissThresholds').build(),
+        movementDuration: p.get('movementDuration').build(),
+        crossAxisEndOffset: p.get('crossAxisEndOffset').build(),
+        dragStartBehavior: p.get('dragStartBehavior').build(),
+        behavior: p.get('behavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -136,10 +136,10 @@ class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate<DismissUp
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DismissUpdateDetails$Mate(
-        direction: p.get('direction').value,
-        reached: p.get('reached').value,
-        previousReached: p.get('previousReached').value,
-        progress: p.get('progress').value,
+        direction: p.get('direction').build(),
+        reached: p.get('reached').build(),
+        previousReached: p.get('previousReached').build(),
+        progress: p.get('progress').build(),
       ),
     );
     mateParams.put('direction', direction);

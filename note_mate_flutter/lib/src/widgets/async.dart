@@ -83,10 +83,10 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with WidgetMate<StreamBuild
     mateParams = ObjectParam(
       init: this,
       builder: (p) => StreamBuilder$Mate(
-        key: p.get('key').value,
-        initialData: p.get('initialData').value,
-        stream: p.get('stream').value,
-        builder: p.get('builder').value,
+        key: p.get('key').build(),
+        initialData: p.get('initialData').build(),
+        stream: p.get('stream').build(),
+        builder: p.get('builder').build(),
       ),
     );
     mateParams.put('key', key);
@@ -120,10 +120,10 @@ class FutureBuilder$Mate<T> extends FutureBuilder<T> with WidgetMate<FutureBuild
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FutureBuilder$Mate(
-        key: p.get('key').value,
-        future: p.get('future').value,
-        initialData: p.get('initialData').value,
-        builder: p.get('builder').value,
+        key: p.get('key').build(),
+        future: p.get('future').build(),
+        initialData: p.get('initialData').build(),
+        builder: p.get('builder').build(),
       ),
     );
     mateParams.put('key', key);

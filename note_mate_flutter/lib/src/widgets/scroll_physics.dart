@@ -13,7 +13,7 @@ class ScrollPhysics$Mate extends ScrollPhysics with Mate<ScrollPhysics$Mate> {
       : super(parent: parent) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ScrollPhysics$Mate(parent: p.get('parent').value),
+      builder: (p) => ScrollPhysics$Mate(parent: p.get('parent').build()),
     );
     mateParams.put('parent', parent);
   }
@@ -30,7 +30,7 @@ class RangeMaintainingScrollPhysics$Mate extends RangeMaintainingScrollPhysics
       : super(parent: parent) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RangeMaintainingScrollPhysics$Mate(parent: p.get('parent').value),
+      builder: (p) => RangeMaintainingScrollPhysics$Mate(parent: p.get('parent').build()),
     );
     mateParams.put('parent', parent);
   }
@@ -52,8 +52,8 @@ class BouncingScrollPhysics$Mate extends BouncingScrollPhysics with Mate<Bouncin
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BouncingScrollPhysics$Mate(
-        decelerationRate: p.get('decelerationRate').value,
-        parent: p.get('parent').value,
+        decelerationRate: p.get('decelerationRate').build(),
+        parent: p.get('parent').build(),
       ),
     );
     mateParams.put('decelerationRate', decelerationRate);
@@ -71,7 +71,7 @@ class ClampingScrollPhysics$Mate extends ClampingScrollPhysics with Mate<Clampin
       : super(parent: parent) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ClampingScrollPhysics$Mate(parent: p.get('parent').value),
+      builder: (p) => ClampingScrollPhysics$Mate(parent: p.get('parent').build()),
     );
     mateParams.put('parent', parent);
   }
@@ -88,7 +88,7 @@ class AlwaysScrollableScrollPhysics$Mate extends AlwaysScrollableScrollPhysics
       : super(parent: parent) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => AlwaysScrollableScrollPhysics$Mate(parent: p.get('parent').value),
+      builder: (p) => AlwaysScrollableScrollPhysics$Mate(parent: p.get('parent').build()),
     );
     mateParams.put('parent', parent);
   }
@@ -105,7 +105,7 @@ class NeverScrollableScrollPhysics$Mate extends NeverScrollableScrollPhysics
       : super(parent: parent) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => NeverScrollableScrollPhysics$Mate(parent: p.get('parent').value),
+      builder: (p) => NeverScrollableScrollPhysics$Mate(parent: p.get('parent').build()),
     );
     mateParams.put('parent', parent);
   }

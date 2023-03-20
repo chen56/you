@@ -30,9 +30,9 @@ class SliderTheme$Mate extends SliderTheme with WidgetMate<SliderTheme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliderTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -169,36 +169,36 @@ class SliderThemeData$Mate extends SliderThemeData with Mate<SliderThemeData$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliderThemeData$Mate(
-        trackHeight: p.get('trackHeight').value,
-        activeTrackColor: p.get('activeTrackColor').value,
-        inactiveTrackColor: p.get('inactiveTrackColor').value,
-        secondaryActiveTrackColor: p.get('secondaryActiveTrackColor').value,
-        disabledActiveTrackColor: p.get('disabledActiveTrackColor').value,
-        disabledInactiveTrackColor: p.get('disabledInactiveTrackColor').value,
-        disabledSecondaryActiveTrackColor: p.get('disabledSecondaryActiveTrackColor').value,
-        activeTickMarkColor: p.get('activeTickMarkColor').value,
-        inactiveTickMarkColor: p.get('inactiveTickMarkColor').value,
-        disabledActiveTickMarkColor: p.get('disabledActiveTickMarkColor').value,
-        disabledInactiveTickMarkColor: p.get('disabledInactiveTickMarkColor').value,
-        thumbColor: p.get('thumbColor').value,
-        overlappingShapeStrokeColor: p.get('overlappingShapeStrokeColor').value,
-        disabledThumbColor: p.get('disabledThumbColor').value,
-        overlayColor: p.get('overlayColor').value,
-        valueIndicatorColor: p.get('valueIndicatorColor').value,
-        overlayShape: p.get('overlayShape').value,
-        tickMarkShape: p.get('tickMarkShape').value,
-        thumbShape: p.get('thumbShape').value,
-        trackShape: p.get('trackShape').value,
-        valueIndicatorShape: p.get('valueIndicatorShape').value,
-        rangeTickMarkShape: p.get('rangeTickMarkShape').value,
-        rangeThumbShape: p.get('rangeThumbShape').value,
-        rangeTrackShape: p.get('rangeTrackShape').value,
-        rangeValueIndicatorShape: p.get('rangeValueIndicatorShape').value,
-        showValueIndicator: p.get('showValueIndicator').value,
-        valueIndicatorTextStyle: p.get('valueIndicatorTextStyle').value,
-        minThumbSeparation: p.get('minThumbSeparation').value,
-        thumbSelector: p.get('thumbSelector').value,
-        mouseCursor: p.get('mouseCursor').value,
+        trackHeight: p.get('trackHeight').build(),
+        activeTrackColor: p.get('activeTrackColor').build(),
+        inactiveTrackColor: p.get('inactiveTrackColor').build(),
+        secondaryActiveTrackColor: p.get('secondaryActiveTrackColor').build(),
+        disabledActiveTrackColor: p.get('disabledActiveTrackColor').build(),
+        disabledInactiveTrackColor: p.get('disabledInactiveTrackColor').build(),
+        disabledSecondaryActiveTrackColor: p.get('disabledSecondaryActiveTrackColor').build(),
+        activeTickMarkColor: p.get('activeTickMarkColor').build(),
+        inactiveTickMarkColor: p.get('inactiveTickMarkColor').build(),
+        disabledActiveTickMarkColor: p.get('disabledActiveTickMarkColor').build(),
+        disabledInactiveTickMarkColor: p.get('disabledInactiveTickMarkColor').build(),
+        thumbColor: p.get('thumbColor').build(),
+        overlappingShapeStrokeColor: p.get('overlappingShapeStrokeColor').build(),
+        disabledThumbColor: p.get('disabledThumbColor').build(),
+        overlayColor: p.get('overlayColor').build(),
+        valueIndicatorColor: p.get('valueIndicatorColor').build(),
+        overlayShape: p.get('overlayShape').build(),
+        tickMarkShape: p.get('tickMarkShape').build(),
+        thumbShape: p.get('thumbShape').build(),
+        trackShape: p.get('trackShape').build(),
+        valueIndicatorShape: p.get('valueIndicatorShape').build(),
+        rangeTickMarkShape: p.get('rangeTickMarkShape').build(),
+        rangeThumbShape: p.get('rangeThumbShape').build(),
+        rangeTrackShape: p.get('rangeTrackShape').build(),
+        rangeValueIndicatorShape: p.get('rangeValueIndicatorShape').build(),
+        showValueIndicator: p.get('showValueIndicator').build(),
+        valueIndicatorTextStyle: p.get('valueIndicatorTextStyle').build(),
+        minThumbSeparation: p.get('minThumbSeparation').build(),
+        thumbSelector: p.get('thumbSelector').build(),
+        mouseCursor: p.get('mouseCursor').build(),
       ),
     );
     mateParams.put('trackHeight', trackHeight);
@@ -244,7 +244,7 @@ class RoundSliderTickMarkShape$Mate extends RoundSliderTickMarkShape with Mate<R
       : super(tickMarkRadius: tickMarkRadius) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RoundSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').value),
+      builder: (p) => RoundSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build()),
     );
     mateParams.put('tickMarkRadius', tickMarkRadius);
   }
@@ -261,7 +261,7 @@ class RoundRangeSliderTickMarkShape$Mate extends RoundRangeSliderTickMarkShape
       : super(tickMarkRadius: tickMarkRadius) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RoundRangeSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').value),
+      builder: (p) => RoundRangeSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build()),
     );
     mateParams.put('tickMarkRadius', tickMarkRadius);
   }
@@ -291,10 +291,10 @@ class RoundSliderThumbShape$Mate extends RoundSliderThumbShape with Mate<RoundSl
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RoundSliderThumbShape$Mate(
-        enabledThumbRadius: p.get('enabledThumbRadius').value,
-        disabledThumbRadius: p.get('disabledThumbRadius').value,
-        elevation: p.get('elevation').value,
-        pressedElevation: p.get('pressedElevation').value,
+        enabledThumbRadius: p.get('enabledThumbRadius').build(),
+        disabledThumbRadius: p.get('disabledThumbRadius').build(),
+        elevation: p.get('elevation').build(),
+        pressedElevation: p.get('pressedElevation').build(),
       ),
     );
     mateParams.put('enabledThumbRadius', enabledThumbRadius);
@@ -328,10 +328,10 @@ class RoundRangeSliderThumbShape$Mate extends RoundRangeSliderThumbShape with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RoundRangeSliderThumbShape$Mate(
-        enabledThumbRadius: p.get('enabledThumbRadius').value,
-        disabledThumbRadius: p.get('disabledThumbRadius').value,
-        elevation: p.get('elevation').value,
-        pressedElevation: p.get('pressedElevation').value,
+        enabledThumbRadius: p.get('enabledThumbRadius').build(),
+        disabledThumbRadius: p.get('disabledThumbRadius').build(),
+        elevation: p.get('elevation').build(),
+        pressedElevation: p.get('pressedElevation').build(),
       ),
     );
     mateParams.put('enabledThumbRadius', enabledThumbRadius);
@@ -351,7 +351,7 @@ class RoundSliderOverlayShape$Mate extends RoundSliderOverlayShape with Mate<Rou
       : super(overlayRadius: overlayRadius) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RoundSliderOverlayShape$Mate(overlayRadius: p.get('overlayRadius').value),
+      builder: (p) => RoundSliderOverlayShape$Mate(overlayRadius: p.get('overlayRadius').build()),
     );
     mateParams.put('overlayRadius', overlayRadius);
   }

@@ -16,7 +16,7 @@ class SnapshotController$Mate extends SnapshotController with Mate<SnapshotContr
       : super(allowSnapshotting: allowSnapshotting) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').value),
+      builder: (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build()),
     );
     mateParams.put('allowSnapshotting', allowSnapshotting);
   }
@@ -54,12 +54,12 @@ class SnapshotWidget$Mate extends SnapshotWidget with WidgetMate<SnapshotWidget$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SnapshotWidget$Mate(
-        key: p.get('key').value,
-        mode: p.get('mode').value,
-        painter: p.get('painter').value,
-        autoresize: p.get('autoresize').value,
-        controller: p.get('controller').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        mode: p.get('mode').build(),
+        painter: p.get('painter').build(),
+        autoresize: p.get('autoresize').build(),
+        controller: p.get('controller').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

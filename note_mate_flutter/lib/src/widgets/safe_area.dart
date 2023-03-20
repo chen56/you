@@ -47,14 +47,14 @@ class SafeArea$Mate extends SafeArea with WidgetMate<SafeArea$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SafeArea$Mate(
-        key: p.get('key').value,
-        left: p.get('left').value,
-        top: p.get('top').value,
-        right: p.get('right').value,
-        bottom: p.get('bottom').value,
-        minimum: p.get('minimum').value,
-        maintainBottomViewPadding: p.get('maintainBottomViewPadding').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        left: p.get('left').build(),
+        top: p.get('top').build(),
+        right: p.get('right').build(),
+        bottom: p.get('bottom').build(),
+        minimum: p.get('minimum').build(),
+        maintainBottomViewPadding: p.get('maintainBottomViewPadding').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -104,13 +104,13 @@ class SliverSafeArea$Mate extends SliverSafeArea with WidgetMate<SliverSafeArea$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverSafeArea$Mate(
-        key: p.get('key').value,
-        left: p.get('left').value,
-        top: p.get('top').value,
-        right: p.get('right').value,
-        bottom: p.get('bottom').value,
-        minimum: p.get('minimum').value,
-        sliver: p.get('sliver').value,
+        key: p.get('key').build(),
+        left: p.get('left').build(),
+        top: p.get('top').build(),
+        right: p.get('right').build(),
+        bottom: p.get('bottom').build(),
+        minimum: p.get('minimum').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('key', key);

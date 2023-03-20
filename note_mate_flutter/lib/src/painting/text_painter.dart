@@ -31,10 +31,10 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate<Placeho
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlaceholderDimensions$Mate(
-        size: p.get('size').value,
-        alignment: p.get('alignment').value,
-        baseline: p.get('baseline').value,
-        baselineOffset: p.get('baselineOffset').value,
+        size: p.get('size').build(),
+        alignment: p.get('alignment').build(),
+        baseline: p.get('baseline').build(),
+        baselineOffset: p.get('baselineOffset').build(),
       ),
     );
     mateParams.put('size', size);
@@ -92,16 +92,16 @@ class TextPainter$Mate extends TextPainter with Mate<TextPainter$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextPainter$Mate(
-        text: p.get('text').value,
-        textAlign: p.get('textAlign').value,
-        textDirection: p.get('textDirection').value,
-        textScaleFactor: p.get('textScaleFactor').value,
-        maxLines: p.get('maxLines').value,
-        ellipsis: p.get('ellipsis').value,
-        locale: p.get('locale').value,
-        strutStyle: p.get('strutStyle').value,
-        textWidthBasis: p.get('textWidthBasis').value,
-        textHeightBehavior: p.get('textHeightBehavior').value,
+        text: p.get('text').build(),
+        textAlign: p.get('textAlign').build(),
+        textDirection: p.get('textDirection').build(),
+        textScaleFactor: p.get('textScaleFactor').build(),
+        maxLines: p.get('maxLines').build(),
+        ellipsis: p.get('ellipsis').build(),
+        locale: p.get('locale').build(),
+        strutStyle: p.get('strutStyle').build(),
+        textWidthBasis: p.get('textWidthBasis').build(),
+        textHeightBehavior: p.get('textHeightBehavior').build(),
       ),
     );
     mateParams.put('text', text);

@@ -22,8 +22,8 @@ class ViewConfiguration$Mate extends ViewConfiguration with Mate<ViewConfigurati
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ViewConfiguration$Mate(
-        size: p.get('size').value,
-        devicePixelRatio: p.get('devicePixelRatio').value,
+        size: p.get('size').build(),
+        devicePixelRatio: p.get('devicePixelRatio').build(),
       ),
     );
     mateParams.put('size', size);
@@ -51,9 +51,9 @@ class RenderView$Mate extends RenderView with Mate<RenderView$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderView$Mate(
-        child: p.get('child').value,
-        configuration: p.get('configuration').value,
-        window: p.get('window').value,
+        child: p.get('child').build(),
+        configuration: p.get('configuration').build(),
+        window: p.get('window').build(),
       ),
     );
     mateParams.put('child', child);

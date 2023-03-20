@@ -36,11 +36,11 @@ class Form$Mate extends Form with WidgetMate<Form$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Form$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        onWillPop: p.get('onWillPop').value,
-        onChanged: p.get('onChanged').value,
-        autovalidateMode: p.get('autovalidateMode').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        onWillPop: p.get('onWillPop').build(),
+        onChanged: p.get('onChanged').build(),
+        autovalidateMode: p.get('autovalidateMode').build(),
       ),
     );
     mateParams.put('key', key);
@@ -91,14 +91,14 @@ class FormField$Mate<T> extends FormField<T> with WidgetMate<FormField$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FormField$Mate(
-        key: p.get('key').value,
-        builder: p.get('builder').value,
-        onSaved: p.get('onSaved').value,
-        validator: p.get('validator').value,
-        initialValue: p.get('initialValue').value,
-        enabled: p.get('enabled').value,
-        autovalidateMode: p.get('autovalidateMode').value,
-        restorationId: p.get('restorationId').value,
+        key: p.get('key').build(),
+        builder: p.get('builder').build(),
+        onSaved: p.get('onSaved').build(),
+        validator: p.get('validator').build(),
+        initialValue: p.get('initialValue').build(),
+        enabled: p.get('enabled').build(),
+        autovalidateMode: p.get('autovalidateMode').build(),
+        restorationId: p.get('restorationId').build(),
       ),
     );
     mateParams.put('key', key);

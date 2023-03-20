@@ -54,15 +54,15 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmente
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSegmentedControl$Mate(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        onValueChanged: p.get('onValueChanged').value,
-        groupValue: p.get('groupValue').value,
-        unselectedColor: p.get('unselectedColor').value,
-        selectedColor: p.get('selectedColor').value,
-        borderColor: p.get('borderColor').value,
-        pressedColor: p.get('pressedColor').value,
-        padding: p.get('padding').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        onValueChanged: p.get('onValueChanged').build(),
+        groupValue: p.get('groupValue').build(),
+        unselectedColor: p.get('unselectedColor').build(),
+        selectedColor: p.get('selectedColor').build(),
+        borderColor: p.get('borderColor').build(),
+        pressedColor: p.get('pressedColor').build(),
+        padding: p.get('padding').build(),
       ),
     );
     mateParams.put('key', key);

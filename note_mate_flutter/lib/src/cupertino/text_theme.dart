@@ -49,15 +49,15 @@ class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate<Cuper
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTextThemeData$Mate(
-        primaryColor: p.get('primaryColor').value,
-        textStyle: p.get('textStyle').value,
-        actionTextStyle: p.get('actionTextStyle').value,
-        tabLabelTextStyle: p.get('tabLabelTextStyle').value,
-        navTitleTextStyle: p.get('navTitleTextStyle').value,
-        navLargeTitleTextStyle: p.get('navLargeTitleTextStyle').value,
-        navActionTextStyle: p.get('navActionTextStyle').value,
-        pickerTextStyle: p.get('pickerTextStyle').value,
-        dateTimePickerTextStyle: p.get('dateTimePickerTextStyle').value,
+        primaryColor: p.get('primaryColor').build(),
+        textStyle: p.get('textStyle').build(),
+        actionTextStyle: p.get('actionTextStyle').build(),
+        tabLabelTextStyle: p.get('tabLabelTextStyle').build(),
+        navTitleTextStyle: p.get('navTitleTextStyle').build(),
+        navLargeTitleTextStyle: p.get('navLargeTitleTextStyle').build(),
+        navActionTextStyle: p.get('navActionTextStyle').build(),
+        pickerTextStyle: p.get('pickerTextStyle').build(),
+        dateTimePickerTextStyle: p.get('dateTimePickerTextStyle').build(),
       ),
     );
     mateParams.put('primaryColor', primaryColor);

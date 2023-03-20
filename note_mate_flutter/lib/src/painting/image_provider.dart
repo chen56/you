@@ -41,12 +41,12 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate<ImageConfigur
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageConfiguration$Mate(
-        bundle: p.get('bundle').value,
-        devicePixelRatio: p.get('devicePixelRatio').value,
-        locale: p.get('locale').value,
-        textDirection: p.get('textDirection').value,
-        size: p.get('size').value,
-        platform: p.get('platform').value,
+        bundle: p.get('bundle').build(),
+        devicePixelRatio: p.get('devicePixelRatio').build(),
+        locale: p.get('locale').build(),
+        textDirection: p.get('textDirection').build(),
+        size: p.get('size').build(),
+        platform: p.get('platform').build(),
       ),
     );
     mateParams.put('bundle', bundle);
@@ -78,9 +78,9 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate<AssetBundle
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AssetBundleImageKey$Mate(
-        bundle: p.get('bundle').value,
-        name: p.get('name').value,
-        scale: p.get('scale').value,
+        bundle: p.get('bundle').build(),
+        name: p.get('name').build(),
+        scale: p.get('scale').build(),
       ),
     );
     mateParams.put('bundle', bundle);
@@ -117,10 +117,10 @@ class ResizeImage$Mate extends ResizeImage with Mate<ResizeImage$Mate> {
       init: this,
       builder: (p) => ResizeImage$Mate(
         p.get('imageProvider').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        policy: p.get('policy').value,
-        allowUpscaling: p.get('allowUpscaling').value,
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        policy: p.get('policy').build(),
+        allowUpscaling: p.get('allowUpscaling').build(),
       ),
     );
     mateParams.put('imageProvider', imageProvider);
@@ -147,7 +147,7 @@ class FileImage$Mate extends FileImage with Mate<FileImage$Mate> {
       init: this,
       builder: (p) => FileImage$Mate(
         p.get('file').value,
-        scale: p.get('scale').value,
+        scale: p.get('scale').build(),
       ),
     );
     mateParams.put('file', file);
@@ -171,7 +171,7 @@ class MemoryImage$Mate extends MemoryImage with Mate<MemoryImage$Mate> {
       init: this,
       builder: (p) => MemoryImage$Mate(
         p.get('bytes').value,
-        scale: p.get('scale').value,
+        scale: p.get('scale').build(),
       ),
     );
     mateParams.put('bytes', bytes);
@@ -203,9 +203,9 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate<ExactAssetImage$Mat
       init: this,
       builder: (p) => ExactAssetImage$Mate(
         p.get('assetName').value,
-        scale: p.get('scale').value,
-        bundle: p.get('bundle').value,
-        package: p.get('package').value,
+        scale: p.get('scale').build(),
+        bundle: p.get('bundle').build(),
+        package: p.get('package').build(),
       ),
     );
     mateParams.put('assetName', assetName);
@@ -231,8 +231,8 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NetworkImageLoadException$Mate(
-        statusCode: p.get('statusCode').value,
-        uri: p.get('uri').value,
+        statusCode: p.get('statusCode').build(),
+        uri: p.get('uri').build(),
       ),
     );
     mateParams.put('statusCode', statusCode);

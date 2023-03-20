@@ -55,16 +55,16 @@ class CupertinoSlider$Mate extends CupertinoSlider with WidgetMate<CupertinoSlid
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoSlider$Mate(
-        key: p.get('key').value,
-        value: p.get('value').value,
-        onChanged: p.get('onChanged').value,
-        onChangeStart: p.get('onChangeStart').value,
-        onChangeEnd: p.get('onChangeEnd').value,
-        min: p.get('min').value,
-        max: p.get('max').value,
-        divisions: p.get('divisions').value,
-        activeColor: p.get('activeColor').value,
-        thumbColor: p.get('thumbColor').value,
+        key: p.get('key').build(),
+        value: p.get('value').build(),
+        onChanged: p.get('onChanged').build(),
+        onChangeStart: p.get('onChangeStart').build(),
+        onChangeEnd: p.get('onChangeEnd').build(),
+        min: p.get('min').build(),
+        max: p.get('max').build(),
+        divisions: p.get('divisions').build(),
+        activeColor: p.get('activeColor').build(),
+        thumbColor: p.get('thumbColor').build(),
       ),
     );
     mateParams.put('key', key);

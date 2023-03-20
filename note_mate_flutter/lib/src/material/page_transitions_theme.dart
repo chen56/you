@@ -16,7 +16,7 @@ class ZoomPageTransitionsBuilder$Mate extends ZoomPageTransitionsBuilder with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) =>
-          ZoomPageTransitionsBuilder$Mate(allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').value),
+          ZoomPageTransitionsBuilder$Mate(allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').build()),
     );
     mateParams.put('allowEnterRouteSnapshotting', allowEnterRouteSnapshotting);
   }
@@ -32,7 +32,7 @@ class PageTransitionsTheme$Mate extends PageTransitionsTheme with Mate<PageTrans
       : super(builders: builders) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => PageTransitionsTheme$Mate(builders: p.get('builders').value),
+      builder: (p) => PageTransitionsTheme$Mate(builders: p.get('builders').build()),
     );
     mateParams.put('builders', builders);
   }

@@ -22,8 +22,8 @@ class RenderCustomMultiChildLayoutBox$Mate extends RenderCustomMultiChildLayoutB
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderCustomMultiChildLayoutBox$Mate(
-        children: p.get('children').value,
-        delegate: p.get('delegate').value,
+        children: p.get('children').build(),
+        delegate: p.get('delegate').build(),
       ),
     );
     mateParams.putList('children', children);

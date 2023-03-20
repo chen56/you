@@ -49,7 +49,7 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate<Order
       : super(secondary: secondary) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').value),
+      builder: (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build()),
     );
     mateParams.put('secondary', secondary);
   }
@@ -75,9 +75,9 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with WidgetMate<Focus
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusTraversalOrder$Mate(
-        key: p.get('key').value,
-        order: p.get('order').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        order: p.get('order').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -114,11 +114,11 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with WidgetMate<Focus
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusTraversalGroup$Mate(
-        key: p.get('key').value,
-        policy: p.get('policy').value,
-        descendantsAreFocusable: p.get('descendantsAreFocusable').value,
-        descendantsAreTraversable: p.get('descendantsAreTraversable').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        policy: p.get('policy').build(),
+        descendantsAreFocusable: p.get('descendantsAreFocusable').build(),
+        descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -161,7 +161,7 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate<Direc
       init: this,
       builder: (p) => DirectionalFocusIntent$Mate(
         p.get('direction').value,
-        ignoreTextFields: p.get('ignoreTextFields').value,
+        ignoreTextFields: p.get('ignoreTextFields').build(),
       ),
     );
     mateParams.put('direction', direction);
@@ -189,9 +189,9 @@ class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with WidgetMate<E
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExcludeFocusTraversal$Mate(
-        key: p.get('key').value,
-        excluding: p.get('excluding').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        excluding: p.get('excluding').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

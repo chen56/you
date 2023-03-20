@@ -45,14 +45,14 @@ class IconThemeData$Mate extends IconThemeData with Mate<IconThemeData$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => IconThemeData$Mate(
-        size: p.get('size').value,
-        fill: p.get('fill').value,
-        weight: p.get('weight').value,
-        grade: p.get('grade').value,
-        opticalSize: p.get('opticalSize').value,
-        color: p.get('color').value,
-        opacity: p.get('opacity').value,
-        shadows: p.get('shadows').value,
+        size: p.get('size').build(),
+        fill: p.get('fill').build(),
+        weight: p.get('weight').build(),
+        grade: p.get('grade').build(),
+        opticalSize: p.get('opticalSize').build(),
+        color: p.get('color').build(),
+        opacity: p.get('opacity').build(),
+        shadows: p.get('shadows').build(),
       ),
     );
     mateParams.put('size', size);

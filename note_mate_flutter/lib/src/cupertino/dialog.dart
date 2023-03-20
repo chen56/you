@@ -50,14 +50,14 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with WidgetMate<Cup
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAlertDialog$Mate(
-        key: p.get('key').value,
-        title: p.get('title').value,
-        content: p.get('content').value,
-        actions: p.get('actions').value,
-        scrollController: p.get('scrollController').value,
-        actionScrollController: p.get('actionScrollController').value,
-        insetAnimationDuration: p.get('insetAnimationDuration').value,
-        insetAnimationCurve: p.get('insetAnimationCurve').value,
+        key: p.get('key').build(),
+        title: p.get('title').build(),
+        content: p.get('content').build(),
+        actions: p.get('actions').build(),
+        scrollController: p.get('scrollController').build(),
+        actionScrollController: p.get('actionScrollController').build(),
+        insetAnimationDuration: p.get('insetAnimationDuration').build(),
+        insetAnimationCurve: p.get('insetAnimationCurve').build(),
       ),
     );
     mateParams.put('key', key);
@@ -91,9 +91,9 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with WidgetMate<C
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoPopupSurface$Mate(
-        key: p.get('key').value,
-        isSurfacePainted: p.get('isSurfacePainted').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        isSurfacePainted: p.get('isSurfacePainted').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -138,13 +138,13 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with WidgetMate<Cup
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoActionSheet$Mate(
-        key: p.get('key').value,
-        title: p.get('title').value,
-        message: p.get('message').value,
-        actions: p.get('actions').value,
-        messageScrollController: p.get('messageScrollController').value,
-        actionScrollController: p.get('actionScrollController').value,
-        cancelButton: p.get('cancelButton').value,
+        key: p.get('key').build(),
+        title: p.get('title').build(),
+        message: p.get('message').build(),
+        actions: p.get('actions').build(),
+        messageScrollController: p.get('messageScrollController').build(),
+        actionScrollController: p.get('actionScrollController').build(),
+        cancelButton: p.get('cancelButton').build(),
       ),
     );
     mateParams.put('key', key);
@@ -186,11 +186,11 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoActionSheetAction$Mate(
-        key: p.get('key').value,
-        onPressed: p.get('onPressed').value,
-        isDefaultAction: p.get('isDefaultAction').value,
-        isDestructiveAction: p.get('isDestructiveAction').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        onPressed: p.get('onPressed').build(),
+        isDefaultAction: p.get('isDefaultAction').build(),
+        isDestructiveAction: p.get('isDestructiveAction').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -233,12 +233,12 @@ class CupertinoDialogAction$Mate extends CupertinoDialogAction with WidgetMate<C
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDialogAction$Mate(
-        key: p.get('key').value,
-        onPressed: p.get('onPressed').value,
-        isDefaultAction: p.get('isDefaultAction').value,
-        isDestructiveAction: p.get('isDestructiveAction').value,
-        textStyle: p.get('textStyle').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        onPressed: p.get('onPressed').build(),
+        isDefaultAction: p.get('isDefaultAction').build(),
+        isDestructiveAction: p.get('isDestructiveAction').build(),
+        textStyle: p.get('textStyle').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

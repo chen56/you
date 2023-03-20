@@ -27,9 +27,9 @@ class WidgetInspector$Mate extends WidgetInspector with WidgetMate<WidgetInspect
     mateParams = ObjectParam(
       init: this,
       builder: (p) => WidgetInspector$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        selectButtonBuilder: p.get('selectButtonBuilder').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        selectButtonBuilder: p.get('selectButtonBuilder').build(),
       ),
     );
     mateParams.put('key', key);
@@ -108,14 +108,14 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => InspectorSerializationDelegate$Mate(
-        groupName: p.get('groupName').value,
-        summaryTree: p.get('summaryTree').value,
-        maxDescendantsTruncatableNode: p.get('maxDescendantsTruncatableNode').value,
-        expandPropertyValues: p.get('expandPropertyValues').value,
-        subtreeDepth: p.get('subtreeDepth').value,
-        includeProperties: p.get('includeProperties').value,
-        service: p.get('service').value,
-        addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').value,
+        groupName: p.get('groupName').build(),
+        summaryTree: p.get('summaryTree').build(),
+        maxDescendantsTruncatableNode: p.get('maxDescendantsTruncatableNode').build(),
+        expandPropertyValues: p.get('expandPropertyValues').build(),
+        subtreeDepth: p.get('subtreeDepth').build(),
+        includeProperties: p.get('includeProperties').build(),
+        service: p.get('service').build(),
+        addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
       ),
     );
     mateParams.put('groupName', groupName);

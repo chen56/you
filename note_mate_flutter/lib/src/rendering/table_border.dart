@@ -41,13 +41,13 @@ class TableBorder$Mate extends TableBorder with Mate<TableBorder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TableBorder$Mate(
-        top: p.get('top').value,
-        right: p.get('right').value,
-        bottom: p.get('bottom').value,
-        left: p.get('left').value,
-        horizontalInside: p.get('horizontalInside').value,
-        verticalInside: p.get('verticalInside').value,
-        borderRadius: p.get('borderRadius').value,
+        top: p.get('top').build(),
+        right: p.get('right').build(),
+        bottom: p.get('bottom').build(),
+        left: p.get('left').build(),
+        horizontalInside: p.get('horizontalInside').build(),
+        verticalInside: p.get('verticalInside').build(),
+        borderRadius: p.get('borderRadius').build(),
       ),
     );
     mateParams.put('top', top);

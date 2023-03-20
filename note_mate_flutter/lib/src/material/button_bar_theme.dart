@@ -54,15 +54,15 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate<ButtonBarThem
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonBarThemeData$Mate(
-        alignment: p.get('alignment').value,
-        mainAxisSize: p.get('mainAxisSize').value,
-        buttonTextTheme: p.get('buttonTextTheme').value,
-        buttonMinWidth: p.get('buttonMinWidth').value,
-        buttonHeight: p.get('buttonHeight').value,
-        buttonPadding: p.get('buttonPadding').value,
-        buttonAlignedDropdown: p.get('buttonAlignedDropdown').value,
-        layoutBehavior: p.get('layoutBehavior').value,
-        overflowDirection: p.get('overflowDirection').value,
+        alignment: p.get('alignment').build(),
+        mainAxisSize: p.get('mainAxisSize').build(),
+        buttonTextTheme: p.get('buttonTextTheme').build(),
+        buttonMinWidth: p.get('buttonMinWidth').build(),
+        buttonHeight: p.get('buttonHeight').build(),
+        buttonPadding: p.get('buttonPadding').build(),
+        buttonAlignedDropdown: p.get('buttonAlignedDropdown').build(),
+        layoutBehavior: p.get('layoutBehavior').build(),
+        overflowDirection: p.get('overflowDirection').build(),
       ),
     );
     mateParams.put('alignment', alignment);
@@ -97,9 +97,9 @@ class ButtonBarTheme$Mate extends ButtonBarTheme with WidgetMate<ButtonBarTheme$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ButtonBarTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -22,8 +22,8 @@ class AnnotationEntry$Mate<T> extends AnnotationEntry<T> with Mate<AnnotationEnt
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnnotationEntry$Mate(
-        annotation: p.get('annotation').value,
-        localPosition: p.get('localPosition').value,
+        annotation: p.get('annotation').build(),
+        localPosition: p.get('localPosition').build(),
       ),
     );
     mateParams.put('annotation', annotation);
@@ -87,10 +87,10 @@ class TextureLayer$Mate extends TextureLayer with Mate<TextureLayer$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextureLayer$Mate(
-        rect: p.get('rect').value,
-        textureId: p.get('textureId').value,
-        freeze: p.get('freeze').value,
-        filterQuality: p.get('filterQuality').value,
+        rect: p.get('rect').build(),
+        textureId: p.get('textureId').build(),
+        freeze: p.get('freeze').build(),
+        filterQuality: p.get('filterQuality').build(),
       ),
     );
     mateParams.put('rect', rect);
@@ -116,8 +116,8 @@ class PlatformViewLayer$Mate extends PlatformViewLayer with Mate<PlatformViewLay
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformViewLayer$Mate(
-        rect: p.get('rect').value,
-        viewId: p.get('viewId').value,
+        rect: p.get('rect').build(),
+        viewId: p.get('viewId').build(),
       ),
     );
     mateParams.put('rect', rect);
@@ -153,11 +153,11 @@ class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate<Per
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PerformanceOverlayLayer$Mate(
-        overlayRect: p.get('overlayRect').value,
-        optionsMask: p.get('optionsMask').value,
-        rasterizerThreshold: p.get('rasterizerThreshold').value,
-        checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').value,
-        checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').value,
+        overlayRect: p.get('overlayRect').build(),
+        optionsMask: p.get('optionsMask').build(),
+        rasterizerThreshold: p.get('rasterizerThreshold').build(),
+        checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+        checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
       ),
     );
     mateParams.put('overlayRect', overlayRect);
@@ -178,7 +178,7 @@ class OffsetLayer$Mate extends OffsetLayer with Mate<OffsetLayer$Mate> {
       : super(offset: offset) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => OffsetLayer$Mate(offset: p.get('offset').value),
+      builder: (p) => OffsetLayer$Mate(offset: p.get('offset').build()),
     );
     mateParams.put('offset', offset);
   }
@@ -200,8 +200,8 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate<ClipRectLayer$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ClipRectLayer$Mate(
-        clipRect: p.get('clipRect').value,
-        clipBehavior: p.get('clipBehavior').value,
+        clipRect: p.get('clipRect').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('clipRect', clipRect);
@@ -225,8 +225,8 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate<ClipRRectLayer$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ClipRRectLayer$Mate(
-        clipRRect: p.get('clipRRect').value,
-        clipBehavior: p.get('clipBehavior').value,
+        clipRRect: p.get('clipRRect').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('clipRRect', clipRRect);
@@ -250,8 +250,8 @@ class ClipPathLayer$Mate extends ClipPathLayer with Mate<ClipPathLayer$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ClipPathLayer$Mate(
-        clipPath: p.get('clipPath').value,
-        clipBehavior: p.get('clipBehavior').value,
+        clipPath: p.get('clipPath').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('clipPath', clipPath);
@@ -269,7 +269,7 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate<ColorFilterLayer$
       : super(colorFilter: colorFilter) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').value),
+      builder: (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build()),
     );
     mateParams.put('colorFilter', colorFilter);
   }
@@ -291,8 +291,8 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate<ImageFilterLayer$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageFilterLayer$Mate(
-        imageFilter: p.get('imageFilter').value,
-        offset: p.get('offset').value,
+        imageFilter: p.get('imageFilter').build(),
+        offset: p.get('offset').build(),
       ),
     );
     mateParams.put('imageFilter', imageFilter);
@@ -316,8 +316,8 @@ class TransformLayer$Mate extends TransformLayer with Mate<TransformLayer$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TransformLayer$Mate(
-        transform: p.get('transform').value,
-        offset: p.get('offset').value,
+        transform: p.get('transform').build(),
+        offset: p.get('offset').build(),
       ),
     );
     mateParams.put('transform', transform);
@@ -341,8 +341,8 @@ class OpacityLayer$Mate extends OpacityLayer with Mate<OpacityLayer$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OpacityLayer$Mate(
-        alpha: p.get('alpha').value,
-        offset: p.get('offset').value,
+        alpha: p.get('alpha').build(),
+        offset: p.get('offset').build(),
       ),
     );
     mateParams.put('alpha', alpha);
@@ -370,9 +370,9 @@ class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate<ShaderMaskLayer$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ShaderMaskLayer$Mate(
-        shader: p.get('shader').value,
-        maskRect: p.get('maskRect').value,
-        blendMode: p.get('blendMode').value,
+        shader: p.get('shader').build(),
+        maskRect: p.get('maskRect').build(),
+        blendMode: p.get('blendMode').build(),
       ),
     );
     mateParams.put('shader', shader);
@@ -397,8 +397,8 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate<BackdropFil
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BackdropFilterLayer$Mate(
-        filter: p.get('filter').value,
-        blendMode: p.get('blendMode').value,
+        filter: p.get('filter').build(),
+        blendMode: p.get('blendMode').build(),
       ),
     );
     mateParams.put('filter', filter);
@@ -434,11 +434,11 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate<PhysicalModel
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PhysicalModelLayer$Mate(
-        clipPath: p.get('clipPath').value,
-        clipBehavior: p.get('clipBehavior').value,
-        elevation: p.get('elevation').value,
-        color: p.get('color').value,
-        shadowColor: p.get('shadowColor').value,
+        clipPath: p.get('clipPath').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        elevation: p.get('elevation').build(),
+        color: p.get('color').build(),
+        shadowColor: p.get('shadowColor').build(),
       ),
     );
     mateParams.put('clipPath', clipPath);
@@ -465,8 +465,8 @@ class LeaderLayer$Mate extends LeaderLayer with Mate<LeaderLayer$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LeaderLayer$Mate(
-        link: p.get('link').value,
-        offset: p.get('offset').value,
+        link: p.get('link').build(),
+        offset: p.get('offset').build(),
       ),
     );
     mateParams.put('link', link);
@@ -498,10 +498,10 @@ class FollowerLayer$Mate extends FollowerLayer with Mate<FollowerLayer$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FollowerLayer$Mate(
-        link: p.get('link').value,
-        showWhenUnlinked: p.get('showWhenUnlinked').value,
-        unlinkedOffset: p.get('unlinkedOffset').value,
-        linkedOffset: p.get('linkedOffset').value,
+        link: p.get('link').build(),
+        showWhenUnlinked: p.get('showWhenUnlinked').build(),
+        unlinkedOffset: p.get('unlinkedOffset').build(),
+        linkedOffset: p.get('linkedOffset').build(),
       ),
     );
     mateParams.put('link', link);
@@ -535,9 +535,9 @@ class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T
       init: this,
       builder: (p) => AnnotatedRegionLayer$Mate(
         p.get('value').value,
-        size: p.get('size').value,
-        offset: p.get('offset').value,
-        opaque: p.get('opaque').value,
+        size: p.get('size').build(),
+        offset: p.get('offset').build(),
+        opaque: p.get('opaque').build(),
       ),
     );
     mateParams.put('value', value);

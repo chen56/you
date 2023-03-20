@@ -38,12 +38,12 @@ class Divider$Mate extends Divider with WidgetMate<Divider$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Divider$Mate(
-        key: p.get('key').value,
-        height: p.get('height').value,
-        thickness: p.get('thickness').value,
-        indent: p.get('indent').value,
-        endIndent: p.get('endIndent').value,
-        color: p.get('color').value,
+        key: p.get('key').build(),
+        height: p.get('height').build(),
+        thickness: p.get('thickness').build(),
+        indent: p.get('indent').build(),
+        endIndent: p.get('endIndent').build(),
+        color: p.get('color').build(),
       ),
     );
     mateParams.put('key', key);
@@ -87,12 +87,12 @@ class VerticalDivider$Mate extends VerticalDivider with WidgetMate<VerticalDivid
     mateParams = ObjectParam(
       init: this,
       builder: (p) => VerticalDivider$Mate(
-        key: p.get('key').value,
-        width: p.get('width').value,
-        thickness: p.get('thickness').value,
-        indent: p.get('indent').value,
-        endIndent: p.get('endIndent').value,
-        color: p.get('color').value,
+        key: p.get('key').build(),
+        width: p.get('width').build(),
+        thickness: p.get('thickness').build(),
+        indent: p.get('indent').build(),
+        endIndent: p.get('endIndent').build(),
+        color: p.get('color').build(),
       ),
     );
     mateParams.put('key', key);

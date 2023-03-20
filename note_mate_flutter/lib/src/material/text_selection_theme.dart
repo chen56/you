@@ -26,9 +26,9 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate<TextS
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionThemeData$Mate(
-        cursorColor: p.get('cursorColor').value,
-        selectionColor: p.get('selectionColor').value,
-        selectionHandleColor: p.get('selectionHandleColor').value,
+        cursorColor: p.get('cursorColor').build(),
+        selectionColor: p.get('selectionColor').build(),
+        selectionHandleColor: p.get('selectionHandleColor').build(),
       ),
     );
     mateParams.put('cursorColor', cursorColor);
@@ -57,9 +57,9 @@ class TextSelectionTheme$Mate extends TextSelectionTheme with WidgetMate<TextSel
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

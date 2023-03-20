@@ -19,7 +19,7 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate<Intrinsic
       : super(flex: flex) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').value),
+      builder: (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build()),
     );
     mateParams.put('flex', flex);
   }
@@ -175,17 +175,17 @@ class RenderTable$Mate extends RenderTable with Mate<RenderTable$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderTable$Mate(
-        columns: p.get('columns').value,
-        rows: p.get('rows').value,
-        columnWidths: p.get('columnWidths').value,
-        defaultColumnWidth: p.get('defaultColumnWidth').value,
-        textDirection: p.get('textDirection').value,
-        border: p.get('border').value,
-        rowDecorations: p.get('rowDecorations').value,
-        configuration: p.get('configuration').value,
-        defaultVerticalAlignment: p.get('defaultVerticalAlignment').value,
-        textBaseline: p.get('textBaseline').value,
-        children: p.get('children').value,
+        columns: p.get('columns').build(),
+        rows: p.get('rows').build(),
+        columnWidths: p.get('columnWidths').build(),
+        defaultColumnWidth: p.get('defaultColumnWidth').build(),
+        textDirection: p.get('textDirection').build(),
+        border: p.get('border').build(),
+        rowDecorations: p.get('rowDecorations').build(),
+        configuration: p.get('configuration').build(),
+        defaultVerticalAlignment: p.get('defaultVerticalAlignment').build(),
+        textBaseline: p.get('textBaseline').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('columns', columns);

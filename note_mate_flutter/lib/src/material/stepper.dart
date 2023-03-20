@@ -34,10 +34,10 @@ class ControlsDetails$Mate extends ControlsDetails with Mate<ControlsDetails$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ControlsDetails$Mate(
-        currentStep: p.get('currentStep').value,
-        stepIndex: p.get('stepIndex').value,
-        onStepCancel: p.get('onStepCancel').value,
-        onStepContinue: p.get('onStepContinue').value,
+        currentStep: p.get('currentStep').build(),
+        stepIndex: p.get('stepIndex').build(),
+        onStepCancel: p.get('onStepCancel').build(),
+        onStepContinue: p.get('onStepContinue').build(),
       ),
     );
     mateParams.put('currentStep', currentStep);
@@ -79,12 +79,12 @@ class Step$Mate extends Step with Mate<Step$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Step$Mate(
-        title: p.get('title').value,
-        subtitle: p.get('subtitle').value,
-        content: p.get('content').value,
-        state: p.get('state').value,
-        isActive: p.get('isActive').value,
-        label: p.get('label').value,
+        title: p.get('title').build(),
+        subtitle: p.get('subtitle').build(),
+        content: p.get('content').build(),
+        state: p.get('state').build(),
+        isActive: p.get('isActive').build(),
+        label: p.get('label').build(),
       ),
     );
     mateParams.put('title', title);
@@ -148,17 +148,17 @@ class Stepper$Mate extends Stepper with WidgetMate<Stepper$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Stepper$Mate(
-        key: p.get('key').value,
-        steps: p.get('steps').value,
-        physics: p.get('physics').value,
-        type: p.get('type').value,
-        currentStep: p.get('currentStep').value,
-        onStepTapped: p.get('onStepTapped').value,
-        onStepContinue: p.get('onStepContinue').value,
-        onStepCancel: p.get('onStepCancel').value,
-        controlsBuilder: p.get('controlsBuilder').value,
-        elevation: p.get('elevation').value,
-        margin: p.get('margin').value,
+        key: p.get('key').build(),
+        steps: p.get('steps').build(),
+        physics: p.get('physics').build(),
+        type: p.get('type').build(),
+        currentStep: p.get('currentStep').build(),
+        onStepTapped: p.get('onStepTapped').build(),
+        onStepContinue: p.get('onStepContinue').build(),
+        onStepCancel: p.get('onStepCancel').build(),
+        controlsBuilder: p.get('controlsBuilder').build(),
+        elevation: p.get('elevation').build(),
+        margin: p.get('margin').build(),
       ),
     );
     mateParams.put('key', key);

@@ -37,11 +37,11 @@ class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionToolbarTextButton$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        padding: p.get('padding').value,
-        onPressed: p.get('onPressed').value,
-        alignment: p.get('alignment').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        padding: p.get('padding').build(),
+        onPressed: p.get('onPressed').build(),
+        alignment: p.get('alignment').build(),
       ),
     );
     mateParams.put('key', key);

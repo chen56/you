@@ -58,16 +58,16 @@ class Scrollbar$Mate extends Scrollbar with WidgetMate<Scrollbar$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Scrollbar$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        controller: p.get('controller').value,
-        thumbVisibility: p.get('thumbVisibility').value,
-        trackVisibility: p.get('trackVisibility').value,
-        thickness: p.get('thickness').value,
-        radius: p.get('radius').value,
-        notificationPredicate: p.get('notificationPredicate').value,
-        interactive: p.get('interactive').value,
-        scrollbarOrientation: p.get('scrollbarOrientation').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        controller: p.get('controller').build(),
+        thumbVisibility: p.get('thumbVisibility').build(),
+        trackVisibility: p.get('trackVisibility').build(),
+        thickness: p.get('thickness').build(),
+        radius: p.get('radius').build(),
+        notificationPredicate: p.get('notificationPredicate').build(),
+        interactive: p.get('interactive').build(),
+        scrollbarOrientation: p.get('scrollbarOrientation').build(),
       ),
     );
     mateParams.put('key', key);

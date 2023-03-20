@@ -61,17 +61,17 @@ class Card$Mate extends Card with WidgetMate<Card$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Card$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        elevation: p.get('elevation').value,
-        shape: p.get('shape').value,
-        borderOnForeground: p.get('borderOnForeground').value,
-        margin: p.get('margin').value,
-        clipBehavior: p.get('clipBehavior').value,
-        child: p.get('child').value,
-        semanticContainer: p.get('semanticContainer').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        elevation: p.get('elevation').build(),
+        shape: p.get('shape').build(),
+        borderOnForeground: p.get('borderOnForeground').build(),
+        margin: p.get('margin').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        child: p.get('child').build(),
+        semanticContainer: p.get('semanticContainer').build(),
       ),
     );
     mateParams.put('key', key);

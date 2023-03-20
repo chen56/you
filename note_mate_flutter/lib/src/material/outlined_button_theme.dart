@@ -16,7 +16,7 @@ class OutlinedButtonThemeData$Mate extends OutlinedButtonThemeData with Mate<Out
       : super(style: style) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => OutlinedButtonThemeData$Mate(style: p.get('style').value),
+      builder: (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build()),
     );
     mateParams.put('style', style);
   }
@@ -42,9 +42,9 @@ class OutlinedButtonTheme$Mate extends OutlinedButtonTheme with WidgetMate<Outli
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OutlinedButtonTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

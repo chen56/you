@@ -20,8 +20,8 @@ class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate<A
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AndroidPointerProperties$Mate(
-        id: p.get('id').value,
-        toolType: p.get('toolType').value,
+        id: p.get('id').build(),
+        toolType: p.get('toolType').build(),
       ),
     );
     mateParams.put('id', id);
@@ -73,15 +73,15 @@ class AndroidPointerCoords$Mate extends AndroidPointerCoords with Mate<AndroidPo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AndroidPointerCoords$Mate(
-        orientation: p.get('orientation').value,
-        pressure: p.get('pressure').value,
-        size: p.get('size').value,
-        toolMajor: p.get('toolMajor').value,
-        toolMinor: p.get('toolMinor').value,
-        touchMajor: p.get('touchMajor').value,
-        touchMinor: p.get('touchMinor').value,
-        x: p.get('x').value,
-        y: p.get('y').value,
+        orientation: p.get('orientation').build(),
+        pressure: p.get('pressure').build(),
+        size: p.get('size').build(),
+        toolMajor: p.get('toolMajor').build(),
+        toolMinor: p.get('toolMinor').build(),
+        touchMajor: p.get('touchMajor').build(),
+        touchMinor: p.get('touchMinor').build(),
+        x: p.get('x').build(),
+        y: p.get('y').build(),
       ),
     );
     mateParams.put('orientation', orientation);
@@ -164,21 +164,21 @@ class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate<AndroidMotion
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AndroidMotionEvent$Mate(
-        downTime: p.get('downTime').value,
-        eventTime: p.get('eventTime').value,
-        action: p.get('action').value,
-        pointerCount: p.get('pointerCount').value,
-        pointerProperties: p.get('pointerProperties').value,
-        pointerCoords: p.get('pointerCoords').value,
-        metaState: p.get('metaState').value,
-        buttonState: p.get('buttonState').value,
-        xPrecision: p.get('xPrecision').value,
-        yPrecision: p.get('yPrecision').value,
-        deviceId: p.get('deviceId').value,
-        edgeFlags: p.get('edgeFlags').value,
-        source: p.get('source').value,
-        flags: p.get('flags').value,
-        motionEventId: p.get('motionEventId').value,
+        downTime: p.get('downTime').build(),
+        eventTime: p.get('eventTime').build(),
+        action: p.get('action').build(),
+        pointerCount: p.get('pointerCount').build(),
+        pointerProperties: p.get('pointerProperties').build(),
+        pointerCoords: p.get('pointerCoords').build(),
+        metaState: p.get('metaState').build(),
+        buttonState: p.get('buttonState').build(),
+        xPrecision: p.get('xPrecision').build(),
+        yPrecision: p.get('yPrecision').build(),
+        deviceId: p.get('deviceId').build(),
+        edgeFlags: p.get('edgeFlags').build(),
+        source: p.get('source').build(),
+        flags: p.get('flags').build(),
+        motionEventId: p.get('motionEventId').build(),
       ),
     );
     mateParams.put('downTime', downTime);

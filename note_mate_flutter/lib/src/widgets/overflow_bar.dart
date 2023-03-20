@@ -53,15 +53,15 @@ class OverflowBar$Mate extends OverflowBar with WidgetMate<OverflowBar$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OverflowBar$Mate(
-        key: p.get('key').value,
-        spacing: p.get('spacing').value,
-        alignment: p.get('alignment').value,
-        overflowSpacing: p.get('overflowSpacing').value,
-        overflowAlignment: p.get('overflowAlignment').value,
-        overflowDirection: p.get('overflowDirection').value,
-        textDirection: p.get('textDirection').value,
-        clipBehavior: p.get('clipBehavior').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        spacing: p.get('spacing').build(),
+        alignment: p.get('alignment').build(),
+        overflowSpacing: p.get('overflowSpacing').build(),
+        overflowAlignment: p.get('overflowAlignment').build(),
+        overflowDirection: p.get('overflowDirection').build(),
+        textDirection: p.get('textDirection').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);

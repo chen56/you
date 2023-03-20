@@ -38,10 +38,10 @@ class DataColumn$Mate extends DataColumn with Mate<DataColumn$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DataColumn$Mate(
-        label: p.get('label').value,
-        tooltip: p.get('tooltip').value,
-        numeric: p.get('numeric').value,
-        onSort: p.get('onSort').value,
+        label: p.get('label').build(),
+        tooltip: p.get('tooltip').build(),
+        numeric: p.get('numeric').build(),
+        onSort: p.get('onSort').build(),
       ),
     );
     mateParams.put('label', label);
@@ -83,12 +83,12 @@ class DataRow$Mate extends DataRow with Mate<DataRow$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DataRow$Mate(
-        key: p.get('key').value,
-        selected: p.get('selected').value,
-        onSelectChanged: p.get('onSelectChanged').value,
-        onLongPress: p.get('onLongPress').value,
-        color: p.get('color').value,
-        cells: p.get('cells').value,
+        key: p.get('key').build(),
+        selected: p.get('selected').build(),
+        onSelectChanged: p.get('onSelectChanged').build(),
+        onLongPress: p.get('onLongPress').build(),
+        color: p.get('color').build(),
+        cells: p.get('cells').build(),
       ),
     );
     mateParams.put('key', key);
@@ -129,12 +129,12 @@ class DataRow$Mate extends DataRow with Mate<DataRow$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DataRow$Mate.byIndex(
-        index: p.get('index').value,
-        selected: p.get('selected').value,
-        onSelectChanged: p.get('onSelectChanged').value,
-        onLongPress: p.get('onLongPress').value,
-        color: p.get('color').value,
-        cells: p.get('cells').value,
+        index: p.get('index').build(),
+        selected: p.get('selected').build(),
+        onSelectChanged: p.get('onSelectChanged').build(),
+        onLongPress: p.get('onLongPress').build(),
+        color: p.get('color').build(),
+        cells: p.get('cells').build(),
       ),
     );
     mateParams.put('index', index);
@@ -186,13 +186,13 @@ class DataCell$Mate extends DataCell with Mate<DataCell$Mate> {
       init: this,
       builder: (p) => DataCell$Mate(
         p.get('child').value,
-        placeholder: p.get('placeholder').value,
-        showEditIcon: p.get('showEditIcon').value,
-        onTap: p.get('onTap').value,
-        onLongPress: p.get('onLongPress').value,
-        onTapDown: p.get('onTapDown').value,
-        onDoubleTap: p.get('onDoubleTap').value,
-        onTapCancel: p.get('onTapCancel').value,
+        placeholder: p.get('placeholder').build(),
+        showEditIcon: p.get('showEditIcon').build(),
+        onTap: p.get('onTap').build(),
+        onLongPress: p.get('onLongPress').build(),
+        onTapDown: p.get('onTapDown').build(),
+        onDoubleTap: p.get('onDoubleTap').build(),
+        onTapCancel: p.get('onTapCancel').build(),
       ),
     );
     mateParams.put('child', child);
@@ -302,28 +302,28 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DataTable$Mate(
-        key: p.get('key').value,
-        columns: p.get('columns').value,
-        sortColumnIndex: p.get('sortColumnIndex').value,
-        sortAscending: p.get('sortAscending').value,
-        onSelectAll: p.get('onSelectAll').value,
-        decoration: p.get('decoration').value,
-        dataRowColor: p.get('dataRowColor').value,
-        dataRowMinHeight: p.get('dataRowMinHeight').value,
-        dataRowMaxHeight: p.get('dataRowMaxHeight').value,
-        dataTextStyle: p.get('dataTextStyle').value,
-        headingRowColor: p.get('headingRowColor').value,
-        headingRowHeight: p.get('headingRowHeight').value,
-        headingTextStyle: p.get('headingTextStyle').value,
-        horizontalMargin: p.get('horizontalMargin').value,
-        columnSpacing: p.get('columnSpacing').value,
-        showCheckboxColumn: p.get('showCheckboxColumn').value,
-        showBottomBorder: p.get('showBottomBorder').value,
-        dividerThickness: p.get('dividerThickness').value,
-        rows: p.get('rows').value,
-        checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').value,
-        border: p.get('border').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        columns: p.get('columns').build(),
+        sortColumnIndex: p.get('sortColumnIndex').build(),
+        sortAscending: p.get('sortAscending').build(),
+        onSelectAll: p.get('onSelectAll').build(),
+        decoration: p.get('decoration').build(),
+        dataRowColor: p.get('dataRowColor').build(),
+        dataRowMinHeight: p.get('dataRowMinHeight').build(),
+        dataRowMaxHeight: p.get('dataRowMaxHeight').build(),
+        dataTextStyle: p.get('dataTextStyle').build(),
+        headingRowColor: p.get('headingRowColor').build(),
+        headingRowHeight: p.get('headingRowHeight').build(),
+        headingTextStyle: p.get('headingTextStyle').build(),
+        horizontalMargin: p.get('horizontalMargin').build(),
+        columnSpacing: p.get('columnSpacing').build(),
+        showCheckboxColumn: p.get('showCheckboxColumn').build(),
+        showBottomBorder: p.get('showBottomBorder').build(),
+        dividerThickness: p.get('dividerThickness').build(),
+        rows: p.get('rows').build(),
+        checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').build(),
+        border: p.get('border').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -387,13 +387,13 @@ class TableRowInkWell$Mate extends TableRowInkWell with WidgetMate<TableRowInkWe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TableRowInkWell$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        onTap: p.get('onTap').value,
-        onDoubleTap: p.get('onDoubleTap').value,
-        onLongPress: p.get('onLongPress').value,
-        onHighlightChanged: p.get('onHighlightChanged').value,
-        overlayColor: p.get('overlayColor').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        onTap: p.get('onTap').build(),
+        onDoubleTap: p.get('onDoubleTap').build(),
+        onLongPress: p.get('onLongPress').build(),
+        onHighlightChanged: p.get('onHighlightChanged').build(),
+        overlayColor: p.get('overlayColor').build(),
       ),
     );
     mateParams.put('key', key);

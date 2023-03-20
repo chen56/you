@@ -42,7 +42,7 @@ class Interval$Mate extends Interval with Mate<Interval$Mate> {
       builder: (p) => Interval$Mate(
         p.get('begin').value,
         p.get('end').value,
-        curve: p.get('curve').value,
+        curve: p.get('curve').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -196,9 +196,9 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate<CatmullRomSpline$
       init: this,
       builder: (p) => CatmullRomSpline$Mate(
         p.get('controlPoints').value,
-        tension: p.get('tension').value,
-        startHandle: p.get('startHandle').value,
-        endHandle: p.get('endHandle').value,
+        tension: p.get('tension').build(),
+        startHandle: p.get('startHandle').build(),
+        endHandle: p.get('endHandle').build(),
       ),
     );
     mateParams.putList('controlPoints', controlPoints);
@@ -229,9 +229,9 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate<CatmullRomSpline$
       init: this,
       builder: (p) => CatmullRomSpline$Mate.precompute(
         p.get('controlPoints').value,
-        tension: p.get('tension').value,
-        startHandle: p.get('startHandle').value,
-        endHandle: p.get('endHandle').value,
+        tension: p.get('tension').build(),
+        startHandle: p.get('startHandle').build(),
+        endHandle: p.get('endHandle').build(),
       ),
     );
     mateParams.putList('controlPoints', controlPoints);
@@ -257,7 +257,7 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate<CatmullRomCurve$Mat
       init: this,
       builder: (p) => CatmullRomCurve$Mate(
         p.get('controlPoints').value,
-        tension: p.get('tension').value,
+        tension: p.get('tension').build(),
       ),
     );
     mateParams.putList('controlPoints', controlPoints);
@@ -278,7 +278,7 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate<CatmullRomCurve$Mat
       init: this,
       builder: (p) => CatmullRomCurve$Mate.precompute(
         p.get('controlPoints').value,
-        tension: p.get('tension').value,
+        tension: p.get('tension').build(),
       ),
     );
     mateParams.putList('controlPoints', controlPoints);

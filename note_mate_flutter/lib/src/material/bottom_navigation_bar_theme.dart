@@ -77,20 +77,20 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomNavigationBarThemeData$Mate(
-        backgroundColor: p.get('backgroundColor').value,
-        elevation: p.get('elevation').value,
-        selectedIconTheme: p.get('selectedIconTheme').value,
-        unselectedIconTheme: p.get('unselectedIconTheme').value,
-        selectedItemColor: p.get('selectedItemColor').value,
-        unselectedItemColor: p.get('unselectedItemColor').value,
-        selectedLabelStyle: p.get('selectedLabelStyle').value,
-        unselectedLabelStyle: p.get('unselectedLabelStyle').value,
-        showSelectedLabels: p.get('showSelectedLabels').value,
-        showUnselectedLabels: p.get('showUnselectedLabels').value,
-        type: p.get('type').value,
-        enableFeedback: p.get('enableFeedback').value,
-        landscapeLayout: p.get('landscapeLayout').value,
-        mouseCursor: p.get('mouseCursor').value,
+        backgroundColor: p.get('backgroundColor').build(),
+        elevation: p.get('elevation').build(),
+        selectedIconTheme: p.get('selectedIconTheme').build(),
+        unselectedIconTheme: p.get('unselectedIconTheme').build(),
+        selectedItemColor: p.get('selectedItemColor').build(),
+        unselectedItemColor: p.get('unselectedItemColor').build(),
+        selectedLabelStyle: p.get('selectedLabelStyle').build(),
+        unselectedLabelStyle: p.get('unselectedLabelStyle').build(),
+        showSelectedLabels: p.get('showSelectedLabels').build(),
+        showUnselectedLabels: p.get('showUnselectedLabels').build(),
+        type: p.get('type').build(),
+        enableFeedback: p.get('enableFeedback').build(),
+        landscapeLayout: p.get('landscapeLayout').build(),
+        mouseCursor: p.get('mouseCursor').build(),
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);
@@ -130,9 +130,9 @@ class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Widget
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomNavigationBarTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

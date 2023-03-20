@@ -28,9 +28,9 @@ class MaterialSlice$Mate extends MaterialSlice with Mate<MaterialSlice$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialSlice$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        color: p.get('color').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        color: p.get('color').build(),
       ),
     );
     mateParams.put('key', key);
@@ -55,8 +55,8 @@ class MaterialGap$Mate extends MaterialGap with Mate<MaterialGap$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialGap$Mate(
-        key: p.get('key').value,
-        size: p.get('size').value,
+        key: p.get('key').build(),
+        size: p.get('size').build(),
       ),
     );
     mateParams.put('key', key);
@@ -96,12 +96,12 @@ class MergeableMaterial$Mate extends MergeableMaterial with WidgetMate<Mergeable
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MergeableMaterial$Mate(
-        key: p.get('key').value,
-        mainAxis: p.get('mainAxis').value,
-        elevation: p.get('elevation').value,
-        hasDividers: p.get('hasDividers').value,
-        children: p.get('children').value,
-        dividerColor: p.get('dividerColor').value,
+        key: p.get('key').build(),
+        mainAxis: p.get('mainAxis').build(),
+        elevation: p.get('elevation').build(),
+        hasDividers: p.get('hasDividers').build(),
+        children: p.get('children').build(),
+        dividerColor: p.get('dividerColor').build(),
       ),
     );
     mateParams.put('key', key);

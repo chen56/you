@@ -49,14 +49,14 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate<RenderAnimate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAnimatedSize$Mate(
-        vsync: p.get('vsync').value,
-        duration: p.get('duration').value,
-        reverseDuration: p.get('reverseDuration').value,
-        curve: p.get('curve').value,
-        alignment: p.get('alignment').value,
-        textDirection: p.get('textDirection').value,
-        child: p.get('child').value,
-        clipBehavior: p.get('clipBehavior').value,
+        vsync: p.get('vsync').build(),
+        duration: p.get('duration').build(),
+        reverseDuration: p.get('reverseDuration').build(),
+        curve: p.get('curve').build(),
+        alignment: p.get('alignment').build(),
+        textDirection: p.get('textDirection').build(),
+        child: p.get('child').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('vsync', vsync);

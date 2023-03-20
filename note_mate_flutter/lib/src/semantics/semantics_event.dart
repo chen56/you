@@ -26,7 +26,7 @@ class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate<Annou
       builder: (p) => AnnounceSemanticsEvent$Mate(
         p.get('message').value,
         p.get('textDirection').value,
-        assertiveness: p.get('assertiveness').value,
+        assertiveness: p.get('assertiveness').build(),
       ),
     );
     mateParams.put('message', message);

@@ -30,10 +30,10 @@ class SelectionContainer$Mate extends SelectionContainer with WidgetMate<Selecti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionContainer$Mate(
-        key: p.get('key').value,
-        registrar: p.get('registrar').value,
-        delegate: p.get('delegate').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        registrar: p.get('registrar').build(),
+        delegate: p.get('delegate').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -56,8 +56,8 @@ class SelectionContainer$Mate extends SelectionContainer with WidgetMate<Selecti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionContainer$Mate.disabled(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -85,9 +85,9 @@ class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionRegistrarScope$Mate(
-        key: p.get('key').value,
-        registrar: p.get('registrar').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        registrar: p.get('registrar').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

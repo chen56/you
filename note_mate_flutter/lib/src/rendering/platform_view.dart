@@ -32,10 +32,10 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate<RenderAndroidVi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderAndroidView$Mate(
-        viewController: p.get('viewController').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
-        gestureRecognizers: p.get('gestureRecognizers').value,
-        clipBehavior: p.get('clipBehavior').value,
+        viewController: p.get('viewController').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
+        gestureRecognizers: p.get('gestureRecognizers').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('viewController', viewController);
@@ -65,9 +65,9 @@ class RenderUiKitView$Mate extends RenderUiKitView with Mate<RenderUiKitView$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderUiKitView$Mate(
-        viewController: p.get('viewController').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
-        gestureRecognizers: p.get('gestureRecognizers').value,
+        viewController: p.get('viewController').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
+        gestureRecognizers: p.get('gestureRecognizers').build(),
       ),
     );
     mateParams.put('viewController', viewController);
@@ -96,9 +96,9 @@ class PlatformViewRenderBox$Mate extends PlatformViewRenderBox with Mate<Platfor
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformViewRenderBox$Mate(
-        controller: p.get('controller').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
-        gestureRecognizers: p.get('gestureRecognizers').value,
+        controller: p.get('controller').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
+        gestureRecognizers: p.get('gestureRecognizers').build(),
       ),
     );
     mateParams.put('controller', controller);

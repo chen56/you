@@ -29,10 +29,10 @@ class BorderSide$Mate extends BorderSide with Mate<BorderSide$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BorderSide$Mate(
-        color: p.get('color').value,
-        width: p.get('width').value,
-        style: p.get('style').value,
-        strokeAlign: p.get('strokeAlign').value,
+        color: p.get('color').build(),
+        width: p.get('width').build(),
+        style: p.get('style').build(),
+        strokeAlign: p.get('strokeAlign').build(),
       ),
     );
     mateParams.put('color', color);

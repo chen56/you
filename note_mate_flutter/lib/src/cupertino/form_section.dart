@@ -49,14 +49,14 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<Cup
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoFormSection$Mate(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        header: p.get('header').value,
-        footer: p.get('footer').value,
-        margin: p.get('margin').value,
-        backgroundColor: p.get('backgroundColor').value,
-        decoration: p.get('decoration').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        header: p.get('header').build(),
+        footer: p.get('footer').build(),
+        margin: p.get('margin').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        decoration: p.get('decoration').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -107,14 +107,14 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<Cup
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoFormSection$Mate.insetGrouped(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        header: p.get('header').value,
-        footer: p.get('footer').value,
-        margin: p.get('margin').value,
-        backgroundColor: p.get('backgroundColor').value,
-        decoration: p.get('decoration').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        header: p.get('header').build(),
+        footer: p.get('footer').build(),
+        margin: p.get('margin').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        decoration: p.get('decoration').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);

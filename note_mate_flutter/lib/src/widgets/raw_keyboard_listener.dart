@@ -41,12 +41,12 @@ class RawKeyboardListener$Mate extends RawKeyboardListener with WidgetMate<RawKe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyboardListener$Mate(
-        key: p.get('key').value,
-        focusNode: p.get('focusNode').value,
-        autofocus: p.get('autofocus').value,
-        includeSemantics: p.get('includeSemantics').value,
-        onKey: p.get('onKey').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        focusNode: p.get('focusNode').build(),
+        autofocus: p.get('autofocus').build(),
+        includeSemantics: p.get('includeSemantics').build(),
+        onKey: p.get('onKey').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

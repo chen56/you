@@ -30,10 +30,10 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoContextMenu$Mate(
-        key: p.get('key').value,
-        actions: p.get('actions').value,
-        child: p.get('child').value,
-        enableHapticFeedback: p.get('enableHapticFeedback').value,
+        key: p.get('key').build(),
+        actions: p.get('actions').build(),
+        child: p.get('child').build(),
+        enableHapticFeedback: p.get('enableHapticFeedback').build(),
       ),
     );
     mateParams.put('key', key);
@@ -64,10 +64,10 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<Cup
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoContextMenu$Mate.builder(
-        key: p.get('key').value,
-        actions: p.get('actions').value,
-        builder: p.get('builder').value,
-        enableHapticFeedback: p.get('enableHapticFeedback').value,
+        key: p.get('key').build(),
+        actions: p.get('actions').build(),
+        builder: p.get('builder').build(),
+        enableHapticFeedback: p.get('enableHapticFeedback').build(),
       ),
     );
     mateParams.put('key', key);

@@ -52,13 +52,13 @@ class Ink$Mate extends Ink with WidgetMate<Ink$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Ink$Mate(
-        key: p.get('key').value,
-        padding: p.get('padding').value,
-        color: p.get('color').value,
-        decoration: p.get('decoration').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        padding: p.get('padding').build(),
+        color: p.get('color').build(),
+        decoration: p.get('decoration').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -128,19 +128,19 @@ class Ink$Mate extends Ink with WidgetMate<Ink$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Ink$Mate.image(
-        key: p.get('key').value,
-        padding: p.get('padding').value,
-        image: p.get('image').value,
-        onImageError: p.get('onImageError').value,
-        colorFilter: p.get('colorFilter').value,
-        fit: p.get('fit').value,
-        alignment: p.get('alignment').value,
-        centerSlice: p.get('centerSlice').value,
-        repeat: p.get('repeat').value,
-        matchTextDirection: p.get('matchTextDirection').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        padding: p.get('padding').build(),
+        image: p.get('image').build(),
+        onImageError: p.get('onImageError').build(),
+        colorFilter: p.get('colorFilter').build(),
+        fit: p.get('fit').build(),
+        alignment: p.get('alignment').build(),
+        centerSlice: p.get('centerSlice').build(),
+        repeat: p.get('repeat').build(),
+        matchTextDirection: p.get('matchTextDirection').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -187,11 +187,11 @@ class InkDecoration$Mate extends InkDecoration with Mate<InkDecoration$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => InkDecoration$Mate(
-        decoration: p.get('decoration').value,
-        configuration: p.get('configuration').value,
-        controller: p.get('controller').value,
-        referenceBox: p.get('referenceBox').value,
-        onRemoved: p.get('onRemoved').value,
+        decoration: p.get('decoration').build(),
+        configuration: p.get('configuration').build(),
+        controller: p.get('controller').build(),
+        referenceBox: p.get('referenceBox').build(),
+        onRemoved: p.get('onRemoved').build(),
       ),
     );
     mateParams.put('decoration', decoration);

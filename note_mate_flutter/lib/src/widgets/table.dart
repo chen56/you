@@ -30,9 +30,9 @@ class TableRow$Mate extends TableRow with Mate<TableRow$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TableRow$Mate(
-        key: p.get('key').value,
-        decoration: p.get('decoration').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        decoration: p.get('decoration').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -81,14 +81,14 @@ class Table$Mate extends Table with WidgetMate<Table$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Table$Mate(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        columnWidths: p.get('columnWidths').value,
-        defaultColumnWidth: p.get('defaultColumnWidth').value,
-        textDirection: p.get('textDirection').value,
-        border: p.get('border').value,
-        defaultVerticalAlignment: p.get('defaultVerticalAlignment').value,
-        textBaseline: p.get('textBaseline').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        columnWidths: p.get('columnWidths').build(),
+        defaultColumnWidth: p.get('defaultColumnWidth').build(),
+        textDirection: p.get('textDirection').build(),
+        border: p.get('border').build(),
+        defaultVerticalAlignment: p.get('defaultVerticalAlignment').build(),
+        textBaseline: p.get('textBaseline').build(),
       ),
     );
     mateParams.put('key', key);
@@ -122,9 +122,9 @@ class TableCell$Mate extends TableCell with WidgetMate<TableCell$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TableCell$Mate(
-        key: p.get('key').value,
-        verticalAlignment: p.get('verticalAlignment').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        verticalAlignment: p.get('verticalAlignment').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

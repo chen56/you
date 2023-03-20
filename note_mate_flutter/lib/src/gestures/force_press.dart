@@ -26,9 +26,9 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate<ForcePressDetai
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ForcePressDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
-        pressure: p.get('pressure').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
+        pressure: p.get('pressure').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -69,12 +69,12 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ForcePressGestureRecognizer$Mate(
-        startPressure: p.get('startPressure').value,
-        peakPressure: p.get('peakPressure').value,
-        interpolation: p.get('interpolation').value,
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        startPressure: p.get('startPressure').build(),
+        peakPressure: p.get('peakPressure').build(),
+        interpolation: p.get('interpolation').build(),
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('startPressure', startPressure);

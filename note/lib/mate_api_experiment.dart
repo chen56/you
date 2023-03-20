@@ -21,13 +21,13 @@ class ContainerMate extends Container with WidgetMate<ContainerMate> {
     mateParams = ObjectParam(
         init: this,
         builder: (p) => ContainerMate(
-              key: p.get("key").value,
-              alignment: p.get("alignment").value,
-              color: p.get("color").value,
-              clipBehavior: p.get("clipBehavior").value,
-              width: p.get("width").value,
-              height: p.get("height").value,
-              child: p.get("child").value,
+              key: p.get("key").build(),
+              alignment: p.get("alignment").build(),
+              color: p.get("color").build(),
+              clipBehavior: p.get("clipBehavior").build(),
+              width: p.get("width").build(),
+              height: p.get("height").build(),
+              child: p.get("child").build(),
             ));
     //这里会换成代码生成，凡是可以取到类型的，都可以支持编辑
     mateParams.put("key", key);
@@ -53,9 +53,9 @@ class ColumnMate extends Column with WidgetMate<ColumnMate> {
     mateParams = ObjectParam(
         init: this,
         builder: (p) => ColumnMate(
-              key: p.get("key").value,
-              mainAxisAlignment: p.get("mainAxisAlignment").value,
-              children: p.get("children").value,
+              key: p.get("key").build(),
+              mainAxisAlignment: p.get("mainAxisAlignment").build(),
+              children: p.get("children").build(),
             ));
 
     mateParams.put("key", key);
@@ -79,10 +79,10 @@ class CenterMate extends Center with WidgetMate<CenterMate> {
     mateParams = ObjectParam(
         init: this,
         builder: (p) => CenterMate(
-              key: p.get("key").value,
-              widthFactor: p.get("widthFactor").value,
-              heightFactor: p.get("heightFactor").value,
-              child: p.get("child").value,
+              key: p.get("key").build(),
+              widthFactor: p.get("widthFactor").build(),
+              heightFactor: p.get("heightFactor").build(),
+              child: p.get("child").build(),
             ));
     mateParams.put("key", key);
     mateParams.put("widthFactor", widthFactor);

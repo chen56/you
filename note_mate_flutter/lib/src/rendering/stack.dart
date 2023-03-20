@@ -72,11 +72,11 @@ class RenderStack$Mate extends RenderStack with Mate<RenderStack$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderStack$Mate(
-        children: p.get('children').value,
-        alignment: p.get('alignment').value,
-        textDirection: p.get('textDirection').value,
-        fit: p.get('fit').value,
-        clipBehavior: p.get('clipBehavior').value,
+        children: p.get('children').build(),
+        alignment: p.get('alignment').build(),
+        textDirection: p.get('textDirection').build(),
+        fit: p.get('fit').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.putList('children', children);
@@ -119,12 +119,12 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate<RenderIndexed
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderIndexedStack$Mate(
-        children: p.get('children').value,
-        alignment: p.get('alignment').value,
-        textDirection: p.get('textDirection').value,
-        fit: p.get('fit').value,
-        clipBehavior: p.get('clipBehavior').value,
-        index: p.get('index').value,
+        children: p.get('children').build(),
+        alignment: p.get('alignment').build(),
+        textDirection: p.get('textDirection').build(),
+        fit: p.get('fit').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        index: p.get('index').build(),
       ),
     );
     mateParams.putList('children', children);

@@ -17,7 +17,7 @@ class DeleteCharacterIntent$Mate extends DeleteCharacterIntent with Mate<DeleteC
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').value),
+      builder: (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }
@@ -34,7 +34,7 @@ class DeleteToNextWordBoundaryIntent$Mate extends DeleteToNextWordBoundaryIntent
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').value),
+      builder: (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }
@@ -50,7 +50,7 @@ class DeleteToLineBreakIntent$Mate extends DeleteToLineBreakIntent with Mate<Del
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').value),
+      builder: (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }
@@ -73,8 +73,8 @@ class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIn
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionByCharacterIntent$Mate(
-        forward: p.get('forward').value,
-        collapseSelection: p.get('collapseSelection').value,
+        forward: p.get('forward').build(),
+        collapseSelection: p.get('collapseSelection').build(),
       ),
     );
     mateParams.put('forward', forward);
@@ -99,8 +99,8 @@ class ExtendSelectionToNextWordBoundaryIntent$Mate extends ExtendSelectionToNext
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionToNextWordBoundaryIntent$Mate(
-        forward: p.get('forward').value,
-        collapseSelection: p.get('collapseSelection').value,
+        forward: p.get('forward').build(),
+        collapseSelection: p.get('collapseSelection').build(),
       ),
     );
     mateParams.put('forward', forward);
@@ -120,7 +120,7 @@ class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').value),
+      builder: (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }
@@ -137,7 +137,7 @@ class ExpandSelectionToDocumentBoundaryIntent$Mate extends ExpandSelectionToDocu
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.get('forward').value),
+      builder: (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }
@@ -154,7 +154,7 @@ class ExpandSelectionToLineBreakIntent$Mate extends ExpandSelectionToLineBreakIn
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.get('forward').value),
+      builder: (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }
@@ -185,10 +185,10 @@ class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIn
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionToLineBreakIntent$Mate(
-        forward: p.get('forward').value,
-        collapseSelection: p.get('collapseSelection').value,
-        collapseAtReversal: p.get('collapseAtReversal').value,
-        continuesAtWrap: p.get('continuesAtWrap').value,
+        forward: p.get('forward').build(),
+        collapseSelection: p.get('collapseSelection').build(),
+        collapseAtReversal: p.get('collapseAtReversal').build(),
+        continuesAtWrap: p.get('continuesAtWrap').build(),
       ),
     );
     mateParams.put('forward', forward);
@@ -215,8 +215,8 @@ class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelection
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionVerticallyToAdjacentLineIntent$Mate(
-        forward: p.get('forward').value,
-        collapseSelection: p.get('collapseSelection').value,
+        forward: p.get('forward').build(),
+        collapseSelection: p.get('collapseSelection').build(),
       ),
     );
     mateParams.put('forward', forward);
@@ -241,8 +241,8 @@ class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelection
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionVerticallyToAdjacentPageIntent$Mate(
-        forward: p.get('forward').value,
-        collapseSelection: p.get('collapseSelection').value,
+        forward: p.get('forward').build(),
+        collapseSelection: p.get('collapseSelection').build(),
       ),
     );
     mateParams.put('forward', forward);
@@ -267,8 +267,8 @@ class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionT
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionToNextParagraphBoundaryIntent$Mate(
-        forward: p.get('forward').value,
-        collapseSelection: p.get('collapseSelection').value,
+        forward: p.get('forward').build(),
+        collapseSelection: p.get('collapseSelection').build(),
       ),
     );
     mateParams.put('forward', forward);
@@ -288,7 +288,8 @@ class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').value),
+      builder: (p) =>
+          ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }
@@ -311,8 +312,8 @@ class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocu
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExtendSelectionToDocumentBoundaryIntent$Mate(
-        forward: p.get('forward').value,
-        collapseSelection: p.get('collapseSelection').value,
+        forward: p.get('forward').build(),
+        collapseSelection: p.get('collapseSelection').build(),
       ),
     );
     mateParams.put('forward', forward);
@@ -331,7 +332,7 @@ class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').value),
+      builder: (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }
@@ -347,7 +348,7 @@ class ExtendSelectionByPageIntent$Mate extends ExtendSelectionByPageIntent with 
       : super(forward: forward) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ExtendSelectionByPageIntent$Mate(forward: p.get('forward').value),
+      builder: (p) => ExtendSelectionByPageIntent$Mate(forward: p.get('forward').build()),
     );
     mateParams.put('forward', forward);
   }

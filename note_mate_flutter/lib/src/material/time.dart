@@ -20,8 +20,8 @@ class TimeOfDay$Mate extends TimeOfDay with Mate<TimeOfDay$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TimeOfDay$Mate(
-        hour: p.get('hour').value,
-        minute: p.get('minute').value,
+        hour: p.get('hour').build(),
+        minute: p.get('minute').build(),
       ),
     );
     mateParams.put('hour', hour);

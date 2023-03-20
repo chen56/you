@@ -47,13 +47,13 @@ class SelectionArea$Mate extends SelectionArea with WidgetMate<SelectionArea$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionArea$Mate(
-        key: p.get('key').value,
-        focusNode: p.get('focusNode').value,
-        selectionControls: p.get('selectionControls').value,
-        contextMenuBuilder: p.get('contextMenuBuilder').value,
-        magnifierConfiguration: p.get('magnifierConfiguration').value,
-        onSelectionChanged: p.get('onSelectionChanged').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        focusNode: p.get('focusNode').build(),
+        selectionControls: p.get('selectionControls').build(),
+        contextMenuBuilder: p.get('contextMenuBuilder').build(),
+        magnifierConfiguration: p.get('magnifierConfiguration').build(),
+        onSelectionChanged: p.get('onSelectionChanged').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -26,9 +26,9 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate<RenderSlive
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverOpacity$Mate(
-        opacity: p.get('opacity').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
-        sliver: p.get('sliver').value,
+        opacity: p.get('opacity').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('opacity', opacity);
@@ -57,9 +57,9 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverIgnorePointer$Mate(
-        sliver: p.get('sliver').value,
-        ignoring: p.get('ignoring').value,
-        ignoringSemantics: p.get('ignoringSemantics').value,
+        sliver: p.get('sliver').build(),
+        ignoring: p.get('ignoring').build(),
+        ignoringSemantics: p.get('ignoringSemantics').build(),
       ),
     );
     mateParams.put('sliver', sliver);
@@ -84,8 +84,8 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate<RenderSli
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverOffstage$Mate(
-        offstage: p.get('offstage').value,
-        sliver: p.get('sliver').value,
+        offstage: p.get('offstage').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('offstage', offstage);
@@ -113,9 +113,9 @@ class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverAnimatedOpacity$Mate(
-        opacity: p.get('opacity').value,
-        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').value,
-        sliver: p.get('sliver').value,
+        opacity: p.get('opacity').build(),
+        alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
+        sliver: p.get('sliver').build(),
       ),
     );
     mateParams.put('opacity', opacity);

@@ -52,15 +52,15 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with WidgetMate<Calenda
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CalendarDatePicker$Mate(
-        key: p.get('key').value,
-        initialDate: p.get('initialDate').value,
-        firstDate: p.get('firstDate').value,
-        lastDate: p.get('lastDate').value,
-        currentDate: p.get('currentDate').value,
-        onDateChanged: p.get('onDateChanged').value,
-        onDisplayedMonthChanged: p.get('onDisplayedMonthChanged').value,
-        initialCalendarMode: p.get('initialCalendarMode').value,
-        selectableDayPredicate: p.get('selectableDayPredicate').value,
+        key: p.get('key').build(),
+        initialDate: p.get('initialDate').build(),
+        firstDate: p.get('firstDate').build(),
+        lastDate: p.get('lastDate').build(),
+        currentDate: p.get('currentDate').build(),
+        onDateChanged: p.get('onDateChanged').build(),
+        onDisplayedMonthChanged: p.get('onDisplayedMonthChanged').build(),
+        initialCalendarMode: p.get('initialCalendarMode').build(),
+        selectableDayPredicate: p.get('selectableDayPredicate').build(),
       ),
     );
     mateParams.put('key', key);
@@ -115,14 +115,14 @@ class YearPicker$Mate extends YearPicker with WidgetMate<YearPicker$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => YearPicker$Mate(
-        key: p.get('key').value,
-        currentDate: p.get('currentDate').value,
-        firstDate: p.get('firstDate').value,
-        lastDate: p.get('lastDate').value,
-        initialDate: p.get('initialDate').value,
-        selectedDate: p.get('selectedDate').value,
-        onChanged: p.get('onChanged').value,
-        dragStartBehavior: p.get('dragStartBehavior').value,
+        key: p.get('key').build(),
+        currentDate: p.get('currentDate').build(),
+        firstDate: p.get('firstDate').build(),
+        lastDate: p.get('lastDate').build(),
+        initialDate: p.get('initialDate').build(),
+        selectedDate: p.get('selectedDate').build(),
+        onChanged: p.get('onChanged').build(),
+        dragStartBehavior: p.get('dragStartBehavior').build(),
       ),
     );
     mateParams.put('key', key);

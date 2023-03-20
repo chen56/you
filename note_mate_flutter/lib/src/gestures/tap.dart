@@ -26,9 +26,9 @@ class TapDownDetails$Mate extends TapDownDetails with Mate<TapDownDetails$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TapDownDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
-        kind: p.get('kind').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
+        kind: p.get('kind').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -57,9 +57,9 @@ class TapUpDetails$Mate extends TapUpDetails with Mate<TapUpDetails$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TapUpDetails$Mate(
-        kind: p.get('kind').value,
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
+        kind: p.get('kind').build(),
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
       ),
     );
     mateParams.put('kind', kind);
@@ -88,9 +88,9 @@ class TapGestureRecognizer$Mate extends TapGestureRecognizer with Mate<TapGestur
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TapGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);

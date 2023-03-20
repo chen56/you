@@ -16,7 +16,7 @@ class ElevatedButtonThemeData$Mate extends ElevatedButtonThemeData with Mate<Ele
       : super(style: style) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ElevatedButtonThemeData$Mate(style: p.get('style').value),
+      builder: (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build()),
     );
     mateParams.put('style', style);
   }
@@ -42,9 +42,9 @@ class ElevatedButtonTheme$Mate extends ElevatedButtonTheme with WidgetMate<Eleva
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ElevatedButtonTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -25,9 +25,9 @@ class ScrollConfiguration$Mate extends ScrollConfiguration with WidgetMate<Scrol
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollConfiguration$Mate(
-        key: p.get('key').value,
-        behavior: p.get('behavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        behavior: p.get('behavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -27,9 +27,9 @@ class OverlayEntry$Mate extends OverlayEntry with Mate<OverlayEntry$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OverlayEntry$Mate(
-        builder: p.get('builder').value,
-        opaque: p.get('opaque').value,
-        maintainState: p.get('maintainState').value,
+        builder: p.get('builder').build(),
+        opaque: p.get('opaque').build(),
+        maintainState: p.get('maintainState').build(),
       ),
     );
     mateParams.put('builder', builder);
@@ -58,9 +58,9 @@ class Overlay$Mate extends Overlay with WidgetMate<Overlay$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Overlay$Mate(
-        key: p.get('key').value,
-        initialEntries: p.get('initialEntries').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        initialEntries: p.get('initialEntries').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -79,7 +79,7 @@ class OverlayPortalController$Mate extends OverlayPortalController with Mate<Ove
       : super(debugLabel: debugLabel) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').value),
+      builder: (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build()),
     );
     mateParams.put('debugLabel', debugLabel);
   }
@@ -109,10 +109,10 @@ class OverlayPortal$Mate extends OverlayPortal with WidgetMate<OverlayPortal$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OverlayPortal$Mate(
-        key: p.get('key').value,
-        controller: p.get('controller').value,
-        overlayChildBuilder: p.get('overlayChildBuilder').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        controller: p.get('controller').build(),
+        overlayChildBuilder: p.get('overlayChildBuilder').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -143,10 +143,10 @@ class OverlayPortal$Mate extends OverlayPortal with WidgetMate<OverlayPortal$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OverlayPortal$Mate.targetsRootOverlay(
-        key: p.get('key').value,
-        controller: p.get('controller').value,
-        overlayChildBuilder: p.get('overlayChildBuilder').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        controller: p.get('controller').build(),
+        overlayChildBuilder: p.get('overlayChildBuilder').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

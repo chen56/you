@@ -29,9 +29,9 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDesktopTextSelectionToolbarButton$Mate(
-        key: p.get('key').value,
-        onPressed: p.get('onPressed').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        onPressed: p.get('onPressed').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -61,10 +61,10 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.text(
-        key: p.get('key').value,
-        context: p.get('context').value,
-        onPressed: p.get('onPressed').value,
-        text: p.get('text').value,
+        key: p.get('key').build(),
+        context: p.get('context').build(),
+        onPressed: p.get('onPressed').build(),
+        text: p.get('text').build(),
       ),
     );
     mateParams.put('key', key);
@@ -87,8 +87,8 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.buttonItem(
-        key: p.get('key').value,
-        buttonItem: p.get('buttonItem').value,
+        key: p.get('key').build(),
+        buttonItem: p.get('buttonItem').build(),
       ),
     );
     mateParams.put('key', key);

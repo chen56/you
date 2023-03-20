@@ -70,19 +70,19 @@ class Material$Mate extends Material with WidgetMate<Material$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Material$Mate(
-        key: p.get('key').value,
-        type: p.get('type').value,
-        elevation: p.get('elevation').value,
-        color: p.get('color').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        textStyle: p.get('textStyle').value,
-        borderRadius: p.get('borderRadius').value,
-        shape: p.get('shape').value,
-        borderOnForeground: p.get('borderOnForeground').value,
-        clipBehavior: p.get('clipBehavior').value,
-        animationDuration: p.get('animationDuration').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        type: p.get('type').build(),
+        elevation: p.get('elevation').build(),
+        color: p.get('color').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        textStyle: p.get('textStyle').build(),
+        borderRadius: p.get('borderRadius').build(),
+        shape: p.get('shape').build(),
+        borderOnForeground: p.get('borderOnForeground').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        animationDuration: p.get('animationDuration').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -117,8 +117,8 @@ class ShapeBorderTween$Mate extends ShapeBorderTween with Mate<ShapeBorderTween$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ShapeBorderTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);

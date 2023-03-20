@@ -47,14 +47,14 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with WidgetMa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearProgressIndicator$Mate(
-        key: p.get('key').value,
-        value: p.get('value').value,
-        backgroundColor: p.get('backgroundColor').value,
-        color: p.get('color').value,
-        valueColor: p.get('valueColor').value,
-        minHeight: p.get('minHeight').value,
-        semanticsLabel: p.get('semanticsLabel').value,
-        semanticsValue: p.get('semanticsValue').value,
+        key: p.get('key').build(),
+        value: p.get('value').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        color: p.get('color').build(),
+        valueColor: p.get('valueColor').build(),
+        minHeight: p.get('minHeight').build(),
+        semanticsLabel: p.get('semanticsLabel').build(),
+        semanticsValue: p.get('semanticsValue').build(),
       ),
     );
     mateParams.put('key', key);
@@ -108,14 +108,14 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Widg
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CircularProgressIndicator$Mate(
-        key: p.get('key').value,
-        value: p.get('value').value,
-        backgroundColor: p.get('backgroundColor').value,
-        color: p.get('color').value,
-        valueColor: p.get('valueColor').value,
-        strokeWidth: p.get('strokeWidth').value,
-        semanticsLabel: p.get('semanticsLabel').value,
-        semanticsValue: p.get('semanticsValue').value,
+        key: p.get('key').build(),
+        value: p.get('value').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        color: p.get('color').build(),
+        valueColor: p.get('valueColor').build(),
+        strokeWidth: p.get('strokeWidth').build(),
+        semanticsLabel: p.get('semanticsLabel').build(),
+        semanticsValue: p.get('semanticsValue').build(),
       ),
     );
     mateParams.put('key', key);
@@ -162,13 +162,13 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Widg
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CircularProgressIndicator$Mate.adaptive(
-        key: p.get('key').value,
-        value: p.get('value').value,
-        backgroundColor: p.get('backgroundColor').value,
-        valueColor: p.get('valueColor').value,
-        strokeWidth: p.get('strokeWidth').value,
-        semanticsLabel: p.get('semanticsLabel').value,
-        semanticsValue: p.get('semanticsValue').value,
+        key: p.get('key').build(),
+        value: p.get('value').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        valueColor: p.get('valueColor').build(),
+        strokeWidth: p.get('strokeWidth').build(),
+        semanticsLabel: p.get('semanticsLabel').build(),
+        semanticsValue: p.get('semanticsValue').build(),
       ),
     );
     mateParams.put('key', key);
@@ -221,14 +221,14 @@ class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Widget
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RefreshProgressIndicator$Mate(
-        key: p.get('key').value,
-        value: p.get('value').value,
-        backgroundColor: p.get('backgroundColor').value,
-        color: p.get('color').value,
-        valueColor: p.get('valueColor').value,
-        strokeWidth: p.get('strokeWidth').value,
-        semanticsLabel: p.get('semanticsLabel').value,
-        semanticsValue: p.get('semanticsValue').value,
+        key: p.get('key').build(),
+        value: p.get('value').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        color: p.get('color').build(),
+        valueColor: p.get('valueColor').build(),
+        strokeWidth: p.get('strokeWidth').build(),
+        semanticsLabel: p.get('semanticsLabel').build(),
+        semanticsValue: p.get('semanticsValue').build(),
       ),
     );
     mateParams.put('key', key);

@@ -34,11 +34,11 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate<KeyDownEvent$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyDownEvent$Mate(
-        physicalKey: p.get('physicalKey').value,
-        logicalKey: p.get('logicalKey').value,
-        character: p.get('character').value,
-        timeStamp: p.get('timeStamp').value,
-        synthesized: p.get('synthesized').value,
+        physicalKey: p.get('physicalKey').build(),
+        logicalKey: p.get('logicalKey').build(),
+        character: p.get('character').build(),
+        timeStamp: p.get('timeStamp').build(),
+        synthesized: p.get('synthesized').build(),
       ),
     );
     mateParams.put('physicalKey', physicalKey);
@@ -73,10 +73,10 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate<KeyUpEvent$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyUpEvent$Mate(
-        physicalKey: p.get('physicalKey').value,
-        logicalKey: p.get('logicalKey').value,
-        timeStamp: p.get('timeStamp').value,
-        synthesized: p.get('synthesized').value,
+        physicalKey: p.get('physicalKey').build(),
+        logicalKey: p.get('logicalKey').build(),
+        timeStamp: p.get('timeStamp').build(),
+        synthesized: p.get('synthesized').build(),
       ),
     );
     mateParams.put('physicalKey', physicalKey);
@@ -110,10 +110,10 @@ class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate<KeyRepeatEvent$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => KeyRepeatEvent$Mate(
-        physicalKey: p.get('physicalKey').value,
-        logicalKey: p.get('logicalKey').value,
-        character: p.get('character').value,
-        timeStamp: p.get('timeStamp').value,
+        physicalKey: p.get('physicalKey').build(),
+        logicalKey: p.get('logicalKey').build(),
+        character: p.get('character').build(),
+        timeStamp: p.get('timeStamp').build(),
       ),
     );
     mateParams.put('physicalKey', physicalKey);

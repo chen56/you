@@ -41,12 +41,12 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoContextMenuAction$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        isDefaultAction: p.get('isDefaultAction').value,
-        isDestructiveAction: p.get('isDestructiveAction').value,
-        onPressed: p.get('onPressed').value,
-        trailingIcon: p.get('trailingIcon').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        isDefaultAction: p.get('isDefaultAction').build(),
+        isDestructiveAction: p.get('isDestructiveAction').build(),
+        onPressed: p.get('onPressed').build(),
+        trailingIcon: p.get('trailingIcon').build(),
       ),
     );
     mateParams.put('key', key);

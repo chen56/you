@@ -24,8 +24,8 @@ class RevealedOffset$Mate extends RevealedOffset with Mate<RevealedOffset$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RevealedOffset$Mate(
-        offset: p.get('offset').value,
-        rect: p.get('rect').value,
+        offset: p.get('offset').build(),
+        rect: p.get('rect').build(),
       ),
     );
     mateParams.put('offset', offset);
@@ -77,15 +77,15 @@ class RenderViewport$Mate extends RenderViewport with Mate<RenderViewport$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderViewport$Mate(
-        axisDirection: p.get('axisDirection').value,
-        crossAxisDirection: p.get('crossAxisDirection').value,
-        offset: p.get('offset').value,
-        anchor: p.get('anchor').value,
-        children: p.get('children').value,
-        center: p.get('center').value,
-        cacheExtent: p.get('cacheExtent').value,
-        cacheExtentStyle: p.get('cacheExtentStyle').value,
-        clipBehavior: p.get('clipBehavior').value,
+        axisDirection: p.get('axisDirection').build(),
+        crossAxisDirection: p.get('crossAxisDirection').build(),
+        offset: p.get('offset').build(),
+        anchor: p.get('anchor').build(),
+        children: p.get('children').build(),
+        center: p.get('center').build(),
+        cacheExtent: p.get('cacheExtent').build(),
+        cacheExtentStyle: p.get('cacheExtentStyle').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('axisDirection', axisDirection);
@@ -129,11 +129,11 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderShrinkWrappingViewport$Mate(
-        axisDirection: p.get('axisDirection').value,
-        crossAxisDirection: p.get('crossAxisDirection').value,
-        offset: p.get('offset').value,
-        clipBehavior: p.get('clipBehavior').value,
-        children: p.get('children').value,
+        axisDirection: p.get('axisDirection').build(),
+        crossAxisDirection: p.get('crossAxisDirection').build(),
+        offset: p.get('offset').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('axisDirection', axisDirection);

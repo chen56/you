@@ -22,8 +22,8 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate<Cuperti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoThumbPainter$Mate(
-        color: p.get('color').value,
-        shadows: p.get('shadows').value,
+        color: p.get('color').build(),
+        shadows: p.get('shadows').build(),
       ),
     );
     mateParams.put('color', color);
@@ -44,8 +44,8 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate<Cuperti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoThumbPainter$Mate.switchThumb(
-        color: p.get('color').value,
-        shadows: p.get('shadows').value,
+        color: p.get('color').build(),
+        shadows: p.get('shadows').build(),
       ),
     );
     mateParams.put('color', color);

@@ -26,8 +26,8 @@ class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with WidgetMate<Slive
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverLayoutBuilder$Mate(
-        key: p.get('key').value,
-        builder: p.get('builder').value,
+        key: p.get('key').build(),
+        builder: p.get('builder').build(),
       ),
     );
     mateParams.put('key', key);

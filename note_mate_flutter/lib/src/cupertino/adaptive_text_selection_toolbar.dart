@@ -33,9 +33,9 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        anchors: p.get('anchors').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        anchors: p.get('anchors').build(),
       ),
     );
     mateParams.put('key', key);
@@ -61,9 +61,9 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.buttonItems(
-        key: p.get('key').value,
-        buttonItems: p.get('buttonItems').value,
-        anchors: p.get('anchors').value,
+        key: p.get('key').build(),
+        buttonItems: p.get('buttonItems').build(),
+        anchors: p.get('anchors').build(),
       ),
     );
     mateParams.put('key', key);
@@ -105,13 +105,13 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editable(
-        key: p.get('key').value,
-        clipboardStatus: p.get('clipboardStatus').value,
-        onCopy: p.get('onCopy').value,
-        onCut: p.get('onCut').value,
-        onPaste: p.get('onPaste').value,
-        onSelectAll: p.get('onSelectAll').value,
-        anchors: p.get('anchors').value,
+        key: p.get('key').build(),
+        clipboardStatus: p.get('clipboardStatus').build(),
+        onCopy: p.get('onCopy').build(),
+        onCut: p.get('onCut').build(),
+        onPaste: p.get('onPaste').build(),
+        onSelectAll: p.get('onSelectAll').build(),
+        anchors: p.get('anchors').build(),
       ),
     );
     mateParams.put('key', key);
@@ -137,8 +137,8 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editableText(
-        key: p.get('key').value,
-        editableTextState: p.get('editableTextState').value,
+        key: p.get('key').build(),
+        editableTextState: p.get('editableTextState').build(),
       ),
     );
     mateParams.put('key', key);
@@ -171,11 +171,11 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.selectable(
-        key: p.get('key').value,
-        onCopy: p.get('onCopy').value,
-        onSelectAll: p.get('onSelectAll').value,
-        selectionGeometry: p.get('selectionGeometry').value,
-        anchors: p.get('anchors').value,
+        key: p.get('key').build(),
+        onCopy: p.get('onCopy').build(),
+        onSelectAll: p.get('onSelectAll').build(),
+        selectionGeometry: p.get('selectionGeometry').build(),
+        anchors: p.get('anchors').build(),
       ),
     );
     mateParams.put('key', key);

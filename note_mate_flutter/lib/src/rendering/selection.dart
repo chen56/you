@@ -15,7 +15,7 @@ class SelectedContent$Mate extends SelectedContent with Mate<SelectedContent$Mat
       : super(plainText: plainText) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectedContent$Mate(plainText: p.get('plainText').value),
+      builder: (p) => SelectedContent$Mate(plainText: p.get('plainText').build()),
     );
     mateParams.put('plainText', plainText);
   }
@@ -31,7 +31,7 @@ class SelectWordSelectionEvent$Mate extends SelectWordSelectionEvent with Mate<S
       : super(globalPosition: globalPosition) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').value),
+      builder: (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').build()),
     );
     mateParams.put('globalPosition', globalPosition);
   }
@@ -47,7 +47,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate<S
       : super.forStart(globalPosition: globalPosition) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').value),
+      builder: (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').build()),
     );
     mateParams.put('globalPosition', globalPosition);
   }
@@ -60,7 +60,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate<S
       : super.forEnd(globalPosition: globalPosition) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').value),
+      builder: (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').build()),
     );
     mateParams.put('globalPosition', globalPosition);
   }
@@ -87,9 +87,9 @@ class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
     mateParams = ObjectParam(
       init: this,
       builder: (p) => GranularlyExtendSelectionEvent$Mate(
-        forward: p.get('forward').value,
-        isEnd: p.get('isEnd').value,
-        granularity: p.get('granularity').value,
+        forward: p.get('forward').build(),
+        isEnd: p.get('isEnd').build(),
+        granularity: p.get('granularity').build(),
       ),
     );
     mateParams.put('forward', forward);
@@ -119,9 +119,9 @@ class DirectionallyExtendSelectionEvent$Mate extends DirectionallyExtendSelectio
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DirectionallyExtendSelectionEvent$Mate(
-        dx: p.get('dx').value,
-        isEnd: p.get('isEnd').value,
-        direction: p.get('direction').value,
+        dx: p.get('dx').build(),
+        isEnd: p.get('isEnd').build(),
+        direction: p.get('direction').build(),
       ),
     );
     mateParams.put('dx', dx);
@@ -154,10 +154,10 @@ class SelectionGeometry$Mate extends SelectionGeometry with Mate<SelectionGeomet
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionGeometry$Mate(
-        startSelectionPoint: p.get('startSelectionPoint').value,
-        endSelectionPoint: p.get('endSelectionPoint').value,
-        status: p.get('status').value,
-        hasContent: p.get('hasContent').value,
+        startSelectionPoint: p.get('startSelectionPoint').build(),
+        endSelectionPoint: p.get('endSelectionPoint').build(),
+        status: p.get('status').build(),
+        hasContent: p.get('hasContent').build(),
       ),
     );
     mateParams.put('startSelectionPoint', startSelectionPoint);
@@ -187,9 +187,9 @@ class SelectionPoint$Mate extends SelectionPoint with Mate<SelectionPoint$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SelectionPoint$Mate(
-        localPosition: p.get('localPosition').value,
-        lineHeight: p.get('lineHeight').value,
-        handleType: p.get('handleType').value,
+        localPosition: p.get('localPosition').build(),
+        lineHeight: p.get('lineHeight').build(),
+        handleType: p.get('handleType').build(),
       ),
     );
     mateParams.put('localPosition', localPosition);

@@ -21,8 +21,8 @@ class Spacer$Mate extends Spacer with WidgetMate<Spacer$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Spacer$Mate(
-        key: p.get('key').value,
-        flex: p.get('flex').value,
+        key: p.get('key').build(),
+        flex: p.get('flex').build(),
       ),
     );
     mateParams.put('key', key);

@@ -25,9 +25,9 @@ class SpringDescription$Mate extends SpringDescription with Mate<SpringDescripti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SpringDescription$Mate(
-        mass: p.get('mass').value,
-        stiffness: p.get('stiffness').value,
-        damping: p.get('damping').value,
+        mass: p.get('mass').build(),
+        stiffness: p.get('stiffness').build(),
+        damping: p.get('damping').build(),
       ),
     );
     mateParams.put('mass', mass);
@@ -53,9 +53,9 @@ class SpringDescription$Mate extends SpringDescription with Mate<SpringDescripti
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SpringDescription$Mate.withDampingRatio(
-        mass: p.get('mass').value,
-        stiffness: p.get('stiffness').value,
-        ratio: p.get('ratio').value,
+        mass: p.get('mass').build(),
+        stiffness: p.get('stiffness').build(),
+        ratio: p.get('ratio').build(),
       ),
     );
     mateParams.put('mass', mass);
@@ -95,7 +95,7 @@ class SpringSimulation$Mate extends SpringSimulation with Mate<SpringSimulation$
         p.get('start').value,
         p.get('end').value,
         p.get('velocity').value,
-        tolerance: p.get('tolerance').value,
+        tolerance: p.get('tolerance').build(),
       ),
     );
     mateParams.put('spring', spring);
@@ -137,7 +137,7 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate<Scrol
         p.get('start').value,
         p.get('end').value,
         p.get('velocity').value,
-        tolerance: p.get('tolerance').value,
+        tolerance: p.get('tolerance').build(),
       ),
     );
     mateParams.put('spring', spring);

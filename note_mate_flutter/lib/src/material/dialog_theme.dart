@@ -57,16 +57,16 @@ class DialogTheme$Mate extends DialogTheme with Mate<DialogTheme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DialogTheme$Mate(
-        backgroundColor: p.get('backgroundColor').value,
-        elevation: p.get('elevation').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        shape: p.get('shape').value,
-        alignment: p.get('alignment').value,
-        iconColor: p.get('iconColor').value,
-        titleTextStyle: p.get('titleTextStyle').value,
-        contentTextStyle: p.get('contentTextStyle').value,
-        actionsPadding: p.get('actionsPadding').value,
+        backgroundColor: p.get('backgroundColor').build(),
+        elevation: p.get('elevation').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        shape: p.get('shape').build(),
+        alignment: p.get('alignment').build(),
+        iconColor: p.get('iconColor').build(),
+        titleTextStyle: p.get('titleTextStyle').build(),
+        contentTextStyle: p.get('contentTextStyle').build(),
+        actionsPadding: p.get('actionsPadding').build(),
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);

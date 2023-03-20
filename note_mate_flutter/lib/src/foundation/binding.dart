@@ -14,7 +14,7 @@ class DebugReassembleConfig$Mate extends DebugReassembleConfig with Mate<DebugRe
       : super(widgetName: widgetName) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => DebugReassembleConfig$Mate(widgetName: p.get('widgetName').value),
+      builder: (p) => DebugReassembleConfig$Mate(widgetName: p.get('widgetName').build()),
     );
     mateParams.put('widgetName', widgetName);
   }

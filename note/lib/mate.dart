@@ -13,9 +13,15 @@ abstract class Param<T> extends ChangeNotifier {
   set value(T newValue) {
     _value = newValue;
     notifyListeners();
-    //冒泡通知
+  }
+
+  @override
+  void notifyListeners() {
+    super.notifyListeners();
     parent?.notifyListeners();
   }
+
+  T build();
 
   Param({required this.init}) : _value = init;
 
@@ -35,9 +41,10 @@ abstract class Param<T> extends ChangeNotifier {
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
-Param<C> convertUseDart3Patterns<C>(C init) {
+Param<C> convertToParam<C>(C init) {
   if (init is List) throw Exception("List type please use putList()");
-  if (init is Mate<C>) return ObjectParam.copy(init.mateParams);
+  // if (init is Mate<C>) return ObjectParam.copy(init.mateParams);
+  if (init is Mate<C>) return init.mateParams;
   if (init is Param) return init as Param<C>;
   return Param.newValue(init: init);
 
@@ -66,6 +73,9 @@ class ValueParam<T> extends Param<T> {
 
   @override
   Iterable<ParamNode> _childrenNodes(ParamNode parent) => List.empty();
+
+  @override
+  T build() => _value;
 }
 
 class ListParam<T, E> extends Param<T> {
@@ -73,14 +83,8 @@ class ListParam<T, E> extends Param<T> {
 
   ListParam({required super.init}) {
     if (init != null) {
-      params = (init as List<E>).map((e) => convertUseDart3Patterns(e)).toList(growable: true);
+      params = (init as List<E>).map((e) => convertToParam(e)).toList(growable: true);
     }
-  }
-
-  int get length => params.length;
-
-  List<E> toValueList() {
-    return params.map((e) => e.value).toList();
   }
 
   @override
@@ -88,6 +92,9 @@ class ListParam<T, E> extends Param<T> {
     int i = 0;
     return params.map((e) => ParamNode._(name: "[${i++}]", param: e, parent: parent));
   }
+
+  @override
+  T build() => params.map((e) => e.build()).toList() as T;
 }
 
 class ObjectParam<T> extends Param<T> {
@@ -110,7 +117,7 @@ class ObjectParam<T> extends Param<T> {
   /// generic V : value type
   Param<V> put<V>(String name, V init) {
     _checkName(name);
-    var param = convertUseDart3Patterns(init);
+    var param = convertToParam(init);
     param.parent = this;
     _paramMap[name] = param;
     return param;
@@ -146,6 +153,9 @@ class ObjectParam<T> extends Param<T> {
   @override
   Iterable<ParamNode> _childrenNodes(ParamNode parent) =>
       _paramMap.entries.map((e) => ParamNode._(name: e.key, param: e.value, parent: parent));
+
+  @override
+  T build() => builder(this);
 }
 
 // tree node
@@ -226,7 +236,10 @@ class DoubleEditor extends Editor<double> {
         hintText: "Text#data",
       ),
       onChanged: (value) {
-        node.param.value = double.parse(value);
+        var newValue = double.tryParse(value);
+        if (newValue != null) {
+          node.param.value = newValue;
+        }
       },
     );
   }
@@ -238,6 +251,9 @@ class EnumEditor extends Editor {
   @override
   Widget valueWidget(BuildContext context, ParamNode node) {
     return DropdownButton<Enum>(
+      onTap: () {
+        print("onTap");
+      },
       alignment: Alignment.topLeft,
       value: node.param.value,
       icon: const Icon(Icons.arrow_downward),

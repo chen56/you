@@ -21,8 +21,8 @@ class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with Widg
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizeChangedLayoutNotifier$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

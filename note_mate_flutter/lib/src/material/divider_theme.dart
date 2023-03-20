@@ -35,11 +35,11 @@ class DividerThemeData$Mate extends DividerThemeData with Mate<DividerThemeData$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DividerThemeData$Mate(
-        color: p.get('color').value,
-        space: p.get('space').value,
-        thickness: p.get('thickness').value,
-        indent: p.get('indent').value,
-        endIndent: p.get('endIndent').value,
+        color: p.get('color').build(),
+        space: p.get('space').build(),
+        thickness: p.get('thickness').build(),
+        indent: p.get('indent').build(),
+        endIndent: p.get('endIndent').build(),
       ),
     );
     mateParams.put('color', color);
@@ -70,9 +70,9 @@ class DividerTheme$Mate extends DividerTheme with WidgetMate<DividerTheme$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DividerTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

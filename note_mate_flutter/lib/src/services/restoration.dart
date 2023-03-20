@@ -20,8 +20,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorationBucket$Mate.empty(
-        restorationId: p.get('restorationId').value,
-        debugOwner: p.get('debugOwner').value,
+        restorationId: p.get('restorationId').build(),
+        debugOwner: p.get('debugOwner').build(),
       ),
     );
     mateParams.put('restorationId', restorationId);
@@ -42,8 +42,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorationBucket$Mate.root(
-        manager: p.get('manager').value,
-        rawData: p.get('rawData').value,
+        manager: p.get('manager').build(),
+        rawData: p.get('rawData').build(),
       ),
     );
     mateParams.put('manager', manager);
@@ -68,9 +68,9 @@ class RestorationBucket$Mate extends RestorationBucket with Mate<RestorationBuck
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorationBucket$Mate.child(
-        restorationId: p.get('restorationId').value,
-        parent: p.get('parent').value,
-        debugOwner: p.get('debugOwner').value,
+        restorationId: p.get('restorationId').build(),
+        parent: p.get('parent').build(),
+        debugOwner: p.get('debugOwner').build(),
       ),
     );
     mateParams.put('restorationId', restorationId);

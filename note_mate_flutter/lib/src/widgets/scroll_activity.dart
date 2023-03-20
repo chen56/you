@@ -41,8 +41,8 @@ class HoldScrollActivity$Mate extends HoldScrollActivity with Mate<HoldScrollAct
     mateParams = ObjectParam(
       init: this,
       builder: (p) => HoldScrollActivity$Mate(
-        delegate: p.get('delegate').value,
-        onHoldCanceled: p.get('onHoldCanceled').value,
+        delegate: p.get('delegate').build(),
+        onHoldCanceled: p.get('onHoldCanceled').build(),
       ),
     );
     mateParams.put('delegate', delegate);
@@ -78,11 +78,11 @@ class ScrollDragController$Mate extends ScrollDragController with Mate<ScrollDra
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollDragController$Mate(
-        delegate: p.get('delegate').value,
-        details: p.get('details').value,
-        onDragCanceled: p.get('onDragCanceled').value,
-        carriedVelocity: p.get('carriedVelocity').value,
-        motionStartDistanceThreshold: p.get('motionStartDistanceThreshold').value,
+        delegate: p.get('delegate').build(),
+        details: p.get('details').build(),
+        onDragCanceled: p.get('onDragCanceled').build(),
+        carriedVelocity: p.get('carriedVelocity').build(),
+        motionStartDistanceThreshold: p.get('motionStartDistanceThreshold').build(),
       ),
     );
     mateParams.put('delegate', delegate);
@@ -187,11 +187,11 @@ class DrivenScrollActivity$Mate extends DrivenScrollActivity with Mate<DrivenScr
       init: this,
       builder: (p) => DrivenScrollActivity$Mate(
         p.get('delegate').value,
-        from: p.get('from').value,
-        to: p.get('to').value,
-        duration: p.get('duration').value,
-        curve: p.get('curve').value,
-        vsync: p.get('vsync').value,
+        from: p.get('from').build(),
+        to: p.get('to').build(),
+        duration: p.get('duration').build(),
+        curve: p.get('curve').build(),
+        vsync: p.get('vsync').build(),
       ),
     );
     mateParams.put('delegate', delegate);

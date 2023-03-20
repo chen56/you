@@ -30,10 +30,10 @@ class WidgetSpan$Mate extends WidgetSpan with Mate<WidgetSpan$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => WidgetSpan$Mate(
-        child: p.get('child').value,
-        alignment: p.get('alignment').value,
-        baseline: p.get('baseline').value,
-        style: p.get('style').value,
+        child: p.get('child').build(),
+        alignment: p.get('alignment').build(),
+        baseline: p.get('baseline').build(),
+        style: p.get('style').build(),
       ),
     );
     mateParams.put('child', child);

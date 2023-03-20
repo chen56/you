@@ -30,10 +30,10 @@ class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Widg
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ValueListenableBuilder$Mate(
-        key: p.get('key').value,
-        valueListenable: p.get('valueListenable').value,
-        builder: p.get('builder').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        valueListenable: p.get('valueListenable').build(),
+        builder: p.get('builder').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

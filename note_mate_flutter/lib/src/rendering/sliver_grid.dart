@@ -29,10 +29,10 @@ class SliverGridGeometry$Mate extends SliverGridGeometry with Mate<SliverGridGeo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGridGeometry$Mate(
-        scrollOffset: p.get('scrollOffset').value,
-        crossAxisOffset: p.get('crossAxisOffset').value,
-        mainAxisExtent: p.get('mainAxisExtent').value,
-        crossAxisExtent: p.get('crossAxisExtent').value,
+        scrollOffset: p.get('scrollOffset').build(),
+        crossAxisOffset: p.get('crossAxisOffset').build(),
+        mainAxisExtent: p.get('mainAxisExtent').build(),
+        crossAxisExtent: p.get('crossAxisExtent').build(),
       ),
     );
     mateParams.put('scrollOffset', scrollOffset);
@@ -74,12 +74,12 @@ class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout with 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGridRegularTileLayout$Mate(
-        crossAxisCount: p.get('crossAxisCount').value,
-        mainAxisStride: p.get('mainAxisStride').value,
-        crossAxisStride: p.get('crossAxisStride').value,
-        childMainAxisExtent: p.get('childMainAxisExtent').value,
-        childCrossAxisExtent: p.get('childCrossAxisExtent').value,
-        reverseCrossAxis: p.get('reverseCrossAxis').value,
+        crossAxisCount: p.get('crossAxisCount').build(),
+        mainAxisStride: p.get('mainAxisStride').build(),
+        crossAxisStride: p.get('crossAxisStride').build(),
+        childMainAxisExtent: p.get('childMainAxisExtent').build(),
+        childCrossAxisExtent: p.get('childCrossAxisExtent').build(),
+        reverseCrossAxis: p.get('reverseCrossAxis').build(),
       ),
     );
     mateParams.put('crossAxisCount', crossAxisCount);
@@ -120,11 +120,11 @@ class SliverGridDelegateWithFixedCrossAxisCount$Mate extends SliverGridDelegateW
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGridDelegateWithFixedCrossAxisCount$Mate(
-        crossAxisCount: p.get('crossAxisCount').value,
-        mainAxisSpacing: p.get('mainAxisSpacing').value,
-        crossAxisSpacing: p.get('crossAxisSpacing').value,
-        childAspectRatio: p.get('childAspectRatio').value,
-        mainAxisExtent: p.get('mainAxisExtent').value,
+        crossAxisCount: p.get('crossAxisCount').build(),
+        mainAxisSpacing: p.get('mainAxisSpacing').build(),
+        crossAxisSpacing: p.get('crossAxisSpacing').build(),
+        childAspectRatio: p.get('childAspectRatio').build(),
+        mainAxisExtent: p.get('mainAxisExtent').build(),
       ),
     );
     mateParams.put('crossAxisCount', crossAxisCount);
@@ -164,11 +164,11 @@ class SliverGridDelegateWithMaxCrossAxisExtent$Mate extends SliverGridDelegateWi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverGridDelegateWithMaxCrossAxisExtent$Mate(
-        maxCrossAxisExtent: p.get('maxCrossAxisExtent').value,
-        mainAxisSpacing: p.get('mainAxisSpacing').value,
-        crossAxisSpacing: p.get('crossAxisSpacing').value,
-        childAspectRatio: p.get('childAspectRatio').value,
-        mainAxisExtent: p.get('mainAxisExtent').value,
+        maxCrossAxisExtent: p.get('maxCrossAxisExtent').build(),
+        mainAxisSpacing: p.get('mainAxisSpacing').build(),
+        crossAxisSpacing: p.get('crossAxisSpacing').build(),
+        childAspectRatio: p.get('childAspectRatio').build(),
+        mainAxisExtent: p.get('mainAxisExtent').build(),
       ),
     );
     mateParams.put('maxCrossAxisExtent', maxCrossAxisExtent);
@@ -195,8 +195,8 @@ class RenderSliverGrid$Mate extends RenderSliverGrid with Mate<RenderSliverGrid$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverGrid$Mate(
-        childManager: p.get('childManager').value,
-        gridDelegate: p.get('gridDelegate').value,
+        childManager: p.get('childManager').build(),
+        gridDelegate: p.get('gridDelegate').build(),
       ),
     );
     mateParams.put('childManager', childManager);

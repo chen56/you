@@ -72,20 +72,20 @@ class Focus$Mate extends Focus with WidgetMate<Focus$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Focus$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        focusNode: p.get('focusNode').value,
-        parentNode: p.get('parentNode').value,
-        autofocus: p.get('autofocus').value,
-        onFocusChange: p.get('onFocusChange').value,
-        onKeyEvent: p.get('onKeyEvent').value,
-        onKey: p.get('onKey').value,
-        canRequestFocus: p.get('canRequestFocus').value,
-        skipTraversal: p.get('skipTraversal').value,
-        descendantsAreFocusable: p.get('descendantsAreFocusable').value,
-        descendantsAreTraversable: p.get('descendantsAreTraversable').value,
-        includeSemantics: p.get('includeSemantics').value,
-        debugLabel: p.get('debugLabel').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        focusNode: p.get('focusNode').build(),
+        parentNode: p.get('parentNode').build(),
+        autofocus: p.get('autofocus').build(),
+        onFocusChange: p.get('onFocusChange').build(),
+        onKeyEvent: p.get('onKeyEvent').build(),
+        onKey: p.get('onKey').build(),
+        canRequestFocus: p.get('canRequestFocus').build(),
+        skipTraversal: p.get('skipTraversal').build(),
+        descendantsAreFocusable: p.get('descendantsAreFocusable').build(),
+        descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
+        includeSemantics: p.get('includeSemantics').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('key', key);
@@ -157,17 +157,17 @@ class FocusScope$Mate extends FocusScope with WidgetMate<FocusScope$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FocusScope$Mate(
-        key: p.get('key').value,
-        node: p.get('node').value,
-        parentNode: p.get('parentNode').value,
-        child: p.get('child').value,
-        autofocus: p.get('autofocus').value,
-        onFocusChange: p.get('onFocusChange').value,
-        canRequestFocus: p.get('canRequestFocus').value,
-        skipTraversal: p.get('skipTraversal').value,
-        onKeyEvent: p.get('onKeyEvent').value,
-        onKey: p.get('onKey').value,
-        debugLabel: p.get('debugLabel').value,
+        key: p.get('key').build(),
+        node: p.get('node').build(),
+        parentNode: p.get('parentNode').build(),
+        child: p.get('child').build(),
+        autofocus: p.get('autofocus').build(),
+        onFocusChange: p.get('onFocusChange').build(),
+        canRequestFocus: p.get('canRequestFocus').build(),
+        skipTraversal: p.get('skipTraversal').build(),
+        onKeyEvent: p.get('onKeyEvent').build(),
+        onKey: p.get('onKey').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('key', key);
@@ -204,9 +204,9 @@ class ExcludeFocus$Mate extends ExcludeFocus with WidgetMate<ExcludeFocus$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ExcludeFocus$Mate(
-        key: p.get('key').value,
-        excluding: p.get('excluding').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        excluding: p.get('excluding').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

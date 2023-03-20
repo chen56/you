@@ -28,9 +28,9 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate<Dropdow
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownMenuThemeData$Mate(
-        textStyle: p.get('textStyle').value,
-        inputDecorationTheme: p.get('inputDecorationTheme').value,
-        menuStyle: p.get('menuStyle').value,
+        textStyle: p.get('textStyle').build(),
+        inputDecorationTheme: p.get('inputDecorationTheme').build(),
+        menuStyle: p.get('menuStyle').build(),
       ),
     );
     mateParams.put('textStyle', textStyle);
@@ -59,9 +59,9 @@ class DropdownMenuTheme$Mate extends DropdownMenuTheme with WidgetMate<DropdownM
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DropdownMenuTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

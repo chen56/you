@@ -51,10 +51,10 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
       init: this,
       builder: (p) => InlineSpanSemanticsInformation$Mate(
         p.get('text').value,
-        isPlaceholder: p.get('isPlaceholder').value,
-        semanticsLabel: p.get('semanticsLabel').value,
-        stringAttributes: p.get('stringAttributes').value,
-        recognizer: p.get('recognizer').value,
+        isPlaceholder: p.get('isPlaceholder').build(),
+        semanticsLabel: p.get('semanticsLabel').build(),
+        stringAttributes: p.get('stringAttributes').build(),
+        recognizer: p.get('recognizer').build(),
       ),
     );
     mateParams.put('text', text);

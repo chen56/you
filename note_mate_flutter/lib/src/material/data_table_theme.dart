@@ -66,18 +66,18 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThem
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DataTableThemeData$Mate(
-        decoration: p.get('decoration').value,
-        dataRowColor: p.get('dataRowColor').value,
-        dataRowMinHeight: p.get('dataRowMinHeight').value,
-        dataRowMaxHeight: p.get('dataRowMaxHeight').value,
-        dataTextStyle: p.get('dataTextStyle').value,
-        headingRowColor: p.get('headingRowColor').value,
-        headingRowHeight: p.get('headingRowHeight').value,
-        headingTextStyle: p.get('headingTextStyle').value,
-        horizontalMargin: p.get('horizontalMargin').value,
-        columnSpacing: p.get('columnSpacing').value,
-        dividerThickness: p.get('dividerThickness').value,
-        checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').value,
+        decoration: p.get('decoration').build(),
+        dataRowColor: p.get('dataRowColor').build(),
+        dataRowMinHeight: p.get('dataRowMinHeight').build(),
+        dataRowMaxHeight: p.get('dataRowMaxHeight').build(),
+        dataTextStyle: p.get('dataTextStyle').build(),
+        headingRowColor: p.get('headingRowColor').build(),
+        headingRowHeight: p.get('headingRowHeight').build(),
+        headingTextStyle: p.get('headingTextStyle').build(),
+        horizontalMargin: p.get('horizontalMargin').build(),
+        columnSpacing: p.get('columnSpacing').build(),
+        dividerThickness: p.get('dividerThickness').build(),
+        checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').build(),
       ),
     );
     mateParams.put('decoration', decoration);
@@ -115,9 +115,9 @@ class DataTableTheme$Mate extends DataTableTheme with WidgetMate<DataTableTheme$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DataTableTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

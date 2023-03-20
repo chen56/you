@@ -31,10 +31,10 @@ class Localizations$Mate extends Localizations with WidgetMate<Localizations$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Localizations$Mate(
-        key: p.get('key').value,
-        locale: p.get('locale').value,
-        delegates: p.get('delegates').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        locale: p.get('locale').build(),
+        delegates: p.get('delegates').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

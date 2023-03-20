@@ -59,16 +59,16 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDrawerThemeData$Mate(
-        tileHeight: p.get('tileHeight').value,
-        backgroundColor: p.get('backgroundColor').value,
-        elevation: p.get('elevation').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        indicatorColor: p.get('indicatorColor').value,
-        indicatorShape: p.get('indicatorShape').value,
-        indicatorSize: p.get('indicatorSize').value,
-        labelTextStyle: p.get('labelTextStyle').value,
-        iconTheme: p.get('iconTheme').value,
+        tileHeight: p.get('tileHeight').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        elevation: p.get('elevation').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        indicatorColor: p.get('indicatorColor').build(),
+        indicatorShape: p.get('indicatorShape').build(),
+        indicatorSize: p.get('indicatorSize').build(),
+        labelTextStyle: p.get('labelTextStyle').build(),
+        iconTheme: p.get('iconTheme').build(),
       ),
     );
     mateParams.put('tileHeight', tileHeight);
@@ -104,9 +104,9 @@ class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with WidgetMate<N
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDrawerTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

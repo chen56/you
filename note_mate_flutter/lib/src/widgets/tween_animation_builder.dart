@@ -47,13 +47,13 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TweenAnimationBuilder$Mate(
-        key: p.get('key').value,
-        tween: p.get('tween').value,
-        duration: p.get('duration').value,
-        curve: p.get('curve').value,
-        builder: p.get('builder').value,
-        onEnd: p.get('onEnd').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        tween: p.get('tween').build(),
+        duration: p.get('duration').build(),
+        curve: p.get('curve').build(),
+        builder: p.get('builder').build(),
+        onEnd: p.get('onEnd').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

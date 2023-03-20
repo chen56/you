@@ -27,9 +27,9 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObj
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderObjectToWidgetAdapter$Mate(
-        child: p.get('child').value,
-        container: p.get('container').value,
-        debugShortDescription: p.get('debugShortDescription').value,
+        child: p.get('child').build(),
+        container: p.get('container').build(),
+        debugShortDescription: p.get('debugShortDescription').build(),
       ),
     );
     mateParams.put('child', child);

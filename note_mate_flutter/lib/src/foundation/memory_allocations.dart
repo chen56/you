@@ -24,9 +24,9 @@ class ObjectCreated$Mate extends ObjectCreated with Mate<ObjectCreated$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ObjectCreated$Mate(
-        library: p.get('library').value,
-        className: p.get('className').value,
-        object: p.get('object').value,
+        library: p.get('library').build(),
+        className: p.get('className').build(),
+        object: p.get('object').build(),
       ),
     );
     mateParams.put('library', library);
@@ -45,7 +45,7 @@ class ObjectDisposed$Mate extends ObjectDisposed with Mate<ObjectDisposed$Mate> 
       : super(object: object) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ObjectDisposed$Mate(object: p.get('object').value),
+      builder: (p) => ObjectDisposed$Mate(object: p.get('object').build()),
     );
     mateParams.put('object', object);
   }

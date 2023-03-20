@@ -50,14 +50,14 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate<BadgeThemeData$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BadgeThemeData$Mate(
-        backgroundColor: p.get('backgroundColor').value,
-        textColor: p.get('textColor').value,
-        smallSize: p.get('smallSize').value,
-        largeSize: p.get('largeSize').value,
-        textStyle: p.get('textStyle').value,
-        padding: p.get('padding').value,
-        alignment: p.get('alignment').value,
-        offset: p.get('offset').value,
+        backgroundColor: p.get('backgroundColor').build(),
+        textColor: p.get('textColor').build(),
+        smallSize: p.get('smallSize').build(),
+        largeSize: p.get('largeSize').build(),
+        textStyle: p.get('textStyle').build(),
+        padding: p.get('padding').build(),
+        alignment: p.get('alignment').build(),
+        offset: p.get('offset').build(),
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);
@@ -91,9 +91,9 @@ class BadgeTheme$Mate extends BadgeTheme with WidgetMate<BadgeTheme$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BadgeTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -14,7 +14,7 @@ class StadiumBorder$Mate extends StadiumBorder with Mate<StadiumBorder$Mate> {
       : super(side: side) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => StadiumBorder$Mate(side: p.get('side').value),
+      builder: (p) => StadiumBorder$Mate(side: p.get('side').build()),
     );
     mateParams.put('side', side);
   }

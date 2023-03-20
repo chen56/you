@@ -20,8 +20,8 @@ class OffsetPair$Mate extends OffsetPair with Mate<OffsetPair$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => OffsetPair$Mate(
-        local: p.get('local').value,
-        global: p.get('global').value,
+        local: p.get('local').build(),
+        global: p.get('global').build(),
       ),
     );
     mateParams.put('local', local);

@@ -26,9 +26,9 @@ class TextSelectionToolbarLayoutDelegate$Mate extends TextSelectionToolbarLayout
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelectionToolbarLayoutDelegate$Mate(
-        anchorAbove: p.get('anchorAbove').value,
-        anchorBelow: p.get('anchorBelow').value,
-        fitsAbove: p.get('fitsAbove').value,
+        anchorAbove: p.get('anchorAbove').build(),
+        anchorBelow: p.get('anchorBelow').build(),
+        fitsAbove: p.get('fitsAbove').build(),
       ),
     );
     mateParams.put('anchorAbove', anchorAbove);

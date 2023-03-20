@@ -22,8 +22,8 @@ class EagerGestureRecognizer$Mate extends EagerGestureRecognizer with Mate<Eager
     mateParams = ObjectParam(
       init: this,
       builder: (p) => EagerGestureRecognizer$Mate(
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('supportedDevices', supportedDevices);

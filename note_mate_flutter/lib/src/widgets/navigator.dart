@@ -25,8 +25,8 @@ class RouteSettings$Mate extends RouteSettings with Mate<RouteSettings$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RouteSettings$Mate(
-        name: p.get('name').value,
-        arguments: p.get('arguments').value,
+        name: p.get('name').build(),
+        arguments: p.get('arguments').build(),
       ),
     );
     mateParams.put('name', name);
@@ -54,9 +54,9 @@ class HeroControllerScope$Mate extends HeroControllerScope with WidgetMate<HeroC
     mateParams = ObjectParam(
       init: this,
       builder: (p) => HeroControllerScope$Mate(
-        key: p.get('key').value,
-        controller: p.get('controller').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        controller: p.get('controller').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -78,8 +78,8 @@ class HeroControllerScope$Mate extends HeroControllerScope with WidgetMate<HeroC
     mateParams = ObjectParam(
       init: this,
       builder: (p) => HeroControllerScope$Mate.none(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -151,20 +151,20 @@ class Navigator$Mate extends Navigator with WidgetMate<Navigator$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Navigator$Mate(
-        key: p.get('key').value,
-        pages: p.get('pages').value,
-        onPopPage: p.get('onPopPage').value,
-        initialRoute: p.get('initialRoute').value,
-        onGenerateInitialRoutes: p.get('onGenerateInitialRoutes').value,
-        onGenerateRoute: p.get('onGenerateRoute').value,
-        onUnknownRoute: p.get('onUnknownRoute').value,
-        transitionDelegate: p.get('transitionDelegate').value,
-        reportsRouteUpdateToEngine: p.get('reportsRouteUpdateToEngine').value,
-        clipBehavior: p.get('clipBehavior').value,
-        observers: p.get('observers').value,
-        requestFocus: p.get('requestFocus').value,
-        restorationScopeId: p.get('restorationScopeId').value,
-        routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').value,
+        key: p.get('key').build(),
+        pages: p.get('pages').build(),
+        onPopPage: p.get('onPopPage').build(),
+        initialRoute: p.get('initialRoute').build(),
+        onGenerateInitialRoutes: p.get('onGenerateInitialRoutes').build(),
+        onGenerateRoute: p.get('onGenerateRoute').build(),
+        onUnknownRoute: p.get('onUnknownRoute').build(),
+        transitionDelegate: p.get('transitionDelegate').build(),
+        reportsRouteUpdateToEngine: p.get('reportsRouteUpdateToEngine').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        observers: p.get('observers').build(),
+        requestFocus: p.get('requestFocus').build(),
+        restorationScopeId: p.get('restorationScopeId').build(),
+        routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -204,9 +204,9 @@ class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate<R
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorableRouteFuture$Mate(
-        navigatorFinder: p.get('navigatorFinder').value,
-        onPresent: p.get('onPresent').value,
-        onComplete: p.get('onComplete').value,
+        navigatorFinder: p.get('navigatorFinder').build(),
+        onPresent: p.get('onPresent').build(),
+        onComplete: p.get('onComplete').build(),
       ),
     );
     mateParams.put('navigatorFinder', navigatorFinder);

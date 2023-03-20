@@ -70,19 +70,19 @@ class DecorationImage$Mate extends DecorationImage with Mate<DecorationImage$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DecorationImage$Mate(
-        image: p.get('image').value,
-        onError: p.get('onError').value,
-        colorFilter: p.get('colorFilter').value,
-        fit: p.get('fit').value,
-        alignment: p.get('alignment').value,
-        centerSlice: p.get('centerSlice').value,
-        repeat: p.get('repeat').value,
-        matchTextDirection: p.get('matchTextDirection').value,
-        scale: p.get('scale').value,
-        opacity: p.get('opacity').value,
-        filterQuality: p.get('filterQuality').value,
-        invertColors: p.get('invertColors').value,
-        isAntiAlias: p.get('isAntiAlias').value,
+        image: p.get('image').build(),
+        onError: p.get('onError').build(),
+        colorFilter: p.get('colorFilter').build(),
+        fit: p.get('fit').build(),
+        alignment: p.get('alignment').build(),
+        centerSlice: p.get('centerSlice').build(),
+        repeat: p.get('repeat').build(),
+        matchTextDirection: p.get('matchTextDirection').build(),
+        scale: p.get('scale').build(),
+        opacity: p.get('opacity').build(),
+        filterQuality: p.get('filterQuality').build(),
+        invertColors: p.get('invertColors').build(),
+        isAntiAlias: p.get('isAntiAlias').build(),
       ),
     );
     mateParams.put('image', image);
@@ -121,9 +121,9 @@ class ImageTilingInfo$Mate extends ImageTilingInfo with Mate<ImageTilingInfo$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ImageTilingInfo$Mate(
-        tmx: p.get('tmx').value,
-        tmy: p.get('tmy').value,
-        transform: p.get('transform').value,
+        tmx: p.get('tmx').build(),
+        tmy: p.get('tmy').build(),
+        transform: p.get('transform').build(),
       ),
     );
     mateParams.put('tmx', tmx);

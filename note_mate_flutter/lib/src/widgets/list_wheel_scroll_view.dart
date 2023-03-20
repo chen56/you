@@ -23,7 +23,7 @@ class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Ma
       : super(children: children) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ListWheelChildListDelegate$Mate(children: p.get('children').value),
+      builder: (p) => ListWheelChildListDelegate$Mate(children: p.get('children').build()),
     );
     mateParams.putList('children', children);
   }
@@ -40,7 +40,7 @@ class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDe
       : super(children: children) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').value),
+      builder: (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build()),
     );
     mateParams.putList('children', children);
   }
@@ -63,8 +63,8 @@ class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ListWheelChildBuilderDelegate$Mate(
-        builder: p.get('builder').value,
-        childCount: p.get('childCount').value,
+        builder: p.get('builder').build(),
+        childCount: p.get('childCount').build(),
       ),
     );
     mateParams.put('builder', builder);
@@ -82,7 +82,7 @@ class FixedExtentScrollController$Mate extends FixedExtentScrollController with 
       : super(initialItem: initialItem) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').value),
+      builder: (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build()),
     );
     mateParams.put('initialItem', initialItem);
   }
@@ -124,13 +124,13 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate<FixedExtentMe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FixedExtentMetrics$Mate(
-        minScrollExtent: p.get('minScrollExtent').value,
-        maxScrollExtent: p.get('maxScrollExtent').value,
-        pixels: p.get('pixels').value,
-        viewportDimension: p.get('viewportDimension').value,
-        axisDirection: p.get('axisDirection').value,
-        itemIndex: p.get('itemIndex').value,
-        devicePixelRatio: p.get('devicePixelRatio').value,
+        minScrollExtent: p.get('minScrollExtent').build(),
+        maxScrollExtent: p.get('maxScrollExtent').build(),
+        pixels: p.get('pixels').build(),
+        viewportDimension: p.get('viewportDimension').build(),
+        axisDirection: p.get('axisDirection').build(),
+        itemIndex: p.get('itemIndex').build(),
+        devicePixelRatio: p.get('devicePixelRatio').build(),
       ),
     );
     mateParams.put('minScrollExtent', minScrollExtent);
@@ -153,7 +153,7 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate<F
       : super(parent: parent) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').value),
+      builder: (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build()),
     );
     mateParams.put('parent', parent);
   }
@@ -235,23 +235,23 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with WidgetMate<ListW
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ListWheelScrollView$Mate(
-        key: p.get('key').value,
-        controller: p.get('controller').value,
-        physics: p.get('physics').value,
-        diameterRatio: p.get('diameterRatio').value,
-        perspective: p.get('perspective').value,
-        offAxisFraction: p.get('offAxisFraction').value,
-        useMagnifier: p.get('useMagnifier').value,
-        magnification: p.get('magnification').value,
-        overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').value,
-        itemExtent: p.get('itemExtent').value,
-        squeeze: p.get('squeeze').value,
-        onSelectedItemChanged: p.get('onSelectedItemChanged').value,
-        renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').value,
-        clipBehavior: p.get('clipBehavior').value,
-        restorationId: p.get('restorationId').value,
-        scrollBehavior: p.get('scrollBehavior').value,
-        children: p.get('children').value,
+        key: p.get('key').build(),
+        controller: p.get('controller').build(),
+        physics: p.get('physics').build(),
+        diameterRatio: p.get('diameterRatio').build(),
+        perspective: p.get('perspective').build(),
+        offAxisFraction: p.get('offAxisFraction').build(),
+        useMagnifier: p.get('useMagnifier').build(),
+        magnification: p.get('magnification').build(),
+        overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
+        itemExtent: p.get('itemExtent').build(),
+        squeeze: p.get('squeeze').build(),
+        onSelectedItemChanged: p.get('onSelectedItemChanged').build(),
+        renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        restorationId: p.get('restorationId').build(),
+        scrollBehavior: p.get('scrollBehavior').build(),
+        children: p.get('children').build(),
       ),
     );
     mateParams.put('key', key);
@@ -347,23 +347,23 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with WidgetMate<ListW
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ListWheelScrollView$Mate.useDelegate(
-        key: p.get('key').value,
-        controller: p.get('controller').value,
-        physics: p.get('physics').value,
-        diameterRatio: p.get('diameterRatio').value,
-        perspective: p.get('perspective').value,
-        offAxisFraction: p.get('offAxisFraction').value,
-        useMagnifier: p.get('useMagnifier').value,
-        magnification: p.get('magnification').value,
-        overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').value,
-        itemExtent: p.get('itemExtent').value,
-        squeeze: p.get('squeeze').value,
-        onSelectedItemChanged: p.get('onSelectedItemChanged').value,
-        renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').value,
-        clipBehavior: p.get('clipBehavior').value,
-        restorationId: p.get('restorationId').value,
-        scrollBehavior: p.get('scrollBehavior').value,
-        childDelegate: p.get('childDelegate').value,
+        key: p.get('key').build(),
+        controller: p.get('controller').build(),
+        physics: p.get('physics').build(),
+        diameterRatio: p.get('diameterRatio').build(),
+        perspective: p.get('perspective').build(),
+        offAxisFraction: p.get('offAxisFraction').build(),
+        useMagnifier: p.get('useMagnifier').build(),
+        magnification: p.get('magnification').build(),
+        overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
+        itemExtent: p.get('itemExtent').build(),
+        squeeze: p.get('squeeze').build(),
+        onSelectedItemChanged: p.get('onSelectedItemChanged').build(),
+        renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        restorationId: p.get('restorationId').build(),
+        scrollBehavior: p.get('scrollBehavior').build(),
+        childDelegate: p.get('childDelegate').build(),
       ),
     );
     mateParams.put('key', key);
@@ -462,19 +462,19 @@ class ListWheelViewport$Mate extends ListWheelViewport with WidgetMate<ListWheel
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ListWheelViewport$Mate(
-        key: p.get('key').value,
-        diameterRatio: p.get('diameterRatio').value,
-        perspective: p.get('perspective').value,
-        offAxisFraction: p.get('offAxisFraction').value,
-        useMagnifier: p.get('useMagnifier').value,
-        magnification: p.get('magnification').value,
-        overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').value,
-        itemExtent: p.get('itemExtent').value,
-        squeeze: p.get('squeeze').value,
-        renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').value,
-        offset: p.get('offset').value,
-        childDelegate: p.get('childDelegate').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        diameterRatio: p.get('diameterRatio').build(),
+        perspective: p.get('perspective').build(),
+        offAxisFraction: p.get('offAxisFraction').build(),
+        useMagnifier: p.get('useMagnifier').build(),
+        magnification: p.get('magnification').build(),
+        overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
+        itemExtent: p.get('itemExtent').build(),
+        squeeze: p.get('squeeze').build(),
+        renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
+        offset: p.get('offset').build(),
+        childDelegate: p.get('childDelegate').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);

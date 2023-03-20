@@ -31,10 +31,10 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoActivityIndicator$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        animating: p.get('animating').value,
-        radius: p.get('radius').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        animating: p.get('animating').build(),
+        radius: p.get('radius').build(),
       ),
     );
     mateParams.put('key', key);
@@ -65,10 +65,10 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoActivityIndicator$Mate.partiallyRevealed(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        radius: p.get('radius').value,
-        progress: p.get('progress').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        radius: p.get('radius').build(),
+        progress: p.get('progress').build(),
       ),
     );
     mateParams.put('key', key);

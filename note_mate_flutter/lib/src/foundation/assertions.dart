@@ -26,9 +26,9 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate<PartialStackFra
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PartialStackFrame$Mate(
-        package: p.get('package').value,
-        className: p.get('className').value,
-        method: p.get('method').value,
+        package: p.get('package').build(),
+        className: p.get('className').build(),
+        method: p.get('method').build(),
       ),
     );
     mateParams.put('package', package);
@@ -53,8 +53,8 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RepetitiveStackFrameFilter$Mate(
-        frames: p.get('frames').value,
-        replacement: p.get('replacement').value,
+        frames: p.get('frames').build(),
+        replacement: p.get('replacement').build(),
       ),
     );
     mateParams.putList('frames', frames);
@@ -146,13 +146,13 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate<FlutterErro
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FlutterErrorDetails$Mate(
-        exception: p.get('exception').value,
-        stack: p.get('stack').value,
-        library: p.get('library').value,
-        context: p.get('context').value,
-        stackFilter: p.get('stackFilter').value,
-        informationCollector: p.get('informationCollector').value,
-        silent: p.get('silent').value,
+        exception: p.get('exception').build(),
+        stack: p.get('stack').build(),
+        library: p.get('library').build(),
+        context: p.get('context').build(),
+        stackFilter: p.get('stackFilter').build(),
+        informationCollector: p.get('informationCollector').build(),
+        silent: p.get('silent').build(),
       ),
     );
     mateParams.put('exception', exception);
@@ -206,8 +206,8 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate<Diagnos
       builder: (p) => DiagnosticsStackTrace$Mate(
         p.get('name').value,
         p.get('stack').value,
-        stackFilter: p.get('stackFilter').value,
-        showSeparator: p.get('showSeparator').value,
+        stackFilter: p.get('stackFilter').build(),
+        showSeparator: p.get('showSeparator').build(),
       ),
     );
     mateParams.put('name', name);
@@ -234,8 +234,8 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate<Diagnos
       init: this,
       builder: (p) => DiagnosticsStackTrace$Mate.singleFrame(
         p.get('name').value,
-        frame: p.get('frame').value,
-        showSeparator: p.get('showSeparator').value,
+        frame: p.get('frame').build(),
+        showSeparator: p.get('showSeparator').build(),
       ),
     );
     mateParams.put('name', name);

@@ -57,10 +57,10 @@ class PipelineOwner$Mate extends PipelineOwner with Mate<PipelineOwner$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PipelineOwner$Mate(
-        onNeedVisualUpdate: p.get('onNeedVisualUpdate').value,
-        onSemanticsOwnerCreated: p.get('onSemanticsOwnerCreated').value,
-        onSemanticsUpdate: p.get('onSemanticsUpdate').value,
-        onSemanticsOwnerDisposed: p.get('onSemanticsOwnerDisposed').value,
+        onNeedVisualUpdate: p.get('onNeedVisualUpdate').build(),
+        onSemanticsOwnerCreated: p.get('onSemanticsOwnerCreated').build(),
+        onSemanticsUpdate: p.get('onSemanticsUpdate').build(),
+        onSemanticsOwnerDisposed: p.get('onSemanticsOwnerDisposed').build(),
       ),
     );
     mateParams.put('onNeedVisualUpdate', onNeedVisualUpdate);

@@ -29,10 +29,10 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate<ActionIconT
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ActionIconThemeData$Mate(
-        backButtonIconBuilder: p.get('backButtonIconBuilder').value,
-        closeButtonIconBuilder: p.get('closeButtonIconBuilder').value,
-        drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').value,
-        endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').value,
+        backButtonIconBuilder: p.get('backButtonIconBuilder').build(),
+        closeButtonIconBuilder: p.get('closeButtonIconBuilder').build(),
+        drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').build(),
+        endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').build(),
       ),
     );
     mateParams.put('backButtonIconBuilder', backButtonIconBuilder);
@@ -62,9 +62,9 @@ class ActionIconTheme$Mate extends ActionIconTheme with WidgetMate<ActionIconThe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ActionIconTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

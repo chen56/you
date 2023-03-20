@@ -20,8 +20,8 @@ class DateTimeRange$Mate extends DateTimeRange with Mate<DateTimeRange$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DateTimeRange$Mate(
-        start: p.get('start').value,
-        end: p.get('end').value,
+        start: p.get('start').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('start', start);

@@ -25,9 +25,9 @@ class AutofillGroup$Mate extends AutofillGroup with WidgetMate<AutofillGroup$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AutofillGroup$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        onDisposeAction: p.get('onDisposeAction').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        onDisposeAction: p.get('onDisposeAction').build(),
       ),
     );
     mateParams.put('key', key);

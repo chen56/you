@@ -30,10 +30,10 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraints$Mate(
-        minWidth: p.get('minWidth').value,
-        maxWidth: p.get('maxWidth').value,
-        minHeight: p.get('minHeight').value,
-        maxHeight: p.get('maxHeight').value,
+        minWidth: p.get('minWidth').build(),
+        maxWidth: p.get('maxWidth').build(),
+        minHeight: p.get('minHeight').build(),
+        maxHeight: p.get('maxHeight').build(),
       ),
     );
     mateParams.put('minWidth', minWidth);
@@ -69,8 +69,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraints$Mate.tightFor(
-        width: p.get('width').value,
-        height: p.get('height').value,
+        width: p.get('width').build(),
+        height: p.get('height').build(),
       ),
     );
     mateParams.put('width', width);
@@ -91,8 +91,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraints$Mate.tightForFinite(
-        width: p.get('width').value,
-        height: p.get('height').value,
+        width: p.get('width').build(),
+        height: p.get('height').build(),
       ),
     );
     mateParams.put('width', width);
@@ -126,8 +126,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate<BoxConstraints$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BoxConstraints$Mate.expand(
-        width: p.get('width').value,
-        height: p.get('height').value,
+        width: p.get('width').build(),
+        height: p.get('height').build(),
       ),
     );
     mateParams.put('width', width);

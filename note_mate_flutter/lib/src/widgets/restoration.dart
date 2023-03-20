@@ -27,9 +27,9 @@ class RestorationScope$Mate extends RestorationScope with WidgetMate<Restoration
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RestorationScope$Mate(
-        key: p.get('key').value,
-        restorationId: p.get('restorationId').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        restorationId: p.get('restorationId').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -58,9 +58,9 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Widg
     mateParams = ObjectParam(
       init: this,
       builder: (p) => UnmanagedRestorationScope$Mate(
-        key: p.get('key').value,
-        bucket: p.get('bucket').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        bucket: p.get('bucket').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -89,9 +89,9 @@ class RootRestorationScope$Mate extends RootRestorationScope with WidgetMate<Roo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RootRestorationScope$Mate(
-        key: p.get('key').value,
-        restorationId: p.get('restorationId').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        restorationId: p.get('restorationId').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

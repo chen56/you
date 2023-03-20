@@ -27,9 +27,9 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
     mateParams = ObjectParam(
       init: this,
       builder: (p) => VerticalDragGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);
@@ -59,9 +59,9 @@ class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecogniz
     mateParams = ObjectParam(
       init: this,
       builder: (p) => HorizontalDragGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);
@@ -90,9 +90,9 @@ class PanGestureRecognizer$Mate extends PanGestureRecognizer with Mate<PanGestur
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PanGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);

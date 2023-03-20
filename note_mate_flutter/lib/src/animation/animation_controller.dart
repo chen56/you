@@ -45,14 +45,14 @@ class AnimationController$Mate extends AnimationController with Mate<AnimationCo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimationController$Mate(
-        value: p.get('value').value,
-        duration: p.get('duration').value,
-        reverseDuration: p.get('reverseDuration').value,
-        debugLabel: p.get('debugLabel').value,
-        lowerBound: p.get('lowerBound').value,
-        upperBound: p.get('upperBound').value,
-        animationBehavior: p.get('animationBehavior').value,
-        vsync: p.get('vsync').value,
+        value: p.get('value').build(),
+        duration: p.get('duration').build(),
+        reverseDuration: p.get('reverseDuration').build(),
+        debugLabel: p.get('debugLabel').build(),
+        lowerBound: p.get('lowerBound').build(),
+        upperBound: p.get('upperBound').build(),
+        animationBehavior: p.get('animationBehavior').build(),
+        vsync: p.get('vsync').build(),
       ),
     );
     mateParams.put('value', value);
@@ -95,12 +95,12 @@ class AnimationController$Mate extends AnimationController with Mate<AnimationCo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimationController$Mate.unbounded(
-        value: p.get('value').value,
-        duration: p.get('duration').value,
-        reverseDuration: p.get('reverseDuration').value,
-        debugLabel: p.get('debugLabel').value,
-        vsync: p.get('vsync').value,
-        animationBehavior: p.get('animationBehavior').value,
+        value: p.get('value').build(),
+        duration: p.get('duration').build(),
+        reverseDuration: p.get('reverseDuration').build(),
+        debugLabel: p.get('debugLabel').build(),
+        vsync: p.get('vsync').build(),
+        animationBehavior: p.get('animationBehavior').build(),
       ),
     );
     mateParams.put('value', value);

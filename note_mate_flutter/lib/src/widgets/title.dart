@@ -31,10 +31,10 @@ class Title$Mate extends Title with WidgetMate<Title$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Title$Mate(
-        key: p.get('key').value,
-        title: p.get('title').value,
-        color: p.get('color').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        title: p.get('title').build(),
+        color: p.get('color').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

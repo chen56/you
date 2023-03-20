@@ -16,7 +16,7 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate<TextButtonT
       : super(style: style) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => TextButtonThemeData$Mate(style: p.get('style').value),
+      builder: (p) => TextButtonThemeData$Mate(style: p.get('style').build()),
     );
     mateParams.put('style', style);
   }
@@ -42,9 +42,9 @@ class TextButtonTheme$Mate extends TextButtonTheme with WidgetMate<TextButtonThe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextButtonTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

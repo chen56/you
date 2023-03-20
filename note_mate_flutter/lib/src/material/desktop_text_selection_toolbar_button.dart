@@ -28,9 +28,9 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DesktopTextSelectionToolbarButton$Mate(
-        key: p.get('key').value,
-        onPressed: p.get('onPressed').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        onPressed: p.get('onPressed').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -60,10 +60,10 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DesktopTextSelectionToolbarButton$Mate.text(
-        key: p.get('key').value,
-        context: p.get('context').value,
-        onPressed: p.get('onPressed').value,
-        text: p.get('text').value,
+        key: p.get('key').build(),
+        context: p.get('context').build(),
+        onPressed: p.get('onPressed').build(),
+        text: p.get('text').build(),
       ),
     );
     mateParams.put('key', key);

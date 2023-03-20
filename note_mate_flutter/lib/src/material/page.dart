@@ -35,11 +35,11 @@ class MaterialPageRoute$Mate<T> extends MaterialPageRoute<T> with Mate<MaterialP
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialPageRoute$Mate(
-        builder: p.get('builder').value,
-        settings: p.get('settings').value,
-        maintainState: p.get('maintainState').value,
-        fullscreenDialog: p.get('fullscreenDialog').value,
-        allowSnapshotting: p.get('allowSnapshotting').value,
+        builder: p.get('builder').build(),
+        settings: p.get('settings').build(),
+        maintainState: p.get('maintainState').build(),
+        fullscreenDialog: p.get('fullscreenDialog').build(),
+        allowSnapshotting: p.get('allowSnapshotting').build(),
       ),
     );
     mateParams.put('builder', builder);
@@ -90,14 +90,14 @@ class MaterialPage$Mate<T> extends MaterialPage<T> with Mate<MaterialPage$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialPage$Mate(
-        child: p.get('child').value,
-        maintainState: p.get('maintainState').value,
-        fullscreenDialog: p.get('fullscreenDialog').value,
-        allowSnapshotting: p.get('allowSnapshotting').value,
-        key: p.get('key').value,
-        name: p.get('name').value,
-        arguments: p.get('arguments').value,
-        restorationId: p.get('restorationId').value,
+        child: p.get('child').build(),
+        maintainState: p.get('maintainState').build(),
+        fullscreenDialog: p.get('fullscreenDialog').build(),
+        allowSnapshotting: p.get('allowSnapshotting').build(),
+        key: p.get('key').build(),
+        name: p.get('name').build(),
+        arguments: p.get('arguments').build(),
+        restorationId: p.get('restorationId').build(),
       ),
     );
     mateParams.put('child', child);

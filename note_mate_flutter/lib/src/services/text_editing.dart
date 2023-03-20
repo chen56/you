@@ -29,10 +29,10 @@ class TextSelection$Mate extends TextSelection with Mate<TextSelection$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelection$Mate(
-        baseOffset: p.get('baseOffset').value,
-        extentOffset: p.get('extentOffset').value,
-        affinity: p.get('affinity').value,
-        isDirectional: p.get('isDirectional').value,
+        baseOffset: p.get('baseOffset').build(),
+        extentOffset: p.get('extentOffset').build(),
+        affinity: p.get('affinity').build(),
+        isDirectional: p.get('isDirectional').build(),
       ),
     );
     mateParams.put('baseOffset', baseOffset);
@@ -55,8 +55,8 @@ class TextSelection$Mate extends TextSelection with Mate<TextSelection$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TextSelection$Mate.collapsed(
-        offset: p.get('offset').value,
-        affinity: p.get('affinity').value,
+        offset: p.get('offset').build(),
+        affinity: p.get('affinity').build(),
       ),
     );
     mateParams.put('offset', offset);

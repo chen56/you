@@ -51,15 +51,15 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate<BottomShe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BottomSheetThemeData$Mate(
-        backgroundColor: p.get('backgroundColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        elevation: p.get('elevation').value,
-        modalBackgroundColor: p.get('modalBackgroundColor').value,
-        modalBarrierColor: p.get('modalBarrierColor').value,
-        modalElevation: p.get('modalElevation').value,
-        shape: p.get('shape').value,
-        clipBehavior: p.get('clipBehavior').value,
-        constraints: p.get('constraints').value,
+        backgroundColor: p.get('backgroundColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        elevation: p.get('elevation').build(),
+        modalBackgroundColor: p.get('modalBackgroundColor').build(),
+        modalBarrierColor: p.get('modalBarrierColor').build(),
+        modalElevation: p.get('modalElevation').build(),
+        shape: p.get('shape').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        constraints: p.get('constraints').build(),
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);

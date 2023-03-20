@@ -71,19 +71,19 @@ class NavigationBar$Mate extends NavigationBar with WidgetMate<NavigationBar$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationBar$Mate(
-        key: p.get('key').value,
-        animationDuration: p.get('animationDuration').value,
-        selectedIndex: p.get('selectedIndex').value,
-        destinations: p.get('destinations').value,
-        onDestinationSelected: p.get('onDestinationSelected').value,
-        backgroundColor: p.get('backgroundColor').value,
-        elevation: p.get('elevation').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        indicatorColor: p.get('indicatorColor').value,
-        indicatorShape: p.get('indicatorShape').value,
-        height: p.get('height').value,
-        labelBehavior: p.get('labelBehavior').value,
+        key: p.get('key').build(),
+        animationDuration: p.get('animationDuration').build(),
+        selectedIndex: p.get('selectedIndex').build(),
+        destinations: p.get('destinations').build(),
+        onDestinationSelected: p.get('onDestinationSelected').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        elevation: p.get('elevation').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        indicatorColor: p.get('indicatorColor').build(),
+        indicatorShape: p.get('indicatorShape').build(),
+        height: p.get('height').build(),
+        labelBehavior: p.get('labelBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -130,11 +130,11 @@ class NavigationDestination$Mate extends NavigationDestination with WidgetMate<N
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDestination$Mate(
-        key: p.get('key').value,
-        icon: p.get('icon').value,
-        selectedIcon: p.get('selectedIcon').value,
-        label: p.get('label').value,
-        tooltip: p.get('tooltip').value,
+        key: p.get('key').build(),
+        icon: p.get('icon').build(),
+        selectedIcon: p.get('selectedIcon').build(),
+        label: p.get('label').build(),
+        tooltip: p.get('tooltip').build(),
       ),
     );
     mateParams.put('key', key);
@@ -181,13 +181,13 @@ class NavigationIndicator$Mate extends NavigationIndicator with WidgetMate<Navig
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationIndicator$Mate(
-        key: p.get('key').value,
-        animation: p.get('animation').value,
-        color: p.get('color').value,
-        width: p.get('width').value,
-        height: p.get('height').value,
-        borderRadius: p.get('borderRadius').value,
-        shape: p.get('shape').value,
+        key: p.get('key').build(),
+        animation: p.get('animation').build(),
+        color: p.get('color').build(),
+        width: p.get('width').build(),
+        height: p.get('height').build(),
+        borderRadius: p.get('borderRadius').build(),
+        shape: p.get('shape').build(),
       ),
     );
     mateParams.put('key', key);

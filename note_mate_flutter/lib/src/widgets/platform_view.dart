@@ -55,15 +55,15 @@ class AndroidView$Mate extends AndroidView with WidgetMate<AndroidView$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AndroidView$Mate(
-        key: p.get('key').value,
-        viewType: p.get('viewType').value,
-        onPlatformViewCreated: p.get('onPlatformViewCreated').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
-        layoutDirection: p.get('layoutDirection').value,
-        gestureRecognizers: p.get('gestureRecognizers').value,
-        creationParams: p.get('creationParams').value,
-        creationParamsCodec: p.get('creationParamsCodec').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        viewType: p.get('viewType').build(),
+        onPlatformViewCreated: p.get('onPlatformViewCreated').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
+        layoutDirection: p.get('layoutDirection').build(),
+        gestureRecognizers: p.get('gestureRecognizers').build(),
+        creationParams: p.get('creationParams').build(),
+        creationParamsCodec: p.get('creationParamsCodec').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);
@@ -118,14 +118,14 @@ class UiKitView$Mate extends UiKitView with WidgetMate<UiKitView$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => UiKitView$Mate(
-        key: p.get('key').value,
-        viewType: p.get('viewType').value,
-        onPlatformViewCreated: p.get('onPlatformViewCreated').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
-        layoutDirection: p.get('layoutDirection').value,
-        creationParams: p.get('creationParams').value,
-        creationParamsCodec: p.get('creationParamsCodec').value,
-        gestureRecognizers: p.get('gestureRecognizers').value,
+        key: p.get('key').build(),
+        viewType: p.get('viewType').build(),
+        onPlatformViewCreated: p.get('onPlatformViewCreated').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
+        layoutDirection: p.get('layoutDirection').build(),
+        creationParams: p.get('creationParams').build(),
+        creationParamsCodec: p.get('creationParamsCodec').build(),
+        gestureRecognizers: p.get('gestureRecognizers').build(),
       ),
     );
     mateParams.put('key', key);
@@ -159,9 +159,9 @@ class HtmlElementView$Mate extends HtmlElementView with WidgetMate<HtmlElementVi
     mateParams = ObjectParam(
       init: this,
       builder: (p) => HtmlElementView$Mate(
-        key: p.get('key').value,
-        viewType: p.get('viewType').value,
-        onPlatformViewCreated: p.get('onPlatformViewCreated').value,
+        key: p.get('key').build(),
+        viewType: p.get('viewType').build(),
+        onPlatformViewCreated: p.get('onPlatformViewCreated').build(),
       ),
     );
     mateParams.put('key', key);
@@ -194,10 +194,10 @@ class PlatformViewLink$Mate extends PlatformViewLink with WidgetMate<PlatformVie
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformViewLink$Mate(
-        key: p.get('key').value,
-        surfaceFactory: p.get('surfaceFactory').value,
-        onCreatePlatformView: p.get('onCreatePlatformView').value,
-        viewType: p.get('viewType').value,
+        key: p.get('key').build(),
+        surfaceFactory: p.get('surfaceFactory').build(),
+        onCreatePlatformView: p.get('onCreatePlatformView').build(),
+        viewType: p.get('viewType').build(),
       ),
     );
     mateParams.put('key', key);
@@ -231,10 +231,10 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with WidgetMate<Platf
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PlatformViewSurface$Mate(
-        key: p.get('key').value,
-        controller: p.get('controller').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
-        gestureRecognizers: p.get('gestureRecognizers').value,
+        key: p.get('key').build(),
+        controller: p.get('controller').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
+        gestureRecognizers: p.get('gestureRecognizers').build(),
       ),
     );
     mateParams.put('key', key);
@@ -268,10 +268,10 @@ class AndroidViewSurface$Mate extends AndroidViewSurface with WidgetMate<Android
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AndroidViewSurface$Mate(
-        key: p.get('key').value,
-        controller: p.get('controller').value,
-        hitTestBehavior: p.get('hitTestBehavior').value,
-        gestureRecognizers: p.get('gestureRecognizers').value,
+        key: p.get('key').build(),
+        controller: p.get('controller').build(),
+        hitTestBehavior: p.get('hitTestBehavior').build(),
+        gestureRecognizers: p.get('gestureRecognizers').build(),
       ),
     );
     mateParams.put('key', key);

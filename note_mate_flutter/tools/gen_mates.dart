@@ -16,8 +16,7 @@ import "package:path/path.dart" as path;
 
 import 'env.dart';
 
-// todo 过滤掉@Deprecated
-// ref: ElementDisplayStringBuilder
+// ref: ElementDisplayStringBuilder 代码生成
 main() async {
   _log("## main");
   List<String> include = [
@@ -452,8 +451,12 @@ void _genLibMate({
                                 parameters.where((e) => e.isPositional).map((e) =>
                                     refer("p.get").call([code.literal(e.name)]).property("value")),
                                 Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
-                                    MapEntry(e.name,
-                                        refer("p.get").call([literal(e.name)]).property("value")))))
+                                    MapEntry(
+                                        e.name,
+                                        refer("p.get")
+                                            .call([literal(e.name)])
+                                            .property("build")
+                                            .call([])))))
                             .code).closure,
                     }))
                     .statement,

@@ -31,10 +31,10 @@ class SliverFillViewport$Mate extends SliverFillViewport with WidgetMate<SliverF
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFillViewport$Mate(
-        key: p.get('key').value,
-        delegate: p.get('delegate').value,
-        viewportFraction: p.get('viewportFraction').value,
-        padEnds: p.get('padEnds').value,
+        key: p.get('key').build(),
+        delegate: p.get('delegate').build(),
+        viewportFraction: p.get('viewportFraction').build(),
+        padEnds: p.get('padEnds').build(),
       ),
     );
     mateParams.put('key', key);
@@ -68,10 +68,10 @@ class SliverFillRemaining$Mate extends SliverFillRemaining with WidgetMate<Slive
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SliverFillRemaining$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        hasScrollBody: p.get('hasScrollBody').value,
-        fillOverscroll: p.get('fillOverscroll').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        hasScrollBody: p.get('hasScrollBody').build(),
+        fillOverscroll: p.get('fillOverscroll').build(),
       ),
     );
     mateParams.put('key', key);

@@ -47,14 +47,14 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with WidgetMate<FlexibleSpa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FlexibleSpaceBar$Mate(
-        key: p.get('key').value,
-        title: p.get('title').value,
-        background: p.get('background').value,
-        centerTitle: p.get('centerTitle').value,
-        titlePadding: p.get('titlePadding').value,
-        collapseMode: p.get('collapseMode').value,
-        stretchModes: p.get('stretchModes').value,
-        expandedTitleScale: p.get('expandedTitleScale').value,
+        key: p.get('key').build(),
+        title: p.get('title').build(),
+        background: p.get('background').build(),
+        centerTitle: p.get('centerTitle').build(),
+        titlePadding: p.get('titlePadding').build(),
+        collapseMode: p.get('collapseMode').build(),
+        stretchModes: p.get('stretchModes').build(),
+        expandedTitleScale: p.get('expandedTitleScale').build(),
       ),
     );
     mateParams.put('key', key);
@@ -104,13 +104,13 @@ class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Widget
     mateParams = ObjectParam(
       init: this,
       builder: (p) => FlexibleSpaceBarSettings$Mate(
-        key: p.get('key').value,
-        toolbarOpacity: p.get('toolbarOpacity').value,
-        minExtent: p.get('minExtent').value,
-        maxExtent: p.get('maxExtent').value,
-        currentExtent: p.get('currentExtent').value,
-        child: p.get('child').value,
-        isScrolledUnder: p.get('isScrolledUnder').value,
+        key: p.get('key').build(),
+        toolbarOpacity: p.get('toolbarOpacity').build(),
+        minExtent: p.get('minExtent').build(),
+        maxExtent: p.get('maxExtent').build(),
+        currentExtent: p.get('currentExtent').build(),
+        child: p.get('child').build(),
+        isScrolledUnder: p.get('isScrolledUnder').build(),
       ),
     );
     mateParams.put('key', key);

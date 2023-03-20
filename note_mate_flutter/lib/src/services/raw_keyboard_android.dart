@@ -56,17 +56,17 @@ class RawKeyEventDataAndroid$Mate extends RawKeyEventDataAndroid with Mate<RawKe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RawKeyEventDataAndroid$Mate(
-        flags: p.get('flags').value,
-        codePoint: p.get('codePoint').value,
-        plainCodePoint: p.get('plainCodePoint').value,
-        keyCode: p.get('keyCode').value,
-        scanCode: p.get('scanCode').value,
-        metaState: p.get('metaState').value,
-        eventSource: p.get('eventSource').value,
-        vendorId: p.get('vendorId').value,
-        productId: p.get('productId').value,
-        deviceId: p.get('deviceId').value,
-        repeatCount: p.get('repeatCount').value,
+        flags: p.get('flags').build(),
+        codePoint: p.get('codePoint').build(),
+        plainCodePoint: p.get('plainCodePoint').build(),
+        keyCode: p.get('keyCode').build(),
+        scanCode: p.get('scanCode').build(),
+        metaState: p.get('metaState').build(),
+        eventSource: p.get('eventSource').build(),
+        vendorId: p.get('vendorId').build(),
+        productId: p.get('productId').build(),
+        deviceId: p.get('deviceId').build(),
+        repeatCount: p.get('repeatCount').build(),
       ),
     );
     mateParams.put('flags', flags);

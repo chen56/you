@@ -35,9 +35,9 @@ class TransformProperty$Mate extends TransformProperty with Mate<TransformProper
       builder: (p) => TransformProperty$Mate(
         p.get('name').value,
         p.get('value').value,
-        showName: p.get('showName').value,
-        defaultValue: p.get('defaultValue').value,
-        level: p.get('level').value,
+        showName: p.get('showName').build(),
+        defaultValue: p.get('defaultValue').build(),
+        level: p.get('level').build(),
       ),
     );
     mateParams.put('name', name);

@@ -49,14 +49,14 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate<Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialBannerThemeData$Mate(
-        backgroundColor: p.get('backgroundColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        shadowColor: p.get('shadowColor').value,
-        dividerColor: p.get('dividerColor').value,
-        contentTextStyle: p.get('contentTextStyle').value,
-        elevation: p.get('elevation').value,
-        padding: p.get('padding').value,
-        leadingPadding: p.get('leadingPadding').value,
+        backgroundColor: p.get('backgroundColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        shadowColor: p.get('shadowColor').build(),
+        dividerColor: p.get('dividerColor').build(),
+        contentTextStyle: p.get('contentTextStyle').build(),
+        elevation: p.get('elevation').build(),
+        padding: p.get('padding').build(),
+        leadingPadding: p.get('leadingPadding').build(),
       ),
     );
     mateParams.put('backgroundColor', backgroundColor);
@@ -90,9 +90,9 @@ class MaterialBannerTheme$Mate extends MaterialBannerTheme with WidgetMate<Mater
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MaterialBannerTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

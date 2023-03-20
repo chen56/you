@@ -26,9 +26,9 @@ class RenderSliverPadding$Mate extends RenderSliverPadding with Mate<RenderSlive
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderSliverPadding$Mate(
-        padding: p.get('padding').value,
-        textDirection: p.get('textDirection').value,
-        child: p.get('child').value,
+        padding: p.get('padding').build(),
+        textDirection: p.get('textDirection').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('padding', padding);

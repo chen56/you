@@ -45,13 +45,13 @@ class AnimatedSize$Mate extends AnimatedSize with WidgetMate<AnimatedSize$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimatedSize$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        alignment: p.get('alignment').value,
-        curve: p.get('curve').value,
-        duration: p.get('duration').value,
-        reverseDuration: p.get('reverseDuration').value,
-        clipBehavior: p.get('clipBehavior').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        alignment: p.get('alignment').build(),
+        curve: p.get('curve').build(),
+        duration: p.get('duration').build(),
+        reverseDuration: p.get('reverseDuration').build(),
+        clipBehavior: p.get('clipBehavior').build(),
       ),
     );
     mateParams.put('key', key);

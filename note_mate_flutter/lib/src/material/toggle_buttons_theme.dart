@@ -78,21 +78,21 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate<Toggl
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ToggleButtonsThemeData$Mate(
-        textStyle: p.get('textStyle').value,
-        constraints: p.get('constraints').value,
-        color: p.get('color').value,
-        selectedColor: p.get('selectedColor').value,
-        disabledColor: p.get('disabledColor').value,
-        fillColor: p.get('fillColor').value,
-        focusColor: p.get('focusColor').value,
-        highlightColor: p.get('highlightColor').value,
-        hoverColor: p.get('hoverColor').value,
-        splashColor: p.get('splashColor').value,
-        borderColor: p.get('borderColor').value,
-        selectedBorderColor: p.get('selectedBorderColor').value,
-        disabledBorderColor: p.get('disabledBorderColor').value,
-        borderRadius: p.get('borderRadius').value,
-        borderWidth: p.get('borderWidth').value,
+        textStyle: p.get('textStyle').build(),
+        constraints: p.get('constraints').build(),
+        color: p.get('color').build(),
+        selectedColor: p.get('selectedColor').build(),
+        disabledColor: p.get('disabledColor').build(),
+        fillColor: p.get('fillColor').build(),
+        focusColor: p.get('focusColor').build(),
+        highlightColor: p.get('highlightColor').build(),
+        hoverColor: p.get('hoverColor').build(),
+        splashColor: p.get('splashColor').build(),
+        borderColor: p.get('borderColor').build(),
+        selectedBorderColor: p.get('selectedBorderColor').build(),
+        disabledBorderColor: p.get('disabledBorderColor').build(),
+        borderRadius: p.get('borderRadius').build(),
+        borderWidth: p.get('borderWidth').build(),
       ),
     );
     mateParams.put('textStyle', textStyle);
@@ -133,9 +133,9 @@ class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with WidgetMate<ToggleB
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ToggleButtonsTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -26,9 +26,9 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate<Spe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SpellCheckConfiguration$Mate(
-        spellCheckService: p.get('spellCheckService').value,
-        misspelledTextStyle: p.get('misspelledTextStyle').value,
-        spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').value,
+        spellCheckService: p.get('spellCheckService').build(),
+        misspelledTextStyle: p.get('misspelledTextStyle').build(),
+        spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
       ),
     );
     mateParams.put('spellCheckService', spellCheckService);

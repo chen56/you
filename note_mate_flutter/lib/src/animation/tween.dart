@@ -22,8 +22,8 @@ class Tween$Mate<T extends Object?> extends Tween<T> with Mate<Tween$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Tween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -63,8 +63,8 @@ class ColorTween$Mate extends ColorTween with Mate<ColorTween$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ColorTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -88,8 +88,8 @@ class SizeTween$Mate extends SizeTween with Mate<SizeTween$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SizeTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -113,8 +113,8 @@ class RectTween$Mate extends RectTween with Mate<RectTween$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RectTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -138,8 +138,8 @@ class IntTween$Mate extends IntTween with Mate<IntTween$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => IntTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -163,8 +163,8 @@ class StepTween$Mate extends StepTween with Mate<StepTween$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => StepTween$Mate(
-        begin: p.get('begin').value,
-        end: p.get('end').value,
+        begin: p.get('begin').build(),
+        end: p.get('end').build(),
       ),
     );
     mateParams.put('begin', begin);
@@ -198,7 +198,7 @@ class CurveTween$Mate extends CurveTween with Mate<CurveTween$Mate> {
       : super(curve: curve) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => CurveTween$Mate(curve: p.get('curve').value),
+      builder: (p) => CurveTween$Mate(curve: p.get('curve').build()),
     );
     mateParams.put('curve', curve);
   }

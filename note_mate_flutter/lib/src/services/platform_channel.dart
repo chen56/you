@@ -28,7 +28,7 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate<Basic
       builder: (p) => BasicMessageChannel$Mate(
         p.get('name').value,
         p.get('codec').value,
-        binaryMessenger: p.get('binaryMessenger').value,
+        binaryMessenger: p.get('binaryMessenger').build(),
       ),
     );
     mateParams.put('name', name);

@@ -27,9 +27,9 @@ class LongPressDownDetails$Mate extends LongPressDownDetails with Mate<LongPress
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LongPressDownDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
-        kind: p.get('kind').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
+        kind: p.get('kind').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -54,8 +54,8 @@ class LongPressStartDetails$Mate extends LongPressStartDetails with Mate<LongPre
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LongPressStartDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -87,10 +87,10 @@ class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LongPressMoveUpdateDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
-        offsetFromOrigin: p.get('offsetFromOrigin').value,
-        localOffsetFromOrigin: p.get('localOffsetFromOrigin').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
+        offsetFromOrigin: p.get('offsetFromOrigin').build(),
+        localOffsetFromOrigin: p.get('localOffsetFromOrigin').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -120,9 +120,9 @@ class LongPressEndDetails$Mate extends LongPressEndDetails with Mate<LongPressEn
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LongPressEndDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
-        velocity: p.get('velocity').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
+        velocity: p.get('velocity').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -159,11 +159,11 @@ class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Ma
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LongPressGestureRecognizer$Mate(
-        duration: p.get('duration').value,
-        postAcceptSlopTolerance: p.get('postAcceptSlopTolerance').value,
-        supportedDevices: p.get('supportedDevices').value,
-        debugOwner: p.get('debugOwner').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        duration: p.get('duration').build(),
+        postAcceptSlopTolerance: p.get('postAcceptSlopTolerance').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        debugOwner: p.get('debugOwner').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('duration', duration);

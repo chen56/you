@@ -16,7 +16,7 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate<MenuBarThemeData$
       : super(style: style) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => MenuBarThemeData$Mate(style: p.get('style').value),
+      builder: (p) => MenuBarThemeData$Mate(style: p.get('style').build()),
     );
     mateParams.put('style', style);
   }
@@ -42,9 +42,9 @@ class MenuBarTheme$Mate extends MenuBarTheme with WidgetMate<MenuBarTheme$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MenuBarTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

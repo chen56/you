@@ -30,10 +30,10 @@ class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Wid
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnnotatedRegion$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        value: p.get('value').value,
-        sized: p.get('sized').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        value: p.get('value').build(),
+        sized: p.get('sized').build(),
       ),
     );
     mateParams.put('key', key);

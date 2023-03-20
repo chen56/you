@@ -59,16 +59,16 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate<PopupMenuThem
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PopupMenuThemeData$Mate(
-        color: p.get('color').value,
-        shape: p.get('shape').value,
-        elevation: p.get('elevation').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        textStyle: p.get('textStyle').value,
-        labelTextStyle: p.get('labelTextStyle').value,
-        enableFeedback: p.get('enableFeedback').value,
-        mouseCursor: p.get('mouseCursor').value,
-        position: p.get('position').value,
+        color: p.get('color').build(),
+        shape: p.get('shape').build(),
+        elevation: p.get('elevation').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        textStyle: p.get('textStyle').build(),
+        labelTextStyle: p.get('labelTextStyle').build(),
+        enableFeedback: p.get('enableFeedback').build(),
+        mouseCursor: p.get('mouseCursor').build(),
+        position: p.get('position').build(),
       ),
     );
     mateParams.put('color', color);
@@ -104,9 +104,9 @@ class PopupMenuTheme$Mate extends PopupMenuTheme with WidgetMate<PopupMenuTheme$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => PopupMenuTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

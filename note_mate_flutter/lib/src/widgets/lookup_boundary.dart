@@ -21,8 +21,8 @@ class LookupBoundary$Mate extends LookupBoundary with WidgetMate<LookupBoundary$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LookupBoundary$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

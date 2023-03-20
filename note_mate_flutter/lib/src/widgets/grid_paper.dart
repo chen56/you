@@ -39,12 +39,12 @@ class GridPaper$Mate extends GridPaper with WidgetMate<GridPaper$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => GridPaper$Mate(
-        key: p.get('key').value,
-        color: p.get('color').value,
-        interval: p.get('interval').value,
-        divisions: p.get('divisions').value,
-        subdivisions: p.get('subdivisions').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        color: p.get('color').build(),
+        interval: p.get('interval').build(),
+        divisions: p.get('divisions').build(),
+        subdivisions: p.get('subdivisions').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

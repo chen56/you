@@ -29,10 +29,10 @@ class AutofillConfiguration$Mate extends AutofillConfiguration with Mate<Autofil
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AutofillConfiguration$Mate(
-        uniqueIdentifier: p.get('uniqueIdentifier').value,
-        autofillHints: p.get('autofillHints').value,
-        currentEditingValue: p.get('currentEditingValue').value,
-        hintText: p.get('hintText').value,
+        uniqueIdentifier: p.get('uniqueIdentifier').build(),
+        autofillHints: p.get('autofillHints').build(),
+        currentEditingValue: p.get('currentEditingValue').build(),
+        hintText: p.get('hintText').build(),
       ),
     );
     mateParams.put('uniqueIdentifier', uniqueIdentifier);

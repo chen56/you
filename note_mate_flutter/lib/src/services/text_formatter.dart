@@ -24,8 +24,8 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
       init: this,
       builder: (p) => FilteringTextInputFormatter$Mate(
         p.get('filterPattern').value,
-        allow: p.get('allow').value,
-        replacementString: p.get('replacementString').value,
+        allow: p.get('allow').build(),
+        replacementString: p.get('replacementString').build(),
       ),
     );
     mateParams.put('filterPattern', filterPattern);
@@ -47,7 +47,7 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
       init: this,
       builder: (p) => FilteringTextInputFormatter$Mate.allow(
         p.get('filterPattern').value,
-        replacementString: p.get('replacementString').value,
+        replacementString: p.get('replacementString').build(),
       ),
     );
     mateParams.put('filterPattern', filterPattern);
@@ -68,7 +68,7 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
       init: this,
       builder: (p) => FilteringTextInputFormatter$Mate.deny(
         p.get('filterPattern').value,
-        replacementString: p.get('replacementString').value,
+        replacementString: p.get('replacementString').build(),
       ),
     );
     mateParams.put('filterPattern', filterPattern);
@@ -93,7 +93,7 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
       init: this,
       builder: (p) => LengthLimitingTextInputFormatter$Mate(
         p.get('maxLength').value,
-        maxLengthEnforcement: p.get('maxLengthEnforcement').value,
+        maxLengthEnforcement: p.get('maxLengthEnforcement').build(),
       ),
     );
     mateParams.put('maxLength', maxLength);

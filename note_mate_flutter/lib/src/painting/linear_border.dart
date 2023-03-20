@@ -21,8 +21,8 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate<LinearBorderEdge$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearBorderEdge$Mate(
-        size: p.get('size').value,
-        alignment: p.get('alignment').value,
+        size: p.get('size').build(),
+        alignment: p.get('alignment').build(),
       ),
     );
     mateParams.put('size', size);
@@ -58,11 +58,11 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearBorder$Mate(
-        side: p.get('side').value,
-        start: p.get('start').value,
-        end: p.get('end').value,
-        top: p.get('top').value,
-        bottom: p.get('bottom').value,
+        side: p.get('side').build(),
+        start: p.get('start').build(),
+        end: p.get('end').build(),
+        top: p.get('top').build(),
+        bottom: p.get('bottom').build(),
       ),
     );
     mateParams.put('side', side);
@@ -90,9 +90,9 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearBorder$Mate.start(
-        side: p.get('side').value,
-        alignment: p.get('alignment').value,
-        size: p.get('size').value,
+        side: p.get('side').build(),
+        alignment: p.get('alignment').build(),
+        size: p.get('size').build(),
       ),
     );
     mateParams.put('side', side);
@@ -118,9 +118,9 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearBorder$Mate.end(
-        side: p.get('side').value,
-        alignment: p.get('alignment').value,
-        size: p.get('size').value,
+        side: p.get('side').build(),
+        alignment: p.get('alignment').build(),
+        size: p.get('size').build(),
       ),
     );
     mateParams.put('side', side);
@@ -146,9 +146,9 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearBorder$Mate.top(
-        side: p.get('side').value,
-        alignment: p.get('alignment').value,
-        size: p.get('size').value,
+        side: p.get('side').build(),
+        alignment: p.get('alignment').build(),
+        size: p.get('size').build(),
       ),
     );
     mateParams.put('side', side);
@@ -174,9 +174,9 @@ class LinearBorder$Mate extends LinearBorder with Mate<LinearBorder$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => LinearBorder$Mate.bottom(
-        side: p.get('side').value,
-        alignment: p.get('alignment').value,
-        size: p.get('size').value,
+        side: p.get('side').build(),
+        alignment: p.get('alignment').build(),
+        size: p.get('size').build(),
       ),
     );
     mateParams.put('side', side);

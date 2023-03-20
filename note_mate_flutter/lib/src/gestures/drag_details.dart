@@ -22,8 +22,8 @@ class DragDownDetails$Mate extends DragDownDetails with Mate<DragDownDetails$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DragDownDetails$Mate(
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
       ),
     );
     mateParams.put('globalPosition', globalPosition);
@@ -55,10 +55,10 @@ class DragStartDetails$Mate extends DragStartDetails with Mate<DragStartDetails$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DragStartDetails$Mate(
-        sourceTimeStamp: p.get('sourceTimeStamp').value,
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
-        kind: p.get('kind').value,
+        sourceTimeStamp: p.get('sourceTimeStamp').build(),
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
+        kind: p.get('kind').build(),
       ),
     );
     mateParams.put('sourceTimeStamp', sourceTimeStamp);
@@ -96,11 +96,11 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate<DragUpdateDetai
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DragUpdateDetails$Mate(
-        sourceTimeStamp: p.get('sourceTimeStamp').value,
-        delta: p.get('delta').value,
-        primaryDelta: p.get('primaryDelta').value,
-        globalPosition: p.get('globalPosition').value,
-        localPosition: p.get('localPosition').value,
+        sourceTimeStamp: p.get('sourceTimeStamp').build(),
+        delta: p.get('delta').build(),
+        primaryDelta: p.get('primaryDelta').build(),
+        globalPosition: p.get('globalPosition').build(),
+        localPosition: p.get('localPosition').build(),
       ),
     );
     mateParams.put('sourceTimeStamp', sourceTimeStamp);
@@ -127,8 +127,8 @@ class DragEndDetails$Mate extends DragEndDetails with Mate<DragEndDetails$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DragEndDetails$Mate(
-        velocity: p.get('velocity').value,
-        primaryVelocity: p.get('primaryVelocity').value,
+        velocity: p.get('velocity').build(),
+        primaryVelocity: p.get('primaryVelocity').build(),
       ),
     );
     mateParams.put('velocity', velocity);

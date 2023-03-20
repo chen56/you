@@ -110,6 +110,11 @@ void main() {
         }))
         .code;
     print(_noFormat(x));
+    //mateParams = Params(init: this, builder: (p) => ContainerMate(key: p.get('key').value, width: p.get('width').value, ), )
+  });
+  test('expression.assign2', () {
+    var x = refer("mateParams").call([]).property("s").call([]).code;
+    print(_noFormat(x));
   });
 }
 

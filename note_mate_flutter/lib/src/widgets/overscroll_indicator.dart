@@ -46,13 +46,13 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator
     mateParams = ObjectParam(
       init: this,
       builder: (p) => GlowingOverscrollIndicator$Mate(
-        key: p.get('key').value,
-        showLeading: p.get('showLeading').value,
-        showTrailing: p.get('showTrailing').value,
-        axisDirection: p.get('axisDirection').value,
-        color: p.get('color').value,
-        notificationPredicate: p.get('notificationPredicate').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        showLeading: p.get('showLeading').build(),
+        showTrailing: p.get('showTrailing').build(),
+        axisDirection: p.get('axisDirection').build(),
+        color: p.get('color').build(),
+        notificationPredicate: p.get('notificationPredicate').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -94,11 +94,11 @@ class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator
     mateParams = ObjectParam(
       init: this,
       builder: (p) => StretchingOverscrollIndicator$Mate(
-        key: p.get('key').value,
-        axisDirection: p.get('axisDirection').value,
-        notificationPredicate: p.get('notificationPredicate').value,
-        clipBehavior: p.get('clipBehavior').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        axisDirection: p.get('axisDirection').build(),
+        notificationPredicate: p.get('notificationPredicate').build(),
+        clipBehavior: p.get('clipBehavior').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);
@@ -120,7 +120,7 @@ class OverscrollIndicatorNotification$Mate extends OverscrollIndicatorNotificati
       : super(leading: leading) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').value),
+      builder: (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').build()),
     );
     mateParams.put('leading', leading);
   }

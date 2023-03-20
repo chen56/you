@@ -15,7 +15,7 @@ class SpellCheckSuggestionsToolbarLayoutDelegate$Mate extends SpellCheckSuggesti
       : super(anchor: anchor) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.get('anchor').value),
+      builder: (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build()),
     );
     mateParams.put('anchor', anchor);
   }

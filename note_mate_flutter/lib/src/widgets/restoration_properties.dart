@@ -230,7 +230,7 @@ class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate<
       init: this,
       builder: (p) => RestorableEnumN$Mate(
         p.get('defaultValue').value,
-        values: p.get('values').value,
+        values: p.get('values').build(),
       ),
     );
     mateParams.put('defaultValue', defaultValue);
@@ -254,7 +254,7 @@ class RestorableEnum$Mate<T extends Enum> extends RestorableEnum<T> with Mate<Re
       init: this,
       builder: (p) => RestorableEnum$Mate(
         p.get('defaultValue').value,
-        values: p.get('values').value,
+        values: p.get('values').build(),
       ),
     );
     mateParams.put('defaultValue', defaultValue);

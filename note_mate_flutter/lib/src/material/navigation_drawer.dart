@@ -57,16 +57,16 @@ class NavigationDrawer$Mate extends NavigationDrawer with WidgetMate<NavigationD
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDrawer$Mate(
-        key: p.get('key').value,
-        children: p.get('children').value,
-        backgroundColor: p.get('backgroundColor').value,
-        shadowColor: p.get('shadowColor').value,
-        surfaceTintColor: p.get('surfaceTintColor').value,
-        elevation: p.get('elevation').value,
-        indicatorColor: p.get('indicatorColor').value,
-        indicatorShape: p.get('indicatorShape').value,
-        onDestinationSelected: p.get('onDestinationSelected').value,
-        selectedIndex: p.get('selectedIndex').value,
+        key: p.get('key').build(),
+        children: p.get('children').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        shadowColor: p.get('shadowColor').build(),
+        surfaceTintColor: p.get('surfaceTintColor').build(),
+        elevation: p.get('elevation').build(),
+        indicatorColor: p.get('indicatorColor').build(),
+        indicatorShape: p.get('indicatorShape').build(),
+        onDestinationSelected: p.get('onDestinationSelected').build(),
+        selectedIndex: p.get('selectedIndex').build(),
       ),
     );
     mateParams.put('key', key);
@@ -111,11 +111,11 @@ class NavigationDrawerDestination$Mate extends NavigationDrawerDestination
     mateParams = ObjectParam(
       init: this,
       builder: (p) => NavigationDrawerDestination$Mate(
-        key: p.get('key').value,
-        backgroundColor: p.get('backgroundColor').value,
-        icon: p.get('icon').value,
-        selectedIcon: p.get('selectedIcon').value,
-        label: p.get('label').value,
+        key: p.get('key').build(),
+        backgroundColor: p.get('backgroundColor').build(),
+        icon: p.get('icon').build(),
+        selectedIcon: p.get('selectedIcon').build(),
+        label: p.get('label').build(),
       ),
     );
     mateParams.put('key', key);

@@ -24,9 +24,9 @@ class ScrollController$Mate extends ScrollController with Mate<ScrollController$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ScrollController$Mate(
-        initialScrollOffset: p.get('initialScrollOffset').value,
-        keepScrollOffset: p.get('keepScrollOffset').value,
-        debugLabel: p.get('debugLabel').value,
+        initialScrollOffset: p.get('initialScrollOffset').build(),
+        keepScrollOffset: p.get('keepScrollOffset').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('initialScrollOffset', initialScrollOffset);
@@ -55,9 +55,9 @@ class TrackingScrollController$Mate extends TrackingScrollController with Mate<T
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TrackingScrollController$Mate(
-        initialScrollOffset: p.get('initialScrollOffset').value,
-        keepScrollOffset: p.get('keepScrollOffset').value,
-        debugLabel: p.get('debugLabel').value,
+        initialScrollOffset: p.get('initialScrollOffset').build(),
+        keepScrollOffset: p.get('keepScrollOffset').build(),
+        debugLabel: p.get('debugLabel').build(),
       ),
     );
     mateParams.put('initialScrollOffset', initialScrollOffset);

@@ -51,15 +51,15 @@ class CupertinoTabView$Mate extends CupertinoTabView with WidgetMate<CupertinoTa
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CupertinoTabView$Mate(
-        key: p.get('key').value,
-        builder: p.get('builder').value,
-        navigatorKey: p.get('navigatorKey').value,
-        defaultTitle: p.get('defaultTitle').value,
-        routes: p.get('routes').value,
-        onGenerateRoute: p.get('onGenerateRoute').value,
-        onUnknownRoute: p.get('onUnknownRoute').value,
-        navigatorObservers: p.get('navigatorObservers').value,
-        restorationScopeId: p.get('restorationScopeId').value,
+        key: p.get('key').build(),
+        builder: p.get('builder').build(),
+        navigatorKey: p.get('navigatorKey').build(),
+        defaultTitle: p.get('defaultTitle').build(),
+        routes: p.get('routes').build(),
+        onGenerateRoute: p.get('onGenerateRoute').build(),
+        onUnknownRoute: p.get('onUnknownRoute').build(),
+        navigatorObservers: p.get('navigatorObservers').build(),
+        restorationScopeId: p.get('restorationScopeId').build(),
       ),
     );
     mateParams.put('key', key);

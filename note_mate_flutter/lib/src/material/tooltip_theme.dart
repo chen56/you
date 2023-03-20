@@ -70,19 +70,19 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate<TooltipThemeData$
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TooltipThemeData$Mate(
-        height: p.get('height').value,
-        padding: p.get('padding').value,
-        margin: p.get('margin').value,
-        verticalOffset: p.get('verticalOffset').value,
-        preferBelow: p.get('preferBelow').value,
-        excludeFromSemantics: p.get('excludeFromSemantics').value,
-        decoration: p.get('decoration').value,
-        textStyle: p.get('textStyle').value,
-        textAlign: p.get('textAlign').value,
-        waitDuration: p.get('waitDuration').value,
-        showDuration: p.get('showDuration').value,
-        triggerMode: p.get('triggerMode').value,
-        enableFeedback: p.get('enableFeedback').value,
+        height: p.get('height').build(),
+        padding: p.get('padding').build(),
+        margin: p.get('margin').build(),
+        verticalOffset: p.get('verticalOffset').build(),
+        preferBelow: p.get('preferBelow').build(),
+        excludeFromSemantics: p.get('excludeFromSemantics').build(),
+        decoration: p.get('decoration').build(),
+        textStyle: p.get('textStyle').build(),
+        textAlign: p.get('textAlign').build(),
+        waitDuration: p.get('waitDuration').build(),
+        showDuration: p.get('showDuration').build(),
+        triggerMode: p.get('triggerMode').build(),
+        enableFeedback: p.get('enableFeedback').build(),
       ),
     );
     mateParams.put('height', height);
@@ -121,9 +121,9 @@ class TooltipTheme$Mate extends TooltipTheme with WidgetMate<TooltipTheme$Mate> 
     mateParams = ObjectParam(
       init: this,
       builder: (p) => TooltipTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -16,7 +16,7 @@ class MenuButtonThemeData$Mate extends MenuButtonThemeData with Mate<MenuButtonT
       : super(style: style) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => MenuButtonThemeData$Mate(style: p.get('style').value),
+      builder: (p) => MenuButtonThemeData$Mate(style: p.get('style').build()),
     );
     mateParams.put('style', style);
   }
@@ -42,9 +42,9 @@ class MenuButtonTheme$Mate extends MenuButtonTheme with WidgetMate<MenuButtonThe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => MenuButtonTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

@@ -22,8 +22,8 @@ class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate<S
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SegmentedButtonThemeData$Mate(
-        style: p.get('style').value,
-        selectedIcon: p.get('selectedIcon').value,
+        style: p.get('style').build(),
+        selectedIcon: p.get('selectedIcon').build(),
       ),
     );
     mateParams.put('style', style);
@@ -51,9 +51,9 @@ class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with WidgetMate<Seg
     mateParams = ObjectParam(
       init: this,
       builder: (p) => SegmentedButtonTheme$Mate(
-        key: p.get('key').value,
-        data: p.get('data').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        data: p.get('data').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

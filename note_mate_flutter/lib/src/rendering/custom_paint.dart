@@ -37,11 +37,11 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate<Custo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CustomPainterSemantics$Mate(
-        key: p.get('key').value,
-        rect: p.get('rect').value,
-        properties: p.get('properties').value,
-        transform: p.get('transform').value,
-        tags: p.get('tags').value,
+        key: p.get('key').build(),
+        rect: p.get('rect').build(),
+        properties: p.get('properties').build(),
+        transform: p.get('transform').build(),
+        tags: p.get('tags').build(),
       ),
     );
     mateParams.put('key', key);
@@ -84,12 +84,12 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate<RenderCustomPai
     mateParams = ObjectParam(
       init: this,
       builder: (p) => RenderCustomPaint$Mate(
-        painter: p.get('painter').value,
-        foregroundPainter: p.get('foregroundPainter').value,
-        preferredSize: p.get('preferredSize').value,
-        isComplex: p.get('isComplex').value,
-        willChange: p.get('willChange').value,
-        child: p.get('child').value,
+        painter: p.get('painter').build(),
+        foregroundPainter: p.get('foregroundPainter').build(),
+        preferredSize: p.get('preferredSize').build(),
+        isComplex: p.get('isComplex').build(),
+        willChange: p.get('willChange').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('painter', painter);

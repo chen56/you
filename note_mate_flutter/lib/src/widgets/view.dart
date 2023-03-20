@@ -21,8 +21,8 @@ class View$Mate extends View with WidgetMate<View$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => View$Mate(
-        view: p.get('view').value,
-        child: p.get('child').value,
+        view: p.get('view').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('view', view);

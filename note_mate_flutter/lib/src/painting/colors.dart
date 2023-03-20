@@ -138,10 +138,10 @@ class ColorProperty$Mate extends ColorProperty with Mate<ColorProperty$Mate> {
       builder: (p) => ColorProperty$Mate(
         p.get('name').value,
         p.get('value').value,
-        showName: p.get('showName').value,
-        defaultValue: p.get('defaultValue').value,
-        style: p.get('style').value,
-        level: p.get('level').value,
+        showName: p.get('showName').build(),
+        defaultValue: p.get('defaultValue').build(),
+        style: p.get('style').build(),
+        level: p.get('level').build(),
       ),
     );
     mateParams.put('name', name);

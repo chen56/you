@@ -21,8 +21,8 @@ class ContinuousRectangleBorder$Mate extends ContinuousRectangleBorder with Mate
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ContinuousRectangleBorder$Mate(
-        side: p.get('side').value,
-        borderRadius: p.get('borderRadius').value,
+        side: p.get('side').build(),
+        borderRadius: p.get('borderRadius').build(),
       ),
     );
     mateParams.put('side', side);

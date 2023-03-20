@@ -14,7 +14,7 @@ class RenderingFlutterBinding$Mate extends RenderingFlutterBinding with Mate<Ren
       : super(root: root) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => RenderingFlutterBinding$Mate(root: p.get('root').value),
+      builder: (p) => RenderingFlutterBinding$Mate(root: p.get('root').build()),
     );
     mateParams.put('root', root);
   }

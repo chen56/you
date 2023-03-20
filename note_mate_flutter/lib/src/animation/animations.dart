@@ -75,9 +75,9 @@ class CurvedAnimation$Mate extends CurvedAnimation with Mate<CurvedAnimation$Mat
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CurvedAnimation$Mate(
-        parent: p.get('parent').value,
-        curve: p.get('curve').value,
-        reverseCurve: p.get('reverseCurve').value,
+        parent: p.get('parent').build(),
+        curve: p.get('curve').build(),
+        reverseCurve: p.get('reverseCurve').build(),
       ),
     );
     mateParams.put('parent', parent);
@@ -107,7 +107,7 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate<TrainHo
       builder: (p) => TrainHoppingAnimation$Mate(
         p.get('_currentTrain').value,
         p.get('_nextTrain').value,
-        onSwitchedTrain: p.get('onSwitchedTrain').value,
+        onSwitchedTrain: p.get('onSwitchedTrain').build(),
       ),
     );
     mateParams.put('_currentTrain', _currentTrain);
@@ -132,8 +132,8 @@ class AnimationMean$Mate extends AnimationMean with Mate<AnimationMean$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => AnimationMean$Mate(
-        left: p.get('left').value,
-        right: p.get('right').value,
+        left: p.get('left').build(),
+        right: p.get('right').build(),
       ),
     );
     mateParams.put('left', left);

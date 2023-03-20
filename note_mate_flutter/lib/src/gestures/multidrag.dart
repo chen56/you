@@ -27,9 +27,9 @@ class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGesture
     mateParams = ObjectParam(
       init: this,
       builder: (p) => ImmediateMultiDragGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);
@@ -59,9 +59,9 @@ class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestu
     mateParams = ObjectParam(
       init: this,
       builder: (p) => HorizontalMultiDragGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);
@@ -91,9 +91,9 @@ class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRe
     mateParams = ObjectParam(
       init: this,
       builder: (p) => VerticalMultiDragGestureRecognizer$Mate(
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('debugOwner', debugOwner);
@@ -127,10 +127,10 @@ class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureReco
     mateParams = ObjectParam(
       init: this,
       builder: (p) => DelayedMultiDragGestureRecognizer$Mate(
-        delay: p.get('delay').value,
-        debugOwner: p.get('debugOwner').value,
-        supportedDevices: p.get('supportedDevices').value,
-        allowedButtonsFilter: p.get('allowedButtonsFilter').value,
+        delay: p.get('delay').build(),
+        debugOwner: p.get('debugOwner').build(),
+        supportedDevices: p.get('supportedDevices').build(),
+        allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
       ),
     );
     mateParams.put('delay', delay);

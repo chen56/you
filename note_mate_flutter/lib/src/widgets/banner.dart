@@ -40,12 +40,12 @@ class BannerPainter$Mate extends BannerPainter with Mate<BannerPainter$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => BannerPainter$Mate(
-        message: p.get('message').value,
-        textDirection: p.get('textDirection').value,
-        location: p.get('location').value,
-        layoutDirection: p.get('layoutDirection').value,
-        color: p.get('color').value,
-        textStyle: p.get('textStyle').value,
+        message: p.get('message').build(),
+        textDirection: p.get('textDirection').build(),
+        location: p.get('location').build(),
+        layoutDirection: p.get('layoutDirection').build(),
+        color: p.get('color').build(),
+        textStyle: p.get('textStyle').build(),
       ),
     );
     mateParams.put('message', message);
@@ -97,14 +97,14 @@ class Banner$Mate extends Banner with WidgetMate<Banner$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => Banner$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
-        message: p.get('message').value,
-        textDirection: p.get('textDirection').value,
-        location: p.get('location').value,
-        layoutDirection: p.get('layoutDirection').value,
-        color: p.get('color').value,
-        textStyle: p.get('textStyle').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
+        message: p.get('message').build(),
+        textDirection: p.get('textDirection').build(),
+        location: p.get('location').build(),
+        layoutDirection: p.get('layoutDirection').build(),
+        color: p.get('color').build(),
+        textStyle: p.get('textStyle').build(),
       ),
     );
     mateParams.put('key', key);
@@ -134,8 +134,8 @@ class CheckedModeBanner$Mate extends CheckedModeBanner with WidgetMate<CheckedMo
     mateParams = ObjectParam(
       init: this,
       builder: (p) => CheckedModeBanner$Mate(
-        key: p.get('key').value,
-        child: p.get('child').value,
+        key: p.get('key').build(),
+        child: p.get('child').build(),
       ),
     );
     mateParams.put('key', key);

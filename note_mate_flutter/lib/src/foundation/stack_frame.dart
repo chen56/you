@@ -52,16 +52,16 @@ class StackFrame$Mate extends StackFrame with Mate<StackFrame$Mate> {
     mateParams = ObjectParam(
       init: this,
       builder: (p) => StackFrame$Mate(
-        number: p.get('number').value,
-        column: p.get('column').value,
-        line: p.get('line').value,
-        packageScheme: p.get('packageScheme').value,
-        package: p.get('package').value,
-        packagePath: p.get('packagePath').value,
-        className: p.get('className').value,
-        method: p.get('method').value,
-        isConstructor: p.get('isConstructor').value,
-        source: p.get('source').value,
+        number: p.get('number').build(),
+        column: p.get('column').build(),
+        line: p.get('line').build(),
+        packageScheme: p.get('packageScheme').build(),
+        package: p.get('package').build(),
+        packagePath: p.get('packagePath').build(),
+        className: p.get('className').build(),
+        method: p.get('method').build(),
+        isConstructor: p.get('isConstructor').build(),
+        source: p.get('source').build(),
       ),
     );
     mateParams.put('number', number);
