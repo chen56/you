@@ -59,7 +59,8 @@ function follow_links() (
   done
   echo "$file"
 )
-export BAKE_HOME=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
+declare BAKE_HOME
+BAKE_HOME=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
 
 /test1?() {
   /test1?shortHelp() {
@@ -89,8 +90,9 @@ EOF
   }
 
   /test_option?option() {
-    echo "${name}"
-    echo "${version}"
+#    echo "${name}"
+#    echo "${version}"
+     echo "???"
   }
 
 }
@@ -103,7 +105,7 @@ option() {
   local help="$4"
   local hasArg=false
   [[ $arg != "" ]] && hasArg=true
-
+  echo "hasArg: $hasArg"
   local toString="short:'$short', long:'$long',arg:'$arg', help:'$help'"
   if [[ $long == "" ]]; then
     cat <<<"long option must not be empty: ($toString)
@@ -124,7 +126,7 @@ option() {
   /init() {
     run git lfs install
     (
-      run cd "$BAKE_HOME/note_app"
+      cd "note_app"
       # 增加平台支持到现存项目
       # https://docs.flutter.dev/development/platform-integration/desktop#add-desktop-support-to-an-existing-flutter-app
       run flutter create --platforms=macos .
@@ -159,7 +161,7 @@ enable_experiment="--enable-experiment=records,patterns"
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
 #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
-    ( cd $BAKE_HOME/packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html ; )
+    ( cd packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html ; )
 
   }
 }
@@ -177,7 +179,7 @@ enable_experiment="--enable-experiment=records,patterns"
     echo "bake preview"
     /build "$@"
     # 	npx http-server ./app_note/build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./$BAKE_HOME/packages/app_note/build/web --port 8000
+    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/app_note/build/web --port 8000
   }
 }
 
@@ -198,17 +200,17 @@ enable_experiment="--enable-experiment=records,patterns"
 /gen?() {
   /gen?shortHelp() { cat <<<"代码生成"; }
   /gen() {
-    (run cd $BAKE_HOME/packages/note_app ;          run dart run tools/gen_pages.dart; )
-    (run cd $BAKE_HOME/packages/note_mate_flutter ; run dart run tools/gen_mates.dart; )
+    (cd packages/note_app ;          run dart run tools/gen_pages.dart; )
+    (cd packages/note_mate_flutter ; run dart run tools/gen_mates.dart; )
   }
 }
 /regen?() {
   /regen?shortHelp() { cat <<<"先删除old, 再代码生成"; }
   /regen() {
-    run rm $BAKE_HOME/packages/note_app/lib/pages.g.dart
-    run rm -rf $BAKE_HOME/packages/note_mate_flutter/lib
-    (run cd $BAKE_HOME/packages/note_app ;          run dart run tools/gen_pages.dart ; )
-    (run cd $BAKE_HOME/packages/note_mate_flutter ; run dart run tools/gen_mates.dart ; )
+    run rm packages/note_app/lib/pages.g.dart
+    run rm -rf packages/note_mate_flutter/lib
+    (cd packages/note_app ;          run dart run tools/gen_pages.dart ; )
+    (cd packages/note_mate_flutter ; run dart run tools/gen_mates.dart ; )
   }
 }
 
@@ -216,18 +218,23 @@ enable_experiment="--enable-experiment=records,patterns"
   /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
   /run() {
     (
-      cd $BAKE_HOME/packages/note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment ;
+      cd packages/note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment ;
     )
   }
 }
 
 /exec?() {
-  /exec?shortHelp() { cat <<<"test"; }
+  /exec?shortHelp() { cat <<<"exec [cmd] , 在各flutter项目目录依次执行exec后跟的参数cmd"; }
   /exec() {
-        (run cd $BAKE_HOME/packages/note ;              run "$@" ; )
-        (run cd $BAKE_HOME/packages/note_mate_flutter ; run "$@" ; )
-        (run cd $BAKE_HOME/packages/note_app ;          run "$@" ; )
-        (run cd $BAKE_HOME/packages/learn_dart ;        run "$@" ; )
+#       目录中有"pubspec.yaml"的，认为是flutter项目
+        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
+          # 用括号()开启子进程执行，可以不影响当前进程的环境
+          ( cd "$project" ;  run "$@" ; )
+        done
+#        (cd packages/note ;              run "$@" ; )
+#        (cd packages/note_mate_flutter ; run "$@" ; )
+#        (cd packages/note_app ;          run "$@" ; )
+#        (cd packages/learn_dart ;        run "$@" ; )
    }
 }
 
@@ -276,8 +283,12 @@ print_stack() {
 }
 # 先打印 后执行
 run() {
-  echo -e "▶︎ ${FUNCNAME[1]} ▶︎ $*"
-  "$@"
+#  local project=${PWD#*$BAKE_HOME}
+  local project
+  project=$(basename "$PWD")
+  [[ "$PWD" == "$BAKE_HOME" ]] && project="root"
+  echo -e "【${project}】 ▶︎${FUNCNAME[1]} ▶︎ $*"
+  eval "$@"
   return $?
 }
 
@@ -301,7 +312,8 @@ print_commands() {
   #     => /run
   # 而fullName 是最终可执行的自命令函数
   IFS=$'\n' # 分配回车符给IFS
-  local fullNames=$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f (\/.*)\?$/\1/')
+  local fullNames
+  fullNames=$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f (\/.*)\?$/\1/')
   readarray -t fullNames <<<"$fullNames"
   local commands=()
   local shortHelps=()
@@ -311,7 +323,8 @@ print_commands() {
     # 先调用最外层注册命令
     "${cmdFullname}?"
     # 现在可以取到内层注册的函数，取帮助等
-    local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null || true)
+    local shortHelp
+    shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null || true)
     shortHelps[i]=${shortHelp}
 
     # 先去第一个"/"，再按"/"split成数组
@@ -325,9 +338,11 @@ print_commands() {
 
   # print all commands and shortHelp
   for i in ${!commands[*]}; do
-    local padding=$(printf %-$((maxLengthOfCmd + 6))b "")
+    local padding
+    padding=$(printf %-$((maxLengthOfCmd + 6))b "")
     # 第二行开始，都补空格
-    local shortHelp=$(sed "2,1000s/^/$padding/g" <<<"${shortHelps[i]}")
+    local shortHelp
+    shortHelp=$(sed "2,1000s/^/$padding/g" <<<"${shortHelps[i]}")
     printf "  %-$((maxLengthOfCmd))s    ${shortHelp}\n" "${commands[i]}"
   done
 
@@ -340,6 +355,9 @@ print_commands() {
 ##########################################
 
 trap " set +x; on_error " ERR
+
+# 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
+cd "${BAKE_HOME}"
 
 # init all sub commands
 initCommands
