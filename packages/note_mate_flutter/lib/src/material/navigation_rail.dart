@@ -13,7 +13,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 
 /// class NavigationRail extends StatefulWidget
-class NavigationRail$Mate extends NavigationRail with WidgetMate<NavigationRail$Mate> {
+class NavigationRail$Mate extends NavigationRail with Mate<NavigationRail$Mate> {
   /// NavigationRail NavigationRail({Key? key, Color? backgroundColor, bool extended = false, Widget? leading, Widget? trailing, required List<NavigationRailDestination> destinations, required int? selectedIndex, void Function(int)? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape})
   NavigationRail$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

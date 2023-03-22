@@ -11,7 +11,7 @@ import 'package:flutter/src/widgets/scrollbar.dart';
 import 'package:note/mate.dart';
 
 /// class Scrollbar extends StatelessWidget
-class Scrollbar$Mate extends Scrollbar with WidgetMate<Scrollbar$Mate> {
+class Scrollbar$Mate extends Scrollbar with Mate<Scrollbar$Mate> {
   /// Scrollbar Scrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, bool? trackVisibility, double? thickness, Radius? radius, bool Function(ScrollNotification)? notificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, bool? isAlwaysShown, bool? showTrackOnHover, double? hoverThickness})
   Scrollbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -15,7 +15,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 
 /// class AppBar extends StatefulWidget implements PreferredSizeWidget
-class AppBar$Mate extends AppBar with WidgetMate<AppBar$Mate> {
+class AppBar$Mate extends AppBar with Mate<AppBar$Mate> {
   /// AppBar AppBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, Widget? title, List<Widget>? actions, Widget? flexibleSpace, PreferredSizeWidget? bottom, double? elevation, double? scrolledUnderElevation, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, Color? backgroundColor, Color? foregroundColor, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool primary = true, bool? centerTitle, bool excludeHeaderSemantics = false, double? titleSpacing, double toolbarOpacity = 1.0, double bottomOpacity = 1.0, double? toolbarHeight, double? leadingWidth, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool forceMaterialTransparency = false})
   AppBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -202,7 +202,7 @@ class AppBar$Mate extends AppBar with WidgetMate<AppBar$Mate> {
 }
 
 /// class SliverAppBar extends StatefulWidget
-class SliverAppBar$Mate extends SliverAppBar with WidgetMate<SliverAppBar$Mate> {
+class SliverAppBar$Mate extends SliverAppBar with Mate<SliverAppBar$Mate> {
   /// SliverAppBar SliverAppBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, Widget? title, List<Widget>? actions, Widget? flexibleSpace, PreferredSizeWidget? bottom, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, bool forceElevated = false, Color? backgroundColor, Color? foregroundColor, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool primary = true, bool? centerTitle, bool excludeHeaderSemantics = false, double? titleSpacing, double? collapsedHeight, double? expandedHeight, bool floating = false, bool pinned = false, bool snap = false, bool stretch = false, double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger, ShapeBorder? shape, double toolbarHeight = kToolbarHeight, double? leadingWidth, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool forceMaterialTransparency = false})
   SliverAppBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

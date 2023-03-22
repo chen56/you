@@ -270,7 +270,7 @@ class _PagePen extends Pen {
   }
 
   @override
-  void sampleMate<T>(WidgetMate<T> widgetMate) {
+  void sampleMate<T>(Mate<T> widgetMate) {
     _contents.add(_MateSample(
       mate: widgetMate,
     ));
@@ -278,7 +278,7 @@ class _PagePen extends Pen {
 }
 
 class _MateSample<T> extends StatelessWidget {
-  final WidgetMate<T> mate;
+  final Mate<T> mate;
 
   const _MateSample({super.key, required this.mate});
 

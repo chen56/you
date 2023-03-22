@@ -146,7 +146,7 @@ class MediaQueryData$Mate extends MediaQueryData with Mate<MediaQueryData$Mate> 
 }
 
 /// class MediaQuery extends InheritedModel<_MediaQueryAspect>
-class MediaQuery$Mate extends MediaQuery with WidgetMate<MediaQuery$Mate> {
+class MediaQuery$Mate extends MediaQuery with Mate<MediaQuery$Mate> {
   /// MediaQuery MediaQuery({Key? key, required MediaQueryData data, required Widget child})
   MediaQuery$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

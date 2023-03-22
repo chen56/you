@@ -14,7 +14,7 @@ import 'package:flutter/src/widgets/scroll_view.dart';
 import 'package:note/mate.dart';
 
 /// class SingleChildScrollView extends StatelessWidget
-class SingleChildScrollView$Mate extends SingleChildScrollView with WidgetMate<SingleChildScrollView$Mate> {
+class SingleChildScrollView$Mate extends SingleChildScrollView with Mate<SingleChildScrollView$Mate> {
   /// SingleChildScrollView SingleChildScrollView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, EdgeInsetsGeometry? padding, bool? primary, ScrollPhysics? physics, ScrollController? controller, Widget? child, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual})
   SingleChildScrollView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

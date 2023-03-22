@@ -95,7 +95,7 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate<ExpansionPa
 }
 
 /// class ExpansionPanelList extends StatefulWidget
-class ExpansionPanelList$Mate extends ExpansionPanelList with WidgetMate<ExpansionPanelList$Mate> {
+class ExpansionPanelList$Mate extends ExpansionPanelList with Mate<ExpansionPanelList$Mate> {
   /// ExpansionPanelList ExpansionPanelList({Key? key, List<ExpansionPanel> children = const <ExpansionPanel>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor})
   ExpansionPanelList$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -43,7 +43,7 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate<ActionIconT
 }
 
 /// class ActionIconTheme extends InheritedTheme
-class ActionIconTheme$Mate extends ActionIconTheme with WidgetMate<ActionIconTheme$Mate> {
+class ActionIconTheme$Mate extends ActionIconTheme with Mate<ActionIconTheme$Mate> {
   /// ActionIconTheme ActionIconTheme({Key? key, required ActionIconThemeData data, required Widget child})
   ActionIconTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

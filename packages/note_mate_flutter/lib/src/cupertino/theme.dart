@@ -9,7 +9,7 @@ import 'package:flutter/src/cupertino/text_theme.dart';
 import 'dart:core';
 
 /// class CupertinoTheme extends StatelessWidget
-class CupertinoTheme$Mate extends CupertinoTheme with WidgetMate<CupertinoTheme$Mate> {
+class CupertinoTheme$Mate extends CupertinoTheme with Mate<CupertinoTheme$Mate> {
   /// CupertinoTheme CupertinoTheme({Key? key, required CupertinoThemeData data, required Widget child})
   CupertinoTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -15,7 +15,7 @@ import 'package:flutter/src/rendering/sliver.dart';
 import 'package:flutter/src/rendering/viewport_offset.dart';
 
 /// class NestedScrollView extends StatefulWidget
-class NestedScrollView$Mate extends NestedScrollView with WidgetMate<NestedScrollView$Mate> {
+class NestedScrollView$Mate extends NestedScrollView with Mate<NestedScrollView$Mate> {
   /// NestedScrollView NestedScrollView({Key? key, ScrollController? controller, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollPhysics? physics, required List<Widget> Function(BuildContext, bool) headerSliverBuilder, required Widget body, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool floatHeaderSlivers = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior})
   NestedScrollView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -100,8 +100,7 @@ class NestedScrollView$Mate extends NestedScrollView with WidgetMate<NestedScrol
 }
 
 /// class SliverOverlapAbsorber extends SingleChildRenderObjectWidget
-class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber
-    with WidgetMate<SliverOverlapAbsorber$Mate> {
+class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate<SliverOverlapAbsorber$Mate> {
   /// SliverOverlapAbsorber SliverOverlapAbsorber({Key? key, required SliverOverlapAbsorberHandle handle, Widget? sliver})
   SliverOverlapAbsorber$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -132,8 +131,7 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber
 }
 
 /// class RenderSliverOverlapAbsorber extends RenderSliver with RenderObjectWithChildMixin<RenderSliver>
-class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber
-    with Mate<RenderSliverOverlapAbsorber$Mate> {
+class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with Mate<RenderSliverOverlapAbsorber$Mate> {
   /// RenderSliverOverlapAbsorber RenderSliverOverlapAbsorber({required SliverOverlapAbsorberHandle handle, RenderSliver? sliver})
   RenderSliverOverlapAbsorber$Mate({
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , hasDefaultValue:false, defaultValueCode:null
@@ -158,8 +156,7 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber
 }
 
 /// class SliverOverlapInjector extends SingleChildRenderObjectWidget
-class SliverOverlapInjector$Mate extends SliverOverlapInjector
-    with WidgetMate<SliverOverlapInjector$Mate> {
+class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate<SliverOverlapInjector$Mate> {
   /// SliverOverlapInjector SliverOverlapInjector({Key? key, required SliverOverlapAbsorberHandle handle, Widget? sliver})
   SliverOverlapInjector$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -190,8 +187,7 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector
 }
 
 /// class RenderSliverOverlapInjector extends RenderSliver
-class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector
-    with Mate<RenderSliverOverlapInjector$Mate> {
+class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with Mate<RenderSliverOverlapInjector$Mate> {
   /// RenderSliverOverlapInjector RenderSliverOverlapInjector({required SliverOverlapAbsorberHandle handle})
   RenderSliverOverlapInjector$Mate(
       {
@@ -207,8 +203,7 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector
 }
 
 /// class NestedScrollViewViewport extends Viewport
-class NestedScrollViewViewport$Mate extends NestedScrollViewViewport
-    with WidgetMate<NestedScrollViewViewport$Mate> {
+class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate<NestedScrollViewViewport$Mate> {
   /// NestedScrollViewViewport NestedScrollViewViewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, double anchor = 0.0, required ViewportOffset offset, Key? center, List<Widget> slivers = const <Widget>[], required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   NestedScrollViewViewport$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -268,7 +263,7 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport
     mateParams.put('anchor', anchor);
     mateParams.put('offset', offset);
     mateParams.put('center', center);
-    var x = mateParams.putList('slivers', slivers);
+    mateParams.putList('slivers', slivers);
     mateParams.put('handle', handle);
     mateParams.put('clipBehavior', clipBehavior);
   }

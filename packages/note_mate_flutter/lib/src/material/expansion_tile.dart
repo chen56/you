@@ -14,7 +14,7 @@ import 'package:flutter/src/material/list_tile.dart';
 import 'package:note/mate.dart';
 
 /// class ExpansionTile extends StatefulWidget
-class ExpansionTile$Mate extends ExpansionTile with WidgetMate<ExpansionTile$Mate> {
+class ExpansionTile$Mate extends ExpansionTile with Mate<ExpansionTile$Mate> {
   /// ExpansionTile ExpansionTile({Key? key, Widget? leading, required Widget title, Widget? subtitle, void Function(bool)? onExpansionChanged, List<Widget> children = const <Widget>[], Widget? trailing, bool initiallyExpanded = false, bool maintainState = false, EdgeInsetsGeometry? tilePadding, CrossAxisAlignment? expandedCrossAxisAlignment, Alignment? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? backgroundColor, Color? collapsedBackgroundColor, Color? textColor, Color? collapsedTextColor, Color? iconColor, Color? collapsedIconColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior, ListTileControlAffinity? controlAffinity})
   ExpansionTile$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

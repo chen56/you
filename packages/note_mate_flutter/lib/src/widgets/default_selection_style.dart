@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class DefaultSelectionStyle extends InheritedTheme
-class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with WidgetMate<DefaultSelectionStyle$Mate> {
+class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate<DefaultSelectionStyle$Mate> {
   /// DefaultSelectionStyle DefaultSelectionStyle({Key? key, Color? cursorColor, Color? selectionColor, required Widget child})
   DefaultSelectionStyle$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

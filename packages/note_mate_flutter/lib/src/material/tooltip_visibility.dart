@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class TooltipVisibility extends StatelessWidget
-class TooltipVisibility$Mate extends TooltipVisibility with WidgetMate<TooltipVisibility$Mate> {
+class TooltipVisibility$Mate extends TooltipVisibility with Mate<TooltipVisibility$Mate> {
   /// TooltipVisibility TooltipVisibility({Key? key, required bool visible, required Widget child})
   TooltipVisibility$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

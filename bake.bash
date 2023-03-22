@@ -161,8 +161,7 @@ enable_experiment="--enable-experiment=records,patterns"
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
 #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
-    ( cd packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html ; )
-
+    ( cd packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html --base-href "/note/" ; )
   }
 }
 
@@ -176,10 +175,11 @@ enable_experiment="--enable-experiment=records,patterns"
 /preview?() {
   /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
   /preview() {
-    echo "bake preview"
-    /build "$@"
+#   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+#    /build "$@"
+    ( cd packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html --base-href "/" ; )
     # 	npx http-server ./app_note/build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/app_note/build/web --port 8000
+    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000
   }
 }
 
@@ -218,7 +218,7 @@ enable_experiment="--enable-experiment=records,patterns"
   /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
   /run() {
     (
-      cd packages/note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment ;
+      cd packages/note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment "$@" ;
     )
   }
 }
@@ -287,7 +287,7 @@ run() {
   local project
   project=$(basename "$PWD")
   [[ "$PWD" == "$BAKE_HOME" ]] && project="root"
-  echo -e "【${project}】 ▶︎${FUNCNAME[1]} ▶︎ $*"
+  echo -e "【${project}】▶︎${FUNCNAME[1]} ▶︎ $*"
   eval "$@"
   return $?
 }
@@ -328,6 +328,7 @@ print_commands() {
     shortHelps[i]=${shortHelp}
 
     # 先去第一个"/"，再按"/"split成数组
+    # shellcheck disable=SC2207
     local split=($(tr "/" " " <<<"${cmdFullname:1}"))
     local cmd=${split[0]} #目前只用 第一个命令, 将来可以扩展为多层父子命令
     commands[i]=${cmd}

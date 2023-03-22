@@ -88,7 +88,7 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate<ScrollbarThem
 }
 
 /// class ScrollbarTheme extends InheritedTheme
-class ScrollbarTheme$Mate extends ScrollbarTheme with WidgetMate<ScrollbarTheme$Mate> {
+class ScrollbarTheme$Mate extends ScrollbarTheme with Mate<ScrollbarTheme$Mate> {
   /// ScrollbarTheme ScrollbarTheme({Key? key, required ScrollbarThemeData data, required Widget child})
   ScrollbarTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

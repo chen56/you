@@ -65,7 +65,7 @@ class MaterialGap$Mate extends MaterialGap with Mate<MaterialGap$Mate> {
 }
 
 /// class MergeableMaterial extends StatefulWidget
-class MergeableMaterial$Mate extends MergeableMaterial with WidgetMate<MergeableMaterial$Mate> {
+class MergeableMaterial$Mate extends MergeableMaterial with Mate<MergeableMaterial$Mate> {
   /// MergeableMaterial MergeableMaterial({Key? key, Axis mainAxis = Axis.vertical, double elevation = 2, bool hasDividers = false, List<MergeableMaterialItem> children = const <MergeableMaterialItem>[], Color? dividerColor})
   MergeableMaterial$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

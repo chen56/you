@@ -16,7 +16,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:note/mate.dart';
 
 /// class Switch extends StatelessWidget
-class Switch$Mate extends Switch with WidgetMate<Switch$Mate> {
+class Switch$Mate extends Switch with Mate<Switch$Mate> {
   /// Switch Switch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false})
   Switch$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

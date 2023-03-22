@@ -8,7 +8,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/services/restoration.dart';
 
 /// class RestorationScope extends StatefulWidget
-class RestorationScope$Mate extends RestorationScope with WidgetMate<RestorationScope$Mate> {
+class RestorationScope$Mate extends RestorationScope with Mate<RestorationScope$Mate> {
   /// RestorationScope RestorationScope({Key? key, required String? restorationId, required Widget child})
   RestorationScope$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -39,7 +39,7 @@ class RestorationScope$Mate extends RestorationScope with WidgetMate<Restoration
 }
 
 /// class UnmanagedRestorationScope extends InheritedWidget
-class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with WidgetMate<UnmanagedRestorationScope$Mate> {
+class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate<UnmanagedRestorationScope$Mate> {
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -70,7 +70,7 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Widg
 }
 
 /// class RootRestorationScope extends StatefulWidget
-class RootRestorationScope$Mate extends RootRestorationScope with WidgetMate<RootRestorationScope$Mate> {
+class RootRestorationScope$Mate extends RootRestorationScope with Mate<RootRestorationScope$Mate> {
   /// RootRestorationScope RootRestorationScope({Key? key, required String? restorationId, required Widget child})
   RootRestorationScope$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

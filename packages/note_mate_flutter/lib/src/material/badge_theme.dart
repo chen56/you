@@ -72,7 +72,7 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate<BadgeThemeData$Mate> 
 }
 
 /// class BadgeTheme extends InheritedTheme
-class BadgeTheme$Mate extends BadgeTheme with WidgetMate<BadgeTheme$Mate> {
+class BadgeTheme$Mate extends BadgeTheme with Mate<BadgeTheme$Mate> {
   /// BadgeTheme BadgeTheme({Key? key, required BadgeThemeData data, required Widget child})
   BadgeTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -8,7 +8,7 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:note/mate.dart';
 
 /// class FlexibleSpaceBar extends StatefulWidget
-class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with WidgetMate<FlexibleSpaceBar$Mate> {
+class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate<FlexibleSpaceBar$Mate> {
   /// FlexibleSpaceBar FlexibleSpaceBar({Key? key, Widget? title, Widget? background, bool? centerTitle, EdgeInsetsGeometry? titlePadding, CollapseMode collapseMode = CollapseMode.parallax, List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground], double expandedTitleScale = 1.5})
   FlexibleSpaceBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -69,7 +69,7 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with WidgetMate<FlexibleSpa
 }
 
 /// class FlexibleSpaceBarSettings extends InheritedWidget
-class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with WidgetMate<FlexibleSpaceBarSettings$Mate> {
+class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Mate<FlexibleSpaceBarSettings$Mate> {
   /// FlexibleSpaceBarSettings FlexibleSpaceBarSettings({Key? key, required double toolbarOpacity, required double minExtent, required double maxExtent, required double currentExtent, required Widget child, bool? isScrolledUnder})
   FlexibleSpaceBarSettings$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

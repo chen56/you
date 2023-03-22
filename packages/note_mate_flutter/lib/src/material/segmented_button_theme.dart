@@ -32,7 +32,7 @@ class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate<S
 }
 
 /// class SegmentedButtonTheme extends InheritedTheme
-class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with WidgetMate<SegmentedButtonTheme$Mate> {
+class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with Mate<SegmentedButtonTheme$Mate> {
   /// SegmentedButtonTheme SegmentedButtonTheme({Key? key, required SegmentedButtonThemeData data, required Widget child})
   SegmentedButtonTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

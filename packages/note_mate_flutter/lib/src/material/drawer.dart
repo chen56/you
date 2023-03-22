@@ -10,7 +10,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class Drawer extends StatelessWidget
-class Drawer$Mate extends Drawer with WidgetMate<Drawer$Mate> {
+class Drawer$Mate extends Drawer with Mate<Drawer$Mate> {
   /// Drawer Drawer({Key? key, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, double? width, Widget? child, String? semanticLabel})
   Drawer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -77,7 +77,7 @@ class Drawer$Mate extends Drawer with WidgetMate<Drawer$Mate> {
 }
 
 /// class DrawerController extends StatefulWidget
-class DrawerController$Mate extends DrawerController with WidgetMate<DrawerController$Mate> {
+class DrawerController$Mate extends DrawerController with Mate<DrawerController$Mate> {
   /// DrawerController DrawerController({GlobalKey<State<StatefulWidget>>? key, required Widget child, required DrawerAlignment alignment, bool isDrawerOpen = false, void Function(bool)? drawerCallback, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? scrimColor, double? edgeDragWidth, bool enableOpenDragGesture = true})
   DrawerController$Mate({
     /// optionalParameters: {GlobalKey<State<StatefulWidget>>? key} , hasDefaultValue:false, defaultValueCode:null

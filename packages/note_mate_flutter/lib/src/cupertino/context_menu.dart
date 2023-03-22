@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoContextMenu extends StatefulWidget
-class CupertinoContextMenu$Mate extends CupertinoContextMenu with WidgetMate<CupertinoContextMenu$Mate> {
+class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate<CupertinoContextMenu$Mate> {
   /// CupertinoContextMenu CupertinoContextMenu({Key? key, required List<Widget> actions, required Widget child, bool enableHapticFeedback = false, Widget Function(BuildContext, Animation<double>, Widget)? previewBuilder = _defaultPreviewBuilder})
   CupertinoContextMenu$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

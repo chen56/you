@@ -7,7 +7,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:note/mate.dart';
 
 /// class ColorFiltered extends SingleChildRenderObjectWidget
-class ColorFiltered$Mate extends ColorFiltered with WidgetMate<ColorFiltered$Mate> {
+class ColorFiltered$Mate extends ColorFiltered with Mate<ColorFiltered$Mate> {
   /// ColorFiltered ColorFiltered({required ColorFilter colorFilter, Widget? child, Key? key})
   ColorFiltered$Mate({
     /// optionalParameters: {required ColorFilter colorFilter} , hasDefaultValue:false, defaultValueCode:null

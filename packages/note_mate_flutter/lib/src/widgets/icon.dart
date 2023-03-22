@@ -8,7 +8,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class Icon extends StatelessWidget
-class Icon$Mate extends Icon with WidgetMate<Icon$Mate> {
+class Icon$Mate extends Icon with Mate<Icon$Mate> {
   /// Icon Icon(IconData? icon, {Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection})
   Icon$Mate(
     /// requiredParameters: IconData? icon

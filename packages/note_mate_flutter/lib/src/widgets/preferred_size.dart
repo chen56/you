@@ -7,7 +7,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class PreferredSize extends StatelessWidget implements PreferredSizeWidget
-class PreferredSize$Mate extends PreferredSize with WidgetMate<PreferredSize$Mate> {
+class PreferredSize$Mate extends PreferredSize with Mate<PreferredSize$Mate> {
   /// PreferredSize PreferredSize({Key? key, required Widget child, required Size preferredSize})
   PreferredSize$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

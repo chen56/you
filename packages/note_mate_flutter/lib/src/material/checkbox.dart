@@ -13,7 +13,7 @@ import 'package:flutter/src/painting/borders.dart';
 import 'package:note/mate.dart';
 
 /// class Checkbox extends StatefulWidget
-class Checkbox$Mate extends Checkbox with WidgetMate<Checkbox$Mate> {
+class Checkbox$Mate extends Checkbox with Mate<Checkbox$Mate> {
   /// Checkbox Checkbox({Key? key, required bool? value, bool tristate = false, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, OutlinedBorder? shape, BorderSide? side, bool isError = false})
   Checkbox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

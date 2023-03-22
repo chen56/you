@@ -9,7 +9,7 @@ import 'package:flutter/src/widgets/scroll_notification.dart';
 import 'package:note/mate.dart';
 
 /// class RefreshIndicator extends StatefulWidget
-class RefreshIndicator$Mate extends RefreshIndicator with WidgetMate<RefreshIndicator$Mate> {
+class RefreshIndicator$Mate extends RefreshIndicator with Mate<RefreshIndicator$Mate> {
   /// RefreshIndicator RefreshIndicator({Key? key, required Widget child, double displacement = 40.0, double edgeOffset = 0.0, required Future<void> Function() onRefresh, Color? color, Color? backgroundColor, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, String? semanticsLabel, String? semanticsValue, double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth, RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge})
   RefreshIndicator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

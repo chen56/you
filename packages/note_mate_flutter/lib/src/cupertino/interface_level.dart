@@ -6,8 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoUserInterfaceLevel extends InheritedWidget
-class CupertinoUserInterfaceLevel$Mate extends CupertinoUserInterfaceLevel
-    with WidgetMate<CupertinoUserInterfaceLevel$Mate> {
+class CupertinoUserInterfaceLevel$Mate extends CupertinoUserInterfaceLevel with Mate<CupertinoUserInterfaceLevel$Mate> {
   /// CupertinoUserInterfaceLevel CupertinoUserInterfaceLevel({Key? key, required CupertinoUserInterfaceLevelData data, required Widget child})
   CupertinoUserInterfaceLevel$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

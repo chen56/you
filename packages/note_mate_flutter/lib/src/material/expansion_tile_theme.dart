@@ -95,7 +95,7 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate<Expan
 }
 
 /// class ExpansionTileTheme extends InheritedTheme
-class ExpansionTileTheme$Mate extends ExpansionTileTheme with WidgetMate<ExpansionTileTheme$Mate> {
+class ExpansionTileTheme$Mate extends ExpansionTileTheme with Mate<ExpansionTileTheme$Mate> {
   /// ExpansionTileTheme ExpansionTileTheme({Key? key, required ExpansionTileThemeData data, required Widget child})
   ExpansionTileTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

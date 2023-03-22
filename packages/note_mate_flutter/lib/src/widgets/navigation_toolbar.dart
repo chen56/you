@@ -7,7 +7,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class NavigationToolbar extends StatelessWidget
-class NavigationToolbar$Mate extends NavigationToolbar with WidgetMate<NavigationToolbar$Mate> {
+class NavigationToolbar$Mate extends NavigationToolbar with Mate<NavigationToolbar$Mate> {
   /// NavigationToolbar NavigationToolbar({Key? key, Widget? leading, Widget? middle, Widget? trailing, bool centerMiddle = true, double middleSpacing = kMiddleSpacing})
   NavigationToolbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

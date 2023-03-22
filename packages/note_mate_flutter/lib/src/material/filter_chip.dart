@@ -15,7 +15,7 @@ import 'package:flutter/src/widgets/icon_theme_data.dart';
 import 'package:note/mate.dart';
 
 /// class FilterChip extends StatelessWidget implements ChipAttributes, SelectableChipAttributes, CheckmarkableChipAttributes, DisabledChipAttributes
-class FilterChip$Mate extends FilterChip with WidgetMate<FilterChip$Mate> {
+class FilterChip$Mate extends FilterChip with Mate<FilterChip$Mate> {
   /// FilterChip FilterChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
   FilterChip$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

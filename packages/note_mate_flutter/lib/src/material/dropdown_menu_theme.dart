@@ -40,7 +40,7 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate<Dropdow
 }
 
 /// class DropdownMenuTheme extends InheritedTheme
-class DropdownMenuTheme$Mate extends DropdownMenuTheme with WidgetMate<DropdownMenuTheme$Mate> {
+class DropdownMenuTheme$Mate extends DropdownMenuTheme with Mate<DropdownMenuTheme$Mate> {
   /// DropdownMenuTheme DropdownMenuTheme({Key? key, required DropdownMenuThemeData data, required Widget child})
   DropdownMenuTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

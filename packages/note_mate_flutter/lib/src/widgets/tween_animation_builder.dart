@@ -12,7 +12,7 @@ import 'package:note/mate.dart';
 
 /// class TweenAnimationBuilder<T extends Object?> extends ImplicitlyAnimatedWidget
 class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilder<T>
-    with WidgetMate<TweenAnimationBuilder$Mate> {
+    with Mate<TweenAnimationBuilder$Mate> {
   /// TweenAnimationBuilder<T> TweenAnimationBuilder({Key? key, required Tween<T> tween, required Duration duration, Curve curve = Curves.linear, required Widget Function(BuildContext, T, Widget?) builder, void Function()? onEnd, Widget? child})
   TweenAnimationBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

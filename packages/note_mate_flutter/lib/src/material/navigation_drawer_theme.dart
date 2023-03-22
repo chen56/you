@@ -85,7 +85,7 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
 }
 
 /// class NavigationDrawerTheme extends InheritedTheme
-class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with WidgetMate<NavigationDrawerTheme$Mate> {
+class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate<NavigationDrawerTheme$Mate> {
   /// NavigationDrawerTheme NavigationDrawerTheme({Key? key, required NavigationDrawerThemeData data, required Widget child})
   NavigationDrawerTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

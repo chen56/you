@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class LookupBoundary extends InheritedWidget
-class LookupBoundary$Mate extends LookupBoundary with WidgetMate<LookupBoundary$Mate> {
+class LookupBoundary$Mate extends LookupBoundary with Mate<LookupBoundary$Mate> {
   /// LookupBoundary LookupBoundary({Key? key, required Widget child})
   LookupBoundary$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

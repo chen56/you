@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class FilledButton extends ButtonStyleButton
-class FilledButton$Mate extends FilledButton with WidgetMate<FilledButton$Mate> {
+class FilledButton$Mate extends FilledButton with Mate<FilledButton$Mate> {
   /// FilledButton FilledButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget? child})
   FilledButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

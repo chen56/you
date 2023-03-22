@@ -71,7 +71,7 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate<RouterConfig$Mate> 
 }
 
 /// class Router<T> extends StatefulWidget
-class Router$Mate<T> extends Router<T> with WidgetMate<Router$Mate> {
+class Router$Mate<T> extends Router<T> with Mate<Router$Mate> {
   /// Router<T> Router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<T>? routeInformationParser, required RouterDelegate<T> routerDelegate, BackButtonDispatcher? backButtonDispatcher, String? restorationScopeId})
   Router$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -136,7 +136,7 @@ class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate
 }
 
 /// class BackButtonListener extends StatefulWidget
-class BackButtonListener$Mate extends BackButtonListener with WidgetMate<BackButtonListener$Mate> {
+class BackButtonListener$Mate extends BackButtonListener with Mate<BackButtonListener$Mate> {
   /// BackButtonListener BackButtonListener({Key? key, required Widget child, required Future<bool> Function() onBackButtonPressed})
   BackButtonListener$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

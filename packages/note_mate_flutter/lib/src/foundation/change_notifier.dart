@@ -4,7 +4,7 @@ import 'package:flutter/src/foundation/change_notifier.dart';
 import 'package:note/mate.dart';
 
 /// class ValueNotifier<T> extends ChangeNotifier implements ValueListenable<T>
-class ValueNotifier$Mate<T> extends ValueNotifier<T> with Mate<ValueNotifier$Mate<T>> {
+class ValueNotifier$Mate<T> extends ValueNotifier<T> with Mate<ValueNotifier$Mate> {
   /// ValueNotifier<T> ValueNotifier(T _value)
   ValueNotifier$Mate(
 
@@ -13,7 +13,7 @@ class ValueNotifier$Mate<T> extends ValueNotifier<T> with Mate<ValueNotifier$Mat
       : super(_value) {
     mateParams = ObjectParam(
       init: this,
-      builder: (p) => ValueNotifier$Mate<T>(p.get('_value').value),
+      builder: (p) => ValueNotifier$Mate(p.get('_value').value),
     );
     mateParams.put('_value', _value);
   }

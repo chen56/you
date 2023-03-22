@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class RawKeyboardListener extends StatefulWidget
-class RawKeyboardListener$Mate extends RawKeyboardListener with WidgetMate<RawKeyboardListener$Mate> {
+class RawKeyboardListener$Mate extends RawKeyboardListener with Mate<RawKeyboardListener$Mate> {
   /// RawKeyboardListener RawKeyboardListener({Key? key, required FocusNode focusNode, bool autofocus = false, bool includeSemantics = true, void Function(RawKeyEvent)? onKey, required Widget child})
   RawKeyboardListener$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -8,7 +8,7 @@ import 'dart:core';
 import 'package:flutter/src/rendering/proxy_box.dart';
 
 /// class TapRegionSurface extends SingleChildRenderObjectWidget
-class TapRegionSurface$Mate extends TapRegionSurface with WidgetMate<TapRegionSurface$Mate> {
+class TapRegionSurface$Mate extends TapRegionSurface with Mate<TapRegionSurface$Mate> {
   /// TapRegionSurface TapRegionSurface({Key? key, required Widget child})
   TapRegionSurface$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -33,7 +33,7 @@ class TapRegionSurface$Mate extends TapRegionSurface with WidgetMate<TapRegionSu
 }
 
 /// class TapRegion extends SingleChildRenderObjectWidget
-class TapRegion$Mate extends TapRegion with WidgetMate<TapRegion$Mate> {
+class TapRegion$Mate extends TapRegion with Mate<TapRegion$Mate> {
   /// TapRegion TapRegion({Key? key, required Widget? child, bool enabled = true, HitTestBehavior behavior = HitTestBehavior.deferToChild, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, Object? groupId, String? debugLabel})
   TapRegion$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -149,7 +149,7 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate<RenderTapRegion$Mat
 }
 
 /// class TextFieldTapRegion extends TapRegion
-class TextFieldTapRegion$Mate extends TextFieldTapRegion with WidgetMate<TextFieldTapRegion$Mate> {
+class TextFieldTapRegion$Mate extends TextFieldTapRegion with Mate<TextFieldTapRegion$Mate> {
   /// TextFieldTapRegion TextFieldTapRegion({Key? key, required Widget? child, bool enabled = true, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, String? debugLabel})
   TextFieldTapRegion$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

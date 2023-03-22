@@ -10,7 +10,7 @@ import 'dart:core';
 import 'dart:ui';
 
 /// class Theme extends StatelessWidget
-class Theme$Mate extends Theme with WidgetMate<Theme$Mate> {
+class Theme$Mate extends Theme with Mate<Theme$Mate> {
   /// Theme Theme({Key? key, required ThemeData data, required Widget child})
   Theme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -66,7 +66,7 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate<ThemeDataTween$Mate> 
 }
 
 /// class AnimatedTheme extends ImplicitlyAnimatedWidget
-class AnimatedTheme$Mate extends AnimatedTheme with WidgetMate<AnimatedTheme$Mate> {
+class AnimatedTheme$Mate extends AnimatedTheme with Mate<AnimatedTheme$Mate> {
   /// AnimatedTheme AnimatedTheme({Key? key, required ThemeData data, Curve curve = Curves.linear, Duration duration = kThemeAnimationDuration, void Function()? onEnd, required Widget child})
   AnimatedTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

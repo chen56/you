@@ -15,7 +15,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/widgets/sliver.dart';
 
 /// class ReorderableList extends StatefulWidget
-class ReorderableList$Mate extends ReorderableList with WidgetMate<ReorderableList$Mate> {
+class ReorderableList$Mate extends ReorderableList with Mate<ReorderableList$Mate> {
   /// ReorderableList ReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, EdgeInsetsGeometry? padding, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ReorderableList$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -160,7 +160,7 @@ class ReorderableList$Mate extends ReorderableList with WidgetMate<ReorderableLi
 }
 
 /// class SliverReorderableList extends StatefulWidget
-class SliverReorderableList$Mate extends SliverReorderableList with WidgetMate<SliverReorderableList$Mate> {
+class SliverReorderableList$Mate extends SliverReorderableList with Mate<SliverReorderableList$Mate> {
   /// SliverReorderableList SliverReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator})
   SliverReorderableList$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -234,7 +234,7 @@ class SliverReorderableList$Mate extends SliverReorderableList with WidgetMate<S
 
 /// class ReorderableDragStartListener extends StatelessWidget
 class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
-    with WidgetMate<ReorderableDragStartListener$Mate> {
+    with Mate<ReorderableDragStartListener$Mate> {
   /// ReorderableDragStartListener ReorderableDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDragStartListener$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -272,7 +272,7 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
 
 /// class ReorderableDelayedDragStartListener extends ReorderableDragStartListener
 class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragStartListener
-    with WidgetMate<ReorderableDelayedDragStartListener$Mate> {
+    with Mate<ReorderableDelayedDragStartListener$Mate> {
   /// ReorderableDelayedDragStartListener ReorderableDelayedDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDelayedDragStartListener$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

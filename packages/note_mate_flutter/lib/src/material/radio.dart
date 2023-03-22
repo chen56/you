@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:note/mate.dart';
 
 /// class Radio<T> extends StatefulWidget
-class Radio$Mate<T> extends Radio<T> with WidgetMate<Radio$Mate> {
+class Radio$Mate<T> extends Radio<T> with Mate<Radio$Mate> {
   /// Radio<T> Radio({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, MouseCursor? mouseCursor, bool toggleable = false, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false})
   Radio$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

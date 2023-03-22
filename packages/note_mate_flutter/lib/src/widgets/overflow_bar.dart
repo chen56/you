@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class OverflowBar extends MultiChildRenderObjectWidget
-class OverflowBar$Mate extends OverflowBar with WidgetMate<OverflowBar$Mate> {
+class OverflowBar$Mate extends OverflowBar with Mate<OverflowBar$Mate> {
   /// OverflowBar OverflowBar({Key? key, double spacing = 0.0, MainAxisAlignment? alignment, double overflowSpacing = 0.0, OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start, VerticalDirection overflowDirection = VerticalDirection.down, TextDirection? textDirection, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   OverflowBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

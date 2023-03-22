@@ -142,7 +142,7 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate<ListTileThemeDa
 }
 
 /// class ListTileTheme extends InheritedTheme
-class ListTileTheme$Mate extends ListTileTheme with WidgetMate<ListTileTheme$Mate> {
+class ListTileTheme$Mate extends ListTileTheme with Mate<ListTileTheme$Mate> {
   /// ListTileTheme ListTileTheme({Key? key, ListTileThemeData? data, bool? dense, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, EdgeInsetsGeometry? contentPadding, Color? tileColor, Color? selectedTileColor, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, required Widget child})
   ListTileTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

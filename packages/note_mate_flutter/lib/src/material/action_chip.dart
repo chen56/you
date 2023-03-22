@@ -14,7 +14,7 @@ import 'package:flutter/src/widgets/icon_theme_data.dart';
 import 'package:note/mate.dart';
 
 /// class ActionChip extends StatelessWidget implements ChipAttributes, TappableChipAttributes, DisabledChipAttributes
-class ActionChip$Mate extends ActionChip with WidgetMate<ActionChip$Mate> {
+class ActionChip$Mate extends ActionChip with Mate<ActionChip$Mate> {
   /// ActionChip ActionChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, void Function()? onPressed, double? pressElevation, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, Color? disabledColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme})
   ActionChip$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class TextButton extends ButtonStyleButton
-class TextButton$Mate extends TextButton with WidgetMate<TextButton$Mate> {
+class TextButton$Mate extends TextButton with Mate<TextButton$Mate> {
   /// TextButton TextButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget child})
   TextButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

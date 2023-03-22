@@ -79,7 +79,7 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate<CheckboxThemeDa
 }
 
 /// class CheckboxTheme extends InheritedWidget
-class CheckboxTheme$Mate extends CheckboxTheme with WidgetMate<CheckboxTheme$Mate> {
+class CheckboxTheme$Mate extends CheckboxTheme with Mate<CheckboxTheme$Mate> {
   /// CheckboxTheme CheckboxTheme({Key? key, required CheckboxThemeData data, required Widget child})
   CheckboxTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

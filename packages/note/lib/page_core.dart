@@ -182,7 +182,7 @@ abstract class Pen {
 
   void markdown(String content);
 
-  void sampleMate<T>(WidgetMate<T> widgetMate);
+  void sampleMate<T>(Mate<T> widgetMate);
 
   void widget(Widget Function(ObjectParam node) builder);
 }

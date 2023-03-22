@@ -11,7 +11,7 @@ import 'dart:ui';
 import 'package:flutter/src/painting/text_style.dart';
 
 /// class CupertinoAlertDialog extends StatelessWidget
-class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with WidgetMate<CupertinoAlertDialog$Mate> {
+class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate<CupertinoAlertDialog$Mate> {
   /// CupertinoAlertDialog CupertinoAlertDialog({Key? key, Widget? title, Widget? content, List<Widget> actions = const <Widget>[], ScrollController? scrollController, ScrollController? actionScrollController, Duration insetAnimationDuration = const Duration(milliseconds: 100), Curve insetAnimationCurve = Curves.decelerate})
   CupertinoAlertDialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -72,7 +72,7 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with WidgetMate<Cup
 }
 
 /// class CupertinoPopupSurface extends StatelessWidget
-class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with WidgetMate<CupertinoPopupSurface$Mate> {
+class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with Mate<CupertinoPopupSurface$Mate> {
   /// CupertinoPopupSurface CupertinoPopupSurface({Key? key, bool isSurfacePainted = true, Widget? child})
   CupertinoPopupSurface$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -103,7 +103,7 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with WidgetMate<C
 }
 
 /// class CupertinoActionSheet extends StatelessWidget
-class CupertinoActionSheet$Mate extends CupertinoActionSheet with WidgetMate<CupertinoActionSheet$Mate> {
+class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate<CupertinoActionSheet$Mate> {
   /// CupertinoActionSheet CupertinoActionSheet({Key? key, Widget? title, Widget? message, List<Widget>? actions, ScrollController? messageScrollController, ScrollController? actionScrollController, Widget? cancelButton})
   CupertinoActionSheet$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -158,8 +158,7 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with WidgetMate<Cup
 }
 
 /// class CupertinoActionSheetAction extends StatelessWidget
-class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction
-    with WidgetMate<CupertinoActionSheetAction$Mate> {
+class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Mate<CupertinoActionSheetAction$Mate> {
   /// CupertinoActionSheetAction CupertinoActionSheetAction({Key? key, required void Function() onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, required Widget child})
   CupertinoActionSheetAction$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -202,7 +201,7 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction
 }
 
 /// class CupertinoDialogAction extends StatelessWidget
-class CupertinoDialogAction$Mate extends CupertinoDialogAction with WidgetMate<CupertinoDialogAction$Mate> {
+class CupertinoDialogAction$Mate extends CupertinoDialogAction with Mate<CupertinoDialogAction$Mate> {
   /// CupertinoDialogAction CupertinoDialogAction({Key? key, void Function()? onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, TextStyle? textStyle, required Widget child})
   CupertinoDialogAction$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

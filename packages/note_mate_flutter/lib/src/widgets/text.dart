@@ -12,7 +12,7 @@ import 'package:flutter/src/painting/strut_style.dart';
 import 'package:flutter/src/painting/inline_span.dart';
 
 /// class DefaultTextStyle extends InheritedTheme
-class DefaultTextStyle$Mate extends DefaultTextStyle with WidgetMate<DefaultTextStyle$Mate> {
+class DefaultTextStyle$Mate extends DefaultTextStyle with Mate<DefaultTextStyle$Mate> {
   /// DefaultTextStyle DefaultTextStyle({Key? key, required TextStyle style, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, required Widget child})
   DefaultTextStyle$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -92,7 +92,7 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with WidgetMate<DefaultText
 }
 
 /// class DefaultTextHeightBehavior extends InheritedTheme
-class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with WidgetMate<DefaultTextHeightBehavior$Mate> {
+class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate<DefaultTextHeightBehavior$Mate> {
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -123,7 +123,7 @@ class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Widg
 }
 
 /// class Text extends StatelessWidget
-class Text$Mate extends Text with WidgetMate<Text$Mate> {
+class Text$Mate extends Text with Mate<Text$Mate> {
   /// Text Text(String data, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
   Text$Mate(
     /// requiredParameters: String data

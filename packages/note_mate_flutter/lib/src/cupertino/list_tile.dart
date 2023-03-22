@@ -10,7 +10,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class CupertinoListTile extends StatefulWidget
-class CupertinoListTile$Mate extends CupertinoListTile with WidgetMate<CupertinoListTile$Mate> {
+class CupertinoListTile$Mate extends CupertinoListTile with Mate<CupertinoListTile$Mate> {
   /// CupertinoListTile CupertinoListTile({Key? key, required Widget title, Widget? subtitle, Widget? additionalInfo, Widget? leading, Widget? trailing, FutureOr<void> Function()? onTap, Color? backgroundColor, Color? backgroundColorActivated, EdgeInsetsGeometry? padding, double leadingSize = _kLeadingSize, double leadingToTitle = _kLeadingToTitle})
   CupertinoListTile$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -177,7 +177,7 @@ class CupertinoListTile$Mate extends CupertinoListTile with WidgetMate<Cupertino
 }
 
 /// class CupertinoListTileChevron extends StatelessWidget
-class CupertinoListTileChevron$Mate extends CupertinoListTileChevron with WidgetMate<CupertinoListTileChevron$Mate> {
+class CupertinoListTileChevron$Mate extends CupertinoListTileChevron with Mate<CupertinoListTileChevron$Mate> {
   /// CupertinoListTileChevron CupertinoListTileChevron({Key? key})
   CupertinoListTileChevron$Mate(
       {

@@ -45,7 +45,7 @@ class TabController$Mate extends TabController with Mate<TabController$Mate> {
 }
 
 /// class DefaultTabController extends StatefulWidget
-class DefaultTabController$Mate extends DefaultTabController with WidgetMate<DefaultTabController$Mate> {
+class DefaultTabController$Mate extends DefaultTabController with Mate<DefaultTabController$Mate> {
   /// DefaultTabController DefaultTabController({Key? key, required int length, int initialIndex = 0, required Widget child, Duration? animationDuration})
   DefaultTabController$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

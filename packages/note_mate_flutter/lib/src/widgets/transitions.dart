@@ -17,7 +17,7 @@ import 'package:flutter/src/painting/text_painter.dart';
 import 'package:flutter/src/foundation/change_notifier.dart';
 
 /// class SlideTransition extends AnimatedWidget
-class SlideTransition$Mate extends SlideTransition with WidgetMate<SlideTransition$Mate> {
+class SlideTransition$Mate extends SlideTransition with Mate<SlideTransition$Mate> {
   /// SlideTransition SlideTransition({Key? key, required Animation<Offset> position, bool transformHitTests = true, TextDirection? textDirection, Widget? child})
   SlideTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -60,7 +60,7 @@ class SlideTransition$Mate extends SlideTransition with WidgetMate<SlideTransiti
 }
 
 /// class ScaleTransition extends AnimatedWidget
-class ScaleTransition$Mate extends ScaleTransition with WidgetMate<ScaleTransition$Mate> {
+class ScaleTransition$Mate extends ScaleTransition with Mate<ScaleTransition$Mate> {
   /// ScaleTransition ScaleTransition({Key? key, required Animation<double> scale, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
   ScaleTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -103,7 +103,7 @@ class ScaleTransition$Mate extends ScaleTransition with WidgetMate<ScaleTransiti
 }
 
 /// class RotationTransition extends AnimatedWidget
-class RotationTransition$Mate extends RotationTransition with WidgetMate<RotationTransition$Mate> {
+class RotationTransition$Mate extends RotationTransition with Mate<RotationTransition$Mate> {
   /// RotationTransition RotationTransition({Key? key, required Animation<double> turns, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
   RotationTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -146,7 +146,7 @@ class RotationTransition$Mate extends RotationTransition with WidgetMate<Rotatio
 }
 
 /// class SizeTransition extends AnimatedWidget
-class SizeTransition$Mate extends SizeTransition with WidgetMate<SizeTransition$Mate> {
+class SizeTransition$Mate extends SizeTransition with Mate<SizeTransition$Mate> {
   /// SizeTransition SizeTransition({Key? key, Axis axis = Axis.vertical, required Animation<double> sizeFactor, double axisAlignment = 0.0, Widget? child})
   SizeTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -189,7 +189,7 @@ class SizeTransition$Mate extends SizeTransition with WidgetMate<SizeTransition$
 }
 
 /// class FadeTransition extends SingleChildRenderObjectWidget
-class FadeTransition$Mate extends FadeTransition with WidgetMate<FadeTransition$Mate> {
+class FadeTransition$Mate extends FadeTransition with Mate<FadeTransition$Mate> {
   /// FadeTransition FadeTransition({Key? key, required Animation<double> opacity, bool alwaysIncludeSemantics = false, Widget? child})
   FadeTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -226,7 +226,7 @@ class FadeTransition$Mate extends FadeTransition with WidgetMate<FadeTransition$
 }
 
 /// class SliverFadeTransition extends SingleChildRenderObjectWidget
-class SliverFadeTransition$Mate extends SliverFadeTransition with WidgetMate<SliverFadeTransition$Mate> {
+class SliverFadeTransition$Mate extends SliverFadeTransition with Mate<SliverFadeTransition$Mate> {
   /// SliverFadeTransition SliverFadeTransition({Key? key, required Animation<double> opacity, bool alwaysIncludeSemantics = false, Widget? sliver})
   SliverFadeTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -288,7 +288,7 @@ class RelativeRectTween$Mate extends RelativeRectTween with Mate<RelativeRectTwe
 }
 
 /// class PositionedTransition extends AnimatedWidget
-class PositionedTransition$Mate extends PositionedTransition with WidgetMate<PositionedTransition$Mate> {
+class PositionedTransition$Mate extends PositionedTransition with Mate<PositionedTransition$Mate> {
   /// PositionedTransition PositionedTransition({Key? key, required Animation<RelativeRect> rect, required Widget child})
   PositionedTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -320,7 +320,7 @@ class PositionedTransition$Mate extends PositionedTransition with WidgetMate<Pos
 
 /// class RelativePositionedTransition extends AnimatedWidget
 class RelativePositionedTransition$Mate extends RelativePositionedTransition
-    with WidgetMate<RelativePositionedTransition$Mate> {
+    with Mate<RelativePositionedTransition$Mate> {
   /// RelativePositionedTransition RelativePositionedTransition({Key? key, required Animation<Rect?> rect, required Size size, required Widget child})
   RelativePositionedTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -357,7 +357,7 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition
 }
 
 /// class DecoratedBoxTransition extends AnimatedWidget
-class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with WidgetMate<DecoratedBoxTransition$Mate> {
+class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with Mate<DecoratedBoxTransition$Mate> {
   /// DecoratedBoxTransition DecoratedBoxTransition({Key? key, required Animation<Decoration> decoration, DecorationPosition position = DecorationPosition.background, required Widget child})
   DecoratedBoxTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -394,7 +394,7 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with WidgetMate
 }
 
 /// class AlignTransition extends AnimatedWidget
-class AlignTransition$Mate extends AlignTransition with WidgetMate<AlignTransition$Mate> {
+class AlignTransition$Mate extends AlignTransition with Mate<AlignTransition$Mate> {
   /// AlignTransition AlignTransition({Key? key, required Animation<AlignmentGeometry> alignment, required Widget child, double? widthFactor, double? heightFactor})
   AlignTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -437,8 +437,7 @@ class AlignTransition$Mate extends AlignTransition with WidgetMate<AlignTransiti
 }
 
 /// class DefaultTextStyleTransition extends AnimatedWidget
-class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition
-    with WidgetMate<DefaultTextStyleTransition$Mate> {
+class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Mate<DefaultTextStyleTransition$Mate> {
   /// DefaultTextStyleTransition DefaultTextStyleTransition({Key? key, required Animation<TextStyle> style, required Widget child, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines})
   DefaultTextStyleTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -493,7 +492,7 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition
 }
 
 /// class ListenableBuilder extends AnimatedWidget
-class ListenableBuilder$Mate extends ListenableBuilder with WidgetMate<ListenableBuilder$Mate> {
+class ListenableBuilder$Mate extends ListenableBuilder with Mate<ListenableBuilder$Mate> {
   /// ListenableBuilder ListenableBuilder({Key? key, required Listenable listenable, required Widget Function(BuildContext, Widget?) builder, Widget? child})
   ListenableBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -530,7 +529,7 @@ class ListenableBuilder$Mate extends ListenableBuilder with WidgetMate<Listenabl
 }
 
 /// class AnimatedBuilder extends ListenableBuilder
-class AnimatedBuilder$Mate extends AnimatedBuilder with WidgetMate<AnimatedBuilder$Mate> {
+class AnimatedBuilder$Mate extends AnimatedBuilder with Mate<AnimatedBuilder$Mate> {
   /// AnimatedBuilder AnimatedBuilder({Key? key, required Listenable animation, required Widget Function(BuildContext, Widget?) builder, Widget? child})
   AnimatedBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

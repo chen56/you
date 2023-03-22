@@ -62,7 +62,7 @@ class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate<DropdownM
 }
 
 /// class DropdownMenu<T> extends StatefulWidget
-class DropdownMenu$Mate<T> extends DropdownMenu<T> with WidgetMate<DropdownMenu$Mate> {
+class DropdownMenu$Mate<T> extends DropdownMenu<T> with Mate<DropdownMenu$Mate> {
   /// DropdownMenu<T> DropdownMenu({Key? key, bool enabled = true, double? width, double? menuHeight, Widget? leadingIcon, Widget? trailingIcon, Widget? label, String? hintText, Widget? selectedTrailingIcon, bool enableFilter = false, bool enableSearch = true, TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle, TextEditingController? controller, T? initialSelection, void Function(T?)? onSelected, bool? requestFocusOnTap, required List<DropdownMenuEntry<T>> dropdownMenuEntries})
   DropdownMenu$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

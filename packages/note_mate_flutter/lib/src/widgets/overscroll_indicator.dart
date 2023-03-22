@@ -10,8 +10,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class GlowingOverscrollIndicator extends StatefulWidget
-class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator
-    with WidgetMate<GlowingOverscrollIndicator$Mate> {
+class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Mate<GlowingOverscrollIndicator$Mate> {
   /// GlowingOverscrollIndicator GlowingOverscrollIndicator({Key? key, bool showLeading = true, bool showTrailing = true, required AxisDirection axisDirection, required Color color, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Widget? child})
   GlowingOverscrollIndicator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -67,7 +66,7 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator
 
 /// class StretchingOverscrollIndicator extends StatefulWidget
 class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator
-    with WidgetMate<StretchingOverscrollIndicator$Mate> {
+    with Mate<StretchingOverscrollIndicator$Mate> {
   /// StretchingOverscrollIndicator StretchingOverscrollIndicator({Key? key, required AxisDirection axisDirection, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Clip clipBehavior = Clip.hardEdge, Widget? child})
   StretchingOverscrollIndicator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

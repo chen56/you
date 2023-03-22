@@ -103,7 +103,7 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate<Nav
 }
 
 /// class NavigationRailTheme extends InheritedTheme
-class NavigationRailTheme$Mate extends NavigationRailTheme with WidgetMate<NavigationRailTheme$Mate> {
+class NavigationRailTheme$Mate extends NavigationRailTheme with Mate<NavigationRailTheme$Mate> {
   /// NavigationRailTheme NavigationRailTheme({Key? key, required NavigationRailThemeData data, required Widget child})
   NavigationRailTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

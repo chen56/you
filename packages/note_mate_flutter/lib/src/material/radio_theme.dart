@@ -60,7 +60,7 @@ class RadioThemeData$Mate extends RadioThemeData with Mate<RadioThemeData$Mate> 
 }
 
 /// class RadioTheme extends InheritedWidget
-class RadioTheme$Mate extends RadioTheme with WidgetMate<RadioTheme$Mate> {
+class RadioTheme$Mate extends RadioTheme with Mate<RadioTheme$Mate> {
   /// RadioTheme RadioTheme({Key? key, required RadioThemeData data, required Widget child})
   RadioTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

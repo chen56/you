@@ -7,7 +7,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/change_notifier.dart';
 
 /// class AutomaticKeepAlive extends StatefulWidget
-class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with WidgetMate<AutomaticKeepAlive$Mate> {
+class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with Mate<AutomaticKeepAlive$Mate> {
   /// AutomaticKeepAlive AutomaticKeepAlive({Key? key, required Widget child})
   AutomaticKeepAlive$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

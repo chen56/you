@@ -15,7 +15,7 @@ import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/material/popup_menu_theme.dart';
 
 /// class PopupMenuDivider extends PopupMenuEntry<Never>
-class PopupMenuDivider$Mate extends PopupMenuDivider with WidgetMate<PopupMenuDivider$Mate> {
+class PopupMenuDivider$Mate extends PopupMenuDivider with Mate<PopupMenuDivider$Mate> {
   /// PopupMenuDivider PopupMenuDivider({Key? key, double height = _kMenuDividerHeight})
   PopupMenuDivider$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -40,7 +40,7 @@ class PopupMenuDivider$Mate extends PopupMenuDivider with WidgetMate<PopupMenuDi
 }
 
 /// class PopupMenuItem<T> extends PopupMenuEntry<T>
-class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with WidgetMate<PopupMenuItem$Mate> {
+class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with Mate<PopupMenuItem$Mate> {
   /// PopupMenuItem<T> PopupMenuItem({Key? key, T? value, void Function()? onTap, bool enabled = true, double height = kMinInteractiveDimension, EdgeInsets? padding, TextStyle? textStyle, MaterialStateProperty<TextStyle?>? labelTextStyle, MouseCursor? mouseCursor, required Widget? child})
   PopupMenuItem$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -113,7 +113,7 @@ class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with WidgetMate<PopupMenuIt
 }
 
 /// class CheckedPopupMenuItem<T> extends PopupMenuItem<T>
-class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with WidgetMate<CheckedPopupMenuItem$Mate> {
+class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with Mate<CheckedPopupMenuItem$Mate> {
   /// CheckedPopupMenuItem<T> CheckedPopupMenuItem({Key? key, T? value, bool checked = false, bool enabled = true, EdgeInsets? padding, double height = kMinInteractiveDimension, MouseCursor? mouseCursor, Widget? child})
   CheckedPopupMenuItem$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -174,7 +174,7 @@ class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with WidgetMa
 }
 
 /// class PopupMenuButton<T> extends StatefulWidget
-class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with WidgetMate<PopupMenuButton$Mate> {
+class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with Mate<PopupMenuButton$Mate> {
   /// PopupMenuButton<T> PopupMenuButton({Key? key, required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder, T? initialValue, void Function()? onOpened, void Function(T)? onSelected, void Function()? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset = Offset.zero, bool enabled = true, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior = Clip.none})
   PopupMenuButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

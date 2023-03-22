@@ -9,7 +9,7 @@ import 'package:flutter/src/gestures/recognizer.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoSwitch extends StatefulWidget
-class CupertinoSwitch$Mate extends CupertinoSwitch with WidgetMate<CupertinoSwitch$Mate> {
+class CupertinoSwitch$Mate extends CupertinoSwitch with Mate<CupertinoSwitch$Mate> {
   /// CupertinoSwitch CupertinoSwitch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? trackColor, Color? thumbColor, bool? applyTheme, Color? focusColor, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   CupertinoSwitch$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

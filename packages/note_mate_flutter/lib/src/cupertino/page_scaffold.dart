@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoPageScaffold extends StatefulWidget
-class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with WidgetMate<CupertinoPageScaffold$Mate> {
+class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with Mate<CupertinoPageScaffold$Mate> {
   /// CupertinoPageScaffold CupertinoPageScaffold({Key? key, ObstructingPreferredSizeWidget? navigationBar, Color? backgroundColor, bool resizeToAvoidBottomInset = true, required Widget child})
   CupertinoPageScaffold$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -16,7 +16,7 @@ import 'package:flutter/src/widgets/sliver.dart';
 import 'package:flutter/src/rendering/sliver_grid.dart';
 
 /// class CustomScrollView extends ScrollView
-class CustomScrollView$Mate extends CustomScrollView with WidgetMate<CustomScrollView$Mate> {
+class CustomScrollView$Mate extends CustomScrollView with Mate<CustomScrollView$Mate> {
   /// CustomScrollView CustomScrollView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, ScrollBehavior? scrollBehavior, bool shrinkWrap = false, Key? center, double anchor = 0.0, double? cacheExtent, List<Widget> slivers = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   CustomScrollView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -131,7 +131,7 @@ class CustomScrollView$Mate extends CustomScrollView with WidgetMate<CustomScrol
 }
 
 /// class ListView extends BoxScrollView
-class ListView$Mate extends ListView with WidgetMate<ListView$Mate> {
+class ListView$Mate extends ListView with Mate<ListView$Mate> {
   /// ListView ListView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -648,7 +648,7 @@ class ListView$Mate extends ListView with WidgetMate<ListView$Mate> {
 }
 
 /// class GridView extends BoxScrollView
-class GridView$Mate extends GridView with WidgetMate<GridView$Mate> {
+class GridView$Mate extends GridView with Mate<GridView$Mate> {
   /// GridView GridView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Clip clipBehavior = Clip.hardEdge, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId})
   GridView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

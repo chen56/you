@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class IconTheme extends InheritedTheme
-class IconTheme$Mate extends IconTheme with WidgetMate<IconTheme$Mate> {
+class IconTheme$Mate extends IconTheme with Mate<IconTheme$Mate> {
   /// IconTheme IconTheme({Key? key, required IconThemeData data, required Widget child})
   IconTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

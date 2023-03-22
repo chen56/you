@@ -38,7 +38,7 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate<TextS
 }
 
 /// class TextSelectionTheme extends InheritedTheme
-class TextSelectionTheme$Mate extends TextSelectionTheme with WidgetMate<TextSelectionTheme$Mate> {
+class TextSelectionTheme$Mate extends TextSelectionTheme with Mate<TextSelectionTheme$Mate> {
   /// TextSelectionTheme TextSelectionTheme({Key? key, required TextSelectionThemeData data, required Widget child})
   TextSelectionTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

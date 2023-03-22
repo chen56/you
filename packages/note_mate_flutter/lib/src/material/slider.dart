@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:note/mate.dart';
 
 /// class Slider extends StatefulWidget
-class Slider$Mate extends Slider with WidgetMate<Slider$Mate> {
+class Slider$Mate extends Slider with Mate<Slider$Mate> {
   /// Slider Slider({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
   Slider$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

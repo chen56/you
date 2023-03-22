@@ -96,7 +96,7 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate<DataTableThem
 }
 
 /// class DataTableTheme extends InheritedWidget
-class DataTableTheme$Mate extends DataTableTheme with WidgetMate<DataTableTheme$Mate> {
+class DataTableTheme$Mate extends DataTableTheme with Mate<DataTableTheme$Mate> {
   /// DataTableTheme DataTableTheme({Key? key, required DataTableThemeData data, required Widget child})
   DataTableTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

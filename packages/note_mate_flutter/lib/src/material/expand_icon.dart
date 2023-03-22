@@ -9,7 +9,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class ExpandIcon extends StatefulWidget
-class ExpandIcon$Mate extends ExpandIcon with WidgetMate<ExpandIcon$Mate> {
+class ExpandIcon$Mate extends ExpandIcon with Mate<ExpandIcon$Mate> {
   /// ExpandIcon ExpandIcon({Key? key, bool isExpanded = false, double size = 24.0, required void Function(bool)? onPressed, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Color? color, Color? disabledColor, Color? expandedColor})
   ExpandIcon$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

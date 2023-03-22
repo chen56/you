@@ -23,7 +23,7 @@ class OutlinedButtonThemeData$Mate extends OutlinedButtonThemeData with Mate<Out
 }
 
 /// class OutlinedButtonTheme extends InheritedTheme
-class OutlinedButtonTheme$Mate extends OutlinedButtonTheme with WidgetMate<OutlinedButtonTheme$Mate> {
+class OutlinedButtonTheme$Mate extends OutlinedButtonTheme with Mate<OutlinedButtonTheme$Mate> {
   /// OutlinedButtonTheme OutlinedButtonTheme({Key? key, required OutlinedButtonThemeData data, required Widget child})
   OutlinedButtonTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

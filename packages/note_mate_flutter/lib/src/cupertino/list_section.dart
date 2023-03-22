@@ -10,7 +10,7 @@ import 'package:flutter/src/painting/box_decoration.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoListSection extends StatelessWidget
-class CupertinoListSection$Mate extends CupertinoListSection with WidgetMate<CupertinoListSection$Mate> {
+class CupertinoListSection$Mate extends CupertinoListSection with Mate<CupertinoListSection$Mate> {
   /// CupertinoListSection CupertinoListSection({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kDefaultRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none, double dividerMargin = _kBaseDividerMargin, double? additionalDividerMargin, double? topMargin = _kMarginTop, bool hasLeading = true})
   CupertinoListSection$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

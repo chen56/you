@@ -7,7 +7,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class Texture extends LeafRenderObjectWidget
-class Texture$Mate extends Texture with WidgetMate<Texture$Mate> {
+class Texture$Mate extends Texture with Mate<Texture$Mate> {
   /// Texture Texture({Key? key, required int textureId, bool freeze = false, FilterQuality filterQuality = FilterQuality.low})
   Texture$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

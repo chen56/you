@@ -9,7 +9,7 @@ PageMeta page = PageMeta(
 );
 
 build(Pen pen, BuildContext context) {
-  pen.markdown(r'''
+  pen.markdown('''
 # note 机制【实验阶段】
 
 ## 可拖动组件，快速实验
@@ -24,11 +24,10 @@ build(Pen pen, BuildContext context) {
   );
 ```
   ''');
-
   pen.markdown(r'''
 ## xxx
   ''');
-
+  // print("${pen.runtimeType}");
   pen.sampleMate(Container$Mate(
     width: 200,
     height: 100,

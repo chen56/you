@@ -17,7 +17,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:note/mate.dart';
 
 /// class InkResponse extends StatelessWidget
-class InkResponse$Mate extends InkResponse with WidgetMate<InkResponse$Mate> {
+class InkResponse$Mate extends InkResponse with Mate<InkResponse$Mate> {
   /// InkResponse InkResponse({Key? key, Widget? child, void Function()? onTap, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function()? onDoubleTap, void Function()? onLongPress, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, bool containedInkWell = false, BoxShape highlightShape = BoxShape.circle, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, bool enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController})
   InkResponse$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -204,7 +204,7 @@ class InkResponse$Mate extends InkResponse with WidgetMate<InkResponse$Mate> {
 }
 
 /// class InkWell extends InkResponse
-class InkWell$Mate extends InkWell with WidgetMate<InkWell$Mate> {
+class InkWell$Mate extends InkWell with Mate<InkWell$Mate> {
   /// InkWell InkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, bool? enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController})
   InkWell$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

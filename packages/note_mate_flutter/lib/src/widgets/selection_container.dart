@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class SelectionContainer extends StatefulWidget
-class SelectionContainer$Mate extends SelectionContainer with WidgetMate<SelectionContainer$Mate> {
+class SelectionContainer$Mate extends SelectionContainer with Mate<SelectionContainer$Mate> {
   /// SelectionContainer SelectionContainer({Key? key, SelectionRegistrar? registrar, required SelectionContainerDelegate delegate, required Widget child})
   SelectionContainer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -66,7 +66,7 @@ class SelectionContainer$Mate extends SelectionContainer with WidgetMate<Selecti
 }
 
 /// class SelectionRegistrarScope extends InheritedWidget
-class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with WidgetMate<SelectionRegistrarScope$Mate> {
+class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with Mate<SelectionRegistrarScope$Mate> {
   /// SelectionRegistrarScope SelectionRegistrarScope({Key? key, required SelectionRegistrar registrar, required Widget child})
   SelectionRegistrarScope$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -8,7 +8,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class CupertinoSlider extends StatefulWidget
-class CupertinoSlider$Mate extends CupertinoSlider with WidgetMate<CupertinoSlider$Mate> {
+class CupertinoSlider$Mate extends CupertinoSlider with Mate<CupertinoSlider$Mate> {
   /// CupertinoSlider CupertinoSlider({Key? key, required double value, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, Color? activeColor, Color thumbColor = CupertinoColors.white})
   CupertinoSlider$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

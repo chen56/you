@@ -17,7 +17,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:note/mate.dart';
 
 /// class ListTile extends StatelessWidget
-class ListTile$Mate extends ListTile with WidgetMate<ListTile$Mate> {
+class ListTile$Mate extends ListTile with Mate<ListTile$Mate> {
   /// ListTile ListTile({Key? key, Widget? leading, Widget? title, Widget? subtitle, Widget? trailing, bool isThreeLine = false, bool? dense, VisualDensity? visualDensity, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, bool enabled = true, void Function()? onTap, void Function()? onLongPress, void Function(bool)? onFocusChange, MouseCursor? mouseCursor, bool selected = false, Color? focusColor, Color? hoverColor, Color? splashColor, FocusNode? focusNode, bool autofocus = false, Color? tileColor, Color? selectedTileColor, bool? enableFeedback, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, ListTileTitleAlignment? titleAlignment})
   ListTile$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

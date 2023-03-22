@@ -13,7 +13,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class Tooltip extends StatefulWidget
-class Tooltip$Mate extends Tooltip with WidgetMate<Tooltip$Mate> {
+class Tooltip$Mate extends Tooltip with Mate<Tooltip$Mate> {
   /// Tooltip Tooltip({Key? key, String? message, InlineSpan? richMessage, double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback, void Function()? onTriggered, Widget? child})
   Tooltip$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

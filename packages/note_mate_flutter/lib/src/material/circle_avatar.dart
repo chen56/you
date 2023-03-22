@@ -10,7 +10,7 @@ import 'package:flutter/src/painting/image_stream.dart';
 import 'package:note/mate.dart';
 
 /// class CircleAvatar extends StatelessWidget
-class CircleAvatar$Mate extends CircleAvatar with WidgetMate<CircleAvatar$Mate> {
+class CircleAvatar$Mate extends CircleAvatar with Mate<CircleAvatar$Mate> {
   /// CircleAvatar CircleAvatar({Key? key, Widget? child, Color? backgroundColor, ImageProvider<Object>? backgroundImage, ImageProvider<Object>? foregroundImage, void Function(Object, StackTrace?)? onBackgroundImageError, void Function(Object, StackTrace?)? onForegroundImageError, Color? foregroundColor, double? radius, double? minRadius, double? maxRadius})
   CircleAvatar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

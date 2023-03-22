@@ -23,7 +23,7 @@ class FilledButtonThemeData$Mate extends FilledButtonThemeData with Mate<FilledB
 }
 
 /// class FilledButtonTheme extends InheritedTheme
-class FilledButtonTheme$Mate extends FilledButtonTheme with WidgetMate<FilledButtonTheme$Mate> {
+class FilledButtonTheme$Mate extends FilledButtonTheme with Mate<FilledButtonTheme$Mate> {
   /// FilledButtonTheme FilledButtonTheme({Key? key, required FilledButtonThemeData data, required Widget child})
   FilledButtonTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

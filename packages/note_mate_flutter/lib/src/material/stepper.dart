@@ -97,7 +97,7 @@ class Step$Mate extends Step with Mate<Step$Mate> {
 }
 
 /// class Stepper extends StatefulWidget
-class Stepper$Mate extends Stepper with WidgetMate<Stepper$Mate> {
+class Stepper$Mate extends Stepper with Mate<Stepper$Mate> {
   /// Stepper Stepper({Key? key, required List<Step> steps, ScrollPhysics? physics, StepperType type = StepperType.vertical, int currentStep = 0, void Function(int)? onStepTapped, void Function()? onStepContinue, void Function()? onStepCancel, Widget Function(BuildContext, ControlsDetails)? controlsBuilder, double? elevation, EdgeInsetsGeometry? margin})
   Stepper$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -127,7 +127,7 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate<CupertinoPage$Mat
 }
 
 /// class CupertinoPageTransition extends StatelessWidget
-class CupertinoPageTransition$Mate extends CupertinoPageTransition with WidgetMate<CupertinoPageTransition$Mate> {
+class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate<CupertinoPageTransition$Mate> {
   /// CupertinoPageTransition CupertinoPageTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoPageTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -171,7 +171,7 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with WidgetMa
 
 /// class CupertinoFullscreenDialogTransition extends StatelessWidget
 class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialogTransition
-    with WidgetMate<CupertinoFullscreenDialogTransition$Mate> {
+    with Mate<CupertinoFullscreenDialogTransition$Mate> {
   /// CupertinoFullscreenDialogTransition CupertinoFullscreenDialogTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoFullscreenDialogTransition$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

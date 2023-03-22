@@ -12,7 +12,7 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:note/mate.dart';
 
 /// class BottomNavigationBar extends StatefulWidget
-class BottomNavigationBar$Mate extends BottomNavigationBar with WidgetMate<BottomNavigationBar$Mate> {
+class BottomNavigationBar$Mate extends BottomNavigationBar with Mate<BottomNavigationBar$Mate> {
   /// BottomNavigationBar BottomNavigationBar({Key? key, required List<BottomNavigationBarItem> items, void Function(int)? onTap, int currentIndex = 0, double? elevation, BottomNavigationBarType? type, Color? fixedColor, Color? backgroundColor, double iconSize = 24.0, Color? selectedItemColor, Color? unselectedItemColor, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, double selectedFontSize = 14.0, double unselectedFontSize = 12.0, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, MouseCursor? mouseCursor, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, bool useLegacyColorScheme = true})
   BottomNavigationBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

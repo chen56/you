@@ -9,7 +9,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class CalendarDatePicker extends StatefulWidget
-class CalendarDatePicker$Mate extends CalendarDatePicker with WidgetMate<CalendarDatePicker$Mate> {
+class CalendarDatePicker$Mate extends CalendarDatePicker with Mate<CalendarDatePicker$Mate> {
   /// CalendarDatePicker CalendarDatePicker({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, required void Function(DateTime) onDateChanged, void Function(DateTime)? onDisplayedMonthChanged, DatePickerMode initialCalendarMode = DatePickerMode.day, bool Function(DateTime)? selectableDayPredicate})
   CalendarDatePicker$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -76,7 +76,7 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with WidgetMate<Calenda
 }
 
 /// class YearPicker extends StatefulWidget
-class YearPicker$Mate extends YearPicker with WidgetMate<YearPicker$Mate> {
+class YearPicker$Mate extends YearPicker with Mate<YearPicker$Mate> {
   /// YearPicker YearPicker({Key? key, DateTime? currentDate, required DateTime firstDate, required DateTime lastDate, DateTime? initialDate, required DateTime selectedDate, required void Function(DateTime) onChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   YearPicker$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

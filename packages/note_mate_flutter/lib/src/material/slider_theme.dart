@@ -11,7 +11,7 @@ import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 
 /// class SliderTheme extends InheritedTheme
-class SliderTheme$Mate extends SliderTheme with WidgetMate<SliderTheme$Mate> {
+class SliderTheme$Mate extends SliderTheme with Mate<SliderTheme$Mate> {
   /// SliderTheme SliderTheme({Key? key, required SliderThemeData data, required Widget child})
   SliderTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -9,7 +9,7 @@ import 'dart:core';
 
 /// class DesktopTextSelectionToolbarButton extends StatelessWidget
 class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbarButton
-    with WidgetMate<DesktopTextSelectionToolbarButton$Mate> {
+    with Mate<DesktopTextSelectionToolbarButton$Mate> {
   /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
   DesktopTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

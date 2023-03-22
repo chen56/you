@@ -15,7 +15,7 @@ import 'package:flutter/src/widgets/icon_theme_data.dart';
 import 'package:note/mate.dart';
 
 /// class InputChip extends StatelessWidget implements ChipAttributes, DeletableChipAttributes, SelectableChipAttributes, CheckmarkableChipAttributes, DisabledChipAttributes, TappableChipAttributes
-class InputChip$Mate extends InputChip with WidgetMate<InputChip$Mate> {
+class InputChip$Mate extends InputChip with Mate<InputChip$Mate> {
   /// InputChip InputChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, bool isEnabled = true, void Function(bool)? onSelected, Widget? deleteIcon, void Function()? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, void Function()? onPressed, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder(), bool useDeleteButtonTooltip = true})
   InputChip$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

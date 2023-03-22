@@ -6,8 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class ScrollNotificationObserver extends StatefulWidget
-class ScrollNotificationObserver$Mate extends ScrollNotificationObserver
-    with WidgetMate<ScrollNotificationObserver$Mate> {
+class ScrollNotificationObserver$Mate extends ScrollNotificationObserver with Mate<ScrollNotificationObserver$Mate> {
   /// ScrollNotificationObserver ScrollNotificationObserver({Key? key, required Widget child})
   ScrollNotificationObserver$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -10,7 +10,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/painting/alignment.dart';
 
 /// class CupertinoDatePicker extends StatefulWidget
-class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<CupertinoDatePicker$Mate> {
+class CupertinoDatePicker$Mate extends CupertinoDatePicker with Mate<CupertinoDatePicker$Mate> {
   /// CupertinoDatePicker CupertinoDatePicker({Key? key, CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime, required void Function(DateTime) onDateTimeChanged, DateTime? initialDateTime, DateTime? minimumDate, DateTime? maximumDate, int minimumYear = 1, int? maximumYear, int minuteInterval = 1, bool use24hFormat = false, DatePickerDateOrder? dateOrder, Color? backgroundColor, bool showDayOfWeek = false})
   CupertinoDatePicker$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -101,7 +101,7 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with WidgetMate<Cuper
 }
 
 /// class CupertinoTimerPicker extends StatefulWidget
-class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with WidgetMate<CupertinoTimerPicker$Mate> {
+class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with Mate<CupertinoTimerPicker$Mate> {
   /// CupertinoTimerPicker CupertinoTimerPicker({Key? key, CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms, Duration initialTimerDuration = Duration.zero, int minuteInterval = 1, int secondInterval = 1, AlignmentGeometry alignment = Alignment.center, Color? backgroundColor, required void Function(Duration) onTimerDurationChanged})
   CupertinoTimerPicker$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

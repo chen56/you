@@ -71,7 +71,7 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate<Mat
 }
 
 /// class MaterialBannerTheme extends InheritedTheme
-class MaterialBannerTheme$Mate extends MaterialBannerTheme with WidgetMate<MaterialBannerTheme$Mate> {
+class MaterialBannerTheme$Mate extends MaterialBannerTheme with Mate<MaterialBannerTheme$Mate> {
   /// MaterialBannerTheme MaterialBannerTheme({Key? key, MaterialBannerThemeData? data, required Widget child})
   MaterialBannerTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

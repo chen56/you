@@ -13,7 +13,7 @@ import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:note/mate.dart';
 
 /// class PaginatedDataTable extends StatefulWidget
-class PaginatedDataTable$Mate extends PaginatedDataTable with WidgetMate<PaginatedDataTable$Mate> {
+class PaginatedDataTable$Mate extends PaginatedDataTable with Mate<PaginatedDataTable$Mate> {
   /// PaginatedDataTable PaginatedDataTable({Key? key, Widget? header, List<Widget>? actions, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, double headingRowHeight = 56.0, double horizontalMargin = 24.0, double columnSpacing = 56.0, bool showCheckboxColumn = true, bool showFirstLastButtons = false, int? initialFirstRowIndex = 0, void Function(int)? onPageChanged, int rowsPerPage = defaultRowsPerPage, List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10], void Function(int?)? onRowsPerPageChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? arrowHeadColor, required DataTableSource source, double? checkboxHorizontalMargin, ScrollController? controller, bool? primary})
   PaginatedDataTable$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

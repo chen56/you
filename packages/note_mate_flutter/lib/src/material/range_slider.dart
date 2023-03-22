@@ -11,7 +11,7 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:note/mate.dart';
 
 /// class RangeSlider extends StatefulWidget
-class RangeSlider$Mate extends RangeSlider with WidgetMate<RangeSlider$Mate> {
+class RangeSlider$Mate extends RangeSlider with Mate<RangeSlider$Mate> {
   /// RangeSlider RangeSlider({Key? key, required RangeValues values, required void Function(RangeValues)? onChanged, void Function(RangeValues)? onChangeStart, void Function(RangeValues)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, RangeLabels? labels, Color? activeColor, Color? inactiveColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<MouseCursor?>? mouseCursor, String Function(double)? semanticFormatterCallback})
   RangeSlider$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

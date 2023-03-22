@@ -11,7 +11,7 @@ import 'dart:core';
 import 'package:flutter/src/painting/box_shadow.dart';
 
 /// class TextMagnifier extends StatefulWidget
-class TextMagnifier$Mate extends TextMagnifier with WidgetMate<TextMagnifier$Mate> {
+class TextMagnifier$Mate extends TextMagnifier with Mate<TextMagnifier$Mate> {
   /// TextMagnifier TextMagnifier({Key? key, required ValueNotifier<MagnifierInfo> magnifierInfo})
   TextMagnifier$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -36,7 +36,7 @@ class TextMagnifier$Mate extends TextMagnifier with WidgetMate<TextMagnifier$Mat
 }
 
 /// class Magnifier extends StatelessWidget
-class Magnifier$Mate extends Magnifier with WidgetMate<Magnifier$Mate> {
+class Magnifier$Mate extends Magnifier with Mate<Magnifier$Mate> {
   /// Magnifier Magnifier({Key? key, Offset additionalFocalPointOffset = Offset.zero, BorderRadius borderRadius = const BorderRadius.all(Radius.circular(_borderRadius)), Color filmColor = const Color.fromARGB(8, 158, 158, 158), List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(blurRadius: 1.5, offset: Offset(0, 2), spreadRadius: 0.75, color: Color.fromARGB(25, 0, 0, 0))], Size size = Magnifier.kDefaultMagnifierSize})
   Magnifier$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -7,7 +7,7 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoFormRow extends StatelessWidget
-class CupertinoFormRow$Mate extends CupertinoFormRow with WidgetMate<CupertinoFormRow$Mate> {
+class CupertinoFormRow$Mate extends CupertinoFormRow with Mate<CupertinoFormRow$Mate> {
   /// CupertinoFormRow CupertinoFormRow({Key? key, required Widget child, Widget? prefix, EdgeInsetsGeometry? padding, Widget? helper, Widget? error})
   CupertinoFormRow$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

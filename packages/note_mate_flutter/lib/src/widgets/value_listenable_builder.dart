@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class ValueListenableBuilder<T> extends StatefulWidget
-class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with WidgetMate<ValueListenableBuilder$Mate> {
+class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Mate<ValueListenableBuilder$Mate> {
   /// ValueListenableBuilder<T> ValueListenableBuilder({Key? key, required ValueListenable<T> valueListenable, required Widget Function(BuildContext, T, Widget?) builder, Widget? child})
   ValueListenableBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -14,7 +14,7 @@ import 'package:flutter/src/material/drawer.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class ScaffoldMessenger extends StatefulWidget
-class ScaffoldMessenger$Mate extends ScaffoldMessenger with WidgetMate<ScaffoldMessenger$Mate> {
+class ScaffoldMessenger$Mate extends ScaffoldMessenger with Mate<ScaffoldMessenger$Mate> {
   /// ScaffoldMessenger ScaffoldMessenger({Key? key, required Widget child})
   ScaffoldMessenger$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -137,7 +137,7 @@ class ScaffoldGeometry$Mate extends ScaffoldGeometry with Mate<ScaffoldGeometry$
 }
 
 /// class Scaffold extends StatefulWidget
-class Scaffold$Mate extends Scaffold with WidgetMate<Scaffold$Mate> {
+class Scaffold$Mate extends Scaffold with Mate<Scaffold$Mate> {
   /// Scaffold Scaffold({Key? key, PreferredSizeWidget? appBar, Widget? body, Widget? floatingActionButton, FloatingActionButtonLocation? floatingActionButtonLocation, FloatingActionButtonAnimator? floatingActionButtonAnimator, List<Widget>? persistentFooterButtons, AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd, Widget? drawer, void Function(bool)? onDrawerChanged, Widget? endDrawer, void Function(bool)? onEndDrawerChanged, Widget? bottomNavigationBar, Widget? bottomSheet, Color? backgroundColor, bool? resizeToAvoidBottomInset, bool primary = true, DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start, bool extendBody = false, bool extendBodyBehindAppBar = false, Color? drawerScrimColor, double? drawerEdgeDragWidth, bool drawerEnableOpenDragGesture = true, bool endDrawerEnableOpenDragGesture = true, String? restorationId})
   Scaffold$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

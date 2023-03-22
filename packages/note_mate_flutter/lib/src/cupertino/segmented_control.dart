@@ -11,7 +11,7 @@ import 'package:note/mate.dart';
 
 /// class CupertinoSegmentedControl<T extends Object> extends StatefulWidget
 class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmentedControl<T>
-    with WidgetMate<CupertinoSegmentedControl$Mate> {
+    with Mate<CupertinoSegmentedControl$Mate> {
   /// CupertinoSegmentedControl<T> CupertinoSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T) onValueChanged, T? groupValue, Color? unselectedColor, Color? selectedColor, Color? borderColor, Color? pressedColor, EdgeInsetsGeometry? padding})
   CupertinoSegmentedControl$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -7,7 +7,7 @@ import 'package:note/mate.dart';
 
 /// class PlatformSelectableRegionContextMenu extends StatelessWidget
 class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionContextMenu
-    with WidgetMate<PlatformSelectableRegionContextMenu$Mate> {
+    with Mate<PlatformSelectableRegionContextMenu$Mate> {
   /// PlatformSelectableRegionContextMenu PlatformSelectableRegionContextMenu({required Widget child, Key? key})
   PlatformSelectableRegionContextMenu$Mate({
     /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null

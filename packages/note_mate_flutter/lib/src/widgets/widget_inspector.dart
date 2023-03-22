@@ -8,7 +8,7 @@ import 'dart:core';
 import 'package:flutter/src/foundation/diagnostics.dart';
 
 /// class WidgetInspector extends StatefulWidget
-class WidgetInspector$Mate extends WidgetInspector with WidgetMate<WidgetInspector$Mate> {
+class WidgetInspector$Mate extends WidgetInspector with Mate<WidgetInspector$Mate> {
   /// WidgetInspector WidgetInspector({Key? key, required Widget child, required Widget Function(BuildContext, void Function())? selectButtonBuilder})
   WidgetInspector$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -93,8 +93,7 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     Map<String, Object>? Function(
       DiagnosticsNode,
       InspectorSerializationDelegate,
-    )?
-        addAdditionalPropertiesCallback,
+    )? addAdditionalPropertiesCallback,
   }) : super(
           groupName: groupName,
           summaryTree: summaryTree,

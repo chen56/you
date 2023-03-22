@@ -15,7 +15,7 @@ import 'dart:typed_data';
 import 'package:flutter/src/services/asset_bundle.dart';
 
 /// class FadeInImage extends StatefulWidget
-class FadeInImage$Mate extends FadeInImage with WidgetMate<FadeInImage$Mate> {
+class FadeInImage$Mate extends FadeInImage with Mate<FadeInImage$Mate> {
   /// FadeInImage FadeInImage({Key? key, required ImageProvider<Object> placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required ImageProvider<Object> image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false})
   FadeInImage$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

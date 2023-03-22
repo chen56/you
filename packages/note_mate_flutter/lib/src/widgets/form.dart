@@ -9,7 +9,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 
 /// class Form extends StatefulWidget
-class Form$Mate extends Form with WidgetMate<Form$Mate> {
+class Form$Mate extends Form with Mate<Form$Mate> {
   /// Form Form({Key? key, required Widget child, Future<bool> Function()? onWillPop, void Function()? onChanged, AutovalidateMode? autovalidateMode})
   Form$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -52,7 +52,7 @@ class Form$Mate extends Form with WidgetMate<Form$Mate> {
 }
 
 /// class FormField<T> extends StatefulWidget
-class FormField$Mate<T> extends FormField<T> with WidgetMate<FormField$Mate> {
+class FormField$Mate<T> extends FormField<T> with Mate<FormField$Mate> {
   /// FormField<T> FormField({Key? key, required Widget Function(FormFieldState<T>) builder, void Function(T?)? onSaved, String? Function(T?)? validator, T? initialValue, bool enabled = true, AutovalidateMode? autovalidateMode, String? restorationId})
   FormField$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

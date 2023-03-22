@@ -114,7 +114,7 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate<Toggl
 }
 
 /// class ToggleButtonsTheme extends InheritedTheme
-class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with WidgetMate<ToggleButtonsTheme$Mate> {
+class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with Mate<ToggleButtonsTheme$Mate> {
   /// ToggleButtonsTheme ToggleButtonsTheme({Key? key, required ToggleButtonsThemeData data, required Widget child})
   ToggleButtonsTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

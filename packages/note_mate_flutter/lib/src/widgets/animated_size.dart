@@ -10,7 +10,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class AnimatedSize extends StatefulWidget
-class AnimatedSize$Mate extends AnimatedSize with WidgetMate<AnimatedSize$Mate> {
+class AnimatedSize$Mate extends AnimatedSize with Mate<AnimatedSize$Mate> {
   /// AnimatedSize AnimatedSize({Key? key, Widget? child, AlignmentGeometry alignment = Alignment.center, Curve curve = Curves.linear, required Duration duration, Duration? reverseDuration, Clip clipBehavior = Clip.hardEdge})
   AnimatedSize$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

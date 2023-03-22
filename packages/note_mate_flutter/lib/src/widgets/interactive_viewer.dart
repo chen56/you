@@ -12,7 +12,7 @@ import 'package:note/mate.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 /// class InteractiveViewer extends StatefulWidget
-class InteractiveViewer$Mate extends InteractiveViewer with WidgetMate<InteractiveViewer$Mate> {
+class InteractiveViewer$Mate extends InteractiveViewer with Mate<InteractiveViewer$Mate> {
   /// InteractiveViewer InteractiveViewer({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, bool constrained = true, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = kDefaultMouseScrollToScaleFactor, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget child})
   InteractiveViewer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

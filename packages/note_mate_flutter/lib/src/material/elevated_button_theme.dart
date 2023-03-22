@@ -23,7 +23,7 @@ class ElevatedButtonThemeData$Mate extends ElevatedButtonThemeData with Mate<Ele
 }
 
 /// class ElevatedButtonTheme extends InheritedTheme
-class ElevatedButtonTheme$Mate extends ElevatedButtonTheme with WidgetMate<ElevatedButtonTheme$Mate> {
+class ElevatedButtonTheme$Mate extends ElevatedButtonTheme with Mate<ElevatedButtonTheme$Mate> {
   /// ElevatedButtonTheme ElevatedButtonTheme({Key? key, required ElevatedButtonThemeData data, required Widget child})
   ElevatedButtonTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

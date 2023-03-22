@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/utils.dart' as utils;
-import 'package:note/utils.dart';
 
 abstract class Param<T> extends ChangeNotifier {
   Param? parent;
@@ -52,14 +51,12 @@ Param<C> convertToParam<C>(C init) {
   if (init is Mate<C>) {
     print(
         "init.mateParams.value:${init.mateParams.value}  isNullable ${init.mateParams.isNullable}");
-    var x = (mate) => init.mateParams.builder(mate);
 
     Param<C> result2 = ObjectParam<C>(
         init: init,
         builder: (mate) => init.mateParams.builder(mate),
         paramMap: init.mateParams._paramMap);
 
-    Param<C> result = ObjectParam.copy(init.mateParams);
     return result2;
   }
   if (init is Param) return init as Param<C>;
@@ -77,13 +74,6 @@ Param<C> convertToParam<C>(C init) {
   //   Param() => init as Param<C>,
   //   _ => Param.newValue(init: init),
   // };
-}
-
-// ignore: unused_element
-Param<C> _convertUseDart2<C>(C init) {
-  if (init is Param) return init as Param<C>;
-  if (isSubtype<Mate, C>()) return (init as Mate<C>).mateParams;
-  return ValueParam(init: init);
 }
 
 class ValueParam<T> extends Param<T> {
@@ -302,11 +292,6 @@ class ReadonlyEditor extends Editor<double> {
 }
 
 mixin Mate<T> {
-  late final ObjectParam<T> mateParams;
-}
-
-mixin WidgetMate<T> on Widget implements Mate<T> {
-  @override
   late final ObjectParam<T> mateParams;
 }
 

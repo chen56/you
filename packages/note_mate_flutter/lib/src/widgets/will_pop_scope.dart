@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/navigator.dart';
 import 'package:note/mate.dart';
 
 /// class WillPopScope extends StatefulWidget
-class WillPopScope$Mate extends WillPopScope with WidgetMate<WillPopScope$Mate> {
+class WillPopScope$Mate extends WillPopScope with Mate<WillPopScope$Mate> {
   /// WillPopScope WillPopScope({Key? key, required Widget child, required Future<bool> Function()? onWillPop})
   WillPopScope$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

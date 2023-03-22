@@ -19,7 +19,7 @@ import 'package:flutter/src/widgets/navigator.dart';
 import 'package:flutter/src/widgets/focus_traversal.dart';
 
 /// class Dialog extends StatelessWidget
-class Dialog$Mate extends Dialog with WidgetMate<Dialog$Mate> {
+class Dialog$Mate extends Dialog with Mate<Dialog$Mate> {
   /// Dialog Dialog({Key? key, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Duration insetAnimationDuration = const Duration(milliseconds: 100), Curve insetAnimationCurve = Curves.decelerate, EdgeInsets? insetPadding = _defaultInsetPadding, Clip clipBehavior = Clip.none, ShapeBorder? shape, AlignmentGeometry? alignment, Widget? child})
   Dialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -144,7 +144,7 @@ class Dialog$Mate extends Dialog with WidgetMate<Dialog$Mate> {
 }
 
 /// class AlertDialog extends StatelessWidget
-class AlertDialog$Mate extends AlertDialog with WidgetMate<AlertDialog$Mate> {
+class AlertDialog$Mate extends AlertDialog with Mate<AlertDialog$Mate> {
   /// AlertDialog AlertDialog({Key? key, Widget? icon, EdgeInsetsGeometry? iconPadding, Color? iconColor, Widget? title, EdgeInsetsGeometry? titlePadding, TextStyle? titleTextStyle, Widget? content, EdgeInsetsGeometry? contentPadding, TextStyle? contentTextStyle, List<Widget>? actions, EdgeInsetsGeometry? actionsPadding, MainAxisAlignment? actionsAlignment, OverflowBarAlignment? actionsOverflowAlignment, VerticalDirection? actionsOverflowDirection, double? actionsOverflowButtonSpacing, EdgeInsetsGeometry? buttonPadding, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, String? semanticLabel, EdgeInsets insetPadding = _defaultInsetPadding, Clip clipBehavior = Clip.none, ShapeBorder? shape, AlignmentGeometry? alignment, bool scrollable = false})
   AlertDialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -319,7 +319,7 @@ class AlertDialog$Mate extends AlertDialog with WidgetMate<AlertDialog$Mate> {
 }
 
 /// class SimpleDialogOption extends StatelessWidget
-class SimpleDialogOption$Mate extends SimpleDialogOption with WidgetMate<SimpleDialogOption$Mate> {
+class SimpleDialogOption$Mate extends SimpleDialogOption with Mate<SimpleDialogOption$Mate> {
   /// SimpleDialogOption SimpleDialogOption({Key? key, void Function()? onPressed, EdgeInsets? padding, Widget? child})
   SimpleDialogOption$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -356,7 +356,7 @@ class SimpleDialogOption$Mate extends SimpleDialogOption with WidgetMate<SimpleD
 }
 
 /// class SimpleDialog extends StatelessWidget
-class SimpleDialog$Mate extends SimpleDialog with WidgetMate<SimpleDialog$Mate> {
+class SimpleDialog$Mate extends SimpleDialog with Mate<SimpleDialog$Mate> {
   /// SimpleDialog SimpleDialog({Key? key, Widget? title, EdgeInsetsGeometry titlePadding = const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0), TextStyle? titleTextStyle, List<Widget>? children, EdgeInsetsGeometry contentPadding = const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0), Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, String? semanticLabel, EdgeInsets insetPadding = _defaultInsetPadding, Clip clipBehavior = Clip.none, ShapeBorder? shape, AlignmentGeometry? alignment})
   SimpleDialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

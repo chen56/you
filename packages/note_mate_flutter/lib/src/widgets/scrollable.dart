@@ -13,7 +13,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/widgets/scroll_metrics.dart';
 
 /// class Scrollable extends StatefulWidget
-class Scrollable$Mate extends Scrollable with WidgetMate<Scrollable$Mate> {
+class Scrollable$Mate extends Scrollable with Mate<Scrollable$Mate> {
   /// Scrollable Scrollable({Key? key, AxisDirection axisDirection = AxisDirection.down, ScrollController? controller, ScrollPhysics? physics, required Widget Function(BuildContext, ViewportOffset) viewportBuilder, double Function(ScrollIncrementDetails)? incrementCalculator, bool excludeFromSemantics = false, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, String? restorationId, ScrollBehavior? scrollBehavior, Clip clipBehavior = Clip.hardEdge})
   Scrollable$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -83,7 +83,7 @@ class BuildOwner$Mate extends BuildOwner with Mate<BuildOwner$Mate> {
 }
 
 /// class ErrorWidget extends LeafRenderObjectWidget
-class ErrorWidget$Mate extends ErrorWidget with WidgetMate<ErrorWidget$Mate> {
+class ErrorWidget$Mate extends ErrorWidget with Mate<ErrorWidget$Mate> {
   /// ErrorWidget ErrorWidget(Object exception)
   ErrorWidget$Mate(
 

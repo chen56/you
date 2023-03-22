@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class PrimaryScrollController extends InheritedWidget
-class PrimaryScrollController$Mate extends PrimaryScrollController with WidgetMate<PrimaryScrollController$Mate> {
+class PrimaryScrollController$Mate extends PrimaryScrollController with Mate<PrimaryScrollController$Mate> {
   /// PrimaryScrollController PrimaryScrollController({Key? key, required ScrollController controller, Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms, Axis? scrollDirection = Axis.vertical, required Widget child})
   PrimaryScrollController$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

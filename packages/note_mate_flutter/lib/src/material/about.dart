@@ -7,7 +7,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class AboutListTile extends StatelessWidget
-class AboutListTile$Mate extends AboutListTile with WidgetMate<AboutListTile$Mate> {
+class AboutListTile$Mate extends AboutListTile with Mate<AboutListTile$Mate> {
   /// AboutListTile AboutListTile({Key? key, Widget? icon, Widget? child, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese, List<Widget>? aboutBoxChildren, bool? dense})
   AboutListTile$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -74,7 +74,7 @@ class AboutListTile$Mate extends AboutListTile with WidgetMate<AboutListTile$Mat
 }
 
 /// class AboutDialog extends StatelessWidget
-class AboutDialog$Mate extends AboutDialog with WidgetMate<AboutDialog$Mate> {
+class AboutDialog$Mate extends AboutDialog with Mate<AboutDialog$Mate> {
   /// AboutDialog AboutDialog({Key? key, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese, List<Widget>? children})
   AboutDialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -123,7 +123,7 @@ class AboutDialog$Mate extends AboutDialog with WidgetMate<AboutDialog$Mate> {
 }
 
 /// class LicensePage extends StatefulWidget
-class LicensePage$Mate extends LicensePage with WidgetMate<LicensePage$Mate> {
+class LicensePage$Mate extends LicensePage with Mate<LicensePage$Mate> {
   /// LicensePage LicensePage({Key? key, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese})
   LicensePage$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

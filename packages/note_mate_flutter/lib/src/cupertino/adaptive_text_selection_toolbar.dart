@@ -14,7 +14,7 @@ import 'package:flutter/src/rendering/selection.dart';
 
 /// class CupertinoAdaptiveTextSelectionToolbar extends StatelessWidget
 class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSelectionToolbar
-    with WidgetMate<CupertinoAdaptiveTextSelectionToolbar$Mate> {
+    with Mate<CupertinoAdaptiveTextSelectionToolbar$Mate> {
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

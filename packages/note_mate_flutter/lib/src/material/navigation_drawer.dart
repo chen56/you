@@ -10,7 +10,7 @@ import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:note/mate.dart';
 
 /// class NavigationDrawer extends StatelessWidget
-class NavigationDrawer$Mate extends NavigationDrawer with WidgetMate<NavigationDrawer$Mate> {
+class NavigationDrawer$Mate extends NavigationDrawer with Mate<NavigationDrawer$Mate> {
   /// NavigationDrawer NavigationDrawer({Key? key, required List<Widget> children, Color? backgroundColor, Color? shadowColor, Color? surfaceTintColor, double? elevation, Color? indicatorColor, ShapeBorder? indicatorShape, void Function(int)? onDestinationSelected, int? selectedIndex = 0})
   NavigationDrawer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -83,8 +83,7 @@ class NavigationDrawer$Mate extends NavigationDrawer with WidgetMate<NavigationD
 }
 
 /// class NavigationDrawerDestination extends StatelessWidget
-class NavigationDrawerDestination$Mate extends NavigationDrawerDestination
-    with WidgetMate<NavigationDrawerDestination$Mate> {
+class NavigationDrawerDestination$Mate extends NavigationDrawerDestination with Mate<NavigationDrawerDestination$Mate> {
   /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
   NavigationDrawerDestination$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

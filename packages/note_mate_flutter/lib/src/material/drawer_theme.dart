@@ -70,7 +70,7 @@ class DrawerThemeData$Mate extends DrawerThemeData with Mate<DrawerThemeData$Mat
 }
 
 /// class DrawerTheme extends InheritedTheme
-class DrawerTheme$Mate extends DrawerTheme with WidgetMate<DrawerTheme$Mate> {
+class DrawerTheme$Mate extends DrawerTheme with Mate<DrawerTheme$Mate> {
   /// DrawerTheme DrawerTheme({Key? key, required DrawerThemeData data, required Widget child})
   DrawerTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

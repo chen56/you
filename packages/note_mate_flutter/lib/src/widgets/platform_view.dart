@@ -12,7 +12,7 @@ import 'package:flutter/src/services/message_codec.dart';
 import 'package:note/mate.dart';
 
 /// class AndroidView extends StatefulWidget
-class AndroidView$Mate extends AndroidView with WidgetMate<AndroidView$Mate> {
+class AndroidView$Mate extends AndroidView with Mate<AndroidView$Mate> {
   /// AndroidView AndroidView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque, TextDirection? layoutDirection, Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers, dynamic creationParams, MessageCodec<dynamic>? creationParamsCodec, Clip clipBehavior = Clip.hardEdge})
   AndroidView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -79,7 +79,7 @@ class AndroidView$Mate extends AndroidView with WidgetMate<AndroidView$Mate> {
 }
 
 /// class UiKitView extends StatefulWidget
-class UiKitView$Mate extends UiKitView with WidgetMate<UiKitView$Mate> {
+class UiKitView$Mate extends UiKitView with Mate<UiKitView$Mate> {
   /// UiKitView UiKitView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque, TextDirection? layoutDirection, dynamic creationParams, MessageCodec<dynamic>? creationParamsCodec, Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers})
   UiKitView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -140,7 +140,7 @@ class UiKitView$Mate extends UiKitView with WidgetMate<UiKitView$Mate> {
 }
 
 /// class HtmlElementView extends StatelessWidget
-class HtmlElementView$Mate extends HtmlElementView with WidgetMate<HtmlElementView$Mate> {
+class HtmlElementView$Mate extends HtmlElementView with Mate<HtmlElementView$Mate> {
   /// HtmlElementView HtmlElementView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated})
   HtmlElementView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -171,7 +171,7 @@ class HtmlElementView$Mate extends HtmlElementView with WidgetMate<HtmlElementVi
 }
 
 /// class PlatformViewLink extends StatefulWidget
-class PlatformViewLink$Mate extends PlatformViewLink with WidgetMate<PlatformViewLink$Mate> {
+class PlatformViewLink$Mate extends PlatformViewLink with Mate<PlatformViewLink$Mate> {
   /// PlatformViewLink PlatformViewLink({Key? key, required Widget Function(BuildContext, PlatformViewController) surfaceFactory, required PlatformViewController Function(PlatformViewCreationParams) onCreatePlatformView, required String viewType})
   PlatformViewLink$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -208,7 +208,7 @@ class PlatformViewLink$Mate extends PlatformViewLink with WidgetMate<PlatformVie
 }
 
 /// class PlatformViewSurface extends LeafRenderObjectWidget
-class PlatformViewSurface$Mate extends PlatformViewSurface with WidgetMate<PlatformViewSurface$Mate> {
+class PlatformViewSurface$Mate extends PlatformViewSurface with Mate<PlatformViewSurface$Mate> {
   /// PlatformViewSurface PlatformViewSurface({Key? key, required PlatformViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   PlatformViewSurface$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -245,7 +245,7 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with WidgetMate<Platf
 }
 
 /// class AndroidViewSurface extends StatefulWidget
-class AndroidViewSurface$Mate extends AndroidViewSurface with WidgetMate<AndroidViewSurface$Mate> {
+class AndroidViewSurface$Mate extends AndroidViewSurface with Mate<AndroidViewSurface$Mate> {
   /// AndroidViewSurface AndroidViewSurface({Key? key, required AndroidViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   AndroidViewSurface$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

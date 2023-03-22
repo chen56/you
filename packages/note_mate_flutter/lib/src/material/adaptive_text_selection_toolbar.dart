@@ -15,7 +15,7 @@ import 'package:flutter/src/widgets/selectable_region.dart';
 
 /// class AdaptiveTextSelectionToolbar extends StatelessWidget
 class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
-    with WidgetMate<AdaptiveTextSelectionToolbar$Mate> {
+    with Mate<AdaptiveTextSelectionToolbar$Mate> {
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

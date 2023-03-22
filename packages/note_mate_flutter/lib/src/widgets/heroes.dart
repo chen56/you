@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class Hero extends StatefulWidget
-class Hero$Mate extends Hero with WidgetMate<Hero$Mate> {
+class Hero$Mate extends Hero with Mate<Hero$Mate> {
   /// Hero Hero({Key? key, required Object tag, Tween<Rect?> Function(Rect?, Rect?)? createRectTween, Widget Function(BuildContext, Animation<double>, HeroFlightDirection, BuildContext, BuildContext)? flightShuttleBuilder, Widget Function(BuildContext, Size, Widget)? placeholderBuilder, bool transitionOnUserGestures = false, required Widget child})
   Hero$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -78,7 +78,7 @@ class HeroController$Mate extends HeroController with Mate<HeroController$Mate> 
 }
 
 /// class HeroMode extends StatelessWidget
-class HeroMode$Mate extends HeroMode with WidgetMate<HeroMode$Mate> {
+class HeroMode$Mate extends HeroMode with Mate<HeroMode$Mate> {
   /// HeroMode HeroMode({Key? key, required Widget child, bool enabled = true})
   HeroMode$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

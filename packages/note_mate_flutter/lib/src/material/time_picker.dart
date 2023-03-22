@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/media_query.dart';
 import 'package:note/mate.dart';
 
 /// class TimePickerDialog extends StatefulWidget
-class TimePickerDialog$Mate extends TimePickerDialog with WidgetMate<TimePickerDialog$Mate> {
+class TimePickerDialog$Mate extends TimePickerDialog with Mate<TimePickerDialog$Mate> {
   /// TimePickerDialog TimePickerDialog({Key? key, required TimeOfDay initialTime, String? cancelText, String? confirmText, String? helpText, String? errorInvalidText, String? hourLabelText, String? minuteLabelText, String? restorationId, TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial, Orientation? orientation, void Function(TimePickerEntryMode)? onEntryModeChanged})
   TimePickerDialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

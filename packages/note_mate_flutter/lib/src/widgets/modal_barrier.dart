@@ -10,7 +10,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/animation/animation.dart';
 
 /// class ModalBarrier extends StatelessWidget
-class ModalBarrier$Mate extends ModalBarrier with WidgetMate<ModalBarrier$Mate> {
+class ModalBarrier$Mate extends ModalBarrier with Mate<ModalBarrier$Mate> {
   /// ModalBarrier ModalBarrier({Key? key, Color? color, bool dismissible = true, void Function()? onDismiss, String? semanticsLabel, bool? barrierSemanticsDismissible = true, ValueNotifier<EdgeInsets>? clipDetailsNotifier, String? semanticsOnTapHint})
   ModalBarrier$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -71,7 +71,7 @@ class ModalBarrier$Mate extends ModalBarrier with WidgetMate<ModalBarrier$Mate> 
 }
 
 /// class AnimatedModalBarrier extends AnimatedWidget
-class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with WidgetMate<AnimatedModalBarrier$Mate> {
+class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate<AnimatedModalBarrier$Mate> {
   /// AnimatedModalBarrier AnimatedModalBarrier({Key? key, required Animation<Color?> color, bool dismissible = true, String? semanticsLabel, bool? barrierSemanticsDismissible, void Function()? onDismiss, ValueNotifier<EdgeInsets>? clipDetailsNotifier, String? semanticsOnTapHint})
   AnimatedModalBarrier$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -15,7 +15,7 @@ import 'package:flutter/src/widgets/icon_theme_data.dart';
 import 'package:note/mate.dart';
 
 /// class ChoiceChip extends StatelessWidget implements ChipAttributes, SelectableChipAttributes, DisabledChipAttributes
-class ChoiceChip$Mate extends ChoiceChip with WidgetMate<ChoiceChip$Mate> {
+class ChoiceChip$Mate extends ChoiceChip with Mate<ChoiceChip$Mate> {
   /// ChoiceChip ChoiceChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, void Function(bool)? onSelected, double? pressElevation, required bool selected, Color? selectedColor, Color? disabledColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, ShapeBorder avatarBorder = const CircleBorder()})
   ChoiceChip$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

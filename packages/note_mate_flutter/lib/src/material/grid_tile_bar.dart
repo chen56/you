@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class GridTileBar extends StatelessWidget
-class GridTileBar$Mate extends GridTileBar with WidgetMate<GridTileBar$Mate> {
+class GridTileBar$Mate extends GridTileBar with Mate<GridTileBar$Mate> {
   /// GridTileBar GridTileBar({Key? key, Color? backgroundColor, Widget? leading, Widget? title, Widget? subtitle, Widget? trailing})
   GridTileBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

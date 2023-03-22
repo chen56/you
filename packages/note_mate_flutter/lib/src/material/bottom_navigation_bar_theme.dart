@@ -111,7 +111,7 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData
 }
 
 /// class BottomNavigationBarTheme extends InheritedWidget
-class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with WidgetMate<BottomNavigationBarTheme$Mate> {
+class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Mate<BottomNavigationBarTheme$Mate> {
   /// BottomNavigationBarTheme BottomNavigationBarTheme({Key? key, required BottomNavigationBarThemeData data, required Widget child})
   BottomNavigationBarTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

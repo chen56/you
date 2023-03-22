@@ -9,7 +9,7 @@ import 'package:note/mate.dart';
 
 /// class CupertinoDesktopTextSelectionToolbar extends StatelessWidget
 class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSelectionToolbar
-    with WidgetMate<CupertinoDesktopTextSelectionToolbar$Mate> {
+    with Mate<CupertinoDesktopTextSelectionToolbar$Mate> {
   /// CupertinoDesktopTextSelectionToolbar CupertinoDesktopTextSelectionToolbar({Key? key, required Offset anchor, required List<Widget> children})
   CupertinoDesktopTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

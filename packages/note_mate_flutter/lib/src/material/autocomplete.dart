@@ -8,7 +8,7 @@ import 'package:flutter/src/services/text_input.dart';
 import 'package:note/mate.dart';
 
 /// class Autocomplete<T extends Object> extends StatelessWidget
-class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with WidgetMate<Autocomplete$Mate> {
+class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate<Autocomplete$Mate> {
   /// Autocomplete<T> Autocomplete({Key? key, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder, void Function(T)? onSelected, double optionsMaxHeight = 200.0, Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder, TextEditingValue? initialValue})
   Autocomplete$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

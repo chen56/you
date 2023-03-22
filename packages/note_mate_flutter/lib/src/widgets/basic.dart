@@ -37,7 +37,7 @@ export 'package:flutter/animation.dart';
 export 'package:flutter/painting.dart';
 
 /// class Directionality extends _UbiquitousInheritedWidget
-class Directionality$Mate extends Directionality with WidgetMate<Directionality$Mate> {
+class Directionality$Mate extends Directionality with Mate<Directionality$Mate> {
   /// Directionality Directionality({Key? key, required TextDirection textDirection, required Widget child})
   Directionality$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -68,7 +68,7 @@ class Directionality$Mate extends Directionality with WidgetMate<Directionality$
 }
 
 /// class Opacity extends SingleChildRenderObjectWidget
-class Opacity$Mate extends Opacity with WidgetMate<Opacity$Mate> {
+class Opacity$Mate extends Opacity with Mate<Opacity$Mate> {
   /// Opacity Opacity({Key? key, required double opacity, bool alwaysIncludeSemantics = false, Widget? child})
   Opacity$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -105,7 +105,7 @@ class Opacity$Mate extends Opacity with WidgetMate<Opacity$Mate> {
 }
 
 /// class ShaderMask extends SingleChildRenderObjectWidget
-class ShaderMask$Mate extends ShaderMask with WidgetMate<ShaderMask$Mate> {
+class ShaderMask$Mate extends ShaderMask with Mate<ShaderMask$Mate> {
   /// ShaderMask ShaderMask({Key? key, required Shader Function(Rect) shaderCallback, BlendMode blendMode = BlendMode.modulate, Widget? child})
   ShaderMask$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -142,7 +142,7 @@ class ShaderMask$Mate extends ShaderMask with WidgetMate<ShaderMask$Mate> {
 }
 
 /// class BackdropFilter extends SingleChildRenderObjectWidget
-class BackdropFilter$Mate extends BackdropFilter with WidgetMate<BackdropFilter$Mate> {
+class BackdropFilter$Mate extends BackdropFilter with Mate<BackdropFilter$Mate> {
   /// BackdropFilter BackdropFilter({Key? key, required ImageFilter filter, Widget? child, BlendMode blendMode = BlendMode.srcOver})
   BackdropFilter$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -179,7 +179,7 @@ class BackdropFilter$Mate extends BackdropFilter with WidgetMate<BackdropFilter$
 }
 
 /// class CustomPaint extends SingleChildRenderObjectWidget
-class CustomPaint$Mate extends CustomPaint with WidgetMate<CustomPaint$Mate> {
+class CustomPaint$Mate extends CustomPaint with Mate<CustomPaint$Mate> {
   /// CustomPaint CustomPaint({Key? key, CustomPainter? painter, CustomPainter? foregroundPainter, Size size = Size.zero, bool isComplex = false, bool willChange = false, Widget? child})
   CustomPaint$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -234,7 +234,7 @@ class CustomPaint$Mate extends CustomPaint with WidgetMate<CustomPaint$Mate> {
 }
 
 /// class ClipRect extends SingleChildRenderObjectWidget
-class ClipRect$Mate extends ClipRect with WidgetMate<ClipRect$Mate> {
+class ClipRect$Mate extends ClipRect with Mate<ClipRect$Mate> {
   /// ClipRect ClipRect({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.hardEdge, Widget? child})
   ClipRect$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -271,7 +271,7 @@ class ClipRect$Mate extends ClipRect with WidgetMate<ClipRect$Mate> {
 }
 
 /// class ClipRRect extends SingleChildRenderObjectWidget
-class ClipRRect$Mate extends ClipRRect with WidgetMate<ClipRRect$Mate> {
+class ClipRRect$Mate extends ClipRRect with Mate<ClipRRect$Mate> {
   /// ClipRRect ClipRRect({Key? key, BorderRadiusGeometry? borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipRRect$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -314,7 +314,7 @@ class ClipRRect$Mate extends ClipRRect with WidgetMate<ClipRRect$Mate> {
 }
 
 /// class ClipOval extends SingleChildRenderObjectWidget
-class ClipOval$Mate extends ClipOval with WidgetMate<ClipOval$Mate> {
+class ClipOval$Mate extends ClipOval with Mate<ClipOval$Mate> {
   /// ClipOval ClipOval({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipOval$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -351,7 +351,7 @@ class ClipOval$Mate extends ClipOval with WidgetMate<ClipOval$Mate> {
 }
 
 /// class ClipPath extends SingleChildRenderObjectWidget
-class ClipPath$Mate extends ClipPath with WidgetMate<ClipPath$Mate> {
+class ClipPath$Mate extends ClipPath with Mate<ClipPath$Mate> {
   /// ClipPath ClipPath({Key? key, CustomClipper<Path>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipPath$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -388,7 +388,7 @@ class ClipPath$Mate extends ClipPath with WidgetMate<ClipPath$Mate> {
 }
 
 /// class PhysicalModel extends SingleChildRenderObjectWidget
-class PhysicalModel$Mate extends PhysicalModel with WidgetMate<PhysicalModel$Mate> {
+class PhysicalModel$Mate extends PhysicalModel with Mate<PhysicalModel$Mate> {
   /// PhysicalModel PhysicalModel({Key? key, BoxShape shape = BoxShape.rectangle, Clip clipBehavior = Clip.none, BorderRadius? borderRadius, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalModel$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -449,7 +449,7 @@ class PhysicalModel$Mate extends PhysicalModel with WidgetMate<PhysicalModel$Mat
 }
 
 /// class PhysicalShape extends SingleChildRenderObjectWidget
-class PhysicalShape$Mate extends PhysicalShape with WidgetMate<PhysicalShape$Mate> {
+class PhysicalShape$Mate extends PhysicalShape with Mate<PhysicalShape$Mate> {
   /// PhysicalShape PhysicalShape({Key? key, required CustomClipper<Path> clipper, Clip clipBehavior = Clip.none, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalShape$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -504,7 +504,7 @@ class PhysicalShape$Mate extends PhysicalShape with WidgetMate<PhysicalShape$Mat
 }
 
 /// class Transform extends SingleChildRenderObjectWidget
-class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
+class Transform$Mate extends Transform with Mate<Transform$Mate> {
   /// Transform Transform({Key? key, required Matrix4 transform, Offset? origin, AlignmentGeometry? alignment, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -767,7 +767,7 @@ class Transform$Mate extends Transform with WidgetMate<Transform$Mate> {
 }
 
 /// class CompositedTransformTarget extends SingleChildRenderObjectWidget
-class CompositedTransformTarget$Mate extends CompositedTransformTarget with WidgetMate<CompositedTransformTarget$Mate> {
+class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate<CompositedTransformTarget$Mate> {
   /// CompositedTransformTarget CompositedTransformTarget({Key? key, required LayerLink link, Widget? child})
   CompositedTransformTarget$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -798,8 +798,7 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Widg
 }
 
 /// class CompositedTransformFollower extends SingleChildRenderObjectWidget
-class CompositedTransformFollower$Mate extends CompositedTransformFollower
-    with WidgetMate<CompositedTransformFollower$Mate> {
+class CompositedTransformFollower$Mate extends CompositedTransformFollower with Mate<CompositedTransformFollower$Mate> {
   /// CompositedTransformFollower CompositedTransformFollower({Key? key, required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment targetAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, Widget? child})
   CompositedTransformFollower$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -854,7 +853,7 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower
 }
 
 /// class FittedBox extends SingleChildRenderObjectWidget
-class FittedBox$Mate extends FittedBox with WidgetMate<FittedBox$Mate> {
+class FittedBox$Mate extends FittedBox with Mate<FittedBox$Mate> {
   /// FittedBox FittedBox({Key? key, BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, Clip clipBehavior = Clip.none, Widget? child})
   FittedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -897,7 +896,7 @@ class FittedBox$Mate extends FittedBox with WidgetMate<FittedBox$Mate> {
 }
 
 /// class FractionalTranslation extends SingleChildRenderObjectWidget
-class FractionalTranslation$Mate extends FractionalTranslation with WidgetMate<FractionalTranslation$Mate> {
+class FractionalTranslation$Mate extends FractionalTranslation with Mate<FractionalTranslation$Mate> {
   /// FractionalTranslation FractionalTranslation({Key? key, required Offset translation, bool transformHitTests = true, Widget? child})
   FractionalTranslation$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -934,7 +933,7 @@ class FractionalTranslation$Mate extends FractionalTranslation with WidgetMate<F
 }
 
 /// class RotatedBox extends SingleChildRenderObjectWidget
-class RotatedBox$Mate extends RotatedBox with WidgetMate<RotatedBox$Mate> {
+class RotatedBox$Mate extends RotatedBox with Mate<RotatedBox$Mate> {
   /// RotatedBox RotatedBox({Key? key, required int quarterTurns, Widget? child})
   RotatedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -965,7 +964,7 @@ class RotatedBox$Mate extends RotatedBox with WidgetMate<RotatedBox$Mate> {
 }
 
 /// class Padding extends SingleChildRenderObjectWidget
-class Padding$Mate extends Padding with WidgetMate<Padding$Mate> {
+class Padding$Mate extends Padding with Mate<Padding$Mate> {
   /// Padding Padding({Key? key, required EdgeInsetsGeometry padding, Widget? child})
   Padding$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -996,7 +995,7 @@ class Padding$Mate extends Padding with WidgetMate<Padding$Mate> {
 }
 
 /// class Align extends SingleChildRenderObjectWidget
-class Align$Mate extends Align with WidgetMate<Align$Mate> {
+class Align$Mate extends Align with Mate<Align$Mate> {
   /// Align Align({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   Align$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1039,7 +1038,7 @@ class Align$Mate extends Align with WidgetMate<Align$Mate> {
 }
 
 /// class Center extends Align
-class Center$Mate extends Center with WidgetMate<Center$Mate> {
+class Center$Mate extends Center with Mate<Center$Mate> {
   /// Center Center({Key? key, double? widthFactor, double? heightFactor, Widget? child})
   Center$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1076,7 +1075,7 @@ class Center$Mate extends Center with WidgetMate<Center$Mate> {
 }
 
 /// class CustomSingleChildLayout extends SingleChildRenderObjectWidget
-class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with WidgetMate<CustomSingleChildLayout$Mate> {
+class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate<CustomSingleChildLayout$Mate> {
   /// CustomSingleChildLayout CustomSingleChildLayout({Key? key, required SingleChildLayoutDelegate delegate, Widget? child})
   CustomSingleChildLayout$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1107,7 +1106,7 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with WidgetMa
 }
 
 /// class LayoutId extends ParentDataWidget<MultiChildLayoutParentData>
-class LayoutId$Mate extends LayoutId with WidgetMate<LayoutId$Mate> {
+class LayoutId$Mate extends LayoutId with Mate<LayoutId$Mate> {
   /// LayoutId LayoutId({Key? key, required Object id, required Widget child})
   LayoutId$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1138,7 +1137,7 @@ class LayoutId$Mate extends LayoutId with WidgetMate<LayoutId$Mate> {
 }
 
 /// class CustomMultiChildLayout extends MultiChildRenderObjectWidget
-class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with WidgetMate<CustomMultiChildLayout$Mate> {
+class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate<CustomMultiChildLayout$Mate> {
   /// CustomMultiChildLayout CustomMultiChildLayout({Key? key, required MultiChildLayoutDelegate delegate, List<Widget> children = const <Widget>[]})
   CustomMultiChildLayout$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1169,7 +1168,7 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with WidgetMate
 }
 
 /// class SizedBox extends SingleChildRenderObjectWidget
-class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
+class SizedBox$Mate extends SizedBox with Mate<SizedBox$Mate> {
   /// SizedBox SizedBox({Key? key, double? width, double? height, Widget? child})
   SizedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1306,7 +1305,7 @@ class SizedBox$Mate extends SizedBox with WidgetMate<SizedBox$Mate> {
 }
 
 /// class ConstrainedBox extends SingleChildRenderObjectWidget
-class ConstrainedBox$Mate extends ConstrainedBox with WidgetMate<ConstrainedBox$Mate> {
+class ConstrainedBox$Mate extends ConstrainedBox with Mate<ConstrainedBox$Mate> {
   /// ConstrainedBox ConstrainedBox({Key? key, required BoxConstraints constraints, Widget? child})
   ConstrainedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1337,7 +1336,7 @@ class ConstrainedBox$Mate extends ConstrainedBox with WidgetMate<ConstrainedBox$
 }
 
 /// class ConstraintsTransformBox extends SingleChildRenderObjectWidget
-class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with WidgetMate<ConstraintsTransformBox$Mate> {
+class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate<ConstraintsTransformBox$Mate> {
   /// ConstraintsTransformBox ConstraintsTransformBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, required BoxConstraints Function(BoxConstraints) constraintsTransform, Clip clipBehavior = Clip.none, String debugTransformType = ''})
   ConstraintsTransformBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1392,7 +1391,7 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with WidgetMa
 }
 
 /// class UnconstrainedBox extends StatelessWidget
-class UnconstrainedBox$Mate extends UnconstrainedBox with WidgetMate<UnconstrainedBox$Mate> {
+class UnconstrainedBox$Mate extends UnconstrainedBox with Mate<UnconstrainedBox$Mate> {
   /// UnconstrainedBox UnconstrainedBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, Axis? constrainedAxis, Clip clipBehavior = Clip.none})
   UnconstrainedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1441,7 +1440,7 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with WidgetMate<Unconstrain
 }
 
 /// class FractionallySizedBox extends SingleChildRenderObjectWidget
-class FractionallySizedBox$Mate extends FractionallySizedBox with WidgetMate<FractionallySizedBox$Mate> {
+class FractionallySizedBox$Mate extends FractionallySizedBox with Mate<FractionallySizedBox$Mate> {
   /// FractionallySizedBox FractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   FractionallySizedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1484,7 +1483,7 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with WidgetMate<Fra
 }
 
 /// class LimitedBox extends SingleChildRenderObjectWidget
-class LimitedBox$Mate extends LimitedBox with WidgetMate<LimitedBox$Mate> {
+class LimitedBox$Mate extends LimitedBox with Mate<LimitedBox$Mate> {
   /// LimitedBox LimitedBox({Key? key, double maxWidth = double.infinity, double maxHeight = double.infinity, Widget? child})
   LimitedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1521,7 +1520,7 @@ class LimitedBox$Mate extends LimitedBox with WidgetMate<LimitedBox$Mate> {
 }
 
 /// class OverflowBox extends SingleChildRenderObjectWidget
-class OverflowBox$Mate extends OverflowBox with WidgetMate<OverflowBox$Mate> {
+class OverflowBox$Mate extends OverflowBox with Mate<OverflowBox$Mate> {
   /// OverflowBox OverflowBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, Widget? child})
   OverflowBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1576,7 +1575,7 @@ class OverflowBox$Mate extends OverflowBox with WidgetMate<OverflowBox$Mate> {
 }
 
 /// class SizedOverflowBox extends SingleChildRenderObjectWidget
-class SizedOverflowBox$Mate extends SizedOverflowBox with WidgetMate<SizedOverflowBox$Mate> {
+class SizedOverflowBox$Mate extends SizedOverflowBox with Mate<SizedOverflowBox$Mate> {
   /// SizedOverflowBox SizedOverflowBox({Key? key, required Size size, AlignmentGeometry alignment = Alignment.center, Widget? child})
   SizedOverflowBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1613,7 +1612,7 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with WidgetMate<SizedOverfl
 }
 
 /// class Offstage extends SingleChildRenderObjectWidget
-class Offstage$Mate extends Offstage with WidgetMate<Offstage$Mate> {
+class Offstage$Mate extends Offstage with Mate<Offstage$Mate> {
   /// Offstage Offstage({Key? key, bool offstage = true, Widget? child})
   Offstage$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1644,7 +1643,7 @@ class Offstage$Mate extends Offstage with WidgetMate<Offstage$Mate> {
 }
 
 /// class AspectRatio extends SingleChildRenderObjectWidget
-class AspectRatio$Mate extends AspectRatio with WidgetMate<AspectRatio$Mate> {
+class AspectRatio$Mate extends AspectRatio with Mate<AspectRatio$Mate> {
   /// AspectRatio AspectRatio({Key? key, required double aspectRatio, Widget? child})
   AspectRatio$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1675,7 +1674,7 @@ class AspectRatio$Mate extends AspectRatio with WidgetMate<AspectRatio$Mate> {
 }
 
 /// class IntrinsicWidth extends SingleChildRenderObjectWidget
-class IntrinsicWidth$Mate extends IntrinsicWidth with WidgetMate<IntrinsicWidth$Mate> {
+class IntrinsicWidth$Mate extends IntrinsicWidth with Mate<IntrinsicWidth$Mate> {
   /// IntrinsicWidth IntrinsicWidth({Key? key, double? stepWidth, double? stepHeight, Widget? child})
   IntrinsicWidth$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1712,7 +1711,7 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with WidgetMate<IntrinsicWidth$
 }
 
 /// class IntrinsicHeight extends SingleChildRenderObjectWidget
-class IntrinsicHeight$Mate extends IntrinsicHeight with WidgetMate<IntrinsicHeight$Mate> {
+class IntrinsicHeight$Mate extends IntrinsicHeight with Mate<IntrinsicHeight$Mate> {
   /// IntrinsicHeight IntrinsicHeight({Key? key, Widget? child})
   IntrinsicHeight$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1737,7 +1736,7 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with WidgetMate<IntrinsicHeig
 }
 
 /// class Baseline extends SingleChildRenderObjectWidget
-class Baseline$Mate extends Baseline with WidgetMate<Baseline$Mate> {
+class Baseline$Mate extends Baseline with Mate<Baseline$Mate> {
   /// Baseline Baseline({Key? key, required double baseline, required TextBaseline baselineType, Widget? child})
   Baseline$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1774,7 +1773,7 @@ class Baseline$Mate extends Baseline with WidgetMate<Baseline$Mate> {
 }
 
 /// class SliverToBoxAdapter extends SingleChildRenderObjectWidget
-class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with WidgetMate<SliverToBoxAdapter$Mate> {
+class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate<SliverToBoxAdapter$Mate> {
   /// SliverToBoxAdapter SliverToBoxAdapter({Key? key, Widget? child})
   SliverToBoxAdapter$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1799,7 +1798,7 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with WidgetMate<SliverT
 }
 
 /// class SliverPadding extends SingleChildRenderObjectWidget
-class SliverPadding$Mate extends SliverPadding with WidgetMate<SliverPadding$Mate> {
+class SliverPadding$Mate extends SliverPadding with Mate<SliverPadding$Mate> {
   /// SliverPadding SliverPadding({Key? key, required EdgeInsetsGeometry padding, Widget? sliver})
   SliverPadding$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1830,7 +1829,7 @@ class SliverPadding$Mate extends SliverPadding with WidgetMate<SliverPadding$Mat
 }
 
 /// class ListBody extends MultiChildRenderObjectWidget
-class ListBody$Mate extends ListBody with WidgetMate<ListBody$Mate> {
+class ListBody$Mate extends ListBody with Mate<ListBody$Mate> {
   /// ListBody ListBody({Key? key, Axis mainAxis = Axis.vertical, bool reverse = false, List<Widget> children = const <Widget>[]})
   ListBody$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1867,7 +1866,7 @@ class ListBody$Mate extends ListBody with WidgetMate<ListBody$Mate> {
 }
 
 /// class Stack extends MultiChildRenderObjectWidget
-class Stack$Mate extends Stack with WidgetMate<Stack$Mate> {
+class Stack$Mate extends Stack with Mate<Stack$Mate> {
   /// Stack Stack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge, List<Widget> children = const <Widget>[]})
   Stack$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1916,7 +1915,7 @@ class Stack$Mate extends Stack with WidgetMate<Stack$Mate> {
 }
 
 /// class IndexedStack extends Stack
-class IndexedStack$Mate extends IndexedStack with WidgetMate<IndexedStack$Mate> {
+class IndexedStack$Mate extends IndexedStack with Mate<IndexedStack$Mate> {
   /// IndexedStack IndexedStack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, Clip clipBehavior = Clip.hardEdge, StackFit sizing = StackFit.loose, int? index = 0, List<Widget> children = const <Widget>[]})
   IndexedStack$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1971,7 +1970,7 @@ class IndexedStack$Mate extends IndexedStack with WidgetMate<IndexedStack$Mate> 
 }
 
 /// class Positioned extends ParentDataWidget<StackParentData>
-class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
+class Positioned$Mate extends Positioned with Mate<Positioned$Mate> {
   /// Positioned Positioned({Key? key, double? left, double? top, double? right, double? bottom, double? width, double? height, required Widget child})
   Positioned$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2134,7 +2133,7 @@ class Positioned$Mate extends Positioned with WidgetMate<Positioned$Mate> {
 }
 
 /// class PositionedDirectional extends StatelessWidget
-class PositionedDirectional$Mate extends PositionedDirectional with WidgetMate<PositionedDirectional$Mate> {
+class PositionedDirectional$Mate extends PositionedDirectional with Mate<PositionedDirectional$Mate> {
   /// PositionedDirectional PositionedDirectional({Key? key, double? start, double? top, double? end, double? bottom, double? width, double? height, required Widget child})
   PositionedDirectional$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2195,7 +2194,7 @@ class PositionedDirectional$Mate extends PositionedDirectional with WidgetMate<P
 }
 
 /// class Flex extends MultiChildRenderObjectWidget
-class Flex$Mate extends Flex with WidgetMate<Flex$Mate> {
+class Flex$Mate extends Flex with Mate<Flex$Mate> {
   /// Flex Flex({Key? key, required Axis direction, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Flex$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2268,7 +2267,7 @@ class Flex$Mate extends Flex with WidgetMate<Flex$Mate> {
 }
 
 /// class Row extends Flex
-class Row$Mate extends Row with WidgetMate<Row$Mate> {
+class Row$Mate extends Row with Mate<Row$Mate> {
   /// Row Row({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Row$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2329,7 +2328,7 @@ class Row$Mate extends Row with WidgetMate<Row$Mate> {
 }
 
 /// class Column extends Flex
-class Column$Mate extends Column with WidgetMate<Column$Mate> {
+class Column$Mate extends Column with Mate<Column$Mate> {
   /// Column Column({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Column$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2390,7 +2389,7 @@ class Column$Mate extends Column with WidgetMate<Column$Mate> {
 }
 
 /// class Flexible extends ParentDataWidget<FlexParentData>
-class Flexible$Mate extends Flexible with WidgetMate<Flexible$Mate> {
+class Flexible$Mate extends Flexible with Mate<Flexible$Mate> {
   /// Flexible Flexible({Key? key, int flex = 1, FlexFit fit = FlexFit.loose, required Widget child})
   Flexible$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2427,7 +2426,7 @@ class Flexible$Mate extends Flexible with WidgetMate<Flexible$Mate> {
 }
 
 /// class Expanded extends Flexible
-class Expanded$Mate extends Expanded with WidgetMate<Expanded$Mate> {
+class Expanded$Mate extends Expanded with Mate<Expanded$Mate> {
   /// Expanded Expanded({Key? key, int flex = 1, required Widget child})
   Expanded$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2458,7 +2457,7 @@ class Expanded$Mate extends Expanded with WidgetMate<Expanded$Mate> {
 }
 
 /// class Wrap extends MultiChildRenderObjectWidget
-class Wrap$Mate extends Wrap with WidgetMate<Wrap$Mate> {
+class Wrap$Mate extends Wrap with Mate<Wrap$Mate> {
   /// Wrap Wrap({Key? key, Axis direction = Axis.horizontal, WrapAlignment alignment = WrapAlignment.start, double spacing = 0.0, WrapAlignment runAlignment = WrapAlignment.start, double runSpacing = 0.0, WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Wrap$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2537,7 +2536,7 @@ class Wrap$Mate extends Wrap with WidgetMate<Wrap$Mate> {
 }
 
 /// class Flow extends MultiChildRenderObjectWidget
-class Flow$Mate extends Flow with WidgetMate<Flow$Mate> {
+class Flow$Mate extends Flow with Mate<Flow$Mate> {
   /// Flow Flow({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2608,7 +2607,7 @@ class Flow$Mate extends Flow with WidgetMate<Flow$Mate> {
 }
 
 /// class RichText extends MultiChildRenderObjectWidget
-class RichText$Mate extends RichText with WidgetMate<RichText$Mate> {
+class RichText$Mate extends RichText with Mate<RichText$Mate> {
   /// RichText RichText({Key? key, required InlineSpan text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, SelectionRegistrar? selectionRegistrar, Color? selectionColor})
   RichText$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2705,7 +2704,7 @@ class RichText$Mate extends RichText with WidgetMate<RichText$Mate> {
 }
 
 /// class RawImage extends LeafRenderObjectWidget
-class RawImage$Mate extends RawImage with WidgetMate<RawImage$Mate> {
+class RawImage$Mate extends RawImage with Mate<RawImage$Mate> {
   /// RawImage RawImage({Key? key, Image? image, String? debugImageLabel, double? width, double? height, double scale = 1.0, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool invertColors = false, FilterQuality filterQuality = FilterQuality.low, bool isAntiAlias = false})
   RawImage$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2820,7 +2819,7 @@ class RawImage$Mate extends RawImage with WidgetMate<RawImage$Mate> {
 }
 
 /// class DefaultAssetBundle extends InheritedWidget
-class DefaultAssetBundle$Mate extends DefaultAssetBundle with WidgetMate<DefaultAssetBundle$Mate> {
+class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate<DefaultAssetBundle$Mate> {
   /// DefaultAssetBundle DefaultAssetBundle({Key? key, required AssetBundle bundle, required Widget child})
   DefaultAssetBundle$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2851,7 +2850,7 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with WidgetMate<Default
 }
 
 /// class WidgetToRenderBoxAdapter extends LeafRenderObjectWidget
-class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with WidgetMate<WidgetToRenderBoxAdapter$Mate> {
+class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate<WidgetToRenderBoxAdapter$Mate> {
   /// WidgetToRenderBoxAdapter WidgetToRenderBoxAdapter({required RenderBox renderBox, void Function()? onBuild, void Function()? onUnmount})
   WidgetToRenderBoxAdapter$Mate({
     /// optionalParameters: {required RenderBox renderBox} , hasDefaultValue:false, defaultValueCode:null
@@ -2882,7 +2881,7 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Widget
 }
 
 /// class Listener extends SingleChildRenderObjectWidget
-class Listener$Mate extends Listener with WidgetMate<Listener$Mate> {
+class Listener$Mate extends Listener with Mate<Listener$Mate> {
   /// Listener Listener({Key? key, void Function(PointerDownEvent)? onPointerDown, void Function(PointerMoveEvent)? onPointerMove, void Function(PointerUpEvent)? onPointerUp, void Function(PointerHoverEvent)? onPointerHover, void Function(PointerCancelEvent)? onPointerCancel, void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart, void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate, void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd, void Function(PointerSignalEvent)? onPointerSignal, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   Listener$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -2967,7 +2966,7 @@ class Listener$Mate extends Listener with WidgetMate<Listener$Mate> {
 }
 
 /// class MouseRegion extends SingleChildRenderObjectWidget
-class MouseRegion$Mate extends MouseRegion with WidgetMate<MouseRegion$Mate> {
+class MouseRegion$Mate extends MouseRegion with Mate<MouseRegion$Mate> {
   /// MouseRegion MouseRegion({Key? key, void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, void Function(PointerHoverEvent)? onHover, MouseCursor cursor = MouseCursor.defer, bool opaque = true, HitTestBehavior? hitTestBehavior, Widget? child})
   MouseRegion$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3028,7 +3027,7 @@ class MouseRegion$Mate extends MouseRegion with WidgetMate<MouseRegion$Mate> {
 }
 
 /// class RepaintBoundary extends SingleChildRenderObjectWidget
-class RepaintBoundary$Mate extends RepaintBoundary with WidgetMate<RepaintBoundary$Mate> {
+class RepaintBoundary$Mate extends RepaintBoundary with Mate<RepaintBoundary$Mate> {
   /// RepaintBoundary RepaintBoundary({Key? key, Widget? child})
   RepaintBoundary$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3053,7 +3052,7 @@ class RepaintBoundary$Mate extends RepaintBoundary with WidgetMate<RepaintBounda
 }
 
 /// class IgnorePointer extends SingleChildRenderObjectWidget
-class IgnorePointer$Mate extends IgnorePointer with WidgetMate<IgnorePointer$Mate> {
+class IgnorePointer$Mate extends IgnorePointer with Mate<IgnorePointer$Mate> {
   /// IgnorePointer IgnorePointer({Key? key, bool ignoring = true, bool? ignoringSemantics, Widget? child})
   IgnorePointer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3090,7 +3089,7 @@ class IgnorePointer$Mate extends IgnorePointer with WidgetMate<IgnorePointer$Mat
 }
 
 /// class AbsorbPointer extends SingleChildRenderObjectWidget
-class AbsorbPointer$Mate extends AbsorbPointer with WidgetMate<AbsorbPointer$Mate> {
+class AbsorbPointer$Mate extends AbsorbPointer with Mate<AbsorbPointer$Mate> {
   /// AbsorbPointer AbsorbPointer({Key? key, bool absorbing = true, Widget? child, bool? ignoringSemantics})
   AbsorbPointer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3127,7 +3126,7 @@ class AbsorbPointer$Mate extends AbsorbPointer with WidgetMate<AbsorbPointer$Mat
 }
 
 /// class MetaData extends SingleChildRenderObjectWidget
-class MetaData$Mate extends MetaData with WidgetMate<MetaData$Mate> {
+class MetaData$Mate extends MetaData with Mate<MetaData$Mate> {
   /// MetaData MetaData({Key? key, dynamic metaData, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   MetaData$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3164,7 +3163,7 @@ class MetaData$Mate extends MetaData with WidgetMate<MetaData$Mate> {
 }
 
 /// class Semantics extends SingleChildRenderObjectWidget
-class Semantics$Mate extends Semantics with WidgetMate<Semantics$Mate> {
+class Semantics$Mate extends Semantics with Mate<Semantics$Mate> {
   /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   Semantics$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3607,7 +3606,7 @@ class Semantics$Mate extends Semantics with WidgetMate<Semantics$Mate> {
 }
 
 /// class MergeSemantics extends SingleChildRenderObjectWidget
-class MergeSemantics$Mate extends MergeSemantics with WidgetMate<MergeSemantics$Mate> {
+class MergeSemantics$Mate extends MergeSemantics with Mate<MergeSemantics$Mate> {
   /// MergeSemantics MergeSemantics({Key? key, Widget? child})
   MergeSemantics$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3632,7 +3631,7 @@ class MergeSemantics$Mate extends MergeSemantics with WidgetMate<MergeSemantics$
 }
 
 /// class BlockSemantics extends SingleChildRenderObjectWidget
-class BlockSemantics$Mate extends BlockSemantics with WidgetMate<BlockSemantics$Mate> {
+class BlockSemantics$Mate extends BlockSemantics with Mate<BlockSemantics$Mate> {
   /// BlockSemantics BlockSemantics({Key? key, bool blocking = true, Widget? child})
   BlockSemantics$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3663,7 +3662,7 @@ class BlockSemantics$Mate extends BlockSemantics with WidgetMate<BlockSemantics$
 }
 
 /// class ExcludeSemantics extends SingleChildRenderObjectWidget
-class ExcludeSemantics$Mate extends ExcludeSemantics with WidgetMate<ExcludeSemantics$Mate> {
+class ExcludeSemantics$Mate extends ExcludeSemantics with Mate<ExcludeSemantics$Mate> {
   /// ExcludeSemantics ExcludeSemantics({Key? key, bool excluding = true, Widget? child})
   ExcludeSemantics$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3694,7 +3693,7 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with WidgetMate<ExcludeSema
 }
 
 /// class IndexedSemantics extends SingleChildRenderObjectWidget
-class IndexedSemantics$Mate extends IndexedSemantics with WidgetMate<IndexedSemantics$Mate> {
+class IndexedSemantics$Mate extends IndexedSemantics with Mate<IndexedSemantics$Mate> {
   /// IndexedSemantics IndexedSemantics({Key? key, required int index, Widget? child})
   IndexedSemantics$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3725,7 +3724,7 @@ class IndexedSemantics$Mate extends IndexedSemantics with WidgetMate<IndexedSema
 }
 
 /// class KeyedSubtree extends StatelessWidget
-class KeyedSubtree$Mate extends KeyedSubtree with WidgetMate<KeyedSubtree$Mate> {
+class KeyedSubtree$Mate extends KeyedSubtree with Mate<KeyedSubtree$Mate> {
   /// KeyedSubtree KeyedSubtree({Key? key, required Widget child})
   KeyedSubtree$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3750,7 +3749,7 @@ class KeyedSubtree$Mate extends KeyedSubtree with WidgetMate<KeyedSubtree$Mate> 
 }
 
 /// class Builder extends StatelessWidget
-class Builder$Mate extends Builder with WidgetMate<Builder$Mate> {
+class Builder$Mate extends Builder with Mate<Builder$Mate> {
   /// Builder Builder({Key? key, required Widget Function(BuildContext) builder})
   Builder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3775,7 +3774,7 @@ class Builder$Mate extends Builder with WidgetMate<Builder$Mate> {
 }
 
 /// class StatefulBuilder extends StatefulWidget
-class StatefulBuilder$Mate extends StatefulBuilder with WidgetMate<StatefulBuilder$Mate> {
+class StatefulBuilder$Mate extends StatefulBuilder with Mate<StatefulBuilder$Mate> {
   /// StatefulBuilder StatefulBuilder({Key? key, required Widget Function(BuildContext, void Function(void Function())) builder})
   StatefulBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -3800,7 +3799,7 @@ class StatefulBuilder$Mate extends StatefulBuilder with WidgetMate<StatefulBuild
 }
 
 /// class ColoredBox extends SingleChildRenderObjectWidget
-class ColoredBox$Mate extends ColoredBox with WidgetMate<ColoredBox$Mate> {
+class ColoredBox$Mate extends ColoredBox with Mate<ColoredBox$Mate> {
   /// ColoredBox ColoredBox({required Color color, Widget? child, Key? key})
   ColoredBox$Mate({
     /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null

@@ -7,7 +7,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class Divider extends StatelessWidget
-class Divider$Mate extends Divider with WidgetMate<Divider$Mate> {
+class Divider$Mate extends Divider with Mate<Divider$Mate> {
   /// Divider Divider({Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color})
   Divider$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -56,7 +56,7 @@ class Divider$Mate extends Divider with WidgetMate<Divider$Mate> {
 }
 
 /// class VerticalDivider extends StatelessWidget
-class VerticalDivider$Mate extends VerticalDivider with WidgetMate<VerticalDivider$Mate> {
+class VerticalDivider$Mate extends VerticalDivider with Mate<VerticalDivider$Mate> {
   /// VerticalDivider VerticalDivider({Key? key, double? width, double? thickness, double? indent, double? endIndent, Color? color})
   VerticalDivider$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

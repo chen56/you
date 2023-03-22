@@ -116,7 +116,7 @@ class PageScrollPhysics$Mate extends PageScrollPhysics with Mate<PageScrollPhysi
 }
 
 /// class PageView extends StatefulWidget
-class PageView$Mate extends PageView with WidgetMate<PageView$Mate> {
+class PageView$Mate extends PageView with Mate<PageView$Mate> {
   /// PageView PageView({Key? key, Axis scrollDirection = Axis.horizontal, bool reverse = false, PageController? controller, ScrollPhysics? physics, bool pageSnapping = true, void Function(int)? onPageChanged, List<Widget> children = const <Widget>[], DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool allowImplicitScrolling = false, String? restorationId, Clip clipBehavior = Clip.hardEdge, ScrollBehavior? scrollBehavior, bool padEnds = true})
   PageView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

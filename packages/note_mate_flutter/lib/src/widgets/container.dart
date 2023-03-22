@@ -14,7 +14,7 @@ import 'package:flutter/src/rendering/box.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 /// class DecoratedBox extends SingleChildRenderObjectWidget
-class DecoratedBox$Mate extends DecoratedBox with WidgetMate<DecoratedBox$Mate> {
+class DecoratedBox$Mate extends DecoratedBox with Mate<DecoratedBox$Mate> {
   /// DecoratedBox DecoratedBox({Key? key, required Decoration decoration, DecorationPosition position = DecorationPosition.background, Widget? child})
   DecoratedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -51,7 +51,7 @@ class DecoratedBox$Mate extends DecoratedBox with WidgetMate<DecoratedBox$Mate> 
 }
 
 /// class Container extends StatelessWidget
-class Container$Mate extends Container with WidgetMate<Container$Mate> {
+class Container$Mate extends Container with Mate<Container$Mate> {
   /// Container Container({Key? key, AlignmentGeometry? alignment, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsetsGeometry? margin, Matrix4? transform, AlignmentGeometry? transformAlignment, Widget? child, Clip clipBehavior = Clip.none})
   Container$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

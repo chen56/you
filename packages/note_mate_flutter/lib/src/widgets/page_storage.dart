@@ -22,7 +22,7 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate<PageStorageKey$
 }
 
 /// class PageStorage extends StatelessWidget
-class PageStorage$Mate extends PageStorage with WidgetMate<PageStorage$Mate> {
+class PageStorage$Mate extends PageStorage with Mate<PageStorage$Mate> {
   /// PageStorage PageStorage({Key? key, required PageStorageBucket bucket, required Widget child})
   PageStorage$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

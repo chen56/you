@@ -9,7 +9,7 @@ import 'package:flutter/src/animation/curves.dart';
 import 'package:note/mate.dart';
 
 /// class FlutterLogo extends StatelessWidget
-class FlutterLogo$Mate extends FlutterLogo with WidgetMate<FlutterLogo$Mate> {
+class FlutterLogo$Mate extends FlutterLogo with Mate<FlutterLogo$Mate> {
   /// FlutterLogo FlutterLogo({Key? key, double? size, Color textColor = const Color(0xFF757575), FlutterLogoStyle style = FlutterLogoStyle.markOnly, Duration duration = const Duration(milliseconds: 750), Curve curve = Curves.fastOutSlowIn})
   FlutterLogo$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

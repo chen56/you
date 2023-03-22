@@ -11,7 +11,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class Badge extends StatelessWidget
-class Badge$Mate extends Badge with WidgetMate<Badge$Mate> {
+class Badge$Mate extends Badge with Mate<Badge$Mate> {
   /// Badge Badge({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, Widget? label, bool isLabelVisible = true, Widget? child})
   Badge$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

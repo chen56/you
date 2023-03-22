@@ -218,7 +218,7 @@ class TextStyleTween$Mate extends TextStyleTween with Mate<TextStyleTween$Mate> 
 }
 
 /// class AnimatedContainer extends ImplicitlyAnimatedWidget
-class AnimatedContainer$Mate extends AnimatedContainer with WidgetMate<AnimatedContainer$Mate> {
+class AnimatedContainer$Mate extends AnimatedContainer with Mate<AnimatedContainer$Mate> {
   /// AnimatedContainer AnimatedContainer({Key? key, AlignmentGeometry? alignment, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsetsGeometry? margin, Matrix4? transform, AlignmentGeometry? transformAlignment, Widget? child, Clip clipBehavior = Clip.none, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedContainer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -333,7 +333,7 @@ class AnimatedContainer$Mate extends AnimatedContainer with WidgetMate<AnimatedC
 }
 
 /// class AnimatedPadding extends ImplicitlyAnimatedWidget
-class AnimatedPadding$Mate extends AnimatedPadding with WidgetMate<AnimatedPadding$Mate> {
+class AnimatedPadding$Mate extends AnimatedPadding with Mate<AnimatedPadding$Mate> {
   /// AnimatedPadding AnimatedPadding({Key? key, required EdgeInsetsGeometry padding, Widget? child, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPadding$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -382,7 +382,7 @@ class AnimatedPadding$Mate extends AnimatedPadding with WidgetMate<AnimatedPaddi
 }
 
 /// class AnimatedAlign extends ImplicitlyAnimatedWidget
-class AnimatedAlign$Mate extends AnimatedAlign with WidgetMate<AnimatedAlign$Mate> {
+class AnimatedAlign$Mate extends AnimatedAlign with Mate<AnimatedAlign$Mate> {
   /// AnimatedAlign AnimatedAlign({Key? key, required AlignmentGeometry alignment, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedAlign$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -443,7 +443,7 @@ class AnimatedAlign$Mate extends AnimatedAlign with WidgetMate<AnimatedAlign$Mat
 }
 
 /// class AnimatedPositioned extends ImplicitlyAnimatedWidget
-class AnimatedPositioned$Mate extends AnimatedPositioned with WidgetMate<AnimatedPositioned$Mate> {
+class AnimatedPositioned$Mate extends AnimatedPositioned with Mate<AnimatedPositioned$Mate> {
   /// AnimatedPositioned AnimatedPositioned({Key? key, required Widget child, double? left, double? top, double? right, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositioned$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -569,7 +569,7 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with WidgetMate<Animate
 
 /// class AnimatedPositionedDirectional extends ImplicitlyAnimatedWidget
 class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional
-    with WidgetMate<AnimatedPositionedDirectional$Mate> {
+    with Mate<AnimatedPositionedDirectional$Mate> {
   /// AnimatedPositionedDirectional AnimatedPositionedDirectional({Key? key, required Widget child, double? start, double? top, double? end, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositionedDirectional$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -648,7 +648,7 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional
 }
 
 /// class AnimatedScale extends ImplicitlyAnimatedWidget
-class AnimatedScale$Mate extends AnimatedScale with WidgetMate<AnimatedScale$Mate> {
+class AnimatedScale$Mate extends AnimatedScale with Mate<AnimatedScale$Mate> {
   /// AnimatedScale AnimatedScale({Key? key, Widget? child, required double scale, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedScale$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -709,7 +709,7 @@ class AnimatedScale$Mate extends AnimatedScale with WidgetMate<AnimatedScale$Mat
 }
 
 /// class AnimatedRotation extends ImplicitlyAnimatedWidget
-class AnimatedRotation$Mate extends AnimatedRotation with WidgetMate<AnimatedRotation$Mate> {
+class AnimatedRotation$Mate extends AnimatedRotation with Mate<AnimatedRotation$Mate> {
   /// AnimatedRotation AnimatedRotation({Key? key, Widget? child, required double turns, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedRotation$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -770,7 +770,7 @@ class AnimatedRotation$Mate extends AnimatedRotation with WidgetMate<AnimatedRot
 }
 
 /// class AnimatedSlide extends ImplicitlyAnimatedWidget
-class AnimatedSlide$Mate extends AnimatedSlide with WidgetMate<AnimatedSlide$Mate> {
+class AnimatedSlide$Mate extends AnimatedSlide with Mate<AnimatedSlide$Mate> {
   /// AnimatedSlide AnimatedSlide({Key? key, Widget? child, required Offset offset, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedSlide$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -819,7 +819,7 @@ class AnimatedSlide$Mate extends AnimatedSlide with WidgetMate<AnimatedSlide$Mat
 }
 
 /// class AnimatedOpacity extends ImplicitlyAnimatedWidget
-class AnimatedOpacity$Mate extends AnimatedOpacity with WidgetMate<AnimatedOpacity$Mate> {
+class AnimatedOpacity$Mate extends AnimatedOpacity with Mate<AnimatedOpacity$Mate> {
   /// AnimatedOpacity AnimatedOpacity({Key? key, Widget? child, required double opacity, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd, bool alwaysIncludeSemantics = false})
   AnimatedOpacity$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -874,7 +874,7 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with WidgetMate<AnimatedOpaci
 }
 
 /// class SliverAnimatedOpacity extends ImplicitlyAnimatedWidget
-class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with WidgetMate<SliverAnimatedOpacity$Mate> {
+class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with Mate<SliverAnimatedOpacity$Mate> {
   /// SliverAnimatedOpacity SliverAnimatedOpacity({Key? key, Widget? sliver, required double opacity, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd, bool alwaysIncludeSemantics = false})
   SliverAnimatedOpacity$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -929,7 +929,7 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with WidgetMate<S
 }
 
 /// class AnimatedDefaultTextStyle extends ImplicitlyAnimatedWidget
-class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with WidgetMate<AnimatedDefaultTextStyle$Mate> {
+class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Mate<AnimatedDefaultTextStyle$Mate> {
   /// AnimatedDefaultTextStyle AnimatedDefaultTextStyle({Key? key, required Widget child, required TextStyle style, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedDefaultTextStyle$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1014,7 +1014,7 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Widget
 }
 
 /// class AnimatedPhysicalModel extends ImplicitlyAnimatedWidget
-class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with WidgetMate<AnimatedPhysicalModel$Mate> {
+class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate<AnimatedPhysicalModel$Mate> {
   /// AnimatedPhysicalModel AnimatedPhysicalModel({Key? key, required Widget child, required BoxShape shape, Clip clipBehavior = Clip.none, BorderRadius borderRadius = BorderRadius.zero, required double elevation, required Color color, bool animateColor = true, required Color shadowColor, bool animateShadowColor = true, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPhysicalModel$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -1106,7 +1106,7 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with WidgetMate<A
 
 /// class AnimatedFractionallySizedBox extends ImplicitlyAnimatedWidget
 class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox
-    with WidgetMate<AnimatedFractionallySizedBox$Mate> {
+    with Mate<AnimatedFractionallySizedBox$Mate> {
   /// AnimatedFractionallySizedBox AnimatedFractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedFractionallySizedBox$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

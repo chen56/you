@@ -120,7 +120,7 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate<MagnifierDe
 }
 
 /// class RawMagnifier extends StatelessWidget
-class RawMagnifier$Mate extends RawMagnifier with WidgetMate<RawMagnifier$Mate> {
+class RawMagnifier$Mate extends RawMagnifier with Mate<RawMagnifier$Mate> {
   /// RawMagnifier RawMagnifier({Key? key, Widget? child, MagnifierDecoration decoration = const MagnifierDecoration(), Offset focalPointOffset = Offset.zero, double magnificationScale = 1, required Size size})
   RawMagnifier$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

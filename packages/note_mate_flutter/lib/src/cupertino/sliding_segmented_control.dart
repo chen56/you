@@ -11,7 +11,7 @@ import 'package:note/mate.dart';
 
 /// class CupertinoSlidingSegmentedControl<T> extends StatefulWidget
 class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmentedControl<T>
-    with WidgetMate<CupertinoSlidingSegmentedControl$Mate> {
+    with Mate<CupertinoSlidingSegmentedControl$Mate> {
   /// CupertinoSlidingSegmentedControl<T> CupertinoSlidingSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T?) onValueChanged, T? groupValue, Color thumbColor = _kThumbColor, EdgeInsetsGeometry padding = _kHorizontalItemPadding, Color backgroundColor = CupertinoColors.tertiarySystemFill})
   CupertinoSlidingSegmentedControl$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -8,7 +8,7 @@ import 'package:flutter/src/services/text_input.dart';
 import 'package:note/mate.dart';
 
 /// class DatePickerDialog extends StatefulWidget
-class DatePickerDialog$Mate extends DatePickerDialog with WidgetMate<DatePickerDialog$Mate> {
+class DatePickerDialog$Mate extends DatePickerDialog with Mate<DatePickerDialog$Mate> {
   /// DatePickerDialog DatePickerDialog({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId})
   DatePickerDialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -123,7 +123,7 @@ class DatePickerDialog$Mate extends DatePickerDialog with WidgetMate<DatePickerD
 }
 
 /// class DateRangePickerDialog extends StatefulWidget
-class DateRangePickerDialog$Mate extends DateRangePickerDialog with WidgetMate<DateRangePickerDialog$Mate> {
+class DateRangePickerDialog$Mate extends DateRangePickerDialog with Mate<DateRangePickerDialog$Mate> {
   /// DateRangePickerDialog DateRangePickerDialog({Key? key, DateTimeRange? initialDateRange, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, String? helpText, String? cancelText, String? confirmText, String? saveText, String? errorInvalidRangeText, String? errorFormatText, String? errorInvalidText, String? fieldStartHintText, String? fieldEndHintText, String? fieldStartLabelText, String? fieldEndLabelText, String? restorationId})
   DateRangePickerDialog$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

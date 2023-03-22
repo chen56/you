@@ -23,7 +23,7 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate<TextButtonT
 }
 
 /// class TextButtonTheme extends InheritedTheme
-class TextButtonTheme$Mate extends TextButtonTheme with WidgetMate<TextButtonTheme$Mate> {
+class TextButtonTheme$Mate extends TextButtonTheme with Mate<TextButtonTheme$Mate> {
   /// TextButtonTheme TextButtonTheme({Key? key, required TextButtonThemeData data, required Widget child})
   TextButtonTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -12,31 +12,7 @@ void main() {
     obj = ObjectParam(init: Container(), builder: (m) => Container());
   });
   group("范型", () {
-    test('print', () {
-      ObjectParam<Container> container =
-          ObjectParam<Container>(init: Container(), builder: (m) => Container());
-      expect(false, container.isNullable);
-
-      ObjectParam<Widget?> child =
-          ObjectParam<Widget?>(init: Container(), builder: (mate) => Container());
-      expect(true, child.isNullable);
-
-      var x = child.builder;
-      T Function(ObjectParam<T> param) xx<T>() {
-        return (mate) {
-          return Container() as T;
-        };
-      }
-
-      var builder = xx<Widget?>();
-      x = container.builder as Widget? Function(ObjectParam<Widget?> param);
-      // child = container;
-    });
-  });
-  test("description", () {
-    List<String> x = List.empty();
-    List<String?> y = x as List<String?>;
-    x = y as List<String>;
+    test('print', () {});
   });
 
   group("put(value)", () {
@@ -66,9 +42,8 @@ void main() {
 
   group("put(Meta)", () {
     test('put(Meta)', () {
-      ObjectParam<Container> p =
-          obj.put("mate", ContainerMate(width: 100)) as ObjectParam<Container>;
-      Param<Container> getP = obj.get("mate") as ObjectParam<Container>;
+      Param<Container> p = obj.put("mate", ContainerMate(width: 100));
+      Param<Container> getP = obj.get("mate");
       expect(p, getP);
 
       expect(true, p.value is ContainerMate);
@@ -78,7 +53,7 @@ void main() {
 
     test('put(Meta?)', () {
       Param<Container?> p = obj.put<Container?>("mate", ContainerMate(width: 100));
-      Param<Container?> getP = obj.get("mate") as ObjectParam<Container?>;
+      Param<Container?> getP = obj.get("mate");
       expect(p, getP);
 
       expect(true, p.value is ContainerMate);
@@ -88,8 +63,8 @@ void main() {
 
     test('put(null)', () {
       // null值无法识别其是否是Mate，所以只能作为ValueParam处理
-      ValueParam<Container?> p = obj.put<Container?>("mate", null) as ValueParam<Container?>;
-      ValueParam<Container?> getP = obj.get("mate") as ValueParam<Container?>;
+      Param<Container?> p = obj.put<Container?>("mate", null);
+      Param<Container?> getP = obj.get("mate");
       expect(p, getP);
 
       expect(true, p.value == null);

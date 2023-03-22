@@ -207,7 +207,7 @@ class DataCell$Mate extends DataCell with Mate<DataCell$Mate> {
 }
 
 /// class DataTable extends StatelessWidget
-class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
+class DataTable$Mate extends DataTable with Mate<DataTable$Mate> {
   /// DataTable DataTable({Key? key, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, bool showCheckboxColumn = true, bool showBottomBorder = false, double? dividerThickness, required List<DataRow> rows, double? checkboxHorizontalMargin, TableBorder? border, Clip clipBehavior = Clip.none})
   DataTable$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -352,7 +352,7 @@ class DataTable$Mate extends DataTable with WidgetMate<DataTable$Mate> {
 }
 
 /// class TableRowInkWell extends InkResponse
-class TableRowInkWell$Mate extends TableRowInkWell with WidgetMate<TableRowInkWell$Mate> {
+class TableRowInkWell$Mate extends TableRowInkWell with Mate<TableRowInkWell$Mate> {
   /// TableRowInkWell TableRowInkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(bool)? onHighlightChanged, MaterialStateProperty<Color?>? overlayColor})
   TableRowInkWell$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

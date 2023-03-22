@@ -8,7 +8,7 @@ import 'package:flutter/src/animation/animation.dart';
 import 'package:note/mate.dart';
 
 /// class LinearProgressIndicator extends ProgressIndicator
-class LinearProgressIndicator$Mate extends LinearProgressIndicator with WidgetMate<LinearProgressIndicator$Mate> {
+class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate<LinearProgressIndicator$Mate> {
   /// LinearProgressIndicator LinearProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double? minHeight, String? semanticsLabel, String? semanticsValue})
   LinearProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -69,7 +69,7 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with WidgetMa
 }
 
 /// class CircularProgressIndicator extends ProgressIndicator
-class CircularProgressIndicator$Mate extends CircularProgressIndicator with WidgetMate<CircularProgressIndicator$Mate> {
+class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate<CircularProgressIndicator$Mate> {
   /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -182,7 +182,7 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Widg
 }
 
 /// class RefreshProgressIndicator extends CircularProgressIndicator
-class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with WidgetMate<RefreshProgressIndicator$Mate> {
+class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Mate<RefreshProgressIndicator$Mate> {
   /// RefreshProgressIndicator RefreshProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = defaultStrokeWidth, String? semanticsLabel, String? semanticsValue})
   RefreshProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

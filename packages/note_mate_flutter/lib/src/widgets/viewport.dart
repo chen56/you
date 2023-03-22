@@ -11,7 +11,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class Viewport extends MultiChildRenderObjectWidget
-class Viewport$Mate extends Viewport with WidgetMate<Viewport$Mate> {
+class Viewport$Mate extends Viewport with Mate<Viewport$Mate> {
   /// Viewport Viewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, double anchor = 0.0, required ViewportOffset offset, Key? center, double? cacheExtent, CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel, Clip clipBehavior = Clip.hardEdge, List<Widget> slivers = const <Widget>[]})
   Viewport$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -84,7 +84,7 @@ class Viewport$Mate extends Viewport with WidgetMate<Viewport$Mate> {
 }
 
 /// class ShrinkWrappingViewport extends MultiChildRenderObjectWidget
-class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with WidgetMate<ShrinkWrappingViewport$Mate> {
+class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate<ShrinkWrappingViewport$Mate> {
   /// ShrinkWrappingViewport ShrinkWrappingViewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<Widget> slivers = const <Widget>[]})
   ShrinkWrappingViewport$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

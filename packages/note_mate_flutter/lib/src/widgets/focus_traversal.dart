@@ -56,7 +56,7 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate<Order
 }
 
 /// class FocusTraversalOrder extends InheritedWidget
-class FocusTraversalOrder$Mate extends FocusTraversalOrder with WidgetMate<FocusTraversalOrder$Mate> {
+class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate<FocusTraversalOrder$Mate> {
   /// FocusTraversalOrder FocusTraversalOrder({Key? key, required FocusOrder order, required Widget child})
   FocusTraversalOrder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -87,7 +87,7 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with WidgetMate<Focus
 }
 
 /// class FocusTraversalGroup extends StatefulWidget
-class FocusTraversalGroup$Mate extends FocusTraversalGroup with WidgetMate<FocusTraversalGroup$Mate> {
+class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate<FocusTraversalGroup$Mate> {
   /// FocusTraversalGroup FocusTraversalGroup({Key? key, FocusTraversalPolicy? policy, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true, required Widget child})
   FocusTraversalGroup$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -170,7 +170,7 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate<Direc
 }
 
 /// class ExcludeFocusTraversal extends StatelessWidget
-class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with WidgetMate<ExcludeFocusTraversal$Mate> {
+class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate<ExcludeFocusTraversal$Mate> {
   /// ExcludeFocusTraversal ExcludeFocusTraversal({Key? key, bool excluding = true, required Widget child})
   ExcludeFocusTraversal$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

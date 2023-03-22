@@ -10,7 +10,7 @@ import 'package:flutter/src/painting/box_border.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoTabBar extends StatelessWidget implements PreferredSizeWidget
-class CupertinoTabBar$Mate extends CupertinoTabBar with WidgetMate<CupertinoTabBar$Mate> {
+class CupertinoTabBar$Mate extends CupertinoTabBar with Mate<CupertinoTabBar$Mate> {
   /// CupertinoTabBar CupertinoTabBar({Key? key, required List<BottomNavigationBarItem> items, void Function(int)? onTap, int currentIndex = 0, Color? backgroundColor, Color? activeColor, Color inactiveColor = _kDefaultTabBarInactiveColor, double iconSize = 30.0, double height = _kTabBarHeight, Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))})
   CupertinoTabBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

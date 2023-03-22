@@ -7,7 +7,7 @@ import 'package:note/mate.dart';
 
 /// class NotificationListener<T extends Notification> extends ProxyWidget
 class NotificationListener$Mate<T extends Notification> extends NotificationListener<T>
-    with WidgetMate<NotificationListener$Mate> {
+    with Mate<NotificationListener$Mate> {
   /// NotificationListener<T> NotificationListener({Key? key, required Widget child, bool Function(T)? onNotification})
   NotificationListener$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -58,7 +58,7 @@ class BannerPainter$Mate extends BannerPainter with Mate<BannerPainter$Mate> {
 }
 
 /// class Banner extends StatelessWidget
-class Banner$Mate extends Banner with WidgetMate<Banner$Mate> {
+class Banner$Mate extends Banner with Mate<Banner$Mate> {
   /// Banner Banner({Key? key, Widget? child, required String message, TextDirection? textDirection, required BannerLocation location, TextDirection? layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   Banner$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -119,7 +119,7 @@ class Banner$Mate extends Banner with WidgetMate<Banner$Mate> {
 }
 
 /// class CheckedModeBanner extends StatelessWidget
-class CheckedModeBanner$Mate extends CheckedModeBanner with WidgetMate<CheckedModeBanner$Mate> {
+class CheckedModeBanner$Mate extends CheckedModeBanner with Mate<CheckedModeBanner$Mate> {
   /// CheckedModeBanner CheckedModeBanner({Key? key, required Widget child})
   CheckedModeBanner$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

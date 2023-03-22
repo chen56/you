@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class SizeChangedLayoutNotifier extends SingleChildRenderObjectWidget
-class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with WidgetMate<SizeChangedLayoutNotifier$Mate> {
+class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with Mate<SizeChangedLayoutNotifier$Mate> {
   /// SizeChangedLayoutNotifier SizeChangedLayoutNotifier({Key? key, Widget? child})
   SizeChangedLayoutNotifier$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

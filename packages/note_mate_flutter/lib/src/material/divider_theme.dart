@@ -51,7 +51,7 @@ class DividerThemeData$Mate extends DividerThemeData with Mate<DividerThemeData$
 }
 
 /// class DividerTheme extends InheritedTheme
-class DividerTheme$Mate extends DividerTheme with WidgetMate<DividerTheme$Mate> {
+class DividerTheme$Mate extends DividerTheme with Mate<DividerTheme$Mate> {
   /// DividerTheme DividerTheme({Key? key, required DividerThemeData data, required Widget child})
   DividerTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

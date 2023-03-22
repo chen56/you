@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 
-class ContainerMate extends Container with WidgetMate<ContainerMate> {
+class ContainerMate extends Container with Mate<ContainerMate> {
   late final Param<double?> widthMate;
   late final Param<double?> heightMate;
 
@@ -44,7 +44,7 @@ class ContainerMate extends Container with WidgetMate<ContainerMate> {
   }
 }
 
-class ColumnMate extends Column with WidgetMate<ColumnMate> {
+class ColumnMate extends Column with Mate<ColumnMate> {
   ColumnMate({
     super.key,
     super.mainAxisAlignment,
@@ -64,7 +64,7 @@ class ColumnMate extends Column with WidgetMate<ColumnMate> {
   }
 }
 
-class CenterMate extends Center with WidgetMate<CenterMate> {
+class CenterMate extends Center with Mate<CenterMate> {
   CenterMate({
     Key? key,
     double? widthFactor,

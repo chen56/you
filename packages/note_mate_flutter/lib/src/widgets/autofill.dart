@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class AutofillGroup extends StatefulWidget
-class AutofillGroup$Mate extends AutofillGroup with WidgetMate<AutofillGroup$Mate> {
+class AutofillGroup$Mate extends AutofillGroup with Mate<AutofillGroup$Mate> {
   /// AutofillGroup AutofillGroup({Key? key, required Widget child, AutofillContextAction onDisposeAction = AutofillContextAction.commit})
   AutofillGroup$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

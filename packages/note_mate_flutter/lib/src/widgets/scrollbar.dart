@@ -122,7 +122,7 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate<ScrollbarPainter$
 }
 
 /// class RawScrollbar extends StatefulWidget
-class RawScrollbar$Mate extends RawScrollbar with WidgetMate<RawScrollbar$Mate> {
+class RawScrollbar$Mate extends RawScrollbar with Mate<RawScrollbar$Mate> {
   /// RawScrollbar RawScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, OutlinedBorder? shape, Radius? radius, double? thickness, Color? thumbColor, double minThumbLength = _kMinThumbExtent, double? minOverscrollLength, bool? trackVisibility, Radius? trackRadius, Color? trackColor, Color? trackBorderColor, Duration fadeDuration = _kScrollbarFadeDuration, Duration timeToFade = _kScrollbarTimeToFade, Duration pressDuration = Duration.zero, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, double mainAxisMargin = 0.0, double crossAxisMargin = 0.0, EdgeInsets? padding, bool? isAlwaysShown})
   RawScrollbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

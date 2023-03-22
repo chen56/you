@@ -10,7 +10,7 @@ import 'package:flutter/src/painting/box_decoration.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoFormSection extends StatelessWidget
-class CupertinoFormSection$Mate extends CupertinoFormSection with WidgetMate<CupertinoFormSection$Mate> {
+class CupertinoFormSection$Mate extends CupertinoFormSection with Mate<CupertinoFormSection$Mate> {
   /// CupertinoFormSection CupertinoFormSection({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = EdgeInsets.zero, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
   CupertinoFormSection$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

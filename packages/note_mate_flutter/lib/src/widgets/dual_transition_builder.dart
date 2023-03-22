@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class DualTransitionBuilder extends StatefulWidget
-class DualTransitionBuilder$Mate extends DualTransitionBuilder with WidgetMate<DualTransitionBuilder$Mate> {
+class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate<DualTransitionBuilder$Mate> {
   /// DualTransitionBuilder DualTransitionBuilder({Key? key, required Animation<double> animation, required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder, required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder, Widget? child})
   DualTransitionBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

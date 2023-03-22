@@ -10,7 +10,7 @@ import 'package:note/mate.dart';
 
 /// class TextSelectionToolbarTextButton extends StatelessWidget
 class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton
-    with WidgetMate<TextSelectionToolbarTextButton$Mate> {
+    with Mate<TextSelectionToolbarTextButton$Mate> {
   /// TextSelectionToolbarTextButton TextSelectionToolbarTextButton({Key? key, required Widget child, required EdgeInsets padding, void Function()? onPressed, AlignmentGeometry? alignment})
   TextSelectionToolbarTextButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

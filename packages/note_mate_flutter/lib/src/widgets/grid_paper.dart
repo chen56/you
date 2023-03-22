@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class GridPaper extends StatelessWidget
-class GridPaper$Mate extends GridPaper with WidgetMate<GridPaper$Mate> {
+class GridPaper$Mate extends GridPaper with Mate<GridPaper$Mate> {
   /// GridPaper GridPaper({Key? key, Color color = const Color(0x7FC3E8F3), double interval = 100.0, int divisions = 2, int subdivisions = 5, Widget? child})
   GridPaper$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

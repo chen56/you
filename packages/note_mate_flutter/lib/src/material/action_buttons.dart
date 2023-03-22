@@ -7,7 +7,7 @@ import 'dart:ui';
 import 'package:flutter/src/material/button_style.dart';
 
 /// class BackButtonIcon extends StatelessWidget
-class BackButtonIcon$Mate extends BackButtonIcon with WidgetMate<BackButtonIcon$Mate> {
+class BackButtonIcon$Mate extends BackButtonIcon with Mate<BackButtonIcon$Mate> {
   /// BackButtonIcon BackButtonIcon({Key? key})
   BackButtonIcon$Mate(
       {
@@ -23,7 +23,7 @@ class BackButtonIcon$Mate extends BackButtonIcon with WidgetMate<BackButtonIcon$
 }
 
 /// class BackButton extends _ActionButton
-class BackButton$Mate extends BackButton with WidgetMate<BackButton$Mate> {
+class BackButton$Mate extends BackButton with Mate<BackButton$Mate> {
   /// BackButton BackButton({Key? key, Color? color, ButtonStyle? style, void Function()? onPressed})
   BackButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -60,7 +60,7 @@ class BackButton$Mate extends BackButton with WidgetMate<BackButton$Mate> {
 }
 
 /// class CloseButtonIcon extends StatelessWidget
-class CloseButtonIcon$Mate extends CloseButtonIcon with WidgetMate<CloseButtonIcon$Mate> {
+class CloseButtonIcon$Mate extends CloseButtonIcon with Mate<CloseButtonIcon$Mate> {
   /// CloseButtonIcon CloseButtonIcon({Key? key})
   CloseButtonIcon$Mate(
       {
@@ -76,7 +76,7 @@ class CloseButtonIcon$Mate extends CloseButtonIcon with WidgetMate<CloseButtonIc
 }
 
 /// class CloseButton extends _ActionButton
-class CloseButton$Mate extends CloseButton with WidgetMate<CloseButton$Mate> {
+class CloseButton$Mate extends CloseButton with Mate<CloseButton$Mate> {
   /// CloseButton CloseButton({Key? key, Color? color, void Function()? onPressed, ButtonStyle? style})
   CloseButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -113,7 +113,7 @@ class CloseButton$Mate extends CloseButton with WidgetMate<CloseButton$Mate> {
 }
 
 /// class DrawerButtonIcon extends StatelessWidget
-class DrawerButtonIcon$Mate extends DrawerButtonIcon with WidgetMate<DrawerButtonIcon$Mate> {
+class DrawerButtonIcon$Mate extends DrawerButtonIcon with Mate<DrawerButtonIcon$Mate> {
   /// DrawerButtonIcon DrawerButtonIcon({Key? key})
   DrawerButtonIcon$Mate(
       {
@@ -129,7 +129,7 @@ class DrawerButtonIcon$Mate extends DrawerButtonIcon with WidgetMate<DrawerButto
 }
 
 /// class DrawerButton extends _ActionButton
-class DrawerButton$Mate extends DrawerButton with WidgetMate<DrawerButton$Mate> {
+class DrawerButton$Mate extends DrawerButton with Mate<DrawerButton$Mate> {
   /// DrawerButton DrawerButton({Key? key, ButtonStyle? style, void Function()? onPressed})
   DrawerButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -160,7 +160,7 @@ class DrawerButton$Mate extends DrawerButton with WidgetMate<DrawerButton$Mate> 
 }
 
 /// class EndDrawerButtonIcon extends StatelessWidget
-class EndDrawerButtonIcon$Mate extends EndDrawerButtonIcon with WidgetMate<EndDrawerButtonIcon$Mate> {
+class EndDrawerButtonIcon$Mate extends EndDrawerButtonIcon with Mate<EndDrawerButtonIcon$Mate> {
   /// EndDrawerButtonIcon EndDrawerButtonIcon({Key? key})
   EndDrawerButtonIcon$Mate(
       {
@@ -176,7 +176,7 @@ class EndDrawerButtonIcon$Mate extends EndDrawerButtonIcon with WidgetMate<EndDr
 }
 
 /// class EndDrawerButton extends _ActionButton
-class EndDrawerButton$Mate extends EndDrawerButton with WidgetMate<EndDrawerButton$Mate> {
+class EndDrawerButton$Mate extends EndDrawerButton with Mate<EndDrawerButton$Mate> {
   /// EndDrawerButton EndDrawerButton({Key? key, ButtonStyle? style, void Function()? onPressed})
   EndDrawerButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

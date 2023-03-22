@@ -7,7 +7,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class Visibility extends StatelessWidget
-class Visibility$Mate extends Visibility with WidgetMate<Visibility$Mate> {
+class Visibility$Mate extends Visibility with Mate<Visibility$Mate> {
   /// Visibility Visibility({Key? key, required Widget child, Widget replacement = const SizedBox.shrink(), bool visible = true, bool maintainState = false, bool maintainAnimation = false, bool maintainSize = false, bool maintainSemantics = false, bool maintainInteractivity = false})
   Visibility$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -108,7 +108,7 @@ class Visibility$Mate extends Visibility with WidgetMate<Visibility$Mate> {
 }
 
 /// class SliverVisibility extends StatelessWidget
-class SliverVisibility$Mate extends SliverVisibility with WidgetMate<SliverVisibility$Mate> {
+class SliverVisibility$Mate extends SliverVisibility with Mate<SliverVisibility$Mate> {
   /// SliverVisibility SliverVisibility({Key? key, required Widget sliver, Widget replacementSliver = const SliverToBoxAdapter(), bool visible = true, bool maintainState = false, bool maintainAnimation = false, bool maintainSize = false, bool maintainSemantics = false, bool maintainInteractivity = false})
   SliverVisibility$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

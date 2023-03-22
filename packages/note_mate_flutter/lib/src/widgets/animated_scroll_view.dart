@@ -13,7 +13,7 @@ import 'package:flutter/src/rendering/sliver_grid.dart';
 import 'package:flutter/src/widgets/sliver.dart';
 
 /// class AnimatedList extends _AnimatedScrollView
-class AnimatedList$Mate extends AnimatedList with WidgetMate<AnimatedList$Mate> {
+class AnimatedList$Mate extends AnimatedList with Mate<AnimatedList$Mate> {
   /// AnimatedList AnimatedList({Key? key, required Widget Function(BuildContext, int, Animation<double>) itemBuilder, int initialItemCount = 0, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, Clip clipBehavior = Clip.hardEdge})
   AnimatedList$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -92,7 +92,7 @@ class AnimatedList$Mate extends AnimatedList with WidgetMate<AnimatedList$Mate> 
 }
 
 /// class AnimatedGrid extends _AnimatedScrollView
-class AnimatedGrid$Mate extends AnimatedGrid with WidgetMate<AnimatedGrid$Mate> {
+class AnimatedGrid$Mate extends AnimatedGrid with Mate<AnimatedGrid$Mate> {
   /// AnimatedGrid AnimatedGrid({Key? key, required Widget Function(BuildContext, int, Animation<double>) itemBuilder, required SliverGridDelegate gridDelegate, int initialItemCount = 0, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, EdgeInsetsGeometry? padding, Clip clipBehavior = Clip.hardEdge})
   AnimatedGrid$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -171,7 +171,7 @@ class AnimatedGrid$Mate extends AnimatedGrid with WidgetMate<AnimatedGrid$Mate> 
 }
 
 /// class SliverAnimatedList extends _SliverAnimatedMultiBoxAdaptor
-class SliverAnimatedList$Mate extends SliverAnimatedList with WidgetMate<SliverAnimatedList$Mate> {
+class SliverAnimatedList$Mate extends SliverAnimatedList with Mate<SliverAnimatedList$Mate> {
   /// SliverAnimatedList SliverAnimatedList({Key? key, required Widget Function(BuildContext, int, Animation<double>) itemBuilder, int? Function(Key)? findChildIndexCallback, int initialItemCount = 0})
   SliverAnimatedList$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -208,7 +208,7 @@ class SliverAnimatedList$Mate extends SliverAnimatedList with WidgetMate<SliverA
 }
 
 /// class SliverAnimatedGrid extends _SliverAnimatedMultiBoxAdaptor
-class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with WidgetMate<SliverAnimatedGrid$Mate> {
+class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with Mate<SliverAnimatedGrid$Mate> {
   /// SliverAnimatedGrid SliverAnimatedGrid({Key? key, required Widget Function(BuildContext, int, Animation<double>) itemBuilder, required SliverGridDelegate gridDelegate, int? Function(Key)? findChildIndexCallback, int initialItemCount = 0})
   SliverAnimatedGrid$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

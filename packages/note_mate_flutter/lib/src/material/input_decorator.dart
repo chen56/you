@@ -14,7 +14,7 @@ import 'package:flutter/src/material/input_border.dart';
 import 'package:flutter/src/painting/borders.dart';
 
 /// class InputDecorator extends StatefulWidget
-class InputDecorator$Mate extends InputDecorator with WidgetMate<InputDecorator$Mate> {
+class InputDecorator$Mate extends InputDecorator with Mate<InputDecorator$Mate> {
   /// InputDecorator InputDecorator({Key? key, required InputDecoration decoration, TextStyle? baseStyle, TextAlign? textAlign, TextAlignVertical? textAlignVertical, bool isFocused = false, bool isHovering = false, bool expands = false, bool isEmpty = false, Widget? child})
   InputDecorator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

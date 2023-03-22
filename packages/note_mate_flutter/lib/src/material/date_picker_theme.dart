@@ -216,7 +216,7 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate<DatePickerT
 }
 
 /// class DatePickerTheme extends InheritedTheme
-class DatePickerTheme$Mate extends DatePickerTheme with WidgetMate<DatePickerTheme$Mate> {
+class DatePickerTheme$Mate extends DatePickerTheme with Mate<DatePickerTheme$Mate> {
   /// DatePickerTheme DatePickerTheme({Key? key, required DatePickerThemeData data, required Widget child})
   DatePickerTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

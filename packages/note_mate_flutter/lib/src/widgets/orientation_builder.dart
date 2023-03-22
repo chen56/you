@@ -5,7 +5,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:note/mate.dart';
 
 /// class OrientationBuilder extends StatelessWidget
-class OrientationBuilder$Mate extends OrientationBuilder with WidgetMate<OrientationBuilder$Mate> {
+class OrientationBuilder$Mate extends OrientationBuilder with Mate<OrientationBuilder$Mate> {
   /// OrientationBuilder OrientationBuilder({Key? key, required Widget Function(BuildContext, Orientation) builder})
   OrientationBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

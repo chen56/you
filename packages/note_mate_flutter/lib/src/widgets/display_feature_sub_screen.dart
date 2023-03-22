@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class DisplayFeatureSubScreen extends StatelessWidget
-class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with WidgetMate<DisplayFeatureSubScreen$Mate> {
+class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with Mate<DisplayFeatureSubScreen$Mate> {
   /// DisplayFeatureSubScreen DisplayFeatureSubScreen({Key? key, Offset? anchorPoint, required Widget child})
   DisplayFeatureSubScreen$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -14,7 +14,7 @@ import 'package:flutter/src/material/button_style.dart';
 import 'package:flutter/src/material/material_state.dart';
 
 /// class MenuAnchor extends StatefulWidget
-class MenuAnchor$Mate extends MenuAnchor with WidgetMate<MenuAnchor$Mate> {
+class MenuAnchor$Mate extends MenuAnchor with Mate<MenuAnchor$Mate> {
   /// MenuAnchor MenuAnchor({Key? key, MenuController? controller, FocusNode? childFocusNode, MenuStyle? style, Offset? alignmentOffset = Offset.zero, Clip clipBehavior = Clip.none, bool anchorTapClosesMenu = false, void Function()? onOpen, void Function()? onClose, bool crossAxisUnconstrained = true, required List<Widget> menuChildren, Widget Function(BuildContext, MenuController, Widget?)? builder, Widget? child})
   MenuAnchor$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -105,7 +105,7 @@ class MenuAnchor$Mate extends MenuAnchor with WidgetMate<MenuAnchor$Mate> {
 }
 
 /// class MenuBar extends StatelessWidget
-class MenuBar$Mate extends MenuBar with WidgetMate<MenuBar$Mate> {
+class MenuBar$Mate extends MenuBar with Mate<MenuBar$Mate> {
   /// MenuBar MenuBar({Key? key, MenuStyle? style, Clip clipBehavior = Clip.none, MenuController? controller, required List<Widget> children})
   MenuBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -148,7 +148,7 @@ class MenuBar$Mate extends MenuBar with WidgetMate<MenuBar$Mate> {
 }
 
 /// class MenuItemButton extends StatefulWidget
-class MenuItemButton$Mate extends MenuItemButton with WidgetMate<MenuItemButton$Mate> {
+class MenuItemButton$Mate extends MenuItemButton with Mate<MenuItemButton$Mate> {
   /// MenuItemButton MenuItemButton({Key? key, void Function()? onPressed, void Function(bool)? onHover, bool requestFocusOnHover = true, void Function(bool)? onFocusChange, FocusNode? focusNode, MenuSerializableShortcut? shortcut, ButtonStyle? style, MaterialStatesController? statesController, Clip clipBehavior = Clip.none, Widget? leadingIcon, Widget? trailingIcon, required Widget? child})
   MenuItemButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -239,7 +239,7 @@ class MenuItemButton$Mate extends MenuItemButton with WidgetMate<MenuItemButton$
 }
 
 /// class CheckboxMenuButton extends StatelessWidget
-class CheckboxMenuButton$Mate extends CheckboxMenuButton with WidgetMate<CheckboxMenuButton$Mate> {
+class CheckboxMenuButton$Mate extends CheckboxMenuButton with Mate<CheckboxMenuButton$Mate> {
   /// CheckboxMenuButton CheckboxMenuButton({Key? key, required bool? value, bool tristate = false, bool isError = false, required void Function(bool?)? onChanged, void Function(bool)? onHover, void Function(bool)? onFocusChange, FocusNode? focusNode, MenuSerializableShortcut? shortcut, ButtonStyle? style, MaterialStatesController? statesController, Clip clipBehavior = Clip.none, Widget? trailingIcon, required Widget? child})
   CheckboxMenuButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -336,7 +336,7 @@ class CheckboxMenuButton$Mate extends CheckboxMenuButton with WidgetMate<Checkbo
 }
 
 /// class RadioMenuButton<T> extends StatelessWidget
-class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with WidgetMate<RadioMenuButton$Mate> {
+class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with Mate<RadioMenuButton$Mate> {
   /// RadioMenuButton<T> RadioMenuButton({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, bool toggleable = false, void Function(bool)? onHover, void Function(bool)? onFocusChange, FocusNode? focusNode, MenuSerializableShortcut? shortcut, ButtonStyle? style, MaterialStatesController? statesController, Clip clipBehavior = Clip.none, Widget? trailingIcon, required Widget? child})
   RadioMenuButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -433,7 +433,7 @@ class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with WidgetMate<RadioMe
 }
 
 /// class SubmenuButton extends StatefulWidget
-class SubmenuButton$Mate extends SubmenuButton with WidgetMate<SubmenuButton$Mate> {
+class SubmenuButton$Mate extends SubmenuButton with Mate<SubmenuButton$Mate> {
   /// SubmenuButton SubmenuButton({Key? key, void Function(bool)? onHover, void Function(bool)? onFocusChange, void Function()? onOpen, void Function()? onClose, ButtonStyle? style, MenuStyle? menuStyle, Offset? alignmentOffset, Clip clipBehavior = Clip.none, FocusNode? focusNode, MaterialStatesController? statesController, Widget? leadingIcon, Widget? trailingIcon, required List<Widget> menuChildren, required Widget? child})
   SubmenuButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -553,7 +553,7 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate<DismissMenuActi
 
 /// class MenuAcceleratorCallbackBinding extends InheritedWidget
 class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
-    with WidgetMate<MenuAcceleratorCallbackBinding$Mate> {
+    with Mate<MenuAcceleratorCallbackBinding$Mate> {
   /// MenuAcceleratorCallbackBinding MenuAcceleratorCallbackBinding({Key? key, void Function()? onInvoke, bool hasSubmenu = false, required Widget child})
   MenuAcceleratorCallbackBinding$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -590,7 +590,7 @@ class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
 }
 
 /// class MenuAcceleratorLabel extends StatefulWidget
-class MenuAcceleratorLabel$Mate extends MenuAcceleratorLabel with WidgetMate<MenuAcceleratorLabel$Mate> {
+class MenuAcceleratorLabel$Mate extends MenuAcceleratorLabel with Mate<MenuAcceleratorLabel$Mate> {
   /// MenuAcceleratorLabel MenuAcceleratorLabel(String label, {Key? key, Widget Function(BuildContext, String, int) builder = defaultLabelBuilder})
   MenuAcceleratorLabel$Mate(
     /// requiredParameters: String label

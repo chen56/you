@@ -60,7 +60,7 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate<AsyncSnapshot$Mat
 }
 
 /// class StreamBuilder<T> extends StreamBuilderBase<T, AsyncSnapshot<T>>
-class StreamBuilder$Mate<T> extends StreamBuilder<T> with WidgetMate<StreamBuilder$Mate> {
+class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate<StreamBuilder$Mate> {
   /// StreamBuilder<T> StreamBuilder({Key? key, T? initialData, Stream<T>? stream, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   StreamBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -97,7 +97,7 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with WidgetMate<StreamBuild
 }
 
 /// class FutureBuilder<T> extends StatefulWidget
-class FutureBuilder$Mate<T> extends FutureBuilder<T> with WidgetMate<FutureBuilder$Mate> {
+class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate<FutureBuilder$Mate> {
   /// FutureBuilder<T> FutureBuilder({Key? key, Future<T>? future, T? initialData, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   FutureBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -158,7 +158,7 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate<TimePickerT
 }
 
 /// class TimePickerTheme extends InheritedTheme
-class TimePickerTheme$Mate extends TimePickerTheme with WidgetMate<TimePickerTheme$Mate> {
+class TimePickerTheme$Mate extends TimePickerTheme with Mate<TimePickerTheme$Mate> {
   /// TimePickerTheme TimePickerTheme({Key? key, required TimePickerThemeData data, required Widget child})
   TimePickerTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoPicker extends StatefulWidget
-class CupertinoPicker$Mate extends CupertinoPicker with WidgetMate<CupertinoPicker$Mate> {
+class CupertinoPicker$Mate extends CupertinoPicker with Mate<CupertinoPicker$Mate> {
   /// CupertinoPicker CupertinoPicker({Key? key, double diameterRatio = _kDefaultDiameterRatio, Color? backgroundColor, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, FixedExtentScrollController? scrollController, double squeeze = _kSqueeze, required double itemExtent, required void Function(int)? onSelectedItemChanged, required List<Widget> children, Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay(), bool looping = false})
   CupertinoPicker$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -190,7 +190,7 @@ class CupertinoPicker$Mate extends CupertinoPicker with WidgetMate<CupertinoPick
 
 /// class CupertinoPickerDefaultSelectionOverlay extends StatelessWidget
 class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefaultSelectionOverlay
-    with WidgetMate<CupertinoPickerDefaultSelectionOverlay$Mate> {
+    with Mate<CupertinoPickerDefaultSelectionOverlay$Mate> {
   /// CupertinoPickerDefaultSelectionOverlay CupertinoPickerDefaultSelectionOverlay({Key? key, Color background = CupertinoColors.tertiarySystemFill, bool capStartEdge = true, bool capEndEdge = true})
   CupertinoPickerDefaultSelectionOverlay$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

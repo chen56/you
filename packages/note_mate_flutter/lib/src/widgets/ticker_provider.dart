@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class TickerMode extends StatefulWidget
-class TickerMode$Mate extends TickerMode with WidgetMate<TickerMode$Mate> {
+class TickerMode$Mate extends TickerMode with Mate<TickerMode$Mate> {
   /// TickerMode TickerMode({Key? key, required bool enabled, required Widget child})
   TickerMode$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

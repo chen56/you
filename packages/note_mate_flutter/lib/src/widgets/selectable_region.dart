@@ -11,7 +11,7 @@ import 'package:flutter/src/rendering/selection.dart';
 import 'package:note/mate.dart';
 
 /// class SelectableRegion extends StatefulWidget
-class SelectableRegion$Mate extends SelectableRegion with WidgetMate<SelectableRegion$Mate> {
+class SelectableRegion$Mate extends SelectableRegion with Mate<SelectableRegion$Mate> {
   /// SelectableRegion SelectableRegion({Key? key, Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder, required FocusNode focusNode, required TextSelectionControls selectionControls, required Widget child, TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled, void Function(SelectedContent?)? onSelectionChanged})
   SelectableRegion$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

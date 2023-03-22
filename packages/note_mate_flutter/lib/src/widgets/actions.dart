@@ -12,7 +12,7 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 import 'dart:ui';
 
 /// class ActionListener extends StatefulWidget
-class ActionListener$Mate extends ActionListener with WidgetMate<ActionListener$Mate> {
+class ActionListener$Mate extends ActionListener with Mate<ActionListener$Mate> {
   /// ActionListener ActionListener({Key? key, required void Function(Action<Intent>) listener, required Action<Intent> action, required Widget child})
   ActionListener$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -65,7 +65,7 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate<
 }
 
 /// class Actions extends StatefulWidget
-class Actions$Mate extends Actions with WidgetMate<Actions$Mate> {
+class Actions$Mate extends Actions with Mate<Actions$Mate> {
   /// Actions Actions({Key? key, ActionDispatcher? dispatcher, required Map<Type, Action<Intent>> actions, required Widget child})
   Actions$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -102,7 +102,7 @@ class Actions$Mate extends Actions with WidgetMate<Actions$Mate> {
 }
 
 /// class FocusableActionDetector extends StatefulWidget
-class FocusableActionDetector$Mate extends FocusableActionDetector with WidgetMate<FocusableActionDetector$Mate> {
+class FocusableActionDetector$Mate extends FocusableActionDetector with Mate<FocusableActionDetector$Mate> {
   /// FocusableActionDetector FocusableActionDetector({Key? key, bool enabled = true, FocusNode? focusNode, bool autofocus = false, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, void Function(bool)? onShowFocusHighlight, void Function(bool)? onShowHoverHighlight, void Function(bool)? onFocusChange, MouseCursor mouseCursor = MouseCursor.defer, bool includeFocusSemantics = true, required Widget child})
   FocusableActionDetector$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

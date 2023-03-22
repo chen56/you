@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class DrawerHeader extends StatelessWidget
-class DrawerHeader$Mate extends DrawerHeader with WidgetMate<DrawerHeader$Mate> {
+class DrawerHeader$Mate extends DrawerHeader with Mate<DrawerHeader$Mate> {
   /// DrawerHeader DrawerHeader({Key? key, Decoration? decoration, EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0), EdgeInsetsGeometry padding = const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0), Duration duration = const Duration(milliseconds: 250), Curve curve = Curves.fastOutSlowIn, required Widget? child})
   DrawerHeader$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

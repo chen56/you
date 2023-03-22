@@ -23,7 +23,7 @@ class SnapshotController$Mate extends SnapshotController with Mate<SnapshotContr
 }
 
 /// class SnapshotWidget extends SingleChildRenderObjectWidget
-class SnapshotWidget$Mate extends SnapshotWidget with WidgetMate<SnapshotWidget$Mate> {
+class SnapshotWidget$Mate extends SnapshotWidget with Mate<SnapshotWidget$Mate> {
   /// SnapshotWidget SnapshotWidget({Key? key, SnapshotMode mode = SnapshotMode.normal, SnapshotPainter painter = const _DefaultSnapshotPainter(), bool autoresize = false, required SnapshotController controller, required Widget? child})
   SnapshotWidget$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

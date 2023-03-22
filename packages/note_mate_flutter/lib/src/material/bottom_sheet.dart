@@ -13,7 +13,7 @@ import 'package:flutter/src/widgets/inherited_theme.dart';
 import 'package:flutter/src/widgets/navigator.dart';
 
 /// class BottomSheet extends StatefulWidget
-class BottomSheet$Mate extends BottomSheet with WidgetMate<BottomSheet$Mate> {
+class BottomSheet$Mate extends BottomSheet with Mate<BottomSheet$Mate> {
   /// BottomSheet BottomSheet({Key? key, AnimationController? animationController, bool enableDrag = true, void Function(DragStartDetails)? onDragStart, void Function(DragEndDetails, {required bool isClosing})? onDragEnd, Color? backgroundColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, required void Function() onClosing, required Widget Function(BuildContext) builder})
   BottomSheet$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

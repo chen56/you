@@ -274,7 +274,7 @@ class ShortcutManager$Mate extends ShortcutManager with Mate<ShortcutManager$Mat
 }
 
 /// class Shortcuts extends StatefulWidget
-class Shortcuts$Mate extends Shortcuts with WidgetMate<Shortcuts$Mate> {
+class Shortcuts$Mate extends Shortcuts with Mate<Shortcuts$Mate> {
   /// Shortcuts Shortcuts({Key? key, required Map<ShortcutActivator, Intent> shortcuts, required Widget child, String? debugLabel})
   Shortcuts$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -345,7 +345,7 @@ class Shortcuts$Mate extends Shortcuts with WidgetMate<Shortcuts$Mate> {
 }
 
 /// class CallbackShortcuts extends StatelessWidget
-class CallbackShortcuts$Mate extends CallbackShortcuts with WidgetMate<CallbackShortcuts$Mate> {
+class CallbackShortcuts$Mate extends CallbackShortcuts with Mate<CallbackShortcuts$Mate> {
   /// CallbackShortcuts CallbackShortcuts({Key? key, required Map<ShortcutActivator, void Function()> bindings, required Widget child})
   CallbackShortcuts$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -376,7 +376,7 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with WidgetMate<CallbackS
 }
 
 /// class ShortcutRegistrar extends StatefulWidget
-class ShortcutRegistrar$Mate extends ShortcutRegistrar with WidgetMate<ShortcutRegistrar$Mate> {
+class ShortcutRegistrar$Mate extends ShortcutRegistrar with Mate<ShortcutRegistrar$Mate> {
   /// ShortcutRegistrar ShortcutRegistrar({Key? key, required Widget child})
   ShortcutRegistrar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -10,7 +10,7 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:note/mate.dart';
 
 /// class BottomAppBar extends StatefulWidget
-class BottomAppBar$Mate extends BottomAppBar with WidgetMate<BottomAppBar$Mate> {
+class BottomAppBar$Mate extends BottomAppBar with Mate<BottomAppBar$Mate> {
   /// BottomAppBar BottomAppBar({Key? key, Color? color, double? elevation, NotchedShape? shape, Clip clipBehavior = Clip.none, double notchMargin = 4.0, Widget? child, EdgeInsetsGeometry? padding, Color? surfaceTintColor, double? height})
   BottomAppBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

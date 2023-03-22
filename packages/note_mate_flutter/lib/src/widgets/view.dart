@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class View extends StatelessWidget
-class View$Mate extends View with WidgetMate<View$Mate> {
+class View$Mate extends View with Mate<View$Mate> {
   /// View View({required FlutterView view, required Widget child})
   View$Mate({
     /// optionalParameters: {required FlutterView view} , hasDefaultValue:false, defaultValueCode:null

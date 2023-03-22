@@ -11,7 +11,7 @@ import 'package:flutter/src/foundation/change_notifier.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class RawAutocomplete<T extends Object> extends StatefulWidget
-class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with WidgetMate<RawAutocomplete$Mate> {
+class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mate<RawAutocomplete$Mate> {
   /// RawAutocomplete<T> RawAutocomplete({Key? key, required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder, FocusNode? focusNode, void Function(T)? onSelected, TextEditingController? textEditingController, TextEditingValue? initialValue})
   RawAutocomplete$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -79,7 +79,7 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Wid
 
 /// class AutocompleteHighlightedOption extends InheritedNotifier<ValueNotifier<int>>
 class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption
-    with WidgetMate<AutocompleteHighlightedOption$Mate> {
+    with Mate<AutocompleteHighlightedOption$Mate> {
   /// AutocompleteHighlightedOption AutocompleteHighlightedOption({Key? key, required ValueNotifier<int> highlightIndexNotifier, required Widget child})
   AutocompleteHighlightedOption$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

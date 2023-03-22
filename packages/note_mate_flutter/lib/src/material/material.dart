@@ -11,7 +11,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class Material extends StatefulWidget
-class Material$Mate extends Material with WidgetMate<Material$Mate> {
+class Material$Mate extends Material with Mate<Material$Mate> {
   /// Material Material({Key? key, MaterialType type = MaterialType.canvas, double elevation = 0.0, Color? color, Color? shadowColor, Color? surfaceTintColor, TextStyle? textStyle, BorderRadiusGeometry? borderRadius, ShapeBorder? shape, bool borderOnForeground = true, Clip clipBehavior = Clip.none, Duration animationDuration = kThemeChangeDuration, Widget? child})
   Material$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

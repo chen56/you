@@ -6,7 +6,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class PerformanceOverlay extends LeafRenderObjectWidget
-class PerformanceOverlay$Mate extends PerformanceOverlay with WidgetMate<PerformanceOverlay$Mate> {
+class PerformanceOverlay$Mate extends PerformanceOverlay with Mate<PerformanceOverlay$Mate> {
   /// PerformanceOverlay PerformanceOverlay({Key? key, int optionsMask = 0, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
   PerformanceOverlay$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

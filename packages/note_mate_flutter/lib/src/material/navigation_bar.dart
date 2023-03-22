@@ -12,7 +12,7 @@ import 'package:flutter/src/animation/animation.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 
 /// class NavigationBar extends StatelessWidget
-class NavigationBar$Mate extends NavigationBar with WidgetMate<NavigationBar$Mate> {
+class NavigationBar$Mate extends NavigationBar with Mate<NavigationBar$Mate> {
   /// NavigationBar NavigationBar({Key? key, Duration? animationDuration, int selectedIndex = 0, required List<Widget> destinations, void Function(int)? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior})
   NavigationBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -103,7 +103,7 @@ class NavigationBar$Mate extends NavigationBar with WidgetMate<NavigationBar$Mat
 }
 
 /// class NavigationDestination extends StatelessWidget
-class NavigationDestination$Mate extends NavigationDestination with WidgetMate<NavigationDestination$Mate> {
+class NavigationDestination$Mate extends NavigationDestination with Mate<NavigationDestination$Mate> {
   /// NavigationDestination NavigationDestination({Key? key, required Widget icon, Widget? selectedIcon, required String label, String? tooltip})
   NavigationDestination$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -146,7 +146,7 @@ class NavigationDestination$Mate extends NavigationDestination with WidgetMate<N
 }
 
 /// class NavigationIndicator extends StatelessWidget
-class NavigationIndicator$Mate extends NavigationIndicator with WidgetMate<NavigationIndicator$Mate> {
+class NavigationIndicator$Mate extends NavigationIndicator with Mate<NavigationIndicator$Mate> {
   /// NavigationIndicator NavigationIndicator({Key? key, required Animation<double> animation, Color? color, double width = _kIndicatorWidth, double height = _kIndicatorHeight, BorderRadius borderRadius = const BorderRadius.all(Radius.circular(16)), ShapeBorder? shape})
   NavigationIndicator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

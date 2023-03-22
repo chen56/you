@@ -8,7 +8,7 @@ import 'package:note/mate.dart';
 
 /// class RenderObjectToWidgetAdapter<T extends RenderObject> extends RenderObjectWidget
 class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObjectToWidgetAdapter<T>
-    with WidgetMate<RenderObjectToWidgetAdapter$Mate> {
+    with Mate<RenderObjectToWidgetAdapter$Mate> {
   /// RenderObjectToWidgetAdapter<T> RenderObjectToWidgetAdapter({Widget? child, required RenderObjectWithChildMixin<T> container, String? debugShortDescription})
   RenderObjectToWidgetAdapter$Mate({
     /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null

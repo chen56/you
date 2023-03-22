@@ -7,7 +7,7 @@ import 'package:flutter/src/painting/text_style.dart';
 import 'package:note/mate.dart';
 
 /// class SemanticsDebugger extends StatefulWidget
-class SemanticsDebugger$Mate extends SemanticsDebugger with WidgetMate<SemanticsDebugger$Mate> {
+class SemanticsDebugger$Mate extends SemanticsDebugger with Mate<SemanticsDebugger$Mate> {
   /// SemanticsDebugger SemanticsDebugger({Key? key, required Widget child, TextStyle labelStyle = const TextStyle(color: Color(0xFF000000), fontSize: 10.0, height: 0.8)})
   SemanticsDebugger$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

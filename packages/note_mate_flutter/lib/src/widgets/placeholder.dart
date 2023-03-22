@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class Placeholder extends StatelessWidget
-class Placeholder$Mate extends Placeholder with WidgetMate<Placeholder$Mate> {
+class Placeholder$Mate extends Placeholder with Mate<Placeholder$Mate> {
   /// Placeholder Placeholder({Key? key, Color color = const Color(0xFF455A64), double strokeWidth = 2.0, double fallbackWidth = 400.0, double fallbackHeight = 400.0, Widget? child})
   Placeholder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

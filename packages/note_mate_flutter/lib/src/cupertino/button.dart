@@ -11,7 +11,7 @@ import 'package:flutter/src/painting/alignment.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoButton extends StatefulWidget
-class CupertinoButton$Mate extends CupertinoButton with WidgetMate<CupertinoButton$Mate> {
+class CupertinoButton$Mate extends CupertinoButton with Mate<CupertinoButton$Mate> {
   /// CupertinoButton CupertinoButton({Key? key, required Widget child, EdgeInsetsGeometry? padding, Color? color, Color disabledColor = CupertinoColors.quaternarySystemFill, double? minSize = kMinInteractiveDimensionCupertino, double? pressedOpacity = 0.4, BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0)), AlignmentGeometry alignment = Alignment.center, required void Function()? onPressed})
   CupertinoButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

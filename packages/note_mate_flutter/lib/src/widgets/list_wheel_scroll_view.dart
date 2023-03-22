@@ -160,7 +160,7 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate<F
 }
 
 /// class ListWheelScrollView extends StatefulWidget
-class ListWheelScrollView$Mate extends ListWheelScrollView with WidgetMate<ListWheelScrollView$Mate> {
+class ListWheelScrollView$Mate extends ListWheelScrollView with Mate<ListWheelScrollView$Mate> {
   /// ListWheelScrollView ListWheelScrollView({Key? key, ScrollController? controller, ScrollPhysics? physics, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, void Function(int)? onSelectedItemChanged, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, required List<Widget> children})
   ListWheelScrollView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -403,7 +403,7 @@ class ListWheelElement$Mate extends ListWheelElement with Mate<ListWheelElement$
 }
 
 /// class ListWheelViewport extends RenderObjectWidget
-class ListWheelViewport$Mate extends ListWheelViewport with WidgetMate<ListWheelViewport$Mate> {
+class ListWheelViewport$Mate extends ListWheelViewport with Mate<ListWheelViewport$Mate> {
   /// ListWheelViewport ListWheelViewport({Key? key, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, bool renderChildrenOutsideViewport = false, required ViewportOffset offset, required ListWheelChildDelegate childDelegate, Clip clipBehavior = Clip.hardEdge})
   ListWheelViewport$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

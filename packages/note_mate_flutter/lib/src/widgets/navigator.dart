@@ -35,7 +35,7 @@ class RouteSettings$Mate extends RouteSettings with Mate<RouteSettings$Mate> {
 }
 
 /// class HeroControllerScope extends InheritedWidget
-class HeroControllerScope$Mate extends HeroControllerScope with WidgetMate<HeroControllerScope$Mate> {
+class HeroControllerScope$Mate extends HeroControllerScope with Mate<HeroControllerScope$Mate> {
   /// HeroControllerScope HeroControllerScope({Key? key, required HeroController controller, required Widget child})
   HeroControllerScope$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -88,7 +88,7 @@ class HeroControllerScope$Mate extends HeroControllerScope with WidgetMate<HeroC
 }
 
 /// class Navigator extends StatefulWidget
-class Navigator$Mate extends Navigator with WidgetMate<Navigator$Mate> {
+class Navigator$Mate extends Navigator with Mate<Navigator$Mate> {
   /// Navigator Navigator({Key? key, List<Page<dynamic>> pages = const <Page<dynamic>>[], bool Function(Route<dynamic>, dynamic)? onPopPage, String? initialRoute, List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, TransitionDelegate<dynamic> transitionDelegate = const DefaultTransitionDelegate<dynamic>(), bool reportsRouteUpdateToEngine = false, Clip clipBehavior = Clip.hardEdge, List<NavigatorObserver> observers = const <NavigatorObserver>[], bool requestFocus = true, String? restorationScopeId, TraversalEdgeBehavior routeTraversalEdgeBehavior = kDefaultRouteTraversalEdgeBehavior})
   Navigator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

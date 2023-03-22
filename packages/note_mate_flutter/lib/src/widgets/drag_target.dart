@@ -12,7 +12,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
 
 /// class Draggable<T extends Object> extends StatefulWidget
-class Draggable$Mate<T extends Object> extends Draggable<T> with WidgetMate<Draggable$Mate> {
+class Draggable$Mate<T extends Object> extends Draggable<T> with Mate<Draggable$Mate> {
   /// Draggable<T> Draggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, Axis? affinity, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, bool rootOverlay = false, HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild, bool Function(int)? allowedButtonsFilter})
   Draggable$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -145,7 +145,7 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with WidgetMate<Drag
 }
 
 /// class LongPressDraggable<T extends Object> extends Draggable<T>
-class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> with WidgetMate<LongPressDraggable$Mate> {
+class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> with Mate<LongPressDraggable$Mate> {
   /// LongPressDraggable<T> LongPressDraggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool hapticFeedbackOnStart = true, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, Duration delay = kLongPressTimeout, bool Function(int)? allowedButtonsFilter})
   LongPressDraggable$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -328,7 +328,7 @@ class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate<DragTarge
 }
 
 /// class DragTarget<T extends Object> extends StatefulWidget
-class DragTarget$Mate<T extends Object> extends DragTarget<T> with WidgetMate<DragTarget$Mate> {
+class DragTarget$Mate<T extends Object> extends DragTarget<T> with Mate<DragTarget$Mate> {
   /// DragTarget<T> DragTarget({Key? key, required Widget Function(BuildContext, List<T?>, List<dynamic>) builder, bool Function(T?)? onWillAccept, void Function(T)? onAccept, void Function(DragTargetDetails<T>)? onAcceptWithDetails, void Function(T?)? onLeave, void Function(DragTargetDetails<T>)? onMove, HitTestBehavior hitTestBehavior = HitTestBehavior.translucent})
   DragTarget$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

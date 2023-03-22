@@ -8,7 +8,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 
 /// class SliverPrototypeExtentList extends SliverMultiBoxAdaptorWidget
-class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with WidgetMate<SliverPrototypeExtentList$Mate> {
+class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate<SliverPrototypeExtentList$Mate> {
   /// SliverPrototypeExtentList SliverPrototypeExtentList({Key? key, required SliverChildDelegate delegate, required Widget prototypeItem})
   SliverPrototypeExtentList$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class Title extends StatelessWidget
-class Title$Mate extends Title with WidgetMate<Title$Mate> {
+class Title$Mate extends Title with Mate<Title$Mate> {
   /// Title Title({Key? key, String title = '', required Color color, required Widget child})
   Title$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

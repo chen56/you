@@ -39,7 +39,7 @@ class OverlayEntry$Mate extends OverlayEntry with Mate<OverlayEntry$Mate> {
 }
 
 /// class Overlay extends StatefulWidget
-class Overlay$Mate extends Overlay with WidgetMate<Overlay$Mate> {
+class Overlay$Mate extends Overlay with Mate<Overlay$Mate> {
   /// Overlay Overlay({Key? key, List<OverlayEntry> initialEntries = const <OverlayEntry>[], Clip clipBehavior = Clip.hardEdge})
   Overlay$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -86,7 +86,7 @@ class OverlayPortalController$Mate extends OverlayPortalController with Mate<Ove
 }
 
 /// class OverlayPortal extends StatefulWidget
-class OverlayPortal$Mate extends OverlayPortal with WidgetMate<OverlayPortal$Mate> {
+class OverlayPortal$Mate extends OverlayPortal with Mate<OverlayPortal$Mate> {
   /// OverlayPortal OverlayPortal({Key? key, required OverlayPortalController controller, required Widget Function(BuildContext) overlayChildBuilder, Widget? child})
   OverlayPortal$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

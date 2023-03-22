@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class AnnotatedRegion<T extends Object> extends SingleChildRenderObjectWidget
-class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with WidgetMate<AnnotatedRegion$Mate> {
+class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Mate<AnnotatedRegion$Mate> {
   /// AnnotatedRegion<T> AnnotatedRegion({Key? key, required Widget child, required T value, bool sized = true})
   AnnotatedRegion$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

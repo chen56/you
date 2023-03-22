@@ -8,7 +8,7 @@ import 'package:flutter/src/animation/curves.dart';
 import 'package:note/mate.dart';
 
 /// class AnimatedSwitcher extends StatefulWidget
-class AnimatedSwitcher$Mate extends AnimatedSwitcher with WidgetMate<AnimatedSwitcher$Mate> {
+class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate<AnimatedSwitcher$Mate> {
   /// AnimatedSwitcher AnimatedSwitcher({Key? key, Widget? child, required Duration duration, Duration? reverseDuration, Curve switchInCurve = Curves.linear, Curve switchOutCurve = Curves.linear, Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder, Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder})
   AnimatedSwitcher$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

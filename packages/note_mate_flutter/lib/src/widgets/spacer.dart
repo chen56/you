@@ -6,7 +6,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class Spacer extends StatelessWidget
-class Spacer$Mate extends Spacer with WidgetMate<Spacer$Mate> {
+class Spacer$Mate extends Spacer with Mate<Spacer$Mate> {
   /// Spacer Spacer({Key? key, int flex = 1})
   Spacer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

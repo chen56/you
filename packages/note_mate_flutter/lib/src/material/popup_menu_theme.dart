@@ -85,7 +85,7 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate<PopupMenuThem
 }
 
 /// class PopupMenuTheme extends InheritedTheme
-class PopupMenuTheme$Mate extends PopupMenuTheme with WidgetMate<PopupMenuTheme$Mate> {
+class PopupMenuTheme$Mate extends PopupMenuTheme with Mate<PopupMenuTheme$Mate> {
   /// PopupMenuTheme PopupMenuTheme({Key? key, required PopupMenuThemeData data, required Widget child})
   PopupMenuTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

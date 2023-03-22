@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class GridTile extends StatelessWidget
-class GridTile$Mate extends GridTile with WidgetMate<GridTile$Mate> {
+class GridTile$Mate extends GridTile with Mate<GridTile$Mate> {
   /// GridTile GridTile({Key? key, Widget? header, Widget? footer, required Widget child})
   GridTile$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

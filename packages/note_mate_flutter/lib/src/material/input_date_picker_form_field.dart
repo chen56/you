@@ -9,7 +9,7 @@ import 'package:flutter/src/services/text_input.dart';
 import 'package:note/mate.dart';
 
 /// class InputDatePickerFormField extends StatefulWidget
-class InputDatePickerFormField$Mate extends InputDatePickerFormField with WidgetMate<InputDatePickerFormField$Mate> {
+class InputDatePickerFormField$Mate extends InputDatePickerFormField with Mate<InputDatePickerFormField$Mate> {
   /// InputDatePickerFormField InputDatePickerFormField({Key? key, DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, void Function(DateTime)? onDateSubmitted, void Function(DateTime)? onDateSaved, bool Function(DateTime)? selectableDayPredicate, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, bool autofocus = false})
   InputDatePickerFormField$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

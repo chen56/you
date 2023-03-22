@@ -306,7 +306,7 @@ class TextSelectionGestureDetectorBuilder$Mate extends TextSelectionGestureDetec
 
 /// class TextSelectionGestureDetector extends StatefulWidget
 class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector
-    with WidgetMate<TextSelectionGestureDetector$Mate> {
+    with Mate<TextSelectionGestureDetector$Mate> {
   /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

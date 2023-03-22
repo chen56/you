@@ -7,7 +7,7 @@ import 'package:flutter/src/rendering/box.dart';
 import 'package:note/mate.dart';
 
 /// class LayoutBuilder extends ConstrainedLayoutBuilder<BoxConstraints>
-class LayoutBuilder$Mate extends LayoutBuilder with WidgetMate<LayoutBuilder$Mate> {
+class LayoutBuilder$Mate extends LayoutBuilder with Mate<LayoutBuilder$Mate> {
   /// LayoutBuilder LayoutBuilder({Key? key, required Widget Function(BuildContext, BoxConstraints) builder})
   LayoutBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -17,8 +17,7 @@ class LayoutBuilder$Mate extends LayoutBuilder with WidgetMate<LayoutBuilder$Mat
     required Widget Function(
       BuildContext,
       BoxConstraints,
-    )
-        builder,
+    ) builder,
   }) : super(
           key: key,
           builder: builder,

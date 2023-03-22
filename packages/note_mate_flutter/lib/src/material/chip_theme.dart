@@ -12,7 +12,7 @@ import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/widgets/icon_theme_data.dart';
 
 /// class ChipTheme extends InheritedTheme
-class ChipTheme$Mate extends ChipTheme with WidgetMate<ChipTheme$Mate> {
+class ChipTheme$Mate extends ChipTheme with Mate<ChipTheme$Mate> {
   /// ChipTheme ChipTheme({Key? key, required ChipThemeData data, required Widget child})
   ChipTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

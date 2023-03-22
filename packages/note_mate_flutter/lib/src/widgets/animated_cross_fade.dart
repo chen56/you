@@ -9,7 +9,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class AnimatedCrossFade extends StatefulWidget
-class AnimatedCrossFade$Mate extends AnimatedCrossFade with WidgetMate<AnimatedCrossFade$Mate> {
+class AnimatedCrossFade$Mate extends AnimatedCrossFade with Mate<AnimatedCrossFade$Mate> {
   /// AnimatedCrossFade AnimatedCrossFade({Key? key, required Widget firstChild, required Widget secondChild, Curve firstCurve = Curves.linear, Curve secondCurve = Curves.linear, Curve sizeCurve = Curves.linear, AlignmentGeometry alignment = Alignment.topCenter, required CrossFadeState crossFadeState, required Duration duration, Duration? reverseDuration, Widget Function(Widget, Key, Widget, Key) layoutBuilder = defaultLayoutBuilder, bool excludeBottomFocus = true})
   AnimatedCrossFade$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

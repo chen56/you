@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class ScrollConfiguration extends InheritedWidget
-class ScrollConfiguration$Mate extends ScrollConfiguration with WidgetMate<ScrollConfiguration$Mate> {
+class ScrollConfiguration$Mate extends ScrollConfiguration with Mate<ScrollConfiguration$Mate> {
   /// ScrollConfiguration ScrollConfiguration({Key? key, required ScrollBehavior behavior, required Widget child})
   ScrollConfiguration$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -13,7 +13,7 @@ import 'package:flutter/src/animation/animation.dart';
 import 'package:flutter/src/widgets/dismissible.dart';
 
 /// class SnackBarAction extends StatefulWidget
-class SnackBarAction$Mate extends SnackBarAction with WidgetMate<SnackBarAction$Mate> {
+class SnackBarAction$Mate extends SnackBarAction with Mate<SnackBarAction$Mate> {
   /// SnackBarAction SnackBarAction({Key? key, Color? textColor, Color? disabledTextColor, required String label, required void Function() onPressed})
   SnackBarAction$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -56,7 +56,7 @@ class SnackBarAction$Mate extends SnackBarAction with WidgetMate<SnackBarAction$
 }
 
 /// class SnackBar extends StatefulWidget
-class SnackBar$Mate extends SnackBar with WidgetMate<SnackBar$Mate> {
+class SnackBar$Mate extends SnackBar with Mate<SnackBar$Mate> {
   /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, SnackBarBehavior? behavior, SnackBarAction? action, double? actionOverflowThreshold, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection dismissDirection = DismissDirection.down, Clip clipBehavior = Clip.hardEdge})
   SnackBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

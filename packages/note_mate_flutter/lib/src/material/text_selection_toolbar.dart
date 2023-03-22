@@ -9,7 +9,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class TextSelectionToolbar extends StatelessWidget
-class TextSelectionToolbar$Mate extends TextSelectionToolbar with WidgetMate<TextSelectionToolbar$Mate> {
+class TextSelectionToolbar$Mate extends TextSelectionToolbar with Mate<TextSelectionToolbar$Mate> {
   /// TextSelectionToolbar TextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder, required List<Widget> children})
   TextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

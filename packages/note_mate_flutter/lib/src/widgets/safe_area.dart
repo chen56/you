@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class SafeArea extends StatelessWidget
-class SafeArea$Mate extends SafeArea with WidgetMate<SafeArea$Mate> {
+class SafeArea$Mate extends SafeArea with Mate<SafeArea$Mate> {
   /// SafeArea SafeArea({Key? key, bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, bool maintainBottomViewPadding = false, required Widget child})
   SafeArea$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -69,7 +69,7 @@ class SafeArea$Mate extends SafeArea with WidgetMate<SafeArea$Mate> {
 }
 
 /// class SliverSafeArea extends StatelessWidget
-class SliverSafeArea$Mate extends SliverSafeArea with WidgetMate<SliverSafeArea$Mate> {
+class SliverSafeArea$Mate extends SliverSafeArea with Mate<SliverSafeArea$Mate> {
   /// SliverSafeArea SliverSafeArea({Key? key, bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, required Widget sliver})
   SliverSafeArea$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

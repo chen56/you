@@ -9,7 +9,7 @@ import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:note/mate.dart';
 
 /// class Focus extends StatefulWidget
-class Focus$Mate extends Focus with WidgetMate<Focus$Mate> {
+class Focus$Mate extends Focus with Mate<Focus$Mate> {
   /// Focus Focus({Key? key, required Widget child, FocusNode? focusNode, FocusNode? parentNode, bool autofocus = false, void Function(bool)? onFocusChange, KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent, KeyEventResult Function(FocusNode, RawKeyEvent)? onKey, bool? canRequestFocus, bool? skipTraversal, bool? descendantsAreFocusable, bool? descendantsAreTraversable, bool includeSemantics = true, String? debugLabel})
   Focus$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -106,7 +106,7 @@ class Focus$Mate extends Focus with WidgetMate<Focus$Mate> {
 }
 
 /// class FocusScope extends Focus
-class FocusScope$Mate extends FocusScope with WidgetMate<FocusScope$Mate> {
+class FocusScope$Mate extends FocusScope with Mate<FocusScope$Mate> {
   /// FocusScope FocusScope({Key? key, FocusScopeNode? node, FocusNode? parentNode, required Widget child, bool autofocus = false, void Function(bool)? onFocusChange, bool? canRequestFocus, bool? skipTraversal, KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent, KeyEventResult Function(FocusNode, RawKeyEvent)? onKey, String? debugLabel})
   FocusScope$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -185,7 +185,7 @@ class FocusScope$Mate extends FocusScope with WidgetMate<FocusScope$Mate> {
 }
 
 /// class ExcludeFocus extends StatelessWidget
-class ExcludeFocus$Mate extends ExcludeFocus with WidgetMate<ExcludeFocus$Mate> {
+class ExcludeFocus$Mate extends ExcludeFocus with Mate<ExcludeFocus$Mate> {
   /// ExcludeFocus ExcludeFocus({Key? key, bool excluding = true, required Widget child})
   ExcludeFocus$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -23,7 +23,7 @@ class MenuThemeData$Mate extends MenuThemeData with Mate<MenuThemeData$Mate> {
 }
 
 /// class MenuTheme extends InheritedTheme
-class MenuTheme$Mate extends MenuTheme with WidgetMate<MenuTheme$Mate> {
+class MenuTheme$Mate extends MenuTheme with Mate<MenuTheme$Mate> {
   /// MenuTheme MenuTheme({Key? key, required MenuThemeData data, required Widget child})
   MenuTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

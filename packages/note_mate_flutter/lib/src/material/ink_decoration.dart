@@ -17,7 +17,7 @@ import 'package:flutter/src/material/material.dart';
 import 'package:flutter/src/rendering/box.dart';
 
 /// class Ink extends StatefulWidget
-class Ink$Mate extends Ink with WidgetMate<Ink$Mate> {
+class Ink$Mate extends Ink with Mate<Ink$Mate> {
   /// Ink Ink({Key? key, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, double? width, double? height, Widget? child})
   Ink$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

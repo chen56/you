@@ -73,7 +73,7 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate<SwitchThemeData$Mat
 }
 
 /// class SwitchTheme extends InheritedWidget
-class SwitchTheme$Mate extends SwitchTheme with WidgetMate<SwitchTheme$Mate> {
+class SwitchTheme$Mate extends SwitchTheme with Mate<SwitchTheme$Mate> {
   /// SwitchTheme SwitchTheme({Key? key, required SwitchThemeData data, required Widget child})
   SwitchTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

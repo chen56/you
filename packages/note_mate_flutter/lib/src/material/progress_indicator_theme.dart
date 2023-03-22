@@ -51,7 +51,7 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
 }
 
 /// class ProgressIndicatorTheme extends InheritedTheme
-class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with WidgetMate<ProgressIndicatorTheme$Mate> {
+class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with Mate<ProgressIndicatorTheme$Mate> {
   /// ProgressIndicatorTheme ProgressIndicatorTheme({Key? key, required ProgressIndicatorThemeData data, required Widget child})
   ProgressIndicatorTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

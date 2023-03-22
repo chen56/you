@@ -8,7 +8,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class ImageFiltered extends SingleChildRenderObjectWidget
-class ImageFiltered$Mate extends ImageFiltered with WidgetMate<ImageFiltered$Mate> {
+class ImageFiltered$Mate extends ImageFiltered with Mate<ImageFiltered$Mate> {
   /// ImageFiltered ImageFiltered({Key? key, required ImageFilter imageFilter, Widget? child, bool enabled = true})
   ImageFiltered$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

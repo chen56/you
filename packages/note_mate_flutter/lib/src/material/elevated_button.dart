@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class ElevatedButton extends ButtonStyleButton
-class ElevatedButton$Mate extends ElevatedButton with WidgetMate<ElevatedButton$Mate> {
+class ElevatedButton$Mate extends ElevatedButton with Mate<ElevatedButton$Mate> {
   /// ElevatedButton ElevatedButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget? child})
   ElevatedButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

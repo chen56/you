@@ -7,7 +7,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class DraggableScrollableSheet extends StatefulWidget
-class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with WidgetMate<DraggableScrollableSheet$Mate> {
+class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate<DraggableScrollableSheet$Mate> {
   /// DraggableScrollableSheet DraggableScrollableSheet({Key? key, double initialChildSize = 0.5, double minChildSize = 0.25, double maxChildSize = 1.0, bool expand = true, bool snap = false, List<double>? snapSizes, Duration? snapAnimationDuration, DraggableScrollableController? controller, required Widget Function(BuildContext, ScrollController) builder})
   DraggableScrollableSheet$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -124,8 +124,7 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
 }
 
 /// class DraggableScrollableActuator extends StatelessWidget
-class DraggableScrollableActuator$Mate extends DraggableScrollableActuator
-    with WidgetMate<DraggableScrollableActuator$Mate> {
+class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with Mate<DraggableScrollableActuator$Mate> {
   /// DraggableScrollableActuator DraggableScrollableActuator({Key? key, required Widget child})
   DraggableScrollableActuator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

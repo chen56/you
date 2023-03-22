@@ -10,7 +10,7 @@ import 'package:flutter/src/widgets/context_menu_button_item.dart';
 
 /// class CupertinoTextSelectionToolbarButton extends StatelessWidget
 class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToolbarButton
-    with WidgetMate<CupertinoTextSelectionToolbarButton$Mate> {
+    with Mate<CupertinoTextSelectionToolbarButton$Mate> {
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton({Key? key, void Function()? onPressed, required Widget child})
   CupertinoTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

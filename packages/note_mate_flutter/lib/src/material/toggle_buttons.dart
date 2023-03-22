@@ -15,7 +15,7 @@ import 'package:flutter/src/painting/basic_types.dart';
 import 'package:note/mate.dart';
 
 /// class ToggleButtons extends StatelessWidget
-class ToggleButtons$Mate extends ToggleButtons with WidgetMate<ToggleButtons$Mate> {
+class ToggleButtons$Mate extends ToggleButtons with Mate<ToggleButtons$Mate> {
   /// ToggleButtons ToggleButtons({Key? key, required List<Widget> children, required List<bool> isSelected, void Function(int)? onPressed, MouseCursor? mouseCursor, MaterialTapTargetSize? tapTargetSize, TextStyle? textStyle, BoxConstraints? constraints, Color? color, Color? selectedColor, Color? disabledColor, Color? fillColor, Color? focusColor, Color? highlightColor, Color? hoverColor, Color? splashColor, List<FocusNode>? focusNodes, bool renderBorder = true, Color? borderColor, Color? selectedBorderColor, Color? disabledBorderColor, BorderRadius? borderRadius, double? borderWidth, Axis direction = Axis.horizontal, VerticalDirection verticalDirection = VerticalDirection.down})
   ToggleButtons$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

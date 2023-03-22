@@ -8,8 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class DesktopTextSelectionToolbar extends StatelessWidget
-class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar
-    with WidgetMate<DesktopTextSelectionToolbar$Mate> {
+class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar with Mate<DesktopTextSelectionToolbar$Mate> {
   /// DesktopTextSelectionToolbar DesktopTextSelectionToolbar({Key? key, required Offset anchor, required List<Widget> children})
   DesktopTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

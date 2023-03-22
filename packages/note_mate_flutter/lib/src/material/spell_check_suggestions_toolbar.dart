@@ -9,7 +9,7 @@ import 'package:note/mate.dart';
 
 /// class SpellCheckSuggestionsToolbar extends StatelessWidget
 class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar
-    with WidgetMate<SpellCheckSuggestionsToolbar$Mate> {
+    with Mate<SpellCheckSuggestionsToolbar$Mate> {
   /// SpellCheckSuggestionsToolbar SpellCheckSuggestionsToolbar({Key? key, required Offset anchor, required List<ContextMenuButtonItem> buttonItems})
   SpellCheckSuggestionsToolbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -42,7 +42,7 @@ class TableRow$Mate extends TableRow with Mate<TableRow$Mate> {
 }
 
 /// class Table extends RenderObjectWidget
-class Table$Mate extends Table with WidgetMate<Table$Mate> {
+class Table$Mate extends Table with Mate<Table$Mate> {
   /// Table Table({Key? key, List<TableRow> children = const <TableRow>[], Map<int, TableColumnWidth>? columnWidths, TableColumnWidth defaultColumnWidth = const FlexColumnWidth(), TextDirection? textDirection, TableBorder? border, TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top, TextBaseline? textBaseline})
   Table$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -103,7 +103,7 @@ class Table$Mate extends Table with WidgetMate<Table$Mate> {
 }
 
 /// class TableCell extends ParentDataWidget<TableCellParentData>
-class TableCell$Mate extends TableCell with WidgetMate<TableCell$Mate> {
+class TableCell$Mate extends TableCell with Mate<TableCell$Mate> {
   /// TableCell TableCell({Key? key, TableCellVerticalAlignment? verticalAlignment, required Widget child})
   TableCell$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

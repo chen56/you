@@ -16,7 +16,7 @@ import 'package:flutter/src/material/input_decorator.dart';
 import 'package:flutter/src/widgets/form.dart';
 
 /// class DropdownMenuItem<T> extends _DropdownMenuItemContainer
-class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with WidgetMate<DropdownMenuItem$Mate> {
+class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate<DropdownMenuItem$Mate> {
   /// DropdownMenuItem<T> DropdownMenuItem({Key? key, void Function()? onTap, T? value, bool enabled = true, AlignmentGeometry alignment = AlignmentDirectional.centerStart, required Widget child})
   DropdownMenuItem$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -65,8 +65,7 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with WidgetMate<Dropd
 }
 
 /// class DropdownButtonHideUnderline extends InheritedWidget
-class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
-    with WidgetMate<DropdownButtonHideUnderline$Mate> {
+class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with Mate<DropdownButtonHideUnderline$Mate> {
   /// DropdownButtonHideUnderline DropdownButtonHideUnderline({Key? key, required Widget child})
   DropdownButtonHideUnderline$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -91,7 +90,7 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
 }
 
 /// class DropdownButton<T> extends StatefulWidget
-class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownButton$Mate> {
+class DropdownButton$Mate<T> extends DropdownButton<T> with Mate<DropdownButton$Mate> {
   /// DropdownButton<T> DropdownButton({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? underline, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = false, bool isExpanded = false, double? itemHeight = kMinInteractiveDimension, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -266,7 +265,7 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with WidgetMate<DropdownB
 }
 
 /// class DropdownButtonFormField<T> extends FormField<T>
-class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with WidgetMate<DropdownButtonFormField$Mate> {
+class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Mate<DropdownButtonFormField$Mate> {
   /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButtonFormField$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

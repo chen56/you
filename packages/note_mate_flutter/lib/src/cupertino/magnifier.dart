@@ -14,7 +14,7 @@ import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/animation/animation.dart';
 
 /// class CupertinoTextMagnifier extends StatefulWidget
-class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with WidgetMate<CupertinoTextMagnifier$Mate> {
+class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate<CupertinoTextMagnifier$Mate> {
   /// CupertinoTextMagnifier CupertinoTextMagnifier({Key? key, Curve animationCurve = Curves.easeOut, required MagnifierController controller, double dragResistance = 10.0, double hideBelowThreshold = 48.0, double horizontalScreenEdgePadding = 10.0, required ValueNotifier<MagnifierInfo> magnifierInfo})
   CupertinoTextMagnifier$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -69,7 +69,7 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with WidgetMate
 }
 
 /// class CupertinoMagnifier extends StatelessWidget
-class CupertinoMagnifier$Mate extends CupertinoMagnifier with WidgetMate<CupertinoMagnifier$Mate> {
+class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate<CupertinoMagnifier$Mate> {
   /// CupertinoMagnifier CupertinoMagnifier({Key? key, Size size = kDefaultSize, BorderRadius borderRadius = const BorderRadius.all(Radius.elliptical(60, 50)), Offset additionalFocalPointOffset = Offset.zero, List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)], BorderSide borderSide = const BorderSide(color: Color.fromARGB(255, 232, 232, 232)), Animation<double>? inOutAnimation})
   CupertinoMagnifier$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

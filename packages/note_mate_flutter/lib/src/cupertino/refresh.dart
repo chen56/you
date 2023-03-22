@@ -7,7 +7,7 @@ import 'package:note/mate.dart';
 
 /// class CupertinoSliverRefreshControl extends StatefulWidget
 class CupertinoSliverRefreshControl$Mate extends CupertinoSliverRefreshControl
-    with WidgetMate<CupertinoSliverRefreshControl$Mate> {
+    with Mate<CupertinoSliverRefreshControl$Mate> {
   /// CupertinoSliverRefreshControl CupertinoSliverRefreshControl({Key? key, double refreshTriggerPullDistance = _defaultRefreshTriggerPullDistance, double refreshIndicatorExtent = _defaultRefreshIndicatorExtent, Widget Function(BuildContext, RefreshIndicatorMode, double, double, double)? builder = buildRefreshIndicator, Future<void> Function()? onRefresh})
   CupertinoSliverRefreshControl$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

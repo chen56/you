@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class SelectionArea extends StatefulWidget
-class SelectionArea$Mate extends SelectionArea with WidgetMate<SelectionArea$Mate> {
+class SelectionArea$Mate extends SelectionArea with Mate<SelectionArea$Mate> {
   /// SelectionArea SelectionArea({Key? key, FocusNode? focusNode, TextSelectionControls? selectionControls, Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration, void Function(SelectedContent?)? onSelectionChanged, required Widget child})
   SelectionArea$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

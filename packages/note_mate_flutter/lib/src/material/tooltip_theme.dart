@@ -102,7 +102,7 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate<TooltipThemeData$
 }
 
 /// class TooltipTheme extends InheritedTheme
-class TooltipTheme$Mate extends TooltipTheme with WidgetMate<TooltipTheme$Mate> {
+class TooltipTheme$Mate extends TooltipTheme with Mate<TooltipTheme$Mate> {
   /// TooltipTheme TooltipTheme({Key? key, required TooltipThemeData data, required Widget child})
   TooltipTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -6,7 +6,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class SliverPersistentHeader extends StatelessWidget
-class SliverPersistentHeader$Mate extends SliverPersistentHeader with WidgetMate<SliverPersistentHeader$Mate> {
+class SliverPersistentHeader$Mate extends SliverPersistentHeader with Mate<SliverPersistentHeader$Mate> {
   /// SliverPersistentHeader SliverPersistentHeader({Key? key, required SliverPersistentHeaderDelegate delegate, bool pinned = false, bool floating = false})
   SliverPersistentHeader$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

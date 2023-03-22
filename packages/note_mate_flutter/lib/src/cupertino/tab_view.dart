@@ -8,7 +8,7 @@ import 'dart:core';
 import 'package:note/mate.dart';
 
 /// class CupertinoTabView extends StatefulWidget
-class CupertinoTabView$Mate extends CupertinoTabView with WidgetMate<CupertinoTabView$Mate> {
+class CupertinoTabView$Mate extends CupertinoTabView with Mate<CupertinoTabView$Mate> {
   /// CupertinoTabView CupertinoTabView({Key? key, Widget Function(BuildContext)? builder, GlobalKey<NavigatorState>? navigatorKey, String? defaultTitle, Map<String, Widget Function(BuildContext)>? routes, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], String? restorationScopeId})
   CupertinoTabView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

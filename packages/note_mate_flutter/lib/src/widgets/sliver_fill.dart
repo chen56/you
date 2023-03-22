@@ -8,7 +8,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class SliverFillViewport extends StatelessWidget
-class SliverFillViewport$Mate extends SliverFillViewport with WidgetMate<SliverFillViewport$Mate> {
+class SliverFillViewport$Mate extends SliverFillViewport with Mate<SliverFillViewport$Mate> {
   /// SliverFillViewport SliverFillViewport({Key? key, required SliverChildDelegate delegate, double viewportFraction = 1.0, bool padEnds = true})
   SliverFillViewport$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -45,7 +45,7 @@ class SliverFillViewport$Mate extends SliverFillViewport with WidgetMate<SliverF
 }
 
 /// class SliverFillRemaining extends StatelessWidget
-class SliverFillRemaining$Mate extends SliverFillRemaining with WidgetMate<SliverFillRemaining$Mate> {
+class SliverFillRemaining$Mate extends SliverFillRemaining with Mate<SliverFillRemaining$Mate> {
   /// SliverFillRemaining SliverFillRemaining({Key? key, Widget? child, bool hasScrollBody = true, bool fillOverscroll = false})
   SliverFillRemaining$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

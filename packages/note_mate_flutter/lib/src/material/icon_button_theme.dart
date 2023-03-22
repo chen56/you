@@ -23,7 +23,7 @@ class IconButtonThemeData$Mate extends IconButtonThemeData with Mate<IconButtonT
 }
 
 /// class IconButtonTheme extends InheritedTheme
-class IconButtonTheme$Mate extends IconButtonTheme with WidgetMate<IconButtonTheme$Mate> {
+class IconButtonTheme$Mate extends IconButtonTheme with Mate<IconButtonTheme$Mate> {
   /// IconButtonTheme IconButtonTheme({Key? key, required IconButtonThemeData data, required Widget child})
   IconButtonTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

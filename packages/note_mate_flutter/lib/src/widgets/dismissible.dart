@@ -10,7 +10,7 @@ import 'package:flutter/src/rendering/proxy_box.dart';
 import 'package:note/mate.dart';
 
 /// class Dismissible extends StatefulWidget
-class Dismissible$Mate extends Dismissible with WidgetMate<Dismissible$Mate> {
+class Dismissible$Mate extends Dismissible with Mate<Dismissible$Mate> {
   /// Dismissible Dismissible({required Key key, required Widget child, Widget? background, Widget? secondaryBackground, Future<bool?> Function(DismissDirection)? confirmDismiss, void Function()? onResize, void Function(DismissUpdateDetails)? onUpdate, void Function(DismissDirection)? onDismissed, DismissDirection direction = DismissDirection.horizontal, Duration? resizeDuration = const Duration(milliseconds: 300), Map<DismissDirection, double> dismissThresholds = const <DismissDirection, double>{}, Duration movementDuration = const Duration(milliseconds: 200), double crossAxisEndOffset = 0.0, DragStartBehavior dragStartBehavior = DragStartBehavior.start, HitTestBehavior behavior = HitTestBehavior.opaque})
   Dismissible$Mate({
     /// optionalParameters: {required Key key} , hasDefaultValue:false, defaultValueCode:null

@@ -86,7 +86,7 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate<Navig
 }
 
 /// class NavigationBarTheme extends InheritedTheme
-class NavigationBarTheme$Mate extends NavigationBarTheme with WidgetMate<NavigationBarTheme$Mate> {
+class NavigationBarTheme$Mate extends NavigationBarTheme with Mate<NavigationBarTheme$Mate> {
   /// NavigationBarTheme NavigationBarTheme({Key? key, required NavigationBarThemeData data, required Widget child})
   NavigationBarTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

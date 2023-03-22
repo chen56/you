@@ -10,7 +10,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class UserAccountsDrawerHeader extends StatefulWidget
-class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with WidgetMate<UserAccountsDrawerHeader$Mate> {
+class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate<UserAccountsDrawerHeader$Mate> {
   /// UserAccountsDrawerHeader UserAccountsDrawerHeader({Key? key, Decoration? decoration, EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0), Widget? currentAccountPicture, List<Widget>? otherAccountsPictures, Size currentAccountPictureSize = const Size.square(72.0), Size otherAccountsPicturesSize = const Size.square(40.0), required Widget? accountName, required Widget? accountEmail, void Function()? onDetailsPressed, Color arrowColor = Colors.white})
   UserAccountsDrawerHeader$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

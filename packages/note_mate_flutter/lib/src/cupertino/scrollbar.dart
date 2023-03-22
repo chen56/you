@@ -11,7 +11,7 @@ import 'package:flutter/src/widgets/scrollbar.dart';
 import 'package:note/mate.dart';
 
 /// class CupertinoScrollbar extends RawScrollbar
-class CupertinoScrollbar$Mate extends CupertinoScrollbar with WidgetMate<CupertinoScrollbar$Mate> {
+class CupertinoScrollbar$Mate extends CupertinoScrollbar with Mate<CupertinoScrollbar$Mate> {
   /// CupertinoScrollbar CupertinoScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, double thickness = defaultThickness, double thicknessWhileDragging = defaultThicknessWhileDragging, Radius radius = defaultRadius, Radius radiusWhileDragging = defaultRadiusWhileDragging, bool Function(ScrollNotification)? notificationPredicate, ScrollbarOrientation? scrollbarOrientation, bool? isAlwaysShown})
   CupertinoScrollbar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

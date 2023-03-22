@@ -8,7 +8,7 @@ import 'dart:ui';
 import 'package:note/mate.dart';
 
 /// class ImageIcon extends StatelessWidget
-class ImageIcon$Mate extends ImageIcon with WidgetMate<ImageIcon$Mate> {
+class ImageIcon$Mate extends ImageIcon with Mate<ImageIcon$Mate> {
   /// ImageIcon ImageIcon(ImageProvider<Object>? image, {Key? key, double? size, Color? color, String? semanticLabel})
   ImageIcon$Mate(
     /// requiredParameters: ImageProvider<Object>? image

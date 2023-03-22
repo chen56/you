@@ -25,7 +25,7 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate<Cuper
 }
 
 /// class CupertinoTabScaffold extends StatefulWidget
-class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with WidgetMate<CupertinoTabScaffold$Mate> {
+class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with Mate<CupertinoTabScaffold$Mate> {
   /// CupertinoTabScaffold CupertinoTabScaffold({Key? key, required CupertinoTabBar tabBar, required Widget Function(BuildContext, int) tabBuilder, CupertinoTabController? controller, Color? backgroundColor, bool resizeToAvoidBottomInset = true, String? restorationId})
   CupertinoTabScaffold$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

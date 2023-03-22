@@ -15,7 +15,7 @@ import 'package:flutter/src/services/asset_bundle.dart';
 import 'dart:typed_data';
 
 /// class Image extends StatefulWidget
-class Image$Mate extends Image with WidgetMate<Image$Mate> {
+class Image$Mate extends Image with Mate<Image$Mate> {
   /// Image Image({Key? key, required ImageProvider<Object> image, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low})
   Image$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

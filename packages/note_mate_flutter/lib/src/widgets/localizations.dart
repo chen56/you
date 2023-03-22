@@ -8,7 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class Localizations extends StatefulWidget
-class Localizations$Mate extends Localizations with WidgetMate<Localizations$Mate> {
+class Localizations$Mate extends Localizations with Mate<Localizations$Mate> {
   /// Localizations Localizations({Key? key, required Locale locale, required List<LocalizationsDelegate<dynamic>> delegates, Widget? child})
   Localizations$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

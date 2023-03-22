@@ -7,7 +7,7 @@ import 'package:flutter/src/rendering/sliver.dart';
 import 'package:note/mate.dart';
 
 /// class SliverLayoutBuilder extends ConstrainedLayoutBuilder<SliverConstraints>
-class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with WidgetMate<SliverLayoutBuilder$Mate> {
+class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with Mate<SliverLayoutBuilder$Mate> {
   /// SliverLayoutBuilder SliverLayoutBuilder({Key? key, required Widget Function(BuildContext, SliverConstraints) builder})
   SliverLayoutBuilder$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -17,8 +17,7 @@ class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with WidgetMate<Slive
     required Widget Function(
       BuildContext,
       SliverConstraints,
-    )
-        builder,
+    ) builder,
   }) : super(
           key: key,
           builder: builder,

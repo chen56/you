@@ -6,8 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class DefaultTextEditingShortcuts extends StatelessWidget
-class DefaultTextEditingShortcuts$Mate extends DefaultTextEditingShortcuts
-    with WidgetMate<DefaultTextEditingShortcuts$Mate> {
+class DefaultTextEditingShortcuts$Mate extends DefaultTextEditingShortcuts with Mate<DefaultTextEditingShortcuts$Mate> {
   /// DefaultTextEditingShortcuts DefaultTextEditingShortcuts({Key? key, required Widget child})
   DefaultTextEditingShortcuts$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

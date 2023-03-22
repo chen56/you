@@ -20,7 +20,7 @@ import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/borders.dart';
 
 /// class Tab extends StatelessWidget implements PreferredSizeWidget
-class Tab$Mate extends Tab with WidgetMate<Tab$Mate> {
+class Tab$Mate extends Tab with Mate<Tab$Mate> {
   /// Tab Tab({Key? key, String? text, Widget? icon, EdgeInsetsGeometry iconMargin = const EdgeInsets.only(bottom: 10.0), double? height, Widget? child})
   Tab$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -69,7 +69,7 @@ class Tab$Mate extends Tab with WidgetMate<Tab$Mate> {
 }
 
 /// class TabBar extends StatefulWidget implements PreferredSizeWidget
-class TabBar$Mate extends TabBar with WidgetMate<TabBar$Mate> {
+class TabBar$Mate extends TabBar with Mate<TabBar$Mate> {
   /// TabBar TabBar({Key? key, required List<Widget> tabs, TabController? controller, bool isScrollable = false, EdgeInsetsGeometry? padding, Color? indicatorColor, bool automaticIndicatorColorAdjustment = true, double indicatorWeight = 2.0, EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero, Decoration? indicator, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, bool? enableFeedback, void Function(int)? onTap, ScrollPhysics? physics, InteractiveInkFeatureFactory? splashFactory, BorderRadius? splashBorderRadius})
   TabBar$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -232,7 +232,7 @@ class TabBar$Mate extends TabBar with WidgetMate<TabBar$Mate> {
 }
 
 /// class TabBarView extends StatefulWidget
-class TabBarView$Mate extends TabBarView with WidgetMate<TabBarView$Mate> {
+class TabBarView$Mate extends TabBarView with Mate<TabBarView$Mate> {
   /// TabBarView TabBarView({Key? key, required List<Widget> children, TabController? controller, ScrollPhysics? physics, DragStartBehavior dragStartBehavior = DragStartBehavior.start, double viewportFraction = 1.0, Clip clipBehavior = Clip.hardEdge})
   TabBarView$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -287,7 +287,7 @@ class TabBarView$Mate extends TabBarView with WidgetMate<TabBarView$Mate> {
 }
 
 /// class TabPageSelectorIndicator extends StatelessWidget
-class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with WidgetMate<TabPageSelectorIndicator$Mate> {
+class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate<TabPageSelectorIndicator$Mate> {
   /// TabPageSelectorIndicator TabPageSelectorIndicator({Key? key, required Color backgroundColor, required Color borderColor, required double size, BorderStyle borderStyle = BorderStyle.solid})
   TabPageSelectorIndicator$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -330,7 +330,7 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Widget
 }
 
 /// class TabPageSelector extends StatelessWidget
-class TabPageSelector$Mate extends TabPageSelector with WidgetMate<TabPageSelector$Mate> {
+class TabPageSelector$Mate extends TabPageSelector with Mate<TabPageSelector$Mate> {
   /// TabPageSelector TabPageSelector({Key? key, TabController? controller, double indicatorSize = 12.0, Color? color, Color? selectedColor, BorderStyle? borderStyle})
   TabPageSelector$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

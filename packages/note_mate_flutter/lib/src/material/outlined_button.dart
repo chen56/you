@@ -12,7 +12,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class OutlinedButton extends ButtonStyleButton
-class OutlinedButton$Mate extends OutlinedButton with WidgetMate<OutlinedButton$Mate> {
+class OutlinedButton$Mate extends OutlinedButton with Mate<OutlinedButton$Mate> {
   /// OutlinedButton OutlinedButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget? child})
   OutlinedButton$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

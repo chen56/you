@@ -6,7 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:note/mate.dart';
 
 /// class SharedAppData extends StatefulWidget
-class SharedAppData$Mate extends SharedAppData with WidgetMate<SharedAppData$Mate> {
+class SharedAppData$Mate extends SharedAppData with Mate<SharedAppData$Mate> {
   /// SharedAppData SharedAppData({Key? key, required Widget child})
   SharedAppData$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

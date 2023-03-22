@@ -12,7 +12,7 @@ import 'package:flutter/src/animation/animation.dart';
 import 'package:note/mate.dart';
 
 /// class MaterialBanner extends StatefulWidget
-class MaterialBanner$Mate extends MaterialBanner with WidgetMate<MaterialBanner$Mate> {
+class MaterialBanner$Mate extends MaterialBanner with Mate<MaterialBanner$Mate> {
   /// MaterialBanner MaterialBanner({Key? key, required Widget content, TextStyle? contentTextStyle, required List<Widget> actions, double? elevation, Widget? leading, Color? backgroundColor, Color? surfaceTintColor, Color? shadowColor, Color? dividerColor, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? leadingPadding, bool forceActionsBelow = false, OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end, Animation<double>? animation, void Function()? onVisible})
   MaterialBanner$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

@@ -161,7 +161,7 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate<Sli
 }
 
 /// class SliverList extends SliverMultiBoxAdaptorWidget
-class SliverList$Mate extends SliverList with WidgetMate<SliverList$Mate> {
+class SliverList$Mate extends SliverList with Mate<SliverList$Mate> {
   /// SliverList SliverList({Key? key, required SliverChildDelegate delegate})
   SliverList$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -336,7 +336,7 @@ class SliverList$Mate extends SliverList with WidgetMate<SliverList$Mate> {
 }
 
 /// class SliverFixedExtentList extends SliverMultiBoxAdaptorWidget
-class SliverFixedExtentList$Mate extends SliverFixedExtentList with WidgetMate<SliverFixedExtentList$Mate> {
+class SliverFixedExtentList$Mate extends SliverFixedExtentList with Mate<SliverFixedExtentList$Mate> {
   /// SliverFixedExtentList SliverFixedExtentList({Key? key, required SliverChildDelegate delegate, required double itemExtent})
   SliverFixedExtentList$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -471,7 +471,7 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with WidgetMate<S
 }
 
 /// class SliverGrid extends SliverMultiBoxAdaptorWidget
-class SliverGrid$Mate extends SliverGrid with WidgetMate<SliverGrid$Mate> {
+class SliverGrid$Mate extends SliverGrid with Mate<SliverGrid$Mate> {
   /// SliverGrid SliverGrid({Key? key, required SliverChildDelegate delegate, required SliverGridDelegate gridDelegate})
   SliverGrid$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -677,7 +677,7 @@ class SliverMultiBoxAdaptorElement$Mate extends SliverMultiBoxAdaptorElement
 }
 
 /// class SliverOpacity extends SingleChildRenderObjectWidget
-class SliverOpacity$Mate extends SliverOpacity with WidgetMate<SliverOpacity$Mate> {
+class SliverOpacity$Mate extends SliverOpacity with Mate<SliverOpacity$Mate> {
   /// SliverOpacity SliverOpacity({Key? key, required double opacity, bool alwaysIncludeSemantics = false, Widget? sliver})
   SliverOpacity$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -714,7 +714,7 @@ class SliverOpacity$Mate extends SliverOpacity with WidgetMate<SliverOpacity$Mat
 }
 
 /// class SliverIgnorePointer extends SingleChildRenderObjectWidget
-class SliverIgnorePointer$Mate extends SliverIgnorePointer with WidgetMate<SliverIgnorePointer$Mate> {
+class SliverIgnorePointer$Mate extends SliverIgnorePointer with Mate<SliverIgnorePointer$Mate> {
   /// SliverIgnorePointer SliverIgnorePointer({Key? key, bool ignoring = true, bool? ignoringSemantics, Widget? sliver})
   SliverIgnorePointer$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -751,7 +751,7 @@ class SliverIgnorePointer$Mate extends SliverIgnorePointer with WidgetMate<Slive
 }
 
 /// class SliverOffstage extends SingleChildRenderObjectWidget
-class SliverOffstage$Mate extends SliverOffstage with WidgetMate<SliverOffstage$Mate> {
+class SliverOffstage$Mate extends SliverOffstage with Mate<SliverOffstage$Mate> {
   /// SliverOffstage SliverOffstage({Key? key, bool offstage = true, Widget? sliver})
   SliverOffstage$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
@@ -782,7 +782,7 @@ class SliverOffstage$Mate extends SliverOffstage with WidgetMate<SliverOffstage$
 }
 
 /// class KeepAlive extends ParentDataWidget<KeepAliveParentDataMixin>
-class KeepAlive$Mate extends KeepAlive with WidgetMate<KeepAlive$Mate> {
+class KeepAlive$Mate extends KeepAlive with Mate<KeepAlive$Mate> {
   /// KeepAlive KeepAlive({Key? key, required bool keepAlive, required Widget child})
   KeepAlive$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null

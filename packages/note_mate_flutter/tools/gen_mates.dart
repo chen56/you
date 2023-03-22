@@ -375,10 +375,11 @@ void _genLibMate({
         ..abstract = clazz.isAbstract
         ..extend = typeRefers.typeRef(clazz.thisType, inClass: clazz)
         ..mixins.add(TypeReference((b) => b
-          ..symbol = clazz.isSubClassOf(
-                  className: "Widget", package: "package:flutter/src/widgets/framework.dart")
-              ? "WidgetMate"
-              : "Mate"
+          // ..symbol = clazz.isSubClassOf(
+          //     className: "Widget", package: "package:flutter/src/widgets/framework.dart")
+          //     ? "WidgetMate"
+          //     : "Mate"
+          ..symbol = "Mate"
           ..types.add(refer(mateClassName))))
         ..types.addAll(clazz.typeParameters
             .map((typeParam) => typeRefers.elementRef(typeParam, inClass: clazz)))

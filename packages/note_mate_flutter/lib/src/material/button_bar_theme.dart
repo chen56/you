@@ -78,7 +78,7 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate<ButtonBarThem
 }
 
 /// class ButtonBarTheme extends InheritedWidget
-class ButtonBarTheme$Mate extends ButtonBarTheme with WidgetMate<ButtonBarTheme$Mate> {
+class ButtonBarTheme$Mate extends ButtonBarTheme with Mate<ButtonBarTheme$Mate> {
   /// ButtonBarTheme ButtonBarTheme({Key? key, required ButtonBarThemeData data, required Widget child})
   ButtonBarTheme$Mate({
     /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
