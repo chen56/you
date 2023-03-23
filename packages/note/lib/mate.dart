@@ -24,9 +24,9 @@ abstract class Param<T> extends ChangeNotifier {
   T build();
 
   Param({
-    required this.name,
+    this.name = "",
     required this.init,
-    required this.nullable,
+    this.nullable = false,
   }) : _value = init;
 
   bool get isNullable => nullable;
@@ -93,48 +93,36 @@ Param<T> _convertToParam<T>({
   required T init,
   required bool nullable,
 }) {
-  // init.mateParams as ObjectParam<C> 转型的含义：
-  // 某Mate比如Center$Mate中定义的是非空范型参数：ObjectParam<Center$Mate> mateParam
-  // 而[convertToParam]返回值Param<C>的范型参数可能是可空的，比如ObjectParam<Center?>
-  // 为什么会有这种差别，是因为定义 Center$Mate的时候，并不知道其[ObjectParam.value]是否能非空，
-  // 直到在另一个构造器中使用时才知道。
-  // ignore: unnecessary_cast
+  if (init is Param<T>) return init;
+
   if (init is Mate) {
-    // var result2 = ObjectParam(
-    //     init: init,
-    //     // builder: (mate) => init.mateParams.builder(mate),
-    //     paramMap: init.mateParams.map((key, value) => MapEntry(key, convertToParam(value))),
-    //     nullable: false);
-    // return result2;
+    return ObjectParam<T>(
+        name: name,
+        init: init,
+        paramMap: init._mateParams,
+        nullable: false,
+        builder: init.mateBuilder);
   }
 
   if (init is List) {
-    // return ListParam(
-    //     init: init,
-    //     // nullable: nullable,
-    //     params: init == null
-    //         ? []
-    //         : (init as List).map((e) => convertToParam(e)).toList(growable: true));
+    List<Param> params = [];
+    if (!nullable) {
+      for (int i = 0; i < init.length; i++) {
+        params.add(_convertToParam(name: "[$i]", init: init[i], nullable: false));
+      }
+    }
+    return ListParam(name: name, init: init, nullable: nullable, params: params);
   }
-  if (init is Param<T>) return init;
 
   return ValueParam(name: name, init: init, nullable: false);
-
-  // flutter build error - Flutter 3.9.0-1.0.pre.2 • channel beta
-  // Target dart2js failed: Exception: Warning: The 'dart2js' entrypoint script is deprecated, please use 'dart compile js' instead.
-  // ../note/lib/mate_old.dart:39:10:
-  // Error: Expected an identifier, but got 'switch'.
-  // return switch (init) {
-  //   /// Mate 不直接 return [Mate.mateParams] 而复制一份ObjectParam的原因是 C可能是可空类型，而Mate.mateParams不是
-  //   List() => throw Exception("List type please use putList()"),
-  //   Mate<C>() => ObjectParam.copy(init.mateParams),
-  //   Param() => init as Param<C>,
-  //   _ => Param.newValue(init: init),
-  // };
 }
 
 class ValueParam<T> extends Param<T> {
-  ValueParam({required super.name, required super.init, required super.nullable});
+  ValueParam({
+    super.name,
+    required super.init,
+    super.nullable,
+  });
 
   @override
   T build() => _value;
@@ -147,11 +135,15 @@ class ListParam<T> extends Param<T> {
   late List<Param> params;
 
   ListParam({
-    required super.name,
+    super.name,
     required super.init,
     required this.params,
-    required super.nullable,
-  });
+    super.nullable,
+  }) {
+    for (var e in params) {
+      e.parent = this;
+    }
+  }
 
   @override
   T build() => params.map((e) => e.build()).toList() as T;
@@ -165,30 +157,41 @@ class ObjectParam<T> extends Param<T> {
   late final Object Function(ObjectParam param) builder;
 
   ObjectParam({
-    required super.name,
+    super.name,
     required super.init,
     required this.builder,
     Map<String, Param>? paramMap,
-    required super.nullable,
-  }) : _paramMap = paramMap ?? {};
-
-  ObjectParam.copy(ObjectParam other)
-      : _paramMap = {},
-        super(
-          name: other.name,
-          init: other.init,
-          nullable: other.nullable,
-        ) {
-    // builder = (mate) => other.builder(mate);
-    _paramMap.addAll(other._paramMap);
+    super.nullable,
+  }) : _paramMap = paramMap == null ? {} : paramMap {
+    _paramMap.forEach((key, value) {
+      value.parent = this;
+    });
   }
+
+  // ObjectParam.copy(ObjectParam other)
+  //     : this(
+  //         name: other.name,
+  //         init: other.init,
+  //         nullable: other.nullable,
+  //         paramMap: other._paramMap.map(
+  //           (key, value) => MapEntry(
+  //             key,
+  //             _convertToParam(
+  //               name: key,
+  //               init: value.init,
+  //               nullable: value.nullable,
+  //             ),
+  //           ),
+  //         ),
+  //         builder: other.builder,
+  //       );
 
   ObjectParam.rootFrom(Mate mate)
       : this(
           name: "root",
           //根对象无name
           init: mate,
-          builder: (objectBuilder) => mate.mateBuilder(objectBuilder),
+          builder: mate.mateBuilder,
           paramMap: mate._mateParams,
           nullable: false, //根对象
         );

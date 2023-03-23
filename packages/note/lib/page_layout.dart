@@ -285,58 +285,75 @@ class _MateSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var listenableBuilder = ListenableBuilder(
-      listenable: objectBuilder,
-      builder: (context, child) {
-        var dataTable = DataTable(
-          dataRowMaxHeight: 25,
-          dataRowMinHeight: 25,
-          headingRowHeight: 0,
-          columns: const [
-            DataColumn(label: Text("")),
-            DataColumn(label: Text("")),
-          ],
-          rows: [
-            ...objectBuilder
-                // .toList(test: (node) => true)
-                .flat(test: (param) => param.init != null)
-                .map(
-                  (e) => DataRow(
-                    cells: [
-                      DataCell(e.mainWidget(context)),
-                      DataCell(Row(
-                        children: [Expanded(child: e.extWidget(context))],
-                      )),
-                    ],
-                  ),
-                )
-                .toList()
-          ],
-        );
-        return Column(
-          children: [
-            objectBuilder.build() as Widget,
-            ExpansionTile(
-              initiallyExpanded: true,
-              expandedAlignment: Alignment.topLeft,
-              expandedCrossAxisAlignment: CrossAxisAlignment.start,
-              title: const Row(
-                children: [
-                  Text("参数设置&代码"),
-                ],
-              ),
-              children: [
-                dataTable,
-              ],
-            ),
-          ],
-        );
-      },
-    );
-
     return Card(
       elevation: 2,
-      child: listenableBuilder,
+      child: Column(
+        children: [
+          _ParamView(objectBuilder: objectBuilder),
+          _MateView(objectBuilder: objectBuilder),
+        ],
+      ),
+    );
+  }
+}
+
+class _ParamView extends StatelessWidget {
+  final ObjectParam objectBuilder;
+
+  // ignore: unused_element
+  const _ParamView({super.key, required this.objectBuilder});
+
+  @override
+  Widget build(BuildContext context) {
+    var paramTable = DataTable(
+      dataRowMaxHeight: 25,
+      dataRowMinHeight: 25,
+      headingRowHeight: 0,
+      columns: const [
+        DataColumn(label: Text("")),
+        DataColumn(label: Text("")),
+      ],
+      rows: [
+        ...objectBuilder
+            .flat(test: (param) => param.init != null)
+            .map(
+              (e) => DataRow(
+                cells: [
+                  DataCell(e.mainWidget(context)),
+                  DataCell(Row(
+                    children: [Expanded(child: e.extWidget(context))],
+                  )),
+                ],
+              ),
+            )
+            .toList()
+      ],
+    );
+    var paramPanel = ListenableBuilder(
+      listenable: objectBuilder,
+      builder: (context, _) => ExpansionTile(
+        initiallyExpanded: true,
+        expandedAlignment: Alignment.topLeft,
+        expandedCrossAxisAlignment: CrossAxisAlignment.start,
+        title: const Row(children: [Text("参数设置&代码")]),
+        children: [paramTable],
+      ),
+    );
+    return paramPanel;
+  }
+}
+
+class _MateView extends StatelessWidget {
+  final ObjectParam objectBuilder;
+
+  // ignore: unused_element
+  const _MateView({super.key, required this.objectBuilder});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: objectBuilder,
+      builder: (context, _) => objectBuilder.build() as Widget,
     );
   }
 }

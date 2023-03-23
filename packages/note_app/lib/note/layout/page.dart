@@ -17,5 +17,15 @@ build(Pen pen, BuildContext context) {
   - Row
   - Column
 
+## 布局故障处理：IntrinsicHeight
+Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          IntrinsicHeight(
+            child: navigationRail,
+          )
+        ],
+      )
+
   ''');
 }
