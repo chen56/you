@@ -307,6 +307,7 @@ bool libFilter(LibraryElement lib) {
 }
 
 extension _InterfaceElement on InterfaceElement {
+  // ignore: unused_element
   bool isSubClassOf({required String className, required String package}) {
     if (name == className && source.uri.toString() == package) {
       return true;
@@ -356,10 +357,10 @@ void _genLibMate({
     // 如果有combinators就别导出了
     // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
     // 瞎导出会导出不存在的元素
-    ..directives.add(Directive((b) => b
-      ..type = DirectiveType.import
-      ..url = "package:note/mate.dart")
-      ..show.add("Mate"))
+    // ..directives.add(Directive((b) => b
+    //   ..type = DirectiveType.import
+    //   ..url = "package:note/mate.dart")
+    //   ..show.add("Mate"))
     ..directives.addAll(lib.libraryExports.where((e) => e.combinators.isEmpty).map((libExport) =>
         Directive((b) => b
           ..type = DirectiveType.export
@@ -384,6 +385,7 @@ void _genLibMate({
               //     ? "WidgetMate"
               //     : "Mate"
               ..symbol = "Mate"
+              ..url = "package:note/mate.dart"
             // Mate 暂时不要类型参数了
             // ..types.add(refer(mateClassName)),
             ))
@@ -391,7 +393,22 @@ void _genLibMate({
             .map((typeParam) => typeRefers.elementRef(typeParam, inClass: clazz)))
         ..constructors.addAll(clazz.constructors.where(constructorFilter).map((constructor) {
           return Constructor((b) {
+            Expression constructorEx = TypeReference((b) => b
+              ..symbol = mateClassName
+              ..types.addAll(
+                  // 1.类型参数不需要bound
+                  // class AnnotatedRegion$Mate<T extends Object>
+                  //     -> mateBuilder = AnnotatedRegion$Mate<T>()
+                  // 2.命名构造器的范型参数要加到类型名后，而不是方法名后
+                  // class ObjectFlagProperty<T>
+                  //    ->ObjectFlagProperty<String>.has()
+                  clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
+            // 命名构造器的情况
+            if (constructor.name.isNotEmpty) {
+              constructorEx = constructorEx.property(constructor.name);
+            }
             var parameters = constructor.parameters.where(parameterFilter);
+
             b
               ..name = constructor.name.isEmpty ? null : constructor.name
               ..docs.addAll(["/// $constructor"])
@@ -466,46 +483,25 @@ void _genLibMate({
                 //     .statement,
                 refer("mateBuilder")
                     .assign(Method((b) {
-                      String mateConstructorCallName = constructor.name.isEmpty
-                          ? mateClassName
-                          : "$mateClassName.${constructor.name}";
-
-                      Expression objectConstructor = TypeReference((b) => b
+                      var positionalArgs = parameters.where((e) => e.isPositional).map(
+                          (e) => refer("p.get").call([code.literal(e.name)]).property("value"));
+                      var namedArgs = Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
+                          MapEntry(e.name,
+                              refer("p.get").call([literal(e.name)]).property("build").call([]))));
+                      var c = TypeReference((b) => b
                         ..symbol = mateClassName
                         ..types.addAll(
-                            // 1.类型参数不需要bound
-                            // class AnnotatedRegion$Mate<T extends Object>
-                            //     -> mateBuilder = AnnotatedRegion$Mate<T>()
-                            // 2.命名构造器的范型参数要加到类型名后，而不是方法名后
-                            // class ObjectFlagProperty<T>
-                            //    ->ObjectFlagProperty<String>.has()
                             clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
-                      // 命名构造器的情况
-                      if (constructor.name.isNotEmpty) {
-                        objectConstructor = objectConstructor.property(constructor.name);
-                      }
                       b
                         ..name = ''
                         ..requiredParameters.add(Parameter((b) => b.name = "p"))
-                        ..body = objectConstructor
-                            .call(
-                                parameters.where((e) => e.isPositional).map((e) =>
-                                    refer("p.get").call([code.literal(e.name)]).property("value")),
-                                Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
-                                    MapEntry(
-                                        e.name,
-                                        refer("p.get")
-                                            .call([literal(e.name)])
-                                            .property("build")
-                                            .call([])))))
-                            .code;
+                        //缺省构造器的name为"",只有命名构造器有name
+                        ..body = constructor.name.isEmpty
+                            ? c.newInstance(positionalArgs, namedArgs).code
+                            : c.newInstanceNamed(constructor.name, positionalArgs, namedArgs).code;
                     }).closure)
                     .statement,
-                ...parameters.map((e) {
-                  var method = e.type.isDartCoreList ? "putList" : "put";
-                  var name = e.name;
-                  return Code("matePut('$name', $name);");
-                }),
+                ...parameters.map((e) => Code("matePut('${e.name}', ${e.name});")),
               ]);
           });
         })));
@@ -520,7 +516,7 @@ void _genLibMate({
         ),
       )
       .toString();
-  // writeContent = dartFormatter.format(writeContent);
+  writeContent = dartFormatter.format(writeContent);
   writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
   writeFS.file(toFile).writeAsStringSync(writeContent);
 }

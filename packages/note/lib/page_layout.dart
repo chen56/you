@@ -272,7 +272,7 @@ class _PagePen extends Pen {
   @override
   void sampleMate(Mate widgetMate) {
     _contents.add(_MateSample(
-      objectBuilder: buildParams(widgetMate),
+      objectBuilder: ObjectParam.rootFrom(widgetMate),
     ));
   }
 }
@@ -280,6 +280,7 @@ class _PagePen extends Pen {
 class _MateSample extends StatelessWidget {
   final ObjectParam objectBuilder;
 
+  // ignore: unused_element
   const _MateSample({super.key, required this.objectBuilder});
 
   @override
@@ -298,7 +299,7 @@ class _MateSample extends StatelessWidget {
           rows: [
             ...objectBuilder
                 // .toList(test: (node) => true)
-                .toList(test: (node) => node.param.init != null)
+                .flat(test: (param) => param.init != null)
                 .map(
                   (e) => DataRow(
                     cells: [

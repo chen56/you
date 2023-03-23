@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 
 class ContainerMate extends Container with Mate {
-  late final MateParam<double?> widthMate;
-  late final MateParam<double?> heightMate;
+  late final Param<double?> widthMate;
+  late final Param<double?> heightMate;
 
   ContainerMate({
     super.key,

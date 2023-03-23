@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:note/utils.dart' as utils;
-import 'package:note/utils.dart';
 
-abstract class ParamBase extends ChangeNotifier {
-  ParamBase? parent;
+abstract class Param<T> extends ChangeNotifier {
+  String name;
+  Param? parent;
   final dynamic init;
   final bool nullable;
-  dynamic _value;
+  T _value;
 
-  dynamic get value => _value;
+  T get value => _value;
 
-  set value(dynamic newValue) {
+  set value(T newValue) {
     _value = newValue;
     notifyListeners();
   }
@@ -21,9 +21,13 @@ abstract class ParamBase extends ChangeNotifier {
     parent?.notifyListeners();
   }
 
-  dynamic build();
+  T build();
 
-  ParamBase({required this.init, required this.nullable}) : _value = init;
+  Param({
+    required this.name,
+    required this.init,
+    required this.nullable,
+  }) : _value = init;
 
   bool get isNullable => nullable;
 
@@ -33,19 +37,62 @@ abstract class ParamBase extends ChangeNotifier {
 
   bool get isList => this is ListParam;
 
-  Iterable<ParamNode> _childrenNodes(ParamNode parent);
-}
+  Iterable<Param> get children;
 
-ObjectParam buildParams(Mate mate) {
-  return ObjectParam(
-      init: mate,
-      builder: (objectBuilder) => mate.mateBuilder(objectBuilder),
-      paramMap: mate.mateParams.map((key, value) => MapEntry(key, convertToParam(value.init))),
-      nullable: false);
+  //todo release模式下 runtimeType被混淆了
+  String get displayName {
+    if (isRoot) return "${init.runtimeType}".replaceAll("\$Mate", "");
+    return name;
+  }
+
+  @override
+  String toString() {
+    return path;
+  }
+
+  bool get isLeaf => children.isEmpty;
+
+  int get level => isRoot ? 0 : parent!.level + 1;
+
+  int levelTo(Param parent) => this.level - parent.level;
+
+  List<Param> get parents => isRoot ? [this] : [this, ...parent!.parents];
+
+  bool get isRoot => parent == null;
+
+  Param get root => isRoot ? this : parent!.root;
+
+  String get path {
+    if (isRoot) return "/";
+    var parentPath = parent!.path;
+    return parentPath == "/" ? "/$name" : "$parentPath/$name";
+  }
+
+  Iterable<Param> flat({
+    bool includeThis = true,
+    bool Function(Param element)? test,
+  }) {
+    return [this, ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))];
+  }
+
+  Widget mainWidget(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(left: level * 15),
+      child: getEditor(this).nameWidget(context, this),
+    );
+  }
+
+  Widget extWidget(BuildContext context) {
+    return getEditor(this).valueWidget(context, this);
+  }
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
-ParamBase convertToParam(dynamic init) {
+Param<T> _convertToParam<T>({
+  required String name,
+  required T init,
+  required bool nullable,
+}) {
   // init.mateParams as ObjectParam<C> 转型的含义：
   // 某Mate比如Center$Mate中定义的是非空范型参数：ObjectParam<Center$Mate> mateParam
   // 而[convertToParam]返回值Param<C>的范型参数可能是可空的，比如ObjectParam<Center?>
@@ -69,9 +116,9 @@ ParamBase convertToParam(dynamic init) {
     //         ? []
     //         : (init as List).map((e) => convertToParam(e)).toList(growable: true));
   }
-  if (init is ParamBase) return init;
+  if (init is Param<T>) return init;
 
-  return ValueParam(init: init, nullable: false);
+  return ValueParam(name: name, init: init, nullable: false);
 
   // flutter build error - Flutter 3.9.0-1.0.pre.2 • channel beta
   // Target dart2js failed: Exception: Warning: The 'dart2js' entrypoint script is deprecated, please use 'dart compile js' instead.
@@ -86,49 +133,49 @@ ParamBase convertToParam(dynamic init) {
   // };
 }
 
-class ValueParam extends ParamBase {
-  ValueParam({required super.init, required super.nullable});
+class ValueParam<T> extends Param<T> {
+  ValueParam({required super.name, required super.init, required super.nullable});
 
   @override
-  Iterable<ParamNode> _childrenNodes(ParamNode parent) => List.empty();
+  T build() => _value;
 
   @override
-  dynamic build() => _value;
+  Iterable<Param> get children => List.empty();
 }
 
-class ListParam extends ParamBase {
-  late List<ParamBase> params;
+class ListParam<T> extends Param<T> {
+  late List<Param> params;
 
   ListParam({
+    required super.name,
     required super.init,
     required this.params,
     required super.nullable,
   });
 
   @override
-  Iterable<ParamNode> _childrenNodes(ParamNode parent) {
-    int i = 0;
-    return params.map((e) => ParamNode._(name: "[${i++}]", param: e, parent: parent));
-  }
+  T build() => params.map((e) => e.build()).toList() as T;
 
   @override
-  dynamic build() => params.map((e) => e.build()).toList();
+  Iterable<Param> get children => params;
 }
 
-class ObjectParam extends ParamBase {
-  final Map<String, ParamBase> _paramMap;
-  late final dynamic Function(ObjectParam param) builder;
+class ObjectParam<T> extends Param<T> {
+  final Map<String, Param> _paramMap;
+  late final Object Function(ObjectParam param) builder;
 
   ObjectParam({
+    required super.name,
     required super.init,
     required this.builder,
-    Map<String, ParamBase>? paramMap,
+    Map<String, Param>? paramMap,
     required super.nullable,
   }) : _paramMap = paramMap ?? {};
 
   ObjectParam.copy(ObjectParam other)
       : _paramMap = {},
         super(
+          name: other.name,
           init: other.init,
           nullable: other.nullable,
         ) {
@@ -136,89 +183,36 @@ class ObjectParam extends ParamBase {
     _paramMap.addAll(other._paramMap);
   }
 
-  ParamBase get<C>(String name) {
-    return _paramMap[name] as ParamBase;
+  ObjectParam.rootFrom(Mate mate)
+      : this(
+          name: "root",
+          //根对象无name
+          init: mate,
+          builder: (objectBuilder) => mate.mateBuilder(objectBuilder),
+          paramMap: mate._mateParams,
+          nullable: false, //根对象
+        );
+
+  Param<E> declare<E>(String name, E init) {
+    var param = _convertToParam<E>(name: name, nullable: utils.isNullableOf<E>(init), init: init);
+    _paramMap[name] = param;
+    return param;
   }
 
-  ParamNode toParamNode() {
-    return ParamNode._root(name: "", param: this);
-  }
-
-  List<ParamNode> toList({bool Function(ParamNode element)? test}) {
-    return toParamNode().toList(test: test);
+  Param<E> get<E>(String name) {
+    return _paramMap[name] as Param<E>;
   }
 
   @override
-  Iterable<ParamNode> _childrenNodes(ParamNode parent) =>
-      _paramMap.entries.map((e) => ParamNode._(name: e.key, param: e.value, parent: parent));
+  T build() => builder(this) as T;
 
   @override
-  dynamic build() => builder(this);
+  Iterable<Param> get children => _paramMap.values;
 }
 
-// tree node
-class ParamNode {
-  final String name;
-  final ParamBase param;
-  final ParamNode? parent;
-  late final Iterable<ParamNode> _children;
-  final Map<String, Object> extAttributes = {};
-
-  ParamNode._({required this.name, required this.param, required ParamNode this.parent}) {
-    _children = param._childrenNodes(this);
-  }
-
-  ParamNode._root({required this.name, required this.param}) : parent = null {
-    _children = param._childrenNodes(this);
-  }
-
-  String get displayName {
-    if (isRoot) return "${param.init.runtimeType}".replaceAll("\$Mate", "");
-    return name;
-  }
-
-  @override
-  String toString() {
-    return path;
-  }
-
-  List<ParamNode> toList({bool Function(ParamNode element)? test}) {
-    return [this, ..._children.where(test ?? (e) => true).expand((e) => e.toList(test: test))];
-  }
-
-  bool get isLeaf => _children.isEmpty;
-
-  int get level => isRoot ? 0 : parent!.level + 1;
-
-  int levelTo(ParamNode parent) => this.level - parent.level;
-
-  List<ParamNode> get parents => isRoot ? [this] : [this, ...parent!.parents];
-
-  bool get isRoot => parent == null;
-
-  ParamNode get root => isRoot ? this : parent!.root;
-
-  String get path {
-    if (isRoot) return "/";
-    var parentPath = parent!.path;
-    return parentPath == "/" ? "/$name" : "$parentPath/$name";
-  }
-
-  Widget mainWidget(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: level * 15),
-      child: getEditor(this).nameWidget(context, this),
-    );
-  }
-
-  Widget extWidget(BuildContext context) {
-    return getEditor(this).valueWidget(context, this);
-  }
-}
-
-Editor getEditor(ParamNode node) {
-  if (node.param.init is double) return DoubleEditor();
-  if (node.param.init is Enum) return EnumEditor();
+Editor getEditor(Param node) {
+  if (node.init is double) return DoubleEditor();
+  if (node.init is Enum) return EnumEditor();
   return ReadonlyEditor();
 }
 
@@ -226,9 +220,9 @@ class DoubleEditor extends Editor<double> {
   DoubleEditor();
 
   @override
-  Widget valueWidget(BuildContext context, ParamNode node) {
+  Widget valueWidget(BuildContext context, Param param) {
     return TextFormField(
-      initialValue: "${node.param.init}",
+      initialValue: "${param.init}",
       autofocus: true,
       decoration: const InputDecoration(
         hintText: "Text#data",
@@ -236,7 +230,7 @@ class DoubleEditor extends Editor<double> {
       onChanged: (value) {
         var newValue = double.tryParse(value);
         if (newValue != null) {
-          node.param.value = newValue;
+          param.value = newValue;
         }
       },
     );
@@ -247,20 +241,20 @@ class EnumEditor extends Editor {
   EnumEditor();
 
   @override
-  Widget valueWidget(BuildContext context, ParamNode node) {
+  Widget valueWidget(BuildContext context, Param param) {
     return DropdownButton<Enum>(
       onTap: () {
         print("onTap");
       },
       alignment: Alignment.topLeft,
-      value: node.param.value,
+      value: param.value,
       icon: const Icon(Icons.arrow_downward),
       elevation: 16,
       style: const TextStyle(color: Colors.deepPurple),
       onChanged: (Enum? value) {
-        node.param.value = value;
+        param.value = value;
       },
-      items: Enums.get(node.param.value.runtimeType).map<DropdownMenuItem<Enum>>((Enum value) {
+      items: Enums.get(param.value.runtimeType).map<DropdownMenuItem<Enum>>((Enum value) {
         return DropdownMenuItem<Enum>(
           value: value,
           child: Text(value.name),
@@ -275,41 +269,34 @@ class ReadonlyEditor extends Editor<double> {
 }
 
 mixin Mate {
-  final Map<String, MateParam> mateParams = {};
+  final Map<String, Param> _mateParams = {};
   late final Object Function(ObjectParam param) mateBuilder;
 
-  MateParam<V> matePut<V>(String name, V init) {
-    var param = MateParam(name: name, nullable: utils.isNullableOf<V>(init), init: init);
-    mateParams[name] = param;
+  Param<V> matePut<V>(String name, V init) {
+    var param = _convertToParam(name: name, nullable: utils.isNullableOf<V>(init), init: init);
+    _mateParams[name] = param;
     return param;
   }
 
-  MateParam<C> mateGet<C>(String name) {
-    return mateParams[name] as MateParam<C>;
+  Param<C> mateGet<C>(String name) {
+    return _mateParams[name] as Param<C>;
   }
-}
-
-class MateParam<T> {
-  String name;
-  bool nullable;
-  T init;
-  MateParam({required this.name, required this.nullable, required this.init});
 }
 
 abstract class Editor<T> {
   Editor();
 
-  Widget nameWidget(BuildContext context, ParamNode node) {
-    String type = "${node.param.init.runtimeType}".replaceAll("\$Mate", "");
-    if (node.isRoot) return Text(type);
-    if (node.param.isValue) {
-      return Text("${node.name}:");
+  Widget nameWidget(BuildContext context, Param param) {
+    String type = "${param.init.runtimeType}".replaceAll("\$Mate", "");
+    if (param.isRoot) return Text(type);
+    if (param.isValue) {
+      return Text("${param.name}:");
     } else {
-      return Text("${node.name}: $type");
+      return Text("${param.name}: $type");
     }
   }
 
-  Widget valueWidget(BuildContext context, ParamNode node) {
+  Widget valueWidget(BuildContext context, Param param) {
     return const Text("");
     // return Text("${node.param.value.runtimeType}".replaceAll("\$Mate", ""));
   }
