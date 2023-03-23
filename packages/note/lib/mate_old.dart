@@ -1,16 +1,15 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/utils.dart' as utils;
-import 'package:note/utils.dart';
 
-abstract class ParamBase extends ChangeNotifier {
-  ParamBase? parent;
-  final dynamic init;
-  final bool nullable;
-  dynamic _value;
+abstract class Param<T> extends ChangeNotifier {
+  Param? parent;
+  final T init;
+  T _value;
 
-  dynamic get value => _value;
+  T get value => _value;
 
-  set value(dynamic newValue) {
+  set value(T newValue) {
     _value = newValue;
     notifyListeners();
   }
@@ -21,11 +20,15 @@ abstract class ParamBase extends ChangeNotifier {
     parent?.notifyListeners();
   }
 
-  dynamic build();
+  T build();
 
-  ParamBase({required this.init, required this.nullable}) : _value = init;
+  Param({required this.init}) : _value = init;
 
-  bool get isNullable => nullable;
+  bool get isNullable => utils.isNullable<T>();
+
+  factory Param.newValue({required init}) {
+    return ValueParam(init: init);
+  }
 
   bool get isValue => this is ValueParam;
 
@@ -36,42 +39,28 @@ abstract class ParamBase extends ChangeNotifier {
   Iterable<ParamNode> _childrenNodes(ParamNode parent);
 }
 
-ObjectParam buildParams(Mate mate) {
-  return ObjectParam(
-      init: mate,
-      builder: (objectBuilder) => mate.mateBuilder(objectBuilder),
-      paramMap: mate.mateParams.map((key, value) => MapEntry(key, convertToParam(value.init))),
-      nullable: false);
-}
-
 // dart3 switch patterns : use idea, click class name can not navigation to source
-ParamBase convertToParam(dynamic init) {
+Param<C> convertToParam<C>(C init) {
+  if (init is List) throw Exception("List type please use putList()");
   // init.mateParams as ObjectParam<C> 转型的含义：
   // 某Mate比如Center$Mate中定义的是非空范型参数：ObjectParam<Center$Mate> mateParam
   // 而[convertToParam]返回值Param<C>的范型参数可能是可空的，比如ObjectParam<Center?>
   // 为什么会有这种差别，是因为定义 Center$Mate的时候，并不知道其[ObjectParam.value]是否能非空，
   // 直到在另一个构造器中使用时才知道。
   // ignore: unnecessary_cast
-  if (init is Mate) {
-    // var result2 = ObjectParam(
-    //     init: init,
-    //     // builder: (mate) => init.mateParams.builder(mate),
-    //     paramMap: init.mateParams.map((key, value) => MapEntry(key, convertToParam(value))),
-    //     nullable: false);
+  if (init is Mate<C>) {
+    // var x = (ObjectParam<C> mate) => init.mateParams.builder(mate) as C;
+    // Param<C> result2 = ObjectParam<C>(
+    //   init: init,
+    //   // builder: x,
+    //   paramMap: init.mateParams.map((key, value) => MapEntry(key, value.)),
+    // );
+
     // return result2;
   }
+  if (init is Param) return init as Param<C>;
 
-  if (init is List) {
-    // return ListParam(
-    //     init: init,
-    //     // nullable: nullable,
-    //     params: init == null
-    //         ? []
-    //         : (init as List).map((e) => convertToParam(e)).toList(growable: true));
-  }
-  if (init is ParamBase) return init;
-
-  return ValueParam(init: init, nullable: false);
+  return Param.newValue(init: init);
 
   // flutter build error - Flutter 3.9.0-1.0.pre.2 • channel beta
   // Target dart2js failed: Exception: Warning: The 'dart2js' entrypoint script is deprecated, please use 'dart compile js' instead.
@@ -86,24 +75,24 @@ ParamBase convertToParam(dynamic init) {
   // };
 }
 
-class ValueParam extends ParamBase {
-  ValueParam({required super.init, required super.nullable});
+class ValueParam<T> extends Param<T> {
+  ValueParam({required super.init});
 
   @override
   Iterable<ParamNode> _childrenNodes(ParamNode parent) => List.empty();
 
   @override
-  dynamic build() => _value;
+  T build() => _value;
 }
 
-class ListParam extends ParamBase {
-  late List<ParamBase> params;
+class ListParam<T> extends Param<T> {
+  late List<Param> params;
 
-  ListParam({
-    required super.init,
-    required this.params,
-    required super.nullable,
-  });
+  ListParam({required super.init}) {
+    if (init != null) {
+      params = (init as List).map((e) => convertToParam(e)).toList(growable: true);
+    }
+  }
 
   @override
   Iterable<ParamNode> _childrenNodes(ParamNode parent) {
@@ -112,32 +101,59 @@ class ListParam extends ParamBase {
   }
 
   @override
-  dynamic build() => params.map((e) => e.build()).toList();
+  T build() => params.map((e) => e.build()).toList() as T;
 }
 
-class ObjectParam extends ParamBase {
-  final Map<String, ParamBase> _paramMap;
-  late final dynamic Function(ObjectParam param) builder;
+class ObjectParam<T> extends Param<T> {
+  final Map<String, Param> _paramMap;
+  late final T Function(ObjectParam<T> param) builder;
 
   ObjectParam({
     required super.init,
     required this.builder,
-    Map<String, ParamBase>? paramMap,
-    required super.nullable,
+    Map<String, Param>? paramMap,
   }) : _paramMap = paramMap ?? {};
 
-  ObjectParam.copy(ObjectParam other)
+  ObjectParam.copy(ObjectParam<T> other)
       : _paramMap = {},
-        super(
-          init: other.init,
-          nullable: other.nullable,
-        ) {
-    // builder = (mate) => other.builder(mate);
+        super(init: other.init) {
+    builder = (mate) => other.builder(mate);
     _paramMap.addAll(other._paramMap);
   }
 
-  ParamBase get<C>(String name) {
-    return _paramMap[name] as ParamBase;
+  /// switch(init) :
+  /// - value is Mate       => return [Mate.mateParams]
+  /// - value is atom value => return new [ValueParam]
+  /// - value is null       => return new [ValueParam]
+  /// - value is List       => throw Error, please use [putList]
+  /// - others              => return new [ValueParam]
+  /// generic V : value type
+  /// todo rename to declare or use
+  Param<V> put<V>(String name, V init) {
+    _checkName(name);
+    var param = convertToParam(init);
+    param.parent = this;
+    _paramMap[name] = param;
+    return param;
+  }
+
+  /// generic V : list type
+  /// generic E : list element type
+  ListParam<V> putList<V, E>(String name, V init) {
+    _checkName(name);
+    ListParam<V> param = ListParam<V>(init: init);
+    param.parent = this;
+    _paramMap[name] = param;
+    return param;
+  }
+
+  void _checkName(String name) {
+    assert(
+        !_paramMap.containsKey(name), "error:duplicate param name: $name , old:${_paramMap[name]}");
+  }
+
+  Param<C> get<C>(String name) {
+    return _paramMap[name] as Param<C>;
   }
 
   ParamNode toParamNode() {
@@ -153,13 +169,13 @@ class ObjectParam extends ParamBase {
       _paramMap.entries.map((e) => ParamNode._(name: e.key, param: e.value, parent: parent));
 
   @override
-  dynamic build() => builder(this);
+  T build() => builder(this);
 }
 
 // tree node
 class ParamNode {
   final String name;
-  final ParamBase param;
+  final Param param;
   final ParamNode? parent;
   late final Iterable<ParamNode> _children;
   final Map<String, Object> extAttributes = {};
@@ -274,7 +290,8 @@ class ReadonlyEditor extends Editor<double> {
   ReadonlyEditor();
 }
 
-mixin Mate {
+mixin Mate<T> {
+  // late final ObjectParam<T> mateParams;
   final Map<String, MateParam> mateParams = {};
   late final Object Function(ObjectParam param) mateBuilder;
 

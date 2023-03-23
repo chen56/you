@@ -270,22 +270,22 @@ class _PagePen extends Pen {
   }
 
   @override
-  void sampleMate<T>(Mate<T> widgetMate) {
+  void sampleMate(Mate widgetMate) {
     _contents.add(_MateSample(
-      mate: widgetMate,
+      objectBuilder: buildParams(widgetMate),
     ));
   }
 }
 
-class _MateSample<T> extends StatelessWidget {
-  final Mate<T> mate;
+class _MateSample extends StatelessWidget {
+  final ObjectParam objectBuilder;
 
-  const _MateSample({super.key, required this.mate});
+  const _MateSample({super.key, required this.objectBuilder});
 
   @override
   Widget build(BuildContext context) {
     var listenableBuilder = ListenableBuilder(
-      listenable: mate.mateParams,
+      listenable: objectBuilder,
       builder: (context, child) {
         var dataTable = DataTable(
           dataRowMaxHeight: 25,
@@ -296,7 +296,7 @@ class _MateSample<T> extends StatelessWidget {
             DataColumn(label: Text("")),
           ],
           rows: [
-            ...mate.mateParams
+            ...objectBuilder
                 // .toList(test: (node) => true)
                 .toList(test: (node) => node.param.init != null)
                 .map(
@@ -314,7 +314,7 @@ class _MateSample<T> extends StatelessWidget {
         );
         return Column(
           children: [
-            mate.mateParams.build() as Widget,
+            objectBuilder.build() as Widget,
             ExpansionTile(
               initiallyExpanded: true,
               expandedAlignment: Alignment.topLeft,

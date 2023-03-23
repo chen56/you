@@ -21,9 +21,9 @@ main() async {
   _log("## main");
   List<String> include = [
     "package:flutter/",
-    "package:flutter/src/rendering/editable.dart",
+    "package:flutter/src/widgets/annotated_region.dart",
     // "package:flutter/src/foundation/bitfield.dart",
-    "package:flutter/src/painting/box_shadow.dart"
+    // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
   ];
 
@@ -356,6 +356,10 @@ void _genLibMate({
     // 如果有combinators就别导出了
     // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
     // 瞎导出会导出不存在的元素
+    ..directives.add(Directive((b) => b
+      ..type = DirectiveType.import
+      ..url = "package:note/mate.dart")
+      ..show.add("Mate"))
     ..directives.addAll(lib.libraryExports.where((e) => e.combinators.isEmpty).map((libExport) =>
         Directive((b) => b
           ..type = DirectiveType.export
@@ -375,18 +379,17 @@ void _genLibMate({
         ..abstract = clazz.isAbstract
         ..extend = typeRefers.typeRef(clazz.thisType, inClass: clazz)
         ..mixins.add(TypeReference((b) => b
-          // ..symbol = clazz.isSubClassOf(
-          //     className: "Widget", package: "package:flutter/src/widgets/framework.dart")
-          //     ? "WidgetMate"
-          //     : "Mate"
-          ..symbol = "Mate"
-          ..types.add(refer(mateClassName))))
+              // ..symbol = clazz.isSubClassOf(
+              //     className: "Widget", package: "package:flutter/src/widgets/framework.dart")
+              //     ? "WidgetMate"
+              //     : "Mate"
+              ..symbol = "Mate"
+            // Mate 暂时不要类型参数了
+            // ..types.add(refer(mateClassName)),
+            ))
         ..types.addAll(clazz.typeParameters
             .map((typeParam) => typeRefers.elementRef(typeParam, inClass: clazz)))
         ..constructors.addAll(clazz.constructors.where(constructorFilter).map((constructor) {
-          String mateConstructorCallName =
-              constructor.name.isEmpty ? mateClassName : "$mateClassName.${constructor.name}";
-
           return Constructor((b) {
             var parameters = constructor.parameters.where(parameterFilter);
             b
@@ -441,13 +444,50 @@ void _genLibMate({
                       .code)
               // ref: package:note/lib/experiment_mates.dart
               ..body = Block.of([
-                refer("mateParams")
-                    .assign(refer("ObjectParam", "package:note/mate.dart").call([], {
-                      "init": refer("this"),
-                      "builder": Method((b) => b
+                // refer("mateParams")
+                //     .assign(refer("ObjectParam", "package:note/mate.dart").call([], {
+                //       "init": refer("this"),
+                //       "builder": Method((b) => b
+                //         ..name = ''
+                //         ..requiredParameters.add(Parameter((b) => b.name = "p"))
+                //         ..body = refer(mateConstructorCallName)
+                //             .call(
+                //                 parameters.where((e) => e.isPositional).map((e) =>
+                //                     refer("p.get").call([code.literal(e.name)]).property("value")),
+                //                 Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
+                //                     MapEntry(
+                //                         e.name,
+                //                         refer("p.get")
+                //                             .call([literal(e.name)])
+                //                             .property("build")
+                //                             .call([])))))
+                //             .code).closure,
+                //     }))
+                //     .statement,
+                refer("mateBuilder")
+                    .assign(Method((b) {
+                      String mateConstructorCallName = constructor.name.isEmpty
+                          ? mateClassName
+                          : "$mateClassName.${constructor.name}";
+
+                      Expression objectConstructor = TypeReference((b) => b
+                        ..symbol = mateClassName
+                        ..types.addAll(
+                            // 1.类型参数不需要bound
+                            // class AnnotatedRegion$Mate<T extends Object>
+                            //     -> mateBuilder = AnnotatedRegion$Mate<T>()
+                            // 2.命名构造器的范型参数要加到类型名后，而不是方法名后
+                            // class ObjectFlagProperty<T>
+                            //    ->ObjectFlagProperty<String>.has()
+                            clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
+                      // 命名构造器的情况
+                      if (constructor.name.isNotEmpty) {
+                        objectConstructor = objectConstructor.property(constructor.name);
+                      }
+                      b
                         ..name = ''
                         ..requiredParameters.add(Parameter((b) => b.name = "p"))
-                        ..body = refer(mateConstructorCallName)
+                        ..body = objectConstructor
                             .call(
                                 parameters.where((e) => e.isPositional).map((e) =>
                                     refer("p.get").call([code.literal(e.name)]).property("value")),
@@ -458,13 +498,13 @@ void _genLibMate({
                                             .call([literal(e.name)])
                                             .property("build")
                                             .call([])))))
-                            .code).closure,
-                    }))
+                            .code;
+                    }).closure)
                     .statement,
                 ...parameters.map((e) {
                   var method = e.type.isDartCoreList ? "putList" : "put";
                   var name = e.name;
-                  return Code("mateParams.$method('$name', $name);");
+                  return Code("matePut('$name', $name);");
                 }),
               ]);
           });
@@ -480,7 +520,7 @@ void _genLibMate({
         ),
       )
       .toString();
-  writeContent = dartFormatter.format(writeContent);
+  // writeContent = dartFormatter.format(writeContent);
   writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
   writeFS.file(toFile).writeAsStringSync(writeContent);
 }

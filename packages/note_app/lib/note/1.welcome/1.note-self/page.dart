@@ -56,23 +56,23 @@ build(Pen pen, BuildContext context) {
   //     child: Container.new
   //       width
   // 这里可以放一些比较复杂的共享MateNode的场景，比如多个组件同width
-  pen.widget((params) {
-    Param<double> width = params.put("width", 200.0);
-    Param<double> height = params.put("height", 200.0);
-
-    return Container(
-      width: width.value,
-      height: height.value,
-      color: Colors.green,
-      clipBehavior: Clip.none,
-      child: Container(
-        width: width.value,
-        height: height.value,
-        color: Colors.blue,
-        clipBehavior: Clip.none,
-      ),
-    );
-  });
+  // pen.widget((params) {
+  //   Param<double> width = params.put("width", 200.0);
+  //   Param<double> height = params.put("height", 200.0);
+  //
+  //   return Container(
+  //     width: width.value,
+  //     height: height.value,
+  //     color: Colors.green,
+  //     clipBehavior: Clip.none,
+  //     child: Container(
+  //       width: width.value,
+  //       height: height.value,
+  //       color: Colors.blue,
+  //       clipBehavior: Clip.none,
+  //     ),
+  //   );
+  // });
 }
 
 // class y {}

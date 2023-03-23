@@ -116,6 +116,17 @@ void main() {
     var x = refer("mateParams").call([]).property("s").call([]).code;
     print(_noFormat(x));
   });
+  test('ObjectFlagProperty<String>.has()', () {
+    var x = TypeReference((b) => b
+      ..symbol = "ObjectFlagProperty"
+      ..types.add(refer("String"))).property("has").call([]).code;
+    expect(_noFormat(x), "ObjectFlagProperty<String>.has()");
+
+    var y = TypeReference((b) => b
+      ..symbol = "ObjectFlagProperty"
+      ..types.add(refer("String"))).call([]).code;
+    expect(_noFormat(y), "ObjectFlagProperty<String>.has()");
+  });
 }
 
 String _format(Spec item) {

@@ -145,7 +145,7 @@ option() {
 # patterns 无法使用，error：flutter build web
 #  // flutter build error - Flutter 3.9.0-1.0.pre.2 • channel beta
 #  // Target dart2js failed: Exception: Warning: The 'dart2js' entrypoint script is deprecated, please use 'dart compile js' instead.
-#  // ../note/lib/mate.dart:39:10:
+#  // ../note/lib/mate_old.dart:39:10:
 #  // Error: Expected an identifier, but got 'switch'.
 #  // return switch (init) {
 #  //   /// Mate 不直接 return [Mate.mateParams] 而复制一份ObjectParam的原因是 C可能是可空类型，而Mate.mateParams不是
