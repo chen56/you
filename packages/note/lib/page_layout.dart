@@ -297,6 +297,7 @@ class _MateSample extends StatelessWidget {
 
   // ignore: unused_element
   const _MateSample({
+    // ignore: unused_element
     super.key,
     required this.rootParam,
     required this.editors,
@@ -336,8 +337,8 @@ class _ParamView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var paramTable = DataTable(
-      dataRowMaxHeight: 25,
       dataRowMinHeight: 25,
+      dataRowMaxHeight: 25,
       // hide header
       headingRowHeight: 0,
       columns: const [
@@ -363,7 +364,7 @@ class _ParamView extends StatelessWidget {
       initiallyExpanded: false,
       expandedAlignment: Alignment.topLeft,
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
-      title: const Row(children: [Text("显示代码")]),
+      title: Row(children: const [Text("显示代码")]),
       children: [paramTable],
     );
   }

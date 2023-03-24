@@ -4,20 +4,16 @@ version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: '>=3.0.0-290.1.beta <4.0.0'
+#  sdk: '>=3.0.0-290.1.beta <4.0.0'
+  sdk: '>=2.19.5 <3.0.0'
 
 # Add regular dependencies here.
 dependencies:
-   path: ^1.8.0
+  note: ^1.0.0
 
 dev_dependencies:
   lints: ^2.0.0
   test: ^1.21.0
   analyzer:
-  path:
+  path: ^1.8.2
   glob:
-  note: ^1.0.0
-
-dependency_overrides:
-  note:
-    path: ../note
