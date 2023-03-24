@@ -19,8 +19,8 @@ set -o functrace #trap inherited in function
 # bake命令规则：
 # 1. 定义以斜杠"/"为前缀的function作为子命令，/build、/run、/assets/list、
 #    表示命令的其父子关系，执行时去掉斜杠/, 构成父子命令：./bake assets list -x -y -z
-# 2. 命令function上方的一行注释作为命令的帮助，显示在命令列表
-# 3. 除bash外，不依赖其他，包括linux coreutils,以便跨平台更简单
+# 2. 命令的帮助从命令后跟?shortHelp的函数提取，比如/build?shortHelp
+# 3. 除bash外，尽量不依赖其他工具，包括linux coreutils,以便跨平台更简单
 # 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
 # ------------------------------------------------------------------------------
 
@@ -59,7 +59,8 @@ function follow_links() (
   done
   echo "$file"
 )
-export BAKE_HOME=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
+declare BAKE_HOME
+BAKE_HOME=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
 
 /test1?() {
   /test1?shortHelp() {
@@ -89,8 +90,9 @@ EOF
   }
 
   /test_option?option() {
-    echo "${name}"
-    echo "${version}"
+#    echo "${name}"
+#    echo "${version}"
+     echo "???"
   }
 
 }
@@ -103,7 +105,7 @@ option() {
   local help="$4"
   local hasArg=false
   [[ $arg != "" ]] && hasArg=true
-
+  echo "hasArg: $hasArg"
   local toString="short:'$short', long:'$long',arg:'$arg', help:'$help'"
   if [[ $long == "" ]]; then
     cat <<<"long option must not be empty: ($toString)
@@ -124,7 +126,7 @@ option() {
   /init() {
     run git lfs install
     (
-      run cd "$BAKE_HOME/note_app"
+      cd "note_app"
       # 增加平台支持到现存项目
       # https://docs.flutter.dev/development/platform-integration/desktop#add-desktop-support-to-an-existing-flutter-app
       run flutter create --platforms=macos .
@@ -136,56 +138,58 @@ option() {
 /get?() {
   /get?shortHelp() { cat <<<"all: pub get"; }
   /get() {
-    run flutter pub get --directory $BAKE_HOME/note
-    run flutter pub get --directory $BAKE_HOME/note_mate_flutter
-    run flutter pub get --directory $BAKE_HOME/note_app
+     /exec flutter pub get
   }
 }
 
+# patterns 无法使用，error：flutter build web
+#  // flutter build error - Flutter 3.9.0-1.0.pre.2 • channel beta
+#  // Target dart2js failed: Exception: Warning: The 'dart2js' entrypoint script is deprecated, please use 'dart compile js' instead.
+#  // ../note/lib/mate_old.dart:39:10:
+#  // Error: Expected an identifier, but got 'switch'.
+#  // return switch (init) {
+#  //   /// Mate 不直接 return [Mate.mateParams] 而复制一份ObjectParam的原因是 C可能是可空类型，而Mate.mateParams不是
+#  //   List() => throw Exception("List type please use putList()"),
+#  //   Mate<C>() => ObjectParam.copy(init.mateParams),
+#  //   Param() => init as Param<C>,
+#  //   _ => Param.newValue(init: init),
+#  // };
+enable_experiment="--enable-experiment=records,patterns"
 /build?() {
-  /build?shortHelp() { cat <<<"构建命令,可附加flutter build的参数"; }
+  /build?shortHelp() { cat <<<"生产build"; }
   /build() {
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
-    run flutter build web --release --web-renderer html --base-href='/note/' "$@"
+#    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
+    ( cd packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html --base-href "/note/" ; )
   }
 }
 
 /test?() {
   /test?shortHelp() { cat <<<"test"; }
-  /test() { echo test; }
+  /test() {
+     /exec flutter test
+   }
 }
 
 /preview?() {
   /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
   /preview() {
-    echo "bake preview"
-    /build "$@"
+#   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+#    /build "$@"
+    ( cd packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html --base-href "/" ; )
     # 	npx http-server ./app_note/build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./app_note/build/web --port 8000
+    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000
   }
 }
 
-/build?() {
-  /build?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
-  /build() {
-    (
-      run cd note_app;
-#      This application cannot tree shake icons fonts. It has non-constant instances of IconData at the following locations:
-#        - file:///Users/cccc/git/chen56/note/note_mate_flutter/lib/src/widgets/icon_data.dart:30:23
-#      Target web_release_bundle failed: Exception: Avoid non-constant invocations of IconData or try to build again with --no-tree-shake-icons.
-      run flutter build web  --enable-experiment=records \
-                             --enable-experiment=patterns \
-                             --release --web-renderer html --base-href='/note/' "$@";
-    )
-  }
-}
+
 /ci?() {
   /ci?shortHelp() { cat <<<"ci重建"; }
   /ci() {
     (
       flutter --version
-#      /clean
+      /clean
       /get
       /build
       /test
@@ -196,25 +200,49 @@ option() {
 /gen?() {
   /gen?shortHelp() { cat <<<"代码生成"; }
   /gen() {
-    (run cd note_app ;          run dart run tools/gen_pages.dart; )
-    (run cd note_mate_flutter ; run dart run tools/gen_mates.dart; )
+    (cd packages/note_app ;          run dart run tools/gen_pages.dart; )
+    (cd packages/note_mate_flutter ; run dart run tools/gen_mates.dart; )
+  }
+}
+/regen?() {
+  /regen?shortHelp() { cat <<<"先删除old, 再代码生成"; }
+  /regen() {
+    run rm packages/note_app/lib/pages.g.dart
+    run rm -rf packages/note_mate_flutter/lib
+    (cd packages/note_app ;          run dart run tools/gen_pages.dart ; )
+    (cd packages/note_mate_flutter ; run dart run tools/gen_mates.dart ; )
   }
 }
 
 /run?() {
   /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
   /run() {
-    run flutter run --web-renderer html --device-id chrome --enable-experiment=records --enable-experiment=patterns;
+    (
+      cd packages/note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment "$@" ;
+    )
   }
 }
+
+/exec?() {
+  /exec?shortHelp() { cat <<<"exec [cmd] , 在各flutter项目目录依次执行exec后跟的参数cmd"; }
+  /exec() {
+#       目录中有"pubspec.yaml"的，认为是flutter项目
+#        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
+#          # 用括号()开启子进程执行，可以不影响当前进程的环境
+#          ( cd "$project" ;  run "$@" ; )
+#        done
+        (cd packages/note ;              run "$@" ; )
+        (cd packages/note_mate_flutter ; run "$@" ; )
+        (cd packages/note_app ;          run "$@" ; )
+   }
+}
+
 
 # 清理
 /clean?() {
   /clean?shortHelp() { cat <<<"清理项目目录"; }
   /clean() {
-     (run cd note; run  run flutter clean;)
-     (run cd note_mate_flutter; run  run flutter clean;)
-     (run cd note_app; run  run flutter clean;)
+     /exec flutter clean
   }
 }
 
@@ -254,15 +282,19 @@ print_stack() {
 }
 # 先打印 后执行
 run() {
-  echo -e "▶︎ ${FUNCNAME[1]} ▶︎ $*"
-  "$@"
+#  local project=${PWD#*$BAKE_HOME}
+  local project
+  project=$(basename "$PWD")
+  [[ "$PWD" == "$BAKE_HOME" ]] && project="root"
+  echo -e "【${project}】▶︎${FUNCNAME[1]} ▶︎ $*"
+  eval "$@"
   return $?
 }
 
 
-run_from_stdin() { while read cmd; do "$cmd"; done; }
+exec_from_stdin() { while read cmd; do "$cmd"; done; }
 initCommands(){
-    run_from_stdin <<< "$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')"
+    exec_from_stdin <<< "$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')"
 }
 
 print_commands() {
@@ -279,7 +311,8 @@ print_commands() {
   #     => /run
   # 而fullName 是最终可执行的自命令函数
   IFS=$'\n' # 分配回车符给IFS
-  local fullNames=$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f (\/.*)\?$/\1/')
+  local fullNames
+  fullNames=$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f (\/.*)\?$/\1/')
   readarray -t fullNames <<<"$fullNames"
   local commands=()
   local shortHelps=()
@@ -289,10 +322,12 @@ print_commands() {
     # 先调用最外层注册命令
     "${cmdFullname}?"
     # 现在可以取到内层注册的函数，取帮助等
-    local shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null || true)
+    local shortHelp
+    shortHelp=$("${cmdFullname}?shortHelp" 2>/dev/null || true)
     shortHelps[i]=${shortHelp}
 
     # 先去第一个"/"，再按"/"split成数组
+    # shellcheck disable=SC2207
     local split=($(tr "/" " " <<<"${cmdFullname:1}"))
     local cmd=${split[0]} #目前只用 第一个命令, 将来可以扩展为多层父子命令
     commands[i]=${cmd}
@@ -303,9 +338,11 @@ print_commands() {
 
   # print all commands and shortHelp
   for i in ${!commands[*]}; do
-    local padding=$(printf %-$((maxLengthOfCmd + 6))b "")
+    local padding
+    padding=$(printf %-$((maxLengthOfCmd + 6))b "")
     # 第二行开始，都补空格
-    local shortHelp=$(sed "2,1000s/^/$padding/g" <<<"${shortHelps[i]}")
+    local shortHelp
+    shortHelp=$(sed "2,1000s/^/$padding/g" <<<"${shortHelps[i]}")
     printf "  %-$((maxLengthOfCmd))s    ${shortHelp}\n" "${commands[i]}"
   done
 
@@ -318,6 +355,9 @@ print_commands() {
 ##########################################
 
 trap " set +x; on_error " ERR
+
+# 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
+cd "${BAKE_HOME}"
 
 # init all sub commands
 initCommands

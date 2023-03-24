@@ -65,7 +65,7 @@ flutter build --enable-experiment=records --enable-experiment=patterns
 ## project workflow
 
 ```text
-# s当前workflow：
+# 当前workflow：
 PR---->main
          | 
          |-----> deploy : https://chen56.github.com/note/
