@@ -227,14 +227,13 @@ enable_experiment="--enable-experiment=records,patterns"
   /exec?shortHelp() { cat <<<"exec [cmd] , 在各flutter项目目录依次执行exec后跟的参数cmd"; }
   /exec() {
 #       目录中有"pubspec.yaml"的，认为是flutter项目
-        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
-          # 用括号()开启子进程执行，可以不影响当前进程的环境
-          ( cd "$project" ;  run "$@" ; )
-        done
-#        (cd packages/note ;              run "$@" ; )
-#        (cd packages/note_mate_flutter ; run "$@" ; )
-#        (cd packages/note_app ;          run "$@" ; )
-#        (cd packages/learn_dart ;        run "$@" ; )
+#        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
+#          # 用括号()开启子进程执行，可以不影响当前进程的环境
+#          ( cd "$project" ;  run "$@" ; )
+#        done
+        (cd packages/note ;              run "$@" ; )
+        (cd packages/note_mate_flutter ; run "$@" ; )
+        (cd packages/note_app ;          run "$@" ; )
    }
 }
 
