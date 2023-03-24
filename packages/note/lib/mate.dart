@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:note/utils.dart' as utils;
 
@@ -224,7 +226,7 @@ class DoubleEditor extends Editor<double> {
 }
 
 class EnumEditor extends Editor {
-  final Enums enums;
+  final EnumRegister enums;
   EnumEditor({required this.enums});
 
   @override
@@ -241,7 +243,7 @@ class EnumEditor extends Editor {
       onChanged: (Enum? value) {
         param.value = value;
       },
-      items: enums.get(param.value.runtimeType).map<DropdownMenuItem<Enum>>((Enum value) {
+      items: enums.getOrEmpty(param.value.runtimeType).map<DropdownMenuItem<Enum>>((Enum value) {
         return DropdownMenuItem<Enum>(
           value: value,
           child: Text(value.name),
@@ -290,7 +292,7 @@ abstract class Editor<T> {
 }
 
 class Editors {
-  final Enums enums;
+  final EnumRegister enums;
   Editors({required this.enums});
 
   Editor _getEditor(Param param) {
@@ -311,12 +313,40 @@ class Editors {
   }
 }
 
-abstract class Enums {
+class EnumRegister extends MapBase<Type, List<Enum>> {
   @protected
   final Map<Type, List<Enum>> enums = {};
 
-  List<Enum> get(Type type) {
-    return !enums.containsKey(type) ? [] : enums[type]!;
+  EnumRegister();
+  EnumRegister.list(List<EnumRegister> registers) {
+    for (var e in registers) {
+      enums.addAll(e.enums);
+    }
+  }
+
+  List<Enum> getOrEmpty(Type type) => !enums.containsKey(type) ? [] : enums[type]!;
+
+  @override
+  List<Enum>? operator [](Object? key) {
+    return enums[key];
+  }
+
+  @override
+  void operator []=(Type key, List<Enum> value) {
+    enums[key] = value;
+  }
+
+  @override
+  void clear() {
+    enums.clear();
+  }
+
+  @override
+  Iterable<Type> get keys => enums.keys;
+
+  @override
+  List<Enum>? remove(Object? key) {
+    return enums.remove(key);
   }
 }
 

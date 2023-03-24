@@ -12,7 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
   note:
-    path: ../note
 
 dev_dependencies:
   lints: ^2.0.0
