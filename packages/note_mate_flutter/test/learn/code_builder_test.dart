@@ -124,7 +124,7 @@ void main() {
 
     var y = TypeReference((b) => b
       ..symbol = "ObjectFlagProperty"
-      ..types.add(refer("String"))).call([]).code;
+      ..types.add(refer("String"))).newInstanceNamed("has", []).code;
     expect(_noFormat(y), "ObjectFlagProperty<String>.has()");
   });
 }

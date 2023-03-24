@@ -19,21 +19,23 @@ void main() {
     test('declare(value)', () {
       Param<double> p = obj.declare("width", 1);
       expect(p, obj.get("width"));
+
       expect(1, p.value);
       expect(true, !p.isNullable);
       expect(true, p.isValue);
     });
     test('declare(value? )', () {
-      Param<double?> p = obj.declare("width", 1);
+      Param<double?> p = obj.declare<double?>("width", 1);
+      expect(p, obj.get("width"));
 
-      expect(1, obj.get("width").value);
       expect(1, p.value);
       expect(true, p.isNullable);
       expect(true, p.isValue);
     });
     test('declare(null)', () {
       Param<double?> p = obj.declare<double?>("width", null);
-      expect(null, obj.get("width").value);
+      expect(p, obj.get("width"));
+
       expect(null, p.value);
       expect(true, p.isNullable);
       expect(true, p.isValue);
@@ -43,8 +45,7 @@ void main() {
   group("declare(Meta)", () {
     test('declare(Meta)', () {
       Param<Container> p = obj.declare("mate", ContainerMate(width: 100));
-      Param<Container> getP = obj.get("mate");
-      expect(p, getP);
+      expect(p, obj.get("mate"));
 
       expect(true, p.value is ContainerMate);
       expect(true, !p.isNullable);
@@ -53,8 +54,7 @@ void main() {
 
     test('declare(Meta?)', () {
       Param<Container?> p = obj.declare<Container?>("mate", ContainerMate(width: 100));
-      Param<Container?> getP = obj.get("mate");
-      expect(p, getP);
+      expect(p, obj.get("mate"));
 
       expect(true, p.value is ContainerMate);
       expect(true, p.isNullable);
@@ -64,8 +64,7 @@ void main() {
     test('declare(null)', () {
       // null值无法识别其是否是Mate，所以只能作为ValueParam处理
       Param<Container?> p = obj.declare<Container?>("mate", null);
-      Param<Container?> getP = obj.get("mate");
-      expect(p, getP);
+      expect(p, obj.get("mate"));
 
       expect(true, p.value == null);
       expect(true, p.isNullable);
@@ -76,8 +75,7 @@ void main() {
   group("putList(List)", () {
     test('putList(List)', () {
       Param<List<int>> p = obj.declare("list", [1, 2]);
-      Param<List<int>> getP = obj.get("list");
-      expect(p, getP);
+      expect(p, obj.get("list"));
 
       // expect([1, 2], list.toValueList());
       expect(true, p.value is List);
@@ -87,8 +85,7 @@ void main() {
 
     test('putList(List?)', () {
       Param<List<int>?> p = obj.declare("list", [1, 2]);
-      Param<List<int>?> getP = obj.get("list");
-      expect(p, getP);
+      expect(p, obj.get("list"));
 
       expect(true, p.value is List);
       expect(true, p.isNullable);
@@ -97,8 +94,7 @@ void main() {
 
     test('putList(null)', () {
       Param<List<int>?> p = obj.declare("list", null);
-      Param<List<int>?> getP = obj.get("list");
-      expect(p, getP);
+      expect(p, obj.get("list"));
 
       expect(true, p.value == null);
       expect(true, p.isNullable);

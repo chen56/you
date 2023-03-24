@@ -91,21 +91,22 @@ Param<T> _convertToParam<T>({
         name: name,
         init: init,
         paramMap: init._mateParams,
-        nullable: false,
+        nullable: nullable,
         builder: init.mateBuilder);
   }
 
-  if (init is List) {
+  if (utils.isSubtype<List, T>() || utils.isSubtype<List?, T>()) {
     List<Param> params = [];
     if (!nullable) {
+      init as List;
       for (int i = 0; i < init.length; i++) {
-        params.add(_convertToParam(name: "[$i]", init: init[i], nullable: false));
+        params.add(_convertToParam(name: "[$i]", init: init[i], nullable: nullable));
       }
     }
     return ListParam(name: name, init: init, nullable: nullable, params: params);
   }
 
-  return ValueParam(name: name, init: init, nullable: false);
+  return ValueParam(name: name, init: init, nullable: nullable);
 }
 
 class ValueParam<T> extends Param<T> {

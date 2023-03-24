@@ -26,10 +26,12 @@ void main() {
   });
   test('Symbol', () {
     String? s = "";
-    expect(isNullableOf(s), true);
+    expect(isNullableOf(s), false);
+    expect(isNullableOf<String?>(s), true);
 
     dynamic x = s;
-    expect(isNullableOf(x), false);
+    expect(isNullableOf<String?>(x), true);
+    expect(isNullableOf(x), true);
   });
 }
 
