@@ -7,10 +7,12 @@ import 'package:note/pen_markdown.dart';
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
-
   final Path? tree;
-
-  PageScreen({super.key, this.tree, required this.current});
+  PageScreen({
+    super.key,
+    this.tree,
+    required this.current,
+  });
 
   @override
   String get location => current.path;
@@ -272,88 +274,77 @@ class _PagePen extends Pen {
   @override
   void sampleMate(Mate widgetMate) {
     _contents.add(_MateSample(
-      objectBuilder: ObjectParam.rootFrom(widgetMate),
+      rootParam: ObjectParam.rootFrom(widgetMate),
     ));
   }
 }
 
 class _MateSample extends StatelessWidget {
-  final ObjectParam objectBuilder;
+  final ObjectParam rootParam;
 
   // ignore: unused_element
-  const _MateSample({super.key, required this.objectBuilder});
+  const _MateSample({super.key, required this.rootParam});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 2,
-      child: Column(
-        children: [
-          _ParamView(objectBuilder: objectBuilder),
-          _MateView(objectBuilder: objectBuilder),
-        ],
+      elevation: 5,
+      child: ListenableBuilder(
+        listenable: rootParam,
+        builder: (context, _) {
+          var renderView = rootParam.build() as Widget;
+          var paramView = _ParamView(rootParam: rootParam);
+          return Column(
+            children: [
+              paramView,
+              renderView,
+            ],
+          );
+        },
       ),
     );
   }
 }
 
 class _ParamView extends StatelessWidget {
-  final ObjectParam objectBuilder;
+  final ObjectParam rootParam;
+  final Editors editors = Editors();
 
   // ignore: unused_element
-  const _ParamView({super.key, required this.objectBuilder});
+  _ParamView({super.key, required this.rootParam});
 
   @override
   Widget build(BuildContext context) {
     var paramTable = DataTable(
       dataRowMaxHeight: 25,
       dataRowMinHeight: 25,
+      // hide header
       headingRowHeight: 0,
       columns: const [
         DataColumn(label: Text("")),
         DataColumn(label: Text("")),
       ],
       rows: [
-        ...objectBuilder
+        ...rootParam
+            // hide null value
             .flat(test: (param) => param.init != null)
             .map(
               (e) => DataRow(
                 cells: [
-                  DataCell(e.mainWidget(context)),
-                  DataCell(Row(
-                    children: [Expanded(child: e.extWidget(context))],
-                  )),
+                  DataCell(editors.nameWidget(context, e)),
+                  DataCell(editors.valueWidget(context, e)),
                 ],
               ),
             )
             .toList()
       ],
     );
-    var paramPanel = ListenableBuilder(
-      listenable: objectBuilder,
-      builder: (context, _) => ExpansionTile(
-        initiallyExpanded: true,
-        expandedAlignment: Alignment.topLeft,
-        expandedCrossAxisAlignment: CrossAxisAlignment.start,
-        title: const Row(children: [Text("参数设置&代码")]),
-        children: [paramTable],
-      ),
-    );
-    return paramPanel;
-  }
-}
-
-class _MateView extends StatelessWidget {
-  final ObjectParam objectBuilder;
-
-  // ignore: unused_element
-  const _MateView({super.key, required this.objectBuilder});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListenableBuilder(
-      listenable: objectBuilder,
-      builder: (context, _) => objectBuilder.build() as Widget,
+    return ExpansionTile(
+      initiallyExpanded: false,
+      expandedAlignment: Alignment.topLeft,
+      expandedCrossAxisAlignment: CrossAxisAlignment.start,
+      title: const Row(children: [Text("显示代码")]),
+      children: [paramTable],
     );
   }
 }

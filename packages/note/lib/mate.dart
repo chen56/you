@@ -74,17 +74,6 @@ abstract class Param<T> extends ChangeNotifier {
   }) {
     return [this, ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))];
   }
-
-  Widget mainWidget(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: level * 15),
-      child: getEditor(this).nameWidget(context, this),
-    );
-  }
-
-  Widget extWidget(BuildContext context) {
-    return getEditor(this).valueWidget(context, this);
-  }
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
@@ -305,7 +294,24 @@ abstract class Editor<T> {
   }
 }
 
-class Editors {}
+class Editors {
+  Editor _getEditor(Param param) {
+    if (param.init is double) return DoubleEditor();
+    if (param.init is Enum) return EnumEditor();
+    return ReadonlyEditor();
+  }
+
+  Widget nameWidget(BuildContext context, Param param) {
+    return Container(
+      padding: EdgeInsets.only(left: param.level * 15),
+      child: _getEditor(param).nameWidget(context, param),
+    );
+  }
+
+  Widget valueWidget(BuildContext context, Param param) {
+    return _getEditor(param).valueWidget(context, param);
+  }
+}
 
 // todo 暂时这样，要用代码生成所有的枚举，并放到note_app里
 class Enums {

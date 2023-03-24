@@ -8,7 +8,10 @@ import 'package:note_app/note_app.dart';
 PageMeta page = PageMeta(
   shortTitle: "home",
   builder: build,
-  layout: <T>(Path<T> note) => PageScreen<T>(current: note, tree: paths.note),
+  layout: <T>(Path<T> note) => PageScreen<T>(
+    current: note,
+    tree: paths.note,
+  ),
 );
 
 build(Pen pen, BuildContext context) {
