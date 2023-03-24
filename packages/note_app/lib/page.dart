@@ -3,7 +3,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 import 'package:note/page_layout.dart';
+import 'package:note/mate.dart';
 import 'package:note_app/note_app.dart';
+import 'package:note_mate_flutter/mate_enums.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "home",
@@ -11,6 +13,7 @@ PageMeta page = PageMeta(
   layout: <T>(Path<T> note) => PageScreen<T>(
     current: note,
     tree: paths.note,
+    editors: Editors(enums: EnumRegister()),
   ),
 );
 

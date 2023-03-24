@@ -20,9 +20,9 @@ import 'package:note/env.dart';
 main() async {
   _log("## main");
   List<String> include = [
-    "package:flutter/",
-    "package:flutter/src/widgets/annotated_region.dart",
-    // "package:flutter/src/foundation/bitfield.dart",
+    // "package:flutter/",
+    // "package:flutter/src/widgets/annotated_region.dart",
+    "package:flutter/src/foundation/diagnostics.dart",
     // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
   ];
@@ -73,6 +73,16 @@ Future<void> gen({
   _log("## AllTypes print:");
   for (var key in allTypes.keys) {
     _log("allTypes--- $key - runtimeType:${key.runtimeType}  lib:${allTypes[key]!.identifier}");
+  }
+
+  _log("## gen enum editor:");
+  {
+    allTypes.keys.whereType<EnumElement>().forEach((e) {
+      // 找到EnumElement的所有枚举字段
+      e.fields.where((f) => f.isEnumConstant && f.type == e.thisType).forEach((f) {
+        print("sss${f}");
+      });
+    });
   }
 
   _log("## gen lib mate, list all:");

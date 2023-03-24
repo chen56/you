@@ -202,12 +202,6 @@ class ObjectParam<T> extends Param<T> {
   Iterable<Param> get children => _paramMap.values;
 }
 
-Editor getEditor(Param node) {
-  if (node.init is double) return DoubleEditor();
-  if (node.init is Enum) return EnumEditor();
-  return ReadonlyEditor();
-}
-
 class DoubleEditor extends Editor<double> {
   DoubleEditor();
 
@@ -230,7 +224,8 @@ class DoubleEditor extends Editor<double> {
 }
 
 class EnumEditor extends Editor {
-  EnumEditor();
+  final Enums enums;
+  EnumEditor({required this.enums});
 
   @override
   Widget valueWidget(BuildContext context, Param param) {
@@ -246,7 +241,7 @@ class EnumEditor extends Editor {
       onChanged: (Enum? value) {
         param.value = value;
       },
-      items: Enums.get(param.value.runtimeType).map<DropdownMenuItem<Enum>>((Enum value) {
+      items: enums.get(param.value.runtimeType).map<DropdownMenuItem<Enum>>((Enum value) {
         return DropdownMenuItem<Enum>(
           value: value,
           child: Text(value.name),
@@ -295,9 +290,12 @@ abstract class Editor<T> {
 }
 
 class Editors {
+  final Enums enums;
+  Editors({required this.enums});
+
   Editor _getEditor(Param param) {
     if (param.init is double) return DoubleEditor();
-    if (param.init is Enum) return EnumEditor();
+    if (param.init is Enum) return EnumEditor(enums: enums);
     return ReadonlyEditor();
   }
 
@@ -313,26 +311,16 @@ class Editors {
   }
 }
 
-// todo 暂时这样，要用代码生成所有的枚举，并放到note_app里
-class Enums {
-  static final Enums _instance = Enums._();
+abstract class Enums {
+  @protected
   final Map<Type, List<Enum>> enums = {};
 
-  Enums._() {
-    enums[MainAxisAlignment] = MainAxisAlignment.values;
-    enums[CrossAxisAlignment] = CrossAxisAlignment.values;
-    enums[VerticalDirection] = VerticalDirection.values;
-    enums[Clip] = Clip.values;
-  }
-
-  static Enums get instance => _instance;
-
-  static List<Enum> get(Type type) {
-    return !instance.enums.containsKey(type) ? [] : instance.enums[type]!;
+  List<Enum> get(Type type) {
+    return !enums.containsKey(type) ? [] : enums[type]!;
   }
 }
 
 main() {
   // ignore: avoid_print
-  print(Enums._instance.enums[MainAxisAlignment.start.runtimeType]);
+  // print(Enums._instance.enums[MainAxisAlignment.start.runtimeType]);
 }

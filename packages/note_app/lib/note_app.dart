@@ -5,7 +5,7 @@ import 'package:note_app/pages.g.dart';
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
-// 需求被拒绝，貌似这种自省需求会影响到dart的性能策略,只能另想办法, 比如自动生成
+// 需求被拒绝，自省会影响到dart的性能策略,只能另想办法, 比如自动生成
 
 // Path<void> root = Path<void>("/", meta: rootPage, kids: [
 //   Path<void>("not_found", meta: notFoundPage),

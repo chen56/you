@@ -8,10 +8,14 @@ import 'package:note/pen_markdown.dart';
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
+
+  final Editors editors;
+
   PageScreen({
     super.key,
     this.tree,
     required this.current,
+    required this.editors,
   });
 
   @override
@@ -24,12 +28,17 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 }
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
-  final _PagePen pen = _PagePen();
+  late final _PagePen pen;
   final ScrollController controller = ScrollController(initialScrollOffset: 0);
+
+  _PageScreenState() {}
 
   @override
   void initState() {
     super.initState();
+
+    pen = _PagePen(editors: widget.editors);
+
     //内容outline只build一次
     widget.current.build(pen, context);
 
@@ -240,7 +249,9 @@ class _OutlineView extends StatelessWidget {
 class _PagePen extends Pen {
   int i = 0;
 
-  _PagePen();
+  final Editors editors;
+
+  _PagePen({required this.editors});
 
   Outline outline = Outline();
   final List<Widget> _contents = List.empty(growable: true);
@@ -275,15 +286,21 @@ class _PagePen extends Pen {
   void sampleMate(Mate widgetMate) {
     _contents.add(_MateSample(
       rootParam: ObjectParam.rootFrom(widgetMate),
+      editors: editors,
     ));
   }
 }
 
 class _MateSample extends StatelessWidget {
   final ObjectParam rootParam;
+  final Editors editors;
 
   // ignore: unused_element
-  const _MateSample({super.key, required this.rootParam});
+  const _MateSample({
+    super.key,
+    required this.rootParam,
+    required this.editors,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -293,7 +310,10 @@ class _MateSample extends StatelessWidget {
         listenable: rootParam,
         builder: (context, _) {
           var renderView = rootParam.build() as Widget;
-          var paramView = _ParamView(rootParam: rootParam);
+          var paramView = _ParamView(
+            rootParam: rootParam,
+            editors: editors,
+          );
           return Column(
             children: [
               paramView,
@@ -308,10 +328,10 @@ class _MateSample extends StatelessWidget {
 
 class _ParamView extends StatelessWidget {
   final ObjectParam rootParam;
-  final Editors editors = Editors();
+  final Editors editors;
 
   // ignore: unused_element
-  _ParamView({super.key, required this.rootParam});
+  _ParamView({super.key, required this.rootParam, required this.editors});
 
   @override
   Widget build(BuildContext context) {
