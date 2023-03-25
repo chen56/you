@@ -43,7 +43,7 @@ abstract class Param<T> extends ChangeNotifier {
 
   Iterable<Param> get children;
 
-  //todo release模式下 runtimeType被混淆了
+  //fixme release模式下 runtimeType被混淆了
   String get displayName {
     if (isRoot) return "${init.runtimeType}".replaceAll("\$Mate", "");
     return name;
@@ -320,7 +320,7 @@ class ReadonlyEditor extends Editor<double> {
 mixin Mate {
   final Map<String, Param> _mateParams = {};
   late final Object Function(ObjectParam param) mateBuilder;
-  //todo builderRefer改为真实值
+  //fixme builderRefer改为真实值
   late final Reference builderRefer = refer(runtimeType.toString());
 
   Param<V> matePut<V>(String name, V init) {
