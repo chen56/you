@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
-import 'package:note/mate.dart';
 import 'package:note_mate_flutter/material.dart';
 
 PageMeta page = PageMeta(
@@ -35,7 +34,6 @@ build(Pen pen, BuildContext context) {
     clipBehavior: Clip.none,
     child: Center$Mate(
       child: Container$Mate(
-        key: ValueKey("s"),
         width: 100,
         height: 100,
         color: Colors.red.shade400,

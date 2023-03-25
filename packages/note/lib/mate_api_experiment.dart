@@ -6,14 +6,18 @@ class ContainerMate extends Container with Mate {
   late final Param<double?> heightMate;
 
   ContainerMate({
-    super.key,
-    super.alignment,
-    super.color,
-    super.clipBehavior,
+    Key? key,
+    AlignmentGeometry? alignment,
+    Color? color,
+    Clip clipBehavior = Clip.none,
     double? width,
     double? height,
     Widget? child,
   }) : super(
+          key: key,
+          alignment: alignment,
+          color: color,
+          clipBehavior: clipBehavior,
           width: width,
           height: height,
           child: child,
@@ -44,10 +48,14 @@ class ContainerMate extends Container with Mate {
 
 class ColumnMate extends Column with Mate {
   ColumnMate({
-    super.key,
-    super.mainAxisAlignment,
+    Key? key,
+    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
     List<Widget> children = const <Widget>[],
-  }) : super(children: children) {
+  }) : super(
+          key: key,
+          mainAxisAlignment: mainAxisAlignment,
+          children: children,
+        ) {
     mateBuilder = (p) => ColumnMate(
           key: p.get("key").build(),
           mainAxisAlignment: p.get("mainAxisAlignment").build(),

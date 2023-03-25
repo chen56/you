@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_type_check
 
+import 'package:code_builder/code_builder.dart';
 import 'package:flutter/widgets.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -9,7 +10,8 @@ void main() {
   late ObjectParam obj;
 
   setUp(() {
-    obj = ObjectParam(init: Container(), builder: (m) => Container());
+    obj = ObjectParam(
+        init: Container(), builder: (m) => Container(), builderRefer: refer("Container"));
   });
   group("范型", () {
     test('print', () {});

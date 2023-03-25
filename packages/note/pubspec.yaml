@@ -17,6 +17,9 @@ dependencies:
   flutter_highlight: ^0.7.0
   highlight: ^0.7.0
 
+  code_builder: ^4.4.0
+  dart_style: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
