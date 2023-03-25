@@ -1,4 +1,5 @@
-import 'package:test/test.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('1', () {
@@ -32,6 +33,21 @@ void main() {
     dynamic x = s;
     expect(isNullableOf<String?>(x), true);
     expect(isNullableOf(x), true);
+  });
+  group("Enum", () {
+    test('cast', () {
+      bool isEnum<T>(T x) {
+        return x is Enum;
+      }
+
+      Enum e = DiagnosticLevel.debug;
+      DiagnosticLevel? c = DiagnosticLevel.debug;
+      expect(isEnum<DiagnosticLevel>(DiagnosticLevel.debug), true);
+      expect(isEnum(e), true);
+      expect(e is Enum, true);
+      expect(c is Enum, true);
+      expect(isEnum(c), true);
+    });
   });
 }
 

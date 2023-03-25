@@ -1,6 +1,6 @@
 import 'dart:collection';
 
-import 'package:code_builder/code_builder.dart';
+import 'package:code_builder/code_builder.dart' as code;
 import 'package:dart_style/dart_style.dart';
 import 'package:flutter/material.dart';
 import 'package:note/utils.dart' as utils;
@@ -8,13 +8,15 @@ import 'package:note/utils.dart' as utils;
 abstract class Param<T> extends ChangeNotifier {
   String name;
   Param? parent;
-  final dynamic init;
+  final T init;
   final bool nullable;
   T _value;
 
   T get value => _value;
 
   set value(T newValue) {
+    if (newValue == null && !nullable) return;
+
     _value = newValue;
     notifyListeners();
   }
@@ -79,7 +81,7 @@ abstract class Param<T> extends ChangeNotifier {
     return [this, ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))];
   }
 
-  Expression expression({required Editors editors});
+  code.Expression expression({required Editors editors});
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
@@ -128,10 +130,10 @@ class ValueParam<T> extends Param<T> {
   Iterable<Param> get children => List.empty();
 
   @override
-  Expression expression({required Editors editors}) {
-    return literal(value, onError: (o) {
+  code.Expression expression({required Editors editors}) {
+    return code.literal(value, onError: (o) {
       if (o is Enum) {}
-      return literalString("$o");
+      return code.literalString("$o");
     });
   }
 }
@@ -157,15 +159,15 @@ class ListParam<T> extends Param<T> {
   Iterable<Param> get children => params;
 
   @override
-  Expression expression({required Editors editors}) {
-    return literalList(children.map((e) => e.expression(editors: editors)));
+  code.Expression expression({required Editors editors}) {
+    return code.literalList(children.map((e) => e.expression(editors: editors)));
   }
 }
 
 class ObjectParam<T> extends Param<T> {
   final Map<String, Param> _paramMap;
   late final Object Function(ObjectParam param) builder;
-  final Reference builderRefer;
+  final code.Reference builderRefer;
   ObjectParam({
     super.name,
     required super.init,
@@ -201,7 +203,7 @@ class ObjectParam<T> extends Param<T> {
       : this(
           name: "root",
           //根对象无name
-          init: mate,
+          init: mate as T,
           builder: mate.mateBuilder,
           paramMap: mate._mateParams,
           nullable: false, //根对象
@@ -226,19 +228,24 @@ class ObjectParam<T> extends Param<T> {
 
   String toCodeString({
     bool snippet = true,
-    DartEmitter? emitter,
+    code.DartEmitter? emitter,
     DartFormatter? formatter,
     Editors? editors,
   }) {
-    var emitter_ = emitter ?? DartEmitter(allocator: Allocator(), useNullSafetySyntax: true);
+    var emitter_ =
+        emitter ?? code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
     // 一般以80个字符为编辑器宽度
-    var formatter_ = formatter ?? DartFormatter(pageWidth: 80);
+    var formatter_ = formatter ??
+        DartFormatter(
+          pageWidth: 80,
+        );
     String result = toCode(snippet: snippet, editors: editors).accept(emitter_).toString();
     result = snippet ? formatter_.formatStatement(result) : formatter_.format(result);
     return result;
   }
 
-  Spec toCode({
+  // fixme 位置参数和命名参数要分离,不然生成的代码都是命名参数了
+  code.Spec toCode({
     bool snippet = true,
     Editors? editors,
   }) {
@@ -247,16 +254,17 @@ class ObjectParam<T> extends Param<T> {
     if (snippet) {
       return expression(editors: editors_).statement;
     }
-    Library lib = Library((e) => e
-      ..body.add(Method((b) => b
+    code.Library lib = code.Library((e) => e
+      ..body.add(code.Method((b) => b
         ..name = "main"
-        ..body = refer("runApp", "package:flutter/material.dart")
+        ..body = code
+            .refer("runApp", "package:flutter/material.dart")
             .call([expression(editors: editors_)]).code).closure.statement));
     return lib;
   }
 
   @override
-  Expression expression({required Editors editors}) {
+  code.Expression expression({required Editors editors}) {
     var filteredParams = Map.fromEntries(_paramMap.entries
         .where((e) => e.value.init != null)
         .map((e) => MapEntry(e.key, e.value.expression(editors: editors))));
@@ -293,7 +301,7 @@ class EnumEditor extends Editor {
   Widget valueWidget(BuildContext context, Param param) {
     return DropdownButton<Enum>(
       alignment: Alignment.topLeft,
-      value: param.value,
+      value: param.value as Enum,
       icon: const Icon(Icons.arrow_downward),
       elevation: 16,
       style: const TextStyle(color: Colors.deepPurple),
@@ -321,7 +329,7 @@ mixin Mate {
   final Map<String, Param> _mateParams = {};
   late final Object Function(ObjectParam param) mateBuilder;
   //fixme builderRefer改为真实值
-  late final Reference builderRefer = refer(runtimeType.toString());
+  late final code.Reference builderRefer = code.refer(runtimeType.toString());
 
   Param<V> matePut<V>(String name, V init) {
     var param = _convertToParam(name: name, nullable: utils.isNullableOf<V>(init), init: init);
@@ -354,12 +362,12 @@ abstract class Editor<T> {
 }
 
 class Editors {
-  final EnumRegister enums;
-  Editors({EnumRegister? enums}) : enums = enums ?? EnumRegister();
+  final EnumRegister enumRegister;
+  Editors({EnumRegister? enumRegister}) : enumRegister = enumRegister ?? EnumRegister();
 
   Editor _getEditor(Param param) {
     if (param.init is double) return DoubleEditor();
-    if (param.init is Enum) return EnumEditor(enums: enums);
+    if (param.init is Enum) return EnumEditor(enums: enumRegister);
     return ReadonlyEditor();
   }
 
@@ -377,10 +385,14 @@ class Editors {
 
 class EnumRegister extends MapBase<Type, List> {
   @protected
-  final Map<Type, List> enums;
+  final Map<Type, List> enums = {};
 
-  EnumRegister({this.enums = const {}});
-  EnumRegister.list(List<EnumRegister> registers) : enums = {} {
+  EnumRegister({Map<Type, List>? enums}) {
+    if (enums != null) {
+      enums.addAll(enums);
+    }
+  }
+  EnumRegister.list(List<EnumRegister> registers) {
     for (var e in registers) {
       enums.addAll(e.enums);
     }
@@ -413,14 +425,6 @@ class EnumRegister extends MapBase<Type, List> {
 }
 
 /// 代码生成
-class CodeGen {}
-
-class MateCode extends CodeGen {}
-
-class DoubleCode extends CodeGen {}
-
-class EnumCode extends CodeGen {}
-
 main() {
   // ignore: avoid_print
   // print(Enums._instance.enums[MainAxisAlignment.start.runtimeType]);

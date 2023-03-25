@@ -13,10 +13,7 @@ PageMeta page = PageMeta(
   layout: <T>(Path<T> note) => PageScreen<T>(
     current: note,
     tree: paths.note,
-    editors: Editors(
-        enums: EnumRegister.list([
-      flutter_enums.registerEnum(),
-    ])),
+    editors: Editors(enumRegister: EnumRegister.list([flutter_enums.registerEnum()])),
   ),
 );
 
