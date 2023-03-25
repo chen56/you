@@ -367,7 +367,37 @@ class _ParamAndCodeView extends StatelessWidget {
             .toList()
       ],
     );
+    Widget paramRow(Param param) {
+      var row = TextButton(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Flexible(child: editors.nameWidget(context, param)),
+            Flexible(child: editors.valueWidget(context, param)),
+          ],
+        ),
+        onPressed: () {},
+      );
+      // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
+      return Padding(
+        // 缩进模仿树形
+        padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
+        child: Container(
+          decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey))),
+          height: 25,
+          child: row,
+        ),
+      );
+    }
 
+    var paramView2 = Column(
+      children: [
+        ...rootParam
+            // hide null value
+            .flat(test: (param) => param.init != null)
+            .map(paramRow)
+      ],
+    );
     var codeView = HighlightView(
       // The original code to be highlighted
       // fixme editors
@@ -396,7 +426,7 @@ class _ParamAndCodeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: paramView),
+            Expanded(child: paramView2),
             Expanded(child: codeView),
           ],
         )
