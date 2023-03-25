@@ -3,6 +3,7 @@ import 'dart:collection';
 import 'package:code_builder/code_builder.dart' as code;
 import 'package:dart_style/dart_style.dart';
 import 'package:flutter/material.dart';
+import 'package:note/src/mate_color.dart';
 import 'package:note/utils.dart' as utils;
 
 abstract class Param<T> extends ChangeNotifier {
@@ -81,7 +82,7 @@ abstract class Param<T> extends ChangeNotifier {
     return [this, ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))];
   }
 
-  code.Expression expression({required Editors editors});
+  code.Expression toCodeExpression({required Editors editors});
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
@@ -130,10 +131,16 @@ class ValueParam<T> extends Param<T> {
   Iterable<Param> get children => List.empty();
 
   @override
-  code.Expression expression({required Editors editors}) {
+  code.Expression toCodeExpression({required Editors editors}) {
     return code.literal(value, onError: (o) {
-      if (o is Enum) {}
-      return code.literalString("$o");
+      if (o is Enum) {
+        return code.refer("$o");
+      }
+      if (o is Color) {
+        return ColorRegister.instance.get(o);
+      }
+
+      return code.refer("$o");
     });
   }
 }
@@ -159,8 +166,8 @@ class ListParam<T> extends Param<T> {
   Iterable<Param> get children => params;
 
   @override
-  code.Expression expression({required Editors editors}) {
-    return code.literalList(children.map((e) => e.expression(editors: editors)));
+  code.Expression toCodeExpression({required Editors editors}) {
+    return code.literalList(children.map((e) => e.toCodeExpression(editors: editors)));
   }
 }
 
@@ -226,7 +233,7 @@ class ObjectParam<T> extends Param<T> {
   @override
   Iterable<Param> get children => _paramMap.values;
 
-  String toCodeString({
+  String toSampleCodeString({
     bool snippet = true,
     code.DartEmitter? emitter,
     DartFormatter? formatter,
@@ -239,35 +246,36 @@ class ObjectParam<T> extends Param<T> {
         DartFormatter(
           pageWidth: 80,
         );
-    String result = toCode(snippet: snippet, editors: editors).accept(emitter_).toString();
+    String result = toSampleCode(snippet: snippet, editors: editors).accept(emitter_).toString();
     result = snippet ? formatter_.formatStatement(result) : formatter_.format(result);
     return result;
   }
 
   // fixme 位置参数和命名参数要分离,不然生成的代码都是命名参数了
-  code.Spec toCode({
+  /// 转换成完整的范例代码
+  code.Spec toSampleCode({
     bool snippet = true,
     Editors? editors,
   }) {
     var editors_ = editors ?? Editors();
 
     if (snippet) {
-      return expression(editors: editors_).statement;
+      return toCodeExpression(editors: editors_).statement;
     }
     code.Library lib = code.Library((e) => e
       ..body.add(code.Method((b) => b
         ..name = "main"
         ..body = code
             .refer("runApp", "package:flutter/material.dart")
-            .call([expression(editors: editors_)]).code).closure.statement));
+            .call([toCodeExpression(editors: editors_)]).code).closure.statement));
     return lib;
   }
 
   @override
-  code.Expression expression({required Editors editors}) {
+  code.Expression toCodeExpression({required Editors editors}) {
     var filteredParams = Map.fromEntries(_paramMap.entries
         .where((e) => e.value.init != null)
-        .map((e) => MapEntry(e.key, e.value.expression(editors: editors))));
+        .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
     return builderRefer.call([], filteredParams);
   }
 }

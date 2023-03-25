@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_type_check
 
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -21,7 +22,16 @@ void main() {
         ),
       );
       var y = ObjectParam.rootFrom(x);
-      print(y.toCodeString());
+      print(y.toSampleCodeString());
+    });
+  });
+  group("type:Color", () {
+    test('print', () {
+      var x = ContainerMate(
+        color: Colors.green.shade100,
+      );
+      var y = ObjectParam.rootFrom(x);
+      print(y.toSampleCodeString());
     });
   });
 }

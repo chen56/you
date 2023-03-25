@@ -313,13 +313,13 @@ class _MateSample extends StatelessWidget {
         listenable: rootParam,
         builder: (context, _) {
           var renderView = rootParam.build() as Widget;
-          var paramView = _ParamAndCodeView(
+          var paramAndCodeView = _ParamAndCodeView(
             rootParam: rootParam,
             editors: editors,
           );
           return Column(
             children: [
-              paramView,
+              paramAndCodeView,
               renderView,
             ],
           );
@@ -345,7 +345,7 @@ class _ParamAndCodeView extends StatelessWidget {
       headingRowHeight: 0,
       columns: const [
         DataColumn(label: Text("")),
-        DataColumn(label: Text("")),
+        // DataColumn(label: Text("")),
       ],
       rows: [
         ...rootParam
@@ -354,8 +354,13 @@ class _ParamAndCodeView extends StatelessWidget {
             .map(
               (e) => DataRow(
                 cells: [
-                  DataCell(editors.nameWidget(context, e)),
-                  DataCell(editors.valueWidget(context, e)),
+                  DataCell(Row(
+                    children: [
+                      Expanded(child: editors.nameWidget(context, e)),
+                      Expanded(child: editors.valueWidget(context, e))
+                    ],
+                  )),
+                  // DataCell(editors.valueWidget(context, e)),
                 ],
               ),
             )
@@ -366,7 +371,7 @@ class _ParamAndCodeView extends StatelessWidget {
     var codeView = HighlightView(
       // The original code to be highlighted
       // fixme editors
-      rootParam.toCodeString(),
+      rootParam.toSampleCodeString(),
 
       // Specify language
       // It is recommended to give it a value for performance
