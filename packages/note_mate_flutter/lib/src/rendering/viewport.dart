@@ -25,8 +25,8 @@ class RevealedOffset$Mate extends RevealedOffset with Mate {
           offset: p.get('offset').build(),
           rect: p.get('rect').build(),
         );
-    mateDeclare('offset', offset);
-    mateDeclare('rect', rect);
+    mateUse('offset', offset);
+    mateUse('rect', rect);
   }
 }
 
@@ -82,20 +82,21 @@ class RenderViewport$Mate extends RenderViewport with Mate {
           cacheExtentStyle: p.get('cacheExtentStyle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('crossAxisDirection', crossAxisDirection);
-    mateDeclare('offset', offset);
-    mateDeclare('anchor', anchor);
-    mateDeclare('children', children);
-    mateDeclare('center', center);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('cacheExtentStyle', cacheExtentStyle);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('axisDirection', axisDirection);
+    mateUse('crossAxisDirection', crossAxisDirection);
+    mateUse('offset', offset);
+    mateUse('anchor', anchor);
+    mateUse('children', children);
+    mateUse('center', center);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('cacheExtentStyle', cacheExtentStyle);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
 /// class RenderShrinkWrappingViewport extends RenderViewportBase<SliverLogicalContainerParentData>
-class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport with Mate {
+class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport
+    with Mate {
   /// RenderShrinkWrappingViewport RenderShrinkWrappingViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<RenderSliver>? children})
   RenderShrinkWrappingViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:is!ConstVariableElement
@@ -126,10 +127,10 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport wit
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('crossAxisDirection', crossAxisDirection);
-    mateDeclare('offset', offset);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('children', children);
+    mateUse('axisDirection', axisDirection);
+    mateUse('crossAxisDirection', crossAxisDirection);
+    mateUse('offset', offset);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('children', children);
   }
 }

@@ -15,7 +15,7 @@ void main() {
   });
   group("范型", () {
     test('declare(enum)', () {
-      Param<Clip> p = obj.declare("arg", Clip.none);
+      Param<Clip> p = obj.use("arg", Clip.none);
       expect(p, obj.get("arg"));
 
       expect(Clip.none, p.value);
@@ -50,7 +50,7 @@ void main() {
 
   group("declare(value)", () {
     test('declare(value)', () {
-      Param<double> p = obj.declare("width", 1);
+      Param<double> p = obj.use("width", 1);
       expect(p, obj.get("width"));
 
       expect(1, p.value);
@@ -58,7 +58,7 @@ void main() {
       expect(true, p.isValue);
     });
     test('declare(value? )', () {
-      Param<double?> p = obj.declare<double?>("width", 1);
+      Param<double?> p = obj.use<double?>("width", 1);
       expect(p, obj.get("width"));
 
       expect(1, p.value);
@@ -66,7 +66,7 @@ void main() {
       expect(true, p.isValue);
     });
     test('declare(null)', () {
-      Param<double?> p = obj.declare<double?>("width", null);
+      Param<double?> p = obj.use<double?>("width", null);
       expect(p, obj.get("width"));
 
       expect(null, p.value);
@@ -77,7 +77,7 @@ void main() {
 
   group("declare(Meta)", () {
     test('declare(Meta)', () {
-      Param<Container> p = obj.declare("mate", ContainerMate(width: 100));
+      Param<Container> p = obj.use("mate", ContainerMate(width: 100));
       expect(p, obj.get("mate"));
 
       expect(true, p.value is ContainerMate);
@@ -86,7 +86,7 @@ void main() {
     });
 
     test('declare(Meta?)', () {
-      Param<Container?> p = obj.declare<Container?>("mate", ContainerMate(width: 100));
+      Param<Container?> p = obj.use<Container?>("mate", ContainerMate(width: 100));
       expect(p, obj.get("mate"));
 
       expect(true, p.value is ContainerMate);
@@ -96,7 +96,7 @@ void main() {
 
     test('declare(null)', () {
       // null值无法识别其是否是Mate，所以只能作为ValueParam处理
-      Param<Container?> p = obj.declare<Container?>("mate", null);
+      Param<Container?> p = obj.use<Container?>("mate", null);
       expect(p, obj.get("mate"));
 
       expect(true, p.value == null);
@@ -107,7 +107,7 @@ void main() {
 
   group("declare(List)", () {
     test('putList(List)', () {
-      Param<List<int>> p = obj.declare("list", [1, 2]);
+      Param<List<int>> p = obj.use("list", [1, 2]);
       expect(p, obj.get("list"));
 
       // expect([1, 2], list.toValueList());
@@ -117,7 +117,7 @@ void main() {
     });
 
     test('declare(List?)', () {
-      Param<List<int>?> p = obj.declare("list", [1, 2]);
+      Param<List<int>?> p = obj.use("list", [1, 2]);
       expect(p, obj.get("list"));
 
       expect(true, p.value is List);
@@ -126,7 +126,7 @@ void main() {
     });
 
     test('declare<List?>(null)', () {
-      Param<List<int>?> p = obj.declare("list", null);
+      Param<List<int>?> p = obj.use("list", null);
       expect(p, obj.get("list"));
 
       expect(true, p.value == null);

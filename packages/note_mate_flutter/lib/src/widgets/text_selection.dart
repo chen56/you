@@ -103,21 +103,21 @@ class TextSelectionOverlay$Mate extends TextSelectionOverlay with Mate {
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateDeclare('value', value);
-    mateDeclare('context', context);
-    mateDeclare('debugRequiredFor', debugRequiredFor);
-    mateDeclare('toolbarLayerLink', toolbarLayerLink);
-    mateDeclare('startHandleLayerLink', startHandleLayerLink);
-    mateDeclare('endHandleLayerLink', endHandleLayerLink);
-    mateDeclare('renderObject', renderObject);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('handlesVisible', handlesVisible);
-    mateDeclare('selectionDelegate', selectionDelegate);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('onSelectionHandleTapped', onSelectionHandleTapped);
-    mateDeclare('clipboardStatus', clipboardStatus);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateUse('value', value);
+    mateUse('context', context);
+    mateUse('debugRequiredFor', debugRequiredFor);
+    mateUse('toolbarLayerLink', toolbarLayerLink);
+    mateUse('startHandleLayerLink', startHandleLayerLink);
+    mateUse('endHandleLayerLink', endHandleLayerLink);
+    mateUse('renderObject', renderObject);
+    mateUse('selectionControls', selectionControls);
+    mateUse('handlesVisible', handlesVisible);
+    mateUse('selectionDelegate', selectionDelegate);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('onSelectionHandleTapped', onSelectionHandleTapped);
+    mateUse('clipboardStatus', clipboardStatus);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
   }
 }
 
@@ -253,49 +253,52 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate {
           onSelectionHandleTapped: p.get('onSelectionHandleTapped').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateDeclare('context', context);
-    mateDeclare('debugRequiredFor', debugRequiredFor);
-    mateDeclare('startHandleType', startHandleType);
-    mateDeclare('lineHeightAtStart', lineHeightAtStart);
-    mateDeclare('startHandlesVisible', startHandlesVisible);
-    mateDeclare('onStartHandleDragStart', onStartHandleDragStart);
-    mateDeclare('onStartHandleDragUpdate', onStartHandleDragUpdate);
-    mateDeclare('onStartHandleDragEnd', onStartHandleDragEnd);
-    mateDeclare('endHandleType', endHandleType);
-    mateDeclare('lineHeightAtEnd', lineHeightAtEnd);
-    mateDeclare('endHandlesVisible', endHandlesVisible);
-    mateDeclare('onEndHandleDragStart', onEndHandleDragStart);
-    mateDeclare('onEndHandleDragUpdate', onEndHandleDragUpdate);
-    mateDeclare('onEndHandleDragEnd', onEndHandleDragEnd);
-    mateDeclare('toolbarVisible', toolbarVisible);
-    mateDeclare('selectionEndpoints', selectionEndpoints);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('selectionDelegate', selectionDelegate);
-    mateDeclare('clipboardStatus', clipboardStatus);
-    mateDeclare('startHandleLayerLink', startHandleLayerLink);
-    mateDeclare('endHandleLayerLink', endHandleLayerLink);
-    mateDeclare('toolbarLayerLink', toolbarLayerLink);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('onSelectionHandleTapped', onSelectionHandleTapped);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateUse('context', context);
+    mateUse('debugRequiredFor', debugRequiredFor);
+    mateUse('startHandleType', startHandleType);
+    mateUse('lineHeightAtStart', lineHeightAtStart);
+    mateUse('startHandlesVisible', startHandlesVisible);
+    mateUse('onStartHandleDragStart', onStartHandleDragStart);
+    mateUse('onStartHandleDragUpdate', onStartHandleDragUpdate);
+    mateUse('onStartHandleDragEnd', onStartHandleDragEnd);
+    mateUse('endHandleType', endHandleType);
+    mateUse('lineHeightAtEnd', lineHeightAtEnd);
+    mateUse('endHandlesVisible', endHandlesVisible);
+    mateUse('onEndHandleDragStart', onEndHandleDragStart);
+    mateUse('onEndHandleDragUpdate', onEndHandleDragUpdate);
+    mateUse('onEndHandleDragEnd', onEndHandleDragEnd);
+    mateUse('toolbarVisible', toolbarVisible);
+    mateUse('selectionEndpoints', selectionEndpoints);
+    mateUse('selectionControls', selectionControls);
+    mateUse('selectionDelegate', selectionDelegate);
+    mateUse('clipboardStatus', clipboardStatus);
+    mateUse('startHandleLayerLink', startHandleLayerLink);
+    mateUse('endHandleLayerLink', endHandleLayerLink);
+    mateUse('toolbarLayerLink', toolbarLayerLink);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('onSelectionHandleTapped', onSelectionHandleTapped);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
   }
 }
 
 /// class TextSelectionGestureDetectorBuilder
-class TextSelectionGestureDetectorBuilder$Mate extends TextSelectionGestureDetectorBuilder with Mate {
+class TextSelectionGestureDetectorBuilder$Mate
+    extends TextSelectionGestureDetectorBuilder with Mate {
   /// TextSelectionGestureDetectorBuilder TextSelectionGestureDetectorBuilder({required TextSelectionGestureDetectorBuilderDelegate delegate})
   TextSelectionGestureDetectorBuilder$Mate(
       {
       /// optionalParameters: {required TextSelectionGestureDetectorBuilderDelegate delegate} , defaultValue:none
       required TextSelectionGestureDetectorBuilderDelegate delegate})
       : super(delegate: delegate) {
-    mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.get('delegate').build());
-    mateDeclare('delegate', delegate);
+    mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(
+        delegate: p.get('delegate').build());
+    mateUse('delegate', delegate);
   }
 }
 
 /// class TextSelectionGestureDetector extends StatefulWidget
-class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector with Mate {
+class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector
+    with Mate {
   /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -386,23 +389,23 @@ class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector wit
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onTapDown', onTapDown);
-    mateDeclare('onForcePressStart', onForcePressStart);
-    mateDeclare('onForcePressEnd', onForcePressEnd);
-    mateDeclare('onSecondaryTap', onSecondaryTap);
-    mateDeclare('onSecondaryTapDown', onSecondaryTapDown);
-    mateDeclare('onSingleTapUp', onSingleTapUp);
-    mateDeclare('onSingleTapCancel', onSingleTapCancel);
-    mateDeclare('onSingleLongTapStart', onSingleLongTapStart);
-    mateDeclare('onSingleLongTapMoveUpdate', onSingleLongTapMoveUpdate);
-    mateDeclare('onSingleLongTapEnd', onSingleLongTapEnd);
-    mateDeclare('onDoubleTapDown', onDoubleTapDown);
-    mateDeclare('onDragSelectionStart', onDragSelectionStart);
-    mateDeclare('onDragSelectionUpdate', onDragSelectionUpdate);
-    mateDeclare('onDragSelectionEnd', onDragSelectionEnd);
-    mateDeclare('behavior', behavior);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('onTapDown', onTapDown);
+    mateUse('onForcePressStart', onForcePressStart);
+    mateUse('onForcePressEnd', onForcePressEnd);
+    mateUse('onSecondaryTap', onSecondaryTap);
+    mateUse('onSecondaryTapDown', onSecondaryTapDown);
+    mateUse('onSingleTapUp', onSingleTapUp);
+    mateUse('onSingleTapCancel', onSingleTapCancel);
+    mateUse('onSingleLongTapStart', onSingleLongTapStart);
+    mateUse('onSingleLongTapMoveUpdate', onSingleLongTapMoveUpdate);
+    mateUse('onSingleLongTapEnd', onSingleLongTapEnd);
+    mateUse('onDoubleTapDown', onDoubleTapDown);
+    mateUse('onDragSelectionStart', onDragSelectionStart);
+    mateUse('onDragSelectionUpdate', onDragSelectionUpdate);
+    mateUse('onDragSelectionEnd', onDragSelectionEnd);
+    mateUse('behavior', behavior);
+    mateUse('child', child);
   }
 }
 
@@ -414,7 +417,8 @@ class ClipboardStatusNotifier$Mate extends ClipboardStatusNotifier with Mate {
       /// optionalParameters: {ClipboardStatus value = ClipboardStatus.unknown} , defaultValue:unprocessed
       required ClipboardStatus value})
       : super(value: value) {
-    mateBuilder = (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
-    mateDeclare('value', value);
+    mateBuilder =
+        (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
+    mateUse('value', value);
   }
 }

@@ -15,7 +15,7 @@ class MenuThemeData$Mate extends MenuThemeData with Mate {
       MenuStyle? style})
       : super(style: style) {
     mateBuilder = (p) => MenuThemeData$Mate(style: p.get('style').build());
-    mateDeclare('style', style);
+    mateUse('style', style);
   }
 }
 
@@ -41,8 +41,8 @@ class MenuTheme$Mate extends MenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

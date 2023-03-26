@@ -21,8 +21,8 @@ class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate {
           id: p.get('id').build(),
           toolType: p.get('toolType').build(),
         );
-    mateDeclare('id', id);
-    mateDeclare('toolType', toolType);
+    mateUse('id', id);
+    mateUse('toolType', toolType);
   }
 }
 
@@ -78,15 +78,15 @@ class AndroidPointerCoords$Mate extends AndroidPointerCoords with Mate {
           x: p.get('x').build(),
           y: p.get('y').build(),
         );
-    mateDeclare('orientation', orientation);
-    mateDeclare('pressure', pressure);
-    mateDeclare('size', size);
-    mateDeclare('toolMajor', toolMajor);
-    mateDeclare('toolMinor', toolMinor);
-    mateDeclare('touchMajor', touchMajor);
-    mateDeclare('touchMinor', touchMinor);
-    mateDeclare('x', x);
-    mateDeclare('y', y);
+    mateUse('orientation', orientation);
+    mateUse('pressure', pressure);
+    mateUse('size', size);
+    mateUse('toolMajor', toolMajor);
+    mateUse('toolMinor', toolMinor);
+    mateUse('touchMajor', touchMajor);
+    mateUse('touchMinor', touchMinor);
+    mateUse('x', x);
+    mateUse('y', y);
   }
 }
 
@@ -172,20 +172,20 @@ class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate {
           flags: p.get('flags').build(),
           motionEventId: p.get('motionEventId').build(),
         );
-    mateDeclare('downTime', downTime);
-    mateDeclare('eventTime', eventTime);
-    mateDeclare('action', action);
-    mateDeclare('pointerCount', pointerCount);
-    mateDeclare('pointerProperties', pointerProperties);
-    mateDeclare('pointerCoords', pointerCoords);
-    mateDeclare('metaState', metaState);
-    mateDeclare('buttonState', buttonState);
-    mateDeclare('xPrecision', xPrecision);
-    mateDeclare('yPrecision', yPrecision);
-    mateDeclare('deviceId', deviceId);
-    mateDeclare('edgeFlags', edgeFlags);
-    mateDeclare('source', source);
-    mateDeclare('flags', flags);
-    mateDeclare('motionEventId', motionEventId);
+    mateUse('downTime', downTime);
+    mateUse('eventTime', eventTime);
+    mateUse('action', action);
+    mateUse('pointerCount', pointerCount);
+    mateUse('pointerProperties', pointerProperties);
+    mateUse('pointerCoords', pointerCoords);
+    mateUse('metaState', metaState);
+    mateUse('buttonState', buttonState);
+    mateUse('xPrecision', xPrecision);
+    mateUse('yPrecision', yPrecision);
+    mateUse('deviceId', deviceId);
+    mateUse('edgeFlags', edgeFlags);
+    mateUse('source', source);
+    mateUse('flags', flags);
+    mateUse('motionEventId', motionEventId);
   }
 }

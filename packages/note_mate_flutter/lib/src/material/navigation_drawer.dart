@@ -66,21 +66,22 @@ class NavigationDrawer$Mate extends NavigationDrawer with Mate {
           onDestinationSelected: p.get('onDestinationSelected').build(),
           selectedIndex: p.get('selectedIndex').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('indicatorShape', indicatorShape);
-    mateDeclare('onDestinationSelected', onDestinationSelected);
-    mateDeclare('selectedIndex', selectedIndex);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('elevation', elevation);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('indicatorShape', indicatorShape);
+    mateUse('onDestinationSelected', onDestinationSelected);
+    mateUse('selectedIndex', selectedIndex);
   }
 }
 
 /// class NavigationDrawerDestination extends StatelessWidget
-class NavigationDrawerDestination$Mate extends NavigationDrawerDestination with Mate {
+class NavigationDrawerDestination$Mate extends NavigationDrawerDestination
+    with Mate {
   /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
   NavigationDrawerDestination$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -111,10 +112,10 @@ class NavigationDrawerDestination$Mate extends NavigationDrawerDestination with 
           selectedIcon: p.get('selectedIcon').build(),
           label: p.get('label').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('icon', icon);
-    mateDeclare('selectedIcon', selectedIcon);
-    mateDeclare('label', label);
+    mateUse('key', key);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('icon', icon);
+    mateUse('selectedIcon', selectedIcon);
+    mateUse('label', label);
   }
 }

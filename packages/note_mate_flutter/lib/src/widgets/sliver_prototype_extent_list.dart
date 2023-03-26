@@ -8,7 +8,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 
 /// class SliverPrototypeExtentList extends SliverMultiBoxAdaptorWidget
-class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate {
+class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList
+    with Mate {
   /// SliverPrototypeExtentList SliverPrototypeExtentList({Key? key, required SliverChildDelegate delegate, required Widget prototypeItem})
   SliverPrototypeExtentList$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -29,9 +30,9 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           delegate: p.get('delegate').build(),
           prototypeItem: p.get('prototypeItem').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('delegate', delegate);
-    mateDeclare('prototypeItem', prototypeItem);
+    mateUse('key', key);
+    mateUse('delegate', delegate);
+    mateUse('prototypeItem', prototypeItem);
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.builder({Key? key, required Widget? Function(BuildContext, int) itemBuilder, required Widget prototypeItem, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -79,14 +80,14 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('findChildIndexCallback', findChildIndexCallback);
-    mateDeclare('itemCount', itemCount);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateUse('key', key);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('findChildIndexCallback', findChildIndexCallback);
+    mateUse('itemCount', itemCount);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.list({Key? key, required List<Widget> children, required Widget prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -124,11 +125,11 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
   }
 }

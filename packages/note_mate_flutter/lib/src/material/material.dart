@@ -82,19 +82,19 @@ class Material$Mate extends Material with Mate {
           animationDuration: p.get('animationDuration').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('type', type);
-    mateDeclare('elevation', elevation);
-    mateDeclare('color', color);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('shape', shape);
-    mateDeclare('borderOnForeground', borderOnForeground);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('animationDuration', animationDuration);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('type', type);
+    mateUse('elevation', elevation);
+    mateUse('color', color);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('textStyle', textStyle);
+    mateUse('borderRadius', borderRadius);
+    mateUse('shape', shape);
+    mateUse('borderOnForeground', borderOnForeground);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('animationDuration', animationDuration);
+    mateUse('child', child);
   }
 }
 
@@ -115,7 +115,7 @@ class ShapeBorderTween$Mate extends ShapeBorderTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }

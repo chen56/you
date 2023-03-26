@@ -27,13 +27,14 @@ class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate {
         ) {
     mateBuilder = (p) => RawKeyEventDataIos$Mate(
           characters: p.get('characters').build(),
-          charactersIgnoringModifiers: p.get('charactersIgnoringModifiers').build(),
+          charactersIgnoringModifiers:
+              p.get('charactersIgnoringModifiers').build(),
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
         );
-    mateDeclare('characters', characters);
-    mateDeclare('charactersIgnoringModifiers', charactersIgnoringModifiers);
-    mateDeclare('keyCode', keyCode);
-    mateDeclare('modifiers', modifiers);
+    mateUse('characters', characters);
+    mateUse('charactersIgnoringModifiers', charactersIgnoringModifiers);
+    mateUse('keyCode', keyCode);
+    mateUse('modifiers', modifiers);
   }
 }

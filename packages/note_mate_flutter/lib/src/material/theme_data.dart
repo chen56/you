@@ -381,7 +381,8 @@ class ThemeData$Mate extends ThemeData with Mate {
           tooltipTheme: tooltipTheme,
         ) {
     mateBuilder = (p) => ThemeData$Mate.raw(
-          applyElevationOverlayColor: p.get('applyElevationOverlayColor').build(),
+          applyElevationOverlayColor:
+              p.get('applyElevationOverlayColor').build(),
           cupertinoOverrideTheme: p.get('cupertinoOverrideTheme').build(),
           extensions: p.get('extensions').build(),
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
@@ -461,98 +462,100 @@ class ThemeData$Mate extends ThemeData with Mate {
           toggleButtonsTheme: p.get('toggleButtonsTheme').build(),
           tooltipTheme: p.get('tooltipTheme').build(),
         );
-    mateDeclare('applyElevationOverlayColor', applyElevationOverlayColor);
-    mateDeclare('cupertinoOverrideTheme', cupertinoOverrideTheme);
-    mateDeclare('extensions', extensions);
-    mateDeclare('inputDecorationTheme', inputDecorationTheme);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('pageTransitionsTheme', pageTransitionsTheme);
-    mateDeclare('platform', platform);
-    mateDeclare('scrollbarTheme', scrollbarTheme);
-    mateDeclare('splashFactory', splashFactory);
-    mateDeclare('useMaterial3', useMaterial3);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('canvasColor', canvasColor);
-    mateDeclare('cardColor', cardColor);
-    mateDeclare('colorScheme', colorScheme);
-    mateDeclare('dialogBackgroundColor', dialogBackgroundColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('dividerColor', dividerColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('highlightColor', highlightColor);
-    mateDeclare('hintColor', hintColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('primaryColor', primaryColor);
-    mateDeclare('primaryColorDark', primaryColorDark);
-    mateDeclare('primaryColorLight', primaryColorLight);
-    mateDeclare('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    mateDeclare('secondaryHeaderColor', secondaryHeaderColor);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('unselectedWidgetColor', unselectedWidgetColor);
-    mateDeclare('iconTheme', iconTheme);
-    mateDeclare('primaryIconTheme', primaryIconTheme);
-    mateDeclare('primaryTextTheme', primaryTextTheme);
-    mateDeclare('textTheme', textTheme);
-    mateDeclare('typography', typography);
-    mateDeclare('actionIconTheme', actionIconTheme);
-    mateDeclare('appBarTheme', appBarTheme);
-    mateDeclare('badgeTheme', badgeTheme);
-    mateDeclare('bannerTheme', bannerTheme);
-    mateDeclare('bottomAppBarTheme', bottomAppBarTheme);
-    mateDeclare('bottomNavigationBarTheme', bottomNavigationBarTheme);
-    mateDeclare('bottomSheetTheme', bottomSheetTheme);
-    mateDeclare('buttonBarTheme', buttonBarTheme);
-    mateDeclare('buttonTheme', buttonTheme);
-    mateDeclare('cardTheme', cardTheme);
-    mateDeclare('checkboxTheme', checkboxTheme);
-    mateDeclare('chipTheme', chipTheme);
-    mateDeclare('dataTableTheme', dataTableTheme);
-    mateDeclare('datePickerTheme', datePickerTheme);
-    mateDeclare('dialogTheme', dialogTheme);
-    mateDeclare('dividerTheme', dividerTheme);
-    mateDeclare('drawerTheme', drawerTheme);
-    mateDeclare('dropdownMenuTheme', dropdownMenuTheme);
-    mateDeclare('elevatedButtonTheme', elevatedButtonTheme);
-    mateDeclare('expansionTileTheme', expansionTileTheme);
-    mateDeclare('filledButtonTheme', filledButtonTheme);
-    mateDeclare('floatingActionButtonTheme', floatingActionButtonTheme);
-    mateDeclare('iconButtonTheme', iconButtonTheme);
-    mateDeclare('listTileTheme', listTileTheme);
-    mateDeclare('menuBarTheme', menuBarTheme);
-    mateDeclare('menuButtonTheme', menuButtonTheme);
-    mateDeclare('menuTheme', menuTheme);
-    mateDeclare('navigationBarTheme', navigationBarTheme);
-    mateDeclare('navigationDrawerTheme', navigationDrawerTheme);
-    mateDeclare('navigationRailTheme', navigationRailTheme);
-    mateDeclare('outlinedButtonTheme', outlinedButtonTheme);
-    mateDeclare('popupMenuTheme', popupMenuTheme);
-    mateDeclare('progressIndicatorTheme', progressIndicatorTheme);
-    mateDeclare('radioTheme', radioTheme);
-    mateDeclare('segmentedButtonTheme', segmentedButtonTheme);
-    mateDeclare('sliderTheme', sliderTheme);
-    mateDeclare('snackBarTheme', snackBarTheme);
-    mateDeclare('switchTheme', switchTheme);
-    mateDeclare('tabBarTheme', tabBarTheme);
-    mateDeclare('textButtonTheme', textButtonTheme);
-    mateDeclare('textSelectionTheme', textSelectionTheme);
-    mateDeclare('timePickerTheme', timePickerTheme);
-    mateDeclare('toggleButtonsTheme', toggleButtonsTheme);
-    mateDeclare('tooltipTheme', tooltipTheme);
+    mateUse('applyElevationOverlayColor', applyElevationOverlayColor);
+    mateUse('cupertinoOverrideTheme', cupertinoOverrideTheme);
+    mateUse('extensions', extensions);
+    mateUse('inputDecorationTheme', inputDecorationTheme);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('pageTransitionsTheme', pageTransitionsTheme);
+    mateUse('platform', platform);
+    mateUse('scrollbarTheme', scrollbarTheme);
+    mateUse('splashFactory', splashFactory);
+    mateUse('useMaterial3', useMaterial3);
+    mateUse('visualDensity', visualDensity);
+    mateUse('canvasColor', canvasColor);
+    mateUse('cardColor', cardColor);
+    mateUse('colorScheme', colorScheme);
+    mateUse('dialogBackgroundColor', dialogBackgroundColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('dividerColor', dividerColor);
+    mateUse('focusColor', focusColor);
+    mateUse('highlightColor', highlightColor);
+    mateUse('hintColor', hintColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('primaryColor', primaryColor);
+    mateUse('primaryColorDark', primaryColorDark);
+    mateUse('primaryColorLight', primaryColorLight);
+    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor);
+    mateUse('secondaryHeaderColor', secondaryHeaderColor);
+    mateUse('shadowColor', shadowColor);
+    mateUse('splashColor', splashColor);
+    mateUse('unselectedWidgetColor', unselectedWidgetColor);
+    mateUse('iconTheme', iconTheme);
+    mateUse('primaryIconTheme', primaryIconTheme);
+    mateUse('primaryTextTheme', primaryTextTheme);
+    mateUse('textTheme', textTheme);
+    mateUse('typography', typography);
+    mateUse('actionIconTheme', actionIconTheme);
+    mateUse('appBarTheme', appBarTheme);
+    mateUse('badgeTheme', badgeTheme);
+    mateUse('bannerTheme', bannerTheme);
+    mateUse('bottomAppBarTheme', bottomAppBarTheme);
+    mateUse('bottomNavigationBarTheme', bottomNavigationBarTheme);
+    mateUse('bottomSheetTheme', bottomSheetTheme);
+    mateUse('buttonBarTheme', buttonBarTheme);
+    mateUse('buttonTheme', buttonTheme);
+    mateUse('cardTheme', cardTheme);
+    mateUse('checkboxTheme', checkboxTheme);
+    mateUse('chipTheme', chipTheme);
+    mateUse('dataTableTheme', dataTableTheme);
+    mateUse('datePickerTheme', datePickerTheme);
+    mateUse('dialogTheme', dialogTheme);
+    mateUse('dividerTheme', dividerTheme);
+    mateUse('drawerTheme', drawerTheme);
+    mateUse('dropdownMenuTheme', dropdownMenuTheme);
+    mateUse('elevatedButtonTheme', elevatedButtonTheme);
+    mateUse('expansionTileTheme', expansionTileTheme);
+    mateUse('filledButtonTheme', filledButtonTheme);
+    mateUse('floatingActionButtonTheme', floatingActionButtonTheme);
+    mateUse('iconButtonTheme', iconButtonTheme);
+    mateUse('listTileTheme', listTileTheme);
+    mateUse('menuBarTheme', menuBarTheme);
+    mateUse('menuButtonTheme', menuButtonTheme);
+    mateUse('menuTheme', menuTheme);
+    mateUse('navigationBarTheme', navigationBarTheme);
+    mateUse('navigationDrawerTheme', navigationDrawerTheme);
+    mateUse('navigationRailTheme', navigationRailTheme);
+    mateUse('outlinedButtonTheme', outlinedButtonTheme);
+    mateUse('popupMenuTheme', popupMenuTheme);
+    mateUse('progressIndicatorTheme', progressIndicatorTheme);
+    mateUse('radioTheme', radioTheme);
+    mateUse('segmentedButtonTheme', segmentedButtonTheme);
+    mateUse('sliderTheme', sliderTheme);
+    mateUse('snackBarTheme', snackBarTheme);
+    mateUse('switchTheme', switchTheme);
+    mateUse('tabBarTheme', tabBarTheme);
+    mateUse('textButtonTheme', textButtonTheme);
+    mateUse('textSelectionTheme', textSelectionTheme);
+    mateUse('timePickerTheme', timePickerTheme);
+    mateUse('toggleButtonsTheme', toggleButtonsTheme);
+    mateUse('tooltipTheme', tooltipTheme);
   }
 }
 
 /// class MaterialBasedCupertinoThemeData extends CupertinoThemeData
-class MaterialBasedCupertinoThemeData$Mate extends MaterialBasedCupertinoThemeData with Mate {
+class MaterialBasedCupertinoThemeData$Mate
+    extends MaterialBasedCupertinoThemeData with Mate {
   /// MaterialBasedCupertinoThemeData MaterialBasedCupertinoThemeData({required ThemeData materialTheme})
   MaterialBasedCupertinoThemeData$Mate(
       {
       /// optionalParameters: {required ThemeData materialTheme} , defaultValue:none
       required ThemeData materialTheme})
       : super(materialTheme: materialTheme) {
-    mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(materialTheme: p.get('materialTheme').build());
-    mateDeclare('materialTheme', materialTheme);
+    mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(
+        materialTheme: p.get('materialTheme').build());
+    mateUse('materialTheme', materialTheme);
   }
 }
 
@@ -573,7 +576,7 @@ class VisualDensity$Mate extends VisualDensity with Mate {
           horizontal: p.get('horizontal').build(),
           vertical: p.get('vertical').build(),
         );
-    mateDeclare('horizontal', horizontal);
-    mateDeclare('vertical', vertical);
+    mateUse('horizontal', horizontal);
+    mateUse('vertical', vertical);
   }
 }

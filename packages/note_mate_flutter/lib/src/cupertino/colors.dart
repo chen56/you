@@ -55,17 +55,18 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           elevatedColor: p.get('elevatedColor').build(),
           darkElevatedColor: p.get('darkElevatedColor').build(),
           highContrastElevatedColor: p.get('highContrastElevatedColor').build(),
-          darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').build(),
+          darkHighContrastElevatedColor:
+              p.get('darkHighContrastElevatedColor').build(),
         );
-    mateDeclare('debugLabel', debugLabel);
-    mateDeclare('color', color);
-    mateDeclare('darkColor', darkColor);
-    mateDeclare('highContrastColor', highContrastColor);
-    mateDeclare('darkHighContrastColor', darkHighContrastColor);
-    mateDeclare('elevatedColor', elevatedColor);
-    mateDeclare('darkElevatedColor', darkElevatedColor);
-    mateDeclare('highContrastElevatedColor', highContrastElevatedColor);
-    mateDeclare('darkHighContrastElevatedColor', darkHighContrastElevatedColor);
+    mateUse('debugLabel', debugLabel);
+    mateUse('color', color);
+    mateUse('darkColor', darkColor);
+    mateUse('highContrastColor', highContrastColor);
+    mateUse('darkHighContrastColor', darkHighContrastColor);
+    mateUse('elevatedColor', elevatedColor);
+    mateUse('darkElevatedColor', darkElevatedColor);
+    mateUse('highContrastElevatedColor', highContrastElevatedColor);
+    mateUse('darkHighContrastElevatedColor', darkHighContrastElevatedColor);
   }
 
   /// CupertinoDynamicColor CupertinoDynamicColor.withBrightnessAndContrast({String? debugLabel, required Color color, required Color darkColor, required Color highContrastColor, required Color darkHighContrastColor})
@@ -98,11 +99,11 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           highContrastColor: p.get('highContrastColor').build(),
           darkHighContrastColor: p.get('darkHighContrastColor').build(),
         );
-    mateDeclare('debugLabel', debugLabel);
-    mateDeclare('color', color);
-    mateDeclare('darkColor', darkColor);
-    mateDeclare('highContrastColor', highContrastColor);
-    mateDeclare('darkHighContrastColor', darkHighContrastColor);
+    mateUse('debugLabel', debugLabel);
+    mateUse('color', color);
+    mateUse('darkColor', darkColor);
+    mateUse('highContrastColor', highContrastColor);
+    mateUse('darkHighContrastColor', darkHighContrastColor);
   }
 
   /// CupertinoDynamicColor CupertinoDynamicColor.withBrightness({String? debugLabel, required Color color, required Color darkColor})
@@ -125,8 +126,8 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           color: p.get('color').build(),
           darkColor: p.get('darkColor').build(),
         );
-    mateDeclare('debugLabel', debugLabel);
-    mateDeclare('color', color);
-    mateDeclare('darkColor', darkColor);
+    mateUse('debugLabel', debugLabel);
+    mateUse('color', color);
+    mateUse('darkColor', darkColor);
   }
 }

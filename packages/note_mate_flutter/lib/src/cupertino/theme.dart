@@ -30,9 +30,9 @@ class CupertinoTheme$Mate extends CupertinoTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }
 
@@ -78,13 +78,13 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').build(),
           applyThemeToAll: p.get('applyThemeToAll').build(),
         );
-    mateDeclare('brightness', brightness);
-    mateDeclare('primaryColor', primaryColor);
-    mateDeclare('primaryContrastingColor', primaryContrastingColor);
-    mateDeclare('textTheme', textTheme);
-    mateDeclare('barBackgroundColor', barBackgroundColor);
-    mateDeclare('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    mateDeclare('applyThemeToAll', applyThemeToAll);
+    mateUse('brightness', brightness);
+    mateUse('primaryColor', primaryColor);
+    mateUse('primaryContrastingColor', primaryContrastingColor);
+    mateUse('textTheme', textTheme);
+    mateUse('barBackgroundColor', barBackgroundColor);
+    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor);
+    mateUse('applyThemeToAll', applyThemeToAll);
   }
 
   /// CupertinoThemeData CupertinoThemeData.raw(Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll)
@@ -127,18 +127,19 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           p.get('scaffoldBackgroundColor').value,
           p.get('applyThemeToAll').value,
         );
-    mateDeclare('brightness', brightness);
-    mateDeclare('primaryColor', primaryColor);
-    mateDeclare('primaryContrastingColor', primaryContrastingColor);
-    mateDeclare('textTheme', textTheme);
-    mateDeclare('barBackgroundColor', barBackgroundColor);
-    mateDeclare('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    mateDeclare('applyThemeToAll', applyThemeToAll);
+    mateUse('brightness', brightness);
+    mateUse('primaryColor', primaryColor);
+    mateUse('primaryContrastingColor', primaryContrastingColor);
+    mateUse('textTheme', textTheme);
+    mateUse('barBackgroundColor', barBackgroundColor);
+    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor);
+    mateUse('applyThemeToAll', applyThemeToAll);
   }
 }
 
 /// class NoDefaultCupertinoThemeData
-class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with Mate {
+class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData
+    with Mate {
   /// NoDefaultCupertinoThemeData NoDefaultCupertinoThemeData({Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll})
   NoDefaultCupertinoThemeData$Mate({
     /// optionalParameters: {Brightness? brightness} , defaultValue:none
@@ -179,12 +180,12 @@ class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with 
           scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').build(),
           applyThemeToAll: p.get('applyThemeToAll').build(),
         );
-    mateDeclare('brightness', brightness);
-    mateDeclare('primaryColor', primaryColor);
-    mateDeclare('primaryContrastingColor', primaryContrastingColor);
-    mateDeclare('textTheme', textTheme);
-    mateDeclare('barBackgroundColor', barBackgroundColor);
-    mateDeclare('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    mateDeclare('applyThemeToAll', applyThemeToAll);
+    mateUse('brightness', brightness);
+    mateUse('primaryColor', primaryColor);
+    mateUse('primaryContrastingColor', primaryContrastingColor);
+    mateUse('textTheme', textTheme);
+    mateUse('barBackgroundColor', barBackgroundColor);
+    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor);
+    mateUse('applyThemeToAll', applyThemeToAll);
   }
 }

@@ -22,7 +22,7 @@ class LookupBoundary$Mate extends LookupBoundary with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('child', child);
   }
 }

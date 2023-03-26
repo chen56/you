@@ -71,16 +71,16 @@ class InkSplash$Mate extends InkSplash with Mate {
           radius: p.get('radius').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    mateDeclare('controller', controller);
-    mateDeclare('referenceBox', referenceBox);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('position', position);
-    mateDeclare('color', color);
-    mateDeclare('containedInkWell', containedInkWell);
-    mateDeclare('rectCallback', rectCallback);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('customBorder', customBorder);
-    mateDeclare('radius', radius);
-    mateDeclare('onRemoved', onRemoved);
+    mateUse('controller', controller);
+    mateUse('referenceBox', referenceBox);
+    mateUse('textDirection', textDirection);
+    mateUse('position', position);
+    mateUse('color', color);
+    mateUse('containedInkWell', containedInkWell);
+    mateUse('rectCallback', rectCallback);
+    mateUse('borderRadius', borderRadius);
+    mateUse('customBorder', customBorder);
+    mateUse('radius', radius);
+    mateUse('onRemoved', onRemoved);
   }
 }

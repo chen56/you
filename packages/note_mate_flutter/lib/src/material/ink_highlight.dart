@@ -72,16 +72,16 @@ class InkHighlight$Mate extends InkHighlight with Mate {
           onRemoved: p.get('onRemoved').build(),
           fadeDuration: p.get('fadeDuration').build(),
         );
-    mateDeclare('controller', controller);
-    mateDeclare('referenceBox', referenceBox);
-    mateDeclare('color', color);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('shape', shape);
-    mateDeclare('radius', radius);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('customBorder', customBorder);
-    mateDeclare('rectCallback', rectCallback);
-    mateDeclare('onRemoved', onRemoved);
-    mateDeclare('fadeDuration', fadeDuration);
+    mateUse('controller', controller);
+    mateUse('referenceBox', referenceBox);
+    mateUse('color', color);
+    mateUse('textDirection', textDirection);
+    mateUse('shape', shape);
+    mateUse('radius', radius);
+    mateUse('borderRadius', borderRadius);
+    mateUse('customBorder', customBorder);
+    mateUse('rectCallback', rectCallback);
+    mateUse('onRemoved', onRemoved);
+    mateUse('fadeDuration', fadeDuration);
   }
 }

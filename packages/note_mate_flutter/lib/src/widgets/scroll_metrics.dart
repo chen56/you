@@ -42,11 +42,11 @@ class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
           axisDirection: p.get('axisDirection').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateDeclare('minScrollExtent', minScrollExtent);
-    mateDeclare('maxScrollExtent', maxScrollExtent);
-    mateDeclare('pixels', pixels);
-    mateDeclare('viewportDimension', viewportDimension);
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('devicePixelRatio', devicePixelRatio);
+    mateUse('minScrollExtent', minScrollExtent);
+    mateUse('maxScrollExtent', maxScrollExtent);
+    mateUse('pixels', pixels);
+    mateUse('viewportDimension', viewportDimension);
+    mateUse('axisDirection', axisDirection);
+    mateUse('devicePixelRatio', devicePixelRatio);
   }
 }

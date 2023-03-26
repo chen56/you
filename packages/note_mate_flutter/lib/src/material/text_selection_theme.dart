@@ -28,9 +28,9 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate {
           selectionColor: p.get('selectionColor').build(),
           selectionHandleColor: p.get('selectionHandleColor').build(),
         );
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('selectionColor', selectionColor);
-    mateDeclare('selectionHandleColor', selectionHandleColor);
+    mateUse('cursorColor', cursorColor);
+    mateUse('selectionColor', selectionColor);
+    mateUse('selectionHandleColor', selectionHandleColor);
   }
 }
 
@@ -56,8 +56,8 @@ class TextSelectionTheme$Mate extends TextSelectionTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

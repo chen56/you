@@ -165,50 +165,60 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
           yearForegroundColor: p.get('yearForegroundColor').build(),
           yearBackgroundColor: p.get('yearBackgroundColor').build(),
           yearOverlayColor: p.get('yearOverlayColor').build(),
-          rangePickerBackgroundColor: p.get('rangePickerBackgroundColor').build(),
+          rangePickerBackgroundColor:
+              p.get('rangePickerBackgroundColor').build(),
           rangePickerElevation: p.get('rangePickerElevation').build(),
           rangePickerShadowColor: p.get('rangePickerShadowColor').build(),
-          rangePickerSurfaceTintColor: p.get('rangePickerSurfaceTintColor').build(),
+          rangePickerSurfaceTintColor:
+              p.get('rangePickerSurfaceTintColor').build(),
           rangePickerShape: p.get('rangePickerShape').build(),
-          rangePickerHeaderBackgroundColor: p.get('rangePickerHeaderBackgroundColor').build(),
-          rangePickerHeaderForegroundColor: p.get('rangePickerHeaderForegroundColor').build(),
-          rangePickerHeaderHeadlineStyle: p.get('rangePickerHeaderHeadlineStyle').build(),
-          rangePickerHeaderHelpStyle: p.get('rangePickerHeaderHelpStyle').build(),
-          rangeSelectionBackgroundColor: p.get('rangeSelectionBackgroundColor').build(),
-          rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').build(),
+          rangePickerHeaderBackgroundColor:
+              p.get('rangePickerHeaderBackgroundColor').build(),
+          rangePickerHeaderForegroundColor:
+              p.get('rangePickerHeaderForegroundColor').build(),
+          rangePickerHeaderHeadlineStyle:
+              p.get('rangePickerHeaderHeadlineStyle').build(),
+          rangePickerHeaderHelpStyle:
+              p.get('rangePickerHeaderHelpStyle').build(),
+          rangeSelectionBackgroundColor:
+              p.get('rangeSelectionBackgroundColor').build(),
+          rangeSelectionOverlayColor:
+              p.get('rangeSelectionOverlayColor').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('shape', shape);
-    mateDeclare('headerBackgroundColor', headerBackgroundColor);
-    mateDeclare('headerForegroundColor', headerForegroundColor);
-    mateDeclare('headerHeadlineStyle', headerHeadlineStyle);
-    mateDeclare('headerHelpStyle', headerHelpStyle);
-    mateDeclare('weekdayStyle', weekdayStyle);
-    mateDeclare('dayStyle', dayStyle);
-    mateDeclare('dayForegroundColor', dayForegroundColor);
-    mateDeclare('dayBackgroundColor', dayBackgroundColor);
-    mateDeclare('dayOverlayColor', dayOverlayColor);
-    mateDeclare('todayForegroundColor', todayForegroundColor);
-    mateDeclare('todayBackgroundColor', todayBackgroundColor);
-    mateDeclare('todayBorder', todayBorder);
-    mateDeclare('yearStyle', yearStyle);
-    mateDeclare('yearForegroundColor', yearForegroundColor);
-    mateDeclare('yearBackgroundColor', yearBackgroundColor);
-    mateDeclare('yearOverlayColor', yearOverlayColor);
-    mateDeclare('rangePickerBackgroundColor', rangePickerBackgroundColor);
-    mateDeclare('rangePickerElevation', rangePickerElevation);
-    mateDeclare('rangePickerShadowColor', rangePickerShadowColor);
-    mateDeclare('rangePickerSurfaceTintColor', rangePickerSurfaceTintColor);
-    mateDeclare('rangePickerShape', rangePickerShape);
-    mateDeclare('rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor);
-    mateDeclare('rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor);
-    mateDeclare('rangePickerHeaderHeadlineStyle', rangePickerHeaderHeadlineStyle);
-    mateDeclare('rangePickerHeaderHelpStyle', rangePickerHeaderHelpStyle);
-    mateDeclare('rangeSelectionBackgroundColor', rangeSelectionBackgroundColor);
-    mateDeclare('rangeSelectionOverlayColor', rangeSelectionOverlayColor);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('shape', shape);
+    mateUse('headerBackgroundColor', headerBackgroundColor);
+    mateUse('headerForegroundColor', headerForegroundColor);
+    mateUse('headerHeadlineStyle', headerHeadlineStyle);
+    mateUse('headerHelpStyle', headerHelpStyle);
+    mateUse('weekdayStyle', weekdayStyle);
+    mateUse('dayStyle', dayStyle);
+    mateUse('dayForegroundColor', dayForegroundColor);
+    mateUse('dayBackgroundColor', dayBackgroundColor);
+    mateUse('dayOverlayColor', dayOverlayColor);
+    mateUse('todayForegroundColor', todayForegroundColor);
+    mateUse('todayBackgroundColor', todayBackgroundColor);
+    mateUse('todayBorder', todayBorder);
+    mateUse('yearStyle', yearStyle);
+    mateUse('yearForegroundColor', yearForegroundColor);
+    mateUse('yearBackgroundColor', yearBackgroundColor);
+    mateUse('yearOverlayColor', yearOverlayColor);
+    mateUse('rangePickerBackgroundColor', rangePickerBackgroundColor);
+    mateUse('rangePickerElevation', rangePickerElevation);
+    mateUse('rangePickerShadowColor', rangePickerShadowColor);
+    mateUse('rangePickerSurfaceTintColor', rangePickerSurfaceTintColor);
+    mateUse('rangePickerShape', rangePickerShape);
+    mateUse(
+        'rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor);
+    mateUse(
+        'rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor);
+    mateUse('rangePickerHeaderHeadlineStyle', rangePickerHeaderHeadlineStyle);
+    mateUse('rangePickerHeaderHelpStyle', rangePickerHeaderHelpStyle);
+    mateUse('rangeSelectionBackgroundColor', rangeSelectionBackgroundColor);
+    mateUse('rangeSelectionOverlayColor', rangeSelectionOverlayColor);
   }
 }
 
@@ -234,8 +244,8 @@ class DatePickerTheme$Mate extends DatePickerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

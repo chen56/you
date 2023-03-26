@@ -33,10 +33,10 @@ class HSVColor$Mate extends HSVColor with Mate {
           p.get('saturation').value,
           p.get('value').value,
         );
-    mateDeclare('alpha', alpha);
-    mateDeclare('hue', hue);
-    mateDeclare('saturation', saturation);
-    mateDeclare('value', value);
+    mateUse('alpha', alpha);
+    mateUse('hue', hue);
+    mateUse('saturation', saturation);
+    mateUse('value', value);
   }
 }
 
@@ -67,10 +67,10 @@ class HSLColor$Mate extends HSLColor with Mate {
           p.get('saturation').value,
           p.get('lightness').value,
         );
-    mateDeclare('alpha', alpha);
-    mateDeclare('hue', hue);
-    mateDeclare('saturation', saturation);
-    mateDeclare('lightness', lightness);
+    mateUse('alpha', alpha);
+    mateUse('hue', hue);
+    mateUse('saturation', saturation);
+    mateUse('lightness', lightness);
   }
 }
 
@@ -91,8 +91,8 @@ class ColorSwatch$Mate<T> extends ColorSwatch<T> with Mate {
           p.get('primary').value,
           p.get('_swatch').value,
         );
-    mateDeclare('primary', primary);
-    mateDeclare('_swatch', _swatch);
+    mateUse('primary', primary);
+    mateUse('_swatch', _swatch);
   }
 }
 
@@ -132,11 +132,11 @@ class ColorProperty$Mate extends ColorProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateDeclare('name', name);
-    mateDeclare('value', value);
-    mateDeclare('showName', showName);
-    mateDeclare('defaultValue', defaultValue);
-    mateDeclare('style', style);
-    mateDeclare('level', level);
+    mateUse('name', name);
+    mateUse('value', value);
+    mateUse('showName', showName);
+    mateUse('defaultValue', defaultValue);
+    mateUse('style', style);
+    mateUse('level', level);
   }
 }

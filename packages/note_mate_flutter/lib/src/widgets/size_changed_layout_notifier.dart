@@ -6,7 +6,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class SizeChangedLayoutNotifier extends SingleChildRenderObjectWidget
-class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with Mate {
+class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier
+    with Mate {
   /// SizeChangedLayoutNotifier SizeChangedLayoutNotifier({Key? key, Widget? child})
   SizeChangedLayoutNotifier$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -22,7 +23,7 @@ class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with Mate
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('child', child);
   }
 }

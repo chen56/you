@@ -29,9 +29,9 @@ class ImageInfo$Mate extends ImageInfo with Mate {
           scale: p.get('scale').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateDeclare('image', image);
-    mateDeclare('scale', scale);
-    mateDeclare('debugLabel', debugLabel);
+    mateUse('image', image);
+    mateUse('scale', scale);
+    mateUse('debugLabel', debugLabel);
   }
 }
 
@@ -56,9 +56,9 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
           onChunk: p.get('onChunk').build(),
           onError: p.get('onError').build(),
         );
-    mateDeclare('onImage', onImage);
-    mateDeclare('onChunk', onChunk);
-    mateDeclare('onError', onError);
+    mateUse('onImage', onImage);
+    mateUse('onChunk', onChunk);
+    mateUse('onError', onError);
   }
 }
 
@@ -79,13 +79,14 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
           cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
           expectedTotalBytes: p.get('expectedTotalBytes').build(),
         );
-    mateDeclare('cumulativeBytesLoaded', cumulativeBytesLoaded);
-    mateDeclare('expectedTotalBytes', expectedTotalBytes);
+    mateUse('cumulativeBytesLoaded', cumulativeBytesLoaded);
+    mateUse('expectedTotalBytes', expectedTotalBytes);
   }
 }
 
 /// class OneFrameImageStreamCompleter extends ImageStreamCompleter
-class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter with Mate {
+class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter
+    with Mate {
   /// OneFrameImageStreamCompleter OneFrameImageStreamCompleter(Future<ImageInfo> image, {Iterable<DiagnosticsNode> Function()? informationCollector})
   OneFrameImageStreamCompleter$Mate(
     /// requiredParameters: Future<ImageInfo> image
@@ -100,13 +101,14 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
           p.get('image').value,
           informationCollector: p.get('informationCollector').build(),
         );
-    mateDeclare('image', image);
-    mateDeclare('informationCollector', informationCollector);
+    mateUse('image', image);
+    mateUse('informationCollector', informationCollector);
   }
 }
 
 /// class MultiFrameImageStreamCompleter extends ImageStreamCompleter
-class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter with Mate {
+class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
+    with Mate {
   /// MultiFrameImageStreamCompleter MultiFrameImageStreamCompleter({required Future<Codec> codec, required double scale, String? debugLabel, Stream<ImageChunkEvent>? chunkEvents, Iterable<DiagnosticsNode> Function()? informationCollector})
   MultiFrameImageStreamCompleter$Mate({
     /// optionalParameters: {required Future<Codec> codec} , defaultValue:none
@@ -137,10 +139,10 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           chunkEvents: p.get('chunkEvents').build(),
           informationCollector: p.get('informationCollector').build(),
         );
-    mateDeclare('codec', codec);
-    mateDeclare('scale', scale);
-    mateDeclare('debugLabel', debugLabel);
-    mateDeclare('chunkEvents', chunkEvents);
-    mateDeclare('informationCollector', informationCollector);
+    mateUse('codec', codec);
+    mateUse('scale', scale);
+    mateUse('debugLabel', debugLabel);
+    mateUse('chunkEvents', chunkEvents);
+    mateUse('informationCollector', informationCollector);
   }
 }

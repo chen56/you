@@ -22,7 +22,7 @@ class View$Mate extends View with Mate {
           view: p.get('view').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('view', view);
-    mateDeclare('child', child);
+    mateUse('view', view);
+    mateUse('child', child);
   }
 }

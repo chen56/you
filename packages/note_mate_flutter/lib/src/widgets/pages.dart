@@ -74,17 +74,17 @@ class PageRouteBuilder$Mate<T> extends PageRouteBuilder<T> with Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    mateDeclare('settings', settings);
-    mateDeclare('pageBuilder', pageBuilder);
-    mateDeclare('transitionsBuilder', transitionsBuilder);
-    mateDeclare('transitionDuration', transitionDuration);
-    mateDeclare('reverseTransitionDuration', reverseTransitionDuration);
-    mateDeclare('opaque', opaque);
-    mateDeclare('barrierDismissible', barrierDismissible);
-    mateDeclare('barrierColor', barrierColor);
-    mateDeclare('barrierLabel', barrierLabel);
-    mateDeclare('maintainState', maintainState);
-    mateDeclare('fullscreenDialog', fullscreenDialog);
-    mateDeclare('allowSnapshotting', allowSnapshotting);
+    mateUse('settings', settings);
+    mateUse('pageBuilder', pageBuilder);
+    mateUse('transitionsBuilder', transitionsBuilder);
+    mateUse('transitionDuration', transitionDuration);
+    mateUse('reverseTransitionDuration', reverseTransitionDuration);
+    mateUse('opaque', opaque);
+    mateUse('barrierDismissible', barrierDismissible);
+    mateUse('barrierColor', barrierColor);
+    mateUse('barrierLabel', barrierLabel);
+    mateUse('maintainState', maintainState);
+    mateUse('fullscreenDialog', fullscreenDialog);
+    mateUse('allowSnapshotting', allowSnapshotting);
   }
 }

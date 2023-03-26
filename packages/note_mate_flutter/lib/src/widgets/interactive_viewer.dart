@@ -96,7 +96,8 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           constrained: p.get('constrained').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient:
+              p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -108,24 +109,25 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('panAxis', panAxis);
-    mateDeclare('boundaryMargin', boundaryMargin);
-    mateDeclare('constrained', constrained);
-    mateDeclare('maxScale', maxScale);
-    mateDeclare('minScale', minScale);
-    mateDeclare('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
-    mateDeclare('onInteractionEnd', onInteractionEnd);
-    mateDeclare('onInteractionStart', onInteractionStart);
-    mateDeclare('onInteractionUpdate', onInteractionUpdate);
-    mateDeclare('panEnabled', panEnabled);
-    mateDeclare('scaleEnabled', scaleEnabled);
-    mateDeclare('scaleFactor', scaleFactor);
-    mateDeclare('transformationController', transformationController);
-    mateDeclare('alignment', alignment);
-    mateDeclare('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('panAxis', panAxis);
+    mateUse('boundaryMargin', boundaryMargin);
+    mateUse('constrained', constrained);
+    mateUse('maxScale', maxScale);
+    mateUse('minScale', minScale);
+    mateUse(
+        'interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
+    mateUse('onInteractionEnd', onInteractionEnd);
+    mateUse('onInteractionStart', onInteractionStart);
+    mateUse('onInteractionUpdate', onInteractionUpdate);
+    mateUse('panEnabled', panEnabled);
+    mateUse('scaleEnabled', scaleEnabled);
+    mateUse('scaleFactor', scaleFactor);
+    mateUse('transformationController', transformationController);
+    mateUse('alignment', alignment);
+    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateUse('child', child);
   }
 
   /// InteractiveViewer InteractiveViewer.builder({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = 200.0, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget Function(BuildContext, Quad) builder})
@@ -206,7 +208,8 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           boundaryMargin: p.get('boundaryMargin').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient:
+              p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -218,23 +221,24 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           builder: p.get('builder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('panAxis', panAxis);
-    mateDeclare('boundaryMargin', boundaryMargin);
-    mateDeclare('maxScale', maxScale);
-    mateDeclare('minScale', minScale);
-    mateDeclare('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
-    mateDeclare('onInteractionEnd', onInteractionEnd);
-    mateDeclare('onInteractionStart', onInteractionStart);
-    mateDeclare('onInteractionUpdate', onInteractionUpdate);
-    mateDeclare('panEnabled', panEnabled);
-    mateDeclare('scaleEnabled', scaleEnabled);
-    mateDeclare('scaleFactor', scaleFactor);
-    mateDeclare('transformationController', transformationController);
-    mateDeclare('alignment', alignment);
-    mateDeclare('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    mateDeclare('builder', builder);
+    mateUse('key', key);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('panAxis', panAxis);
+    mateUse('boundaryMargin', boundaryMargin);
+    mateUse('maxScale', maxScale);
+    mateUse('minScale', minScale);
+    mateUse(
+        'interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
+    mateUse('onInteractionEnd', onInteractionEnd);
+    mateUse('onInteractionStart', onInteractionStart);
+    mateUse('onInteractionUpdate', onInteractionUpdate);
+    mateUse('panEnabled', panEnabled);
+    mateUse('scaleEnabled', scaleEnabled);
+    mateUse('scaleFactor', scaleFactor);
+    mateUse('transformationController', transformationController);
+    mateUse('alignment', alignment);
+    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateUse('builder', builder);
   }
 }
 
@@ -247,6 +251,6 @@ class TransformationController$Mate extends TransformationController with Mate {
       Matrix4? value)
       : super(value) {
     mateBuilder = (p) => TransformationController$Mate(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }

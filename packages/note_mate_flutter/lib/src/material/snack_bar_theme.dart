@@ -75,17 +75,17 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate {
           closeIconColor: p.get('closeIconColor').build(),
           actionOverflowThreshold: p.get('actionOverflowThreshold').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('actionTextColor', actionTextColor);
-    mateDeclare('disabledActionTextColor', disabledActionTextColor);
-    mateDeclare('contentTextStyle', contentTextStyle);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shape', shape);
-    mateDeclare('behavior', behavior);
-    mateDeclare('width', width);
-    mateDeclare('insetPadding', insetPadding);
-    mateDeclare('showCloseIcon', showCloseIcon);
-    mateDeclare('closeIconColor', closeIconColor);
-    mateDeclare('actionOverflowThreshold', actionOverflowThreshold);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('actionTextColor', actionTextColor);
+    mateUse('disabledActionTextColor', disabledActionTextColor);
+    mateUse('contentTextStyle', contentTextStyle);
+    mateUse('elevation', elevation);
+    mateUse('shape', shape);
+    mateUse('behavior', behavior);
+    mateUse('width', width);
+    mateUse('insetPadding', insetPadding);
+    mateUse('showCloseIcon', showCloseIcon);
+    mateUse('closeIconColor', closeIconColor);
+    mateUse('actionOverflowThreshold', actionOverflowThreshold);
   }
 }

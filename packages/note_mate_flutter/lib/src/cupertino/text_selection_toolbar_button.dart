@@ -9,7 +9,8 @@ import 'dart:core';
 import 'package:flutter/src/widgets/context_menu_button_item.dart';
 
 /// class CupertinoTextSelectionToolbarButton extends StatelessWidget
-class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToolbarButton with Mate {
+class CupertinoTextSelectionToolbarButton$Mate
+    extends CupertinoTextSelectionToolbarButton with Mate {
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton({Key? key, void Function()? onPressed, required Widget child})
   CupertinoTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -30,9 +31,9 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           onPressed: p.get('onPressed').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('onPressed', onPressed);
+    mateUse('child', child);
   }
 
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton.text({Key? key, void Function()? onPressed, required String? text})
@@ -55,9 +56,9 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           onPressed: p.get('onPressed').build(),
           text: p.get('text').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('text', text);
+    mateUse('key', key);
+    mateUse('onPressed', onPressed);
+    mateUse('text', text);
   }
 
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
@@ -75,7 +76,7 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           key: p.get('key').build(),
           buttonItem: p.get('buttonItem').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('buttonItem', buttonItem);
+    mateUse('key', key);
+    mateUse('buttonItem', buttonItem);
   }
 }

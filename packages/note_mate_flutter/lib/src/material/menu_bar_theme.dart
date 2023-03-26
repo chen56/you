@@ -15,7 +15,7 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate {
       MenuStyle? style})
       : super(style: style) {
     mateBuilder = (p) => MenuBarThemeData$Mate(style: p.get('style').build());
-    mateDeclare('style', style);
+    mateUse('style', style);
   }
 }
 
@@ -41,8 +41,8 @@ class MenuBarTheme$Mate extends MenuBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

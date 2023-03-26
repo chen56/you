@@ -26,8 +26,8 @@ class AssetImage$Mate extends AssetImage with Mate {
           bundle: p.get('bundle').build(),
           package: p.get('package').build(),
         );
-    mateDeclare('assetName', assetName);
-    mateDeclare('bundle', bundle);
-    mateDeclare('package', package);
+    mateUse('assetName', assetName);
+    mateUse('bundle', bundle);
+    mateUse('package', package);
   }
 }

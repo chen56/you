@@ -80,18 +80,18 @@ class InputDatePickerFormField$Mate extends InputDatePickerFormField with Mate {
           keyboardType: p.get('keyboardType').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('initialDate', initialDate);
-    mateDeclare('firstDate', firstDate);
-    mateDeclare('lastDate', lastDate);
-    mateDeclare('onDateSubmitted', onDateSubmitted);
-    mateDeclare('onDateSaved', onDateSaved);
-    mateDeclare('selectableDayPredicate', selectableDayPredicate);
-    mateDeclare('errorFormatText', errorFormatText);
-    mateDeclare('errorInvalidText', errorInvalidText);
-    mateDeclare('fieldHintText', fieldHintText);
-    mateDeclare('fieldLabelText', fieldLabelText);
-    mateDeclare('keyboardType', keyboardType);
-    mateDeclare('autofocus', autofocus);
+    mateUse('key', key);
+    mateUse('initialDate', initialDate);
+    mateUse('firstDate', firstDate);
+    mateUse('lastDate', lastDate);
+    mateUse('onDateSubmitted', onDateSubmitted);
+    mateUse('onDateSaved', onDateSaved);
+    mateUse('selectableDayPredicate', selectableDayPredicate);
+    mateUse('errorFormatText', errorFormatText);
+    mateUse('errorInvalidText', errorInvalidText);
+    mateUse('fieldHintText', fieldHintText);
+    mateUse('fieldLabelText', fieldLabelText);
+    mateUse('keyboardType', keyboardType);
+    mateUse('autofocus', autofocus);
   }
 }

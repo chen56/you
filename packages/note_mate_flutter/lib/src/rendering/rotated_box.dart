@@ -22,7 +22,7 @@ class RenderRotatedBox$Mate extends RenderRotatedBox with Mate {
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('quarterTurns', quarterTurns);
-    mateDeclare('child', child);
+    mateUse('quarterTurns', quarterTurns);
+    mateUse('child', child);
   }
 }

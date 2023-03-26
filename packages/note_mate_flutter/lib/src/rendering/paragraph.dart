@@ -11,15 +11,17 @@ import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/rendering/selection.dart';
 
 /// class PlaceholderSpanIndexSemanticsTag extends SemanticsTag
-class PlaceholderSpanIndexSemanticsTag$Mate extends PlaceholderSpanIndexSemanticsTag with Mate {
+class PlaceholderSpanIndexSemanticsTag$Mate
+    extends PlaceholderSpanIndexSemanticsTag with Mate {
   /// PlaceholderSpanIndexSemanticsTag PlaceholderSpanIndexSemanticsTag(int index)
   PlaceholderSpanIndexSemanticsTag$Mate(
 
       /// requiredParameters: int index
       int index)
       : super(index) {
-    mateBuilder = (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
-    mateDeclare('index', index);
+    mateBuilder =
+        (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
+    mateUse('index', index);
   }
 }
 
@@ -99,19 +101,19 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
           selectionColor: p.get('selectionColor').build(),
           registrar: p.get('registrar').build(),
         );
-    mateDeclare('text', text);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('softWrap', softWrap);
-    mateDeclare('overflow', overflow);
-    mateDeclare('textScaleFactor', textScaleFactor);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('locale', locale);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textWidthBasis', textWidthBasis);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('children', children);
-    mateDeclare('selectionColor', selectionColor);
-    mateDeclare('registrar', registrar);
+    mateUse('text', text);
+    mateUse('textAlign', textAlign);
+    mateUse('textDirection', textDirection);
+    mateUse('softWrap', softWrap);
+    mateUse('overflow', overflow);
+    mateUse('textScaleFactor', textScaleFactor);
+    mateUse('maxLines', maxLines);
+    mateUse('locale', locale);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textWidthBasis', textWidthBasis);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('children', children);
+    mateUse('selectionColor', selectionColor);
+    mateUse('registrar', registrar);
   }
 }

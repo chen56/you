@@ -18,7 +18,7 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate {
       double? flex})
       : super(flex: flex) {
     mateBuilder = (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build());
-    mateDeclare('flex', flex);
+    mateUse('flex', flex);
   }
 }
 
@@ -31,7 +31,7 @@ class FixedColumnWidth$Mate extends FixedColumnWidth with Mate {
       double value)
       : super(value) {
     mateBuilder = (p) => FixedColumnWidth$Mate(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }
 
@@ -44,7 +44,7 @@ class FractionColumnWidth$Mate extends FractionColumnWidth with Mate {
       double value)
       : super(value) {
     mateBuilder = (p) => FractionColumnWidth$Mate(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }
 
@@ -57,7 +57,7 @@ class FlexColumnWidth$Mate extends FlexColumnWidth with Mate {
       double value)
       : super(value) {
     mateBuilder = (p) => FlexColumnWidth$Mate(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }
 
@@ -78,8 +78,8 @@ class MaxColumnWidth$Mate extends MaxColumnWidth with Mate {
           p.get('a').value,
           p.get('b').value,
         );
-    mateDeclare('a', a);
-    mateDeclare('b', b);
+    mateUse('a', a);
+    mateUse('b', b);
   }
 }
 
@@ -100,8 +100,8 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
           p.get('a').value,
           p.get('b').value,
         );
-    mateDeclare('a', a);
-    mateDeclare('b', b);
+    mateUse('a', a);
+    mateUse('b', b);
   }
 }
 
@@ -167,16 +167,16 @@ class RenderTable$Mate extends RenderTable with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('columns', columns);
-    mateDeclare('rows', rows);
-    mateDeclare('columnWidths', columnWidths);
-    mateDeclare('defaultColumnWidth', defaultColumnWidth);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('border', border);
-    mateDeclare('rowDecorations', rowDecorations);
-    mateDeclare('configuration', configuration);
-    mateDeclare('defaultVerticalAlignment', defaultVerticalAlignment);
-    mateDeclare('textBaseline', textBaseline);
-    mateDeclare('children', children);
+    mateUse('columns', columns);
+    mateUse('rows', rows);
+    mateUse('columnWidths', columnWidths);
+    mateUse('defaultColumnWidth', defaultColumnWidth);
+    mateUse('textDirection', textDirection);
+    mateUse('border', border);
+    mateUse('rowDecorations', rowDecorations);
+    mateUse('configuration', configuration);
+    mateUse('defaultVerticalAlignment', defaultVerticalAlignment);
+    mateUse('textBaseline', textBaseline);
+    mateUse('children', children);
   }
 }

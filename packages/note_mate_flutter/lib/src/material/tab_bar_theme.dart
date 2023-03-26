@@ -78,17 +78,17 @@ class TabBarTheme$Mate extends TabBarTheme with Mate {
           splashFactory: p.get('splashFactory').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateDeclare('indicator', indicator);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('indicatorSize', indicatorSize);
-    mateDeclare('dividerColor', dividerColor);
-    mateDeclare('labelColor', labelColor);
-    mateDeclare('labelPadding', labelPadding);
-    mateDeclare('labelStyle', labelStyle);
-    mateDeclare('unselectedLabelColor', unselectedLabelColor);
-    mateDeclare('unselectedLabelStyle', unselectedLabelStyle);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('splashFactory', splashFactory);
-    mateDeclare('mouseCursor', mouseCursor);
+    mateUse('indicator', indicator);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('indicatorSize', indicatorSize);
+    mateUse('dividerColor', dividerColor);
+    mateUse('labelColor', labelColor);
+    mateUse('labelPadding', labelPadding);
+    mateUse('labelStyle', labelStyle);
+    mateUse('unselectedLabelColor', unselectedLabelColor);
+    mateUse('unselectedLabelStyle', unselectedLabelStyle);
+    mateUse('overlayColor', overlayColor);
+    mateUse('splashFactory', splashFactory);
+    mateUse('mouseCursor', mouseCursor);
   }
 }

@@ -23,8 +23,8 @@ class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('child', child);
   }
 }
 
@@ -37,6 +37,6 @@ class KeepAliveNotification$Mate extends KeepAliveNotification with Mate {
       Listenable handle)
       : super(handle) {
     mateBuilder = (p) => KeepAliveNotification$Mate(p.get('handle').value);
-    mateDeclare('handle', handle);
+    mateUse('handle', handle);
   }
 }

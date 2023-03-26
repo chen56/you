@@ -14,33 +14,38 @@ import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'package:flutter/src/rendering/viewport_offset.dart';
 
 /// class ListWheelChildListDelegate extends ListWheelChildDelegate
-class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Mate {
+class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate
+    with Mate {
   /// ListWheelChildListDelegate ListWheelChildListDelegate({required List<Widget> children})
   ListWheelChildListDelegate$Mate(
       {
       /// optionalParameters: {required List<Widget> children} , defaultValue:none
       required List<Widget> children})
       : super(children: children) {
-    mateBuilder = (p) => ListWheelChildListDelegate$Mate(children: p.get('children').build());
-    mateDeclare('children', children);
+    mateBuilder = (p) =>
+        ListWheelChildListDelegate$Mate(children: p.get('children').build());
+    mateUse('children', children);
   }
 }
 
 /// class ListWheelChildLoopingListDelegate extends ListWheelChildDelegate
-class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDelegate with Mate {
+class ListWheelChildLoopingListDelegate$Mate
+    extends ListWheelChildLoopingListDelegate with Mate {
   /// ListWheelChildLoopingListDelegate ListWheelChildLoopingListDelegate({required List<Widget> children})
   ListWheelChildLoopingListDelegate$Mate(
       {
       /// optionalParameters: {required List<Widget> children} , defaultValue:none
       required List<Widget> children})
       : super(children: children) {
-    mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build());
-    mateDeclare('children', children);
+    mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(
+        children: p.get('children').build());
+    mateUse('children', children);
   }
 }
 
 /// class ListWheelChildBuilderDelegate extends ListWheelChildDelegate
-class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate with Mate {
+class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate
+    with Mate {
   /// ListWheelChildBuilderDelegate ListWheelChildBuilderDelegate({required Widget? Function(BuildContext, int) builder, int? childCount})
   ListWheelChildBuilderDelegate$Mate({
     /// optionalParameters: {required Widget? Function(BuildContext, int) builder} , defaultValue:none
@@ -56,21 +61,23 @@ class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate w
           builder: p.get('builder').build(),
           childCount: p.get('childCount').build(),
         );
-    mateDeclare('builder', builder);
-    mateDeclare('childCount', childCount);
+    mateUse('builder', builder);
+    mateUse('childCount', childCount);
   }
 }
 
 /// class FixedExtentScrollController extends ScrollController
-class FixedExtentScrollController$Mate extends FixedExtentScrollController with Mate {
+class FixedExtentScrollController$Mate extends FixedExtentScrollController
+    with Mate {
   /// FixedExtentScrollController FixedExtentScrollController({int initialItem = 0})
   FixedExtentScrollController$Mate(
       {
       /// optionalParameters: {int initialItem = 0} , defaultValue:Literal
       int initialItem = 0})
       : super(initialItem: initialItem) {
-    mateBuilder = (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
-    mateDeclare('initialItem', initialItem);
+    mateBuilder = (p) => FixedExtentScrollController$Mate(
+        initialItem: p.get('initialItem').build());
+    mateUse('initialItem', initialItem);
   }
 }
 
@@ -116,13 +123,13 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate {
           itemIndex: p.get('itemIndex').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateDeclare('minScrollExtent', minScrollExtent);
-    mateDeclare('maxScrollExtent', maxScrollExtent);
-    mateDeclare('pixels', pixels);
-    mateDeclare('viewportDimension', viewportDimension);
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('itemIndex', itemIndex);
-    mateDeclare('devicePixelRatio', devicePixelRatio);
+    mateUse('minScrollExtent', minScrollExtent);
+    mateUse('maxScrollExtent', maxScrollExtent);
+    mateUse('pixels', pixels);
+    mateUse('viewportDimension', viewportDimension);
+    mateUse('axisDirection', axisDirection);
+    mateUse('itemIndex', itemIndex);
+    mateUse('devicePixelRatio', devicePixelRatio);
   }
 }
 
@@ -134,8 +141,9 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate {
       /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateBuilder = (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
-    mateDeclare('parent', parent);
+    mateBuilder =
+        (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
+    mateUse('parent', parent);
   }
 }
 
@@ -225,29 +233,30 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
           onSelectedItemChanged: p.get('onSelectedItemChanged').build(),
-          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport:
+              p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('physics', physics);
-    mateDeclare('diameterRatio', diameterRatio);
-    mateDeclare('perspective', perspective);
-    mateDeclare('offAxisFraction', offAxisFraction);
-    mateDeclare('useMagnifier', useMagnifier);
-    mateDeclare('magnification', magnification);
-    mateDeclare('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('squeeze', squeeze);
-    mateDeclare('onSelectedItemChanged', onSelectedItemChanged);
-    mateDeclare('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('scrollBehavior', scrollBehavior);
-    mateDeclare('children', children);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('physics', physics);
+    mateUse('diameterRatio', diameterRatio);
+    mateUse('perspective', perspective);
+    mateUse('offAxisFraction', offAxisFraction);
+    mateUse('useMagnifier', useMagnifier);
+    mateUse('magnification', magnification);
+    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
+    mateUse('itemExtent', itemExtent);
+    mateUse('squeeze', squeeze);
+    mateUse('onSelectedItemChanged', onSelectedItemChanged);
+    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('scrollBehavior', scrollBehavior);
+    mateUse('children', children);
   }
 
   /// ListWheelScrollView ListWheelScrollView.useDelegate({Key? key, ScrollController? controller, ScrollPhysics? physics, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, void Function(int)? onSelectedItemChanged, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, required ListWheelChildDelegate childDelegate})
@@ -334,29 +343,30 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
           onSelectedItemChanged: p.get('onSelectedItemChanged').build(),
-          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport:
+              p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
           childDelegate: p.get('childDelegate').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('physics', physics);
-    mateDeclare('diameterRatio', diameterRatio);
-    mateDeclare('perspective', perspective);
-    mateDeclare('offAxisFraction', offAxisFraction);
-    mateDeclare('useMagnifier', useMagnifier);
-    mateDeclare('magnification', magnification);
-    mateDeclare('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('squeeze', squeeze);
-    mateDeclare('onSelectedItemChanged', onSelectedItemChanged);
-    mateDeclare('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('scrollBehavior', scrollBehavior);
-    mateDeclare('childDelegate', childDelegate);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('physics', physics);
+    mateUse('diameterRatio', diameterRatio);
+    mateUse('perspective', perspective);
+    mateUse('offAxisFraction', offAxisFraction);
+    mateUse('useMagnifier', useMagnifier);
+    mateUse('magnification', magnification);
+    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
+    mateUse('itemExtent', itemExtent);
+    mateUse('squeeze', squeeze);
+    mateUse('onSelectedItemChanged', onSelectedItemChanged);
+    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('scrollBehavior', scrollBehavior);
+    mateUse('childDelegate', childDelegate);
   }
 }
 
@@ -369,7 +379,7 @@ class ListWheelElement$Mate extends ListWheelElement with Mate {
       ListWheelViewport widget)
       : super(widget) {
     mateBuilder = (p) => ListWheelElement$Mate(p.get('widget').value);
-    mateDeclare('widget', widget);
+    mateUse('widget', widget);
   }
 }
 
@@ -440,23 +450,24 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
           overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
-          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport:
+              p.get('renderChildrenOutsideViewport').build(),
           offset: p.get('offset').build(),
           childDelegate: p.get('childDelegate').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('diameterRatio', diameterRatio);
-    mateDeclare('perspective', perspective);
-    mateDeclare('offAxisFraction', offAxisFraction);
-    mateDeclare('useMagnifier', useMagnifier);
-    mateDeclare('magnification', magnification);
-    mateDeclare('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('squeeze', squeeze);
-    mateDeclare('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    mateDeclare('offset', offset);
-    mateDeclare('childDelegate', childDelegate);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('diameterRatio', diameterRatio);
+    mateUse('perspective', perspective);
+    mateUse('offAxisFraction', offAxisFraction);
+    mateUse('useMagnifier', useMagnifier);
+    mateUse('magnification', magnification);
+    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
+    mateUse('itemExtent', itemExtent);
+    mateUse('squeeze', squeeze);
+    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
+    mateUse('offset', offset);
+    mateUse('childDelegate', childDelegate);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

@@ -7,7 +7,8 @@ import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class VerticalDragGestureRecognizer extends DragGestureRecognizer
-class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer with Mate {
+class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
+    with Mate {
   /// VerticalDragGestureRecognizer VerticalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   VerticalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
@@ -28,14 +29,15 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer w
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
 /// class HorizontalDragGestureRecognizer extends DragGestureRecognizer
-class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecognizer with Mate {
+class HorizontalDragGestureRecognizer$Mate
+    extends HorizontalDragGestureRecognizer with Mate {
   /// HorizontalDragGestureRecognizer HorizontalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   HorizontalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
@@ -56,9 +58,9 @@ class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecogniz
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -84,8 +86,8 @@ class PanGestureRecognizer$Mate extends PanGestureRecognizer with Mate {
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

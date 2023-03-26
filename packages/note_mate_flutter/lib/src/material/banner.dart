@@ -103,22 +103,22 @@ class MaterialBanner$Mate extends MaterialBanner with Mate {
           animation: p.get('animation').build(),
           onVisible: p.get('onVisible').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('content', content);
-    mateDeclare('contentTextStyle', contentTextStyle);
-    mateDeclare('actions', actions);
-    mateDeclare('elevation', elevation);
-    mateDeclare('leading', leading);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('dividerColor', dividerColor);
-    mateDeclare('padding', padding);
-    mateDeclare('margin', margin);
-    mateDeclare('leadingPadding', leadingPadding);
-    mateDeclare('forceActionsBelow', forceActionsBelow);
-    mateDeclare('overflowAlignment', overflowAlignment);
-    mateDeclare('animation', animation);
-    mateDeclare('onVisible', onVisible);
+    mateUse('key', key);
+    mateUse('content', content);
+    mateUse('contentTextStyle', contentTextStyle);
+    mateUse('actions', actions);
+    mateUse('elevation', elevation);
+    mateUse('leading', leading);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('shadowColor', shadowColor);
+    mateUse('dividerColor', dividerColor);
+    mateUse('padding', padding);
+    mateUse('margin', margin);
+    mateUse('leadingPadding', leadingPadding);
+    mateUse('forceActionsBelow', forceActionsBelow);
+    mateUse('overflowAlignment', overflowAlignment);
+    mateUse('animation', animation);
+    mateUse('onVisible', onVisible);
   }
 }

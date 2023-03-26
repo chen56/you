@@ -45,11 +45,11 @@ class FlutterLogo$Mate extends FlutterLogo with Mate {
           duration: p.get('duration').build(),
           curve: p.get('curve').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('size', size);
-    mateDeclare('textColor', textColor);
-    mateDeclare('style', style);
-    mateDeclare('duration', duration);
-    mateDeclare('curve', curve);
+    mateUse('key', key);
+    mateUse('size', size);
+    mateUse('textColor', textColor);
+    mateUse('style', style);
+    mateUse('duration', duration);
+    mateUse('curve', curve);
   }
 }

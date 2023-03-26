@@ -81,18 +81,18 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('physics', physics);
-    mateDeclare('headerSliverBuilder', headerSliverBuilder);
-    mateDeclare('body', body);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('floatHeaderSlivers', floatHeaderSlivers);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('scrollBehavior', scrollBehavior);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('physics', physics);
+    mateUse('headerSliverBuilder', headerSliverBuilder);
+    mateUse('body', body);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('floatHeaderSlivers', floatHeaderSlivers);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('scrollBehavior', scrollBehavior);
   }
 }
 
@@ -118,14 +118,15 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('handle', handle);
-    mateDeclare('sliver', sliver);
+    mateUse('key', key);
+    mateUse('handle', handle);
+    mateUse('sliver', sliver);
   }
 }
 
 /// class RenderSliverOverlapAbsorber extends RenderSliver with RenderObjectWithChildMixin<RenderSliver>
-class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with Mate {
+class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber
+    with Mate {
   /// RenderSliverOverlapAbsorber RenderSliverOverlapAbsorber({required SliverOverlapAbsorberHandle handle, RenderSliver? sliver})
   RenderSliverOverlapAbsorber$Mate({
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
@@ -141,8 +142,8 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with 
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateDeclare('handle', handle);
-    mateDeclare('sliver', sliver);
+    mateUse('handle', handle);
+    mateUse('sliver', sliver);
   }
 }
 
@@ -168,22 +169,24 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('handle', handle);
-    mateDeclare('sliver', sliver);
+    mateUse('key', key);
+    mateUse('handle', handle);
+    mateUse('sliver', sliver);
   }
 }
 
 /// class RenderSliverOverlapInjector extends RenderSliver
-class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with Mate {
+class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector
+    with Mate {
   /// RenderSliverOverlapInjector RenderSliverOverlapInjector({required SliverOverlapAbsorberHandle handle})
   RenderSliverOverlapInjector$Mate(
       {
       /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
       required SliverOverlapAbsorberHandle handle})
       : super(handle: handle) {
-    mateBuilder = (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
-    mateDeclare('handle', handle);
+    mateBuilder = (p) =>
+        RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
+    mateUse('handle', handle);
   }
 }
 
@@ -239,20 +242,21 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
           handle: p.get('handle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('crossAxisDirection', crossAxisDirection);
-    mateDeclare('anchor', anchor);
-    mateDeclare('offset', offset);
-    mateDeclare('center', center);
-    mateDeclare('slivers', slivers);
-    mateDeclare('handle', handle);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('axisDirection', axisDirection);
+    mateUse('crossAxisDirection', crossAxisDirection);
+    mateUse('anchor', anchor);
+    mateUse('offset', offset);
+    mateUse('center', center);
+    mateUse('slivers', slivers);
+    mateUse('handle', handle);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
 /// class RenderNestedScrollViewViewport extends RenderViewport
-class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport with Mate {
+class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
+    with Mate {
   /// RenderNestedScrollViewViewport RenderNestedScrollViewViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   RenderNestedScrollViewViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:is!ConstVariableElement
@@ -298,13 +302,13 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
           handle: p.get('handle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('crossAxisDirection', crossAxisDirection);
-    mateDeclare('offset', offset);
-    mateDeclare('anchor', anchor);
-    mateDeclare('children', children);
-    mateDeclare('center', center);
-    mateDeclare('handle', handle);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('axisDirection', axisDirection);
+    mateUse('crossAxisDirection', crossAxisDirection);
+    mateUse('offset', offset);
+    mateUse('anchor', anchor);
+    mateUse('children', children);
+    mateUse('center', center);
+    mateUse('handle', handle);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

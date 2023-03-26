@@ -29,9 +29,9 @@ class OverlayEntry$Mate extends OverlayEntry with Mate {
           opaque: p.get('opaque').build(),
           maintainState: p.get('maintainState').build(),
         );
-    mateDeclare('builder', builder);
-    mateDeclare('opaque', opaque);
-    mateDeclare('maintainState', maintainState);
+    mateUse('builder', builder);
+    mateUse('opaque', opaque);
+    mateUse('maintainState', maintainState);
   }
 }
 
@@ -57,9 +57,9 @@ class Overlay$Mate extends Overlay with Mate {
           initialEntries: p.get('initialEntries').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('initialEntries', initialEntries);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('initialEntries', initialEntries);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -71,8 +71,9 @@ class OverlayPortalController$Mate extends OverlayPortalController with Mate {
       /// optionalParameters: {String? debugLabel} , defaultValue:none
       String? debugLabel})
       : super(debugLabel: debugLabel) {
-    mateBuilder = (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
-    mateDeclare('debugLabel', debugLabel);
+    mateBuilder = (p) =>
+        OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
+    mateUse('debugLabel', debugLabel);
   }
 }
 
@@ -103,10 +104,10 @@ class OverlayPortal$Mate extends OverlayPortal with Mate {
           overlayChildBuilder: p.get('overlayChildBuilder').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('overlayChildBuilder', overlayChildBuilder);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('overlayChildBuilder', overlayChildBuilder);
+    mateUse('child', child);
   }
 
   /// OverlayPortal OverlayPortal.targetsRootOverlay({Key? key, required OverlayPortalController controller, required Widget Function(BuildContext) overlayChildBuilder, Widget? child})
@@ -134,9 +135,9 @@ class OverlayPortal$Mate extends OverlayPortal with Mate {
           overlayChildBuilder: p.get('overlayChildBuilder').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('overlayChildBuilder', overlayChildBuilder);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('overlayChildBuilder', overlayChildBuilder);
+    mateUse('child', child);
   }
 }

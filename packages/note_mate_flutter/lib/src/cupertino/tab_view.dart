@@ -59,14 +59,14 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
           navigatorObservers: p.get('navigatorObservers').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('builder', builder);
-    mateDeclare('navigatorKey', navigatorKey);
-    mateDeclare('defaultTitle', defaultTitle);
-    mateDeclare('routes', routes);
-    mateDeclare('onGenerateRoute', onGenerateRoute);
-    mateDeclare('onUnknownRoute', onUnknownRoute);
-    mateDeclare('navigatorObservers', navigatorObservers);
-    mateDeclare('restorationScopeId', restorationScopeId);
+    mateUse('key', key);
+    mateUse('builder', builder);
+    mateUse('navigatorKey', navigatorKey);
+    mateUse('defaultTitle', defaultTitle);
+    mateUse('routes', routes);
+    mateUse('onGenerateRoute', onGenerateRoute);
+    mateUse('onUnknownRoute', onUnknownRoute);
+    mateUse('navigatorObservers', navigatorObservers);
+    mateUse('restorationScopeId', restorationScopeId);
   }
 }

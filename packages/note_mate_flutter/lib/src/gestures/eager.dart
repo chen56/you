@@ -23,7 +23,7 @@ class EagerGestureRecognizer$Mate extends EagerGestureRecognizer with Mate {
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

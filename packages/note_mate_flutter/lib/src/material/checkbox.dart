@@ -114,24 +114,24 @@ class Checkbox$Mate extends Checkbox with Mate {
           side: p.get('side').build(),
           isError: p.get('isError').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('tristate', tristate);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('activeColor', activeColor);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('checkColor', checkColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('splashRadius', splashRadius);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('shape', shape);
-    mateDeclare('side', side);
-    mateDeclare('isError', isError);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('tristate', tristate);
+    mateUse('onChanged', onChanged);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('activeColor', activeColor);
+    mateUse('fillColor', fillColor);
+    mateUse('checkColor', checkColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('splashRadius', splashRadius);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('visualDensity', visualDensity);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('shape', shape);
+    mateUse('side', side);
+    mateUse('isError', isError);
   }
 }

@@ -61,14 +61,14 @@ class OverflowBar$Mate extends OverflowBar with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('spacing', spacing);
-    mateDeclare('alignment', alignment);
-    mateDeclare('overflowSpacing', overflowSpacing);
-    mateDeclare('overflowAlignment', overflowAlignment);
-    mateDeclare('overflowDirection', overflowDirection);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('children', children);
+    mateUse('key', key);
+    mateUse('spacing', spacing);
+    mateUse('alignment', alignment);
+    mateUse('overflowSpacing', overflowSpacing);
+    mateUse('overflowAlignment', overflowAlignment);
+    mateUse('overflowDirection', overflowDirection);
+    mateUse('textDirection', textDirection);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('children', children);
   }
 }

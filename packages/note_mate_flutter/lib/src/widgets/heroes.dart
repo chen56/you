@@ -48,13 +48,13 @@ class Hero$Mate extends Hero with Mate {
           transitionOnUserGestures: p.get('transitionOnUserGestures').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('tag', tag);
-    mateDeclare('createRectTween', createRectTween);
-    mateDeclare('flightShuttleBuilder', flightShuttleBuilder);
-    mateDeclare('placeholderBuilder', placeholderBuilder);
-    mateDeclare('transitionOnUserGestures', transitionOnUserGestures);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('tag', tag);
+    mateUse('createRectTween', createRectTween);
+    mateUse('flightShuttleBuilder', flightShuttleBuilder);
+    mateUse('placeholderBuilder', placeholderBuilder);
+    mateUse('transitionOnUserGestures', transitionOnUserGestures);
+    mateUse('child', child);
   }
 }
 
@@ -66,8 +66,9 @@ class HeroController$Mate extends HeroController with Mate {
       /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , defaultValue:none
       CreateRectTween? createRectTween})
       : super(createRectTween: createRectTween) {
-    mateBuilder = (p) => HeroController$Mate(createRectTween: p.get('createRectTween').build());
-    mateDeclare('createRectTween', createRectTween);
+    mateBuilder = (p) =>
+        HeroController$Mate(createRectTween: p.get('createRectTween').build());
+    mateUse('createRectTween', createRectTween);
   }
 }
 
@@ -93,8 +94,8 @@ class HeroMode$Mate extends HeroMode with Mate {
           child: p.get('child').build(),
           enabled: p.get('enabled').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('enabled', enabled);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('enabled', enabled);
   }
 }

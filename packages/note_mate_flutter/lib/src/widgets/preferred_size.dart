@@ -28,8 +28,8 @@ class PreferredSize$Mate extends PreferredSize with Mate {
           child: p.get('child').build(),
           preferredSize: p.get('preferredSize').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('preferredSize', preferredSize);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('preferredSize', preferredSize);
   }
 }

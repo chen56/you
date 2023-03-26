@@ -21,15 +21,18 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
   }) : super(
           spellCheckService: spellCheckService,
           misspelledTextStyle: misspelledTextStyle,
-          spellCheckSuggestionsToolbarBuilder: spellCheckSuggestionsToolbarBuilder,
+          spellCheckSuggestionsToolbarBuilder:
+              spellCheckSuggestionsToolbarBuilder,
         ) {
     mateBuilder = (p) => SpellCheckConfiguration$Mate(
           spellCheckService: p.get('spellCheckService').build(),
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
-          spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
+          spellCheckSuggestionsToolbarBuilder:
+              p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
-    mateDeclare('spellCheckService', spellCheckService);
-    mateDeclare('misspelledTextStyle', misspelledTextStyle);
-    mateDeclare('spellCheckSuggestionsToolbarBuilder', spellCheckSuggestionsToolbarBuilder);
+    mateUse('spellCheckService', spellCheckService);
+    mateUse('misspelledTextStyle', misspelledTextStyle);
+    mateUse('spellCheckSuggestionsToolbarBuilder',
+        spellCheckSuggestionsToolbarBuilder);
   }
 }

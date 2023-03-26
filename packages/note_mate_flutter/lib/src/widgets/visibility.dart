@@ -58,15 +58,15 @@ class Visibility$Mate extends Visibility with Mate {
           maintainSemantics: p.get('maintainSemantics').build(),
           maintainInteractivity: p.get('maintainInteractivity').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('replacement', replacement);
-    mateDeclare('visible', visible);
-    mateDeclare('maintainState', maintainState);
-    mateDeclare('maintainAnimation', maintainAnimation);
-    mateDeclare('maintainSize', maintainSize);
-    mateDeclare('maintainSemantics', maintainSemantics);
-    mateDeclare('maintainInteractivity', maintainInteractivity);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('replacement', replacement);
+    mateUse('visible', visible);
+    mateUse('maintainState', maintainState);
+    mateUse('maintainAnimation', maintainAnimation);
+    mateUse('maintainSize', maintainSize);
+    mateUse('maintainSemantics', maintainSemantics);
+    mateUse('maintainInteractivity', maintainInteractivity);
   }
 
   /// Visibility Visibility.maintain({Key? key, required Widget child, Widget replacement = const SizedBox.shrink(), bool visible = true})
@@ -94,10 +94,10 @@ class Visibility$Mate extends Visibility with Mate {
           replacement: p.get('replacement').build(),
           visible: p.get('visible').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('replacement', replacement);
-    mateDeclare('visible', visible);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('replacement', replacement);
+    mateUse('visible', visible);
   }
 }
 
@@ -153,15 +153,15 @@ class SliverVisibility$Mate extends SliverVisibility with Mate {
           maintainSemantics: p.get('maintainSemantics').build(),
           maintainInteractivity: p.get('maintainInteractivity').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('sliver', sliver);
-    mateDeclare('replacementSliver', replacementSliver);
-    mateDeclare('visible', visible);
-    mateDeclare('maintainState', maintainState);
-    mateDeclare('maintainAnimation', maintainAnimation);
-    mateDeclare('maintainSize', maintainSize);
-    mateDeclare('maintainSemantics', maintainSemantics);
-    mateDeclare('maintainInteractivity', maintainInteractivity);
+    mateUse('key', key);
+    mateUse('sliver', sliver);
+    mateUse('replacementSliver', replacementSliver);
+    mateUse('visible', visible);
+    mateUse('maintainState', maintainState);
+    mateUse('maintainAnimation', maintainAnimation);
+    mateUse('maintainSize', maintainSize);
+    mateUse('maintainSemantics', maintainSemantics);
+    mateUse('maintainInteractivity', maintainInteractivity);
   }
 
   /// SliverVisibility SliverVisibility.maintain({Key? key, required Widget sliver, Widget replacementSliver = const SliverToBoxAdapter(), bool visible = true})
@@ -189,9 +189,9 @@ class SliverVisibility$Mate extends SliverVisibility with Mate {
           replacementSliver: p.get('replacementSliver').build(),
           visible: p.get('visible').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('sliver', sliver);
-    mateDeclare('replacementSliver', replacementSliver);
-    mateDeclare('visible', visible);
+    mateUse('key', key);
+    mateUse('sliver', sliver);
+    mateUse('replacementSliver', replacementSliver);
+    mateUse('visible', visible);
   }
 }

@@ -14,7 +14,7 @@ class CharacterBoundary$Mate extends CharacterBoundary with Mate {
       String _text)
       : super(_text) {
     mateBuilder = (p) => CharacterBoundary$Mate(p.get('_text').value);
-    mateDeclare('_text', _text);
+    mateUse('_text', _text);
   }
 }
 
@@ -27,7 +27,7 @@ class LineBoundary$Mate extends LineBoundary with Mate {
       TextLayoutMetrics _textLayout)
       : super(_textLayout) {
     mateBuilder = (p) => LineBoundary$Mate(p.get('_textLayout').value);
-    mateDeclare('_textLayout', _textLayout);
+    mateUse('_textLayout', _textLayout);
   }
 }
 
@@ -40,7 +40,7 @@ class ParagraphBoundary$Mate extends ParagraphBoundary with Mate {
       String _text)
       : super(_text) {
     mateBuilder = (p) => ParagraphBoundary$Mate(p.get('_text').value);
-    mateDeclare('_text', _text);
+    mateUse('_text', _text);
   }
 }
 
@@ -53,6 +53,6 @@ class DocumentBoundary$Mate extends DocumentBoundary with Mate {
       String _text)
       : super(_text) {
     mateBuilder = (p) => DocumentBoundary$Mate(p.get('_text').value);
-    mateDeclare('_text', _text);
+    mateUse('_text', _text);
   }
 }

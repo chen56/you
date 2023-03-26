@@ -163,40 +163,41 @@ class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Mate {
           focusNode: p.get('focusNode').build(),
           smartQuotesType: p.get('smartQuotesType').build(),
           smartDashesType: p.get('smartDashesType').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           autofocus: p.get('autofocus').build(),
           onTap: p.get('onTap').build(),
           autocorrect: p.get('autocorrect').build(),
           enabled: p.get('enabled').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onSubmitted', onSubmitted);
-    mateDeclare('style', style);
-    mateDeclare('placeholder', placeholder);
-    mateDeclare('placeholderStyle', placeholderStyle);
-    mateDeclare('decoration', decoration);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('keyboardType', keyboardType);
-    mateDeclare('padding', padding);
-    mateDeclare('itemColor', itemColor);
-    mateDeclare('itemSize', itemSize);
-    mateDeclare('prefixInsets', prefixInsets);
-    mateDeclare('prefixIcon', prefixIcon);
-    mateDeclare('suffixInsets', suffixInsets);
-    mateDeclare('suffixIcon', suffixIcon);
-    mateDeclare('suffixMode', suffixMode);
-    mateDeclare('onSuffixTap', onSuffixTap);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('smartQuotesType', smartQuotesType);
-    mateDeclare('smartDashesType', smartDashesType);
-    mateDeclare('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('onTap', onTap);
-    mateDeclare('autocorrect', autocorrect);
-    mateDeclare('enabled', enabled);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('onChanged', onChanged);
+    mateUse('onSubmitted', onSubmitted);
+    mateUse('style', style);
+    mateUse('placeholder', placeholder);
+    mateUse('placeholderStyle', placeholderStyle);
+    mateUse('decoration', decoration);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('borderRadius', borderRadius);
+    mateUse('keyboardType', keyboardType);
+    mateUse('padding', padding);
+    mateUse('itemColor', itemColor);
+    mateUse('itemSize', itemSize);
+    mateUse('prefixInsets', prefixInsets);
+    mateUse('prefixIcon', prefixIcon);
+    mateUse('suffixInsets', suffixInsets);
+    mateUse('suffixIcon', suffixIcon);
+    mateUse('suffixMode', suffixMode);
+    mateUse('onSuffixTap', onSuffixTap);
+    mateUse('restorationId', restorationId);
+    mateUse('focusNode', focusNode);
+    mateUse('smartQuotesType', smartQuotesType);
+    mateUse('smartDashesType', smartDashesType);
+    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
+    mateUse('autofocus', autofocus);
+    mateUse('onTap', onTap);
+    mateUse('autocorrect', autocorrect);
+    mateUse('enabled', enabled);
   }
 }

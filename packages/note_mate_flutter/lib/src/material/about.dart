@@ -58,15 +58,15 @@ class AboutListTile$Mate extends AboutListTile with Mate {
           aboutBoxChildren: p.get('aboutBoxChildren').build(),
           dense: p.get('dense').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('icon', icon);
-    mateDeclare('child', child);
-    mateDeclare('applicationName', applicationName);
-    mateDeclare('applicationVersion', applicationVersion);
-    mateDeclare('applicationIcon', applicationIcon);
-    mateDeclare('applicationLegalese', applicationLegalese);
-    mateDeclare('aboutBoxChildren', aboutBoxChildren);
-    mateDeclare('dense', dense);
+    mateUse('key', key);
+    mateUse('icon', icon);
+    mateUse('child', child);
+    mateUse('applicationName', applicationName);
+    mateUse('applicationVersion', applicationVersion);
+    mateUse('applicationIcon', applicationIcon);
+    mateUse('applicationLegalese', applicationLegalese);
+    mateUse('aboutBoxChildren', aboutBoxChildren);
+    mateUse('dense', dense);
   }
 }
 
@@ -107,12 +107,12 @@ class AboutDialog$Mate extends AboutDialog with Mate {
           applicationLegalese: p.get('applicationLegalese').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('applicationName', applicationName);
-    mateDeclare('applicationVersion', applicationVersion);
-    mateDeclare('applicationIcon', applicationIcon);
-    mateDeclare('applicationLegalese', applicationLegalese);
-    mateDeclare('children', children);
+    mateUse('key', key);
+    mateUse('applicationName', applicationName);
+    mateUse('applicationVersion', applicationVersion);
+    mateUse('applicationIcon', applicationIcon);
+    mateUse('applicationLegalese', applicationLegalese);
+    mateUse('children', children);
   }
 }
 
@@ -148,10 +148,10 @@ class LicensePage$Mate extends LicensePage with Mate {
           applicationIcon: p.get('applicationIcon').build(),
           applicationLegalese: p.get('applicationLegalese').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('applicationName', applicationName);
-    mateDeclare('applicationVersion', applicationVersion);
-    mateDeclare('applicationIcon', applicationIcon);
-    mateDeclare('applicationLegalese', applicationLegalese);
+    mateUse('key', key);
+    mateUse('applicationName', applicationName);
+    mateUse('applicationVersion', applicationVersion);
+    mateUse('applicationIcon', applicationIcon);
+    mateUse('applicationLegalese', applicationLegalese);
   }
 }

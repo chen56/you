@@ -40,10 +40,10 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
           position: p.get('position').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('decoration', decoration);
-    mateDeclare('position', position);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('decoration', decoration);
+    mateUse('position', position);
+    mateUse('child', child);
   }
 }
 
@@ -124,19 +124,19 @@ class Container$Mate extends Container with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('alignment', alignment);
-    mateDeclare('padding', padding);
-    mateDeclare('color', color);
-    mateDeclare('decoration', decoration);
-    mateDeclare('foregroundDecoration', foregroundDecoration);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('constraints', constraints);
-    mateDeclare('margin', margin);
-    mateDeclare('transform', transform);
-    mateDeclare('transformAlignment', transformAlignment);
-    mateDeclare('child', child);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('alignment', alignment);
+    mateUse('padding', padding);
+    mateUse('color', color);
+    mateUse('decoration', decoration);
+    mateUse('foregroundDecoration', foregroundDecoration);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('constraints', constraints);
+    mateUse('margin', margin);
+    mateUse('transform', transform);
+    mateUse('transformAlignment', transformAlignment);
+    mateUse('child', child);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

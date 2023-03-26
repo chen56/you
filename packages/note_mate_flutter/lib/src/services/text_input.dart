@@ -24,8 +24,8 @@ class TextInputType$Mate extends TextInputType with Mate {
           signed: p.get('signed').build(),
           decimal: p.get('decimal').build(),
         );
-    mateDeclare('signed', signed);
-    mateDeclare('decimal', decimal);
+    mateUse('signed', signed);
+    mateUse('decimal', decimal);
   }
 }
 
@@ -106,32 +106,34 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
           smartDashesType: p.get('smartDashesType').build(),
           smartQuotesType: p.get('smartQuotesType').build(),
           enableSuggestions: p.get('enableSuggestions').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           actionLabel: p.get('actionLabel').build(),
           inputAction: p.get('inputAction').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           textCapitalization: p.get('textCapitalization').build(),
           autofillConfiguration: p.get('autofillConfiguration').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
           enableDeltaModel: p.get('enableDeltaModel').build(),
         );
-    mateDeclare('inputType', inputType);
-    mateDeclare('readOnly', readOnly);
-    mateDeclare('obscureText', obscureText);
-    mateDeclare('autocorrect', autocorrect);
-    mateDeclare('smartDashesType', smartDashesType);
-    mateDeclare('smartQuotesType', smartQuotesType);
-    mateDeclare('enableSuggestions', enableSuggestions);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('actionLabel', actionLabel);
-    mateDeclare('inputAction', inputAction);
-    mateDeclare('keyboardAppearance', keyboardAppearance);
-    mateDeclare('textCapitalization', textCapitalization);
-    mateDeclare('autofillConfiguration', autofillConfiguration);
-    mateDeclare('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    mateDeclare('allowedMimeTypes', allowedMimeTypes);
-    mateDeclare('enableDeltaModel', enableDeltaModel);
+    mateUse('inputType', inputType);
+    mateUse('readOnly', readOnly);
+    mateUse('obscureText', obscureText);
+    mateUse('autocorrect', autocorrect);
+    mateUse('smartDashesType', smartDashesType);
+    mateUse('smartQuotesType', smartQuotesType);
+    mateUse('enableSuggestions', enableSuggestions);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('actionLabel', actionLabel);
+    mateUse('inputAction', inputAction);
+    mateUse('keyboardAppearance', keyboardAppearance);
+    mateUse('textCapitalization', textCapitalization);
+    mateUse('autofillConfiguration', autofillConfiguration);
+    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
+    mateUse('allowedMimeTypes', allowedMimeTypes);
+    mateUse('enableDeltaModel', enableDeltaModel);
   }
 }
 
@@ -152,8 +154,8 @@ class RawFloatingCursorPoint$Mate extends RawFloatingCursorPoint with Mate {
           offset: p.get('offset').build(),
           state: p.get('state').build(),
         );
-    mateDeclare('offset', offset);
-    mateDeclare('state', state);
+    mateUse('offset', offset);
+    mateUse('state', state);
   }
 }
 
@@ -179,9 +181,9 @@ class TextEditingValue$Mate extends TextEditingValue with Mate {
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateDeclare('text', text);
-    mateDeclare('selection', selection);
-    mateDeclare('composing', composing);
+    mateUse('text', text);
+    mateUse('selection', selection);
+    mateUse('composing', composing);
   }
 }
 
@@ -207,8 +209,8 @@ class SelectionRect$Mate extends SelectionRect with Mate {
           bounds: p.get('bounds').build(),
           direction: p.get('direction').build(),
         );
-    mateDeclare('position', position);
-    mateDeclare('bounds', bounds);
-    mateDeclare('direction', direction);
+    mateUse('position', position);
+    mateUse('bounds', bounds);
+    mateUse('direction', direction);
   }
 }

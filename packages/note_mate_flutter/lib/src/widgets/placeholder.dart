@@ -44,11 +44,11 @@ class Placeholder$Mate extends Placeholder with Mate {
           fallbackHeight: p.get('fallbackHeight').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('strokeWidth', strokeWidth);
-    mateDeclare('fallbackWidth', fallbackWidth);
-    mateDeclare('fallbackHeight', fallbackHeight);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('strokeWidth', strokeWidth);
+    mateUse('fallbackWidth', fallbackWidth);
+    mateUse('fallbackHeight', fallbackHeight);
+    mateUse('child', child);
   }
 }

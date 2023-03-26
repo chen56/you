@@ -60,15 +60,15 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with Mate {
           initialCalendarMode: p.get('initialCalendarMode').build(),
           selectableDayPredicate: p.get('selectableDayPredicate').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('initialDate', initialDate);
-    mateDeclare('firstDate', firstDate);
-    mateDeclare('lastDate', lastDate);
-    mateDeclare('currentDate', currentDate);
-    mateDeclare('onDateChanged', onDateChanged);
-    mateDeclare('onDisplayedMonthChanged', onDisplayedMonthChanged);
-    mateDeclare('initialCalendarMode', initialCalendarMode);
-    mateDeclare('selectableDayPredicate', selectableDayPredicate);
+    mateUse('key', key);
+    mateUse('initialDate', initialDate);
+    mateUse('firstDate', firstDate);
+    mateUse('lastDate', lastDate);
+    mateUse('currentDate', currentDate);
+    mateUse('onDateChanged', onDateChanged);
+    mateUse('onDisplayedMonthChanged', onDisplayedMonthChanged);
+    mateUse('initialCalendarMode', initialCalendarMode);
+    mateUse('selectableDayPredicate', selectableDayPredicate);
   }
 }
 
@@ -119,13 +119,13 @@ class YearPicker$Mate extends YearPicker with Mate {
           onChanged: p.get('onChanged').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('currentDate', currentDate);
-    mateDeclare('firstDate', firstDate);
-    mateDeclare('lastDate', lastDate);
-    mateDeclare('initialDate', initialDate);
-    mateDeclare('selectedDate', selectedDate);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateUse('key', key);
+    mateUse('currentDate', currentDate);
+    mateUse('firstDate', firstDate);
+    mateUse('lastDate', lastDate);
+    mateUse('initialDate', initialDate);
+    mateUse('selectedDate', selectedDate);
+    mateUse('onChanged', onChanged);
+    mateUse('dragStartBehavior', dragStartBehavior);
   }
 }

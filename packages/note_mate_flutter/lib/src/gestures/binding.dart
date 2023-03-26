@@ -9,7 +9,8 @@ import 'package:flutter/src/gestures/hit_test.dart';
 import 'package:flutter/src/foundation/assertions.dart';
 
 /// class FlutterErrorDetailsForPointerEventDispatcher extends FlutterErrorDetails
-class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDetailsForPointerEventDispatcher with Mate {
+class FlutterErrorDetailsForPointerEventDispatcher$Mate
+    extends FlutterErrorDetailsForPointerEventDispatcher with Mate {
   /// FlutterErrorDetailsForPointerEventDispatcher FlutterErrorDetailsForPointerEventDispatcher({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, PointerEvent? event, HitTestEntry<HitTestTarget>? hitTestEntry, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetailsForPointerEventDispatcher$Mate({
     /// optionalParameters: {required Object exception} , defaultValue:none
@@ -55,13 +56,13 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    mateDeclare('exception', exception);
-    mateDeclare('stack', stack);
-    mateDeclare('library', library);
-    mateDeclare('context', context);
-    mateDeclare('event', event);
-    mateDeclare('hitTestEntry', hitTestEntry);
-    mateDeclare('informationCollector', informationCollector);
-    mateDeclare('silent', silent);
+    mateUse('exception', exception);
+    mateUse('stack', stack);
+    mateUse('library', library);
+    mateUse('context', context);
+    mateUse('event', event);
+    mateUse('hitTestEntry', hitTestEntry);
+    mateUse('informationCollector', informationCollector);
+    mateUse('silent', silent);
   }
 }

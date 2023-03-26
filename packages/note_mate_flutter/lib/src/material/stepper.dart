@@ -37,10 +37,10 @@ class ControlsDetails$Mate extends ControlsDetails with Mate {
           onStepCancel: p.get('onStepCancel').build(),
           onStepContinue: p.get('onStepContinue').build(),
         );
-    mateDeclare('currentStep', currentStep);
-    mateDeclare('stepIndex', stepIndex);
-    mateDeclare('onStepCancel', onStepCancel);
-    mateDeclare('onStepContinue', onStepContinue);
+    mateUse('currentStep', currentStep);
+    mateUse('stepIndex', stepIndex);
+    mateUse('onStepCancel', onStepCancel);
+    mateUse('onStepContinue', onStepContinue);
   }
 }
 
@@ -81,12 +81,12 @@ class Step$Mate extends Step with Mate {
           isActive: p.get('isActive').build(),
           label: p.get('label').build(),
         );
-    mateDeclare('title', title);
-    mateDeclare('subtitle', subtitle);
-    mateDeclare('content', content);
-    mateDeclare('state', state);
-    mateDeclare('isActive', isActive);
-    mateDeclare('label', label);
+    mateUse('title', title);
+    mateUse('subtitle', subtitle);
+    mateUse('content', content);
+    mateUse('state', state);
+    mateUse('isActive', isActive);
+    mateUse('label', label);
   }
 }
 
@@ -152,16 +152,16 @@ class Stepper$Mate extends Stepper with Mate {
           elevation: p.get('elevation').build(),
           margin: p.get('margin').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('steps', steps);
-    mateDeclare('physics', physics);
-    mateDeclare('type', type);
-    mateDeclare('currentStep', currentStep);
-    mateDeclare('onStepTapped', onStepTapped);
-    mateDeclare('onStepContinue', onStepContinue);
-    mateDeclare('onStepCancel', onStepCancel);
-    mateDeclare('controlsBuilder', controlsBuilder);
-    mateDeclare('elevation', elevation);
-    mateDeclare('margin', margin);
+    mateUse('key', key);
+    mateUse('steps', steps);
+    mateUse('physics', physics);
+    mateUse('type', type);
+    mateUse('currentStep', currentStep);
+    mateUse('onStepTapped', onStepTapped);
+    mateUse('onStepContinue', onStepContinue);
+    mateUse('onStepCancel', onStepCancel);
+    mateUse('controlsBuilder', controlsBuilder);
+    mateUse('elevation', elevation);
+    mateUse('margin', margin);
   }
 }

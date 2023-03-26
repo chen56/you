@@ -103,23 +103,23 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('textTheme', textTheme);
-    mateDeclare('layoutBehavior', layoutBehavior);
-    mateDeclare('minWidth', minWidth);
-    mateDeclare('height', height);
-    mateDeclare('padding', padding);
-    mateDeclare('shape', shape);
-    mateDeclare('alignedDropdown', alignedDropdown);
-    mateDeclare('buttonColor', buttonColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('highlightColor', highlightColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('colorScheme', colorScheme);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('textTheme', textTheme);
+    mateUse('layoutBehavior', layoutBehavior);
+    mateUse('minWidth', minWidth);
+    mateUse('height', height);
+    mateUse('padding', padding);
+    mateUse('shape', shape);
+    mateUse('alignedDropdown', alignedDropdown);
+    mateUse('buttonColor', buttonColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('highlightColor', highlightColor);
+    mateUse('splashColor', splashColor);
+    mateUse('colorScheme', colorScheme);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('child', child);
   }
 
   /// ButtonTheme ButtonTheme.fromButtonThemeData({Key? key, required ButtonThemeData data, required Widget child})
@@ -142,9 +142,9 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }
 
@@ -230,20 +230,20 @@ class ButtonThemeData$Mate extends ButtonThemeData with Mate {
           colorScheme: p.get('colorScheme').build(),
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
         );
-    mateDeclare('textTheme', textTheme);
-    mateDeclare('minWidth', minWidth);
-    mateDeclare('height', height);
-    mateDeclare('padding', padding);
-    mateDeclare('shape', shape);
-    mateDeclare('layoutBehavior', layoutBehavior);
-    mateDeclare('alignedDropdown', alignedDropdown);
-    mateDeclare('buttonColor', buttonColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('highlightColor', highlightColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('colorScheme', colorScheme);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateUse('textTheme', textTheme);
+    mateUse('minWidth', minWidth);
+    mateUse('height', height);
+    mateUse('padding', padding);
+    mateUse('shape', shape);
+    mateUse('layoutBehavior', layoutBehavior);
+    mateUse('alignedDropdown', alignedDropdown);
+    mateUse('buttonColor', buttonColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('highlightColor', highlightColor);
+    mateUse('splashColor', splashColor);
+    mateUse('colorScheme', colorScheme);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
   }
 }

@@ -63,15 +63,15 @@ class AndroidView$Mate extends AndroidView with Mate {
           creationParamsCodec: p.get('creationParamsCodec').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('viewType', viewType);
-    mateDeclare('onPlatformViewCreated', onPlatformViewCreated);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
-    mateDeclare('layoutDirection', layoutDirection);
-    mateDeclare('gestureRecognizers', gestureRecognizers);
-    mateDeclare('creationParams', creationParams);
-    mateDeclare('creationParamsCodec', creationParamsCodec);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('viewType', viewType);
+    mateUse('onPlatformViewCreated', onPlatformViewCreated);
+    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('layoutDirection', layoutDirection);
+    mateUse('gestureRecognizers', gestureRecognizers);
+    mateUse('creationParams', creationParams);
+    mateUse('creationParamsCodec', creationParamsCodec);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -122,14 +122,14 @@ class UiKitView$Mate extends UiKitView with Mate {
           creationParamsCodec: p.get('creationParamsCodec').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('viewType', viewType);
-    mateDeclare('onPlatformViewCreated', onPlatformViewCreated);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
-    mateDeclare('layoutDirection', layoutDirection);
-    mateDeclare('creationParams', creationParams);
-    mateDeclare('creationParamsCodec', creationParamsCodec);
-    mateDeclare('gestureRecognizers', gestureRecognizers);
+    mateUse('key', key);
+    mateUse('viewType', viewType);
+    mateUse('onPlatformViewCreated', onPlatformViewCreated);
+    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('layoutDirection', layoutDirection);
+    mateUse('creationParams', creationParams);
+    mateUse('creationParamsCodec', creationParamsCodec);
+    mateUse('gestureRecognizers', gestureRecognizers);
   }
 }
 
@@ -155,9 +155,9 @@ class HtmlElementView$Mate extends HtmlElementView with Mate {
           viewType: p.get('viewType').build(),
           onPlatformViewCreated: p.get('onPlatformViewCreated').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('viewType', viewType);
-    mateDeclare('onPlatformViewCreated', onPlatformViewCreated);
+    mateUse('key', key);
+    mateUse('viewType', viewType);
+    mateUse('onPlatformViewCreated', onPlatformViewCreated);
   }
 }
 
@@ -188,10 +188,10 @@ class PlatformViewLink$Mate extends PlatformViewLink with Mate {
           onCreatePlatformView: p.get('onCreatePlatformView').build(),
           viewType: p.get('viewType').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('surfaceFactory', surfaceFactory);
-    mateDeclare('onCreatePlatformView', onCreatePlatformView);
-    mateDeclare('viewType', viewType);
+    mateUse('key', key);
+    mateUse('surfaceFactory', surfaceFactory);
+    mateUse('onCreatePlatformView', onCreatePlatformView);
+    mateUse('viewType', viewType);
   }
 }
 
@@ -222,10 +222,10 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
-    mateDeclare('gestureRecognizers', gestureRecognizers);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('gestureRecognizers', gestureRecognizers);
   }
 }
 
@@ -256,9 +256,9 @@ class AndroidViewSurface$Mate extends AndroidViewSurface with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
-    mateDeclare('gestureRecognizers', gestureRecognizers);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('gestureRecognizers', gestureRecognizers);
   }
 }

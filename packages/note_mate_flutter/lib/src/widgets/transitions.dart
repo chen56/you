@@ -48,11 +48,11 @@ class SlideTransition$Mate extends SlideTransition with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('position', position);
-    mateDeclare('transformHitTests', transformHitTests);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('position', position);
+    mateUse('transformHitTests', transformHitTests);
+    mateUse('textDirection', textDirection);
+    mateUse('child', child);
   }
 }
 
@@ -88,11 +88,11 @@ class ScaleTransition$Mate extends ScaleTransition with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scale', scale);
-    mateDeclare('alignment', alignment);
-    mateDeclare('filterQuality', filterQuality);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('scale', scale);
+    mateUse('alignment', alignment);
+    mateUse('filterQuality', filterQuality);
+    mateUse('child', child);
   }
 }
 
@@ -128,11 +128,11 @@ class RotationTransition$Mate extends RotationTransition with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('turns', turns);
-    mateDeclare('alignment', alignment);
-    mateDeclare('filterQuality', filterQuality);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('turns', turns);
+    mateUse('alignment', alignment);
+    mateUse('filterQuality', filterQuality);
+    mateUse('child', child);
   }
 }
 
@@ -168,11 +168,11 @@ class SizeTransition$Mate extends SizeTransition with Mate {
           axisAlignment: p.get('axisAlignment').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('axis', axis);
-    mateDeclare('sizeFactor', sizeFactor);
-    mateDeclare('axisAlignment', axisAlignment);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('axis', axis);
+    mateUse('sizeFactor', sizeFactor);
+    mateUse('axisAlignment', axisAlignment);
+    mateUse('child', child);
   }
 }
 
@@ -203,10 +203,10 @@ class FadeTransition$Mate extends FadeTransition with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('opacity', opacity);
-    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('opacity', opacity);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateUse('child', child);
   }
 }
 
@@ -237,10 +237,10 @@ class SliverFadeTransition$Mate extends SliverFadeTransition with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('opacity', opacity);
-    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateDeclare('sliver', sliver);
+    mateUse('key', key);
+    mateUse('opacity', opacity);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateUse('sliver', sliver);
   }
 }
 
@@ -261,8 +261,8 @@ class RelativeRectTween$Mate extends RelativeRectTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }
 
@@ -288,14 +288,15 @@ class PositionedTransition$Mate extends PositionedTransition with Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('rect', rect);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('rect', rect);
+    mateUse('child', child);
   }
 }
 
 /// class RelativePositionedTransition extends AnimatedWidget
-class RelativePositionedTransition$Mate extends RelativePositionedTransition with Mate {
+class RelativePositionedTransition$Mate extends RelativePositionedTransition
+    with Mate {
   /// RelativePositionedTransition RelativePositionedTransition({Key? key, required Animation<Rect?> rect, required Size size, required Widget child})
   RelativePositionedTransition$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -321,10 +322,10 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition wit
           size: p.get('size').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('rect', rect);
-    mateDeclare('size', size);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('rect', rect);
+    mateUse('size', size);
+    mateUse('child', child);
   }
 }
 
@@ -355,10 +356,10 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with Mate {
           position: p.get('position').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('decoration', decoration);
-    mateDeclare('position', position);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('decoration', decoration);
+    mateUse('position', position);
+    mateUse('child', child);
   }
 }
 
@@ -394,16 +395,17 @@ class AlignTransition$Mate extends AlignTransition with Mate {
           widthFactor: p.get('widthFactor').build(),
           heightFactor: p.get('heightFactor').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('alignment', alignment);
-    mateDeclare('child', child);
-    mateDeclare('widthFactor', widthFactor);
-    mateDeclare('heightFactor', heightFactor);
+    mateUse('key', key);
+    mateUse('alignment', alignment);
+    mateUse('child', child);
+    mateUse('widthFactor', widthFactor);
+    mateUse('heightFactor', heightFactor);
   }
 }
 
 /// class DefaultTextStyleTransition extends AnimatedWidget
-class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Mate {
+class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition
+    with Mate {
   /// DefaultTextStyleTransition DefaultTextStyleTransition({Key? key, required Animation<TextStyle> style, required Widget child, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines})
   DefaultTextStyleTransition$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -444,13 +446,13 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Ma
           overflow: p.get('overflow').build(),
           maxLines: p.get('maxLines').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('style', style);
-    mateDeclare('child', child);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('softWrap', softWrap);
-    mateDeclare('overflow', overflow);
-    mateDeclare('maxLines', maxLines);
+    mateUse('key', key);
+    mateUse('style', style);
+    mateUse('child', child);
+    mateUse('textAlign', textAlign);
+    mateUse('softWrap', softWrap);
+    mateUse('overflow', overflow);
+    mateUse('maxLines', maxLines);
   }
 }
 
@@ -481,10 +483,10 @@ class ListenableBuilder$Mate extends ListenableBuilder with Mate {
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('listenable', listenable);
-    mateDeclare('builder', builder);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('listenable', listenable);
+    mateUse('builder', builder);
+    mateUse('child', child);
   }
 }
 
@@ -515,9 +517,9 @@ class AnimatedBuilder$Mate extends AnimatedBuilder with Mate {
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('animation', animation);
-    mateDeclare('builder', builder);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('animation', animation);
+    mateUse('builder', builder);
+    mateUse('child', child);
   }
 }

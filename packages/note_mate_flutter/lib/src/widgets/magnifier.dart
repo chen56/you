@@ -37,15 +37,16 @@ class MagnifierInfo$Mate extends MagnifierInfo with Mate {
           fieldBounds: p.get('fieldBounds').build(),
           currentLineBoundaries: p.get('currentLineBoundaries').build(),
         );
-    mateDeclare('globalGesturePosition', globalGesturePosition);
-    mateDeclare('caretRect', caretRect);
-    mateDeclare('fieldBounds', fieldBounds);
-    mateDeclare('currentLineBoundaries', currentLineBoundaries);
+    mateUse('globalGesturePosition', globalGesturePosition);
+    mateUse('caretRect', caretRect);
+    mateUse('fieldBounds', fieldBounds);
+    mateUse('currentLineBoundaries', currentLineBoundaries);
   }
 }
 
 /// class TextMagnifierConfiguration
-class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration with Mate {
+class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration
+    with Mate {
   /// TextMagnifierConfiguration TextMagnifierConfiguration({Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder, bool shouldDisplayHandlesInMagnifier = true})
   TextMagnifierConfiguration$Mate({
     /// optionalParameters: {Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder} , defaultValue:none
@@ -59,10 +60,11 @@ class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration with Ma
         ) {
     mateBuilder = (p) => TextMagnifierConfiguration$Mate(
           magnifierBuilder: p.get('magnifierBuilder').build(),
-          shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').build(),
+          shouldDisplayHandlesInMagnifier:
+              p.get('shouldDisplayHandlesInMagnifier').build(),
         );
-    mateDeclare('magnifierBuilder', magnifierBuilder);
-    mateDeclare('shouldDisplayHandlesInMagnifier', shouldDisplayHandlesInMagnifier);
+    mateUse('magnifierBuilder', magnifierBuilder);
+    mateUse('shouldDisplayHandlesInMagnifier', shouldDisplayHandlesInMagnifier);
   }
 }
 
@@ -74,8 +76,9 @@ class MagnifierController$Mate extends MagnifierController with Mate {
       /// optionalParameters: {AnimationController? animationController} , defaultValue:none
       AnimationController? animationController})
       : super(animationController: animationController) {
-    mateBuilder = (p) => MagnifierController$Mate(animationController: p.get('animationController').build());
-    mateDeclare('animationController', animationController);
+    mateBuilder = (p) => MagnifierController$Mate(
+        animationController: p.get('animationController').build());
+    mateUse('animationController', animationController);
   }
 }
 
@@ -101,9 +104,9 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate {
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    mateDeclare('opacity', opacity);
-    mateDeclare('shadows', shadows);
-    mateDeclare('shape', shape);
+    mateUse('opacity', opacity);
+    mateUse('shadows', shadows);
+    mateUse('shape', shape);
   }
 }
 
@@ -144,11 +147,11 @@ class RawMagnifier$Mate extends RawMagnifier with Mate {
           magnificationScale: p.get('magnificationScale').build(),
           size: p.get('size').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('decoration', decoration);
-    mateDeclare('focalPointOffset', focalPointOffset);
-    mateDeclare('magnificationScale', magnificationScale);
-    mateDeclare('size', size);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('decoration', decoration);
+    mateUse('focalPointOffset', focalPointOffset);
+    mateUse('magnificationScale', magnificationScale);
+    mateUse('size', size);
   }
 }

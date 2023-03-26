@@ -8,7 +8,8 @@ import 'package:flutter/src/animation/curves.dart';
 import 'dart:ui';
 
 /// class AlwaysStoppedAnimation<T> extends Animation<T>
-class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T> with Mate {
+class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T>
+    with Mate {
   /// AlwaysStoppedAnimation<T> AlwaysStoppedAnimation(T value)
   AlwaysStoppedAnimation$Mate(
 
@@ -16,7 +17,7 @@ class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T> with Mate
       T value)
       : super(value) {
     mateBuilder = (p) => AlwaysStoppedAnimation$Mate<T>(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }
 
@@ -29,7 +30,7 @@ class ProxyAnimation$Mate extends ProxyAnimation with Mate {
       Animation<double>? animation)
       : super(animation) {
     mateBuilder = (p) => ProxyAnimation$Mate(p.get('animation').value);
-    mateDeclare('animation', animation);
+    mateUse('animation', animation);
   }
 }
 
@@ -42,7 +43,7 @@ class ReverseAnimation$Mate extends ReverseAnimation with Mate {
       Animation<double> parent)
       : super(parent) {
     mateBuilder = (p) => ReverseAnimation$Mate(p.get('parent').value);
-    mateDeclare('parent', parent);
+    mateUse('parent', parent);
   }
 }
 
@@ -68,9 +69,9 @@ class CurvedAnimation$Mate extends CurvedAnimation with Mate {
           curve: p.get('curve').build(),
           reverseCurve: p.get('reverseCurve').build(),
         );
-    mateDeclare('parent', parent);
-    mateDeclare('curve', curve);
-    mateDeclare('reverseCurve', reverseCurve);
+    mateUse('parent', parent);
+    mateUse('curve', curve);
+    mateUse('reverseCurve', reverseCurve);
   }
 }
 
@@ -95,9 +96,9 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate {
           p.get('_nextTrain').value,
           onSwitchedTrain: p.get('onSwitchedTrain').build(),
         );
-    mateDeclare('_currentTrain', _currentTrain);
-    mateDeclare('_nextTrain', _nextTrain);
-    mateDeclare('onSwitchedTrain', onSwitchedTrain);
+    mateUse('_currentTrain', _currentTrain);
+    mateUse('_nextTrain', _nextTrain);
+    mateUse('onSwitchedTrain', onSwitchedTrain);
   }
 }
 
@@ -118,8 +119,8 @@ class AnimationMean$Mate extends AnimationMean with Mate {
           left: p.get('left').build(),
           right: p.get('right').build(),
         );
-    mateDeclare('left', left);
-    mateDeclare('right', right);
+    mateUse('left', left);
+    mateUse('right', right);
   }
 }
 
@@ -140,8 +141,8 @@ class AnimationMax$Mate<T extends num> extends AnimationMax<T> with Mate {
           p.get('first').value,
           p.get('next').value,
         );
-    mateDeclare('first', first);
-    mateDeclare('next', next);
+    mateUse('first', first);
+    mateUse('next', next);
   }
 }
 
@@ -162,7 +163,7 @@ class AnimationMin$Mate<T extends num> extends AnimationMin<T> with Mate {
           p.get('first').value,
           p.get('next').value,
         );
-    mateDeclare('first', first);
-    mateDeclare('next', next);
+    mateUse('first', first);
+    mateUse('next', next);
   }
 }

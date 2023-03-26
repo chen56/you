@@ -177,7 +177,8 @@ class ListTile$Mate extends ListTile with Mate {
           textColor: p.get('textColor').build(),
           titleTextStyle: p.get('titleTextStyle').build(),
           subtitleTextStyle: p.get('subtitleTextStyle').build(),
-          leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').build(),
+          leadingAndTrailingTextStyle:
+              p.get('leadingAndTrailingTextStyle').build(),
           contentPadding: p.get('contentPadding').build(),
           enabled: p.get('enabled').build(),
           onTap: p.get('onTap').build(),
@@ -198,40 +199,40 @@ class ListTile$Mate extends ListTile with Mate {
           minLeadingWidth: p.get('minLeadingWidth').build(),
           titleAlignment: p.get('titleAlignment').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('leading', leading);
-    mateDeclare('title', title);
-    mateDeclare('subtitle', subtitle);
-    mateDeclare('trailing', trailing);
-    mateDeclare('isThreeLine', isThreeLine);
-    mateDeclare('dense', dense);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('shape', shape);
-    mateDeclare('style', style);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('iconColor', iconColor);
-    mateDeclare('textColor', textColor);
-    mateDeclare('titleTextStyle', titleTextStyle);
-    mateDeclare('subtitleTextStyle', subtitleTextStyle);
-    mateDeclare('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle);
-    mateDeclare('contentPadding', contentPadding);
-    mateDeclare('enabled', enabled);
-    mateDeclare('onTap', onTap);
-    mateDeclare('onLongPress', onLongPress);
-    mateDeclare('onFocusChange', onFocusChange);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('selected', selected);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('tileColor', tileColor);
-    mateDeclare('selectedTileColor', selectedTileColor);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('horizontalTitleGap', horizontalTitleGap);
-    mateDeclare('minVerticalPadding', minVerticalPadding);
-    mateDeclare('minLeadingWidth', minLeadingWidth);
-    mateDeclare('titleAlignment', titleAlignment);
+    mateUse('key', key);
+    mateUse('leading', leading);
+    mateUse('title', title);
+    mateUse('subtitle', subtitle);
+    mateUse('trailing', trailing);
+    mateUse('isThreeLine', isThreeLine);
+    mateUse('dense', dense);
+    mateUse('visualDensity', visualDensity);
+    mateUse('shape', shape);
+    mateUse('style', style);
+    mateUse('selectedColor', selectedColor);
+    mateUse('iconColor', iconColor);
+    mateUse('textColor', textColor);
+    mateUse('titleTextStyle', titleTextStyle);
+    mateUse('subtitleTextStyle', subtitleTextStyle);
+    mateUse('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle);
+    mateUse('contentPadding', contentPadding);
+    mateUse('enabled', enabled);
+    mateUse('onTap', onTap);
+    mateUse('onLongPress', onLongPress);
+    mateUse('onFocusChange', onFocusChange);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('selected', selected);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('splashColor', splashColor);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('tileColor', tileColor);
+    mateUse('selectedTileColor', selectedTileColor);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('horizontalTitleGap', horizontalTitleGap);
+    mateUse('minVerticalPadding', minVerticalPadding);
+    mateUse('minLeadingWidth', minLeadingWidth);
+    mateUse('titleAlignment', titleAlignment);
   }
 }

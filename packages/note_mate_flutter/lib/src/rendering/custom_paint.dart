@@ -41,11 +41,11 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
           transform: p.get('transform').build(),
           tags: p.get('tags').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('rect', rect);
-    mateDeclare('properties', properties);
-    mateDeclare('transform', transform);
-    mateDeclare('tags', tags);
+    mateUse('key', key);
+    mateUse('rect', rect);
+    mateUse('properties', properties);
+    mateUse('transform', transform);
+    mateUse('tags', tags);
   }
 }
 
@@ -86,11 +86,11 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('painter', painter);
-    mateDeclare('foregroundPainter', foregroundPainter);
-    mateDeclare('preferredSize', preferredSize);
-    mateDeclare('isComplex', isComplex);
-    mateDeclare('willChange', willChange);
-    mateDeclare('child', child);
+    mateUse('painter', painter);
+    mateUse('foregroundPainter', foregroundPainter);
+    mateUse('preferredSize', preferredSize);
+    mateUse('isComplex', isComplex);
+    mateUse('willChange', willChange);
+    mateUse('child', child);
   }
 }

@@ -52,12 +52,12 @@ class SelectableRegion$Mate extends SelectableRegion with Mate {
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
           onSelectionChanged: p.get('onSelectionChanged').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('child', child);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
-    mateDeclare('onSelectionChanged', onSelectionChanged);
+    mateUse('key', key);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
+    mateUse('focusNode', focusNode);
+    mateUse('selectionControls', selectionControls);
+    mateUse('child', child);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
+    mateUse('onSelectionChanged', onSelectionChanged);
   }
 }

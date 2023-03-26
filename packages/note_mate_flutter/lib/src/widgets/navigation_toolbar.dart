@@ -43,11 +43,11 @@ class NavigationToolbar$Mate extends NavigationToolbar with Mate {
           centerMiddle: p.get('centerMiddle').build(),
           middleSpacing: p.get('middleSpacing').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('leading', leading);
-    mateDeclare('middle', middle);
-    mateDeclare('trailing', trailing);
-    mateDeclare('centerMiddle', centerMiddle);
-    mateDeclare('middleSpacing', middleSpacing);
+    mateUse('key', key);
+    mateUse('leading', leading);
+    mateUse('middle', middle);
+    mateUse('trailing', trailing);
+    mateUse('centerMiddle', centerMiddle);
+    mateUse('middleSpacing', middleSpacing);
   }
 }

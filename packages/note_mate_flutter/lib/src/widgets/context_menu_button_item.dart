@@ -27,8 +27,8 @@ class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate {
           type: p.get('type').build(),
           label: p.get('label').build(),
         );
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('type', type);
-    mateDeclare('label', label);
+    mateUse('onPressed', onPressed);
+    mateUse('type', type);
+    mateUse('label', label);
   }
 }

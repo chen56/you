@@ -121,7 +121,8 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           initiallyExpanded: p.get('initiallyExpanded').build(),
           maintainState: p.get('maintainState').build(),
           tilePadding: p.get('tilePadding').build(),
-          expandedCrossAxisAlignment: p.get('expandedCrossAxisAlignment').build(),
+          expandedCrossAxisAlignment:
+              p.get('expandedCrossAxisAlignment').build(),
           expandedAlignment: p.get('expandedAlignment').build(),
           childrenPadding: p.get('childrenPadding').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -135,28 +136,28 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           controlAffinity: p.get('controlAffinity').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('leading', leading);
-    mateDeclare('title', title);
-    mateDeclare('subtitle', subtitle);
-    mateDeclare('onExpansionChanged', onExpansionChanged);
-    mateDeclare('children', children);
-    mateDeclare('trailing', trailing);
-    mateDeclare('initiallyExpanded', initiallyExpanded);
-    mateDeclare('maintainState', maintainState);
-    mateDeclare('tilePadding', tilePadding);
-    mateDeclare('expandedCrossAxisAlignment', expandedCrossAxisAlignment);
-    mateDeclare('expandedAlignment', expandedAlignment);
-    mateDeclare('childrenPadding', childrenPadding);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('collapsedBackgroundColor', collapsedBackgroundColor);
-    mateDeclare('textColor', textColor);
-    mateDeclare('collapsedTextColor', collapsedTextColor);
-    mateDeclare('iconColor', iconColor);
-    mateDeclare('collapsedIconColor', collapsedIconColor);
-    mateDeclare('shape', shape);
-    mateDeclare('collapsedShape', collapsedShape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('controlAffinity', controlAffinity);
+    mateUse('key', key);
+    mateUse('leading', leading);
+    mateUse('title', title);
+    mateUse('subtitle', subtitle);
+    mateUse('onExpansionChanged', onExpansionChanged);
+    mateUse('children', children);
+    mateUse('trailing', trailing);
+    mateUse('initiallyExpanded', initiallyExpanded);
+    mateUse('maintainState', maintainState);
+    mateUse('tilePadding', tilePadding);
+    mateUse('expandedCrossAxisAlignment', expandedCrossAxisAlignment);
+    mateUse('expandedAlignment', expandedAlignment);
+    mateUse('childrenPadding', childrenPadding);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('collapsedBackgroundColor', collapsedBackgroundColor);
+    mateUse('textColor', textColor);
+    mateUse('collapsedTextColor', collapsedTextColor);
+    mateUse('iconColor', iconColor);
+    mateUse('collapsedIconColor', collapsedIconColor);
+    mateUse('shape', shape);
+    mateUse('collapsedShape', collapsedShape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('controlAffinity', controlAffinity);
   }
 }

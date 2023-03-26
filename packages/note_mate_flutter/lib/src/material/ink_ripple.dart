@@ -71,16 +71,16 @@ class InkRipple$Mate extends InkRipple with Mate {
           radius: p.get('radius').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    mateDeclare('controller', controller);
-    mateDeclare('referenceBox', referenceBox);
-    mateDeclare('position', position);
-    mateDeclare('color', color);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('containedInkWell', containedInkWell);
-    mateDeclare('rectCallback', rectCallback);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('customBorder', customBorder);
-    mateDeclare('radius', radius);
-    mateDeclare('onRemoved', onRemoved);
+    mateUse('controller', controller);
+    mateUse('referenceBox', referenceBox);
+    mateUse('position', position);
+    mateUse('color', color);
+    mateUse('textDirection', textDirection);
+    mateUse('containedInkWell', containedInkWell);
+    mateUse('rectCallback', rectCallback);
+    mateUse('borderRadius', borderRadius);
+    mateUse('customBorder', customBorder);
+    mateUse('radius', radius);
+    mateUse('onRemoved', onRemoved);
   }
 }

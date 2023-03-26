@@ -58,14 +58,14 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate {
           splashRadius: p.get('splashRadius').build(),
           thumbIcon: p.get('thumbIcon').build(),
         );
-    mateDeclare('thumbColor', thumbColor);
-    mateDeclare('trackColor', trackColor);
-    mateDeclare('trackOutlineColor', trackOutlineColor);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('splashRadius', splashRadius);
-    mateDeclare('thumbIcon', thumbIcon);
+    mateUse('thumbColor', thumbColor);
+    mateUse('trackColor', trackColor);
+    mateUse('trackOutlineColor', trackOutlineColor);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('splashRadius', splashRadius);
+    mateUse('thumbIcon', thumbIcon);
   }
 }
 
@@ -91,8 +91,8 @@ class SwitchTheme$Mate extends SwitchTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

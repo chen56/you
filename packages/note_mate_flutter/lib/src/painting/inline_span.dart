@@ -15,12 +15,13 @@ class Accumulator$Mate extends Accumulator with Mate {
       int _value)
       : super(_value) {
     mateBuilder = (p) => Accumulator$Mate(p.get('_value').value);
-    mateDeclare('_value', _value);
+    mateUse('_value', _value);
   }
 }
 
 /// class InlineSpanSemanticsInformation
-class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation with Mate {
+class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
+    with Mate {
   /// InlineSpanSemanticsInformation InlineSpanSemanticsInformation(String text, {bool isPlaceholder = false, String? semanticsLabel, List<StringAttribute> stringAttributes = const <ui.StringAttribute>[], GestureRecognizer? recognizer})
   InlineSpanSemanticsInformation$Mate(
     /// requiredParameters: String text
@@ -50,10 +51,10 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
           stringAttributes: p.get('stringAttributes').build(),
           recognizer: p.get('recognizer').build(),
         );
-    mateDeclare('text', text);
-    mateDeclare('isPlaceholder', isPlaceholder);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('stringAttributes', stringAttributes);
-    mateDeclare('recognizer', recognizer);
+    mateUse('text', text);
+    mateUse('isPlaceholder', isPlaceholder);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('stringAttributes', stringAttributes);
+    mateUse('recognizer', recognizer);
   }
 }

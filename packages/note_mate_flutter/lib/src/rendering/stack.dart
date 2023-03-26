@@ -34,10 +34,10 @@ class RelativeRect$Mate extends RelativeRect with Mate {
           p.get('right').value,
           p.get('bottom').value,
         );
-    mateDeclare('left', left);
-    mateDeclare('top', top);
-    mateDeclare('right', right);
-    mateDeclare('bottom', bottom);
+    mateUse('left', left);
+    mateUse('top', top);
+    mateUse('right', right);
+    mateUse('bottom', bottom);
   }
 }
 
@@ -73,11 +73,11 @@ class RenderStack$Mate extends RenderStack with Mate {
           fit: p.get('fit').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('children', children);
-    mateDeclare('alignment', alignment);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('fit', fit);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('children', children);
+    mateUse('alignment', alignment);
+    mateUse('textDirection', textDirection);
+    mateUse('fit', fit);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -118,11 +118,11 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           index: p.get('index').build(),
         );
-    mateDeclare('children', children);
-    mateDeclare('alignment', alignment);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('fit', fit);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('index', index);
+    mateUse('children', children);
+    mateUse('alignment', alignment);
+    mateUse('textDirection', textDirection);
+    mateUse('fit', fit);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('index', index);
   }
 }

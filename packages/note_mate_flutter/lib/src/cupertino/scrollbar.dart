@@ -67,15 +67,15 @@ class CupertinoScrollbar$Mate extends CupertinoScrollbar with Mate {
           notificationPredicate: p.get('notificationPredicate').build(),
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('controller', controller);
-    mateDeclare('thumbVisibility', thumbVisibility);
-    mateDeclare('thickness', thickness);
-    mateDeclare('thicknessWhileDragging', thicknessWhileDragging);
-    mateDeclare('radius', radius);
-    mateDeclare('radiusWhileDragging', radiusWhileDragging);
-    mateDeclare('notificationPredicate', notificationPredicate);
-    mateDeclare('scrollbarOrientation', scrollbarOrientation);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('controller', controller);
+    mateUse('thumbVisibility', thumbVisibility);
+    mateUse('thickness', thickness);
+    mateUse('thicknessWhileDragging', thicknessWhileDragging);
+    mateUse('radius', radius);
+    mateUse('radiusWhileDragging', radiusWhileDragging);
+    mateUse('notificationPredicate', notificationPredicate);
+    mateUse('scrollbarOrientation', scrollbarOrientation);
   }
 }

@@ -67,16 +67,16 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
           alignment: p.get('alignment').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('padding', padding);
-    mateDeclare('color', color);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('minSize', minSize);
-    mateDeclare('pressedOpacity', pressedOpacity);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('alignment', alignment);
-    mateDeclare('onPressed', onPressed);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('padding', padding);
+    mateUse('color', color);
+    mateUse('disabledColor', disabledColor);
+    mateUse('minSize', minSize);
+    mateUse('pressedOpacity', pressedOpacity);
+    mateUse('borderRadius', borderRadius);
+    mateUse('alignment', alignment);
+    mateUse('onPressed', onPressed);
   }
 
   /// CupertinoButton CupertinoButton.filled({Key? key, required Widget child, EdgeInsetsGeometry? padding, Color disabledColor = CupertinoColors.quaternarySystemFill, double? minSize = kMinInteractiveDimensionCupertino, double? pressedOpacity = 0.4, BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0)), AlignmentGeometry alignment = Alignment.center, required void Function()? onPressed})
@@ -129,14 +129,14 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
           alignment: p.get('alignment').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('padding', padding);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('minSize', minSize);
-    mateDeclare('pressedOpacity', pressedOpacity);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('alignment', alignment);
-    mateDeclare('onPressed', onPressed);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('padding', padding);
+    mateUse('disabledColor', disabledColor);
+    mateUse('minSize', minSize);
+    mateUse('pressedOpacity', pressedOpacity);
+    mateUse('borderRadius', borderRadius);
+    mateUse('alignment', alignment);
+    mateUse('onPressed', onPressed);
   }
 }

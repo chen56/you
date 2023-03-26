@@ -143,31 +143,31 @@ class TextStyle$Mate extends TextStyle with Mate {
           package: p.get('package').build(),
           overflow: p.get('overflow').build(),
         );
-    mateDeclare('inherit', inherit);
-    mateDeclare('color', color);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('fontSize', fontSize);
-    mateDeclare('fontWeight', fontWeight);
-    mateDeclare('fontStyle', fontStyle);
-    mateDeclare('letterSpacing', letterSpacing);
-    mateDeclare('wordSpacing', wordSpacing);
-    mateDeclare('textBaseline', textBaseline);
-    mateDeclare('height', height);
-    mateDeclare('leadingDistribution', leadingDistribution);
-    mateDeclare('locale', locale);
-    mateDeclare('foreground', foreground);
-    mateDeclare('background', background);
-    mateDeclare('shadows', shadows);
-    mateDeclare('fontFeatures', fontFeatures);
-    mateDeclare('fontVariations', fontVariations);
-    mateDeclare('decoration', decoration);
-    mateDeclare('decorationColor', decorationColor);
-    mateDeclare('decorationStyle', decorationStyle);
-    mateDeclare('decorationThickness', decorationThickness);
-    mateDeclare('debugLabel', debugLabel);
-    mateDeclare('fontFamily', fontFamily);
-    mateDeclare('fontFamilyFallback', fontFamilyFallback);
-    mateDeclare('package', package);
-    mateDeclare('overflow', overflow);
+    mateUse('inherit', inherit);
+    mateUse('color', color);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('fontSize', fontSize);
+    mateUse('fontWeight', fontWeight);
+    mateUse('fontStyle', fontStyle);
+    mateUse('letterSpacing', letterSpacing);
+    mateUse('wordSpacing', wordSpacing);
+    mateUse('textBaseline', textBaseline);
+    mateUse('height', height);
+    mateUse('leadingDistribution', leadingDistribution);
+    mateUse('locale', locale);
+    mateUse('foreground', foreground);
+    mateUse('background', background);
+    mateUse('shadows', shadows);
+    mateUse('fontFeatures', fontFeatures);
+    mateUse('fontVariations', fontVariations);
+    mateUse('decoration', decoration);
+    mateUse('decorationColor', decorationColor);
+    mateUse('decorationStyle', decorationStyle);
+    mateUse('decorationThickness', decorationThickness);
+    mateUse('debugLabel', debugLabel);
+    mateUse('fontFamily', fontFamily);
+    mateUse('fontFamilyFallback', fontFamilyFallback);
+    mateUse('package', package);
+    mateUse('overflow', overflow);
   }
 }

@@ -83,19 +83,19 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
           minWidth: p.get('minWidth').build(),
           minExtendedWidth: p.get('minExtendedWidth').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('unselectedLabelTextStyle', unselectedLabelTextStyle);
-    mateDeclare('selectedLabelTextStyle', selectedLabelTextStyle);
-    mateDeclare('unselectedIconTheme', unselectedIconTheme);
-    mateDeclare('selectedIconTheme', selectedIconTheme);
-    mateDeclare('groupAlignment', groupAlignment);
-    mateDeclare('labelType', labelType);
-    mateDeclare('useIndicator', useIndicator);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('indicatorShape', indicatorShape);
-    mateDeclare('minWidth', minWidth);
-    mateDeclare('minExtendedWidth', minExtendedWidth);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('unselectedLabelTextStyle', unselectedLabelTextStyle);
+    mateUse('selectedLabelTextStyle', selectedLabelTextStyle);
+    mateUse('unselectedIconTheme', unselectedIconTheme);
+    mateUse('selectedIconTheme', selectedIconTheme);
+    mateUse('groupAlignment', groupAlignment);
+    mateUse('labelType', labelType);
+    mateUse('useIndicator', useIndicator);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('indicatorShape', indicatorShape);
+    mateUse('minWidth', minWidth);
+    mateUse('minExtendedWidth', minExtendedWidth);
   }
 }
 
@@ -121,8 +121,8 @@ class NavigationRailTheme$Mate extends NavigationRailTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

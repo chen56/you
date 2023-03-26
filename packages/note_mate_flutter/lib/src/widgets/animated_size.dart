@@ -51,12 +51,12 @@ class AnimatedSize$Mate extends AnimatedSize with Mate {
           reverseDuration: p.get('reverseDuration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('alignment', alignment);
-    mateDeclare('curve', curve);
-    mateDeclare('duration', duration);
-    mateDeclare('reverseDuration', reverseDuration);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('alignment', alignment);
+    mateUse('curve', curve);
+    mateUse('duration', duration);
+    mateUse('reverseDuration', reverseDuration);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

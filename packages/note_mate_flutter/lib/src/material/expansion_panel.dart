@@ -40,11 +40,11 @@ class ExpansionPanel$Mate extends ExpansionPanel with Mate {
           canTapOnHeader: p.get('canTapOnHeader').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    mateDeclare('headerBuilder', headerBuilder);
-    mateDeclare('body', body);
-    mateDeclare('isExpanded', isExpanded);
-    mateDeclare('canTapOnHeader', canTapOnHeader);
-    mateDeclare('backgroundColor', backgroundColor);
+    mateUse('headerBuilder', headerBuilder);
+    mateUse('body', body);
+    mateUse('isExpanded', isExpanded);
+    mateUse('canTapOnHeader', canTapOnHeader);
+    mateUse('backgroundColor', backgroundColor);
   }
 }
 
@@ -80,11 +80,11 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate {
           canTapOnHeader: p.get('canTapOnHeader').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    mateDeclare('value', value);
-    mateDeclare('headerBuilder', headerBuilder);
-    mateDeclare('body', body);
-    mateDeclare('canTapOnHeader', canTapOnHeader);
-    mateDeclare('backgroundColor', backgroundColor);
+    mateUse('value', value);
+    mateUse('headerBuilder', headerBuilder);
+    mateUse('body', body);
+    mateUse('canTapOnHeader', canTapOnHeader);
+    mateUse('backgroundColor', backgroundColor);
   }
 }
 
@@ -135,14 +135,14 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: p.get('elevation').build(),
           expandIconColor: p.get('expandIconColor').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('expansionCallback', expansionCallback);
-    mateDeclare('animationDuration', animationDuration);
-    mateDeclare('expandedHeaderPadding', expandedHeaderPadding);
-    mateDeclare('dividerColor', dividerColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('expandIconColor', expandIconColor);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('expansionCallback', expansionCallback);
+    mateUse('animationDuration', animationDuration);
+    mateUse('expandedHeaderPadding', expandedHeaderPadding);
+    mateUse('dividerColor', dividerColor);
+    mateUse('elevation', elevation);
+    mateUse('expandIconColor', expandIconColor);
   }
 
   /// ExpansionPanelList ExpansionPanelList.radio({Key? key, List<ExpansionPanel> children = const <ExpansionPanelRadio>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, Object? initialOpenPanelValue, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor})
@@ -195,14 +195,14 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: p.get('elevation').build(),
           expandIconColor: p.get('expandIconColor').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('expansionCallback', expansionCallback);
-    mateDeclare('animationDuration', animationDuration);
-    mateDeclare('initialOpenPanelValue', initialOpenPanelValue);
-    mateDeclare('expandedHeaderPadding', expandedHeaderPadding);
-    mateDeclare('dividerColor', dividerColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('expandIconColor', expandIconColor);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('expansionCallback', expansionCallback);
+    mateUse('animationDuration', animationDuration);
+    mateUse('initialOpenPanelValue', initialOpenPanelValue);
+    mateUse('expandedHeaderPadding', expandedHeaderPadding);
+    mateUse('dividerColor', dividerColor);
+    mateUse('elevation', elevation);
+    mateUse('expandIconColor', expandIconColor);
   }
 }

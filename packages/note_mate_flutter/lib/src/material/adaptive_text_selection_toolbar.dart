@@ -14,7 +14,8 @@ import 'package:flutter/src/rendering/selection.dart';
 import 'package:flutter/src/widgets/selectable_region.dart';
 
 /// class AdaptiveTextSelectionToolbar extends StatelessWidget
-class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar with Mate {
+class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
+    with Mate {
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -35,9 +36,9 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           children: p.get('children').build(),
           anchors: p.get('anchors').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('anchors', anchors);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('anchors', anchors);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
@@ -60,9 +61,9 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           buttonItems: p.get('buttonItems').build(),
           anchors: p.get('anchors').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('buttonItems', buttonItems);
-    mateDeclare('anchors', anchors);
+    mateUse('key', key);
+    mateUse('buttonItems', buttonItems);
+    mateUse('anchors', anchors);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
@@ -105,13 +106,13 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           onSelectAll: p.get('onSelectAll').build(),
           anchors: p.get('anchors').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('clipboardStatus', clipboardStatus);
-    mateDeclare('onCopy', onCopy);
-    mateDeclare('onCut', onCut);
-    mateDeclare('onPaste', onPaste);
-    mateDeclare('onSelectAll', onSelectAll);
-    mateDeclare('anchors', anchors);
+    mateUse('key', key);
+    mateUse('clipboardStatus', clipboardStatus);
+    mateUse('onCopy', onCopy);
+    mateUse('onCut', onCut);
+    mateUse('onPaste', onPaste);
+    mateUse('onSelectAll', onSelectAll);
+    mateUse('anchors', anchors);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
@@ -129,8 +130,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           key: p.get('key').build(),
           editableTextState: p.get('editableTextState').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('editableTextState', editableTextState);
+    mateUse('key', key);
+    mateUse('editableTextState', editableTextState);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
@@ -163,11 +164,11 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           selectionGeometry: p.get('selectionGeometry').build(),
           anchors: p.get('anchors').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onCopy', onCopy);
-    mateDeclare('onSelectAll', onSelectAll);
-    mateDeclare('selectionGeometry', selectionGeometry);
-    mateDeclare('anchors', anchors);
+    mateUse('key', key);
+    mateUse('onCopy', onCopy);
+    mateUse('onSelectAll', onSelectAll);
+    mateUse('selectionGeometry', selectionGeometry);
+    mateUse('anchors', anchors);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectableRegion({Key? key, required SelectableRegionState selectableRegionState})
@@ -185,7 +186,7 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           key: p.get('key').build(),
           selectableRegionState: p.get('selectableRegionState').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('selectableRegionState', selectableRegionState);
+    mateUse('key', key);
+    mateUse('selectableRegionState', selectableRegionState);
   }
 }

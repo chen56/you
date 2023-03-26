@@ -133,28 +133,28 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with Mate {
           landscapeLayout: p.get('landscapeLayout').build(),
           useLegacyColorScheme: p.get('useLegacyColorScheme').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('items', items);
-    mateDeclare('onTap', onTap);
-    mateDeclare('currentIndex', currentIndex);
-    mateDeclare('elevation', elevation);
-    mateDeclare('type', type);
-    mateDeclare('fixedColor', fixedColor);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('iconSize', iconSize);
-    mateDeclare('selectedItemColor', selectedItemColor);
-    mateDeclare('unselectedItemColor', unselectedItemColor);
-    mateDeclare('selectedIconTheme', selectedIconTheme);
-    mateDeclare('unselectedIconTheme', unselectedIconTheme);
-    mateDeclare('selectedFontSize', selectedFontSize);
-    mateDeclare('unselectedFontSize', unselectedFontSize);
-    mateDeclare('selectedLabelStyle', selectedLabelStyle);
-    mateDeclare('unselectedLabelStyle', unselectedLabelStyle);
-    mateDeclare('showSelectedLabels', showSelectedLabels);
-    mateDeclare('showUnselectedLabels', showUnselectedLabels);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('landscapeLayout', landscapeLayout);
-    mateDeclare('useLegacyColorScheme', useLegacyColorScheme);
+    mateUse('key', key);
+    mateUse('items', items);
+    mateUse('onTap', onTap);
+    mateUse('currentIndex', currentIndex);
+    mateUse('elevation', elevation);
+    mateUse('type', type);
+    mateUse('fixedColor', fixedColor);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('iconSize', iconSize);
+    mateUse('selectedItemColor', selectedItemColor);
+    mateUse('unselectedItemColor', unselectedItemColor);
+    mateUse('selectedIconTheme', selectedIconTheme);
+    mateUse('unselectedIconTheme', unselectedIconTheme);
+    mateUse('selectedFontSize', selectedFontSize);
+    mateUse('unselectedFontSize', unselectedFontSize);
+    mateUse('selectedLabelStyle', selectedLabelStyle);
+    mateUse('unselectedLabelStyle', unselectedLabelStyle);
+    mateUse('showSelectedLabels', showSelectedLabels);
+    mateUse('showUnselectedLabels', showUnselectedLabels);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('landscapeLayout', landscapeLayout);
+    mateUse('useLegacyColorScheme', useLegacyColorScheme);
   }
 }

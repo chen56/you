@@ -21,8 +21,8 @@ class MethodCall$Mate extends MethodCall with Mate {
           p.get('method').value,
           p.get('arguments').value,
         );
-    mateDeclare('method', method);
-    mateDeclare('arguments', arguments);
+    mateUse('method', method);
+    mateUse('arguments', arguments);
   }
 }
 
@@ -53,10 +53,10 @@ class PlatformException$Mate extends PlatformException with Mate {
           details: p.get('details').build(),
           stacktrace: p.get('stacktrace').build(),
         );
-    mateDeclare('code', code);
-    mateDeclare('message', message);
-    mateDeclare('details', details);
-    mateDeclare('stacktrace', stacktrace);
+    mateUse('code', code);
+    mateUse('message', message);
+    mateUse('details', details);
+    mateUse('stacktrace', stacktrace);
   }
 }
 
@@ -69,6 +69,6 @@ class MissingPluginException$Mate extends MissingPluginException with Mate {
       String? message)
       : super(message) {
     mateBuilder = (p) => MissingPluginException$Mate(p.get('message').value);
-    mateDeclare('message', message);
+    mateUse('message', message);
   }
 }

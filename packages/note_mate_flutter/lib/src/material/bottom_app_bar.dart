@@ -66,15 +66,15 @@ class BottomAppBar$Mate extends BottomAppBar with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           height: p.get('height').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('notchMargin', notchMargin);
-    mateDeclare('child', child);
-    mateDeclare('padding', padding);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('height', height);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('elevation', elevation);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('notchMargin', notchMargin);
+    mateUse('child', child);
+    mateUse('padding', padding);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('height', height);
   }
 }

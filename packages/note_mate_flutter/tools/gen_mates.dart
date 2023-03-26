@@ -560,7 +560,7 @@ void _genLibMate({
                         .code;
                 }).closure)
                     .statement,
-                ...parameters.map((e) => Code("mateDeclare('${e.name}', ${e.name});")),
+                ...parameters.map((e) => Code("mateUse('${e.name}', ${e.name});")),
               ]);
           });
         })));

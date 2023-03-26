@@ -49,12 +49,12 @@ class CardTheme$Mate extends CardTheme with Mate {
           margin: p.get('margin').build(),
           shape: p.get('shape').build(),
         );
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('color', color);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('margin', margin);
-    mateDeclare('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('color', color);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('elevation', elevation);
+    mateUse('margin', margin);
+    mateUse('shape', shape);
   }
 }

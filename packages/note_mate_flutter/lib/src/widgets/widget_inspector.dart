@@ -29,9 +29,9 @@ class WidgetInspector$Mate extends WidgetInspector with Mate {
           child: p.get('child').build(),
           selectButtonBuilder: p.get('selectButtonBuilder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('selectButtonBuilder', selectButtonBuilder);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('selectButtonBuilder', selectButtonBuilder);
   }
 }
 
@@ -52,13 +52,14 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
           p.get('description').value,
           p.get('url').value,
         );
-    mateDeclare('description', description);
-    mateDeclare('url', url);
+    mateUse('description', description);
+    mateUse('url', url);
   }
 }
 
 /// class InspectorSerializationDelegate implements DiagnosticsSerializationDelegate
-class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate with Mate {
+class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
+    with Mate {
   /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
     /// optionalParameters: {String? groupName} , defaultValue:none
@@ -86,7 +87,8 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     Map<String, Object>? Function(
       DiagnosticsNode,
       InspectorSerializationDelegate,
-    )? addAdditionalPropertiesCallback,
+    )?
+        addAdditionalPropertiesCallback,
   }) : super(
           groupName: groupName,
           summaryTree: summaryTree,
@@ -100,20 +102,22 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     mateBuilder = (p) => InspectorSerializationDelegate$Mate(
           groupName: p.get('groupName').build(),
           summaryTree: p.get('summaryTree').build(),
-          maxDescendantsTruncatableNode: p.get('maxDescendantsTruncatableNode').build(),
+          maxDescendantsTruncatableNode:
+              p.get('maxDescendantsTruncatableNode').build(),
           expandPropertyValues: p.get('expandPropertyValues').build(),
           subtreeDepth: p.get('subtreeDepth').build(),
           includeProperties: p.get('includeProperties').build(),
           service: p.get('service').build(),
-          addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
+          addAdditionalPropertiesCallback:
+              p.get('addAdditionalPropertiesCallback').build(),
         );
-    mateDeclare('groupName', groupName);
-    mateDeclare('summaryTree', summaryTree);
-    mateDeclare('maxDescendantsTruncatableNode', maxDescendantsTruncatableNode);
-    mateDeclare('expandPropertyValues', expandPropertyValues);
-    mateDeclare('subtreeDepth', subtreeDepth);
-    mateDeclare('includeProperties', includeProperties);
-    mateDeclare('service', service);
-    mateDeclare('addAdditionalPropertiesCallback', addAdditionalPropertiesCallback);
+    mateUse('groupName', groupName);
+    mateUse('summaryTree', summaryTree);
+    mateUse('maxDescendantsTruncatableNode', maxDescendantsTruncatableNode);
+    mateUse('expandPropertyValues', expandPropertyValues);
+    mateUse('subtreeDepth', subtreeDepth);
+    mateUse('includeProperties', includeProperties);
+    mateUse('service', service);
+    mateUse('addAdditionalPropertiesCallback', addAdditionalPropertiesCallback);
   }
 }

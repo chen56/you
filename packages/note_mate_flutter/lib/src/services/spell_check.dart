@@ -22,8 +22,8 @@ class SuggestionSpan$Mate extends SuggestionSpan with Mate {
           p.get('range').value,
           p.get('suggestions').value,
         );
-    mateDeclare('range', range);
-    mateDeclare('suggestions', suggestions);
+    mateUse('range', range);
+    mateUse('suggestions', suggestions);
   }
 }
 
@@ -44,7 +44,7 @@ class SpellCheckResults$Mate extends SpellCheckResults with Mate {
           p.get('spellCheckedText').value,
           p.get('suggestionSpans').value,
         );
-    mateDeclare('spellCheckedText', spellCheckedText);
-    mateDeclare('suggestionSpans', suggestionSpans);
+    mateUse('spellCheckedText', spellCheckedText);
+    mateUse('suggestionSpans', suggestionSpans);
   }
 }

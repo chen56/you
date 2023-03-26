@@ -69,16 +69,16 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate {
           iconTheme: p.get('iconTheme').build(),
           labelBehavior: p.get('labelBehavior').build(),
         );
-    mateDeclare('height', height);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('indicatorShape', indicatorShape);
-    mateDeclare('labelTextStyle', labelTextStyle);
-    mateDeclare('iconTheme', iconTheme);
-    mateDeclare('labelBehavior', labelBehavior);
+    mateUse('height', height);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('indicatorShape', indicatorShape);
+    mateUse('labelTextStyle', labelTextStyle);
+    mateUse('iconTheme', iconTheme);
+    mateUse('labelBehavior', labelBehavior);
   }
 }
 
@@ -104,8 +104,8 @@ class NavigationBarTheme$Mate extends NavigationBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

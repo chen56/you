@@ -99,23 +99,23 @@ class DatePickerDialog$Mate extends DatePickerDialog with Mate {
           keyboardType: p.get('keyboardType').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('initialDate', initialDate);
-    mateDeclare('firstDate', firstDate);
-    mateDeclare('lastDate', lastDate);
-    mateDeclare('currentDate', currentDate);
-    mateDeclare('initialEntryMode', initialEntryMode);
-    mateDeclare('selectableDayPredicate', selectableDayPredicate);
-    mateDeclare('cancelText', cancelText);
-    mateDeclare('confirmText', confirmText);
-    mateDeclare('helpText', helpText);
-    mateDeclare('initialCalendarMode', initialCalendarMode);
-    mateDeclare('errorFormatText', errorFormatText);
-    mateDeclare('errorInvalidText', errorInvalidText);
-    mateDeclare('fieldHintText', fieldHintText);
-    mateDeclare('fieldLabelText', fieldLabelText);
-    mateDeclare('keyboardType', keyboardType);
-    mateDeclare('restorationId', restorationId);
+    mateUse('key', key);
+    mateUse('initialDate', initialDate);
+    mateUse('firstDate', firstDate);
+    mateUse('lastDate', lastDate);
+    mateUse('currentDate', currentDate);
+    mateUse('initialEntryMode', initialEntryMode);
+    mateUse('selectableDayPredicate', selectableDayPredicate);
+    mateUse('cancelText', cancelText);
+    mateUse('confirmText', confirmText);
+    mateUse('helpText', helpText);
+    mateUse('initialCalendarMode', initialCalendarMode);
+    mateUse('errorFormatText', errorFormatText);
+    mateUse('errorInvalidText', errorInvalidText);
+    mateUse('fieldHintText', fieldHintText);
+    mateUse('fieldLabelText', fieldLabelText);
+    mateUse('keyboardType', keyboardType);
+    mateUse('restorationId', restorationId);
   }
 }
 
@@ -216,23 +216,23 @@ class DateRangePickerDialog$Mate extends DateRangePickerDialog with Mate {
           fieldEndLabelText: p.get('fieldEndLabelText').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('initialDateRange', initialDateRange);
-    mateDeclare('firstDate', firstDate);
-    mateDeclare('lastDate', lastDate);
-    mateDeclare('currentDate', currentDate);
-    mateDeclare('initialEntryMode', initialEntryMode);
-    mateDeclare('helpText', helpText);
-    mateDeclare('cancelText', cancelText);
-    mateDeclare('confirmText', confirmText);
-    mateDeclare('saveText', saveText);
-    mateDeclare('errorInvalidRangeText', errorInvalidRangeText);
-    mateDeclare('errorFormatText', errorFormatText);
-    mateDeclare('errorInvalidText', errorInvalidText);
-    mateDeclare('fieldStartHintText', fieldStartHintText);
-    mateDeclare('fieldEndHintText', fieldEndHintText);
-    mateDeclare('fieldStartLabelText', fieldStartLabelText);
-    mateDeclare('fieldEndLabelText', fieldEndLabelText);
-    mateDeclare('restorationId', restorationId);
+    mateUse('key', key);
+    mateUse('initialDateRange', initialDateRange);
+    mateUse('firstDate', firstDate);
+    mateUse('lastDate', lastDate);
+    mateUse('currentDate', currentDate);
+    mateUse('initialEntryMode', initialEntryMode);
+    mateUse('helpText', helpText);
+    mateUse('cancelText', cancelText);
+    mateUse('confirmText', confirmText);
+    mateUse('saveText', saveText);
+    mateUse('errorInvalidRangeText', errorInvalidRangeText);
+    mateUse('errorFormatText', errorFormatText);
+    mateUse('errorInvalidText', errorInvalidText);
+    mateUse('fieldStartHintText', fieldStartHintText);
+    mateUse('fieldEndHintText', fieldEndHintText);
+    mateUse('fieldStartLabelText', fieldStartLabelText);
+    mateUse('fieldEndLabelText', fieldEndLabelText);
+    mateUse('restorationId', restorationId);
   }
 }

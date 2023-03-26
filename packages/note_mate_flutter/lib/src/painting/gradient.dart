@@ -15,7 +15,7 @@ class GradientRotation$Mate extends GradientRotation with Mate {
       double radians)
       : super(radians) {
     mateBuilder = (p) => GradientRotation$Mate(p.get('radians').value);
-    mateDeclare('radians', radians);
+    mateUse('radians', radians);
   }
 }
 
@@ -56,12 +56,12 @@ class LinearGradient$Mate extends LinearGradient with Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
-    mateDeclare('colors', colors);
-    mateDeclare('stops', stops);
-    mateDeclare('tileMode', tileMode);
-    mateDeclare('transform', transform);
+    mateUse('begin', begin);
+    mateUse('end', end);
+    mateUse('colors', colors);
+    mateUse('stops', stops);
+    mateUse('tileMode', tileMode);
+    mateUse('transform', transform);
   }
 }
 
@@ -112,14 +112,14 @@ class RadialGradient$Mate extends RadialGradient with Mate {
           focalRadius: p.get('focalRadius').build(),
           transform: p.get('transform').build(),
         );
-    mateDeclare('center', center);
-    mateDeclare('radius', radius);
-    mateDeclare('colors', colors);
-    mateDeclare('stops', stops);
-    mateDeclare('tileMode', tileMode);
-    mateDeclare('focal', focal);
-    mateDeclare('focalRadius', focalRadius);
-    mateDeclare('transform', transform);
+    mateUse('center', center);
+    mateUse('radius', radius);
+    mateUse('colors', colors);
+    mateUse('stops', stops);
+    mateUse('tileMode', tileMode);
+    mateUse('focal', focal);
+    mateUse('focalRadius', focalRadius);
+    mateUse('transform', transform);
   }
 }
 
@@ -165,12 +165,12 @@ class SweepGradient$Mate extends SweepGradient with Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    mateDeclare('center', center);
-    mateDeclare('startAngle', startAngle);
-    mateDeclare('endAngle', endAngle);
-    mateDeclare('colors', colors);
-    mateDeclare('stops', stops);
-    mateDeclare('tileMode', tileMode);
-    mateDeclare('transform', transform);
+    mateUse('center', center);
+    mateUse('startAngle', startAngle);
+    mateUse('endAngle', endAngle);
+    mateUse('colors', colors);
+    mateUse('stops', stops);
+    mateUse('tileMode', tileMode);
+    mateUse('transform', transform);
   }
 }

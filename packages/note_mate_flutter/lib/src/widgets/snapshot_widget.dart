@@ -14,8 +14,9 @@ class SnapshotController$Mate extends SnapshotController with Mate {
       /// optionalParameters: {bool allowSnapshotting = false} , defaultValue:Literal
       bool allowSnapshotting = false})
       : super(allowSnapshotting: allowSnapshotting) {
-    mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
-    mateDeclare('allowSnapshotting', allowSnapshotting);
+    mateBuilder = (p) => SnapshotController$Mate(
+        allowSnapshotting: p.get('allowSnapshotting').build());
+    mateUse('allowSnapshotting', allowSnapshotting);
   }
 }
 
@@ -56,11 +57,11 @@ class SnapshotWidget$Mate extends SnapshotWidget with Mate {
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('mode', mode);
-    mateDeclare('painter', painter);
-    mateDeclare('autoresize', autoresize);
-    mateDeclare('controller', controller);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('mode', mode);
+    mateUse('painter', painter);
+    mateUse('autoresize', autoresize);
+    mateUse('controller', controller);
+    mateUse('child', child);
   }
 }

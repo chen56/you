@@ -129,28 +129,28 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate {
           padding: p.get('padding').build(),
           shape: p.get('shape').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('cancelButtonStyle', cancelButtonStyle);
-    mateDeclare('confirmButtonStyle', confirmButtonStyle);
-    mateDeclare('dayPeriodBorderSide', dayPeriodBorderSide);
-    mateDeclare('dayPeriodColor', dayPeriodColor);
-    mateDeclare('dayPeriodShape', dayPeriodShape);
-    mateDeclare('dayPeriodTextColor', dayPeriodTextColor);
-    mateDeclare('dayPeriodTextStyle', dayPeriodTextStyle);
-    mateDeclare('dialBackgroundColor', dialBackgroundColor);
-    mateDeclare('dialHandColor', dialHandColor);
-    mateDeclare('dialTextColor', dialTextColor);
-    mateDeclare('dialTextStyle', dialTextStyle);
-    mateDeclare('elevation', elevation);
-    mateDeclare('entryModeIconColor', entryModeIconColor);
-    mateDeclare('helpTextStyle', helpTextStyle);
-    mateDeclare('hourMinuteColor', hourMinuteColor);
-    mateDeclare('hourMinuteShape', hourMinuteShape);
-    mateDeclare('hourMinuteTextColor', hourMinuteTextColor);
-    mateDeclare('hourMinuteTextStyle', hourMinuteTextStyle);
-    mateDeclare('inputDecorationTheme', inputDecorationTheme);
-    mateDeclare('padding', padding);
-    mateDeclare('shape', shape);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('cancelButtonStyle', cancelButtonStyle);
+    mateUse('confirmButtonStyle', confirmButtonStyle);
+    mateUse('dayPeriodBorderSide', dayPeriodBorderSide);
+    mateUse('dayPeriodColor', dayPeriodColor);
+    mateUse('dayPeriodShape', dayPeriodShape);
+    mateUse('dayPeriodTextColor', dayPeriodTextColor);
+    mateUse('dayPeriodTextStyle', dayPeriodTextStyle);
+    mateUse('dialBackgroundColor', dialBackgroundColor);
+    mateUse('dialHandColor', dialHandColor);
+    mateUse('dialTextColor', dialTextColor);
+    mateUse('dialTextStyle', dialTextStyle);
+    mateUse('elevation', elevation);
+    mateUse('entryModeIconColor', entryModeIconColor);
+    mateUse('helpTextStyle', helpTextStyle);
+    mateUse('hourMinuteColor', hourMinuteColor);
+    mateUse('hourMinuteShape', hourMinuteShape);
+    mateUse('hourMinuteTextColor', hourMinuteTextColor);
+    mateUse('hourMinuteTextStyle', hourMinuteTextStyle);
+    mateUse('inputDecorationTheme', inputDecorationTheme);
+    mateUse('padding', padding);
+    mateUse('shape', shape);
   }
 }
 
@@ -176,8 +176,8 @@ class TimePickerTheme$Mate extends TimePickerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

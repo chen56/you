@@ -41,10 +41,10 @@ class DataColumn$Mate extends DataColumn with Mate {
           numeric: p.get('numeric').build(),
           onSort: p.get('onSort').build(),
         );
-    mateDeclare('label', label);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('numeric', numeric);
-    mateDeclare('onSort', onSort);
+    mateUse('label', label);
+    mateUse('tooltip', tooltip);
+    mateUse('numeric', numeric);
+    mateUse('onSort', onSort);
   }
 }
 
@@ -85,12 +85,12 @@ class DataRow$Mate extends DataRow with Mate {
           color: p.get('color').build(),
           cells: p.get('cells').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('selected', selected);
-    mateDeclare('onSelectChanged', onSelectChanged);
-    mateDeclare('onLongPress', onLongPress);
-    mateDeclare('color', color);
-    mateDeclare('cells', cells);
+    mateUse('key', key);
+    mateUse('selected', selected);
+    mateUse('onSelectChanged', onSelectChanged);
+    mateUse('onLongPress', onLongPress);
+    mateUse('color', color);
+    mateUse('cells', cells);
   }
 
   /// DataRow DataRow.byIndex({int? index, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
@@ -128,12 +128,12 @@ class DataRow$Mate extends DataRow with Mate {
           color: p.get('color').build(),
           cells: p.get('cells').build(),
         );
-    mateDeclare('index', index);
-    mateDeclare('selected', selected);
-    mateDeclare('onSelectChanged', onSelectChanged);
-    mateDeclare('onLongPress', onLongPress);
-    mateDeclare('color', color);
-    mateDeclare('cells', cells);
+    mateUse('index', index);
+    mateUse('selected', selected);
+    mateUse('onSelectChanged', onSelectChanged);
+    mateUse('onLongPress', onLongPress);
+    mateUse('color', color);
+    mateUse('cells', cells);
   }
 }
 
@@ -183,14 +183,14 @@ class DataCell$Mate extends DataCell with Mate {
           onDoubleTap: p.get('onDoubleTap').build(),
           onTapCancel: p.get('onTapCancel').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('placeholder', placeholder);
-    mateDeclare('showEditIcon', showEditIcon);
-    mateDeclare('onTap', onTap);
-    mateDeclare('onLongPress', onLongPress);
-    mateDeclare('onTapDown', onTapDown);
-    mateDeclare('onDoubleTap', onDoubleTap);
-    mateDeclare('onTapCancel', onTapCancel);
+    mateUse('child', child);
+    mateUse('placeholder', placeholder);
+    mateUse('showEditIcon', showEditIcon);
+    mateUse('onTap', onTap);
+    mateUse('onLongPress', onLongPress);
+    mateUse('onTapDown', onTapDown);
+    mateUse('onDoubleTap', onDoubleTap);
+    mateUse('onTapCancel', onTapCancel);
   }
 }
 
@@ -311,28 +311,28 @@ class DataTable$Mate extends DataTable with Mate {
           border: p.get('border').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('columns', columns);
-    mateDeclare('sortColumnIndex', sortColumnIndex);
-    mateDeclare('sortAscending', sortAscending);
-    mateDeclare('onSelectAll', onSelectAll);
-    mateDeclare('decoration', decoration);
-    mateDeclare('dataRowColor', dataRowColor);
-    mateDeclare('dataRowMinHeight', dataRowMinHeight);
-    mateDeclare('dataRowMaxHeight', dataRowMaxHeight);
-    mateDeclare('dataTextStyle', dataTextStyle);
-    mateDeclare('headingRowColor', headingRowColor);
-    mateDeclare('headingRowHeight', headingRowHeight);
-    mateDeclare('headingTextStyle', headingTextStyle);
-    mateDeclare('horizontalMargin', horizontalMargin);
-    mateDeclare('columnSpacing', columnSpacing);
-    mateDeclare('showCheckboxColumn', showCheckboxColumn);
-    mateDeclare('showBottomBorder', showBottomBorder);
-    mateDeclare('dividerThickness', dividerThickness);
-    mateDeclare('rows', rows);
-    mateDeclare('checkboxHorizontalMargin', checkboxHorizontalMargin);
-    mateDeclare('border', border);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('columns', columns);
+    mateUse('sortColumnIndex', sortColumnIndex);
+    mateUse('sortAscending', sortAscending);
+    mateUse('onSelectAll', onSelectAll);
+    mateUse('decoration', decoration);
+    mateUse('dataRowColor', dataRowColor);
+    mateUse('dataRowMinHeight', dataRowMinHeight);
+    mateUse('dataRowMaxHeight', dataRowMaxHeight);
+    mateUse('dataTextStyle', dataTextStyle);
+    mateUse('headingRowColor', headingRowColor);
+    mateUse('headingRowHeight', headingRowHeight);
+    mateUse('headingTextStyle', headingTextStyle);
+    mateUse('horizontalMargin', horizontalMargin);
+    mateUse('columnSpacing', columnSpacing);
+    mateUse('showCheckboxColumn', showCheckboxColumn);
+    mateUse('showBottomBorder', showBottomBorder);
+    mateUse('dividerThickness', dividerThickness);
+    mateUse('rows', rows);
+    mateUse('checkboxHorizontalMargin', checkboxHorizontalMargin);
+    mateUse('border', border);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -378,12 +378,12 @@ class TableRowInkWell$Mate extends TableRowInkWell with Mate {
           onHighlightChanged: p.get('onHighlightChanged').build(),
           overlayColor: p.get('overlayColor').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('onTap', onTap);
-    mateDeclare('onDoubleTap', onDoubleTap);
-    mateDeclare('onLongPress', onLongPress);
-    mateDeclare('onHighlightChanged', onHighlightChanged);
-    mateDeclare('overlayColor', overlayColor);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('onTap', onTap);
+    mateUse('onDoubleTap', onDoubleTap);
+    mateUse('onLongPress', onLongPress);
+    mateUse('onHighlightChanged', onHighlightChanged);
+    mateUse('overlayColor', overlayColor);
   }
 }

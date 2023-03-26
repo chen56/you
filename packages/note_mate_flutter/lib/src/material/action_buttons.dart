@@ -15,7 +15,7 @@ class BackButtonIcon$Mate extends BackButtonIcon with Mate {
       Key? key})
       : super(key: key) {
     mateBuilder = (p) => BackButtonIcon$Mate(key: p.get('key').build());
-    mateDeclare('key', key);
+    mateUse('key', key);
   }
 }
 
@@ -46,10 +46,10 @@ class BackButton$Mate extends BackButton with Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('style', style);
-    mateDeclare('onPressed', onPressed);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('style', style);
+    mateUse('onPressed', onPressed);
   }
 }
 
@@ -62,7 +62,7 @@ class CloseButtonIcon$Mate extends CloseButtonIcon with Mate {
       Key? key})
       : super(key: key) {
     mateBuilder = (p) => CloseButtonIcon$Mate(key: p.get('key').build());
-    mateDeclare('key', key);
+    mateUse('key', key);
   }
 }
 
@@ -93,10 +93,10 @@ class CloseButton$Mate extends CloseButton with Mate {
           onPressed: p.get('onPressed').build(),
           style: p.get('style').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('style', style);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('onPressed', onPressed);
+    mateUse('style', style);
   }
 }
 
@@ -109,7 +109,7 @@ class DrawerButtonIcon$Mate extends DrawerButtonIcon with Mate {
       Key? key})
       : super(key: key) {
     mateBuilder = (p) => DrawerButtonIcon$Mate(key: p.get('key').build());
-    mateDeclare('key', key);
+    mateUse('key', key);
   }
 }
 
@@ -135,9 +135,9 @@ class DrawerButton$Mate extends DrawerButton with Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('style', style);
-    mateDeclare('onPressed', onPressed);
+    mateUse('key', key);
+    mateUse('style', style);
+    mateUse('onPressed', onPressed);
   }
 }
 
@@ -150,7 +150,7 @@ class EndDrawerButtonIcon$Mate extends EndDrawerButtonIcon with Mate {
       Key? key})
       : super(key: key) {
     mateBuilder = (p) => EndDrawerButtonIcon$Mate(key: p.get('key').build());
-    mateDeclare('key', key);
+    mateUse('key', key);
   }
 }
 
@@ -176,8 +176,8 @@ class EndDrawerButton$Mate extends EndDrawerButton with Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('style', style);
-    mateDeclare('onPressed', onPressed);
+    mateUse('key', key);
+    mateUse('style', style);
+    mateUse('onPressed', onPressed);
   }
 }

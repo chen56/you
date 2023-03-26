@@ -87,19 +87,19 @@ class RangeSlider$Mate extends RangeSlider with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           semanticFormatterCallback: p.get('semanticFormatterCallback').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('values', values);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onChangeStart', onChangeStart);
-    mateDeclare('onChangeEnd', onChangeEnd);
-    mateDeclare('min', min);
-    mateDeclare('max', max);
-    mateDeclare('divisions', divisions);
-    mateDeclare('labels', labels);
-    mateDeclare('activeColor', activeColor);
-    mateDeclare('inactiveColor', inactiveColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('semanticFormatterCallback', semanticFormatterCallback);
+    mateUse('key', key);
+    mateUse('values', values);
+    mateUse('onChanged', onChanged);
+    mateUse('onChangeStart', onChangeStart);
+    mateUse('onChangeEnd', onChangeEnd);
+    mateUse('min', min);
+    mateUse('max', max);
+    mateUse('divisions', divisions);
+    mateUse('labels', labels);
+    mateUse('activeColor', activeColor);
+    mateUse('inactiveColor', inactiveColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('semanticFormatterCallback', semanticFormatterCallback);
   }
 }

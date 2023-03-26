@@ -14,7 +14,7 @@ class RestorableNum$Mate<T extends num> extends RestorableNum<T> with Mate {
       T defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableNum$Mate<T>(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -27,7 +27,7 @@ class RestorableDouble$Mate extends RestorableDouble with Mate {
       double defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableDouble$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -40,7 +40,7 @@ class RestorableInt$Mate extends RestorableInt with Mate {
       int defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableInt$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -53,7 +53,7 @@ class RestorableString$Mate extends RestorableString with Mate {
       String defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableString$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -66,7 +66,7 @@ class RestorableBool$Mate extends RestorableBool with Mate {
       bool defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableBool$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -79,7 +79,7 @@ class RestorableBoolN$Mate extends RestorableBoolN with Mate {
       bool? defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableBoolN$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -92,7 +92,7 @@ class RestorableNumN$Mate<T extends num?> extends RestorableNumN<T> with Mate {
       T defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableNumN$Mate<T>(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -105,7 +105,7 @@ class RestorableDoubleN$Mate extends RestorableDoubleN with Mate {
       double? defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableDoubleN$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -118,7 +118,7 @@ class RestorableIntN$Mate extends RestorableIntN with Mate {
       int? defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableIntN$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -131,7 +131,7 @@ class RestorableStringN$Mate extends RestorableStringN with Mate {
       String? defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableStringN$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -144,7 +144,7 @@ class RestorableDateTime$Mate extends RestorableDateTime with Mate {
       DateTime defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableDateTime$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
@@ -157,25 +157,28 @@ class RestorableDateTimeN$Mate extends RestorableDateTimeN with Mate {
       DateTime? defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableDateTimeN$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }
 
 /// class RestorableTextEditingController extends RestorableChangeNotifier<TextEditingController>
-class RestorableTextEditingController$Mate extends RestorableTextEditingController with Mate {
+class RestorableTextEditingController$Mate
+    extends RestorableTextEditingController with Mate {
   /// RestorableTextEditingController RestorableTextEditingController.fromValue(TextEditingValue value)
   RestorableTextEditingController$Mate.fromValue(
 
       /// requiredParameters: TextEditingValue value
       TextEditingValue value)
       : super.fromValue(value) {
-    mateBuilder = (p) => RestorableTextEditingController$Mate.fromValue(p.get('value').value);
-    mateDeclare('value', value);
+    mateBuilder = (p) =>
+        RestorableTextEditingController$Mate.fromValue(p.get('value').value);
+    mateUse('value', value);
   }
 }
 
 /// class RestorableEnumN<T extends Enum> extends RestorableValue<T?>
-class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate {
+class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T>
+    with Mate {
   /// RestorableEnumN<T> RestorableEnumN(T? defaultValue, {required Iterable<T> values})
   RestorableEnumN$Mate(
     /// requiredParameters: T? defaultValue
@@ -190,8 +193,8 @@ class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate 
           p.get('defaultValue').value,
           values: p.get('values').build(),
         );
-    mateDeclare('defaultValue', defaultValue);
-    mateDeclare('values', values);
+    mateUse('defaultValue', defaultValue);
+    mateUse('values', values);
   }
 }
 
@@ -211,7 +214,7 @@ class RestorableEnum$Mate<T extends Enum> extends RestorableEnum<T> with Mate {
           p.get('defaultValue').value,
           values: p.get('values').build(),
         );
-    mateDeclare('defaultValue', defaultValue);
-    mateDeclare('values', values);
+    mateUse('defaultValue', defaultValue);
+    mateUse('values', values);
   }
 }

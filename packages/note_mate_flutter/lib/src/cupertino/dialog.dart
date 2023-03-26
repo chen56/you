@@ -57,14 +57,14 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate {
           insetAnimationDuration: p.get('insetAnimationDuration').build(),
           insetAnimationCurve: p.get('insetAnimationCurve').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('title', title);
-    mateDeclare('content', content);
-    mateDeclare('actions', actions);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('actionScrollController', actionScrollController);
-    mateDeclare('insetAnimationDuration', insetAnimationDuration);
-    mateDeclare('insetAnimationCurve', insetAnimationCurve);
+    mateUse('key', key);
+    mateUse('title', title);
+    mateUse('content', content);
+    mateUse('actions', actions);
+    mateUse('scrollController', scrollController);
+    mateUse('actionScrollController', actionScrollController);
+    mateUse('insetAnimationDuration', insetAnimationDuration);
+    mateUse('insetAnimationCurve', insetAnimationCurve);
   }
 }
 
@@ -90,9 +90,9 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with Mate {
           isSurfacePainted: p.get('isSurfacePainted').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('isSurfacePainted', isSurfacePainted);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('isSurfacePainted', isSurfacePainted);
+    mateUse('child', child);
   }
 }
 
@@ -138,18 +138,19 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
           actionScrollController: p.get('actionScrollController').build(),
           cancelButton: p.get('cancelButton').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('title', title);
-    mateDeclare('message', message);
-    mateDeclare('actions', actions);
-    mateDeclare('messageScrollController', messageScrollController);
-    mateDeclare('actionScrollController', actionScrollController);
-    mateDeclare('cancelButton', cancelButton);
+    mateUse('key', key);
+    mateUse('title', title);
+    mateUse('message', message);
+    mateUse('actions', actions);
+    mateUse('messageScrollController', messageScrollController);
+    mateUse('actionScrollController', actionScrollController);
+    mateUse('cancelButton', cancelButton);
   }
 }
 
 /// class CupertinoActionSheetAction extends StatelessWidget
-class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Mate {
+class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction
+    with Mate {
   /// CupertinoActionSheetAction CupertinoActionSheetAction({Key? key, required void Function() onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, required Widget child})
   CupertinoActionSheetAction$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -180,11 +181,11 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Ma
           isDestructiveAction: p.get('isDestructiveAction').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('isDefaultAction', isDefaultAction);
-    mateDeclare('isDestructiveAction', isDestructiveAction);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('onPressed', onPressed);
+    mateUse('isDefaultAction', isDefaultAction);
+    mateUse('isDestructiveAction', isDestructiveAction);
+    mateUse('child', child);
   }
 }
 
@@ -225,11 +226,11 @@ class CupertinoDialogAction$Mate extends CupertinoDialogAction with Mate {
           textStyle: p.get('textStyle').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('isDefaultAction', isDefaultAction);
-    mateDeclare('isDestructiveAction', isDestructiveAction);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('onPressed', onPressed);
+    mateUse('isDefaultAction', isDefaultAction);
+    mateUse('isDestructiveAction', isDestructiveAction);
+    mateUse('textStyle', textStyle);
+    mateUse('child', child);
   }
 }

@@ -33,9 +33,9 @@ class Texture$Mate extends Texture with Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('textureId', textureId);
-    mateDeclare('freeze', freeze);
-    mateDeclare('filterQuality', filterQuality);
+    mateUse('key', key);
+    mateUse('textureId', textureId);
+    mateUse('freeze', freeze);
+    mateUse('filterQuality', filterQuality);
   }
 }

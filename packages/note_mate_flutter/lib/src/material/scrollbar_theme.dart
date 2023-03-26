@@ -70,17 +70,17 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate {
           minThumbLength: p.get('minThumbLength').build(),
           interactive: p.get('interactive').build(),
         );
-    mateDeclare('thumbVisibility', thumbVisibility);
-    mateDeclare('thickness', thickness);
-    mateDeclare('trackVisibility', trackVisibility);
-    mateDeclare('radius', radius);
-    mateDeclare('thumbColor', thumbColor);
-    mateDeclare('trackColor', trackColor);
-    mateDeclare('trackBorderColor', trackBorderColor);
-    mateDeclare('crossAxisMargin', crossAxisMargin);
-    mateDeclare('mainAxisMargin', mainAxisMargin);
-    mateDeclare('minThumbLength', minThumbLength);
-    mateDeclare('interactive', interactive);
+    mateUse('thumbVisibility', thumbVisibility);
+    mateUse('thickness', thickness);
+    mateUse('trackVisibility', trackVisibility);
+    mateUse('radius', radius);
+    mateUse('thumbColor', thumbColor);
+    mateUse('trackColor', trackColor);
+    mateUse('trackBorderColor', trackBorderColor);
+    mateUse('crossAxisMargin', crossAxisMargin);
+    mateUse('mainAxisMargin', mainAxisMargin);
+    mateUse('minThumbLength', minThumbLength);
+    mateUse('interactive', interactive);
   }
 }
 
@@ -106,8 +106,8 @@ class ScrollbarTheme$Mate extends ScrollbarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

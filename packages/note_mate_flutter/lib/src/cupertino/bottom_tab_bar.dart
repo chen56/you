@@ -66,15 +66,15 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with Mate {
           height: p.get('height').build(),
           border: p.get('border').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('items', items);
-    mateDeclare('onTap', onTap);
-    mateDeclare('currentIndex', currentIndex);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('activeColor', activeColor);
-    mateDeclare('inactiveColor', inactiveColor);
-    mateDeclare('iconSize', iconSize);
-    mateDeclare('height', height);
-    mateDeclare('border', border);
+    mateUse('key', key);
+    mateUse('items', items);
+    mateUse('onTap', onTap);
+    mateUse('currentIndex', currentIndex);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('activeColor', activeColor);
+    mateUse('inactiveColor', inactiveColor);
+    mateUse('iconSize', iconSize);
+    mateUse('height', height);
+    mateUse('border', border);
   }
 }

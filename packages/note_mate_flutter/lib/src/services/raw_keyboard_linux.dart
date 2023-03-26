@@ -46,12 +46,12 @@ class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
           isDown: p.get('isDown').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    mateDeclare('keyHelper', keyHelper);
-    mateDeclare('unicodeScalarValues', unicodeScalarValues);
-    mateDeclare('scanCode', scanCode);
-    mateDeclare('keyCode', keyCode);
-    mateDeclare('modifiers', modifiers);
-    mateDeclare('isDown', isDown);
-    mateDeclare('specifiedLogicalKey', specifiedLogicalKey);
+    mateUse('keyHelper', keyHelper);
+    mateUse('unicodeScalarValues', unicodeScalarValues);
+    mateUse('scanCode', scanCode);
+    mateUse('keyCode', keyCode);
+    mateUse('modifiers', modifiers);
+    mateUse('isDown', isDown);
+    mateUse('specifiedLogicalKey', specifiedLogicalKey);
   }
 }

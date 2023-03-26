@@ -24,8 +24,8 @@ class TapRegionSurface$Mate extends TapRegionSurface with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('child', child);
   }
 }
 
@@ -76,14 +76,14 @@ class TapRegion$Mate extends TapRegion with Mate {
           groupId: p.get('groupId').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('enabled', enabled);
-    mateDeclare('behavior', behavior);
-    mateDeclare('onTapOutside', onTapOutside);
-    mateDeclare('onTapInside', onTapInside);
-    mateDeclare('groupId', groupId);
-    mateDeclare('debugLabel', debugLabel);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('enabled', enabled);
+    mateUse('behavior', behavior);
+    mateUse('onTapOutside', onTapOutside);
+    mateUse('onTapInside', onTapInside);
+    mateUse('groupId', groupId);
+    mateUse('debugLabel', debugLabel);
   }
 }
 
@@ -129,13 +129,13 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate {
           groupId: p.get('groupId').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateDeclare('registry', registry);
-    mateDeclare('enabled', enabled);
-    mateDeclare('onTapOutside', onTapOutside);
-    mateDeclare('onTapInside', onTapInside);
-    mateDeclare('behavior', behavior);
-    mateDeclare('groupId', groupId);
-    mateDeclare('debugLabel', debugLabel);
+    mateUse('registry', registry);
+    mateUse('enabled', enabled);
+    mateUse('onTapOutside', onTapOutside);
+    mateUse('onTapInside', onTapInside);
+    mateUse('behavior', behavior);
+    mateUse('groupId', groupId);
+    mateUse('debugLabel', debugLabel);
   }
 }
 
@@ -176,11 +176,11 @@ class TextFieldTapRegion$Mate extends TextFieldTapRegion with Mate {
           onTapInside: p.get('onTapInside').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('enabled', enabled);
-    mateDeclare('onTapOutside', onTapOutside);
-    mateDeclare('onTapInside', onTapInside);
-    mateDeclare('debugLabel', debugLabel);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('enabled', enabled);
+    mateUse('onTapOutside', onTapOutside);
+    mateUse('onTapInside', onTapInside);
+    mateUse('debugLabel', debugLabel);
   }
 }

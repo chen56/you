@@ -38,23 +38,25 @@ class ActionListener$Mate extends ActionListener with Mate {
           action: p.get('action').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('listener', listener);
-    mateDeclare('action', action);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('listener', listener);
+    mateUse('action', action);
+    mateUse('child', child);
   }
 }
 
 /// class CallbackAction<T extends Intent> extends Action<T>
-class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate {
+class CallbackAction$Mate<T extends Intent> extends CallbackAction<T>
+    with Mate {
   /// CallbackAction<T> CallbackAction({required Object? Function(T) onInvoke})
   CallbackAction$Mate(
       {
       /// optionalParameters: {required Object? Function(T) onInvoke} , defaultValue:none
       required OnInvokeCallback<T> onInvoke})
       : super(onInvoke: onInvoke) {
-    mateBuilder = (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
-    mateDeclare('onInvoke', onInvoke);
+    mateBuilder =
+        (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
+    mateUse('onInvoke', onInvoke);
   }
 }
 
@@ -85,10 +87,10 @@ class Actions$Mate extends Actions with Mate {
           actions: p.get('actions').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('dispatcher', dispatcher);
-    mateDeclare('actions', actions);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('dispatcher', dispatcher);
+    mateUse('actions', actions);
+    mateUse('child', child);
   }
 }
 
@@ -169,20 +171,20 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with Mate {
           includeFocusSemantics: p.get('includeFocusSemantics').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('enabled', enabled);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('descendantsAreFocusable', descendantsAreFocusable);
-    mateDeclare('descendantsAreTraversable', descendantsAreTraversable);
-    mateDeclare('shortcuts', shortcuts);
-    mateDeclare('actions', actions);
-    mateDeclare('onShowFocusHighlight', onShowFocusHighlight);
-    mateDeclare('onShowHoverHighlight', onShowHoverHighlight);
-    mateDeclare('onFocusChange', onFocusChange);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('includeFocusSemantics', includeFocusSemantics);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('enabled', enabled);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('descendantsAreFocusable', descendantsAreFocusable);
+    mateUse('descendantsAreTraversable', descendantsAreTraversable);
+    mateUse('shortcuts', shortcuts);
+    mateUse('actions', actions);
+    mateUse('onShowFocusHighlight', onShowFocusHighlight);
+    mateUse('onShowHoverHighlight', onShowHoverHighlight);
+    mateUse('onFocusChange', onFocusChange);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('includeFocusSemantics', includeFocusSemantics);
+    mateUse('child', child);
   }
 }
 
@@ -195,7 +197,7 @@ class VoidCallbackIntent$Mate extends VoidCallbackIntent with Mate {
       VoidCallback callback)
       : super(callback) {
     mateBuilder = (p) => VoidCallbackIntent$Mate(p.get('callback').value);
-    mateDeclare('callback', callback);
+    mateUse('callback', callback);
   }
 }
 
@@ -207,8 +209,9 @@ class DoNothingAction$Mate extends DoNothingAction with Mate {
       /// optionalParameters: {bool consumesKey = true} , defaultValue:Literal
       bool consumesKey = true})
       : super(consumesKey: consumesKey) {
-    mateBuilder = (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
-    mateDeclare('consumesKey', consumesKey);
+    mateBuilder =
+        (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
+    mateUse('consumesKey', consumesKey);
   }
 }
 
@@ -220,7 +223,8 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate {
       /// optionalParameters: {required List<Intent> orderedIntents} , defaultValue:none
       required List<Intent> orderedIntents})
       : super(orderedIntents: orderedIntents) {
-    mateBuilder = (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build());
-    mateDeclare('orderedIntents', orderedIntents);
+    mateBuilder = (p) => PrioritizedIntents$Mate(
+        orderedIntents: p.get('orderedIntents').build());
+    mateUse('orderedIntents', orderedIntents);
   }
 }

@@ -27,8 +27,8 @@ class TextureBox$Mate extends TextureBox with Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateDeclare('textureId', textureId);
-    mateDeclare('freeze', freeze);
-    mateDeclare('filterQuality', filterQuality);
+    mateUse('textureId', textureId);
+    mateUse('freeze', freeze);
+    mateUse('filterQuality', filterQuality);
   }
 }

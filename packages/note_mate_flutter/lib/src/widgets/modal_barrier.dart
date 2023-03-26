@@ -52,18 +52,19 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
           dismissible: p.get('dismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible:
+              p.get('barrierSemanticsDismissible').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('dismissible', dismissible);
-    mateDeclare('onDismiss', onDismiss);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('barrierSemanticsDismissible', barrierSemanticsDismissible);
-    mateDeclare('clipDetailsNotifier', clipDetailsNotifier);
-    mateDeclare('semanticsOnTapHint', semanticsOnTapHint);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('dismissible', dismissible);
+    mateUse('onDismiss', onDismiss);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('barrierSemanticsDismissible', barrierSemanticsDismissible);
+    mateUse('clipDetailsNotifier', clipDetailsNotifier);
+    mateUse('semanticsOnTapHint', semanticsOnTapHint);
   }
 }
 
@@ -109,18 +110,19 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
           color: p.get('color').build(),
           dismissible: p.get('dismissible').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible:
+              p.get('barrierSemanticsDismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('dismissible', dismissible);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('barrierSemanticsDismissible', barrierSemanticsDismissible);
-    mateDeclare('onDismiss', onDismiss);
-    mateDeclare('clipDetailsNotifier', clipDetailsNotifier);
-    mateDeclare('semanticsOnTapHint', semanticsOnTapHint);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('dismissible', dismissible);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('barrierSemanticsDismissible', barrierSemanticsDismissible);
+    mateUse('onDismiss', onDismiss);
+    mateUse('clipDetailsNotifier', clipDetailsNotifier);
+    mateUse('semanticsOnTapHint', semanticsOnTapHint);
   }
 }

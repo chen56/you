@@ -75,18 +75,18 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
           strokeWidth: p.get('strokeWidth').build(),
           triggerMode: p.get('triggerMode').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('displacement', displacement);
-    mateDeclare('edgeOffset', edgeOffset);
-    mateDeclare('onRefresh', onRefresh);
-    mateDeclare('color', color);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('notificationPredicate', notificationPredicate);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('semanticsValue', semanticsValue);
-    mateDeclare('strokeWidth', strokeWidth);
-    mateDeclare('triggerMode', triggerMode);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('displacement', displacement);
+    mateUse('edgeOffset', edgeOffset);
+    mateUse('onRefresh', onRefresh);
+    mateUse('color', color);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('notificationPredicate', notificationPredicate);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('semanticsValue', semanticsValue);
+    mateUse('strokeWidth', strokeWidth);
+    mateUse('triggerMode', triggerMode);
   }
 
   /// RefreshIndicator RefreshIndicator.adaptive({Key? key, required Widget child, double displacement = 40.0, double edgeOffset = 0.0, required Future<void> Function() onRefresh, Color? color, Color? backgroundColor, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, String? semanticsLabel, String? semanticsValue, double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth, RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge})
@@ -154,17 +154,17 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
           strokeWidth: p.get('strokeWidth').build(),
           triggerMode: p.get('triggerMode').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('displacement', displacement);
-    mateDeclare('edgeOffset', edgeOffset);
-    mateDeclare('onRefresh', onRefresh);
-    mateDeclare('color', color);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('notificationPredicate', notificationPredicate);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('semanticsValue', semanticsValue);
-    mateDeclare('strokeWidth', strokeWidth);
-    mateDeclare('triggerMode', triggerMode);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('displacement', displacement);
+    mateUse('edgeOffset', edgeOffset);
+    mateUse('onRefresh', onRefresh);
+    mateUse('color', color);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('notificationPredicate', notificationPredicate);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('semanticsValue', semanticsValue);
+    mateUse('strokeWidth', strokeWidth);
+    mateUse('triggerMode', triggerMode);
   }
 }

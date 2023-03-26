@@ -119,31 +119,32 @@ class NavigationRail$Mate extends NavigationRail with Mate {
           indicatorColor: p.get('indicatorColor').build(),
           indicatorShape: p.get('indicatorShape').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('extended', extended);
-    mateDeclare('leading', leading);
-    mateDeclare('trailing', trailing);
-    mateDeclare('destinations', destinations);
-    mateDeclare('selectedIndex', selectedIndex);
-    mateDeclare('onDestinationSelected', onDestinationSelected);
-    mateDeclare('elevation', elevation);
-    mateDeclare('groupAlignment', groupAlignment);
-    mateDeclare('labelType', labelType);
-    mateDeclare('unselectedLabelTextStyle', unselectedLabelTextStyle);
-    mateDeclare('selectedLabelTextStyle', selectedLabelTextStyle);
-    mateDeclare('unselectedIconTheme', unselectedIconTheme);
-    mateDeclare('selectedIconTheme', selectedIconTheme);
-    mateDeclare('minWidth', minWidth);
-    mateDeclare('minExtendedWidth', minExtendedWidth);
-    mateDeclare('useIndicator', useIndicator);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('indicatorShape', indicatorShape);
+    mateUse('key', key);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('extended', extended);
+    mateUse('leading', leading);
+    mateUse('trailing', trailing);
+    mateUse('destinations', destinations);
+    mateUse('selectedIndex', selectedIndex);
+    mateUse('onDestinationSelected', onDestinationSelected);
+    mateUse('elevation', elevation);
+    mateUse('groupAlignment', groupAlignment);
+    mateUse('labelType', labelType);
+    mateUse('unselectedLabelTextStyle', unselectedLabelTextStyle);
+    mateUse('selectedLabelTextStyle', selectedLabelTextStyle);
+    mateUse('unselectedIconTheme', unselectedIconTheme);
+    mateUse('selectedIconTheme', selectedIconTheme);
+    mateUse('minWidth', minWidth);
+    mateUse('minExtendedWidth', minExtendedWidth);
+    mateUse('useIndicator', useIndicator);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('indicatorShape', indicatorShape);
   }
 }
 
 /// class NavigationRailDestination
-class NavigationRailDestination$Mate extends NavigationRailDestination with Mate {
+class NavigationRailDestination$Mate extends NavigationRailDestination
+    with Mate {
   /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding})
   NavigationRailDestination$Mate({
     /// optionalParameters: {required Widget icon} , defaultValue:none
@@ -179,11 +180,11 @@ class NavigationRailDestination$Mate extends NavigationRailDestination with Mate
           label: p.get('label').build(),
           padding: p.get('padding').build(),
         );
-    mateDeclare('icon', icon);
-    mateDeclare('selectedIcon', selectedIcon);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('indicatorShape', indicatorShape);
-    mateDeclare('label', label);
-    mateDeclare('padding', padding);
+    mateUse('icon', icon);
+    mateUse('selectedIcon', selectedIcon);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('indicatorShape', indicatorShape);
+    mateUse('label', label);
+    mateUse('padding', padding);
   }
 }

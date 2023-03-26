@@ -27,8 +27,8 @@ class FlutterLogoDecoration$Mate extends FlutterLogoDecoration with Mate {
           style: p.get('style').build(),
           margin: p.get('margin').build(),
         );
-    mateDeclare('textColor', textColor);
-    mateDeclare('style', style);
-    mateDeclare('margin', margin);
+    mateUse('textColor', textColor);
+    mateUse('style', style);
+    mateUse('margin', margin);
   }
 }

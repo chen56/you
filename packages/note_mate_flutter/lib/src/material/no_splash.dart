@@ -33,9 +33,9 @@ class NoSplash$Mate extends NoSplash with Mate {
           color: p.get('color').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    mateDeclare('controller', controller);
-    mateDeclare('referenceBox', referenceBox);
-    mateDeclare('color', color);
-    mateDeclare('onRemoved', onRemoved);
+    mateUse('controller', controller);
+    mateUse('referenceBox', referenceBox);
+    mateUse('color', color);
+    mateUse('onRemoved', onRemoved);
   }
 }

@@ -7,7 +7,8 @@ import 'dart:ui';
 import 'dart:core';
 
 /// class CupertinoActivityIndicator extends StatefulWidget
-class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Mate {
+class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
+    with Mate {
   /// CupertinoActivityIndicator CupertinoActivityIndicator({Key? key, Color? color, bool animating = true, double radius = _kDefaultIndicatorRadius})
   CupertinoActivityIndicator$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -33,10 +34,10 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           animating: p.get('animating').build(),
           radius: p.get('radius').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('animating', animating);
-    mateDeclare('radius', radius);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('animating', animating);
+    mateUse('radius', radius);
   }
 
   /// CupertinoActivityIndicator CupertinoActivityIndicator.partiallyRevealed({Key? key, Color? color, double radius = _kDefaultIndicatorRadius, double progress = 1.0})
@@ -64,9 +65,9 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           radius: p.get('radius').build(),
           progress: p.get('progress').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('radius', radius);
-    mateDeclare('progress', progress);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('radius', radius);
+    mateUse('progress', progress);
   }
 }

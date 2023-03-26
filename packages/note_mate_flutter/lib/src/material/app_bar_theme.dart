@@ -96,21 +96,21 @@ class AppBarTheme$Mate extends AppBarTheme with Mate {
           titleTextStyle: p.get('titleTextStyle').build(),
           systemOverlayStyle: p.get('systemOverlayStyle').build(),
         );
-    mateDeclare('color', color);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('foregroundColor', foregroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('scrolledUnderElevation', scrolledUnderElevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('shape', shape);
-    mateDeclare('iconTheme', iconTheme);
-    mateDeclare('actionsIconTheme', actionsIconTheme);
-    mateDeclare('centerTitle', centerTitle);
-    mateDeclare('titleSpacing', titleSpacing);
-    mateDeclare('toolbarHeight', toolbarHeight);
-    mateDeclare('toolbarTextStyle', toolbarTextStyle);
-    mateDeclare('titleTextStyle', titleTextStyle);
-    mateDeclare('systemOverlayStyle', systemOverlayStyle);
+    mateUse('color', color);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('foregroundColor', foregroundColor);
+    mateUse('elevation', elevation);
+    mateUse('scrolledUnderElevation', scrolledUnderElevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('shape', shape);
+    mateUse('iconTheme', iconTheme);
+    mateUse('actionsIconTheme', actionsIconTheme);
+    mateUse('centerTitle', centerTitle);
+    mateUse('titleSpacing', titleSpacing);
+    mateUse('toolbarHeight', toolbarHeight);
+    mateUse('toolbarTextStyle', toolbarTextStyle);
+    mateUse('titleTextStyle', titleTextStyle);
+    mateUse('systemOverlayStyle', systemOverlayStyle);
   }
 }

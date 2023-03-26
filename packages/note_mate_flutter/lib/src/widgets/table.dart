@@ -32,9 +32,9 @@ class TableRow$Mate extends TableRow with Mate {
           decoration: p.get('decoration').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('decoration', decoration);
-    mateDeclare('children', children);
+    mateUse('key', key);
+    mateUse('decoration', decoration);
+    mateUse('children', children);
   }
 }
 
@@ -85,14 +85,14 @@ class Table$Mate extends Table with Mate {
           defaultVerticalAlignment: p.get('defaultVerticalAlignment').build(),
           textBaseline: p.get('textBaseline').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('columnWidths', columnWidths);
-    mateDeclare('defaultColumnWidth', defaultColumnWidth);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('border', border);
-    mateDeclare('defaultVerticalAlignment', defaultVerticalAlignment);
-    mateDeclare('textBaseline', textBaseline);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('columnWidths', columnWidths);
+    mateUse('defaultColumnWidth', defaultColumnWidth);
+    mateUse('textDirection', textDirection);
+    mateUse('border', border);
+    mateUse('defaultVerticalAlignment', defaultVerticalAlignment);
+    mateUse('textBaseline', textBaseline);
   }
 }
 
@@ -118,8 +118,8 @@ class TableCell$Mate extends TableCell with Mate {
           verticalAlignment: p.get('verticalAlignment').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('verticalAlignment', verticalAlignment);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('verticalAlignment', verticalAlignment);
+    mateUse('child', child);
   }
 }

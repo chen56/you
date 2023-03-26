@@ -77,17 +77,17 @@ class ButtonBar$Mate extends ButtonBar with Mate {
           overflowButtonSpacing: p.get('overflowButtonSpacing').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('alignment', alignment);
-    mateDeclare('mainAxisSize', mainAxisSize);
-    mateDeclare('buttonTextTheme', buttonTextTheme);
-    mateDeclare('buttonMinWidth', buttonMinWidth);
-    mateDeclare('buttonHeight', buttonHeight);
-    mateDeclare('buttonPadding', buttonPadding);
-    mateDeclare('buttonAlignedDropdown', buttonAlignedDropdown);
-    mateDeclare('layoutBehavior', layoutBehavior);
-    mateDeclare('overflowDirection', overflowDirection);
-    mateDeclare('overflowButtonSpacing', overflowButtonSpacing);
-    mateDeclare('children', children);
+    mateUse('key', key);
+    mateUse('alignment', alignment);
+    mateUse('mainAxisSize', mainAxisSize);
+    mateUse('buttonTextTheme', buttonTextTheme);
+    mateUse('buttonMinWidth', buttonMinWidth);
+    mateUse('buttonHeight', buttonHeight);
+    mateUse('buttonPadding', buttonPadding);
+    mateUse('buttonAlignedDropdown', buttonAlignedDropdown);
+    mateUse('layoutBehavior', layoutBehavior);
+    mateUse('overflowDirection', overflowDirection);
+    mateUse('overflowButtonSpacing', overflowButtonSpacing);
+    mateUse('children', children);
   }
 }

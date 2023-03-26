@@ -77,18 +77,18 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate {
           dividerThickness: p.get('dividerThickness').build(),
           checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').build(),
         );
-    mateDeclare('decoration', decoration);
-    mateDeclare('dataRowColor', dataRowColor);
-    mateDeclare('dataRowMinHeight', dataRowMinHeight);
-    mateDeclare('dataRowMaxHeight', dataRowMaxHeight);
-    mateDeclare('dataTextStyle', dataTextStyle);
-    mateDeclare('headingRowColor', headingRowColor);
-    mateDeclare('headingRowHeight', headingRowHeight);
-    mateDeclare('headingTextStyle', headingTextStyle);
-    mateDeclare('horizontalMargin', horizontalMargin);
-    mateDeclare('columnSpacing', columnSpacing);
-    mateDeclare('dividerThickness', dividerThickness);
-    mateDeclare('checkboxHorizontalMargin', checkboxHorizontalMargin);
+    mateUse('decoration', decoration);
+    mateUse('dataRowColor', dataRowColor);
+    mateUse('dataRowMinHeight', dataRowMinHeight);
+    mateUse('dataRowMaxHeight', dataRowMaxHeight);
+    mateUse('dataTextStyle', dataTextStyle);
+    mateUse('headingRowColor', headingRowColor);
+    mateUse('headingRowHeight', headingRowHeight);
+    mateUse('headingTextStyle', headingTextStyle);
+    mateUse('horizontalMargin', horizontalMargin);
+    mateUse('columnSpacing', columnSpacing);
+    mateUse('dividerThickness', dividerThickness);
+    mateUse('checkboxHorizontalMargin', checkboxHorizontalMargin);
   }
 }
 
@@ -114,8 +114,8 @@ class DataTableTheme$Mate extends DataTableTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

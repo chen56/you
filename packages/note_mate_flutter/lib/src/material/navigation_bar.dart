@@ -83,19 +83,19 @@ class NavigationBar$Mate extends NavigationBar with Mate {
           height: p.get('height').build(),
           labelBehavior: p.get('labelBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('animationDuration', animationDuration);
-    mateDeclare('selectedIndex', selectedIndex);
-    mateDeclare('destinations', destinations);
-    mateDeclare('onDestinationSelected', onDestinationSelected);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('indicatorShape', indicatorShape);
-    mateDeclare('height', height);
-    mateDeclare('labelBehavior', labelBehavior);
+    mateUse('key', key);
+    mateUse('animationDuration', animationDuration);
+    mateUse('selectedIndex', selectedIndex);
+    mateUse('destinations', destinations);
+    mateUse('onDestinationSelected', onDestinationSelected);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('indicatorShape', indicatorShape);
+    mateUse('height', height);
+    mateUse('labelBehavior', labelBehavior);
   }
 }
 
@@ -131,11 +131,11 @@ class NavigationDestination$Mate extends NavigationDestination with Mate {
           label: p.get('label').build(),
           tooltip: p.get('tooltip').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('icon', icon);
-    mateDeclare('selectedIcon', selectedIcon);
-    mateDeclare('label', label);
-    mateDeclare('tooltip', tooltip);
+    mateUse('key', key);
+    mateUse('icon', icon);
+    mateUse('selectedIcon', selectedIcon);
+    mateUse('label', label);
+    mateUse('tooltip', tooltip);
   }
 }
 
@@ -181,12 +181,12 @@ class NavigationIndicator$Mate extends NavigationIndicator with Mate {
           borderRadius: p.get('borderRadius').build(),
           shape: p.get('shape').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('animation', animation);
-    mateDeclare('color', color);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('shape', shape);
+    mateUse('key', key);
+    mateUse('animation', animation);
+    mateUse('color', color);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('borderRadius', borderRadius);
+    mateUse('shape', shape);
   }
 }

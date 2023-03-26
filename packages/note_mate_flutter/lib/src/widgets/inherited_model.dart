@@ -12,6 +12,6 @@ class InheritedModelElement$Mate<T> extends InheritedModelElement<T> with Mate {
       InheritedModel<T> widget)
       : super(widget) {
     mateBuilder = (p) => InheritedModelElement$Mate<T>(p.get('widget').value);
-    mateDeclare('widget', widget);
+    mateUse('widget', widget);
   }
 }

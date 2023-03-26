@@ -63,15 +63,15 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate {
           shape: p.get('shape').build(),
           side: p.get('side').build(),
         );
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('checkColor', checkColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('splashRadius', splashRadius);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('shape', shape);
-    mateDeclare('side', side);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('fillColor', fillColor);
+    mateUse('checkColor', checkColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('splashRadius', splashRadius);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('visualDensity', visualDensity);
+    mateUse('shape', shape);
+    mateUse('side', side);
   }
 }
 
@@ -97,8 +97,8 @@ class CheckboxTheme$Mate extends CheckboxTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

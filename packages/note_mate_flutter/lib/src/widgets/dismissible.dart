@@ -91,21 +91,21 @@ class Dismissible$Mate extends Dismissible with Mate {
           dragStartBehavior: p.get('dragStartBehavior').build(),
           behavior: p.get('behavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('background', background);
-    mateDeclare('secondaryBackground', secondaryBackground);
-    mateDeclare('confirmDismiss', confirmDismiss);
-    mateDeclare('onResize', onResize);
-    mateDeclare('onUpdate', onUpdate);
-    mateDeclare('onDismissed', onDismissed);
-    mateDeclare('direction', direction);
-    mateDeclare('resizeDuration', resizeDuration);
-    mateDeclare('dismissThresholds', dismissThresholds);
-    mateDeclare('movementDuration', movementDuration);
-    mateDeclare('crossAxisEndOffset', crossAxisEndOffset);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('behavior', behavior);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('background', background);
+    mateUse('secondaryBackground', secondaryBackground);
+    mateUse('confirmDismiss', confirmDismiss);
+    mateUse('onResize', onResize);
+    mateUse('onUpdate', onUpdate);
+    mateUse('onDismissed', onDismissed);
+    mateUse('direction', direction);
+    mateUse('resizeDuration', resizeDuration);
+    mateUse('dismissThresholds', dismissThresholds);
+    mateUse('movementDuration', movementDuration);
+    mateUse('crossAxisEndOffset', crossAxisEndOffset);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('behavior', behavior);
   }
 }
 
@@ -136,9 +136,9 @@ class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate {
           previousReached: p.get('previousReached').build(),
           progress: p.get('progress').build(),
         );
-    mateDeclare('direction', direction);
-    mateDeclare('reached', reached);
-    mateDeclare('previousReached', previousReached);
-    mateDeclare('progress', progress);
+    mateUse('direction', direction);
+    mateUse('reached', reached);
+    mateUse('previousReached', previousReached);
+    mateUse('progress', progress);
   }
 }

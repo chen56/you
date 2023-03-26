@@ -38,11 +38,11 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate {
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateDeclare('physicalKey', physicalKey);
-    mateDeclare('logicalKey', logicalKey);
-    mateDeclare('character', character);
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('synthesized', synthesized);
+    mateUse('physicalKey', physicalKey);
+    mateUse('logicalKey', logicalKey);
+    mateUse('character', character);
+    mateUse('timeStamp', timeStamp);
+    mateUse('synthesized', synthesized);
   }
 }
 
@@ -73,10 +73,10 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate {
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateDeclare('physicalKey', physicalKey);
-    mateDeclare('logicalKey', logicalKey);
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('synthesized', synthesized);
+    mateUse('physicalKey', physicalKey);
+    mateUse('logicalKey', logicalKey);
+    mateUse('timeStamp', timeStamp);
+    mateUse('synthesized', synthesized);
   }
 }
 
@@ -107,10 +107,10 @@ class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate {
           character: p.get('character').build(),
           timeStamp: p.get('timeStamp').build(),
         );
-    mateDeclare('physicalKey', physicalKey);
-    mateDeclare('logicalKey', logicalKey);
-    mateDeclare('character', character);
-    mateDeclare('timeStamp', timeStamp);
+    mateUse('physicalKey', physicalKey);
+    mateUse('logicalKey', logicalKey);
+    mateUse('character', character);
+    mateUse('timeStamp', timeStamp);
   }
 }
 
@@ -131,8 +131,8 @@ class KeyMessage$Mate extends KeyMessage with Mate {
           p.get('events').value,
           p.get('rawEvent').value,
         );
-    mateDeclare('events', events);
-    mateDeclare('rawEvent', rawEvent);
+    mateUse('events', events);
+    mateUse('rawEvent', rawEvent);
   }
 }
 
@@ -153,7 +153,7 @@ class KeyEventManager$Mate extends KeyEventManager with Mate {
           p.get('_hardwareKeyboard').value,
           p.get('_rawKeyboard').value,
         );
-    mateDeclare('_hardwareKeyboard', _hardwareKeyboard);
-    mateDeclare('_rawKeyboard', _rawKeyboard);
+    mateUse('_hardwareKeyboard', _hardwareKeyboard);
+    mateUse('_rawKeyboard', _rawKeyboard);
   }
 }

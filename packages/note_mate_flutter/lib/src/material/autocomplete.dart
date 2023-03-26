@@ -54,13 +54,13 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
           initialValue: p.get('initialValue').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('optionsBuilder', optionsBuilder);
-    mateDeclare('displayStringForOption', displayStringForOption);
-    mateDeclare('fieldViewBuilder', fieldViewBuilder);
-    mateDeclare('onSelected', onSelected);
-    mateDeclare('optionsMaxHeight', optionsMaxHeight);
-    mateDeclare('optionsViewBuilder', optionsViewBuilder);
-    mateDeclare('initialValue', initialValue);
+    mateUse('key', key);
+    mateUse('optionsBuilder', optionsBuilder);
+    mateUse('displayStringForOption', displayStringForOption);
+    mateUse('fieldViewBuilder', fieldViewBuilder);
+    mateUse('onSelected', onSelected);
+    mateUse('optionsMaxHeight', optionsMaxHeight);
+    mateUse('optionsViewBuilder', optionsViewBuilder);
+    mateUse('initialValue', initialValue);
   }
 }

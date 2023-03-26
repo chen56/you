@@ -13,7 +13,8 @@ import 'package:flutter/src/widgets/editable_text.dart';
 import 'package:flutter/src/rendering/selection.dart';
 
 /// class CupertinoAdaptiveTextSelectionToolbar extends StatelessWidget
-class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSelectionToolbar with Mate {
+class CupertinoAdaptiveTextSelectionToolbar$Mate
+    extends CupertinoAdaptiveTextSelectionToolbar with Mate {
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -34,9 +35,9 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           children: p.get('children').build(),
           anchors: p.get('anchors').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('anchors', anchors);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
@@ -59,9 +60,9 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           buttonItems: p.get('buttonItems').build(),
           anchors: p.get('anchors').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('buttonItems', buttonItems);
-    mateDeclare('anchors', anchors);
+    mateUse('key', key);
+    mateUse('buttonItems', buttonItems);
+    mateUse('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
@@ -104,13 +105,13 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           onSelectAll: p.get('onSelectAll').build(),
           anchors: p.get('anchors').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('clipboardStatus', clipboardStatus);
-    mateDeclare('onCopy', onCopy);
-    mateDeclare('onCut', onCut);
-    mateDeclare('onPaste', onPaste);
-    mateDeclare('onSelectAll', onSelectAll);
-    mateDeclare('anchors', anchors);
+    mateUse('key', key);
+    mateUse('clipboardStatus', clipboardStatus);
+    mateUse('onCopy', onCopy);
+    mateUse('onCut', onCut);
+    mateUse('onPaste', onPaste);
+    mateUse('onSelectAll', onSelectAll);
+    mateUse('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
@@ -124,12 +125,13 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           key: key,
           editableTextState: editableTextState,
         ) {
-    mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editableText(
-          key: p.get('key').build(),
-          editableTextState: p.get('editableTextState').build(),
-        );
-    mateDeclare('key', key);
-    mateDeclare('editableTextState', editableTextState);
+    mateBuilder =
+        (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editableText(
+              key: p.get('key').build(),
+              editableTextState: p.get('editableTextState').build(),
+            );
+    mateUse('key', key);
+    mateUse('editableTextState', editableTextState);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
@@ -162,10 +164,10 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           selectionGeometry: p.get('selectionGeometry').build(),
           anchors: p.get('anchors').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onCopy', onCopy);
-    mateDeclare('onSelectAll', onSelectAll);
-    mateDeclare('selectionGeometry', selectionGeometry);
-    mateDeclare('anchors', anchors);
+    mateUse('key', key);
+    mateUse('onCopy', onCopy);
+    mateUse('onSelectAll', onSelectAll);
+    mateUse('selectionGeometry', selectionGeometry);
+    mateUse('anchors', anchors);
   }
 }

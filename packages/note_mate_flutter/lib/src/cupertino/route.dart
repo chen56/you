@@ -47,12 +47,12 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    mateDeclare('builder', builder);
-    mateDeclare('title', title);
-    mateDeclare('settings', settings);
-    mateDeclare('maintainState', maintainState);
-    mateDeclare('fullscreenDialog', fullscreenDialog);
-    mateDeclare('allowSnapshotting', allowSnapshotting);
+    mateUse('builder', builder);
+    mateUse('title', title);
+    mateUse('settings', settings);
+    mateUse('maintainState', maintainState);
+    mateUse('fullscreenDialog', fullscreenDialog);
+    mateUse('allowSnapshotting', allowSnapshotting);
   }
 }
 
@@ -108,15 +108,15 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate {
           arguments: p.get('arguments').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('maintainState', maintainState);
-    mateDeclare('title', title);
-    mateDeclare('fullscreenDialog', fullscreenDialog);
-    mateDeclare('allowSnapshotting', allowSnapshotting);
-    mateDeclare('key', key);
-    mateDeclare('name', name);
-    mateDeclare('arguments', arguments);
-    mateDeclare('restorationId', restorationId);
+    mateUse('child', child);
+    mateUse('maintainState', maintainState);
+    mateUse('title', title);
+    mateUse('fullscreenDialog', fullscreenDialog);
+    mateUse('allowSnapshotting', allowSnapshotting);
+    mateUse('key', key);
+    mateUse('name', name);
+    mateUse('arguments', arguments);
+    mateUse('restorationId', restorationId);
   }
 }
 
@@ -152,16 +152,17 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
           child: p.get('child').build(),
           linearTransition: p.get('linearTransition').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('primaryRouteAnimation', primaryRouteAnimation);
-    mateDeclare('secondaryRouteAnimation', secondaryRouteAnimation);
-    mateDeclare('child', child);
-    mateDeclare('linearTransition', linearTransition);
+    mateUse('key', key);
+    mateUse('primaryRouteAnimation', primaryRouteAnimation);
+    mateUse('secondaryRouteAnimation', secondaryRouteAnimation);
+    mateUse('child', child);
+    mateUse('linearTransition', linearTransition);
   }
 }
 
 /// class CupertinoFullscreenDialogTransition extends StatelessWidget
-class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialogTransition with Mate {
+class CupertinoFullscreenDialogTransition$Mate
+    extends CupertinoFullscreenDialogTransition with Mate {
   /// CupertinoFullscreenDialogTransition CupertinoFullscreenDialogTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoFullscreenDialogTransition$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -192,16 +193,17 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
           child: p.get('child').build(),
           linearTransition: p.get('linearTransition').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('primaryRouteAnimation', primaryRouteAnimation);
-    mateDeclare('secondaryRouteAnimation', secondaryRouteAnimation);
-    mateDeclare('child', child);
-    mateDeclare('linearTransition', linearTransition);
+    mateUse('key', key);
+    mateUse('primaryRouteAnimation', primaryRouteAnimation);
+    mateUse('secondaryRouteAnimation', secondaryRouteAnimation);
+    mateUse('child', child);
+    mateUse('linearTransition', linearTransition);
   }
 }
 
 /// class CupertinoModalPopupRoute<T> extends PopupRoute<T>
-class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with Mate {
+class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T>
+    with Mate {
   /// CupertinoModalPopupRoute<T> CupertinoModalPopupRoute({required Widget Function(BuildContext) builder, String barrierLabel = 'Dismiss', Color? barrierColor = kCupertinoModalBarrierColor, bool barrierDismissible = true, bool semanticsDismissible = false, ImageFilter? filter, RouteSettings? settings, Offset? anchorPoint})
   CupertinoModalPopupRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , defaultValue:none
@@ -247,14 +249,14 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
           settings: p.get('settings').build(),
           anchorPoint: p.get('anchorPoint').build(),
         );
-    mateDeclare('builder', builder);
-    mateDeclare('barrierLabel', barrierLabel);
-    mateDeclare('barrierColor', barrierColor);
-    mateDeclare('barrierDismissible', barrierDismissible);
-    mateDeclare('semanticsDismissible', semanticsDismissible);
-    mateDeclare('filter', filter);
-    mateDeclare('settings', settings);
-    mateDeclare('anchorPoint', anchorPoint);
+    mateUse('builder', builder);
+    mateUse('barrierLabel', barrierLabel);
+    mateUse('barrierColor', barrierColor);
+    mateUse('barrierDismissible', barrierDismissible);
+    mateUse('semanticsDismissible', semanticsDismissible);
+    mateUse('filter', filter);
+    mateUse('settings', settings);
+    mateUse('anchorPoint', anchorPoint);
   }
 }
 
@@ -310,14 +312,14 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate {
           settings: p.get('settings').build(),
           anchorPoint: p.get('anchorPoint').build(),
         );
-    mateDeclare('builder', builder);
-    mateDeclare('context', context);
-    mateDeclare('barrierDismissible', barrierDismissible);
-    mateDeclare('barrierColor', barrierColor);
-    mateDeclare('barrierLabel', barrierLabel);
-    mateDeclare('transitionDuration', transitionDuration);
-    mateDeclare('transitionBuilder', transitionBuilder);
-    mateDeclare('settings', settings);
-    mateDeclare('anchorPoint', anchorPoint);
+    mateUse('builder', builder);
+    mateUse('context', context);
+    mateUse('barrierDismissible', barrierDismissible);
+    mateUse('barrierColor', barrierColor);
+    mateUse('barrierLabel', barrierLabel);
+    mateUse('transitionDuration', transitionDuration);
+    mateUse('transitionBuilder', transitionBuilder);
+    mateUse('settings', settings);
+    mateUse('anchorPoint', anchorPoint);
   }
 }

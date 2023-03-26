@@ -32,9 +32,9 @@ class GridTile$Mate extends GridTile with Mate {
           footer: p.get('footer').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('header', header);
-    mateDeclare('footer', footer);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('header', header);
+    mateUse('footer', footer);
+    mateUse('child', child);
   }
 }

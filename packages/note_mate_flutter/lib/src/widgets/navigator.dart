@@ -26,8 +26,8 @@ class RouteSettings$Mate extends RouteSettings with Mate {
           name: p.get('name').build(),
           arguments: p.get('arguments').build(),
         );
-    mateDeclare('name', name);
-    mateDeclare('arguments', arguments);
+    mateUse('name', name);
+    mateUse('arguments', arguments);
   }
 }
 
@@ -53,9 +53,9 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('child', child);
   }
 
   /// HeroControllerScope HeroControllerScope.none({Key? key, required Widget child})
@@ -73,8 +73,8 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('child', child);
   }
 }
 
@@ -148,27 +148,29 @@ class Navigator$Mate extends Navigator with Mate {
           onGenerateRoute: p.get('onGenerateRoute').build(),
           onUnknownRoute: p.get('onUnknownRoute').build(),
           transitionDelegate: p.get('transitionDelegate').build(),
-          reportsRouteUpdateToEngine: p.get('reportsRouteUpdateToEngine').build(),
+          reportsRouteUpdateToEngine:
+              p.get('reportsRouteUpdateToEngine').build(),
           clipBehavior: p.get('clipBehavior').build(),
           observers: p.get('observers').build(),
           requestFocus: p.get('requestFocus').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
-          routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
+          routeTraversalEdgeBehavior:
+              p.get('routeTraversalEdgeBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('pages', pages);
-    mateDeclare('onPopPage', onPopPage);
-    mateDeclare('initialRoute', initialRoute);
-    mateDeclare('onGenerateInitialRoutes', onGenerateInitialRoutes);
-    mateDeclare('onGenerateRoute', onGenerateRoute);
-    mateDeclare('onUnknownRoute', onUnknownRoute);
-    mateDeclare('transitionDelegate', transitionDelegate);
-    mateDeclare('reportsRouteUpdateToEngine', reportsRouteUpdateToEngine);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('observers', observers);
-    mateDeclare('requestFocus', requestFocus);
-    mateDeclare('restorationScopeId', restorationScopeId);
-    mateDeclare('routeTraversalEdgeBehavior', routeTraversalEdgeBehavior);
+    mateUse('key', key);
+    mateUse('pages', pages);
+    mateUse('onPopPage', onPopPage);
+    mateUse('initialRoute', initialRoute);
+    mateUse('onGenerateInitialRoutes', onGenerateInitialRoutes);
+    mateUse('onGenerateRoute', onGenerateRoute);
+    mateUse('onUnknownRoute', onUnknownRoute);
+    mateUse('transitionDelegate', transitionDelegate);
+    mateUse('reportsRouteUpdateToEngine', reportsRouteUpdateToEngine);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('observers', observers);
+    mateUse('requestFocus', requestFocus);
+    mateUse('restorationScopeId', restorationScopeId);
+    mateUse('routeTraversalEdgeBehavior', routeTraversalEdgeBehavior);
   }
 }
 
@@ -194,8 +196,8 @@ class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate {
           onPresent: p.get('onPresent').build(),
           onComplete: p.get('onComplete').build(),
         );
-    mateDeclare('navigatorFinder', navigatorFinder);
-    mateDeclare('onPresent', onPresent);
-    mateDeclare('onComplete', onComplete);
+    mateUse('navigatorFinder', navigatorFinder);
+    mateUse('onPresent', onPresent);
+    mateUse('onComplete', onComplete);
   }
 }

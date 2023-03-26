@@ -49,12 +49,12 @@ class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate {
           enabled: p.get('enabled').build(),
           style: p.get('style').build(),
         );
-    mateDeclare('value', value);
-    mateDeclare('label', label);
-    mateDeclare('leadingIcon', leadingIcon);
-    mateDeclare('trailingIcon', trailingIcon);
-    mateDeclare('enabled', enabled);
-    mateDeclare('style', style);
+    mateUse('value', value);
+    mateUse('label', label);
+    mateUse('leadingIcon', leadingIcon);
+    mateUse('trailingIcon', trailingIcon);
+    mateUse('enabled', enabled);
+    mateUse('style', style);
   }
 }
 
@@ -160,24 +160,24 @@ class DropdownMenu$Mate<T> extends DropdownMenu<T> with Mate {
           requestFocusOnTap: p.get('requestFocusOnTap').build(),
           dropdownMenuEntries: p.get('dropdownMenuEntries').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('enabled', enabled);
-    mateDeclare('width', width);
-    mateDeclare('menuHeight', menuHeight);
-    mateDeclare('leadingIcon', leadingIcon);
-    mateDeclare('trailingIcon', trailingIcon);
-    mateDeclare('label', label);
-    mateDeclare('hintText', hintText);
-    mateDeclare('selectedTrailingIcon', selectedTrailingIcon);
-    mateDeclare('enableFilter', enableFilter);
-    mateDeclare('enableSearch', enableSearch);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('inputDecorationTheme', inputDecorationTheme);
-    mateDeclare('menuStyle', menuStyle);
-    mateDeclare('controller', controller);
-    mateDeclare('initialSelection', initialSelection);
-    mateDeclare('onSelected', onSelected);
-    mateDeclare('requestFocusOnTap', requestFocusOnTap);
-    mateDeclare('dropdownMenuEntries', dropdownMenuEntries);
+    mateUse('key', key);
+    mateUse('enabled', enabled);
+    mateUse('width', width);
+    mateUse('menuHeight', menuHeight);
+    mateUse('leadingIcon', leadingIcon);
+    mateUse('trailingIcon', trailingIcon);
+    mateUse('label', label);
+    mateUse('hintText', hintText);
+    mateUse('selectedTrailingIcon', selectedTrailingIcon);
+    mateUse('enableFilter', enableFilter);
+    mateUse('enableSearch', enableSearch);
+    mateUse('textStyle', textStyle);
+    mateUse('inputDecorationTheme', inputDecorationTheme);
+    mateUse('menuStyle', menuStyle);
+    mateUse('controller', controller);
+    mateUse('initialSelection', initialSelection);
+    mateUse('onSelected', onSelected);
+    mateUse('requestFocusOnTap', requestFocusOnTap);
+    mateUse('dropdownMenuEntries', dropdownMenuEntries);
   }
 }

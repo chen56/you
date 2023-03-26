@@ -75,22 +75,23 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
           overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
-          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport:
+              p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('childManager', childManager);
-    mateDeclare('offset', offset);
-    mateDeclare('diameterRatio', diameterRatio);
-    mateDeclare('perspective', perspective);
-    mateDeclare('offAxisFraction', offAxisFraction);
-    mateDeclare('useMagnifier', useMagnifier);
-    mateDeclare('magnification', magnification);
-    mateDeclare('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('squeeze', squeeze);
-    mateDeclare('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('children', children);
+    mateUse('childManager', childManager);
+    mateUse('offset', offset);
+    mateUse('diameterRatio', diameterRatio);
+    mateUse('perspective', perspective);
+    mateUse('offAxisFraction', offAxisFraction);
+    mateUse('useMagnifier', useMagnifier);
+    mateUse('magnification', magnification);
+    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
+    mateUse('itemExtent', itemExtent);
+    mateUse('squeeze', squeeze);
+    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('children', children);
   }
 }

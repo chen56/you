@@ -14,7 +14,7 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate {
       T value)
       : super(value) {
     mateBuilder = (p) => PageStorageKey$Mate<T>(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }
 
@@ -40,8 +40,8 @@ class PageStorage$Mate extends PageStorage with Mate {
           bucket: p.get('bucket').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('bucket', bucket);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('bucket', bucket);
+    mateUse('child', child);
   }
 }

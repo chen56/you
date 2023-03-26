@@ -64,15 +64,15 @@ class RenderWrap$Mate extends RenderWrap with Mate {
           verticalDirection: p.get('verticalDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('children', children);
-    mateDeclare('direction', direction);
-    mateDeclare('alignment', alignment);
-    mateDeclare('spacing', spacing);
-    mateDeclare('runAlignment', runAlignment);
-    mateDeclare('runSpacing', runSpacing);
-    mateDeclare('crossAxisAlignment', crossAxisAlignment);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('verticalDirection', verticalDirection);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('children', children);
+    mateUse('direction', direction);
+    mateUse('alignment', alignment);
+    mateUse('spacing', spacing);
+    mateUse('runAlignment', runAlignment);
+    mateUse('runSpacing', runSpacing);
+    mateUse('crossAxisAlignment', crossAxisAlignment);
+    mateUse('textDirection', textDirection);
+    mateUse('verticalDirection', verticalDirection);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

@@ -8,7 +8,8 @@ import 'dart:core';
 import 'package:flutter/src/widgets/scroll_position.dart';
 
 /// class ScrollPositionWithSingleContext extends ScrollPosition implements ScrollActivityDelegate
-class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleContext with Mate {
+class ScrollPositionWithSingleContext$Mate
+    extends ScrollPositionWithSingleContext with Mate {
   /// ScrollPositionWithSingleContext ScrollPositionWithSingleContext({required ScrollPhysics physics, required ScrollContext context, double? initialPixels = 0.0, bool keepScrollOffset = true, ScrollPosition? oldPosition, String? debugLabel})
   ScrollPositionWithSingleContext$Mate({
     /// optionalParameters: {required ScrollPhysics physics} , defaultValue:none
@@ -44,11 +45,11 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
           oldPosition: p.get('oldPosition').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateDeclare('physics', physics);
-    mateDeclare('context', context);
-    mateDeclare('initialPixels', initialPixels);
-    mateDeclare('keepScrollOffset', keepScrollOffset);
-    mateDeclare('oldPosition', oldPosition);
-    mateDeclare('debugLabel', debugLabel);
+    mateUse('physics', physics);
+    mateUse('context', context);
+    mateUse('initialPixels', initialPixels);
+    mateUse('keepScrollOffset', keepScrollOffset);
+    mateUse('oldPosition', oldPosition);
+    mateUse('debugLabel', debugLabel);
   }
 }

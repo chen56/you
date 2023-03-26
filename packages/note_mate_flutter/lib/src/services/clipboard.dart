@@ -13,6 +13,6 @@ class ClipboardData$Mate extends ClipboardData with Mate {
       String? text})
       : super(text: text) {
     mateBuilder = (p) => ClipboardData$Mate(text: p.get('text').build());
-    mateDeclare('text', text);
+    mateUse('text', text);
   }
 }

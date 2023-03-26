@@ -7,7 +7,8 @@ import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class ImmediateMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGestureRecognizer with Mate {
+class ImmediateMultiDragGestureRecognizer$Mate
+    extends ImmediateMultiDragGestureRecognizer with Mate {
   /// ImmediateMultiDragGestureRecognizer ImmediateMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   ImmediateMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
@@ -28,14 +29,15 @@ class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGesture
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
 /// class HorizontalMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestureRecognizer with Mate {
+class HorizontalMultiDragGestureRecognizer$Mate
+    extends HorizontalMultiDragGestureRecognizer with Mate {
   /// HorizontalMultiDragGestureRecognizer HorizontalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   HorizontalMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
@@ -56,14 +58,15 @@ class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestu
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
 /// class VerticalMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRecognizer with Mate {
+class VerticalMultiDragGestureRecognizer$Mate
+    extends VerticalMultiDragGestureRecognizer with Mate {
   /// VerticalMultiDragGestureRecognizer VerticalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   VerticalMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
@@ -84,14 +87,15 @@ class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRe
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
 /// class DelayedMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureRecognizer with Mate {
+class DelayedMultiDragGestureRecognizer$Mate
+    extends DelayedMultiDragGestureRecognizer with Mate {
   /// DelayedMultiDragGestureRecognizer DelayedMultiDragGestureRecognizer({Duration delay = kLongPressTimeout, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   DelayedMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Duration delay = kLongPressTimeout} , defaultValue:unprocessed
@@ -117,9 +121,9 @@ class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureReco
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('delay', delay);
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('delay', delay);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

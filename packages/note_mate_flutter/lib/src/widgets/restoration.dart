@@ -29,14 +29,15 @@ class RestorationScope$Mate extends RestorationScope with Mate {
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('restorationId', restorationId);
+    mateUse('child', child);
   }
 }
 
 /// class UnmanagedRestorationScope extends InheritedWidget
-class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate {
+class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope
+    with Mate {
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -57,9 +58,9 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate
           bucket: p.get('bucket').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('bucket', bucket);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('bucket', bucket);
+    mateUse('child', child);
   }
 }
 
@@ -85,8 +86,8 @@ class RootRestorationScope$Mate extends RootRestorationScope with Mate {
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('restorationId', restorationId);
+    mateUse('child', child);
   }
 }

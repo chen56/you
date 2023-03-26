@@ -33,9 +33,9 @@ class WidgetSpan$Mate extends WidgetSpan with Mate {
           baseline: p.get('baseline').build(),
           style: p.get('style').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('alignment', alignment);
-    mateDeclare('baseline', baseline);
-    mateDeclare('style', style);
+    mateUse('child', child);
+    mateUse('alignment', alignment);
+    mateUse('baseline', baseline);
+    mateUse('style', style);
   }
 }

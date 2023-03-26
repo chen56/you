@@ -76,18 +76,18 @@ class CupertinoListTile$Mate extends CupertinoListTile with Mate {
           leadingSize: p.get('leadingSize').build(),
           leadingToTitle: p.get('leadingToTitle').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('title', title);
-    mateDeclare('subtitle', subtitle);
-    mateDeclare('additionalInfo', additionalInfo);
-    mateDeclare('leading', leading);
-    mateDeclare('trailing', trailing);
-    mateDeclare('onTap', onTap);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('backgroundColorActivated', backgroundColorActivated);
-    mateDeclare('padding', padding);
-    mateDeclare('leadingSize', leadingSize);
-    mateDeclare('leadingToTitle', leadingToTitle);
+    mateUse('key', key);
+    mateUse('title', title);
+    mateUse('subtitle', subtitle);
+    mateUse('additionalInfo', additionalInfo);
+    mateUse('leading', leading);
+    mateUse('trailing', trailing);
+    mateUse('onTap', onTap);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('backgroundColorActivated', backgroundColorActivated);
+    mateUse('padding', padding);
+    mateUse('leadingSize', leadingSize);
+    mateUse('leadingToTitle', leadingToTitle);
   }
 
   /// CupertinoListTile CupertinoListTile.notched({Key? key, required Widget title, Widget? subtitle, Widget? additionalInfo, Widget? leading, Widget? trailing, FutureOr<void> Function()? onTap, Color? backgroundColor, Color? backgroundColorActivated, EdgeInsetsGeometry? padding, double leadingSize = _kNotchedLeadingSize, double leadingToTitle = _kNotchedLeadingToTitle})
@@ -155,18 +155,18 @@ class CupertinoListTile$Mate extends CupertinoListTile with Mate {
           leadingSize: p.get('leadingSize').build(),
           leadingToTitle: p.get('leadingToTitle').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('title', title);
-    mateDeclare('subtitle', subtitle);
-    mateDeclare('additionalInfo', additionalInfo);
-    mateDeclare('leading', leading);
-    mateDeclare('trailing', trailing);
-    mateDeclare('onTap', onTap);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('backgroundColorActivated', backgroundColorActivated);
-    mateDeclare('padding', padding);
-    mateDeclare('leadingSize', leadingSize);
-    mateDeclare('leadingToTitle', leadingToTitle);
+    mateUse('key', key);
+    mateUse('title', title);
+    mateUse('subtitle', subtitle);
+    mateUse('additionalInfo', additionalInfo);
+    mateUse('leading', leading);
+    mateUse('trailing', trailing);
+    mateUse('onTap', onTap);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('backgroundColorActivated', backgroundColorActivated);
+    mateUse('padding', padding);
+    mateUse('leadingSize', leadingSize);
+    mateUse('leadingToTitle', leadingToTitle);
   }
 }
 
@@ -178,7 +178,8 @@ class CupertinoListTileChevron$Mate extends CupertinoListTileChevron with Mate {
       /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super(key: key) {
-    mateBuilder = (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
-    mateDeclare('key', key);
+    mateBuilder =
+        (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
+    mateUse('key', key);
   }
 }

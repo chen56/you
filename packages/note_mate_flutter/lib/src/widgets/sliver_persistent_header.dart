@@ -32,9 +32,9 @@ class SliverPersistentHeader$Mate extends SliverPersistentHeader with Mate {
           pinned: p.get('pinned').build(),
           floating: p.get('floating').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('delegate', delegate);
-    mateDeclare('pinned', pinned);
-    mateDeclare('floating', floating);
+    mateUse('key', key);
+    mateUse('delegate', delegate);
+    mateUse('pinned', pinned);
+    mateUse('floating', floating);
   }
 }

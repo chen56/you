@@ -12,7 +12,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class NavigationDrawerThemeData with Diagnosticable
-class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate {
+class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData
+    with Mate {
   /// NavigationDrawerThemeData NavigationDrawerThemeData({double? tileHeight, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, Size? indicatorSize, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme})
   NavigationDrawerThemeData$Mate({
     /// optionalParameters: {double? tileHeight} , defaultValue:none
@@ -68,16 +69,16 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
           labelTextStyle: p.get('labelTextStyle').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateDeclare('tileHeight', tileHeight);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('indicatorShape', indicatorShape);
-    mateDeclare('indicatorSize', indicatorSize);
-    mateDeclare('labelTextStyle', labelTextStyle);
-    mateDeclare('iconTheme', iconTheme);
+    mateUse('tileHeight', tileHeight);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse('indicatorShape', indicatorShape);
+    mateUse('indicatorSize', indicatorSize);
+    mateUse('labelTextStyle', labelTextStyle);
+    mateUse('iconTheme', iconTheme);
   }
 }
 
@@ -103,8 +104,8 @@ class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

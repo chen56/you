@@ -81,19 +81,19 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           selectionOverlay: p.get('selectionOverlay').build(),
           looping: p.get('looping').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('diameterRatio', diameterRatio);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('offAxisFraction', offAxisFraction);
-    mateDeclare('useMagnifier', useMagnifier);
-    mateDeclare('magnification', magnification);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('squeeze', squeeze);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('onSelectedItemChanged', onSelectedItemChanged);
-    mateDeclare('children', children);
-    mateDeclare('selectionOverlay', selectionOverlay);
-    mateDeclare('looping', looping);
+    mateUse('key', key);
+    mateUse('diameterRatio', diameterRatio);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('offAxisFraction', offAxisFraction);
+    mateUse('useMagnifier', useMagnifier);
+    mateUse('magnification', magnification);
+    mateUse('scrollController', scrollController);
+    mateUse('squeeze', squeeze);
+    mateUse('itemExtent', itemExtent);
+    mateUse('onSelectedItemChanged', onSelectedItemChanged);
+    mateUse('children', children);
+    mateUse('selectionOverlay', selectionOverlay);
+    mateUse('looping', looping);
   }
 
   /// CupertinoPicker CupertinoPicker.builder({Key? key, double diameterRatio = _kDefaultDiameterRatio, Color? backgroundColor, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, FixedExtentScrollController? scrollController, double squeeze = _kSqueeze, required double itemExtent, required void Function(int)? onSelectedItemChanged, required Widget? Function(BuildContext, int) itemBuilder, int? childCount, Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()})
@@ -166,24 +166,25 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           childCount: p.get('childCount').build(),
           selectionOverlay: p.get('selectionOverlay').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('diameterRatio', diameterRatio);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('offAxisFraction', offAxisFraction);
-    mateDeclare('useMagnifier', useMagnifier);
-    mateDeclare('magnification', magnification);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('squeeze', squeeze);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('onSelectedItemChanged', onSelectedItemChanged);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('childCount', childCount);
-    mateDeclare('selectionOverlay', selectionOverlay);
+    mateUse('key', key);
+    mateUse('diameterRatio', diameterRatio);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('offAxisFraction', offAxisFraction);
+    mateUse('useMagnifier', useMagnifier);
+    mateUse('magnification', magnification);
+    mateUse('scrollController', scrollController);
+    mateUse('squeeze', squeeze);
+    mateUse('itemExtent', itemExtent);
+    mateUse('onSelectedItemChanged', onSelectedItemChanged);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('childCount', childCount);
+    mateUse('selectionOverlay', selectionOverlay);
   }
 }
 
 /// class CupertinoPickerDefaultSelectionOverlay extends StatelessWidget
-class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefaultSelectionOverlay with Mate {
+class CupertinoPickerDefaultSelectionOverlay$Mate
+    extends CupertinoPickerDefaultSelectionOverlay with Mate {
   /// CupertinoPickerDefaultSelectionOverlay CupertinoPickerDefaultSelectionOverlay({Key? key, Color background = CupertinoColors.tertiarySystemFill, bool capStartEdge = true, bool capEndEdge = true})
   CupertinoPickerDefaultSelectionOverlay$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -209,9 +210,9 @@ class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefault
           capStartEdge: p.get('capStartEdge').build(),
           capEndEdge: p.get('capEndEdge').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('background', background);
-    mateDeclare('capStartEdge', capStartEdge);
-    mateDeclare('capEndEdge', capEndEdge);
+    mateUse('key', key);
+    mateUse('background', background);
+    mateUse('capStartEdge', capStartEdge);
+    mateUse('capEndEdge', capEndEdge);
   }
 }

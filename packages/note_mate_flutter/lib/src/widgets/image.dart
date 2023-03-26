@@ -121,26 +121,26 @@ class Image$Mate extends Image with Mate {
           isAntiAlias: p.get('isAntiAlias').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('image', image);
-    mateDeclare('frameBuilder', frameBuilder);
-    mateDeclare('loadingBuilder', loadingBuilder);
-    mateDeclare('errorBuilder', errorBuilder);
-    mateDeclare('semanticLabel', semanticLabel);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('color', color);
-    mateDeclare('opacity', opacity);
-    mateDeclare('colorBlendMode', colorBlendMode);
-    mateDeclare('fit', fit);
-    mateDeclare('alignment', alignment);
-    mateDeclare('repeat', repeat);
-    mateDeclare('centerSlice', centerSlice);
-    mateDeclare('matchTextDirection', matchTextDirection);
-    mateDeclare('gaplessPlayback', gaplessPlayback);
-    mateDeclare('isAntiAlias', isAntiAlias);
-    mateDeclare('filterQuality', filterQuality);
+    mateUse('key', key);
+    mateUse('image', image);
+    mateUse('frameBuilder', frameBuilder);
+    mateUse('loadingBuilder', loadingBuilder);
+    mateUse('errorBuilder', errorBuilder);
+    mateUse('semanticLabel', semanticLabel);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('color', color);
+    mateUse('opacity', opacity);
+    mateUse('colorBlendMode', colorBlendMode);
+    mateUse('fit', fit);
+    mateUse('alignment', alignment);
+    mateUse('repeat', repeat);
+    mateUse('centerSlice', centerSlice);
+    mateUse('matchTextDirection', matchTextDirection);
+    mateUse('gaplessPlayback', gaplessPlayback);
+    mateUse('isAntiAlias', isAntiAlias);
+    mateUse('filterQuality', filterQuality);
   }
 
   /// Image Image.network(String src, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, FilterQuality filterQuality = FilterQuality.low, bool isAntiAlias = false, Map<String, String>? headers, int? cacheWidth, int? cacheHeight})
@@ -267,30 +267,30 @@ class Image$Mate extends Image with Mate {
           cacheWidth: p.get('cacheWidth').build(),
           cacheHeight: p.get('cacheHeight').build(),
         );
-    mateDeclare('src', src);
-    mateDeclare('key', key);
-    mateDeclare('scale', scale);
-    mateDeclare('frameBuilder', frameBuilder);
-    mateDeclare('loadingBuilder', loadingBuilder);
-    mateDeclare('errorBuilder', errorBuilder);
-    mateDeclare('semanticLabel', semanticLabel);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('color', color);
-    mateDeclare('opacity', opacity);
-    mateDeclare('colorBlendMode', colorBlendMode);
-    mateDeclare('fit', fit);
-    mateDeclare('alignment', alignment);
-    mateDeclare('repeat', repeat);
-    mateDeclare('centerSlice', centerSlice);
-    mateDeclare('matchTextDirection', matchTextDirection);
-    mateDeclare('gaplessPlayback', gaplessPlayback);
-    mateDeclare('filterQuality', filterQuality);
-    mateDeclare('isAntiAlias', isAntiAlias);
-    mateDeclare('headers', headers);
-    mateDeclare('cacheWidth', cacheWidth);
-    mateDeclare('cacheHeight', cacheHeight);
+    mateUse('src', src);
+    mateUse('key', key);
+    mateUse('scale', scale);
+    mateUse('frameBuilder', frameBuilder);
+    mateUse('loadingBuilder', loadingBuilder);
+    mateUse('errorBuilder', errorBuilder);
+    mateUse('semanticLabel', semanticLabel);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('color', color);
+    mateUse('opacity', opacity);
+    mateUse('colorBlendMode', colorBlendMode);
+    mateUse('fit', fit);
+    mateUse('alignment', alignment);
+    mateUse('repeat', repeat);
+    mateUse('centerSlice', centerSlice);
+    mateUse('matchTextDirection', matchTextDirection);
+    mateUse('gaplessPlayback', gaplessPlayback);
+    mateUse('filterQuality', filterQuality);
+    mateUse('isAntiAlias', isAntiAlias);
+    mateUse('headers', headers);
+    mateUse('cacheWidth', cacheWidth);
+    mateUse('cacheHeight', cacheHeight);
   }
 
   /// Image Image.file(File file, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
@@ -407,28 +407,28 @@ class Image$Mate extends Image with Mate {
           cacheWidth: p.get('cacheWidth').build(),
           cacheHeight: p.get('cacheHeight').build(),
         );
-    mateDeclare('file', file);
-    mateDeclare('key', key);
-    mateDeclare('scale', scale);
-    mateDeclare('frameBuilder', frameBuilder);
-    mateDeclare('errorBuilder', errorBuilder);
-    mateDeclare('semanticLabel', semanticLabel);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('color', color);
-    mateDeclare('opacity', opacity);
-    mateDeclare('colorBlendMode', colorBlendMode);
-    mateDeclare('fit', fit);
-    mateDeclare('alignment', alignment);
-    mateDeclare('repeat', repeat);
-    mateDeclare('centerSlice', centerSlice);
-    mateDeclare('matchTextDirection', matchTextDirection);
-    mateDeclare('gaplessPlayback', gaplessPlayback);
-    mateDeclare('isAntiAlias', isAntiAlias);
-    mateDeclare('filterQuality', filterQuality);
-    mateDeclare('cacheWidth', cacheWidth);
-    mateDeclare('cacheHeight', cacheHeight);
+    mateUse('file', file);
+    mateUse('key', key);
+    mateUse('scale', scale);
+    mateUse('frameBuilder', frameBuilder);
+    mateUse('errorBuilder', errorBuilder);
+    mateUse('semanticLabel', semanticLabel);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('color', color);
+    mateUse('opacity', opacity);
+    mateUse('colorBlendMode', colorBlendMode);
+    mateUse('fit', fit);
+    mateUse('alignment', alignment);
+    mateUse('repeat', repeat);
+    mateUse('centerSlice', centerSlice);
+    mateUse('matchTextDirection', matchTextDirection);
+    mateUse('gaplessPlayback', gaplessPlayback);
+    mateUse('isAntiAlias', isAntiAlias);
+    mateUse('filterQuality', filterQuality);
+    mateUse('cacheWidth', cacheWidth);
+    mateUse('cacheHeight', cacheHeight);
   }
 
   /// Image Image.asset(String name, {Key? key, AssetBundle? bundle, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? scale, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, String? package, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
@@ -555,30 +555,30 @@ class Image$Mate extends Image with Mate {
           cacheWidth: p.get('cacheWidth').build(),
           cacheHeight: p.get('cacheHeight').build(),
         );
-    mateDeclare('name', name);
-    mateDeclare('key', key);
-    mateDeclare('bundle', bundle);
-    mateDeclare('frameBuilder', frameBuilder);
-    mateDeclare('errorBuilder', errorBuilder);
-    mateDeclare('semanticLabel', semanticLabel);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('scale', scale);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('color', color);
-    mateDeclare('opacity', opacity);
-    mateDeclare('colorBlendMode', colorBlendMode);
-    mateDeclare('fit', fit);
-    mateDeclare('alignment', alignment);
-    mateDeclare('repeat', repeat);
-    mateDeclare('centerSlice', centerSlice);
-    mateDeclare('matchTextDirection', matchTextDirection);
-    mateDeclare('gaplessPlayback', gaplessPlayback);
-    mateDeclare('isAntiAlias', isAntiAlias);
-    mateDeclare('package', package);
-    mateDeclare('filterQuality', filterQuality);
-    mateDeclare('cacheWidth', cacheWidth);
-    mateDeclare('cacheHeight', cacheHeight);
+    mateUse('name', name);
+    mateUse('key', key);
+    mateUse('bundle', bundle);
+    mateUse('frameBuilder', frameBuilder);
+    mateUse('errorBuilder', errorBuilder);
+    mateUse('semanticLabel', semanticLabel);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('scale', scale);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('color', color);
+    mateUse('opacity', opacity);
+    mateUse('colorBlendMode', colorBlendMode);
+    mateUse('fit', fit);
+    mateUse('alignment', alignment);
+    mateUse('repeat', repeat);
+    mateUse('centerSlice', centerSlice);
+    mateUse('matchTextDirection', matchTextDirection);
+    mateUse('gaplessPlayback', gaplessPlayback);
+    mateUse('isAntiAlias', isAntiAlias);
+    mateUse('package', package);
+    mateUse('filterQuality', filterQuality);
+    mateUse('cacheWidth', cacheWidth);
+    mateUse('cacheHeight', cacheHeight);
   }
 
   /// Image Image.memory(Uint8List bytes, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
@@ -695,27 +695,27 @@ class Image$Mate extends Image with Mate {
           cacheWidth: p.get('cacheWidth').build(),
           cacheHeight: p.get('cacheHeight').build(),
         );
-    mateDeclare('bytes', bytes);
-    mateDeclare('key', key);
-    mateDeclare('scale', scale);
-    mateDeclare('frameBuilder', frameBuilder);
-    mateDeclare('errorBuilder', errorBuilder);
-    mateDeclare('semanticLabel', semanticLabel);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('color', color);
-    mateDeclare('opacity', opacity);
-    mateDeclare('colorBlendMode', colorBlendMode);
-    mateDeclare('fit', fit);
-    mateDeclare('alignment', alignment);
-    mateDeclare('repeat', repeat);
-    mateDeclare('centerSlice', centerSlice);
-    mateDeclare('matchTextDirection', matchTextDirection);
-    mateDeclare('gaplessPlayback', gaplessPlayback);
-    mateDeclare('isAntiAlias', isAntiAlias);
-    mateDeclare('filterQuality', filterQuality);
-    mateDeclare('cacheWidth', cacheWidth);
-    mateDeclare('cacheHeight', cacheHeight);
+    mateUse('bytes', bytes);
+    mateUse('key', key);
+    mateUse('scale', scale);
+    mateUse('frameBuilder', frameBuilder);
+    mateUse('errorBuilder', errorBuilder);
+    mateUse('semanticLabel', semanticLabel);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('color', color);
+    mateUse('opacity', opacity);
+    mateUse('colorBlendMode', colorBlendMode);
+    mateUse('fit', fit);
+    mateUse('alignment', alignment);
+    mateUse('repeat', repeat);
+    mateUse('centerSlice', centerSlice);
+    mateUse('matchTextDirection', matchTextDirection);
+    mateUse('gaplessPlayback', gaplessPlayback);
+    mateUse('isAntiAlias', isAntiAlias);
+    mateUse('filterQuality', filterQuality);
+    mateUse('cacheWidth', cacheWidth);
+    mateUse('cacheHeight', cacheHeight);
   }
 }

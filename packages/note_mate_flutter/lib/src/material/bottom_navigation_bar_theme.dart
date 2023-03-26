@@ -13,7 +13,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class BottomNavigationBarThemeData with Diagnosticable
-class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData with Mate {
+class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData
+    with Mate {
   /// BottomNavigationBarThemeData BottomNavigationBarThemeData({Color? backgroundColor, double? elevation, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, Color? selectedItemColor, Color? unselectedItemColor, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, BottomNavigationBarType? type, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, MaterialStateProperty<MouseCursor?>? mouseCursor})
   BottomNavigationBarThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , defaultValue:none
@@ -89,20 +90,20 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData wit
           landscapeLayout: p.get('landscapeLayout').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('selectedIconTheme', selectedIconTheme);
-    mateDeclare('unselectedIconTheme', unselectedIconTheme);
-    mateDeclare('selectedItemColor', selectedItemColor);
-    mateDeclare('unselectedItemColor', unselectedItemColor);
-    mateDeclare('selectedLabelStyle', selectedLabelStyle);
-    mateDeclare('unselectedLabelStyle', unselectedLabelStyle);
-    mateDeclare('showSelectedLabels', showSelectedLabels);
-    mateDeclare('showUnselectedLabels', showUnselectedLabels);
-    mateDeclare('type', type);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('landscapeLayout', landscapeLayout);
-    mateDeclare('mouseCursor', mouseCursor);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('selectedIconTheme', selectedIconTheme);
+    mateUse('unselectedIconTheme', unselectedIconTheme);
+    mateUse('selectedItemColor', selectedItemColor);
+    mateUse('unselectedItemColor', unselectedItemColor);
+    mateUse('selectedLabelStyle', selectedLabelStyle);
+    mateUse('unselectedLabelStyle', unselectedLabelStyle);
+    mateUse('showSelectedLabels', showSelectedLabels);
+    mateUse('showUnselectedLabels', showUnselectedLabels);
+    mateUse('type', type);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('landscapeLayout', landscapeLayout);
+    mateUse('mouseCursor', mouseCursor);
   }
 }
 
@@ -128,8 +129,8 @@ class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

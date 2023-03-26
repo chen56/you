@@ -14,8 +14,9 @@ class ElevatedButtonThemeData$Mate extends ElevatedButtonThemeData with Mate {
       /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
-    mateBuilder = (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
-    mateDeclare('style', style);
+    mateBuilder =
+        (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
+    mateUse('style', style);
   }
 }
 
@@ -41,8 +42,8 @@ class ElevatedButtonTheme$Mate extends ElevatedButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

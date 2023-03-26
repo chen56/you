@@ -29,9 +29,9 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
           localFocalPoint: p.get('localFocalPoint').build(),
           pointerCount: p.get('pointerCount').build(),
         );
-    mateDeclare('focalPoint', focalPoint);
-    mateDeclare('localFocalPoint', localFocalPoint);
-    mateDeclare('pointerCount', pointerCount);
+    mateUse('focalPoint', focalPoint);
+    mateUse('localFocalPoint', localFocalPoint);
+    mateUse('pointerCount', pointerCount);
   }
 }
 
@@ -82,14 +82,14 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
           pointerCount: p.get('pointerCount').build(),
           focalPointDelta: p.get('focalPointDelta').build(),
         );
-    mateDeclare('focalPoint', focalPoint);
-    mateDeclare('localFocalPoint', localFocalPoint);
-    mateDeclare('scale', scale);
-    mateDeclare('horizontalScale', horizontalScale);
-    mateDeclare('verticalScale', verticalScale);
-    mateDeclare('rotation', rotation);
-    mateDeclare('pointerCount', pointerCount);
-    mateDeclare('focalPointDelta', focalPointDelta);
+    mateUse('focalPoint', focalPoint);
+    mateUse('localFocalPoint', localFocalPoint);
+    mateUse('scale', scale);
+    mateUse('horizontalScale', horizontalScale);
+    mateUse('verticalScale', verticalScale);
+    mateUse('rotation', rotation);
+    mateUse('pointerCount', pointerCount);
+    mateUse('focalPointDelta', focalPointDelta);
   }
 }
 
@@ -115,9 +115,9 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate {
           scaleVelocity: p.get('scaleVelocity').build(),
           pointerCount: p.get('pointerCount').build(),
         );
-    mateDeclare('velocity', velocity);
-    mateDeclare('scaleVelocity', scaleVelocity);
-    mateDeclare('pointerCount', pointerCount);
+    mateUse('velocity', velocity);
+    mateUse('scaleVelocity', scaleVelocity);
+    mateUse('pointerCount', pointerCount);
   }
 }
 
@@ -156,13 +156,14 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate {
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
-          trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
+          trackpadScrollToScaleFactor:
+              p.get('trackpadScrollToScaleFactor').build(),
         );
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    mateDeclare('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateUse('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
   }
 }

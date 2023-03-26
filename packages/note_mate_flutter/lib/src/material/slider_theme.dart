@@ -32,9 +32,9 @@ class SliderTheme$Mate extends SliderTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }
 
@@ -169,14 +169,19 @@ class SliderThemeData$Mate extends SliderThemeData with Mate {
           inactiveTrackColor: p.get('inactiveTrackColor').build(),
           secondaryActiveTrackColor: p.get('secondaryActiveTrackColor').build(),
           disabledActiveTrackColor: p.get('disabledActiveTrackColor').build(),
-          disabledInactiveTrackColor: p.get('disabledInactiveTrackColor').build(),
-          disabledSecondaryActiveTrackColor: p.get('disabledSecondaryActiveTrackColor').build(),
+          disabledInactiveTrackColor:
+              p.get('disabledInactiveTrackColor').build(),
+          disabledSecondaryActiveTrackColor:
+              p.get('disabledSecondaryActiveTrackColor').build(),
           activeTickMarkColor: p.get('activeTickMarkColor').build(),
           inactiveTickMarkColor: p.get('inactiveTickMarkColor').build(),
-          disabledActiveTickMarkColor: p.get('disabledActiveTickMarkColor').build(),
-          disabledInactiveTickMarkColor: p.get('disabledInactiveTickMarkColor').build(),
+          disabledActiveTickMarkColor:
+              p.get('disabledActiveTickMarkColor').build(),
+          disabledInactiveTickMarkColor:
+              p.get('disabledInactiveTickMarkColor').build(),
           thumbColor: p.get('thumbColor').build(),
-          overlappingShapeStrokeColor: p.get('overlappingShapeStrokeColor').build(),
+          overlappingShapeStrokeColor:
+              p.get('overlappingShapeStrokeColor').build(),
           disabledThumbColor: p.get('disabledThumbColor').build(),
           overlayColor: p.get('overlayColor').build(),
           valueIndicatorColor: p.get('valueIndicatorColor').build(),
@@ -195,36 +200,37 @@ class SliderThemeData$Mate extends SliderThemeData with Mate {
           thumbSelector: p.get('thumbSelector').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateDeclare('trackHeight', trackHeight);
-    mateDeclare('activeTrackColor', activeTrackColor);
-    mateDeclare('inactiveTrackColor', inactiveTrackColor);
-    mateDeclare('secondaryActiveTrackColor', secondaryActiveTrackColor);
-    mateDeclare('disabledActiveTrackColor', disabledActiveTrackColor);
-    mateDeclare('disabledInactiveTrackColor', disabledInactiveTrackColor);
-    mateDeclare('disabledSecondaryActiveTrackColor', disabledSecondaryActiveTrackColor);
-    mateDeclare('activeTickMarkColor', activeTickMarkColor);
-    mateDeclare('inactiveTickMarkColor', inactiveTickMarkColor);
-    mateDeclare('disabledActiveTickMarkColor', disabledActiveTickMarkColor);
-    mateDeclare('disabledInactiveTickMarkColor', disabledInactiveTickMarkColor);
-    mateDeclare('thumbColor', thumbColor);
-    mateDeclare('overlappingShapeStrokeColor', overlappingShapeStrokeColor);
-    mateDeclare('disabledThumbColor', disabledThumbColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('valueIndicatorColor', valueIndicatorColor);
-    mateDeclare('overlayShape', overlayShape);
-    mateDeclare('tickMarkShape', tickMarkShape);
-    mateDeclare('thumbShape', thumbShape);
-    mateDeclare('trackShape', trackShape);
-    mateDeclare('valueIndicatorShape', valueIndicatorShape);
-    mateDeclare('rangeTickMarkShape', rangeTickMarkShape);
-    mateDeclare('rangeThumbShape', rangeThumbShape);
-    mateDeclare('rangeTrackShape', rangeTrackShape);
-    mateDeclare('rangeValueIndicatorShape', rangeValueIndicatorShape);
-    mateDeclare('showValueIndicator', showValueIndicator);
-    mateDeclare('valueIndicatorTextStyle', valueIndicatorTextStyle);
-    mateDeclare('minThumbSeparation', minThumbSeparation);
-    mateDeclare('thumbSelector', thumbSelector);
-    mateDeclare('mouseCursor', mouseCursor);
+    mateUse('trackHeight', trackHeight);
+    mateUse('activeTrackColor', activeTrackColor);
+    mateUse('inactiveTrackColor', inactiveTrackColor);
+    mateUse('secondaryActiveTrackColor', secondaryActiveTrackColor);
+    mateUse('disabledActiveTrackColor', disabledActiveTrackColor);
+    mateUse('disabledInactiveTrackColor', disabledInactiveTrackColor);
+    mateUse(
+        'disabledSecondaryActiveTrackColor', disabledSecondaryActiveTrackColor);
+    mateUse('activeTickMarkColor', activeTickMarkColor);
+    mateUse('inactiveTickMarkColor', inactiveTickMarkColor);
+    mateUse('disabledActiveTickMarkColor', disabledActiveTickMarkColor);
+    mateUse('disabledInactiveTickMarkColor', disabledInactiveTickMarkColor);
+    mateUse('thumbColor', thumbColor);
+    mateUse('overlappingShapeStrokeColor', overlappingShapeStrokeColor);
+    mateUse('disabledThumbColor', disabledThumbColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('valueIndicatorColor', valueIndicatorColor);
+    mateUse('overlayShape', overlayShape);
+    mateUse('tickMarkShape', tickMarkShape);
+    mateUse('thumbShape', thumbShape);
+    mateUse('trackShape', trackShape);
+    mateUse('valueIndicatorShape', valueIndicatorShape);
+    mateUse('rangeTickMarkShape', rangeTickMarkShape);
+    mateUse('rangeThumbShape', rangeThumbShape);
+    mateUse('rangeTrackShape', rangeTrackShape);
+    mateUse('rangeValueIndicatorShape', rangeValueIndicatorShape);
+    mateUse('showValueIndicator', showValueIndicator);
+    mateUse('valueIndicatorTextStyle', valueIndicatorTextStyle);
+    mateUse('minThumbSeparation', minThumbSeparation);
+    mateUse('thumbSelector', thumbSelector);
+    mateUse('mouseCursor', mouseCursor);
   }
 }
 
@@ -236,21 +242,24 @@ class RoundSliderTickMarkShape$Mate extends RoundSliderTickMarkShape with Mate {
       /// optionalParameters: {double? tickMarkRadius} , defaultValue:none
       double? tickMarkRadius})
       : super(tickMarkRadius: tickMarkRadius) {
-    mateBuilder = (p) => RoundSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
-    mateDeclare('tickMarkRadius', tickMarkRadius);
+    mateBuilder = (p) => RoundSliderTickMarkShape$Mate(
+        tickMarkRadius: p.get('tickMarkRadius').build());
+    mateUse('tickMarkRadius', tickMarkRadius);
   }
 }
 
 /// class RoundRangeSliderTickMarkShape extends RangeSliderTickMarkShape
-class RoundRangeSliderTickMarkShape$Mate extends RoundRangeSliderTickMarkShape with Mate {
+class RoundRangeSliderTickMarkShape$Mate extends RoundRangeSliderTickMarkShape
+    with Mate {
   /// RoundRangeSliderTickMarkShape RoundRangeSliderTickMarkShape({double? tickMarkRadius})
   RoundRangeSliderTickMarkShape$Mate(
       {
       /// optionalParameters: {double? tickMarkRadius} , defaultValue:none
       double? tickMarkRadius})
       : super(tickMarkRadius: tickMarkRadius) {
-    mateBuilder = (p) => RoundRangeSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
-    mateDeclare('tickMarkRadius', tickMarkRadius);
+    mateBuilder = (p) => RoundRangeSliderTickMarkShape$Mate(
+        tickMarkRadius: p.get('tickMarkRadius').build());
+    mateUse('tickMarkRadius', tickMarkRadius);
   }
 }
 
@@ -281,15 +290,16 @@ class RoundSliderThumbShape$Mate extends RoundSliderThumbShape with Mate {
           elevation: p.get('elevation').build(),
           pressedElevation: p.get('pressedElevation').build(),
         );
-    mateDeclare('enabledThumbRadius', enabledThumbRadius);
-    mateDeclare('disabledThumbRadius', disabledThumbRadius);
-    mateDeclare('elevation', elevation);
-    mateDeclare('pressedElevation', pressedElevation);
+    mateUse('enabledThumbRadius', enabledThumbRadius);
+    mateUse('disabledThumbRadius', disabledThumbRadius);
+    mateUse('elevation', elevation);
+    mateUse('pressedElevation', pressedElevation);
   }
 }
 
 /// class RoundRangeSliderThumbShape extends RangeSliderThumbShape
-class RoundRangeSliderThumbShape$Mate extends RoundRangeSliderThumbShape with Mate {
+class RoundRangeSliderThumbShape$Mate extends RoundRangeSliderThumbShape
+    with Mate {
   /// RoundRangeSliderThumbShape RoundRangeSliderThumbShape({double enabledThumbRadius = 10.0, double? disabledThumbRadius, double elevation = 1.0, double pressedElevation = 6.0})
   RoundRangeSliderThumbShape$Mate({
     /// optionalParameters: {double enabledThumbRadius = 10.0} , defaultValue:Literal
@@ -315,10 +325,10 @@ class RoundRangeSliderThumbShape$Mate extends RoundRangeSliderThumbShape with Ma
           elevation: p.get('elevation').build(),
           pressedElevation: p.get('pressedElevation').build(),
         );
-    mateDeclare('enabledThumbRadius', enabledThumbRadius);
-    mateDeclare('disabledThumbRadius', disabledThumbRadius);
-    mateDeclare('elevation', elevation);
-    mateDeclare('pressedElevation', pressedElevation);
+    mateUse('enabledThumbRadius', enabledThumbRadius);
+    mateUse('disabledThumbRadius', disabledThumbRadius);
+    mateUse('elevation', elevation);
+    mateUse('pressedElevation', pressedElevation);
   }
 }
 
@@ -330,8 +340,9 @@ class RoundSliderOverlayShape$Mate extends RoundSliderOverlayShape with Mate {
       /// optionalParameters: {double overlayRadius = 24.0} , defaultValue:Literal
       double overlayRadius = 24.0})
       : super(overlayRadius: overlayRadius) {
-    mateBuilder = (p) => RoundSliderOverlayShape$Mate(overlayRadius: p.get('overlayRadius').build());
-    mateDeclare('overlayRadius', overlayRadius);
+    mateBuilder = (p) => RoundSliderOverlayShape$Mate(
+        overlayRadius: p.get('overlayRadius').build());
+    mateUse('overlayRadius', overlayRadius);
   }
 }
 
@@ -352,8 +363,8 @@ class RangeValues$Mate extends RangeValues with Mate {
           p.get('start').value,
           p.get('end').value,
         );
-    mateDeclare('start', start);
-    mateDeclare('end', end);
+    mateUse('start', start);
+    mateUse('end', end);
   }
 }
 
@@ -374,7 +385,7 @@ class RangeLabels$Mate extends RangeLabels with Mate {
           p.get('start').value,
           p.get('end').value,
         );
-    mateDeclare('start', start);
-    mateDeclare('end', end);
+    mateUse('start', start);
+    mateUse('end', end);
   }
 }

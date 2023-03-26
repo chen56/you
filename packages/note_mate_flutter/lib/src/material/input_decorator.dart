@@ -70,16 +70,16 @@ class InputDecorator$Mate extends InputDecorator with Mate {
           isEmpty: p.get('isEmpty').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('decoration', decoration);
-    mateDeclare('baseStyle', baseStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textAlignVertical', textAlignVertical);
-    mateDeclare('isFocused', isFocused);
-    mateDeclare('isHovering', isHovering);
-    mateDeclare('expands', expands);
-    mateDeclare('isEmpty', isEmpty);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('decoration', decoration);
+    mateUse('baseStyle', baseStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('textAlignVertical', textAlignVertical);
+    mateUse('isFocused', isFocused);
+    mateUse('isHovering', isHovering);
+    mateUse('expands', expands);
+    mateUse('isEmpty', isEmpty);
+    mateUse('child', child);
   }
 }
 
@@ -340,56 +340,56 @@ class InputDecoration$Mate extends InputDecoration with Mate {
           alignLabelWithHint: p.get('alignLabelWithHint').build(),
           constraints: p.get('constraints').build(),
         );
-    mateDeclare('icon', icon);
-    mateDeclare('iconColor', iconColor);
-    mateDeclare('label', label);
-    mateDeclare('labelText', labelText);
-    mateDeclare('labelStyle', labelStyle);
-    mateDeclare('floatingLabelStyle', floatingLabelStyle);
-    mateDeclare('helperText', helperText);
-    mateDeclare('helperStyle', helperStyle);
-    mateDeclare('helperMaxLines', helperMaxLines);
-    mateDeclare('hintText', hintText);
-    mateDeclare('hintStyle', hintStyle);
-    mateDeclare('hintTextDirection', hintTextDirection);
-    mateDeclare('hintMaxLines', hintMaxLines);
-    mateDeclare('errorText', errorText);
-    mateDeclare('errorStyle', errorStyle);
-    mateDeclare('errorMaxLines', errorMaxLines);
-    mateDeclare('floatingLabelBehavior', floatingLabelBehavior);
-    mateDeclare('floatingLabelAlignment', floatingLabelAlignment);
-    mateDeclare('isCollapsed', isCollapsed);
-    mateDeclare('isDense', isDense);
-    mateDeclare('contentPadding', contentPadding);
-    mateDeclare('prefixIcon', prefixIcon);
-    mateDeclare('prefixIconConstraints', prefixIconConstraints);
-    mateDeclare('prefix', prefix);
-    mateDeclare('prefixText', prefixText);
-    mateDeclare('prefixStyle', prefixStyle);
-    mateDeclare('prefixIconColor', prefixIconColor);
-    mateDeclare('suffixIcon', suffixIcon);
-    mateDeclare('suffix', suffix);
-    mateDeclare('suffixText', suffixText);
-    mateDeclare('suffixStyle', suffixStyle);
-    mateDeclare('suffixIconColor', suffixIconColor);
-    mateDeclare('suffixIconConstraints', suffixIconConstraints);
-    mateDeclare('counter', counter);
-    mateDeclare('counterText', counterText);
-    mateDeclare('counterStyle', counterStyle);
-    mateDeclare('filled', filled);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('errorBorder', errorBorder);
-    mateDeclare('focusedBorder', focusedBorder);
-    mateDeclare('focusedErrorBorder', focusedErrorBorder);
-    mateDeclare('disabledBorder', disabledBorder);
-    mateDeclare('enabledBorder', enabledBorder);
-    mateDeclare('border', border);
-    mateDeclare('enabled', enabled);
-    mateDeclare('semanticCounterText', semanticCounterText);
-    mateDeclare('alignLabelWithHint', alignLabelWithHint);
-    mateDeclare('constraints', constraints);
+    mateUse('icon', icon);
+    mateUse('iconColor', iconColor);
+    mateUse('label', label);
+    mateUse('labelText', labelText);
+    mateUse('labelStyle', labelStyle);
+    mateUse('floatingLabelStyle', floatingLabelStyle);
+    mateUse('helperText', helperText);
+    mateUse('helperStyle', helperStyle);
+    mateUse('helperMaxLines', helperMaxLines);
+    mateUse('hintText', hintText);
+    mateUse('hintStyle', hintStyle);
+    mateUse('hintTextDirection', hintTextDirection);
+    mateUse('hintMaxLines', hintMaxLines);
+    mateUse('errorText', errorText);
+    mateUse('errorStyle', errorStyle);
+    mateUse('errorMaxLines', errorMaxLines);
+    mateUse('floatingLabelBehavior', floatingLabelBehavior);
+    mateUse('floatingLabelAlignment', floatingLabelAlignment);
+    mateUse('isCollapsed', isCollapsed);
+    mateUse('isDense', isDense);
+    mateUse('contentPadding', contentPadding);
+    mateUse('prefixIcon', prefixIcon);
+    mateUse('prefixIconConstraints', prefixIconConstraints);
+    mateUse('prefix', prefix);
+    mateUse('prefixText', prefixText);
+    mateUse('prefixStyle', prefixStyle);
+    mateUse('prefixIconColor', prefixIconColor);
+    mateUse('suffixIcon', suffixIcon);
+    mateUse('suffix', suffix);
+    mateUse('suffixText', suffixText);
+    mateUse('suffixStyle', suffixStyle);
+    mateUse('suffixIconColor', suffixIconColor);
+    mateUse('suffixIconConstraints', suffixIconConstraints);
+    mateUse('counter', counter);
+    mateUse('counterText', counterText);
+    mateUse('counterStyle', counterStyle);
+    mateUse('filled', filled);
+    mateUse('fillColor', fillColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('errorBorder', errorBorder);
+    mateUse('focusedBorder', focusedBorder);
+    mateUse('focusedErrorBorder', focusedErrorBorder);
+    mateUse('disabledBorder', disabledBorder);
+    mateUse('enabledBorder', enabledBorder);
+    mateUse('border', border);
+    mateUse('enabled', enabled);
+    mateUse('semanticCounterText', semanticCounterText);
+    mateUse('alignLabelWithHint', alignLabelWithHint);
+    mateUse('constraints', constraints);
   }
 
   /// InputDecoration InputDecoration.collapsed({required String? hintText, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, TextStyle? hintStyle, TextDirection? hintTextDirection, bool? filled = false, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? border = InputBorder.none, bool enabled = true})
@@ -452,17 +452,17 @@ class InputDecoration$Mate extends InputDecoration with Mate {
           border: p.get('border').build(),
           enabled: p.get('enabled').build(),
         );
-    mateDeclare('hintText', hintText);
-    mateDeclare('floatingLabelBehavior', floatingLabelBehavior);
-    mateDeclare('floatingLabelAlignment', floatingLabelAlignment);
-    mateDeclare('hintStyle', hintStyle);
-    mateDeclare('hintTextDirection', hintTextDirection);
-    mateDeclare('filled', filled);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('border', border);
-    mateDeclare('enabled', enabled);
+    mateUse('hintText', hintText);
+    mateUse('floatingLabelBehavior', floatingLabelBehavior);
+    mateUse('floatingLabelAlignment', floatingLabelAlignment);
+    mateUse('hintStyle', hintStyle);
+    mateUse('hintTextDirection', hintTextDirection);
+    mateUse('filled', filled);
+    mateUse('fillColor', fillColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('border', border);
+    mateUse('enabled', enabled);
   }
 }
 
@@ -633,37 +633,37 @@ class InputDecorationTheme$Mate extends InputDecorationTheme with Mate {
           alignLabelWithHint: p.get('alignLabelWithHint').build(),
           constraints: p.get('constraints').build(),
         );
-    mateDeclare('labelStyle', labelStyle);
-    mateDeclare('floatingLabelStyle', floatingLabelStyle);
-    mateDeclare('helperStyle', helperStyle);
-    mateDeclare('helperMaxLines', helperMaxLines);
-    mateDeclare('hintStyle', hintStyle);
-    mateDeclare('errorStyle', errorStyle);
-    mateDeclare('errorMaxLines', errorMaxLines);
-    mateDeclare('floatingLabelBehavior', floatingLabelBehavior);
-    mateDeclare('floatingLabelAlignment', floatingLabelAlignment);
-    mateDeclare('isDense', isDense);
-    mateDeclare('contentPadding', contentPadding);
-    mateDeclare('isCollapsed', isCollapsed);
-    mateDeclare('iconColor', iconColor);
-    mateDeclare('prefixStyle', prefixStyle);
-    mateDeclare('prefixIconColor', prefixIconColor);
-    mateDeclare('suffixStyle', suffixStyle);
-    mateDeclare('suffixIconColor', suffixIconColor);
-    mateDeclare('counterStyle', counterStyle);
-    mateDeclare('filled', filled);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('activeIndicatorBorder', activeIndicatorBorder);
-    mateDeclare('outlineBorder', outlineBorder);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('errorBorder', errorBorder);
-    mateDeclare('focusedBorder', focusedBorder);
-    mateDeclare('focusedErrorBorder', focusedErrorBorder);
-    mateDeclare('disabledBorder', disabledBorder);
-    mateDeclare('enabledBorder', enabledBorder);
-    mateDeclare('border', border);
-    mateDeclare('alignLabelWithHint', alignLabelWithHint);
-    mateDeclare('constraints', constraints);
+    mateUse('labelStyle', labelStyle);
+    mateUse('floatingLabelStyle', floatingLabelStyle);
+    mateUse('helperStyle', helperStyle);
+    mateUse('helperMaxLines', helperMaxLines);
+    mateUse('hintStyle', hintStyle);
+    mateUse('errorStyle', errorStyle);
+    mateUse('errorMaxLines', errorMaxLines);
+    mateUse('floatingLabelBehavior', floatingLabelBehavior);
+    mateUse('floatingLabelAlignment', floatingLabelAlignment);
+    mateUse('isDense', isDense);
+    mateUse('contentPadding', contentPadding);
+    mateUse('isCollapsed', isCollapsed);
+    mateUse('iconColor', iconColor);
+    mateUse('prefixStyle', prefixStyle);
+    mateUse('prefixIconColor', prefixIconColor);
+    mateUse('suffixStyle', suffixStyle);
+    mateUse('suffixIconColor', suffixIconColor);
+    mateUse('counterStyle', counterStyle);
+    mateUse('filled', filled);
+    mateUse('fillColor', fillColor);
+    mateUse('activeIndicatorBorder', activeIndicatorBorder);
+    mateUse('outlineBorder', outlineBorder);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('errorBorder', errorBorder);
+    mateUse('focusedBorder', focusedBorder);
+    mateUse('focusedErrorBorder', focusedErrorBorder);
+    mateUse('disabledBorder', disabledBorder);
+    mateUse('enabledBorder', enabledBorder);
+    mateUse('border', border);
+    mateUse('alignLabelWithHint', alignLabelWithHint);
+    mateUse('constraints', constraints);
   }
 }

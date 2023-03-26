@@ -12,8 +12,9 @@ class CachingIterable$Mate<E> extends CachingIterable<E> with Mate {
       /// requiredParameters: Iterator<E> _prefillIterator
       Iterator<E> _prefillIterator)
       : super(_prefillIterator) {
-    mateBuilder = (p) => CachingIterable$Mate<E>(p.get('_prefillIterator').value);
-    mateDeclare('_prefillIterator', _prefillIterator);
+    mateBuilder =
+        (p) => CachingIterable$Mate<E>(p.get('_prefillIterator').value);
+    mateUse('_prefillIterator', _prefillIterator);
   }
 }
 
@@ -26,6 +27,6 @@ class Factory$Mate<T> extends Factory<T> with Mate {
       ValueGetter<T> constructor)
       : super(constructor) {
     mateBuilder = (p) => Factory$Mate<T>(p.get('constructor').value);
-    mateDeclare('constructor', constructor);
+    mateUse('constructor', constructor);
   }
 }

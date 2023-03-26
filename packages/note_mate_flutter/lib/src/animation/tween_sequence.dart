@@ -14,7 +14,7 @@ class TweenSequence$Mate<T> extends TweenSequence<T> with Mate {
       List<TweenSequenceItem<T>> items)
       : super(items) {
     mateBuilder = (p) => TweenSequence$Mate<T>(p.get('items').value);
-    mateDeclare('items', items);
+    mateUse('items', items);
   }
 }
 
@@ -27,7 +27,7 @@ class FlippedTweenSequence$Mate extends FlippedTweenSequence with Mate {
       List<TweenSequenceItem<double>> items)
       : super(items) {
     mateBuilder = (p) => FlippedTweenSequence$Mate(p.get('items').value);
-    mateDeclare('items', items);
+    mateUse('items', items);
   }
 }
 
@@ -48,7 +48,7 @@ class TweenSequenceItem$Mate<T> extends TweenSequenceItem<T> with Mate {
           tween: p.get('tween').build(),
           weight: p.get('weight').build(),
         );
-    mateDeclare('tween', tween);
-    mateDeclare('weight', weight);
+    mateUse('tween', tween);
+    mateUse('weight', weight);
   }
 }

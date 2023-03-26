@@ -33,10 +33,10 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
           selectionColor: p.get('selectionColor').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('selectionColor', selectionColor);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('cursorColor', cursorColor);
+    mateUse('selectionColor', selectionColor);
+    mateUse('child', child);
   }
 
   /// DefaultSelectionStyle DefaultSelectionStyle.fallback({Key? key})
@@ -45,7 +45,8 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
       /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super.fallback(key: key) {
-    mateBuilder = (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
-    mateDeclare('key', key);
+    mateBuilder =
+        (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
+    mateUse('key', key);
   }
 }

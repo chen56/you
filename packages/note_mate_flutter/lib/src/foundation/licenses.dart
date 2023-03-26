@@ -21,13 +21,14 @@ class LicenseParagraph$Mate extends LicenseParagraph with Mate {
           p.get('text').value,
           p.get('indent').value,
         );
-    mateDeclare('text', text);
-    mateDeclare('indent', indent);
+    mateUse('text', text);
+    mateUse('indent', indent);
   }
 }
 
 /// class LicenseEntryWithLineBreaks extends LicenseEntry
-class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks with Mate {
+class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks
+    with Mate {
   /// LicenseEntryWithLineBreaks LicenseEntryWithLineBreaks(List<String> packages, String text)
   LicenseEntryWithLineBreaks$Mate(
     /// requiredParameters: List<String> packages
@@ -43,7 +44,7 @@ class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks with Ma
           p.get('packages').value,
           p.get('text').value,
         );
-    mateDeclare('packages', packages);
-    mateDeclare('text', text);
+    mateUse('packages', packages);
+    mateUse('text', text);
   }
 }

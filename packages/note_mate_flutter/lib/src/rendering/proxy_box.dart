@@ -31,7 +31,7 @@ class RenderProxyBox$Mate extends RenderProxyBox with Mate {
       RenderBox? child)
       : super(child) {
     mateBuilder = (p) => RenderProxyBox$Mate(p.get('child').value);
-    mateDeclare('child', child);
+    mateUse('child', child);
   }
 }
 
@@ -52,8 +52,8 @@ class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate {
           child: p.get('child').build(),
           additionalConstraints: p.get('additionalConstraints').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('additionalConstraints', additionalConstraints);
+    mateUse('child', child);
+    mateUse('additionalConstraints', additionalConstraints);
   }
 }
 
@@ -79,9 +79,9 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate {
           maxWidth: p.get('maxWidth').build(),
           maxHeight: p.get('maxHeight').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('maxWidth', maxWidth);
-    mateDeclare('maxHeight', maxHeight);
+    mateUse('child', child);
+    mateUse('maxWidth', maxWidth);
+    mateUse('maxHeight', maxHeight);
   }
 }
 
@@ -102,8 +102,8 @@ class RenderAspectRatio$Mate extends RenderAspectRatio with Mate {
           child: p.get('child').build(),
           aspectRatio: p.get('aspectRatio').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('aspectRatio', aspectRatio);
+    mateUse('child', child);
+    mateUse('aspectRatio', aspectRatio);
   }
 }
 
@@ -129,9 +129,9 @@ class RenderIntrinsicWidth$Mate extends RenderIntrinsicWidth with Mate {
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('stepWidth', stepWidth);
-    mateDeclare('stepHeight', stepHeight);
-    mateDeclare('child', child);
+    mateUse('stepWidth', stepWidth);
+    mateUse('stepHeight', stepHeight);
+    mateUse('child', child);
   }
 }
 
@@ -143,8 +143,9 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate {
       /// optionalParameters: {RenderBox? child} , defaultValue:none
       RenderBox? child})
       : super(child: child) {
-    mateBuilder = (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
-    mateDeclare('child', child);
+    mateBuilder =
+        (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
+    mateUse('child', child);
   }
 }
 
@@ -170,9 +171,9 @@ class RenderOpacity$Mate extends RenderOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('opacity', opacity);
-    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateDeclare('child', child);
+    mateUse('opacity', opacity);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateUse('child', child);
   }
 }
 
@@ -198,9 +199,9 @@ class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('opacity', opacity);
-    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateDeclare('child', child);
+    mateUse('opacity', opacity);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateUse('child', child);
   }
 }
 
@@ -226,9 +227,9 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate {
           shaderCallback: p.get('shaderCallback').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('shaderCallback', shaderCallback);
-    mateDeclare('blendMode', blendMode);
+    mateUse('child', child);
+    mateUse('shaderCallback', shaderCallback);
+    mateUse('blendMode', blendMode);
   }
 }
 
@@ -254,9 +255,9 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate {
           filter: p.get('filter').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('filter', filter);
-    mateDeclare('blendMode', blendMode);
+    mateUse('child', child);
+    mateUse('filter', filter);
+    mateUse('blendMode', blendMode);
   }
 }
 
@@ -277,8 +278,8 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate {
           shape: p.get('shape').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateDeclare('shape', shape);
-    mateDeclare('textDirection', textDirection);
+    mateUse('shape', shape);
+    mateUse('textDirection', textDirection);
   }
 }
 
@@ -304,9 +305,9 @@ class RenderClipRect$Mate extends RenderClipRect with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('clipper', clipper);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('child', child);
+    mateUse('clipper', clipper);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -342,11 +343,11 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('clipper', clipper);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('textDirection', textDirection);
+    mateUse('child', child);
+    mateUse('borderRadius', borderRadius);
+    mateUse('clipper', clipper);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('textDirection', textDirection);
   }
 }
 
@@ -372,9 +373,9 @@ class RenderClipOval$Mate extends RenderClipOval with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('clipper', clipper);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('child', child);
+    mateUse('clipper', clipper);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -400,9 +401,9 @@ class RenderClipPath$Mate extends RenderClipPath with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('clipper', clipper);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('child', child);
+    mateUse('clipper', clipper);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -448,13 +449,13 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('elevation', elevation);
-    mateDeclare('color', color);
-    mateDeclare('shadowColor', shadowColor);
+    mateUse('child', child);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('borderRadius', borderRadius);
+    mateUse('elevation', elevation);
+    mateUse('color', color);
+    mateUse('shadowColor', shadowColor);
   }
 }
 
@@ -495,12 +496,12 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('clipper', clipper);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('elevation', elevation);
-    mateDeclare('color', color);
-    mateDeclare('shadowColor', shadowColor);
+    mateUse('child', child);
+    mateUse('clipper', clipper);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('elevation', elevation);
+    mateUse('color', color);
+    mateUse('shadowColor', shadowColor);
   }
 }
 
@@ -531,10 +532,10 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate {
           configuration: p.get('configuration').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('decoration', decoration);
-    mateDeclare('position', position);
-    mateDeclare('configuration', configuration);
-    mateDeclare('child', child);
+    mateUse('decoration', decoration);
+    mateUse('position', position);
+    mateUse('configuration', configuration);
+    mateUse('child', child);
   }
 }
 
@@ -580,13 +581,13 @@ class RenderTransform$Mate extends RenderTransform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('transform', transform);
-    mateDeclare('origin', origin);
-    mateDeclare('alignment', alignment);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('transformHitTests', transformHitTests);
-    mateDeclare('filterQuality', filterQuality);
-    mateDeclare('child', child);
+    mateUse('transform', transform);
+    mateUse('origin', origin);
+    mateUse('alignment', alignment);
+    mateUse('textDirection', textDirection);
+    mateUse('transformHitTests', transformHitTests);
+    mateUse('filterQuality', filterQuality);
+    mateUse('child', child);
   }
 }
 
@@ -622,16 +623,17 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('fit', fit);
-    mateDeclare('alignment', alignment);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('child', child);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('fit', fit);
+    mateUse('alignment', alignment);
+    mateUse('textDirection', textDirection);
+    mateUse('child', child);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
 /// class RenderFractionalTranslation extends RenderProxyBox
-class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with Mate {
+class RenderFractionalTranslation$Mate extends RenderFractionalTranslation
+    with Mate {
   /// RenderFractionalTranslation RenderFractionalTranslation({required Offset translation, bool transformHitTests = true, RenderBox? child})
   RenderFractionalTranslation$Mate({
     /// optionalParameters: {required Offset translation} , defaultValue:none
@@ -652,9 +654,9 @@ class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with 
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('translation', translation);
-    mateDeclare('transformHitTests', transformHitTests);
-    mateDeclare('child', child);
+    mateUse('translation', translation);
+    mateUse('transformHitTests', transformHitTests);
+    mateUse('child', child);
   }
 }
 
@@ -720,17 +722,17 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('onPointerDown', onPointerDown);
-    mateDeclare('onPointerMove', onPointerMove);
-    mateDeclare('onPointerUp', onPointerUp);
-    mateDeclare('onPointerHover', onPointerHover);
-    mateDeclare('onPointerCancel', onPointerCancel);
-    mateDeclare('onPointerPanZoomStart', onPointerPanZoomStart);
-    mateDeclare('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
-    mateDeclare('onPointerPanZoomEnd', onPointerPanZoomEnd);
-    mateDeclare('onPointerSignal', onPointerSignal);
-    mateDeclare('behavior', behavior);
-    mateDeclare('child', child);
+    mateUse('onPointerDown', onPointerDown);
+    mateUse('onPointerMove', onPointerMove);
+    mateUse('onPointerUp', onPointerUp);
+    mateUse('onPointerHover', onPointerHover);
+    mateUse('onPointerCancel', onPointerCancel);
+    mateUse('onPointerPanZoomStart', onPointerPanZoomStart);
+    mateUse('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
+    mateUse('onPointerPanZoomEnd', onPointerPanZoomEnd);
+    mateUse('onPointerSignal', onPointerSignal);
+    mateUse('behavior', behavior);
+    mateUse('child', child);
   }
 }
 
@@ -781,14 +783,14 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate {
           child: p.get('child').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
         );
-    mateDeclare('onEnter', onEnter);
-    mateDeclare('onHover', onHover);
-    mateDeclare('onExit', onExit);
-    mateDeclare('cursor', cursor);
-    mateDeclare('validForMouseTracker', validForMouseTracker);
-    mateDeclare('opaque', opaque);
-    mateDeclare('child', child);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
+    mateUse('onEnter', onEnter);
+    mateUse('onHover', onHover);
+    mateUse('onExit', onExit);
+    mateUse('cursor', cursor);
+    mateUse('validForMouseTracker', validForMouseTracker);
+    mateUse('opaque', opaque);
+    mateUse('child', child);
+    mateUse('hitTestBehavior', hitTestBehavior);
   }
 }
 
@@ -800,8 +802,9 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate {
       /// optionalParameters: {RenderBox? child} , defaultValue:none
       RenderBox? child})
       : super(child: child) {
-    mateBuilder = (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
-    mateDeclare('child', child);
+    mateBuilder =
+        (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
+    mateUse('child', child);
   }
 }
 
@@ -827,9 +830,9 @@ class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate {
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('ignoring', ignoring);
-    mateDeclare('ignoringSemantics', ignoringSemantics);
+    mateUse('child', child);
+    mateUse('ignoring', ignoring);
+    mateUse('ignoringSemantics', ignoringSemantics);
   }
 }
 
@@ -850,8 +853,8 @@ class RenderOffstage$Mate extends RenderOffstage with Mate {
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('offstage', offstage);
-    mateDeclare('child', child);
+    mateUse('offstage', offstage);
+    mateUse('child', child);
   }
 }
 
@@ -877,9 +880,9 @@ class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate {
           absorbing: p.get('absorbing').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('absorbing', absorbing);
-    mateDeclare('ignoringSemantics', ignoringSemantics);
+    mateUse('child', child);
+    mateUse('absorbing', absorbing);
+    mateUse('ignoringSemantics', ignoringSemantics);
   }
 }
 
@@ -905,14 +908,15 @@ class RenderMetaData$Mate extends RenderMetaData with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('metaData', metaData);
-    mateDeclare('behavior', behavior);
-    mateDeclare('child', child);
+    mateUse('metaData', metaData);
+    mateUse('behavior', behavior);
+    mateUse('child', child);
   }
 }
 
 /// class RenderSemanticsGestureHandler extends RenderProxyBoxWithHitTestBehavior
-class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler with Mate {
+class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
+    with Mate {
   /// RenderSemanticsGestureHandler RenderSemanticsGestureHandler({RenderBox? child, void Function()? onTap, void Function()? onLongPress, void Function(DragUpdateDetails)? onHorizontalDragUpdate, void Function(DragUpdateDetails)? onVerticalDragUpdate, double scrollFactor = 0.8, HitTestBehavior behavior = HitTestBehavior.deferToChild})
   RenderSemanticsGestureHandler$Mate({
     /// optionalParameters: {RenderBox? child} , defaultValue:none
@@ -953,18 +957,19 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler w
           scrollFactor: p.get('scrollFactor').build(),
           behavior: p.get('behavior').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('onTap', onTap);
-    mateDeclare('onLongPress', onLongPress);
-    mateDeclare('onHorizontalDragUpdate', onHorizontalDragUpdate);
-    mateDeclare('onVerticalDragUpdate', onVerticalDragUpdate);
-    mateDeclare('scrollFactor', scrollFactor);
-    mateDeclare('behavior', behavior);
+    mateUse('child', child);
+    mateUse('onTap', onTap);
+    mateUse('onLongPress', onLongPress);
+    mateUse('onHorizontalDragUpdate', onHorizontalDragUpdate);
+    mateUse('onVerticalDragUpdate', onVerticalDragUpdate);
+    mateUse('scrollFactor', scrollFactor);
+    mateUse('behavior', behavior);
   }
 }
 
 /// class RenderSemanticsAnnotations extends RenderProxyBox
-class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Mate {
+class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations
+    with Mate {
   /// RenderSemanticsAnnotations RenderSemanticsAnnotations({RenderBox? child, required SemanticsProperties properties, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, TextDirection? textDirection})
   RenderSemanticsAnnotations$Mate({
     /// optionalParameters: {RenderBox? child} , defaultValue:none
@@ -1000,12 +1005,12 @@ class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Ma
           excludeSemantics: p.get('excludeSemantics').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('properties', properties);
-    mateDeclare('container', container);
-    mateDeclare('explicitChildNodes', explicitChildNodes);
-    mateDeclare('excludeSemantics', excludeSemantics);
-    mateDeclare('textDirection', textDirection);
+    mateUse('child', child);
+    mateUse('properties', properties);
+    mateUse('container', container);
+    mateUse('explicitChildNodes', explicitChildNodes);
+    mateUse('excludeSemantics', excludeSemantics);
+    mateUse('textDirection', textDirection);
   }
 }
 
@@ -1026,8 +1031,8 @@ class RenderBlockSemantics$Mate extends RenderBlockSemantics with Mate {
           child: p.get('child').build(),
           blocking: p.get('blocking').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('blocking', blocking);
+    mateUse('child', child);
+    mateUse('blocking', blocking);
   }
 }
 
@@ -1039,8 +1044,9 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate {
       /// optionalParameters: {RenderBox? child} , defaultValue:none
       RenderBox? child})
       : super(child: child) {
-    mateBuilder = (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
-    mateDeclare('child', child);
+    mateBuilder =
+        (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
+    mateUse('child', child);
   }
 }
 
@@ -1061,8 +1067,8 @@ class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate {
           child: p.get('child').build(),
           excluding: p.get('excluding').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('excluding', excluding);
+    mateUse('child', child);
+    mateUse('excluding', excluding);
   }
 }
 
@@ -1083,8 +1089,8 @@ class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate {
           child: p.get('child').build(),
           index: p.get('index').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('index', index);
+    mateUse('child', child);
+    mateUse('index', index);
   }
 }
 
@@ -1105,8 +1111,8 @@ class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate {
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('link', link);
-    mateDeclare('child', child);
+    mateUse('link', link);
+    mateUse('child', child);
   }
 }
 
@@ -1147,17 +1153,18 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('link', link);
-    mateDeclare('showWhenUnlinked', showWhenUnlinked);
-    mateDeclare('offset', offset);
-    mateDeclare('leaderAnchor', leaderAnchor);
-    mateDeclare('followerAnchor', followerAnchor);
-    mateDeclare('child', child);
+    mateUse('link', link);
+    mateUse('showWhenUnlinked', showWhenUnlinked);
+    mateUse('offset', offset);
+    mateUse('leaderAnchor', leaderAnchor);
+    mateUse('followerAnchor', followerAnchor);
+    mateUse('child', child);
   }
 }
 
 /// class RenderAnnotatedRegion<T extends Object> extends RenderProxyBox
-class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion<T> with Mate {
+class RenderAnnotatedRegion$Mate<T extends Object>
+    extends RenderAnnotatedRegion<T> with Mate {
   /// RenderAnnotatedRegion<T> RenderAnnotatedRegion({required T value, required bool sized, RenderBox? child})
   RenderAnnotatedRegion$Mate({
     /// optionalParameters: {required T value} , defaultValue:none
@@ -1178,8 +1185,8 @@ class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion
           sized: p.get('sized').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('value', value);
-    mateDeclare('sized', sized);
-    mateDeclare('child', child);
+    mateUse('value', value);
+    mateUse('sized', sized);
+    mateUse('child', child);
   }
 }

@@ -107,23 +107,23 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('scrollBehavior', scrollBehavior);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('center', center);
-    mateDeclare('anchor', anchor);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('slivers', slivers);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('scrollBehavior', scrollBehavior);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('center', center);
+    mateUse('anchor', anchor);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('slivers', slivers);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -234,26 +234,26 @@ class ListView$Mate extends ListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('children', children);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('itemExtent', itemExtent);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('children', children);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -371,28 +371,28 @@ class ListView$Mate extends ListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('findChildIndexCallback', findChildIndexCallback);
-    mateDeclare('itemCount', itemCount);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('itemExtent', itemExtent);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('findChildIndexCallback', findChildIndexCallback);
+    mateUse('itemCount', itemCount);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.separated({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required Widget Function(BuildContext, int) separatorBuilder, required int itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -500,26 +500,26 @@ class ListView$Mate extends ListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('findChildIndexCallback', findChildIndexCallback);
-    mateDeclare('separatorBuilder', separatorBuilder);
-    mateDeclare('itemCount', itemCount);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('findChildIndexCallback', findChildIndexCallback);
+    mateUse('separatorBuilder', separatorBuilder);
+    mateUse('itemCount', itemCount);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -612,23 +612,23 @@ class ListView$Mate extends ListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('childrenDelegate', childrenDelegate);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('itemExtent', itemExtent);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('childrenDelegate', childrenDelegate);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -734,25 +734,25 @@ class GridView$Mate extends GridView with Mate {
           keyboardDismissBehavior: p.get('keyboardDismissBehavior').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('gridDelegate', gridDelegate);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('children', children);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('gridDelegate', gridDelegate);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('children', children);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
   }
 
   /// GridView GridView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -865,27 +865,27 @@ class GridView$Mate extends GridView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('gridDelegate', gridDelegate);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('findChildIndexCallback', findChildIndexCallback);
-    mateDeclare('itemCount', itemCount);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('gridDelegate', gridDelegate);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('findChildIndexCallback', findChildIndexCallback);
+    mateUse('itemCount', itemCount);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -973,22 +973,22 @@ class GridView$Mate extends GridView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('gridDelegate', gridDelegate);
-    mateDeclare('childrenDelegate', childrenDelegate);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('gridDelegate', gridDelegate);
+    mateUse('childrenDelegate', childrenDelegate);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.count({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required int crossAxisCount, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -1106,28 +1106,28 @@ class GridView$Mate extends GridView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('crossAxisCount', crossAxisCount);
-    mateDeclare('mainAxisSpacing', mainAxisSpacing);
-    mateDeclare('crossAxisSpacing', crossAxisSpacing);
-    mateDeclare('childAspectRatio', childAspectRatio);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('children', children);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('crossAxisCount', crossAxisCount);
+    mateUse('mainAxisSpacing', mainAxisSpacing);
+    mateUse('crossAxisSpacing', crossAxisSpacing);
+    mateUse('childAspectRatio', childAspectRatio);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('children', children);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.extent({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -1245,27 +1245,27 @@ class GridView$Mate extends GridView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('padding', padding);
-    mateDeclare('maxCrossAxisExtent', maxCrossAxisExtent);
-    mateDeclare('mainAxisSpacing', mainAxisSpacing);
-    mateDeclare('crossAxisSpacing', crossAxisSpacing);
-    mateDeclare('childAspectRatio', childAspectRatio);
-    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
-    mateDeclare('addSemanticIndexes', addSemanticIndexes);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('children', children);
-    mateDeclare('semanticChildCount', semanticChildCount);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('padding', padding);
+    mateUse('maxCrossAxisExtent', maxCrossAxisExtent);
+    mateUse('mainAxisSpacing', mainAxisSpacing);
+    mateUse('crossAxisSpacing', crossAxisSpacing);
+    mateUse('childAspectRatio', childAspectRatio);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries);
+    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('children', children);
+    mateUse('semanticChildCount', semanticChildCount);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

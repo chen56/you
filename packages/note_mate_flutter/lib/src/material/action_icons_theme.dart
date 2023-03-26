@@ -30,12 +30,13 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
           backButtonIconBuilder: p.get('backButtonIconBuilder').build(),
           closeButtonIconBuilder: p.get('closeButtonIconBuilder').build(),
           drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').build(),
-          endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').build(),
+          endDrawerButtonIconBuilder:
+              p.get('endDrawerButtonIconBuilder').build(),
         );
-    mateDeclare('backButtonIconBuilder', backButtonIconBuilder);
-    mateDeclare('closeButtonIconBuilder', closeButtonIconBuilder);
-    mateDeclare('drawerButtonIconBuilder', drawerButtonIconBuilder);
-    mateDeclare('endDrawerButtonIconBuilder', endDrawerButtonIconBuilder);
+    mateUse('backButtonIconBuilder', backButtonIconBuilder);
+    mateUse('closeButtonIconBuilder', closeButtonIconBuilder);
+    mateUse('drawerButtonIconBuilder', drawerButtonIconBuilder);
+    mateUse('endDrawerButtonIconBuilder', endDrawerButtonIconBuilder);
   }
 }
 
@@ -61,8 +62,8 @@ class ActionIconTheme$Mate extends ActionIconTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

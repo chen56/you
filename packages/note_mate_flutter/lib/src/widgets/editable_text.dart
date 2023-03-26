@@ -33,8 +33,9 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       /// optionalParameters: {String? text} , defaultValue:none
       String? text})
       : super(text: text) {
-    mateBuilder = (p) => TextEditingController$Mate(text: p.get('text').build());
-    mateDeclare('text', text);
+    mateBuilder =
+        (p) => TextEditingController$Mate(text: p.get('text').build());
+    mateUse('text', text);
   }
 
   /// TextEditingController TextEditingController.fromValue(TextEditingValue? value)
@@ -43,8 +44,9 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       /// requiredParameters: TextEditingValue? value
       TextEditingValue? value)
       : super.fromValue(value) {
-    mateBuilder = (p) => TextEditingController$Mate.fromValue(p.get('value').value);
-    mateDeclare('value', value);
+    mateBuilder =
+        (p) => TextEditingController$Mate.fromValue(p.get('value').value);
+    mateUse('value', value);
   }
 }
 
@@ -75,15 +77,16 @@ class ToolbarOptions$Mate extends ToolbarOptions with Mate {
           paste: p.get('paste').build(),
           selectAll: p.get('selectAll').build(),
         );
-    mateDeclare('copy', copy);
-    mateDeclare('cut', cut);
-    mateDeclare('paste', paste);
-    mateDeclare('selectAll', selectAll);
+    mateUse('copy', copy);
+    mateUse('cut', cut);
+    mateUse('paste', paste);
+    mateUse('selectAll', selectAll);
   }
 }
 
 /// class ContentInsertionConfiguration
-class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration with Mate {
+class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration
+    with Mate {
   /// ContentInsertionConfiguration ContentInsertionConfiguration({required void Function(KeyboardInsertedContent) onContentInserted, List<String> allowedMimeTypes = kDefaultContentInsertionMimeTypes})
   ContentInsertionConfiguration$Mate({
     /// optionalParameters: {required void Function(KeyboardInsertedContent) onContentInserted} , defaultValue:none
@@ -99,8 +102,8 @@ class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration w
           onContentInserted: p.get('onContentInserted').build(),
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
         );
-    mateDeclare('onContentInserted', onContentInserted);
-    mateDeclare('allowedMimeTypes', allowedMimeTypes);
+    mateUse('onContentInserted', onContentInserted);
+    mateUse('allowedMimeTypes', allowedMimeTypes);
   }
 }
 
@@ -435,89 +438,93 @@ class EditableText$Mate extends EditableText with Mate {
           scrollPadding: p.get('scrollPadding').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
-          autocorrectionTextRectColor: p.get('autocorrectionTextRectColor').build(),
+          autocorrectionTextRectColor:
+              p.get('autocorrectionTextRectColor').build(),
           autofillHints: p.get('autofillHints').build(),
           autofillClient: p.get('autofillClient').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
-          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
+          contentInsertionConfiguration:
+              p.get('contentInsertionConfiguration').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('readOnly', readOnly);
-    mateDeclare('obscuringCharacter', obscuringCharacter);
-    mateDeclare('obscureText', obscureText);
-    mateDeclare('autocorrect', autocorrect);
-    mateDeclare('smartDashesType', smartDashesType);
-    mateDeclare('smartQuotesType', smartQuotesType);
-    mateDeclare('enableSuggestions', enableSuggestions);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('backgroundCursorColor', backgroundCursorColor);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('locale', locale);
-    mateDeclare('textScaleFactor', textScaleFactor);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('minLines', minLines);
-    mateDeclare('expands', expands);
-    mateDeclare('forceLine', forceLine);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('textWidthBasis', textWidthBasis);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('showCursor', showCursor);
-    mateDeclare('showSelectionHandles', showSelectionHandles);
-    mateDeclare('selectionColor', selectionColor);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('keyboardType', keyboardType);
-    mateDeclare('textInputAction', textInputAction);
-    mateDeclare('textCapitalization', textCapitalization);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onEditingComplete', onEditingComplete);
-    mateDeclare('onSubmitted', onSubmitted);
-    mateDeclare('onAppPrivateCommand', onAppPrivateCommand);
-    mateDeclare('onSelectionChanged', onSelectionChanged);
-    mateDeclare('onSelectionHandleTapped', onSelectionHandleTapped);
-    mateDeclare('onTapOutside', onTapOutside);
-    mateDeclare('inputFormatters', inputFormatters);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('rendererIgnoresPointer', rendererIgnoresPointer);
-    mateDeclare('cursorWidth', cursorWidth);
-    mateDeclare('cursorHeight', cursorHeight);
-    mateDeclare('cursorRadius', cursorRadius);
-    mateDeclare('cursorOpacityAnimates', cursorOpacityAnimates);
-    mateDeclare('cursorOffset', cursorOffset);
-    mateDeclare('paintCursorAboveText', paintCursorAboveText);
-    mateDeclare('selectionHeightStyle', selectionHeightStyle);
-    mateDeclare('selectionWidthStyle', selectionWidthStyle);
-    mateDeclare('scrollPadding', scrollPadding);
-    mateDeclare('keyboardAppearance', keyboardAppearance);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('scrollPhysics', scrollPhysics);
-    mateDeclare('autocorrectionTextRectColor', autocorrectionTextRectColor);
-    mateDeclare('autofillHints', autofillHints);
-    mateDeclare('autofillClient', autofillClient);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('scrollBehavior', scrollBehavior);
-    mateDeclare('scribbleEnabled', scribbleEnabled);
-    mateDeclare('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    mateDeclare('contentInsertionConfiguration', contentInsertionConfiguration);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
-    mateDeclare('spellCheckConfiguration', spellCheckConfiguration);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('focusNode', focusNode);
+    mateUse('readOnly', readOnly);
+    mateUse('obscuringCharacter', obscuringCharacter);
+    mateUse('obscureText', obscureText);
+    mateUse('autocorrect', autocorrect);
+    mateUse('smartDashesType', smartDashesType);
+    mateUse('smartQuotesType', smartQuotesType);
+    mateUse('enableSuggestions', enableSuggestions);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('cursorColor', cursorColor);
+    mateUse('backgroundCursorColor', backgroundCursorColor);
+    mateUse('textAlign', textAlign);
+    mateUse('textDirection', textDirection);
+    mateUse('locale', locale);
+    mateUse('textScaleFactor', textScaleFactor);
+    mateUse('maxLines', maxLines);
+    mateUse('minLines', minLines);
+    mateUse('expands', expands);
+    mateUse('forceLine', forceLine);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('textWidthBasis', textWidthBasis);
+    mateUse('autofocus', autofocus);
+    mateUse('showCursor', showCursor);
+    mateUse('showSelectionHandles', showSelectionHandles);
+    mateUse('selectionColor', selectionColor);
+    mateUse('selectionControls', selectionControls);
+    mateUse('keyboardType', keyboardType);
+    mateUse('textInputAction', textInputAction);
+    mateUse('textCapitalization', textCapitalization);
+    mateUse('onChanged', onChanged);
+    mateUse('onEditingComplete', onEditingComplete);
+    mateUse('onSubmitted', onSubmitted);
+    mateUse('onAppPrivateCommand', onAppPrivateCommand);
+    mateUse('onSelectionChanged', onSelectionChanged);
+    mateUse('onSelectionHandleTapped', onSelectionHandleTapped);
+    mateUse('onTapOutside', onTapOutside);
+    mateUse('inputFormatters', inputFormatters);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('rendererIgnoresPointer', rendererIgnoresPointer);
+    mateUse('cursorWidth', cursorWidth);
+    mateUse('cursorHeight', cursorHeight);
+    mateUse('cursorRadius', cursorRadius);
+    mateUse('cursorOpacityAnimates', cursorOpacityAnimates);
+    mateUse('cursorOffset', cursorOffset);
+    mateUse('paintCursorAboveText', paintCursorAboveText);
+    mateUse('selectionHeightStyle', selectionHeightStyle);
+    mateUse('selectionWidthStyle', selectionWidthStyle);
+    mateUse('scrollPadding', scrollPadding);
+    mateUse('keyboardAppearance', keyboardAppearance);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('scrollController', scrollController);
+    mateUse('scrollPhysics', scrollPhysics);
+    mateUse('autocorrectionTextRectColor', autocorrectionTextRectColor);
+    mateUse('autofillHints', autofillHints);
+    mateUse('autofillClient', autofillClient);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('scrollBehavior', scrollBehavior);
+    mateUse('scribbleEnabled', scribbleEnabled);
+    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
+    mateUse('contentInsertionConfiguration', contentInsertionConfiguration);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
+    mateUse('spellCheckConfiguration', spellCheckConfiguration);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
   }
 }

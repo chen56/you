@@ -63,21 +63,22 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
           controller: p.get('controller').build(),
           builder: p.get('builder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('initialChildSize', initialChildSize);
-    mateDeclare('minChildSize', minChildSize);
-    mateDeclare('maxChildSize', maxChildSize);
-    mateDeclare('expand', expand);
-    mateDeclare('snap', snap);
-    mateDeclare('snapSizes', snapSizes);
-    mateDeclare('snapAnimationDuration', snapAnimationDuration);
-    mateDeclare('controller', controller);
-    mateDeclare('builder', builder);
+    mateUse('key', key);
+    mateUse('initialChildSize', initialChildSize);
+    mateUse('minChildSize', minChildSize);
+    mateUse('maxChildSize', maxChildSize);
+    mateUse('expand', expand);
+    mateUse('snap', snap);
+    mateUse('snapSizes', snapSizes);
+    mateUse('snapAnimationDuration', snapAnimationDuration);
+    mateUse('controller', controller);
+    mateUse('builder', builder);
   }
 }
 
 /// class DraggableScrollableNotification extends Notification with ViewportNotificationMixin
-class DraggableScrollableNotification$Mate extends DraggableScrollableNotification with Mate {
+class DraggableScrollableNotification$Mate
+    extends DraggableScrollableNotification with Mate {
   /// DraggableScrollableNotification DraggableScrollableNotification({required double extent, required double minExtent, required double maxExtent, required double initialExtent, required BuildContext context})
   DraggableScrollableNotification$Mate({
     /// optionalParameters: {required double extent} , defaultValue:none
@@ -108,16 +109,17 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
           initialExtent: p.get('initialExtent').build(),
           context: p.get('context').build(),
         );
-    mateDeclare('extent', extent);
-    mateDeclare('minExtent', minExtent);
-    mateDeclare('maxExtent', maxExtent);
-    mateDeclare('initialExtent', initialExtent);
-    mateDeclare('context', context);
+    mateUse('extent', extent);
+    mateUse('minExtent', minExtent);
+    mateUse('maxExtent', maxExtent);
+    mateUse('initialExtent', initialExtent);
+    mateUse('context', context);
   }
 }
 
 /// class DraggableScrollableActuator extends StatelessWidget
-class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with Mate {
+class DraggableScrollableActuator$Mate extends DraggableScrollableActuator
+    with Mate {
   /// DraggableScrollableActuator DraggableScrollableActuator({Key? key, required Widget child})
   DraggableScrollableActuator$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -133,7 +135,7 @@ class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with 
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('child', child);
   }
 }

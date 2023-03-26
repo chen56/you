@@ -98,21 +98,21 @@ class Radio$Mate<T> extends Radio<T> with Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('groupValue', groupValue);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('toggleable', toggleable);
-    mateDeclare('activeColor', activeColor);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('splashRadius', splashRadius);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('groupValue', groupValue);
+    mateUse('onChanged', onChanged);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('toggleable', toggleable);
+    mateUse('activeColor', activeColor);
+    mateUse('fillColor', fillColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('splashRadius', splashRadius);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('visualDensity', visualDensity);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
   }
 }

@@ -47,12 +47,12 @@ class TableBorder$Mate extends TableBorder with Mate {
           verticalInside: p.get('verticalInside').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    mateDeclare('top', top);
-    mateDeclare('right', right);
-    mateDeclare('bottom', bottom);
-    mateDeclare('left', left);
-    mateDeclare('horizontalInside', horizontalInside);
-    mateDeclare('verticalInside', verticalInside);
-    mateDeclare('borderRadius', borderRadius);
+    mateUse('top', top);
+    mateUse('right', right);
+    mateUse('bottom', bottom);
+    mateUse('left', left);
+    mateUse('horizontalInside', horizontalInside);
+    mateUse('verticalInside', verticalInside);
+    mateUse('borderRadius', borderRadius);
   }
 }

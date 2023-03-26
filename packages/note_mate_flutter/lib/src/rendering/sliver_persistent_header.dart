@@ -7,7 +7,8 @@ import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/animation/curves.dart';
 
 /// class OverScrollHeaderStretchConfiguration
-class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchConfiguration with Mate {
+class OverScrollHeaderStretchConfiguration$Mate
+    extends OverScrollHeaderStretchConfiguration with Mate {
   /// OverScrollHeaderStretchConfiguration OverScrollHeaderStretchConfiguration({double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger})
   OverScrollHeaderStretchConfiguration$Mate({
     /// optionalParameters: {double stretchTriggerOffset = 100.0} , defaultValue:Literal
@@ -23,13 +24,14 @@ class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchC
           stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
           onStretchTrigger: p.get('onStretchTrigger').build(),
         );
-    mateDeclare('stretchTriggerOffset', stretchTriggerOffset);
-    mateDeclare('onStretchTrigger', onStretchTrigger);
+    mateUse('stretchTriggerOffset', stretchTriggerOffset);
+    mateUse('onStretchTrigger', onStretchTrigger);
   }
 }
 
 /// class PersistentHeaderShowOnScreenConfiguration
-class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderShowOnScreenConfiguration with Mate {
+class PersistentHeaderShowOnScreenConfiguration$Mate
+    extends PersistentHeaderShowOnScreenConfiguration with Mate {
   /// PersistentHeaderShowOnScreenConfiguration PersistentHeaderShowOnScreenConfiguration({double minShowOnScreenExtent = double.negativeInfinity, double maxShowOnScreenExtent = double.infinity})
   PersistentHeaderShowOnScreenConfiguration$Mate({
     /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , defaultValue:unprocessed
@@ -45,13 +47,14 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderSho
           minShowOnScreenExtent: p.get('minShowOnScreenExtent').build(),
           maxShowOnScreenExtent: p.get('maxShowOnScreenExtent').build(),
         );
-    mateDeclare('minShowOnScreenExtent', minShowOnScreenExtent);
-    mateDeclare('maxShowOnScreenExtent', maxShowOnScreenExtent);
+    mateUse('minShowOnScreenExtent', minShowOnScreenExtent);
+    mateUse('maxShowOnScreenExtent', maxShowOnScreenExtent);
   }
 }
 
 /// class FloatingHeaderSnapConfiguration
-class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfiguration with Mate {
+class FloatingHeaderSnapConfiguration$Mate
+    extends FloatingHeaderSnapConfiguration with Mate {
   /// FloatingHeaderSnapConfiguration FloatingHeaderSnapConfiguration({Curve curve = Curves.ease, Duration duration = const Duration(milliseconds: 300)})
   FloatingHeaderSnapConfiguration$Mate({
     /// optionalParameters: {Curve curve = Curves.ease} , defaultValue:unprocessed
@@ -67,7 +70,7 @@ class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfigurati
           curve: p.get('curve').build(),
           duration: p.get('duration').build(),
         );
-    mateDeclare('curve', curve);
-    mateDeclare('duration', duration);
+    mateUse('curve', curve);
+    mateUse('duration', duration);
   }
 }

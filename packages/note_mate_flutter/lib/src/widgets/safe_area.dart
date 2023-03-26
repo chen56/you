@@ -54,14 +54,14 @@ class SafeArea$Mate extends SafeArea with Mate {
           maintainBottomViewPadding: p.get('maintainBottomViewPadding').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('left', left);
-    mateDeclare('top', top);
-    mateDeclare('right', right);
-    mateDeclare('bottom', bottom);
-    mateDeclare('minimum', minimum);
-    mateDeclare('maintainBottomViewPadding', maintainBottomViewPadding);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('left', left);
+    mateUse('top', top);
+    mateUse('right', right);
+    mateUse('bottom', bottom);
+    mateUse('minimum', minimum);
+    mateUse('maintainBottomViewPadding', maintainBottomViewPadding);
+    mateUse('child', child);
   }
 }
 
@@ -107,12 +107,12 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
           minimum: p.get('minimum').build(),
           sliver: p.get('sliver').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('left', left);
-    mateDeclare('top', top);
-    mateDeclare('right', right);
-    mateDeclare('bottom', bottom);
-    mateDeclare('minimum', minimum);
-    mateDeclare('sliver', sliver);
+    mateUse('key', key);
+    mateUse('left', left);
+    mateUse('top', top);
+    mateUse('right', right);
+    mateUse('bottom', bottom);
+    mateUse('minimum', minimum);
+    mateUse('sliver', sliver);
   }
 }

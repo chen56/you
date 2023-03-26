@@ -36,10 +36,10 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           control: p.get('control').build(),
           meta: p.get('meta').build(),
         );
-    mateDeclare('character', character);
-    mateDeclare('alt', alt);
-    mateDeclare('control', control);
-    mateDeclare('meta', meta);
+    mateUse('character', character);
+    mateUse('alt', alt);
+    mateUse('control', control);
+    mateUse('meta', meta);
   }
 
   /// ShortcutSerialization ShortcutSerialization.modifier(LogicalKeyboardKey trigger, {bool alt = false, bool control = false, bool meta = false, bool shift = false})
@@ -71,24 +71,26 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           meta: p.get('meta').build(),
           shift: p.get('shift').build(),
         );
-    mateDeclare('trigger', trigger);
-    mateDeclare('alt', alt);
-    mateDeclare('control', control);
-    mateDeclare('meta', meta);
-    mateDeclare('shift', shift);
+    mateUse('trigger', trigger);
+    mateUse('alt', alt);
+    mateUse('control', control);
+    mateUse('meta', meta);
+    mateUse('shift', shift);
   }
 }
 
 /// class DefaultPlatformMenuDelegate extends PlatformMenuDelegate
-class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with Mate {
+class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate
+    with Mate {
   /// DefaultPlatformMenuDelegate DefaultPlatformMenuDelegate({MethodChannel? channel})
   DefaultPlatformMenuDelegate$Mate(
       {
       /// optionalParameters: {MethodChannel? channel} , defaultValue:none
       MethodChannel? channel})
       : super(channel: channel) {
-    mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
-    mateDeclare('channel', channel);
+    mateBuilder = (p) =>
+        DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
+    mateUse('channel', channel);
   }
 }
 
@@ -114,9 +116,9 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
           menus: p.get('menus').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('menus', menus);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('menus', menus);
+    mateUse('child', child);
   }
 }
 
@@ -147,10 +149,10 @@ class PlatformMenu$Mate extends PlatformMenu with Mate {
           onClose: p.get('onClose').build(),
           menus: p.get('menus').build(),
         );
-    mateDeclare('label', label);
-    mateDeclare('onOpen', onOpen);
-    mateDeclare('onClose', onClose);
-    mateDeclare('menus', menus);
+    mateUse('label', label);
+    mateUse('onOpen', onOpen);
+    mateUse('onClose', onClose);
+    mateUse('menus', menus);
   }
 }
 
@@ -162,8 +164,9 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
       /// optionalParameters: {required List<PlatformMenuItem> members} , defaultValue:none
       required List<PlatformMenuItem> members})
       : super(members: members) {
-    mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
-    mateDeclare('members', members);
+    mateBuilder =
+        (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
+    mateUse('members', members);
   }
 }
 
@@ -194,10 +197,10 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
           onSelected: p.get('onSelected').build(),
           onSelectedIntent: p.get('onSelectedIntent').build(),
         );
-    mateDeclare('label', label);
-    mateDeclare('shortcut', shortcut);
-    mateDeclare('onSelected', onSelected);
-    mateDeclare('onSelectedIntent', onSelectedIntent);
+    mateUse('label', label);
+    mateUse('shortcut', shortcut);
+    mateUse('onSelected', onSelected);
+    mateUse('onSelectedIntent', onSelectedIntent);
   }
 }
 
@@ -218,7 +221,7 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate {
           type: p.get('type').build(),
           enabled: p.get('enabled').build(),
         );
-    mateDeclare('type', type);
-    mateDeclare('enabled', enabled);
+    mateUse('type', type);
+    mateUse('enabled', enabled);
   }
 }

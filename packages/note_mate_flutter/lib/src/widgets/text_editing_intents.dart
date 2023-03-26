@@ -15,21 +15,24 @@ class DeleteCharacterIntent$Mate extends DeleteCharacterIntent with Mate {
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder = (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder =
+        (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
 /// class DeleteToNextWordBoundaryIntent extends DirectionalTextEditingIntent
-class DeleteToNextWordBoundaryIntent$Mate extends DeleteToNextWordBoundaryIntent with Mate {
+class DeleteToNextWordBoundaryIntent$Mate extends DeleteToNextWordBoundaryIntent
+    with Mate {
   /// DeleteToNextWordBoundaryIntent DeleteToNextWordBoundaryIntent({required bool forward})
   DeleteToNextWordBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder = (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder = (p) =>
+        DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
@@ -41,13 +44,15 @@ class DeleteToLineBreakIntent$Mate extends DeleteToLineBreakIntent with Mate {
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder = (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder =
+        (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
 /// class ExtendSelectionByCharacterIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIntent with Mate {
+class ExtendSelectionByCharacterIntent$Mate
+    extends ExtendSelectionByCharacterIntent with Mate {
   /// ExtendSelectionByCharacterIntent ExtendSelectionByCharacterIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionByCharacterIntent$Mate({
     /// optionalParameters: {required bool forward} , defaultValue:none
@@ -63,13 +68,14 @@ class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIn
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateDeclare('forward', forward);
-    mateDeclare('collapseSelection', collapseSelection);
+    mateUse('forward', forward);
+    mateUse('collapseSelection', collapseSelection);
   }
 }
 
 /// class ExtendSelectionToNextWordBoundaryIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionToNextWordBoundaryIntent$Mate extends ExtendSelectionToNextWordBoundaryIntent with Mate {
+class ExtendSelectionToNextWordBoundaryIntent$Mate
+    extends ExtendSelectionToNextWordBoundaryIntent with Mate {
   /// ExtendSelectionToNextWordBoundaryIntent ExtendSelectionToNextWordBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToNextWordBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , defaultValue:none
@@ -85,8 +91,8 @@ class ExtendSelectionToNextWordBoundaryIntent$Mate extends ExtendSelectionToNext
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateDeclare('forward', forward);
-    mateDeclare('collapseSelection', collapseSelection);
+    mateUse('forward', forward);
+    mateUse('collapseSelection', collapseSelection);
   }
 }
 
@@ -99,39 +105,46 @@ class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder = (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder = (p) =>
+        ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(
+            forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
 /// class ExpandSelectionToDocumentBoundaryIntent extends DirectionalCaretMovementIntent
-class ExpandSelectionToDocumentBoundaryIntent$Mate extends ExpandSelectionToDocumentBoundaryIntent with Mate {
+class ExpandSelectionToDocumentBoundaryIntent$Mate
+    extends ExpandSelectionToDocumentBoundaryIntent with Mate {
   /// ExpandSelectionToDocumentBoundaryIntent ExpandSelectionToDocumentBoundaryIntent({required bool forward})
   ExpandSelectionToDocumentBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder = (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder = (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(
+        forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
 /// class ExpandSelectionToLineBreakIntent extends DirectionalCaretMovementIntent
-class ExpandSelectionToLineBreakIntent$Mate extends ExpandSelectionToLineBreakIntent with Mate {
+class ExpandSelectionToLineBreakIntent$Mate
+    extends ExpandSelectionToLineBreakIntent with Mate {
   /// ExpandSelectionToLineBreakIntent ExpandSelectionToLineBreakIntent({required bool forward})
   ExpandSelectionToLineBreakIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder = (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder = (p) => ExpandSelectionToLineBreakIntent$Mate(
+        forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
 /// class ExtendSelectionToLineBreakIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIntent with Mate {
+class ExtendSelectionToLineBreakIntent$Mate
+    extends ExtendSelectionToLineBreakIntent with Mate {
   /// ExtendSelectionToLineBreakIntent ExtendSelectionToLineBreakIntent({required bool forward, required bool collapseSelection, bool collapseAtReversal = false, bool continuesAtWrap = false})
   ExtendSelectionToLineBreakIntent$Mate({
     /// optionalParameters: {required bool forward} , defaultValue:none
@@ -157,16 +170,16 @@ class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIn
           collapseAtReversal: p.get('collapseAtReversal').build(),
           continuesAtWrap: p.get('continuesAtWrap').build(),
         );
-    mateDeclare('forward', forward);
-    mateDeclare('collapseSelection', collapseSelection);
-    mateDeclare('collapseAtReversal', collapseAtReversal);
-    mateDeclare('continuesAtWrap', continuesAtWrap);
+    mateUse('forward', forward);
+    mateUse('collapseSelection', collapseSelection);
+    mateUse('collapseAtReversal', collapseAtReversal);
+    mateUse('continuesAtWrap', continuesAtWrap);
   }
 }
 
 /// class ExtendSelectionVerticallyToAdjacentLineIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelectionVerticallyToAdjacentLineIntent
-    with Mate {
+class ExtendSelectionVerticallyToAdjacentLineIntent$Mate
+    extends ExtendSelectionVerticallyToAdjacentLineIntent with Mate {
   /// ExtendSelectionVerticallyToAdjacentLineIntent ExtendSelectionVerticallyToAdjacentLineIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionVerticallyToAdjacentLineIntent$Mate({
     /// optionalParameters: {required bool forward} , defaultValue:none
@@ -182,14 +195,14 @@ class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelection
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateDeclare('forward', forward);
-    mateDeclare('collapseSelection', collapseSelection);
+    mateUse('forward', forward);
+    mateUse('collapseSelection', collapseSelection);
   }
 }
 
 /// class ExtendSelectionVerticallyToAdjacentPageIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelectionVerticallyToAdjacentPageIntent
-    with Mate {
+class ExtendSelectionVerticallyToAdjacentPageIntent$Mate
+    extends ExtendSelectionVerticallyToAdjacentPageIntent with Mate {
   /// ExtendSelectionVerticallyToAdjacentPageIntent ExtendSelectionVerticallyToAdjacentPageIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionVerticallyToAdjacentPageIntent$Mate({
     /// optionalParameters: {required bool forward} , defaultValue:none
@@ -205,13 +218,14 @@ class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelection
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateDeclare('forward', forward);
-    mateDeclare('collapseSelection', collapseSelection);
+    mateUse('forward', forward);
+    mateUse('collapseSelection', collapseSelection);
   }
 }
 
 /// class ExtendSelectionToNextParagraphBoundaryIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionToNextParagraphBoundaryIntent with Mate {
+class ExtendSelectionToNextParagraphBoundaryIntent$Mate
+    extends ExtendSelectionToNextParagraphBoundaryIntent with Mate {
   /// ExtendSelectionToNextParagraphBoundaryIntent ExtendSelectionToNextParagraphBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToNextParagraphBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , defaultValue:none
@@ -227,28 +241,31 @@ class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionT
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateDeclare('forward', forward);
-    mateDeclare('collapseSelection', collapseSelection);
+    mateUse('forward', forward);
+    mateUse('collapseSelection', collapseSelection);
   }
 }
 
 /// class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent extends DirectionalCaretMovementIntent
 class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate
-    extends ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent with Mate {
+    extends ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent
+    with Mate {
   /// ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent({required bool forward})
   ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder =
-        (p) => ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder = (p) =>
+        ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(
+            forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
 /// class ExtendSelectionToDocumentBoundaryIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocumentBoundaryIntent with Mate {
+class ExtendSelectionToDocumentBoundaryIntent$Mate
+    extends ExtendSelectionToDocumentBoundaryIntent with Mate {
   /// ExtendSelectionToDocumentBoundaryIntent ExtendSelectionToDocumentBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToDocumentBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , defaultValue:none
@@ -264,34 +281,38 @@ class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocu
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateDeclare('forward', forward);
-    mateDeclare('collapseSelection', collapseSelection);
+    mateUse('forward', forward);
+    mateUse('collapseSelection', collapseSelection);
   }
 }
 
 /// class ScrollToDocumentBoundaryIntent extends DirectionalTextEditingIntent
-class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent with Mate {
+class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent
+    with Mate {
   /// ScrollToDocumentBoundaryIntent ScrollToDocumentBoundaryIntent({required bool forward})
   ScrollToDocumentBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder = (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder = (p) =>
+        ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
 /// class ExtendSelectionByPageIntent extends DirectionalTextEditingIntent
-class ExtendSelectionByPageIntent$Mate extends ExtendSelectionByPageIntent with Mate {
+class ExtendSelectionByPageIntent$Mate extends ExtendSelectionByPageIntent
+    with Mate {
   /// ExtendSelectionByPageIntent ExtendSelectionByPageIntent({required bool forward})
   ExtendSelectionByPageIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , defaultValue:none
       required bool forward})
       : super(forward: forward) {
-    mateBuilder = (p) => ExtendSelectionByPageIntent$Mate(forward: p.get('forward').build());
-    mateDeclare('forward', forward);
+    mateBuilder = (p) =>
+        ExtendSelectionByPageIntent$Mate(forward: p.get('forward').build());
+    mateUse('forward', forward);
   }
 }
 
@@ -304,7 +325,7 @@ class SelectAllTextIntent$Mate extends SelectAllTextIntent with Mate {
       SelectionChangedCause cause)
       : super(cause) {
     mateBuilder = (p) => SelectAllTextIntent$Mate(p.get('cause').value);
-    mateDeclare('cause', cause);
+    mateUse('cause', cause);
   }
 }
 
@@ -317,7 +338,7 @@ class CopySelectionTextIntent$Mate extends CopySelectionTextIntent with Mate {
       SelectionChangedCause cause)
       : super.cut(cause) {
     mateBuilder = (p) => CopySelectionTextIntent$Mate.cut(p.get('cause').value);
-    mateDeclare('cause', cause);
+    mateUse('cause', cause);
   }
 }
 
@@ -330,7 +351,7 @@ class PasteTextIntent$Mate extends PasteTextIntent with Mate {
       SelectionChangedCause cause)
       : super(cause) {
     mateBuilder = (p) => PasteTextIntent$Mate(p.get('cause').value);
-    mateDeclare('cause', cause);
+    mateUse('cause', cause);
   }
 }
 
@@ -343,7 +364,7 @@ class RedoTextIntent$Mate extends RedoTextIntent with Mate {
       SelectionChangedCause cause)
       : super(cause) {
     mateBuilder = (p) => RedoTextIntent$Mate(p.get('cause').value);
-    mateDeclare('cause', cause);
+    mateUse('cause', cause);
   }
 }
 
@@ -374,10 +395,10 @@ class ReplaceTextIntent$Mate extends ReplaceTextIntent with Mate {
           p.get('replacementRange').value,
           p.get('cause').value,
         );
-    mateDeclare('currentTextEditingValue', currentTextEditingValue);
-    mateDeclare('replacementText', replacementText);
-    mateDeclare('replacementRange', replacementRange);
-    mateDeclare('cause', cause);
+    mateUse('currentTextEditingValue', currentTextEditingValue);
+    mateUse('replacementText', replacementText);
+    mateUse('replacementRange', replacementRange);
+    mateUse('cause', cause);
   }
 }
 
@@ -390,7 +411,7 @@ class UndoTextIntent$Mate extends UndoTextIntent with Mate {
       SelectionChangedCause cause)
       : super(cause) {
     mateBuilder = (p) => UndoTextIntent$Mate(p.get('cause').value);
-    mateDeclare('cause', cause);
+    mateUse('cause', cause);
   }
 }
 
@@ -416,8 +437,8 @@ class UpdateSelectionIntent$Mate extends UpdateSelectionIntent with Mate {
           p.get('newSelection').value,
           p.get('cause').value,
         );
-    mateDeclare('currentTextEditingValue', currentTextEditingValue);
-    mateDeclare('newSelection', newSelection);
-    mateDeclare('cause', cause);
+    mateUse('currentTextEditingValue', currentTextEditingValue);
+    mateUse('newSelection', newSelection);
+    mateUse('cause', cause);
   }
 }

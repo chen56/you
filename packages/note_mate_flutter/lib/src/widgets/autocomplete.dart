@@ -11,7 +11,8 @@ import 'package:flutter/src/foundation/change_notifier.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class RawAutocomplete<T extends Object> extends StatefulWidget
-class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mate {
+class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T>
+    with Mate {
   /// RawAutocomplete<T> RawAutocomplete({Key? key, required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder, FocusNode? focusNode, void Function(T)? onSelected, TextEditingController? textEditingController, TextEditingValue? initialValue})
   RawAutocomplete$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -62,20 +63,21 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
           textEditingController: p.get('textEditingController').build(),
           initialValue: p.get('initialValue').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('optionsViewBuilder', optionsViewBuilder);
-    mateDeclare('optionsBuilder', optionsBuilder);
-    mateDeclare('displayStringForOption', displayStringForOption);
-    mateDeclare('fieldViewBuilder', fieldViewBuilder);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('onSelected', onSelected);
-    mateDeclare('textEditingController', textEditingController);
-    mateDeclare('initialValue', initialValue);
+    mateUse('key', key);
+    mateUse('optionsViewBuilder', optionsViewBuilder);
+    mateUse('optionsBuilder', optionsBuilder);
+    mateUse('displayStringForOption', displayStringForOption);
+    mateUse('fieldViewBuilder', fieldViewBuilder);
+    mateUse('focusNode', focusNode);
+    mateUse('onSelected', onSelected);
+    mateUse('textEditingController', textEditingController);
+    mateUse('initialValue', initialValue);
   }
 }
 
 /// class AutocompleteHighlightedOption extends InheritedNotifier<ValueNotifier<int>>
-class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption with Mate {
+class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption
+    with Mate {
   /// AutocompleteHighlightedOption AutocompleteHighlightedOption({Key? key, required ValueNotifier<int> highlightIndexNotifier, required Widget child})
   AutocompleteHighlightedOption$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -96,8 +98,8 @@ class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption w
           highlightIndexNotifier: p.get('highlightIndexNotifier').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('highlightIndexNotifier', highlightIndexNotifier);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('highlightIndexNotifier', highlightIndexNotifier);
+    mateUse('child', child);
   }
 }

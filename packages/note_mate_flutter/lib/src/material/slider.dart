@@ -113,25 +113,25 @@ class Slider$Mate extends Slider with Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('secondaryTrackValue', secondaryTrackValue);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onChangeStart', onChangeStart);
-    mateDeclare('onChangeEnd', onChangeEnd);
-    mateDeclare('min', min);
-    mateDeclare('max', max);
-    mateDeclare('divisions', divisions);
-    mateDeclare('label', label);
-    mateDeclare('activeColor', activeColor);
-    mateDeclare('inactiveColor', inactiveColor);
-    mateDeclare('secondaryActiveColor', secondaryActiveColor);
-    mateDeclare('thumbColor', thumbColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('semanticFormatterCallback', semanticFormatterCallback);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('secondaryTrackValue', secondaryTrackValue);
+    mateUse('onChanged', onChanged);
+    mateUse('onChangeStart', onChangeStart);
+    mateUse('onChangeEnd', onChangeEnd);
+    mateUse('min', min);
+    mateUse('max', max);
+    mateUse('divisions', divisions);
+    mateUse('label', label);
+    mateUse('activeColor', activeColor);
+    mateUse('inactiveColor', inactiveColor);
+    mateUse('secondaryActiveColor', secondaryActiveColor);
+    mateUse('thumbColor', thumbColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('semanticFormatterCallback', semanticFormatterCallback);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
   }
 
   /// Slider Slider.adaptive({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, MouseCursor? mouseCursor, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
@@ -234,24 +234,24 @@ class Slider$Mate extends Slider with Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('secondaryTrackValue', secondaryTrackValue);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onChangeStart', onChangeStart);
-    mateDeclare('onChangeEnd', onChangeEnd);
-    mateDeclare('min', min);
-    mateDeclare('max', max);
-    mateDeclare('divisions', divisions);
-    mateDeclare('label', label);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('activeColor', activeColor);
-    mateDeclare('inactiveColor', inactiveColor);
-    mateDeclare('secondaryActiveColor', secondaryActiveColor);
-    mateDeclare('thumbColor', thumbColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('semanticFormatterCallback', semanticFormatterCallback);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('secondaryTrackValue', secondaryTrackValue);
+    mateUse('onChanged', onChanged);
+    mateUse('onChangeStart', onChangeStart);
+    mateUse('onChangeEnd', onChangeEnd);
+    mateUse('min', min);
+    mateUse('max', max);
+    mateUse('divisions', divisions);
+    mateUse('label', label);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('activeColor', activeColor);
+    mateUse('inactiveColor', inactiveColor);
+    mateUse('secondaryActiveColor', secondaryActiveColor);
+    mateUse('thumbColor', thumbColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('semanticFormatterCallback', semanticFormatterCallback);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
   }
 }

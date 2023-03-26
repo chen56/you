@@ -58,13 +58,13 @@ class Ink$Mate extends Ink with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('padding', padding);
-    mateDeclare('color', color);
-    mateDeclare('decoration', decoration);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('padding', padding);
+    mateUse('color', color);
+    mateUse('decoration', decoration);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('child', child);
   }
 
   /// Ink Ink.image({Key? key, EdgeInsetsGeometry? padding, required ImageProvider<Object> image, void Function(Object, StackTrace?)? onImageError, ColorFilter? colorFilter, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, Rect? centerSlice, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, double? width, double? height, Widget? child})
@@ -137,19 +137,19 @@ class Ink$Mate extends Ink with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('padding', padding);
-    mateDeclare('image', image);
-    mateDeclare('onImageError', onImageError);
-    mateDeclare('colorFilter', colorFilter);
-    mateDeclare('fit', fit);
-    mateDeclare('alignment', alignment);
-    mateDeclare('centerSlice', centerSlice);
-    mateDeclare('repeat', repeat);
-    mateDeclare('matchTextDirection', matchTextDirection);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('padding', padding);
+    mateUse('image', image);
+    mateUse('onImageError', onImageError);
+    mateUse('colorFilter', colorFilter);
+    mateUse('fit', fit);
+    mateUse('alignment', alignment);
+    mateUse('centerSlice', centerSlice);
+    mateUse('repeat', repeat);
+    mateUse('matchTextDirection', matchTextDirection);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('child', child);
   }
 }
 
@@ -185,10 +185,10 @@ class InkDecoration$Mate extends InkDecoration with Mate {
           referenceBox: p.get('referenceBox').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    mateDeclare('decoration', decoration);
-    mateDeclare('configuration', configuration);
-    mateDeclare('controller', controller);
-    mateDeclare('referenceBox', referenceBox);
-    mateDeclare('onRemoved', onRemoved);
+    mateUse('decoration', decoration);
+    mateUse('configuration', configuration);
+    mateUse('controller', controller);
+    mateUse('referenceBox', referenceBox);
+    mateUse('onRemoved', onRemoved);
   }
 }

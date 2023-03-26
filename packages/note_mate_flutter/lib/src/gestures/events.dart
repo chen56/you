@@ -87,21 +87,21 @@ class PointerAddedEvent$Mate extends PointerAddedEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('pointer', pointer);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distance', distance);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('orientation', orientation);
-    mateDeclare('tilt', tilt);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('pointer', pointer);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('obscured', obscured);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distance', distance);
+    mateUse('distanceMax', distanceMax);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('orientation', orientation);
+    mateUse('tilt', tilt);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -177,19 +177,19 @@ class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate {
           original: p.get('original').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('pointer', pointer);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('original', original);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('pointer', pointer);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('obscured', obscured);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distanceMax', distanceMax);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('original', original);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -305,27 +305,27 @@ class PointerHoverEvent$Mate extends PointerHoverEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('kind', kind);
-    mateDeclare('pointer', pointer);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('delta', delta);
-    mateDeclare('buttons', buttons);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distance', distance);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('size', size);
-    mateDeclare('radiusMajor', radiusMajor);
-    mateDeclare('radiusMinor', radiusMinor);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('orientation', orientation);
-    mateDeclare('tilt', tilt);
-    mateDeclare('synthesized', synthesized);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('kind', kind);
+    mateUse('pointer', pointer);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('delta', delta);
+    mateUse('buttons', buttons);
+    mateUse('obscured', obscured);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distance', distance);
+    mateUse('distanceMax', distanceMax);
+    mateUse('size', size);
+    mateUse('radiusMajor', radiusMajor);
+    mateUse('radiusMinor', radiusMinor);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('orientation', orientation);
+    mateUse('tilt', tilt);
+    mateUse('synthesized', synthesized);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -446,28 +446,28 @@ class PointerEnterEvent$Mate extends PointerEnterEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('pointer', pointer);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('delta', delta);
-    mateDeclare('buttons', buttons);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distance', distance);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('size', size);
-    mateDeclare('radiusMajor', radiusMajor);
-    mateDeclare('radiusMinor', radiusMinor);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('orientation', orientation);
-    mateDeclare('tilt', tilt);
-    mateDeclare('down', down);
-    mateDeclare('synthesized', synthesized);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('pointer', pointer);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('delta', delta);
+    mateUse('buttons', buttons);
+    mateUse('obscured', obscured);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distance', distance);
+    mateUse('distanceMax', distanceMax);
+    mateUse('size', size);
+    mateUse('radiusMajor', radiusMajor);
+    mateUse('radiusMinor', radiusMinor);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('orientation', orientation);
+    mateUse('tilt', tilt);
+    mateUse('down', down);
+    mateUse('synthesized', synthesized);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -588,28 +588,28 @@ class PointerExitEvent$Mate extends PointerExitEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('kind', kind);
-    mateDeclare('pointer', pointer);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('delta', delta);
-    mateDeclare('buttons', buttons);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distance', distance);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('size', size);
-    mateDeclare('radiusMajor', radiusMajor);
-    mateDeclare('radiusMinor', radiusMinor);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('orientation', orientation);
-    mateDeclare('tilt', tilt);
-    mateDeclare('down', down);
-    mateDeclare('synthesized', synthesized);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('kind', kind);
+    mateUse('pointer', pointer);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('delta', delta);
+    mateUse('buttons', buttons);
+    mateUse('obscured', obscured);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distance', distance);
+    mateUse('distanceMax', distanceMax);
+    mateUse('size', size);
+    mateUse('radiusMajor', radiusMajor);
+    mateUse('radiusMinor', radiusMinor);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('orientation', orientation);
+    mateUse('tilt', tilt);
+    mateUse('down', down);
+    mateUse('synthesized', synthesized);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -715,25 +715,25 @@ class PointerDownEvent$Mate extends PointerDownEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('pointer', pointer);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('buttons', buttons);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressure', pressure);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('size', size);
-    mateDeclare('radiusMajor', radiusMajor);
-    mateDeclare('radiusMinor', radiusMinor);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('orientation', orientation);
-    mateDeclare('tilt', tilt);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('pointer', pointer);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('buttons', buttons);
+    mateUse('obscured', obscured);
+    mateUse('pressure', pressure);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distanceMax', distanceMax);
+    mateUse('size', size);
+    mateUse('radiusMajor', radiusMajor);
+    mateUse('radiusMinor', radiusMinor);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('orientation', orientation);
+    mateUse('tilt', tilt);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -854,28 +854,28 @@ class PointerMoveEvent$Mate extends PointerMoveEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('pointer', pointer);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('delta', delta);
-    mateDeclare('buttons', buttons);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressure', pressure);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('size', size);
-    mateDeclare('radiusMajor', radiusMajor);
-    mateDeclare('radiusMinor', radiusMinor);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('orientation', orientation);
-    mateDeclare('tilt', tilt);
-    mateDeclare('platformData', platformData);
-    mateDeclare('synthesized', synthesized);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('pointer', pointer);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('delta', delta);
+    mateUse('buttons', buttons);
+    mateUse('obscured', obscured);
+    mateUse('pressure', pressure);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distanceMax', distanceMax);
+    mateUse('size', size);
+    mateUse('radiusMajor', radiusMajor);
+    mateUse('radiusMinor', radiusMinor);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('orientation', orientation);
+    mateUse('tilt', tilt);
+    mateUse('platformData', platformData);
+    mateUse('synthesized', synthesized);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -986,26 +986,26 @@ class PointerUpEvent$Mate extends PointerUpEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('pointer', pointer);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('buttons', buttons);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressure', pressure);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distance', distance);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('size', size);
-    mateDeclare('radiusMajor', radiusMajor);
-    mateDeclare('radiusMinor', radiusMinor);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('orientation', orientation);
-    mateDeclare('tilt', tilt);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('pointer', pointer);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('buttons', buttons);
+    mateUse('obscured', obscured);
+    mateUse('pressure', pressure);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distance', distance);
+    mateUse('distanceMax', distanceMax);
+    mateUse('size', size);
+    mateUse('radiusMajor', radiusMajor);
+    mateUse('radiusMinor', radiusMinor);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('orientation', orientation);
+    mateUse('tilt', tilt);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -1046,17 +1046,18 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
           scrollDelta: p.get('scrollDelta').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('scrollDelta', scrollDelta);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('scrollDelta', scrollDelta);
+    mateUse('embedderId', embedderId);
   }
 }
 
 /// class PointerScrollInertiaCancelEvent extends PointerSignalEvent with _PointerEventDescription, _CopyPointerScrollInertiaCancelEvent
-class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEvent with Mate {
+class PointerScrollInertiaCancelEvent$Mate
+    extends PointerScrollInertiaCancelEvent with Mate {
   /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
   PointerScrollInertiaCancelEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
@@ -1087,11 +1088,11 @@ class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEve
           position: p.get('position').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('embedderId', embedderId);
   }
 }
 
@@ -1132,12 +1133,12 @@ class PointerScaleEvent$Mate extends PointerScaleEvent with Mate {
           embedderId: p.get('embedderId').build(),
           scale: p.get('scale').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('embedderId', embedderId);
-    mateDeclare('scale', scale);
+    mateUse('timeStamp', timeStamp);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('embedderId', embedderId);
+    mateUse('scale', scale);
   }
 }
 
@@ -1178,17 +1179,18 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
           embedderId: p.get('embedderId').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('device', device);
-    mateDeclare('pointer', pointer);
-    mateDeclare('position', position);
-    mateDeclare('embedderId', embedderId);
-    mateDeclare('synthesized', synthesized);
+    mateUse('timeStamp', timeStamp);
+    mateUse('device', device);
+    mateUse('pointer', pointer);
+    mateUse('position', position);
+    mateUse('embedderId', embedderId);
+    mateUse('synthesized', synthesized);
   }
 }
 
 /// class PointerPanZoomUpdateEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomUpdateEvent
-class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate {
+class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent
+    with Mate {
   /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
   PointerPanZoomUpdateEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
@@ -1244,16 +1246,16 @@ class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate
           rotation: p.get('rotation').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('device', device);
-    mateDeclare('pointer', pointer);
-    mateDeclare('position', position);
-    mateDeclare('embedderId', embedderId);
-    mateDeclare('pan', pan);
-    mateDeclare('panDelta', panDelta);
-    mateDeclare('scale', scale);
-    mateDeclare('rotation', rotation);
-    mateDeclare('synthesized', synthesized);
+    mateUse('timeStamp', timeStamp);
+    mateUse('device', device);
+    mateUse('pointer', pointer);
+    mateUse('position', position);
+    mateUse('embedderId', embedderId);
+    mateUse('pan', pan);
+    mateUse('panDelta', panDelta);
+    mateUse('scale', scale);
+    mateUse('rotation', rotation);
+    mateUse('synthesized', synthesized);
   }
 }
 
@@ -1294,12 +1296,12 @@ class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate {
           embedderId: p.get('embedderId').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('device', device);
-    mateDeclare('pointer', pointer);
-    mateDeclare('position', position);
-    mateDeclare('embedderId', embedderId);
-    mateDeclare('synthesized', synthesized);
+    mateUse('timeStamp', timeStamp);
+    mateUse('device', device);
+    mateUse('pointer', pointer);
+    mateUse('position', position);
+    mateUse('embedderId', embedderId);
+    mateUse('synthesized', synthesized);
   }
 }
 
@@ -1405,24 +1407,24 @@ class PointerCancelEvent$Mate extends PointerCancelEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateDeclare('timeStamp', timeStamp);
-    mateDeclare('pointer', pointer);
-    mateDeclare('kind', kind);
-    mateDeclare('device', device);
-    mateDeclare('position', position);
-    mateDeclare('buttons', buttons);
-    mateDeclare('obscured', obscured);
-    mateDeclare('pressureMin', pressureMin);
-    mateDeclare('pressureMax', pressureMax);
-    mateDeclare('distance', distance);
-    mateDeclare('distanceMax', distanceMax);
-    mateDeclare('size', size);
-    mateDeclare('radiusMajor', radiusMajor);
-    mateDeclare('radiusMinor', radiusMinor);
-    mateDeclare('radiusMin', radiusMin);
-    mateDeclare('radiusMax', radiusMax);
-    mateDeclare('orientation', orientation);
-    mateDeclare('tilt', tilt);
-    mateDeclare('embedderId', embedderId);
+    mateUse('timeStamp', timeStamp);
+    mateUse('pointer', pointer);
+    mateUse('kind', kind);
+    mateUse('device', device);
+    mateUse('position', position);
+    mateUse('buttons', buttons);
+    mateUse('obscured', obscured);
+    mateUse('pressureMin', pressureMin);
+    mateUse('pressureMax', pressureMax);
+    mateUse('distance', distance);
+    mateUse('distanceMax', distanceMax);
+    mateUse('size', size);
+    mateUse('radiusMajor', radiusMajor);
+    mateUse('radiusMinor', radiusMinor);
+    mateUse('radiusMin', radiusMin);
+    mateUse('radiusMax', radiusMax);
+    mateUse('orientation', orientation);
+    mateUse('tilt', tilt);
+    mateUse('embedderId', embedderId);
   }
 }

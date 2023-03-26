@@ -68,16 +68,16 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           position: p.get('position').build(),
         );
-    mateDeclare('color', color);
-    mateDeclare('shape', shape);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('labelTextStyle', labelTextStyle);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('position', position);
+    mateUse('color', color);
+    mateUse('shape', shape);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('textStyle', textStyle);
+    mateUse('labelTextStyle', labelTextStyle);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('position', position);
   }
 }
 
@@ -103,8 +103,8 @@ class PopupMenuTheme$Mate extends PopupMenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

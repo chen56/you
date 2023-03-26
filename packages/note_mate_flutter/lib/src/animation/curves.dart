@@ -14,7 +14,7 @@ class SawTooth$Mate extends SawTooth with Mate {
       int count)
       : super(count) {
     mateBuilder = (p) => SawTooth$Mate(p.get('count').value);
-    mateDeclare('count', count);
+    mateUse('count', count);
   }
 }
 
@@ -39,9 +39,9 @@ class Interval$Mate extends Interval with Mate {
           p.get('end').value,
           curve: p.get('curve').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
-    mateDeclare('curve', curve);
+    mateUse('begin', begin);
+    mateUse('end', end);
+    mateUse('curve', curve);
   }
 }
 
@@ -54,7 +54,7 @@ class Threshold$Mate extends Threshold with Mate {
       double threshold)
       : super(threshold) {
     mateBuilder = (p) => Threshold$Mate(p.get('threshold').value);
-    mateDeclare('threshold', threshold);
+    mateUse('threshold', threshold);
   }
 }
 
@@ -85,10 +85,10 @@ class Cubic$Mate extends Cubic with Mate {
           p.get('c').value,
           p.get('d').value,
         );
-    mateDeclare('a', a);
-    mateDeclare('b', b);
-    mateDeclare('c', c);
-    mateDeclare('d', d);
+    mateUse('a', a);
+    mateUse('b', b);
+    mateUse('c', c);
+    mateUse('d', d);
   }
 }
 
@@ -124,11 +124,11 @@ class ThreePointCubic$Mate extends ThreePointCubic with Mate {
           p.get('a2').value,
           p.get('b2').value,
         );
-    mateDeclare('a1', a1);
-    mateDeclare('b1', b1);
-    mateDeclare('midpoint', midpoint);
-    mateDeclare('a2', a2);
-    mateDeclare('b2', b2);
+    mateUse('a1', a1);
+    mateUse('b1', b1);
+    mateUse('midpoint', midpoint);
+    mateUse('a2', a2);
+    mateUse('b2', b2);
   }
 }
 
@@ -149,8 +149,8 @@ class Curve2DSample$Mate extends Curve2DSample with Mate {
           p.get('t').value,
           p.get('value').value,
         );
-    mateDeclare('t', t);
-    mateDeclare('value', value);
+    mateUse('t', t);
+    mateUse('value', value);
   }
 }
 
@@ -180,10 +180,10 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate {
           startHandle: p.get('startHandle').build(),
           endHandle: p.get('endHandle').build(),
         );
-    mateDeclare('controlPoints', controlPoints);
-    mateDeclare('tension', tension);
-    mateDeclare('startHandle', startHandle);
-    mateDeclare('endHandle', endHandle);
+    mateUse('controlPoints', controlPoints);
+    mateUse('tension', tension);
+    mateUse('startHandle', startHandle);
+    mateUse('endHandle', endHandle);
   }
 
   /// CatmullRomSpline CatmullRomSpline.precompute(List<Offset> controlPoints, {double tension = 0.0, Offset? startHandle, Offset? endHandle})
@@ -210,10 +210,10 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate {
           startHandle: p.get('startHandle').build(),
           endHandle: p.get('endHandle').build(),
         );
-    mateDeclare('controlPoints', controlPoints);
-    mateDeclare('tension', tension);
-    mateDeclare('startHandle', startHandle);
-    mateDeclare('endHandle', endHandle);
+    mateUse('controlPoints', controlPoints);
+    mateUse('tension', tension);
+    mateUse('startHandle', startHandle);
+    mateUse('endHandle', endHandle);
   }
 }
 
@@ -233,8 +233,8 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate {
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
         );
-    mateDeclare('controlPoints', controlPoints);
-    mateDeclare('tension', tension);
+    mateUse('controlPoints', controlPoints);
+    mateUse('tension', tension);
   }
 
   /// CatmullRomCurve CatmullRomCurve.precompute(List<Offset> controlPoints, {double tension = 0.0})
@@ -251,8 +251,8 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate {
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
         );
-    mateDeclare('controlPoints', controlPoints);
-    mateDeclare('tension', tension);
+    mateUse('controlPoints', controlPoints);
+    mateUse('tension', tension);
   }
 }
 
@@ -265,7 +265,7 @@ class FlippedCurve$Mate extends FlippedCurve with Mate {
       Curve curve)
       : super(curve) {
     mateBuilder = (p) => FlippedCurve$Mate(p.get('curve').value);
-    mateDeclare('curve', curve);
+    mateUse('curve', curve);
   }
 }
 
@@ -278,7 +278,7 @@ class ElasticInCurve$Mate extends ElasticInCurve with Mate {
       double period)
       : super(period) {
     mateBuilder = (p) => ElasticInCurve$Mate(p.get('period').value);
-    mateDeclare('period', period);
+    mateUse('period', period);
   }
 }
 
@@ -291,7 +291,7 @@ class ElasticOutCurve$Mate extends ElasticOutCurve with Mate {
       double period)
       : super(period) {
     mateBuilder = (p) => ElasticOutCurve$Mate(p.get('period').value);
-    mateDeclare('period', period);
+    mateUse('period', period);
   }
 }
 
@@ -304,6 +304,6 @@ class ElasticInOutCurve$Mate extends ElasticInOutCurve with Mate {
       double period)
       : super(period) {
     mateBuilder = (p) => ElasticInOutCurve$Mate(p.get('period').value);
-    mateDeclare('period', period);
+    mateUse('period', period);
   }
 }

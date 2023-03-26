@@ -5,7 +5,8 @@ import 'package:note/mate.dart';
 import 'dart:core';
 
 /// class FilteringTextInputFormatter extends TextInputFormatter
-class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with Mate {
+class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter
+    with Mate {
   /// FilteringTextInputFormatter FilteringTextInputFormatter(Pattern filterPattern, {required bool allow, String replacementString = ''})
   FilteringTextInputFormatter$Mate(
     /// requiredParameters: Pattern filterPattern
@@ -25,9 +26,9 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           allow: p.get('allow').build(),
           replacementString: p.get('replacementString').build(),
         );
-    mateDeclare('filterPattern', filterPattern);
-    mateDeclare('allow', allow);
-    mateDeclare('replacementString', replacementString);
+    mateUse('filterPattern', filterPattern);
+    mateUse('allow', allow);
+    mateUse('replacementString', replacementString);
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.allow(Pattern filterPattern, {String replacementString = ''})
@@ -44,8 +45,8 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           p.get('filterPattern').value,
           replacementString: p.get('replacementString').build(),
         );
-    mateDeclare('filterPattern', filterPattern);
-    mateDeclare('replacementString', replacementString);
+    mateUse('filterPattern', filterPattern);
+    mateUse('replacementString', replacementString);
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.deny(Pattern filterPattern, {String replacementString = ''})
@@ -62,13 +63,14 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           p.get('filterPattern').value,
           replacementString: p.get('replacementString').build(),
         );
-    mateDeclare('filterPattern', filterPattern);
-    mateDeclare('replacementString', replacementString);
+    mateUse('filterPattern', filterPattern);
+    mateUse('replacementString', replacementString);
   }
 }
 
 /// class LengthLimitingTextInputFormatter extends TextInputFormatter
-class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputFormatter with Mate {
+class LengthLimitingTextInputFormatter$Mate
+    extends LengthLimitingTextInputFormatter with Mate {
   /// LengthLimitingTextInputFormatter LengthLimitingTextInputFormatter(int? maxLength, {MaxLengthEnforcement? maxLengthEnforcement})
   LengthLimitingTextInputFormatter$Mate(
     /// requiredParameters: int? maxLength
@@ -83,7 +85,7 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
           p.get('maxLength').value,
           maxLengthEnforcement: p.get('maxLengthEnforcement').build(),
         );
-    mateDeclare('maxLength', maxLength);
-    mateDeclare('maxLengthEnforcement', maxLengthEnforcement);
+    mateUse('maxLength', maxLength);
+    mateUse('maxLengthEnforcement', maxLengthEnforcement);
   }
 }

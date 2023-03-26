@@ -79,18 +79,18 @@ class BottomSheet$Mate extends BottomSheet with Mate {
           onClosing: p.get('onClosing').build(),
           builder: p.get('builder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('animationController', animationController);
-    mateDeclare('enableDrag', enableDrag);
-    mateDeclare('onDragStart', onDragStart);
-    mateDeclare('onDragEnd', onDragEnd);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('constraints', constraints);
-    mateDeclare('onClosing', onClosing);
-    mateDeclare('builder', builder);
+    mateUse('key', key);
+    mateUse('animationController', animationController);
+    mateUse('enableDrag', enableDrag);
+    mateUse('onDragStart', onDragStart);
+    mateUse('onDragEnd', onDragEnd);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('constraints', constraints);
+    mateUse('onClosing', onClosing);
+    mateUse('builder', builder);
   }
 }
 
@@ -182,26 +182,27 @@ class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate {
           enableDrag: p.get('enableDrag').build(),
           isScrollControlled: p.get('isScrollControlled').build(),
           settings: p.get('settings').build(),
-          transitionAnimationController: p.get('transitionAnimationController').build(),
+          transitionAnimationController:
+              p.get('transitionAnimationController').build(),
           anchorPoint: p.get('anchorPoint').build(),
           useSafeArea: p.get('useSafeArea').build(),
         );
-    mateDeclare('builder', builder);
-    mateDeclare('capturedThemes', capturedThemes);
-    mateDeclare('barrierLabel', barrierLabel);
-    mateDeclare('barrierOnTapHint', barrierOnTapHint);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('constraints', constraints);
-    mateDeclare('modalBarrierColor', modalBarrierColor);
-    mateDeclare('isDismissible', isDismissible);
-    mateDeclare('enableDrag', enableDrag);
-    mateDeclare('isScrollControlled', isScrollControlled);
-    mateDeclare('settings', settings);
-    mateDeclare('transitionAnimationController', transitionAnimationController);
-    mateDeclare('anchorPoint', anchorPoint);
-    mateDeclare('useSafeArea', useSafeArea);
+    mateUse('builder', builder);
+    mateUse('capturedThemes', capturedThemes);
+    mateUse('barrierLabel', barrierLabel);
+    mateUse('barrierOnTapHint', barrierOnTapHint);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('constraints', constraints);
+    mateUse('modalBarrierColor', modalBarrierColor);
+    mateUse('isDismissible', isDismissible);
+    mateUse('enableDrag', enableDrag);
+    mateUse('isScrollControlled', isScrollControlled);
+    mateUse('settings', settings);
+    mateUse('transitionAnimationController', transitionAnimationController);
+    mateUse('anchorPoint', anchorPoint);
+    mateUse('useSafeArea', useSafeArea);
   }
 }

@@ -99,22 +99,22 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate {
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
           ignorePointer: p.get('ignorePointer').build(),
         );
-    mateDeclare('color', color);
-    mateDeclare('fadeoutOpacityAnimation', fadeoutOpacityAnimation);
-    mateDeclare('trackColor', trackColor);
-    mateDeclare('trackBorderColor', trackBorderColor);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('thickness', thickness);
-    mateDeclare('padding', padding);
-    mateDeclare('mainAxisMargin', mainAxisMargin);
-    mateDeclare('crossAxisMargin', crossAxisMargin);
-    mateDeclare('radius', radius);
-    mateDeclare('trackRadius', trackRadius);
-    mateDeclare('shape', shape);
-    mateDeclare('minLength', minLength);
-    mateDeclare('minOverscrollLength', minOverscrollLength);
-    mateDeclare('scrollbarOrientation', scrollbarOrientation);
-    mateDeclare('ignorePointer', ignorePointer);
+    mateUse('color', color);
+    mateUse('fadeoutOpacityAnimation', fadeoutOpacityAnimation);
+    mateUse('trackColor', trackColor);
+    mateUse('trackBorderColor', trackBorderColor);
+    mateUse('textDirection', textDirection);
+    mateUse('thickness', thickness);
+    mateUse('padding', padding);
+    mateUse('mainAxisMargin', mainAxisMargin);
+    mateUse('crossAxisMargin', crossAxisMargin);
+    mateUse('radius', radius);
+    mateUse('trackRadius', trackRadius);
+    mateUse('shape', shape);
+    mateUse('minLength', minLength);
+    mateUse('minOverscrollLength', minOverscrollLength);
+    mateUse('scrollbarOrientation', scrollbarOrientation);
+    mateUse('ignorePointer', ignorePointer);
   }
 }
 
@@ -240,28 +240,28 @@ class RawScrollbar$Mate extends RawScrollbar with Mate {
           crossAxisMargin: p.get('crossAxisMargin').build(),
           padding: p.get('padding').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('controller', controller);
-    mateDeclare('thumbVisibility', thumbVisibility);
-    mateDeclare('shape', shape);
-    mateDeclare('radius', radius);
-    mateDeclare('thickness', thickness);
-    mateDeclare('thumbColor', thumbColor);
-    mateDeclare('minThumbLength', minThumbLength);
-    mateDeclare('minOverscrollLength', minOverscrollLength);
-    mateDeclare('trackVisibility', trackVisibility);
-    mateDeclare('trackRadius', trackRadius);
-    mateDeclare('trackColor', trackColor);
-    mateDeclare('trackBorderColor', trackBorderColor);
-    mateDeclare('fadeDuration', fadeDuration);
-    mateDeclare('timeToFade', timeToFade);
-    mateDeclare('pressDuration', pressDuration);
-    mateDeclare('notificationPredicate', notificationPredicate);
-    mateDeclare('interactive', interactive);
-    mateDeclare('scrollbarOrientation', scrollbarOrientation);
-    mateDeclare('mainAxisMargin', mainAxisMargin);
-    mateDeclare('crossAxisMargin', crossAxisMargin);
-    mateDeclare('padding', padding);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('controller', controller);
+    mateUse('thumbVisibility', thumbVisibility);
+    mateUse('shape', shape);
+    mateUse('radius', radius);
+    mateUse('thickness', thickness);
+    mateUse('thumbColor', thumbColor);
+    mateUse('minThumbLength', minThumbLength);
+    mateUse('minOverscrollLength', minOverscrollLength);
+    mateUse('trackVisibility', trackVisibility);
+    mateUse('trackRadius', trackRadius);
+    mateUse('trackColor', trackColor);
+    mateUse('trackBorderColor', trackBorderColor);
+    mateUse('fadeDuration', fadeDuration);
+    mateUse('timeToFade', timeToFade);
+    mateUse('pressDuration', pressDuration);
+    mateUse('notificationPredicate', notificationPredicate);
+    mateUse('interactive', interactive);
+    mateUse('scrollbarOrientation', scrollbarOrientation);
+    mateUse('mainAxisMargin', mainAxisMargin);
+    mateUse('crossAxisMargin', crossAxisMargin);
+    mateUse('padding', padding);
   }
 }

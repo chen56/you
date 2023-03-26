@@ -32,9 +32,9 @@ class AutofillConfiguration$Mate extends AutofillConfiguration with Mate {
           currentEditingValue: p.get('currentEditingValue').build(),
           hintText: p.get('hintText').build(),
         );
-    mateDeclare('uniqueIdentifier', uniqueIdentifier);
-    mateDeclare('autofillHints', autofillHints);
-    mateDeclare('currentEditingValue', currentEditingValue);
-    mateDeclare('hintText', hintText);
+    mateUse('uniqueIdentifier', uniqueIdentifier);
+    mateUse('autofillHints', autofillHints);
+    mateUse('currentEditingValue', currentEditingValue);
+    mateUse('hintText', hintText);
   }
 }

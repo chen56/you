@@ -34,10 +34,10 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
           label: p.get('label').build(),
           enabled: p.get('enabled').build(),
         );
-    mateDeclare('value', value);
-    mateDeclare('icon', icon);
-    mateDeclare('label', label);
-    mateDeclare('enabled', enabled);
+    mateUse('value', value);
+    mateUse('icon', icon);
+    mateUse('label', label);
+    mateUse('enabled', enabled);
   }
 }
 
@@ -93,14 +93,14 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
           showSelectedIcon: p.get('showSelectedIcon').build(),
           selectedIcon: p.get('selectedIcon').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('segments', segments);
-    mateDeclare('selected', selected);
-    mateDeclare('onSelectionChanged', onSelectionChanged);
-    mateDeclare('multiSelectionEnabled', multiSelectionEnabled);
-    mateDeclare('emptySelectionAllowed', emptySelectionAllowed);
-    mateDeclare('style', style);
-    mateDeclare('showSelectedIcon', showSelectedIcon);
-    mateDeclare('selectedIcon', selectedIcon);
+    mateUse('key', key);
+    mateUse('segments', segments);
+    mateUse('selected', selected);
+    mateUse('onSelectionChanged', onSelectionChanged);
+    mateUse('multiSelectionEnabled', multiSelectionEnabled);
+    mateUse('emptySelectionAllowed', emptySelectionAllowed);
+    mateUse('style', style);
+    mateUse('showSelectedIcon', showSelectedIcon);
+    mateUse('selectedIcon', selectedIcon);
   }
 }

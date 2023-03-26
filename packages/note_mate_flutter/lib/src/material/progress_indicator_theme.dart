@@ -8,7 +8,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class ProgressIndicatorThemeData with Diagnosticable
-class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Mate {
+class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData
+    with Mate {
   /// ProgressIndicatorThemeData ProgressIndicatorThemeData({Color? color, Color? linearTrackColor, double? linearMinHeight, Color? circularTrackColor, Color? refreshBackgroundColor})
   ProgressIndicatorThemeData$Mate({
     /// optionalParameters: {Color? color} , defaultValue:none
@@ -39,11 +40,11 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
           circularTrackColor: p.get('circularTrackColor').build(),
           refreshBackgroundColor: p.get('refreshBackgroundColor').build(),
         );
-    mateDeclare('color', color);
-    mateDeclare('linearTrackColor', linearTrackColor);
-    mateDeclare('linearMinHeight', linearMinHeight);
-    mateDeclare('circularTrackColor', circularTrackColor);
-    mateDeclare('refreshBackgroundColor', refreshBackgroundColor);
+    mateUse('color', color);
+    mateUse('linearTrackColor', linearTrackColor);
+    mateUse('linearMinHeight', linearMinHeight);
+    mateUse('circularTrackColor', circularTrackColor);
+    mateUse('refreshBackgroundColor', refreshBackgroundColor);
   }
 }
 
@@ -69,8 +70,8 @@ class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

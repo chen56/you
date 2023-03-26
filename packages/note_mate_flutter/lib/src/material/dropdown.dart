@@ -52,17 +52,18 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onTap', onTap);
-    mateDeclare('value', value);
-    mateDeclare('enabled', enabled);
-    mateDeclare('alignment', alignment);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('onTap', onTap);
+    mateUse('value', value);
+    mateUse('enabled', enabled);
+    mateUse('alignment', alignment);
+    mateUse('child', child);
   }
 }
 
 /// class DropdownButtonHideUnderline extends InheritedWidget
-class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with Mate {
+class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
+    with Mate {
   /// DropdownButtonHideUnderline DropdownButtonHideUnderline({Key? key, required Widget child})
   DropdownButtonHideUnderline$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -78,8 +79,8 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with 
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('child', child);
   }
 }
 
@@ -225,38 +226,39 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
           borderRadius: p.get('borderRadius').build(),
           padding: p.get('padding').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('items', items);
-    mateDeclare('selectedItemBuilder', selectedItemBuilder);
-    mateDeclare('value', value);
-    mateDeclare('hint', hint);
-    mateDeclare('disabledHint', disabledHint);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onTap', onTap);
-    mateDeclare('elevation', elevation);
-    mateDeclare('style', style);
-    mateDeclare('underline', underline);
-    mateDeclare('icon', icon);
-    mateDeclare('iconDisabledColor', iconDisabledColor);
-    mateDeclare('iconEnabledColor', iconEnabledColor);
-    mateDeclare('iconSize', iconSize);
-    mateDeclare('isDense', isDense);
-    mateDeclare('isExpanded', isExpanded);
-    mateDeclare('itemHeight', itemHeight);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('dropdownColor', dropdownColor);
-    mateDeclare('menuMaxHeight', menuMaxHeight);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('alignment', alignment);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('padding', padding);
+    mateUse('key', key);
+    mateUse('items', items);
+    mateUse('selectedItemBuilder', selectedItemBuilder);
+    mateUse('value', value);
+    mateUse('hint', hint);
+    mateUse('disabledHint', disabledHint);
+    mateUse('onChanged', onChanged);
+    mateUse('onTap', onTap);
+    mateUse('elevation', elevation);
+    mateUse('style', style);
+    mateUse('underline', underline);
+    mateUse('icon', icon);
+    mateUse('iconDisabledColor', iconDisabledColor);
+    mateUse('iconEnabledColor', iconEnabledColor);
+    mateUse('iconSize', iconSize);
+    mateUse('isDense', isDense);
+    mateUse('isExpanded', isExpanded);
+    mateUse('itemHeight', itemHeight);
+    mateUse('focusColor', focusColor);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('dropdownColor', dropdownColor);
+    mateUse('menuMaxHeight', menuMaxHeight);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('alignment', alignment);
+    mateUse('borderRadius', borderRadius);
+    mateUse('padding', padding);
   }
 }
 
 /// class DropdownButtonFormField<T> extends FormField<T>
-class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Mate {
+class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T>
+    with Mate {
   /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButtonFormField$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -412,35 +414,35 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Ma
           borderRadius: p.get('borderRadius').build(),
           padding: p.get('padding').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('items', items);
-    mateDeclare('selectedItemBuilder', selectedItemBuilder);
-    mateDeclare('value', value);
-    mateDeclare('hint', hint);
-    mateDeclare('disabledHint', disabledHint);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onTap', onTap);
-    mateDeclare('elevation', elevation);
-    mateDeclare('style', style);
-    mateDeclare('icon', icon);
-    mateDeclare('iconDisabledColor', iconDisabledColor);
-    mateDeclare('iconEnabledColor', iconEnabledColor);
-    mateDeclare('iconSize', iconSize);
-    mateDeclare('isDense', isDense);
-    mateDeclare('isExpanded', isExpanded);
-    mateDeclare('itemHeight', itemHeight);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('dropdownColor', dropdownColor);
-    mateDeclare('decoration', decoration);
-    mateDeclare('onSaved', onSaved);
-    mateDeclare('validator', validator);
-    mateDeclare('autovalidateMode', autovalidateMode);
-    mateDeclare('menuMaxHeight', menuMaxHeight);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('alignment', alignment);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('padding', padding);
+    mateUse('key', key);
+    mateUse('items', items);
+    mateUse('selectedItemBuilder', selectedItemBuilder);
+    mateUse('value', value);
+    mateUse('hint', hint);
+    mateUse('disabledHint', disabledHint);
+    mateUse('onChanged', onChanged);
+    mateUse('onTap', onTap);
+    mateUse('elevation', elevation);
+    mateUse('style', style);
+    mateUse('icon', icon);
+    mateUse('iconDisabledColor', iconDisabledColor);
+    mateUse('iconEnabledColor', iconEnabledColor);
+    mateUse('iconSize', iconSize);
+    mateUse('isDense', isDense);
+    mateUse('isExpanded', isExpanded);
+    mateUse('itemHeight', itemHeight);
+    mateUse('focusColor', focusColor);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('dropdownColor', dropdownColor);
+    mateUse('decoration', decoration);
+    mateUse('onSaved', onSaved);
+    mateUse('validator', validator);
+    mateUse('autovalidateMode', autovalidateMode);
+    mateUse('menuMaxHeight', menuMaxHeight);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('alignment', alignment);
+    mateUse('borderRadius', borderRadius);
+    mateUse('padding', padding);
   }
 }

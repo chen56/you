@@ -22,7 +22,8 @@ import 'package:flutter/src/widgets/text_selection.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 
 /// class CupertinoTextFormFieldRow extends FormField<String>
-class CupertinoTextFormFieldRow$Mate extends CupertinoTextFormFieldRow with Mate {
+class CupertinoTextFormFieldRow$Mate extends CupertinoTextFormFieldRow
+    with Mate {
   /// CupertinoTextFormFieldRow CupertinoTextFormFieldRow({Key? key, Widget? prefix, EdgeInsetsGeometry? padding, TextEditingController? controller, String? initialValue, FocusNode? focusNode, BoxDecoration? decoration, TextInputType? keyboardType, TextCapitalization textCapitalization = TextCapitalization.none, TextInputAction? textInputAction, TextStyle? style, StrutStyle? strutStyle, TextDirection? textDirection, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, bool autofocus = false, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, void Function(String)? onChanged, void Function()? onTap, void Function()? onEditingComplete, void Function(String)? onFieldSubmitted, void Function(String?)? onSaved, String? Function(String?)? validator, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Color? cursorColor, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints, AutovalidateMode autovalidateMode = AutovalidateMode.disabled, String? placeholder, TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText), Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder})
   CupertinoTextFormFieldRow$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -264,7 +265,8 @@ class CupertinoTextFormFieldRow$Mate extends CupertinoTextFormFieldRow with Mate
           cursorColor: p.get('cursorColor').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
           autofillHints: p.get('autofillHints').build(),
@@ -273,54 +275,54 @@ class CupertinoTextFormFieldRow$Mate extends CupertinoTextFormFieldRow with Mate
           placeholderStyle: p.get('placeholderStyle').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('prefix', prefix);
-    mateDeclare('padding', padding);
-    mateDeclare('controller', controller);
-    mateDeclare('initialValue', initialValue);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('decoration', decoration);
-    mateDeclare('keyboardType', keyboardType);
-    mateDeclare('textCapitalization', textCapitalization);
-    mateDeclare('textInputAction', textInputAction);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textAlignVertical', textAlignVertical);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('readOnly', readOnly);
-    mateDeclare('showCursor', showCursor);
-    mateDeclare('obscuringCharacter', obscuringCharacter);
-    mateDeclare('obscureText', obscureText);
-    mateDeclare('autocorrect', autocorrect);
-    mateDeclare('smartDashesType', smartDashesType);
-    mateDeclare('smartQuotesType', smartQuotesType);
-    mateDeclare('enableSuggestions', enableSuggestions);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('minLines', minLines);
-    mateDeclare('expands', expands);
-    mateDeclare('maxLength', maxLength);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onTap', onTap);
-    mateDeclare('onEditingComplete', onEditingComplete);
-    mateDeclare('onFieldSubmitted', onFieldSubmitted);
-    mateDeclare('onSaved', onSaved);
-    mateDeclare('validator', validator);
-    mateDeclare('inputFormatters', inputFormatters);
-    mateDeclare('enabled', enabled);
-    mateDeclare('cursorWidth', cursorWidth);
-    mateDeclare('cursorHeight', cursorHeight);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('keyboardAppearance', keyboardAppearance);
-    mateDeclare('scrollPadding', scrollPadding);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('scrollPhysics', scrollPhysics);
-    mateDeclare('autofillHints', autofillHints);
-    mateDeclare('autovalidateMode', autovalidateMode);
-    mateDeclare('placeholder', placeholder);
-    mateDeclare('placeholderStyle', placeholderStyle);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
+    mateUse('key', key);
+    mateUse('prefix', prefix);
+    mateUse('padding', padding);
+    mateUse('controller', controller);
+    mateUse('initialValue', initialValue);
+    mateUse('focusNode', focusNode);
+    mateUse('decoration', decoration);
+    mateUse('keyboardType', keyboardType);
+    mateUse('textCapitalization', textCapitalization);
+    mateUse('textInputAction', textInputAction);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textDirection', textDirection);
+    mateUse('textAlign', textAlign);
+    mateUse('textAlignVertical', textAlignVertical);
+    mateUse('autofocus', autofocus);
+    mateUse('readOnly', readOnly);
+    mateUse('showCursor', showCursor);
+    mateUse('obscuringCharacter', obscuringCharacter);
+    mateUse('obscureText', obscureText);
+    mateUse('autocorrect', autocorrect);
+    mateUse('smartDashesType', smartDashesType);
+    mateUse('smartQuotesType', smartQuotesType);
+    mateUse('enableSuggestions', enableSuggestions);
+    mateUse('maxLines', maxLines);
+    mateUse('minLines', minLines);
+    mateUse('expands', expands);
+    mateUse('maxLength', maxLength);
+    mateUse('onChanged', onChanged);
+    mateUse('onTap', onTap);
+    mateUse('onEditingComplete', onEditingComplete);
+    mateUse('onFieldSubmitted', onFieldSubmitted);
+    mateUse('onSaved', onSaved);
+    mateUse('validator', validator);
+    mateUse('inputFormatters', inputFormatters);
+    mateUse('enabled', enabled);
+    mateUse('cursorWidth', cursorWidth);
+    mateUse('cursorHeight', cursorHeight);
+    mateUse('cursorColor', cursorColor);
+    mateUse('keyboardAppearance', keyboardAppearance);
+    mateUse('scrollPadding', scrollPadding);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('selectionControls', selectionControls);
+    mateUse('scrollPhysics', scrollPhysics);
+    mateUse('autofillHints', autofillHints);
+    mateUse('autovalidateMode', autovalidateMode);
+    mateUse('placeholder', placeholder);
+    mateUse('placeholderStyle', placeholderStyle);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
   }
 }

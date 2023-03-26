@@ -27,9 +27,9 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: p.get('stiffness').build(),
           damping: p.get('damping').build(),
         );
-    mateDeclare('mass', mass);
-    mateDeclare('stiffness', stiffness);
-    mateDeclare('damping', damping);
+    mateUse('mass', mass);
+    mateUse('stiffness', stiffness);
+    mateUse('damping', damping);
   }
 
   /// SpringDescription SpringDescription.withDampingRatio({required double mass, required double stiffness, double ratio = 1.0})
@@ -52,9 +52,9 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: p.get('stiffness').build(),
           ratio: p.get('ratio').build(),
         );
-    mateDeclare('mass', mass);
-    mateDeclare('stiffness', stiffness);
-    mateDeclare('ratio', ratio);
+    mateUse('mass', mass);
+    mateUse('stiffness', stiffness);
+    mateUse('ratio', ratio);
   }
 }
 
@@ -89,11 +89,11 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    mateDeclare('spring', spring);
-    mateDeclare('start', start);
-    mateDeclare('end', end);
-    mateDeclare('velocity', velocity);
-    mateDeclare('tolerance', tolerance);
+    mateUse('spring', spring);
+    mateUse('start', start);
+    mateUse('end', end);
+    mateUse('velocity', velocity);
+    mateUse('tolerance', tolerance);
   }
 }
 
@@ -128,10 +128,10 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    mateDeclare('spring', spring);
-    mateDeclare('start', start);
-    mateDeclare('end', end);
-    mateDeclare('velocity', velocity);
-    mateDeclare('tolerance', tolerance);
+    mateUse('spring', spring);
+    mateUse('start', start);
+    mateUse('end', end);
+    mateUse('velocity', velocity);
+    mateUse('tolerance', tolerance);
   }
 }

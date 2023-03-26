@@ -33,8 +33,8 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends GestureRecognizer>
           p.get('_constructor').value,
           p.get('_initializer').value,
         );
-    mateDeclare('_constructor', _constructor);
-    mateDeclare('_initializer', _initializer);
+    mateUse('_constructor', _constructor);
+    mateUse('_initializer', _initializer);
   }
 }
 
@@ -328,17 +328,20 @@ class GestureDetector$Mate extends GestureDetector with Mate {
           onLongPressUp: p.get('onLongPressUp').build(),
           onLongPressEnd: p.get('onLongPressEnd').build(),
           onSecondaryLongPressDown: p.get('onSecondaryLongPressDown').build(),
-          onSecondaryLongPressCancel: p.get('onSecondaryLongPressCancel').build(),
+          onSecondaryLongPressCancel:
+              p.get('onSecondaryLongPressCancel').build(),
           onSecondaryLongPress: p.get('onSecondaryLongPress').build(),
           onSecondaryLongPressStart: p.get('onSecondaryLongPressStart').build(),
-          onSecondaryLongPressMoveUpdate: p.get('onSecondaryLongPressMoveUpdate').build(),
+          onSecondaryLongPressMoveUpdate:
+              p.get('onSecondaryLongPressMoveUpdate').build(),
           onSecondaryLongPressUp: p.get('onSecondaryLongPressUp').build(),
           onSecondaryLongPressEnd: p.get('onSecondaryLongPressEnd').build(),
           onTertiaryLongPressDown: p.get('onTertiaryLongPressDown').build(),
           onTertiaryLongPressCancel: p.get('onTertiaryLongPressCancel').build(),
           onTertiaryLongPress: p.get('onTertiaryLongPress').build(),
           onTertiaryLongPressStart: p.get('onTertiaryLongPressStart').build(),
-          onTertiaryLongPressMoveUpdate: p.get('onTertiaryLongPressMoveUpdate').build(),
+          onTertiaryLongPressMoveUpdate:
+              p.get('onTertiaryLongPressMoveUpdate').build(),
           onTertiaryLongPressUp: p.get('onTertiaryLongPressUp').build(),
           onTertiaryLongPressEnd: p.get('onTertiaryLongPressEnd').build(),
           onVerticalDragDown: p.get('onVerticalDragDown').build(),
@@ -367,74 +370,75 @@ class GestureDetector$Mate extends GestureDetector with Mate {
           excludeFromSemantics: p.get('excludeFromSemantics').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
-          trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
+          trackpadScrollToScaleFactor:
+              p.get('trackpadScrollToScaleFactor').build(),
           supportedDevices: p.get('supportedDevices').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('onTapDown', onTapDown);
-    mateDeclare('onTapUp', onTapUp);
-    mateDeclare('onTap', onTap);
-    mateDeclare('onTapCancel', onTapCancel);
-    mateDeclare('onSecondaryTap', onSecondaryTap);
-    mateDeclare('onSecondaryTapDown', onSecondaryTapDown);
-    mateDeclare('onSecondaryTapUp', onSecondaryTapUp);
-    mateDeclare('onSecondaryTapCancel', onSecondaryTapCancel);
-    mateDeclare('onTertiaryTapDown', onTertiaryTapDown);
-    mateDeclare('onTertiaryTapUp', onTertiaryTapUp);
-    mateDeclare('onTertiaryTapCancel', onTertiaryTapCancel);
-    mateDeclare('onDoubleTapDown', onDoubleTapDown);
-    mateDeclare('onDoubleTap', onDoubleTap);
-    mateDeclare('onDoubleTapCancel', onDoubleTapCancel);
-    mateDeclare('onLongPressDown', onLongPressDown);
-    mateDeclare('onLongPressCancel', onLongPressCancel);
-    mateDeclare('onLongPress', onLongPress);
-    mateDeclare('onLongPressStart', onLongPressStart);
-    mateDeclare('onLongPressMoveUpdate', onLongPressMoveUpdate);
-    mateDeclare('onLongPressUp', onLongPressUp);
-    mateDeclare('onLongPressEnd', onLongPressEnd);
-    mateDeclare('onSecondaryLongPressDown', onSecondaryLongPressDown);
-    mateDeclare('onSecondaryLongPressCancel', onSecondaryLongPressCancel);
-    mateDeclare('onSecondaryLongPress', onSecondaryLongPress);
-    mateDeclare('onSecondaryLongPressStart', onSecondaryLongPressStart);
-    mateDeclare('onSecondaryLongPressMoveUpdate', onSecondaryLongPressMoveUpdate);
-    mateDeclare('onSecondaryLongPressUp', onSecondaryLongPressUp);
-    mateDeclare('onSecondaryLongPressEnd', onSecondaryLongPressEnd);
-    mateDeclare('onTertiaryLongPressDown', onTertiaryLongPressDown);
-    mateDeclare('onTertiaryLongPressCancel', onTertiaryLongPressCancel);
-    mateDeclare('onTertiaryLongPress', onTertiaryLongPress);
-    mateDeclare('onTertiaryLongPressStart', onTertiaryLongPressStart);
-    mateDeclare('onTertiaryLongPressMoveUpdate', onTertiaryLongPressMoveUpdate);
-    mateDeclare('onTertiaryLongPressUp', onTertiaryLongPressUp);
-    mateDeclare('onTertiaryLongPressEnd', onTertiaryLongPressEnd);
-    mateDeclare('onVerticalDragDown', onVerticalDragDown);
-    mateDeclare('onVerticalDragStart', onVerticalDragStart);
-    mateDeclare('onVerticalDragUpdate', onVerticalDragUpdate);
-    mateDeclare('onVerticalDragEnd', onVerticalDragEnd);
-    mateDeclare('onVerticalDragCancel', onVerticalDragCancel);
-    mateDeclare('onHorizontalDragDown', onHorizontalDragDown);
-    mateDeclare('onHorizontalDragStart', onHorizontalDragStart);
-    mateDeclare('onHorizontalDragUpdate', onHorizontalDragUpdate);
-    mateDeclare('onHorizontalDragEnd', onHorizontalDragEnd);
-    mateDeclare('onHorizontalDragCancel', onHorizontalDragCancel);
-    mateDeclare('onForcePressStart', onForcePressStart);
-    mateDeclare('onForcePressPeak', onForcePressPeak);
-    mateDeclare('onForcePressUpdate', onForcePressUpdate);
-    mateDeclare('onForcePressEnd', onForcePressEnd);
-    mateDeclare('onPanDown', onPanDown);
-    mateDeclare('onPanStart', onPanStart);
-    mateDeclare('onPanUpdate', onPanUpdate);
-    mateDeclare('onPanEnd', onPanEnd);
-    mateDeclare('onPanCancel', onPanCancel);
-    mateDeclare('onScaleStart', onScaleStart);
-    mateDeclare('onScaleUpdate', onScaleUpdate);
-    mateDeclare('onScaleEnd', onScaleEnd);
-    mateDeclare('behavior', behavior);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    mateDeclare('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
-    mateDeclare('supportedDevices', supportedDevices);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('onTapDown', onTapDown);
+    mateUse('onTapUp', onTapUp);
+    mateUse('onTap', onTap);
+    mateUse('onTapCancel', onTapCancel);
+    mateUse('onSecondaryTap', onSecondaryTap);
+    mateUse('onSecondaryTapDown', onSecondaryTapDown);
+    mateUse('onSecondaryTapUp', onSecondaryTapUp);
+    mateUse('onSecondaryTapCancel', onSecondaryTapCancel);
+    mateUse('onTertiaryTapDown', onTertiaryTapDown);
+    mateUse('onTertiaryTapUp', onTertiaryTapUp);
+    mateUse('onTertiaryTapCancel', onTertiaryTapCancel);
+    mateUse('onDoubleTapDown', onDoubleTapDown);
+    mateUse('onDoubleTap', onDoubleTap);
+    mateUse('onDoubleTapCancel', onDoubleTapCancel);
+    mateUse('onLongPressDown', onLongPressDown);
+    mateUse('onLongPressCancel', onLongPressCancel);
+    mateUse('onLongPress', onLongPress);
+    mateUse('onLongPressStart', onLongPressStart);
+    mateUse('onLongPressMoveUpdate', onLongPressMoveUpdate);
+    mateUse('onLongPressUp', onLongPressUp);
+    mateUse('onLongPressEnd', onLongPressEnd);
+    mateUse('onSecondaryLongPressDown', onSecondaryLongPressDown);
+    mateUse('onSecondaryLongPressCancel', onSecondaryLongPressCancel);
+    mateUse('onSecondaryLongPress', onSecondaryLongPress);
+    mateUse('onSecondaryLongPressStart', onSecondaryLongPressStart);
+    mateUse('onSecondaryLongPressMoveUpdate', onSecondaryLongPressMoveUpdate);
+    mateUse('onSecondaryLongPressUp', onSecondaryLongPressUp);
+    mateUse('onSecondaryLongPressEnd', onSecondaryLongPressEnd);
+    mateUse('onTertiaryLongPressDown', onTertiaryLongPressDown);
+    mateUse('onTertiaryLongPressCancel', onTertiaryLongPressCancel);
+    mateUse('onTertiaryLongPress', onTertiaryLongPress);
+    mateUse('onTertiaryLongPressStart', onTertiaryLongPressStart);
+    mateUse('onTertiaryLongPressMoveUpdate', onTertiaryLongPressMoveUpdate);
+    mateUse('onTertiaryLongPressUp', onTertiaryLongPressUp);
+    mateUse('onTertiaryLongPressEnd', onTertiaryLongPressEnd);
+    mateUse('onVerticalDragDown', onVerticalDragDown);
+    mateUse('onVerticalDragStart', onVerticalDragStart);
+    mateUse('onVerticalDragUpdate', onVerticalDragUpdate);
+    mateUse('onVerticalDragEnd', onVerticalDragEnd);
+    mateUse('onVerticalDragCancel', onVerticalDragCancel);
+    mateUse('onHorizontalDragDown', onHorizontalDragDown);
+    mateUse('onHorizontalDragStart', onHorizontalDragStart);
+    mateUse('onHorizontalDragUpdate', onHorizontalDragUpdate);
+    mateUse('onHorizontalDragEnd', onHorizontalDragEnd);
+    mateUse('onHorizontalDragCancel', onHorizontalDragCancel);
+    mateUse('onForcePressStart', onForcePressStart);
+    mateUse('onForcePressPeak', onForcePressPeak);
+    mateUse('onForcePressUpdate', onForcePressUpdate);
+    mateUse('onForcePressEnd', onForcePressEnd);
+    mateUse('onPanDown', onPanDown);
+    mateUse('onPanStart', onPanStart);
+    mateUse('onPanUpdate', onPanUpdate);
+    mateUse('onPanEnd', onPanEnd);
+    mateUse('onPanCancel', onPanCancel);
+    mateUse('onScaleStart', onScaleStart);
+    mateUse('onScaleUpdate', onScaleUpdate);
+    mateUse('onScaleEnd', onScaleEnd);
+    mateUse('behavior', behavior);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateUse('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
+    mateUse('supportedDevices', supportedDevices);
   }
 }
 
@@ -475,11 +479,11 @@ class RawGestureDetector$Mate extends RawGestureDetector with Mate {
           excludeFromSemantics: p.get('excludeFromSemantics').build(),
           semantics: p.get('semantics').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('gestures', gestures);
-    mateDeclare('behavior', behavior);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('semantics', semantics);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('gestures', gestures);
+    mateUse('behavior', behavior);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('semantics', semantics);
   }
 }

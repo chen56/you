@@ -27,8 +27,8 @@ class AutofillGroup$Mate extends AutofillGroup with Mate {
           child: p.get('child').build(),
           onDisposeAction: p.get('onDisposeAction').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('onDisposeAction', onDisposeAction);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('onDisposeAction', onDisposeAction);
   }
 }

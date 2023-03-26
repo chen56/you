@@ -31,8 +31,8 @@ class PopupMenuDivider$Mate extends PopupMenuDivider with Mate {
           key: p.get('key').build(),
           height: p.get('height').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('height', height);
+    mateUse('key', key);
+    mateUse('height', height);
   }
 }
 
@@ -93,16 +93,16 @@ class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('onTap', onTap);
-    mateDeclare('enabled', enabled);
-    mateDeclare('height', height);
-    mateDeclare('padding', padding);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('labelTextStyle', labelTextStyle);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('onTap', onTap);
+    mateUse('enabled', enabled);
+    mateUse('height', height);
+    mateUse('padding', padding);
+    mateUse('textStyle', textStyle);
+    mateUse('labelTextStyle', labelTextStyle);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('child', child);
   }
 }
 
@@ -153,14 +153,14 @@ class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('checked', checked);
-    mateDeclare('enabled', enabled);
-    mateDeclare('padding', padding);
-    mateDeclare('height', height);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('checked', checked);
+    mateUse('enabled', enabled);
+    mateUse('padding', padding);
+    mateUse('height', height);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('child', child);
   }
 }
 
@@ -286,28 +286,28 @@ class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with Mate {
           position: p.get('position').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('initialValue', initialValue);
-    mateDeclare('onOpened', onOpened);
-    mateDeclare('onSelected', onSelected);
-    mateDeclare('onCanceled', onCanceled);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('padding', padding);
-    mateDeclare('child', child);
-    mateDeclare('splashRadius', splashRadius);
-    mateDeclare('icon', icon);
-    mateDeclare('iconSize', iconSize);
-    mateDeclare('offset', offset);
-    mateDeclare('enabled', enabled);
-    mateDeclare('shape', shape);
-    mateDeclare('color', color);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('constraints', constraints);
-    mateDeclare('position', position);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('initialValue', initialValue);
+    mateUse('onOpened', onOpened);
+    mateUse('onSelected', onSelected);
+    mateUse('onCanceled', onCanceled);
+    mateUse('tooltip', tooltip);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('padding', padding);
+    mateUse('child', child);
+    mateUse('splashRadius', splashRadius);
+    mateUse('icon', icon);
+    mateUse('iconSize', iconSize);
+    mateUse('offset', offset);
+    mateUse('enabled', enabled);
+    mateUse('shape', shape);
+    mateUse('color', color);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('constraints', constraints);
+    mateUse('position', position);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

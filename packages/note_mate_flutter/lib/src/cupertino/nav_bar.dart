@@ -81,24 +81,25 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with Mate {
           transitionBetweenRoutes: p.get('transitionBetweenRoutes').build(),
           heroTag: p.get('heroTag').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('leading', leading);
-    mateDeclare('automaticallyImplyLeading', automaticallyImplyLeading);
-    mateDeclare('automaticallyImplyMiddle', automaticallyImplyMiddle);
-    mateDeclare('previousPageTitle', previousPageTitle);
-    mateDeclare('middle', middle);
-    mateDeclare('trailing', trailing);
-    mateDeclare('border', border);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('brightness', brightness);
-    mateDeclare('padding', padding);
-    mateDeclare('transitionBetweenRoutes', transitionBetweenRoutes);
-    mateDeclare('heroTag', heroTag);
+    mateUse('key', key);
+    mateUse('leading', leading);
+    mateUse('automaticallyImplyLeading', automaticallyImplyLeading);
+    mateUse('automaticallyImplyMiddle', automaticallyImplyMiddle);
+    mateUse('previousPageTitle', previousPageTitle);
+    mateUse('middle', middle);
+    mateUse('trailing', trailing);
+    mateUse('border', border);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('brightness', brightness);
+    mateUse('padding', padding);
+    mateUse('transitionBetweenRoutes', transitionBetweenRoutes);
+    mateUse('heroTag', heroTag);
   }
 }
 
 /// class CupertinoSliverNavigationBar extends StatefulWidget
-class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar with Mate {
+class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar
+    with Mate {
   /// CupertinoSliverNavigationBar CupertinoSliverNavigationBar({Key? key, Widget? largeTitle, Widget? leading, bool automaticallyImplyLeading = true, bool automaticallyImplyTitle = true, bool alwaysShowMiddle = true, String? previousPageTitle, Widget? middle, Widget? trailing, Border? border = _kDefaultNavBarBorder, Color? backgroundColor, Brightness? brightness, EdgeInsetsDirectional? padding, bool transitionBetweenRoutes = true, Object heroTag = _defaultHeroTag, bool stretch = false})
   CupertinoSliverNavigationBar$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -184,27 +185,28 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar wit
           heroTag: p.get('heroTag').build(),
           stretch: p.get('stretch').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('largeTitle', largeTitle);
-    mateDeclare('leading', leading);
-    mateDeclare('automaticallyImplyLeading', automaticallyImplyLeading);
-    mateDeclare('automaticallyImplyTitle', automaticallyImplyTitle);
-    mateDeclare('alwaysShowMiddle', alwaysShowMiddle);
-    mateDeclare('previousPageTitle', previousPageTitle);
-    mateDeclare('middle', middle);
-    mateDeclare('trailing', trailing);
-    mateDeclare('border', border);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('brightness', brightness);
-    mateDeclare('padding', padding);
-    mateDeclare('transitionBetweenRoutes', transitionBetweenRoutes);
-    mateDeclare('heroTag', heroTag);
-    mateDeclare('stretch', stretch);
+    mateUse('key', key);
+    mateUse('largeTitle', largeTitle);
+    mateUse('leading', leading);
+    mateUse('automaticallyImplyLeading', automaticallyImplyLeading);
+    mateUse('automaticallyImplyTitle', automaticallyImplyTitle);
+    mateUse('alwaysShowMiddle', alwaysShowMiddle);
+    mateUse('previousPageTitle', previousPageTitle);
+    mateUse('middle', middle);
+    mateUse('trailing', trailing);
+    mateUse('border', border);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('brightness', brightness);
+    mateUse('padding', padding);
+    mateUse('transitionBetweenRoutes', transitionBetweenRoutes);
+    mateUse('heroTag', heroTag);
+    mateUse('stretch', stretch);
   }
 }
 
 /// class CupertinoNavigationBarBackButton extends StatelessWidget
-class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackButton with Mate {
+class CupertinoNavigationBarBackButton$Mate
+    extends CupertinoNavigationBarBackButton with Mate {
   /// CupertinoNavigationBarBackButton CupertinoNavigationBarBackButton({Key? key, Color? color, String? previousPageTitle, void Function()? onPressed})
   CupertinoNavigationBarBackButton$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -230,9 +232,9 @@ class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackBu
           previousPageTitle: p.get('previousPageTitle').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('previousPageTitle', previousPageTitle);
-    mateDeclare('onPressed', onPressed);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('previousPageTitle', previousPageTitle);
+    mateUse('onPressed', onPressed);
   }
 }

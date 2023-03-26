@@ -67,16 +67,16 @@ class Viewport$Mate extends Viewport with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           slivers: p.get('slivers').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('crossAxisDirection', crossAxisDirection);
-    mateDeclare('anchor', anchor);
-    mateDeclare('offset', offset);
-    mateDeclare('center', center);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('cacheExtentStyle', cacheExtentStyle);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('slivers', slivers);
+    mateUse('key', key);
+    mateUse('axisDirection', axisDirection);
+    mateUse('crossAxisDirection', crossAxisDirection);
+    mateUse('anchor', anchor);
+    mateUse('offset', offset);
+    mateUse('center', center);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('cacheExtentStyle', cacheExtentStyle);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('slivers', slivers);
   }
 }
 
@@ -117,11 +117,11 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           slivers: p.get('slivers').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('crossAxisDirection', crossAxisDirection);
-    mateDeclare('offset', offset);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('slivers', slivers);
+    mateUse('key', key);
+    mateUse('axisDirection', axisDirection);
+    mateUse('crossAxisDirection', crossAxisDirection);
+    mateUse('offset', offset);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('slivers', slivers);
   }
 }

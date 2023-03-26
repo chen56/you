@@ -38,10 +38,10 @@ class ImageIcon$Mate extends ImageIcon with Mate {
           color: p.get('color').build(),
           semanticLabel: p.get('semanticLabel').build(),
         );
-    mateDeclare('image', image);
-    mateDeclare('key', key);
-    mateDeclare('size', size);
-    mateDeclare('color', color);
-    mateDeclare('semanticLabel', semanticLabel);
+    mateUse('image', image);
+    mateUse('key', key);
+    mateUse('size', size);
+    mateUse('color', color);
+    mateUse('semanticLabel', semanticLabel);
   }
 }

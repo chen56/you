@@ -28,14 +28,15 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate {
           localPosition: p.get('localPosition').build(),
           pressure: p.get('pressure').build(),
         );
-    mateDeclare('globalPosition', globalPosition);
-    mateDeclare('localPosition', localPosition);
-    mateDeclare('pressure', pressure);
+    mateUse('globalPosition', globalPosition);
+    mateUse('localPosition', localPosition);
+    mateUse('pressure', pressure);
   }
 }
 
 /// class ForcePressGestureRecognizer extends OneSequenceGestureRecognizer
-class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with Mate {
+class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer
+    with Mate {
   /// ForcePressGestureRecognizer ForcePressGestureRecognizer({double startPressure = 0.4, double peakPressure = 0.85, double Function(double, double, double) interpolation = _inverseLerp, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ForcePressGestureRecognizer$Mate({
     /// optionalParameters: {double startPressure = 0.4} , defaultValue:Literal
@@ -71,11 +72,11 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('startPressure', startPressure);
-    mateDeclare('peakPressure', peakPressure);
-    mateDeclare('interpolation', interpolation);
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('startPressure', startPressure);
+    mateUse('peakPressure', peakPressure);
+    mateUse('interpolation', interpolation);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

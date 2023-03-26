@@ -40,11 +40,11 @@ class Form$Mate extends Form with Mate {
           onChanged: p.get('onChanged').build(),
           autovalidateMode: p.get('autovalidateMode').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('onWillPop', onWillPop);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('autovalidateMode', autovalidateMode);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('onWillPop', onWillPop);
+    mateUse('onChanged', onChanged);
+    mateUse('autovalidateMode', autovalidateMode);
   }
 }
 
@@ -95,13 +95,13 @@ class FormField$Mate<T> extends FormField<T> with Mate {
           autovalidateMode: p.get('autovalidateMode').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('builder', builder);
-    mateDeclare('onSaved', onSaved);
-    mateDeclare('validator', validator);
-    mateDeclare('initialValue', initialValue);
-    mateDeclare('enabled', enabled);
-    mateDeclare('autovalidateMode', autovalidateMode);
-    mateDeclare('restorationId', restorationId);
+    mateUse('key', key);
+    mateUse('builder', builder);
+    mateUse('onSaved', onSaved);
+    mateUse('validator', validator);
+    mateUse('initialValue', initialValue);
+    mateUse('enabled', enabled);
+    mateUse('autovalidateMode', autovalidateMode);
+    mateUse('restorationId', restorationId);
   }
 }

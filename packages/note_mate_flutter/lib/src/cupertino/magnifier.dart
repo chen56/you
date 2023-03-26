@@ -52,16 +52,17 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate {
           controller: p.get('controller').build(),
           dragResistance: p.get('dragResistance').build(),
           hideBelowThreshold: p.get('hideBelowThreshold').build(),
-          horizontalScreenEdgePadding: p.get('horizontalScreenEdgePadding').build(),
+          horizontalScreenEdgePadding:
+              p.get('horizontalScreenEdgePadding').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('animationCurve', animationCurve);
-    mateDeclare('controller', controller);
-    mateDeclare('dragResistance', dragResistance);
-    mateDeclare('hideBelowThreshold', hideBelowThreshold);
-    mateDeclare('horizontalScreenEdgePadding', horizontalScreenEdgePadding);
-    mateDeclare('magnifierInfo', magnifierInfo);
+    mateUse('key', key);
+    mateUse('animationCurve', animationCurve);
+    mateUse('controller', controller);
+    mateUse('dragResistance', dragResistance);
+    mateUse('hideBelowThreshold', hideBelowThreshold);
+    mateUse('horizontalScreenEdgePadding', horizontalScreenEdgePadding);
+    mateUse('magnifierInfo', magnifierInfo);
   }
 }
 
@@ -102,17 +103,18 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate {
           key: p.get('key').build(),
           size: p.get('size').build(),
           borderRadius: p.get('borderRadius').build(),
-          additionalFocalPointOffset: p.get('additionalFocalPointOffset').build(),
+          additionalFocalPointOffset:
+              p.get('additionalFocalPointOffset').build(),
           shadows: p.get('shadows').build(),
           borderSide: p.get('borderSide').build(),
           inOutAnimation: p.get('inOutAnimation').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('size', size);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('additionalFocalPointOffset', additionalFocalPointOffset);
-    mateDeclare('shadows', shadows);
-    mateDeclare('borderSide', borderSide);
-    mateDeclare('inOutAnimation', inOutAnimation);
+    mateUse('key', key);
+    mateUse('size', size);
+    mateUse('borderRadius', borderRadius);
+    mateUse('additionalFocalPointOffset', additionalFocalPointOffset);
+    mateUse('shadows', shadows);
+    mateUse('borderSide', borderSide);
+    mateUse('inOutAnimation', inOutAnimation);
   }
 }

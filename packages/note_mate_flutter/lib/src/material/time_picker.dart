@@ -74,17 +74,17 @@ class TimePickerDialog$Mate extends TimePickerDialog with Mate {
           orientation: p.get('orientation').build(),
           onEntryModeChanged: p.get('onEntryModeChanged').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('initialTime', initialTime);
-    mateDeclare('cancelText', cancelText);
-    mateDeclare('confirmText', confirmText);
-    mateDeclare('helpText', helpText);
-    mateDeclare('errorInvalidText', errorInvalidText);
-    mateDeclare('hourLabelText', hourLabelText);
-    mateDeclare('minuteLabelText', minuteLabelText);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('initialEntryMode', initialEntryMode);
-    mateDeclare('orientation', orientation);
-    mateDeclare('onEntryModeChanged', onEntryModeChanged);
+    mateUse('key', key);
+    mateUse('initialTime', initialTime);
+    mateUse('cancelText', cancelText);
+    mateUse('confirmText', confirmText);
+    mateUse('helpText', helpText);
+    mateUse('errorInvalidText', errorInvalidText);
+    mateUse('hourLabelText', hourLabelText);
+    mateUse('minuteLabelText', minuteLabelText);
+    mateUse('restorationId', restorationId);
+    mateUse('initialEntryMode', initialEntryMode);
+    mateUse('orientation', orientation);
+    mateUse('onEntryModeChanged', onEntryModeChanged);
   }
 }

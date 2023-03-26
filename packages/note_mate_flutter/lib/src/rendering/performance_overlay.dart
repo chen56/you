@@ -28,12 +28,14 @@ class RenderPerformanceOverlay$Mate extends RenderPerformanceOverlay with Mate {
     mateBuilder = (p) => RenderPerformanceOverlay$Mate(
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
-    mateDeclare('optionsMask', optionsMask);
-    mateDeclare('rasterizerThreshold', rasterizerThreshold);
-    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse('optionsMask', optionsMask);
+    mateUse('rasterizerThreshold', rasterizerThreshold);
+    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
   }
 }

@@ -131,28 +131,28 @@ class ReorderableList$Mate extends ReorderableList with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('itemCount', itemCount);
-    mateDeclare('onReorder', onReorder);
-    mateDeclare('onReorderStart', onReorderStart);
-    mateDeclare('onReorderEnd', onReorderEnd);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('proxyDecorator', proxyDecorator);
-    mateDeclare('padding', padding);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('anchor', anchor);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('itemCount', itemCount);
+    mateUse('onReorder', onReorder);
+    mateUse('onReorderStart', onReorderStart);
+    mateUse('onReorderEnd', onReorderEnd);
+    mateUse('itemExtent', itemExtent);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('proxyDecorator', proxyDecorator);
+    mateUse('padding', padding);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('anchor', anchor);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -213,21 +213,22 @@ class SliverReorderableList$Mate extends SliverReorderableList with Mate {
           prototypeItem: p.get('prototypeItem').build(),
           proxyDecorator: p.get('proxyDecorator').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('findChildIndexCallback', findChildIndexCallback);
-    mateDeclare('itemCount', itemCount);
-    mateDeclare('onReorder', onReorder);
-    mateDeclare('onReorderStart', onReorderStart);
-    mateDeclare('onReorderEnd', onReorderEnd);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('proxyDecorator', proxyDecorator);
+    mateUse('key', key);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('findChildIndexCallback', findChildIndexCallback);
+    mateUse('itemCount', itemCount);
+    mateUse('onReorder', onReorder);
+    mateUse('onReorderStart', onReorderStart);
+    mateUse('onReorderEnd', onReorderEnd);
+    mateUse('itemExtent', itemExtent);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('proxyDecorator', proxyDecorator);
   }
 }
 
 /// class ReorderableDragStartListener extends StatelessWidget
-class ReorderableDragStartListener$Mate extends ReorderableDragStartListener with Mate {
+class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
+    with Mate {
   /// ReorderableDragStartListener ReorderableDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDragStartListener$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -253,15 +254,16 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener wit
           index: p.get('index').build(),
           enabled: p.get('enabled').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('index', index);
-    mateDeclare('enabled', enabled);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('index', index);
+    mateUse('enabled', enabled);
   }
 }
 
 /// class ReorderableDelayedDragStartListener extends ReorderableDragStartListener
-class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragStartListener with Mate {
+class ReorderableDelayedDragStartListener$Mate
+    extends ReorderableDelayedDragStartListener with Mate {
   /// ReorderableDelayedDragStartListener ReorderableDelayedDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDelayedDragStartListener$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -287,9 +289,9 @@ class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragSta
           index: p.get('index').build(),
           enabled: p.get('enabled').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('index', index);
-    mateDeclare('enabled', enabled);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('index', index);
+    mateUse('enabled', enabled);
   }
 }

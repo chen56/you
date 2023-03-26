@@ -32,10 +32,10 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           p.get('right').value,
           p.get('bottom').value,
         );
-    mateDeclare('left', left);
-    mateDeclare('top', top);
-    mateDeclare('right', right);
-    mateDeclare('bottom', bottom);
+    mateUse('left', left);
+    mateUse('top', top);
+    mateUse('right', right);
+    mateUse('bottom', bottom);
   }
 
   /// EdgeInsets EdgeInsets.all(double value)
@@ -45,7 +45,7 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
       double value)
       : super.all(value) {
     mateBuilder = (p) => EdgeInsets$Mate.all(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 
   /// EdgeInsets EdgeInsets.only({double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0})
@@ -73,10 +73,10 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           right: p.get('right').build(),
           bottom: p.get('bottom').build(),
         );
-    mateDeclare('left', left);
-    mateDeclare('top', top);
-    mateDeclare('right', right);
-    mateDeclare('bottom', bottom);
+    mateUse('left', left);
+    mateUse('top', top);
+    mateUse('right', right);
+    mateUse('bottom', bottom);
   }
 
   /// EdgeInsets EdgeInsets.symmetric({double vertical = 0.0, double horizontal = 0.0})
@@ -94,8 +94,8 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           vertical: p.get('vertical').build(),
           horizontal: p.get('horizontal').build(),
         );
-    mateDeclare('vertical', vertical);
-    mateDeclare('horizontal', horizontal);
+    mateUse('vertical', vertical);
+    mateUse('horizontal', horizontal);
   }
 
   /// EdgeInsets EdgeInsets.fromViewPadding(ViewPadding padding, double devicePixelRatio)
@@ -113,8 +113,8 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           p.get('padding').value,
           p.get('devicePixelRatio').value,
         );
-    mateDeclare('padding', padding);
-    mateDeclare('devicePixelRatio', devicePixelRatio);
+    mateUse('padding', padding);
+    mateUse('devicePixelRatio', devicePixelRatio);
   }
 }
 
@@ -145,10 +145,10 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           p.get('end').value,
           p.get('bottom').value,
         );
-    mateDeclare('start', start);
-    mateDeclare('top', top);
-    mateDeclare('end', end);
-    mateDeclare('bottom', bottom);
+    mateUse('start', start);
+    mateUse('top', top);
+    mateUse('end', end);
+    mateUse('bottom', bottom);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.only({double start = 0.0, double top = 0.0, double end = 0.0, double bottom = 0.0})
@@ -176,10 +176,10 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           end: p.get('end').build(),
           bottom: p.get('bottom').build(),
         );
-    mateDeclare('start', start);
-    mateDeclare('top', top);
-    mateDeclare('end', end);
-    mateDeclare('bottom', bottom);
+    mateUse('start', start);
+    mateUse('top', top);
+    mateUse('end', end);
+    mateUse('bottom', bottom);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.symmetric({double horizontal = 0.0, double vertical = 0.0})
@@ -197,8 +197,8 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           horizontal: p.get('horizontal').build(),
           vertical: p.get('vertical').build(),
         );
-    mateDeclare('horizontal', horizontal);
-    mateDeclare('vertical', vertical);
+    mateUse('horizontal', horizontal);
+    mateUse('vertical', vertical);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.all(double value)
@@ -208,6 +208,6 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
       double value)
       : super.all(value) {
     mateBuilder = (p) => EdgeInsetsDirectional$Mate.all(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }

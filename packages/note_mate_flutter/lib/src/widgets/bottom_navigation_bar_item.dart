@@ -38,10 +38,10 @@ class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate {
           backgroundColor: p.get('backgroundColor').build(),
           tooltip: p.get('tooltip').build(),
         );
-    mateDeclare('icon', icon);
-    mateDeclare('label', label);
-    mateDeclare('activeIcon', activeIcon);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('tooltip', tooltip);
+    mateUse('icon', icon);
+    mateUse('label', label);
+    mateUse('activeIcon', activeIcon);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('tooltip', tooltip);
   }
 }

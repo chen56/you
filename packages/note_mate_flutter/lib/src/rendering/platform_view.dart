@@ -35,10 +35,10 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate {
           gestureRecognizers: p.get('gestureRecognizers').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('viewController', viewController);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
-    mateDeclare('gestureRecognizers', gestureRecognizers);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('viewController', viewController);
+    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('gestureRecognizers', gestureRecognizers);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -64,9 +64,9 @@ class RenderUiKitView$Mate extends RenderUiKitView with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateDeclare('viewController', viewController);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
-    mateDeclare('gestureRecognizers', gestureRecognizers);
+    mateUse('viewController', viewController);
+    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('gestureRecognizers', gestureRecognizers);
   }
 }
 
@@ -92,8 +92,8 @@ class PlatformViewRenderBox$Mate extends PlatformViewRenderBox with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateDeclare('controller', controller);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
-    mateDeclare('gestureRecognizers', gestureRecognizers);
+    mateUse('controller', controller);
+    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('gestureRecognizers', gestureRecognizers);
   }
 }

@@ -71,16 +71,16 @@ class Card$Mate extends Card with Mate {
           child: p.get('child').build(),
           semanticContainer: p.get('semanticContainer').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('color', color);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shape', shape);
-    mateDeclare('borderOnForeground', borderOnForeground);
-    mateDeclare('margin', margin);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('child', child);
-    mateDeclare('semanticContainer', semanticContainer);
+    mateUse('key', key);
+    mateUse('color', color);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('elevation', elevation);
+    mateUse('shape', shape);
+    mateUse('borderOnForeground', borderOnForeground);
+    mateUse('margin', margin);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('child', child);
+    mateUse('semanticContainer', semanticContainer);
   }
 }

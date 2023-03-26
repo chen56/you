@@ -151,31 +151,31 @@ class ChoiceChip$Mate extends ChoiceChip with Mate {
           selectedShadowColor: p.get('selectedShadowColor').build(),
           avatarBorder: p.get('avatarBorder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('avatar', avatar);
-    mateDeclare('label', label);
-    mateDeclare('labelStyle', labelStyle);
-    mateDeclare('labelPadding', labelPadding);
-    mateDeclare('onSelected', onSelected);
-    mateDeclare('pressElevation', pressElevation);
-    mateDeclare('selected', selected);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('side', side);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('padding', padding);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('iconTheme', iconTheme);
-    mateDeclare('selectedShadowColor', selectedShadowColor);
-    mateDeclare('avatarBorder', avatarBorder);
+    mateUse('key', key);
+    mateUse('avatar', avatar);
+    mateUse('label', label);
+    mateUse('labelStyle', labelStyle);
+    mateUse('labelPadding', labelPadding);
+    mateUse('onSelected', onSelected);
+    mateUse('pressElevation', pressElevation);
+    mateUse('selected', selected);
+    mateUse('selectedColor', selectedColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('tooltip', tooltip);
+    mateUse('side', side);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('padding', padding);
+    mateUse('visualDensity', visualDensity);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('iconTheme', iconTheme);
+    mateUse('selectedShadowColor', selectedShadowColor);
+    mateUse('avatarBorder', avatarBorder);
   }
 }

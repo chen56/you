@@ -75,18 +75,18 @@ class SliverConstraints$Mate extends SliverConstraints with Mate {
           remainingCacheExtent: p.get('remainingCacheExtent').build(),
           cacheOrigin: p.get('cacheOrigin').build(),
         );
-    mateDeclare('axisDirection', axisDirection);
-    mateDeclare('growthDirection', growthDirection);
-    mateDeclare('userScrollDirection', userScrollDirection);
-    mateDeclare('scrollOffset', scrollOffset);
-    mateDeclare('precedingScrollExtent', precedingScrollExtent);
-    mateDeclare('overlap', overlap);
-    mateDeclare('remainingPaintExtent', remainingPaintExtent);
-    mateDeclare('crossAxisExtent', crossAxisExtent);
-    mateDeclare('crossAxisDirection', crossAxisDirection);
-    mateDeclare('viewportMainAxisExtent', viewportMainAxisExtent);
-    mateDeclare('remainingCacheExtent', remainingCacheExtent);
-    mateDeclare('cacheOrigin', cacheOrigin);
+    mateUse('axisDirection', axisDirection);
+    mateUse('growthDirection', growthDirection);
+    mateUse('userScrollDirection', userScrollDirection);
+    mateUse('scrollOffset', scrollOffset);
+    mateUse('precedingScrollExtent', precedingScrollExtent);
+    mateUse('overlap', overlap);
+    mateUse('remainingPaintExtent', remainingPaintExtent);
+    mateUse('crossAxisExtent', crossAxisExtent);
+    mateUse('crossAxisDirection', crossAxisDirection);
+    mateUse('viewportMainAxisExtent', viewportMainAxisExtent);
+    mateUse('remainingCacheExtent', remainingCacheExtent);
+    mateUse('cacheOrigin', cacheOrigin);
   }
 }
 
@@ -145,24 +145,25 @@ class SliverGeometry$Mate extends SliverGeometry with Mate {
           paintOrigin: p.get('paintOrigin').build(),
           layoutExtent: p.get('layoutExtent').build(),
           maxPaintExtent: p.get('maxPaintExtent').build(),
-          maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').build(),
+          maxScrollObstructionExtent:
+              p.get('maxScrollObstructionExtent').build(),
           hitTestExtent: p.get('hitTestExtent').build(),
           visible: p.get('visible').build(),
           hasVisualOverflow: p.get('hasVisualOverflow').build(),
           scrollOffsetCorrection: p.get('scrollOffsetCorrection').build(),
           cacheExtent: p.get('cacheExtent').build(),
         );
-    mateDeclare('scrollExtent', scrollExtent);
-    mateDeclare('paintExtent', paintExtent);
-    mateDeclare('paintOrigin', paintOrigin);
-    mateDeclare('layoutExtent', layoutExtent);
-    mateDeclare('maxPaintExtent', maxPaintExtent);
-    mateDeclare('maxScrollObstructionExtent', maxScrollObstructionExtent);
-    mateDeclare('hitTestExtent', hitTestExtent);
-    mateDeclare('visible', visible);
-    mateDeclare('hasVisualOverflow', hasVisualOverflow);
-    mateDeclare('scrollOffsetCorrection', scrollOffsetCorrection);
-    mateDeclare('cacheExtent', cacheExtent);
+    mateUse('scrollExtent', scrollExtent);
+    mateUse('paintExtent', paintExtent);
+    mateUse('paintOrigin', paintOrigin);
+    mateUse('layoutExtent', layoutExtent);
+    mateUse('maxPaintExtent', maxPaintExtent);
+    mateUse('maxScrollObstructionExtent', maxScrollObstructionExtent);
+    mateUse('hitTestExtent', hitTestExtent);
+    mateUse('visible', visible);
+    mateUse('hasVisualOverflow', hasVisualOverflow);
+    mateUse('scrollOffsetCorrection', scrollOffsetCorrection);
+    mateUse('cacheExtent', cacheExtent);
   }
 }
 
@@ -175,7 +176,7 @@ class SliverHitTestResult$Mate extends SliverHitTestResult with Mate {
       HitTestResult result)
       : super.wrap(result) {
     mateBuilder = (p) => SliverHitTestResult$Mate.wrap(p.get('result').value);
-    mateDeclare('result', result);
+    mateUse('result', result);
   }
 }
 
@@ -200,9 +201,9 @@ class SliverHitTestEntry$Mate extends SliverHitTestEntry with Mate {
           mainAxisPosition: p.get('mainAxisPosition').build(),
           crossAxisPosition: p.get('crossAxisPosition').build(),
         );
-    mateDeclare('target', target);
-    mateDeclare('mainAxisPosition', mainAxisPosition);
-    mateDeclare('crossAxisPosition', crossAxisPosition);
+    mateUse('target', target);
+    mateUse('mainAxisPosition', mainAxisPosition);
+    mateUse('crossAxisPosition', crossAxisPosition);
   }
 }
 
@@ -214,7 +215,8 @@ class RenderSliverToBoxAdapter$Mate extends RenderSliverToBoxAdapter with Mate {
       /// optionalParameters: {RenderBox? child} , defaultValue:none
       RenderBox? child})
       : super(child: child) {
-    mateBuilder = (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
-    mateDeclare('child', child);
+    mateBuilder =
+        (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
+    mateUse('child', child);
   }
 }

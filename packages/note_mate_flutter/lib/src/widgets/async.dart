@@ -23,8 +23,8 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           p.get('state').value,
           p.get('data').value,
         );
-    mateDeclare('state', state);
-    mateDeclare('data', data);
+    mateUse('state', state);
+    mateUse('data', data);
   }
 
   /// AsyncSnapshot<T> AsyncSnapshot.withError(ConnectionState state, Object error, [StackTrace stackTrace = StackTrace.empty])
@@ -47,9 +47,9 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           p.get('error').value,
           p.get('stackTrace').value,
         );
-    mateDeclare('state', state);
-    mateDeclare('error', error);
-    mateDeclare('stackTrace', stackTrace);
+    mateUse('state', state);
+    mateUse('error', error);
+    mateUse('stackTrace', stackTrace);
   }
 }
 
@@ -80,10 +80,10 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
           stream: p.get('stream').build(),
           builder: p.get('builder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('initialData', initialData);
-    mateDeclare('stream', stream);
-    mateDeclare('builder', builder);
+    mateUse('key', key);
+    mateUse('initialData', initialData);
+    mateUse('stream', stream);
+    mateUse('builder', builder);
   }
 }
 
@@ -114,9 +114,9 @@ class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate {
           initialData: p.get('initialData').build(),
           builder: p.get('builder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('future', future);
-    mateDeclare('initialData', initialData);
-    mateDeclare('builder', builder);
+    mateUse('key', key);
+    mateUse('future', future);
+    mateUse('initialData', initialData);
+    mateUse('builder', builder);
   }
 }

@@ -136,28 +136,28 @@ class IconButton$Mate extends IconButton with Mate {
           selectedIcon: p.get('selectedIcon').build(),
           icon: p.get('icon').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('iconSize', iconSize);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('padding', padding);
-    mateDeclare('alignment', alignment);
-    mateDeclare('splashRadius', splashRadius);
-    mateDeclare('color', color);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('highlightColor', highlightColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('constraints', constraints);
-    mateDeclare('style', style);
-    mateDeclare('isSelected', isSelected);
-    mateDeclare('selectedIcon', selectedIcon);
-    mateDeclare('icon', icon);
+    mateUse('key', key);
+    mateUse('iconSize', iconSize);
+    mateUse('visualDensity', visualDensity);
+    mateUse('padding', padding);
+    mateUse('alignment', alignment);
+    mateUse('splashRadius', splashRadius);
+    mateUse('color', color);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('highlightColor', highlightColor);
+    mateUse('splashColor', splashColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('onPressed', onPressed);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('tooltip', tooltip);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('constraints', constraints);
+    mateUse('style', style);
+    mateUse('isSelected', isSelected);
+    mateUse('selectedIcon', selectedIcon);
+    mateUse('icon', icon);
   }
 }

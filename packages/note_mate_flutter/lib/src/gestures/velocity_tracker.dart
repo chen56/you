@@ -13,8 +13,9 @@ class Velocity$Mate extends Velocity with Mate {
       /// optionalParameters: {required Offset pixelsPerSecond} , defaultValue:none
       required Offset pixelsPerSecond})
       : super(pixelsPerSecond: pixelsPerSecond) {
-    mateBuilder = (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build());
-    mateDeclare('pixelsPerSecond', pixelsPerSecond);
+    mateBuilder =
+        (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build());
+    mateUse('pixelsPerSecond', pixelsPerSecond);
   }
 }
 
@@ -45,10 +46,10 @@ class VelocityEstimate$Mate extends VelocityEstimate with Mate {
           duration: p.get('duration').build(),
           offset: p.get('offset').build(),
         );
-    mateDeclare('pixelsPerSecond', pixelsPerSecond);
-    mateDeclare('confidence', confidence);
-    mateDeclare('duration', duration);
-    mateDeclare('offset', offset);
+    mateUse('pixelsPerSecond', pixelsPerSecond);
+    mateUse('confidence', confidence);
+    mateUse('duration', duration);
+    mateUse('offset', offset);
   }
 }
 
@@ -61,32 +62,36 @@ class VelocityTracker$Mate extends VelocityTracker with Mate {
       PointerDeviceKind kind)
       : super.withKind(kind) {
     mateBuilder = (p) => VelocityTracker$Mate.withKind(p.get('kind').value);
-    mateDeclare('kind', kind);
+    mateUse('kind', kind);
   }
 }
 
 /// class IOSScrollViewFlingVelocityTracker extends VelocityTracker
-class IOSScrollViewFlingVelocityTracker$Mate extends IOSScrollViewFlingVelocityTracker with Mate {
+class IOSScrollViewFlingVelocityTracker$Mate
+    extends IOSScrollViewFlingVelocityTracker with Mate {
   /// IOSScrollViewFlingVelocityTracker IOSScrollViewFlingVelocityTracker(PointerDeviceKind kind)
   IOSScrollViewFlingVelocityTracker$Mate(
 
       /// requiredParameters: PointerDeviceKind kind
       PointerDeviceKind kind)
       : super(kind) {
-    mateBuilder = (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    mateDeclare('kind', kind);
+    mateBuilder =
+        (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
+    mateUse('kind', kind);
   }
 }
 
 /// class MacOSScrollViewFlingVelocityTracker extends IOSScrollViewFlingVelocityTracker
-class MacOSScrollViewFlingVelocityTracker$Mate extends MacOSScrollViewFlingVelocityTracker with Mate {
+class MacOSScrollViewFlingVelocityTracker$Mate
+    extends MacOSScrollViewFlingVelocityTracker with Mate {
   /// MacOSScrollViewFlingVelocityTracker MacOSScrollViewFlingVelocityTracker(PointerDeviceKind kind)
   MacOSScrollViewFlingVelocityTracker$Mate(
 
       /// requiredParameters: PointerDeviceKind kind
       PointerDeviceKind kind)
       : super(kind) {
-    mateBuilder = (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    mateDeclare('kind', kind);
+    mateBuilder =
+        (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
+    mateUse('kind', kind);
   }
 }

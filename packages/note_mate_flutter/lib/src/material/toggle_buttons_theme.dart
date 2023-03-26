@@ -92,21 +92,21 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
           borderRadius: p.get('borderRadius').build(),
           borderWidth: p.get('borderWidth').build(),
         );
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('constraints', constraints);
-    mateDeclare('color', color);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('highlightColor', highlightColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('borderColor', borderColor);
-    mateDeclare('selectedBorderColor', selectedBorderColor);
-    mateDeclare('disabledBorderColor', disabledBorderColor);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('borderWidth', borderWidth);
+    mateUse('textStyle', textStyle);
+    mateUse('constraints', constraints);
+    mateUse('color', color);
+    mateUse('selectedColor', selectedColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('fillColor', fillColor);
+    mateUse('focusColor', focusColor);
+    mateUse('highlightColor', highlightColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('splashColor', splashColor);
+    mateUse('borderColor', borderColor);
+    mateUse('selectedBorderColor', selectedBorderColor);
+    mateUse('disabledBorderColor', disabledBorderColor);
+    mateUse('borderRadius', borderRadius);
+    mateUse('borderWidth', borderWidth);
   }
 }
 
@@ -132,8 +132,8 @@ class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

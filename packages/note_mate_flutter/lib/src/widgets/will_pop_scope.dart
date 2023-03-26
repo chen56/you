@@ -28,8 +28,8 @@ class WillPopScope$Mate extends WillPopScope with Mate {
           child: p.get('child').build(),
           onWillPop: p.get('onWillPop').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('onWillPop', onWillPop);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('onWillPop', onWillPop);
   }
 }

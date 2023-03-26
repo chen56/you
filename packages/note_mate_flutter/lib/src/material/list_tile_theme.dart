@@ -104,7 +104,8 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate {
           textColor: p.get('textColor').build(),
           titleTextStyle: p.get('titleTextStyle').build(),
           subtitleTextStyle: p.get('subtitleTextStyle').build(),
-          leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').build(),
+          leadingAndTrailingTextStyle:
+              p.get('leadingAndTrailingTextStyle').build(),
           contentPadding: p.get('contentPadding').build(),
           tileColor: p.get('tileColor').build(),
           selectedTileColor: p.get('selectedTileColor').build(),
@@ -116,25 +117,25 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate {
           visualDensity: p.get('visualDensity').build(),
           titleAlignment: p.get('titleAlignment').build(),
         );
-    mateDeclare('dense', dense);
-    mateDeclare('shape', shape);
-    mateDeclare('style', style);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('iconColor', iconColor);
-    mateDeclare('textColor', textColor);
-    mateDeclare('titleTextStyle', titleTextStyle);
-    mateDeclare('subtitleTextStyle', subtitleTextStyle);
-    mateDeclare('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle);
-    mateDeclare('contentPadding', contentPadding);
-    mateDeclare('tileColor', tileColor);
-    mateDeclare('selectedTileColor', selectedTileColor);
-    mateDeclare('horizontalTitleGap', horizontalTitleGap);
-    mateDeclare('minVerticalPadding', minVerticalPadding);
-    mateDeclare('minLeadingWidth', minLeadingWidth);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('titleAlignment', titleAlignment);
+    mateUse('dense', dense);
+    mateUse('shape', shape);
+    mateUse('style', style);
+    mateUse('selectedColor', selectedColor);
+    mateUse('iconColor', iconColor);
+    mateUse('textColor', textColor);
+    mateUse('titleTextStyle', titleTextStyle);
+    mateUse('subtitleTextStyle', subtitleTextStyle);
+    mateUse('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle);
+    mateUse('contentPadding', contentPadding);
+    mateUse('tileColor', tileColor);
+    mateUse('selectedTileColor', selectedTileColor);
+    mateUse('horizontalTitleGap', horizontalTitleGap);
+    mateUse('minVerticalPadding', minVerticalPadding);
+    mateUse('minLeadingWidth', minLeadingWidth);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('visualDensity', visualDensity);
+    mateUse('titleAlignment', titleAlignment);
   }
 }
 
@@ -230,22 +231,22 @@ class ListTileTheme$Mate extends ListTileTheme with Mate {
           minLeadingWidth: p.get('minLeadingWidth').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('dense', dense);
-    mateDeclare('shape', shape);
-    mateDeclare('style', style);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('iconColor', iconColor);
-    mateDeclare('textColor', textColor);
-    mateDeclare('contentPadding', contentPadding);
-    mateDeclare('tileColor', tileColor);
-    mateDeclare('selectedTileColor', selectedTileColor);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('horizontalTitleGap', horizontalTitleGap);
-    mateDeclare('minVerticalPadding', minVerticalPadding);
-    mateDeclare('minLeadingWidth', minLeadingWidth);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('dense', dense);
+    mateUse('shape', shape);
+    mateUse('style', style);
+    mateUse('selectedColor', selectedColor);
+    mateUse('iconColor', iconColor);
+    mateUse('textColor', textColor);
+    mateUse('contentPadding', contentPadding);
+    mateUse('tileColor', tileColor);
+    mateUse('selectedTileColor', selectedTileColor);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('horizontalTitleGap', horizontalTitleGap);
+    mateUse('minVerticalPadding', minVerticalPadding);
+    mateUse('minLeadingWidth', minLeadingWidth);
+    mateUse('child', child);
   }
 }

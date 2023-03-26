@@ -34,9 +34,9 @@ class ImageFiltered$Mate extends ImageFiltered with Mate {
           child: p.get('child').build(),
           enabled: p.get('enabled').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('imageFilter', imageFilter);
-    mateDeclare('child', child);
-    mateDeclare('enabled', enabled);
+    mateUse('key', key);
+    mateUse('imageFilter', imageFilter);
+    mateUse('child', child);
+    mateUse('enabled', enabled);
   }
 }

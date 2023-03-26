@@ -6,7 +6,8 @@ import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 
 /// class ContinuousRectangleBorder extends OutlinedBorder
-class ContinuousRectangleBorder$Mate extends ContinuousRectangleBorder with Mate {
+class ContinuousRectangleBorder$Mate extends ContinuousRectangleBorder
+    with Mate {
   /// ContinuousRectangleBorder ContinuousRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   ContinuousRectangleBorder$Mate({
     /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
@@ -22,7 +23,7 @@ class ContinuousRectangleBorder$Mate extends ContinuousRectangleBorder with Mate
           side: p.get('side').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    mateDeclare('side', side);
-    mateDeclare('borderRadius', borderRadius);
+    mateUse('side', side);
+    mateUse('borderRadius', borderRadius);
   }
 }

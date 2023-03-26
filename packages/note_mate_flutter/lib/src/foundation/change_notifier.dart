@@ -12,6 +12,6 @@ class ValueNotifier$Mate<T> extends ValueNotifier<T> with Mate {
       T _value)
       : super(_value) {
     mateBuilder = (p) => ValueNotifier$Mate<T>(p.get('_value').value);
-    mateDeclare('_value', _value);
+    mateUse('_value', _value);
   }
 }

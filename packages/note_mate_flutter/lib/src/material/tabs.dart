@@ -56,12 +56,12 @@ class Tab$Mate extends Tab with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('text', text);
-    mateDeclare('icon', icon);
-    mateDeclare('iconMargin', iconMargin);
-    mateDeclare('height', height);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('text', text);
+    mateUse('icon', icon);
+    mateUse('iconMargin', iconMargin);
+    mateUse('height', height);
+    mateUse('child', child);
   }
 }
 
@@ -177,7 +177,8 @@ class TabBar$Mate extends TabBar with Mate {
           isScrollable: p.get('isScrollable').build(),
           padding: p.get('padding').build(),
           indicatorColor: p.get('indicatorColor').build(),
-          automaticIndicatorColorAdjustment: p.get('automaticIndicatorColorAdjustment').build(),
+          automaticIndicatorColorAdjustment:
+              p.get('automaticIndicatorColorAdjustment').build(),
           indicatorWeight: p.get('indicatorWeight').build(),
           indicatorPadding: p.get('indicatorPadding').build(),
           indicator: p.get('indicator').build(),
@@ -197,31 +198,32 @@ class TabBar$Mate extends TabBar with Mate {
           splashFactory: p.get('splashFactory').build(),
           splashBorderRadius: p.get('splashBorderRadius').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('tabs', tabs);
-    mateDeclare('controller', controller);
-    mateDeclare('isScrollable', isScrollable);
-    mateDeclare('padding', padding);
-    mateDeclare('indicatorColor', indicatorColor);
-    mateDeclare('automaticIndicatorColorAdjustment', automaticIndicatorColorAdjustment);
-    mateDeclare('indicatorWeight', indicatorWeight);
-    mateDeclare('indicatorPadding', indicatorPadding);
-    mateDeclare('indicator', indicator);
-    mateDeclare('indicatorSize', indicatorSize);
-    mateDeclare('dividerColor', dividerColor);
-    mateDeclare('labelColor', labelColor);
-    mateDeclare('labelStyle', labelStyle);
-    mateDeclare('labelPadding', labelPadding);
-    mateDeclare('unselectedLabelColor', unselectedLabelColor);
-    mateDeclare('unselectedLabelStyle', unselectedLabelStyle);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('onTap', onTap);
-    mateDeclare('physics', physics);
-    mateDeclare('splashFactory', splashFactory);
-    mateDeclare('splashBorderRadius', splashBorderRadius);
+    mateUse('key', key);
+    mateUse('tabs', tabs);
+    mateUse('controller', controller);
+    mateUse('isScrollable', isScrollable);
+    mateUse('padding', padding);
+    mateUse('indicatorColor', indicatorColor);
+    mateUse(
+        'automaticIndicatorColorAdjustment', automaticIndicatorColorAdjustment);
+    mateUse('indicatorWeight', indicatorWeight);
+    mateUse('indicatorPadding', indicatorPadding);
+    mateUse('indicator', indicator);
+    mateUse('indicatorSize', indicatorSize);
+    mateUse('dividerColor', dividerColor);
+    mateUse('labelColor', labelColor);
+    mateUse('labelStyle', labelStyle);
+    mateUse('labelPadding', labelPadding);
+    mateUse('unselectedLabelColor', unselectedLabelColor);
+    mateUse('unselectedLabelStyle', unselectedLabelStyle);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('overlayColor', overlayColor);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('onTap', onTap);
+    mateUse('physics', physics);
+    mateUse('splashFactory', splashFactory);
+    mateUse('splashBorderRadius', splashBorderRadius);
   }
 }
 
@@ -267,13 +269,13 @@ class TabBarView$Mate extends TabBarView with Mate {
           viewportFraction: p.get('viewportFraction').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('controller', controller);
-    mateDeclare('physics', physics);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('viewportFraction', viewportFraction);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('controller', controller);
+    mateUse('physics', physics);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('viewportFraction', viewportFraction);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -309,11 +311,11 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
           size: p.get('size').build(),
           borderStyle: p.get('borderStyle').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('borderColor', borderColor);
-    mateDeclare('size', size);
-    mateDeclare('borderStyle', borderStyle);
+    mateUse('key', key);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('borderColor', borderColor);
+    mateUse('size', size);
+    mateUse('borderStyle', borderStyle);
   }
 }
 
@@ -354,11 +356,11 @@ class TabPageSelector$Mate extends TabPageSelector with Mate {
           selectedColor: p.get('selectedColor').build(),
           borderStyle: p.get('borderStyle').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('indicatorSize', indicatorSize);
-    mateDeclare('color', color);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('borderStyle', borderStyle);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('indicatorSize', indicatorSize);
+    mateUse('color', color);
+    mateUse('selectedColor', selectedColor);
+    mateUse('borderStyle', borderStyle);
   }
 }

@@ -289,7 +289,8 @@ class TextFormField$Mate extends TextFormField with Mate {
           cursorColor: p.get('cursorColor').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           buildCounter: p.get('buildCounter').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
@@ -297,64 +298,65 @@ class TextFormField$Mate extends TextFormField with Mate {
           autovalidateMode: p.get('autovalidateMode').build(),
           scrollController: p.get('scrollController').build(),
           restorationId: p.get('restorationId').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           mouseCursor: p.get('mouseCursor').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('initialValue', initialValue);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('decoration', decoration);
-    mateDeclare('keyboardType', keyboardType);
-    mateDeclare('textCapitalization', textCapitalization);
-    mateDeclare('textInputAction', textInputAction);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textAlignVertical', textAlignVertical);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('readOnly', readOnly);
-    mateDeclare('showCursor', showCursor);
-    mateDeclare('obscuringCharacter', obscuringCharacter);
-    mateDeclare('obscureText', obscureText);
-    mateDeclare('autocorrect', autocorrect);
-    mateDeclare('smartDashesType', smartDashesType);
-    mateDeclare('smartQuotesType', smartQuotesType);
-    mateDeclare('enableSuggestions', enableSuggestions);
-    mateDeclare('maxLengthEnforcement', maxLengthEnforcement);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('minLines', minLines);
-    mateDeclare('expands', expands);
-    mateDeclare('maxLength', maxLength);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onTap', onTap);
-    mateDeclare('onTapOutside', onTapOutside);
-    mateDeclare('onEditingComplete', onEditingComplete);
-    mateDeclare('onFieldSubmitted', onFieldSubmitted);
-    mateDeclare('onSaved', onSaved);
-    mateDeclare('validator', validator);
-    mateDeclare('inputFormatters', inputFormatters);
-    mateDeclare('enabled', enabled);
-    mateDeclare('cursorWidth', cursorWidth);
-    mateDeclare('cursorHeight', cursorHeight);
-    mateDeclare('cursorRadius', cursorRadius);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('keyboardAppearance', keyboardAppearance);
-    mateDeclare('scrollPadding', scrollPadding);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('buildCounter', buildCounter);
-    mateDeclare('scrollPhysics', scrollPhysics);
-    mateDeclare('autofillHints', autofillHints);
-    mateDeclare('autovalidateMode', autovalidateMode);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('initialValue', initialValue);
+    mateUse('focusNode', focusNode);
+    mateUse('decoration', decoration);
+    mateUse('keyboardType', keyboardType);
+    mateUse('textCapitalization', textCapitalization);
+    mateUse('textInputAction', textInputAction);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textDirection', textDirection);
+    mateUse('textAlign', textAlign);
+    mateUse('textAlignVertical', textAlignVertical);
+    mateUse('autofocus', autofocus);
+    mateUse('readOnly', readOnly);
+    mateUse('showCursor', showCursor);
+    mateUse('obscuringCharacter', obscuringCharacter);
+    mateUse('obscureText', obscureText);
+    mateUse('autocorrect', autocorrect);
+    mateUse('smartDashesType', smartDashesType);
+    mateUse('smartQuotesType', smartQuotesType);
+    mateUse('enableSuggestions', enableSuggestions);
+    mateUse('maxLengthEnforcement', maxLengthEnforcement);
+    mateUse('maxLines', maxLines);
+    mateUse('minLines', minLines);
+    mateUse('expands', expands);
+    mateUse('maxLength', maxLength);
+    mateUse('onChanged', onChanged);
+    mateUse('onTap', onTap);
+    mateUse('onTapOutside', onTapOutside);
+    mateUse('onEditingComplete', onEditingComplete);
+    mateUse('onFieldSubmitted', onFieldSubmitted);
+    mateUse('onSaved', onSaved);
+    mateUse('validator', validator);
+    mateUse('inputFormatters', inputFormatters);
+    mateUse('enabled', enabled);
+    mateUse('cursorWidth', cursorWidth);
+    mateUse('cursorHeight', cursorHeight);
+    mateUse('cursorRadius', cursorRadius);
+    mateUse('cursorColor', cursorColor);
+    mateUse('keyboardAppearance', keyboardAppearance);
+    mateUse('scrollPadding', scrollPadding);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('selectionControls', selectionControls);
+    mateUse('buildCounter', buildCounter);
+    mateUse('scrollPhysics', scrollPhysics);
+    mateUse('autofillHints', autofillHints);
+    mateUse('autovalidateMode', autovalidateMode);
+    mateUse('scrollController', scrollController);
+    mateUse('restorationId', restorationId);
+    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
   }
 }

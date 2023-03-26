@@ -332,84 +332,87 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
           autofillHints: p.get('autofillHints').build(),
-          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
+          contentInsertionConfiguration:
+              p.get('contentInsertionConfiguration').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('decoration', decoration);
-    mateDeclare('padding', padding);
-    mateDeclare('placeholder', placeholder);
-    mateDeclare('placeholderStyle', placeholderStyle);
-    mateDeclare('prefix', prefix);
-    mateDeclare('prefixMode', prefixMode);
-    mateDeclare('suffix', suffix);
-    mateDeclare('suffixMode', suffixMode);
-    mateDeclare('clearButtonMode', clearButtonMode);
-    mateDeclare('keyboardType', keyboardType);
-    mateDeclare('textInputAction', textInputAction);
-    mateDeclare('textCapitalization', textCapitalization);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textAlignVertical', textAlignVertical);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('readOnly', readOnly);
-    mateDeclare('showCursor', showCursor);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('obscuringCharacter', obscuringCharacter);
-    mateDeclare('obscureText', obscureText);
-    mateDeclare('autocorrect', autocorrect);
-    mateDeclare('smartDashesType', smartDashesType);
-    mateDeclare('smartQuotesType', smartQuotesType);
-    mateDeclare('enableSuggestions', enableSuggestions);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('minLines', minLines);
-    mateDeclare('expands', expands);
-    mateDeclare('maxLength', maxLength);
-    mateDeclare('maxLengthEnforcement', maxLengthEnforcement);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onEditingComplete', onEditingComplete);
-    mateDeclare('onSubmitted', onSubmitted);
-    mateDeclare('onTapOutside', onTapOutside);
-    mateDeclare('inputFormatters', inputFormatters);
-    mateDeclare('enabled', enabled);
-    mateDeclare('cursorWidth', cursorWidth);
-    mateDeclare('cursorHeight', cursorHeight);
-    mateDeclare('cursorRadius', cursorRadius);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('selectionHeightStyle', selectionHeightStyle);
-    mateDeclare('selectionWidthStyle', selectionWidthStyle);
-    mateDeclare('keyboardAppearance', keyboardAppearance);
-    mateDeclare('scrollPadding', scrollPadding);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('onTap', onTap);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('scrollPhysics', scrollPhysics);
-    mateDeclare('autofillHints', autofillHints);
-    mateDeclare('contentInsertionConfiguration', contentInsertionConfiguration);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('scribbleEnabled', scribbleEnabled);
-    mateDeclare('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
-    mateDeclare('spellCheckConfiguration', spellCheckConfiguration);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('focusNode', focusNode);
+    mateUse('decoration', decoration);
+    mateUse('padding', padding);
+    mateUse('placeholder', placeholder);
+    mateUse('placeholderStyle', placeholderStyle);
+    mateUse('prefix', prefix);
+    mateUse('prefixMode', prefixMode);
+    mateUse('suffix', suffix);
+    mateUse('suffixMode', suffixMode);
+    mateUse('clearButtonMode', clearButtonMode);
+    mateUse('keyboardType', keyboardType);
+    mateUse('textInputAction', textInputAction);
+    mateUse('textCapitalization', textCapitalization);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('textAlignVertical', textAlignVertical);
+    mateUse('textDirection', textDirection);
+    mateUse('readOnly', readOnly);
+    mateUse('showCursor', showCursor);
+    mateUse('autofocus', autofocus);
+    mateUse('obscuringCharacter', obscuringCharacter);
+    mateUse('obscureText', obscureText);
+    mateUse('autocorrect', autocorrect);
+    mateUse('smartDashesType', smartDashesType);
+    mateUse('smartQuotesType', smartQuotesType);
+    mateUse('enableSuggestions', enableSuggestions);
+    mateUse('maxLines', maxLines);
+    mateUse('minLines', minLines);
+    mateUse('expands', expands);
+    mateUse('maxLength', maxLength);
+    mateUse('maxLengthEnforcement', maxLengthEnforcement);
+    mateUse('onChanged', onChanged);
+    mateUse('onEditingComplete', onEditingComplete);
+    mateUse('onSubmitted', onSubmitted);
+    mateUse('onTapOutside', onTapOutside);
+    mateUse('inputFormatters', inputFormatters);
+    mateUse('enabled', enabled);
+    mateUse('cursorWidth', cursorWidth);
+    mateUse('cursorHeight', cursorHeight);
+    mateUse('cursorRadius', cursorRadius);
+    mateUse('cursorColor', cursorColor);
+    mateUse('selectionHeightStyle', selectionHeightStyle);
+    mateUse('selectionWidthStyle', selectionWidthStyle);
+    mateUse('keyboardAppearance', keyboardAppearance);
+    mateUse('scrollPadding', scrollPadding);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('selectionControls', selectionControls);
+    mateUse('onTap', onTap);
+    mateUse('scrollController', scrollController);
+    mateUse('scrollPhysics', scrollPhysics);
+    mateUse('autofillHints', autofillHints);
+    mateUse('contentInsertionConfiguration', contentInsertionConfiguration);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('scribbleEnabled', scribbleEnabled);
+    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
+    mateUse('spellCheckConfiguration', spellCheckConfiguration);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
   }
 
   /// CupertinoTextField CupertinoTextField.borderless({Key? key, TextEditingController? controller, FocusNode? focusNode, BoxDecoration? decoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = _kDefaultPlaceholderStyle, Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
@@ -717,83 +720,86 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
           autofillHints: p.get('autofillHints').build(),
-          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
+          contentInsertionConfiguration:
+              p.get('contentInsertionConfiguration').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('controller', controller);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('decoration', decoration);
-    mateDeclare('padding', padding);
-    mateDeclare('placeholder', placeholder);
-    mateDeclare('placeholderStyle', placeholderStyle);
-    mateDeclare('prefix', prefix);
-    mateDeclare('prefixMode', prefixMode);
-    mateDeclare('suffix', suffix);
-    mateDeclare('suffixMode', suffixMode);
-    mateDeclare('clearButtonMode', clearButtonMode);
-    mateDeclare('keyboardType', keyboardType);
-    mateDeclare('textInputAction', textInputAction);
-    mateDeclare('textCapitalization', textCapitalization);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textAlignVertical', textAlignVertical);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('readOnly', readOnly);
-    mateDeclare('showCursor', showCursor);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('obscuringCharacter', obscuringCharacter);
-    mateDeclare('obscureText', obscureText);
-    mateDeclare('autocorrect', autocorrect);
-    mateDeclare('smartDashesType', smartDashesType);
-    mateDeclare('smartQuotesType', smartQuotesType);
-    mateDeclare('enableSuggestions', enableSuggestions);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('minLines', minLines);
-    mateDeclare('expands', expands);
-    mateDeclare('maxLength', maxLength);
-    mateDeclare('maxLengthEnforcement', maxLengthEnforcement);
-    mateDeclare('onChanged', onChanged);
-    mateDeclare('onEditingComplete', onEditingComplete);
-    mateDeclare('onSubmitted', onSubmitted);
-    mateDeclare('onTapOutside', onTapOutside);
-    mateDeclare('inputFormatters', inputFormatters);
-    mateDeclare('enabled', enabled);
-    mateDeclare('cursorWidth', cursorWidth);
-    mateDeclare('cursorHeight', cursorHeight);
-    mateDeclare('cursorRadius', cursorRadius);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('selectionHeightStyle', selectionHeightStyle);
-    mateDeclare('selectionWidthStyle', selectionWidthStyle);
-    mateDeclare('keyboardAppearance', keyboardAppearance);
-    mateDeclare('scrollPadding', scrollPadding);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('onTap', onTap);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('scrollPhysics', scrollPhysics);
-    mateDeclare('autofillHints', autofillHints);
-    mateDeclare('contentInsertionConfiguration', contentInsertionConfiguration);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('scribbleEnabled', scribbleEnabled);
-    mateDeclare('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
-    mateDeclare('spellCheckConfiguration', spellCheckConfiguration);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateUse('key', key);
+    mateUse('controller', controller);
+    mateUse('focusNode', focusNode);
+    mateUse('decoration', decoration);
+    mateUse('padding', padding);
+    mateUse('placeholder', placeholder);
+    mateUse('placeholderStyle', placeholderStyle);
+    mateUse('prefix', prefix);
+    mateUse('prefixMode', prefixMode);
+    mateUse('suffix', suffix);
+    mateUse('suffixMode', suffixMode);
+    mateUse('clearButtonMode', clearButtonMode);
+    mateUse('keyboardType', keyboardType);
+    mateUse('textInputAction', textInputAction);
+    mateUse('textCapitalization', textCapitalization);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('textAlignVertical', textAlignVertical);
+    mateUse('textDirection', textDirection);
+    mateUse('readOnly', readOnly);
+    mateUse('showCursor', showCursor);
+    mateUse('autofocus', autofocus);
+    mateUse('obscuringCharacter', obscuringCharacter);
+    mateUse('obscureText', obscureText);
+    mateUse('autocorrect', autocorrect);
+    mateUse('smartDashesType', smartDashesType);
+    mateUse('smartQuotesType', smartQuotesType);
+    mateUse('enableSuggestions', enableSuggestions);
+    mateUse('maxLines', maxLines);
+    mateUse('minLines', minLines);
+    mateUse('expands', expands);
+    mateUse('maxLength', maxLength);
+    mateUse('maxLengthEnforcement', maxLengthEnforcement);
+    mateUse('onChanged', onChanged);
+    mateUse('onEditingComplete', onEditingComplete);
+    mateUse('onSubmitted', onSubmitted);
+    mateUse('onTapOutside', onTapOutside);
+    mateUse('inputFormatters', inputFormatters);
+    mateUse('enabled', enabled);
+    mateUse('cursorWidth', cursorWidth);
+    mateUse('cursorHeight', cursorHeight);
+    mateUse('cursorRadius', cursorRadius);
+    mateUse('cursorColor', cursorColor);
+    mateUse('selectionHeightStyle', selectionHeightStyle);
+    mateUse('selectionWidthStyle', selectionWidthStyle);
+    mateUse('keyboardAppearance', keyboardAppearance);
+    mateUse('scrollPadding', scrollPadding);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('selectionControls', selectionControls);
+    mateUse('onTap', onTap);
+    mateUse('scrollController', scrollController);
+    mateUse('scrollPhysics', scrollPhysics);
+    mateUse('autofillHints', autofillHints);
+    mateUse('contentInsertionConfiguration', contentInsertionConfiguration);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('scribbleEnabled', scribbleEnabled);
+    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
+    mateUse('spellCheckConfiguration', spellCheckConfiguration);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
   }
 }

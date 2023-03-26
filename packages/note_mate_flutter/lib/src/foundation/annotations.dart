@@ -13,7 +13,7 @@ class Category$Mate extends Category with Mate {
       List<String> sections)
       : super(sections) {
     mateBuilder = (p) => Category$Mate(p.get('sections').value);
-    mateDeclare('sections', sections);
+    mateUse('sections', sections);
   }
 }
 
@@ -26,7 +26,7 @@ class DocumentationIcon$Mate extends DocumentationIcon with Mate {
       String url)
       : super(url) {
     mateBuilder = (p) => DocumentationIcon$Mate(p.get('url').value);
-    mateDeclare('url', url);
+    mateUse('url', url);
   }
 }
 
@@ -39,6 +39,6 @@ class Summary$Mate extends Summary with Mate {
       String text)
       : super(text) {
     mateBuilder = (p) => Summary$Mate(p.get('text').value);
-    mateDeclare('text', text);
+    mateUse('text', text);
   }
 }

@@ -40,11 +40,11 @@ class TapDragDownDetails$Mate extends TapDragDownDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateDeclare('globalPosition', globalPosition);
-    mateDeclare('localPosition', localPosition);
-    mateDeclare('kind', kind);
-    mateDeclare('consecutiveTapCount', consecutiveTapCount);
-    mateDeclare('keysPressedOnDown', keysPressedOnDown);
+    mateUse('globalPosition', globalPosition);
+    mateUse('localPosition', localPosition);
+    mateUse('kind', kind);
+    mateUse('consecutiveTapCount', consecutiveTapCount);
+    mateUse('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -80,11 +80,11 @@ class TapDragUpDetails$Mate extends TapDragUpDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateDeclare('kind', kind);
-    mateDeclare('globalPosition', globalPosition);
-    mateDeclare('localPosition', localPosition);
-    mateDeclare('consecutiveTapCount', consecutiveTapCount);
-    mateDeclare('keysPressedOnDown', keysPressedOnDown);
+    mateUse('kind', kind);
+    mateUse('globalPosition', globalPosition);
+    mateUse('localPosition', localPosition);
+    mateUse('consecutiveTapCount', consecutiveTapCount);
+    mateUse('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -125,12 +125,12 @@ class TapDragStartDetails$Mate extends TapDragStartDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateDeclare('sourceTimeStamp', sourceTimeStamp);
-    mateDeclare('globalPosition', globalPosition);
-    mateDeclare('localPosition', localPosition);
-    mateDeclare('kind', kind);
-    mateDeclare('consecutiveTapCount', consecutiveTapCount);
-    mateDeclare('keysPressedOnDown', keysPressedOnDown);
+    mateUse('sourceTimeStamp', sourceTimeStamp);
+    mateUse('globalPosition', globalPosition);
+    mateUse('localPosition', localPosition);
+    mateUse('kind', kind);
+    mateUse('consecutiveTapCount', consecutiveTapCount);
+    mateUse('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -191,16 +191,16 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateDeclare('sourceTimeStamp', sourceTimeStamp);
-    mateDeclare('delta', delta);
-    mateDeclare('primaryDelta', primaryDelta);
-    mateDeclare('globalPosition', globalPosition);
-    mateDeclare('kind', kind);
-    mateDeclare('localPosition', localPosition);
-    mateDeclare('offsetFromOrigin', offsetFromOrigin);
-    mateDeclare('localOffsetFromOrigin', localOffsetFromOrigin);
-    mateDeclare('consecutiveTapCount', consecutiveTapCount);
-    mateDeclare('keysPressedOnDown', keysPressedOnDown);
+    mateUse('sourceTimeStamp', sourceTimeStamp);
+    mateUse('delta', delta);
+    mateUse('primaryDelta', primaryDelta);
+    mateUse('globalPosition', globalPosition);
+    mateUse('kind', kind);
+    mateUse('localPosition', localPosition);
+    mateUse('offsetFromOrigin', offsetFromOrigin);
+    mateUse('localOffsetFromOrigin', localOffsetFromOrigin);
+    mateUse('consecutiveTapCount', consecutiveTapCount);
+    mateUse('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
@@ -231,15 +231,16 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateDeclare('velocity', velocity);
-    mateDeclare('primaryVelocity', primaryVelocity);
-    mateDeclare('consecutiveTapCount', consecutiveTapCount);
-    mateDeclare('keysPressedOnDown', keysPressedOnDown);
+    mateUse('velocity', velocity);
+    mateUse('primaryVelocity', primaryVelocity);
+    mateUse('consecutiveTapCount', consecutiveTapCount);
+    mateUse('keysPressedOnDown', keysPressedOnDown);
   }
 }
 
 /// class TapAndDragGestureRecognizer extends OneSequenceGestureRecognizer with _TapStatusTrackerMixin
-class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with Mate {
+class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer
+    with Mate {
   /// TapAndDragGestureRecognizer TapAndDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   TapAndDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
@@ -260,8 +261,8 @@ class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with 
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('debugOwner', debugOwner);
-    mateDeclare('supportedDevices', supportedDevices);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner);
+    mateUse('supportedDevices', supportedDevices);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

@@ -5,7 +5,8 @@ import 'package:note/mate.dart';
 import 'dart:core';
 
 /// class MaterialStatePropertyAll<T> implements MaterialStateProperty<T>
-class MaterialStatePropertyAll$Mate<T> extends MaterialStatePropertyAll<T> with Mate {
+class MaterialStatePropertyAll$Mate<T> extends MaterialStatePropertyAll<T>
+    with Mate {
   /// MaterialStatePropertyAll<T> MaterialStatePropertyAll(T value)
   MaterialStatePropertyAll$Mate(
 
@@ -13,7 +14,7 @@ class MaterialStatePropertyAll$Mate<T> extends MaterialStatePropertyAll<T> with 
       T value)
       : super(value) {
     mateBuilder = (p) => MaterialStatePropertyAll$Mate<T>(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }
 
@@ -26,6 +27,6 @@ class MaterialStatesController$Mate extends MaterialStatesController with Mate {
       Set<MaterialState>? value)
       : super(value) {
     mateBuilder = (p) => MaterialStatesController$Mate(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }

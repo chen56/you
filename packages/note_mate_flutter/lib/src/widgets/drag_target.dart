@@ -118,31 +118,32 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('feedback', feedback);
-    mateDeclare('data', data);
-    mateDeclare('axis', axis);
-    mateDeclare('childWhenDragging', childWhenDragging);
-    mateDeclare('feedbackOffset', feedbackOffset);
-    mateDeclare('dragAnchorStrategy', dragAnchorStrategy);
-    mateDeclare('affinity', affinity);
-    mateDeclare('maxSimultaneousDrags', maxSimultaneousDrags);
-    mateDeclare('onDragStarted', onDragStarted);
-    mateDeclare('onDragUpdate', onDragUpdate);
-    mateDeclare('onDraggableCanceled', onDraggableCanceled);
-    mateDeclare('onDragEnd', onDragEnd);
-    mateDeclare('onDragCompleted', onDragCompleted);
-    mateDeclare('ignoringFeedbackSemantics', ignoringFeedbackSemantics);
-    mateDeclare('ignoringFeedbackPointer', ignoringFeedbackPointer);
-    mateDeclare('rootOverlay', rootOverlay);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('feedback', feedback);
+    mateUse('data', data);
+    mateUse('axis', axis);
+    mateUse('childWhenDragging', childWhenDragging);
+    mateUse('feedbackOffset', feedbackOffset);
+    mateUse('dragAnchorStrategy', dragAnchorStrategy);
+    mateUse('affinity', affinity);
+    mateUse('maxSimultaneousDrags', maxSimultaneousDrags);
+    mateUse('onDragStarted', onDragStarted);
+    mateUse('onDragUpdate', onDragUpdate);
+    mateUse('onDraggableCanceled', onDraggableCanceled);
+    mateUse('onDragEnd', onDragEnd);
+    mateUse('onDragCompleted', onDragCompleted);
+    mateUse('ignoringFeedbackSemantics', ignoringFeedbackSemantics);
+    mateUse('ignoringFeedbackPointer', ignoringFeedbackPointer);
+    mateUse('rootOverlay', rootOverlay);
+    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
 /// class LongPressDraggable<T extends Object> extends Draggable<T>
-class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> with Mate {
+class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T>
+    with Mate {
   /// LongPressDraggable<T> LongPressDraggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool hapticFeedbackOnStart = true, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, Duration delay = kLongPressTimeout, bool Function(int)? allowedButtonsFilter})
   LongPressDraggable$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -243,25 +244,25 @@ class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> wi
           delay: p.get('delay').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('feedback', feedback);
-    mateDeclare('data', data);
-    mateDeclare('axis', axis);
-    mateDeclare('childWhenDragging', childWhenDragging);
-    mateDeclare('feedbackOffset', feedbackOffset);
-    mateDeclare('dragAnchorStrategy', dragAnchorStrategy);
-    mateDeclare('maxSimultaneousDrags', maxSimultaneousDrags);
-    mateDeclare('onDragStarted', onDragStarted);
-    mateDeclare('onDragUpdate', onDragUpdate);
-    mateDeclare('onDraggableCanceled', onDraggableCanceled);
-    mateDeclare('onDragEnd', onDragEnd);
-    mateDeclare('onDragCompleted', onDragCompleted);
-    mateDeclare('hapticFeedbackOnStart', hapticFeedbackOnStart);
-    mateDeclare('ignoringFeedbackSemantics', ignoringFeedbackSemantics);
-    mateDeclare('ignoringFeedbackPointer', ignoringFeedbackPointer);
-    mateDeclare('delay', delay);
-    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('feedback', feedback);
+    mateUse('data', data);
+    mateUse('axis', axis);
+    mateUse('childWhenDragging', childWhenDragging);
+    mateUse('feedbackOffset', feedbackOffset);
+    mateUse('dragAnchorStrategy', dragAnchorStrategy);
+    mateUse('maxSimultaneousDrags', maxSimultaneousDrags);
+    mateUse('onDragStarted', onDragStarted);
+    mateUse('onDragUpdate', onDragUpdate);
+    mateUse('onDraggableCanceled', onDraggableCanceled);
+    mateUse('onDragEnd', onDragEnd);
+    mateUse('onDragCompleted', onDragCompleted);
+    mateUse('hapticFeedbackOnStart', hapticFeedbackOnStart);
+    mateUse('ignoringFeedbackSemantics', ignoringFeedbackSemantics);
+    mateUse('ignoringFeedbackPointer', ignoringFeedbackPointer);
+    mateUse('delay', delay);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter);
   }
 }
 
@@ -287,9 +288,9 @@ class DraggableDetails$Mate extends DraggableDetails with Mate {
           velocity: p.get('velocity').build(),
           offset: p.get('offset').build(),
         );
-    mateDeclare('wasAccepted', wasAccepted);
-    mateDeclare('velocity', velocity);
-    mateDeclare('offset', offset);
+    mateUse('wasAccepted', wasAccepted);
+    mateUse('velocity', velocity);
+    mateUse('offset', offset);
   }
 }
 
@@ -310,8 +311,8 @@ class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate {
           data: p.get('data').build(),
           offset: p.get('offset').build(),
         );
-    mateDeclare('data', data);
-    mateDeclare('offset', offset);
+    mateUse('data', data);
+    mateUse('offset', offset);
   }
 }
 
@@ -362,13 +363,13 @@ class DragTarget$Mate<T extends Object> extends DragTarget<T> with Mate {
           onMove: p.get('onMove').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('builder', builder);
-    mateDeclare('onWillAccept', onWillAccept);
-    mateDeclare('onAccept', onAccept);
-    mateDeclare('onAcceptWithDetails', onAcceptWithDetails);
-    mateDeclare('onLeave', onLeave);
-    mateDeclare('onMove', onMove);
-    mateDeclare('hitTestBehavior', hitTestBehavior);
+    mateUse('key', key);
+    mateUse('builder', builder);
+    mateUse('onWillAccept', onWillAccept);
+    mateUse('onAccept', onAccept);
+    mateUse('onAcceptWithDetails', onAcceptWithDetails);
+    mateUse('onLeave', onLeave);
+    mateUse('onMove', onMove);
+    mateUse('hitTestBehavior', hitTestBehavior);
   }
 }

@@ -32,10 +32,10 @@ class TextSelection$Mate extends TextSelection with Mate {
           affinity: p.get('affinity').build(),
           isDirectional: p.get('isDirectional').build(),
         );
-    mateDeclare('baseOffset', baseOffset);
-    mateDeclare('extentOffset', extentOffset);
-    mateDeclare('affinity', affinity);
-    mateDeclare('isDirectional', isDirectional);
+    mateUse('baseOffset', baseOffset);
+    mateUse('extentOffset', extentOffset);
+    mateUse('affinity', affinity);
+    mateUse('isDirectional', isDirectional);
   }
 
   /// TextSelection TextSelection.collapsed({required int offset, TextAffinity affinity = TextAffinity.downstream})
@@ -53,8 +53,8 @@ class TextSelection$Mate extends TextSelection with Mate {
           offset: p.get('offset').build(),
           affinity: p.get('affinity').build(),
         );
-    mateDeclare('offset', offset);
-    mateDeclare('affinity', affinity);
+    mateUse('offset', offset);
+    mateUse('affinity', affinity);
   }
 
   /// TextSelection TextSelection.fromPosition(TextPosition position)
@@ -63,7 +63,8 @@ class TextSelection$Mate extends TextSelection with Mate {
       /// requiredParameters: TextPosition position
       TextPosition position)
       : super.fromPosition(position) {
-    mateBuilder = (p) => TextSelection$Mate.fromPosition(p.get('position').value);
-    mateDeclare('position', position);
+    mateBuilder =
+        (p) => TextSelection$Mate.fromPosition(p.get('position').value);
+    mateUse('position', position);
   }
 }

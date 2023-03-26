@@ -9,7 +9,8 @@ import 'dart:ui';
 import 'package:flutter/src/widgets/icon_data.dart';
 
 /// class CupertinoContextMenuAction extends StatefulWidget
-class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Mate {
+class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction
+    with Mate {
   /// CupertinoContextMenuAction CupertinoContextMenuAction({Key? key, required Widget child, bool isDefaultAction = false, bool isDestructiveAction = false, void Function()? onPressed, IconData? trailingIcon})
   CupertinoContextMenuAction$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -45,11 +46,11 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Ma
           onPressed: p.get('onPressed').build(),
           trailingIcon: p.get('trailingIcon').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('isDefaultAction', isDefaultAction);
-    mateDeclare('isDestructiveAction', isDestructiveAction);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('trailingIcon', trailingIcon);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('isDefaultAction', isDefaultAction);
+    mateUse('isDestructiveAction', isDestructiveAction);
+    mateUse('onPressed', onPressed);
+    mateUse('trailingIcon', trailingIcon);
   }
 }

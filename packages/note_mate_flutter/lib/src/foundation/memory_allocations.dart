@@ -26,9 +26,9 @@ class ObjectCreated$Mate extends ObjectCreated with Mate {
           className: p.get('className').build(),
           object: p.get('object').build(),
         );
-    mateDeclare('library', library);
-    mateDeclare('className', className);
-    mateDeclare('object', object);
+    mateUse('library', library);
+    mateUse('className', className);
+    mateUse('object', object);
   }
 }
 
@@ -41,6 +41,6 @@ class ObjectDisposed$Mate extends ObjectDisposed with Mate {
       required Object object})
       : super(object: object) {
     mateBuilder = (p) => ObjectDisposed$Mate(object: p.get('object').build());
-    mateDeclare('object', object);
+    mateUse('object', object);
   }
 }

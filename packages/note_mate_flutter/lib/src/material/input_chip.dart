@@ -167,7 +167,8 @@ class InputChip$Mate extends InputChip with Mate {
           deleteIcon: p.get('deleteIcon').build(),
           onDeleted: p.get('onDeleted').build(),
           deleteIconColor: p.get('deleteIconColor').build(),
-          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
+          deleteButtonTooltipMessage:
+              p.get('deleteButtonTooltipMessage').build(),
           onPressed: p.get('onPressed').build(),
           pressElevation: p.get('pressElevation').build(),
           disabledColor: p.get('disabledColor').build(),
@@ -191,39 +192,39 @@ class InputChip$Mate extends InputChip with Mate {
           checkmarkColor: p.get('checkmarkColor').build(),
           avatarBorder: p.get('avatarBorder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('avatar', avatar);
-    mateDeclare('label', label);
-    mateDeclare('labelStyle', labelStyle);
-    mateDeclare('labelPadding', labelPadding);
-    mateDeclare('selected', selected);
-    mateDeclare('isEnabled', isEnabled);
-    mateDeclare('onSelected', onSelected);
-    mateDeclare('deleteIcon', deleteIcon);
-    mateDeclare('onDeleted', onDeleted);
-    mateDeclare('deleteIconColor', deleteIconColor);
-    mateDeclare('deleteButtonTooltipMessage', deleteButtonTooltipMessage);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('pressElevation', pressElevation);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('side', side);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('padding', padding);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('iconTheme', iconTheme);
-    mateDeclare('selectedShadowColor', selectedShadowColor);
-    mateDeclare('showCheckmark', showCheckmark);
-    mateDeclare('checkmarkColor', checkmarkColor);
-    mateDeclare('avatarBorder', avatarBorder);
+    mateUse('key', key);
+    mateUse('avatar', avatar);
+    mateUse('label', label);
+    mateUse('labelStyle', labelStyle);
+    mateUse('labelPadding', labelPadding);
+    mateUse('selected', selected);
+    mateUse('isEnabled', isEnabled);
+    mateUse('onSelected', onSelected);
+    mateUse('deleteIcon', deleteIcon);
+    mateUse('onDeleted', onDeleted);
+    mateUse('deleteIconColor', deleteIconColor);
+    mateUse('deleteButtonTooltipMessage', deleteButtonTooltipMessage);
+    mateUse('onPressed', onPressed);
+    mateUse('pressElevation', pressElevation);
+    mateUse('disabledColor', disabledColor);
+    mateUse('selectedColor', selectedColor);
+    mateUse('tooltip', tooltip);
+    mateUse('side', side);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('padding', padding);
+    mateUse('visualDensity', visualDensity);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('iconTheme', iconTheme);
+    mateUse('selectedShadowColor', selectedShadowColor);
+    mateUse('showCheckmark', showCheckmark);
+    mateUse('checkmarkColor', checkmarkColor);
+    mateUse('avatarBorder', avatarBorder);
   }
 }

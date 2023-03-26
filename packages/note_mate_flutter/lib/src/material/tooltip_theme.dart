@@ -82,19 +82,19 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
           triggerMode: p.get('triggerMode').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateDeclare('height', height);
-    mateDeclare('padding', padding);
-    mateDeclare('margin', margin);
-    mateDeclare('verticalOffset', verticalOffset);
-    mateDeclare('preferBelow', preferBelow);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('decoration', decoration);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('waitDuration', waitDuration);
-    mateDeclare('showDuration', showDuration);
-    mateDeclare('triggerMode', triggerMode);
-    mateDeclare('enableFeedback', enableFeedback);
+    mateUse('height', height);
+    mateUse('padding', padding);
+    mateUse('margin', margin);
+    mateUse('verticalOffset', verticalOffset);
+    mateUse('preferBelow', preferBelow);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('decoration', decoration);
+    mateUse('textStyle', textStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('waitDuration', waitDuration);
+    mateUse('showDuration', showDuration);
+    mateUse('triggerMode', triggerMode);
+    mateUse('enableFeedback', enableFeedback);
   }
 }
 
@@ -120,8 +120,8 @@ class TooltipTheme$Mate extends TooltipTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

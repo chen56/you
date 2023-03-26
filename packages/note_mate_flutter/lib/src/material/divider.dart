@@ -43,12 +43,12 @@ class Divider$Mate extends Divider with Mate {
           endIndent: p.get('endIndent').build(),
           color: p.get('color').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('height', height);
-    mateDeclare('thickness', thickness);
-    mateDeclare('indent', indent);
-    mateDeclare('endIndent', endIndent);
-    mateDeclare('color', color);
+    mateUse('key', key);
+    mateUse('height', height);
+    mateUse('thickness', thickness);
+    mateUse('indent', indent);
+    mateUse('endIndent', endIndent);
+    mateUse('color', color);
   }
 }
 
@@ -89,11 +89,11 @@ class VerticalDivider$Mate extends VerticalDivider with Mate {
           endIndent: p.get('endIndent').build(),
           color: p.get('color').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('width', width);
-    mateDeclare('thickness', thickness);
-    mateDeclare('indent', indent);
-    mateDeclare('endIndent', endIndent);
-    mateDeclare('color', color);
+    mateUse('key', key);
+    mateUse('width', width);
+    mateUse('thickness', thickness);
+    mateUse('indent', indent);
+    mateUse('endIndent', endIndent);
+    mateUse('color', color);
   }
 }

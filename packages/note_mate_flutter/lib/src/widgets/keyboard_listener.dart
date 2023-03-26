@@ -46,11 +46,11 @@ class KeyboardListener$Mate extends KeyboardListener with Mate {
           onKeyEvent: p.get('onKeyEvent').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('includeSemantics', includeSemantics);
-    mateDeclare('onKeyEvent', onKeyEvent);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('includeSemantics', includeSemantics);
+    mateUse('onKeyEvent', onKeyEvent);
+    mateUse('child', child);
   }
 }

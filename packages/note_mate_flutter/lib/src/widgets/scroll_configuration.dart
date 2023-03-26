@@ -27,8 +27,8 @@ class ScrollConfiguration$Mate extends ScrollConfiguration with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('behavior', behavior);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('behavior', behavior);
+    mateUse('child', child);
   }
 }

@@ -83,18 +83,18 @@ class MenuStyle$Mate extends MenuStyle with Mate {
           visualDensity: p.get('visualDensity').build(),
           alignment: p.get('alignment').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('padding', padding);
-    mateDeclare('minimumSize', minimumSize);
-    mateDeclare('fixedSize', fixedSize);
-    mateDeclare('maximumSize', maximumSize);
-    mateDeclare('side', side);
-    mateDeclare('shape', shape);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('alignment', alignment);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('elevation', elevation);
+    mateUse('padding', padding);
+    mateUse('minimumSize', minimumSize);
+    mateUse('fixedSize', fixedSize);
+    mateUse('maximumSize', maximumSize);
+    mateUse('side', side);
+    mateUse('shape', shape);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('visualDensity', visualDensity);
+    mateUse('alignment', alignment);
   }
 }

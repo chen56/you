@@ -28,14 +28,15 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate {
           className: p.get('className').build(),
           method: p.get('method').build(),
         );
-    mateDeclare('package', package);
-    mateDeclare('className', className);
-    mateDeclare('method', method);
+    mateUse('package', package);
+    mateUse('className', className);
+    mateUse('method', method);
   }
 }
 
 /// class RepetitiveStackFrameFilter extends StackFilter
-class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Mate {
+class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter
+    with Mate {
   /// RepetitiveStackFrameFilter RepetitiveStackFrameFilter({required List<PartialStackFrame> frames, required String replacement})
   RepetitiveStackFrameFilter$Mate({
     /// optionalParameters: {required List<PartialStackFrame> frames} , defaultValue:none
@@ -51,8 +52,8 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Ma
           frames: p.get('frames').build(),
           replacement: p.get('replacement').build(),
         );
-    mateDeclare('frames', frames);
-    mateDeclare('replacement', replacement);
+    mateUse('frames', frames);
+    mateUse('replacement', replacement);
   }
 }
 
@@ -65,7 +66,7 @@ class ErrorDescription$Mate extends ErrorDescription with Mate {
       String message)
       : super(message) {
     mateBuilder = (p) => ErrorDescription$Mate(p.get('message').value);
-    mateDeclare('message', message);
+    mateUse('message', message);
   }
 }
 
@@ -78,7 +79,7 @@ class ErrorSummary$Mate extends ErrorSummary with Mate {
       String message)
       : super(message) {
     mateBuilder = (p) => ErrorSummary$Mate(p.get('message').value);
-    mateDeclare('message', message);
+    mateUse('message', message);
   }
 }
 
@@ -91,7 +92,7 @@ class ErrorHint$Mate extends ErrorHint with Mate {
       String message)
       : super(message) {
     mateBuilder = (p) => ErrorHint$Mate(p.get('message').value);
-    mateDeclare('message', message);
+    mateUse('message', message);
   }
 }
 
@@ -137,13 +138,13 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate {
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    mateDeclare('exception', exception);
-    mateDeclare('stack', stack);
-    mateDeclare('library', library);
-    mateDeclare('context', context);
-    mateDeclare('stackFilter', stackFilter);
-    mateDeclare('informationCollector', informationCollector);
-    mateDeclare('silent', silent);
+    mateUse('exception', exception);
+    mateUse('stack', stack);
+    mateUse('library', library);
+    mateUse('context', context);
+    mateUse('stackFilter', stackFilter);
+    mateUse('informationCollector', informationCollector);
+    mateUse('silent', silent);
   }
 }
 
@@ -155,8 +156,9 @@ class FlutterError$Mate extends FlutterError with Mate {
       /// requiredParameters: List<DiagnosticsNode> diagnostics
       List<DiagnosticsNode> diagnostics)
       : super.fromParts(diagnostics) {
-    mateBuilder = (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
-    mateDeclare('diagnostics', diagnostics);
+    mateBuilder =
+        (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
+    mateUse('diagnostics', diagnostics);
   }
 }
 
@@ -186,10 +188,10 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
           stackFilter: p.get('stackFilter').build(),
           showSeparator: p.get('showSeparator').build(),
         );
-    mateDeclare('name', name);
-    mateDeclare('stack', stack);
-    mateDeclare('stackFilter', stackFilter);
-    mateDeclare('showSeparator', showSeparator);
+    mateUse('name', name);
+    mateUse('stack', stack);
+    mateUse('stackFilter', stackFilter);
+    mateUse('showSeparator', showSeparator);
   }
 
   /// DiagnosticsStackTrace DiagnosticsStackTrace.singleFrame(String name, {required String frame, bool showSeparator = true})
@@ -211,8 +213,8 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
           frame: p.get('frame').build(),
           showSeparator: p.get('showSeparator').build(),
         );
-    mateDeclare('name', name);
-    mateDeclare('frame', frame);
-    mateDeclare('showSeparator', showSeparator);
+    mateUse('name', name);
+    mateUse('frame', frame);
+    mateUse('showSeparator', showSeparator);
   }
 }

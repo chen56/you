@@ -6,7 +6,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/foundation/key.dart';
 
 /// class PlatformSelectableRegionContextMenu extends StatelessWidget
-class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionContextMenu with Mate {
+class PlatformSelectableRegionContextMenu$Mate
+    extends PlatformSelectableRegionContextMenu with Mate {
   /// PlatformSelectableRegionContextMenu PlatformSelectableRegionContextMenu({required Widget child, Key? key})
   PlatformSelectableRegionContextMenu$Mate({
     /// optionalParameters: {required Widget child} , defaultValue:none
@@ -22,7 +23,7 @@ class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionC
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateDeclare('child', child);
-    mateDeclare('key', key);
+    mateUse('child', child);
+    mateUse('key', key);
   }
 }

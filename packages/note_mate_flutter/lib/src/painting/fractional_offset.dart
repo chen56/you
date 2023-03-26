@@ -21,7 +21,7 @@ class FractionalOffset$Mate extends FractionalOffset with Mate {
           p.get('dx').value,
           p.get('dy').value,
         );
-    mateDeclare('dx', dx);
-    mateDeclare('dy', dy);
+    mateUse('dx', dx);
+    mateUse('dy', dy);
   }
 }

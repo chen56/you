@@ -56,14 +56,14 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
           padding: p.get('padding').build(),
           leadingPadding: p.get('leadingPadding').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('dividerColor', dividerColor);
-    mateDeclare('contentTextStyle', contentTextStyle);
-    mateDeclare('elevation', elevation);
-    mateDeclare('padding', padding);
-    mateDeclare('leadingPadding', leadingPadding);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('shadowColor', shadowColor);
+    mateUse('dividerColor', dividerColor);
+    mateUse('contentTextStyle', contentTextStyle);
+    mateUse('elevation', elevation);
+    mateUse('padding', padding);
+    mateUse('leadingPadding', leadingPadding);
   }
 }
 
@@ -89,8 +89,8 @@ class MaterialBannerTheme$Mate extends MaterialBannerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

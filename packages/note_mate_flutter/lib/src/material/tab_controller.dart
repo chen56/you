@@ -34,10 +34,10 @@ class TabController$Mate extends TabController with Mate {
           length: p.get('length').build(),
           vsync: p.get('vsync').build(),
         );
-    mateDeclare('initialIndex', initialIndex);
-    mateDeclare('animationDuration', animationDuration);
-    mateDeclare('length', length);
-    mateDeclare('vsync', vsync);
+    mateUse('initialIndex', initialIndex);
+    mateUse('animationDuration', animationDuration);
+    mateUse('length', length);
+    mateUse('vsync', vsync);
   }
 }
 
@@ -73,10 +73,10 @@ class DefaultTabController$Mate extends DefaultTabController with Mate {
           child: p.get('child').build(),
           animationDuration: p.get('animationDuration').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('length', length);
-    mateDeclare('initialIndex', initialIndex);
-    mateDeclare('child', child);
-    mateDeclare('animationDuration', animationDuration);
+    mateUse('key', key);
+    mateUse('length', length);
+    mateUse('initialIndex', initialIndex);
+    mateUse('child', child);
+    mateUse('animationDuration', animationDuration);
   }
 }

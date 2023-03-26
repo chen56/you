@@ -144,30 +144,30 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with Mate {
           controller: p.get('controller').build(),
           primary: p.get('primary').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('header', header);
-    mateDeclare('actions', actions);
-    mateDeclare('columns', columns);
-    mateDeclare('sortColumnIndex', sortColumnIndex);
-    mateDeclare('sortAscending', sortAscending);
-    mateDeclare('onSelectAll', onSelectAll);
-    mateDeclare('dataRowMinHeight', dataRowMinHeight);
-    mateDeclare('dataRowMaxHeight', dataRowMaxHeight);
-    mateDeclare('headingRowHeight', headingRowHeight);
-    mateDeclare('horizontalMargin', horizontalMargin);
-    mateDeclare('columnSpacing', columnSpacing);
-    mateDeclare('showCheckboxColumn', showCheckboxColumn);
-    mateDeclare('showFirstLastButtons', showFirstLastButtons);
-    mateDeclare('initialFirstRowIndex', initialFirstRowIndex);
-    mateDeclare('onPageChanged', onPageChanged);
-    mateDeclare('rowsPerPage', rowsPerPage);
-    mateDeclare('availableRowsPerPage', availableRowsPerPage);
-    mateDeclare('onRowsPerPageChanged', onRowsPerPageChanged);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('arrowHeadColor', arrowHeadColor);
-    mateDeclare('source', source);
-    mateDeclare('checkboxHorizontalMargin', checkboxHorizontalMargin);
-    mateDeclare('controller', controller);
-    mateDeclare('primary', primary);
+    mateUse('key', key);
+    mateUse('header', header);
+    mateUse('actions', actions);
+    mateUse('columns', columns);
+    mateUse('sortColumnIndex', sortColumnIndex);
+    mateUse('sortAscending', sortAscending);
+    mateUse('onSelectAll', onSelectAll);
+    mateUse('dataRowMinHeight', dataRowMinHeight);
+    mateUse('dataRowMaxHeight', dataRowMaxHeight);
+    mateUse('headingRowHeight', headingRowHeight);
+    mateUse('horizontalMargin', horizontalMargin);
+    mateUse('columnSpacing', columnSpacing);
+    mateUse('showCheckboxColumn', showCheckboxColumn);
+    mateUse('showFirstLastButtons', showFirstLastButtons);
+    mateUse('initialFirstRowIndex', initialFirstRowIndex);
+    mateUse('onPageChanged', onPageChanged);
+    mateUse('rowsPerPage', rowsPerPage);
+    mateUse('availableRowsPerPage', availableRowsPerPage);
+    mateUse('onRowsPerPageChanged', onRowsPerPageChanged);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('arrowHeadColor', arrowHeadColor);
+    mateUse('source', source);
+    mateUse('checkboxHorizontalMargin', checkboxHorizontalMargin);
+    mateUse('controller', controller);
+    mateUse('primary', primary);
   }
 }

@@ -130,27 +130,27 @@ class ActionChip$Mate extends ActionChip with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('avatar', avatar);
-    mateDeclare('label', label);
-    mateDeclare('labelStyle', labelStyle);
-    mateDeclare('labelPadding', labelPadding);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('pressElevation', pressElevation);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('side', side);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('padding', padding);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('iconTheme', iconTheme);
+    mateUse('key', key);
+    mateUse('avatar', avatar);
+    mateUse('label', label);
+    mateUse('labelStyle', labelStyle);
+    mateUse('labelPadding', labelPadding);
+    mateUse('onPressed', onPressed);
+    mateUse('pressElevation', pressElevation);
+    mateUse('tooltip', tooltip);
+    mateUse('side', side);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('padding', padding);
+    mateUse('visualDensity', visualDensity);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('iconTheme', iconTheme);
   }
 }

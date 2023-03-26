@@ -21,7 +21,7 @@ class DateTimeRange$Mate extends DateTimeRange with Mate {
           start: p.get('start').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('start', start);
-    mateDeclare('end', end);
+    mateUse('start', start);
+    mateUse('end', end);
   }
 }

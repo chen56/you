@@ -61,15 +61,15 @@ class Drawer$Mate extends Drawer with Mate {
           child: p.get('child').build(),
           semanticLabel: p.get('semanticLabel').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('shape', shape);
-    mateDeclare('width', width);
-    mateDeclare('child', child);
-    mateDeclare('semanticLabel', semanticLabel);
+    mateUse('key', key);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('shape', shape);
+    mateUse('width', width);
+    mateUse('child', child);
+    mateUse('semanticLabel', semanticLabel);
   }
 }
 
@@ -125,14 +125,14 @@ class DrawerController$Mate extends DrawerController with Mate {
           edgeDragWidth: p.get('edgeDragWidth').build(),
           enableOpenDragGesture: p.get('enableOpenDragGesture').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('alignment', alignment);
-    mateDeclare('isDrawerOpen', isDrawerOpen);
-    mateDeclare('drawerCallback', drawerCallback);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('scrimColor', scrimColor);
-    mateDeclare('edgeDragWidth', edgeDragWidth);
-    mateDeclare('enableOpenDragGesture', enableOpenDragGesture);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('alignment', alignment);
+    mateUse('isDrawerOpen', isDrawerOpen);
+    mateUse('drawerCallback', drawerCallback);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('scrimColor', scrimColor);
+    mateUse('edgeDragWidth', edgeDragWidth);
+    mateUse('enableOpenDragGesture', enableOpenDragGesture);
   }
 }

@@ -7,7 +7,8 @@ import 'package:flutter/src/services/text_editing.dart';
 import 'dart:ui';
 
 /// class TextEditingDeltaInsertion extends TextEditingDelta
-class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate {
+class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion
+    with Mate {
   /// TextEditingDeltaInsertion TextEditingDeltaInsertion({required String oldText, required String textInserted, required int insertionOffset, required TextSelection selection, required TextRange composing})
   TextEditingDeltaInsertion$Mate({
     /// optionalParameters: {required String oldText} , defaultValue:none
@@ -38,11 +39,11 @@ class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateDeclare('oldText', oldText);
-    mateDeclare('textInserted', textInserted);
-    mateDeclare('insertionOffset', insertionOffset);
-    mateDeclare('selection', selection);
-    mateDeclare('composing', composing);
+    mateUse('oldText', oldText);
+    mateUse('textInserted', textInserted);
+    mateUse('insertionOffset', insertionOffset);
+    mateUse('selection', selection);
+    mateUse('composing', composing);
   }
 }
 
@@ -73,15 +74,16 @@ class TextEditingDeltaDeletion$Mate extends TextEditingDeltaDeletion with Mate {
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateDeclare('oldText', oldText);
-    mateDeclare('deletedRange', deletedRange);
-    mateDeclare('selection', selection);
-    mateDeclare('composing', composing);
+    mateUse('oldText', oldText);
+    mateUse('deletedRange', deletedRange);
+    mateUse('selection', selection);
+    mateUse('composing', composing);
   }
 }
 
 /// class TextEditingDeltaReplacement extends TextEditingDelta
-class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with Mate {
+class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement
+    with Mate {
   /// TextEditingDeltaReplacement TextEditingDeltaReplacement({required String oldText, required String replacementText, required TextRange replacedRange, required TextSelection selection, required TextRange composing})
   TextEditingDeltaReplacement$Mate({
     /// optionalParameters: {required String oldText} , defaultValue:none
@@ -112,16 +114,17 @@ class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with 
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateDeclare('oldText', oldText);
-    mateDeclare('replacementText', replacementText);
-    mateDeclare('replacedRange', replacedRange);
-    mateDeclare('selection', selection);
-    mateDeclare('composing', composing);
+    mateUse('oldText', oldText);
+    mateUse('replacementText', replacementText);
+    mateUse('replacedRange', replacedRange);
+    mateUse('selection', selection);
+    mateUse('composing', composing);
   }
 }
 
 /// class TextEditingDeltaNonTextUpdate extends TextEditingDelta
-class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate with Mate {
+class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate
+    with Mate {
   /// TextEditingDeltaNonTextUpdate TextEditingDeltaNonTextUpdate({required String oldText, required TextSelection selection, required TextRange composing})
   TextEditingDeltaNonTextUpdate$Mate({
     /// optionalParameters: {required String oldText} , defaultValue:none
@@ -142,8 +145,8 @@ class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate w
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateDeclare('oldText', oldText);
-    mateDeclare('selection', selection);
-    mateDeclare('composing', composing);
+    mateUse('oldText', oldText);
+    mateUse('selection', selection);
+    mateUse('composing', composing);
   }
 }

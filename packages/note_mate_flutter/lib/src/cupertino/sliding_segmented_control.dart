@@ -10,7 +10,8 @@ import 'dart:ui';
 import 'package:flutter/src/painting/edge_insets.dart';
 
 /// class CupertinoSlidingSegmentedControl<T> extends StatefulWidget
-class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmentedControl<T> with Mate {
+class CupertinoSlidingSegmentedControl$Mate<T>
+    extends CupertinoSlidingSegmentedControl<T> with Mate {
   /// CupertinoSlidingSegmentedControl<T> CupertinoSlidingSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T?) onValueChanged, T? groupValue, Color thumbColor = _kThumbColor, EdgeInsetsGeometry padding = _kHorizontalItemPadding, Color backgroundColor = CupertinoColors.tertiarySystemFill})
   CupertinoSlidingSegmentedControl$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -51,12 +52,12 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmented
           padding: p.get('padding').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('onValueChanged', onValueChanged);
-    mateDeclare('groupValue', groupValue);
-    mateDeclare('thumbColor', thumbColor);
-    mateDeclare('padding', padding);
-    mateDeclare('backgroundColor', backgroundColor);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('onValueChanged', onValueChanged);
+    mateUse('groupValue', groupValue);
+    mateUse('thumbColor', thumbColor);
+    mateUse('padding', padding);
+    mateUse('backgroundColor', backgroundColor);
   }
 }

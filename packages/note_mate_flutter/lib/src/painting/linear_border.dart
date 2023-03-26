@@ -22,8 +22,8 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
         );
-    mateDeclare('size', size);
-    mateDeclare('alignment', alignment);
+    mateUse('size', size);
+    mateUse('alignment', alignment);
   }
 }
 
@@ -59,11 +59,11 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    mateDeclare('side', side);
-    mateDeclare('start', start);
-    mateDeclare('end', end);
-    mateDeclare('top', top);
-    mateDeclare('bottom', bottom);
+    mateUse('side', side);
+    mateUse('start', start);
+    mateUse('end', end);
+    mateUse('top', top);
+    mateUse('bottom', bottom);
   }
 
   /// LinearBorder LinearBorder.start({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -86,9 +86,9 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateDeclare('side', side);
-    mateDeclare('alignment', alignment);
-    mateDeclare('size', size);
+    mateUse('side', side);
+    mateUse('alignment', alignment);
+    mateUse('size', size);
   }
 
   /// LinearBorder LinearBorder.end({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -111,9 +111,9 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateDeclare('side', side);
-    mateDeclare('alignment', alignment);
-    mateDeclare('size', size);
+    mateUse('side', side);
+    mateUse('alignment', alignment);
+    mateUse('size', size);
   }
 
   /// LinearBorder LinearBorder.top({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -136,9 +136,9 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateDeclare('side', side);
-    mateDeclare('alignment', alignment);
-    mateDeclare('size', size);
+    mateUse('side', side);
+    mateUse('alignment', alignment);
+    mateUse('size', size);
   }
 
   /// LinearBorder LinearBorder.bottom({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -161,8 +161,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateDeclare('side', side);
-    mateDeclare('alignment', alignment);
-    mateDeclare('size', size);
+    mateUse('side', side);
+    mateUse('alignment', alignment);
+    mateUse('size', size);
   }
 }

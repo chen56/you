@@ -57,14 +57,14 @@ class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
           pickerTextStyle: p.get('pickerTextStyle').build(),
           dateTimePickerTextStyle: p.get('dateTimePickerTextStyle').build(),
         );
-    mateDeclare('primaryColor', primaryColor);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('actionTextStyle', actionTextStyle);
-    mateDeclare('tabLabelTextStyle', tabLabelTextStyle);
-    mateDeclare('navTitleTextStyle', navTitleTextStyle);
-    mateDeclare('navLargeTitleTextStyle', navLargeTitleTextStyle);
-    mateDeclare('navActionTextStyle', navActionTextStyle);
-    mateDeclare('pickerTextStyle', pickerTextStyle);
-    mateDeclare('dateTimePickerTextStyle', dateTimePickerTextStyle);
+    mateUse('primaryColor', primaryColor);
+    mateUse('textStyle', textStyle);
+    mateUse('actionTextStyle', actionTextStyle);
+    mateUse('tabLabelTextStyle', tabLabelTextStyle);
+    mateUse('navTitleTextStyle', navTitleTextStyle);
+    mateUse('navLargeTitleTextStyle', navLargeTitleTextStyle);
+    mateUse('navActionTextStyle', navActionTextStyle);
+    mateUse('pickerTextStyle', pickerTextStyle);
+    mateUse('dateTimePickerTextStyle', dateTimePickerTextStyle);
   }
 }

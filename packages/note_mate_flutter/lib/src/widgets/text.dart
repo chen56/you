@@ -63,15 +63,15 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('style', style);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('softWrap', softWrap);
-    mateDeclare('overflow', overflow);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('textWidthBasis', textWidthBasis);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('style', style);
+    mateUse('textAlign', textAlign);
+    mateUse('softWrap', softWrap);
+    mateUse('overflow', overflow);
+    mateUse('maxLines', maxLines);
+    mateUse('textWidthBasis', textWidthBasis);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('child', child);
   }
 
   /// DefaultTextStyle DefaultTextStyle.fallback({Key? key})
@@ -80,13 +80,15 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
       /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super.fallback(key: key) {
-    mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
-    mateDeclare('key', key);
+    mateBuilder =
+        (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
+    mateUse('key', key);
   }
 }
 
 /// class DefaultTextHeightBehavior extends InheritedTheme
-class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate {
+class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior
+    with Mate {
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -107,9 +109,9 @@ class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('child', child);
   }
 }
 
@@ -194,21 +196,21 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateDeclare('data', data);
-    mateDeclare('key', key);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('locale', locale);
-    mateDeclare('softWrap', softWrap);
-    mateDeclare('overflow', overflow);
-    mateDeclare('textScaleFactor', textScaleFactor);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('textWidthBasis', textWidthBasis);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('selectionColor', selectionColor);
+    mateUse('data', data);
+    mateUse('key', key);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('textDirection', textDirection);
+    mateUse('locale', locale);
+    mateUse('softWrap', softWrap);
+    mateUse('overflow', overflow);
+    mateUse('textScaleFactor', textScaleFactor);
+    mateUse('maxLines', maxLines);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('textWidthBasis', textWidthBasis);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('selectionColor', selectionColor);
   }
 
   /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
@@ -290,20 +292,20 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateDeclare('textSpan', textSpan);
-    mateDeclare('key', key);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('locale', locale);
-    mateDeclare('softWrap', softWrap);
-    mateDeclare('overflow', overflow);
-    mateDeclare('textScaleFactor', textScaleFactor);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('textWidthBasis', textWidthBasis);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('selectionColor', selectionColor);
+    mateUse('textSpan', textSpan);
+    mateUse('key', key);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('textDirection', textDirection);
+    mateUse('locale', locale);
+    mateUse('softWrap', softWrap);
+    mateUse('overflow', overflow);
+    mateUse('textScaleFactor', textScaleFactor);
+    mateUse('maxLines', maxLines);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('textWidthBasis', textWidthBasis);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('selectionColor', selectionColor);
   }
 }

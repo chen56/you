@@ -141,30 +141,30 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('onReorder', onReorder);
-    mateDeclare('onReorderStart', onReorderStart);
-    mateDeclare('onReorderEnd', onReorderEnd);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('proxyDecorator', proxyDecorator);
-    mateDeclare('buildDefaultDragHandles', buildDefaultDragHandles);
-    mateDeclare('padding', padding);
-    mateDeclare('header', header);
-    mateDeclare('footer', footer);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('anchor', anchor);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('onReorder', onReorder);
+    mateUse('onReorderStart', onReorderStart);
+    mateUse('onReorderEnd', onReorderEnd);
+    mateUse('itemExtent', itemExtent);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('proxyDecorator', proxyDecorator);
+    mateUse('buildDefaultDragHandles', buildDefaultDragHandles);
+    mateUse('padding', padding);
+    mateUse('header', header);
+    mateUse('footer', footer);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('scrollController', scrollController);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('anchor', anchor);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 
   /// ReorderableListView ReorderableListView.builder({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -297,30 +297,30 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('itemBuilder', itemBuilder);
-    mateDeclare('itemCount', itemCount);
-    mateDeclare('onReorder', onReorder);
-    mateDeclare('onReorderStart', onReorderStart);
-    mateDeclare('onReorderEnd', onReorderEnd);
-    mateDeclare('itemExtent', itemExtent);
-    mateDeclare('prototypeItem', prototypeItem);
-    mateDeclare('proxyDecorator', proxyDecorator);
-    mateDeclare('buildDefaultDragHandles', buildDefaultDragHandles);
-    mateDeclare('padding', padding);
-    mateDeclare('header', header);
-    mateDeclare('footer', footer);
-    mateDeclare('scrollDirection', scrollDirection);
-    mateDeclare('reverse', reverse);
-    mateDeclare('scrollController', scrollController);
-    mateDeclare('primary', primary);
-    mateDeclare('physics', physics);
-    mateDeclare('shrinkWrap', shrinkWrap);
-    mateDeclare('anchor', anchor);
-    mateDeclare('cacheExtent', cacheExtent);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('itemBuilder', itemBuilder);
+    mateUse('itemCount', itemCount);
+    mateUse('onReorder', onReorder);
+    mateUse('onReorderStart', onReorderStart);
+    mateUse('onReorderEnd', onReorderEnd);
+    mateUse('itemExtent', itemExtent);
+    mateUse('prototypeItem', prototypeItem);
+    mateUse('proxyDecorator', proxyDecorator);
+    mateUse('buildDefaultDragHandles', buildDefaultDragHandles);
+    mateUse('padding', padding);
+    mateUse('header', header);
+    mateUse('footer', footer);
+    mateUse('scrollDirection', scrollDirection);
+    mateUse('reverse', reverse);
+    mateUse('scrollController', scrollController);
+    mateUse('primary', primary);
+    mateUse('physics', physics);
+    mateUse('shrinkWrap', shrinkWrap);
+    mateUse('anchor', anchor);
+    mateUse('cacheExtent', cacheExtent);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('restorationId', restorationId);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

@@ -217,7 +217,7 @@ class ObjectParam<T> extends Param<T> {
           builderRefer: mate.builderRefer,
         );
 
-  Param<E> declare<E>(String name, E init) {
+  Param<E> use<E>(String name, E init) {
     var param = _convertToParam<E>(name: name, nullable: utils.isNullableOf<E>(init), init: init);
     _paramMap[name] = param;
     return param;
@@ -339,7 +339,7 @@ mixin Mate {
   //fixme builderRefer改为真实值
   late final code.Reference builderRefer = code.refer(runtimeType.toString());
 
-  Param<V> mateDeclare<V>(String name, V init) {
+  Param<V> mateUse<V>(String name, V init, {dynamic defaultValue}) {
     var param = _convertToParam(name: name, nullable: utils.isNullableOf<V>(init), init: init);
     _mateParams[name] = param;
     return param;

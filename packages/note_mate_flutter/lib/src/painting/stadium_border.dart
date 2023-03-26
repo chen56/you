@@ -13,6 +13,6 @@ class StadiumBorder$Mate extends StadiumBorder with Mate {
       required BorderSide side})
       : super(side: side) {
     mateBuilder = (p) => StadiumBorder$Mate(side: p.get('side').build());
-    mateDeclare('side', side);
+    mateUse('side', side);
   }
 }

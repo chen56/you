@@ -8,7 +8,8 @@ import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class CupertinoTextSelectionToolbar extends StatelessWidget
-class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar with Mate {
+class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar
+    with Mate {
   /// CupertinoTextSelectionToolbar CupertinoTextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, required List<Widget> children, Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder})
   CupertinoTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -39,10 +40,10 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar w
           children: p.get('children').build(),
           toolbarBuilder: p.get('toolbarBuilder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('anchorAbove', anchorAbove);
-    mateDeclare('anchorBelow', anchorBelow);
-    mateDeclare('children', children);
-    mateDeclare('toolbarBuilder', toolbarBuilder);
+    mateUse('key', key);
+    mateUse('anchorAbove', anchorAbove);
+    mateUse('anchorBelow', anchorBelow);
+    mateUse('children', children);
+    mateUse('toolbarBuilder', toolbarBuilder);
   }
 }

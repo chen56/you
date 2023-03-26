@@ -75,17 +75,17 @@ class AnimatedCrossFade$Mate extends AnimatedCrossFade with Mate {
           layoutBuilder: p.get('layoutBuilder').build(),
           excludeBottomFocus: p.get('excludeBottomFocus').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('firstChild', firstChild);
-    mateDeclare('secondChild', secondChild);
-    mateDeclare('firstCurve', firstCurve);
-    mateDeclare('secondCurve', secondCurve);
-    mateDeclare('sizeCurve', sizeCurve);
-    mateDeclare('alignment', alignment);
-    mateDeclare('crossFadeState', crossFadeState);
-    mateDeclare('duration', duration);
-    mateDeclare('reverseDuration', reverseDuration);
-    mateDeclare('layoutBuilder', layoutBuilder);
-    mateDeclare('excludeBottomFocus', excludeBottomFocus);
+    mateUse('key', key);
+    mateUse('firstChild', firstChild);
+    mateUse('secondChild', secondChild);
+    mateUse('firstCurve', firstCurve);
+    mateUse('secondCurve', secondCurve);
+    mateUse('sizeCurve', sizeCurve);
+    mateUse('alignment', alignment);
+    mateUse('crossFadeState', crossFadeState);
+    mateUse('duration', duration);
+    mateUse('reverseDuration', reverseDuration);
+    mateUse('layoutBuilder', layoutBuilder);
+    mateUse('excludeBottomFocus', excludeBottomFocus);
   }
 }

@@ -130,27 +130,27 @@ class ButtonStyle$Mate extends ButtonStyle with Mate {
           alignment: p.get('alignment').build(),
           splashFactory: p.get('splashFactory').build(),
         );
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('foregroundColor', foregroundColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('padding', padding);
-    mateDeclare('minimumSize', minimumSize);
-    mateDeclare('fixedSize', fixedSize);
-    mateDeclare('maximumSize', maximumSize);
-    mateDeclare('iconColor', iconColor);
-    mateDeclare('iconSize', iconSize);
-    mateDeclare('side', side);
-    mateDeclare('shape', shape);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('visualDensity', visualDensity);
-    mateDeclare('tapTargetSize', tapTargetSize);
-    mateDeclare('animationDuration', animationDuration);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('alignment', alignment);
-    mateDeclare('splashFactory', splashFactory);
+    mateUse('textStyle', textStyle);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('foregroundColor', foregroundColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('elevation', elevation);
+    mateUse('padding', padding);
+    mateUse('minimumSize', minimumSize);
+    mateUse('fixedSize', fixedSize);
+    mateUse('maximumSize', maximumSize);
+    mateUse('iconColor', iconColor);
+    mateUse('iconSize', iconSize);
+    mateUse('side', side);
+    mateUse('shape', shape);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('visualDensity', visualDensity);
+    mateUse('tapTargetSize', tapTargetSize);
+    mateUse('animationDuration', animationDuration);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('alignment', alignment);
+    mateUse('splashFactory', splashFactory);
   }
 }

@@ -22,7 +22,7 @@ class OvalBorder$Mate extends OvalBorder with Mate {
           side: p.get('side').build(),
           eccentricity: p.get('eccentricity').build(),
         );
-    mateDeclare('side', side);
-    mateDeclare('eccentricity', eccentricity);
+    mateUse('side', side);
+    mateUse('eccentricity', eccentricity);
   }
 }

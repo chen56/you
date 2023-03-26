@@ -34,14 +34,16 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           key: p.get('key').build(),
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('optionsMask', optionsMask);
-    mateDeclare('rasterizerThreshold', rasterizerThreshold);
-    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse('key', key);
+    mateUse('optionsMask', optionsMask);
+    mateUse('rasterizerThreshold', rasterizerThreshold);
+    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
   }
 
   /// PerformanceOverlay PerformanceOverlay.allEnabled({Key? key, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
@@ -66,12 +68,14 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
     mateBuilder = (p) => PerformanceOverlay$Mate.allEnabled(
           key: p.get('key').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('rasterizerThreshold', rasterizerThreshold);
-    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse('key', key);
+    mateUse('rasterizerThreshold', rasterizerThreshold);
+    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
   }
 }

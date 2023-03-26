@@ -157,7 +157,8 @@ class SelectableText$Mate extends SelectableText with Mate {
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
@@ -168,35 +169,35 @@ class SelectableText$Mate extends SelectableText with Mate {
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateDeclare('data', data);
-    mateDeclare('key', key);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('textScaleFactor', textScaleFactor);
-    mateDeclare('showCursor', showCursor);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('minLines', minLines);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('cursorWidth', cursorWidth);
-    mateDeclare('cursorHeight', cursorHeight);
-    mateDeclare('cursorRadius', cursorRadius);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('selectionHeightStyle', selectionHeightStyle);
-    mateDeclare('selectionWidthStyle', selectionWidthStyle);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('onTap', onTap);
-    mateDeclare('scrollPhysics', scrollPhysics);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('textWidthBasis', textWidthBasis);
-    mateDeclare('onSelectionChanged', onSelectionChanged);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateUse('data', data);
+    mateUse('key', key);
+    mateUse('focusNode', focusNode);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('textDirection', textDirection);
+    mateUse('textScaleFactor', textScaleFactor);
+    mateUse('showCursor', showCursor);
+    mateUse('autofocus', autofocus);
+    mateUse('minLines', minLines);
+    mateUse('maxLines', maxLines);
+    mateUse('cursorWidth', cursorWidth);
+    mateUse('cursorHeight', cursorHeight);
+    mateUse('cursorRadius', cursorRadius);
+    mateUse('cursorColor', cursorColor);
+    mateUse('selectionHeightStyle', selectionHeightStyle);
+    mateUse('selectionWidthStyle', selectionWidthStyle);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('selectionControls', selectionControls);
+    mateUse('onTap', onTap);
+    mateUse('scrollPhysics', scrollPhysics);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('textWidthBasis', textWidthBasis);
+    mateUse('onSelectionChanged', onSelectionChanged);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
   }
 
   /// SelectableText SelectableText.rich(TextSpan textSpan, {Key? key, FocusNode? focusNode, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, double? textScaleFactor, bool showCursor = false, bool autofocus = false, ToolbarOptions? toolbarOptions, int? minLines, int? maxLines, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, void Function()? onTap, ScrollPhysics? scrollPhysics, String? semanticsLabel, TextHeightBehavior? textHeightBehavior, TextWidthBasis? textWidthBasis, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration})
@@ -337,7 +338,8 @@ class SelectableText$Mate extends SelectableText with Mate {
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
@@ -348,34 +350,34 @@ class SelectableText$Mate extends SelectableText with Mate {
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateDeclare('textSpan', textSpan);
-    mateDeclare('key', key);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('style', style);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('textScaleFactor', textScaleFactor);
-    mateDeclare('showCursor', showCursor);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('minLines', minLines);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('cursorWidth', cursorWidth);
-    mateDeclare('cursorHeight', cursorHeight);
-    mateDeclare('cursorRadius', cursorRadius);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('selectionHeightStyle', selectionHeightStyle);
-    mateDeclare('selectionWidthStyle', selectionWidthStyle);
-    mateDeclare('dragStartBehavior', dragStartBehavior);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('selectionControls', selectionControls);
-    mateDeclare('onTap', onTap);
-    mateDeclare('scrollPhysics', scrollPhysics);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('textWidthBasis', textWidthBasis);
-    mateDeclare('onSelectionChanged', onSelectionChanged);
-    mateDeclare('contextMenuBuilder', contextMenuBuilder);
-    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateUse('textSpan', textSpan);
+    mateUse('key', key);
+    mateUse('focusNode', focusNode);
+    mateUse('style', style);
+    mateUse('strutStyle', strutStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('textDirection', textDirection);
+    mateUse('textScaleFactor', textScaleFactor);
+    mateUse('showCursor', showCursor);
+    mateUse('autofocus', autofocus);
+    mateUse('minLines', minLines);
+    mateUse('maxLines', maxLines);
+    mateUse('cursorWidth', cursorWidth);
+    mateUse('cursorHeight', cursorHeight);
+    mateUse('cursorRadius', cursorRadius);
+    mateUse('cursorColor', cursorColor);
+    mateUse('selectionHeightStyle', selectionHeightStyle);
+    mateUse('selectionWidthStyle', selectionWidthStyle);
+    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('selectionControls', selectionControls);
+    mateUse('onTap', onTap);
+    mateUse('scrollPhysics', scrollPhysics);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('textWidthBasis', textWidthBasis);
+    mateUse('onSelectionChanged', onSelectionChanged);
+    mateUse('contextMenuBuilder', contextMenuBuilder);
+    mateUse('magnifierConfiguration', magnifierConfiguration);
   }
 }

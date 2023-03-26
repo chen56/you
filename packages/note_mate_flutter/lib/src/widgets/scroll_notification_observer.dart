@@ -6,7 +6,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class ScrollNotificationObserver extends StatefulWidget
-class ScrollNotificationObserver$Mate extends ScrollNotificationObserver with Mate {
+class ScrollNotificationObserver$Mate extends ScrollNotificationObserver
+    with Mate {
   /// ScrollNotificationObserver ScrollNotificationObserver({Key? key, required Widget child})
   ScrollNotificationObserver$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -22,7 +23,7 @@ class ScrollNotificationObserver$Mate extends ScrollNotificationObserver with Ma
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('child', child);
   }
 }

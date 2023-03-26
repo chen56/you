@@ -14,7 +14,7 @@ class BorderRadius$Mate extends BorderRadius with Mate {
       Radius radius)
       : super.all(radius) {
     mateBuilder = (p) => BorderRadius$Mate.all(p.get('radius').value);
-    mateDeclare('radius', radius);
+    mateUse('radius', radius);
   }
 
   /// BorderRadius BorderRadius.circular(double radius)
@@ -24,7 +24,7 @@ class BorderRadius$Mate extends BorderRadius with Mate {
       double radius)
       : super.circular(radius) {
     mateBuilder = (p) => BorderRadius$Mate.circular(p.get('radius').value);
-    mateDeclare('radius', radius);
+    mateUse('radius', radius);
   }
 
   /// BorderRadius BorderRadius.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})
@@ -42,8 +42,8 @@ class BorderRadius$Mate extends BorderRadius with Mate {
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    mateDeclare('top', top);
-    mateDeclare('bottom', bottom);
+    mateUse('top', top);
+    mateUse('bottom', bottom);
   }
 
   /// BorderRadius BorderRadius.horizontal({Radius left = Radius.zero, Radius right = Radius.zero})
@@ -61,8 +61,8 @@ class BorderRadius$Mate extends BorderRadius with Mate {
           left: p.get('left').build(),
           right: p.get('right').build(),
         );
-    mateDeclare('left', left);
-    mateDeclare('right', right);
+    mateUse('left', left);
+    mateUse('right', right);
   }
 
   /// BorderRadius BorderRadius.only({Radius topLeft = Radius.zero, Radius topRight = Radius.zero, Radius bottomLeft = Radius.zero, Radius bottomRight = Radius.zero})
@@ -90,10 +90,10 @@ class BorderRadius$Mate extends BorderRadius with Mate {
           bottomLeft: p.get('bottomLeft').build(),
           bottomRight: p.get('bottomRight').build(),
         );
-    mateDeclare('topLeft', topLeft);
-    mateDeclare('topRight', topRight);
-    mateDeclare('bottomLeft', bottomLeft);
-    mateDeclare('bottomRight', bottomRight);
+    mateUse('topLeft', topLeft);
+    mateUse('topRight', topRight);
+    mateUse('bottomLeft', bottomLeft);
+    mateUse('bottomRight', bottomRight);
   }
 }
 
@@ -105,8 +105,9 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
       /// requiredParameters: Radius radius
       Radius radius)
       : super.all(radius) {
-    mateBuilder = (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
-    mateDeclare('radius', radius);
+    mateBuilder =
+        (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
+    mateUse('radius', radius);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.circular(double radius)
@@ -115,8 +116,9 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
       /// requiredParameters: double radius
       double radius)
       : super.circular(radius) {
-    mateBuilder = (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
-    mateDeclare('radius', radius);
+    mateBuilder =
+        (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
+    mateUse('radius', radius);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})
@@ -134,8 +136,8 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    mateDeclare('top', top);
-    mateDeclare('bottom', bottom);
+    mateUse('top', top);
+    mateUse('bottom', bottom);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.horizontal({Radius start = Radius.zero, Radius end = Radius.zero})
@@ -153,8 +155,8 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
           start: p.get('start').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('start', start);
-    mateDeclare('end', end);
+    mateUse('start', start);
+    mateUse('end', end);
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.only({Radius topStart = Radius.zero, Radius topEnd = Radius.zero, Radius bottomStart = Radius.zero, Radius bottomEnd = Radius.zero})
@@ -182,9 +184,9 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
           bottomStart: p.get('bottomStart').build(),
           bottomEnd: p.get('bottomEnd').build(),
         );
-    mateDeclare('topStart', topStart);
-    mateDeclare('topEnd', topEnd);
-    mateDeclare('bottomStart', bottomStart);
-    mateDeclare('bottomEnd', bottomEnd);
+    mateUse('topStart', topStart);
+    mateUse('topEnd', topEnd);
+    mateUse('bottomStart', bottomStart);
+    mateUse('bottomEnd', bottomEnd);
   }
 }

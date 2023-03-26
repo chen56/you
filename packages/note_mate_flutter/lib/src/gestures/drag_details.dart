@@ -23,8 +23,8 @@ class DragDownDetails$Mate extends DragDownDetails with Mate {
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateDeclare('globalPosition', globalPosition);
-    mateDeclare('localPosition', localPosition);
+    mateUse('globalPosition', globalPosition);
+    mateUse('localPosition', localPosition);
   }
 }
 
@@ -55,10 +55,10 @@ class DragStartDetails$Mate extends DragStartDetails with Mate {
           localPosition: p.get('localPosition').build(),
           kind: p.get('kind').build(),
         );
-    mateDeclare('sourceTimeStamp', sourceTimeStamp);
-    mateDeclare('globalPosition', globalPosition);
-    mateDeclare('localPosition', localPosition);
-    mateDeclare('kind', kind);
+    mateUse('sourceTimeStamp', sourceTimeStamp);
+    mateUse('globalPosition', globalPosition);
+    mateUse('localPosition', localPosition);
+    mateUse('kind', kind);
   }
 }
 
@@ -94,11 +94,11 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate {
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateDeclare('sourceTimeStamp', sourceTimeStamp);
-    mateDeclare('delta', delta);
-    mateDeclare('primaryDelta', primaryDelta);
-    mateDeclare('globalPosition', globalPosition);
-    mateDeclare('localPosition', localPosition);
+    mateUse('sourceTimeStamp', sourceTimeStamp);
+    mateUse('delta', delta);
+    mateUse('primaryDelta', primaryDelta);
+    mateUse('globalPosition', globalPosition);
+    mateUse('localPosition', localPosition);
   }
 }
 
@@ -119,7 +119,7 @@ class DragEndDetails$Mate extends DragEndDetails with Mate {
           velocity: p.get('velocity').build(),
           primaryVelocity: p.get('primaryVelocity').build(),
         );
-    mateDeclare('velocity', velocity);
-    mateDeclare('primaryVelocity', primaryVelocity);
+    mateUse('velocity', velocity);
+    mateUse('primaryVelocity', primaryVelocity);
   }
 }

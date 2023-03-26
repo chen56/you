@@ -23,8 +23,8 @@ class AnnotationEntry$Mate<T> extends AnnotationEntry<T> with Mate {
           annotation: p.get('annotation').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateDeclare('annotation', annotation);
-    mateDeclare('localPosition', localPosition);
+    mateUse('annotation', annotation);
+    mateUse('localPosition', localPosition);
   }
 }
 
@@ -37,7 +37,7 @@ class LayerHandle$Mate<T extends Layer> extends LayerHandle<T> with Mate {
       T? _layer)
       : super(_layer) {
     mateBuilder = (p) => LayerHandle$Mate<T>(p.get('_layer').value);
-    mateDeclare('_layer', _layer);
+    mateUse('_layer', _layer);
   }
 }
 
@@ -50,7 +50,7 @@ class PictureLayer$Mate extends PictureLayer with Mate {
       Rect canvasBounds)
       : super(canvasBounds) {
     mateBuilder = (p) => PictureLayer$Mate(p.get('canvasBounds').value);
-    mateDeclare('canvasBounds', canvasBounds);
+    mateUse('canvasBounds', canvasBounds);
   }
 }
 
@@ -81,10 +81,10 @@ class TextureLayer$Mate extends TextureLayer with Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateDeclare('rect', rect);
-    mateDeclare('textureId', textureId);
-    mateDeclare('freeze', freeze);
-    mateDeclare('filterQuality', filterQuality);
+    mateUse('rect', rect);
+    mateUse('textureId', textureId);
+    mateUse('freeze', freeze);
+    mateUse('filterQuality', filterQuality);
   }
 }
 
@@ -105,8 +105,8 @@ class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
           rect: p.get('rect').build(),
           viewId: p.get('viewId').build(),
         );
-    mateDeclare('rect', rect);
-    mateDeclare('viewId', viewId);
+    mateUse('rect', rect);
+    mateUse('viewId', viewId);
   }
 }
 
@@ -139,14 +139,16 @@ class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
           overlayRect: p.get('overlayRect').build(),
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
-    mateDeclare('overlayRect', overlayRect);
-    mateDeclare('optionsMask', optionsMask);
-    mateDeclare('rasterizerThreshold', rasterizerThreshold);
-    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse('overlayRect', overlayRect);
+    mateUse('optionsMask', optionsMask);
+    mateUse('rasterizerThreshold', rasterizerThreshold);
+    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
   }
 }
 
@@ -159,7 +161,7 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
       required Offset offset})
       : super(offset: offset) {
     mateBuilder = (p) => OffsetLayer$Mate(offset: p.get('offset').build());
-    mateDeclare('offset', offset);
+    mateUse('offset', offset);
   }
 }
 
@@ -180,8 +182,8 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate {
           clipRect: p.get('clipRect').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('clipRect', clipRect);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('clipRect', clipRect);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -202,8 +204,8 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
           clipRRect: p.get('clipRRect').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('clipRRect', clipRRect);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('clipRRect', clipRRect);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -224,8 +226,8 @@ class ClipPathLayer$Mate extends ClipPathLayer with Mate {
           clipPath: p.get('clipPath').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('clipPath', clipPath);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('clipPath', clipPath);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -237,8 +239,9 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
       /// optionalParameters: {ColorFilter? colorFilter} , defaultValue:none
       ColorFilter? colorFilter})
       : super(colorFilter: colorFilter) {
-    mateBuilder = (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
-    mateDeclare('colorFilter', colorFilter);
+    mateBuilder =
+        (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
+    mateUse('colorFilter', colorFilter);
   }
 }
 
@@ -259,8 +262,8 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
           imageFilter: p.get('imageFilter').build(),
           offset: p.get('offset').build(),
         );
-    mateDeclare('imageFilter', imageFilter);
-    mateDeclare('offset', offset);
+    mateUse('imageFilter', imageFilter);
+    mateUse('offset', offset);
   }
 }
 
@@ -281,8 +284,8 @@ class TransformLayer$Mate extends TransformLayer with Mate {
           transform: p.get('transform').build(),
           offset: p.get('offset').build(),
         );
-    mateDeclare('transform', transform);
-    mateDeclare('offset', offset);
+    mateUse('transform', transform);
+    mateUse('offset', offset);
   }
 }
 
@@ -303,8 +306,8 @@ class OpacityLayer$Mate extends OpacityLayer with Mate {
           alpha: p.get('alpha').build(),
           offset: p.get('offset').build(),
         );
-    mateDeclare('alpha', alpha);
-    mateDeclare('offset', offset);
+    mateUse('alpha', alpha);
+    mateUse('offset', offset);
   }
 }
 
@@ -330,9 +333,9 @@ class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
           maskRect: p.get('maskRect').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateDeclare('shader', shader);
-    mateDeclare('maskRect', maskRect);
-    mateDeclare('blendMode', blendMode);
+    mateUse('shader', shader);
+    mateUse('maskRect', maskRect);
+    mateUse('blendMode', blendMode);
   }
 }
 
@@ -353,8 +356,8 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
           filter: p.get('filter').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateDeclare('filter', filter);
-    mateDeclare('blendMode', blendMode);
+    mateUse('filter', filter);
+    mateUse('blendMode', blendMode);
   }
 }
 
@@ -390,11 +393,11 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateDeclare('clipPath', clipPath);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('elevation', elevation);
-    mateDeclare('color', color);
-    mateDeclare('shadowColor', shadowColor);
+    mateUse('clipPath', clipPath);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('elevation', elevation);
+    mateUse('color', color);
+    mateUse('shadowColor', shadowColor);
   }
 }
 
@@ -415,8 +418,8 @@ class LeaderLayer$Mate extends LeaderLayer with Mate {
           link: p.get('link').build(),
           offset: p.get('offset').build(),
         );
-    mateDeclare('link', link);
-    mateDeclare('offset', offset);
+    mateUse('link', link);
+    mateUse('offset', offset);
   }
 }
 
@@ -447,15 +450,16 @@ class FollowerLayer$Mate extends FollowerLayer with Mate {
           unlinkedOffset: p.get('unlinkedOffset').build(),
           linkedOffset: p.get('linkedOffset').build(),
         );
-    mateDeclare('link', link);
-    mateDeclare('showWhenUnlinked', showWhenUnlinked);
-    mateDeclare('unlinkedOffset', unlinkedOffset);
-    mateDeclare('linkedOffset', linkedOffset);
+    mateUse('link', link);
+    mateUse('showWhenUnlinked', showWhenUnlinked);
+    mateUse('unlinkedOffset', unlinkedOffset);
+    mateUse('linkedOffset', linkedOffset);
   }
 }
 
 /// class AnnotatedRegionLayer<T extends Object> extends ContainerLayer
-class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T> with Mate {
+class AnnotatedRegionLayer$Mate<T extends Object>
+    extends AnnotatedRegionLayer<T> with Mate {
   /// AnnotatedRegionLayer<T> AnnotatedRegionLayer(T value, {Size? size, Offset? offset, bool opaque = false})
   AnnotatedRegionLayer$Mate(
     /// requiredParameters: T value
@@ -480,9 +484,9 @@ class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T
           offset: p.get('offset').build(),
           opaque: p.get('opaque').build(),
         );
-    mateDeclare('value', value);
-    mateDeclare('size', size);
-    mateDeclare('offset', offset);
-    mateDeclare('opaque', opaque);
+    mateUse('value', value);
+    mateUse('size', size);
+    mateUse('offset', offset);
+    mateUse('opaque', opaque);
   }
 }

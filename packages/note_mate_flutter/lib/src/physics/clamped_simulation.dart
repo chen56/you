@@ -36,10 +36,10 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
           dxMin: p.get('dxMin').build(),
           dxMax: p.get('dxMax').build(),
         );
-    mateDeclare('simulation', simulation);
-    mateDeclare('xMin', xMin);
-    mateDeclare('xMax', xMax);
-    mateDeclare('dxMin', dxMin);
-    mateDeclare('dxMax', dxMax);
+    mateUse('simulation', simulation);
+    mateUse('xMin', xMin);
+    mateUse('xMax', xMax);
+    mateUse('dxMin', dxMin);
+    mateUse('dxMax', dxMax);
   }
 }

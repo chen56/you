@@ -146,30 +146,30 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
           direction: p.get('direction').build(),
           verticalDirection: p.get('verticalDirection').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('isSelected', isSelected);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('tapTargetSize', tapTargetSize);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('constraints', constraints);
-    mateDeclare('color', color);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('highlightColor', highlightColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('focusNodes', focusNodes);
-    mateDeclare('renderBorder', renderBorder);
-    mateDeclare('borderColor', borderColor);
-    mateDeclare('selectedBorderColor', selectedBorderColor);
-    mateDeclare('disabledBorderColor', disabledBorderColor);
-    mateDeclare('borderRadius', borderRadius);
-    mateDeclare('borderWidth', borderWidth);
-    mateDeclare('direction', direction);
-    mateDeclare('verticalDirection', verticalDirection);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('isSelected', isSelected);
+    mateUse('onPressed', onPressed);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('tapTargetSize', tapTargetSize);
+    mateUse('textStyle', textStyle);
+    mateUse('constraints', constraints);
+    mateUse('color', color);
+    mateUse('selectedColor', selectedColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('fillColor', fillColor);
+    mateUse('focusColor', focusColor);
+    mateUse('highlightColor', highlightColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('splashColor', splashColor);
+    mateUse('focusNodes', focusNodes);
+    mateUse('renderBorder', renderBorder);
+    mateUse('borderColor', borderColor);
+    mateUse('selectedBorderColor', selectedBorderColor);
+    mateUse('disabledBorderColor', disabledBorderColor);
+    mateUse('borderRadius', borderRadius);
+    mateUse('borderWidth', borderWidth);
+    mateUse('direction', direction);
+    mateUse('verticalDirection', verticalDirection);
   }
 }

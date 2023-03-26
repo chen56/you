@@ -140,30 +140,30 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           isExtended: p.get('isExtended').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('foregroundColor', foregroundColor);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('heroTag', heroTag);
-    mateDeclare('elevation', elevation);
-    mateDeclare('focusElevation', focusElevation);
-    mateDeclare('hoverElevation', hoverElevation);
-    mateDeclare('highlightElevation', highlightElevation);
-    mateDeclare('disabledElevation', disabledElevation);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('mini', mini);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('isExtended', isExtended);
-    mateDeclare('enableFeedback', enableFeedback);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('tooltip', tooltip);
+    mateUse('foregroundColor', foregroundColor);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('splashColor', splashColor);
+    mateUse('heroTag', heroTag);
+    mateUse('elevation', elevation);
+    mateUse('focusElevation', focusElevation);
+    mateUse('hoverElevation', hoverElevation);
+    mateUse('highlightElevation', highlightElevation);
+    mateUse('disabledElevation', disabledElevation);
+    mateUse('onPressed', onPressed);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('mini', mini);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('isExtended', isExtended);
+    mateUse('enableFeedback', enableFeedback);
   }
 
   /// FloatingActionButton FloatingActionButton.small({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool? enableFeedback})
@@ -281,28 +281,28 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('foregroundColor', foregroundColor);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('heroTag', heroTag);
-    mateDeclare('elevation', elevation);
-    mateDeclare('focusElevation', focusElevation);
-    mateDeclare('hoverElevation', hoverElevation);
-    mateDeclare('highlightElevation', highlightElevation);
-    mateDeclare('disabledElevation', disabledElevation);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('enableFeedback', enableFeedback);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('tooltip', tooltip);
+    mateUse('foregroundColor', foregroundColor);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('splashColor', splashColor);
+    mateUse('heroTag', heroTag);
+    mateUse('elevation', elevation);
+    mateUse('focusElevation', focusElevation);
+    mateUse('hoverElevation', hoverElevation);
+    mateUse('highlightElevation', highlightElevation);
+    mateUse('disabledElevation', disabledElevation);
+    mateUse('onPressed', onPressed);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('enableFeedback', enableFeedback);
   }
 
   /// FloatingActionButton FloatingActionButton.large({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool? enableFeedback})
@@ -420,28 +420,28 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('foregroundColor', foregroundColor);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('heroTag', heroTag);
-    mateDeclare('elevation', elevation);
-    mateDeclare('focusElevation', focusElevation);
-    mateDeclare('hoverElevation', hoverElevation);
-    mateDeclare('highlightElevation', highlightElevation);
-    mateDeclare('disabledElevation', disabledElevation);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('enableFeedback', enableFeedback);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('tooltip', tooltip);
+    mateUse('foregroundColor', foregroundColor);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('splashColor', splashColor);
+    mateUse('heroTag', heroTag);
+    mateUse('elevation', elevation);
+    mateUse('focusElevation', focusElevation);
+    mateUse('hoverElevation', hoverElevation);
+    mateUse('highlightElevation', highlightElevation);
+    mateUse('disabledElevation', disabledElevation);
+    mateUse('onPressed', onPressed);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('enableFeedback', enableFeedback);
   }
 
   /// FloatingActionButton FloatingActionButton.extended({Key? key, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, Color? splashColor, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor = SystemMouseCursors.click, ShapeBorder? shape, bool isExtended = true, MaterialTapTargetSize? materialTapTargetSize, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, Widget? icon, required Widget label, bool? enableFeedback})
@@ -584,32 +584,32 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           label: p.get('label').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('tooltip', tooltip);
-    mateDeclare('foregroundColor', foregroundColor);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('heroTag', heroTag);
-    mateDeclare('elevation', elevation);
-    mateDeclare('focusElevation', focusElevation);
-    mateDeclare('hoverElevation', hoverElevation);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('highlightElevation', highlightElevation);
-    mateDeclare('disabledElevation', disabledElevation);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('shape', shape);
-    mateDeclare('isExtended', isExtended);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('extendedIconLabelSpacing', extendedIconLabelSpacing);
-    mateDeclare('extendedPadding', extendedPadding);
-    mateDeclare('extendedTextStyle', extendedTextStyle);
-    mateDeclare('icon', icon);
-    mateDeclare('label', label);
-    mateDeclare('enableFeedback', enableFeedback);
+    mateUse('key', key);
+    mateUse('tooltip', tooltip);
+    mateUse('foregroundColor', foregroundColor);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('heroTag', heroTag);
+    mateUse('elevation', elevation);
+    mateUse('focusElevation', focusElevation);
+    mateUse('hoverElevation', hoverElevation);
+    mateUse('splashColor', splashColor);
+    mateUse('highlightElevation', highlightElevation);
+    mateUse('disabledElevation', disabledElevation);
+    mateUse('onPressed', onPressed);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('shape', shape);
+    mateUse('isExtended', isExtended);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('extendedIconLabelSpacing', extendedIconLabelSpacing);
+    mateUse('extendedPadding', extendedPadding);
+    mateUse('extendedTextStyle', extendedTextStyle);
+    mateUse('icon', icon);
+    mateUse('label', label);
+    mateUse('enableFeedback', enableFeedback);
   }
 }

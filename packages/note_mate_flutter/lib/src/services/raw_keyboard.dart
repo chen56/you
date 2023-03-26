@@ -26,9 +26,9 @@ class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate {
           character: p.get('character').build(),
           repeat: p.get('repeat').build(),
         );
-    mateDeclare('data', data);
-    mateDeclare('character', character);
-    mateDeclare('repeat', repeat);
+    mateUse('data', data);
+    mateUse('character', character);
+    mateUse('repeat', repeat);
   }
 }
 
@@ -49,7 +49,7 @@ class RawKeyUpEvent$Mate extends RawKeyUpEvent with Mate {
           data: p.get('data').build(),
           character: p.get('character').build(),
         );
-    mateDeclare('data', data);
-    mateDeclare('character', character);
+    mateUse('data', data);
+    mateUse('character', character);
   }
 }

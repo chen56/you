@@ -44,11 +44,11 @@ class SnackBarAction$Mate extends SnackBarAction with Mate {
           label: p.get('label').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('textColor', textColor);
-    mateDeclare('disabledTextColor', disabledTextColor);
-    mateDeclare('label', label);
-    mateDeclare('onPressed', onPressed);
+    mateUse('key', key);
+    mateUse('textColor', textColor);
+    mateUse('disabledTextColor', disabledTextColor);
+    mateUse('label', label);
+    mateUse('onPressed', onPressed);
   }
 }
 
@@ -149,23 +149,23 @@ class SnackBar$Mate extends SnackBar with Mate {
           dismissDirection: p.get('dismissDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('content', content);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('margin', margin);
-    mateDeclare('padding', padding);
-    mateDeclare('width', width);
-    mateDeclare('shape', shape);
-    mateDeclare('behavior', behavior);
-    mateDeclare('action', action);
-    mateDeclare('actionOverflowThreshold', actionOverflowThreshold);
-    mateDeclare('showCloseIcon', showCloseIcon);
-    mateDeclare('closeIconColor', closeIconColor);
-    mateDeclare('duration', duration);
-    mateDeclare('animation', animation);
-    mateDeclare('onVisible', onVisible);
-    mateDeclare('dismissDirection', dismissDirection);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('content', content);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('elevation', elevation);
+    mateUse('margin', margin);
+    mateUse('padding', padding);
+    mateUse('width', width);
+    mateUse('shape', shape);
+    mateUse('behavior', behavior);
+    mateUse('action', action);
+    mateUse('actionOverflowThreshold', actionOverflowThreshold);
+    mateUse('showCloseIcon', showCloseIcon);
+    mateUse('closeIconColor', closeIconColor);
+    mateUse('duration', duration);
+    mateUse('animation', animation);
+    mateUse('onVisible', onVisible);
+    mateUse('dismissDirection', dismissDirection);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

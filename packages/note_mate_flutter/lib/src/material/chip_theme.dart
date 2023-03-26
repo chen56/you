@@ -33,9 +33,9 @@ class ChipTheme$Mate extends ChipTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }
 
@@ -146,25 +146,25 @@ class ChipThemeData$Mate extends ChipThemeData with Mate {
           pressElevation: p.get('pressElevation').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('deleteIconColor', deleteIconColor);
-    mateDeclare('disabledColor', disabledColor);
-    mateDeclare('selectedColor', selectedColor);
-    mateDeclare('secondarySelectedColor', secondarySelectedColor);
-    mateDeclare('shadowColor', shadowColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('selectedShadowColor', selectedShadowColor);
-    mateDeclare('showCheckmark', showCheckmark);
-    mateDeclare('checkmarkColor', checkmarkColor);
-    mateDeclare('labelPadding', labelPadding);
-    mateDeclare('padding', padding);
-    mateDeclare('side', side);
-    mateDeclare('shape', shape);
-    mateDeclare('labelStyle', labelStyle);
-    mateDeclare('secondaryLabelStyle', secondaryLabelStyle);
-    mateDeclare('brightness', brightness);
-    mateDeclare('elevation', elevation);
-    mateDeclare('pressElevation', pressElevation);
-    mateDeclare('iconTheme', iconTheme);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('deleteIconColor', deleteIconColor);
+    mateUse('disabledColor', disabledColor);
+    mateUse('selectedColor', selectedColor);
+    mateUse('secondarySelectedColor', secondarySelectedColor);
+    mateUse('shadowColor', shadowColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('selectedShadowColor', selectedShadowColor);
+    mateUse('showCheckmark', showCheckmark);
+    mateUse('checkmarkColor', checkmarkColor);
+    mateUse('labelPadding', labelPadding);
+    mateUse('padding', padding);
+    mateUse('side', side);
+    mateUse('shape', shape);
+    mateUse('labelStyle', labelStyle);
+    mateUse('secondaryLabelStyle', secondaryLabelStyle);
+    mateUse('brightness', brightness);
+    mateUse('elevation', elevation);
+    mateUse('pressElevation', pressElevation);
+    mateUse('iconTheme', iconTheme);
   }
 }

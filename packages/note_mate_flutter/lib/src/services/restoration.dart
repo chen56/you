@@ -21,8 +21,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           restorationId: p.get('restorationId').build(),
           debugOwner: p.get('debugOwner').build(),
         );
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('debugOwner', debugOwner);
+    mateUse('restorationId', restorationId);
+    mateUse('debugOwner', debugOwner);
   }
 
   /// RestorationBucket RestorationBucket.root({required RestorationManager manager, required Map<Object?, Object?>? rawData})
@@ -40,8 +40,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           manager: p.get('manager').build(),
           rawData: p.get('rawData').build(),
         );
-    mateDeclare('manager', manager);
-    mateDeclare('rawData', rawData);
+    mateUse('manager', manager);
+    mateUse('rawData', rawData);
   }
 
   /// RestorationBucket RestorationBucket.child({required String restorationId, required RestorationBucket parent, required Object? debugOwner})
@@ -64,8 +64,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           parent: p.get('parent').build(),
           debugOwner: p.get('debugOwner').build(),
         );
-    mateDeclare('restorationId', restorationId);
-    mateDeclare('parent', parent);
-    mateDeclare('debugOwner', debugOwner);
+    mateUse('restorationId', restorationId);
+    mateUse('parent', parent);
+    mateUse('debugOwner', debugOwner);
   }
 }

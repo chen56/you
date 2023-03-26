@@ -25,8 +25,8 @@ class PaintingContext$Mate extends PaintingContext with Mate {
           p.get('_containerLayer').value,
           p.get('estimatedBounds').value,
         );
-    mateDeclare('_containerLayer', _containerLayer);
-    mateDeclare('estimatedBounds', estimatedBounds);
+    mateUse('_containerLayer', _containerLayer);
+    mateUse('estimatedBounds', estimatedBounds);
   }
 }
 
@@ -57,10 +57,10 @@ class PipelineOwner$Mate extends PipelineOwner with Mate {
           onSemanticsUpdate: p.get('onSemanticsUpdate').build(),
           onSemanticsOwnerDisposed: p.get('onSemanticsOwnerDisposed').build(),
         );
-    mateDeclare('onNeedVisualUpdate', onNeedVisualUpdate);
-    mateDeclare('onSemanticsOwnerCreated', onSemanticsOwnerCreated);
-    mateDeclare('onSemanticsUpdate', onSemanticsUpdate);
-    mateDeclare('onSemanticsOwnerDisposed', onSemanticsOwnerDisposed);
+    mateUse('onNeedVisualUpdate', onNeedVisualUpdate);
+    mateUse('onSemanticsOwnerCreated', onSemanticsOwnerCreated);
+    mateUse('onSemanticsUpdate', onSemanticsUpdate);
+    mateUse('onSemanticsOwnerDisposed', onSemanticsOwnerDisposed);
   }
 }
 
@@ -73,6 +73,6 @@ class DiagnosticsDebugCreator$Mate extends DiagnosticsDebugCreator with Mate {
       Object value)
       : super(value) {
     mateBuilder = (p) => DiagnosticsDebugCreator$Mate(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }

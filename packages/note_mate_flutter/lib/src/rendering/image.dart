@@ -101,22 +101,22 @@ class RenderImage$Mate extends RenderImage with Mate {
           isAntiAlias: p.get('isAntiAlias').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateDeclare('image', image);
-    mateDeclare('debugImageLabel', debugImageLabel);
-    mateDeclare('width', width);
-    mateDeclare('height', height);
-    mateDeclare('scale', scale);
-    mateDeclare('color', color);
-    mateDeclare('opacity', opacity);
-    mateDeclare('colorBlendMode', colorBlendMode);
-    mateDeclare('fit', fit);
-    mateDeclare('alignment', alignment);
-    mateDeclare('repeat', repeat);
-    mateDeclare('centerSlice', centerSlice);
-    mateDeclare('matchTextDirection', matchTextDirection);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('invertColors', invertColors);
-    mateDeclare('isAntiAlias', isAntiAlias);
-    mateDeclare('filterQuality', filterQuality);
+    mateUse('image', image);
+    mateUse('debugImageLabel', debugImageLabel);
+    mateUse('width', width);
+    mateUse('height', height);
+    mateUse('scale', scale);
+    mateUse('color', color);
+    mateUse('opacity', opacity);
+    mateUse('colorBlendMode', colorBlendMode);
+    mateUse('fit', fit);
+    mateUse('alignment', alignment);
+    mateUse('repeat', repeat);
+    mateUse('centerSlice', centerSlice);
+    mateUse('matchTextDirection', matchTextDirection);
+    mateUse('textDirection', textDirection);
+    mateUse('invertColors', invertColors);
+    mateUse('isAntiAlias', isAntiAlias);
+    mateUse('filterQuality', filterQuality);
   }
 }

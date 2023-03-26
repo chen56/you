@@ -23,8 +23,8 @@ class Tween$Mate<T extends Object?> extends Tween<T> with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }
 
@@ -37,7 +37,7 @@ class ReverseTween$Mate<T extends Object?> extends ReverseTween<T> with Mate {
       Tween<T> parent)
       : super(parent) {
     mateBuilder = (p) => ReverseTween$Mate<T>(p.get('parent').value);
-    mateDeclare('parent', parent);
+    mateUse('parent', parent);
   }
 }
 
@@ -58,8 +58,8 @@ class ColorTween$Mate extends ColorTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }
 
@@ -80,8 +80,8 @@ class SizeTween$Mate extends SizeTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }
 
@@ -102,8 +102,8 @@ class RectTween$Mate extends RectTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }
 
@@ -124,8 +124,8 @@ class IntTween$Mate extends IntTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }
 
@@ -146,8 +146,8 @@ class StepTween$Mate extends StepTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }
 
@@ -160,7 +160,7 @@ class ConstantTween$Mate<T> extends ConstantTween<T> with Mate {
       T value)
       : super(value) {
     mateBuilder = (p) => ConstantTween$Mate<T>(p.get('value').value);
-    mateDeclare('value', value);
+    mateUse('value', value);
   }
 }
 
@@ -173,6 +173,6 @@ class CurveTween$Mate extends CurveTween with Mate {
       required Curve curve})
       : super(curve: curve) {
     mateBuilder = (p) => CurveTween$Mate(curve: p.get('curve').build());
-    mateDeclare('curve', curve);
+    mateUse('curve', curve);
   }
 }

@@ -21,8 +21,8 @@ class TimeOfDay$Mate extends TimeOfDay with Mate {
           hour: p.get('hour').build(),
           minute: p.get('minute').build(),
         );
-    mateDeclare('hour', hour);
-    mateDeclare('minute', minute);
+    mateUse('hour', hour);
+    mateUse('minute', minute);
   }
 
   /// TimeOfDay TimeOfDay.fromDateTime(DateTime time)
@@ -32,7 +32,7 @@ class TimeOfDay$Mate extends TimeOfDay with Mate {
       DateTime time)
       : super.fromDateTime(time) {
     mateBuilder = (p) => TimeOfDay$Mate.fromDateTime(p.get('time').value);
-    mateDeclare('time', time);
+    mateUse('time', time);
   }
 }
 
@@ -45,6 +45,6 @@ class RestorableTimeOfDay$Mate extends RestorableTimeOfDay with Mate {
       TimeOfDay defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableTimeOfDay$Mate(p.get('defaultValue').value);
-    mateDeclare('defaultValue', defaultValue);
+    mateUse('defaultValue', defaultValue);
   }
 }

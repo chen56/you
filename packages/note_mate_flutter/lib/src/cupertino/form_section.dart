@@ -56,14 +56,14 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('header', header);
-    mateDeclare('footer', footer);
-    mateDeclare('margin', margin);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('decoration', decoration);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('header', header);
+    mateUse('footer', footer);
+    mateUse('margin', margin);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('decoration', decoration);
+    mateUse('clipBehavior', clipBehavior);
   }
 
   /// CupertinoFormSection CupertinoFormSection.insetGrouped({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
@@ -111,13 +111,13 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('children', children);
-    mateDeclare('header', header);
-    mateDeclare('footer', footer);
-    mateDeclare('margin', margin);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('decoration', decoration);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('key', key);
+    mateUse('children', children);
+    mateUse('header', header);
+    mateUse('footer', footer);
+    mateUse('margin', margin);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('decoration', decoration);
+    mateUse('clipBehavior', clipBehavior);
   }
 }

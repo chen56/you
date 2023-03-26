@@ -109,23 +109,23 @@ class Tooltip$Mate extends Tooltip with Mate {
           onTriggered: p.get('onTriggered').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('message', message);
-    mateDeclare('richMessage', richMessage);
-    mateDeclare('height', height);
-    mateDeclare('padding', padding);
-    mateDeclare('margin', margin);
-    mateDeclare('verticalOffset', verticalOffset);
-    mateDeclare('preferBelow', preferBelow);
-    mateDeclare('excludeFromSemantics', excludeFromSemantics);
-    mateDeclare('decoration', decoration);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('waitDuration', waitDuration);
-    mateDeclare('showDuration', showDuration);
-    mateDeclare('triggerMode', triggerMode);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('onTriggered', onTriggered);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('message', message);
+    mateUse('richMessage', richMessage);
+    mateUse('height', height);
+    mateUse('padding', padding);
+    mateUse('margin', margin);
+    mateUse('verticalOffset', verticalOffset);
+    mateUse('preferBelow', preferBelow);
+    mateUse('excludeFromSemantics', excludeFromSemantics);
+    mateUse('decoration', decoration);
+    mateUse('textStyle', textStyle);
+    mateUse('textAlign', textAlign);
+    mateUse('waitDuration', waitDuration);
+    mateUse('showDuration', showDuration);
+    mateUse('triggerMode', triggerMode);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('onTriggered', onTriggered);
+    mateUse('child', child);
   }
 }

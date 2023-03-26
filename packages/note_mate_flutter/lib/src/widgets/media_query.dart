@@ -101,23 +101,23 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           gestureSettings: p.get('gestureSettings').build(),
           displayFeatures: p.get('displayFeatures').build(),
         );
-    mateDeclare('size', size);
-    mateDeclare('devicePixelRatio', devicePixelRatio);
-    mateDeclare('textScaleFactor', textScaleFactor);
-    mateDeclare('platformBrightness', platformBrightness);
-    mateDeclare('padding', padding);
-    mateDeclare('viewInsets', viewInsets);
-    mateDeclare('systemGestureInsets', systemGestureInsets);
-    mateDeclare('viewPadding', viewPadding);
-    mateDeclare('alwaysUse24HourFormat', alwaysUse24HourFormat);
-    mateDeclare('accessibleNavigation', accessibleNavigation);
-    mateDeclare('invertColors', invertColors);
-    mateDeclare('highContrast', highContrast);
-    mateDeclare('disableAnimations', disableAnimations);
-    mateDeclare('boldText', boldText);
-    mateDeclare('navigationMode', navigationMode);
-    mateDeclare('gestureSettings', gestureSettings);
-    mateDeclare('displayFeatures', displayFeatures);
+    mateUse('size', size);
+    mateUse('devicePixelRatio', devicePixelRatio);
+    mateUse('textScaleFactor', textScaleFactor);
+    mateUse('platformBrightness', platformBrightness);
+    mateUse('padding', padding);
+    mateUse('viewInsets', viewInsets);
+    mateUse('systemGestureInsets', systemGestureInsets);
+    mateUse('viewPadding', viewPadding);
+    mateUse('alwaysUse24HourFormat', alwaysUse24HourFormat);
+    mateUse('accessibleNavigation', accessibleNavigation);
+    mateUse('invertColors', invertColors);
+    mateUse('highContrast', highContrast);
+    mateUse('disableAnimations', disableAnimations);
+    mateUse('boldText', boldText);
+    mateUse('navigationMode', navigationMode);
+    mateUse('gestureSettings', gestureSettings);
+    mateUse('displayFeatures', displayFeatures);
   }
 
   /// MediaQueryData MediaQueryData.fromView(FlutterView view, {MediaQueryData? platformData})
@@ -134,8 +134,8 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           p.get('view').value,
           platformData: p.get('platformData').build(),
         );
-    mateDeclare('view', view);
-    mateDeclare('platformData', platformData);
+    mateUse('view', view);
+    mateUse('platformData', platformData);
   }
 }
 
@@ -161,8 +161,8 @@ class MediaQuery$Mate extends MediaQuery with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

@@ -16,8 +16,9 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate {
       /// optionalParameters: {int initialIndex = 0} , defaultValue:Literal
       int initialIndex = 0})
       : super(initialIndex: initialIndex) {
-    mateBuilder = (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
-    mateDeclare('initialIndex', initialIndex);
+    mateBuilder = (p) => CupertinoTabController$Mate(
+        initialIndex: p.get('initialIndex').build());
+    mateUse('initialIndex', initialIndex);
   }
 }
 
@@ -63,25 +64,27 @@ class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with Mate {
           resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('tabBar', tabBar);
-    mateDeclare('tabBuilder', tabBuilder);
-    mateDeclare('controller', controller);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
-    mateDeclare('restorationId', restorationId);
+    mateUse('key', key);
+    mateUse('tabBar', tabBar);
+    mateUse('tabBuilder', tabBuilder);
+    mateUse('controller', controller);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
+    mateUse('restorationId', restorationId);
   }
 }
 
 /// class RestorableCupertinoTabController extends RestorableChangeNotifier<CupertinoTabController>
-class RestorableCupertinoTabController$Mate extends RestorableCupertinoTabController with Mate {
+class RestorableCupertinoTabController$Mate
+    extends RestorableCupertinoTabController with Mate {
   /// RestorableCupertinoTabController RestorableCupertinoTabController({int initialIndex = 0})
   RestorableCupertinoTabController$Mate(
       {
       /// optionalParameters: {int initialIndex = 0} , defaultValue:Literal
       int initialIndex = 0})
       : super(initialIndex: initialIndex) {
-    mateBuilder = (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
-    mateDeclare('initialIndex', initialIndex);
+    mateBuilder = (p) => RestorableCupertinoTabController$Mate(
+        initialIndex: p.get('initialIndex').build());
+    mateUse('initialIndex', initialIndex);
   }
 }

@@ -13,6 +13,6 @@ class NetworkAssetBundle$Mate extends NetworkAssetBundle with Mate {
       Uri baseUrl)
       : super(baseUrl) {
     mateBuilder = (p) => NetworkAssetBundle$Mate(p.get('baseUrl').value);
-    mateDeclare('baseUrl', baseUrl);
+    mateUse('baseUrl', baseUrl);
   }
 }

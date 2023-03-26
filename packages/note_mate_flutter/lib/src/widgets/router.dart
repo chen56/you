@@ -25,8 +25,8 @@ class RouteInformation$Mate extends RouteInformation with Mate {
           location: p.get('location').build(),
           state: p.get('state').build(),
         );
-    mateDeclare('location', location);
-    mateDeclare('state', state);
+    mateUse('location', location);
+    mateUse('state', state);
   }
 }
 
@@ -57,10 +57,10 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate {
           routerDelegate: p.get('routerDelegate').build(),
           backButtonDispatcher: p.get('backButtonDispatcher').build(),
         );
-    mateDeclare('routeInformationProvider', routeInformationProvider);
-    mateDeclare('routeInformationParser', routeInformationParser);
-    mateDeclare('routerDelegate', routerDelegate);
-    mateDeclare('backButtonDispatcher', backButtonDispatcher);
+    mateUse('routeInformationProvider', routeInformationProvider);
+    mateUse('routeInformationParser', routeInformationParser);
+    mateUse('routerDelegate', routerDelegate);
+    mateUse('backButtonDispatcher', backButtonDispatcher);
   }
 }
 
@@ -101,17 +101,18 @@ class Router$Mate<T> extends Router<T> with Mate {
           backButtonDispatcher: p.get('backButtonDispatcher').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('routeInformationProvider', routeInformationProvider);
-    mateDeclare('routeInformationParser', routeInformationParser);
-    mateDeclare('routerDelegate', routerDelegate);
-    mateDeclare('backButtonDispatcher', backButtonDispatcher);
-    mateDeclare('restorationScopeId', restorationScopeId);
+    mateUse('key', key);
+    mateUse('routeInformationProvider', routeInformationProvider);
+    mateUse('routeInformationParser', routeInformationParser);
+    mateUse('routerDelegate', routerDelegate);
+    mateUse('backButtonDispatcher', backButtonDispatcher);
+    mateUse('restorationScopeId', restorationScopeId);
   }
 }
 
 /// class ChildBackButtonDispatcher extends BackButtonDispatcher
-class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate {
+class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher
+    with Mate {
   /// ChildBackButtonDispatcher ChildBackButtonDispatcher(BackButtonDispatcher parent)
   ChildBackButtonDispatcher$Mate(
 
@@ -119,7 +120,7 @@ class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate
       BackButtonDispatcher parent)
       : super(parent) {
     mateBuilder = (p) => ChildBackButtonDispatcher$Mate(p.get('parent').value);
-    mateDeclare('parent', parent);
+    mateUse('parent', parent);
   }
 }
 
@@ -145,22 +146,23 @@ class BackButtonListener$Mate extends BackButtonListener with Mate {
           child: p.get('child').build(),
           onBackButtonPressed: p.get('onBackButtonPressed').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('child', child);
-    mateDeclare('onBackButtonPressed', onBackButtonPressed);
+    mateUse('key', key);
+    mateUse('child', child);
+    mateUse('onBackButtonPressed', onBackButtonPressed);
   }
 }
 
 /// class PlatformRouteInformationProvider extends RouteInformationProvider with WidgetsBindingObserver, ChangeNotifier
-class PlatformRouteInformationProvider$Mate extends PlatformRouteInformationProvider with Mate {
+class PlatformRouteInformationProvider$Mate
+    extends PlatformRouteInformationProvider with Mate {
   /// PlatformRouteInformationProvider PlatformRouteInformationProvider({required RouteInformation initialRouteInformation})
   PlatformRouteInformationProvider$Mate(
       {
       /// optionalParameters: {required RouteInformation initialRouteInformation} , defaultValue:none
       required RouteInformation initialRouteInformation})
       : super(initialRouteInformation: initialRouteInformation) {
-    mateBuilder =
-        (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
-    mateDeclare('initialRouteInformation', initialRouteInformation);
+    mateBuilder = (p) => PlatformRouteInformationProvider$Mate(
+        initialRouteInformation: p.get('initialRouteInformation').build());
+    mateUse('initialRouteInformation', initialRouteInformation);
   }
 }

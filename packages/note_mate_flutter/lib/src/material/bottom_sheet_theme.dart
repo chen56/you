@@ -59,14 +59,14 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           constraints: p.get('constraints').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('surfaceTintColor', surfaceTintColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('modalBackgroundColor', modalBackgroundColor);
-    mateDeclare('modalBarrierColor', modalBarrierColor);
-    mateDeclare('modalElevation', modalElevation);
-    mateDeclare('shape', shape);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('constraints', constraints);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('surfaceTintColor', surfaceTintColor);
+    mateUse('elevation', elevation);
+    mateUse('modalBackgroundColor', modalBackgroundColor);
+    mateUse('modalBarrierColor', modalBarrierColor);
+    mateUse('modalElevation', modalElevation);
+    mateUse('shape', shape);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('constraints', constraints);
   }
 }

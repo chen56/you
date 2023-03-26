@@ -14,8 +14,9 @@ class MenuButtonThemeData$Mate extends MenuButtonThemeData with Mate {
       /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
-    mateBuilder = (p) => MenuButtonThemeData$Mate(style: p.get('style').build());
-    mateDeclare('style', style);
+    mateBuilder =
+        (p) => MenuButtonThemeData$Mate(style: p.get('style').build());
+    mateUse('style', style);
   }
 }
 
@@ -41,8 +42,8 @@ class MenuButtonTheme$Mate extends MenuButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

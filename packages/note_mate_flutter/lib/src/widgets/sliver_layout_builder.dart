@@ -17,7 +17,8 @@ class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with Mate {
     required Widget Function(
       BuildContext,
       SliverConstraints,
-    ) builder,
+    )
+        builder,
   }) : super(
           key: key,
           builder: builder,
@@ -26,7 +27,7 @@ class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('builder', builder);
+    mateUse('key', key);
+    mateUse('builder', builder);
   }
 }

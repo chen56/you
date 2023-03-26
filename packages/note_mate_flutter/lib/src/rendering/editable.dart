@@ -32,8 +32,8 @@ class TextSelectionPoint$Mate extends TextSelectionPoint with Mate {
           p.get('point').value,
           p.get('direction').value,
         );
-    mateDeclare('point', point);
-    mateDeclare('direction', direction);
+    mateUse('point', point);
+    mateUse('direction', direction);
   }
 }
 
@@ -249,7 +249,8 @@ class RenderEditable$Mate extends RenderEditable with Mate {
           devicePixelRatio: p.get('devicePixelRatio').build(),
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           floatingCursorAddedMargin: p.get('floatingCursorAddedMargin').build(),
           promptRectRange: p.get('promptRectRange').build(),
           promptRectColor: p.get('promptRectColor').build(),
@@ -259,48 +260,48 @@ class RenderEditable$Mate extends RenderEditable with Mate {
           foregroundPainter: p.get('foregroundPainter').build(),
           children: p.get('children').build(),
         );
-    mateDeclare('text', text);
-    mateDeclare('textDirection', textDirection);
-    mateDeclare('textAlign', textAlign);
-    mateDeclare('cursorColor', cursorColor);
-    mateDeclare('backgroundCursorColor', backgroundCursorColor);
-    mateDeclare('showCursor', showCursor);
-    mateDeclare('hasFocus', hasFocus);
-    mateDeclare('startHandleLayerLink', startHandleLayerLink);
-    mateDeclare('endHandleLayerLink', endHandleLayerLink);
-    mateDeclare('maxLines', maxLines);
-    mateDeclare('minLines', minLines);
-    mateDeclare('expands', expands);
-    mateDeclare('strutStyle', strutStyle);
-    mateDeclare('selectionColor', selectionColor);
-    mateDeclare('textScaleFactor', textScaleFactor);
-    mateDeclare('selection', selection);
-    mateDeclare('offset', offset);
-    mateDeclare('onCaretChanged', onCaretChanged);
-    mateDeclare('ignorePointer', ignorePointer);
-    mateDeclare('readOnly', readOnly);
-    mateDeclare('forceLine', forceLine);
-    mateDeclare('textHeightBehavior', textHeightBehavior);
-    mateDeclare('textWidthBasis', textWidthBasis);
-    mateDeclare('obscuringCharacter', obscuringCharacter);
-    mateDeclare('obscureText', obscureText);
-    mateDeclare('locale', locale);
-    mateDeclare('cursorWidth', cursorWidth);
-    mateDeclare('cursorHeight', cursorHeight);
-    mateDeclare('cursorRadius', cursorRadius);
-    mateDeclare('paintCursorAboveText', paintCursorAboveText);
-    mateDeclare('cursorOffset', cursorOffset);
-    mateDeclare('devicePixelRatio', devicePixelRatio);
-    mateDeclare('selectionHeightStyle', selectionHeightStyle);
-    mateDeclare('selectionWidthStyle', selectionWidthStyle);
-    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
-    mateDeclare('floatingCursorAddedMargin', floatingCursorAddedMargin);
-    mateDeclare('promptRectRange', promptRectRange);
-    mateDeclare('promptRectColor', promptRectColor);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('textSelectionDelegate', textSelectionDelegate);
-    mateDeclare('painter', painter);
-    mateDeclare('foregroundPainter', foregroundPainter);
-    mateDeclare('children', children);
+    mateUse('text', text);
+    mateUse('textDirection', textDirection);
+    mateUse('textAlign', textAlign);
+    mateUse('cursorColor', cursorColor);
+    mateUse('backgroundCursorColor', backgroundCursorColor);
+    mateUse('showCursor', showCursor);
+    mateUse('hasFocus', hasFocus);
+    mateUse('startHandleLayerLink', startHandleLayerLink);
+    mateUse('endHandleLayerLink', endHandleLayerLink);
+    mateUse('maxLines', maxLines);
+    mateUse('minLines', minLines);
+    mateUse('expands', expands);
+    mateUse('strutStyle', strutStyle);
+    mateUse('selectionColor', selectionColor);
+    mateUse('textScaleFactor', textScaleFactor);
+    mateUse('selection', selection);
+    mateUse('offset', offset);
+    mateUse('onCaretChanged', onCaretChanged);
+    mateUse('ignorePointer', ignorePointer);
+    mateUse('readOnly', readOnly);
+    mateUse('forceLine', forceLine);
+    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('textWidthBasis', textWidthBasis);
+    mateUse('obscuringCharacter', obscuringCharacter);
+    mateUse('obscureText', obscureText);
+    mateUse('locale', locale);
+    mateUse('cursorWidth', cursorWidth);
+    mateUse('cursorHeight', cursorHeight);
+    mateUse('cursorRadius', cursorRadius);
+    mateUse('paintCursorAboveText', paintCursorAboveText);
+    mateUse('cursorOffset', cursorOffset);
+    mateUse('devicePixelRatio', devicePixelRatio);
+    mateUse('selectionHeightStyle', selectionHeightStyle);
+    mateUse('selectionWidthStyle', selectionWidthStyle);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection);
+    mateUse('floatingCursorAddedMargin', floatingCursorAddedMargin);
+    mateUse('promptRectRange', promptRectRange);
+    mateUse('promptRectColor', promptRectColor);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('textSelectionDelegate', textSelectionDelegate);
+    mateUse('painter', painter);
+    mateUse('foregroundPainter', foregroundPainter);
+    mateUse('children', children);
   }
 }

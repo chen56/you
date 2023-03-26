@@ -86,20 +86,20 @@ class TextTheme$Mate extends TextTheme with Mate {
           labelMedium: p.get('labelMedium').build(),
           labelSmall: p.get('labelSmall').build(),
         );
-    mateDeclare('displayLarge', displayLarge);
-    mateDeclare('displayMedium', displayMedium);
-    mateDeclare('displaySmall', displaySmall);
-    mateDeclare('headlineLarge', headlineLarge);
-    mateDeclare('headlineMedium', headlineMedium);
-    mateDeclare('headlineSmall', headlineSmall);
-    mateDeclare('titleLarge', titleLarge);
-    mateDeclare('titleMedium', titleMedium);
-    mateDeclare('titleSmall', titleSmall);
-    mateDeclare('bodyLarge', bodyLarge);
-    mateDeclare('bodyMedium', bodyMedium);
-    mateDeclare('bodySmall', bodySmall);
-    mateDeclare('labelLarge', labelLarge);
-    mateDeclare('labelMedium', labelMedium);
-    mateDeclare('labelSmall', labelSmall);
+    mateUse('displayLarge', displayLarge);
+    mateUse('displayMedium', displayMedium);
+    mateUse('displaySmall', displaySmall);
+    mateUse('headlineLarge', headlineLarge);
+    mateUse('headlineMedium', headlineMedium);
+    mateUse('headlineSmall', headlineSmall);
+    mateUse('titleLarge', titleLarge);
+    mateUse('titleMedium', titleMedium);
+    mateUse('titleSmall', titleSmall);
+    mateUse('bodyLarge', bodyLarge);
+    mateUse('bodyMedium', bodyMedium);
+    mateUse('bodySmall', bodySmall);
+    mateUse('labelLarge', labelLarge);
+    mateUse('labelMedium', labelMedium);
+    mateUse('labelSmall', labelSmall);
   }
 }

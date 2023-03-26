@@ -31,15 +31,16 @@ class RawKeyEventDataMacOs$Mate extends RawKeyEventDataMacOs with Mate {
         ) {
     mateBuilder = (p) => RawKeyEventDataMacOs$Mate(
           characters: p.get('characters').build(),
-          charactersIgnoringModifiers: p.get('charactersIgnoringModifiers').build(),
+          charactersIgnoringModifiers:
+              p.get('charactersIgnoringModifiers').build(),
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    mateDeclare('characters', characters);
-    mateDeclare('charactersIgnoringModifiers', charactersIgnoringModifiers);
-    mateDeclare('keyCode', keyCode);
-    mateDeclare('modifiers', modifiers);
-    mateDeclare('specifiedLogicalKey', specifiedLogicalKey);
+    mateUse('characters', characters);
+    mateUse('charactersIgnoringModifiers', charactersIgnoringModifiers);
+    mateUse('keyCode', keyCode);
+    mateUse('modifiers', modifiers);
+    mateUse('specifiedLogicalKey', specifiedLogicalKey);
   }
 }

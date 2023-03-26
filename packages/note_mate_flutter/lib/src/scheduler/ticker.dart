@@ -20,8 +20,8 @@ class Ticker$Mate extends Ticker with Mate {
           p.get('_onTick').value,
           debugLabel: p.get('debugLabel').build(),
         );
-    mateDeclare('_onTick', _onTick);
-    mateDeclare('debugLabel', debugLabel);
+    mateUse('_onTick', _onTick);
+    mateUse('debugLabel', debugLabel);
   }
 }
 
@@ -34,6 +34,6 @@ class TickerCanceled$Mate extends TickerCanceled with Mate {
       Ticker? ticker)
       : super(ticker) {
     mateBuilder = (p) => TickerCanceled$Mate(p.get('ticker').value);
-    mateDeclare('ticker', ticker);
+    mateUse('ticker', ticker);
   }
 }

@@ -12,7 +12,8 @@ import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 
 /// class FloatingActionButtonThemeData with Diagnosticable
-class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData with Mate {
+class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData
+    with Mate {
   /// FloatingActionButtonThemeData FloatingActionButtonThemeData({Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? disabledElevation, double? highlightElevation, ShapeBorder? shape, bool? enableFeedback, double? iconSize, BoxConstraints? sizeConstraints, BoxConstraints? smallSizeConstraints, BoxConstraints? largeSizeConstraints, BoxConstraints? extendedSizeConstraints, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, MaterialStateProperty<MouseCursor?>? mouseCursor})
   FloatingActionButtonThemeData$Mate({
     /// optionalParameters: {Color? foregroundColor} , defaultValue:none
@@ -123,26 +124,26 @@ class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData w
           extendedTextStyle: p.get('extendedTextStyle').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateDeclare('foregroundColor', foregroundColor);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('focusColor', focusColor);
-    mateDeclare('hoverColor', hoverColor);
-    mateDeclare('splashColor', splashColor);
-    mateDeclare('elevation', elevation);
-    mateDeclare('focusElevation', focusElevation);
-    mateDeclare('hoverElevation', hoverElevation);
-    mateDeclare('disabledElevation', disabledElevation);
-    mateDeclare('highlightElevation', highlightElevation);
-    mateDeclare('shape', shape);
-    mateDeclare('enableFeedback', enableFeedback);
-    mateDeclare('iconSize', iconSize);
-    mateDeclare('sizeConstraints', sizeConstraints);
-    mateDeclare('smallSizeConstraints', smallSizeConstraints);
-    mateDeclare('largeSizeConstraints', largeSizeConstraints);
-    mateDeclare('extendedSizeConstraints', extendedSizeConstraints);
-    mateDeclare('extendedIconLabelSpacing', extendedIconLabelSpacing);
-    mateDeclare('extendedPadding', extendedPadding);
-    mateDeclare('extendedTextStyle', extendedTextStyle);
-    mateDeclare('mouseCursor', mouseCursor);
+    mateUse('foregroundColor', foregroundColor);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('focusColor', focusColor);
+    mateUse('hoverColor', hoverColor);
+    mateUse('splashColor', splashColor);
+    mateUse('elevation', elevation);
+    mateUse('focusElevation', focusElevation);
+    mateUse('hoverElevation', hoverElevation);
+    mateUse('disabledElevation', disabledElevation);
+    mateUse('highlightElevation', highlightElevation);
+    mateUse('shape', shape);
+    mateUse('enableFeedback', enableFeedback);
+    mateUse('iconSize', iconSize);
+    mateUse('sizeConstraints', sizeConstraints);
+    mateUse('smallSizeConstraints', smallSizeConstraints);
+    mateUse('largeSizeConstraints', largeSizeConstraints);
+    mateUse('extendedSizeConstraints', extendedSizeConstraints);
+    mateUse('extendedIconLabelSpacing', extendedIconLabelSpacing);
+    mateUse('extendedPadding', extendedPadding);
+    mateUse('extendedTextStyle', extendedTextStyle);
+    mateUse('mouseCursor', mouseCursor);
   }
 }

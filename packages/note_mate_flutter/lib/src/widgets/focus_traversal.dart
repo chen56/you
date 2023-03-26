@@ -16,7 +16,7 @@ class NumericFocusOrder$Mate extends NumericFocusOrder with Mate {
       double order)
       : super(order) {
     mateBuilder = (p) => NumericFocusOrder$Mate(p.get('order').value);
-    mateDeclare('order', order);
+    mateUse('order', order);
   }
 }
 
@@ -29,7 +29,7 @@ class LexicalFocusOrder$Mate extends LexicalFocusOrder with Mate {
       String order)
       : super(order) {
     mateBuilder = (p) => LexicalFocusOrder$Mate(p.get('order').value);
-    mateDeclare('order', order);
+    mateUse('order', order);
   }
 }
 
@@ -41,8 +41,9 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
       /// optionalParameters: {FocusTraversalPolicy? secondary} , defaultValue:none
       FocusTraversalPolicy? secondary})
       : super(secondary: secondary) {
-    mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
-    mateDeclare('secondary', secondary);
+    mateBuilder = (p) =>
+        OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
+    mateUse('secondary', secondary);
   }
 }
 
@@ -68,9 +69,9 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
           order: p.get('order').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('order', order);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('order', order);
+    mateUse('child', child);
   }
 }
 
@@ -106,11 +107,11 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
           descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('policy', policy);
-    mateDeclare('descendantsAreFocusable', descendantsAreFocusable);
-    mateDeclare('descendantsAreTraversable', descendantsAreTraversable);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('policy', policy);
+    mateUse('descendantsAreFocusable', descendantsAreFocusable);
+    mateUse('descendantsAreTraversable', descendantsAreTraversable);
+    mateUse('child', child);
   }
 }
 
@@ -123,7 +124,7 @@ class RequestFocusIntent$Mate extends RequestFocusIntent with Mate {
       FocusNode focusNode)
       : super(focusNode) {
     mateBuilder = (p) => RequestFocusIntent$Mate(p.get('focusNode').value);
-    mateDeclare('focusNode', focusNode);
+    mateUse('focusNode', focusNode);
   }
 }
 
@@ -143,8 +144,8 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
           p.get('direction').value,
           ignoreTextFields: p.get('ignoreTextFields').build(),
         );
-    mateDeclare('direction', direction);
-    mateDeclare('ignoreTextFields', ignoreTextFields);
+    mateUse('direction', direction);
+    mateUse('ignoreTextFields', ignoreTextFields);
   }
 }
 
@@ -170,8 +171,8 @@ class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('excluding', excluding);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('excluding', excluding);
+    mateUse('child', child);
   }
 }

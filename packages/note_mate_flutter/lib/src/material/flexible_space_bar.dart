@@ -54,14 +54,14 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
           stretchModes: p.get('stretchModes').build(),
           expandedTitleScale: p.get('expandedTitleScale').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('title', title);
-    mateDeclare('background', background);
-    mateDeclare('centerTitle', centerTitle);
-    mateDeclare('titlePadding', titlePadding);
-    mateDeclare('collapseMode', collapseMode);
-    mateDeclare('stretchModes', stretchModes);
-    mateDeclare('expandedTitleScale', expandedTitleScale);
+    mateUse('key', key);
+    mateUse('title', title);
+    mateUse('background', background);
+    mateUse('centerTitle', centerTitle);
+    mateUse('titlePadding', titlePadding);
+    mateUse('collapseMode', collapseMode);
+    mateUse('stretchModes', stretchModes);
+    mateUse('expandedTitleScale', expandedTitleScale);
   }
 }
 
@@ -107,12 +107,12 @@ class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Mate {
           child: p.get('child').build(),
           isScrolledUnder: p.get('isScrolledUnder').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('toolbarOpacity', toolbarOpacity);
-    mateDeclare('minExtent', minExtent);
-    mateDeclare('maxExtent', maxExtent);
-    mateDeclare('currentExtent', currentExtent);
-    mateDeclare('child', child);
-    mateDeclare('isScrolledUnder', isScrolledUnder);
+    mateUse('key', key);
+    mateUse('toolbarOpacity', toolbarOpacity);
+    mateUse('minExtent', minExtent);
+    mateUse('maxExtent', maxExtent);
+    mateUse('currentExtent', currentExtent);
+    mateUse('child', child);
+    mateUse('isScrolledUnder', isScrolledUnder);
   }
 }

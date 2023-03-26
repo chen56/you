@@ -51,12 +51,12 @@ class DrawerHeader$Mate extends DrawerHeader with Mate {
           curve: p.get('curve').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('decoration', decoration);
-    mateDeclare('margin', margin);
-    mateDeclare('padding', padding);
-    mateDeclare('duration', duration);
-    mateDeclare('curve', curve);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('decoration', decoration);
+    mateUse('margin', margin);
+    mateUse('padding', padding);
+    mateUse('duration', duration);
+    mateUse('curve', curve);
+    mateUse('child', child);
   }
 }

@@ -71,16 +71,16 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
           onDetailsPressed: p.get('onDetailsPressed').build(),
           arrowColor: p.get('arrowColor').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('decoration', decoration);
-    mateDeclare('margin', margin);
-    mateDeclare('currentAccountPicture', currentAccountPicture);
-    mateDeclare('otherAccountsPictures', otherAccountsPictures);
-    mateDeclare('currentAccountPictureSize', currentAccountPictureSize);
-    mateDeclare('otherAccountsPicturesSize', otherAccountsPicturesSize);
-    mateDeclare('accountName', accountName);
-    mateDeclare('accountEmail', accountEmail);
-    mateDeclare('onDetailsPressed', onDetailsPressed);
-    mateDeclare('arrowColor', arrowColor);
+    mateUse('key', key);
+    mateUse('decoration', decoration);
+    mateUse('margin', margin);
+    mateUse('currentAccountPicture', currentAccountPicture);
+    mateUse('otherAccountsPictures', otherAccountsPictures);
+    mateUse('currentAccountPictureSize', currentAccountPictureSize);
+    mateUse('otherAccountsPicturesSize', otherAccountsPicturesSize);
+    mateUse('accountName', accountName);
+    mateUse('accountEmail', accountEmail);
+    mateUse('onDetailsPressed', onDetailsPressed);
+    mateUse('arrowColor', arrowColor);
   }
 }

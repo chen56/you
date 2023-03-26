@@ -73,16 +73,16 @@ class OutlinedButton$Mate extends OutlinedButton with Mate {
           statesController: p.get('statesController').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('onLongPress', onLongPress);
-    mateDeclare('onHover', onHover);
-    mateDeclare('onFocusChange', onFocusChange);
-    mateDeclare('style', style);
-    mateDeclare('focusNode', focusNode);
-    mateDeclare('autofocus', autofocus);
-    mateDeclare('clipBehavior', clipBehavior);
-    mateDeclare('statesController', statesController);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('onPressed', onPressed);
+    mateUse('onLongPress', onLongPress);
+    mateUse('onHover', onHover);
+    mateUse('onFocusChange', onFocusChange);
+    mateUse('style', style);
+    mateUse('focusNode', focusNode);
+    mateUse('autofocus', autofocus);
+    mateUse('clipBehavior', clipBehavior);
+    mateUse('statesController', statesController);
+    mateUse('child', child);
   }
 }

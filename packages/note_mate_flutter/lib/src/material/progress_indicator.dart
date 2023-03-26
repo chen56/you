@@ -54,19 +54,20 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('color', color);
-    mateDeclare('valueColor', valueColor);
-    mateDeclare('minHeight', minHeight);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('semanticsValue', semanticsValue);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('color', color);
+    mateUse('valueColor', valueColor);
+    mateUse('minHeight', minHeight);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('semanticsValue', semanticsValue);
   }
 }
 
 /// class CircularProgressIndicator extends ProgressIndicator
-class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate {
+class CircularProgressIndicator$Mate extends CircularProgressIndicator
+    with Mate {
   /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -112,14 +113,14 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('color', color);
-    mateDeclare('valueColor', valueColor);
-    mateDeclare('strokeWidth', strokeWidth);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('semanticsValue', semanticsValue);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('color', color);
+    mateUse('valueColor', valueColor);
+    mateUse('strokeWidth', strokeWidth);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('semanticsValue', semanticsValue);
   }
 
   /// CircularProgressIndicator CircularProgressIndicator.adaptive({Key? key, double? value, Color? backgroundColor, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
@@ -162,13 +163,13 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('valueColor', valueColor);
-    mateDeclare('strokeWidth', strokeWidth);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('semanticsValue', semanticsValue);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('valueColor', valueColor);
+    mateUse('strokeWidth', strokeWidth);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('semanticsValue', semanticsValue);
   }
 }
 
@@ -219,13 +220,13 @@ class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Mate {
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('value', value);
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('color', color);
-    mateDeclare('valueColor', valueColor);
-    mateDeclare('strokeWidth', strokeWidth);
-    mateDeclare('semanticsLabel', semanticsLabel);
-    mateDeclare('semanticsValue', semanticsValue);
+    mateUse('key', key);
+    mateUse('value', value);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('color', color);
+    mateUse('valueColor', valueColor);
+    mateUse('strokeWidth', strokeWidth);
+    mateUse('semanticsLabel', semanticsLabel);
+    mateUse('semanticsValue', semanticsValue);
   }
 }

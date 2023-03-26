@@ -47,12 +47,12 @@ class RadioThemeData$Mate extends RadioThemeData with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           visualDensity: p.get('visualDensity').build(),
         );
-    mateDeclare('mouseCursor', mouseCursor);
-    mateDeclare('fillColor', fillColor);
-    mateDeclare('overlayColor', overlayColor);
-    mateDeclare('splashRadius', splashRadius);
-    mateDeclare('materialTapTargetSize', materialTapTargetSize);
-    mateDeclare('visualDensity', visualDensity);
+    mateUse('mouseCursor', mouseCursor);
+    mateUse('fillColor', fillColor);
+    mateUse('overlayColor', overlayColor);
+    mateUse('splashRadius', splashRadius);
+    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('visualDensity', visualDensity);
   }
 }
 
@@ -78,8 +78,8 @@ class RadioTheme$Mate extends RadioTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }

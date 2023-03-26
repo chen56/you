@@ -8,7 +8,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 
 /// class DesktopTextSelectionToolbarButton extends StatelessWidget
-class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbarButton with Mate {
+class DesktopTextSelectionToolbarButton$Mate
+    extends DesktopTextSelectionToolbarButton with Mate {
   /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
   DesktopTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -29,9 +30,9 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: p.get('onPressed').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('onPressed', onPressed);
+    mateUse('child', child);
   }
 
   /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
@@ -59,9 +60,9 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: p.get('onPressed').build(),
           text: p.get('text').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('context', context);
-    mateDeclare('onPressed', onPressed);
-    mateDeclare('text', text);
+    mateUse('key', key);
+    mateUse('context', context);
+    mateUse('onPressed', onPressed);
+    mateUse('text', text);
   }
 }

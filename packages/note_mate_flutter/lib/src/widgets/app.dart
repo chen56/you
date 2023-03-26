@@ -157,50 +157,55 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback:
+              p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
           debugShowWidgetInspector: p.get('debugShowWidgetInspector').build(),
-          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
-          inspectorSelectButtonBuilder: p.get('inspectorSelectButtonBuilder').build(),
+          debugShowCheckedModeBanner:
+              p.get('debugShowCheckedModeBanner').build(),
+          inspectorSelectButtonBuilder:
+              p.get('inspectorSelectButtonBuilder').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('navigatorKey', navigatorKey);
-    mateDeclare('onGenerateRoute', onGenerateRoute);
-    mateDeclare('onGenerateInitialRoutes', onGenerateInitialRoutes);
-    mateDeclare('onUnknownRoute', onUnknownRoute);
-    mateDeclare('navigatorObservers', navigatorObservers);
-    mateDeclare('initialRoute', initialRoute);
-    mateDeclare('pageRouteBuilder', pageRouteBuilder);
-    mateDeclare('home', home);
-    mateDeclare('routes', routes);
-    mateDeclare('builder', builder);
-    mateDeclare('title', title);
-    mateDeclare('onGenerateTitle', onGenerateTitle);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('color', color);
-    mateDeclare('locale', locale);
-    mateDeclare('localizationsDelegates', localizationsDelegates);
-    mateDeclare('localeListResolutionCallback', localeListResolutionCallback);
-    mateDeclare('localeResolutionCallback', localeResolutionCallback);
-    mateDeclare('supportedLocales', supportedLocales);
-    mateDeclare('showPerformanceOverlay', showPerformanceOverlay);
-    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
-    mateDeclare('showSemanticsDebugger', showSemanticsDebugger);
-    mateDeclare('debugShowWidgetInspector', debugShowWidgetInspector);
-    mateDeclare('debugShowCheckedModeBanner', debugShowCheckedModeBanner);
-    mateDeclare('inspectorSelectButtonBuilder', inspectorSelectButtonBuilder);
-    mateDeclare('shortcuts', shortcuts);
-    mateDeclare('actions', actions);
-    mateDeclare('restorationScopeId', restorationScopeId);
+    mateUse('key', key);
+    mateUse('navigatorKey', navigatorKey);
+    mateUse('onGenerateRoute', onGenerateRoute);
+    mateUse('onGenerateInitialRoutes', onGenerateInitialRoutes);
+    mateUse('onUnknownRoute', onUnknownRoute);
+    mateUse('navigatorObservers', navigatorObservers);
+    mateUse('initialRoute', initialRoute);
+    mateUse('pageRouteBuilder', pageRouteBuilder);
+    mateUse('home', home);
+    mateUse('routes', routes);
+    mateUse('builder', builder);
+    mateUse('title', title);
+    mateUse('onGenerateTitle', onGenerateTitle);
+    mateUse('textStyle', textStyle);
+    mateUse('color', color);
+    mateUse('locale', locale);
+    mateUse('localizationsDelegates', localizationsDelegates);
+    mateUse('localeListResolutionCallback', localeListResolutionCallback);
+    mateUse('localeResolutionCallback', localeResolutionCallback);
+    mateUse('supportedLocales', supportedLocales);
+    mateUse('showPerformanceOverlay', showPerformanceOverlay);
+    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse('showSemanticsDebugger', showSemanticsDebugger);
+    mateUse('debugShowWidgetInspector', debugShowWidgetInspector);
+    mateUse('debugShowCheckedModeBanner', debugShowCheckedModeBanner);
+    mateUse('inspectorSelectButtonBuilder', inspectorSelectButtonBuilder);
+    mateUse('shortcuts', shortcuts);
+    mateUse('actions', actions);
+    mateUse('restorationScopeId', restorationScopeId);
   }
 
   /// WidgetsApp WidgetsApp.router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, TextStyle? textStyle, required Color color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowWidgetInspector = false, bool debugShowCheckedModeBanner = true, Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, bool useInheritedMediaQuery = false})
@@ -324,45 +329,50 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback:
+              p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
           debugShowWidgetInspector: p.get('debugShowWidgetInspector').build(),
-          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
-          inspectorSelectButtonBuilder: p.get('inspectorSelectButtonBuilder').build(),
+          debugShowCheckedModeBanner:
+              p.get('debugShowCheckedModeBanner').build(),
+          inspectorSelectButtonBuilder:
+              p.get('inspectorSelectButtonBuilder').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('routeInformationProvider', routeInformationProvider);
-    mateDeclare('routeInformationParser', routeInformationParser);
-    mateDeclare('routerDelegate', routerDelegate);
-    mateDeclare('routerConfig', routerConfig);
-    mateDeclare('backButtonDispatcher', backButtonDispatcher);
-    mateDeclare('builder', builder);
-    mateDeclare('title', title);
-    mateDeclare('onGenerateTitle', onGenerateTitle);
-    mateDeclare('textStyle', textStyle);
-    mateDeclare('color', color);
-    mateDeclare('locale', locale);
-    mateDeclare('localizationsDelegates', localizationsDelegates);
-    mateDeclare('localeListResolutionCallback', localeListResolutionCallback);
-    mateDeclare('localeResolutionCallback', localeResolutionCallback);
-    mateDeclare('supportedLocales', supportedLocales);
-    mateDeclare('showPerformanceOverlay', showPerformanceOverlay);
-    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
-    mateDeclare('showSemanticsDebugger', showSemanticsDebugger);
-    mateDeclare('debugShowWidgetInspector', debugShowWidgetInspector);
-    mateDeclare('debugShowCheckedModeBanner', debugShowCheckedModeBanner);
-    mateDeclare('inspectorSelectButtonBuilder', inspectorSelectButtonBuilder);
-    mateDeclare('shortcuts', shortcuts);
-    mateDeclare('actions', actions);
-    mateDeclare('restorationScopeId', restorationScopeId);
+    mateUse('key', key);
+    mateUse('routeInformationProvider', routeInformationProvider);
+    mateUse('routeInformationParser', routeInformationParser);
+    mateUse('routerDelegate', routerDelegate);
+    mateUse('routerConfig', routerConfig);
+    mateUse('backButtonDispatcher', backButtonDispatcher);
+    mateUse('builder', builder);
+    mateUse('title', title);
+    mateUse('onGenerateTitle', onGenerateTitle);
+    mateUse('textStyle', textStyle);
+    mateUse('color', color);
+    mateUse('locale', locale);
+    mateUse('localizationsDelegates', localizationsDelegates);
+    mateUse('localeListResolutionCallback', localeListResolutionCallback);
+    mateUse('localeResolutionCallback', localeResolutionCallback);
+    mateUse('supportedLocales', supportedLocales);
+    mateUse('showPerformanceOverlay', showPerformanceOverlay);
+    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse('showSemanticsDebugger', showSemanticsDebugger);
+    mateUse('debugShowWidgetInspector', debugShowWidgetInspector);
+    mateUse('debugShowCheckedModeBanner', debugShowCheckedModeBanner);
+    mateUse('inspectorSelectButtonBuilder', inspectorSelectButtonBuilder);
+    mateUse('shortcuts', shortcuts);
+    mateUse('actions', actions);
+    mateUse('restorationScopeId', restorationScopeId);
   }
 }

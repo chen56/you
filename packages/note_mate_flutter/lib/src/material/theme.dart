@@ -31,9 +31,9 @@ class Theme$Mate extends Theme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }
 
@@ -54,8 +54,8 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateDeclare('begin', begin);
-    mateDeclare('end', end);
+    mateUse('begin', begin);
+    mateUse('end', end);
   }
 }
 
@@ -96,11 +96,11 @@ class AnimatedTheme$Mate extends AnimatedTheme with Mate {
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('curve', curve);
-    mateDeclare('duration', duration);
-    mateDeclare('onEnd', onEnd);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('curve', curve);
+    mateUse('duration', duration);
+    mateUse('onEnd', onEnd);
+    mateUse('child', child);
   }
 }

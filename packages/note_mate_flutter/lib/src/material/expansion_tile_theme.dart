@@ -76,18 +76,18 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
           collapsedShape: p.get('collapsedShape').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateDeclare('backgroundColor', backgroundColor);
-    mateDeclare('collapsedBackgroundColor', collapsedBackgroundColor);
-    mateDeclare('tilePadding', tilePadding);
-    mateDeclare('expandedAlignment', expandedAlignment);
-    mateDeclare('childrenPadding', childrenPadding);
-    mateDeclare('iconColor', iconColor);
-    mateDeclare('collapsedIconColor', collapsedIconColor);
-    mateDeclare('textColor', textColor);
-    mateDeclare('collapsedTextColor', collapsedTextColor);
-    mateDeclare('shape', shape);
-    mateDeclare('collapsedShape', collapsedShape);
-    mateDeclare('clipBehavior', clipBehavior);
+    mateUse('backgroundColor', backgroundColor);
+    mateUse('collapsedBackgroundColor', collapsedBackgroundColor);
+    mateUse('tilePadding', tilePadding);
+    mateUse('expandedAlignment', expandedAlignment);
+    mateUse('childrenPadding', childrenPadding);
+    mateUse('iconColor', iconColor);
+    mateUse('collapsedIconColor', collapsedIconColor);
+    mateUse('textColor', textColor);
+    mateUse('collapsedTextColor', collapsedTextColor);
+    mateUse('shape', shape);
+    mateUse('collapsedShape', collapsedShape);
+    mateUse('clipBehavior', clipBehavior);
   }
 }
 
@@ -113,8 +113,8 @@ class ExpansionTileTheme$Mate extends ExpansionTileTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateDeclare('key', key);
-    mateDeclare('data', data);
-    mateDeclare('child', child);
+    mateUse('key', key);
+    mateUse('data', data);
+    mateUse('child', child);
   }
 }
