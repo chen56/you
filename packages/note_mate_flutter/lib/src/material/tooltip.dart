@@ -16,58 +16,58 @@ import 'package:flutter/src/widgets/framework.dart';
 class Tooltip$Mate extends Tooltip with Mate {
   /// Tooltip Tooltip({Key? key, String? message, InlineSpan? richMessage, double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback, void Function()? onTriggered, Widget? child})
   Tooltip$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {String? message} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? message} , defaultValue:none
     String? message,
 
-    /// optionalParameters: {InlineSpan? richMessage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InlineSpan? richMessage} , defaultValue:none
     InlineSpan? richMessage,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {double? verticalOffset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? verticalOffset} , defaultValue:none
     double? verticalOffset,
 
-    /// optionalParameters: {bool? preferBelow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? preferBelow} , defaultValue:none
     bool? preferBelow,
 
-    /// optionalParameters: {bool? excludeFromSemantics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? excludeFromSemantics} , defaultValue:none
     bool? excludeFromSemantics,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , defaultValue:none
     Decoration? decoration,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , defaultValue:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {Duration? waitDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? waitDuration} , defaultValue:none
     Duration? waitDuration,
 
-    /// optionalParameters: {Duration? showDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? showDuration} , defaultValue:none
     Duration? showDuration,
 
-    /// optionalParameters: {TooltipTriggerMode? triggerMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TooltipTriggerMode? triggerMode} , defaultValue:none
     TooltipTriggerMode? triggerMode,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {void Function()? onTriggered} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTriggered} , defaultValue:none
     TooltipTriggeredCallback? onTriggered,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -109,23 +109,23 @@ class Tooltip$Mate extends Tooltip with Mate {
           onTriggered: p.get('onTriggered').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('message', message);
-    matePut('richMessage', richMessage);
-    matePut('height', height);
-    matePut('padding', padding);
-    matePut('margin', margin);
-    matePut('verticalOffset', verticalOffset);
-    matePut('preferBelow', preferBelow);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('decoration', decoration);
-    matePut('textStyle', textStyle);
-    matePut('textAlign', textAlign);
-    matePut('waitDuration', waitDuration);
-    matePut('showDuration', showDuration);
-    matePut('triggerMode', triggerMode);
-    matePut('enableFeedback', enableFeedback);
-    matePut('onTriggered', onTriggered);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('message', message);
+    mateDeclare('richMessage', richMessage);
+    mateDeclare('height', height);
+    mateDeclare('padding', padding);
+    mateDeclare('margin', margin);
+    mateDeclare('verticalOffset', verticalOffset);
+    mateDeclare('preferBelow', preferBelow);
+    mateDeclare('excludeFromSemantics', excludeFromSemantics);
+    mateDeclare('decoration', decoration);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('waitDuration', waitDuration);
+    mateDeclare('showDuration', showDuration);
+    mateDeclare('triggerMode', triggerMode);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('onTriggered', onTriggered);
+    mateDeclare('child', child);
   }
 }

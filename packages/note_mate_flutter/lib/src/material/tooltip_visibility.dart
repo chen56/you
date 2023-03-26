@@ -10,13 +10,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class TooltipVisibility$Mate extends TooltipVisibility with Mate {
   /// TooltipVisibility TooltipVisibility({Key? key, required bool visible, required Widget child})
   TooltipVisibility$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required bool visible} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool visible} , defaultValue:none
     required bool visible,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -28,8 +28,8 @@ class TooltipVisibility$Mate extends TooltipVisibility with Mate {
           visible: p.get('visible').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('visible', visible);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('visible', visible);
+    mateDeclare('child', child);
   }
 }

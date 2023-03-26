@@ -10,13 +10,13 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class ForcePressDetails$Mate extends ForcePressDetails with Mate {
   /// ForcePressDetails ForcePressDetails({required Offset globalPosition, Offset? localPosition, required double pressure})
   ForcePressDetails$Mate({
-    /// optionalParameters: {required Offset globalPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset globalPosition} , defaultValue:none
     required Offset globalPosition,
 
-    /// optionalParameters: {Offset? localPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
 
-    /// optionalParameters: {required double pressure} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double pressure} , defaultValue:none
     required double pressure,
   }) : super(
           globalPosition: globalPosition,
@@ -28,9 +28,9 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate {
           localPosition: p.get('localPosition').build(),
           pressure: p.get('pressure').build(),
         );
-    matePut('globalPosition', globalPosition);
-    matePut('localPosition', localPosition);
-    matePut('pressure', pressure);
+    mateDeclare('globalPosition', globalPosition);
+    mateDeclare('localPosition', localPosition);
+    mateDeclare('pressure', pressure);
   }
 }
 
@@ -38,22 +38,22 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate {
 class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with Mate {
   /// ForcePressGestureRecognizer ForcePressGestureRecognizer({double startPressure = 0.4, double peakPressure = 0.85, double Function(double, double, double) interpolation = _inverseLerp, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ForcePressGestureRecognizer$Mate({
-    /// optionalParameters: {double startPressure = 0.4} , hasDefaultValue:true, defaultValueCode:0.4
-    required double startPressure,
+    /// optionalParameters: {double startPressure = 0.4} , defaultValue:Literal
+    double startPressure = 0.4,
 
-    /// optionalParameters: {double peakPressure = 0.85} , hasDefaultValue:true, defaultValueCode:0.85
-    required double peakPressure,
+    /// optionalParameters: {double peakPressure = 0.85} , defaultValue:Literal
+    double peakPressure = 0.85,
 
-    /// optionalParameters: {double Function(double, double, double) interpolation = _inverseLerp} , hasDefaultValue:true, defaultValueCode:_inverseLerp
+    /// optionalParameters: {double Function(double, double, double) interpolation = _inverseLerp} , defaultValue:unprocessed
     required GestureForceInterpolation interpolation,
 
-    /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? debugOwner} , defaultValue:none
     Object? debugOwner,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           startPressure: startPressure,
@@ -71,11 +71,11 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    matePut('startPressure', startPressure);
-    matePut('peakPressure', peakPressure);
-    matePut('interpolation', interpolation);
-    matePut('debugOwner', debugOwner);
-    matePut('supportedDevices', supportedDevices);
-    matePut('allowedButtonsFilter', allowedButtonsFilter);
+    mateDeclare('startPressure', startPressure);
+    mateDeclare('peakPressure', peakPressure);
+    mateDeclare('interpolation', interpolation);
+    mateDeclare('debugOwner', debugOwner);
+    mateDeclare('supportedDevices', supportedDevices);
+    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
   }
 }

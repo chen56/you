@@ -18,7 +18,7 @@ class SemanticsTag$Mate extends SemanticsTag with Mate {
       String name)
       : super(name) {
     mateBuilder = (p) => SemanticsTag$Mate(p.get('name').value);
-    matePut('name', name);
+    mateDeclare('name', name);
   }
 }
 
@@ -27,19 +27,19 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate {
   /// CustomSemanticsAction CustomSemanticsAction({required String label})
   CustomSemanticsAction$Mate(
       {
-      /// optionalParameters: {required String label} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required String label} , defaultValue:none
       required String label})
       : super(label: label) {
     mateBuilder = (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
-    matePut('label', label);
+    mateDeclare('label', label);
   }
 
   /// CustomSemanticsAction CustomSemanticsAction.overridingAction({required String hint, required SemanticsAction action})
   CustomSemanticsAction$Mate.overridingAction({
-    /// optionalParameters: {required String hint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String hint} , defaultValue:none
     required String hint,
 
-    /// optionalParameters: {required SemanticsAction action} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SemanticsAction action} , defaultValue:none
     required SemanticsAction action,
   }) : super.overridingAction(
           hint: hint,
@@ -49,8 +49,8 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate {
           hint: p.get('hint').build(),
           action: p.get('action').build(),
         );
-    matePut('hint', hint);
-    matePut('action', action);
+    mateDeclare('hint', hint);
+    mateDeclare('action', action);
   }
 }
 
@@ -60,7 +60,7 @@ class AttributedString$Mate extends AttributedString with Mate {
   AttributedString$Mate(
     /// requiredParameters: String string
     String string, {
-    /// optionalParameters: {List<StringAttribute> attributes = const <StringAttribute>[]} , hasDefaultValue:true, defaultValueCode:const <StringAttribute>[]
+    /// optionalParameters: {List<StringAttribute> attributes = const <StringAttribute>[]} , defaultValue:unprocessed
     required List<StringAttribute> attributes,
   }) : super(
           string,
@@ -70,8 +70,8 @@ class AttributedString$Mate extends AttributedString with Mate {
           p.get('string').value,
           attributes: p.get('attributes').build(),
         );
-    matePut('string', string);
-    matePut('attributes', attributes);
+    mateDeclare('string', string);
+    mateDeclare('attributes', attributes);
   }
 }
 
@@ -84,19 +84,19 @@ class AttributedStringProperty$Mate extends AttributedStringProperty with Mate {
 
     /// requiredParameters: AttributedString? value
     AttributedString? value, {
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {bool showWhenEmpty = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showWhenEmpty,
+    /// optionalParameters: {bool showWhenEmpty = false} , defaultValue:Literal
+    bool showWhenEmpty = false,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
 
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , defaultValue:none
     String? description,
   }) : super(
           name,
@@ -116,13 +116,13 @@ class AttributedStringProperty$Mate extends AttributedStringProperty with Mate {
           level: p.get('level').build(),
           description: p.get('description').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('showName', showName);
-    matePut('showWhenEmpty', showWhenEmpty);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
-    matePut('description', description);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('showName', showName);
+    mateDeclare('showWhenEmpty', showWhenEmpty);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('level', level);
+    mateDeclare('description', description);
   }
 }
 
@@ -130,76 +130,76 @@ class AttributedStringProperty$Mate extends AttributedStringProperty with Mate {
 class SemanticsData$Mate extends SemanticsData with Mate {
   /// SemanticsData SemanticsData({required int flags, required int actions, required AttributedString attributedLabel, required AttributedString attributedValue, required AttributedString attributedIncreasedValue, required AttributedString attributedDecreasedValue, required AttributedString attributedHint, required String tooltip, required TextDirection? textDirection, required Rect rect, required double elevation, required double thickness, required TextSelection? textSelection, required int? scrollIndex, required int? scrollChildCount, required double? scrollPosition, required double? scrollExtentMax, required double? scrollExtentMin, required int? platformViewId, required int? maxValueLength, required int? currentValueLength, Set<SemanticsTag>? tags, Matrix4? transform, List<int>? customSemanticsActionIds})
   SemanticsData$Mate({
-    /// optionalParameters: {required int flags} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int flags} , defaultValue:none
     required int flags,
 
-    /// optionalParameters: {required int actions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int actions} , defaultValue:none
     required int actions,
 
-    /// optionalParameters: {required AttributedString attributedLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AttributedString attributedLabel} , defaultValue:none
     required AttributedString attributedLabel,
 
-    /// optionalParameters: {required AttributedString attributedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AttributedString attributedValue} , defaultValue:none
     required AttributedString attributedValue,
 
-    /// optionalParameters: {required AttributedString attributedIncreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AttributedString attributedIncreasedValue} , defaultValue:none
     required AttributedString attributedIncreasedValue,
 
-    /// optionalParameters: {required AttributedString attributedDecreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AttributedString attributedDecreasedValue} , defaultValue:none
     required AttributedString attributedDecreasedValue,
 
-    /// optionalParameters: {required AttributedString attributedHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AttributedString attributedHint} , defaultValue:none
     required AttributedString attributedHint,
 
-    /// optionalParameters: {required String tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String tooltip} , defaultValue:none
     required String tooltip,
 
-    /// optionalParameters: {required TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection? textDirection} , defaultValue:none
     required TextDirection? textDirection,
 
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , defaultValue:none
     required Rect rect,
 
-    /// optionalParameters: {required double elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double elevation} , defaultValue:none
     required double elevation,
 
-    /// optionalParameters: {required double thickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double thickness} , defaultValue:none
     required double thickness,
 
-    /// optionalParameters: {required TextSelection? textSelection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelection? textSelection} , defaultValue:none
     required TextSelection? textSelection,
 
-    /// optionalParameters: {required int? scrollIndex} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int? scrollIndex} , defaultValue:none
     required int? scrollIndex,
 
-    /// optionalParameters: {required int? scrollChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int? scrollChildCount} , defaultValue:none
     required int? scrollChildCount,
 
-    /// optionalParameters: {required double? scrollPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? scrollPosition} , defaultValue:none
     required double? scrollPosition,
 
-    /// optionalParameters: {required double? scrollExtentMax} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? scrollExtentMax} , defaultValue:none
     required double? scrollExtentMax,
 
-    /// optionalParameters: {required double? scrollExtentMin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? scrollExtentMin} , defaultValue:none
     required double? scrollExtentMin,
 
-    /// optionalParameters: {required int? platformViewId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int? platformViewId} , defaultValue:none
     required int? platformViewId,
 
-    /// optionalParameters: {required int? maxValueLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int? maxValueLength} , defaultValue:none
     required int? maxValueLength,
 
-    /// optionalParameters: {required int? currentValueLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int? currentValueLength} , defaultValue:none
     required int? currentValueLength,
 
-    /// optionalParameters: {Set<SemanticsTag>? tags} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<SemanticsTag>? tags} , defaultValue:none
     Set<SemanticsTag>? tags,
 
-    /// optionalParameters: {Matrix4? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Matrix4? transform} , defaultValue:none
     Matrix4? transform,
 
-    /// optionalParameters: {List<int>? customSemanticsActionIds} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<int>? customSemanticsActionIds} , defaultValue:none
     List<int>? customSemanticsActionIds,
   }) : super(
           flags: flags,
@@ -253,30 +253,30 @@ class SemanticsData$Mate extends SemanticsData with Mate {
           transform: p.get('transform').build(),
           customSemanticsActionIds: p.get('customSemanticsActionIds').build(),
         );
-    matePut('flags', flags);
-    matePut('actions', actions);
-    matePut('attributedLabel', attributedLabel);
-    matePut('attributedValue', attributedValue);
-    matePut('attributedIncreasedValue', attributedIncreasedValue);
-    matePut('attributedDecreasedValue', attributedDecreasedValue);
-    matePut('attributedHint', attributedHint);
-    matePut('tooltip', tooltip);
-    matePut('textDirection', textDirection);
-    matePut('rect', rect);
-    matePut('elevation', elevation);
-    matePut('thickness', thickness);
-    matePut('textSelection', textSelection);
-    matePut('scrollIndex', scrollIndex);
-    matePut('scrollChildCount', scrollChildCount);
-    matePut('scrollPosition', scrollPosition);
-    matePut('scrollExtentMax', scrollExtentMax);
-    matePut('scrollExtentMin', scrollExtentMin);
-    matePut('platformViewId', platformViewId);
-    matePut('maxValueLength', maxValueLength);
-    matePut('currentValueLength', currentValueLength);
-    matePut('tags', tags);
-    matePut('transform', transform);
-    matePut('customSemanticsActionIds', customSemanticsActionIds);
+    mateDeclare('flags', flags);
+    mateDeclare('actions', actions);
+    mateDeclare('attributedLabel', attributedLabel);
+    mateDeclare('attributedValue', attributedValue);
+    mateDeclare('attributedIncreasedValue', attributedIncreasedValue);
+    mateDeclare('attributedDecreasedValue', attributedDecreasedValue);
+    mateDeclare('attributedHint', attributedHint);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('rect', rect);
+    mateDeclare('elevation', elevation);
+    mateDeclare('thickness', thickness);
+    mateDeclare('textSelection', textSelection);
+    mateDeclare('scrollIndex', scrollIndex);
+    mateDeclare('scrollChildCount', scrollChildCount);
+    mateDeclare('scrollPosition', scrollPosition);
+    mateDeclare('scrollExtentMax', scrollExtentMax);
+    mateDeclare('scrollExtentMin', scrollExtentMin);
+    mateDeclare('platformViewId', platformViewId);
+    mateDeclare('maxValueLength', maxValueLength);
+    mateDeclare('currentValueLength', currentValueLength);
+    mateDeclare('tags', tags);
+    mateDeclare('transform', transform);
+    mateDeclare('customSemanticsActionIds', customSemanticsActionIds);
   }
 }
 
@@ -284,10 +284,10 @@ class SemanticsData$Mate extends SemanticsData with Mate {
 class SemanticsHintOverrides$Mate extends SemanticsHintOverrides with Mate {
   /// SemanticsHintOverrides SemanticsHintOverrides({String? onTapHint, String? onLongPressHint})
   SemanticsHintOverrides$Mate({
-    /// optionalParameters: {String? onTapHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? onTapHint} , defaultValue:none
     String? onTapHint,
 
-    /// optionalParameters: {String? onLongPressHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? onLongPressHint} , defaultValue:none
     String? onLongPressHint,
   }) : super(
           onTapHint: onTapHint,
@@ -297,8 +297,8 @@ class SemanticsHintOverrides$Mate extends SemanticsHintOverrides with Mate {
           onTapHint: p.get('onTapHint').build(),
           onLongPressHint: p.get('onLongPressHint').build(),
         );
-    matePut('onTapHint', onTapHint);
-    matePut('onLongPressHint', onLongPressHint);
+    mateDeclare('onTapHint', onTapHint);
+    mateDeclare('onLongPressHint', onLongPressHint);
   }
 }
 
@@ -306,184 +306,184 @@ class SemanticsHintOverrides$Mate extends SemanticsHintOverrides with Mate {
 class SemanticsProperties$Mate extends SemanticsProperties with Mate {
   /// SemanticsProperties SemanticsProperties({bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? link, bool? header, bool? textField, bool? slider, bool? keyboardKey, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? hidden, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, String? tooltip, AttributedString? attributedHint, SemanticsHintOverrides? hintOverrides, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(bool)? onMoveCursorForwardByWord, void Function(bool)? onMoveCursorBackwardByWord, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, void Function()? onDismiss, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   SemanticsProperties$Mate({
-    /// optionalParameters: {bool? enabled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enabled} , defaultValue:none
     bool? enabled,
 
-    /// optionalParameters: {bool? checked} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? checked} , defaultValue:none
     bool? checked,
 
-    /// optionalParameters: {bool? mixed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? mixed} , defaultValue:none
     bool? mixed,
 
-    /// optionalParameters: {bool? selected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? selected} , defaultValue:none
     bool? selected,
 
-    /// optionalParameters: {bool? toggled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? toggled} , defaultValue:none
     bool? toggled,
 
-    /// optionalParameters: {bool? button} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? button} , defaultValue:none
     bool? button,
 
-    /// optionalParameters: {bool? link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? link} , defaultValue:none
     bool? link,
 
-    /// optionalParameters: {bool? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? header} , defaultValue:none
     bool? header,
 
-    /// optionalParameters: {bool? textField} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? textField} , defaultValue:none
     bool? textField,
 
-    /// optionalParameters: {bool? slider} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? slider} , defaultValue:none
     bool? slider,
 
-    /// optionalParameters: {bool? keyboardKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? keyboardKey} , defaultValue:none
     bool? keyboardKey,
 
-    /// optionalParameters: {bool? readOnly} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? readOnly} , defaultValue:none
     bool? readOnly,
 
-    /// optionalParameters: {bool? focusable} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? focusable} , defaultValue:none
     bool? focusable,
 
-    /// optionalParameters: {bool? focused} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? focused} , defaultValue:none
     bool? focused,
 
-    /// optionalParameters: {bool? inMutuallyExclusiveGroup} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? inMutuallyExclusiveGroup} , defaultValue:none
     bool? inMutuallyExclusiveGroup,
 
-    /// optionalParameters: {bool? hidden} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? hidden} , defaultValue:none
     bool? hidden,
 
-    /// optionalParameters: {bool? obscured} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? obscured} , defaultValue:none
     bool? obscured,
 
-    /// optionalParameters: {bool? multiline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? multiline} , defaultValue:none
     bool? multiline,
 
-    /// optionalParameters: {bool? scopesRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? scopesRoute} , defaultValue:none
     bool? scopesRoute,
 
-    /// optionalParameters: {bool? namesRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? namesRoute} , defaultValue:none
     bool? namesRoute,
 
-    /// optionalParameters: {bool? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? image} , defaultValue:none
     bool? image,
 
-    /// optionalParameters: {bool? liveRegion} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? liveRegion} , defaultValue:none
     bool? liveRegion,
 
-    /// optionalParameters: {int? maxValueLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxValueLength} , defaultValue:none
     int? maxValueLength,
 
-    /// optionalParameters: {int? currentValueLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? currentValueLength} , defaultValue:none
     int? currentValueLength,
 
-    /// optionalParameters: {String? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? label} , defaultValue:none
     String? label,
 
-    /// optionalParameters: {AttributedString? attributedLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedLabel} , defaultValue:none
     AttributedString? attributedLabel,
 
-    /// optionalParameters: {String? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? value} , defaultValue:none
     String? value,
 
-    /// optionalParameters: {AttributedString? attributedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedValue} , defaultValue:none
     AttributedString? attributedValue,
 
-    /// optionalParameters: {String? increasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? increasedValue} , defaultValue:none
     String? increasedValue,
 
-    /// optionalParameters: {AttributedString? attributedIncreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedIncreasedValue} , defaultValue:none
     AttributedString? attributedIncreasedValue,
 
-    /// optionalParameters: {String? decreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? decreasedValue} , defaultValue:none
     String? decreasedValue,
 
-    /// optionalParameters: {AttributedString? attributedDecreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedDecreasedValue} , defaultValue:none
     AttributedString? attributedDecreasedValue,
 
-    /// optionalParameters: {String? hint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? hint} , defaultValue:none
     String? hint,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {AttributedString? attributedHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedHint} , defaultValue:none
     AttributedString? attributedHint,
 
-    /// optionalParameters: {SemanticsHintOverrides? hintOverrides} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SemanticsHintOverrides? hintOverrides} , defaultValue:none
     SemanticsHintOverrides? hintOverrides,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {SemanticsSortKey? sortKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SemanticsSortKey? sortKey} , defaultValue:none
     SemanticsSortKey? sortKey,
 
-    /// optionalParameters: {SemanticsTag? tagForChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SemanticsTag? tagForChildren} , defaultValue:none
     SemanticsTag? tagForChildren,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , defaultValue:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
     VoidCallback? onLongPress,
 
-    /// optionalParameters: {void Function()? onScrollLeft} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollLeft} , defaultValue:none
     VoidCallback? onScrollLeft,
 
-    /// optionalParameters: {void Function()? onScrollRight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollRight} , defaultValue:none
     VoidCallback? onScrollRight,
 
-    /// optionalParameters: {void Function()? onScrollUp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollUp} , defaultValue:none
     VoidCallback? onScrollUp,
 
-    /// optionalParameters: {void Function()? onScrollDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollDown} , defaultValue:none
     VoidCallback? onScrollDown,
 
-    /// optionalParameters: {void Function()? onIncrease} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onIncrease} , defaultValue:none
     VoidCallback? onIncrease,
 
-    /// optionalParameters: {void Function()? onDecrease} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDecrease} , defaultValue:none
     VoidCallback? onDecrease,
 
-    /// optionalParameters: {void Function()? onCopy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onCopy} , defaultValue:none
     VoidCallback? onCopy,
 
-    /// optionalParameters: {void Function()? onCut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onCut} , defaultValue:none
     VoidCallback? onCut,
 
-    /// optionalParameters: {void Function()? onPaste} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPaste} , defaultValue:none
     VoidCallback? onPaste,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , defaultValue:none
     MoveCursorHandler? onMoveCursorForwardByCharacter,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , defaultValue:none
     MoveCursorHandler? onMoveCursorBackwardByCharacter,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByWord} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByWord} , defaultValue:none
     MoveCursorHandler? onMoveCursorForwardByWord,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByWord} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByWord} , defaultValue:none
     MoveCursorHandler? onMoveCursorBackwardByWord,
 
-    /// optionalParameters: {void Function(TextSelection)? onSetSelection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TextSelection)? onSetSelection} , defaultValue:none
     SetSelectionHandler? onSetSelection,
 
-    /// optionalParameters: {void Function(String)? onSetText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(String)? onSetText} , defaultValue:none
     SetTextHandler? onSetText,
 
-    /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , defaultValue:none
     VoidCallback? onDidGainAccessibilityFocus,
 
-    /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , defaultValue:none
     VoidCallback? onDidLoseAccessibilityFocus,
 
-    /// optionalParameters: {void Function()? onDismiss} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDismiss} , defaultValue:none
     VoidCallback? onDismiss,
 
-    /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , defaultValue:none
     Map<CustomSemanticsAction, VoidCallback>? customSemanticsActions,
   }) : super(
           enabled: enabled,
@@ -609,66 +609,66 @@ class SemanticsProperties$Mate extends SemanticsProperties with Mate {
           onDismiss: p.get('onDismiss').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
-    matePut('enabled', enabled);
-    matePut('checked', checked);
-    matePut('mixed', mixed);
-    matePut('selected', selected);
-    matePut('toggled', toggled);
-    matePut('button', button);
-    matePut('link', link);
-    matePut('header', header);
-    matePut('textField', textField);
-    matePut('slider', slider);
-    matePut('keyboardKey', keyboardKey);
-    matePut('readOnly', readOnly);
-    matePut('focusable', focusable);
-    matePut('focused', focused);
-    matePut('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
-    matePut('hidden', hidden);
-    matePut('obscured', obscured);
-    matePut('multiline', multiline);
-    matePut('scopesRoute', scopesRoute);
-    matePut('namesRoute', namesRoute);
-    matePut('image', image);
-    matePut('liveRegion', liveRegion);
-    matePut('maxValueLength', maxValueLength);
-    matePut('currentValueLength', currentValueLength);
-    matePut('label', label);
-    matePut('attributedLabel', attributedLabel);
-    matePut('value', value);
-    matePut('attributedValue', attributedValue);
-    matePut('increasedValue', increasedValue);
-    matePut('attributedIncreasedValue', attributedIncreasedValue);
-    matePut('decreasedValue', decreasedValue);
-    matePut('attributedDecreasedValue', attributedDecreasedValue);
-    matePut('hint', hint);
-    matePut('tooltip', tooltip);
-    matePut('attributedHint', attributedHint);
-    matePut('hintOverrides', hintOverrides);
-    matePut('textDirection', textDirection);
-    matePut('sortKey', sortKey);
-    matePut('tagForChildren', tagForChildren);
-    matePut('onTap', onTap);
-    matePut('onLongPress', onLongPress);
-    matePut('onScrollLeft', onScrollLeft);
-    matePut('onScrollRight', onScrollRight);
-    matePut('onScrollUp', onScrollUp);
-    matePut('onScrollDown', onScrollDown);
-    matePut('onIncrease', onIncrease);
-    matePut('onDecrease', onDecrease);
-    matePut('onCopy', onCopy);
-    matePut('onCut', onCut);
-    matePut('onPaste', onPaste);
-    matePut('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
-    matePut('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
-    matePut('onMoveCursorForwardByWord', onMoveCursorForwardByWord);
-    matePut('onMoveCursorBackwardByWord', onMoveCursorBackwardByWord);
-    matePut('onSetSelection', onSetSelection);
-    matePut('onSetText', onSetText);
-    matePut('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
-    matePut('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
-    matePut('onDismiss', onDismiss);
-    matePut('customSemanticsActions', customSemanticsActions);
+    mateDeclare('enabled', enabled);
+    mateDeclare('checked', checked);
+    mateDeclare('mixed', mixed);
+    mateDeclare('selected', selected);
+    mateDeclare('toggled', toggled);
+    mateDeclare('button', button);
+    mateDeclare('link', link);
+    mateDeclare('header', header);
+    mateDeclare('textField', textField);
+    mateDeclare('slider', slider);
+    mateDeclare('keyboardKey', keyboardKey);
+    mateDeclare('readOnly', readOnly);
+    mateDeclare('focusable', focusable);
+    mateDeclare('focused', focused);
+    mateDeclare('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
+    mateDeclare('hidden', hidden);
+    mateDeclare('obscured', obscured);
+    mateDeclare('multiline', multiline);
+    mateDeclare('scopesRoute', scopesRoute);
+    mateDeclare('namesRoute', namesRoute);
+    mateDeclare('image', image);
+    mateDeclare('liveRegion', liveRegion);
+    mateDeclare('maxValueLength', maxValueLength);
+    mateDeclare('currentValueLength', currentValueLength);
+    mateDeclare('label', label);
+    mateDeclare('attributedLabel', attributedLabel);
+    mateDeclare('value', value);
+    mateDeclare('attributedValue', attributedValue);
+    mateDeclare('increasedValue', increasedValue);
+    mateDeclare('attributedIncreasedValue', attributedIncreasedValue);
+    mateDeclare('decreasedValue', decreasedValue);
+    mateDeclare('attributedDecreasedValue', attributedDecreasedValue);
+    mateDeclare('hint', hint);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('attributedHint', attributedHint);
+    mateDeclare('hintOverrides', hintOverrides);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('sortKey', sortKey);
+    mateDeclare('tagForChildren', tagForChildren);
+    mateDeclare('onTap', onTap);
+    mateDeclare('onLongPress', onLongPress);
+    mateDeclare('onScrollLeft', onScrollLeft);
+    mateDeclare('onScrollRight', onScrollRight);
+    mateDeclare('onScrollUp', onScrollUp);
+    mateDeclare('onScrollDown', onScrollDown);
+    mateDeclare('onIncrease', onIncrease);
+    mateDeclare('onDecrease', onDecrease);
+    mateDeclare('onCopy', onCopy);
+    mateDeclare('onCut', onCut);
+    mateDeclare('onPaste', onPaste);
+    mateDeclare('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
+    mateDeclare('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
+    mateDeclare('onMoveCursorForwardByWord', onMoveCursorForwardByWord);
+    mateDeclare('onMoveCursorBackwardByWord', onMoveCursorBackwardByWord);
+    mateDeclare('onSetSelection', onSetSelection);
+    mateDeclare('onSetText', onSetText);
+    mateDeclare('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
+    mateDeclare('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
+    mateDeclare('onDismiss', onDismiss);
+    mateDeclare('customSemanticsActions', customSemanticsActions);
   }
 }
 
@@ -676,10 +676,10 @@ class SemanticsProperties$Mate extends SemanticsProperties with Mate {
 class SemanticsNode$Mate extends SemanticsNode with Mate {
   /// SemanticsNode SemanticsNode({Key? key, void Function()? showOnScreen})
   SemanticsNode$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function()? showOnScreen} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? showOnScreen} , defaultValue:none
     VoidCallback? showOnScreen,
   }) : super(
           key: key,
@@ -689,19 +689,19 @@ class SemanticsNode$Mate extends SemanticsNode with Mate {
           key: p.get('key').build(),
           showOnScreen: p.get('showOnScreen').build(),
         );
-    matePut('key', key);
-    matePut('showOnScreen', showOnScreen);
+    mateDeclare('key', key);
+    mateDeclare('showOnScreen', showOnScreen);
   }
 
   /// SemanticsNode SemanticsNode.root({Key? key, void Function()? showOnScreen, required SemanticsOwner owner})
   SemanticsNode$Mate.root({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function()? showOnScreen} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? showOnScreen} , defaultValue:none
     VoidCallback? showOnScreen,
 
-    /// optionalParameters: {required SemanticsOwner owner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SemanticsOwner owner} , defaultValue:none
     required SemanticsOwner owner,
   }) : super.root(
           key: key,
@@ -713,9 +713,9 @@ class SemanticsNode$Mate extends SemanticsNode with Mate {
           showOnScreen: p.get('showOnScreen').build(),
           owner: p.get('owner').build(),
         );
-    matePut('key', key);
-    matePut('showOnScreen', showOnScreen);
-    matePut('owner', owner);
+    mateDeclare('key', key);
+    mateDeclare('showOnScreen', showOnScreen);
+    mateDeclare('owner', owner);
   }
 }
 
@@ -724,11 +724,11 @@ class SemanticsOwner$Mate extends SemanticsOwner with Mate {
   /// SemanticsOwner SemanticsOwner({required void Function(SemanticsUpdate) onSemanticsUpdate})
   SemanticsOwner$Mate(
       {
-      /// optionalParameters: {required void Function(SemanticsUpdate) onSemanticsUpdate} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required void Function(SemanticsUpdate) onSemanticsUpdate} , defaultValue:none
       required SemanticsUpdateCallback onSemanticsUpdate})
       : super(onSemanticsUpdate: onSemanticsUpdate) {
     mateBuilder = (p) => SemanticsOwner$Mate(onSemanticsUpdate: p.get('onSemanticsUpdate').build());
-    matePut('onSemanticsUpdate', onSemanticsUpdate);
+    mateDeclare('onSemanticsUpdate', onSemanticsUpdate);
   }
 }
 
@@ -738,7 +738,7 @@ class OrdinalSortKey$Mate extends OrdinalSortKey with Mate {
   OrdinalSortKey$Mate(
     /// requiredParameters: double order
     double order, {
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , defaultValue:none
     String? name,
   }) : super(
           order,
@@ -748,7 +748,7 @@ class OrdinalSortKey$Mate extends OrdinalSortKey with Mate {
           p.get('order').value,
           name: p.get('name').build(),
         );
-    matePut('order', order);
-    matePut('name', name);
+    mateDeclare('order', order);
+    mateDeclare('name', name);
   }
 }

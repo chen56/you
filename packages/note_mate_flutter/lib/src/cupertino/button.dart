@@ -14,34 +14,34 @@ import 'package:flutter/src/painting/alignment.dart';
 class CupertinoButton$Mate extends CupertinoButton with Mate {
   /// CupertinoButton CupertinoButton({Key? key, required Widget child, EdgeInsetsGeometry? padding, Color? color, Color disabledColor = CupertinoColors.quaternarySystemFill, double? minSize = kMinInteractiveDimensionCupertino, double? pressedOpacity = 0.4, BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0)), AlignmentGeometry alignment = Alignment.center, required void Function()? onPressed})
   CupertinoButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , hasDefaultValue:true, defaultValueCode:CupertinoColors.quaternarySystemFill
+    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , defaultValue:unprocessed
     required Color disabledColor,
 
-    /// optionalParameters: {double? minSize = kMinInteractiveDimensionCupertino} , hasDefaultValue:true, defaultValueCode:kMinInteractiveDimensionCupertino
+    /// optionalParameters: {double? minSize = kMinInteractiveDimensionCupertino} , defaultValue:unprocessed
     double? minSize,
 
-    /// optionalParameters: {double? pressedOpacity = 0.4} , hasDefaultValue:true, defaultValueCode:0.4
-    double? pressedOpacity,
+    /// optionalParameters: {double? pressedOpacity = 0.4} , defaultValue:Literal
+    double? pressedOpacity = 0.4,
 
-    /// optionalParameters: {BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0))} , hasDefaultValue:true, defaultValueCode:const BorderRadius.all(Radius.circular(8.0))
+    /// optionalParameters: {BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0))} , defaultValue:unprocessed
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
     required VoidCallback? onPressed,
   }) : super(
           key: key,
@@ -67,45 +67,45 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
           alignment: p.get('alignment').build(),
           onPressed: p.get('onPressed').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('padding', padding);
-    matePut('color', color);
-    matePut('disabledColor', disabledColor);
-    matePut('minSize', minSize);
-    matePut('pressedOpacity', pressedOpacity);
-    matePut('borderRadius', borderRadius);
-    matePut('alignment', alignment);
-    matePut('onPressed', onPressed);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('padding', padding);
+    mateDeclare('color', color);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('minSize', minSize);
+    mateDeclare('pressedOpacity', pressedOpacity);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('alignment', alignment);
+    mateDeclare('onPressed', onPressed);
   }
 
   /// CupertinoButton CupertinoButton.filled({Key? key, required Widget child, EdgeInsetsGeometry? padding, Color disabledColor = CupertinoColors.quaternarySystemFill, double? minSize = kMinInteractiveDimensionCupertino, double? pressedOpacity = 0.4, BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0)), AlignmentGeometry alignment = Alignment.center, required void Function()? onPressed})
   CupertinoButton$Mate.filled({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , hasDefaultValue:true, defaultValueCode:CupertinoColors.quaternarySystemFill
+    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , defaultValue:unprocessed
     required Color disabledColor,
 
-    /// optionalParameters: {double? minSize = kMinInteractiveDimensionCupertino} , hasDefaultValue:true, defaultValueCode:kMinInteractiveDimensionCupertino
+    /// optionalParameters: {double? minSize = kMinInteractiveDimensionCupertino} , defaultValue:unprocessed
     double? minSize,
 
-    /// optionalParameters: {double? pressedOpacity = 0.4} , hasDefaultValue:true, defaultValueCode:0.4
-    double? pressedOpacity,
+    /// optionalParameters: {double? pressedOpacity = 0.4} , defaultValue:Literal
+    double? pressedOpacity = 0.4,
 
-    /// optionalParameters: {BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0))} , hasDefaultValue:true, defaultValueCode:const BorderRadius.all(Radius.circular(8.0))
+    /// optionalParameters: {BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0))} , defaultValue:unprocessed
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
     required VoidCallback? onPressed,
   }) : super.filled(
           key: key,
@@ -129,14 +129,14 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
           alignment: p.get('alignment').build(),
           onPressed: p.get('onPressed').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('padding', padding);
-    matePut('disabledColor', disabledColor);
-    matePut('minSize', minSize);
-    matePut('pressedOpacity', pressedOpacity);
-    matePut('borderRadius', borderRadius);
-    matePut('alignment', alignment);
-    matePut('onPressed', onPressed);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('padding', padding);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('minSize', minSize);
+    mateDeclare('pressedOpacity', pressedOpacity);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('alignment', alignment);
+    mateDeclare('onPressed', onPressed);
   }
 }

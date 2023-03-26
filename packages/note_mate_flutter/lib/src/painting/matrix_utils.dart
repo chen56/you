@@ -15,13 +15,13 @@ class TransformProperty$Mate extends TransformProperty with Mate {
 
     /// requiredParameters: Matrix4? value
     Matrix4? value, {
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -37,10 +37,10 @@ class TransformProperty$Mate extends TransformProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('showName', showName);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('level', level);
   }
 }

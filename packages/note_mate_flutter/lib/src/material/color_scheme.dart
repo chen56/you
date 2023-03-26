@@ -8,97 +8,97 @@ import 'dart:ui';
 class ColorScheme$Mate extends ColorScheme with Mate {
   /// ColorScheme ColorScheme({required Brightness brightness, required Color primary, required Color onPrimary, Color? primaryContainer, Color? onPrimaryContainer, required Color secondary, required Color onSecondary, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, required Color error, required Color onError, Color? errorContainer, Color? onErrorContainer, required Color background, required Color onBackground, required Color surface, required Color onSurface, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant, Color? secondaryVariant})
   ColorScheme$Mate({
-    /// optionalParameters: {required Brightness brightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Brightness brightness} , defaultValue:none
     required Brightness brightness,
 
-    /// optionalParameters: {required Color primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color primary} , defaultValue:none
     required Color primary,
 
-    /// optionalParameters: {required Color onPrimary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color onPrimary} , defaultValue:none
     required Color onPrimary,
 
-    /// optionalParameters: {Color? primaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
 
-    /// optionalParameters: {Color? onPrimaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onPrimaryContainer} , defaultValue:none
     Color? onPrimaryContainer,
 
-    /// optionalParameters: {required Color secondary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color secondary} , defaultValue:none
     required Color secondary,
 
-    /// optionalParameters: {required Color onSecondary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color onSecondary} , defaultValue:none
     required Color onSecondary,
 
-    /// optionalParameters: {Color? secondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
 
-    /// optionalParameters: {Color? onSecondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSecondaryContainer} , defaultValue:none
     Color? onSecondaryContainer,
 
-    /// optionalParameters: {Color? tertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiary} , defaultValue:none
     Color? tertiary,
 
-    /// optionalParameters: {Color? onTertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiary} , defaultValue:none
     Color? onTertiary,
 
-    /// optionalParameters: {Color? tertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiaryContainer} , defaultValue:none
     Color? tertiaryContainer,
 
-    /// optionalParameters: {Color? onTertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiaryContainer} , defaultValue:none
     Color? onTertiaryContainer,
 
-    /// optionalParameters: {required Color error} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color error} , defaultValue:none
     required Color error,
 
-    /// optionalParameters: {required Color onError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color onError} , defaultValue:none
     required Color onError,
 
-    /// optionalParameters: {Color? errorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
 
-    /// optionalParameters: {Color? onErrorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onErrorContainer} , defaultValue:none
     Color? onErrorContainer,
 
-    /// optionalParameters: {required Color background} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color background} , defaultValue:none
     required Color background,
 
-    /// optionalParameters: {required Color onBackground} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color onBackground} , defaultValue:none
     required Color onBackground,
 
-    /// optionalParameters: {required Color surface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color surface} , defaultValue:none
     required Color surface,
 
-    /// optionalParameters: {required Color onSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color onSurface} , defaultValue:none
     required Color onSurface,
 
-    /// optionalParameters: {Color? surfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,
 
-    /// optionalParameters: {Color? onSurfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSurfaceVariant} , defaultValue:none
     Color? onSurfaceVariant,
 
-    /// optionalParameters: {Color? outline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outline} , defaultValue:none
     Color? outline,
 
-    /// optionalParameters: {Color? outlineVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outlineVariant} , defaultValue:none
     Color? outlineVariant,
 
-    /// optionalParameters: {Color? shadow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadow} , defaultValue:none
     Color? shadow,
 
-    /// optionalParameters: {Color? scrim} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scrim} , defaultValue:none
     Color? scrim,
 
-    /// optionalParameters: {Color? inverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inverseSurface} , defaultValue:none
     Color? inverseSurface,
 
-    /// optionalParameters: {Color? onInverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onInverseSurface} , defaultValue:none
     Color? onInverseSurface,
 
-    /// optionalParameters: {Color? inversePrimary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inversePrimary} , defaultValue:none
     Color? inversePrimary,
 
-    /// optionalParameters: {Color? surfaceTint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTint} , defaultValue:none
     Color? surfaceTint,
   }) : super(
           brightness: brightness,
@@ -166,132 +166,132 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    matePut('brightness', brightness);
-    matePut('primary', primary);
-    matePut('onPrimary', onPrimary);
-    matePut('primaryContainer', primaryContainer);
-    matePut('onPrimaryContainer', onPrimaryContainer);
-    matePut('secondary', secondary);
-    matePut('onSecondary', onSecondary);
-    matePut('secondaryContainer', secondaryContainer);
-    matePut('onSecondaryContainer', onSecondaryContainer);
-    matePut('tertiary', tertiary);
-    matePut('onTertiary', onTertiary);
-    matePut('tertiaryContainer', tertiaryContainer);
-    matePut('onTertiaryContainer', onTertiaryContainer);
-    matePut('error', error);
-    matePut('onError', onError);
-    matePut('errorContainer', errorContainer);
-    matePut('onErrorContainer', onErrorContainer);
-    matePut('background', background);
-    matePut('onBackground', onBackground);
-    matePut('surface', surface);
-    matePut('onSurface', onSurface);
-    matePut('surfaceVariant', surfaceVariant);
-    matePut('onSurfaceVariant', onSurfaceVariant);
-    matePut('outline', outline);
-    matePut('outlineVariant', outlineVariant);
-    matePut('shadow', shadow);
-    matePut('scrim', scrim);
-    matePut('inverseSurface', inverseSurface);
-    matePut('onInverseSurface', onInverseSurface);
-    matePut('inversePrimary', inversePrimary);
-    matePut('surfaceTint', surfaceTint);
+    mateDeclare('brightness', brightness);
+    mateDeclare('primary', primary);
+    mateDeclare('onPrimary', onPrimary);
+    mateDeclare('primaryContainer', primaryContainer);
+    mateDeclare('onPrimaryContainer', onPrimaryContainer);
+    mateDeclare('secondary', secondary);
+    mateDeclare('onSecondary', onSecondary);
+    mateDeclare('secondaryContainer', secondaryContainer);
+    mateDeclare('onSecondaryContainer', onSecondaryContainer);
+    mateDeclare('tertiary', tertiary);
+    mateDeclare('onTertiary', onTertiary);
+    mateDeclare('tertiaryContainer', tertiaryContainer);
+    mateDeclare('onTertiaryContainer', onTertiaryContainer);
+    mateDeclare('error', error);
+    mateDeclare('onError', onError);
+    mateDeclare('errorContainer', errorContainer);
+    mateDeclare('onErrorContainer', onErrorContainer);
+    mateDeclare('background', background);
+    mateDeclare('onBackground', onBackground);
+    mateDeclare('surface', surface);
+    mateDeclare('onSurface', onSurface);
+    mateDeclare('surfaceVariant', surfaceVariant);
+    mateDeclare('onSurfaceVariant', onSurfaceVariant);
+    mateDeclare('outline', outline);
+    mateDeclare('outlineVariant', outlineVariant);
+    mateDeclare('shadow', shadow);
+    mateDeclare('scrim', scrim);
+    mateDeclare('inverseSurface', inverseSurface);
+    mateDeclare('onInverseSurface', onInverseSurface);
+    mateDeclare('inversePrimary', inversePrimary);
+    mateDeclare('surfaceTint', surfaceTint);
   }
 
   /// ColorScheme ColorScheme.light({Brightness brightness = Brightness.light, Color primary = const Color(0xff6200ee), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffb00020), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700b3), Color? secondaryVariant = const Color(0xff018786)})
   ColorScheme$Mate.light({
-    /// optionalParameters: {Brightness brightness = Brightness.light} , hasDefaultValue:true, defaultValueCode:Brightness.light
+    /// optionalParameters: {Brightness brightness = Brightness.light} , defaultValue:unprocessed
     required Brightness brightness,
 
-    /// optionalParameters: {Color primary = const Color(0xff6200ee)} , hasDefaultValue:true, defaultValueCode:const Color(0xff6200ee)
+    /// optionalParameters: {Color primary = const Color(0xff6200ee)} , defaultValue:unprocessed
     required Color primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color onPrimary = Colors.white} , defaultValue:unprocessed
     required Color onPrimary,
 
-    /// optionalParameters: {Color? primaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
 
-    /// optionalParameters: {Color? onPrimaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onPrimaryContainer} , defaultValue:none
     Color? onPrimaryContainer,
 
-    /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , hasDefaultValue:true, defaultValueCode:const Color(0xff03dac6)
+    /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , defaultValue:unprocessed
     required Color secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:unprocessed
     required Color onSecondary,
 
-    /// optionalParameters: {Color? secondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
 
-    /// optionalParameters: {Color? onSecondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSecondaryContainer} , defaultValue:none
     Color? onSecondaryContainer,
 
-    /// optionalParameters: {Color? tertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiary} , defaultValue:none
     Color? tertiary,
 
-    /// optionalParameters: {Color? onTertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiary} , defaultValue:none
     Color? onTertiary,
 
-    /// optionalParameters: {Color? tertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiaryContainer} , defaultValue:none
     Color? tertiaryContainer,
 
-    /// optionalParameters: {Color? onTertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiaryContainer} , defaultValue:none
     Color? onTertiaryContainer,
 
-    /// optionalParameters: {Color error = const Color(0xffb00020)} , hasDefaultValue:true, defaultValueCode:const Color(0xffb00020)
+    /// optionalParameters: {Color error = const Color(0xffb00020)} , defaultValue:unprocessed
     required Color error,
 
-    /// optionalParameters: {Color onError = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color onError = Colors.white} , defaultValue:unprocessed
     required Color onError,
 
-    /// optionalParameters: {Color? errorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
 
-    /// optionalParameters: {Color? onErrorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onErrorContainer} , defaultValue:none
     Color? onErrorContainer,
 
-    /// optionalParameters: {Color background = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color background = Colors.white} , defaultValue:unprocessed
     required Color background,
 
-    /// optionalParameters: {Color onBackground = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onBackground = Colors.black} , defaultValue:unprocessed
     required Color onBackground,
 
-    /// optionalParameters: {Color surface = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color surface = Colors.white} , defaultValue:unprocessed
     required Color surface,
 
-    /// optionalParameters: {Color onSurface = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onSurface = Colors.black} , defaultValue:unprocessed
     required Color onSurface,
 
-    /// optionalParameters: {Color? surfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,
 
-    /// optionalParameters: {Color? onSurfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSurfaceVariant} , defaultValue:none
     Color? onSurfaceVariant,
 
-    /// optionalParameters: {Color? outline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outline} , defaultValue:none
     Color? outline,
 
-    /// optionalParameters: {Color? outlineVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outlineVariant} , defaultValue:none
     Color? outlineVariant,
 
-    /// optionalParameters: {Color? shadow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadow} , defaultValue:none
     Color? shadow,
 
-    /// optionalParameters: {Color? scrim} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scrim} , defaultValue:none
     Color? scrim,
 
-    /// optionalParameters: {Color? inverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inverseSurface} , defaultValue:none
     Color? inverseSurface,
 
-    /// optionalParameters: {Color? onInverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onInverseSurface} , defaultValue:none
     Color? onInverseSurface,
 
-    /// optionalParameters: {Color? inversePrimary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inversePrimary} , defaultValue:none
     Color? inversePrimary,
 
-    /// optionalParameters: {Color? surfaceTint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTint} , defaultValue:none
     Color? surfaceTint,
   }) : super.light(
           brightness: brightness,
@@ -359,132 +359,132 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    matePut('brightness', brightness);
-    matePut('primary', primary);
-    matePut('onPrimary', onPrimary);
-    matePut('primaryContainer', primaryContainer);
-    matePut('onPrimaryContainer', onPrimaryContainer);
-    matePut('secondary', secondary);
-    matePut('onSecondary', onSecondary);
-    matePut('secondaryContainer', secondaryContainer);
-    matePut('onSecondaryContainer', onSecondaryContainer);
-    matePut('tertiary', tertiary);
-    matePut('onTertiary', onTertiary);
-    matePut('tertiaryContainer', tertiaryContainer);
-    matePut('onTertiaryContainer', onTertiaryContainer);
-    matePut('error', error);
-    matePut('onError', onError);
-    matePut('errorContainer', errorContainer);
-    matePut('onErrorContainer', onErrorContainer);
-    matePut('background', background);
-    matePut('onBackground', onBackground);
-    matePut('surface', surface);
-    matePut('onSurface', onSurface);
-    matePut('surfaceVariant', surfaceVariant);
-    matePut('onSurfaceVariant', onSurfaceVariant);
-    matePut('outline', outline);
-    matePut('outlineVariant', outlineVariant);
-    matePut('shadow', shadow);
-    matePut('scrim', scrim);
-    matePut('inverseSurface', inverseSurface);
-    matePut('onInverseSurface', onInverseSurface);
-    matePut('inversePrimary', inversePrimary);
-    matePut('surfaceTint', surfaceTint);
+    mateDeclare('brightness', brightness);
+    mateDeclare('primary', primary);
+    mateDeclare('onPrimary', onPrimary);
+    mateDeclare('primaryContainer', primaryContainer);
+    mateDeclare('onPrimaryContainer', onPrimaryContainer);
+    mateDeclare('secondary', secondary);
+    mateDeclare('onSecondary', onSecondary);
+    mateDeclare('secondaryContainer', secondaryContainer);
+    mateDeclare('onSecondaryContainer', onSecondaryContainer);
+    mateDeclare('tertiary', tertiary);
+    mateDeclare('onTertiary', onTertiary);
+    mateDeclare('tertiaryContainer', tertiaryContainer);
+    mateDeclare('onTertiaryContainer', onTertiaryContainer);
+    mateDeclare('error', error);
+    mateDeclare('onError', onError);
+    mateDeclare('errorContainer', errorContainer);
+    mateDeclare('onErrorContainer', onErrorContainer);
+    mateDeclare('background', background);
+    mateDeclare('onBackground', onBackground);
+    mateDeclare('surface', surface);
+    mateDeclare('onSurface', onSurface);
+    mateDeclare('surfaceVariant', surfaceVariant);
+    mateDeclare('onSurfaceVariant', onSurfaceVariant);
+    mateDeclare('outline', outline);
+    mateDeclare('outlineVariant', outlineVariant);
+    mateDeclare('shadow', shadow);
+    mateDeclare('scrim', scrim);
+    mateDeclare('inverseSurface', inverseSurface);
+    mateDeclare('onInverseSurface', onInverseSurface);
+    mateDeclare('inversePrimary', inversePrimary);
+    mateDeclare('surfaceTint', surfaceTint);
   }
 
   /// ColorScheme ColorScheme.dark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffbb86fc), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffcf6679), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700B3), Color? secondaryVariant = const Color(0xff03dac6)})
   ColorScheme$Mate.dark({
-    /// optionalParameters: {Brightness brightness = Brightness.dark} , hasDefaultValue:true, defaultValueCode:Brightness.dark
+    /// optionalParameters: {Brightness brightness = Brightness.dark} , defaultValue:unprocessed
     required Brightness brightness,
 
-    /// optionalParameters: {Color primary = const Color(0xffbb86fc)} , hasDefaultValue:true, defaultValueCode:const Color(0xffbb86fc)
+    /// optionalParameters: {Color primary = const Color(0xffbb86fc)} , defaultValue:unprocessed
     required Color primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onPrimary = Colors.black} , defaultValue:unprocessed
     required Color onPrimary,
 
-    /// optionalParameters: {Color? primaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
 
-    /// optionalParameters: {Color? onPrimaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onPrimaryContainer} , defaultValue:none
     Color? onPrimaryContainer,
 
-    /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , hasDefaultValue:true, defaultValueCode:const Color(0xff03dac6)
+    /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , defaultValue:unprocessed
     required Color secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:unprocessed
     required Color onSecondary,
 
-    /// optionalParameters: {Color? secondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
 
-    /// optionalParameters: {Color? onSecondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSecondaryContainer} , defaultValue:none
     Color? onSecondaryContainer,
 
-    /// optionalParameters: {Color? tertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiary} , defaultValue:none
     Color? tertiary,
 
-    /// optionalParameters: {Color? onTertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiary} , defaultValue:none
     Color? onTertiary,
 
-    /// optionalParameters: {Color? tertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiaryContainer} , defaultValue:none
     Color? tertiaryContainer,
 
-    /// optionalParameters: {Color? onTertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiaryContainer} , defaultValue:none
     Color? onTertiaryContainer,
 
-    /// optionalParameters: {Color error = const Color(0xffcf6679)} , hasDefaultValue:true, defaultValueCode:const Color(0xffcf6679)
+    /// optionalParameters: {Color error = const Color(0xffcf6679)} , defaultValue:unprocessed
     required Color error,
 
-    /// optionalParameters: {Color onError = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onError = Colors.black} , defaultValue:unprocessed
     required Color onError,
 
-    /// optionalParameters: {Color? errorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
 
-    /// optionalParameters: {Color? onErrorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onErrorContainer} , defaultValue:none
     Color? onErrorContainer,
 
-    /// optionalParameters: {Color background = const Color(0xff121212)} , hasDefaultValue:true, defaultValueCode:const Color(0xff121212)
+    /// optionalParameters: {Color background = const Color(0xff121212)} , defaultValue:unprocessed
     required Color background,
 
-    /// optionalParameters: {Color onBackground = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color onBackground = Colors.white} , defaultValue:unprocessed
     required Color onBackground,
 
-    /// optionalParameters: {Color surface = const Color(0xff121212)} , hasDefaultValue:true, defaultValueCode:const Color(0xff121212)
+    /// optionalParameters: {Color surface = const Color(0xff121212)} , defaultValue:unprocessed
     required Color surface,
 
-    /// optionalParameters: {Color onSurface = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color onSurface = Colors.white} , defaultValue:unprocessed
     required Color onSurface,
 
-    /// optionalParameters: {Color? surfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,
 
-    /// optionalParameters: {Color? onSurfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSurfaceVariant} , defaultValue:none
     Color? onSurfaceVariant,
 
-    /// optionalParameters: {Color? outline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outline} , defaultValue:none
     Color? outline,
 
-    /// optionalParameters: {Color? outlineVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outlineVariant} , defaultValue:none
     Color? outlineVariant,
 
-    /// optionalParameters: {Color? shadow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadow} , defaultValue:none
     Color? shadow,
 
-    /// optionalParameters: {Color? scrim} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scrim} , defaultValue:none
     Color? scrim,
 
-    /// optionalParameters: {Color? inverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inverseSurface} , defaultValue:none
     Color? inverseSurface,
 
-    /// optionalParameters: {Color? onInverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onInverseSurface} , defaultValue:none
     Color? onInverseSurface,
 
-    /// optionalParameters: {Color? inversePrimary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inversePrimary} , defaultValue:none
     Color? inversePrimary,
 
-    /// optionalParameters: {Color? surfaceTint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTint} , defaultValue:none
     Color? surfaceTint,
   }) : super.dark(
           brightness: brightness,
@@ -552,132 +552,132 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    matePut('brightness', brightness);
-    matePut('primary', primary);
-    matePut('onPrimary', onPrimary);
-    matePut('primaryContainer', primaryContainer);
-    matePut('onPrimaryContainer', onPrimaryContainer);
-    matePut('secondary', secondary);
-    matePut('onSecondary', onSecondary);
-    matePut('secondaryContainer', secondaryContainer);
-    matePut('onSecondaryContainer', onSecondaryContainer);
-    matePut('tertiary', tertiary);
-    matePut('onTertiary', onTertiary);
-    matePut('tertiaryContainer', tertiaryContainer);
-    matePut('onTertiaryContainer', onTertiaryContainer);
-    matePut('error', error);
-    matePut('onError', onError);
-    matePut('errorContainer', errorContainer);
-    matePut('onErrorContainer', onErrorContainer);
-    matePut('background', background);
-    matePut('onBackground', onBackground);
-    matePut('surface', surface);
-    matePut('onSurface', onSurface);
-    matePut('surfaceVariant', surfaceVariant);
-    matePut('onSurfaceVariant', onSurfaceVariant);
-    matePut('outline', outline);
-    matePut('outlineVariant', outlineVariant);
-    matePut('shadow', shadow);
-    matePut('scrim', scrim);
-    matePut('inverseSurface', inverseSurface);
-    matePut('onInverseSurface', onInverseSurface);
-    matePut('inversePrimary', inversePrimary);
-    matePut('surfaceTint', surfaceTint);
+    mateDeclare('brightness', brightness);
+    mateDeclare('primary', primary);
+    mateDeclare('onPrimary', onPrimary);
+    mateDeclare('primaryContainer', primaryContainer);
+    mateDeclare('onPrimaryContainer', onPrimaryContainer);
+    mateDeclare('secondary', secondary);
+    mateDeclare('onSecondary', onSecondary);
+    mateDeclare('secondaryContainer', secondaryContainer);
+    mateDeclare('onSecondaryContainer', onSecondaryContainer);
+    mateDeclare('tertiary', tertiary);
+    mateDeclare('onTertiary', onTertiary);
+    mateDeclare('tertiaryContainer', tertiaryContainer);
+    mateDeclare('onTertiaryContainer', onTertiaryContainer);
+    mateDeclare('error', error);
+    mateDeclare('onError', onError);
+    mateDeclare('errorContainer', errorContainer);
+    mateDeclare('onErrorContainer', onErrorContainer);
+    mateDeclare('background', background);
+    mateDeclare('onBackground', onBackground);
+    mateDeclare('surface', surface);
+    mateDeclare('onSurface', onSurface);
+    mateDeclare('surfaceVariant', surfaceVariant);
+    mateDeclare('onSurfaceVariant', onSurfaceVariant);
+    mateDeclare('outline', outline);
+    mateDeclare('outlineVariant', outlineVariant);
+    mateDeclare('shadow', shadow);
+    mateDeclare('scrim', scrim);
+    mateDeclare('inverseSurface', inverseSurface);
+    mateDeclare('onInverseSurface', onInverseSurface);
+    mateDeclare('inversePrimary', inversePrimary);
+    mateDeclare('surfaceTint', surfaceTint);
   }
 
   /// ColorScheme ColorScheme.highContrastLight({Brightness brightness = Brightness.light, Color primary = const Color(0xff0000ba), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff790000), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff000088), Color? secondaryVariant = const Color(0xff018786)})
   ColorScheme$Mate.highContrastLight({
-    /// optionalParameters: {Brightness brightness = Brightness.light} , hasDefaultValue:true, defaultValueCode:Brightness.light
+    /// optionalParameters: {Brightness brightness = Brightness.light} , defaultValue:unprocessed
     required Brightness brightness,
 
-    /// optionalParameters: {Color primary = const Color(0xff0000ba)} , hasDefaultValue:true, defaultValueCode:const Color(0xff0000ba)
+    /// optionalParameters: {Color primary = const Color(0xff0000ba)} , defaultValue:unprocessed
     required Color primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color onPrimary = Colors.white} , defaultValue:unprocessed
     required Color onPrimary,
 
-    /// optionalParameters: {Color? primaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
 
-    /// optionalParameters: {Color? onPrimaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onPrimaryContainer} , defaultValue:none
     Color? onPrimaryContainer,
 
-    /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , hasDefaultValue:true, defaultValueCode:const Color(0xff66fff9)
+    /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , defaultValue:unprocessed
     required Color secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:unprocessed
     required Color onSecondary,
 
-    /// optionalParameters: {Color? secondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
 
-    /// optionalParameters: {Color? onSecondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSecondaryContainer} , defaultValue:none
     Color? onSecondaryContainer,
 
-    /// optionalParameters: {Color? tertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiary} , defaultValue:none
     Color? tertiary,
 
-    /// optionalParameters: {Color? onTertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiary} , defaultValue:none
     Color? onTertiary,
 
-    /// optionalParameters: {Color? tertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiaryContainer} , defaultValue:none
     Color? tertiaryContainer,
 
-    /// optionalParameters: {Color? onTertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiaryContainer} , defaultValue:none
     Color? onTertiaryContainer,
 
-    /// optionalParameters: {Color error = const Color(0xff790000)} , hasDefaultValue:true, defaultValueCode:const Color(0xff790000)
+    /// optionalParameters: {Color error = const Color(0xff790000)} , defaultValue:unprocessed
     required Color error,
 
-    /// optionalParameters: {Color onError = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color onError = Colors.white} , defaultValue:unprocessed
     required Color onError,
 
-    /// optionalParameters: {Color? errorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
 
-    /// optionalParameters: {Color? onErrorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onErrorContainer} , defaultValue:none
     Color? onErrorContainer,
 
-    /// optionalParameters: {Color background = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color background = Colors.white} , defaultValue:unprocessed
     required Color background,
 
-    /// optionalParameters: {Color onBackground = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onBackground = Colors.black} , defaultValue:unprocessed
     required Color onBackground,
 
-    /// optionalParameters: {Color surface = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color surface = Colors.white} , defaultValue:unprocessed
     required Color surface,
 
-    /// optionalParameters: {Color onSurface = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onSurface = Colors.black} , defaultValue:unprocessed
     required Color onSurface,
 
-    /// optionalParameters: {Color? surfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,
 
-    /// optionalParameters: {Color? onSurfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSurfaceVariant} , defaultValue:none
     Color? onSurfaceVariant,
 
-    /// optionalParameters: {Color? outline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outline} , defaultValue:none
     Color? outline,
 
-    /// optionalParameters: {Color? outlineVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outlineVariant} , defaultValue:none
     Color? outlineVariant,
 
-    /// optionalParameters: {Color? shadow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadow} , defaultValue:none
     Color? shadow,
 
-    /// optionalParameters: {Color? scrim} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scrim} , defaultValue:none
     Color? scrim,
 
-    /// optionalParameters: {Color? inverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inverseSurface} , defaultValue:none
     Color? inverseSurface,
 
-    /// optionalParameters: {Color? onInverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onInverseSurface} , defaultValue:none
     Color? onInverseSurface,
 
-    /// optionalParameters: {Color? inversePrimary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inversePrimary} , defaultValue:none
     Color? inversePrimary,
 
-    /// optionalParameters: {Color? surfaceTint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTint} , defaultValue:none
     Color? surfaceTint,
   }) : super.highContrastLight(
           brightness: brightness,
@@ -745,132 +745,132 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    matePut('brightness', brightness);
-    matePut('primary', primary);
-    matePut('onPrimary', onPrimary);
-    matePut('primaryContainer', primaryContainer);
-    matePut('onPrimaryContainer', onPrimaryContainer);
-    matePut('secondary', secondary);
-    matePut('onSecondary', onSecondary);
-    matePut('secondaryContainer', secondaryContainer);
-    matePut('onSecondaryContainer', onSecondaryContainer);
-    matePut('tertiary', tertiary);
-    matePut('onTertiary', onTertiary);
-    matePut('tertiaryContainer', tertiaryContainer);
-    matePut('onTertiaryContainer', onTertiaryContainer);
-    matePut('error', error);
-    matePut('onError', onError);
-    matePut('errorContainer', errorContainer);
-    matePut('onErrorContainer', onErrorContainer);
-    matePut('background', background);
-    matePut('onBackground', onBackground);
-    matePut('surface', surface);
-    matePut('onSurface', onSurface);
-    matePut('surfaceVariant', surfaceVariant);
-    matePut('onSurfaceVariant', onSurfaceVariant);
-    matePut('outline', outline);
-    matePut('outlineVariant', outlineVariant);
-    matePut('shadow', shadow);
-    matePut('scrim', scrim);
-    matePut('inverseSurface', inverseSurface);
-    matePut('onInverseSurface', onInverseSurface);
-    matePut('inversePrimary', inversePrimary);
-    matePut('surfaceTint', surfaceTint);
+    mateDeclare('brightness', brightness);
+    mateDeclare('primary', primary);
+    mateDeclare('onPrimary', onPrimary);
+    mateDeclare('primaryContainer', primaryContainer);
+    mateDeclare('onPrimaryContainer', onPrimaryContainer);
+    mateDeclare('secondary', secondary);
+    mateDeclare('onSecondary', onSecondary);
+    mateDeclare('secondaryContainer', secondaryContainer);
+    mateDeclare('onSecondaryContainer', onSecondaryContainer);
+    mateDeclare('tertiary', tertiary);
+    mateDeclare('onTertiary', onTertiary);
+    mateDeclare('tertiaryContainer', tertiaryContainer);
+    mateDeclare('onTertiaryContainer', onTertiaryContainer);
+    mateDeclare('error', error);
+    mateDeclare('onError', onError);
+    mateDeclare('errorContainer', errorContainer);
+    mateDeclare('onErrorContainer', onErrorContainer);
+    mateDeclare('background', background);
+    mateDeclare('onBackground', onBackground);
+    mateDeclare('surface', surface);
+    mateDeclare('onSurface', onSurface);
+    mateDeclare('surfaceVariant', surfaceVariant);
+    mateDeclare('onSurfaceVariant', onSurfaceVariant);
+    mateDeclare('outline', outline);
+    mateDeclare('outlineVariant', outlineVariant);
+    mateDeclare('shadow', shadow);
+    mateDeclare('scrim', scrim);
+    mateDeclare('inverseSurface', inverseSurface);
+    mateDeclare('onInverseSurface', onInverseSurface);
+    mateDeclare('inversePrimary', inversePrimary);
+    mateDeclare('surfaceTint', surfaceTint);
   }
 
   /// ColorScheme ColorScheme.highContrastDark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffefb7ff), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff9b374d), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xffbe9eff), Color? secondaryVariant = const Color(0xff66fff9)})
   ColorScheme$Mate.highContrastDark({
-    /// optionalParameters: {Brightness brightness = Brightness.dark} , hasDefaultValue:true, defaultValueCode:Brightness.dark
+    /// optionalParameters: {Brightness brightness = Brightness.dark} , defaultValue:unprocessed
     required Brightness brightness,
 
-    /// optionalParameters: {Color primary = const Color(0xffefb7ff)} , hasDefaultValue:true, defaultValueCode:const Color(0xffefb7ff)
+    /// optionalParameters: {Color primary = const Color(0xffefb7ff)} , defaultValue:unprocessed
     required Color primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onPrimary = Colors.black} , defaultValue:unprocessed
     required Color onPrimary,
 
-    /// optionalParameters: {Color? primaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
 
-    /// optionalParameters: {Color? onPrimaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onPrimaryContainer} , defaultValue:none
     Color? onPrimaryContainer,
 
-    /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , hasDefaultValue:true, defaultValueCode:const Color(0xff66fff9)
+    /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , defaultValue:unprocessed
     required Color secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:unprocessed
     required Color onSecondary,
 
-    /// optionalParameters: {Color? secondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
 
-    /// optionalParameters: {Color? onSecondaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSecondaryContainer} , defaultValue:none
     Color? onSecondaryContainer,
 
-    /// optionalParameters: {Color? tertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiary} , defaultValue:none
     Color? tertiary,
 
-    /// optionalParameters: {Color? onTertiary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiary} , defaultValue:none
     Color? onTertiary,
 
-    /// optionalParameters: {Color? tertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tertiaryContainer} , defaultValue:none
     Color? tertiaryContainer,
 
-    /// optionalParameters: {Color? onTertiaryContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onTertiaryContainer} , defaultValue:none
     Color? onTertiaryContainer,
 
-    /// optionalParameters: {Color error = const Color(0xff9b374d)} , hasDefaultValue:true, defaultValueCode:const Color(0xff9b374d)
+    /// optionalParameters: {Color error = const Color(0xff9b374d)} , defaultValue:unprocessed
     required Color error,
 
-    /// optionalParameters: {Color onError = Colors.black} , hasDefaultValue:true, defaultValueCode:Colors.black
+    /// optionalParameters: {Color onError = Colors.black} , defaultValue:unprocessed
     required Color onError,
 
-    /// optionalParameters: {Color? errorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
 
-    /// optionalParameters: {Color? onErrorContainer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onErrorContainer} , defaultValue:none
     Color? onErrorContainer,
 
-    /// optionalParameters: {Color background = const Color(0xff121212)} , hasDefaultValue:true, defaultValueCode:const Color(0xff121212)
+    /// optionalParameters: {Color background = const Color(0xff121212)} , defaultValue:unprocessed
     required Color background,
 
-    /// optionalParameters: {Color onBackground = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color onBackground = Colors.white} , defaultValue:unprocessed
     required Color onBackground,
 
-    /// optionalParameters: {Color surface = const Color(0xff121212)} , hasDefaultValue:true, defaultValueCode:const Color(0xff121212)
+    /// optionalParameters: {Color surface = const Color(0xff121212)} , defaultValue:unprocessed
     required Color surface,
 
-    /// optionalParameters: {Color onSurface = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
+    /// optionalParameters: {Color onSurface = Colors.white} , defaultValue:unprocessed
     required Color onSurface,
 
-    /// optionalParameters: {Color? surfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,
 
-    /// optionalParameters: {Color? onSurfaceVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onSurfaceVariant} , defaultValue:none
     Color? onSurfaceVariant,
 
-    /// optionalParameters: {Color? outline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outline} , defaultValue:none
     Color? outline,
 
-    /// optionalParameters: {Color? outlineVariant} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? outlineVariant} , defaultValue:none
     Color? outlineVariant,
 
-    /// optionalParameters: {Color? shadow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadow} , defaultValue:none
     Color? shadow,
 
-    /// optionalParameters: {Color? scrim} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scrim} , defaultValue:none
     Color? scrim,
 
-    /// optionalParameters: {Color? inverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inverseSurface} , defaultValue:none
     Color? inverseSurface,
 
-    /// optionalParameters: {Color? onInverseSurface} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? onInverseSurface} , defaultValue:none
     Color? onInverseSurface,
 
-    /// optionalParameters: {Color? inversePrimary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inversePrimary} , defaultValue:none
     Color? inversePrimary,
 
-    /// optionalParameters: {Color? surfaceTint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTint} , defaultValue:none
     Color? surfaceTint,
   }) : super.highContrastDark(
           brightness: brightness,
@@ -938,36 +938,36 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    matePut('brightness', brightness);
-    matePut('primary', primary);
-    matePut('onPrimary', onPrimary);
-    matePut('primaryContainer', primaryContainer);
-    matePut('onPrimaryContainer', onPrimaryContainer);
-    matePut('secondary', secondary);
-    matePut('onSecondary', onSecondary);
-    matePut('secondaryContainer', secondaryContainer);
-    matePut('onSecondaryContainer', onSecondaryContainer);
-    matePut('tertiary', tertiary);
-    matePut('onTertiary', onTertiary);
-    matePut('tertiaryContainer', tertiaryContainer);
-    matePut('onTertiaryContainer', onTertiaryContainer);
-    matePut('error', error);
-    matePut('onError', onError);
-    matePut('errorContainer', errorContainer);
-    matePut('onErrorContainer', onErrorContainer);
-    matePut('background', background);
-    matePut('onBackground', onBackground);
-    matePut('surface', surface);
-    matePut('onSurface', onSurface);
-    matePut('surfaceVariant', surfaceVariant);
-    matePut('onSurfaceVariant', onSurfaceVariant);
-    matePut('outline', outline);
-    matePut('outlineVariant', outlineVariant);
-    matePut('shadow', shadow);
-    matePut('scrim', scrim);
-    matePut('inverseSurface', inverseSurface);
-    matePut('onInverseSurface', onInverseSurface);
-    matePut('inversePrimary', inversePrimary);
-    matePut('surfaceTint', surfaceTint);
+    mateDeclare('brightness', brightness);
+    mateDeclare('primary', primary);
+    mateDeclare('onPrimary', onPrimary);
+    mateDeclare('primaryContainer', primaryContainer);
+    mateDeclare('onPrimaryContainer', onPrimaryContainer);
+    mateDeclare('secondary', secondary);
+    mateDeclare('onSecondary', onSecondary);
+    mateDeclare('secondaryContainer', secondaryContainer);
+    mateDeclare('onSecondaryContainer', onSecondaryContainer);
+    mateDeclare('tertiary', tertiary);
+    mateDeclare('onTertiary', onTertiary);
+    mateDeclare('tertiaryContainer', tertiaryContainer);
+    mateDeclare('onTertiaryContainer', onTertiaryContainer);
+    mateDeclare('error', error);
+    mateDeclare('onError', onError);
+    mateDeclare('errorContainer', errorContainer);
+    mateDeclare('onErrorContainer', onErrorContainer);
+    mateDeclare('background', background);
+    mateDeclare('onBackground', onBackground);
+    mateDeclare('surface', surface);
+    mateDeclare('onSurface', onSurface);
+    mateDeclare('surfaceVariant', surfaceVariant);
+    mateDeclare('onSurfaceVariant', onSurfaceVariant);
+    mateDeclare('outline', outline);
+    mateDeclare('outlineVariant', outlineVariant);
+    mateDeclare('shadow', shadow);
+    mateDeclare('scrim', scrim);
+    mateDeclare('inverseSurface', inverseSurface);
+    mateDeclare('onInverseSurface', onInverseSurface);
+    mateDeclare('inversePrimary', inversePrimary);
+    mateDeclare('surfaceTint', surfaceTint);
   }
 }

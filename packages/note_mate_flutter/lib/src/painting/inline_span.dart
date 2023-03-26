@@ -15,7 +15,7 @@ class Accumulator$Mate extends Accumulator with Mate {
       int _value)
       : super(_value) {
     mateBuilder = (p) => Accumulator$Mate(p.get('_value').value);
-    matePut('_value', _value);
+    mateDeclare('_value', _value);
   }
 }
 
@@ -25,16 +25,16 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
   InlineSpanSemanticsInformation$Mate(
     /// requiredParameters: String text
     String text, {
-    /// optionalParameters: {bool isPlaceholder = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isPlaceholder,
+    /// optionalParameters: {bool isPlaceholder = false} , defaultValue:Literal
+    bool isPlaceholder = false,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {List<StringAttribute> stringAttributes = const <ui.StringAttribute>[]} , hasDefaultValue:true, defaultValueCode:const <ui.StringAttribute>[]
+    /// optionalParameters: {List<StringAttribute> stringAttributes = const <ui.StringAttribute>[]} , defaultValue:unprocessed
     required List<StringAttribute> stringAttributes,
 
-    /// optionalParameters: {GestureRecognizer? recognizer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GestureRecognizer? recognizer} , defaultValue:none
     GestureRecognizer? recognizer,
   }) : super(
           text,
@@ -50,10 +50,10 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
           stringAttributes: p.get('stringAttributes').build(),
           recognizer: p.get('recognizer').build(),
         );
-    matePut('text', text);
-    matePut('isPlaceholder', isPlaceholder);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('stringAttributes', stringAttributes);
-    matePut('recognizer', recognizer);
+    mateDeclare('text', text);
+    mateDeclare('isPlaceholder', isPlaceholder);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('stringAttributes', stringAttributes);
+    mateDeclare('recognizer', recognizer);
   }
 }

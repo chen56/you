@@ -9,10 +9,10 @@ class RenderingFlutterBinding$Mate extends RenderingFlutterBinding with Mate {
   /// RenderingFlutterBinding RenderingFlutterBinding({RenderBox? root})
   RenderingFlutterBinding$Mate(
       {
-      /// optionalParameters: {RenderBox? root} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {RenderBox? root} , defaultValue:none
       RenderBox? root})
       : super(root: root) {
     mateBuilder = (p) => RenderingFlutterBinding$Mate(root: p.get('root').build());
-    matePut('root', root);
+    mateDeclare('root', root);
   }
 }

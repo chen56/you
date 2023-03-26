@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with Mate {
   /// CupertinoPageScaffold CupertinoPageScaffold({Key? key, ObstructingPreferredSizeWidget? navigationBar, Color? backgroundColor, bool resizeToAvoidBottomInset = true, required Widget child})
   CupertinoPageScaffold$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {ObstructingPreferredSizeWidget? navigationBar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ObstructingPreferredSizeWidget? navigationBar} , defaultValue:none
     ObstructingPreferredSizeWidget? navigationBar,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {bool resizeToAvoidBottomInset = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool resizeToAvoidBottomInset,
+    /// optionalParameters: {bool resizeToAvoidBottomInset = true} , defaultValue:Literal
+    bool resizeToAvoidBottomInset = true,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -39,10 +39,10 @@ class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with Mate {
           resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('navigationBar', navigationBar);
-    matePut('backgroundColor', backgroundColor);
-    matePut('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('navigationBar', navigationBar);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
+    mateDeclare('child', child);
   }
 }

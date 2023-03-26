@@ -9,28 +9,28 @@ import 'dart:ui';
 class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
   /// CupertinoIconThemeData CupertinoIconThemeData({double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, double? opacity, List<Shadow>? shadows})
   CupertinoIconThemeData$Mate({
-    /// optionalParameters: {double? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? size} , defaultValue:none
     double? size,
 
-    /// optionalParameters: {double? fill} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? fill} , defaultValue:none
     double? fill,
 
-    /// optionalParameters: {double? weight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? weight} , defaultValue:none
     double? weight,
 
-    /// optionalParameters: {double? grade} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? grade} , defaultValue:none
     double? grade,
 
-    /// optionalParameters: {double? opticalSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? opticalSize} , defaultValue:none
     double? opticalSize,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {double? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? opacity} , defaultValue:none
     double? opacity,
 
-    /// optionalParameters: {List<Shadow>? shadows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Shadow>? shadows} , defaultValue:none
     List<Shadow>? shadows,
   }) : super(
           size: size,
@@ -52,13 +52,13 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
           opacity: p.get('opacity').build(),
           shadows: p.get('shadows').build(),
         );
-    matePut('size', size);
-    matePut('fill', fill);
-    matePut('weight', weight);
-    matePut('grade', grade);
-    matePut('opticalSize', opticalSize);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('shadows', shadows);
+    mateDeclare('size', size);
+    mateDeclare('fill', fill);
+    mateDeclare('weight', weight);
+    mateDeclare('grade', grade);
+    mateDeclare('opticalSize', opticalSize);
+    mateDeclare('color', color);
+    mateDeclare('opacity', opacity);
+    mateDeclare('shadows', shadows);
   }
 }

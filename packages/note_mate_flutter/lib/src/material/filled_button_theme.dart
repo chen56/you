@@ -11,11 +11,11 @@ class FilledButtonThemeData$Mate extends FilledButtonThemeData with Mate {
   /// FilledButtonThemeData FilledButtonThemeData({ButtonStyle? style})
   FilledButtonThemeData$Mate(
       {
-      /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
     mateBuilder = (p) => FilledButtonThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateDeclare('style', style);
   }
 }
 
@@ -23,13 +23,13 @@ class FilledButtonThemeData$Mate extends FilledButtonThemeData with Mate {
 class FilledButtonTheme$Mate extends FilledButtonTheme with Mate {
   /// FilledButtonTheme FilledButtonTheme({Key? key, required FilledButtonThemeData data, required Widget child})
   FilledButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required FilledButtonThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FilledButtonThemeData data} , defaultValue:none
     required FilledButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -41,8 +41,8 @@ class FilledButtonTheme$Mate extends FilledButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

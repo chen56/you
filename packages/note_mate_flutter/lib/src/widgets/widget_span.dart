@@ -10,16 +10,16 @@ import 'package:flutter/src/painting/text_style.dart';
 class WidgetSpan$Mate extends WidgetSpan with Mate {
   /// WidgetSpan WidgetSpan({required Widget child, PlaceholderAlignment alignment = ui.PlaceholderAlignment.bottom, TextBaseline? baseline, TextStyle? style})
   WidgetSpan$Mate({
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {PlaceholderAlignment alignment = ui.PlaceholderAlignment.bottom} , hasDefaultValue:true, defaultValueCode:ui.PlaceholderAlignment.bottom
+    /// optionalParameters: {PlaceholderAlignment alignment = ui.PlaceholderAlignment.bottom} , defaultValue:unprocessed
     required PlaceholderAlignment alignment,
 
-    /// optionalParameters: {TextBaseline? baseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? baseline} , defaultValue:none
     TextBaseline? baseline,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , defaultValue:none
     TextStyle? style,
   }) : super(
           child: child,
@@ -33,9 +33,9 @@ class WidgetSpan$Mate extends WidgetSpan with Mate {
           baseline: p.get('baseline').build(),
           style: p.get('style').build(),
         );
-    matePut('child', child);
-    matePut('alignment', alignment);
-    matePut('baseline', baseline);
-    matePut('style', style);
+    mateDeclare('child', child);
+    mateDeclare('alignment', alignment);
+    mateDeclare('baseline', baseline);
+    mateDeclare('style', style);
   }
 }

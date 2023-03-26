@@ -14,49 +14,49 @@ import 'package:flutter/src/widgets/framework.dart';
 class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
   /// ToggleButtonsThemeData ToggleButtonsThemeData({TextStyle? textStyle, BoxConstraints? constraints, Color? color, Color? selectedColor, Color? disabledColor, Color? fillColor, Color? focusColor, Color? highlightColor, Color? hoverColor, Color? splashColor, Color? borderColor, Color? selectedBorderColor, Color? disabledBorderColor, BorderRadius? borderRadius, double? borderWidth})
   ToggleButtonsThemeData$Mate({
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , defaultValue:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? fillColor} , defaultValue:none
     Color? fillColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , defaultValue:none
     Color? highlightColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , defaultValue:none
     Color? splashColor,
 
-    /// optionalParameters: {Color? borderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? borderColor} , defaultValue:none
     Color? borderColor,
 
-    /// optionalParameters: {Color? selectedBorderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedBorderColor} , defaultValue:none
     Color? selectedBorderColor,
 
-    /// optionalParameters: {Color? disabledBorderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledBorderColor} , defaultValue:none
     Color? disabledBorderColor,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {double? borderWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? borderWidth} , defaultValue:none
     double? borderWidth,
   }) : super(
           textStyle: textStyle,
@@ -92,21 +92,21 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
           borderRadius: p.get('borderRadius').build(),
           borderWidth: p.get('borderWidth').build(),
         );
-    matePut('textStyle', textStyle);
-    matePut('constraints', constraints);
-    matePut('color', color);
-    matePut('selectedColor', selectedColor);
-    matePut('disabledColor', disabledColor);
-    matePut('fillColor', fillColor);
-    matePut('focusColor', focusColor);
-    matePut('highlightColor', highlightColor);
-    matePut('hoverColor', hoverColor);
-    matePut('splashColor', splashColor);
-    matePut('borderColor', borderColor);
-    matePut('selectedBorderColor', selectedBorderColor);
-    matePut('disabledBorderColor', disabledBorderColor);
-    matePut('borderRadius', borderRadius);
-    matePut('borderWidth', borderWidth);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('constraints', constraints);
+    mateDeclare('color', color);
+    mateDeclare('selectedColor', selectedColor);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('fillColor', fillColor);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('highlightColor', highlightColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('splashColor', splashColor);
+    mateDeclare('borderColor', borderColor);
+    mateDeclare('selectedBorderColor', selectedBorderColor);
+    mateDeclare('disabledBorderColor', disabledBorderColor);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('borderWidth', borderWidth);
   }
 }
 
@@ -114,13 +114,13 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
 class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with Mate {
   /// ToggleButtonsTheme ToggleButtonsTheme({Key? key, required ToggleButtonsThemeData data, required Widget child})
   ToggleButtonsTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ToggleButtonsThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ToggleButtonsThemeData data} , defaultValue:none
     required ToggleButtonsThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -132,8 +132,8 @@ class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

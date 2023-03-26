@@ -31,9 +31,9 @@ class GravitySimulation$Mate extends GravitySimulation with Mate {
           p.get('endDistance').value,
           p.get('velocity').value,
         );
-    matePut('acceleration', acceleration);
-    matePut('distance', distance);
-    matePut('endDistance', endDistance);
-    matePut('velocity', velocity);
+    mateDeclare('acceleration', acceleration);
+    mateDeclare('distance', distance);
+    mateDeclare('endDistance', endDistance);
+    mateDeclare('velocity', velocity);
   }
 }

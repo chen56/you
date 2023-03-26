@@ -11,13 +11,13 @@ import 'package:flutter/src/foundation/assertions.dart';
 class ImageInfo$Mate extends ImageInfo with Mate {
   /// ImageInfo ImageInfo({required Image image, double scale = 1.0, String? debugLabel})
   ImageInfo$Mate({
-    /// optionalParameters: {required Image image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Image image} , defaultValue:none
     required Image image,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
   }) : super(
           image: image,
@@ -29,9 +29,9 @@ class ImageInfo$Mate extends ImageInfo with Mate {
           scale: p.get('scale').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('image', image);
-    matePut('scale', scale);
-    matePut('debugLabel', debugLabel);
+    mateDeclare('image', image);
+    mateDeclare('scale', scale);
+    mateDeclare('debugLabel', debugLabel);
   }
 }
 
@@ -41,10 +41,10 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
   ImageStreamListener$Mate(
     /// requiredParameters: void Function(ImageInfo, bool) onImage
     ImageListener onImage, {
-    /// optionalParameters: {void Function(ImageChunkEvent)? onChunk} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(ImageChunkEvent)? onChunk} , defaultValue:none
     ImageChunkListener? onChunk,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onError} , defaultValue:none
     ImageErrorListener? onError,
   }) : super(
           onImage,
@@ -56,9 +56,9 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
           onChunk: p.get('onChunk').build(),
           onError: p.get('onError').build(),
         );
-    matePut('onImage', onImage);
-    matePut('onChunk', onChunk);
-    matePut('onError', onError);
+    mateDeclare('onImage', onImage);
+    mateDeclare('onChunk', onChunk);
+    mateDeclare('onError', onError);
   }
 }
 
@@ -66,10 +66,10 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
 class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
   /// ImageChunkEvent ImageChunkEvent({required int cumulativeBytesLoaded, required int? expectedTotalBytes})
   ImageChunkEvent$Mate({
-    /// optionalParameters: {required int cumulativeBytesLoaded} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int cumulativeBytesLoaded} , defaultValue:none
     required int cumulativeBytesLoaded,
 
-    /// optionalParameters: {required int? expectedTotalBytes} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int? expectedTotalBytes} , defaultValue:none
     required int? expectedTotalBytes,
   }) : super(
           cumulativeBytesLoaded: cumulativeBytesLoaded,
@@ -79,8 +79,8 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
           cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
           expectedTotalBytes: p.get('expectedTotalBytes').build(),
         );
-    matePut('cumulativeBytesLoaded', cumulativeBytesLoaded);
-    matePut('expectedTotalBytes', expectedTotalBytes);
+    mateDeclare('cumulativeBytesLoaded', cumulativeBytesLoaded);
+    mateDeclare('expectedTotalBytes', expectedTotalBytes);
   }
 }
 
@@ -90,7 +90,7 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
   OneFrameImageStreamCompleter$Mate(
     /// requiredParameters: Future<ImageInfo> image
     Future<ImageInfo> image, {
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , defaultValue:none
     InformationCollector? informationCollector,
   }) : super(
           image,
@@ -100,8 +100,8 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
           p.get('image').value,
           informationCollector: p.get('informationCollector').build(),
         );
-    matePut('image', image);
-    matePut('informationCollector', informationCollector);
+    mateDeclare('image', image);
+    mateDeclare('informationCollector', informationCollector);
   }
 }
 
@@ -109,19 +109,19 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
 class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter with Mate {
   /// MultiFrameImageStreamCompleter MultiFrameImageStreamCompleter({required Future<Codec> codec, required double scale, String? debugLabel, Stream<ImageChunkEvent>? chunkEvents, Iterable<DiagnosticsNode> Function()? informationCollector})
   MultiFrameImageStreamCompleter$Mate({
-    /// optionalParameters: {required Future<Codec> codec} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Future<Codec> codec} , defaultValue:none
     required Future<Codec> codec,
 
-    /// optionalParameters: {required double scale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double scale} , defaultValue:none
     required double scale,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
 
-    /// optionalParameters: {Stream<ImageChunkEvent>? chunkEvents} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Stream<ImageChunkEvent>? chunkEvents} , defaultValue:none
     Stream<ImageChunkEvent>? chunkEvents,
 
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , defaultValue:none
     InformationCollector? informationCollector,
   }) : super(
           codec: codec,
@@ -137,10 +137,10 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           chunkEvents: p.get('chunkEvents').build(),
           informationCollector: p.get('informationCollector').build(),
         );
-    matePut('codec', codec);
-    matePut('scale', scale);
-    matePut('debugLabel', debugLabel);
-    matePut('chunkEvents', chunkEvents);
-    matePut('informationCollector', informationCollector);
+    mateDeclare('codec', codec);
+    mateDeclare('scale', scale);
+    mateDeclare('debugLabel', debugLabel);
+    mateDeclare('chunkEvents', chunkEvents);
+    mateDeclare('informationCollector', informationCollector);
   }
 }

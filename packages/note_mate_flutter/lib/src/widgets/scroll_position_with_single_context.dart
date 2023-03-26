@@ -11,22 +11,22 @@ import 'package:flutter/src/widgets/scroll_position.dart';
 class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleContext with Mate {
   /// ScrollPositionWithSingleContext ScrollPositionWithSingleContext({required ScrollPhysics physics, required ScrollContext context, double? initialPixels = 0.0, bool keepScrollOffset = true, ScrollPosition? oldPosition, String? debugLabel})
   ScrollPositionWithSingleContext$Mate({
-    /// optionalParameters: {required ScrollPhysics physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollPhysics physics} , defaultValue:none
     required ScrollPhysics physics,
 
-    /// optionalParameters: {required ScrollContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollContext context} , defaultValue:none
     required ScrollContext context,
 
-    /// optionalParameters: {double? initialPixels = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? initialPixels,
+    /// optionalParameters: {double? initialPixels = 0.0} , defaultValue:Literal
+    double? initialPixels = 0.0,
 
-    /// optionalParameters: {bool keepScrollOffset = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool keepScrollOffset,
+    /// optionalParameters: {bool keepScrollOffset = true} , defaultValue:Literal
+    bool keepScrollOffset = true,
 
-    /// optionalParameters: {ScrollPosition? oldPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPosition? oldPosition} , defaultValue:none
     ScrollPosition? oldPosition,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
   }) : super(
           physics: physics,
@@ -44,11 +44,11 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
           oldPosition: p.get('oldPosition').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('physics', physics);
-    matePut('context', context);
-    matePut('initialPixels', initialPixels);
-    matePut('keepScrollOffset', keepScrollOffset);
-    matePut('oldPosition', oldPosition);
-    matePut('debugLabel', debugLabel);
+    mateDeclare('physics', physics);
+    mateDeclare('context', context);
+    mateDeclare('initialPixels', initialPixels);
+    mateDeclare('keepScrollOffset', keepScrollOffset);
+    mateDeclare('oldPosition', oldPosition);
+    mateDeclare('debugLabel', debugLabel);
   }
 }

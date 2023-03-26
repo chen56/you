@@ -13,37 +13,37 @@ import 'package:flutter/src/painting/borders.dart';
 class InkSplash$Mate extends InkSplash with Mate {
   /// InkSplash InkSplash({required MaterialInkController controller, required RenderBox referenceBox, required TextDirection textDirection, Offset? position, required Color color, bool containedInkWell = false, Rect Function()? rectCallback, BorderRadius? borderRadius, ShapeBorder? customBorder, double? radius, void Function()? onRemoved})
   InkSplash$Mate({
-    /// optionalParameters: {required MaterialInkController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MaterialInkController controller} , defaultValue:none
     required MaterialInkController controller,
 
-    /// optionalParameters: {required RenderBox referenceBox} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderBox referenceBox} , defaultValue:none
     required RenderBox referenceBox,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {Offset? position} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? position} , defaultValue:none
     Offset? position,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {bool containedInkWell = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool containedInkWell,
+    /// optionalParameters: {bool containedInkWell = false} , defaultValue:Literal
+    bool containedInkWell = false,
 
-    /// optionalParameters: {Rect Function()? rectCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect Function()? rectCallback} , defaultValue:none
     RectCallback? rectCallback,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {ShapeBorder? customBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? customBorder} , defaultValue:none
     ShapeBorder? customBorder,
 
-    /// optionalParameters: {double? radius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? radius} , defaultValue:none
     double? radius,
 
-    /// optionalParameters: {void Function()? onRemoved} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onRemoved} , defaultValue:none
     VoidCallback? onRemoved,
   }) : super(
           controller: controller,
@@ -71,16 +71,16 @@ class InkSplash$Mate extends InkSplash with Mate {
           radius: p.get('radius').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    matePut('controller', controller);
-    matePut('referenceBox', referenceBox);
-    matePut('textDirection', textDirection);
-    matePut('position', position);
-    matePut('color', color);
-    matePut('containedInkWell', containedInkWell);
-    matePut('rectCallback', rectCallback);
-    matePut('borderRadius', borderRadius);
-    matePut('customBorder', customBorder);
-    matePut('radius', radius);
-    matePut('onRemoved', onRemoved);
+    mateDeclare('controller', controller);
+    mateDeclare('referenceBox', referenceBox);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('position', position);
+    mateDeclare('color', color);
+    mateDeclare('containedInkWell', containedInkWell);
+    mateDeclare('rectCallback', rectCallback);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('customBorder', customBorder);
+    mateDeclare('radius', radius);
+    mateDeclare('onRemoved', onRemoved);
   }
 }

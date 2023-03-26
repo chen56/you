@@ -9,16 +9,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class GridTile$Mate extends GridTile with Mate {
   /// GridTile GridTile({Key? key, Widget? header, Widget? footer, required Widget child})
   GridTile$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? header} , defaultValue:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? footer} , defaultValue:none
     Widget? footer,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -32,9 +32,9 @@ class GridTile$Mate extends GridTile with Mate {
           footer: p.get('footer').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('header', header);
-    matePut('footer', footer);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('header', header);
+    mateDeclare('footer', footer);
+    mateDeclare('child', child);
   }
 }

@@ -18,10 +18,10 @@ import 'package:flutter/src/material/popup_menu_theme.dart';
 class PopupMenuDivider$Mate extends PopupMenuDivider with Mate {
   /// PopupMenuDivider PopupMenuDivider({Key? key, double height = _kMenuDividerHeight})
   PopupMenuDivider$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double height = _kMenuDividerHeight} , hasDefaultValue:true, defaultValueCode:_kMenuDividerHeight
+    /// optionalParameters: {double height = _kMenuDividerHeight} , defaultValue:unprocessed
     required double height,
   }) : super(
           key: key,
@@ -31,8 +31,8 @@ class PopupMenuDivider$Mate extends PopupMenuDivider with Mate {
           key: p.get('key').build(),
           height: p.get('height').build(),
         );
-    matePut('key', key);
-    matePut('height', height);
+    mateDeclare('key', key);
+    mateDeclare('height', height);
   }
 }
 
@@ -40,34 +40,34 @@ class PopupMenuDivider$Mate extends PopupMenuDivider with Mate {
 class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with Mate {
   /// PopupMenuItem<T> PopupMenuItem({Key? key, T? value, void Function()? onTap, bool enabled = true, double height = kMinInteractiveDimension, EdgeInsets? padding, TextStyle? textStyle, MaterialStateProperty<TextStyle?>? labelTextStyle, MouseCursor? mouseCursor, required Widget? child})
   PopupMenuItem$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {T? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? value} , defaultValue:none
     T? value,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , defaultValue:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    bool enabled = true,
 
-    /// optionalParameters: {double height = kMinInteractiveDimension} , hasDefaultValue:true, defaultValueCode:kMinInteractiveDimension
+    /// optionalParameters: {double height = kMinInteractiveDimension} , defaultValue:unprocessed
     required double height,
 
-    /// optionalParameters: {EdgeInsets? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsets? padding} , defaultValue:none
     EdgeInsets? padding,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , defaultValue:none
     MaterialStateProperty<TextStyle?>? labelTextStyle,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {required Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? child} , defaultValue:none
     required Widget? child,
   }) : super(
           key: key,
@@ -93,16 +93,16 @@ class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('onTap', onTap);
-    matePut('enabled', enabled);
-    matePut('height', height);
-    matePut('padding', padding);
-    matePut('textStyle', textStyle);
-    matePut('labelTextStyle', labelTextStyle);
-    matePut('mouseCursor', mouseCursor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('onTap', onTap);
+    mateDeclare('enabled', enabled);
+    mateDeclare('height', height);
+    mateDeclare('padding', padding);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('labelTextStyle', labelTextStyle);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('child', child);
   }
 }
 
@@ -110,28 +110,28 @@ class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with Mate {
 class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with Mate {
   /// CheckedPopupMenuItem<T> CheckedPopupMenuItem({Key? key, T? value, bool checked = false, bool enabled = true, EdgeInsets? padding, double height = kMinInteractiveDimension, MouseCursor? mouseCursor, Widget? child})
   CheckedPopupMenuItem$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {T? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? value} , defaultValue:none
     T? value,
 
-    /// optionalParameters: {bool checked = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checked,
+    /// optionalParameters: {bool checked = false} , defaultValue:Literal
+    bool checked = false,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool enabled = true} , defaultValue:is!ConstVariableElement
     required bool enabled,
 
-    /// optionalParameters: {EdgeInsets? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsets? padding} , defaultValue:none
     EdgeInsets? padding,
 
-    /// optionalParameters: {double height = kMinInteractiveDimension} , hasDefaultValue:true, defaultValueCode:kMinInteractiveDimension
+    /// optionalParameters: {double height = kMinInteractiveDimension} , defaultValue:is!ConstVariableElement
     required double height,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -153,14 +153,14 @@ class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('checked', checked);
-    matePut('enabled', enabled);
-    matePut('padding', padding);
-    matePut('height', height);
-    matePut('mouseCursor', mouseCursor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('checked', checked);
+    mateDeclare('enabled', enabled);
+    mateDeclare('padding', padding);
+    mateDeclare('height', height);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('child', child);
   }
 }
 
@@ -168,73 +168,73 @@ class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with Mate {
 class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with Mate {
   /// PopupMenuButton<T> PopupMenuButton({Key? key, required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder, T? initialValue, void Function()? onOpened, void Function(T)? onSelected, void Function()? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset = Offset.zero, bool enabled = true, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior = Clip.none})
   PopupMenuButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder} , defaultValue:none
     required PopupMenuItemBuilder<T> itemBuilder,
 
-    /// optionalParameters: {T? initialValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? initialValue} , defaultValue:none
     T? initialValue,
 
-    /// optionalParameters: {void Function()? onOpened} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onOpened} , defaultValue:none
     VoidCallback? onOpened,
 
-    /// optionalParameters: {void Function(T)? onSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(T)? onSelected} , defaultValue:none
     PopupMenuItemSelected<T>? onSelected,
 
-    /// optionalParameters: {void Function()? onCanceled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onCanceled} , defaultValue:none
     PopupMenuCanceled? onCanceled,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(8.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.all(8.0)
+    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(8.0)} , defaultValue:unprocessed
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {Widget? icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? icon} , defaultValue:none
     Widget? icon,
 
-    /// optionalParameters: {double? iconSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? iconSize} , defaultValue:none
     double? iconSize,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
     required Offset offset,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    bool enabled = true,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {PopupMenuPosition? position} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {PopupMenuPosition? position} , defaultValue:none
     PopupMenuPosition? position,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -286,28 +286,28 @@ class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with Mate {
           position: p.get('position').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('itemBuilder', itemBuilder);
-    matePut('initialValue', initialValue);
-    matePut('onOpened', onOpened);
-    matePut('onSelected', onSelected);
-    matePut('onCanceled', onCanceled);
-    matePut('tooltip', tooltip);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('padding', padding);
-    matePut('child', child);
-    matePut('splashRadius', splashRadius);
-    matePut('icon', icon);
-    matePut('iconSize', iconSize);
-    matePut('offset', offset);
-    matePut('enabled', enabled);
-    matePut('shape', shape);
-    matePut('color', color);
-    matePut('enableFeedback', enableFeedback);
-    matePut('constraints', constraints);
-    matePut('position', position);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('itemBuilder', itemBuilder);
+    mateDeclare('initialValue', initialValue);
+    mateDeclare('onOpened', onOpened);
+    mateDeclare('onSelected', onSelected);
+    mateDeclare('onCanceled', onCanceled);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('padding', padding);
+    mateDeclare('child', child);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('icon', icon);
+    mateDeclare('iconSize', iconSize);
+    mateDeclare('offset', offset);
+    mateDeclare('enabled', enabled);
+    mateDeclare('shape', shape);
+    mateDeclare('color', color);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('constraints', constraints);
+    mateDeclare('position', position);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }

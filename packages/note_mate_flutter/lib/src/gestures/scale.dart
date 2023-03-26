@@ -11,14 +11,14 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
   /// ScaleStartDetails ScaleStartDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, int pointerCount = 0})
   ScaleStartDetails$Mate({
-    /// optionalParameters: {Offset focalPoint = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset focalPoint = Offset.zero} , defaultValue:unprocessed
     required Offset focalPoint,
 
-    /// optionalParameters: {Offset? localFocalPoint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localFocalPoint} , defaultValue:none
     Offset? localFocalPoint,
 
-    /// optionalParameters: {int pointerCount = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointerCount,
+    /// optionalParameters: {int pointerCount = 0} , defaultValue:Literal
+    int pointerCount = 0,
   }) : super(
           focalPoint: focalPoint,
           localFocalPoint: localFocalPoint,
@@ -29,9 +29,9 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
           localFocalPoint: p.get('localFocalPoint').build(),
           pointerCount: p.get('pointerCount').build(),
         );
-    matePut('focalPoint', focalPoint);
-    matePut('localFocalPoint', localFocalPoint);
-    matePut('pointerCount', pointerCount);
+    mateDeclare('focalPoint', focalPoint);
+    mateDeclare('localFocalPoint', localFocalPoint);
+    mateDeclare('pointerCount', pointerCount);
   }
 }
 
@@ -39,28 +39,28 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
 class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
   /// ScaleUpdateDetails ScaleUpdateDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, double scale = 1.0, double horizontalScale = 1.0, double verticalScale = 1.0, double rotation = 0.0, int pointerCount = 0, Offset focalPointDelta = Offset.zero})
   ScaleUpdateDetails$Mate({
-    /// optionalParameters: {Offset focalPoint = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset focalPoint = Offset.zero} , defaultValue:unprocessed
     required Offset focalPoint,
 
-    /// optionalParameters: {Offset? localFocalPoint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localFocalPoint} , defaultValue:none
     Offset? localFocalPoint,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
 
-    /// optionalParameters: {double horizontalScale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double horizontalScale,
+    /// optionalParameters: {double horizontalScale = 1.0} , defaultValue:Literal
+    double horizontalScale = 1.0,
 
-    /// optionalParameters: {double verticalScale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double verticalScale,
+    /// optionalParameters: {double verticalScale = 1.0} , defaultValue:Literal
+    double verticalScale = 1.0,
 
-    /// optionalParameters: {double rotation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double rotation,
+    /// optionalParameters: {double rotation = 0.0} , defaultValue:Literal
+    double rotation = 0.0,
 
-    /// optionalParameters: {int pointerCount = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointerCount,
+    /// optionalParameters: {int pointerCount = 0} , defaultValue:Literal
+    int pointerCount = 0,
 
-    /// optionalParameters: {Offset focalPointDelta = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset focalPointDelta = Offset.zero} , defaultValue:unprocessed
     required Offset focalPointDelta,
   }) : super(
           focalPoint: focalPoint,
@@ -82,14 +82,14 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
           pointerCount: p.get('pointerCount').build(),
           focalPointDelta: p.get('focalPointDelta').build(),
         );
-    matePut('focalPoint', focalPoint);
-    matePut('localFocalPoint', localFocalPoint);
-    matePut('scale', scale);
-    matePut('horizontalScale', horizontalScale);
-    matePut('verticalScale', verticalScale);
-    matePut('rotation', rotation);
-    matePut('pointerCount', pointerCount);
-    matePut('focalPointDelta', focalPointDelta);
+    mateDeclare('focalPoint', focalPoint);
+    mateDeclare('localFocalPoint', localFocalPoint);
+    mateDeclare('scale', scale);
+    mateDeclare('horizontalScale', horizontalScale);
+    mateDeclare('verticalScale', verticalScale);
+    mateDeclare('rotation', rotation);
+    mateDeclare('pointerCount', pointerCount);
+    mateDeclare('focalPointDelta', focalPointDelta);
   }
 }
 
@@ -97,14 +97,14 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
 class ScaleEndDetails$Mate extends ScaleEndDetails with Mate {
   /// ScaleEndDetails ScaleEndDetails({Velocity velocity = Velocity.zero, double scaleVelocity = 0, int pointerCount = 0})
   ScaleEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , hasDefaultValue:true, defaultValueCode:Velocity.zero
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:unprocessed
     required Velocity velocity,
 
-    /// optionalParameters: {double scaleVelocity = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double scaleVelocity,
+    /// optionalParameters: {double scaleVelocity = 0} , defaultValue:Literal
+    double scaleVelocity = 0,
 
-    /// optionalParameters: {int pointerCount = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointerCount,
+    /// optionalParameters: {int pointerCount = 0} , defaultValue:Literal
+    int pointerCount = 0,
   }) : super(
           velocity: velocity,
           scaleVelocity: scaleVelocity,
@@ -115,9 +115,9 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate {
           scaleVelocity: p.get('scaleVelocity').build(),
           pointerCount: p.get('pointerCount').build(),
         );
-    matePut('velocity', velocity);
-    matePut('scaleVelocity', scaleVelocity);
-    matePut('pointerCount', pointerCount);
+    mateDeclare('velocity', velocity);
+    mateDeclare('scaleVelocity', scaleVelocity);
+    mateDeclare('pointerCount', pointerCount);
   }
 }
 
@@ -125,22 +125,22 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate {
 class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate {
   /// ScaleGestureRecognizer ScaleGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter, DragStartBehavior dragStartBehavior = DragStartBehavior.down, bool trackpadScrollCausesScale = false, Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor})
   ScaleGestureRecognizer$Mate({
-    /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? debugOwner} , defaultValue:none
     Object? debugOwner,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
     AllowedButtonsFilter? allowedButtonsFilter,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.down} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.down
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.down} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {bool trackpadScrollCausesScale = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool trackpadScrollCausesScale,
+    /// optionalParameters: {bool trackpadScrollCausesScale = false} , defaultValue:Literal
+    bool trackpadScrollCausesScale = false,
 
-    /// optionalParameters: {Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor} , hasDefaultValue:true, defaultValueCode:kDefaultTrackpadScrollToScaleFactor
+    /// optionalParameters: {Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor} , defaultValue:unprocessed
     required Offset trackpadScrollToScaleFactor,
   }) : super(
           debugOwner: debugOwner,
@@ -158,11 +158,11 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
         );
-    matePut('debugOwner', debugOwner);
-    matePut('supportedDevices', supportedDevices);
-    matePut('allowedButtonsFilter', allowedButtonsFilter);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    matePut('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
+    mateDeclare('debugOwner', debugOwner);
+    mateDeclare('supportedDevices', supportedDevices);
+    mateDeclare('allowedButtonsFilter', allowedButtonsFilter);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('trackpadScrollCausesScale', trackpadScrollCausesScale);
+    mateDeclare('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
   }
 }

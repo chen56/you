@@ -10,11 +10,11 @@ import 'package:flutter/src/rendering/box.dart';
 class ViewConfiguration$Mate extends ViewConfiguration with Mate {
   /// ViewConfiguration ViewConfiguration({Size size = Size.zero, double devicePixelRatio = 1.0})
   ViewConfiguration$Mate({
-    /// optionalParameters: {Size size = Size.zero} , hasDefaultValue:true, defaultValueCode:Size.zero
+    /// optionalParameters: {Size size = Size.zero} , defaultValue:unprocessed
     required Size size,
 
-    /// optionalParameters: {double devicePixelRatio = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double devicePixelRatio,
+    /// optionalParameters: {double devicePixelRatio = 1.0} , defaultValue:Literal
+    double devicePixelRatio = 1.0,
   }) : super(
           size: size,
           devicePixelRatio: devicePixelRatio,
@@ -23,8 +23,8 @@ class ViewConfiguration$Mate extends ViewConfiguration with Mate {
           size: p.get('size').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    matePut('size', size);
-    matePut('devicePixelRatio', devicePixelRatio);
+    mateDeclare('size', size);
+    mateDeclare('devicePixelRatio', devicePixelRatio);
   }
 }
 
@@ -32,13 +32,13 @@ class ViewConfiguration$Mate extends ViewConfiguration with Mate {
 class RenderView$Mate extends RenderView with Mate {
   /// RenderView RenderView({RenderBox? child, required ViewConfiguration configuration, required FlutterView window})
   RenderView$Mate({
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {required ViewConfiguration configuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewConfiguration configuration} , defaultValue:none
     required ViewConfiguration configuration,
 
-    /// optionalParameters: {required FlutterView window} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlutterView window} , defaultValue:none
     required FlutterView window,
   }) : super(
           child: child,
@@ -50,8 +50,8 @@ class RenderView$Mate extends RenderView with Mate {
           configuration: p.get('configuration').build(),
           window: p.get('window').build(),
         );
-    matePut('child', child);
-    matePut('configuration', configuration);
-    matePut('window', window);
+    mateDeclare('child', child);
+    mateDeclare('configuration', configuration);
+    mateDeclare('window', window);
   }
 }

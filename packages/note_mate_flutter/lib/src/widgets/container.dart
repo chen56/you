@@ -17,16 +17,16 @@ import 'package:vector_math/vector_math_64.dart';
 class DecoratedBox$Mate extends DecoratedBox with Mate {
   /// DecoratedBox DecoratedBox({Key? key, required Decoration decoration, DecorationPosition position = DecorationPosition.background, Widget? child})
   DecoratedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Decoration decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Decoration decoration} , defaultValue:none
     required Decoration decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , hasDefaultValue:true, defaultValueCode:DecorationPosition.background
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , defaultValue:unprocessed
     required DecorationPosition position,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -40,10 +40,10 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
           position: p.get('position').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('decoration', decoration);
-    matePut('position', position);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('decoration', decoration);
+    mateDeclare('position', position);
+    mateDeclare('child', child);
   }
 }
 
@@ -51,46 +51,46 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
 class Container$Mate extends Container with Mate {
   /// Container Container({Key? key, AlignmentGeometry? alignment, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsetsGeometry? margin, Matrix4? transform, AlignmentGeometry? transformAlignment, Widget? child, Clip clipBehavior = Clip.none})
   Container$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , defaultValue:none
     Decoration? decoration,
 
-    /// optionalParameters: {Decoration? foregroundDecoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? foregroundDecoration} , defaultValue:none
     Decoration? foregroundDecoration,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {Matrix4? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Matrix4? transform} , defaultValue:none
     Matrix4? transform,
 
-    /// optionalParameters: {AlignmentGeometry? transformAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? transformAlignment} , defaultValue:none
     AlignmentGeometry? transformAlignment,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -124,19 +124,19 @@ class Container$Mate extends Container with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('padding', padding);
-    matePut('color', color);
-    matePut('decoration', decoration);
-    matePut('foregroundDecoration', foregroundDecoration);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('constraints', constraints);
-    matePut('margin', margin);
-    matePut('transform', transform);
-    matePut('transformAlignment', transformAlignment);
-    matePut('child', child);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('alignment', alignment);
+    mateDeclare('padding', padding);
+    mateDeclare('color', color);
+    mateDeclare('decoration', decoration);
+    mateDeclare('foregroundDecoration', foregroundDecoration);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
+    mateDeclare('constraints', constraints);
+    mateDeclare('margin', margin);
+    mateDeclare('transform', transform);
+    mateDeclare('transformAlignment', transformAlignment);
+    mateDeclare('child', child);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }

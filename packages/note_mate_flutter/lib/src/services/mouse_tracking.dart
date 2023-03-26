@@ -9,17 +9,17 @@ import 'dart:core';
 class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate {
   /// MouseTrackerAnnotation MouseTrackerAnnotation({void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, MouseCursor cursor = MouseCursor.defer, bool validForMouseTracker = true})
   MouseTrackerAnnotation$Mate({
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , defaultValue:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , defaultValue:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , hasDefaultValue:true, defaultValueCode:MouseCursor.defer
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:unprocessed
     required MouseCursor cursor,
 
-    /// optionalParameters: {bool validForMouseTracker = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool validForMouseTracker,
+    /// optionalParameters: {bool validForMouseTracker = true} , defaultValue:Literal
+    bool validForMouseTracker = true,
   }) : super(
           onEnter: onEnter,
           onExit: onExit,
@@ -32,9 +32,9 @@ class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate {
           cursor: p.get('cursor').build(),
           validForMouseTracker: p.get('validForMouseTracker').build(),
         );
-    matePut('onEnter', onEnter);
-    matePut('onExit', onExit);
-    matePut('cursor', cursor);
-    matePut('validForMouseTracker', validForMouseTracker);
+    mateDeclare('onEnter', onEnter);
+    mateDeclare('onExit', onExit);
+    mateDeclare('cursor', cursor);
+    mateDeclare('validForMouseTracker', validForMouseTracker);
   }
 }

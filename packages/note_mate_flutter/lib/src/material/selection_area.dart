@@ -15,25 +15,25 @@ import 'package:flutter/src/widgets/framework.dart';
 class SelectionArea$Mate extends SelectionArea with Mate {
   /// SelectionArea SelectionArea({Key? key, FocusNode? focusNode, TextSelectionControls? selectionControls, Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration, void Function(SelectedContent?)? onSelectionChanged, required Widget child})
   SelectionArea$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {TextSelectionControls? selectionControls} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextSelectionControls? selectionControls} , defaultValue:none
     TextSelectionControls? selectionControls,
 
-    /// optionalParameters: {Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder = _defaultContextMenuBuilder} , hasDefaultValue:true, defaultValueCode:_defaultContextMenuBuilder
+    /// optionalParameters: {Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder = _defaultContextMenuBuilder} , defaultValue:unprocessed
     SelectableRegionContextMenuBuilder? contextMenuBuilder,
 
-    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , defaultValue:none
     TextMagnifierConfiguration? magnifierConfiguration,
 
-    /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , defaultValue:none
     ValueChanged<SelectedContent?>? onSelectionChanged,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -53,12 +53,12 @@ class SelectionArea$Mate extends SelectionArea with Mate {
           onSelectionChanged: p.get('onSelectionChanged').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('focusNode', focusNode);
-    matePut('selectionControls', selectionControls);
-    matePut('contextMenuBuilder', contextMenuBuilder);
-    matePut('magnifierConfiguration', magnifierConfiguration);
-    matePut('onSelectionChanged', onSelectionChanged);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('selectionControls', selectionControls);
+    mateDeclare('contextMenuBuilder', contextMenuBuilder);
+    mateDeclare('magnifierConfiguration', magnifierConfiguration);
+    mateDeclare('onSelectionChanged', onSelectionChanged);
+    mateDeclare('child', child);
   }
 }

@@ -14,11 +14,11 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate {
   /// IntrinsicColumnWidth IntrinsicColumnWidth({double? flex})
   IntrinsicColumnWidth$Mate(
       {
-      /// optionalParameters: {double? flex} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {double? flex} , defaultValue:none
       double? flex})
       : super(flex: flex) {
     mateBuilder = (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build());
-    matePut('flex', flex);
+    mateDeclare('flex', flex);
   }
 }
 
@@ -31,7 +31,7 @@ class FixedColumnWidth$Mate extends FixedColumnWidth with Mate {
       double value)
       : super(value) {
     mateBuilder = (p) => FixedColumnWidth$Mate(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -44,7 +44,7 @@ class FractionColumnWidth$Mate extends FractionColumnWidth with Mate {
       double value)
       : super(value) {
     mateBuilder = (p) => FractionColumnWidth$Mate(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -57,7 +57,7 @@ class FlexColumnWidth$Mate extends FlexColumnWidth with Mate {
       double value)
       : super(value) {
     mateBuilder = (p) => FlexColumnWidth$Mate(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -78,8 +78,8 @@ class MaxColumnWidth$Mate extends MaxColumnWidth with Mate {
           p.get('a').value,
           p.get('b').value,
         );
-    matePut('a', a);
-    matePut('b', b);
+    mateDeclare('a', a);
+    mateDeclare('b', b);
   }
 }
 
@@ -100,8 +100,8 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
           p.get('a').value,
           p.get('b').value,
         );
-    matePut('a', a);
-    matePut('b', b);
+    mateDeclare('a', a);
+    mateDeclare('b', b);
   }
 }
 
@@ -109,37 +109,37 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
 class RenderTable$Mate extends RenderTable with Mate {
   /// RenderTable RenderTable({int? columns, int? rows, Map<int, TableColumnWidth>? columnWidths, TableColumnWidth defaultColumnWidth = const FlexColumnWidth(), required TextDirection textDirection, TableBorder? border, List<Decoration?>? rowDecorations, ImageConfiguration configuration = ImageConfiguration.empty, TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top, TextBaseline? textBaseline, List<List<RenderBox>>? children})
   RenderTable$Mate({
-    /// optionalParameters: {int? columns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? columns} , defaultValue:none
     int? columns,
 
-    /// optionalParameters: {int? rows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? rows} , defaultValue:none
     int? rows,
 
-    /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , defaultValue:none
     Map<int, TableColumnWidth>? columnWidths,
 
-    /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , hasDefaultValue:true, defaultValueCode:const FlexColumnWidth()
+    /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , defaultValue:unprocessed
     required TableColumnWidth defaultColumnWidth,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {TableBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TableBorder? border} , defaultValue:none
     TableBorder? border,
 
-    /// optionalParameters: {List<Decoration?>? rowDecorations} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Decoration?>? rowDecorations} , defaultValue:none
     List<Decoration?>? rowDecorations,
 
-    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , hasDefaultValue:true, defaultValueCode:ImageConfiguration.empty
+    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , defaultValue:unprocessed
     required ImageConfiguration configuration,
 
-    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , hasDefaultValue:true, defaultValueCode:TableCellVerticalAlignment.top
+    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , defaultValue:unprocessed
     required TableCellVerticalAlignment defaultVerticalAlignment,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {List<List<RenderBox>>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<List<RenderBox>>? children} , defaultValue:none
     List<List<RenderBox>>? children,
   }) : super(
           columns: columns,
@@ -167,16 +167,16 @@ class RenderTable$Mate extends RenderTable with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    matePut('columns', columns);
-    matePut('rows', rows);
-    matePut('columnWidths', columnWidths);
-    matePut('defaultColumnWidth', defaultColumnWidth);
-    matePut('textDirection', textDirection);
-    matePut('border', border);
-    matePut('rowDecorations', rowDecorations);
-    matePut('configuration', configuration);
-    matePut('defaultVerticalAlignment', defaultVerticalAlignment);
-    matePut('textBaseline', textBaseline);
-    matePut('children', children);
+    mateDeclare('columns', columns);
+    mateDeclare('rows', rows);
+    mateDeclare('columnWidths', columnWidths);
+    mateDeclare('defaultColumnWidth', defaultColumnWidth);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('border', border);
+    mateDeclare('rowDecorations', rowDecorations);
+    mateDeclare('configuration', configuration);
+    mateDeclare('defaultVerticalAlignment', defaultVerticalAlignment);
+    mateDeclare('textBaseline', textBaseline);
+    mateDeclare('children', children);
   }
 }

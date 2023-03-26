@@ -13,41 +13,41 @@ import 'package:flutter/src/painting/box_decoration.dart';
 class CupertinoListSection$Mate extends CupertinoListSection with Mate {
   /// CupertinoListSection CupertinoListSection({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kDefaultRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none, double dividerMargin = _kBaseDividerMargin, double? additionalDividerMargin, double? topMargin = _kMarginTop, bool hasLeading = true})
   CupertinoListSection$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {List<Widget>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? children} , defaultValue:none
     List<Widget>? children,
 
-    /// optionalParameters: {Widget? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? header} , defaultValue:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? footer} , defaultValue:none
     Widget? footer,
 
-    /// optionalParameters: {EdgeInsetsGeometry margin = _kDefaultRowsMargin} , hasDefaultValue:true, defaultValueCode:_kDefaultRowsMargin
+    /// optionalParameters: {EdgeInsetsGeometry margin = _kDefaultRowsMargin} , defaultValue:unprocessed
     required EdgeInsetsGeometry margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , hasDefaultValue:true, defaultValueCode:CupertinoColors.systemGroupedBackground
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:unprocessed
     required Color backgroundColor,
 
-    /// optionalParameters: {BoxDecoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {double dividerMargin = _kBaseDividerMargin} , hasDefaultValue:true, defaultValueCode:_kBaseDividerMargin
+    /// optionalParameters: {double dividerMargin = _kBaseDividerMargin} , defaultValue:unprocessed
     required double dividerMargin,
 
-    /// optionalParameters: {double? additionalDividerMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? additionalDividerMargin} , defaultValue:none
     double? additionalDividerMargin,
 
-    /// optionalParameters: {double? topMargin = _kMarginTop} , hasDefaultValue:true, defaultValueCode:_kMarginTop
+    /// optionalParameters: {double? topMargin = _kMarginTop} , defaultValue:unprocessed
     double? topMargin,
 
-    /// optionalParameters: {bool hasLeading = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool hasLeading,
+    /// optionalParameters: {bool hasLeading = true} , defaultValue:Literal
+    bool hasLeading = true,
   }) : super(
           key: key,
           children: children,
@@ -76,57 +76,57 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
           topMargin: p.get('topMargin').build(),
           hasLeading: p.get('hasLeading').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('header', header);
-    matePut('footer', footer);
-    matePut('margin', margin);
-    matePut('backgroundColor', backgroundColor);
-    matePut('decoration', decoration);
-    matePut('clipBehavior', clipBehavior);
-    matePut('dividerMargin', dividerMargin);
-    matePut('additionalDividerMargin', additionalDividerMargin);
-    matePut('topMargin', topMargin);
-    matePut('hasLeading', hasLeading);
+    mateDeclare('key', key);
+    mateDeclare('children', children);
+    mateDeclare('header', header);
+    mateDeclare('footer', footer);
+    mateDeclare('margin', margin);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('decoration', decoration);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('dividerMargin', dividerMargin);
+    mateDeclare('additionalDividerMargin', additionalDividerMargin);
+    mateDeclare('topMargin', topMargin);
+    mateDeclare('hasLeading', hasLeading);
   }
 
   /// CupertinoListSection CupertinoListSection.insetGrouped({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry? margin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.hardEdge, double dividerMargin = _kInsetDividerMargin, double? additionalDividerMargin, double? topMargin, bool hasLeading = true})
   CupertinoListSection$Mate.insetGrouped({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {List<Widget>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? children} , defaultValue:none
     List<Widget>? children,
 
-    /// optionalParameters: {Widget? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? header} , defaultValue:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? footer} , defaultValue:none
     Widget? footer,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , hasDefaultValue:true, defaultValueCode:CupertinoColors.systemGroupedBackground
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:unprocessed
     required Color backgroundColor,
 
-    /// optionalParameters: {BoxDecoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {double dividerMargin = _kInsetDividerMargin} , hasDefaultValue:true, defaultValueCode:_kInsetDividerMargin
+    /// optionalParameters: {double dividerMargin = _kInsetDividerMargin} , defaultValue:unprocessed
     required double dividerMargin,
 
-    /// optionalParameters: {double? additionalDividerMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? additionalDividerMargin} , defaultValue:none
     double? additionalDividerMargin,
 
-    /// optionalParameters: {double? topMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? topMargin} , defaultValue:none
     double? topMargin,
 
-    /// optionalParameters: {bool hasLeading = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool hasLeading,
+    /// optionalParameters: {bool hasLeading = true} , defaultValue:Literal
+    bool hasLeading = true,
   }) : super.insetGrouped(
           key: key,
           children: children,
@@ -155,17 +155,17 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
           topMargin: p.get('topMargin').build(),
           hasLeading: p.get('hasLeading').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('header', header);
-    matePut('footer', footer);
-    matePut('margin', margin);
-    matePut('backgroundColor', backgroundColor);
-    matePut('decoration', decoration);
-    matePut('clipBehavior', clipBehavior);
-    matePut('dividerMargin', dividerMargin);
-    matePut('additionalDividerMargin', additionalDividerMargin);
-    matePut('topMargin', topMargin);
-    matePut('hasLeading', hasLeading);
+    mateDeclare('key', key);
+    mateDeclare('children', children);
+    mateDeclare('header', header);
+    mateDeclare('footer', footer);
+    mateDeclare('margin', margin);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('decoration', decoration);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('dividerMargin', dividerMargin);
+    mateDeclare('additionalDividerMargin', additionalDividerMargin);
+    mateDeclare('topMargin', topMargin);
+    mateDeclare('hasLeading', hasLeading);
   }
 }

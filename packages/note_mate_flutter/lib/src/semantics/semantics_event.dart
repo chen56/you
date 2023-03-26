@@ -14,7 +14,7 @@ class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate {
 
     /// requiredParameters: TextDirection textDirection
     TextDirection textDirection, {
-    /// optionalParameters: {Assertiveness assertiveness = Assertiveness.polite} , hasDefaultValue:true, defaultValueCode:Assertiveness.polite
+    /// optionalParameters: {Assertiveness assertiveness = Assertiveness.polite} , defaultValue:unprocessed
     required Assertiveness assertiveness,
   }) : super(
           message,
@@ -26,9 +26,9 @@ class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate {
           p.get('textDirection').value,
           assertiveness: p.get('assertiveness').build(),
         );
-    matePut('message', message);
-    matePut('textDirection', textDirection);
-    matePut('assertiveness', assertiveness);
+    mateDeclare('message', message);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('assertiveness', assertiveness);
   }
 }
 
@@ -41,6 +41,6 @@ class TooltipSemanticsEvent$Mate extends TooltipSemanticsEvent with Mate {
       String message)
       : super(message) {
     mateBuilder = (p) => TooltipSemanticsEvent$Mate(p.get('message').value);
-    matePut('message', message);
+    mateDeclare('message', message);
   }
 }

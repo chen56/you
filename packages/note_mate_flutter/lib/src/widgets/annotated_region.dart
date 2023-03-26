@@ -10,17 +10,17 @@ import 'package:flutter/src/widgets/framework.dart';
 class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Mate {
   /// AnnotatedRegion<T> AnnotatedRegion({Key? key, required Widget child, required T value, bool sized = true})
   AnnotatedRegion$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , defaultValue:none
     required T value,
 
-    /// optionalParameters: {bool sized = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool sized,
+    /// optionalParameters: {bool sized = true} , defaultValue:Literal
+    bool sized = true,
   }) : super(
           key: key,
           child: child,
@@ -33,9 +33,9 @@ class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Mat
           value: p.get('value').build(),
           sized: p.get('sized').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('value', value);
-    matePut('sized', sized);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('value', value);
+    mateDeclare('sized', sized);
   }
 }

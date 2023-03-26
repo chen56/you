@@ -9,10 +9,10 @@ class DeviceGestureSettings$Mate extends DeviceGestureSettings with Mate {
   /// DeviceGestureSettings DeviceGestureSettings({double? touchSlop})
   DeviceGestureSettings$Mate(
       {
-      /// optionalParameters: {double? touchSlop} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {double? touchSlop} , defaultValue:none
       double? touchSlop})
       : super(touchSlop: touchSlop) {
     mateBuilder = (p) => DeviceGestureSettings$Mate(touchSlop: p.get('touchSlop').build());
-    matePut('touchSlop', touchSlop);
+    mateDeclare('touchSlop', touchSlop);
   }
 }

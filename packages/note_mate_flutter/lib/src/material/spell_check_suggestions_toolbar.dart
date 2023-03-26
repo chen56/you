@@ -11,13 +11,13 @@ import 'package:flutter/src/widgets/context_menu_button_item.dart';
 class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar with Mate {
   /// SpellCheckSuggestionsToolbar SpellCheckSuggestionsToolbar({Key? key, required Offset anchor, required List<ContextMenuButtonItem> buttonItems})
   SpellCheckSuggestionsToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Offset anchor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset anchor} , defaultValue:none
     required Offset anchor,
 
-    /// optionalParameters: {required List<ContextMenuButtonItem> buttonItems} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<ContextMenuButtonItem> buttonItems} , defaultValue:none
     required List<ContextMenuButtonItem> buttonItems,
   }) : super(
           key: key,
@@ -29,8 +29,8 @@ class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar wit
           anchor: p.get('anchor').build(),
           buttonItems: p.get('buttonItems').build(),
         );
-    matePut('key', key);
-    matePut('anchor', anchor);
-    matePut('buttonItems', buttonItems);
+    mateDeclare('key', key);
+    mateDeclare('anchor', anchor);
+    mateDeclare('buttonItems', buttonItems);
   }
 }

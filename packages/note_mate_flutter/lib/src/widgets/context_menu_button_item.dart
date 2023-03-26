@@ -9,13 +9,13 @@ import 'dart:core';
 class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate {
   /// ContextMenuButtonItem ContextMenuButtonItem({required void Function() onPressed, ContextMenuButtonType type = ContextMenuButtonType.custom, String? label})
   ContextMenuButtonItem$Mate({
-    /// optionalParameters: {required void Function() onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , hasDefaultValue:true, defaultValueCode:ContextMenuButtonType.custom
+    /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , defaultValue:unprocessed
     required ContextMenuButtonType type,
 
-    /// optionalParameters: {String? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? label} , defaultValue:none
     String? label,
   }) : super(
           onPressed: onPressed,
@@ -27,8 +27,8 @@ class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate {
           type: p.get('type').build(),
           label: p.get('label').build(),
         );
-    matePut('onPressed', onPressed);
-    matePut('type', type);
-    matePut('label', label);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('type', type);
+    mateDeclare('label', label);
   }
 }

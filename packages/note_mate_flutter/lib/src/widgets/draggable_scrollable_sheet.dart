@@ -10,34 +10,34 @@ import 'package:flutter/src/widgets/framework.dart';
 class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
   /// DraggableScrollableSheet DraggableScrollableSheet({Key? key, double initialChildSize = 0.5, double minChildSize = 0.25, double maxChildSize = 1.0, bool expand = true, bool snap = false, List<double>? snapSizes, Duration? snapAnimationDuration, DraggableScrollableController? controller, required Widget Function(BuildContext, ScrollController) builder})
   DraggableScrollableSheet$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double initialChildSize = 0.5} , hasDefaultValue:true, defaultValueCode:0.5
-    required double initialChildSize,
+    /// optionalParameters: {double initialChildSize = 0.5} , defaultValue:Literal
+    double initialChildSize = 0.5,
 
-    /// optionalParameters: {double minChildSize = 0.25} , hasDefaultValue:true, defaultValueCode:0.25
-    required double minChildSize,
+    /// optionalParameters: {double minChildSize = 0.25} , defaultValue:Literal
+    double minChildSize = 0.25,
 
-    /// optionalParameters: {double maxChildSize = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double maxChildSize,
+    /// optionalParameters: {double maxChildSize = 1.0} , defaultValue:Literal
+    double maxChildSize = 1.0,
 
-    /// optionalParameters: {bool expand = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool expand,
+    /// optionalParameters: {bool expand = true} , defaultValue:Literal
+    bool expand = true,
 
-    /// optionalParameters: {bool snap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool snap,
+    /// optionalParameters: {bool snap = false} , defaultValue:Literal
+    bool snap = false,
 
-    /// optionalParameters: {List<double>? snapSizes} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<double>? snapSizes} , defaultValue:none
     List<double>? snapSizes,
 
-    /// optionalParameters: {Duration? snapAnimationDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? snapAnimationDuration} , defaultValue:none
     Duration? snapAnimationDuration,
 
-    /// optionalParameters: {DraggableScrollableController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DraggableScrollableController? controller} , defaultValue:none
     DraggableScrollableController? controller,
 
-    /// optionalParameters: {required Widget Function(BuildContext, ScrollController) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, ScrollController) builder} , defaultValue:none
     required ScrollableWidgetBuilder builder,
   }) : super(
           key: key,
@@ -63,16 +63,16 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
           controller: p.get('controller').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('initialChildSize', initialChildSize);
-    matePut('minChildSize', minChildSize);
-    matePut('maxChildSize', maxChildSize);
-    matePut('expand', expand);
-    matePut('snap', snap);
-    matePut('snapSizes', snapSizes);
-    matePut('snapAnimationDuration', snapAnimationDuration);
-    matePut('controller', controller);
-    matePut('builder', builder);
+    mateDeclare('key', key);
+    mateDeclare('initialChildSize', initialChildSize);
+    mateDeclare('minChildSize', minChildSize);
+    mateDeclare('maxChildSize', maxChildSize);
+    mateDeclare('expand', expand);
+    mateDeclare('snap', snap);
+    mateDeclare('snapSizes', snapSizes);
+    mateDeclare('snapAnimationDuration', snapAnimationDuration);
+    mateDeclare('controller', controller);
+    mateDeclare('builder', builder);
   }
 }
 
@@ -80,19 +80,19 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
 class DraggableScrollableNotification$Mate extends DraggableScrollableNotification with Mate {
   /// DraggableScrollableNotification DraggableScrollableNotification({required double extent, required double minExtent, required double maxExtent, required double initialExtent, required BuildContext context})
   DraggableScrollableNotification$Mate({
-    /// optionalParameters: {required double extent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double extent} , defaultValue:none
     required double extent,
 
-    /// optionalParameters: {required double minExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double minExtent} , defaultValue:none
     required double minExtent,
 
-    /// optionalParameters: {required double maxExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double maxExtent} , defaultValue:none
     required double maxExtent,
 
-    /// optionalParameters: {required double initialExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double initialExtent} , defaultValue:none
     required double initialExtent,
 
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , defaultValue:none
     required BuildContext context,
   }) : super(
           extent: extent,
@@ -108,11 +108,11 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
           initialExtent: p.get('initialExtent').build(),
           context: p.get('context').build(),
         );
-    matePut('extent', extent);
-    matePut('minExtent', minExtent);
-    matePut('maxExtent', maxExtent);
-    matePut('initialExtent', initialExtent);
-    matePut('context', context);
+    mateDeclare('extent', extent);
+    mateDeclare('minExtent', minExtent);
+    mateDeclare('maxExtent', maxExtent);
+    mateDeclare('initialExtent', initialExtent);
+    mateDeclare('context', context);
   }
 }
 
@@ -120,10 +120,10 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
 class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with Mate {
   /// DraggableScrollableActuator DraggableScrollableActuator({Key? key, required Widget child})
   DraggableScrollableActuator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -133,7 +133,7 @@ class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with 
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }

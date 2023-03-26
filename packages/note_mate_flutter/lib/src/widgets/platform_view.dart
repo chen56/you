@@ -15,31 +15,31 @@ import 'package:flutter/src/services/message_codec.dart';
 class AndroidView$Mate extends AndroidView with Mate {
   /// AndroidView AndroidView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque, TextDirection? layoutDirection, Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers, dynamic creationParams, MessageCodec<dynamic>? creationParamsCodec, Clip clipBehavior = Clip.hardEdge})
   AndroidView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required String viewType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String viewType} , defaultValue:none
     required String viewType,
 
-    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , defaultValue:none
     PlatformViewCreatedCallback? onPlatformViewCreated,
 
-    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , hasDefaultValue:true, defaultValueCode:PlatformViewHitTestBehavior.opaque
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , defaultValue:unprocessed
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {TextDirection? layoutDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? layoutDirection} , defaultValue:none
     TextDirection? layoutDirection,
 
-    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , defaultValue:none
     Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers,
 
-    /// optionalParameters: {dynamic creationParams} , hasDefaultValue:false, defaultValueCode:null
-    required dynamic creationParams,
+    /// optionalParameters: {dynamic creationParams} , defaultValue:none
+    dynamic creationParams,
 
-    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , defaultValue:none
     MessageCodec<dynamic>? creationParamsCodec,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -63,15 +63,15 @@ class AndroidView$Mate extends AndroidView with Mate {
           creationParamsCodec: p.get('creationParamsCodec').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('viewType', viewType);
-    matePut('onPlatformViewCreated', onPlatformViewCreated);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('layoutDirection', layoutDirection);
-    matePut('gestureRecognizers', gestureRecognizers);
-    matePut('creationParams', creationParams);
-    matePut('creationParamsCodec', creationParamsCodec);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('viewType', viewType);
+    mateDeclare('onPlatformViewCreated', onPlatformViewCreated);
+    mateDeclare('hitTestBehavior', hitTestBehavior);
+    mateDeclare('layoutDirection', layoutDirection);
+    mateDeclare('gestureRecognizers', gestureRecognizers);
+    mateDeclare('creationParams', creationParams);
+    mateDeclare('creationParamsCodec', creationParamsCodec);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -79,28 +79,28 @@ class AndroidView$Mate extends AndroidView with Mate {
 class UiKitView$Mate extends UiKitView with Mate {
   /// UiKitView UiKitView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque, TextDirection? layoutDirection, dynamic creationParams, MessageCodec<dynamic>? creationParamsCodec, Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers})
   UiKitView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required String viewType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String viewType} , defaultValue:none
     required String viewType,
 
-    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , defaultValue:none
     PlatformViewCreatedCallback? onPlatformViewCreated,
 
-    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , hasDefaultValue:true, defaultValueCode:PlatformViewHitTestBehavior.opaque
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , defaultValue:unprocessed
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {TextDirection? layoutDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? layoutDirection} , defaultValue:none
     TextDirection? layoutDirection,
 
-    /// optionalParameters: {dynamic creationParams} , hasDefaultValue:false, defaultValueCode:null
-    required dynamic creationParams,
+    /// optionalParameters: {dynamic creationParams} , defaultValue:none
+    dynamic creationParams,
 
-    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , defaultValue:none
     MessageCodec<dynamic>? creationParamsCodec,
 
-    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , defaultValue:none
     Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers,
   }) : super(
           key: key,
@@ -122,14 +122,14 @@ class UiKitView$Mate extends UiKitView with Mate {
           creationParamsCodec: p.get('creationParamsCodec').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    matePut('key', key);
-    matePut('viewType', viewType);
-    matePut('onPlatformViewCreated', onPlatformViewCreated);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('layoutDirection', layoutDirection);
-    matePut('creationParams', creationParams);
-    matePut('creationParamsCodec', creationParamsCodec);
-    matePut('gestureRecognizers', gestureRecognizers);
+    mateDeclare('key', key);
+    mateDeclare('viewType', viewType);
+    mateDeclare('onPlatformViewCreated', onPlatformViewCreated);
+    mateDeclare('hitTestBehavior', hitTestBehavior);
+    mateDeclare('layoutDirection', layoutDirection);
+    mateDeclare('creationParams', creationParams);
+    mateDeclare('creationParamsCodec', creationParamsCodec);
+    mateDeclare('gestureRecognizers', gestureRecognizers);
   }
 }
 
@@ -137,13 +137,13 @@ class UiKitView$Mate extends UiKitView with Mate {
 class HtmlElementView$Mate extends HtmlElementView with Mate {
   /// HtmlElementView HtmlElementView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated})
   HtmlElementView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required String viewType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String viewType} , defaultValue:none
     required String viewType,
 
-    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , defaultValue:none
     PlatformViewCreatedCallback? onPlatformViewCreated,
   }) : super(
           key: key,
@@ -155,9 +155,9 @@ class HtmlElementView$Mate extends HtmlElementView with Mate {
           viewType: p.get('viewType').build(),
           onPlatformViewCreated: p.get('onPlatformViewCreated').build(),
         );
-    matePut('key', key);
-    matePut('viewType', viewType);
-    matePut('onPlatformViewCreated', onPlatformViewCreated);
+    mateDeclare('key', key);
+    mateDeclare('viewType', viewType);
+    mateDeclare('onPlatformViewCreated', onPlatformViewCreated);
   }
 }
 
@@ -165,16 +165,16 @@ class HtmlElementView$Mate extends HtmlElementView with Mate {
 class PlatformViewLink$Mate extends PlatformViewLink with Mate {
   /// PlatformViewLink PlatformViewLink({Key? key, required Widget Function(BuildContext, PlatformViewController) surfaceFactory, required PlatformViewController Function(PlatformViewCreationParams) onCreatePlatformView, required String viewType})
   PlatformViewLink$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, PlatformViewController) surfaceFactory} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, PlatformViewController) surfaceFactory} , defaultValue:none
     required PlatformViewSurfaceFactory surfaceFactory,
 
-    /// optionalParameters: {required PlatformViewController Function(PlatformViewCreationParams) onCreatePlatformView} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewController Function(PlatformViewCreationParams) onCreatePlatformView} , defaultValue:none
     required CreatePlatformViewCallback onCreatePlatformView,
 
-    /// optionalParameters: {required String viewType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String viewType} , defaultValue:none
     required String viewType,
   }) : super(
           key: key,
@@ -188,10 +188,10 @@ class PlatformViewLink$Mate extends PlatformViewLink with Mate {
           onCreatePlatformView: p.get('onCreatePlatformView').build(),
           viewType: p.get('viewType').build(),
         );
-    matePut('key', key);
-    matePut('surfaceFactory', surfaceFactory);
-    matePut('onCreatePlatformView', onCreatePlatformView);
-    matePut('viewType', viewType);
+    mateDeclare('key', key);
+    mateDeclare('surfaceFactory', surfaceFactory);
+    mateDeclare('onCreatePlatformView', onCreatePlatformView);
+    mateDeclare('viewType', viewType);
   }
 }
 
@@ -199,16 +199,16 @@ class PlatformViewLink$Mate extends PlatformViewLink with Mate {
 class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
   /// PlatformViewSurface PlatformViewSurface({Key? key, required PlatformViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   PlatformViewSurface$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required PlatformViewController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewController controller} , defaultValue:none
     required PlatformViewController controller,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , defaultValue:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , defaultValue:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
   }) : super(
           key: key,
@@ -222,10 +222,10 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('gestureRecognizers', gestureRecognizers);
+    mateDeclare('key', key);
+    mateDeclare('controller', controller);
+    mateDeclare('hitTestBehavior', hitTestBehavior);
+    mateDeclare('gestureRecognizers', gestureRecognizers);
   }
 }
 
@@ -233,16 +233,16 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
 class AndroidViewSurface$Mate extends AndroidViewSurface with Mate {
   /// AndroidViewSurface AndroidViewSurface({Key? key, required AndroidViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   AndroidViewSurface$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required AndroidViewController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AndroidViewController controller} , defaultValue:none
     required AndroidViewController controller,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , defaultValue:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , defaultValue:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
   }) : super(
           key: key,
@@ -256,9 +256,9 @@ class AndroidViewSurface$Mate extends AndroidViewSurface with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('gestureRecognizers', gestureRecognizers);
+    mateDeclare('key', key);
+    mateDeclare('controller', controller);
+    mateDeclare('hitTestBehavior', hitTestBehavior);
+    mateDeclare('gestureRecognizers', gestureRecognizers);
   }
 }

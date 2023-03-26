@@ -16,46 +16,46 @@ import 'package:flutter/src/widgets/framework.dart';
 class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData with Mate {
   /// BottomNavigationBarThemeData BottomNavigationBarThemeData({Color? backgroundColor, double? elevation, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, Color? selectedItemColor, Color? unselectedItemColor, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, BottomNavigationBarType? type, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, MaterialStateProperty<MouseCursor?>? mouseCursor})
   BottomNavigationBarThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {IconThemeData? selectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? selectedIconTheme} , defaultValue:none
     IconThemeData? selectedIconTheme,
 
-    /// optionalParameters: {IconThemeData? unselectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? unselectedIconTheme} , defaultValue:none
     IconThemeData? unselectedIconTheme,
 
-    /// optionalParameters: {Color? selectedItemColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedItemColor} , defaultValue:none
     Color? selectedItemColor,
 
-    /// optionalParameters: {Color? unselectedItemColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? unselectedItemColor} , defaultValue:none
     Color? unselectedItemColor,
 
-    /// optionalParameters: {TextStyle? selectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? selectedLabelStyle} , defaultValue:none
     TextStyle? selectedLabelStyle,
 
-    /// optionalParameters: {TextStyle? unselectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? unselectedLabelStyle} , defaultValue:none
     TextStyle? unselectedLabelStyle,
 
-    /// optionalParameters: {bool? showSelectedLabels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showSelectedLabels} , defaultValue:none
     bool? showSelectedLabels,
 
-    /// optionalParameters: {bool? showUnselectedLabels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showUnselectedLabels} , defaultValue:none
     bool? showUnselectedLabels,
 
-    /// optionalParameters: {BottomNavigationBarType? type} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BottomNavigationBarType? type} , defaultValue:none
     BottomNavigationBarType? type,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {BottomNavigationBarLandscapeLayout? landscapeLayout} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BottomNavigationBarLandscapeLayout? landscapeLayout} , defaultValue:none
     BottomNavigationBarLandscapeLayout? landscapeLayout,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
   }) : super(
           backgroundColor: backgroundColor,
@@ -89,20 +89,20 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData wit
           landscapeLayout: p.get('landscapeLayout').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('selectedIconTheme', selectedIconTheme);
-    matePut('unselectedIconTheme', unselectedIconTheme);
-    matePut('selectedItemColor', selectedItemColor);
-    matePut('unselectedItemColor', unselectedItemColor);
-    matePut('selectedLabelStyle', selectedLabelStyle);
-    matePut('unselectedLabelStyle', unselectedLabelStyle);
-    matePut('showSelectedLabels', showSelectedLabels);
-    matePut('showUnselectedLabels', showUnselectedLabels);
-    matePut('type', type);
-    matePut('enableFeedback', enableFeedback);
-    matePut('landscapeLayout', landscapeLayout);
-    matePut('mouseCursor', mouseCursor);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('selectedIconTheme', selectedIconTheme);
+    mateDeclare('unselectedIconTheme', unselectedIconTheme);
+    mateDeclare('selectedItemColor', selectedItemColor);
+    mateDeclare('unselectedItemColor', unselectedItemColor);
+    mateDeclare('selectedLabelStyle', selectedLabelStyle);
+    mateDeclare('unselectedLabelStyle', unselectedLabelStyle);
+    mateDeclare('showSelectedLabels', showSelectedLabels);
+    mateDeclare('showUnselectedLabels', showUnselectedLabels);
+    mateDeclare('type', type);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('landscapeLayout', landscapeLayout);
+    mateDeclare('mouseCursor', mouseCursor);
   }
 }
 
@@ -110,13 +110,13 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData wit
 class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Mate {
   /// BottomNavigationBarTheme BottomNavigationBarTheme({Key? key, required BottomNavigationBarThemeData data, required Widget child})
   BottomNavigationBarTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required BottomNavigationBarThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BottomNavigationBarThemeData data} , defaultValue:none
     required BottomNavigationBarThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -128,8 +128,8 @@ class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

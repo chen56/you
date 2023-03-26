@@ -12,28 +12,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class DrawerThemeData$Mate extends DrawerThemeData with Mate {
   /// DrawerThemeData DrawerThemeData({Color? backgroundColor, Color? scrimColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, ShapeBorder? endShape, double? width})
   DrawerThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? scrimColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scrimColor} , defaultValue:none
     Color? scrimColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ShapeBorder? endShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? endShape} , defaultValue:none
     ShapeBorder? endShape,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
   }) : super(
           backgroundColor: backgroundColor,
@@ -55,14 +55,14 @@ class DrawerThemeData$Mate extends DrawerThemeData with Mate {
           endShape: p.get('endShape').build(),
           width: p.get('width').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('scrimColor', scrimColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('shape', shape);
-    matePut('endShape', endShape);
-    matePut('width', width);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('scrimColor', scrimColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('shape', shape);
+    mateDeclare('endShape', endShape);
+    mateDeclare('width', width);
   }
 }
 
@@ -70,13 +70,13 @@ class DrawerThemeData$Mate extends DrawerThemeData with Mate {
 class DrawerTheme$Mate extends DrawerTheme with Mate {
   /// DrawerTheme DrawerTheme({Key? key, required DrawerThemeData data, required Widget child})
   DrawerTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required DrawerThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DrawerThemeData data} , defaultValue:none
     required DrawerThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -88,8 +88,8 @@ class DrawerTheme$Mate extends DrawerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

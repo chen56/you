@@ -14,22 +14,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class RadioThemeData$Mate extends RadioThemeData with Mate {
   /// RadioThemeData RadioThemeData({MaterialStateProperty<MouseCursor?>? mouseCursor, MaterialStateProperty<Color?>? fillColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity})
   RadioThemeData$Mate({
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , defaultValue:none
     MaterialStateProperty<Color?>? fillColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
   }) : super(
           mouseCursor: mouseCursor,
@@ -47,12 +47,12 @@ class RadioThemeData$Mate extends RadioThemeData with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           visualDensity: p.get('visualDensity').build(),
         );
-    matePut('mouseCursor', mouseCursor);
-    matePut('fillColor', fillColor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashRadius', splashRadius);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('visualDensity', visualDensity);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('fillColor', fillColor);
+    mateDeclare('overlayColor', overlayColor);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('visualDensity', visualDensity);
   }
 }
 
@@ -60,13 +60,13 @@ class RadioThemeData$Mate extends RadioThemeData with Mate {
 class RadioTheme$Mate extends RadioTheme with Mate {
   /// RadioTheme RadioTheme({Key? key, required RadioThemeData data, required Widget child})
   RadioTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required RadioThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RadioThemeData data} , defaultValue:none
     required RadioThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -78,8 +78,8 @@ class RadioTheme$Mate extends RadioTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

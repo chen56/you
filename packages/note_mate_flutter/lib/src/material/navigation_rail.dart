@@ -16,64 +16,64 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class NavigationRail$Mate extends NavigationRail with Mate {
   /// NavigationRail NavigationRail({Key? key, Color? backgroundColor, bool extended = false, Widget? leading, Widget? trailing, required List<NavigationRailDestination> destinations, required int? selectedIndex, void Function(int)? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape})
   NavigationRail$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {bool extended = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool extended,
+    /// optionalParameters: {bool extended = false} , defaultValue:Literal
+    bool extended = false,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , defaultValue:none
     Widget? leading,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , defaultValue:none
     Widget? trailing,
 
-    /// optionalParameters: {required List<NavigationRailDestination> destinations} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<NavigationRailDestination> destinations} , defaultValue:none
     required List<NavigationRailDestination> destinations,
 
-    /// optionalParameters: {required int? selectedIndex} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int? selectedIndex} , defaultValue:none
     required int? selectedIndex,
 
-    /// optionalParameters: {void Function(int)? onDestinationSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onDestinationSelected} , defaultValue:none
     ValueChanged<int>? onDestinationSelected,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {double? groupAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? groupAlignment} , defaultValue:none
     double? groupAlignment,
 
-    /// optionalParameters: {NavigationRailLabelType? labelType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {NavigationRailLabelType? labelType} , defaultValue:none
     NavigationRailLabelType? labelType,
 
-    /// optionalParameters: {TextStyle? unselectedLabelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? unselectedLabelTextStyle} , defaultValue:none
     TextStyle? unselectedLabelTextStyle,
 
-    /// optionalParameters: {TextStyle? selectedLabelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? selectedLabelTextStyle} , defaultValue:none
     TextStyle? selectedLabelTextStyle,
 
-    /// optionalParameters: {IconThemeData? unselectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? unselectedIconTheme} , defaultValue:none
     IconThemeData? unselectedIconTheme,
 
-    /// optionalParameters: {IconThemeData? selectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? selectedIconTheme} , defaultValue:none
     IconThemeData? selectedIconTheme,
 
-    /// optionalParameters: {double? minWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minWidth} , defaultValue:none
     double? minWidth,
 
-    /// optionalParameters: {double? minExtendedWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minExtendedWidth} , defaultValue:none
     double? minExtendedWidth,
 
-    /// optionalParameters: {bool? useIndicator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? useIndicator} , defaultValue:none
     bool? useIndicator,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
     ShapeBorder? indicatorShape,
   }) : super(
           key: key,
@@ -119,26 +119,26 @@ class NavigationRail$Mate extends NavigationRail with Mate {
           indicatorColor: p.get('indicatorColor').build(),
           indicatorShape: p.get('indicatorShape').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('extended', extended);
-    matePut('leading', leading);
-    matePut('trailing', trailing);
-    matePut('destinations', destinations);
-    matePut('selectedIndex', selectedIndex);
-    matePut('onDestinationSelected', onDestinationSelected);
-    matePut('elevation', elevation);
-    matePut('groupAlignment', groupAlignment);
-    matePut('labelType', labelType);
-    matePut('unselectedLabelTextStyle', unselectedLabelTextStyle);
-    matePut('selectedLabelTextStyle', selectedLabelTextStyle);
-    matePut('unselectedIconTheme', unselectedIconTheme);
-    matePut('selectedIconTheme', selectedIconTheme);
-    matePut('minWidth', minWidth);
-    matePut('minExtendedWidth', minExtendedWidth);
-    matePut('useIndicator', useIndicator);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorShape', indicatorShape);
+    mateDeclare('key', key);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('extended', extended);
+    mateDeclare('leading', leading);
+    mateDeclare('trailing', trailing);
+    mateDeclare('destinations', destinations);
+    mateDeclare('selectedIndex', selectedIndex);
+    mateDeclare('onDestinationSelected', onDestinationSelected);
+    mateDeclare('elevation', elevation);
+    mateDeclare('groupAlignment', groupAlignment);
+    mateDeclare('labelType', labelType);
+    mateDeclare('unselectedLabelTextStyle', unselectedLabelTextStyle);
+    mateDeclare('selectedLabelTextStyle', selectedLabelTextStyle);
+    mateDeclare('unselectedIconTheme', unselectedIconTheme);
+    mateDeclare('selectedIconTheme', selectedIconTheme);
+    mateDeclare('minWidth', minWidth);
+    mateDeclare('minExtendedWidth', minExtendedWidth);
+    mateDeclare('useIndicator', useIndicator);
+    mateDeclare('indicatorColor', indicatorColor);
+    mateDeclare('indicatorShape', indicatorShape);
   }
 }
 
@@ -146,22 +146,22 @@ class NavigationRail$Mate extends NavigationRail with Mate {
 class NavigationRailDestination$Mate extends NavigationRailDestination with Mate {
   /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding})
   NavigationRailDestination$Mate({
-    /// optionalParameters: {required Widget icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget icon} , defaultValue:none
     required Widget icon,
 
-    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? selectedIcon} , defaultValue:none
     Widget? selectedIcon,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {required Widget label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget label} , defaultValue:none
     required Widget label,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
   }) : super(
           icon: icon,
@@ -179,11 +179,11 @@ class NavigationRailDestination$Mate extends NavigationRailDestination with Mate
           label: p.get('label').build(),
           padding: p.get('padding').build(),
         );
-    matePut('icon', icon);
-    matePut('selectedIcon', selectedIcon);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorShape', indicatorShape);
-    matePut('label', label);
-    matePut('padding', padding);
+    mateDeclare('icon', icon);
+    mateDeclare('selectedIcon', selectedIcon);
+    mateDeclare('indicatorColor', indicatorColor);
+    mateDeclare('indicatorShape', indicatorShape);
+    mateDeclare('label', label);
+    mateDeclare('padding', padding);
   }
 }

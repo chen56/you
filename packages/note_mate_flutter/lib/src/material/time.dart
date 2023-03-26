@@ -8,10 +8,10 @@ import 'dart:core';
 class TimeOfDay$Mate extends TimeOfDay with Mate {
   /// TimeOfDay TimeOfDay({required int hour, required int minute})
   TimeOfDay$Mate({
-    /// optionalParameters: {required int hour} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int hour} , defaultValue:none
     required int hour,
 
-    /// optionalParameters: {required int minute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int minute} , defaultValue:none
     required int minute,
   }) : super(
           hour: hour,
@@ -21,8 +21,8 @@ class TimeOfDay$Mate extends TimeOfDay with Mate {
           hour: p.get('hour').build(),
           minute: p.get('minute').build(),
         );
-    matePut('hour', hour);
-    matePut('minute', minute);
+    mateDeclare('hour', hour);
+    mateDeclare('minute', minute);
   }
 
   /// TimeOfDay TimeOfDay.fromDateTime(DateTime time)
@@ -32,7 +32,7 @@ class TimeOfDay$Mate extends TimeOfDay with Mate {
       DateTime time)
       : super.fromDateTime(time) {
     mateBuilder = (p) => TimeOfDay$Mate.fromDateTime(p.get('time').value);
-    matePut('time', time);
+    mateDeclare('time', time);
   }
 }
 
@@ -45,6 +45,6 @@ class RestorableTimeOfDay$Mate extends RestorableTimeOfDay with Mate {
       TimeOfDay defaultValue)
       : super(defaultValue) {
     mateBuilder = (p) => RestorableTimeOfDay$Mate(p.get('defaultValue').value);
-    matePut('defaultValue', defaultValue);
+    mateDeclare('defaultValue', defaultValue);
   }
 }

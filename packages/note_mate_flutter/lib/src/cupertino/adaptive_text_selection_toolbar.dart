@@ -16,13 +16,13 @@ import 'package:flutter/src/rendering/selection.dart';
 class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSelectionToolbar with Mate {
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget>? children} , defaultValue:none
     required List<Widget>? children,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , defaultValue:none
     required TextSelectionToolbarAnchors anchors,
   }) : super(
           key: key,
@@ -34,20 +34,20 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           children: p.get('children').build(),
           anchors: p.get('anchors').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('anchors', anchors);
+    mateDeclare('key', key);
+    mateDeclare('children', children);
+    mateDeclare('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate.buttonItems({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<ContextMenuButtonItem>? buttonItems} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<ContextMenuButtonItem>? buttonItems} , defaultValue:none
     required List<ContextMenuButtonItem>? buttonItems,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , defaultValue:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.buttonItems(
           key: key,
@@ -59,32 +59,32 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           buttonItems: p.get('buttonItems').build(),
           anchors: p.get('anchors').build(),
         );
-    matePut('key', key);
-    matePut('buttonItems', buttonItems);
-    matePut('anchors', anchors);
+    mateDeclare('key', key);
+    mateDeclare('buttonItems', buttonItems);
+    mateDeclare('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate.editable({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ClipboardStatus clipboardStatus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ClipboardStatus clipboardStatus} , defaultValue:none
     required ClipboardStatus clipboardStatus,
 
-    /// optionalParameters: {required void Function()? onCopy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onCopy} , defaultValue:none
     required VoidCallback? onCopy,
 
-    /// optionalParameters: {required void Function()? onCut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onCut} , defaultValue:none
     required VoidCallback? onCut,
 
-    /// optionalParameters: {required void Function()? onPaste} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onPaste} , defaultValue:none
     required VoidCallback? onPaste,
 
-    /// optionalParameters: {required void Function()? onSelectAll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onSelectAll} , defaultValue:none
     required VoidCallback? onSelectAll,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , defaultValue:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.editable(
           key: key,
@@ -104,21 +104,21 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           onSelectAll: p.get('onSelectAll').build(),
           anchors: p.get('anchors').build(),
         );
-    matePut('key', key);
-    matePut('clipboardStatus', clipboardStatus);
-    matePut('onCopy', onCopy);
-    matePut('onCut', onCut);
-    matePut('onPaste', onPaste);
-    matePut('onSelectAll', onSelectAll);
-    matePut('anchors', anchors);
+    mateDeclare('key', key);
+    mateDeclare('clipboardStatus', clipboardStatus);
+    mateDeclare('onCopy', onCopy);
+    mateDeclare('onCut', onCut);
+    mateDeclare('onPaste', onPaste);
+    mateDeclare('onSelectAll', onSelectAll);
+    mateDeclare('anchors', anchors);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
   CupertinoAdaptiveTextSelectionToolbar$Mate.editableText({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required EditableTextState editableTextState} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EditableTextState editableTextState} , defaultValue:none
     required EditableTextState editableTextState,
   }) : super.editableText(
           key: key,
@@ -128,25 +128,25 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           key: p.get('key').build(),
           editableTextState: p.get('editableTextState').build(),
         );
-    matePut('key', key);
-    matePut('editableTextState', editableTextState);
+    mateDeclare('key', key);
+    mateDeclare('editableTextState', editableTextState);
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate.selectable({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required void Function() onCopy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onCopy} , defaultValue:none
     required VoidCallback onCopy,
 
-    /// optionalParameters: {required void Function() onSelectAll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onSelectAll} , defaultValue:none
     required VoidCallback onSelectAll,
 
-    /// optionalParameters: {required SelectionGeometry selectionGeometry} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SelectionGeometry selectionGeometry} , defaultValue:none
     required SelectionGeometry selectionGeometry,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , defaultValue:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.selectable(
           key: key,
@@ -162,10 +162,10 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSe
           selectionGeometry: p.get('selectionGeometry').build(),
           anchors: p.get('anchors').build(),
         );
-    matePut('key', key);
-    matePut('onCopy', onCopy);
-    matePut('onSelectAll', onSelectAll);
-    matePut('selectionGeometry', selectionGeometry);
-    matePut('anchors', anchors);
+    mateDeclare('key', key);
+    mateDeclare('onCopy', onCopy);
+    mateDeclare('onSelectAll', onSelectAll);
+    mateDeclare('selectionGeometry', selectionGeometry);
+    mateDeclare('anchors', anchors);
   }
 }

@@ -14,7 +14,7 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate {
       T value)
       : super(value) {
     mateBuilder = (p) => PageStorageKey$Mate<T>(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -22,13 +22,13 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate {
 class PageStorage$Mate extends PageStorage with Mate {
   /// PageStorage PageStorage({Key? key, required PageStorageBucket bucket, required Widget child})
   PageStorage$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required PageStorageBucket bucket} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PageStorageBucket bucket} , defaultValue:none
     required PageStorageBucket bucket,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -40,8 +40,8 @@ class PageStorage$Mate extends PageStorage with Mate {
           bucket: p.get('bucket').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('bucket', bucket);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('bucket', bucket);
+    mateDeclare('child', child);
   }
 }

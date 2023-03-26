@@ -40,13 +40,13 @@ export 'package:flutter/painting.dart';
 class Directionality$Mate extends Directionality with Mate {
   /// Directionality Directionality({Key? key, required TextDirection textDirection, required Widget child})
   Directionality$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -58,9 +58,9 @@ class Directionality$Mate extends Directionality with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('textDirection', textDirection);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('child', child);
   }
 }
 
@@ -68,16 +68,16 @@ class Directionality$Mate extends Directionality with Mate {
 class Opacity$Mate extends Opacity with Mate {
   /// Opacity Opacity({Key? key, required double opacity, bool alwaysIncludeSemantics = false, Widget? child})
   Opacity$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required double opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double opacity} , defaultValue:none
     required double opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysIncludeSemantics,
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -91,10 +91,10 @@ class Opacity$Mate extends Opacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('opacity', opacity);
-    matePut('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('opacity', opacity);
+    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateDeclare('child', child);
   }
 }
 
@@ -102,16 +102,16 @@ class Opacity$Mate extends Opacity with Mate {
 class ShaderMask$Mate extends ShaderMask with Mate {
   /// ShaderMask ShaderMask({Key? key, required Shader Function(Rect) shaderCallback, BlendMode blendMode = BlendMode.modulate, Widget? child})
   ShaderMask$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Shader Function(Rect) shaderCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Shader Function(Rect) shaderCallback} , defaultValue:none
     required ShaderCallback shaderCallback,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , hasDefaultValue:true, defaultValueCode:BlendMode.modulate
+    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , defaultValue:unprocessed
     required BlendMode blendMode,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -125,10 +125,10 @@ class ShaderMask$Mate extends ShaderMask with Mate {
           blendMode: p.get('blendMode').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('shaderCallback', shaderCallback);
-    matePut('blendMode', blendMode);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('shaderCallback', shaderCallback);
+    mateDeclare('blendMode', blendMode);
+    mateDeclare('child', child);
   }
 }
 
@@ -136,16 +136,16 @@ class ShaderMask$Mate extends ShaderMask with Mate {
 class BackdropFilter$Mate extends BackdropFilter with Mate {
   /// BackdropFilter BackdropFilter({Key? key, required ImageFilter filter, Widget? child, BlendMode blendMode = BlendMode.srcOver})
   BackdropFilter$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ImageFilter filter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageFilter filter} , defaultValue:none
     required ImageFilter filter,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , hasDefaultValue:true, defaultValueCode:BlendMode.srcOver
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:unprocessed
     required BlendMode blendMode,
   }) : super(
           key: key,
@@ -159,10 +159,10 @@ class BackdropFilter$Mate extends BackdropFilter with Mate {
           child: p.get('child').build(),
           blendMode: p.get('blendMode').build(),
         );
-    matePut('key', key);
-    matePut('filter', filter);
-    matePut('child', child);
-    matePut('blendMode', blendMode);
+    mateDeclare('key', key);
+    mateDeclare('filter', filter);
+    mateDeclare('child', child);
+    mateDeclare('blendMode', blendMode);
   }
 }
 
@@ -170,25 +170,25 @@ class BackdropFilter$Mate extends BackdropFilter with Mate {
 class CustomPaint$Mate extends CustomPaint with Mate {
   /// CustomPaint CustomPaint({Key? key, CustomPainter? painter, CustomPainter? foregroundPainter, Size size = Size.zero, bool isComplex = false, bool willChange = false, Widget? child})
   CustomPaint$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {CustomPainter? painter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomPainter? painter} , defaultValue:none
     CustomPainter? painter,
 
-    /// optionalParameters: {CustomPainter? foregroundPainter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomPainter? foregroundPainter} , defaultValue:none
     CustomPainter? foregroundPainter,
 
-    /// optionalParameters: {Size size = Size.zero} , hasDefaultValue:true, defaultValueCode:Size.zero
+    /// optionalParameters: {Size size = Size.zero} , defaultValue:unprocessed
     required Size size,
 
-    /// optionalParameters: {bool isComplex = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isComplex,
+    /// optionalParameters: {bool isComplex = false} , defaultValue:Literal
+    bool isComplex = false,
 
-    /// optionalParameters: {bool willChange = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool willChange,
+    /// optionalParameters: {bool willChange = false} , defaultValue:Literal
+    bool willChange = false,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -208,13 +208,13 @@ class CustomPaint$Mate extends CustomPaint with Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('painter', painter);
-    matePut('foregroundPainter', foregroundPainter);
-    matePut('size', size);
-    matePut('isComplex', isComplex);
-    matePut('willChange', willChange);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('painter', painter);
+    mateDeclare('foregroundPainter', foregroundPainter);
+    mateDeclare('size', size);
+    mateDeclare('isComplex', isComplex);
+    mateDeclare('willChange', willChange);
+    mateDeclare('child', child);
   }
 }
 
@@ -222,16 +222,16 @@ class CustomPaint$Mate extends CustomPaint with Mate {
 class ClipRect$Mate extends ClipRect with Mate {
   /// ClipRect ClipRect({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.hardEdge, Widget? child})
   ClipRect$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Rect>? clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomClipper<Rect>? clipper} , defaultValue:none
     CustomClipper<Rect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -245,10 +245,10 @@ class ClipRect$Mate extends ClipRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('clipper', clipper);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -256,19 +256,19 @@ class ClipRect$Mate extends ClipRect with Mate {
 class ClipRRect$Mate extends ClipRRect with Mate {
   /// ClipRRect ClipRRect({Key? key, BorderRadiusGeometry? borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipRRect$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , hasDefaultValue:true, defaultValueCode:BorderRadius.zero
+    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , defaultValue:unprocessed
     BorderRadiusGeometry? borderRadius,
 
-    /// optionalParameters: {CustomClipper<RRect>? clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomClipper<RRect>? clipper} , defaultValue:none
     CustomClipper<RRect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -284,11 +284,11 @@ class ClipRRect$Mate extends ClipRRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('borderRadius', borderRadius);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('clipper', clipper);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -296,16 +296,16 @@ class ClipRRect$Mate extends ClipRRect with Mate {
 class ClipOval$Mate extends ClipOval with Mate {
   /// ClipOval ClipOval({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipOval$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Rect>? clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomClipper<Rect>? clipper} , defaultValue:none
     CustomClipper<Rect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -319,10 +319,10 @@ class ClipOval$Mate extends ClipOval with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('clipper', clipper);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -330,16 +330,16 @@ class ClipOval$Mate extends ClipOval with Mate {
 class ClipPath$Mate extends ClipPath with Mate {
   /// ClipPath ClipPath({Key? key, CustomClipper<Path>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipPath$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Path>? clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomClipper<Path>? clipper} , defaultValue:none
     CustomClipper<Path>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -353,10 +353,10 @@ class ClipPath$Mate extends ClipPath with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('clipper', clipper);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -364,28 +364,28 @@ class ClipPath$Mate extends ClipPath with Mate {
 class PhysicalModel$Mate extends PhysicalModel with Mate {
   /// PhysicalModel PhysicalModel({Key? key, BoxShape shape = BoxShape.rectangle, Clip clipBehavior = Clip.none, BorderRadius? borderRadius, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalModel$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , hasDefaultValue:true, defaultValueCode:BoxShape.rectangle
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:unprocessed
     required BoxShape shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {double elevation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double elevation,
+    /// optionalParameters: {double elevation = 0.0} , defaultValue:Literal
+    double elevation = 0.0,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF000000)
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:unprocessed
     required Color shadowColor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -407,14 +407,14 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('shape', shape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('borderRadius', borderRadius);
-    matePut('elevation', elevation);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('shape', shape);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('elevation', elevation);
+    mateDeclare('color', color);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('child', child);
   }
 }
 
@@ -422,25 +422,25 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
 class PhysicalShape$Mate extends PhysicalShape with Mate {
   /// PhysicalShape PhysicalShape({Key? key, required CustomClipper<Path> clipper, Clip clipBehavior = Clip.none, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalShape$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required CustomClipper<Path> clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required CustomClipper<Path> clipper} , defaultValue:none
     required CustomClipper<Path> clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {double elevation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double elevation,
+    /// optionalParameters: {double elevation = 0.0} , defaultValue:Literal
+    double elevation = 0.0,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF000000)
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:unprocessed
     required Color shadowColor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -460,13 +460,13 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('elevation', elevation);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('clipper', clipper);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('elevation', elevation);
+    mateDeclare('color', color);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('child', child);
   }
 }
 
@@ -474,25 +474,25 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
 class Transform$Mate extends Transform with Mate {
   /// Transform Transform({Key? key, required Matrix4 transform, Offset? origin, AlignmentGeometry? alignment, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Matrix4 transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Matrix4 transform} , defaultValue:none
     required Matrix4 transform,
 
-    /// optionalParameters: {Offset? origin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? origin} , defaultValue:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -512,36 +512,36 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('transform', transform);
-    matePut('origin', origin);
-    matePut('alignment', alignment);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('transform', transform);
+    mateDeclare('origin', origin);
+    mateDeclare('alignment', alignment);
+    mateDeclare('transformHitTests', transformHitTests);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('child', child);
   }
 
   /// Transform Transform.rotate({Key? key, required double angle, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.rotate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required double angle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double angle} , defaultValue:none
     required double angle,
 
-    /// optionalParameters: {Offset? origin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? origin} , defaultValue:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , defaultValue:unprocessed
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.rotate(
           key: key,
@@ -561,30 +561,30 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('angle', angle);
-    matePut('origin', origin);
-    matePut('alignment', alignment);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('angle', angle);
+    mateDeclare('origin', origin);
+    mateDeclare('alignment', alignment);
+    mateDeclare('transformHitTests', transformHitTests);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('child', child);
   }
 
   /// Transform Transform.translate({Key? key, required Offset offset, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.translate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Offset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset offset} , defaultValue:none
     required Offset offset,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.translate(
           key: key,
@@ -600,40 +600,40 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('offset', offset);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('offset', offset);
+    mateDeclare('transformHitTests', transformHitTests);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('child', child);
   }
 
   /// Transform Transform.scale({Key? key, double? scale, double? scaleX, double? scaleY, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.scale({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? scale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scale} , defaultValue:none
     double? scale,
 
-    /// optionalParameters: {double? scaleX} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scaleX} , defaultValue:none
     double? scaleX,
 
-    /// optionalParameters: {double? scaleY} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scaleY} , defaultValue:none
     double? scaleY,
 
-    /// optionalParameters: {Offset? origin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? origin} , defaultValue:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , defaultValue:unprocessed
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.scale(
           key: key,
@@ -657,38 +657,38 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('scale', scale);
-    matePut('scaleX', scaleX);
-    matePut('scaleY', scaleY);
-    matePut('origin', origin);
-    matePut('alignment', alignment);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('scale', scale);
+    mateDeclare('scaleX', scaleX);
+    mateDeclare('scaleY', scaleY);
+    mateDeclare('origin', origin);
+    mateDeclare('alignment', alignment);
+    mateDeclare('transformHitTests', transformHitTests);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('child', child);
   }
 
   /// Transform Transform.flip({Key? key, bool flipX = false, bool flipY = false, Offset? origin, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.flip({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool flipX = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool flipX,
+    /// optionalParameters: {bool flipX = false} , defaultValue:Literal
+    bool flipX = false,
 
-    /// optionalParameters: {bool flipY = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool flipY,
+    /// optionalParameters: {bool flipY = false} , defaultValue:Literal
+    bool flipY = false,
 
-    /// optionalParameters: {Offset? origin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? origin} , defaultValue:none
     Offset? origin,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.flip(
           key: key,
@@ -708,13 +708,13 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('flipX', flipX);
-    matePut('flipY', flipY);
-    matePut('origin', origin);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('flipX', flipX);
+    mateDeclare('flipY', flipY);
+    mateDeclare('origin', origin);
+    mateDeclare('transformHitTests', transformHitTests);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('child', child);
   }
 }
 
@@ -722,13 +722,13 @@ class Transform$Mate extends Transform with Mate {
 class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate {
   /// CompositedTransformTarget CompositedTransformTarget({Key? key, required LayerLink link, Widget? child})
   CompositedTransformTarget$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required LayerLink link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink link} , defaultValue:none
     required LayerLink link,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -740,9 +740,9 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('link', link);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('link', link);
+    mateDeclare('child', child);
   }
 }
 
@@ -750,25 +750,25 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate
 class CompositedTransformFollower$Mate extends CompositedTransformFollower with Mate {
   /// CompositedTransformFollower CompositedTransformFollower({Key? key, required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment targetAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, Widget? child})
   CompositedTransformFollower$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required LayerLink link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink link} , defaultValue:none
     required LayerLink link,
 
-    /// optionalParameters: {bool showWhenUnlinked = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showWhenUnlinked,
+    /// optionalParameters: {bool showWhenUnlinked = true} , defaultValue:Literal
+    bool showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
     required Offset offset,
 
-    /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , hasDefaultValue:true, defaultValueCode:Alignment.topLeft
+    /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , defaultValue:unprocessed
     required Alignment targetAnchor,
 
-    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , hasDefaultValue:true, defaultValueCode:Alignment.topLeft
+    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , defaultValue:unprocessed
     required Alignment followerAnchor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -788,13 +788,13 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower with 
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('link', link);
-    matePut('showWhenUnlinked', showWhenUnlinked);
-    matePut('offset', offset);
-    matePut('targetAnchor', targetAnchor);
-    matePut('followerAnchor', followerAnchor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('link', link);
+    mateDeclare('showWhenUnlinked', showWhenUnlinked);
+    mateDeclare('offset', offset);
+    mateDeclare('targetAnchor', targetAnchor);
+    mateDeclare('followerAnchor', followerAnchor);
+    mateDeclare('child', child);
   }
 }
 
@@ -802,19 +802,19 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower with 
 class FittedBox$Mate extends FittedBox with Mate {
   /// FittedBox FittedBox({Key? key, BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, Clip clipBehavior = Clip.none, Widget? child})
   FittedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {BoxFit fit = BoxFit.contain} , hasDefaultValue:true, defaultValueCode:BoxFit.contain
+    /// optionalParameters: {BoxFit fit = BoxFit.contain} , defaultValue:unprocessed
     required BoxFit fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -830,11 +830,11 @@ class FittedBox$Mate extends FittedBox with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('fit', fit);
+    mateDeclare('alignment', alignment);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -842,16 +842,16 @@ class FittedBox$Mate extends FittedBox with Mate {
 class FractionalTranslation$Mate extends FractionalTranslation with Mate {
   /// FractionalTranslation FractionalTranslation({Key? key, required Offset translation, bool transformHitTests = true, Widget? child})
   FractionalTranslation$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Offset translation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset translation} , defaultValue:none
     required Offset translation,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    bool transformHitTests = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -865,10 +865,10 @@ class FractionalTranslation$Mate extends FractionalTranslation with Mate {
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('translation', translation);
-    matePut('transformHitTests', transformHitTests);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('translation', translation);
+    mateDeclare('transformHitTests', transformHitTests);
+    mateDeclare('child', child);
   }
 }
 
@@ -876,13 +876,13 @@ class FractionalTranslation$Mate extends FractionalTranslation with Mate {
 class RotatedBox$Mate extends RotatedBox with Mate {
   /// RotatedBox RotatedBox({Key? key, required int quarterTurns, Widget? child})
   RotatedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required int quarterTurns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int quarterTurns} , defaultValue:none
     required int quarterTurns,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -894,9 +894,9 @@ class RotatedBox$Mate extends RotatedBox with Mate {
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('quarterTurns', quarterTurns);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('quarterTurns', quarterTurns);
+    mateDeclare('child', child);
   }
 }
 
@@ -904,13 +904,13 @@ class RotatedBox$Mate extends RotatedBox with Mate {
 class Padding$Mate extends Padding with Mate {
   /// Padding Padding({Key? key, required EdgeInsetsGeometry padding, Widget? child})
   Padding$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , defaultValue:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -922,9 +922,9 @@ class Padding$Mate extends Padding with Mate {
           padding: p.get('padding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('padding', padding);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('padding', padding);
+    mateDeclare('child', child);
   }
 }
 
@@ -932,19 +932,19 @@ class Padding$Mate extends Padding with Mate {
 class Align$Mate extends Align with Mate {
   /// Align Align({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   Align$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , defaultValue:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , defaultValue:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -960,11 +960,11 @@ class Align$Mate extends Align with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('alignment', alignment);
+    mateDeclare('widthFactor', widthFactor);
+    mateDeclare('heightFactor', heightFactor);
+    mateDeclare('child', child);
   }
 }
 
@@ -972,16 +972,16 @@ class Align$Mate extends Align with Mate {
 class Center$Mate extends Center with Mate {
   /// Center Center({Key? key, double? widthFactor, double? heightFactor, Widget? child})
   Center$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , defaultValue:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , defaultValue:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -995,10 +995,10 @@ class Center$Mate extends Center with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('widthFactor', widthFactor);
+    mateDeclare('heightFactor', heightFactor);
+    mateDeclare('child', child);
   }
 }
 
@@ -1006,13 +1006,13 @@ class Center$Mate extends Center with Mate {
 class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
   /// CustomSingleChildLayout CustomSingleChildLayout({Key? key, required SingleChildLayoutDelegate delegate, Widget? child})
   CustomSingleChildLayout$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required SingleChildLayoutDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SingleChildLayoutDelegate delegate} , defaultValue:none
     required SingleChildLayoutDelegate delegate,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1024,9 +1024,9 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('delegate', delegate);
+    mateDeclare('child', child);
   }
 }
 
@@ -1034,13 +1034,13 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
 class LayoutId$Mate extends LayoutId with Mate {
   /// LayoutId LayoutId({Key? key, required Object id, required Widget child})
   LayoutId$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Object id} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object id} , defaultValue:none
     required Object id,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -1052,9 +1052,9 @@ class LayoutId$Mate extends LayoutId with Mate {
           id: p.get('id').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('id', id);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('id', id);
+    mateDeclare('child', child);
   }
 }
 
@@ -1062,13 +1062,13 @@ class LayoutId$Mate extends LayoutId with Mate {
 class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
   /// CustomMultiChildLayout CustomMultiChildLayout({Key? key, required MultiChildLayoutDelegate delegate, List<Widget> children = const <Widget>[]})
   CustomMultiChildLayout$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required MultiChildLayoutDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MultiChildLayoutDelegate delegate} , defaultValue:none
     required MultiChildLayoutDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1080,9 +1080,9 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
           delegate: p.get('delegate').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('delegate', delegate);
+    mateDeclare('children', children);
   }
 }
 
@@ -1090,16 +1090,16 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
 class SizedBox$Mate extends SizedBox with Mate {
   /// SizedBox SizedBox({Key? key, double? width, double? height, Widget? child})
   SizedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1113,18 +1113,18 @@ class SizedBox$Mate extends SizedBox with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
+    mateDeclare('child', child);
   }
 
   /// SizedBox SizedBox.expand({Key? key, Widget? child})
   SizedBox$Mate.expand({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.expand(
           key: key,
@@ -1134,16 +1134,16 @@ class SizedBox$Mate extends SizedBox with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 
   /// SizedBox SizedBox.shrink({Key? key, Widget? child})
   SizedBox$Mate.shrink({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.shrink(
           key: key,
@@ -1153,19 +1153,19 @@ class SizedBox$Mate extends SizedBox with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 
   /// SizedBox SizedBox.fromSize({Key? key, Widget? child, Size? size})
   SizedBox$Mate.fromSize({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {Size? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? size} , defaultValue:none
     Size? size,
   }) : super.fromSize(
           key: key,
@@ -1177,20 +1177,20 @@ class SizedBox$Mate extends SizedBox with Mate {
           child: p.get('child').build(),
           size: p.get('size').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('size', size);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('size', size);
   }
 
   /// SizedBox SizedBox.square({Key? key, Widget? child, double? dimension})
   SizedBox$Mate.square({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {double? dimension} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dimension} , defaultValue:none
     double? dimension,
   }) : super.square(
           key: key,
@@ -1202,9 +1202,9 @@ class SizedBox$Mate extends SizedBox with Mate {
           child: p.get('child').build(),
           dimension: p.get('dimension').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('dimension', dimension);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('dimension', dimension);
   }
 }
 
@@ -1212,13 +1212,13 @@ class SizedBox$Mate extends SizedBox with Mate {
 class ConstrainedBox$Mate extends ConstrainedBox with Mate {
   /// ConstrainedBox ConstrainedBox({Key? key, required BoxConstraints constraints, Widget? child})
   ConstrainedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required BoxConstraints constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BoxConstraints constraints} , defaultValue:none
     required BoxConstraints constraints,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1230,9 +1230,9 @@ class ConstrainedBox$Mate extends ConstrainedBox with Mate {
           constraints: p.get('constraints').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('constraints', constraints);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('constraints', constraints);
+    mateDeclare('child', child);
   }
 }
 
@@ -1240,26 +1240,26 @@ class ConstrainedBox$Mate extends ConstrainedBox with Mate {
 class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
   /// ConstraintsTransformBox ConstraintsTransformBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, required BoxConstraints Function(BoxConstraints) constraintsTransform, Clip clipBehavior = Clip.none, String debugTransformType = ''})
   ConstraintsTransformBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , defaultValue:none
     required BoxConstraintsTransform constraintsTransform,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {String debugTransformType = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String debugTransformType,
+    /// optionalParameters: {String debugTransformType = ''} , defaultValue:Literal
+    String debugTransformType = '',
   }) : super(
           key: key,
           child: child,
@@ -1278,13 +1278,13 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           debugTransformType: p.get('debugTransformType').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('textDirection', textDirection);
-    matePut('alignment', alignment);
-    matePut('constraintsTransform', constraintsTransform);
-    matePut('clipBehavior', clipBehavior);
-    matePut('debugTransformType', debugTransformType);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('alignment', alignment);
+    mateDeclare('constraintsTransform', constraintsTransform);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('debugTransformType', debugTransformType);
   }
 }
 
@@ -1292,22 +1292,22 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
 class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
   /// UnconstrainedBox UnconstrainedBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, Axis? constrainedAxis, Clip clipBehavior = Clip.none})
   UnconstrainedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {Axis? constrainedAxis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Axis? constrainedAxis} , defaultValue:none
     Axis? constrainedAxis,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -1325,12 +1325,12 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
           constrainedAxis: p.get('constrainedAxis').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('textDirection', textDirection);
-    matePut('alignment', alignment);
-    matePut('constrainedAxis', constrainedAxis);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('alignment', alignment);
+    mateDeclare('constrainedAxis', constrainedAxis);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -1338,19 +1338,19 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
 class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
   /// FractionallySizedBox FractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   FractionallySizedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , defaultValue:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , defaultValue:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1366,11 +1366,11 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('alignment', alignment);
+    mateDeclare('widthFactor', widthFactor);
+    mateDeclare('heightFactor', heightFactor);
+    mateDeclare('child', child);
   }
 }
 
@@ -1378,16 +1378,16 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
 class LimitedBox$Mate extends LimitedBox with Mate {
   /// LimitedBox LimitedBox({Key? key, double maxWidth = double.infinity, double maxHeight = double.infinity, Widget? child})
   LimitedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double maxWidth = double.infinity} , defaultValue:unprocessed
     required double maxWidth,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double maxHeight = double.infinity} , defaultValue:unprocessed
     required double maxHeight,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1401,10 +1401,10 @@ class LimitedBox$Mate extends LimitedBox with Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('maxWidth', maxWidth);
-    matePut('maxHeight', maxHeight);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('maxWidth', maxWidth);
+    mateDeclare('maxHeight', maxHeight);
+    mateDeclare('child', child);
   }
 }
 
@@ -1412,25 +1412,25 @@ class LimitedBox$Mate extends LimitedBox with Mate {
 class OverflowBox$Mate extends OverflowBox with Mate {
   /// OverflowBox OverflowBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, Widget? child})
   OverflowBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {double? minWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minWidth} , defaultValue:none
     double? minWidth,
 
-    /// optionalParameters: {double? maxWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? maxWidth} , defaultValue:none
     double? maxWidth,
 
-    /// optionalParameters: {double? minHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minHeight} , defaultValue:none
     double? minHeight,
 
-    /// optionalParameters: {double? maxHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? maxHeight} , defaultValue:none
     double? maxHeight,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1450,13 +1450,13 @@ class OverflowBox$Mate extends OverflowBox with Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('minWidth', minWidth);
-    matePut('maxWidth', maxWidth);
-    matePut('minHeight', minHeight);
-    matePut('maxHeight', maxHeight);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('alignment', alignment);
+    mateDeclare('minWidth', minWidth);
+    mateDeclare('maxWidth', maxWidth);
+    mateDeclare('minHeight', minHeight);
+    mateDeclare('maxHeight', maxHeight);
+    mateDeclare('child', child);
   }
 }
 
@@ -1464,16 +1464,16 @@ class OverflowBox$Mate extends OverflowBox with Mate {
 class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
   /// SizedOverflowBox SizedOverflowBox({Key? key, required Size size, AlignmentGeometry alignment = Alignment.center, Widget? child})
   SizedOverflowBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Size size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size size} , defaultValue:none
     required Size size,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1487,10 +1487,10 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('size', size);
-    matePut('alignment', alignment);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('size', size);
+    mateDeclare('alignment', alignment);
+    mateDeclare('child', child);
   }
 }
 
@@ -1498,13 +1498,13 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
 class Offstage$Mate extends Offstage with Mate {
   /// Offstage Offstage({Key? key, bool offstage = true, Widget? child})
   Offstage$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool offstage = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool offstage,
+    /// optionalParameters: {bool offstage = true} , defaultValue:Literal
+    bool offstage = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1516,9 +1516,9 @@ class Offstage$Mate extends Offstage with Mate {
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('offstage', offstage);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('offstage', offstage);
+    mateDeclare('child', child);
   }
 }
 
@@ -1526,13 +1526,13 @@ class Offstage$Mate extends Offstage with Mate {
 class AspectRatio$Mate extends AspectRatio with Mate {
   /// AspectRatio AspectRatio({Key? key, required double aspectRatio, Widget? child})
   AspectRatio$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required double aspectRatio} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double aspectRatio} , defaultValue:none
     required double aspectRatio,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1544,9 +1544,9 @@ class AspectRatio$Mate extends AspectRatio with Mate {
           aspectRatio: p.get('aspectRatio').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('aspectRatio', aspectRatio);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('aspectRatio', aspectRatio);
+    mateDeclare('child', child);
   }
 }
 
@@ -1554,16 +1554,16 @@ class AspectRatio$Mate extends AspectRatio with Mate {
 class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
   /// IntrinsicWidth IntrinsicWidth({Key? key, double? stepWidth, double? stepHeight, Widget? child})
   IntrinsicWidth$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? stepWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? stepWidth} , defaultValue:none
     double? stepWidth,
 
-    /// optionalParameters: {double? stepHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? stepHeight} , defaultValue:none
     double? stepHeight,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1577,10 +1577,10 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('stepWidth', stepWidth);
-    matePut('stepHeight', stepHeight);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('stepWidth', stepWidth);
+    mateDeclare('stepHeight', stepHeight);
+    mateDeclare('child', child);
   }
 }
 
@@ -1588,10 +1588,10 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
 class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
   /// IntrinsicHeight IntrinsicHeight({Key? key, Widget? child})
   IntrinsicHeight$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1601,8 +1601,8 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }
 
@@ -1610,16 +1610,16 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
 class Baseline$Mate extends Baseline with Mate {
   /// Baseline Baseline({Key? key, required double baseline, required TextBaseline baselineType, Widget? child})
   Baseline$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required double baseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double baseline} , defaultValue:none
     required double baseline,
 
-    /// optionalParameters: {required TextBaseline baselineType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextBaseline baselineType} , defaultValue:none
     required TextBaseline baselineType,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1633,10 +1633,10 @@ class Baseline$Mate extends Baseline with Mate {
           baselineType: p.get('baselineType').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('baseline', baseline);
-    matePut('baselineType', baselineType);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('baseline', baseline);
+    mateDeclare('baselineType', baselineType);
+    mateDeclare('child', child);
   }
 }
 
@@ -1644,10 +1644,10 @@ class Baseline$Mate extends Baseline with Mate {
 class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
   /// SliverToBoxAdapter SliverToBoxAdapter({Key? key, Widget? child})
   SliverToBoxAdapter$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -1657,8 +1657,8 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }
 
@@ -1666,13 +1666,13 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
 class SliverPadding$Mate extends SliverPadding with Mate {
   /// SliverPadding SliverPadding({Key? key, required EdgeInsetsGeometry padding, Widget? sliver})
   SliverPadding$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , defaultValue:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Widget? sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? sliver} , defaultValue:none
     Widget? sliver,
   }) : super(
           key: key,
@@ -1684,9 +1684,9 @@ class SliverPadding$Mate extends SliverPadding with Mate {
           padding: p.get('padding').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('key', key);
-    matePut('padding', padding);
-    matePut('sliver', sliver);
+    mateDeclare('key', key);
+    mateDeclare('padding', padding);
+    mateDeclare('sliver', sliver);
   }
 }
 
@@ -1694,16 +1694,16 @@ class SliverPadding$Mate extends SliverPadding with Mate {
 class ListBody$Mate extends ListBody with Mate {
   /// ListBody ListBody({Key? key, Axis mainAxis = Axis.vertical, bool reverse = false, List<Widget> children = const <Widget>[]})
   ListBody$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis mainAxis = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis mainAxis = Axis.vertical} , defaultValue:unprocessed
     required Axis mainAxis,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1717,10 +1717,10 @@ class ListBody$Mate extends ListBody with Mate {
           reverse: p.get('reverse').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('mainAxis', mainAxis);
-    matePut('reverse', reverse);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('mainAxis', mainAxis);
+    mateDeclare('reverse', reverse);
+    mateDeclare('children', children);
   }
 }
 
@@ -1728,22 +1728,22 @@ class ListBody$Mate extends ListBody with Mate {
 class Stack$Mate extends Stack with Mate {
   /// Stack Stack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge, List<Widget> children = const <Widget>[]})
   Stack$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , hasDefaultValue:true, defaultValueCode:AlignmentDirectional.topStart
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , hasDefaultValue:true, defaultValueCode:StackFit.loose
+    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:unprocessed
     required StackFit fit,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1761,12 +1761,12 @@ class Stack$Mate extends Stack with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
-    matePut('fit', fit);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('fit', fit);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
   }
 }
 
@@ -1774,25 +1774,25 @@ class Stack$Mate extends Stack with Mate {
 class IndexedStack$Mate extends IndexedStack with Mate {
   /// IndexedStack IndexedStack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, Clip clipBehavior = Clip.hardEdge, StackFit sizing = StackFit.loose, int? index = 0, List<Widget> children = const <Widget>[]})
   IndexedStack$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , hasDefaultValue:true, defaultValueCode:AlignmentDirectional.topStart
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {StackFit sizing = StackFit.loose} , hasDefaultValue:true, defaultValueCode:StackFit.loose
+    /// optionalParameters: {StackFit sizing = StackFit.loose} , defaultValue:unprocessed
     required StackFit sizing,
 
-    /// optionalParameters: {int? index = 0} , hasDefaultValue:true, defaultValueCode:0
-    int? index,
+    /// optionalParameters: {int? index = 0} , defaultValue:Literal
+    int? index = 0,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1812,13 +1812,13 @@ class IndexedStack$Mate extends IndexedStack with Mate {
           index: p.get('index').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
-    matePut('clipBehavior', clipBehavior);
-    matePut('sizing', sizing);
-    matePut('index', index);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('sizing', sizing);
+    mateDeclare('index', index);
+    mateDeclare('children', children);
   }
 }
 
@@ -1826,28 +1826,28 @@ class IndexedStack$Mate extends IndexedStack with Mate {
 class Positioned$Mate extends Positioned with Mate {
   /// Positioned Positioned({Key? key, double? left, double? top, double? right, double? bottom, double? width, double? height, required Widget child})
   Positioned$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? left} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? left} , defaultValue:none
     double? left,
 
-    /// optionalParameters: {double? top} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? top} , defaultValue:none
     double? top,
 
-    /// optionalParameters: {double? right} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? right} , defaultValue:none
     double? right,
 
-    /// optionalParameters: {double? bottom} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? bottom} , defaultValue:none
     double? bottom,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -1869,25 +1869,25 @@ class Positioned$Mate extends Positioned with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('left', left);
+    mateDeclare('top', top);
+    mateDeclare('right', right);
+    mateDeclare('bottom', bottom);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
+    mateDeclare('child', child);
   }
 
   /// Positioned Positioned.fromRect({Key? key, required Rect rect, required Widget child})
   Positioned$Mate.fromRect({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , defaultValue:none
     required Rect rect,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super.fromRect(
           key: key,
@@ -1899,20 +1899,20 @@ class Positioned$Mate extends Positioned with Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('rect', rect);
+    mateDeclare('child', child);
   }
 
   /// Positioned Positioned.fromRelativeRect({Key? key, required RelativeRect rect, required Widget child})
   Positioned$Mate.fromRelativeRect({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required RelativeRect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RelativeRect rect} , defaultValue:none
     required RelativeRect rect,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super.fromRelativeRect(
           key: key,
@@ -1924,29 +1924,29 @@ class Positioned$Mate extends Positioned with Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('rect', rect);
+    mateDeclare('child', child);
   }
 
   /// Positioned Positioned.fill({Key? key, double? left = 0.0, double? top = 0.0, double? right = 0.0, double? bottom = 0.0, required Widget child})
   Positioned$Mate.fill({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? left = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? left,
+    /// optionalParameters: {double? left = 0.0} , defaultValue:Literal
+    double? left = 0.0,
 
-    /// optionalParameters: {double? top = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? top,
+    /// optionalParameters: {double? top = 0.0} , defaultValue:Literal
+    double? top = 0.0,
 
-    /// optionalParameters: {double? right = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? right,
+    /// optionalParameters: {double? right = 0.0} , defaultValue:Literal
+    double? right = 0.0,
 
-    /// optionalParameters: {double? bottom = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? bottom,
+    /// optionalParameters: {double? bottom = 0.0} , defaultValue:Literal
+    double? bottom = 0.0,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super.fill(
           key: key,
@@ -1964,12 +1964,12 @@ class Positioned$Mate extends Positioned with Mate {
           bottom: p.get('bottom').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('left', left);
+    mateDeclare('top', top);
+    mateDeclare('right', right);
+    mateDeclare('bottom', bottom);
+    mateDeclare('child', child);
   }
 }
 
@@ -1977,28 +1977,28 @@ class Positioned$Mate extends Positioned with Mate {
 class PositionedDirectional$Mate extends PositionedDirectional with Mate {
   /// PositionedDirectional PositionedDirectional({Key? key, double? start, double? top, double? end, double? bottom, double? width, double? height, required Widget child})
   PositionedDirectional$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? start} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? start} , defaultValue:none
     double? start,
 
-    /// optionalParameters: {double? top} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? top} , defaultValue:none
     double? top,
 
-    /// optionalParameters: {double? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? end} , defaultValue:none
     double? end,
 
-    /// optionalParameters: {double? bottom} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? bottom} , defaultValue:none
     double? bottom,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -2020,14 +2020,14 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('start', start);
-    matePut('top', top);
-    matePut('end', end);
-    matePut('bottom', bottom);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('start', start);
+    mateDeclare('top', top);
+    mateDeclare('end', end);
+    mateDeclare('bottom', bottom);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
+    mateDeclare('child', child);
   }
 }
 
@@ -2035,34 +2035,34 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
 class Flex$Mate extends Flex with Mate {
   /// Flex Flex({Key? key, required Axis direction, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Flex$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Axis direction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Axis direction} , defaultValue:none
     required Axis direction,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , hasDefaultValue:true, defaultValueCode:MainAxisAlignment.start
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:unprocessed
     required MainAxisAlignment mainAxisAlignment,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , hasDefaultValue:true, defaultValueCode:MainAxisSize.max
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:unprocessed
     required MainAxisSize mainAxisSize,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , hasDefaultValue:true, defaultValueCode:CrossAxisAlignment.center
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:unprocessed
     required CrossAxisAlignment crossAxisAlignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:unprocessed
     required VerticalDirection verticalDirection,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2088,16 +2088,16 @@ class Flex$Mate extends Flex with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('direction', direction);
-    matePut('mainAxisAlignment', mainAxisAlignment);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('textBaseline', textBaseline);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('direction', direction);
+    mateDeclare('mainAxisAlignment', mainAxisAlignment);
+    mateDeclare('mainAxisSize', mainAxisSize);
+    mateDeclare('crossAxisAlignment', crossAxisAlignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('verticalDirection', verticalDirection);
+    mateDeclare('textBaseline', textBaseline);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
   }
 }
 
@@ -2105,28 +2105,28 @@ class Flex$Mate extends Flex with Mate {
 class Row$Mate extends Row with Mate {
   /// Row Row({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Row$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , hasDefaultValue:true, defaultValueCode:MainAxisAlignment.start
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:unprocessed
     required MainAxisAlignment mainAxisAlignment,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , hasDefaultValue:true, defaultValueCode:MainAxisSize.max
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:unprocessed
     required MainAxisSize mainAxisSize,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , hasDefaultValue:true, defaultValueCode:CrossAxisAlignment.center
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:unprocessed
     required CrossAxisAlignment crossAxisAlignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:unprocessed
     required VerticalDirection verticalDirection,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2148,14 +2148,14 @@ class Row$Mate extends Row with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('mainAxisAlignment', mainAxisAlignment);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('textBaseline', textBaseline);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('mainAxisAlignment', mainAxisAlignment);
+    mateDeclare('mainAxisSize', mainAxisSize);
+    mateDeclare('crossAxisAlignment', crossAxisAlignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('verticalDirection', verticalDirection);
+    mateDeclare('textBaseline', textBaseline);
+    mateDeclare('children', children);
   }
 }
 
@@ -2163,28 +2163,28 @@ class Row$Mate extends Row with Mate {
 class Column$Mate extends Column with Mate {
   /// Column Column({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Column$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , hasDefaultValue:true, defaultValueCode:MainAxisAlignment.start
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:unprocessed
     required MainAxisAlignment mainAxisAlignment,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , hasDefaultValue:true, defaultValueCode:MainAxisSize.max
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:unprocessed
     required MainAxisSize mainAxisSize,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , hasDefaultValue:true, defaultValueCode:CrossAxisAlignment.center
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:unprocessed
     required CrossAxisAlignment crossAxisAlignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:unprocessed
     required VerticalDirection verticalDirection,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2206,14 +2206,14 @@ class Column$Mate extends Column with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('mainAxisAlignment', mainAxisAlignment);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('textBaseline', textBaseline);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('mainAxisAlignment', mainAxisAlignment);
+    mateDeclare('mainAxisSize', mainAxisSize);
+    mateDeclare('crossAxisAlignment', crossAxisAlignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('verticalDirection', verticalDirection);
+    mateDeclare('textBaseline', textBaseline);
+    mateDeclare('children', children);
   }
 }
 
@@ -2221,16 +2221,16 @@ class Column$Mate extends Column with Mate {
 class Flexible$Mate extends Flexible with Mate {
   /// Flexible Flexible({Key? key, int flex = 1, FlexFit fit = FlexFit.loose, required Widget child})
   Flexible$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {int flex = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int flex,
+    /// optionalParameters: {int flex = 1} , defaultValue:Literal
+    int flex = 1,
 
-    /// optionalParameters: {FlexFit fit = FlexFit.loose} , hasDefaultValue:true, defaultValueCode:FlexFit.loose
+    /// optionalParameters: {FlexFit fit = FlexFit.loose} , defaultValue:unprocessed
     required FlexFit fit,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -2244,10 +2244,10 @@ class Flexible$Mate extends Flexible with Mate {
           fit: p.get('fit').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('flex', flex);
-    matePut('fit', fit);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('flex', flex);
+    mateDeclare('fit', fit);
+    mateDeclare('child', child);
   }
 }
 
@@ -2255,13 +2255,13 @@ class Flexible$Mate extends Flexible with Mate {
 class Expanded$Mate extends Expanded with Mate {
   /// Expanded Expanded({Key? key, int flex = 1, required Widget child})
   Expanded$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {int flex = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int flex,
+    /// optionalParameters: {int flex = 1} , defaultValue:Literal
+    int flex = 1,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -2273,9 +2273,9 @@ class Expanded$Mate extends Expanded with Mate {
           flex: p.get('flex').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('flex', flex);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('flex', flex);
+    mateDeclare('child', child);
   }
 }
 
@@ -2283,37 +2283,37 @@ class Expanded$Mate extends Expanded with Mate {
 class Wrap$Mate extends Wrap with Mate {
   /// Wrap Wrap({Key? key, Axis direction = Axis.horizontal, WrapAlignment alignment = WrapAlignment.start, double spacing = 0.0, WrapAlignment runAlignment = WrapAlignment.start, double runSpacing = 0.0, WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Wrap$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , hasDefaultValue:true, defaultValueCode:Axis.horizontal
+    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:unprocessed
     required Axis direction,
 
-    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapAlignment.start
+    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , defaultValue:unprocessed
     required WrapAlignment alignment,
 
-    /// optionalParameters: {double spacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double spacing,
+    /// optionalParameters: {double spacing = 0.0} , defaultValue:Literal
+    double spacing = 0.0,
 
-    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapAlignment.start
+    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , defaultValue:unprocessed
     required WrapAlignment runAlignment,
 
-    /// optionalParameters: {double runSpacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double runSpacing,
+    /// optionalParameters: {double runSpacing = 0.0} , defaultValue:Literal
+    double runSpacing = 0.0,
 
-    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapCrossAlignment.start
+    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , defaultValue:unprocessed
     required WrapCrossAlignment crossAxisAlignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:unprocessed
     required VerticalDirection verticalDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2341,17 +2341,17 @@ class Wrap$Mate extends Wrap with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('direction', direction);
-    matePut('alignment', alignment);
-    matePut('spacing', spacing);
-    matePut('runAlignment', runAlignment);
-    matePut('runSpacing', runSpacing);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('direction', direction);
+    mateDeclare('alignment', alignment);
+    mateDeclare('spacing', spacing);
+    mateDeclare('runAlignment', runAlignment);
+    mateDeclare('runSpacing', runSpacing);
+    mateDeclare('crossAxisAlignment', crossAxisAlignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('verticalDirection', verticalDirection);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
   }
 }
 
@@ -2359,16 +2359,16 @@ class Wrap$Mate extends Wrap with Mate {
 class Flow$Mate extends Flow with Mate {
   /// Flow Flow({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required FlowDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlowDelegate delegate} , defaultValue:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -2382,24 +2382,24 @@ class Flow$Mate extends Flow with Mate {
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('children', children);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('delegate', delegate);
+    mateDeclare('children', children);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 
   /// Flow Flow.unwrapped({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate.unwrapped({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required FlowDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlowDelegate delegate} , defaultValue:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.unwrapped(
           key: key,
@@ -2413,10 +2413,10 @@ class Flow$Mate extends Flow with Mate {
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('children', children);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('delegate', delegate);
+    mateDeclare('children', children);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -2424,46 +2424,46 @@ class Flow$Mate extends Flow with Mate {
 class RichText$Mate extends RichText with Mate {
   /// RichText RichText({Key? key, required InlineSpan text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, SelectionRegistrar? selectionRegistrar, Color? selectionColor})
   RichText$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required InlineSpan text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required InlineSpan text} , defaultValue:none
     required InlineSpan text,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , hasDefaultValue:true, defaultValueCode:TextAlign.start
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
     required TextAlign textAlign,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {bool softWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool softWrap,
+    /// optionalParameters: {bool softWrap = true} , defaultValue:Literal
+    bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , hasDefaultValue:true, defaultValueCode:TextOverflow.clip
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:unprocessed
     required TextOverflow overflow,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double textScaleFactor,
+    /// optionalParameters: {double textScaleFactor = 1.0} , defaultValue:Literal
+    double textScaleFactor = 1.0,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , defaultValue:none
     int? maxLines,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , hasDefaultValue:true, defaultValueCode:TextWidthBasis.parent
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
     required TextWidthBasis textWidthBasis,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {SelectionRegistrar? selectionRegistrar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SelectionRegistrar? selectionRegistrar} , defaultValue:none
     SelectionRegistrar? selectionRegistrar,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , defaultValue:none
     Color? selectionColor,
   }) : super(
           key: key,
@@ -2497,20 +2497,20 @@ class RichText$Mate extends RichText with Mate {
           selectionRegistrar: p.get('selectionRegistrar').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    matePut('key', key);
-    matePut('text', text);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('maxLines', maxLines);
-    matePut('locale', locale);
-    matePut('strutStyle', strutStyle);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('selectionRegistrar', selectionRegistrar);
-    matePut('selectionColor', selectionColor);
+    mateDeclare('key', key);
+    mateDeclare('text', text);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('softWrap', softWrap);
+    mateDeclare('overflow', overflow);
+    mateDeclare('textScaleFactor', textScaleFactor);
+    mateDeclare('maxLines', maxLines);
+    mateDeclare('locale', locale);
+    mateDeclare('strutStyle', strutStyle);
+    mateDeclare('textWidthBasis', textWidthBasis);
+    mateDeclare('textHeightBehavior', textHeightBehavior);
+    mateDeclare('selectionRegistrar', selectionRegistrar);
+    mateDeclare('selectionColor', selectionColor);
   }
 }
 
@@ -2518,56 +2518,56 @@ class RichText$Mate extends RichText with Mate {
 class RawImage$Mate extends RawImage with Mate {
   /// RawImage RawImage({Key? key, Image? image, String? debugImageLabel, double? width, double? height, double scale = 1.0, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool invertColors = false, FilterQuality filterQuality = FilterQuality.low, bool isAntiAlias = false})
   RawImage$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Image? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Image? image} , defaultValue:none
     Image? image,
 
-    /// optionalParameters: {String? debugImageLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugImageLabel} , defaultValue:none
     String? debugImageLabel,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? opacity} , defaultValue:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? colorBlendMode} , defaultValue:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
     required ImageRepeat repeat,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {bool invertColors = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool invertColors,
+    /// optionalParameters: {bool invertColors = false} , defaultValue:Literal
+    bool invertColors = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
     required FilterQuality filterQuality,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
+    bool isAntiAlias = false,
   }) : super(
           key: key,
           image: image,
@@ -2606,23 +2606,23 @@ class RawImage$Mate extends RawImage with Mate {
           filterQuality: p.get('filterQuality').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    matePut('key', key);
-    matePut('image', image);
-    matePut('debugImageLabel', debugImageLabel);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('scale', scale);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('colorBlendMode', colorBlendMode);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('repeat', repeat);
-    matePut('centerSlice', centerSlice);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('invertColors', invertColors);
-    matePut('filterQuality', filterQuality);
-    matePut('isAntiAlias', isAntiAlias);
+    mateDeclare('key', key);
+    mateDeclare('image', image);
+    mateDeclare('debugImageLabel', debugImageLabel);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
+    mateDeclare('scale', scale);
+    mateDeclare('color', color);
+    mateDeclare('opacity', opacity);
+    mateDeclare('colorBlendMode', colorBlendMode);
+    mateDeclare('fit', fit);
+    mateDeclare('alignment', alignment);
+    mateDeclare('repeat', repeat);
+    mateDeclare('centerSlice', centerSlice);
+    mateDeclare('matchTextDirection', matchTextDirection);
+    mateDeclare('invertColors', invertColors);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('isAntiAlias', isAntiAlias);
   }
 }
 
@@ -2630,13 +2630,13 @@ class RawImage$Mate extends RawImage with Mate {
 class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
   /// DefaultAssetBundle DefaultAssetBundle({Key? key, required AssetBundle bundle, required Widget child})
   DefaultAssetBundle$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required AssetBundle bundle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AssetBundle bundle} , defaultValue:none
     required AssetBundle bundle,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -2648,9 +2648,9 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
           bundle: p.get('bundle').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('bundle', bundle);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('bundle', bundle);
+    mateDeclare('child', child);
   }
 }
 
@@ -2658,13 +2658,13 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
 class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
   /// WidgetToRenderBoxAdapter WidgetToRenderBoxAdapter({required RenderBox renderBox, void Function()? onBuild, void Function()? onUnmount})
   WidgetToRenderBoxAdapter$Mate({
-    /// optionalParameters: {required RenderBox renderBox} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderBox renderBox} , defaultValue:none
     required RenderBox renderBox,
 
-    /// optionalParameters: {void Function()? onBuild} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onBuild} , defaultValue:none
     VoidCallback? onBuild,
 
-    /// optionalParameters: {void Function()? onUnmount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onUnmount} , defaultValue:none
     VoidCallback? onUnmount,
   }) : super(
           renderBox: renderBox,
@@ -2676,9 +2676,9 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
           onBuild: p.get('onBuild').build(),
           onUnmount: p.get('onUnmount').build(),
         );
-    matePut('renderBox', renderBox);
-    matePut('onBuild', onBuild);
-    matePut('onUnmount', onUnmount);
+    mateDeclare('renderBox', renderBox);
+    mateDeclare('onBuild', onBuild);
+    mateDeclare('onUnmount', onUnmount);
   }
 }
 
@@ -2686,40 +2686,40 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
 class Listener$Mate extends Listener with Mate {
   /// Listener Listener({Key? key, void Function(PointerDownEvent)? onPointerDown, void Function(PointerMoveEvent)? onPointerMove, void Function(PointerUpEvent)? onPointerUp, void Function(PointerHoverEvent)? onPointerHover, void Function(PointerCancelEvent)? onPointerCancel, void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart, void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate, void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd, void Function(PointerSignalEvent)? onPointerSignal, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   Listener$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , defaultValue:none
     PointerDownEventListener? onPointerDown,
 
-    /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , defaultValue:none
     PointerMoveEventListener? onPointerMove,
 
-    /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , defaultValue:none
     PointerUpEventListener? onPointerUp,
 
-    /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , defaultValue:none
     PointerHoverEventListener? onPointerHover,
 
-    /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , defaultValue:none
     PointerCancelEventListener? onPointerCancel,
 
-    /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , defaultValue:none
     PointerPanZoomStartEventListener? onPointerPanZoomStart,
 
-    /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , defaultValue:none
     PointerPanZoomUpdateEventListener? onPointerPanZoomUpdate,
 
-    /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , defaultValue:none
     PointerPanZoomEndEventListener? onPointerPanZoomEnd,
 
-    /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , defaultValue:none
     PointerSignalEventListener? onPointerSignal,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , hasDefaultValue:true, defaultValueCode:HitTestBehavior.deferToChild
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:unprocessed
     required HitTestBehavior behavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -2749,18 +2749,18 @@ class Listener$Mate extends Listener with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPointerDown', onPointerDown);
-    matePut('onPointerMove', onPointerMove);
-    matePut('onPointerUp', onPointerUp);
-    matePut('onPointerHover', onPointerHover);
-    matePut('onPointerCancel', onPointerCancel);
-    matePut('onPointerPanZoomStart', onPointerPanZoomStart);
-    matePut('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
-    matePut('onPointerPanZoomEnd', onPointerPanZoomEnd);
-    matePut('onPointerSignal', onPointerSignal);
-    matePut('behavior', behavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onPointerDown', onPointerDown);
+    mateDeclare('onPointerMove', onPointerMove);
+    mateDeclare('onPointerUp', onPointerUp);
+    mateDeclare('onPointerHover', onPointerHover);
+    mateDeclare('onPointerCancel', onPointerCancel);
+    mateDeclare('onPointerPanZoomStart', onPointerPanZoomStart);
+    mateDeclare('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
+    mateDeclare('onPointerPanZoomEnd', onPointerPanZoomEnd);
+    mateDeclare('onPointerSignal', onPointerSignal);
+    mateDeclare('behavior', behavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -2768,28 +2768,28 @@ class Listener$Mate extends Listener with Mate {
 class MouseRegion$Mate extends MouseRegion with Mate {
   /// MouseRegion MouseRegion({Key? key, void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, void Function(PointerHoverEvent)? onHover, MouseCursor cursor = MouseCursor.defer, bool opaque = true, HitTestBehavior? hitTestBehavior, Widget? child})
   MouseRegion$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , defaultValue:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , defaultValue:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , defaultValue:none
     PointerHoverEventListener? onHover,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , hasDefaultValue:true, defaultValueCode:MouseCursor.defer
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:unprocessed
     required MouseCursor cursor,
 
-    /// optionalParameters: {bool opaque = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool opaque,
+    /// optionalParameters: {bool opaque = true} , defaultValue:Literal
+    bool opaque = true,
 
-    /// optionalParameters: {HitTestBehavior? hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {HitTestBehavior? hitTestBehavior} , defaultValue:none
     HitTestBehavior? hitTestBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -2811,14 +2811,14 @@ class MouseRegion$Mate extends MouseRegion with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onEnter', onEnter);
-    matePut('onExit', onExit);
-    matePut('onHover', onHover);
-    matePut('cursor', cursor);
-    matePut('opaque', opaque);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onEnter', onEnter);
+    mateDeclare('onExit', onExit);
+    mateDeclare('onHover', onHover);
+    mateDeclare('cursor', cursor);
+    mateDeclare('opaque', opaque);
+    mateDeclare('hitTestBehavior', hitTestBehavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -2826,10 +2826,10 @@ class MouseRegion$Mate extends MouseRegion with Mate {
 class RepaintBoundary$Mate extends RepaintBoundary with Mate {
   /// RepaintBoundary RepaintBoundary({Key? key, Widget? child})
   RepaintBoundary$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -2839,8 +2839,8 @@ class RepaintBoundary$Mate extends RepaintBoundary with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }
 
@@ -2848,16 +2848,16 @@ class RepaintBoundary$Mate extends RepaintBoundary with Mate {
 class IgnorePointer$Mate extends IgnorePointer with Mate {
   /// IgnorePointer IgnorePointer({Key? key, bool ignoring = true, bool? ignoringSemantics, Widget? child})
   IgnorePointer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool ignoring = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool ignoring,
+    /// optionalParameters: {bool ignoring = true} , defaultValue:Literal
+    bool ignoring = true,
 
-    /// optionalParameters: {bool? ignoringSemantics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? ignoringSemantics} , defaultValue:none
     bool? ignoringSemantics,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -2871,10 +2871,10 @@ class IgnorePointer$Mate extends IgnorePointer with Mate {
           ignoringSemantics: p.get('ignoringSemantics').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('ignoring', ignoring);
-    matePut('ignoringSemantics', ignoringSemantics);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('ignoring', ignoring);
+    mateDeclare('ignoringSemantics', ignoringSemantics);
+    mateDeclare('child', child);
   }
 }
 
@@ -2882,16 +2882,16 @@ class IgnorePointer$Mate extends IgnorePointer with Mate {
 class AbsorbPointer$Mate extends AbsorbPointer with Mate {
   /// AbsorbPointer AbsorbPointer({Key? key, bool absorbing = true, Widget? child, bool? ignoringSemantics})
   AbsorbPointer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool absorbing = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool absorbing,
+    /// optionalParameters: {bool absorbing = true} , defaultValue:Literal
+    bool absorbing = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {bool? ignoringSemantics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? ignoringSemantics} , defaultValue:none
     bool? ignoringSemantics,
   }) : super(
           key: key,
@@ -2905,10 +2905,10 @@ class AbsorbPointer$Mate extends AbsorbPointer with Mate {
           child: p.get('child').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    matePut('key', key);
-    matePut('absorbing', absorbing);
-    matePut('child', child);
-    matePut('ignoringSemantics', ignoringSemantics);
+    mateDeclare('key', key);
+    mateDeclare('absorbing', absorbing);
+    mateDeclare('child', child);
+    mateDeclare('ignoringSemantics', ignoringSemantics);
   }
 }
 
@@ -2916,16 +2916,16 @@ class AbsorbPointer$Mate extends AbsorbPointer with Mate {
 class MetaData$Mate extends MetaData with Mate {
   /// MetaData MetaData({Key? key, dynamic metaData, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   MetaData$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {dynamic metaData} , hasDefaultValue:false, defaultValueCode:null
-    required dynamic metaData,
+    /// optionalParameters: {dynamic metaData} , defaultValue:none
+    dynamic metaData,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , hasDefaultValue:true, defaultValueCode:HitTestBehavior.deferToChild
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:unprocessed
     required HitTestBehavior behavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -2939,10 +2939,10 @@ class MetaData$Mate extends MetaData with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('metaData', metaData);
-    matePut('behavior', behavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('metaData', metaData);
+    mateDeclare('behavior', behavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -2950,196 +2950,196 @@ class MetaData$Mate extends MetaData with Mate {
 class Semantics$Mate extends Semantics with Mate {
   /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   Semantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {bool container = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool container,
+    /// optionalParameters: {bool container = false} , defaultValue:Literal
+    bool container = false,
 
-    /// optionalParameters: {bool explicitChildNodes = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool explicitChildNodes,
+    /// optionalParameters: {bool explicitChildNodes = false} , defaultValue:Literal
+    bool explicitChildNodes = false,
 
-    /// optionalParameters: {bool excludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeSemantics,
+    /// optionalParameters: {bool excludeSemantics = false} , defaultValue:Literal
+    bool excludeSemantics = false,
 
-    /// optionalParameters: {bool? enabled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enabled} , defaultValue:none
     bool? enabled,
 
-    /// optionalParameters: {bool? checked} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? checked} , defaultValue:none
     bool? checked,
 
-    /// optionalParameters: {bool? mixed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? mixed} , defaultValue:none
     bool? mixed,
 
-    /// optionalParameters: {bool? selected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? selected} , defaultValue:none
     bool? selected,
 
-    /// optionalParameters: {bool? toggled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? toggled} , defaultValue:none
     bool? toggled,
 
-    /// optionalParameters: {bool? button} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? button} , defaultValue:none
     bool? button,
 
-    /// optionalParameters: {bool? slider} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? slider} , defaultValue:none
     bool? slider,
 
-    /// optionalParameters: {bool? keyboardKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? keyboardKey} , defaultValue:none
     bool? keyboardKey,
 
-    /// optionalParameters: {bool? link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? link} , defaultValue:none
     bool? link,
 
-    /// optionalParameters: {bool? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? header} , defaultValue:none
     bool? header,
 
-    /// optionalParameters: {bool? textField} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? textField} , defaultValue:none
     bool? textField,
 
-    /// optionalParameters: {bool? readOnly} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? readOnly} , defaultValue:none
     bool? readOnly,
 
-    /// optionalParameters: {bool? focusable} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? focusable} , defaultValue:none
     bool? focusable,
 
-    /// optionalParameters: {bool? focused} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? focused} , defaultValue:none
     bool? focused,
 
-    /// optionalParameters: {bool? inMutuallyExclusiveGroup} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? inMutuallyExclusiveGroup} , defaultValue:none
     bool? inMutuallyExclusiveGroup,
 
-    /// optionalParameters: {bool? obscured} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? obscured} , defaultValue:none
     bool? obscured,
 
-    /// optionalParameters: {bool? multiline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? multiline} , defaultValue:none
     bool? multiline,
 
-    /// optionalParameters: {bool? scopesRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? scopesRoute} , defaultValue:none
     bool? scopesRoute,
 
-    /// optionalParameters: {bool? namesRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? namesRoute} , defaultValue:none
     bool? namesRoute,
 
-    /// optionalParameters: {bool? hidden} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? hidden} , defaultValue:none
     bool? hidden,
 
-    /// optionalParameters: {bool? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? image} , defaultValue:none
     bool? image,
 
-    /// optionalParameters: {bool? liveRegion} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? liveRegion} , defaultValue:none
     bool? liveRegion,
 
-    /// optionalParameters: {int? maxValueLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxValueLength} , defaultValue:none
     int? maxValueLength,
 
-    /// optionalParameters: {int? currentValueLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? currentValueLength} , defaultValue:none
     int? currentValueLength,
 
-    /// optionalParameters: {String? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? label} , defaultValue:none
     String? label,
 
-    /// optionalParameters: {AttributedString? attributedLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedLabel} , defaultValue:none
     AttributedString? attributedLabel,
 
-    /// optionalParameters: {String? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? value} , defaultValue:none
     String? value,
 
-    /// optionalParameters: {AttributedString? attributedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedValue} , defaultValue:none
     AttributedString? attributedValue,
 
-    /// optionalParameters: {String? increasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? increasedValue} , defaultValue:none
     String? increasedValue,
 
-    /// optionalParameters: {AttributedString? attributedIncreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedIncreasedValue} , defaultValue:none
     AttributedString? attributedIncreasedValue,
 
-    /// optionalParameters: {String? decreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? decreasedValue} , defaultValue:none
     String? decreasedValue,
 
-    /// optionalParameters: {AttributedString? attributedDecreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedDecreasedValue} , defaultValue:none
     AttributedString? attributedDecreasedValue,
 
-    /// optionalParameters: {String? hint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? hint} , defaultValue:none
     String? hint,
 
-    /// optionalParameters: {AttributedString? attributedHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedHint} , defaultValue:none
     AttributedString? attributedHint,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {String? onTapHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? onTapHint} , defaultValue:none
     String? onTapHint,
 
-    /// optionalParameters: {String? onLongPressHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? onLongPressHint} , defaultValue:none
     String? onLongPressHint,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {SemanticsSortKey? sortKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SemanticsSortKey? sortKey} , defaultValue:none
     SemanticsSortKey? sortKey,
 
-    /// optionalParameters: {SemanticsTag? tagForChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SemanticsTag? tagForChildren} , defaultValue:none
     SemanticsTag? tagForChildren,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , defaultValue:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
     VoidCallback? onLongPress,
 
-    /// optionalParameters: {void Function()? onScrollLeft} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollLeft} , defaultValue:none
     VoidCallback? onScrollLeft,
 
-    /// optionalParameters: {void Function()? onScrollRight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollRight} , defaultValue:none
     VoidCallback? onScrollRight,
 
-    /// optionalParameters: {void Function()? onScrollUp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollUp} , defaultValue:none
     VoidCallback? onScrollUp,
 
-    /// optionalParameters: {void Function()? onScrollDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollDown} , defaultValue:none
     VoidCallback? onScrollDown,
 
-    /// optionalParameters: {void Function()? onIncrease} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onIncrease} , defaultValue:none
     VoidCallback? onIncrease,
 
-    /// optionalParameters: {void Function()? onDecrease} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDecrease} , defaultValue:none
     VoidCallback? onDecrease,
 
-    /// optionalParameters: {void Function()? onCopy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onCopy} , defaultValue:none
     VoidCallback? onCopy,
 
-    /// optionalParameters: {void Function()? onCut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onCut} , defaultValue:none
     VoidCallback? onCut,
 
-    /// optionalParameters: {void Function()? onPaste} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPaste} , defaultValue:none
     VoidCallback? onPaste,
 
-    /// optionalParameters: {void Function()? onDismiss} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDismiss} , defaultValue:none
     VoidCallback? onDismiss,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , defaultValue:none
     MoveCursorHandler? onMoveCursorForwardByCharacter,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , defaultValue:none
     MoveCursorHandler? onMoveCursorBackwardByCharacter,
 
-    /// optionalParameters: {void Function(TextSelection)? onSetSelection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TextSelection)? onSetSelection} , defaultValue:none
     SetSelectionHandler? onSetSelection,
 
-    /// optionalParameters: {void Function(String)? onSetText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(String)? onSetText} , defaultValue:none
     SetTextHandler? onSetText,
 
-    /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , defaultValue:none
     VoidCallback? onDidGainAccessibilityFocus,
 
-    /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , defaultValue:none
     VoidCallback? onDidLoseAccessibilityFocus,
 
-    /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , defaultValue:none
     Map<CustomSemanticsAction, VoidCallback>? customSemanticsActions,
   }) : super(
           key: key,
@@ -3273,90 +3273,90 @@ class Semantics$Mate extends Semantics with Mate {
           onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('container', container);
-    matePut('explicitChildNodes', explicitChildNodes);
-    matePut('excludeSemantics', excludeSemantics);
-    matePut('enabled', enabled);
-    matePut('checked', checked);
-    matePut('mixed', mixed);
-    matePut('selected', selected);
-    matePut('toggled', toggled);
-    matePut('button', button);
-    matePut('slider', slider);
-    matePut('keyboardKey', keyboardKey);
-    matePut('link', link);
-    matePut('header', header);
-    matePut('textField', textField);
-    matePut('readOnly', readOnly);
-    matePut('focusable', focusable);
-    matePut('focused', focused);
-    matePut('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
-    matePut('obscured', obscured);
-    matePut('multiline', multiline);
-    matePut('scopesRoute', scopesRoute);
-    matePut('namesRoute', namesRoute);
-    matePut('hidden', hidden);
-    matePut('image', image);
-    matePut('liveRegion', liveRegion);
-    matePut('maxValueLength', maxValueLength);
-    matePut('currentValueLength', currentValueLength);
-    matePut('label', label);
-    matePut('attributedLabel', attributedLabel);
-    matePut('value', value);
-    matePut('attributedValue', attributedValue);
-    matePut('increasedValue', increasedValue);
-    matePut('attributedIncreasedValue', attributedIncreasedValue);
-    matePut('decreasedValue', decreasedValue);
-    matePut('attributedDecreasedValue', attributedDecreasedValue);
-    matePut('hint', hint);
-    matePut('attributedHint', attributedHint);
-    matePut('tooltip', tooltip);
-    matePut('onTapHint', onTapHint);
-    matePut('onLongPressHint', onLongPressHint);
-    matePut('textDirection', textDirection);
-    matePut('sortKey', sortKey);
-    matePut('tagForChildren', tagForChildren);
-    matePut('onTap', onTap);
-    matePut('onLongPress', onLongPress);
-    matePut('onScrollLeft', onScrollLeft);
-    matePut('onScrollRight', onScrollRight);
-    matePut('onScrollUp', onScrollUp);
-    matePut('onScrollDown', onScrollDown);
-    matePut('onIncrease', onIncrease);
-    matePut('onDecrease', onDecrease);
-    matePut('onCopy', onCopy);
-    matePut('onCut', onCut);
-    matePut('onPaste', onPaste);
-    matePut('onDismiss', onDismiss);
-    matePut('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
-    matePut('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
-    matePut('onSetSelection', onSetSelection);
-    matePut('onSetText', onSetText);
-    matePut('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
-    matePut('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
-    matePut('customSemanticsActions', customSemanticsActions);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('container', container);
+    mateDeclare('explicitChildNodes', explicitChildNodes);
+    mateDeclare('excludeSemantics', excludeSemantics);
+    mateDeclare('enabled', enabled);
+    mateDeclare('checked', checked);
+    mateDeclare('mixed', mixed);
+    mateDeclare('selected', selected);
+    mateDeclare('toggled', toggled);
+    mateDeclare('button', button);
+    mateDeclare('slider', slider);
+    mateDeclare('keyboardKey', keyboardKey);
+    mateDeclare('link', link);
+    mateDeclare('header', header);
+    mateDeclare('textField', textField);
+    mateDeclare('readOnly', readOnly);
+    mateDeclare('focusable', focusable);
+    mateDeclare('focused', focused);
+    mateDeclare('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
+    mateDeclare('obscured', obscured);
+    mateDeclare('multiline', multiline);
+    mateDeclare('scopesRoute', scopesRoute);
+    mateDeclare('namesRoute', namesRoute);
+    mateDeclare('hidden', hidden);
+    mateDeclare('image', image);
+    mateDeclare('liveRegion', liveRegion);
+    mateDeclare('maxValueLength', maxValueLength);
+    mateDeclare('currentValueLength', currentValueLength);
+    mateDeclare('label', label);
+    mateDeclare('attributedLabel', attributedLabel);
+    mateDeclare('value', value);
+    mateDeclare('attributedValue', attributedValue);
+    mateDeclare('increasedValue', increasedValue);
+    mateDeclare('attributedIncreasedValue', attributedIncreasedValue);
+    mateDeclare('decreasedValue', decreasedValue);
+    mateDeclare('attributedDecreasedValue', attributedDecreasedValue);
+    mateDeclare('hint', hint);
+    mateDeclare('attributedHint', attributedHint);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('onTapHint', onTapHint);
+    mateDeclare('onLongPressHint', onLongPressHint);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('sortKey', sortKey);
+    mateDeclare('tagForChildren', tagForChildren);
+    mateDeclare('onTap', onTap);
+    mateDeclare('onLongPress', onLongPress);
+    mateDeclare('onScrollLeft', onScrollLeft);
+    mateDeclare('onScrollRight', onScrollRight);
+    mateDeclare('onScrollUp', onScrollUp);
+    mateDeclare('onScrollDown', onScrollDown);
+    mateDeclare('onIncrease', onIncrease);
+    mateDeclare('onDecrease', onDecrease);
+    mateDeclare('onCopy', onCopy);
+    mateDeclare('onCut', onCut);
+    mateDeclare('onPaste', onPaste);
+    mateDeclare('onDismiss', onDismiss);
+    mateDeclare('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
+    mateDeclare('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
+    mateDeclare('onSetSelection', onSetSelection);
+    mateDeclare('onSetText', onSetText);
+    mateDeclare('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
+    mateDeclare('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
+    mateDeclare('customSemanticsActions', customSemanticsActions);
   }
 
   /// Semantics Semantics.fromProperties({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, required SemanticsProperties properties})
   Semantics$Mate.fromProperties({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {bool container = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool container,
+    /// optionalParameters: {bool container = false} , defaultValue:Literal
+    bool container = false,
 
-    /// optionalParameters: {bool explicitChildNodes = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool explicitChildNodes,
+    /// optionalParameters: {bool explicitChildNodes = false} , defaultValue:Literal
+    bool explicitChildNodes = false,
 
-    /// optionalParameters: {bool excludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeSemantics,
+    /// optionalParameters: {bool excludeSemantics = false} , defaultValue:Literal
+    bool excludeSemantics = false,
 
-    /// optionalParameters: {required SemanticsProperties properties} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SemanticsProperties properties} , defaultValue:none
     required SemanticsProperties properties,
   }) : super.fromProperties(
           key: key,
@@ -3374,12 +3374,12 @@ class Semantics$Mate extends Semantics with Mate {
           excludeSemantics: p.get('excludeSemantics').build(),
           properties: p.get('properties').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('container', container);
-    matePut('explicitChildNodes', explicitChildNodes);
-    matePut('excludeSemantics', excludeSemantics);
-    matePut('properties', properties);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('container', container);
+    mateDeclare('explicitChildNodes', explicitChildNodes);
+    mateDeclare('excludeSemantics', excludeSemantics);
+    mateDeclare('properties', properties);
   }
 }
 
@@ -3387,10 +3387,10 @@ class Semantics$Mate extends Semantics with Mate {
 class MergeSemantics$Mate extends MergeSemantics with Mate {
   /// MergeSemantics MergeSemantics({Key? key, Widget? child})
   MergeSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -3400,8 +3400,8 @@ class MergeSemantics$Mate extends MergeSemantics with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }
 
@@ -3409,13 +3409,13 @@ class MergeSemantics$Mate extends MergeSemantics with Mate {
 class BlockSemantics$Mate extends BlockSemantics with Mate {
   /// BlockSemantics BlockSemantics({Key? key, bool blocking = true, Widget? child})
   BlockSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool blocking = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool blocking,
+    /// optionalParameters: {bool blocking = true} , defaultValue:Literal
+    bool blocking = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -3427,9 +3427,9 @@ class BlockSemantics$Mate extends BlockSemantics with Mate {
           blocking: p.get('blocking').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('blocking', blocking);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('blocking', blocking);
+    mateDeclare('child', child);
   }
 }
 
@@ -3437,13 +3437,13 @@ class BlockSemantics$Mate extends BlockSemantics with Mate {
 class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
   /// ExcludeSemantics ExcludeSemantics({Key? key, bool excluding = true, Widget? child})
   ExcludeSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool excluding = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool excluding,
+    /// optionalParameters: {bool excluding = true} , defaultValue:Literal
+    bool excluding = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -3455,9 +3455,9 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('excluding', excluding);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('excluding', excluding);
+    mateDeclare('child', child);
   }
 }
 
@@ -3465,13 +3465,13 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
 class IndexedSemantics$Mate extends IndexedSemantics with Mate {
   /// IndexedSemantics IndexedSemantics({Key? key, required int index, Widget? child})
   IndexedSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required int index} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int index} , defaultValue:none
     required int index,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -3483,9 +3483,9 @@ class IndexedSemantics$Mate extends IndexedSemantics with Mate {
           index: p.get('index').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('index', index);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('index', index);
+    mateDeclare('child', child);
   }
 }
 
@@ -3493,10 +3493,10 @@ class IndexedSemantics$Mate extends IndexedSemantics with Mate {
 class KeyedSubtree$Mate extends KeyedSubtree with Mate {
   /// KeyedSubtree KeyedSubtree({Key? key, required Widget child})
   KeyedSubtree$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -3506,8 +3506,8 @@ class KeyedSubtree$Mate extends KeyedSubtree with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }
 
@@ -3515,10 +3515,10 @@ class KeyedSubtree$Mate extends KeyedSubtree with Mate {
 class Builder$Mate extends Builder with Mate {
   /// Builder Builder({Key? key, required Widget Function(BuildContext) builder})
   Builder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , defaultValue:none
     required WidgetBuilder builder,
   }) : super(
           key: key,
@@ -3528,8 +3528,8 @@ class Builder$Mate extends Builder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('builder', builder);
+    mateDeclare('key', key);
+    mateDeclare('builder', builder);
   }
 }
 
@@ -3537,10 +3537,10 @@ class Builder$Mate extends Builder with Mate {
 class StatefulBuilder$Mate extends StatefulBuilder with Mate {
   /// StatefulBuilder StatefulBuilder({Key? key, required Widget Function(BuildContext, void Function(void Function())) builder})
   StatefulBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, void Function(void Function())) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, void Function(void Function())) builder} , defaultValue:none
     required StatefulWidgetBuilder builder,
   }) : super(
           key: key,
@@ -3550,8 +3550,8 @@ class StatefulBuilder$Mate extends StatefulBuilder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('builder', builder);
+    mateDeclare('key', key);
+    mateDeclare('builder', builder);
   }
 }
 
@@ -3559,13 +3559,13 @@ class StatefulBuilder$Mate extends StatefulBuilder with Mate {
 class ColoredBox$Mate extends ColoredBox with Mate {
   /// ColoredBox ColoredBox({required Color color, Widget? child, Key? key})
   ColoredBox$Mate({
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
   }) : super(
           color: color,
@@ -3577,8 +3577,8 @@ class ColoredBox$Mate extends ColoredBox with Mate {
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    matePut('color', color);
-    matePut('child', child);
-    matePut('key', key);
+    mateDeclare('color', color);
+    mateDeclare('child', child);
+    mateDeclare('key', key);
   }
 }

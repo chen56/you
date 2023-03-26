@@ -14,31 +14,31 @@ import 'package:flutter/src/widgets/framework.dart';
 class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
   /// ButtonBarThemeData ButtonBarThemeData({MainAxisAlignment? alignment, MainAxisSize? mainAxisSize, ButtonTextTheme? buttonTextTheme, double? buttonMinWidth, double? buttonHeight, EdgeInsetsGeometry? buttonPadding, bool? buttonAlignedDropdown, ButtonBarLayoutBehavior? layoutBehavior, VerticalDirection? overflowDirection})
   ButtonBarThemeData$Mate({
-    /// optionalParameters: {MainAxisAlignment? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MainAxisAlignment? alignment} , defaultValue:none
     MainAxisAlignment? alignment,
 
-    /// optionalParameters: {MainAxisSize? mainAxisSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MainAxisSize? mainAxisSize} , defaultValue:none
     MainAxisSize? mainAxisSize,
 
-    /// optionalParameters: {ButtonTextTheme? buttonTextTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonTextTheme? buttonTextTheme} , defaultValue:none
     ButtonTextTheme? buttonTextTheme,
 
-    /// optionalParameters: {double? buttonMinWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? buttonMinWidth} , defaultValue:none
     double? buttonMinWidth,
 
-    /// optionalParameters: {double? buttonHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? buttonHeight} , defaultValue:none
     double? buttonHeight,
 
-    /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , defaultValue:none
     EdgeInsetsGeometry? buttonPadding,
 
-    /// optionalParameters: {bool? buttonAlignedDropdown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? buttonAlignedDropdown} , defaultValue:none
     bool? buttonAlignedDropdown,
 
-    /// optionalParameters: {ButtonBarLayoutBehavior? layoutBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonBarLayoutBehavior? layoutBehavior} , defaultValue:none
     ButtonBarLayoutBehavior? layoutBehavior,
 
-    /// optionalParameters: {VerticalDirection? overflowDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VerticalDirection? overflowDirection} , defaultValue:none
     VerticalDirection? overflowDirection,
   }) : super(
           alignment: alignment,
@@ -62,15 +62,15 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
           layoutBehavior: p.get('layoutBehavior').build(),
           overflowDirection: p.get('overflowDirection').build(),
         );
-    matePut('alignment', alignment);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('buttonTextTheme', buttonTextTheme);
-    matePut('buttonMinWidth', buttonMinWidth);
-    matePut('buttonHeight', buttonHeight);
-    matePut('buttonPadding', buttonPadding);
-    matePut('buttonAlignedDropdown', buttonAlignedDropdown);
-    matePut('layoutBehavior', layoutBehavior);
-    matePut('overflowDirection', overflowDirection);
+    mateDeclare('alignment', alignment);
+    mateDeclare('mainAxisSize', mainAxisSize);
+    mateDeclare('buttonTextTheme', buttonTextTheme);
+    mateDeclare('buttonMinWidth', buttonMinWidth);
+    mateDeclare('buttonHeight', buttonHeight);
+    mateDeclare('buttonPadding', buttonPadding);
+    mateDeclare('buttonAlignedDropdown', buttonAlignedDropdown);
+    mateDeclare('layoutBehavior', layoutBehavior);
+    mateDeclare('overflowDirection', overflowDirection);
   }
 }
 
@@ -78,13 +78,13 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
 class ButtonBarTheme$Mate extends ButtonBarTheme with Mate {
   /// ButtonBarTheme ButtonBarTheme({Key? key, required ButtonBarThemeData data, required Widget child})
   ButtonBarTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ButtonBarThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ButtonBarThemeData data} , defaultValue:none
     required ButtonBarThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -96,8 +96,8 @@ class ButtonBarTheme$Mate extends ButtonBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

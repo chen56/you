@@ -17,25 +17,25 @@ import 'package:flutter/src/animation/animation.dart';
 class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate {
   /// CupertinoTextMagnifier CupertinoTextMagnifier({Key? key, Curve animationCurve = Curves.easeOut, required MagnifierController controller, double dragResistance = 10.0, double hideBelowThreshold = 48.0, double horizontalScreenEdgePadding = 10.0, required ValueNotifier<MagnifierInfo> magnifierInfo})
   CupertinoTextMagnifier$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Curve animationCurve = Curves.easeOut} , hasDefaultValue:true, defaultValueCode:Curves.easeOut
+    /// optionalParameters: {Curve animationCurve = Curves.easeOut} , defaultValue:unprocessed
     required Curve animationCurve,
 
-    /// optionalParameters: {required MagnifierController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MagnifierController controller} , defaultValue:none
     required MagnifierController controller,
 
-    /// optionalParameters: {double dragResistance = 10.0} , hasDefaultValue:true, defaultValueCode:10.0
-    required double dragResistance,
+    /// optionalParameters: {double dragResistance = 10.0} , defaultValue:Literal
+    double dragResistance = 10.0,
 
-    /// optionalParameters: {double hideBelowThreshold = 48.0} , hasDefaultValue:true, defaultValueCode:48.0
-    required double hideBelowThreshold,
+    /// optionalParameters: {double hideBelowThreshold = 48.0} , defaultValue:Literal
+    double hideBelowThreshold = 48.0,
 
-    /// optionalParameters: {double horizontalScreenEdgePadding = 10.0} , hasDefaultValue:true, defaultValueCode:10.0
-    required double horizontalScreenEdgePadding,
+    /// optionalParameters: {double horizontalScreenEdgePadding = 10.0} , defaultValue:Literal
+    double horizontalScreenEdgePadding = 10.0,
 
-    /// optionalParameters: {required ValueNotifier<MagnifierInfo> magnifierInfo} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ValueNotifier<MagnifierInfo> magnifierInfo} , defaultValue:none
     required ValueNotifier<MagnifierInfo> magnifierInfo,
   }) : super(
           key: key,
@@ -55,13 +55,13 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate {
           horizontalScreenEdgePadding: p.get('horizontalScreenEdgePadding').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
-    matePut('key', key);
-    matePut('animationCurve', animationCurve);
-    matePut('controller', controller);
-    matePut('dragResistance', dragResistance);
-    matePut('hideBelowThreshold', hideBelowThreshold);
-    matePut('horizontalScreenEdgePadding', horizontalScreenEdgePadding);
-    matePut('magnifierInfo', magnifierInfo);
+    mateDeclare('key', key);
+    mateDeclare('animationCurve', animationCurve);
+    mateDeclare('controller', controller);
+    mateDeclare('dragResistance', dragResistance);
+    mateDeclare('hideBelowThreshold', hideBelowThreshold);
+    mateDeclare('horizontalScreenEdgePadding', horizontalScreenEdgePadding);
+    mateDeclare('magnifierInfo', magnifierInfo);
   }
 }
 
@@ -69,25 +69,25 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate {
 class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate {
   /// CupertinoMagnifier CupertinoMagnifier({Key? key, Size size = kDefaultSize, BorderRadius borderRadius = const BorderRadius.all(Radius.elliptical(60, 50)), Offset additionalFocalPointOffset = Offset.zero, List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)], BorderSide borderSide = const BorderSide(color: Color.fromARGB(255, 232, 232, 232)), Animation<double>? inOutAnimation})
   CupertinoMagnifier$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Size size = kDefaultSize} , hasDefaultValue:true, defaultValueCode:kDefaultSize
+    /// optionalParameters: {Size size = kDefaultSize} , defaultValue:unprocessed
     required Size size,
 
-    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.elliptical(60, 50))} , hasDefaultValue:true, defaultValueCode:const BorderRadius.all(Radius.elliptical(60, 50))
+    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.elliptical(60, 50))} , defaultValue:unprocessed
     required BorderRadius borderRadius,
 
-    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , defaultValue:unprocessed
     required Offset additionalFocalPointOffset,
 
-    /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)]} , hasDefaultValue:true, defaultValueCode:const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)]
+    /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)]} , defaultValue:unprocessed
     required List<BoxShadow> shadows,
 
-    /// optionalParameters: {BorderSide borderSide = const BorderSide(color: Color.fromARGB(255, 232, 232, 232))} , hasDefaultValue:true, defaultValueCode:const BorderSide(color: Color.fromARGB(255, 232, 232, 232))
+    /// optionalParameters: {BorderSide borderSide = const BorderSide(color: Color.fromARGB(255, 232, 232, 232))} , defaultValue:unprocessed
     required BorderSide borderSide,
 
-    /// optionalParameters: {Animation<double>? inOutAnimation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? inOutAnimation} , defaultValue:none
     Animation<double>? inOutAnimation,
   }) : super(
           key: key,
@@ -107,12 +107,12 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate {
           borderSide: p.get('borderSide').build(),
           inOutAnimation: p.get('inOutAnimation').build(),
         );
-    matePut('key', key);
-    matePut('size', size);
-    matePut('borderRadius', borderRadius);
-    matePut('additionalFocalPointOffset', additionalFocalPointOffset);
-    matePut('shadows', shadows);
-    matePut('borderSide', borderSide);
-    matePut('inOutAnimation', inOutAnimation);
+    mateDeclare('key', key);
+    mateDeclare('size', size);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('additionalFocalPointOffset', additionalFocalPointOffset);
+    mateDeclare('shadows', shadows);
+    mateDeclare('borderSide', borderSide);
+    mateDeclare('inOutAnimation', inOutAnimation);
   }
 }

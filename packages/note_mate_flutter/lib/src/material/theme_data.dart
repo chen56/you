@@ -63,241 +63,241 @@ import 'package:flutter/src/material/tooltip_theme.dart';
 class ThemeData$Mate extends ThemeData with Mate {
   /// ThemeData ThemeData.raw({required bool applyElevationOverlayColor, required NoDefaultCupertinoThemeData? cupertinoOverrideTheme, required Map<Object, ThemeExtension<dynamic>> extensions, required InputDecorationTheme inputDecorationTheme, required MaterialTapTargetSize materialTapTargetSize, required PageTransitionsTheme pageTransitionsTheme, required TargetPlatform platform, required ScrollbarThemeData scrollbarTheme, required InteractiveInkFeatureFactory splashFactory, required bool useMaterial3, required VisualDensity visualDensity, required Color canvasColor, required Color cardColor, required ColorScheme colorScheme, required Color dialogBackgroundColor, required Color disabledColor, required Color dividerColor, required Color focusColor, required Color highlightColor, required Color hintColor, required Color hoverColor, required Color indicatorColor, required Color primaryColor, required Color primaryColorDark, required Color primaryColorLight, required Color scaffoldBackgroundColor, required Color secondaryHeaderColor, required Color shadowColor, required Color splashColor, required Color unselectedWidgetColor, required IconThemeData iconTheme, required IconThemeData primaryIconTheme, required TextTheme primaryTextTheme, required TextTheme textTheme, required Typography typography, required ActionIconThemeData? actionIconTheme, required AppBarTheme appBarTheme, required BadgeThemeData badgeTheme, required MaterialBannerThemeData bannerTheme, required BottomAppBarTheme bottomAppBarTheme, required BottomNavigationBarThemeData bottomNavigationBarTheme, required BottomSheetThemeData bottomSheetTheme, required ButtonBarThemeData buttonBarTheme, required ButtonThemeData buttonTheme, required CardTheme cardTheme, required CheckboxThemeData checkboxTheme, required ChipThemeData chipTheme, required DataTableThemeData dataTableTheme, required DatePickerThemeData datePickerTheme, required DialogTheme dialogTheme, required DividerThemeData dividerTheme, required DrawerThemeData drawerTheme, required DropdownMenuThemeData dropdownMenuTheme, required ElevatedButtonThemeData elevatedButtonTheme, required ExpansionTileThemeData expansionTileTheme, required FilledButtonThemeData filledButtonTheme, required FloatingActionButtonThemeData floatingActionButtonTheme, required IconButtonThemeData iconButtonTheme, required ListTileThemeData listTileTheme, required MenuBarThemeData menuBarTheme, required MenuButtonThemeData menuButtonTheme, required MenuThemeData menuTheme, required NavigationBarThemeData navigationBarTheme, required NavigationDrawerThemeData navigationDrawerTheme, required NavigationRailThemeData navigationRailTheme, required OutlinedButtonThemeData outlinedButtonTheme, required PopupMenuThemeData popupMenuTheme, required ProgressIndicatorThemeData progressIndicatorTheme, required RadioThemeData radioTheme, required SegmentedButtonThemeData segmentedButtonTheme, required SliderThemeData sliderTheme, required SnackBarThemeData snackBarTheme, required SwitchThemeData switchTheme, required TabBarTheme tabBarTheme, required TextButtonThemeData textButtonTheme, required TextSelectionThemeData textSelectionTheme, required TimePickerThemeData timePickerTheme, required ToggleButtonsThemeData toggleButtonsTheme, required TooltipThemeData tooltipTheme, bool? fixTextFieldOutlineLabel, Brightness? primaryColorBrightness, AndroidOverscrollIndicator? androidOverscrollIndicator, Color? toggleableActiveColor, Color? selectedRowColor, Color? errorColor, Color? backgroundColor, Color? bottomAppBarColor})
   ThemeData$Mate.raw({
-    /// optionalParameters: {required bool applyElevationOverlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool applyElevationOverlayColor} , defaultValue:none
     required bool applyElevationOverlayColor,
 
-    /// optionalParameters: {required NoDefaultCupertinoThemeData? cupertinoOverrideTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required NoDefaultCupertinoThemeData? cupertinoOverrideTheme} , defaultValue:none
     required NoDefaultCupertinoThemeData? cupertinoOverrideTheme,
 
-    /// optionalParameters: {required Map<Object, ThemeExtension<dynamic>> extensions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<Object, ThemeExtension<dynamic>> extensions} , defaultValue:none
     required Map<Object, ThemeExtension<dynamic>> extensions,
 
-    /// optionalParameters: {required InputDecorationTheme inputDecorationTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required InputDecorationTheme inputDecorationTheme} , defaultValue:none
     required InputDecorationTheme inputDecorationTheme,
 
-    /// optionalParameters: {required MaterialTapTargetSize materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MaterialTapTargetSize materialTapTargetSize} , defaultValue:none
     required MaterialTapTargetSize materialTapTargetSize,
 
-    /// optionalParameters: {required PageTransitionsTheme pageTransitionsTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PageTransitionsTheme pageTransitionsTheme} , defaultValue:none
     required PageTransitionsTheme pageTransitionsTheme,
 
-    /// optionalParameters: {required TargetPlatform platform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TargetPlatform platform} , defaultValue:none
     required TargetPlatform platform,
 
-    /// optionalParameters: {required ScrollbarThemeData scrollbarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollbarThemeData scrollbarTheme} , defaultValue:none
     required ScrollbarThemeData scrollbarTheme,
 
-    /// optionalParameters: {required InteractiveInkFeatureFactory splashFactory} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required InteractiveInkFeatureFactory splashFactory} , defaultValue:none
     required InteractiveInkFeatureFactory splashFactory,
 
-    /// optionalParameters: {required bool useMaterial3} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool useMaterial3} , defaultValue:none
     required bool useMaterial3,
 
-    /// optionalParameters: {required VisualDensity visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required VisualDensity visualDensity} , defaultValue:none
     required VisualDensity visualDensity,
 
-    /// optionalParameters: {required Color canvasColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color canvasColor} , defaultValue:none
     required Color canvasColor,
 
-    /// optionalParameters: {required Color cardColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color cardColor} , defaultValue:none
     required Color cardColor,
 
-    /// optionalParameters: {required ColorScheme colorScheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ColorScheme colorScheme} , defaultValue:none
     required ColorScheme colorScheme,
 
-    /// optionalParameters: {required Color dialogBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color dialogBackgroundColor} , defaultValue:none
     required Color dialogBackgroundColor,
 
-    /// optionalParameters: {required Color disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color disabledColor} , defaultValue:none
     required Color disabledColor,
 
-    /// optionalParameters: {required Color dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color dividerColor} , defaultValue:none
     required Color dividerColor,
 
-    /// optionalParameters: {required Color focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color focusColor} , defaultValue:none
     required Color focusColor,
 
-    /// optionalParameters: {required Color highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color highlightColor} , defaultValue:none
     required Color highlightColor,
 
-    /// optionalParameters: {required Color hintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color hintColor} , defaultValue:none
     required Color hintColor,
 
-    /// optionalParameters: {required Color hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color hoverColor} , defaultValue:none
     required Color hoverColor,
 
-    /// optionalParameters: {required Color indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color indicatorColor} , defaultValue:none
     required Color indicatorColor,
 
-    /// optionalParameters: {required Color primaryColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color primaryColor} , defaultValue:none
     required Color primaryColor,
 
-    /// optionalParameters: {required Color primaryColorDark} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color primaryColorDark} , defaultValue:none
     required Color primaryColorDark,
 
-    /// optionalParameters: {required Color primaryColorLight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color primaryColorLight} , defaultValue:none
     required Color primaryColorLight,
 
-    /// optionalParameters: {required Color scaffoldBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color scaffoldBackgroundColor} , defaultValue:none
     required Color scaffoldBackgroundColor,
 
-    /// optionalParameters: {required Color secondaryHeaderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color secondaryHeaderColor} , defaultValue:none
     required Color secondaryHeaderColor,
 
-    /// optionalParameters: {required Color shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color shadowColor} , defaultValue:none
     required Color shadowColor,
 
-    /// optionalParameters: {required Color splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color splashColor} , defaultValue:none
     required Color splashColor,
 
-    /// optionalParameters: {required Color unselectedWidgetColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color unselectedWidgetColor} , defaultValue:none
     required Color unselectedWidgetColor,
 
-    /// optionalParameters: {required IconThemeData iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required IconThemeData iconTheme} , defaultValue:none
     required IconThemeData iconTheme,
 
-    /// optionalParameters: {required IconThemeData primaryIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required IconThemeData primaryIconTheme} , defaultValue:none
     required IconThemeData primaryIconTheme,
 
-    /// optionalParameters: {required TextTheme primaryTextTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextTheme primaryTextTheme} , defaultValue:none
     required TextTheme primaryTextTheme,
 
-    /// optionalParameters: {required TextTheme textTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextTheme textTheme} , defaultValue:none
     required TextTheme textTheme,
 
-    /// optionalParameters: {required Typography typography} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Typography typography} , defaultValue:none
     required Typography typography,
 
-    /// optionalParameters: {required ActionIconThemeData? actionIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ActionIconThemeData? actionIconTheme} , defaultValue:none
     required ActionIconThemeData? actionIconTheme,
 
-    /// optionalParameters: {required AppBarTheme appBarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AppBarTheme appBarTheme} , defaultValue:none
     required AppBarTheme appBarTheme,
 
-    /// optionalParameters: {required BadgeThemeData badgeTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BadgeThemeData badgeTheme} , defaultValue:none
     required BadgeThemeData badgeTheme,
 
-    /// optionalParameters: {required MaterialBannerThemeData bannerTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MaterialBannerThemeData bannerTheme} , defaultValue:none
     required MaterialBannerThemeData bannerTheme,
 
-    /// optionalParameters: {required BottomAppBarTheme bottomAppBarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BottomAppBarTheme bottomAppBarTheme} , defaultValue:none
     required BottomAppBarTheme bottomAppBarTheme,
 
-    /// optionalParameters: {required BottomNavigationBarThemeData bottomNavigationBarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BottomNavigationBarThemeData bottomNavigationBarTheme} , defaultValue:none
     required BottomNavigationBarThemeData bottomNavigationBarTheme,
 
-    /// optionalParameters: {required BottomSheetThemeData bottomSheetTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BottomSheetThemeData bottomSheetTheme} , defaultValue:none
     required BottomSheetThemeData bottomSheetTheme,
 
-    /// optionalParameters: {required ButtonBarThemeData buttonBarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ButtonBarThemeData buttonBarTheme} , defaultValue:none
     required ButtonBarThemeData buttonBarTheme,
 
-    /// optionalParameters: {required ButtonThemeData buttonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ButtonThemeData buttonTheme} , defaultValue:none
     required ButtonThemeData buttonTheme,
 
-    /// optionalParameters: {required CardTheme cardTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required CardTheme cardTheme} , defaultValue:none
     required CardTheme cardTheme,
 
-    /// optionalParameters: {required CheckboxThemeData checkboxTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required CheckboxThemeData checkboxTheme} , defaultValue:none
     required CheckboxThemeData checkboxTheme,
 
-    /// optionalParameters: {required ChipThemeData chipTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ChipThemeData chipTheme} , defaultValue:none
     required ChipThemeData chipTheme,
 
-    /// optionalParameters: {required DataTableThemeData dataTableTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DataTableThemeData dataTableTheme} , defaultValue:none
     required DataTableThemeData dataTableTheme,
 
-    /// optionalParameters: {required DatePickerThemeData datePickerTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DatePickerThemeData datePickerTheme} , defaultValue:none
     required DatePickerThemeData datePickerTheme,
 
-    /// optionalParameters: {required DialogTheme dialogTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DialogTheme dialogTheme} , defaultValue:none
     required DialogTheme dialogTheme,
 
-    /// optionalParameters: {required DividerThemeData dividerTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DividerThemeData dividerTheme} , defaultValue:none
     required DividerThemeData dividerTheme,
 
-    /// optionalParameters: {required DrawerThemeData drawerTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DrawerThemeData drawerTheme} , defaultValue:none
     required DrawerThemeData drawerTheme,
 
-    /// optionalParameters: {required DropdownMenuThemeData dropdownMenuTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DropdownMenuThemeData dropdownMenuTheme} , defaultValue:none
     required DropdownMenuThemeData dropdownMenuTheme,
 
-    /// optionalParameters: {required ElevatedButtonThemeData elevatedButtonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ElevatedButtonThemeData elevatedButtonTheme} , defaultValue:none
     required ElevatedButtonThemeData elevatedButtonTheme,
 
-    /// optionalParameters: {required ExpansionTileThemeData expansionTileTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ExpansionTileThemeData expansionTileTheme} , defaultValue:none
     required ExpansionTileThemeData expansionTileTheme,
 
-    /// optionalParameters: {required FilledButtonThemeData filledButtonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FilledButtonThemeData filledButtonTheme} , defaultValue:none
     required FilledButtonThemeData filledButtonTheme,
 
-    /// optionalParameters: {required FloatingActionButtonThemeData floatingActionButtonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FloatingActionButtonThemeData floatingActionButtonTheme} , defaultValue:none
     required FloatingActionButtonThemeData floatingActionButtonTheme,
 
-    /// optionalParameters: {required IconButtonThemeData iconButtonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required IconButtonThemeData iconButtonTheme} , defaultValue:none
     required IconButtonThemeData iconButtonTheme,
 
-    /// optionalParameters: {required ListTileThemeData listTileTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ListTileThemeData listTileTheme} , defaultValue:none
     required ListTileThemeData listTileTheme,
 
-    /// optionalParameters: {required MenuBarThemeData menuBarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MenuBarThemeData menuBarTheme} , defaultValue:none
     required MenuBarThemeData menuBarTheme,
 
-    /// optionalParameters: {required MenuButtonThemeData menuButtonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MenuButtonThemeData menuButtonTheme} , defaultValue:none
     required MenuButtonThemeData menuButtonTheme,
 
-    /// optionalParameters: {required MenuThemeData menuTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MenuThemeData menuTheme} , defaultValue:none
     required MenuThemeData menuTheme,
 
-    /// optionalParameters: {required NavigationBarThemeData navigationBarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required NavigationBarThemeData navigationBarTheme} , defaultValue:none
     required NavigationBarThemeData navigationBarTheme,
 
-    /// optionalParameters: {required NavigationDrawerThemeData navigationDrawerTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required NavigationDrawerThemeData navigationDrawerTheme} , defaultValue:none
     required NavigationDrawerThemeData navigationDrawerTheme,
 
-    /// optionalParameters: {required NavigationRailThemeData navigationRailTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required NavigationRailThemeData navigationRailTheme} , defaultValue:none
     required NavigationRailThemeData navigationRailTheme,
 
-    /// optionalParameters: {required OutlinedButtonThemeData outlinedButtonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required OutlinedButtonThemeData outlinedButtonTheme} , defaultValue:none
     required OutlinedButtonThemeData outlinedButtonTheme,
 
-    /// optionalParameters: {required PopupMenuThemeData popupMenuTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PopupMenuThemeData popupMenuTheme} , defaultValue:none
     required PopupMenuThemeData popupMenuTheme,
 
-    /// optionalParameters: {required ProgressIndicatorThemeData progressIndicatorTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ProgressIndicatorThemeData progressIndicatorTheme} , defaultValue:none
     required ProgressIndicatorThemeData progressIndicatorTheme,
 
-    /// optionalParameters: {required RadioThemeData radioTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RadioThemeData radioTheme} , defaultValue:none
     required RadioThemeData radioTheme,
 
-    /// optionalParameters: {required SegmentedButtonThemeData segmentedButtonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SegmentedButtonThemeData segmentedButtonTheme} , defaultValue:none
     required SegmentedButtonThemeData segmentedButtonTheme,
 
-    /// optionalParameters: {required SliderThemeData sliderTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliderThemeData sliderTheme} , defaultValue:none
     required SliderThemeData sliderTheme,
 
-    /// optionalParameters: {required SnackBarThemeData snackBarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SnackBarThemeData snackBarTheme} , defaultValue:none
     required SnackBarThemeData snackBarTheme,
 
-    /// optionalParameters: {required SwitchThemeData switchTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SwitchThemeData switchTheme} , defaultValue:none
     required SwitchThemeData switchTheme,
 
-    /// optionalParameters: {required TabBarTheme tabBarTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TabBarTheme tabBarTheme} , defaultValue:none
     required TabBarTheme tabBarTheme,
 
-    /// optionalParameters: {required TextButtonThemeData textButtonTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextButtonThemeData textButtonTheme} , defaultValue:none
     required TextButtonThemeData textButtonTheme,
 
-    /// optionalParameters: {required TextSelectionThemeData textSelectionTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionThemeData textSelectionTheme} , defaultValue:none
     required TextSelectionThemeData textSelectionTheme,
 
-    /// optionalParameters: {required TimePickerThemeData timePickerTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TimePickerThemeData timePickerTheme} , defaultValue:none
     required TimePickerThemeData timePickerTheme,
 
-    /// optionalParameters: {required ToggleButtonsThemeData toggleButtonsTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ToggleButtonsThemeData toggleButtonsTheme} , defaultValue:none
     required ToggleButtonsThemeData toggleButtonsTheme,
 
-    /// optionalParameters: {required TooltipThemeData tooltipTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TooltipThemeData tooltipTheme} , defaultValue:none
     required TooltipThemeData tooltipTheme,
   }) : super.raw(
           applyElevationOverlayColor: applyElevationOverlayColor,
@@ -461,85 +461,85 @@ class ThemeData$Mate extends ThemeData with Mate {
           toggleButtonsTheme: p.get('toggleButtonsTheme').build(),
           tooltipTheme: p.get('tooltipTheme').build(),
         );
-    matePut('applyElevationOverlayColor', applyElevationOverlayColor);
-    matePut('cupertinoOverrideTheme', cupertinoOverrideTheme);
-    matePut('extensions', extensions);
-    matePut('inputDecorationTheme', inputDecorationTheme);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('pageTransitionsTheme', pageTransitionsTheme);
-    matePut('platform', platform);
-    matePut('scrollbarTheme', scrollbarTheme);
-    matePut('splashFactory', splashFactory);
-    matePut('useMaterial3', useMaterial3);
-    matePut('visualDensity', visualDensity);
-    matePut('canvasColor', canvasColor);
-    matePut('cardColor', cardColor);
-    matePut('colorScheme', colorScheme);
-    matePut('dialogBackgroundColor', dialogBackgroundColor);
-    matePut('disabledColor', disabledColor);
-    matePut('dividerColor', dividerColor);
-    matePut('focusColor', focusColor);
-    matePut('highlightColor', highlightColor);
-    matePut('hintColor', hintColor);
-    matePut('hoverColor', hoverColor);
-    matePut('indicatorColor', indicatorColor);
-    matePut('primaryColor', primaryColor);
-    matePut('primaryColorDark', primaryColorDark);
-    matePut('primaryColorLight', primaryColorLight);
-    matePut('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    matePut('secondaryHeaderColor', secondaryHeaderColor);
-    matePut('shadowColor', shadowColor);
-    matePut('splashColor', splashColor);
-    matePut('unselectedWidgetColor', unselectedWidgetColor);
-    matePut('iconTheme', iconTheme);
-    matePut('primaryIconTheme', primaryIconTheme);
-    matePut('primaryTextTheme', primaryTextTheme);
-    matePut('textTheme', textTheme);
-    matePut('typography', typography);
-    matePut('actionIconTheme', actionIconTheme);
-    matePut('appBarTheme', appBarTheme);
-    matePut('badgeTheme', badgeTheme);
-    matePut('bannerTheme', bannerTheme);
-    matePut('bottomAppBarTheme', bottomAppBarTheme);
-    matePut('bottomNavigationBarTheme', bottomNavigationBarTheme);
-    matePut('bottomSheetTheme', bottomSheetTheme);
-    matePut('buttonBarTheme', buttonBarTheme);
-    matePut('buttonTheme', buttonTheme);
-    matePut('cardTheme', cardTheme);
-    matePut('checkboxTheme', checkboxTheme);
-    matePut('chipTheme', chipTheme);
-    matePut('dataTableTheme', dataTableTheme);
-    matePut('datePickerTheme', datePickerTheme);
-    matePut('dialogTheme', dialogTheme);
-    matePut('dividerTheme', dividerTheme);
-    matePut('drawerTheme', drawerTheme);
-    matePut('dropdownMenuTheme', dropdownMenuTheme);
-    matePut('elevatedButtonTheme', elevatedButtonTheme);
-    matePut('expansionTileTheme', expansionTileTheme);
-    matePut('filledButtonTheme', filledButtonTheme);
-    matePut('floatingActionButtonTheme', floatingActionButtonTheme);
-    matePut('iconButtonTheme', iconButtonTheme);
-    matePut('listTileTheme', listTileTheme);
-    matePut('menuBarTheme', menuBarTheme);
-    matePut('menuButtonTheme', menuButtonTheme);
-    matePut('menuTheme', menuTheme);
-    matePut('navigationBarTheme', navigationBarTheme);
-    matePut('navigationDrawerTheme', navigationDrawerTheme);
-    matePut('navigationRailTheme', navigationRailTheme);
-    matePut('outlinedButtonTheme', outlinedButtonTheme);
-    matePut('popupMenuTheme', popupMenuTheme);
-    matePut('progressIndicatorTheme', progressIndicatorTheme);
-    matePut('radioTheme', radioTheme);
-    matePut('segmentedButtonTheme', segmentedButtonTheme);
-    matePut('sliderTheme', sliderTheme);
-    matePut('snackBarTheme', snackBarTheme);
-    matePut('switchTheme', switchTheme);
-    matePut('tabBarTheme', tabBarTheme);
-    matePut('textButtonTheme', textButtonTheme);
-    matePut('textSelectionTheme', textSelectionTheme);
-    matePut('timePickerTheme', timePickerTheme);
-    matePut('toggleButtonsTheme', toggleButtonsTheme);
-    matePut('tooltipTheme', tooltipTheme);
+    mateDeclare('applyElevationOverlayColor', applyElevationOverlayColor);
+    mateDeclare('cupertinoOverrideTheme', cupertinoOverrideTheme);
+    mateDeclare('extensions', extensions);
+    mateDeclare('inputDecorationTheme', inputDecorationTheme);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('pageTransitionsTheme', pageTransitionsTheme);
+    mateDeclare('platform', platform);
+    mateDeclare('scrollbarTheme', scrollbarTheme);
+    mateDeclare('splashFactory', splashFactory);
+    mateDeclare('useMaterial3', useMaterial3);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('canvasColor', canvasColor);
+    mateDeclare('cardColor', cardColor);
+    mateDeclare('colorScheme', colorScheme);
+    mateDeclare('dialogBackgroundColor', dialogBackgroundColor);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('dividerColor', dividerColor);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('highlightColor', highlightColor);
+    mateDeclare('hintColor', hintColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('indicatorColor', indicatorColor);
+    mateDeclare('primaryColor', primaryColor);
+    mateDeclare('primaryColorDark', primaryColorDark);
+    mateDeclare('primaryColorLight', primaryColorLight);
+    mateDeclare('scaffoldBackgroundColor', scaffoldBackgroundColor);
+    mateDeclare('secondaryHeaderColor', secondaryHeaderColor);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('splashColor', splashColor);
+    mateDeclare('unselectedWidgetColor', unselectedWidgetColor);
+    mateDeclare('iconTheme', iconTheme);
+    mateDeclare('primaryIconTheme', primaryIconTheme);
+    mateDeclare('primaryTextTheme', primaryTextTheme);
+    mateDeclare('textTheme', textTheme);
+    mateDeclare('typography', typography);
+    mateDeclare('actionIconTheme', actionIconTheme);
+    mateDeclare('appBarTheme', appBarTheme);
+    mateDeclare('badgeTheme', badgeTheme);
+    mateDeclare('bannerTheme', bannerTheme);
+    mateDeclare('bottomAppBarTheme', bottomAppBarTheme);
+    mateDeclare('bottomNavigationBarTheme', bottomNavigationBarTheme);
+    mateDeclare('bottomSheetTheme', bottomSheetTheme);
+    mateDeclare('buttonBarTheme', buttonBarTheme);
+    mateDeclare('buttonTheme', buttonTheme);
+    mateDeclare('cardTheme', cardTheme);
+    mateDeclare('checkboxTheme', checkboxTheme);
+    mateDeclare('chipTheme', chipTheme);
+    mateDeclare('dataTableTheme', dataTableTheme);
+    mateDeclare('datePickerTheme', datePickerTheme);
+    mateDeclare('dialogTheme', dialogTheme);
+    mateDeclare('dividerTheme', dividerTheme);
+    mateDeclare('drawerTheme', drawerTheme);
+    mateDeclare('dropdownMenuTheme', dropdownMenuTheme);
+    mateDeclare('elevatedButtonTheme', elevatedButtonTheme);
+    mateDeclare('expansionTileTheme', expansionTileTheme);
+    mateDeclare('filledButtonTheme', filledButtonTheme);
+    mateDeclare('floatingActionButtonTheme', floatingActionButtonTheme);
+    mateDeclare('iconButtonTheme', iconButtonTheme);
+    mateDeclare('listTileTheme', listTileTheme);
+    mateDeclare('menuBarTheme', menuBarTheme);
+    mateDeclare('menuButtonTheme', menuButtonTheme);
+    mateDeclare('menuTheme', menuTheme);
+    mateDeclare('navigationBarTheme', navigationBarTheme);
+    mateDeclare('navigationDrawerTheme', navigationDrawerTheme);
+    mateDeclare('navigationRailTheme', navigationRailTheme);
+    mateDeclare('outlinedButtonTheme', outlinedButtonTheme);
+    mateDeclare('popupMenuTheme', popupMenuTheme);
+    mateDeclare('progressIndicatorTheme', progressIndicatorTheme);
+    mateDeclare('radioTheme', radioTheme);
+    mateDeclare('segmentedButtonTheme', segmentedButtonTheme);
+    mateDeclare('sliderTheme', sliderTheme);
+    mateDeclare('snackBarTheme', snackBarTheme);
+    mateDeclare('switchTheme', switchTheme);
+    mateDeclare('tabBarTheme', tabBarTheme);
+    mateDeclare('textButtonTheme', textButtonTheme);
+    mateDeclare('textSelectionTheme', textSelectionTheme);
+    mateDeclare('timePickerTheme', timePickerTheme);
+    mateDeclare('toggleButtonsTheme', toggleButtonsTheme);
+    mateDeclare('tooltipTheme', tooltipTheme);
   }
 }
 
@@ -548,11 +548,11 @@ class MaterialBasedCupertinoThemeData$Mate extends MaterialBasedCupertinoThemeDa
   /// MaterialBasedCupertinoThemeData MaterialBasedCupertinoThemeData({required ThemeData materialTheme})
   MaterialBasedCupertinoThemeData$Mate(
       {
-      /// optionalParameters: {required ThemeData materialTheme} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required ThemeData materialTheme} , defaultValue:none
       required ThemeData materialTheme})
       : super(materialTheme: materialTheme) {
     mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(materialTheme: p.get('materialTheme').build());
-    matePut('materialTheme', materialTheme);
+    mateDeclare('materialTheme', materialTheme);
   }
 }
 
@@ -560,11 +560,11 @@ class MaterialBasedCupertinoThemeData$Mate extends MaterialBasedCupertinoThemeDa
 class VisualDensity$Mate extends VisualDensity with Mate {
   /// VisualDensity VisualDensity({double horizontal = 0.0, double vertical = 0.0})
   VisualDensity$Mate({
-    /// optionalParameters: {double horizontal = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double horizontal,
+    /// optionalParameters: {double horizontal = 0.0} , defaultValue:Literal
+    double horizontal = 0.0,
 
-    /// optionalParameters: {double vertical = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double vertical,
+    /// optionalParameters: {double vertical = 0.0} , defaultValue:Literal
+    double vertical = 0.0,
   }) : super(
           horizontal: horizontal,
           vertical: vertical,
@@ -573,7 +573,7 @@ class VisualDensity$Mate extends VisualDensity with Mate {
           horizontal: p.get('horizontal').build(),
           vertical: p.get('vertical').build(),
         );
-    matePut('horizontal', horizontal);
-    matePut('vertical', vertical);
+    mateDeclare('horizontal', horizontal);
+    mateDeclare('vertical', vertical);
   }
 }

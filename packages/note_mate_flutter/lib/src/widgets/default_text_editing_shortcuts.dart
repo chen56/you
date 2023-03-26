@@ -9,10 +9,10 @@ import 'package:flutter/src/widgets/framework.dart';
 class DefaultTextEditingShortcuts$Mate extends DefaultTextEditingShortcuts with Mate {
   /// DefaultTextEditingShortcuts DefaultTextEditingShortcuts({Key? key, required Widget child})
   DefaultTextEditingShortcuts$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -22,7 +22,7 @@ class DefaultTextEditingShortcuts$Mate extends DefaultTextEditingShortcuts with 
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }

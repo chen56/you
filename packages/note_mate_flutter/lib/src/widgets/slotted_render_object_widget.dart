@@ -12,6 +12,6 @@ class SlottedRenderObjectElement$Mate<S> extends SlottedRenderObjectElement<S> w
       SlottedMultiChildRenderObjectWidgetMixin<S> widget)
       : super(widget) {
     mateBuilder = (p) => SlottedRenderObjectElement$Mate<S>(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }

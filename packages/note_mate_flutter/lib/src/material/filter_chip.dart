@@ -18,88 +18,88 @@ import 'package:flutter/src/widgets/icon_theme_data.dart';
 class FilterChip$Mate extends FilterChip with Mate {
   /// FilterChip FilterChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, bool selected = false, required void Function(bool)? onSelected, double? pressElevation, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder()})
   FilterChip$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? avatar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? avatar} , defaultValue:none
     Widget? avatar,
 
-    /// optionalParameters: {required Widget label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget label} , defaultValue:none
     required Widget label,
 
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , defaultValue:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , defaultValue:none
     EdgeInsetsGeometry? labelPadding,
 
-    /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool selected,
+    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    bool selected = false,
 
-    /// optionalParameters: {required void Function(bool)? onSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(bool)? onSelected} , defaultValue:none
     required ValueChanged<bool>? onSelected,
 
-    /// optionalParameters: {double? pressElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? pressElevation} , defaultValue:none
     double? pressElevation,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , defaultValue:none
     Color? selectedColor,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {BorderSide? side} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? side} , defaultValue:none
     BorderSide? side,
 
-    /// optionalParameters: {OutlinedBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {IconThemeData? iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? iconTheme} , defaultValue:none
     IconThemeData? iconTheme,
 
-    /// optionalParameters: {Color? selectedShadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedShadowColor} , defaultValue:none
     Color? selectedShadowColor,
 
-    /// optionalParameters: {bool? showCheckmark} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showCheckmark} , defaultValue:none
     bool? showCheckmark,
 
-    /// optionalParameters: {Color? checkmarkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? checkmarkColor} , defaultValue:none
     Color? checkmarkColor,
 
-    /// optionalParameters: {ShapeBorder avatarBorder = const CircleBorder()} , hasDefaultValue:true, defaultValueCode:const CircleBorder()
+    /// optionalParameters: {ShapeBorder avatarBorder = const CircleBorder()} , defaultValue:unprocessed
     required ShapeBorder avatarBorder,
   }) : super(
           key: key,
@@ -161,33 +161,33 @@ class FilterChip$Mate extends FilterChip with Mate {
           checkmarkColor: p.get('checkmarkColor').build(),
           avatarBorder: p.get('avatarBorder').build(),
         );
-    matePut('key', key);
-    matePut('avatar', avatar);
-    matePut('label', label);
-    matePut('labelStyle', labelStyle);
-    matePut('labelPadding', labelPadding);
-    matePut('selected', selected);
-    matePut('onSelected', onSelected);
-    matePut('pressElevation', pressElevation);
-    matePut('disabledColor', disabledColor);
-    matePut('selectedColor', selectedColor);
-    matePut('tooltip', tooltip);
-    matePut('side', side);
-    matePut('shape', shape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('backgroundColor', backgroundColor);
-    matePut('padding', padding);
-    matePut('visualDensity', visualDensity);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('iconTheme', iconTheme);
-    matePut('selectedShadowColor', selectedShadowColor);
-    matePut('showCheckmark', showCheckmark);
-    matePut('checkmarkColor', checkmarkColor);
-    matePut('avatarBorder', avatarBorder);
+    mateDeclare('key', key);
+    mateDeclare('avatar', avatar);
+    mateDeclare('label', label);
+    mateDeclare('labelStyle', labelStyle);
+    mateDeclare('labelPadding', labelPadding);
+    mateDeclare('selected', selected);
+    mateDeclare('onSelected', onSelected);
+    mateDeclare('pressElevation', pressElevation);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('selectedColor', selectedColor);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('side', side);
+    mateDeclare('shape', shape);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('padding', padding);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('iconTheme', iconTheme);
+    mateDeclare('selectedShadowColor', selectedShadowColor);
+    mateDeclare('showCheckmark', showCheckmark);
+    mateDeclare('checkmarkColor', checkmarkColor);
+    mateDeclare('avatarBorder', avatarBorder);
   }
 }

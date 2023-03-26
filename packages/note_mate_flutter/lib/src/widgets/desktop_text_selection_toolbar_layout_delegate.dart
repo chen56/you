@@ -9,10 +9,10 @@ class DesktopTextSelectionToolbarLayoutDelegate$Mate extends DesktopTextSelectio
   /// DesktopTextSelectionToolbarLayoutDelegate DesktopTextSelectionToolbarLayoutDelegate({required Offset anchor})
   DesktopTextSelectionToolbarLayoutDelegate$Mate(
       {
-      /// optionalParameters: {required Offset anchor} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required Offset anchor} , defaultValue:none
       required Offset anchor})
       : super(anchor: anchor) {
     mateBuilder = (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
-    matePut('anchor', anchor);
+    mateDeclare('anchor', anchor);
   }
 }

@@ -11,17 +11,17 @@ import 'package:flutter/src/material/button_style.dart';
 class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
   /// ButtonSegment<T> ButtonSegment({required T value, Widget? icon, Widget? label, bool enabled = true})
   ButtonSegment$Mate({
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , defaultValue:none
     required T value,
 
-    /// optionalParameters: {Widget? icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? icon} , defaultValue:none
     Widget? icon,
 
-    /// optionalParameters: {Widget? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? label} , defaultValue:none
     Widget? label,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    bool enabled = true,
   }) : super(
           value: value,
           icon: icon,
@@ -34,10 +34,10 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
           label: p.get('label').build(),
           enabled: p.get('enabled').build(),
         );
-    matePut('value', value);
-    matePut('icon', icon);
-    matePut('label', label);
-    matePut('enabled', enabled);
+    mateDeclare('value', value);
+    mateDeclare('icon', icon);
+    mateDeclare('label', label);
+    mateDeclare('enabled', enabled);
   }
 }
 
@@ -45,31 +45,31 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
 class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
   /// SegmentedButton<T> SegmentedButton({Key? key, required List<ButtonSegment<T>> segments, required Set<T> selected, void Function(Set<T>)? onSelectionChanged, bool multiSelectionEnabled = false, bool emptySelectionAllowed = false, ButtonStyle? style, bool showSelectedIcon = true, Widget? selectedIcon})
   SegmentedButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<ButtonSegment<T>> segments} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<ButtonSegment<T>> segments} , defaultValue:none
     required List<ButtonSegment<T>> segments,
 
-    /// optionalParameters: {required Set<T> selected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<T> selected} , defaultValue:none
     required Set<T> selected,
 
-    /// optionalParameters: {void Function(Set<T>)? onSelectionChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Set<T>)? onSelectionChanged} , defaultValue:none
     void Function(Set<T>)? onSelectionChanged,
 
-    /// optionalParameters: {bool multiSelectionEnabled = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool multiSelectionEnabled,
+    /// optionalParameters: {bool multiSelectionEnabled = false} , defaultValue:Literal
+    bool multiSelectionEnabled = false,
 
-    /// optionalParameters: {bool emptySelectionAllowed = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool emptySelectionAllowed,
+    /// optionalParameters: {bool emptySelectionAllowed = false} , defaultValue:Literal
+    bool emptySelectionAllowed = false,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
     ButtonStyle? style,
 
-    /// optionalParameters: {bool showSelectedIcon = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSelectedIcon,
+    /// optionalParameters: {bool showSelectedIcon = true} , defaultValue:Literal
+    bool showSelectedIcon = true,
 
-    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? selectedIcon} , defaultValue:none
     Widget? selectedIcon,
   }) : super(
           key: key,
@@ -93,14 +93,14 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
           showSelectedIcon: p.get('showSelectedIcon').build(),
           selectedIcon: p.get('selectedIcon').build(),
         );
-    matePut('key', key);
-    matePut('segments', segments);
-    matePut('selected', selected);
-    matePut('onSelectionChanged', onSelectionChanged);
-    matePut('multiSelectionEnabled', multiSelectionEnabled);
-    matePut('emptySelectionAllowed', emptySelectionAllowed);
-    matePut('style', style);
-    matePut('showSelectedIcon', showSelectedIcon);
-    matePut('selectedIcon', selectedIcon);
+    mateDeclare('key', key);
+    mateDeclare('segments', segments);
+    mateDeclare('selected', selected);
+    mateDeclare('onSelectionChanged', onSelectionChanged);
+    mateDeclare('multiSelectionEnabled', multiSelectionEnabled);
+    mateDeclare('emptySelectionAllowed', emptySelectionAllowed);
+    mateDeclare('style', style);
+    mateDeclare('showSelectedIcon', showSelectedIcon);
+    mateDeclare('selectedIcon', selectedIcon);
   }
 }

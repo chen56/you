@@ -14,34 +14,34 @@ import 'package:flutter/src/widgets/scrollbar.dart';
 class CupertinoScrollbar$Mate extends CupertinoScrollbar with Mate {
   /// CupertinoScrollbar CupertinoScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, double thickness = defaultThickness, double thicknessWhileDragging = defaultThicknessWhileDragging, Radius radius = defaultRadius, Radius radiusWhileDragging = defaultRadiusWhileDragging, bool Function(ScrollNotification)? notificationPredicate, ScrollbarOrientation? scrollbarOrientation, bool? isAlwaysShown})
   CupertinoScrollbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? thumbVisibility} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? thumbVisibility} , defaultValue:none
     bool? thumbVisibility,
 
-    /// optionalParameters: {double thickness = defaultThickness} , hasDefaultValue:true, defaultValueCode:defaultThickness
+    /// optionalParameters: {double thickness = defaultThickness} , defaultValue:none
     required double thickness,
 
-    /// optionalParameters: {double thicknessWhileDragging = defaultThicknessWhileDragging} , hasDefaultValue:true, defaultValueCode:defaultThicknessWhileDragging
+    /// optionalParameters: {double thicknessWhileDragging = defaultThicknessWhileDragging} , defaultValue:unprocessed
     required double thicknessWhileDragging,
 
-    /// optionalParameters: {Radius radius = defaultRadius} , hasDefaultValue:true, defaultValueCode:defaultRadius
+    /// optionalParameters: {Radius radius = defaultRadius} , defaultValue:none
     required Radius radius,
 
-    /// optionalParameters: {Radius radiusWhileDragging = defaultRadiusWhileDragging} , hasDefaultValue:true, defaultValueCode:defaultRadiusWhileDragging
+    /// optionalParameters: {Radius radiusWhileDragging = defaultRadiusWhileDragging} , defaultValue:unprocessed
     required Radius radiusWhileDragging,
 
-    /// optionalParameters: {bool Function(ScrollNotification)? notificationPredicate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(ScrollNotification)? notificationPredicate} , defaultValue:none
     ScrollNotificationPredicate? notificationPredicate,
 
-    /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , defaultValue:none
     ScrollbarOrientation? scrollbarOrientation,
   }) : super(
           key: key,
@@ -67,15 +67,15 @@ class CupertinoScrollbar$Mate extends CupertinoScrollbar with Mate {
           notificationPredicate: p.get('notificationPredicate').build(),
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('controller', controller);
-    matePut('thumbVisibility', thumbVisibility);
-    matePut('thickness', thickness);
-    matePut('thicknessWhileDragging', thicknessWhileDragging);
-    matePut('radius', radius);
-    matePut('radiusWhileDragging', radiusWhileDragging);
-    matePut('notificationPredicate', notificationPredicate);
-    matePut('scrollbarOrientation', scrollbarOrientation);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('controller', controller);
+    mateDeclare('thumbVisibility', thumbVisibility);
+    mateDeclare('thickness', thickness);
+    mateDeclare('thicknessWhileDragging', thicknessWhileDragging);
+    mateDeclare('radius', radius);
+    mateDeclare('radiusWhileDragging', radiusWhileDragging);
+    mateDeclare('notificationPredicate', notificationPredicate);
+    mateDeclare('scrollbarOrientation', scrollbarOrientation);
   }
 }

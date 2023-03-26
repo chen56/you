@@ -15,28 +15,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class SwitchThemeData$Mate extends SwitchThemeData with Mate {
   /// SwitchThemeData SwitchThemeData({MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialTapTargetSize? materialTapTargetSize, MaterialStateProperty<MouseCursor?>? mouseCursor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialStateProperty<Icon?>? thumbIcon})
   SwitchThemeData$Mate({
-    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , defaultValue:none
     MaterialStateProperty<Color?>? thumbColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , defaultValue:none
     MaterialStateProperty<Color?>? trackColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , defaultValue:none
     MaterialStateProperty<Color?>? trackOutlineColor,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , defaultValue:none
     MaterialStateProperty<Icon?>? thumbIcon,
   }) : super(
           thumbColor: thumbColor,
@@ -58,14 +58,14 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate {
           splashRadius: p.get('splashRadius').build(),
           thumbIcon: p.get('thumbIcon').build(),
         );
-    matePut('thumbColor', thumbColor);
-    matePut('trackColor', trackColor);
-    matePut('trackOutlineColor', trackOutlineColor);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('mouseCursor', mouseCursor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashRadius', splashRadius);
-    matePut('thumbIcon', thumbIcon);
+    mateDeclare('thumbColor', thumbColor);
+    mateDeclare('trackColor', trackColor);
+    mateDeclare('trackOutlineColor', trackOutlineColor);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('overlayColor', overlayColor);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('thumbIcon', thumbIcon);
   }
 }
 
@@ -73,13 +73,13 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate {
 class SwitchTheme$Mate extends SwitchTheme with Mate {
   /// SwitchTheme SwitchTheme({Key? key, required SwitchThemeData data, required Widget child})
   SwitchTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required SwitchThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SwitchThemeData data} , defaultValue:none
     required SwitchThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -91,8 +91,8 @@ class SwitchTheme$Mate extends SwitchTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

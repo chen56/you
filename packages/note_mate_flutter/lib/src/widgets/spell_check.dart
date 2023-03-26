@@ -10,13 +10,13 @@ import 'package:flutter/src/widgets/editable_text.dart';
 class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
   /// SpellCheckConfiguration SpellCheckConfiguration({SpellCheckService? spellCheckService, TextStyle? misspelledTextStyle, Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder})
   SpellCheckConfiguration$Mate({
-    /// optionalParameters: {SpellCheckService? spellCheckService} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SpellCheckService? spellCheckService} , defaultValue:none
     SpellCheckService? spellCheckService,
 
-    /// optionalParameters: {TextStyle? misspelledTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? misspelledTextStyle} , defaultValue:none
     TextStyle? misspelledTextStyle,
 
-    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder} , defaultValue:none
     EditableTextContextMenuBuilder? spellCheckSuggestionsToolbarBuilder,
   }) : super(
           spellCheckService: spellCheckService,
@@ -28,8 +28,8 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
           spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
-    matePut('spellCheckService', spellCheckService);
-    matePut('misspelledTextStyle', misspelledTextStyle);
-    matePut('spellCheckSuggestionsToolbarBuilder', spellCheckSuggestionsToolbarBuilder);
+    mateDeclare('spellCheckService', spellCheckService);
+    mateDeclare('misspelledTextStyle', misspelledTextStyle);
+    mateDeclare('spellCheckSuggestionsToolbarBuilder', spellCheckSuggestionsToolbarBuilder);
   }
 }

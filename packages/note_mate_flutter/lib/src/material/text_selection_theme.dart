@@ -10,13 +10,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate {
   /// TextSelectionThemeData TextSelectionThemeData({Color? cursorColor, Color? selectionColor, Color? selectionHandleColor})
   TextSelectionThemeData$Mate({
-    /// optionalParameters: {Color? cursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? cursorColor} , defaultValue:none
     Color? cursorColor,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , defaultValue:none
     Color? selectionColor,
 
-    /// optionalParameters: {Color? selectionHandleColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionHandleColor} , defaultValue:none
     Color? selectionHandleColor,
   }) : super(
           cursorColor: cursorColor,
@@ -28,9 +28,9 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate {
           selectionColor: p.get('selectionColor').build(),
           selectionHandleColor: p.get('selectionHandleColor').build(),
         );
-    matePut('cursorColor', cursorColor);
-    matePut('selectionColor', selectionColor);
-    matePut('selectionHandleColor', selectionHandleColor);
+    mateDeclare('cursorColor', cursorColor);
+    mateDeclare('selectionColor', selectionColor);
+    mateDeclare('selectionHandleColor', selectionHandleColor);
   }
 }
 
@@ -38,13 +38,13 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate {
 class TextSelectionTheme$Mate extends TextSelectionTheme with Mate {
   /// TextSelectionTheme TextSelectionTheme({Key? key, required TextSelectionThemeData data, required Widget child})
   TextSelectionTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required TextSelectionThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionThemeData data} , defaultValue:none
     required TextSelectionThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -56,8 +56,8 @@ class TextSelectionTheme$Mate extends TextSelectionTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

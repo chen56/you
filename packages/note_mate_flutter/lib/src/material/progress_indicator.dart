@@ -11,28 +11,28 @@ import 'package:flutter/src/animation/animation.dart';
 class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
   /// LinearProgressIndicator LinearProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double? minHeight, String? semanticsLabel, String? semanticsValue})
   LinearProgressIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? value} , defaultValue:none
     double? value,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Animation<Color?>? valueColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<Color?>? valueColor} , defaultValue:none
     Animation<Color?>? valueColor,
 
-    /// optionalParameters: {double? minHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minHeight} , defaultValue:none
     double? minHeight,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {String? semanticsValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsValue} , defaultValue:none
     String? semanticsValue,
   }) : super(
           key: key,
@@ -54,14 +54,14 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('backgroundColor', backgroundColor);
-    matePut('color', color);
-    matePut('valueColor', valueColor);
-    matePut('minHeight', minHeight);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('semanticsValue', semanticsValue);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('color', color);
+    mateDeclare('valueColor', valueColor);
+    mateDeclare('minHeight', minHeight);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('semanticsValue', semanticsValue);
   }
 }
 
@@ -69,28 +69,28 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
 class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate {
   /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? value} , defaultValue:none
     double? value,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Animation<Color?>? valueColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<Color?>? valueColor} , defaultValue:none
     Animation<Color?>? valueColor,
 
-    /// optionalParameters: {double strokeWidth = 4.0} , hasDefaultValue:true, defaultValueCode:4.0
-    required double strokeWidth,
+    /// optionalParameters: {double strokeWidth = 4.0} , defaultValue:Literal
+    double strokeWidth = 4.0,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {String? semanticsValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsValue} , defaultValue:none
     String? semanticsValue,
   }) : super(
           key: key,
@@ -112,37 +112,37 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('backgroundColor', backgroundColor);
-    matePut('color', color);
-    matePut('valueColor', valueColor);
-    matePut('strokeWidth', strokeWidth);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('semanticsValue', semanticsValue);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('color', color);
+    mateDeclare('valueColor', valueColor);
+    mateDeclare('strokeWidth', strokeWidth);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('semanticsValue', semanticsValue);
   }
 
   /// CircularProgressIndicator CircularProgressIndicator.adaptive({Key? key, double? value, Color? backgroundColor, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate.adaptive({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? value} , defaultValue:none
     double? value,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Animation<Color?>? valueColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<Color?>? valueColor} , defaultValue:none
     Animation<Color?>? valueColor,
 
-    /// optionalParameters: {double strokeWidth = 4.0} , hasDefaultValue:true, defaultValueCode:4.0
-    required double strokeWidth,
+    /// optionalParameters: {double strokeWidth = 4.0} , defaultValue:Literal
+    double strokeWidth = 4.0,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {String? semanticsValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsValue} , defaultValue:none
     String? semanticsValue,
   }) : super.adaptive(
           key: key,
@@ -162,13 +162,13 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('backgroundColor', backgroundColor);
-    matePut('valueColor', valueColor);
-    matePut('strokeWidth', strokeWidth);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('semanticsValue', semanticsValue);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('valueColor', valueColor);
+    mateDeclare('strokeWidth', strokeWidth);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('semanticsValue', semanticsValue);
   }
 }
 
@@ -176,28 +176,28 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
 class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Mate {
   /// RefreshProgressIndicator RefreshProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = defaultStrokeWidth, String? semanticsLabel, String? semanticsValue})
   RefreshProgressIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? value} , defaultValue:none
     double? value,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Animation<Color?>? valueColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<Color?>? valueColor} , defaultValue:none
     Animation<Color?>? valueColor,
 
-    /// optionalParameters: {double strokeWidth = defaultStrokeWidth} , hasDefaultValue:true, defaultValueCode:defaultStrokeWidth
-    required double strokeWidth,
+    /// optionalParameters: {double strokeWidth = defaultStrokeWidth} , defaultValue:Literal
+    double strokeWidth = 4.0,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {String? semanticsValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsValue} , defaultValue:none
     String? semanticsValue,
   }) : super(
           key: key,
@@ -219,13 +219,13 @@ class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Mate {
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('backgroundColor', backgroundColor);
-    matePut('color', color);
-    matePut('valueColor', valueColor);
-    matePut('strokeWidth', strokeWidth);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('semanticsValue', semanticsValue);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('color', color);
+    mateDeclare('valueColor', valueColor);
+    mateDeclare('strokeWidth', strokeWidth);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('semanticsValue', semanticsValue);
   }
 }

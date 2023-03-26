@@ -11,11 +11,11 @@ class OutlinedButtonThemeData$Mate extends OutlinedButtonThemeData with Mate {
   /// OutlinedButtonThemeData OutlinedButtonThemeData({ButtonStyle? style})
   OutlinedButtonThemeData$Mate(
       {
-      /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
     mateBuilder = (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateDeclare('style', style);
   }
 }
 
@@ -23,13 +23,13 @@ class OutlinedButtonThemeData$Mate extends OutlinedButtonThemeData with Mate {
 class OutlinedButtonTheme$Mate extends OutlinedButtonTheme with Mate {
   /// OutlinedButtonTheme OutlinedButtonTheme({Key? key, required OutlinedButtonThemeData data, required Widget child})
   OutlinedButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required OutlinedButtonThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required OutlinedButtonThemeData data} , defaultValue:none
     required OutlinedButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -41,8 +41,8 @@ class OutlinedButtonTheme$Mate extends OutlinedButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

@@ -11,17 +11,17 @@ import 'package:flutter/src/widgets/framework.dart';
 class SliverFillViewport$Mate extends SliverFillViewport with Mate {
   /// SliverFillViewport SliverFillViewport({Key? key, required SliverChildDelegate delegate, double viewportFraction = 1.0, bool padEnds = true})
   SliverFillViewport$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required SliverChildDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliverChildDelegate delegate} , defaultValue:none
     required SliverChildDelegate delegate,
 
-    /// optionalParameters: {double viewportFraction = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double viewportFraction,
+    /// optionalParameters: {double viewportFraction = 1.0} , defaultValue:Literal
+    double viewportFraction = 1.0,
 
-    /// optionalParameters: {bool padEnds = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool padEnds,
+    /// optionalParameters: {bool padEnds = true} , defaultValue:Literal
+    bool padEnds = true,
   }) : super(
           key: key,
           delegate: delegate,
@@ -34,10 +34,10 @@ class SliverFillViewport$Mate extends SliverFillViewport with Mate {
           viewportFraction: p.get('viewportFraction').build(),
           padEnds: p.get('padEnds').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('viewportFraction', viewportFraction);
-    matePut('padEnds', padEnds);
+    mateDeclare('key', key);
+    mateDeclare('delegate', delegate);
+    mateDeclare('viewportFraction', viewportFraction);
+    mateDeclare('padEnds', padEnds);
   }
 }
 
@@ -45,17 +45,17 @@ class SliverFillViewport$Mate extends SliverFillViewport with Mate {
 class SliverFillRemaining$Mate extends SliverFillRemaining with Mate {
   /// SliverFillRemaining SliverFillRemaining({Key? key, Widget? child, bool hasScrollBody = true, bool fillOverscroll = false})
   SliverFillRemaining$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {bool hasScrollBody = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool hasScrollBody,
+    /// optionalParameters: {bool hasScrollBody = true} , defaultValue:Literal
+    bool hasScrollBody = true,
 
-    /// optionalParameters: {bool fillOverscroll = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool fillOverscroll,
+    /// optionalParameters: {bool fillOverscroll = false} , defaultValue:Literal
+    bool fillOverscroll = false,
   }) : super(
           key: key,
           child: child,
@@ -68,9 +68,9 @@ class SliverFillRemaining$Mate extends SliverFillRemaining with Mate {
           hasScrollBody: p.get('hasScrollBody').build(),
           fillOverscroll: p.get('fillOverscroll').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('hasScrollBody', hasScrollBody);
-    matePut('fillOverscroll', fillOverscroll);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('hasScrollBody', hasScrollBody);
+    mateDeclare('fillOverscroll', fillOverscroll);
   }
 }

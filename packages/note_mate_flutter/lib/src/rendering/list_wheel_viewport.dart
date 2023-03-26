@@ -11,43 +11,43 @@ import 'package:flutter/src/rendering/box.dart';
 class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
   /// RenderListWheelViewport RenderListWheelViewport({required ListWheelChildManager childManager, required ViewportOffset offset, double diameterRatio = defaultDiameterRatio, double perspective = defaultPerspective, double offAxisFraction = 0, bool useMagnifier = false, double magnification = 1, double overAndUnderCenterOpacity = 1, required double itemExtent, double squeeze = 1, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.none, List<RenderBox>? children})
   RenderListWheelViewport$Mate({
-    /// optionalParameters: {required ListWheelChildManager childManager} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ListWheelChildManager childManager} , defaultValue:none
     required ListWheelChildManager childManager,
 
-    /// optionalParameters: {required ViewportOffset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {double diameterRatio = defaultDiameterRatio} , hasDefaultValue:true, defaultValueCode:defaultDiameterRatio
+    /// optionalParameters: {double diameterRatio = defaultDiameterRatio} , defaultValue:unprocessed
     required double diameterRatio,
 
-    /// optionalParameters: {double perspective = defaultPerspective} , hasDefaultValue:true, defaultValueCode:defaultPerspective
+    /// optionalParameters: {double perspective = defaultPerspective} , defaultValue:unprocessed
     required double perspective,
 
-    /// optionalParameters: {double offAxisFraction = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double offAxisFraction,
+    /// optionalParameters: {double offAxisFraction = 0} , defaultValue:Literal
+    double offAxisFraction = 0,
 
-    /// optionalParameters: {bool useMagnifier = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool useMagnifier,
+    /// optionalParameters: {bool useMagnifier = false} , defaultValue:Literal
+    bool useMagnifier = false,
 
-    /// optionalParameters: {double magnification = 1} , hasDefaultValue:true, defaultValueCode:1
-    required double magnification,
+    /// optionalParameters: {double magnification = 1} , defaultValue:Literal
+    double magnification = 1,
 
-    /// optionalParameters: {double overAndUnderCenterOpacity = 1} , hasDefaultValue:true, defaultValueCode:1
-    required double overAndUnderCenterOpacity,
+    /// optionalParameters: {double overAndUnderCenterOpacity = 1} , defaultValue:Literal
+    double overAndUnderCenterOpacity = 1,
 
-    /// optionalParameters: {required double itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double itemExtent} , defaultValue:none
     required double itemExtent,
 
-    /// optionalParameters: {double squeeze = 1} , hasDefaultValue:true, defaultValueCode:1
-    required double squeeze,
+    /// optionalParameters: {double squeeze = 1} , defaultValue:Literal
+    double squeeze = 1,
 
-    /// optionalParameters: {bool renderChildrenOutsideViewport = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool renderChildrenOutsideViewport,
+    /// optionalParameters: {bool renderChildrenOutsideViewport = false} , defaultValue:Literal
+    bool renderChildrenOutsideViewport = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
   }) : super(
           childManager: childManager,
@@ -79,18 +79,18 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('childManager', childManager);
-    matePut('offset', offset);
-    matePut('diameterRatio', diameterRatio);
-    matePut('perspective', perspective);
-    matePut('offAxisFraction', offAxisFraction);
-    matePut('useMagnifier', useMagnifier);
-    matePut('magnification', magnification);
-    matePut('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    matePut('itemExtent', itemExtent);
-    matePut('squeeze', squeeze);
-    matePut('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateDeclare('childManager', childManager);
+    mateDeclare('offset', offset);
+    mateDeclare('diameterRatio', diameterRatio);
+    mateDeclare('perspective', perspective);
+    mateDeclare('offAxisFraction', offAxisFraction);
+    mateDeclare('useMagnifier', useMagnifier);
+    mateDeclare('magnification', magnification);
+    mateDeclare('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
+    mateDeclare('itemExtent', itemExtent);
+    mateDeclare('squeeze', squeeze);
+    mateDeclare('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
   }
 }

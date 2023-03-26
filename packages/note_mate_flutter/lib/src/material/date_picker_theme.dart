@@ -14,100 +14,100 @@ import 'package:flutter/src/widgets/framework.dart';
 class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
   /// DatePickerThemeData DatePickerThemeData({Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, Color? headerBackgroundColor, Color? headerForegroundColor, TextStyle? headerHeadlineStyle, TextStyle? headerHelpStyle, TextStyle? weekdayStyle, TextStyle? dayStyle, MaterialStateProperty<Color?>? dayForegroundColor, MaterialStateProperty<Color?>? dayBackgroundColor, MaterialStateProperty<Color?>? dayOverlayColor, MaterialStateProperty<Color?>? todayForegroundColor, MaterialStateProperty<Color?>? todayBackgroundColor, BorderSide? todayBorder, TextStyle? yearStyle, MaterialStateProperty<Color?>? yearForegroundColor, MaterialStateProperty<Color?>? yearBackgroundColor, MaterialStateProperty<Color?>? yearOverlayColor, Color? rangePickerBackgroundColor, double? rangePickerElevation, Color? rangePickerShadowColor, Color? rangePickerSurfaceTintColor, ShapeBorder? rangePickerShape, Color? rangePickerHeaderBackgroundColor, Color? rangePickerHeaderForegroundColor, TextStyle? rangePickerHeaderHeadlineStyle, TextStyle? rangePickerHeaderHelpStyle, Color? rangeSelectionBackgroundColor, MaterialStateProperty<Color?>? rangeSelectionOverlayColor})
   DatePickerThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Color? headerBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? headerBackgroundColor} , defaultValue:none
     Color? headerBackgroundColor,
 
-    /// optionalParameters: {Color? headerForegroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? headerForegroundColor} , defaultValue:none
     Color? headerForegroundColor,
 
-    /// optionalParameters: {TextStyle? headerHeadlineStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? headerHeadlineStyle} , defaultValue:none
     TextStyle? headerHeadlineStyle,
 
-    /// optionalParameters: {TextStyle? headerHelpStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? headerHelpStyle} , defaultValue:none
     TextStyle? headerHelpStyle,
 
-    /// optionalParameters: {TextStyle? weekdayStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? weekdayStyle} , defaultValue:none
     TextStyle? weekdayStyle,
 
-    /// optionalParameters: {TextStyle? dayStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? dayStyle} , defaultValue:none
     TextStyle? dayStyle,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? dayForegroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? dayForegroundColor} , defaultValue:none
     MaterialStateProperty<Color?>? dayForegroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? dayBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? dayBackgroundColor} , defaultValue:none
     MaterialStateProperty<Color?>? dayBackgroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? dayOverlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? dayOverlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? dayOverlayColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? todayForegroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? todayForegroundColor} , defaultValue:none
     MaterialStateProperty<Color?>? todayForegroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? todayBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? todayBackgroundColor} , defaultValue:none
     MaterialStateProperty<Color?>? todayBackgroundColor,
 
-    /// optionalParameters: {BorderSide? todayBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? todayBorder} , defaultValue:none
     BorderSide? todayBorder,
 
-    /// optionalParameters: {TextStyle? yearStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? yearStyle} , defaultValue:none
     TextStyle? yearStyle,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? yearForegroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? yearForegroundColor} , defaultValue:none
     MaterialStateProperty<Color?>? yearForegroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? yearBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? yearBackgroundColor} , defaultValue:none
     MaterialStateProperty<Color?>? yearBackgroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? yearOverlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? yearOverlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? yearOverlayColor,
 
-    /// optionalParameters: {Color? rangePickerBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? rangePickerBackgroundColor} , defaultValue:none
     Color? rangePickerBackgroundColor,
 
-    /// optionalParameters: {double? rangePickerElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? rangePickerElevation} , defaultValue:none
     double? rangePickerElevation,
 
-    /// optionalParameters: {Color? rangePickerShadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? rangePickerShadowColor} , defaultValue:none
     Color? rangePickerShadowColor,
 
-    /// optionalParameters: {Color? rangePickerSurfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? rangePickerSurfaceTintColor} , defaultValue:none
     Color? rangePickerSurfaceTintColor,
 
-    /// optionalParameters: {ShapeBorder? rangePickerShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? rangePickerShape} , defaultValue:none
     ShapeBorder? rangePickerShape,
 
-    /// optionalParameters: {Color? rangePickerHeaderBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? rangePickerHeaderBackgroundColor} , defaultValue:none
     Color? rangePickerHeaderBackgroundColor,
 
-    /// optionalParameters: {Color? rangePickerHeaderForegroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? rangePickerHeaderForegroundColor} , defaultValue:none
     Color? rangePickerHeaderForegroundColor,
 
-    /// optionalParameters: {TextStyle? rangePickerHeaderHeadlineStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? rangePickerHeaderHeadlineStyle} , defaultValue:none
     TextStyle? rangePickerHeaderHeadlineStyle,
 
-    /// optionalParameters: {TextStyle? rangePickerHeaderHelpStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? rangePickerHeaderHelpStyle} , defaultValue:none
     TextStyle? rangePickerHeaderHelpStyle,
 
-    /// optionalParameters: {Color? rangeSelectionBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? rangeSelectionBackgroundColor} , defaultValue:none
     Color? rangeSelectionBackgroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? rangeSelectionOverlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? rangeSelectionOverlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? rangeSelectionOverlayColor,
   }) : super(
           backgroundColor: backgroundColor,
@@ -177,38 +177,38 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
           rangeSelectionBackgroundColor: p.get('rangeSelectionBackgroundColor').build(),
           rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('shape', shape);
-    matePut('headerBackgroundColor', headerBackgroundColor);
-    matePut('headerForegroundColor', headerForegroundColor);
-    matePut('headerHeadlineStyle', headerHeadlineStyle);
-    matePut('headerHelpStyle', headerHelpStyle);
-    matePut('weekdayStyle', weekdayStyle);
-    matePut('dayStyle', dayStyle);
-    matePut('dayForegroundColor', dayForegroundColor);
-    matePut('dayBackgroundColor', dayBackgroundColor);
-    matePut('dayOverlayColor', dayOverlayColor);
-    matePut('todayForegroundColor', todayForegroundColor);
-    matePut('todayBackgroundColor', todayBackgroundColor);
-    matePut('todayBorder', todayBorder);
-    matePut('yearStyle', yearStyle);
-    matePut('yearForegroundColor', yearForegroundColor);
-    matePut('yearBackgroundColor', yearBackgroundColor);
-    matePut('yearOverlayColor', yearOverlayColor);
-    matePut('rangePickerBackgroundColor', rangePickerBackgroundColor);
-    matePut('rangePickerElevation', rangePickerElevation);
-    matePut('rangePickerShadowColor', rangePickerShadowColor);
-    matePut('rangePickerSurfaceTintColor', rangePickerSurfaceTintColor);
-    matePut('rangePickerShape', rangePickerShape);
-    matePut('rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor);
-    matePut('rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor);
-    matePut('rangePickerHeaderHeadlineStyle', rangePickerHeaderHeadlineStyle);
-    matePut('rangePickerHeaderHelpStyle', rangePickerHeaderHelpStyle);
-    matePut('rangeSelectionBackgroundColor', rangeSelectionBackgroundColor);
-    matePut('rangeSelectionOverlayColor', rangeSelectionOverlayColor);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('shape', shape);
+    mateDeclare('headerBackgroundColor', headerBackgroundColor);
+    mateDeclare('headerForegroundColor', headerForegroundColor);
+    mateDeclare('headerHeadlineStyle', headerHeadlineStyle);
+    mateDeclare('headerHelpStyle', headerHelpStyle);
+    mateDeclare('weekdayStyle', weekdayStyle);
+    mateDeclare('dayStyle', dayStyle);
+    mateDeclare('dayForegroundColor', dayForegroundColor);
+    mateDeclare('dayBackgroundColor', dayBackgroundColor);
+    mateDeclare('dayOverlayColor', dayOverlayColor);
+    mateDeclare('todayForegroundColor', todayForegroundColor);
+    mateDeclare('todayBackgroundColor', todayBackgroundColor);
+    mateDeclare('todayBorder', todayBorder);
+    mateDeclare('yearStyle', yearStyle);
+    mateDeclare('yearForegroundColor', yearForegroundColor);
+    mateDeclare('yearBackgroundColor', yearBackgroundColor);
+    mateDeclare('yearOverlayColor', yearOverlayColor);
+    mateDeclare('rangePickerBackgroundColor', rangePickerBackgroundColor);
+    mateDeclare('rangePickerElevation', rangePickerElevation);
+    mateDeclare('rangePickerShadowColor', rangePickerShadowColor);
+    mateDeclare('rangePickerSurfaceTintColor', rangePickerSurfaceTintColor);
+    mateDeclare('rangePickerShape', rangePickerShape);
+    mateDeclare('rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor);
+    mateDeclare('rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor);
+    mateDeclare('rangePickerHeaderHeadlineStyle', rangePickerHeaderHeadlineStyle);
+    mateDeclare('rangePickerHeaderHelpStyle', rangePickerHeaderHelpStyle);
+    mateDeclare('rangeSelectionBackgroundColor', rangeSelectionBackgroundColor);
+    mateDeclare('rangeSelectionOverlayColor', rangeSelectionOverlayColor);
   }
 }
 
@@ -216,13 +216,13 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
 class DatePickerTheme$Mate extends DatePickerTheme with Mate {
   /// DatePickerTheme DatePickerTheme({Key? key, required DatePickerThemeData data, required Widget child})
   DatePickerTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required DatePickerThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DatePickerThemeData data} , defaultValue:none
     required DatePickerThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -234,8 +234,8 @@ class DatePickerTheme$Mate extends DatePickerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

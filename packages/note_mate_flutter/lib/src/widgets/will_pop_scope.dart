@@ -10,13 +10,13 @@ import 'package:flutter/src/widgets/navigator.dart';
 class WillPopScope$Mate extends WillPopScope with Mate {
   /// WillPopScope WillPopScope({Key? key, required Widget child, required Future<bool> Function()? onWillPop})
   WillPopScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {required Future<bool> Function()? onWillPop} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Future<bool> Function()? onWillPop} , defaultValue:none
     required WillPopCallback? onWillPop,
   }) : super(
           key: key,
@@ -28,8 +28,8 @@ class WillPopScope$Mate extends WillPopScope with Mate {
           child: p.get('child').build(),
           onWillPop: p.get('onWillPop').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onWillPop', onWillPop);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('onWillPop', onWillPop);
   }
 }

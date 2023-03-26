@@ -9,13 +9,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class NotificationListener$Mate<T extends Notification> extends NotificationListener<T> with Mate {
   /// NotificationListener<T> NotificationListener({Key? key, required Widget child, bool Function(T)? onNotification})
   NotificationListener$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {bool Function(T)? onNotification} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(T)? onNotification} , defaultValue:none
     NotificationListenerCallback<T>? onNotification,
   }) : super(
           key: key,
@@ -27,8 +27,8 @@ class NotificationListener$Mate<T extends Notification> extends NotificationList
           child: p.get('child').build(),
           onNotification: p.get('onNotification').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onNotification', onNotification);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('onNotification', onNotification);
   }
 }

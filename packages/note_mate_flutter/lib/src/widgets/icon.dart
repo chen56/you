@@ -13,34 +13,34 @@ class Icon$Mate extends Icon with Mate {
   Icon$Mate(
     /// requiredParameters: IconData? icon
     IconData? icon, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? size} , defaultValue:none
     double? size,
 
-    /// optionalParameters: {double? fill} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? fill} , defaultValue:none
     double? fill,
 
-    /// optionalParameters: {double? weight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? weight} , defaultValue:none
     double? weight,
 
-    /// optionalParameters: {double? grade} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? grade} , defaultValue:none
     double? grade,
 
-    /// optionalParameters: {double? opticalSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? opticalSize} , defaultValue:none
     double? opticalSize,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {List<Shadow>? shadows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Shadow>? shadows} , defaultValue:none
     List<Shadow>? shadows,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , defaultValue:none
     String? semanticLabel,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
   }) : super(
           icon,
@@ -68,16 +68,16 @@ class Icon$Mate extends Icon with Mate {
           semanticLabel: p.get('semanticLabel').build(),
           textDirection: p.get('textDirection').build(),
         );
-    matePut('icon', icon);
-    matePut('key', key);
-    matePut('size', size);
-    matePut('fill', fill);
-    matePut('weight', weight);
-    matePut('grade', grade);
-    matePut('opticalSize', opticalSize);
-    matePut('color', color);
-    matePut('shadows', shadows);
-    matePut('semanticLabel', semanticLabel);
-    matePut('textDirection', textDirection);
+    mateDeclare('icon', icon);
+    mateDeclare('key', key);
+    mateDeclare('size', size);
+    mateDeclare('fill', fill);
+    mateDeclare('weight', weight);
+    mateDeclare('grade', grade);
+    mateDeclare('opticalSize', opticalSize);
+    mateDeclare('color', color);
+    mateDeclare('shadows', shadows);
+    mateDeclare('semanticLabel', semanticLabel);
+    mateDeclare('textDirection', textDirection);
   }
 }

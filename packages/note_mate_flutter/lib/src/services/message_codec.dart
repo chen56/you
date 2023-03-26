@@ -21,8 +21,8 @@ class MethodCall$Mate extends MethodCall with Mate {
           p.get('method').value,
           p.get('arguments').value,
         );
-    matePut('method', method);
-    matePut('arguments', arguments);
+    mateDeclare('method', method);
+    mateDeclare('arguments', arguments);
   }
 }
 
@@ -30,16 +30,16 @@ class MethodCall$Mate extends MethodCall with Mate {
 class PlatformException$Mate extends PlatformException with Mate {
   /// PlatformException PlatformException({required String code, String? message, dynamic details, String? stacktrace})
   PlatformException$Mate({
-    /// optionalParameters: {required String code} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String code} , defaultValue:none
     required String code,
 
-    /// optionalParameters: {String? message} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? message} , defaultValue:none
     String? message,
 
-    /// optionalParameters: {dynamic details} , hasDefaultValue:false, defaultValueCode:null
-    required dynamic details,
+    /// optionalParameters: {dynamic details} , defaultValue:none
+    dynamic details,
 
-    /// optionalParameters: {String? stacktrace} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? stacktrace} , defaultValue:none
     String? stacktrace,
   }) : super(
           code: code,
@@ -53,10 +53,10 @@ class PlatformException$Mate extends PlatformException with Mate {
           details: p.get('details').build(),
           stacktrace: p.get('stacktrace').build(),
         );
-    matePut('code', code);
-    matePut('message', message);
-    matePut('details', details);
-    matePut('stacktrace', stacktrace);
+    mateDeclare('code', code);
+    mateDeclare('message', message);
+    mateDeclare('details', details);
+    mateDeclare('stacktrace', stacktrace);
   }
 }
 
@@ -69,6 +69,6 @@ class MissingPluginException$Mate extends MissingPluginException with Mate {
       String? message)
       : super(message) {
     mateBuilder = (p) => MissingPluginException$Mate(p.get('message').value);
-    matePut('message', message);
+    mateDeclare('message', message);
   }
 }

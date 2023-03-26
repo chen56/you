@@ -8,13 +8,13 @@ import 'dart:core';
 class Tolerance$Mate extends Tolerance with Mate {
   /// Tolerance Tolerance({double distance = _epsilonDefault, double time = _epsilonDefault, double velocity = _epsilonDefault})
   Tolerance$Mate({
-    /// optionalParameters: {double distance = _epsilonDefault} , hasDefaultValue:true, defaultValueCode:_epsilonDefault
+    /// optionalParameters: {double distance = _epsilonDefault} , defaultValue:unprocessed
     required double distance,
 
-    /// optionalParameters: {double time = _epsilonDefault} , hasDefaultValue:true, defaultValueCode:_epsilonDefault
+    /// optionalParameters: {double time = _epsilonDefault} , defaultValue:unprocessed
     required double time,
 
-    /// optionalParameters: {double velocity = _epsilonDefault} , hasDefaultValue:true, defaultValueCode:_epsilonDefault
+    /// optionalParameters: {double velocity = _epsilonDefault} , defaultValue:unprocessed
     required double velocity,
   }) : super(
           distance: distance,
@@ -26,8 +26,8 @@ class Tolerance$Mate extends Tolerance with Mate {
           time: p.get('time').build(),
           velocity: p.get('velocity').build(),
         );
-    matePut('distance', distance);
-    matePut('time', time);
-    matePut('velocity', velocity);
+    mateDeclare('distance', distance);
+    mateDeclare('time', time);
+    mateDeclare('velocity', velocity);
   }
 }

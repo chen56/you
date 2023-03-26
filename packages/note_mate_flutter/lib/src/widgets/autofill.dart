@@ -9,13 +9,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class AutofillGroup$Mate extends AutofillGroup with Mate {
   /// AutofillGroup AutofillGroup({Key? key, required Widget child, AutofillContextAction onDisposeAction = AutofillContextAction.commit})
   AutofillGroup$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , hasDefaultValue:true, defaultValueCode:AutofillContextAction.commit
+    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , defaultValue:unprocessed
     required AutofillContextAction onDisposeAction,
   }) : super(
           key: key,
@@ -27,8 +27,8 @@ class AutofillGroup$Mate extends AutofillGroup with Mate {
           child: p.get('child').build(),
           onDisposeAction: p.get('onDisposeAction').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onDisposeAction', onDisposeAction);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('onDisposeAction', onDisposeAction);
   }
 }

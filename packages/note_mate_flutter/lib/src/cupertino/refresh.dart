@@ -9,19 +9,19 @@ import 'dart:core';
 class CupertinoSliverRefreshControl$Mate extends CupertinoSliverRefreshControl with Mate {
   /// CupertinoSliverRefreshControl CupertinoSliverRefreshControl({Key? key, double refreshTriggerPullDistance = _defaultRefreshTriggerPullDistance, double refreshIndicatorExtent = _defaultRefreshIndicatorExtent, Widget Function(BuildContext, RefreshIndicatorMode, double, double, double)? builder = buildRefreshIndicator, Future<void> Function()? onRefresh})
   CupertinoSliverRefreshControl$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double refreshTriggerPullDistance = _defaultRefreshTriggerPullDistance} , hasDefaultValue:true, defaultValueCode:_defaultRefreshTriggerPullDistance
+    /// optionalParameters: {double refreshTriggerPullDistance = _defaultRefreshTriggerPullDistance} , defaultValue:unprocessed
     required double refreshTriggerPullDistance,
 
-    /// optionalParameters: {double refreshIndicatorExtent = _defaultRefreshIndicatorExtent} , hasDefaultValue:true, defaultValueCode:_defaultRefreshIndicatorExtent
+    /// optionalParameters: {double refreshIndicatorExtent = _defaultRefreshIndicatorExtent} , defaultValue:unprocessed
     required double refreshIndicatorExtent,
 
-    /// optionalParameters: {Widget Function(BuildContext, RefreshIndicatorMode, double, double, double)? builder = buildRefreshIndicator} , hasDefaultValue:true, defaultValueCode:buildRefreshIndicator
+    /// optionalParameters: {Widget Function(BuildContext, RefreshIndicatorMode, double, double, double)? builder = buildRefreshIndicator} , defaultValue:unprocessed
     RefreshControlIndicatorBuilder? builder,
 
-    /// optionalParameters: {Future<void> Function()? onRefresh} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Future<void> Function()? onRefresh} , defaultValue:none
     RefreshCallback? onRefresh,
   }) : super(
           key: key,
@@ -37,10 +37,10 @@ class CupertinoSliverRefreshControl$Mate extends CupertinoSliverRefreshControl w
           builder: p.get('builder').build(),
           onRefresh: p.get('onRefresh').build(),
         );
-    matePut('key', key);
-    matePut('refreshTriggerPullDistance', refreshTriggerPullDistance);
-    matePut('refreshIndicatorExtent', refreshIndicatorExtent);
-    matePut('builder', builder);
-    matePut('onRefresh', onRefresh);
+    mateDeclare('key', key);
+    mateDeclare('refreshTriggerPullDistance', refreshTriggerPullDistance);
+    mateDeclare('refreshIndicatorExtent', refreshIndicatorExtent);
+    mateDeclare('builder', builder);
+    mateDeclare('onRefresh', onRefresh);
   }
 }

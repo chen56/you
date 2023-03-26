@@ -11,22 +11,22 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
   /// BottomAppBarTheme BottomAppBarTheme({Color? color, double? elevation, NotchedShape? shape, double? height, Color? surfaceTintColor, EdgeInsetsGeometry? padding})
   BottomAppBarTheme$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {NotchedShape? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {NotchedShape? shape} , defaultValue:none
     NotchedShape? shape,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
   }) : super(
           color: color,
@@ -44,11 +44,11 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           padding: p.get('padding').build(),
         );
-    matePut('color', color);
-    matePut('elevation', elevation);
-    matePut('shape', shape);
-    matePut('height', height);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('padding', padding);
+    mateDeclare('color', color);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shape', shape);
+    mateDeclare('height', height);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('padding', padding);
   }
 }

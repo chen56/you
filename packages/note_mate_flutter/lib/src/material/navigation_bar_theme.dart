@@ -16,34 +16,34 @@ import 'package:flutter/src/widgets/framework.dart';
 class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate {
   /// NavigationBarThemeData NavigationBarThemeData({double? height, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme, NavigationDestinationLabelBehavior? labelBehavior})
   NavigationBarThemeData$Mate({
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , defaultValue:none
     MaterialStateProperty<TextStyle?>? labelTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , defaultValue:none
     MaterialStateProperty<IconThemeData?>? iconTheme,
 
-    /// optionalParameters: {NavigationDestinationLabelBehavior? labelBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {NavigationDestinationLabelBehavior? labelBehavior} , defaultValue:none
     NavigationDestinationLabelBehavior? labelBehavior,
   }) : super(
           height: height,
@@ -69,16 +69,16 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate {
           iconTheme: p.get('iconTheme').build(),
           labelBehavior: p.get('labelBehavior').build(),
         );
-    matePut('height', height);
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorShape', indicatorShape);
-    matePut('labelTextStyle', labelTextStyle);
-    matePut('iconTheme', iconTheme);
-    matePut('labelBehavior', labelBehavior);
+    mateDeclare('height', height);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('indicatorColor', indicatorColor);
+    mateDeclare('indicatorShape', indicatorShape);
+    mateDeclare('labelTextStyle', labelTextStyle);
+    mateDeclare('iconTheme', iconTheme);
+    mateDeclare('labelBehavior', labelBehavior);
   }
 }
 
@@ -86,13 +86,13 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate {
 class NavigationBarTheme$Mate extends NavigationBarTheme with Mate {
   /// NavigationBarTheme NavigationBarTheme({Key? key, required NavigationBarThemeData data, required Widget child})
   NavigationBarTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required NavigationBarThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required NavigationBarThemeData data} , defaultValue:none
     required NavigationBarThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -104,8 +104,8 @@ class NavigationBarTheme$Mate extends NavigationBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

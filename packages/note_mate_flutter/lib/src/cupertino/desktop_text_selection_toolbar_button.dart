@@ -12,13 +12,13 @@ import 'package:flutter/src/widgets/context_menu_button_item.dart';
 class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTextSelectionToolbarButton with Mate {
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
   CupertinoDesktopTextSelectionToolbarButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required void Function() onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -30,23 +30,23 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           onPressed: p.get('onPressed').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('child', child);
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
   CupertinoDesktopTextSelectionToolbarButton$Mate.text({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , defaultValue:none
     required BuildContext context,
 
-    /// optionalParameters: {required void Function() onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {required String text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String text} , defaultValue:none
     required String text,
   }) : super.text(
           key: key,
@@ -60,18 +60,18 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           onPressed: p.get('onPressed').build(),
           text: p.get('text').build(),
         );
-    matePut('key', key);
-    matePut('context', context);
-    matePut('onPressed', onPressed);
-    matePut('text', text);
+    mateDeclare('key', key);
+    mateDeclare('context', context);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('text', text);
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
   CupertinoDesktopTextSelectionToolbarButton$Mate.buttonItem({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ContextMenuButtonItem buttonItem} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ContextMenuButtonItem buttonItem} , defaultValue:none
     required ContextMenuButtonItem buttonItem,
   }) : super.buttonItem(
           key: key,
@@ -81,7 +81,7 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           key: p.get('key').build(),
           buttonItem: p.get('buttonItem').build(),
         );
-    matePut('key', key);
-    matePut('buttonItem', buttonItem);
+    mateDeclare('key', key);
+    mateDeclare('buttonItem', buttonItem);
   }
 }

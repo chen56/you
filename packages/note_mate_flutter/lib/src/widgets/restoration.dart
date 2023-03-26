@@ -11,13 +11,13 @@ import 'package:flutter/src/services/restoration.dart';
 class RestorationScope$Mate extends RestorationScope with Mate {
   /// RestorationScope RestorationScope({Key? key, required String? restorationId, required Widget child})
   RestorationScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String? restorationId} , defaultValue:none
     required String? restorationId,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -29,9 +29,9 @@ class RestorationScope$Mate extends RestorationScope with Mate {
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('restorationId', restorationId);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('child', child);
   }
 }
 
@@ -39,13 +39,13 @@ class RestorationScope$Mate extends RestorationScope with Mate {
 class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate {
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {RestorationBucket? bucket} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RestorationBucket? bucket} , defaultValue:none
     RestorationBucket? bucket,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -57,9 +57,9 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate
           bucket: p.get('bucket').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('bucket', bucket);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('bucket', bucket);
+    mateDeclare('child', child);
   }
 }
 
@@ -67,13 +67,13 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate
 class RootRestorationScope$Mate extends RootRestorationScope with Mate {
   /// RootRestorationScope RootRestorationScope({Key? key, required String? restorationId, required Widget child})
   RootRestorationScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String? restorationId} , defaultValue:none
     required String? restorationId,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -85,8 +85,8 @@ class RootRestorationScope$Mate extends RootRestorationScope with Mate {
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('restorationId', restorationId);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('child', child);
   }
 }

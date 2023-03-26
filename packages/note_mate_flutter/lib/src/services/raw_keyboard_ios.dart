@@ -8,17 +8,17 @@ import 'dart:core';
 class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate {
   /// RawKeyEventDataIos RawKeyEventDataIos({String characters = '', String charactersIgnoringModifiers = '', int keyCode = 0, int modifiers = 0})
   RawKeyEventDataIos$Mate({
-    /// optionalParameters: {String characters = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String characters,
+    /// optionalParameters: {String characters = ''} , defaultValue:Literal
+    String characters = '',
 
-    /// optionalParameters: {String charactersIgnoringModifiers = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String charactersIgnoringModifiers,
+    /// optionalParameters: {String charactersIgnoringModifiers = ''} , defaultValue:Literal
+    String charactersIgnoringModifiers = '',
 
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    int keyCode = 0,
 
-    /// optionalParameters: {int modifiers = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int modifiers,
+    /// optionalParameters: {int modifiers = 0} , defaultValue:Literal
+    int modifiers = 0,
   }) : super(
           characters: characters,
           charactersIgnoringModifiers: charactersIgnoringModifiers,
@@ -31,9 +31,9 @@ class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate {
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
         );
-    matePut('characters', characters);
-    matePut('charactersIgnoringModifiers', charactersIgnoringModifiers);
-    matePut('keyCode', keyCode);
-    matePut('modifiers', modifiers);
+    mateDeclare('characters', characters);
+    mateDeclare('charactersIgnoringModifiers', charactersIgnoringModifiers);
+    mateDeclare('keyCode', keyCode);
+    mateDeclare('modifiers', modifiers);
   }
 }

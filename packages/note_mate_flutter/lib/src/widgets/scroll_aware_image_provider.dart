@@ -11,10 +11,10 @@ import 'package:flutter/src/painting/image_provider.dart';
 class ScrollAwareImageProvider$Mate<T extends Object> extends ScrollAwareImageProvider<T> with Mate {
   /// ScrollAwareImageProvider<T> ScrollAwareImageProvider({required DisposableBuildContext<State<StatefulWidget>> context, required ImageProvider<T> imageProvider})
   ScrollAwareImageProvider$Mate({
-    /// optionalParameters: {required DisposableBuildContext<State<StatefulWidget>> context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DisposableBuildContext<State<StatefulWidget>> context} , defaultValue:none
     required DisposableBuildContext<State<StatefulWidget>> context,
 
-    /// optionalParameters: {required ImageProvider<T> imageProvider} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageProvider<T> imageProvider} , defaultValue:none
     required ImageProvider<T> imageProvider,
   }) : super(
           context: context,
@@ -24,7 +24,7 @@ class ScrollAwareImageProvider$Mate<T extends Object> extends ScrollAwareImagePr
           context: p.get('context').build(),
           imageProvider: p.get('imageProvider').build(),
         );
-    matePut('context', context);
-    matePut('imageProvider', imageProvider);
+    mateDeclare('context', context);
+    mateDeclare('imageProvider', imageProvider);
   }
 }

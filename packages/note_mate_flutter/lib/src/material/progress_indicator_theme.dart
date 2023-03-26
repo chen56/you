@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Mate {
   /// ProgressIndicatorThemeData ProgressIndicatorThemeData({Color? color, Color? linearTrackColor, double? linearMinHeight, Color? circularTrackColor, Color? refreshBackgroundColor})
   ProgressIndicatorThemeData$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? linearTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? linearTrackColor} , defaultValue:none
     Color? linearTrackColor,
 
-    /// optionalParameters: {double? linearMinHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? linearMinHeight} , defaultValue:none
     double? linearMinHeight,
 
-    /// optionalParameters: {Color? circularTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? circularTrackColor} , defaultValue:none
     Color? circularTrackColor,
 
-    /// optionalParameters: {Color? refreshBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? refreshBackgroundColor} , defaultValue:none
     Color? refreshBackgroundColor,
   }) : super(
           color: color,
@@ -39,11 +39,11 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
           circularTrackColor: p.get('circularTrackColor').build(),
           refreshBackgroundColor: p.get('refreshBackgroundColor').build(),
         );
-    matePut('color', color);
-    matePut('linearTrackColor', linearTrackColor);
-    matePut('linearMinHeight', linearMinHeight);
-    matePut('circularTrackColor', circularTrackColor);
-    matePut('refreshBackgroundColor', refreshBackgroundColor);
+    mateDeclare('color', color);
+    mateDeclare('linearTrackColor', linearTrackColor);
+    mateDeclare('linearMinHeight', linearMinHeight);
+    mateDeclare('circularTrackColor', circularTrackColor);
+    mateDeclare('refreshBackgroundColor', refreshBackgroundColor);
   }
 }
 
@@ -51,13 +51,13 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
 class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with Mate {
   /// ProgressIndicatorTheme ProgressIndicatorTheme({Key? key, required ProgressIndicatorThemeData data, required Widget child})
   ProgressIndicatorTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ProgressIndicatorThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ProgressIndicatorThemeData data} , defaultValue:none
     required ProgressIndicatorThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -69,8 +69,8 @@ class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

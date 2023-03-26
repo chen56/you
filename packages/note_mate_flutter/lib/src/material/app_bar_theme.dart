@@ -13,52 +13,52 @@ import 'package:flutter/src/services/system_chrome.dart';
 class AppBarTheme$Mate extends AppBarTheme with Mate {
   /// AppBarTheme AppBarTheme({Color? color, Color? backgroundColor, Color? foregroundColor, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool? centerTitle, double? titleSpacing, double? toolbarHeight, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle})
   AppBarTheme$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? foregroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
     Color? foregroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {double? scrolledUnderElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scrolledUnderElevation} , defaultValue:none
     double? scrolledUnderElevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {IconThemeData? iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? iconTheme} , defaultValue:none
     IconThemeData? iconTheme,
 
-    /// optionalParameters: {IconThemeData? actionsIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? actionsIconTheme} , defaultValue:none
     IconThemeData? actionsIconTheme,
 
-    /// optionalParameters: {bool? centerTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? centerTitle} , defaultValue:none
     bool? centerTitle,
 
-    /// optionalParameters: {double? titleSpacing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? titleSpacing} , defaultValue:none
     double? titleSpacing,
 
-    /// optionalParameters: {double? toolbarHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? toolbarHeight} , defaultValue:none
     double? toolbarHeight,
 
-    /// optionalParameters: {TextStyle? toolbarTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? toolbarTextStyle} , defaultValue:none
     TextStyle? toolbarTextStyle,
 
-    /// optionalParameters: {TextStyle? titleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? titleTextStyle} , defaultValue:none
     TextStyle? titleTextStyle,
 
-    /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , defaultValue:none
     SystemUiOverlayStyle? systemOverlayStyle,
   }) : super(
           color: color,
@@ -96,21 +96,21 @@ class AppBarTheme$Mate extends AppBarTheme with Mate {
           titleTextStyle: p.get('titleTextStyle').build(),
           systemOverlayStyle: p.get('systemOverlayStyle').build(),
         );
-    matePut('color', color);
-    matePut('backgroundColor', backgroundColor);
-    matePut('foregroundColor', foregroundColor);
-    matePut('elevation', elevation);
-    matePut('scrolledUnderElevation', scrolledUnderElevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('shape', shape);
-    matePut('iconTheme', iconTheme);
-    matePut('actionsIconTheme', actionsIconTheme);
-    matePut('centerTitle', centerTitle);
-    matePut('titleSpacing', titleSpacing);
-    matePut('toolbarHeight', toolbarHeight);
-    matePut('toolbarTextStyle', toolbarTextStyle);
-    matePut('titleTextStyle', titleTextStyle);
-    matePut('systemOverlayStyle', systemOverlayStyle);
+    mateDeclare('color', color);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('foregroundColor', foregroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('scrolledUnderElevation', scrolledUnderElevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('shape', shape);
+    mateDeclare('iconTheme', iconTheme);
+    mateDeclare('actionsIconTheme', actionsIconTheme);
+    mateDeclare('centerTitle', centerTitle);
+    mateDeclare('titleSpacing', titleSpacing);
+    mateDeclare('toolbarHeight', toolbarHeight);
+    mateDeclare('toolbarTextStyle', toolbarTextStyle);
+    mateDeclare('titleTextStyle', titleTextStyle);
+    mateDeclare('systemOverlayStyle', systemOverlayStyle);
   }
 }

@@ -13,40 +13,40 @@ import 'dart:core';
 class CupertinoListTile$Mate extends CupertinoListTile with Mate {
   /// CupertinoListTile CupertinoListTile({Key? key, required Widget title, Widget? subtitle, Widget? additionalInfo, Widget? leading, Widget? trailing, FutureOr<void> Function()? onTap, Color? backgroundColor, Color? backgroundColorActivated, EdgeInsetsGeometry? padding, double leadingSize = _kLeadingSize, double leadingToTitle = _kLeadingToTitle})
   CupertinoListTile$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget title} , defaultValue:none
     required Widget title,
 
-    /// optionalParameters: {Widget? subtitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? subtitle} , defaultValue:none
     Widget? subtitle,
 
-    /// optionalParameters: {Widget? additionalInfo} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? additionalInfo} , defaultValue:none
     Widget? additionalInfo,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , defaultValue:none
     Widget? leading,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , defaultValue:none
     Widget? trailing,
 
-    /// optionalParameters: {FutureOr<void> Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FutureOr<void> Function()? onTap} , defaultValue:none
     FutureOr<void> Function()? onTap,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? backgroundColorActivated} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColorActivated} , defaultValue:none
     Color? backgroundColorActivated,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {double leadingSize = _kLeadingSize} , hasDefaultValue:true, defaultValueCode:_kLeadingSize
+    /// optionalParameters: {double leadingSize = _kLeadingSize} , defaultValue:unprocessed
     required double leadingSize,
 
-    /// optionalParameters: {double leadingToTitle = _kLeadingToTitle} , hasDefaultValue:true, defaultValueCode:_kLeadingToTitle
+    /// optionalParameters: {double leadingToTitle = _kLeadingToTitle} , defaultValue:unprocessed
     required double leadingToTitle,
   }) : super(
           key: key,
@@ -76,56 +76,56 @@ class CupertinoListTile$Mate extends CupertinoListTile with Mate {
           leadingSize: p.get('leadingSize').build(),
           leadingToTitle: p.get('leadingToTitle').build(),
         );
-    matePut('key', key);
-    matePut('title', title);
-    matePut('subtitle', subtitle);
-    matePut('additionalInfo', additionalInfo);
-    matePut('leading', leading);
-    matePut('trailing', trailing);
-    matePut('onTap', onTap);
-    matePut('backgroundColor', backgroundColor);
-    matePut('backgroundColorActivated', backgroundColorActivated);
-    matePut('padding', padding);
-    matePut('leadingSize', leadingSize);
-    matePut('leadingToTitle', leadingToTitle);
+    mateDeclare('key', key);
+    mateDeclare('title', title);
+    mateDeclare('subtitle', subtitle);
+    mateDeclare('additionalInfo', additionalInfo);
+    mateDeclare('leading', leading);
+    mateDeclare('trailing', trailing);
+    mateDeclare('onTap', onTap);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('backgroundColorActivated', backgroundColorActivated);
+    mateDeclare('padding', padding);
+    mateDeclare('leadingSize', leadingSize);
+    mateDeclare('leadingToTitle', leadingToTitle);
   }
 
   /// CupertinoListTile CupertinoListTile.notched({Key? key, required Widget title, Widget? subtitle, Widget? additionalInfo, Widget? leading, Widget? trailing, FutureOr<void> Function()? onTap, Color? backgroundColor, Color? backgroundColorActivated, EdgeInsetsGeometry? padding, double leadingSize = _kNotchedLeadingSize, double leadingToTitle = _kNotchedLeadingToTitle})
   CupertinoListTile$Mate.notched({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget title} , defaultValue:none
     required Widget title,
 
-    /// optionalParameters: {Widget? subtitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? subtitle} , defaultValue:none
     Widget? subtitle,
 
-    /// optionalParameters: {Widget? additionalInfo} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? additionalInfo} , defaultValue:none
     Widget? additionalInfo,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , defaultValue:none
     Widget? leading,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , defaultValue:none
     Widget? trailing,
 
-    /// optionalParameters: {FutureOr<void> Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FutureOr<void> Function()? onTap} , defaultValue:none
     FutureOr<void> Function()? onTap,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? backgroundColorActivated} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColorActivated} , defaultValue:none
     Color? backgroundColorActivated,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {double leadingSize = _kNotchedLeadingSize} , hasDefaultValue:true, defaultValueCode:_kNotchedLeadingSize
+    /// optionalParameters: {double leadingSize = _kNotchedLeadingSize} , defaultValue:unprocessed
     required double leadingSize,
 
-    /// optionalParameters: {double leadingToTitle = _kNotchedLeadingToTitle} , hasDefaultValue:true, defaultValueCode:_kNotchedLeadingToTitle
+    /// optionalParameters: {double leadingToTitle = _kNotchedLeadingToTitle} , defaultValue:unprocessed
     required double leadingToTitle,
   }) : super.notched(
           key: key,
@@ -155,18 +155,18 @@ class CupertinoListTile$Mate extends CupertinoListTile with Mate {
           leadingSize: p.get('leadingSize').build(),
           leadingToTitle: p.get('leadingToTitle').build(),
         );
-    matePut('key', key);
-    matePut('title', title);
-    matePut('subtitle', subtitle);
-    matePut('additionalInfo', additionalInfo);
-    matePut('leading', leading);
-    matePut('trailing', trailing);
-    matePut('onTap', onTap);
-    matePut('backgroundColor', backgroundColor);
-    matePut('backgroundColorActivated', backgroundColorActivated);
-    matePut('padding', padding);
-    matePut('leadingSize', leadingSize);
-    matePut('leadingToTitle', leadingToTitle);
+    mateDeclare('key', key);
+    mateDeclare('title', title);
+    mateDeclare('subtitle', subtitle);
+    mateDeclare('additionalInfo', additionalInfo);
+    mateDeclare('leading', leading);
+    mateDeclare('trailing', trailing);
+    mateDeclare('onTap', onTap);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('backgroundColorActivated', backgroundColorActivated);
+    mateDeclare('padding', padding);
+    mateDeclare('leadingSize', leadingSize);
+    mateDeclare('leadingToTitle', leadingToTitle);
   }
 }
 
@@ -175,10 +175,10 @@ class CupertinoListTileChevron$Mate extends CupertinoListTileChevron with Mate {
   /// CupertinoListTileChevron CupertinoListTileChevron({Key? key})
   CupertinoListTileChevron$Mate(
       {
-      /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super(key: key) {
     mateBuilder = (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
-    matePut('key', key);
+    mateDeclare('key', key);
   }
 }

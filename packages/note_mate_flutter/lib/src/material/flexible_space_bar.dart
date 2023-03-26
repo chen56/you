@@ -11,29 +11,29 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
   /// FlexibleSpaceBar FlexibleSpaceBar({Key? key, Widget? title, Widget? background, bool? centerTitle, EdgeInsetsGeometry? titlePadding, CollapseMode collapseMode = CollapseMode.parallax, List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground], double expandedTitleScale = 1.5})
   FlexibleSpaceBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? title} , defaultValue:none
     Widget? title,
 
-    /// optionalParameters: {Widget? background} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? background} , defaultValue:none
     Widget? background,
 
-    /// optionalParameters: {bool? centerTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? centerTitle} , defaultValue:none
     bool? centerTitle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? titlePadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? titlePadding} , defaultValue:none
     EdgeInsetsGeometry? titlePadding,
 
-    /// optionalParameters: {CollapseMode collapseMode = CollapseMode.parallax} , hasDefaultValue:true, defaultValueCode:CollapseMode.parallax
+    /// optionalParameters: {CollapseMode collapseMode = CollapseMode.parallax} , defaultValue:unprocessed
     required CollapseMode collapseMode,
 
-    /// optionalParameters: {List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground]} , hasDefaultValue:true, defaultValueCode:const <StretchMode>[StretchMode.zoomBackground]
+    /// optionalParameters: {List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground]} , defaultValue:unprocessed
     required List<StretchMode> stretchModes,
 
-    /// optionalParameters: {double expandedTitleScale = 1.5} , hasDefaultValue:true, defaultValueCode:1.5
-    required double expandedTitleScale,
+    /// optionalParameters: {double expandedTitleScale = 1.5} , defaultValue:Literal
+    double expandedTitleScale = 1.5,
   }) : super(
           key: key,
           title: title,
@@ -54,14 +54,14 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
           stretchModes: p.get('stretchModes').build(),
           expandedTitleScale: p.get('expandedTitleScale').build(),
         );
-    matePut('key', key);
-    matePut('title', title);
-    matePut('background', background);
-    matePut('centerTitle', centerTitle);
-    matePut('titlePadding', titlePadding);
-    matePut('collapseMode', collapseMode);
-    matePut('stretchModes', stretchModes);
-    matePut('expandedTitleScale', expandedTitleScale);
+    mateDeclare('key', key);
+    mateDeclare('title', title);
+    mateDeclare('background', background);
+    mateDeclare('centerTitle', centerTitle);
+    mateDeclare('titlePadding', titlePadding);
+    mateDeclare('collapseMode', collapseMode);
+    mateDeclare('stretchModes', stretchModes);
+    mateDeclare('expandedTitleScale', expandedTitleScale);
   }
 }
 
@@ -69,25 +69,25 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
 class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Mate {
   /// FlexibleSpaceBarSettings FlexibleSpaceBarSettings({Key? key, required double toolbarOpacity, required double minExtent, required double maxExtent, required double currentExtent, required Widget child, bool? isScrolledUnder})
   FlexibleSpaceBarSettings$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required double toolbarOpacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double toolbarOpacity} , defaultValue:none
     required double toolbarOpacity,
 
-    /// optionalParameters: {required double minExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double minExtent} , defaultValue:none
     required double minExtent,
 
-    /// optionalParameters: {required double maxExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double maxExtent} , defaultValue:none
     required double maxExtent,
 
-    /// optionalParameters: {required double currentExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double currentExtent} , defaultValue:none
     required double currentExtent,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {bool? isScrolledUnder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? isScrolledUnder} , defaultValue:none
     bool? isScrolledUnder,
   }) : super(
           key: key,
@@ -107,12 +107,12 @@ class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Mate {
           child: p.get('child').build(),
           isScrolledUnder: p.get('isScrolledUnder').build(),
         );
-    matePut('key', key);
-    matePut('toolbarOpacity', toolbarOpacity);
-    matePut('minExtent', minExtent);
-    matePut('maxExtent', maxExtent);
-    matePut('currentExtent', currentExtent);
-    matePut('child', child);
-    matePut('isScrolledUnder', isScrolledUnder);
+    mateDeclare('key', key);
+    mateDeclare('toolbarOpacity', toolbarOpacity);
+    mateDeclare('minExtent', minExtent);
+    mateDeclare('maxExtent', maxExtent);
+    mateDeclare('currentExtent', currentExtent);
+    mateDeclare('child', child);
+    mateDeclare('isScrolledUnder', isScrolledUnder);
   }
 }

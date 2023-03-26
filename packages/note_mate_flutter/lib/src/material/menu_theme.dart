@@ -11,11 +11,11 @@ class MenuThemeData$Mate extends MenuThemeData with Mate {
   /// MenuThemeData MenuThemeData({MenuStyle? style})
   MenuThemeData$Mate(
       {
-      /// optionalParameters: {MenuStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {MenuStyle? style} , defaultValue:none
       MenuStyle? style})
       : super(style: style) {
     mateBuilder = (p) => MenuThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateDeclare('style', style);
   }
 }
 
@@ -23,13 +23,13 @@ class MenuThemeData$Mate extends MenuThemeData with Mate {
 class MenuTheme$Mate extends MenuTheme with Mate {
   /// MenuTheme MenuTheme({Key? key, required MenuThemeData data, required Widget child})
   MenuTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required MenuThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MenuThemeData data} , defaultValue:none
     required MenuThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -41,8 +41,8 @@ class MenuTheme$Mate extends MenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

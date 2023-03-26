@@ -9,10 +9,10 @@ import 'package:flutter/src/rendering/box.dart';
 class RenderCustomMultiChildLayoutBox$Mate extends RenderCustomMultiChildLayoutBox with Mate {
   /// RenderCustomMultiChildLayoutBox RenderCustomMultiChildLayoutBox({List<RenderBox>? children, required MultiChildLayoutDelegate delegate})
   RenderCustomMultiChildLayoutBox$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {required MultiChildLayoutDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MultiChildLayoutDelegate delegate} , defaultValue:none
     required MultiChildLayoutDelegate delegate,
   }) : super(
           children: children,
@@ -22,7 +22,7 @@ class RenderCustomMultiChildLayoutBox$Mate extends RenderCustomMultiChildLayoutB
           children: p.get('children').build(),
           delegate: p.get('delegate').build(),
         );
-    matePut('children', children);
-    matePut('delegate', delegate);
+    mateDeclare('children', children);
+    mateDeclare('delegate', delegate);
   }
 }

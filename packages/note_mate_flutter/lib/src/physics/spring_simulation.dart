@@ -9,13 +9,13 @@ import 'package:flutter/src/physics/tolerance.dart';
 class SpringDescription$Mate extends SpringDescription with Mate {
   /// SpringDescription SpringDescription({required double mass, required double stiffness, required double damping})
   SpringDescription$Mate({
-    /// optionalParameters: {required double mass} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double mass} , defaultValue:none
     required double mass,
 
-    /// optionalParameters: {required double stiffness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double stiffness} , defaultValue:none
     required double stiffness,
 
-    /// optionalParameters: {required double damping} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double damping} , defaultValue:none
     required double damping,
   }) : super(
           mass: mass,
@@ -27,21 +27,21 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: p.get('stiffness').build(),
           damping: p.get('damping').build(),
         );
-    matePut('mass', mass);
-    matePut('stiffness', stiffness);
-    matePut('damping', damping);
+    mateDeclare('mass', mass);
+    mateDeclare('stiffness', stiffness);
+    mateDeclare('damping', damping);
   }
 
   /// SpringDescription SpringDescription.withDampingRatio({required double mass, required double stiffness, double ratio = 1.0})
   SpringDescription$Mate.withDampingRatio({
-    /// optionalParameters: {required double mass} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double mass} , defaultValue:none
     required double mass,
 
-    /// optionalParameters: {required double stiffness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double stiffness} , defaultValue:none
     required double stiffness,
 
-    /// optionalParameters: {double ratio = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double ratio,
+    /// optionalParameters: {double ratio = 1.0} , defaultValue:Literal
+    double ratio = 1.0,
   }) : super.withDampingRatio(
           mass: mass,
           stiffness: stiffness,
@@ -52,9 +52,9 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: p.get('stiffness').build(),
           ratio: p.get('ratio').build(),
         );
-    matePut('mass', mass);
-    matePut('stiffness', stiffness);
-    matePut('ratio', ratio);
+    mateDeclare('mass', mass);
+    mateDeclare('stiffness', stiffness);
+    mateDeclare('ratio', ratio);
   }
 }
 
@@ -73,7 +73,7 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , hasDefaultValue:true, defaultValueCode:Tolerance.defaultTolerance
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:unprocessed
     required Tolerance tolerance,
   }) : super(
           spring,
@@ -89,11 +89,11 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    matePut('spring', spring);
-    matePut('start', start);
-    matePut('end', end);
-    matePut('velocity', velocity);
-    matePut('tolerance', tolerance);
+    mateDeclare('spring', spring);
+    mateDeclare('start', start);
+    mateDeclare('end', end);
+    mateDeclare('velocity', velocity);
+    mateDeclare('tolerance', tolerance);
   }
 }
 
@@ -112,7 +112,7 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , hasDefaultValue:true, defaultValueCode:Tolerance.defaultTolerance
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:unprocessed
     required Tolerance tolerance,
   }) : super(
           spring,
@@ -128,10 +128,10 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    matePut('spring', spring);
-    matePut('start', start);
-    matePut('end', end);
-    matePut('velocity', velocity);
-    matePut('tolerance', tolerance);
+    mateDeclare('spring', spring);
+    mateDeclare('start', start);
+    mateDeclare('end', end);
+    mateDeclare('velocity', velocity);
+    mateDeclare('tolerance', tolerance);
   }
 }

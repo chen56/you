@@ -8,25 +8,25 @@ import 'dart:core';
 class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
   /// RawKeyEventDataLinux RawKeyEventDataLinux({required KeyHelper keyHelper, int unicodeScalarValues = 0, int scanCode = 0, int keyCode = 0, int modifiers = 0, required bool isDown, int? specifiedLogicalKey})
   RawKeyEventDataLinux$Mate({
-    /// optionalParameters: {required KeyHelper keyHelper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required KeyHelper keyHelper} , defaultValue:none
     required KeyHelper keyHelper,
 
-    /// optionalParameters: {int unicodeScalarValues = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int unicodeScalarValues,
+    /// optionalParameters: {int unicodeScalarValues = 0} , defaultValue:Literal
+    int unicodeScalarValues = 0,
 
-    /// optionalParameters: {int scanCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int scanCode,
+    /// optionalParameters: {int scanCode = 0} , defaultValue:Literal
+    int scanCode = 0,
 
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    int keyCode = 0,
 
-    /// optionalParameters: {int modifiers = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int modifiers,
+    /// optionalParameters: {int modifiers = 0} , defaultValue:Literal
+    int modifiers = 0,
 
-    /// optionalParameters: {required bool isDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool isDown} , defaultValue:none
     required bool isDown,
 
-    /// optionalParameters: {int? specifiedLogicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? specifiedLogicalKey} , defaultValue:none
     int? specifiedLogicalKey,
   }) : super(
           keyHelper: keyHelper,
@@ -46,12 +46,12 @@ class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
           isDown: p.get('isDown').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    matePut('keyHelper', keyHelper);
-    matePut('unicodeScalarValues', unicodeScalarValues);
-    matePut('scanCode', scanCode);
-    matePut('keyCode', keyCode);
-    matePut('modifiers', modifiers);
-    matePut('isDown', isDown);
-    matePut('specifiedLogicalKey', specifiedLogicalKey);
+    mateDeclare('keyHelper', keyHelper);
+    mateDeclare('unicodeScalarValues', unicodeScalarValues);
+    mateDeclare('scanCode', scanCode);
+    mateDeclare('keyCode', keyCode);
+    mateDeclare('modifiers', modifiers);
+    mateDeclare('isDown', isDown);
+    mateDeclare('specifiedLogicalKey', specifiedLogicalKey);
   }
 }

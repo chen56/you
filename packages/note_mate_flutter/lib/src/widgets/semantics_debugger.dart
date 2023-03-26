@@ -10,13 +10,13 @@ import 'package:flutter/src/painting/text_style.dart';
 class SemanticsDebugger$Mate extends SemanticsDebugger with Mate {
   /// SemanticsDebugger SemanticsDebugger({Key? key, required Widget child, TextStyle labelStyle = const TextStyle(color: Color(0xFF000000), fontSize: 10.0, height: 0.8)})
   SemanticsDebugger$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {TextStyle labelStyle = const TextStyle(color: Color(0xFF000000), fontSize: 10.0, height: 0.8)} , hasDefaultValue:true, defaultValueCode:const TextStyle(color: Color(0xFF000000), fontSize: 10.0, height: 0.8)
+    /// optionalParameters: {TextStyle labelStyle = const TextStyle(color: Color(0xFF000000), fontSize: 10.0, height: 0.8)} , defaultValue:unprocessed
     required TextStyle labelStyle,
   }) : super(
           key: key,
@@ -28,8 +28,8 @@ class SemanticsDebugger$Mate extends SemanticsDebugger with Mate {
           child: p.get('child').build(),
           labelStyle: p.get('labelStyle').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('labelStyle', labelStyle);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('labelStyle', labelStyle);
   }
 }

@@ -8,10 +8,10 @@ import 'package:flutter/src/foundation/key.dart';
 class OrientationBuilder$Mate extends OrientationBuilder with Mate {
   /// OrientationBuilder OrientationBuilder({Key? key, required Widget Function(BuildContext, Orientation) builder})
   OrientationBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Orientation) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Orientation) builder} , defaultValue:none
     required OrientationWidgetBuilder builder,
   }) : super(
           key: key,
@@ -21,7 +21,7 @@ class OrientationBuilder$Mate extends OrientationBuilder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('builder', builder);
+    mateDeclare('key', key);
+    mateDeclare('builder', builder);
   }
 }

@@ -8,10 +8,10 @@ import 'dart:core';
 class RestorationBucket$Mate extends RestorationBucket with Mate {
   /// RestorationBucket RestorationBucket.empty({required String restorationId, required Object? debugOwner})
   RestorationBucket$Mate.empty({
-    /// optionalParameters: {required String restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String restorationId} , defaultValue:none
     required String restorationId,
 
-    /// optionalParameters: {required Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object? debugOwner} , defaultValue:none
     required Object? debugOwner,
   }) : super.empty(
           restorationId: restorationId,
@@ -21,16 +21,16 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           restorationId: p.get('restorationId').build(),
           debugOwner: p.get('debugOwner').build(),
         );
-    matePut('restorationId', restorationId);
-    matePut('debugOwner', debugOwner);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('debugOwner', debugOwner);
   }
 
   /// RestorationBucket RestorationBucket.root({required RestorationManager manager, required Map<Object?, Object?>? rawData})
   RestorationBucket$Mate.root({
-    /// optionalParameters: {required RestorationManager manager} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RestorationManager manager} , defaultValue:none
     required RestorationManager manager,
 
-    /// optionalParameters: {required Map<Object?, Object?>? rawData} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<Object?, Object?>? rawData} , defaultValue:none
     required Map<Object?, Object?>? rawData,
   }) : super.root(
           manager: manager,
@@ -40,19 +40,19 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           manager: p.get('manager').build(),
           rawData: p.get('rawData').build(),
         );
-    matePut('manager', manager);
-    matePut('rawData', rawData);
+    mateDeclare('manager', manager);
+    mateDeclare('rawData', rawData);
   }
 
   /// RestorationBucket RestorationBucket.child({required String restorationId, required RestorationBucket parent, required Object? debugOwner})
   RestorationBucket$Mate.child({
-    /// optionalParameters: {required String restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String restorationId} , defaultValue:none
     required String restorationId,
 
-    /// optionalParameters: {required RestorationBucket parent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RestorationBucket parent} , defaultValue:none
     required RestorationBucket parent,
 
-    /// optionalParameters: {required Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object? debugOwner} , defaultValue:none
     required Object? debugOwner,
   }) : super.child(
           restorationId: restorationId,
@@ -64,8 +64,8 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           parent: p.get('parent').build(),
           debugOwner: p.get('debugOwner').build(),
         );
-    matePut('restorationId', restorationId);
-    matePut('parent', parent);
-    matePut('debugOwner', debugOwner);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('parent', parent);
+    mateDeclare('debugOwner', debugOwner);
   }
 }

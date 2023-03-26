@@ -9,13 +9,13 @@ import 'dart:ui';
 class ImageSizeInfo$Mate extends ImageSizeInfo with Mate {
   /// ImageSizeInfo ImageSizeInfo({String? source, required Size displaySize, required Size imageSize})
   ImageSizeInfo$Mate({
-    /// optionalParameters: {String? source} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? source} , defaultValue:none
     String? source,
 
-    /// optionalParameters: {required Size displaySize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size displaySize} , defaultValue:none
     required Size displaySize,
 
-    /// optionalParameters: {required Size imageSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size imageSize} , defaultValue:none
     required Size imageSize,
   }) : super(
           source: source,
@@ -27,8 +27,8 @@ class ImageSizeInfo$Mate extends ImageSizeInfo with Mate {
           displaySize: p.get('displaySize').build(),
           imageSize: p.get('imageSize').build(),
         );
-    matePut('source', source);
-    matePut('displaySize', displaySize);
-    matePut('imageSize', imageSize);
+    mateDeclare('source', source);
+    mateDeclare('displaySize', displaySize);
+    mateDeclare('imageSize', imageSize);
   }
 }

@@ -11,13 +11,13 @@ import 'dart:core';
 class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbarButton with Mate {
   /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
   DesktopTextSelectionToolbarButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required void Function() onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -29,23 +29,23 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: p.get('onPressed').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('child', child);
   }
 
   /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
   DesktopTextSelectionToolbarButton$Mate.text({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , defaultValue:none
     required BuildContext context,
 
-    /// optionalParameters: {required void Function() onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {required String text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String text} , defaultValue:none
     required String text,
   }) : super.text(
           key: key,
@@ -59,9 +59,9 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: p.get('onPressed').build(),
           text: p.get('text').build(),
         );
-    matePut('key', key);
-    matePut('context', context);
-    matePut('onPressed', onPressed);
-    matePut('text', text);
+    mateDeclare('key', key);
+    mateDeclare('context', context);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('text', text);
   }
 }

@@ -13,55 +13,55 @@ import 'package:flutter/src/painting/decoration_image.dart';
 class RenderImage$Mate extends RenderImage with Mate {
   /// RenderImage RenderImage({Image? image, String? debugImageLabel, double? width, double? height, double scale = 1.0, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, TextDirection? textDirection, bool invertColors = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low})
   RenderImage$Mate({
-    /// optionalParameters: {Image? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Image? image} , defaultValue:none
     Image? image,
 
-    /// optionalParameters: {String? debugImageLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugImageLabel} , defaultValue:none
     String? debugImageLabel,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? opacity} , defaultValue:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? colorBlendMode} , defaultValue:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
     required ImageRepeat repeat,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {bool invertColors = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool invertColors,
+    /// optionalParameters: {bool invertColors = false} , defaultValue:Literal
+    bool invertColors = false,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
+    bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
     required FilterQuality filterQuality,
   }) : super(
           image: image,
@@ -101,22 +101,22 @@ class RenderImage$Mate extends RenderImage with Mate {
           isAntiAlias: p.get('isAntiAlias').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    matePut('image', image);
-    matePut('debugImageLabel', debugImageLabel);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('scale', scale);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('colorBlendMode', colorBlendMode);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('repeat', repeat);
-    matePut('centerSlice', centerSlice);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('textDirection', textDirection);
-    matePut('invertColors', invertColors);
-    matePut('isAntiAlias', isAntiAlias);
-    matePut('filterQuality', filterQuality);
+    mateDeclare('image', image);
+    mateDeclare('debugImageLabel', debugImageLabel);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
+    mateDeclare('scale', scale);
+    mateDeclare('color', color);
+    mateDeclare('opacity', opacity);
+    mateDeclare('colorBlendMode', colorBlendMode);
+    mateDeclare('fit', fit);
+    mateDeclare('alignment', alignment);
+    mateDeclare('repeat', repeat);
+    mateDeclare('centerSlice', centerSlice);
+    mateDeclare('matchTextDirection', matchTextDirection);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('invertColors', invertColors);
+    mateDeclare('isAntiAlias', isAntiAlias);
+    mateDeclare('filterQuality', filterQuality);
   }
 }

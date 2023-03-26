@@ -13,40 +13,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
   /// ExpansionTileThemeData ExpansionTileThemeData({Color? backgroundColor, Color? collapsedBackgroundColor, EdgeInsetsGeometry? tilePadding, AlignmentGeometry? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? iconColor, Color? collapsedIconColor, Color? textColor, Color? collapsedTextColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior})
   ExpansionTileThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? collapsedBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedBackgroundColor} , defaultValue:none
     Color? collapsedBackgroundColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? tilePadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? tilePadding} , defaultValue:none
     EdgeInsetsGeometry? tilePadding,
 
-    /// optionalParameters: {AlignmentGeometry? expandedAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? expandedAlignment} , defaultValue:none
     AlignmentGeometry? expandedAlignment,
 
-    /// optionalParameters: {EdgeInsetsGeometry? childrenPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? childrenPadding} , defaultValue:none
     EdgeInsetsGeometry? childrenPadding,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , defaultValue:none
     Color? iconColor,
 
-    /// optionalParameters: {Color? collapsedIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedIconColor} , defaultValue:none
     Color? collapsedIconColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , defaultValue:none
     Color? textColor,
 
-    /// optionalParameters: {Color? collapsedTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedTextColor} , defaultValue:none
     Color? collapsedTextColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ShapeBorder? collapsedShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? collapsedShape} , defaultValue:none
     ShapeBorder? collapsedShape,
 
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , defaultValue:none
     Clip? clipBehavior,
   }) : super(
           backgroundColor: backgroundColor,
@@ -76,18 +76,18 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
           collapsedShape: p.get('collapsedShape').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('collapsedBackgroundColor', collapsedBackgroundColor);
-    matePut('tilePadding', tilePadding);
-    matePut('expandedAlignment', expandedAlignment);
-    matePut('childrenPadding', childrenPadding);
-    matePut('iconColor', iconColor);
-    matePut('collapsedIconColor', collapsedIconColor);
-    matePut('textColor', textColor);
-    matePut('collapsedTextColor', collapsedTextColor);
-    matePut('shape', shape);
-    matePut('collapsedShape', collapsedShape);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('collapsedBackgroundColor', collapsedBackgroundColor);
+    mateDeclare('tilePadding', tilePadding);
+    mateDeclare('expandedAlignment', expandedAlignment);
+    mateDeclare('childrenPadding', childrenPadding);
+    mateDeclare('iconColor', iconColor);
+    mateDeclare('collapsedIconColor', collapsedIconColor);
+    mateDeclare('textColor', textColor);
+    mateDeclare('collapsedTextColor', collapsedTextColor);
+    mateDeclare('shape', shape);
+    mateDeclare('collapsedShape', collapsedShape);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -95,13 +95,13 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
 class ExpansionTileTheme$Mate extends ExpansionTileTheme with Mate {
   /// ExpansionTileTheme ExpansionTileTheme({Key? key, required ExpansionTileThemeData data, required Widget child})
   ExpansionTileTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ExpansionTileThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ExpansionTileThemeData data} , defaultValue:none
     required ExpansionTileThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -113,8 +113,8 @@ class ExpansionTileTheme$Mate extends ExpansionTileTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

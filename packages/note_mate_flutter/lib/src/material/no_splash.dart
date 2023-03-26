@@ -10,16 +10,16 @@ import 'dart:ui';
 class NoSplash$Mate extends NoSplash with Mate {
   /// NoSplash NoSplash({required MaterialInkController controller, required RenderBox referenceBox, required Color color, void Function()? onRemoved})
   NoSplash$Mate({
-    /// optionalParameters: {required MaterialInkController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MaterialInkController controller} , defaultValue:none
     required MaterialInkController controller,
 
-    /// optionalParameters: {required RenderBox referenceBox} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderBox referenceBox} , defaultValue:none
     required RenderBox referenceBox,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {void Function()? onRemoved} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onRemoved} , defaultValue:none
     VoidCallback? onRemoved,
   }) : super(
           controller: controller,
@@ -33,9 +33,9 @@ class NoSplash$Mate extends NoSplash with Mate {
           color: p.get('color').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    matePut('controller', controller);
-    matePut('referenceBox', referenceBox);
-    matePut('color', color);
-    matePut('onRemoved', onRemoved);
+    mateDeclare('controller', controller);
+    mateDeclare('referenceBox', referenceBox);
+    mateDeclare('color', color);
+    mateDeclare('onRemoved', onRemoved);
   }
 }

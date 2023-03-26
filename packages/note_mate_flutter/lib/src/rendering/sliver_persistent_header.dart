@@ -10,10 +10,10 @@ import 'package:flutter/src/animation/curves.dart';
 class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchConfiguration with Mate {
   /// OverScrollHeaderStretchConfiguration OverScrollHeaderStretchConfiguration({double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger})
   OverScrollHeaderStretchConfiguration$Mate({
-    /// optionalParameters: {double stretchTriggerOffset = 100.0} , hasDefaultValue:true, defaultValueCode:100.0
-    required double stretchTriggerOffset,
+    /// optionalParameters: {double stretchTriggerOffset = 100.0} , defaultValue:Literal
+    double stretchTriggerOffset = 100.0,
 
-    /// optionalParameters: {Future<void> Function()? onStretchTrigger} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Future<void> Function()? onStretchTrigger} , defaultValue:none
     AsyncCallback? onStretchTrigger,
   }) : super(
           stretchTriggerOffset: stretchTriggerOffset,
@@ -23,8 +23,8 @@ class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchC
           stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
           onStretchTrigger: p.get('onStretchTrigger').build(),
         );
-    matePut('stretchTriggerOffset', stretchTriggerOffset);
-    matePut('onStretchTrigger', onStretchTrigger);
+    mateDeclare('stretchTriggerOffset', stretchTriggerOffset);
+    mateDeclare('onStretchTrigger', onStretchTrigger);
   }
 }
 
@@ -32,10 +32,10 @@ class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchC
 class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderShowOnScreenConfiguration with Mate {
   /// PersistentHeaderShowOnScreenConfiguration PersistentHeaderShowOnScreenConfiguration({double minShowOnScreenExtent = double.negativeInfinity, double maxShowOnScreenExtent = double.infinity})
   PersistentHeaderShowOnScreenConfiguration$Mate({
-    /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , hasDefaultValue:true, defaultValueCode:double.negativeInfinity
+    /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , defaultValue:unprocessed
     required double minShowOnScreenExtent,
 
-    /// optionalParameters: {double maxShowOnScreenExtent = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double maxShowOnScreenExtent = double.infinity} , defaultValue:unprocessed
     required double maxShowOnScreenExtent,
   }) : super(
           minShowOnScreenExtent: minShowOnScreenExtent,
@@ -45,8 +45,8 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderSho
           minShowOnScreenExtent: p.get('minShowOnScreenExtent').build(),
           maxShowOnScreenExtent: p.get('maxShowOnScreenExtent').build(),
         );
-    matePut('minShowOnScreenExtent', minShowOnScreenExtent);
-    matePut('maxShowOnScreenExtent', maxShowOnScreenExtent);
+    mateDeclare('minShowOnScreenExtent', minShowOnScreenExtent);
+    mateDeclare('maxShowOnScreenExtent', maxShowOnScreenExtent);
   }
 }
 
@@ -54,10 +54,10 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderSho
 class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfiguration with Mate {
   /// FloatingHeaderSnapConfiguration FloatingHeaderSnapConfiguration({Curve curve = Curves.ease, Duration duration = const Duration(milliseconds: 300)})
   FloatingHeaderSnapConfiguration$Mate({
-    /// optionalParameters: {Curve curve = Curves.ease} , hasDefaultValue:true, defaultValueCode:Curves.ease
+    /// optionalParameters: {Curve curve = Curves.ease} , defaultValue:unprocessed
     required Curve curve,
 
-    /// optionalParameters: {Duration duration = const Duration(milliseconds: 300)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 300)
+    /// optionalParameters: {Duration duration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
     required Duration duration,
   }) : super(
           curve: curve,
@@ -67,7 +67,7 @@ class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfigurati
           curve: p.get('curve').build(),
           duration: p.get('duration').build(),
         );
-    matePut('curve', curve);
-    matePut('duration', duration);
+    mateDeclare('curve', curve);
+    mateDeclare('duration', duration);
   }
 }

@@ -9,10 +9,10 @@ class ClipboardData$Mate extends ClipboardData with Mate {
   /// ClipboardData ClipboardData({String? text})
   ClipboardData$Mate(
       {
-      /// optionalParameters: {String? text} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {String? text} , defaultValue:none
       String? text})
       : super(text: text) {
     mateBuilder = (p) => ClipboardData$Mate(text: p.get('text').build());
-    matePut('text', text);
+    mateDeclare('text', text);
   }
 }

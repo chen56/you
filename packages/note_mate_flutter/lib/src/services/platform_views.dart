@@ -8,10 +8,10 @@ import 'dart:core';
 class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate {
   /// AndroidPointerProperties AndroidPointerProperties({required int id, required int toolType})
   AndroidPointerProperties$Mate({
-    /// optionalParameters: {required int id} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int id} , defaultValue:none
     required int id,
 
-    /// optionalParameters: {required int toolType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int toolType} , defaultValue:none
     required int toolType,
   }) : super(
           id: id,
@@ -21,8 +21,8 @@ class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate {
           id: p.get('id').build(),
           toolType: p.get('toolType').build(),
         );
-    matePut('id', id);
-    matePut('toolType', toolType);
+    mateDeclare('id', id);
+    mateDeclare('toolType', toolType);
   }
 }
 
@@ -30,31 +30,31 @@ class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate {
 class AndroidPointerCoords$Mate extends AndroidPointerCoords with Mate {
   /// AndroidPointerCoords AndroidPointerCoords({required double orientation, required double pressure, required double size, required double toolMajor, required double toolMinor, required double touchMajor, required double touchMinor, required double x, required double y})
   AndroidPointerCoords$Mate({
-    /// optionalParameters: {required double orientation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double orientation} , defaultValue:none
     required double orientation,
 
-    /// optionalParameters: {required double pressure} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double pressure} , defaultValue:none
     required double pressure,
 
-    /// optionalParameters: {required double size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double size} , defaultValue:none
     required double size,
 
-    /// optionalParameters: {required double toolMajor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double toolMajor} , defaultValue:none
     required double toolMajor,
 
-    /// optionalParameters: {required double toolMinor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double toolMinor} , defaultValue:none
     required double toolMinor,
 
-    /// optionalParameters: {required double touchMajor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double touchMajor} , defaultValue:none
     required double touchMajor,
 
-    /// optionalParameters: {required double touchMinor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double touchMinor} , defaultValue:none
     required double touchMinor,
 
-    /// optionalParameters: {required double x} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double x} , defaultValue:none
     required double x,
 
-    /// optionalParameters: {required double y} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double y} , defaultValue:none
     required double y,
   }) : super(
           orientation: orientation,
@@ -78,15 +78,15 @@ class AndroidPointerCoords$Mate extends AndroidPointerCoords with Mate {
           x: p.get('x').build(),
           y: p.get('y').build(),
         );
-    matePut('orientation', orientation);
-    matePut('pressure', pressure);
-    matePut('size', size);
-    matePut('toolMajor', toolMajor);
-    matePut('toolMinor', toolMinor);
-    matePut('touchMajor', touchMajor);
-    matePut('touchMinor', touchMinor);
-    matePut('x', x);
-    matePut('y', y);
+    mateDeclare('orientation', orientation);
+    mateDeclare('pressure', pressure);
+    mateDeclare('size', size);
+    mateDeclare('toolMajor', toolMajor);
+    mateDeclare('toolMinor', toolMinor);
+    mateDeclare('touchMajor', touchMajor);
+    mateDeclare('touchMinor', touchMinor);
+    mateDeclare('x', x);
+    mateDeclare('y', y);
   }
 }
 
@@ -94,49 +94,49 @@ class AndroidPointerCoords$Mate extends AndroidPointerCoords with Mate {
 class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate {
   /// AndroidMotionEvent AndroidMotionEvent({required int downTime, required int eventTime, required int action, required int pointerCount, required List<AndroidPointerProperties> pointerProperties, required List<AndroidPointerCoords> pointerCoords, required int metaState, required int buttonState, required double xPrecision, required double yPrecision, required int deviceId, required int edgeFlags, required int source, required int flags, required int motionEventId})
   AndroidMotionEvent$Mate({
-    /// optionalParameters: {required int downTime} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int downTime} , defaultValue:none
     required int downTime,
 
-    /// optionalParameters: {required int eventTime} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int eventTime} , defaultValue:none
     required int eventTime,
 
-    /// optionalParameters: {required int action} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int action} , defaultValue:none
     required int action,
 
-    /// optionalParameters: {required int pointerCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int pointerCount} , defaultValue:none
     required int pointerCount,
 
-    /// optionalParameters: {required List<AndroidPointerProperties> pointerProperties} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<AndroidPointerProperties> pointerProperties} , defaultValue:none
     required List<AndroidPointerProperties> pointerProperties,
 
-    /// optionalParameters: {required List<AndroidPointerCoords> pointerCoords} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<AndroidPointerCoords> pointerCoords} , defaultValue:none
     required List<AndroidPointerCoords> pointerCoords,
 
-    /// optionalParameters: {required int metaState} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int metaState} , defaultValue:none
     required int metaState,
 
-    /// optionalParameters: {required int buttonState} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int buttonState} , defaultValue:none
     required int buttonState,
 
-    /// optionalParameters: {required double xPrecision} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double xPrecision} , defaultValue:none
     required double xPrecision,
 
-    /// optionalParameters: {required double yPrecision} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double yPrecision} , defaultValue:none
     required double yPrecision,
 
-    /// optionalParameters: {required int deviceId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int deviceId} , defaultValue:none
     required int deviceId,
 
-    /// optionalParameters: {required int edgeFlags} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int edgeFlags} , defaultValue:none
     required int edgeFlags,
 
-    /// optionalParameters: {required int source} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int source} , defaultValue:none
     required int source,
 
-    /// optionalParameters: {required int flags} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int flags} , defaultValue:none
     required int flags,
 
-    /// optionalParameters: {required int motionEventId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int motionEventId} , defaultValue:none
     required int motionEventId,
   }) : super(
           downTime: downTime,
@@ -172,20 +172,20 @@ class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate {
           flags: p.get('flags').build(),
           motionEventId: p.get('motionEventId').build(),
         );
-    matePut('downTime', downTime);
-    matePut('eventTime', eventTime);
-    matePut('action', action);
-    matePut('pointerCount', pointerCount);
-    matePut('pointerProperties', pointerProperties);
-    matePut('pointerCoords', pointerCoords);
-    matePut('metaState', metaState);
-    matePut('buttonState', buttonState);
-    matePut('xPrecision', xPrecision);
-    matePut('yPrecision', yPrecision);
-    matePut('deviceId', deviceId);
-    matePut('edgeFlags', edgeFlags);
-    matePut('source', source);
-    matePut('flags', flags);
-    matePut('motionEventId', motionEventId);
+    mateDeclare('downTime', downTime);
+    mateDeclare('eventTime', eventTime);
+    mateDeclare('action', action);
+    mateDeclare('pointerCount', pointerCount);
+    mateDeclare('pointerProperties', pointerProperties);
+    mateDeclare('pointerCoords', pointerCoords);
+    mateDeclare('metaState', metaState);
+    mateDeclare('buttonState', buttonState);
+    mateDeclare('xPrecision', xPrecision);
+    mateDeclare('yPrecision', yPrecision);
+    mateDeclare('deviceId', deviceId);
+    mateDeclare('edgeFlags', edgeFlags);
+    mateDeclare('source', source);
+    mateDeclare('flags', flags);
+    mateDeclare('motionEventId', motionEventId);
   }
 }

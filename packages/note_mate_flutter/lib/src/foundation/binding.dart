@@ -9,10 +9,10 @@ class DebugReassembleConfig$Mate extends DebugReassembleConfig with Mate {
   /// DebugReassembleConfig DebugReassembleConfig({String? widgetName})
   DebugReassembleConfig$Mate(
       {
-      /// optionalParameters: {String? widgetName} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {String? widgetName} , defaultValue:none
       String? widgetName})
       : super(widgetName: widgetName) {
     mateBuilder = (p) => DebugReassembleConfig$Mate(widgetName: p.get('widgetName').build());
-    matePut('widgetName', widgetName);
+    mateDeclare('widgetName', widgetName);
   }
 }

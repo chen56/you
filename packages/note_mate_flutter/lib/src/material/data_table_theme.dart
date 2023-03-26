@@ -14,40 +14,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class DataTableThemeData$Mate extends DataTableThemeData with Mate {
   /// DataTableThemeData DataTableThemeData({Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, double? dividerThickness, double? checkboxHorizontalMargin})
   DataTableThemeData$Mate({
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , defaultValue:none
     Decoration? decoration,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , defaultValue:none
     MaterialStateProperty<Color?>? dataRowColor,
 
-    /// optionalParameters: {double? dataRowMinHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dataRowMinHeight} , defaultValue:none
     double? dataRowMinHeight,
 
-    /// optionalParameters: {double? dataRowMaxHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dataRowMaxHeight} , defaultValue:none
     double? dataRowMaxHeight,
 
-    /// optionalParameters: {TextStyle? dataTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? dataTextStyle} , defaultValue:none
     TextStyle? dataTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , defaultValue:none
     MaterialStateProperty<Color?>? headingRowColor,
 
-    /// optionalParameters: {double? headingRowHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? headingRowHeight} , defaultValue:none
     double? headingRowHeight,
 
-    /// optionalParameters: {TextStyle? headingTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? headingTextStyle} , defaultValue:none
     TextStyle? headingTextStyle,
 
-    /// optionalParameters: {double? horizontalMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? horizontalMargin} , defaultValue:none
     double? horizontalMargin,
 
-    /// optionalParameters: {double? columnSpacing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? columnSpacing} , defaultValue:none
     double? columnSpacing,
 
-    /// optionalParameters: {double? dividerThickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dividerThickness} , defaultValue:none
     double? dividerThickness,
 
-    /// optionalParameters: {double? checkboxHorizontalMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? checkboxHorizontalMargin} , defaultValue:none
     double? checkboxHorizontalMargin,
   }) : super(
           decoration: decoration,
@@ -77,18 +77,18 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate {
           dividerThickness: p.get('dividerThickness').build(),
           checkboxHorizontalMargin: p.get('checkboxHorizontalMargin').build(),
         );
-    matePut('decoration', decoration);
-    matePut('dataRowColor', dataRowColor);
-    matePut('dataRowMinHeight', dataRowMinHeight);
-    matePut('dataRowMaxHeight', dataRowMaxHeight);
-    matePut('dataTextStyle', dataTextStyle);
-    matePut('headingRowColor', headingRowColor);
-    matePut('headingRowHeight', headingRowHeight);
-    matePut('headingTextStyle', headingTextStyle);
-    matePut('horizontalMargin', horizontalMargin);
-    matePut('columnSpacing', columnSpacing);
-    matePut('dividerThickness', dividerThickness);
-    matePut('checkboxHorizontalMargin', checkboxHorizontalMargin);
+    mateDeclare('decoration', decoration);
+    mateDeclare('dataRowColor', dataRowColor);
+    mateDeclare('dataRowMinHeight', dataRowMinHeight);
+    mateDeclare('dataRowMaxHeight', dataRowMaxHeight);
+    mateDeclare('dataTextStyle', dataTextStyle);
+    mateDeclare('headingRowColor', headingRowColor);
+    mateDeclare('headingRowHeight', headingRowHeight);
+    mateDeclare('headingTextStyle', headingTextStyle);
+    mateDeclare('horizontalMargin', horizontalMargin);
+    mateDeclare('columnSpacing', columnSpacing);
+    mateDeclare('dividerThickness', dividerThickness);
+    mateDeclare('checkboxHorizontalMargin', checkboxHorizontalMargin);
   }
 }
 
@@ -96,13 +96,13 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate {
 class DataTableTheme$Mate extends DataTableTheme with Mate {
   /// DataTableTheme DataTableTheme({Key? key, required DataTableThemeData data, required Widget child})
   DataTableTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required DataTableThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DataTableThemeData data} , defaultValue:none
     required DataTableThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -114,8 +114,8 @@ class DataTableTheme$Mate extends DataTableTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

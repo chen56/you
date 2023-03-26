@@ -10,22 +10,22 @@ import 'dart:ui';
 class Divider$Mate extends Divider with Mate {
   /// Divider Divider({Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color})
   Divider$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {double? thickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? thickness} , defaultValue:none
     double? thickness,
 
-    /// optionalParameters: {double? indent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? indent} , defaultValue:none
     double? indent,
 
-    /// optionalParameters: {double? endIndent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? endIndent} , defaultValue:none
     double? endIndent,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
   }) : super(
           key: key,
@@ -43,12 +43,12 @@ class Divider$Mate extends Divider with Mate {
           endIndent: p.get('endIndent').build(),
           color: p.get('color').build(),
         );
-    matePut('key', key);
-    matePut('height', height);
-    matePut('thickness', thickness);
-    matePut('indent', indent);
-    matePut('endIndent', endIndent);
-    matePut('color', color);
+    mateDeclare('key', key);
+    mateDeclare('height', height);
+    mateDeclare('thickness', thickness);
+    mateDeclare('indent', indent);
+    mateDeclare('endIndent', endIndent);
+    mateDeclare('color', color);
   }
 }
 
@@ -56,22 +56,22 @@ class Divider$Mate extends Divider with Mate {
 class VerticalDivider$Mate extends VerticalDivider with Mate {
   /// VerticalDivider VerticalDivider({Key? key, double? width, double? thickness, double? indent, double? endIndent, Color? color})
   VerticalDivider$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? thickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? thickness} , defaultValue:none
     double? thickness,
 
-    /// optionalParameters: {double? indent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? indent} , defaultValue:none
     double? indent,
 
-    /// optionalParameters: {double? endIndent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? endIndent} , defaultValue:none
     double? endIndent,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
   }) : super(
           key: key,
@@ -89,11 +89,11 @@ class VerticalDivider$Mate extends VerticalDivider with Mate {
           endIndent: p.get('endIndent').build(),
           color: p.get('color').build(),
         );
-    matePut('key', key);
-    matePut('width', width);
-    matePut('thickness', thickness);
-    matePut('indent', indent);
-    matePut('endIndent', endIndent);
-    matePut('color', color);
+    mateDeclare('key', key);
+    mateDeclare('width', width);
+    mateDeclare('thickness', thickness);
+    mateDeclare('indent', indent);
+    mateDeclare('endIndent', endIndent);
+    mateDeclare('color', color);
   }
 }

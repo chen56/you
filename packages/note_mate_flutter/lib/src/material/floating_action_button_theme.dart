@@ -15,67 +15,67 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData with Mate {
   /// FloatingActionButtonThemeData FloatingActionButtonThemeData({Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? disabledElevation, double? highlightElevation, ShapeBorder? shape, bool? enableFeedback, double? iconSize, BoxConstraints? sizeConstraints, BoxConstraints? smallSizeConstraints, BoxConstraints? largeSizeConstraints, BoxConstraints? extendedSizeConstraints, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, MaterialStateProperty<MouseCursor?>? mouseCursor})
   FloatingActionButtonThemeData$Mate({
-    /// optionalParameters: {Color? foregroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
     Color? foregroundColor,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , defaultValue:none
     Color? splashColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {double? focusElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? focusElevation} , defaultValue:none
     double? focusElevation,
 
-    /// optionalParameters: {double? hoverElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? hoverElevation} , defaultValue:none
     double? hoverElevation,
 
-    /// optionalParameters: {double? disabledElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? disabledElevation} , defaultValue:none
     double? disabledElevation,
 
-    /// optionalParameters: {double? highlightElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? highlightElevation} , defaultValue:none
     double? highlightElevation,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {double? iconSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? iconSize} , defaultValue:none
     double? iconSize,
 
-    /// optionalParameters: {BoxConstraints? sizeConstraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? sizeConstraints} , defaultValue:none
     BoxConstraints? sizeConstraints,
 
-    /// optionalParameters: {BoxConstraints? smallSizeConstraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? smallSizeConstraints} , defaultValue:none
     BoxConstraints? smallSizeConstraints,
 
-    /// optionalParameters: {BoxConstraints? largeSizeConstraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? largeSizeConstraints} , defaultValue:none
     BoxConstraints? largeSizeConstraints,
 
-    /// optionalParameters: {BoxConstraints? extendedSizeConstraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? extendedSizeConstraints} , defaultValue:none
     BoxConstraints? extendedSizeConstraints,
 
-    /// optionalParameters: {double? extendedIconLabelSpacing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? extendedIconLabelSpacing} , defaultValue:none
     double? extendedIconLabelSpacing,
 
-    /// optionalParameters: {EdgeInsetsGeometry? extendedPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? extendedPadding} , defaultValue:none
     EdgeInsetsGeometry? extendedPadding,
 
-    /// optionalParameters: {TextStyle? extendedTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? extendedTextStyle} , defaultValue:none
     TextStyle? extendedTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
   }) : super(
           foregroundColor: foregroundColor,
@@ -123,26 +123,26 @@ class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData w
           extendedTextStyle: p.get('extendedTextStyle').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    matePut('foregroundColor', foregroundColor);
-    matePut('backgroundColor', backgroundColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('splashColor', splashColor);
-    matePut('elevation', elevation);
-    matePut('focusElevation', focusElevation);
-    matePut('hoverElevation', hoverElevation);
-    matePut('disabledElevation', disabledElevation);
-    matePut('highlightElevation', highlightElevation);
-    matePut('shape', shape);
-    matePut('enableFeedback', enableFeedback);
-    matePut('iconSize', iconSize);
-    matePut('sizeConstraints', sizeConstraints);
-    matePut('smallSizeConstraints', smallSizeConstraints);
-    matePut('largeSizeConstraints', largeSizeConstraints);
-    matePut('extendedSizeConstraints', extendedSizeConstraints);
-    matePut('extendedIconLabelSpacing', extendedIconLabelSpacing);
-    matePut('extendedPadding', extendedPadding);
-    matePut('extendedTextStyle', extendedTextStyle);
-    matePut('mouseCursor', mouseCursor);
+    mateDeclare('foregroundColor', foregroundColor);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('splashColor', splashColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('focusElevation', focusElevation);
+    mateDeclare('hoverElevation', hoverElevation);
+    mateDeclare('disabledElevation', disabledElevation);
+    mateDeclare('highlightElevation', highlightElevation);
+    mateDeclare('shape', shape);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('iconSize', iconSize);
+    mateDeclare('sizeConstraints', sizeConstraints);
+    mateDeclare('smallSizeConstraints', smallSizeConstraints);
+    mateDeclare('largeSizeConstraints', largeSizeConstraints);
+    mateDeclare('extendedSizeConstraints', extendedSizeConstraints);
+    mateDeclare('extendedIconLabelSpacing', extendedIconLabelSpacing);
+    mateDeclare('extendedPadding', extendedPadding);
+    mateDeclare('extendedTextStyle', extendedTextStyle);
+    mateDeclare('mouseCursor', mouseCursor);
   }
 }

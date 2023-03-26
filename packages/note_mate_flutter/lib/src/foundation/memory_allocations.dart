@@ -8,13 +8,13 @@ import 'dart:core';
 class ObjectCreated$Mate extends ObjectCreated with Mate {
   /// ObjectCreated ObjectCreated({required String library, required String className, required Object object})
   ObjectCreated$Mate({
-    /// optionalParameters: {required String library} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String library} , defaultValue:none
     required String library,
 
-    /// optionalParameters: {required String className} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String className} , defaultValue:none
     required String className,
 
-    /// optionalParameters: {required Object object} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object object} , defaultValue:none
     required Object object,
   }) : super(
           library: library,
@@ -26,9 +26,9 @@ class ObjectCreated$Mate extends ObjectCreated with Mate {
           className: p.get('className').build(),
           object: p.get('object').build(),
         );
-    matePut('library', library);
-    matePut('className', className);
-    matePut('object', object);
+    mateDeclare('library', library);
+    mateDeclare('className', className);
+    mateDeclare('object', object);
   }
 }
 
@@ -37,10 +37,10 @@ class ObjectDisposed$Mate extends ObjectDisposed with Mate {
   /// ObjectDisposed ObjectDisposed({required Object object})
   ObjectDisposed$Mate(
       {
-      /// optionalParameters: {required Object object} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required Object object} , defaultValue:none
       required Object object})
       : super(object: object) {
     mateBuilder = (p) => ObjectDisposed$Mate(object: p.get('object').build());
-    matePut('object', object);
+    mateDeclare('object', object);
   }
 }

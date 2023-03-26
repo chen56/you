@@ -15,53 +15,53 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 class Radio$Mate<T> extends Radio<T> with Mate {
   /// Radio<T> Radio({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, MouseCursor? mouseCursor, bool toggleable = false, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false})
   Radio$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , defaultValue:none
     required T value,
 
-    /// optionalParameters: {required T? groupValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T? groupValue} , defaultValue:none
     required T? groupValue,
 
-    /// optionalParameters: {required void Function(T?)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(T?)? onChanged} , defaultValue:none
     required ValueChanged<T?>? onChanged,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {bool toggleable = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool toggleable,
+    /// optionalParameters: {bool toggleable = false} , defaultValue:Literal
+    bool toggleable = false,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , defaultValue:none
     Color? activeColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , defaultValue:none
     MaterialStateProperty<Color?>? fillColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
   }) : super(
           key: key,
           value: value,
@@ -98,21 +98,21 @@ class Radio$Mate<T> extends Radio<T> with Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('groupValue', groupValue);
-    matePut('onChanged', onChanged);
-    matePut('mouseCursor', mouseCursor);
-    matePut('toggleable', toggleable);
-    matePut('activeColor', activeColor);
-    matePut('fillColor', fillColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashRadius', splashRadius);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('visualDensity', visualDensity);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('groupValue', groupValue);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('toggleable', toggleable);
+    mateDeclare('activeColor', activeColor);
+    mateDeclare('fillColor', fillColor);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('overlayColor', overlayColor);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
   }
 }

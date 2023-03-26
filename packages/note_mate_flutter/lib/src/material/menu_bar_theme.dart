@@ -11,11 +11,11 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate {
   /// MenuBarThemeData MenuBarThemeData({MenuStyle? style})
   MenuBarThemeData$Mate(
       {
-      /// optionalParameters: {MenuStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {MenuStyle? style} , defaultValue:none
       MenuStyle? style})
       : super(style: style) {
     mateBuilder = (p) => MenuBarThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateDeclare('style', style);
   }
 }
 
@@ -23,13 +23,13 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate {
 class MenuBarTheme$Mate extends MenuBarTheme with Mate {
   /// MenuBarTheme MenuBarTheme({Key? key, required MenuBarThemeData data, required Widget child})
   MenuBarTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required MenuBarThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MenuBarThemeData data} , defaultValue:none
     required MenuBarThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -41,8 +41,8 @@ class MenuBarTheme$Mate extends MenuBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

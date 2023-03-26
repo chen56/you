@@ -13,37 +13,37 @@ import 'package:flutter/src/painting/image_stream.dart';
 class CircleAvatar$Mate extends CircleAvatar with Mate {
   /// CircleAvatar CircleAvatar({Key? key, Widget? child, Color? backgroundColor, ImageProvider<Object>? backgroundImage, ImageProvider<Object>? foregroundImage, void Function(Object, StackTrace?)? onBackgroundImageError, void Function(Object, StackTrace?)? onForegroundImageError, Color? foregroundColor, double? radius, double? minRadius, double? maxRadius})
   CircleAvatar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {ImageProvider<Object>? backgroundImage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageProvider<Object>? backgroundImage} , defaultValue:none
     ImageProvider<Object>? backgroundImage,
 
-    /// optionalParameters: {ImageProvider<Object>? foregroundImage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageProvider<Object>? foregroundImage} , defaultValue:none
     ImageProvider<Object>? foregroundImage,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onBackgroundImageError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onBackgroundImageError} , defaultValue:none
     ImageErrorListener? onBackgroundImageError,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onForegroundImageError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onForegroundImageError} , defaultValue:none
     ImageErrorListener? onForegroundImageError,
 
-    /// optionalParameters: {Color? foregroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
     Color? foregroundColor,
 
-    /// optionalParameters: {double? radius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? radius} , defaultValue:none
     double? radius,
 
-    /// optionalParameters: {double? minRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minRadius} , defaultValue:none
     double? minRadius,
 
-    /// optionalParameters: {double? maxRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? maxRadius} , defaultValue:none
     double? maxRadius,
   }) : super(
           key: key,
@@ -71,16 +71,16 @@ class CircleAvatar$Mate extends CircleAvatar with Mate {
           minRadius: p.get('minRadius').build(),
           maxRadius: p.get('maxRadius').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('backgroundColor', backgroundColor);
-    matePut('backgroundImage', backgroundImage);
-    matePut('foregroundImage', foregroundImage);
-    matePut('onBackgroundImageError', onBackgroundImageError);
-    matePut('onForegroundImageError', onForegroundImageError);
-    matePut('foregroundColor', foregroundColor);
-    matePut('radius', radius);
-    matePut('minRadius', minRadius);
-    matePut('maxRadius', maxRadius);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('backgroundImage', backgroundImage);
+    mateDeclare('foregroundImage', foregroundImage);
+    mateDeclare('onBackgroundImageError', onBackgroundImageError);
+    mateDeclare('onForegroundImageError', onForegroundImageError);
+    mateDeclare('foregroundColor', foregroundColor);
+    mateDeclare('radius', radius);
+    mateDeclare('minRadius', minRadius);
+    mateDeclare('maxRadius', maxRadius);
   }
 }

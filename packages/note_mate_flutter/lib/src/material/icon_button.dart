@@ -18,73 +18,73 @@ import 'package:flutter/src/widgets/framework.dart';
 class IconButton$Mate extends IconButton with Mate {
   /// IconButton IconButton({Key? key, double? iconSize, VisualDensity? visualDensity, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, double? splashRadius, Color? color, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Color? disabledColor, required void Function()? onPressed, MouseCursor? mouseCursor, FocusNode? focusNode, bool autofocus = false, String? tooltip, bool? enableFeedback, BoxConstraints? constraints, ButtonStyle? style, bool? isSelected, Widget? selectedIcon, required Widget icon})
   IconButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? iconSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? iconSize} , defaultValue:none
     double? iconSize,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , defaultValue:none
     Color? highlightColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , defaultValue:none
     Color? splashColor,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
     ButtonStyle? style,
 
-    /// optionalParameters: {bool? isSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? isSelected} , defaultValue:none
     bool? isSelected,
 
-    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? selectedIcon} , defaultValue:none
     Widget? selectedIcon,
 
-    /// optionalParameters: {required Widget icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget icon} , defaultValue:none
     required Widget icon,
   }) : super(
           key: key,
@@ -136,28 +136,28 @@ class IconButton$Mate extends IconButton with Mate {
           selectedIcon: p.get('selectedIcon').build(),
           icon: p.get('icon').build(),
         );
-    matePut('key', key);
-    matePut('iconSize', iconSize);
-    matePut('visualDensity', visualDensity);
-    matePut('padding', padding);
-    matePut('alignment', alignment);
-    matePut('splashRadius', splashRadius);
-    matePut('color', color);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('highlightColor', highlightColor);
-    matePut('splashColor', splashColor);
-    matePut('disabledColor', disabledColor);
-    matePut('onPressed', onPressed);
-    matePut('mouseCursor', mouseCursor);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('tooltip', tooltip);
-    matePut('enableFeedback', enableFeedback);
-    matePut('constraints', constraints);
-    matePut('style', style);
-    matePut('isSelected', isSelected);
-    matePut('selectedIcon', selectedIcon);
-    matePut('icon', icon);
+    mateDeclare('key', key);
+    mateDeclare('iconSize', iconSize);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('padding', padding);
+    mateDeclare('alignment', alignment);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('color', color);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('highlightColor', highlightColor);
+    mateDeclare('splashColor', splashColor);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('constraints', constraints);
+    mateDeclare('style', style);
+    mateDeclare('isSelected', isSelected);
+    mateDeclare('selectedIcon', selectedIcon);
+    mateDeclare('icon', icon);
   }
 }

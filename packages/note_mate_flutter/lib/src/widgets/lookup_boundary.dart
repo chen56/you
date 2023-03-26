@@ -9,10 +9,10 @@ import 'package:flutter/src/widgets/framework.dart';
 class LookupBoundary$Mate extends LookupBoundary with Mate {
   /// LookupBoundary LookupBoundary({Key? key, required Widget child})
   LookupBoundary$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -22,7 +22,7 @@ class LookupBoundary$Mate extends LookupBoundary with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }

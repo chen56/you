@@ -13,22 +13,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
   /// RawKeyboardListener RawKeyboardListener({Key? key, required FocusNode focusNode, bool autofocus = false, bool includeSemantics = true, void Function(RawKeyEvent)? onKey, required Widget child})
   RawKeyboardListener$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required FocusNode focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FocusNode focusNode} , defaultValue:none
     required FocusNode focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {bool includeSemantics = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool includeSemantics,
+    /// optionalParameters: {bool includeSemantics = true} , defaultValue:Literal
+    bool includeSemantics = true,
 
-    /// optionalParameters: {void Function(RawKeyEvent)? onKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(RawKeyEvent)? onKey} , defaultValue:none
     ValueChanged<RawKeyEvent>? onKey,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -46,11 +46,11 @@ class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
           onKey: p.get('onKey').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('includeSemantics', includeSemantics);
-    matePut('onKey', onKey);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('includeSemantics', includeSemantics);
+    mateDeclare('onKey', onKey);
+    mateDeclare('child', child);
   }
 }

@@ -11,31 +11,31 @@ import 'dart:core';
 class CupertinoTabView$Mate extends CupertinoTabView with Mate {
   /// CupertinoTabView CupertinoTabView({Key? key, Widget Function(BuildContext)? builder, GlobalKey<NavigatorState>? navigatorKey, String? defaultTitle, Map<String, Widget Function(BuildContext)>? routes, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], String? restorationScopeId})
   CupertinoTabView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget Function(BuildContext)? builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? builder} , defaultValue:none
     WidgetBuilder? builder,
 
-    /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , defaultValue:none
     GlobalKey<NavigatorState>? navigatorKey,
 
-    /// optionalParameters: {String? defaultTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? defaultTitle} , defaultValue:none
     String? defaultTitle,
 
-    /// optionalParameters: {Map<String, Widget Function(BuildContext)>? routes} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<String, Widget Function(BuildContext)>? routes} , defaultValue:none
     Map<String, WidgetBuilder>? routes,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , defaultValue:none
     RouteFactory? onGenerateRoute,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , defaultValue:none
     RouteFactory? onUnknownRoute,
 
-    /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , hasDefaultValue:true, defaultValueCode:const <NavigatorObserver>[]
+    /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , defaultValue:unprocessed
     required List<NavigatorObserver> navigatorObservers,
 
-    /// optionalParameters: {String? restorationScopeId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationScopeId} , defaultValue:none
     String? restorationScopeId,
   }) : super(
           key: key,
@@ -59,14 +59,14 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
           navigatorObservers: p.get('navigatorObservers').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    matePut('key', key);
-    matePut('builder', builder);
-    matePut('navigatorKey', navigatorKey);
-    matePut('defaultTitle', defaultTitle);
-    matePut('routes', routes);
-    matePut('onGenerateRoute', onGenerateRoute);
-    matePut('onUnknownRoute', onUnknownRoute);
-    matePut('navigatorObservers', navigatorObservers);
-    matePut('restorationScopeId', restorationScopeId);
+    mateDeclare('key', key);
+    mateDeclare('builder', builder);
+    mateDeclare('navigatorKey', navigatorKey);
+    mateDeclare('defaultTitle', defaultTitle);
+    mateDeclare('routes', routes);
+    mateDeclare('onGenerateRoute', onGenerateRoute);
+    mateDeclare('onUnknownRoute', onUnknownRoute);
+    mateDeclare('navigatorObservers', navigatorObservers);
+    mateDeclare('restorationScopeId', restorationScopeId);
   }
 }

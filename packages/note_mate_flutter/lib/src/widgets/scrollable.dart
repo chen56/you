@@ -16,40 +16,40 @@ import 'package:flutter/src/widgets/scroll_metrics.dart';
 class Scrollable$Mate extends Scrollable with Mate {
   /// Scrollable Scrollable({Key? key, AxisDirection axisDirection = AxisDirection.down, ScrollController? controller, ScrollPhysics? physics, required Widget Function(BuildContext, ViewportOffset) viewportBuilder, double Function(ScrollIncrementDetails)? incrementCalculator, bool excludeFromSemantics = false, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, String? restorationId, ScrollBehavior? scrollBehavior, Clip clipBehavior = Clip.hardEdge})
   Scrollable$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , hasDefaultValue:true, defaultValueCode:AxisDirection.down
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:unprocessed
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {required Widget Function(BuildContext, ViewportOffset) viewportBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, ViewportOffset) viewportBuilder} , defaultValue:none
     required ViewportBuilder viewportBuilder,
 
-    /// optionalParameters: {double Function(ScrollIncrementDetails)? incrementCalculator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double Function(ScrollIncrementDetails)? incrementCalculator} , defaultValue:none
     ScrollIncrementCalculator? incrementCalculator,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , defaultValue:Literal
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
     ScrollBehavior? scrollBehavior,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -79,18 +79,18 @@ class Scrollable$Mate extends Scrollable with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('axisDirection', axisDirection);
-    matePut('controller', controller);
-    matePut('physics', physics);
-    matePut('viewportBuilder', viewportBuilder);
-    matePut('incrementCalculator', incrementCalculator);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('restorationId', restorationId);
-    matePut('scrollBehavior', scrollBehavior);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('axisDirection', axisDirection);
+    mateDeclare('controller', controller);
+    mateDeclare('physics', physics);
+    mateDeclare('viewportBuilder', viewportBuilder);
+    mateDeclare('incrementCalculator', incrementCalculator);
+    mateDeclare('excludeFromSemantics', excludeFromSemantics);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('scrollBehavior', scrollBehavior);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -100,10 +100,10 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate {
   EdgeDraggingAutoScroller$Mate(
     /// requiredParameters: ScrollableState scrollable
     ScrollableState scrollable, {
-    /// optionalParameters: {void Function()? onScrollViewScrolled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollViewScrolled} , defaultValue:none
     VoidCallback? onScrollViewScrolled,
 
-    /// optionalParameters: {double velocityScalar = _kDefaultAutoScrollVelocityScalar} , hasDefaultValue:true, defaultValueCode:_kDefaultAutoScrollVelocityScalar
+    /// optionalParameters: {double velocityScalar = _kDefaultAutoScrollVelocityScalar} , defaultValue:unprocessed
     required double velocityScalar,
   }) : super(
           scrollable,
@@ -115,9 +115,9 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate {
           onScrollViewScrolled: p.get('onScrollViewScrolled').build(),
           velocityScalar: p.get('velocityScalar').build(),
         );
-    matePut('scrollable', scrollable);
-    matePut('onScrollViewScrolled', onScrollViewScrolled);
-    matePut('velocityScalar', velocityScalar);
+    mateDeclare('scrollable', scrollable);
+    mateDeclare('onScrollViewScrolled', onScrollViewScrolled);
+    mateDeclare('velocityScalar', velocityScalar);
   }
 }
 
@@ -125,13 +125,13 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate {
 class ScrollableDetails$Mate extends ScrollableDetails with Mate {
   /// ScrollableDetails ScrollableDetails({required AxisDirection direction, required ScrollController controller, Clip? clipBehavior})
   ScrollableDetails$Mate({
-    /// optionalParameters: {required AxisDirection direction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection direction} , defaultValue:none
     required AxisDirection direction,
 
-    /// optionalParameters: {required ScrollController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollController controller} , defaultValue:none
     required ScrollController controller,
 
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , defaultValue:none
     Clip? clipBehavior,
   }) : super(
           direction: direction,
@@ -143,9 +143,9 @@ class ScrollableDetails$Mate extends ScrollableDetails with Mate {
           controller: p.get('controller').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('direction', direction);
-    matePut('controller', controller);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('direction', direction);
+    mateDeclare('controller', controller);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -153,10 +153,10 @@ class ScrollableDetails$Mate extends ScrollableDetails with Mate {
 class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate {
   /// ScrollIncrementDetails ScrollIncrementDetails({required ScrollIncrementType type, required ScrollMetrics metrics})
   ScrollIncrementDetails$Mate({
-    /// optionalParameters: {required ScrollIncrementType type} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollIncrementType type} , defaultValue:none
     required ScrollIncrementType type,
 
-    /// optionalParameters: {required ScrollMetrics metrics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollMetrics metrics} , defaultValue:none
     required ScrollMetrics metrics,
   }) : super(
           type: type,
@@ -166,8 +166,8 @@ class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate {
           type: p.get('type').build(),
           metrics: p.get('metrics').build(),
         );
-    matePut('type', type);
-    matePut('metrics', metrics);
+    mateDeclare('type', type);
+    mateDeclare('metrics', metrics);
   }
 }
 
@@ -175,10 +175,10 @@ class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate {
 class ScrollIntent$Mate extends ScrollIntent with Mate {
   /// ScrollIntent ScrollIntent({required AxisDirection direction, ScrollIncrementType type = ScrollIncrementType.line})
   ScrollIntent$Mate({
-    /// optionalParameters: {required AxisDirection direction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection direction} , defaultValue:none
     required AxisDirection direction,
 
-    /// optionalParameters: {ScrollIncrementType type = ScrollIncrementType.line} , hasDefaultValue:true, defaultValueCode:ScrollIncrementType.line
+    /// optionalParameters: {ScrollIncrementType type = ScrollIncrementType.line} , defaultValue:unprocessed
     required ScrollIncrementType type,
   }) : super(
           direction: direction,
@@ -188,7 +188,7 @@ class ScrollIntent$Mate extends ScrollIntent with Mate {
           direction: p.get('direction').build(),
           type: p.get('type').build(),
         );
-    matePut('direction', direction);
-    matePut('type', type);
+    mateDeclare('direction', direction);
+    mateDeclare('type', type);
   }
 }

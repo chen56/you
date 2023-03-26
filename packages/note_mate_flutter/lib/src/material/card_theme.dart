@@ -11,25 +11,25 @@ import 'package:flutter/src/painting/borders.dart';
 class CardTheme$Mate extends CardTheme with Mate {
   /// CardTheme CardTheme({Clip? clipBehavior, Color? color, Color? shadowColor, Color? surfaceTintColor, double? elevation, EdgeInsetsGeometry? margin, ShapeBorder? shape})
   CardTheme$Mate({
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , defaultValue:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
   }) : super(
           clipBehavior: clipBehavior,
@@ -49,12 +49,12 @@ class CardTheme$Mate extends CardTheme with Mate {
           margin: p.get('margin').build(),
           shape: p.get('shape').build(),
         );
-    matePut('clipBehavior', clipBehavior);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('elevation', elevation);
-    matePut('margin', margin);
-    matePut('shape', shape);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('color', color);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('margin', margin);
+    mateDeclare('shape', shape);
   }
 }

@@ -10,13 +10,13 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class UnderlineTabIndicator$Mate extends UnderlineTabIndicator with Mate {
   /// UnderlineTabIndicator UnderlineTabIndicator({BorderRadius? borderRadius, BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white), EdgeInsetsGeometry insets = EdgeInsets.zero})
   UnderlineTabIndicator$Mate({
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white)} , hasDefaultValue:true, defaultValueCode:const BorderSide(width: 2.0, color: Colors.white)
+    /// optionalParameters: {BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white)} , defaultValue:unprocessed
     required BorderSide borderSide,
 
-    /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsetsGeometry insets,
   }) : super(
           borderRadius: borderRadius,
@@ -28,8 +28,8 @@ class UnderlineTabIndicator$Mate extends UnderlineTabIndicator with Mate {
           borderSide: p.get('borderSide').build(),
           insets: p.get('insets').build(),
         );
-    matePut('borderRadius', borderRadius);
-    matePut('borderSide', borderSide);
-    matePut('insets', insets);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('borderSide', borderSide);
+    mateDeclare('insets', insets);
   }
 }

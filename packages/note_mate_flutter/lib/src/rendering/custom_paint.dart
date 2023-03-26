@@ -13,19 +13,19 @@ import 'package:flutter/src/rendering/box.dart';
 class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
   /// CustomPainterSemantics CustomPainterSemantics({Key? key, required Rect rect, required SemanticsProperties properties, Matrix4? transform, Set<SemanticsTag>? tags})
   CustomPainterSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , defaultValue:none
     required Rect rect,
 
-    /// optionalParameters: {required SemanticsProperties properties} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SemanticsProperties properties} , defaultValue:none
     required SemanticsProperties properties,
 
-    /// optionalParameters: {Matrix4? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Matrix4? transform} , defaultValue:none
     Matrix4? transform,
 
-    /// optionalParameters: {Set<SemanticsTag>? tags} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<SemanticsTag>? tags} , defaultValue:none
     Set<SemanticsTag>? tags,
   }) : super(
           key: key,
@@ -41,11 +41,11 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
           transform: p.get('transform').build(),
           tags: p.get('tags').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('properties', properties);
-    matePut('transform', transform);
-    matePut('tags', tags);
+    mateDeclare('key', key);
+    mateDeclare('rect', rect);
+    mateDeclare('properties', properties);
+    mateDeclare('transform', transform);
+    mateDeclare('tags', tags);
   }
 }
 
@@ -53,22 +53,22 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
 class RenderCustomPaint$Mate extends RenderCustomPaint with Mate {
   /// RenderCustomPaint RenderCustomPaint({CustomPainter? painter, CustomPainter? foregroundPainter, Size preferredSize = Size.zero, bool isComplex = false, bool willChange = false, RenderBox? child})
   RenderCustomPaint$Mate({
-    /// optionalParameters: {CustomPainter? painter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomPainter? painter} , defaultValue:none
     CustomPainter? painter,
 
-    /// optionalParameters: {CustomPainter? foregroundPainter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomPainter? foregroundPainter} , defaultValue:none
     CustomPainter? foregroundPainter,
 
-    /// optionalParameters: {Size preferredSize = Size.zero} , hasDefaultValue:true, defaultValueCode:Size.zero
+    /// optionalParameters: {Size preferredSize = Size.zero} , defaultValue:unprocessed
     required Size preferredSize,
 
-    /// optionalParameters: {bool isComplex = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isComplex,
+    /// optionalParameters: {bool isComplex = false} , defaultValue:Literal
+    bool isComplex = false,
 
-    /// optionalParameters: {bool willChange = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool willChange,
+    /// optionalParameters: {bool willChange = false} , defaultValue:Literal
+    bool willChange = false,
 
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
   }) : super(
           painter: painter,
@@ -86,11 +86,11 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    matePut('painter', painter);
-    matePut('foregroundPainter', foregroundPainter);
-    matePut('preferredSize', preferredSize);
-    matePut('isComplex', isComplex);
-    matePut('willChange', willChange);
-    matePut('child', child);
+    mateDeclare('painter', painter);
+    mateDeclare('foregroundPainter', foregroundPainter);
+    mateDeclare('preferredSize', preferredSize);
+    mateDeclare('isComplex', isComplex);
+    mateDeclare('willChange', willChange);
+    mateDeclare('child', child);
   }
 }

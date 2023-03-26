@@ -15,13 +15,13 @@ import 'package:flutter/src/widgets/icon_theme_data.dart';
 class ChipTheme$Mate extends ChipTheme with Mate {
   /// ChipTheme ChipTheme({Key? key, required ChipThemeData data, required Widget child})
   ChipTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ChipThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ChipThemeData data} , defaultValue:none
     required ChipThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -33,9 +33,9 @@ class ChipTheme$Mate extends ChipTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }
 
@@ -43,64 +43,64 @@ class ChipTheme$Mate extends ChipTheme with Mate {
 class ChipThemeData$Mate extends ChipThemeData with Mate {
   /// ChipThemeData ChipThemeData({Color? backgroundColor, Color? deleteIconColor, Color? disabledColor, Color? selectedColor, Color? secondarySelectedColor, Color? shadowColor, Color? surfaceTintColor, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, EdgeInsetsGeometry? labelPadding, EdgeInsetsGeometry? padding, BorderSide? side, OutlinedBorder? shape, TextStyle? labelStyle, TextStyle? secondaryLabelStyle, Brightness? brightness, double? elevation, double? pressElevation, IconThemeData? iconTheme})
   ChipThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? deleteIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? deleteIconColor} , defaultValue:none
     Color? deleteIconColor,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , defaultValue:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? secondarySelectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondarySelectedColor} , defaultValue:none
     Color? secondarySelectedColor,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? selectedShadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedShadowColor} , defaultValue:none
     Color? selectedShadowColor,
 
-    /// optionalParameters: {bool? showCheckmark} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showCheckmark} , defaultValue:none
     bool? showCheckmark,
 
-    /// optionalParameters: {Color? checkmarkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? checkmarkColor} , defaultValue:none
     Color? checkmarkColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , defaultValue:none
     EdgeInsetsGeometry? labelPadding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {BorderSide? side} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? side} , defaultValue:none
     BorderSide? side,
 
-    /// optionalParameters: {OutlinedBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , defaultValue:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {TextStyle? secondaryLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? secondaryLabelStyle} , defaultValue:none
     TextStyle? secondaryLabelStyle,
 
-    /// optionalParameters: {Brightness? brightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? brightness} , defaultValue:none
     Brightness? brightness,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {double? pressElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? pressElevation} , defaultValue:none
     double? pressElevation,
 
-    /// optionalParameters: {IconThemeData? iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? iconTheme} , defaultValue:none
     IconThemeData? iconTheme,
   }) : super(
           backgroundColor: backgroundColor,
@@ -146,25 +146,25 @@ class ChipThemeData$Mate extends ChipThemeData with Mate {
           pressElevation: p.get('pressElevation').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('deleteIconColor', deleteIconColor);
-    matePut('disabledColor', disabledColor);
-    matePut('selectedColor', selectedColor);
-    matePut('secondarySelectedColor', secondarySelectedColor);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('selectedShadowColor', selectedShadowColor);
-    matePut('showCheckmark', showCheckmark);
-    matePut('checkmarkColor', checkmarkColor);
-    matePut('labelPadding', labelPadding);
-    matePut('padding', padding);
-    matePut('side', side);
-    matePut('shape', shape);
-    matePut('labelStyle', labelStyle);
-    matePut('secondaryLabelStyle', secondaryLabelStyle);
-    matePut('brightness', brightness);
-    matePut('elevation', elevation);
-    matePut('pressElevation', pressElevation);
-    matePut('iconTheme', iconTheme);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('deleteIconColor', deleteIconColor);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('selectedColor', selectedColor);
+    mateDeclare('secondarySelectedColor', secondarySelectedColor);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('selectedShadowColor', selectedShadowColor);
+    mateDeclare('showCheckmark', showCheckmark);
+    mateDeclare('checkmarkColor', checkmarkColor);
+    mateDeclare('labelPadding', labelPadding);
+    mateDeclare('padding', padding);
+    mateDeclare('side', side);
+    mateDeclare('shape', shape);
+    mateDeclare('labelStyle', labelStyle);
+    mateDeclare('secondaryLabelStyle', secondaryLabelStyle);
+    mateDeclare('brightness', brightness);
+    mateDeclare('elevation', elevation);
+    mateDeclare('pressElevation', pressElevation);
+    mateDeclare('iconTheme', iconTheme);
   }
 }

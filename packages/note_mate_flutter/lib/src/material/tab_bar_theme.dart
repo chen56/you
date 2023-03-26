@@ -15,40 +15,40 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 class TabBarTheme$Mate extends TabBarTheme with Mate {
   /// TabBarTheme TabBarTheme({Decoration? indicator, Color? indicatorColor, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, EdgeInsetsGeometry? labelPadding, TextStyle? labelStyle, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, MaterialStateProperty<Color?>? overlayColor, InteractiveInkFeatureFactory? splashFactory, MaterialStateProperty<MouseCursor?>? mouseCursor})
   TabBarTheme$Mate({
-    /// optionalParameters: {Decoration? indicator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? indicator} , defaultValue:none
     Decoration? indicator,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
     Color? indicatorColor,
 
-    /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , defaultValue:none
     TabBarIndicatorSize? indicatorSize,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , defaultValue:none
     Color? dividerColor,
 
-    /// optionalParameters: {Color? labelColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? labelColor} , defaultValue:none
     Color? labelColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , defaultValue:none
     EdgeInsetsGeometry? labelPadding,
 
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , defaultValue:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {Color? unselectedLabelColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? unselectedLabelColor} , defaultValue:none
     Color? unselectedLabelColor,
 
-    /// optionalParameters: {TextStyle? unselectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? unselectedLabelStyle} , defaultValue:none
     TextStyle? unselectedLabelStyle,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , defaultValue:none
     InteractiveInkFeatureFactory? splashFactory,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
   }) : super(
           indicator: indicator,
@@ -78,17 +78,17 @@ class TabBarTheme$Mate extends TabBarTheme with Mate {
           splashFactory: p.get('splashFactory').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    matePut('indicator', indicator);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorSize', indicatorSize);
-    matePut('dividerColor', dividerColor);
-    matePut('labelColor', labelColor);
-    matePut('labelPadding', labelPadding);
-    matePut('labelStyle', labelStyle);
-    matePut('unselectedLabelColor', unselectedLabelColor);
-    matePut('unselectedLabelStyle', unselectedLabelStyle);
-    matePut('overlayColor', overlayColor);
-    matePut('splashFactory', splashFactory);
-    matePut('mouseCursor', mouseCursor);
+    mateDeclare('indicator', indicator);
+    mateDeclare('indicatorColor', indicatorColor);
+    mateDeclare('indicatorSize', indicatorSize);
+    mateDeclare('dividerColor', dividerColor);
+    mateDeclare('labelColor', labelColor);
+    mateDeclare('labelPadding', labelPadding);
+    mateDeclare('labelStyle', labelStyle);
+    mateDeclare('unselectedLabelColor', unselectedLabelColor);
+    mateDeclare('unselectedLabelStyle', unselectedLabelStyle);
+    mateDeclare('overlayColor', overlayColor);
+    mateDeclare('splashFactory', splashFactory);
+    mateDeclare('mouseCursor', mouseCursor);
   }
 }

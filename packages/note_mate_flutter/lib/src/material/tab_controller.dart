@@ -11,16 +11,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class TabController$Mate extends TabController with Mate {
   /// TabController TabController({int initialIndex = 0, Duration? animationDuration, required int length, required TickerProvider vsync})
   TabController$Mate({
-    /// optionalParameters: {int initialIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int initialIndex,
+    /// optionalParameters: {int initialIndex = 0} , defaultValue:Literal
+    int initialIndex = 0,
 
-    /// optionalParameters: {Duration? animationDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? animationDuration} , defaultValue:none
     Duration? animationDuration,
 
-    /// optionalParameters: {required int length} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int length} , defaultValue:none
     required int length,
 
-    /// optionalParameters: {required TickerProvider vsync} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TickerProvider vsync} , defaultValue:none
     required TickerProvider vsync,
   }) : super(
           initialIndex: initialIndex,
@@ -34,10 +34,10 @@ class TabController$Mate extends TabController with Mate {
           length: p.get('length').build(),
           vsync: p.get('vsync').build(),
         );
-    matePut('initialIndex', initialIndex);
-    matePut('animationDuration', animationDuration);
-    matePut('length', length);
-    matePut('vsync', vsync);
+    mateDeclare('initialIndex', initialIndex);
+    mateDeclare('animationDuration', animationDuration);
+    mateDeclare('length', length);
+    mateDeclare('vsync', vsync);
   }
 }
 
@@ -45,19 +45,19 @@ class TabController$Mate extends TabController with Mate {
 class DefaultTabController$Mate extends DefaultTabController with Mate {
   /// DefaultTabController DefaultTabController({Key? key, required int length, int initialIndex = 0, required Widget child, Duration? animationDuration})
   DefaultTabController$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required int length} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int length} , defaultValue:none
     required int length,
 
-    /// optionalParameters: {int initialIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int initialIndex,
+    /// optionalParameters: {int initialIndex = 0} , defaultValue:Literal
+    int initialIndex = 0,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {Duration? animationDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? animationDuration} , defaultValue:none
     Duration? animationDuration,
   }) : super(
           key: key,
@@ -73,10 +73,10 @@ class DefaultTabController$Mate extends DefaultTabController with Mate {
           child: p.get('child').build(),
           animationDuration: p.get('animationDuration').build(),
         );
-    matePut('key', key);
-    matePut('length', length);
-    matePut('initialIndex', initialIndex);
-    matePut('child', child);
-    matePut('animationDuration', animationDuration);
+    mateDeclare('key', key);
+    mateDeclare('length', length);
+    mateDeclare('initialIndex', initialIndex);
+    mateDeclare('child', child);
+    mateDeclare('animationDuration', animationDuration);
   }
 }

@@ -10,13 +10,13 @@ import 'dart:core';
 class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObjectToWidgetAdapter<T> with Mate {
   /// RenderObjectToWidgetAdapter<T> RenderObjectToWidgetAdapter({Widget? child, required RenderObjectWithChildMixin<T> container, String? debugShortDescription})
   RenderObjectToWidgetAdapter$Mate({
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {required RenderObjectWithChildMixin<T> container} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderObjectWithChildMixin<T> container} , defaultValue:none
     required RenderObjectWithChildMixin<T> container,
 
-    /// optionalParameters: {String? debugShortDescription} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugShortDescription} , defaultValue:none
     String? debugShortDescription,
   }) : super(
           child: child,
@@ -28,9 +28,9 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObj
           container: p.get('container').build(),
           debugShortDescription: p.get('debugShortDescription').build(),
         );
-    matePut('child', child);
-    matePut('container', container);
-    matePut('debugShortDescription', debugShortDescription);
+    mateDeclare('child', child);
+    mateDeclare('container', container);
+    mateDeclare('debugShortDescription', debugShortDescription);
   }
 }
 
@@ -43,6 +43,6 @@ class RenderObjectToWidgetElement$Mate<T extends RenderObject> extends RenderObj
       RenderObjectToWidgetAdapter<T> widget)
       : super(widget) {
     mateBuilder = (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }

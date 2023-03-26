@@ -16,7 +16,7 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate {
 
     /// requiredParameters: MessageCodec<T> codec
     MessageCodec<T> codec, {
-    /// optionalParameters: {BinaryMessenger? binaryMessenger} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BinaryMessenger? binaryMessenger} , defaultValue:none
     BinaryMessenger? binaryMessenger,
   }) : super(
           name,
@@ -28,9 +28,9 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate {
           p.get('codec').value,
           binaryMessenger: p.get('binaryMessenger').build(),
         );
-    matePut('name', name);
-    matePut('codec', codec);
-    matePut('binaryMessenger', binaryMessenger);
+    mateDeclare('name', name);
+    mateDeclare('codec', codec);
+    mateDeclare('binaryMessenger', binaryMessenger);
   }
 }
 
@@ -56,9 +56,9 @@ class MethodChannel$Mate extends MethodChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    matePut('name', name);
-    matePut('codec', codec);
-    matePut('binaryMessenger', binaryMessenger);
+    mateDeclare('name', name);
+    mateDeclare('codec', codec);
+    mateDeclare('binaryMessenger', binaryMessenger);
   }
 }
 
@@ -84,9 +84,9 @@ class OptionalMethodChannel$Mate extends OptionalMethodChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    matePut('name', name);
-    matePut('codec', codec);
-    matePut('binaryMessenger', binaryMessenger);
+    mateDeclare('name', name);
+    mateDeclare('codec', codec);
+    mateDeclare('binaryMessenger', binaryMessenger);
   }
 }
 
@@ -112,8 +112,8 @@ class EventChannel$Mate extends EventChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    matePut('name', name);
-    matePut('codec', codec);
-    matePut('binaryMessenger', binaryMessenger);
+    mateDeclare('name', name);
+    mateDeclare('codec', codec);
+    mateDeclare('binaryMessenger', binaryMessenger);
   }
 }

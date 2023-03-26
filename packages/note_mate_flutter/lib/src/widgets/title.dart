@@ -11,16 +11,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class Title$Mate extends Title with Mate {
   /// Title Title({Key? key, String title = '', required Color color, required Widget child})
   Title$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {String title = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String title,
+    /// optionalParameters: {String title = ''} , defaultValue:Literal
+    String title = '',
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -34,9 +34,9 @@ class Title$Mate extends Title with Mate {
           color: p.get('color').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('title', title);
-    matePut('color', color);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('title', title);
+    mateDeclare('color', color);
+    mateDeclare('child', child);
   }
 }

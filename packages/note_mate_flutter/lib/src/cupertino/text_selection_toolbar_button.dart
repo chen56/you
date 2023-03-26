@@ -12,13 +12,13 @@ import 'package:flutter/src/widgets/context_menu_button_item.dart';
 class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToolbarButton with Mate {
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton({Key? key, void Function()? onPressed, required Widget child})
   CupertinoTextSelectionToolbarButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -30,20 +30,20 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           onPressed: p.get('onPressed').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('child', child);
   }
 
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton.text({Key? key, void Function()? onPressed, required String? text})
   CupertinoTextSelectionToolbarButton$Mate.text({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {required String? text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String? text} , defaultValue:none
     required String? text,
   }) : super.text(
           key: key,
@@ -55,17 +55,17 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           onPressed: p.get('onPressed').build(),
           text: p.get('text').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('text', text);
+    mateDeclare('key', key);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('text', text);
   }
 
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
   CupertinoTextSelectionToolbarButton$Mate.buttonItem({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ContextMenuButtonItem buttonItem} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ContextMenuButtonItem buttonItem} , defaultValue:none
     required ContextMenuButtonItem buttonItem,
   }) : super.buttonItem(
           key: key,
@@ -75,7 +75,7 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           key: p.get('key').build(),
           buttonItem: p.get('buttonItem').build(),
         );
-    matePut('key', key);
-    matePut('buttonItem', buttonItem);
+    mateDeclare('key', key);
+    mateDeclare('buttonItem', buttonItem);
   }
 }

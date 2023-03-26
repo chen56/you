@@ -13,44 +13,44 @@ import 'package:flutter/src/painting/alignment.dart';
 class CupertinoDatePicker$Mate extends CupertinoDatePicker with Mate {
   /// CupertinoDatePicker CupertinoDatePicker({Key? key, CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime, required void Function(DateTime) onDateTimeChanged, DateTime? initialDateTime, DateTime? minimumDate, DateTime? maximumDate, int minimumYear = 1, int? maximumYear, int minuteInterval = 1, bool use24hFormat = false, DatePickerDateOrder? dateOrder, Color? backgroundColor, bool showDayOfWeek = false})
   CupertinoDatePicker$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime} , hasDefaultValue:true, defaultValueCode:CupertinoDatePickerMode.dateAndTime
+    /// optionalParameters: {CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime} , defaultValue:unprocessed
     required CupertinoDatePickerMode mode,
 
-    /// optionalParameters: {required void Function(DateTime) onDateTimeChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(DateTime) onDateTimeChanged} , defaultValue:none
     required ValueChanged<DateTime> onDateTimeChanged,
 
-    /// optionalParameters: {DateTime? initialDateTime} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DateTime? initialDateTime} , defaultValue:none
     DateTime? initialDateTime,
 
-    /// optionalParameters: {DateTime? minimumDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DateTime? minimumDate} , defaultValue:none
     DateTime? minimumDate,
 
-    /// optionalParameters: {DateTime? maximumDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DateTime? maximumDate} , defaultValue:none
     DateTime? maximumDate,
 
-    /// optionalParameters: {int minimumYear = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int minimumYear,
+    /// optionalParameters: {int minimumYear = 1} , defaultValue:Literal
+    int minimumYear = 1,
 
-    /// optionalParameters: {int? maximumYear} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maximumYear} , defaultValue:none
     int? maximumYear,
 
-    /// optionalParameters: {int minuteInterval = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int minuteInterval,
+    /// optionalParameters: {int minuteInterval = 1} , defaultValue:Literal
+    int minuteInterval = 1,
 
-    /// optionalParameters: {bool use24hFormat = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool use24hFormat,
+    /// optionalParameters: {bool use24hFormat = false} , defaultValue:Literal
+    bool use24hFormat = false,
 
-    /// optionalParameters: {DatePickerDateOrder? dateOrder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DatePickerDateOrder? dateOrder} , defaultValue:none
     DatePickerDateOrder? dateOrder,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {bool showDayOfWeek = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showDayOfWeek,
+    /// optionalParameters: {bool showDayOfWeek = false} , defaultValue:Literal
+    bool showDayOfWeek = false,
   }) : super(
           key: key,
           mode: mode,
@@ -81,19 +81,19 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with Mate {
           backgroundColor: p.get('backgroundColor').build(),
           showDayOfWeek: p.get('showDayOfWeek').build(),
         );
-    matePut('key', key);
-    matePut('mode', mode);
-    matePut('onDateTimeChanged', onDateTimeChanged);
-    matePut('initialDateTime', initialDateTime);
-    matePut('minimumDate', minimumDate);
-    matePut('maximumDate', maximumDate);
-    matePut('minimumYear', minimumYear);
-    matePut('maximumYear', maximumYear);
-    matePut('minuteInterval', minuteInterval);
-    matePut('use24hFormat', use24hFormat);
-    matePut('dateOrder', dateOrder);
-    matePut('backgroundColor', backgroundColor);
-    matePut('showDayOfWeek', showDayOfWeek);
+    mateDeclare('key', key);
+    mateDeclare('mode', mode);
+    mateDeclare('onDateTimeChanged', onDateTimeChanged);
+    mateDeclare('initialDateTime', initialDateTime);
+    mateDeclare('minimumDate', minimumDate);
+    mateDeclare('maximumDate', maximumDate);
+    mateDeclare('minimumYear', minimumYear);
+    mateDeclare('maximumYear', maximumYear);
+    mateDeclare('minuteInterval', minuteInterval);
+    mateDeclare('use24hFormat', use24hFormat);
+    mateDeclare('dateOrder', dateOrder);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('showDayOfWeek', showDayOfWeek);
   }
 }
 
@@ -101,28 +101,28 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with Mate {
 class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with Mate {
   /// CupertinoTimerPicker CupertinoTimerPicker({Key? key, CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms, Duration initialTimerDuration = Duration.zero, int minuteInterval = 1, int secondInterval = 1, AlignmentGeometry alignment = Alignment.center, Color? backgroundColor, required void Function(Duration) onTimerDurationChanged})
   CupertinoTimerPicker$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms} , hasDefaultValue:true, defaultValueCode:CupertinoTimerPickerMode.hms
+    /// optionalParameters: {CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms} , defaultValue:unprocessed
     required CupertinoTimerPickerMode mode,
 
-    /// optionalParameters: {Duration initialTimerDuration = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration initialTimerDuration = Duration.zero} , defaultValue:unprocessed
     required Duration initialTimerDuration,
 
-    /// optionalParameters: {int minuteInterval = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int minuteInterval,
+    /// optionalParameters: {int minuteInterval = 1} , defaultValue:Literal
+    int minuteInterval = 1,
 
-    /// optionalParameters: {int secondInterval = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int secondInterval,
+    /// optionalParameters: {int secondInterval = 1} , defaultValue:Literal
+    int secondInterval = 1,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {required void Function(Duration) onTimerDurationChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(Duration) onTimerDurationChanged} , defaultValue:none
     required ValueChanged<Duration> onTimerDurationChanged,
   }) : super(
           key: key,
@@ -144,13 +144,13 @@ class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with Mate {
           backgroundColor: p.get('backgroundColor').build(),
           onTimerDurationChanged: p.get('onTimerDurationChanged').build(),
         );
-    matePut('key', key);
-    matePut('mode', mode);
-    matePut('initialTimerDuration', initialTimerDuration);
-    matePut('minuteInterval', minuteInterval);
-    matePut('secondInterval', secondInterval);
-    matePut('alignment', alignment);
-    matePut('backgroundColor', backgroundColor);
-    matePut('onTimerDurationChanged', onTimerDurationChanged);
+    mateDeclare('key', key);
+    mateDeclare('mode', mode);
+    mateDeclare('initialTimerDuration', initialTimerDuration);
+    mateDeclare('minuteInterval', minuteInterval);
+    mateDeclare('secondInterval', secondInterval);
+    mateDeclare('alignment', alignment);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('onTimerDurationChanged', onTimerDurationChanged);
   }
 }

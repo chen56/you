@@ -16,79 +16,79 @@ import 'package:flutter/src/widgets/scroll_controller.dart';
 class PaginatedDataTable$Mate extends PaginatedDataTable with Mate {
   /// PaginatedDataTable PaginatedDataTable({Key? key, Widget? header, List<Widget>? actions, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, double headingRowHeight = 56.0, double horizontalMargin = 24.0, double columnSpacing = 56.0, bool showCheckboxColumn = true, bool showFirstLastButtons = false, int? initialFirstRowIndex = 0, void Function(int)? onPageChanged, int rowsPerPage = defaultRowsPerPage, List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10], void Function(int?)? onRowsPerPageChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? arrowHeadColor, required DataTableSource source, double? checkboxHorizontalMargin, ScrollController? controller, bool? primary})
   PaginatedDataTable$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? header} , defaultValue:none
     Widget? header,
 
-    /// optionalParameters: {List<Widget>? actions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? actions} , defaultValue:none
     List<Widget>? actions,
 
-    /// optionalParameters: {required List<DataColumn> columns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<DataColumn> columns} , defaultValue:none
     required List<DataColumn> columns,
 
-    /// optionalParameters: {int? sortColumnIndex} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? sortColumnIndex} , defaultValue:none
     int? sortColumnIndex,
 
-    /// optionalParameters: {bool sortAscending = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool sortAscending,
+    /// optionalParameters: {bool sortAscending = true} , defaultValue:Literal
+    bool sortAscending = true,
 
-    /// optionalParameters: {void Function(bool?)? onSelectAll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool?)? onSelectAll} , defaultValue:none
     ValueSetter<bool?>? onSelectAll,
 
-    /// optionalParameters: {double? dataRowMinHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dataRowMinHeight} , defaultValue:none
     double? dataRowMinHeight,
 
-    /// optionalParameters: {double? dataRowMaxHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dataRowMaxHeight} , defaultValue:none
     double? dataRowMaxHeight,
 
-    /// optionalParameters: {double headingRowHeight = 56.0} , hasDefaultValue:true, defaultValueCode:56.0
-    required double headingRowHeight,
+    /// optionalParameters: {double headingRowHeight = 56.0} , defaultValue:Literal
+    double headingRowHeight = 56.0,
 
-    /// optionalParameters: {double horizontalMargin = 24.0} , hasDefaultValue:true, defaultValueCode:24.0
-    required double horizontalMargin,
+    /// optionalParameters: {double horizontalMargin = 24.0} , defaultValue:Literal
+    double horizontalMargin = 24.0,
 
-    /// optionalParameters: {double columnSpacing = 56.0} , hasDefaultValue:true, defaultValueCode:56.0
-    required double columnSpacing,
+    /// optionalParameters: {double columnSpacing = 56.0} , defaultValue:Literal
+    double columnSpacing = 56.0,
 
-    /// optionalParameters: {bool showCheckboxColumn = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showCheckboxColumn,
+    /// optionalParameters: {bool showCheckboxColumn = true} , defaultValue:Literal
+    bool showCheckboxColumn = true,
 
-    /// optionalParameters: {bool showFirstLastButtons = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showFirstLastButtons,
+    /// optionalParameters: {bool showFirstLastButtons = false} , defaultValue:Literal
+    bool showFirstLastButtons = false,
 
-    /// optionalParameters: {int? initialFirstRowIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-    int? initialFirstRowIndex,
+    /// optionalParameters: {int? initialFirstRowIndex = 0} , defaultValue:Literal
+    int? initialFirstRowIndex = 0,
 
-    /// optionalParameters: {void Function(int)? onPageChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onPageChanged} , defaultValue:none
     ValueChanged<int>? onPageChanged,
 
-    /// optionalParameters: {int rowsPerPage = defaultRowsPerPage} , hasDefaultValue:true, defaultValueCode:defaultRowsPerPage
+    /// optionalParameters: {int rowsPerPage = defaultRowsPerPage} , defaultValue:unprocessed
     required int rowsPerPage,
 
-    /// optionalParameters: {List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10]} , hasDefaultValue:true, defaultValueCode:const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10]
+    /// optionalParameters: {List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10]} , defaultValue:unprocessed
     required List<int> availableRowsPerPage,
 
-    /// optionalParameters: {void Function(int?)? onRowsPerPageChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int?)? onRowsPerPageChanged} , defaultValue:none
     ValueChanged<int?>? onRowsPerPageChanged,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {Color? arrowHeadColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? arrowHeadColor} , defaultValue:none
     Color? arrowHeadColor,
 
-    /// optionalParameters: {required DataTableSource source} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DataTableSource source} , defaultValue:none
     required DataTableSource source,
 
-    /// optionalParameters: {double? checkboxHorizontalMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? checkboxHorizontalMargin} , defaultValue:none
     double? checkboxHorizontalMargin,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
   }) : super(
           key: key,
@@ -144,30 +144,30 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with Mate {
           controller: p.get('controller').build(),
           primary: p.get('primary').build(),
         );
-    matePut('key', key);
-    matePut('header', header);
-    matePut('actions', actions);
-    matePut('columns', columns);
-    matePut('sortColumnIndex', sortColumnIndex);
-    matePut('sortAscending', sortAscending);
-    matePut('onSelectAll', onSelectAll);
-    matePut('dataRowMinHeight', dataRowMinHeight);
-    matePut('dataRowMaxHeight', dataRowMaxHeight);
-    matePut('headingRowHeight', headingRowHeight);
-    matePut('horizontalMargin', horizontalMargin);
-    matePut('columnSpacing', columnSpacing);
-    matePut('showCheckboxColumn', showCheckboxColumn);
-    matePut('showFirstLastButtons', showFirstLastButtons);
-    matePut('initialFirstRowIndex', initialFirstRowIndex);
-    matePut('onPageChanged', onPageChanged);
-    matePut('rowsPerPage', rowsPerPage);
-    matePut('availableRowsPerPage', availableRowsPerPage);
-    matePut('onRowsPerPageChanged', onRowsPerPageChanged);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('arrowHeadColor', arrowHeadColor);
-    matePut('source', source);
-    matePut('checkboxHorizontalMargin', checkboxHorizontalMargin);
-    matePut('controller', controller);
-    matePut('primary', primary);
+    mateDeclare('key', key);
+    mateDeclare('header', header);
+    mateDeclare('actions', actions);
+    mateDeclare('columns', columns);
+    mateDeclare('sortColumnIndex', sortColumnIndex);
+    mateDeclare('sortAscending', sortAscending);
+    mateDeclare('onSelectAll', onSelectAll);
+    mateDeclare('dataRowMinHeight', dataRowMinHeight);
+    mateDeclare('dataRowMaxHeight', dataRowMaxHeight);
+    mateDeclare('headingRowHeight', headingRowHeight);
+    mateDeclare('horizontalMargin', horizontalMargin);
+    mateDeclare('columnSpacing', columnSpacing);
+    mateDeclare('showCheckboxColumn', showCheckboxColumn);
+    mateDeclare('showFirstLastButtons', showFirstLastButtons);
+    mateDeclare('initialFirstRowIndex', initialFirstRowIndex);
+    mateDeclare('onPageChanged', onPageChanged);
+    mateDeclare('rowsPerPage', rowsPerPage);
+    mateDeclare('availableRowsPerPage', availableRowsPerPage);
+    mateDeclare('onRowsPerPageChanged', onRowsPerPageChanged);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('arrowHeadColor', arrowHeadColor);
+    mateDeclare('source', source);
+    mateDeclare('checkboxHorizontalMargin', checkboxHorizontalMargin);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
   }
 }

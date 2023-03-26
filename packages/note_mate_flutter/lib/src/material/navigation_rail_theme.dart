@@ -15,43 +15,43 @@ import 'package:flutter/src/widgets/framework.dart';
 class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
   /// NavigationRailThemeData NavigationRailThemeData({Color? backgroundColor, double? elevation, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? groupAlignment, NavigationRailLabelType? labelType, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape, double? minWidth, double? minExtendedWidth})
   NavigationRailThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {TextStyle? unselectedLabelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? unselectedLabelTextStyle} , defaultValue:none
     TextStyle? unselectedLabelTextStyle,
 
-    /// optionalParameters: {TextStyle? selectedLabelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? selectedLabelTextStyle} , defaultValue:none
     TextStyle? selectedLabelTextStyle,
 
-    /// optionalParameters: {IconThemeData? unselectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? unselectedIconTheme} , defaultValue:none
     IconThemeData? unselectedIconTheme,
 
-    /// optionalParameters: {IconThemeData? selectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? selectedIconTheme} , defaultValue:none
     IconThemeData? selectedIconTheme,
 
-    /// optionalParameters: {double? groupAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? groupAlignment} , defaultValue:none
     double? groupAlignment,
 
-    /// optionalParameters: {NavigationRailLabelType? labelType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {NavigationRailLabelType? labelType} , defaultValue:none
     NavigationRailLabelType? labelType,
 
-    /// optionalParameters: {bool? useIndicator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? useIndicator} , defaultValue:none
     bool? useIndicator,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {double? minWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minWidth} , defaultValue:none
     double? minWidth,
 
-    /// optionalParameters: {double? minExtendedWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minExtendedWidth} , defaultValue:none
     double? minExtendedWidth,
   }) : super(
           backgroundColor: backgroundColor,
@@ -83,19 +83,19 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
           minWidth: p.get('minWidth').build(),
           minExtendedWidth: p.get('minExtendedWidth').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('unselectedLabelTextStyle', unselectedLabelTextStyle);
-    matePut('selectedLabelTextStyle', selectedLabelTextStyle);
-    matePut('unselectedIconTheme', unselectedIconTheme);
-    matePut('selectedIconTheme', selectedIconTheme);
-    matePut('groupAlignment', groupAlignment);
-    matePut('labelType', labelType);
-    matePut('useIndicator', useIndicator);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorShape', indicatorShape);
-    matePut('minWidth', minWidth);
-    matePut('minExtendedWidth', minExtendedWidth);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('unselectedLabelTextStyle', unselectedLabelTextStyle);
+    mateDeclare('selectedLabelTextStyle', selectedLabelTextStyle);
+    mateDeclare('unselectedIconTheme', unselectedIconTheme);
+    mateDeclare('selectedIconTheme', selectedIconTheme);
+    mateDeclare('groupAlignment', groupAlignment);
+    mateDeclare('labelType', labelType);
+    mateDeclare('useIndicator', useIndicator);
+    mateDeclare('indicatorColor', indicatorColor);
+    mateDeclare('indicatorShape', indicatorShape);
+    mateDeclare('minWidth', minWidth);
+    mateDeclare('minExtendedWidth', minExtendedWidth);
   }
 }
 
@@ -103,13 +103,13 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
 class NavigationRailTheme$Mate extends NavigationRailTheme with Mate {
   /// NavigationRailTheme NavigationRailTheme({Key? key, required NavigationRailThemeData data, required Widget child})
   NavigationRailTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required NavigationRailThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required NavigationRailThemeData data} , defaultValue:none
     required NavigationRailThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -121,8 +121,8 @@ class NavigationRailTheme$Mate extends NavigationRailTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

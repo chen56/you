@@ -11,11 +11,11 @@ import 'package:flutter/src/services/text_editing.dart';
 class TextInputType$Mate extends TextInputType with Mate {
   /// TextInputType TextInputType.numberWithOptions({bool? signed = false, bool? decimal = false})
   TextInputType$Mate.numberWithOptions({
-    /// optionalParameters: {bool? signed = false} , hasDefaultValue:true, defaultValueCode:false
-    bool? signed,
+    /// optionalParameters: {bool? signed = false} , defaultValue:Literal
+    bool? signed = false,
 
-    /// optionalParameters: {bool? decimal = false} , hasDefaultValue:true, defaultValueCode:false
-    bool? decimal,
+    /// optionalParameters: {bool? decimal = false} , defaultValue:Literal
+    bool? decimal = false,
   }) : super.numberWithOptions(
           signed: signed,
           decimal: decimal,
@@ -24,8 +24,8 @@ class TextInputType$Mate extends TextInputType with Mate {
           signed: p.get('signed').build(),
           decimal: p.get('decimal').build(),
         );
-    matePut('signed', signed);
-    matePut('decimal', decimal);
+    mateDeclare('signed', signed);
+    mateDeclare('decimal', decimal);
   }
 }
 
@@ -33,53 +33,53 @@ class TextInputType$Mate extends TextInputType with Mate {
 class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
   /// TextInputConfiguration TextInputConfiguration({TextInputType inputType = TextInputType.text, bool readOnly = false, bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, bool enableInteractiveSelection = true, String? actionLabel, TextInputAction inputAction = TextInputAction.done, Brightness keyboardAppearance = Brightness.light, TextCapitalization textCapitalization = TextCapitalization.none, AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled, bool enableIMEPersonalizedLearning = true, List<String> allowedMimeTypes = const <String>[], bool enableDeltaModel = false})
   TextInputConfiguration$Mate({
-    /// optionalParameters: {TextInputType inputType = TextInputType.text} , hasDefaultValue:true, defaultValueCode:TextInputType.text
+    /// optionalParameters: {TextInputType inputType = TextInputType.text} , defaultValue:unprocessed
     required TextInputType inputType,
 
-    /// optionalParameters: {bool readOnly = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool readOnly,
+    /// optionalParameters: {bool readOnly = false} , defaultValue:Literal
+    bool readOnly = false,
 
-    /// optionalParameters: {bool obscureText = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscureText,
+    /// optionalParameters: {bool obscureText = false} , defaultValue:Literal
+    bool obscureText = false,
 
-    /// optionalParameters: {bool autocorrect = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool autocorrect,
+    /// optionalParameters: {bool autocorrect = true} , defaultValue:Literal
+    bool autocorrect = true,
 
-    /// optionalParameters: {SmartDashesType? smartDashesType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SmartDashesType? smartDashesType} , defaultValue:none
     SmartDashesType? smartDashesType,
 
-    /// optionalParameters: {SmartQuotesType? smartQuotesType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SmartQuotesType? smartQuotesType} , defaultValue:none
     SmartQuotesType? smartQuotesType,
 
-    /// optionalParameters: {bool enableSuggestions = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableSuggestions,
+    /// optionalParameters: {bool enableSuggestions = true} , defaultValue:Literal
+    bool enableSuggestions = true,
 
-    /// optionalParameters: {bool enableInteractiveSelection = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableInteractiveSelection,
+    /// optionalParameters: {bool enableInteractiveSelection = true} , defaultValue:Literal
+    bool enableInteractiveSelection = true,
 
-    /// optionalParameters: {String? actionLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? actionLabel} , defaultValue:none
     String? actionLabel,
 
-    /// optionalParameters: {TextInputAction inputAction = TextInputAction.done} , hasDefaultValue:true, defaultValueCode:TextInputAction.done
+    /// optionalParameters: {TextInputAction inputAction = TextInputAction.done} , defaultValue:unprocessed
     required TextInputAction inputAction,
 
-    /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , hasDefaultValue:true, defaultValueCode:Brightness.light
+    /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , defaultValue:unprocessed
     required Brightness keyboardAppearance,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , hasDefaultValue:true, defaultValueCode:TextCapitalization.none
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:unprocessed
     required TextCapitalization textCapitalization,
 
-    /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , hasDefaultValue:true, defaultValueCode:AutofillConfiguration.disabled
+    /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , defaultValue:unprocessed
     required AutofillConfiguration autofillConfiguration,
 
-    /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableIMEPersonalizedLearning,
+    /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , defaultValue:Literal
+    bool enableIMEPersonalizedLearning = true,
 
-    /// optionalParameters: {List<String> allowedMimeTypes = const <String>[]} , hasDefaultValue:true, defaultValueCode:const <String>[]
+    /// optionalParameters: {List<String> allowedMimeTypes = const <String>[]} , defaultValue:unprocessed
     required List<String> allowedMimeTypes,
 
-    /// optionalParameters: {bool enableDeltaModel = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool enableDeltaModel,
+    /// optionalParameters: {bool enableDeltaModel = false} , defaultValue:Literal
+    bool enableDeltaModel = false,
   }) : super(
           inputType: inputType,
           readOnly: readOnly,
@@ -116,22 +116,22 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
           enableDeltaModel: p.get('enableDeltaModel').build(),
         );
-    matePut('inputType', inputType);
-    matePut('readOnly', readOnly);
-    matePut('obscureText', obscureText);
-    matePut('autocorrect', autocorrect);
-    matePut('smartDashesType', smartDashesType);
-    matePut('smartQuotesType', smartQuotesType);
-    matePut('enableSuggestions', enableSuggestions);
-    matePut('enableInteractiveSelection', enableInteractiveSelection);
-    matePut('actionLabel', actionLabel);
-    matePut('inputAction', inputAction);
-    matePut('keyboardAppearance', keyboardAppearance);
-    matePut('textCapitalization', textCapitalization);
-    matePut('autofillConfiguration', autofillConfiguration);
-    matePut('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    matePut('allowedMimeTypes', allowedMimeTypes);
-    matePut('enableDeltaModel', enableDeltaModel);
+    mateDeclare('inputType', inputType);
+    mateDeclare('readOnly', readOnly);
+    mateDeclare('obscureText', obscureText);
+    mateDeclare('autocorrect', autocorrect);
+    mateDeclare('smartDashesType', smartDashesType);
+    mateDeclare('smartQuotesType', smartQuotesType);
+    mateDeclare('enableSuggestions', enableSuggestions);
+    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
+    mateDeclare('actionLabel', actionLabel);
+    mateDeclare('inputAction', inputAction);
+    mateDeclare('keyboardAppearance', keyboardAppearance);
+    mateDeclare('textCapitalization', textCapitalization);
+    mateDeclare('autofillConfiguration', autofillConfiguration);
+    mateDeclare('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
+    mateDeclare('allowedMimeTypes', allowedMimeTypes);
+    mateDeclare('enableDeltaModel', enableDeltaModel);
   }
 }
 
@@ -139,10 +139,10 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
 class RawFloatingCursorPoint$Mate extends RawFloatingCursorPoint with Mate {
   /// RawFloatingCursorPoint RawFloatingCursorPoint({Offset? offset, required FloatingCursorDragState state})
   RawFloatingCursorPoint$Mate({
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , defaultValue:none
     Offset? offset,
 
-    /// optionalParameters: {required FloatingCursorDragState state} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FloatingCursorDragState state} , defaultValue:none
     required FloatingCursorDragState state,
   }) : super(
           offset: offset,
@@ -152,8 +152,8 @@ class RawFloatingCursorPoint$Mate extends RawFloatingCursorPoint with Mate {
           offset: p.get('offset').build(),
           state: p.get('state').build(),
         );
-    matePut('offset', offset);
-    matePut('state', state);
+    mateDeclare('offset', offset);
+    mateDeclare('state', state);
   }
 }
 
@@ -161,13 +161,13 @@ class RawFloatingCursorPoint$Mate extends RawFloatingCursorPoint with Mate {
 class TextEditingValue$Mate extends TextEditingValue with Mate {
   /// TextEditingValue TextEditingValue({String text = '', TextSelection selection = const TextSelection.collapsed(offset: -1), TextRange composing = TextRange.empty})
   TextEditingValue$Mate({
-    /// optionalParameters: {String text = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String text,
+    /// optionalParameters: {String text = ''} , defaultValue:Literal
+    String text = '',
 
-    /// optionalParameters: {TextSelection selection = const TextSelection.collapsed(offset: -1)} , hasDefaultValue:true, defaultValueCode:const TextSelection.collapsed(offset: -1)
+    /// optionalParameters: {TextSelection selection = const TextSelection.collapsed(offset: -1)} , defaultValue:unprocessed
     required TextSelection selection,
 
-    /// optionalParameters: {TextRange composing = TextRange.empty} , hasDefaultValue:true, defaultValueCode:TextRange.empty
+    /// optionalParameters: {TextRange composing = TextRange.empty} , defaultValue:unprocessed
     required TextRange composing,
   }) : super(
           text: text,
@@ -179,9 +179,9 @@ class TextEditingValue$Mate extends TextEditingValue with Mate {
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    matePut('text', text);
-    matePut('selection', selection);
-    matePut('composing', composing);
+    mateDeclare('text', text);
+    mateDeclare('selection', selection);
+    mateDeclare('composing', composing);
   }
 }
 
@@ -189,13 +189,13 @@ class TextEditingValue$Mate extends TextEditingValue with Mate {
 class SelectionRect$Mate extends SelectionRect with Mate {
   /// SelectionRect SelectionRect({required int position, required Rect bounds, TextDirection direction = TextDirection.ltr})
   SelectionRect$Mate({
-    /// optionalParameters: {required int position} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int position} , defaultValue:none
     required int position,
 
-    /// optionalParameters: {required Rect bounds} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect bounds} , defaultValue:none
     required Rect bounds,
 
-    /// optionalParameters: {TextDirection direction = TextDirection.ltr} , hasDefaultValue:true, defaultValueCode:TextDirection.ltr
+    /// optionalParameters: {TextDirection direction = TextDirection.ltr} , defaultValue:unprocessed
     required TextDirection direction,
   }) : super(
           position: position,
@@ -207,8 +207,8 @@ class SelectionRect$Mate extends SelectionRect with Mate {
           bounds: p.get('bounds').build(),
           direction: p.get('direction').build(),
         );
-    matePut('position', position);
-    matePut('bounds', bounds);
-    matePut('direction', direction);
+    mateDeclare('position', position);
+    mateDeclare('bounds', bounds);
+    mateDeclare('direction', direction);
   }
 }

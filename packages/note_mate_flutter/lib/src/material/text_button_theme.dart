@@ -11,11 +11,11 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate {
   /// TextButtonThemeData TextButtonThemeData({ButtonStyle? style})
   TextButtonThemeData$Mate(
       {
-      /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
     mateBuilder = (p) => TextButtonThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateDeclare('style', style);
   }
 }
 
@@ -23,13 +23,13 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate {
 class TextButtonTheme$Mate extends TextButtonTheme with Mate {
   /// TextButtonTheme TextButtonTheme({Key? key, required TextButtonThemeData data, required Widget child})
   TextButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required TextButtonThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextButtonThemeData data} , defaultValue:none
     required TextButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -41,8 +41,8 @@ class TextButtonTheme$Mate extends TextButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

@@ -13,6 +13,6 @@ class RenderErrorBox$Mate extends RenderErrorBox with Mate {
       String message)
       : super(message) {
     mateBuilder = (p) => RenderErrorBox$Mate(p.get('message').value);
-    matePut('message', message);
+    mateDeclare('message', message);
   }
 }

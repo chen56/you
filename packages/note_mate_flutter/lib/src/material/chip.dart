@@ -19,70 +19,70 @@ import 'package:flutter/src/foundation/basic_types.dart';
 class Chip$Mate extends Chip with Mate {
   /// Chip Chip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Widget? deleteIcon, void Function()? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, bool useDeleteButtonTooltip = true})
   Chip$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? avatar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? avatar} , defaultValue:none
     Widget? avatar,
 
-    /// optionalParameters: {required Widget label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget label} , defaultValue:none
     required Widget label,
 
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , defaultValue:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , defaultValue:none
     EdgeInsetsGeometry? labelPadding,
 
-    /// optionalParameters: {Widget? deleteIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? deleteIcon} , defaultValue:none
     Widget? deleteIcon,
 
-    /// optionalParameters: {void Function()? onDeleted} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDeleted} , defaultValue:none
     VoidCallback? onDeleted,
 
-    /// optionalParameters: {Color? deleteIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? deleteIconColor} , defaultValue:none
     Color? deleteIconColor,
 
-    /// optionalParameters: {String? deleteButtonTooltipMessage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? deleteButtonTooltipMessage} , defaultValue:none
     String? deleteButtonTooltipMessage,
 
-    /// optionalParameters: {BorderSide? side} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? side} , defaultValue:none
     BorderSide? side,
 
-    /// optionalParameters: {OutlinedBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {IconThemeData? iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? iconTheme} , defaultValue:none
     IconThemeData? iconTheme,
   }) : super(
           key: key,
@@ -132,28 +132,28 @@ class Chip$Mate extends Chip with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    matePut('key', key);
-    matePut('avatar', avatar);
-    matePut('label', label);
-    matePut('labelStyle', labelStyle);
-    matePut('labelPadding', labelPadding);
-    matePut('deleteIcon', deleteIcon);
-    matePut('onDeleted', onDeleted);
-    matePut('deleteIconColor', deleteIconColor);
-    matePut('deleteButtonTooltipMessage', deleteButtonTooltipMessage);
-    matePut('side', side);
-    matePut('shape', shape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('backgroundColor', backgroundColor);
-    matePut('padding', padding);
-    matePut('visualDensity', visualDensity);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('iconTheme', iconTheme);
+    mateDeclare('key', key);
+    mateDeclare('avatar', avatar);
+    mateDeclare('label', label);
+    mateDeclare('labelStyle', labelStyle);
+    mateDeclare('labelPadding', labelPadding);
+    mateDeclare('deleteIcon', deleteIcon);
+    mateDeclare('onDeleted', onDeleted);
+    mateDeclare('deleteIconColor', deleteIconColor);
+    mateDeclare('deleteButtonTooltipMessage', deleteButtonTooltipMessage);
+    mateDeclare('side', side);
+    mateDeclare('shape', shape);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('padding', padding);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('iconTheme', iconTheme);
   }
 }
 
@@ -161,112 +161,112 @@ class Chip$Mate extends Chip with Mate {
 class RawChip$Mate extends RawChip with Mate {
   /// RawChip RawChip({Key? key, ChipThemeData? defaultProperties, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, EdgeInsetsGeometry? labelPadding, Widget? deleteIcon, void Function()? onDeleted, Color? deleteIconColor, String? deleteButtonTooltipMessage, void Function()? onPressed, void Function(bool)? onSelected, double? pressElevation, bool tapEnabled = true, bool selected = false, bool isEnabled = true, Color? disabledColor, Color? selectedColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, bool? showCheckmark = true, Color? checkmarkColor, ShapeBorder avatarBorder = const CircleBorder(), bool useDeleteButtonTooltip = true})
   RawChip$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {ChipThemeData? defaultProperties} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ChipThemeData? defaultProperties} , defaultValue:none
     ChipThemeData? defaultProperties,
 
-    /// optionalParameters: {Widget? avatar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? avatar} , defaultValue:none
     Widget? avatar,
 
-    /// optionalParameters: {required Widget label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget label} , defaultValue:none
     required Widget label,
 
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , defaultValue:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , defaultValue:none
     EdgeInsetsGeometry? labelPadding,
 
-    /// optionalParameters: {Widget? deleteIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? deleteIcon} , defaultValue:none
     Widget? deleteIcon,
 
-    /// optionalParameters: {void Function()? onDeleted} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDeleted} , defaultValue:none
     VoidCallback? onDeleted,
 
-    /// optionalParameters: {Color? deleteIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? deleteIconColor} , defaultValue:none
     Color? deleteIconColor,
 
-    /// optionalParameters: {String? deleteButtonTooltipMessage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? deleteButtonTooltipMessage} , defaultValue:none
     String? deleteButtonTooltipMessage,
 
-    /// optionalParameters: {void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {void Function(bool)? onSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onSelected} , defaultValue:none
     ValueChanged<bool>? onSelected,
 
-    /// optionalParameters: {double? pressElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? pressElevation} , defaultValue:none
     double? pressElevation,
 
-    /// optionalParameters: {bool tapEnabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool tapEnabled,
+    /// optionalParameters: {bool tapEnabled = true} , defaultValue:Literal
+    bool tapEnabled = true,
 
-    /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool selected,
+    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    bool selected = false,
 
-    /// optionalParameters: {bool isEnabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool isEnabled,
+    /// optionalParameters: {bool isEnabled = true} , defaultValue:Literal
+    bool isEnabled = true,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , defaultValue:none
     Color? selectedColor,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {BorderSide? side} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? side} , defaultValue:none
     BorderSide? side,
 
-    /// optionalParameters: {OutlinedBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {IconThemeData? iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? iconTheme} , defaultValue:none
     IconThemeData? iconTheme,
 
-    /// optionalParameters: {Color? selectedShadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedShadowColor} , defaultValue:none
     Color? selectedShadowColor,
 
-    /// optionalParameters: {bool? showCheckmark = true} , hasDefaultValue:true, defaultValueCode:true
-    bool? showCheckmark,
+    /// optionalParameters: {bool? showCheckmark = true} , defaultValue:Literal
+    bool? showCheckmark = true,
 
-    /// optionalParameters: {Color? checkmarkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? checkmarkColor} , defaultValue:none
     Color? checkmarkColor,
 
-    /// optionalParameters: {ShapeBorder avatarBorder = const CircleBorder()} , hasDefaultValue:true, defaultValueCode:const CircleBorder()
+    /// optionalParameters: {ShapeBorder avatarBorder = const CircleBorder()} , defaultValue:unprocessed
     required ShapeBorder avatarBorder,
   }) : super(
           key: key,
@@ -344,41 +344,41 @@ class RawChip$Mate extends RawChip with Mate {
           checkmarkColor: p.get('checkmarkColor').build(),
           avatarBorder: p.get('avatarBorder').build(),
         );
-    matePut('key', key);
-    matePut('defaultProperties', defaultProperties);
-    matePut('avatar', avatar);
-    matePut('label', label);
-    matePut('labelStyle', labelStyle);
-    matePut('padding', padding);
-    matePut('visualDensity', visualDensity);
-    matePut('labelPadding', labelPadding);
-    matePut('deleteIcon', deleteIcon);
-    matePut('onDeleted', onDeleted);
-    matePut('deleteIconColor', deleteIconColor);
-    matePut('deleteButtonTooltipMessage', deleteButtonTooltipMessage);
-    matePut('onPressed', onPressed);
-    matePut('onSelected', onSelected);
-    matePut('pressElevation', pressElevation);
-    matePut('tapEnabled', tapEnabled);
-    matePut('selected', selected);
-    matePut('isEnabled', isEnabled);
-    matePut('disabledColor', disabledColor);
-    matePut('selectedColor', selectedColor);
-    matePut('tooltip', tooltip);
-    matePut('side', side);
-    matePut('shape', shape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('backgroundColor', backgroundColor);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('iconTheme', iconTheme);
-    matePut('selectedShadowColor', selectedShadowColor);
-    matePut('showCheckmark', showCheckmark);
-    matePut('checkmarkColor', checkmarkColor);
-    matePut('avatarBorder', avatarBorder);
+    mateDeclare('key', key);
+    mateDeclare('defaultProperties', defaultProperties);
+    mateDeclare('avatar', avatar);
+    mateDeclare('label', label);
+    mateDeclare('labelStyle', labelStyle);
+    mateDeclare('padding', padding);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('labelPadding', labelPadding);
+    mateDeclare('deleteIcon', deleteIcon);
+    mateDeclare('onDeleted', onDeleted);
+    mateDeclare('deleteIconColor', deleteIconColor);
+    mateDeclare('deleteButtonTooltipMessage', deleteButtonTooltipMessage);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('onSelected', onSelected);
+    mateDeclare('pressElevation', pressElevation);
+    mateDeclare('tapEnabled', tapEnabled);
+    mateDeclare('selected', selected);
+    mateDeclare('isEnabled', isEnabled);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('selectedColor', selectedColor);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('side', side);
+    mateDeclare('shape', shape);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('iconTheme', iconTheme);
+    mateDeclare('selectedShadowColor', selectedShadowColor);
+    mateDeclare('showCheckmark', showCheckmark);
+    mateDeclare('checkmarkColor', checkmarkColor);
+    mateDeclare('avatarBorder', avatarBorder);
   }
 }

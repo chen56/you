@@ -12,6 +12,6 @@ class StandardMethodCodec$Mate extends StandardMethodCodec with Mate {
       StandardMessageCodec messageCodec)
       : super(messageCodec) {
     mateBuilder = (p) => StandardMethodCodec$Mate(p.get('messageCodec').value);
-    matePut('messageCodec', messageCodec);
+    mateDeclare('messageCodec', messageCodec);
   }
 }

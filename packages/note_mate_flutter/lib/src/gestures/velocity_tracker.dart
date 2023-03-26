@@ -10,11 +10,11 @@ class Velocity$Mate extends Velocity with Mate {
   /// Velocity Velocity({required Offset pixelsPerSecond})
   Velocity$Mate(
       {
-      /// optionalParameters: {required Offset pixelsPerSecond} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required Offset pixelsPerSecond} , defaultValue:none
       required Offset pixelsPerSecond})
       : super(pixelsPerSecond: pixelsPerSecond) {
     mateBuilder = (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build());
-    matePut('pixelsPerSecond', pixelsPerSecond);
+    mateDeclare('pixelsPerSecond', pixelsPerSecond);
   }
 }
 
@@ -22,16 +22,16 @@ class Velocity$Mate extends Velocity with Mate {
 class VelocityEstimate$Mate extends VelocityEstimate with Mate {
   /// VelocityEstimate VelocityEstimate({required Offset pixelsPerSecond, required double confidence, required Duration duration, required Offset offset})
   VelocityEstimate$Mate({
-    /// optionalParameters: {required Offset pixelsPerSecond} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset pixelsPerSecond} , defaultValue:none
     required Offset pixelsPerSecond,
 
-    /// optionalParameters: {required double confidence} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double confidence} , defaultValue:none
     required double confidence,
 
-    /// optionalParameters: {required Duration duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
 
-    /// optionalParameters: {required Offset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset offset} , defaultValue:none
     required Offset offset,
   }) : super(
           pixelsPerSecond: pixelsPerSecond,
@@ -45,10 +45,10 @@ class VelocityEstimate$Mate extends VelocityEstimate with Mate {
           duration: p.get('duration').build(),
           offset: p.get('offset').build(),
         );
-    matePut('pixelsPerSecond', pixelsPerSecond);
-    matePut('confidence', confidence);
-    matePut('duration', duration);
-    matePut('offset', offset);
+    mateDeclare('pixelsPerSecond', pixelsPerSecond);
+    mateDeclare('confidence', confidence);
+    mateDeclare('duration', duration);
+    mateDeclare('offset', offset);
   }
 }
 
@@ -61,7 +61,7 @@ class VelocityTracker$Mate extends VelocityTracker with Mate {
       PointerDeviceKind kind)
       : super.withKind(kind) {
     mateBuilder = (p) => VelocityTracker$Mate.withKind(p.get('kind').value);
-    matePut('kind', kind);
+    mateDeclare('kind', kind);
   }
 }
 
@@ -74,7 +74,7 @@ class IOSScrollViewFlingVelocityTracker$Mate extends IOSScrollViewFlingVelocityT
       PointerDeviceKind kind)
       : super(kind) {
     mateBuilder = (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    matePut('kind', kind);
+    mateDeclare('kind', kind);
   }
 }
 
@@ -87,6 +87,6 @@ class MacOSScrollViewFlingVelocityTracker$Mate extends MacOSScrollViewFlingVeloc
       PointerDeviceKind kind)
       : super(kind) {
     mateBuilder = (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    matePut('kind', kind);
+    mateDeclare('kind', kind);
   }
 }

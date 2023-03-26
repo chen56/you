@@ -10,22 +10,22 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class CupertinoFormRow$Mate extends CupertinoFormRow with Mate {
   /// CupertinoFormRow CupertinoFormRow({Key? key, required Widget child, Widget? prefix, EdgeInsetsGeometry? padding, Widget? helper, Widget? error})
   CupertinoFormRow$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {Widget? prefix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prefix} , defaultValue:none
     Widget? prefix,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Widget? helper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? helper} , defaultValue:none
     Widget? helper,
 
-    /// optionalParameters: {Widget? error} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? error} , defaultValue:none
     Widget? error,
   }) : super(
           key: key,
@@ -43,11 +43,11 @@ class CupertinoFormRow$Mate extends CupertinoFormRow with Mate {
           helper: p.get('helper').build(),
           error: p.get('error').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('prefix', prefix);
-    matePut('padding', padding);
-    matePut('helper', helper);
-    matePut('error', error);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('prefix', prefix);
+    mateDeclare('padding', padding);
+    mateDeclare('helper', helper);
+    mateDeclare('error', error);
   }
 }

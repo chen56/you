@@ -12,31 +12,31 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
   /// CupertinoSwitch CupertinoSwitch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? trackColor, Color? thumbColor, bool? applyTheme, Color? focusColor, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   CupertinoSwitch$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required bool value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool value} , defaultValue:none
     required bool value,
 
-    /// optionalParameters: {required void Function(bool)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(bool)? onChanged} , defaultValue:none
     required ValueChanged<bool>? onChanged,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , defaultValue:none
     Color? activeColor,
 
-    /// optionalParameters: {Color? trackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? trackColor} , defaultValue:none
     Color? trackColor,
 
-    /// optionalParameters: {Color? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? thumbColor} , defaultValue:none
     Color? thumbColor,
 
-    /// optionalParameters: {bool? applyTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? applyTheme} , defaultValue:none
     bool? applyTheme,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
   }) : super(
           key: key,
@@ -60,14 +60,14 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
           focusColor: p.get('focusColor').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('onChanged', onChanged);
-    matePut('activeColor', activeColor);
-    matePut('trackColor', trackColor);
-    matePut('thumbColor', thumbColor);
-    matePut('applyTheme', applyTheme);
-    matePut('focusColor', focusColor);
-    matePut('dragStartBehavior', dragStartBehavior);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('activeColor', activeColor);
+    mateDeclare('trackColor', trackColor);
+    mateDeclare('thumbColor', thumbColor);
+    mateDeclare('applyTheme', applyTheme);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
   }
 }

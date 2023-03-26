@@ -10,13 +10,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class TickerMode$Mate extends TickerMode with Mate {
   /// TickerMode TickerMode({Key? key, required bool enabled, required Widget child})
   TickerMode$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required bool enabled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool enabled} , defaultValue:none
     required bool enabled,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -28,8 +28,8 @@ class TickerMode$Mate extends TickerMode with Mate {
           enabled: p.get('enabled').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('enabled', enabled);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('enabled', enabled);
+    mateDeclare('child', child);
   }
 }

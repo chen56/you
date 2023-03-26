@@ -17,7 +17,7 @@ class ObjectKey$Mate extends ObjectKey with Mate {
       Object? value)
       : super(value) {
     mateBuilder = (p) => ObjectKey$Mate(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -30,7 +30,7 @@ class LabeledGlobalKey$Mate<T extends State<StatefulWidget>> extends LabeledGlob
       String? _debugLabel)
       : super(_debugLabel) {
     mateBuilder = (p) => LabeledGlobalKey$Mate<T>(p.get('_debugLabel').value);
-    matePut('_debugLabel', _debugLabel);
+    mateDeclare('_debugLabel', _debugLabel);
   }
 }
 
@@ -43,7 +43,7 @@ class GlobalObjectKey$Mate<T extends State<StatefulWidget>> extends GlobalObject
       Object value)
       : super(value) {
     mateBuilder = (p) => GlobalObjectKey$Mate<T>(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -51,10 +51,10 @@ class GlobalObjectKey$Mate<T extends State<StatefulWidget>> extends GlobalObject
 class BuildOwner$Mate extends BuildOwner with Mate {
   /// BuildOwner BuildOwner({void Function()? onBuildScheduled, FocusManager? focusManager})
   BuildOwner$Mate({
-    /// optionalParameters: {void Function()? onBuildScheduled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onBuildScheduled} , defaultValue:none
     VoidCallback? onBuildScheduled,
 
-    /// optionalParameters: {FocusManager? focusManager} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusManager? focusManager} , defaultValue:none
     FocusManager? focusManager,
   }) : super(
           onBuildScheduled: onBuildScheduled,
@@ -64,8 +64,8 @@ class BuildOwner$Mate extends BuildOwner with Mate {
           onBuildScheduled: p.get('onBuildScheduled').build(),
           focusManager: p.get('focusManager').build(),
         );
-    matePut('onBuildScheduled', onBuildScheduled);
-    matePut('focusManager', focusManager);
+    mateDeclare('onBuildScheduled', onBuildScheduled);
+    mateDeclare('focusManager', focusManager);
   }
 }
 
@@ -78,15 +78,15 @@ class ErrorWidget$Mate extends ErrorWidget with Mate {
       Object exception)
       : super(exception) {
     mateBuilder = (p) => ErrorWidget$Mate(p.get('exception').value);
-    matePut('exception', exception);
+    mateDeclare('exception', exception);
   }
 
   /// ErrorWidget ErrorWidget.withDetails({String message = '', FlutterError? error})
   ErrorWidget$Mate.withDetails({
-    /// optionalParameters: {String message = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String message,
+    /// optionalParameters: {String message = ''} , defaultValue:Literal
+    String message = '',
 
-    /// optionalParameters: {FlutterError? error} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FlutterError? error} , defaultValue:none
     FlutterError? error,
   }) : super.withDetails(
           message: message,
@@ -96,8 +96,8 @@ class ErrorWidget$Mate extends ErrorWidget with Mate {
           message: p.get('message').build(),
           error: p.get('error').build(),
         );
-    matePut('message', message);
-    matePut('error', error);
+    mateDeclare('message', message);
+    mateDeclare('error', error);
   }
 }
 
@@ -110,7 +110,7 @@ class StatelessElement$Mate extends StatelessElement with Mate {
       StatelessWidget widget)
       : super(widget) {
     mateBuilder = (p) => StatelessElement$Mate(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }
 
@@ -123,7 +123,7 @@ class StatefulElement$Mate extends StatefulElement with Mate {
       StatefulWidget widget)
       : super(widget) {
     mateBuilder = (p) => StatefulElement$Mate(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }
 
@@ -136,7 +136,7 @@ class ParentDataElement$Mate<T extends ParentData> extends ParentDataElement<T> 
       ParentDataWidget<T> widget)
       : super(widget) {
     mateBuilder = (p) => ParentDataElement$Mate<T>(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }
 
@@ -149,7 +149,7 @@ class InheritedElement$Mate extends InheritedElement with Mate {
       InheritedWidget widget)
       : super(widget) {
     mateBuilder = (p) => InheritedElement$Mate(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }
 
@@ -162,7 +162,7 @@ class LeafRenderObjectElement$Mate extends LeafRenderObjectElement with Mate {
       LeafRenderObjectWidget widget)
       : super(widget) {
     mateBuilder = (p) => LeafRenderObjectElement$Mate(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }
 
@@ -175,7 +175,7 @@ class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement
       SingleChildRenderObjectWidget widget)
       : super(widget) {
     mateBuilder = (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }
 
@@ -188,7 +188,7 @@ class MultiChildRenderObjectElement$Mate extends MultiChildRenderObjectElement w
       MultiChildRenderObjectWidget widget)
       : super(widget) {
     mateBuilder = (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value);
-    matePut('widget', widget);
+    mateDeclare('widget', widget);
   }
 }
 
@@ -201,7 +201,7 @@ class DebugCreator$Mate extends DebugCreator with Mate {
       Element element)
       : super(element) {
     mateBuilder = (p) => DebugCreator$Mate(p.get('element').value);
-    matePut('element', element);
+    mateDeclare('element', element);
   }
 }
 
@@ -222,7 +222,7 @@ class IndexedSlot$Mate<T extends Element?> extends IndexedSlot<T> with Mate {
           p.get('index').value,
           p.get('value').value,
         );
-    matePut('index', index);
-    matePut('value', value);
+    mateDeclare('index', index);
+    mateDeclare('value', value);
   }
 }

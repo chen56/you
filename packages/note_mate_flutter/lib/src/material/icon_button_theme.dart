@@ -11,11 +11,11 @@ class IconButtonThemeData$Mate extends IconButtonThemeData with Mate {
   /// IconButtonThemeData IconButtonThemeData({ButtonStyle? style})
   IconButtonThemeData$Mate(
       {
-      /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
     mateBuilder = (p) => IconButtonThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateDeclare('style', style);
   }
 }
 
@@ -23,13 +23,13 @@ class IconButtonThemeData$Mate extends IconButtonThemeData with Mate {
 class IconButtonTheme$Mate extends IconButtonTheme with Mate {
   /// IconButtonTheme IconButtonTheme({Key? key, required IconButtonThemeData data, required Widget child})
   IconButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required IconButtonThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required IconButtonThemeData data} , defaultValue:none
     required IconButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -41,8 +41,8 @@ class IconButtonTheme$Mate extends IconButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

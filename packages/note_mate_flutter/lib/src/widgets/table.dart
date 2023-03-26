@@ -14,13 +14,13 @@ import 'package:flutter/src/rendering/table_border.dart';
 class TableRow$Mate extends TableRow with Mate {
   /// TableRow TableRow({LocalKey? key, Decoration? decoration, List<Widget> children = const <Widget>[]})
   TableRow$Mate({
-    /// optionalParameters: {LocalKey? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LocalKey? key} , defaultValue:none
     LocalKey? key,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , defaultValue:none
     Decoration? decoration,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -32,9 +32,9 @@ class TableRow$Mate extends TableRow with Mate {
           decoration: p.get('decoration').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('decoration', decoration);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('decoration', decoration);
+    mateDeclare('children', children);
   }
 }
 
@@ -42,28 +42,28 @@ class TableRow$Mate extends TableRow with Mate {
 class Table$Mate extends Table with Mate {
   /// Table Table({Key? key, List<TableRow> children = const <TableRow>[], Map<int, TableColumnWidth>? columnWidths, TableColumnWidth defaultColumnWidth = const FlexColumnWidth(), TextDirection? textDirection, TableBorder? border, TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top, TextBaseline? textBaseline})
   Table$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {List<TableRow> children = const <TableRow>[]} , hasDefaultValue:true, defaultValueCode:const <TableRow>[]
+    /// optionalParameters: {List<TableRow> children = const <TableRow>[]} , defaultValue:unprocessed
     required List<TableRow> children,
 
-    /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , defaultValue:none
     Map<int, TableColumnWidth>? columnWidths,
 
-    /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , hasDefaultValue:true, defaultValueCode:const FlexColumnWidth()
+    /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , defaultValue:unprocessed
     required TableColumnWidth defaultColumnWidth,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {TableBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TableBorder? border} , defaultValue:none
     TableBorder? border,
 
-    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , hasDefaultValue:true, defaultValueCode:TableCellVerticalAlignment.top
+    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , defaultValue:unprocessed
     required TableCellVerticalAlignment defaultVerticalAlignment,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,
   }) : super(
           key: key,
@@ -85,14 +85,14 @@ class Table$Mate extends Table with Mate {
           defaultVerticalAlignment: p.get('defaultVerticalAlignment').build(),
           textBaseline: p.get('textBaseline').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('columnWidths', columnWidths);
-    matePut('defaultColumnWidth', defaultColumnWidth);
-    matePut('textDirection', textDirection);
-    matePut('border', border);
-    matePut('defaultVerticalAlignment', defaultVerticalAlignment);
-    matePut('textBaseline', textBaseline);
+    mateDeclare('key', key);
+    mateDeclare('children', children);
+    mateDeclare('columnWidths', columnWidths);
+    mateDeclare('defaultColumnWidth', defaultColumnWidth);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('border', border);
+    mateDeclare('defaultVerticalAlignment', defaultVerticalAlignment);
+    mateDeclare('textBaseline', textBaseline);
   }
 }
 
@@ -100,13 +100,13 @@ class Table$Mate extends Table with Mate {
 class TableCell$Mate extends TableCell with Mate {
   /// TableCell TableCell({Key? key, TableCellVerticalAlignment? verticalAlignment, required Widget child})
   TableCell$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {TableCellVerticalAlignment? verticalAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TableCellVerticalAlignment? verticalAlignment} , defaultValue:none
     TableCellVerticalAlignment? verticalAlignment,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -118,8 +118,8 @@ class TableCell$Mate extends TableCell with Mate {
           verticalAlignment: p.get('verticalAlignment').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('verticalAlignment', verticalAlignment);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('verticalAlignment', verticalAlignment);
+    mateDeclare('child', child);
   }
 }

@@ -8,11 +8,11 @@ class ScrollPhysics$Mate extends ScrollPhysics with Mate {
   /// ScrollPhysics ScrollPhysics({ScrollPhysics? parent})
   ScrollPhysics$Mate(
       {
-      /// optionalParameters: {ScrollPhysics? parent} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
       ScrollPhysics? parent})
       : super(parent: parent) {
     mateBuilder = (p) => ScrollPhysics$Mate(parent: p.get('parent').build());
-    matePut('parent', parent);
+    mateDeclare('parent', parent);
   }
 }
 
@@ -21,11 +21,11 @@ class RangeMaintainingScrollPhysics$Mate extends RangeMaintainingScrollPhysics w
   /// RangeMaintainingScrollPhysics RangeMaintainingScrollPhysics({ScrollPhysics? parent})
   RangeMaintainingScrollPhysics$Mate(
       {
-      /// optionalParameters: {ScrollPhysics? parent} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
       ScrollPhysics? parent})
       : super(parent: parent) {
     mateBuilder = (p) => RangeMaintainingScrollPhysics$Mate(parent: p.get('parent').build());
-    matePut('parent', parent);
+    mateDeclare('parent', parent);
   }
 }
 
@@ -33,10 +33,10 @@ class RangeMaintainingScrollPhysics$Mate extends RangeMaintainingScrollPhysics w
 class BouncingScrollPhysics$Mate extends BouncingScrollPhysics with Mate {
   /// BouncingScrollPhysics BouncingScrollPhysics({ScrollDecelerationRate decelerationRate = ScrollDecelerationRate.normal, ScrollPhysics? parent})
   BouncingScrollPhysics$Mate({
-    /// optionalParameters: {ScrollDecelerationRate decelerationRate = ScrollDecelerationRate.normal} , hasDefaultValue:true, defaultValueCode:ScrollDecelerationRate.normal
+    /// optionalParameters: {ScrollDecelerationRate decelerationRate = ScrollDecelerationRate.normal} , defaultValue:unprocessed
     required ScrollDecelerationRate decelerationRate,
 
-    /// optionalParameters: {ScrollPhysics? parent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
     ScrollPhysics? parent,
   }) : super(
           decelerationRate: decelerationRate,
@@ -46,8 +46,8 @@ class BouncingScrollPhysics$Mate extends BouncingScrollPhysics with Mate {
           decelerationRate: p.get('decelerationRate').build(),
           parent: p.get('parent').build(),
         );
-    matePut('decelerationRate', decelerationRate);
-    matePut('parent', parent);
+    mateDeclare('decelerationRate', decelerationRate);
+    mateDeclare('parent', parent);
   }
 }
 
@@ -56,11 +56,11 @@ class ClampingScrollPhysics$Mate extends ClampingScrollPhysics with Mate {
   /// ClampingScrollPhysics ClampingScrollPhysics({ScrollPhysics? parent})
   ClampingScrollPhysics$Mate(
       {
-      /// optionalParameters: {ScrollPhysics? parent} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
       ScrollPhysics? parent})
       : super(parent: parent) {
     mateBuilder = (p) => ClampingScrollPhysics$Mate(parent: p.get('parent').build());
-    matePut('parent', parent);
+    mateDeclare('parent', parent);
   }
 }
 
@@ -69,11 +69,11 @@ class AlwaysScrollableScrollPhysics$Mate extends AlwaysScrollableScrollPhysics w
   /// AlwaysScrollableScrollPhysics AlwaysScrollableScrollPhysics({ScrollPhysics? parent})
   AlwaysScrollableScrollPhysics$Mate(
       {
-      /// optionalParameters: {ScrollPhysics? parent} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
       ScrollPhysics? parent})
       : super(parent: parent) {
     mateBuilder = (p) => AlwaysScrollableScrollPhysics$Mate(parent: p.get('parent').build());
-    matePut('parent', parent);
+    mateDeclare('parent', parent);
   }
 }
 
@@ -82,10 +82,10 @@ class NeverScrollableScrollPhysics$Mate extends NeverScrollableScrollPhysics wit
   /// NeverScrollableScrollPhysics NeverScrollableScrollPhysics({ScrollPhysics? parent})
   NeverScrollableScrollPhysics$Mate(
       {
-      /// optionalParameters: {ScrollPhysics? parent} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
       ScrollPhysics? parent})
       : super(parent: parent) {
     mateBuilder = (p) => NeverScrollableScrollPhysics$Mate(parent: p.get('parent').build());
-    matePut('parent', parent);
+    mateDeclare('parent', parent);
   }
 }

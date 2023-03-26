@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
   /// DualTransitionBuilder DualTransitionBuilder({Key? key, required Animation<double> animation, required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder, required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder, Widget? child})
   DualTransitionBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> animation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> animation} , defaultValue:none
     required Animation<double> animation,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder} , defaultValue:none
     required AnimatedTransitionBuilder forwardBuilder,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder} , defaultValue:none
     required AnimatedTransitionBuilder reverseBuilder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -39,10 +39,10 @@ class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
           reverseBuilder: p.get('reverseBuilder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('animation', animation);
-    matePut('forwardBuilder', forwardBuilder);
-    matePut('reverseBuilder', reverseBuilder);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('animation', animation);
+    mateDeclare('forwardBuilder', forwardBuilder);
+    mateDeclare('reverseBuilder', reverseBuilder);
+    mateDeclare('child', child);
   }
 }

@@ -14,43 +14,43 @@ import 'package:flutter/src/widgets/framework.dart';
 class TooltipThemeData$Mate extends TooltipThemeData with Mate {
   /// TooltipThemeData TooltipThemeData({double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback})
   TooltipThemeData$Mate({
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {double? verticalOffset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? verticalOffset} , defaultValue:none
     double? verticalOffset,
 
-    /// optionalParameters: {bool? preferBelow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? preferBelow} , defaultValue:none
     bool? preferBelow,
 
-    /// optionalParameters: {bool? excludeFromSemantics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? excludeFromSemantics} , defaultValue:none
     bool? excludeFromSemantics,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , defaultValue:none
     Decoration? decoration,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , defaultValue:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {Duration? waitDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? waitDuration} , defaultValue:none
     Duration? waitDuration,
 
-    /// optionalParameters: {Duration? showDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? showDuration} , defaultValue:none
     Duration? showDuration,
 
-    /// optionalParameters: {TooltipTriggerMode? triggerMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TooltipTriggerMode? triggerMode} , defaultValue:none
     TooltipTriggerMode? triggerMode,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
   }) : super(
           height: height,
@@ -82,19 +82,19 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
           triggerMode: p.get('triggerMode').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    matePut('height', height);
-    matePut('padding', padding);
-    matePut('margin', margin);
-    matePut('verticalOffset', verticalOffset);
-    matePut('preferBelow', preferBelow);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('decoration', decoration);
-    matePut('textStyle', textStyle);
-    matePut('textAlign', textAlign);
-    matePut('waitDuration', waitDuration);
-    matePut('showDuration', showDuration);
-    matePut('triggerMode', triggerMode);
-    matePut('enableFeedback', enableFeedback);
+    mateDeclare('height', height);
+    mateDeclare('padding', padding);
+    mateDeclare('margin', margin);
+    mateDeclare('verticalOffset', verticalOffset);
+    mateDeclare('preferBelow', preferBelow);
+    mateDeclare('excludeFromSemantics', excludeFromSemantics);
+    mateDeclare('decoration', decoration);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('waitDuration', waitDuration);
+    mateDeclare('showDuration', showDuration);
+    mateDeclare('triggerMode', triggerMode);
+    mateDeclare('enableFeedback', enableFeedback);
   }
 }
 
@@ -102,13 +102,13 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
 class TooltipTheme$Mate extends TooltipTheme with Mate {
   /// TooltipTheme TooltipTheme({Key? key, required TooltipThemeData data, required Widget child})
   TooltipTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required TooltipThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TooltipThemeData data} , defaultValue:none
     required TooltipThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -120,8 +120,8 @@ class TooltipTheme$Mate extends TooltipTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

@@ -12,19 +12,19 @@ import 'dart:core';
 class Form$Mate extends Form with Mate {
   /// Form Form({Key? key, required Widget child, Future<bool> Function()? onWillPop, void Function()? onChanged, AutovalidateMode? autovalidateMode})
   Form$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {Future<bool> Function()? onWillPop} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Future<bool> Function()? onWillPop} , defaultValue:none
     WillPopCallback? onWillPop,
 
-    /// optionalParameters: {void Function()? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onChanged} , defaultValue:none
     VoidCallback? onChanged,
 
-    /// optionalParameters: {AutovalidateMode? autovalidateMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AutovalidateMode? autovalidateMode} , defaultValue:none
     AutovalidateMode? autovalidateMode,
   }) : super(
           key: key,
@@ -40,11 +40,11 @@ class Form$Mate extends Form with Mate {
           onChanged: p.get('onChanged').build(),
           autovalidateMode: p.get('autovalidateMode').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onWillPop', onWillPop);
-    matePut('onChanged', onChanged);
-    matePut('autovalidateMode', autovalidateMode);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('onWillPop', onWillPop);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('autovalidateMode', autovalidateMode);
   }
 }
 
@@ -52,28 +52,28 @@ class Form$Mate extends Form with Mate {
 class FormField$Mate<T> extends FormField<T> with Mate {
   /// FormField<T> FormField({Key? key, required Widget Function(FormFieldState<T>) builder, void Function(T?)? onSaved, String? Function(T?)? validator, T? initialValue, bool enabled = true, AutovalidateMode? autovalidateMode, String? restorationId})
   FormField$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(FormFieldState<T>) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(FormFieldState<T>) builder} , defaultValue:none
     required FormFieldBuilder<T> builder,
 
-    /// optionalParameters: {void Function(T?)? onSaved} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(T?)? onSaved} , defaultValue:none
     FormFieldSetter<T>? onSaved,
 
-    /// optionalParameters: {String? Function(T?)? validator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? Function(T?)? validator} , defaultValue:none
     FormFieldValidator<T>? validator,
 
-    /// optionalParameters: {T? initialValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? initialValue} , defaultValue:none
     T? initialValue,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    bool enabled = true,
 
-    /// optionalParameters: {AutovalidateMode? autovalidateMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AutovalidateMode? autovalidateMode} , defaultValue:none
     AutovalidateMode? autovalidateMode,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
   }) : super(
           key: key,
@@ -95,13 +95,13 @@ class FormField$Mate<T> extends FormField<T> with Mate {
           autovalidateMode: p.get('autovalidateMode').build(),
           restorationId: p.get('restorationId').build(),
         );
-    matePut('key', key);
-    matePut('builder', builder);
-    matePut('onSaved', onSaved);
-    matePut('validator', validator);
-    matePut('initialValue', initialValue);
-    matePut('enabled', enabled);
-    matePut('autovalidateMode', autovalidateMode);
-    matePut('restorationId', restorationId);
+    mateDeclare('key', key);
+    mateDeclare('builder', builder);
+    mateDeclare('onSaved', onSaved);
+    mateDeclare('validator', validator);
+    mateDeclare('initialValue', initialValue);
+    mateDeclare('enabled', enabled);
+    mateDeclare('autovalidateMode', autovalidateMode);
+    mateDeclare('restorationId', restorationId);
   }
 }

@@ -12,13 +12,13 @@ import 'package:flutter/src/painting/alignment.dart';
 class RenderPadding$Mate extends RenderPadding with Mate {
   /// RenderPadding RenderPadding({required EdgeInsetsGeometry padding, TextDirection? textDirection, RenderBox? child})
   RenderPadding$Mate({
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , defaultValue:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
   }) : super(
           padding: padding,
@@ -30,9 +30,9 @@ class RenderPadding$Mate extends RenderPadding with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    matePut('padding', padding);
-    matePut('textDirection', textDirection);
-    matePut('child', child);
+    mateDeclare('padding', padding);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('child', child);
   }
 }
 
@@ -40,19 +40,19 @@ class RenderPadding$Mate extends RenderPadding with Mate {
 class RenderPositionedBox$Mate extends RenderPositionedBox with Mate {
   /// RenderPositionedBox RenderPositionedBox({RenderBox? child, double? widthFactor, double? heightFactor, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderPositionedBox$Mate({
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , defaultValue:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , defaultValue:none
     double? heightFactor,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
   }) : super(
           child: child,
@@ -68,11 +68,11 @@ class RenderPositionedBox$Mate extends RenderPositionedBox with Mate {
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );
-    matePut('child', child);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
+    mateDeclare('child', child);
+    mateDeclare('widthFactor', widthFactor);
+    mateDeclare('heightFactor', heightFactor);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
   }
 }
 
@@ -80,25 +80,25 @@ class RenderPositionedBox$Mate extends RenderPositionedBox with Mate {
 class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox with Mate {
   /// RenderConstrainedOverflowBox RenderConstrainedOverflowBox({RenderBox? child, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderConstrainedOverflowBox$Mate({
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {double? minWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minWidth} , defaultValue:none
     double? minWidth,
 
-    /// optionalParameters: {double? maxWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? maxWidth} , defaultValue:none
     double? maxWidth,
 
-    /// optionalParameters: {double? minHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minHeight} , defaultValue:none
     double? minHeight,
 
-    /// optionalParameters: {double? maxHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? maxHeight} , defaultValue:none
     double? maxHeight,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
   }) : super(
           child: child,
@@ -118,13 +118,13 @@ class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox wit
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );
-    matePut('child', child);
-    matePut('minWidth', minWidth);
-    matePut('maxWidth', maxWidth);
-    matePut('minHeight', minHeight);
-    matePut('maxHeight', maxHeight);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
+    mateDeclare('child', child);
+    mateDeclare('minWidth', minWidth);
+    mateDeclare('maxWidth', maxWidth);
+    mateDeclare('minHeight', minHeight);
+    mateDeclare('maxHeight', maxHeight);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
   }
 }
 
@@ -132,19 +132,19 @@ class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox wit
 class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox with Mate {
   /// RenderConstraintsTransformBox RenderConstraintsTransformBox({required AlignmentGeometry alignment = Alignment.center, required TextDirection? textDirection, required BoxConstraints Function(BoxConstraints) constraintsTransform, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderConstraintsTransformBox$Mate({
-    /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {required TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection? textDirection} , defaultValue:none
     required TextDirection? textDirection,
 
-    /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , defaultValue:none
     required BoxConstraintsTransform constraintsTransform,
 
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           alignment: alignment,
@@ -160,11 +160,11 @@ class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox w
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
-    matePut('constraintsTransform', constraintsTransform);
-    matePut('child', child);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('constraintsTransform', constraintsTransform);
+    mateDeclare('child', child);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -172,16 +172,16 @@ class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox w
 class RenderSizedOverflowBox$Mate extends RenderSizedOverflowBox with Mate {
   /// RenderSizedOverflowBox RenderSizedOverflowBox({RenderBox? child, required Size requestedSize, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderSizedOverflowBox$Mate({
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {required Size requestedSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size requestedSize} , defaultValue:none
     required Size requestedSize,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
   }) : super(
           child: child,
@@ -195,10 +195,10 @@ class RenderSizedOverflowBox$Mate extends RenderSizedOverflowBox with Mate {
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );
-    matePut('child', child);
-    matePut('requestedSize', requestedSize);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
+    mateDeclare('child', child);
+    mateDeclare('requestedSize', requestedSize);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
   }
 }
 
@@ -206,19 +206,19 @@ class RenderSizedOverflowBox$Mate extends RenderSizedOverflowBox with Mate {
 class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOverflowBox with Mate {
   /// RenderFractionallySizedOverflowBox RenderFractionallySizedOverflowBox({RenderBox? child, double? widthFactor, double? heightFactor, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderFractionallySizedOverflowBox$Mate({
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , defaultValue:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , defaultValue:none
     double? heightFactor,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
   }) : super(
           child: child,
@@ -234,11 +234,11 @@ class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOve
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );
-    matePut('child', child);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
+    mateDeclare('child', child);
+    mateDeclare('widthFactor', widthFactor);
+    mateDeclare('heightFactor', heightFactor);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
   }
 }
 
@@ -246,10 +246,10 @@ class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOve
 class RenderCustomSingleChildLayoutBox$Mate extends RenderCustomSingleChildLayoutBox with Mate {
   /// RenderCustomSingleChildLayoutBox RenderCustomSingleChildLayoutBox({RenderBox? child, required SingleChildLayoutDelegate delegate})
   RenderCustomSingleChildLayoutBox$Mate({
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {required SingleChildLayoutDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SingleChildLayoutDelegate delegate} , defaultValue:none
     required SingleChildLayoutDelegate delegate,
   }) : super(
           child: child,
@@ -259,8 +259,8 @@ class RenderCustomSingleChildLayoutBox$Mate extends RenderCustomSingleChildLayou
           child: p.get('child').build(),
           delegate: p.get('delegate').build(),
         );
-    matePut('child', child);
-    matePut('delegate', delegate);
+    mateDeclare('child', child);
+    mateDeclare('delegate', delegate);
   }
 }
 
@@ -268,13 +268,13 @@ class RenderCustomSingleChildLayoutBox$Mate extends RenderCustomSingleChildLayou
 class RenderBaseline$Mate extends RenderBaseline with Mate {
   /// RenderBaseline RenderBaseline({RenderBox? child, required double baseline, required TextBaseline baselineType})
   RenderBaseline$Mate({
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {required double baseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double baseline} , defaultValue:none
     required double baseline,
 
-    /// optionalParameters: {required TextBaseline baselineType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextBaseline baselineType} , defaultValue:none
     required TextBaseline baselineType,
   }) : super(
           child: child,
@@ -286,8 +286,8 @@ class RenderBaseline$Mate extends RenderBaseline with Mate {
           baseline: p.get('baseline').build(),
           baselineType: p.get('baselineType').build(),
         );
-    matePut('child', child);
-    matePut('baseline', baseline);
-    matePut('baselineType', baselineType);
+    mateDeclare('child', child);
+    mateDeclare('baseline', baseline);
+    mateDeclare('baselineType', baselineType);
   }
 }

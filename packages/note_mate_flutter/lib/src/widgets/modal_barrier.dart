@@ -13,28 +13,28 @@ import 'package:flutter/src/animation/animation.dart';
 class ModalBarrier$Mate extends ModalBarrier with Mate {
   /// ModalBarrier ModalBarrier({Key? key, Color? color, bool dismissible = true, void Function()? onDismiss, String? semanticsLabel, bool? barrierSemanticsDismissible = true, ValueNotifier<EdgeInsets>? clipDetailsNotifier, String? semanticsOnTapHint})
   ModalBarrier$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {bool dismissible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool dismissible,
+    /// optionalParameters: {bool dismissible = true} , defaultValue:Literal
+    bool dismissible = true,
 
-    /// optionalParameters: {void Function()? onDismiss} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDismiss} , defaultValue:none
     VoidCallback? onDismiss,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {bool? barrierSemanticsDismissible = true} , hasDefaultValue:true, defaultValueCode:true
-    bool? barrierSemanticsDismissible,
+    /// optionalParameters: {bool? barrierSemanticsDismissible = true} , defaultValue:Literal
+    bool? barrierSemanticsDismissible = true,
 
-    /// optionalParameters: {ValueNotifier<EdgeInsets>? clipDetailsNotifier} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ValueNotifier<EdgeInsets>? clipDetailsNotifier} , defaultValue:none
     ValueNotifier<EdgeInsets>? clipDetailsNotifier,
 
-    /// optionalParameters: {String? semanticsOnTapHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsOnTapHint} , defaultValue:none
     String? semanticsOnTapHint,
   }) : super(
           key: key,
@@ -56,14 +56,14 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('dismissible', dismissible);
-    matePut('onDismiss', onDismiss);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('barrierSemanticsDismissible', barrierSemanticsDismissible);
-    matePut('clipDetailsNotifier', clipDetailsNotifier);
-    matePut('semanticsOnTapHint', semanticsOnTapHint);
+    mateDeclare('key', key);
+    mateDeclare('color', color);
+    mateDeclare('dismissible', dismissible);
+    mateDeclare('onDismiss', onDismiss);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('barrierSemanticsDismissible', barrierSemanticsDismissible);
+    mateDeclare('clipDetailsNotifier', clipDetailsNotifier);
+    mateDeclare('semanticsOnTapHint', semanticsOnTapHint);
   }
 }
 
@@ -71,28 +71,28 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
 class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
   /// AnimatedModalBarrier AnimatedModalBarrier({Key? key, required Animation<Color?> color, bool dismissible = true, String? semanticsLabel, bool? barrierSemanticsDismissible, void Function()? onDismiss, ValueNotifier<EdgeInsets>? clipDetailsNotifier, String? semanticsOnTapHint})
   AnimatedModalBarrier$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<Color?> color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<Color?> color} , defaultValue:none
     required Animation<Color?> color,
 
-    /// optionalParameters: {bool dismissible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool dismissible,
+    /// optionalParameters: {bool dismissible = true} , defaultValue:Literal
+    bool dismissible = true,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {bool? barrierSemanticsDismissible} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? barrierSemanticsDismissible} , defaultValue:none
     bool? barrierSemanticsDismissible,
 
-    /// optionalParameters: {void Function()? onDismiss} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDismiss} , defaultValue:none
     VoidCallback? onDismiss,
 
-    /// optionalParameters: {ValueNotifier<EdgeInsets>? clipDetailsNotifier} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ValueNotifier<EdgeInsets>? clipDetailsNotifier} , defaultValue:none
     ValueNotifier<EdgeInsets>? clipDetailsNotifier,
 
-    /// optionalParameters: {String? semanticsOnTapHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsOnTapHint} , defaultValue:none
     String? semanticsOnTapHint,
   }) : super(
           key: key,
@@ -114,13 +114,13 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('dismissible', dismissible);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('barrierSemanticsDismissible', barrierSemanticsDismissible);
-    matePut('onDismiss', onDismiss);
-    matePut('clipDetailsNotifier', clipDetailsNotifier);
-    matePut('semanticsOnTapHint', semanticsOnTapHint);
+    mateDeclare('key', key);
+    mateDeclare('color', color);
+    mateDeclare('dismissible', dismissible);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('barrierSemanticsDismissible', barrierSemanticsDismissible);
+    mateDeclare('onDismiss', onDismiss);
+    mateDeclare('clipDetailsNotifier', clipDetailsNotifier);
+    mateDeclare('semanticsOnTapHint', semanticsOnTapHint);
   }
 }

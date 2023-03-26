@@ -8,19 +8,19 @@ import 'dart:core';
 class RawKeyEventDataMacOs$Mate extends RawKeyEventDataMacOs with Mate {
   /// RawKeyEventDataMacOs RawKeyEventDataMacOs({String characters = '', String charactersIgnoringModifiers = '', int keyCode = 0, int modifiers = 0, int? specifiedLogicalKey})
   RawKeyEventDataMacOs$Mate({
-    /// optionalParameters: {String characters = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String characters,
+    /// optionalParameters: {String characters = ''} , defaultValue:Literal
+    String characters = '',
 
-    /// optionalParameters: {String charactersIgnoringModifiers = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String charactersIgnoringModifiers,
+    /// optionalParameters: {String charactersIgnoringModifiers = ''} , defaultValue:Literal
+    String charactersIgnoringModifiers = '',
 
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    int keyCode = 0,
 
-    /// optionalParameters: {int modifiers = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int modifiers,
+    /// optionalParameters: {int modifiers = 0} , defaultValue:Literal
+    int modifiers = 0,
 
-    /// optionalParameters: {int? specifiedLogicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? specifiedLogicalKey} , defaultValue:none
     int? specifiedLogicalKey,
   }) : super(
           characters: characters,
@@ -36,10 +36,10 @@ class RawKeyEventDataMacOs$Mate extends RawKeyEventDataMacOs with Mate {
           modifiers: p.get('modifiers').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    matePut('characters', characters);
-    matePut('charactersIgnoringModifiers', charactersIgnoringModifiers);
-    matePut('keyCode', keyCode);
-    matePut('modifiers', modifiers);
-    matePut('specifiedLogicalKey', specifiedLogicalKey);
+    mateDeclare('characters', characters);
+    mateDeclare('charactersIgnoringModifiers', charactersIgnoringModifiers);
+    mateDeclare('keyCode', keyCode);
+    mateDeclare('modifiers', modifiers);
+    mateDeclare('specifiedLogicalKey', specifiedLogicalKey);
   }
 }

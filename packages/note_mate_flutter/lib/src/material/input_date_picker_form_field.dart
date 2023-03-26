@@ -12,44 +12,44 @@ import 'package:flutter/src/services/text_input.dart';
 class InputDatePickerFormField$Mate extends InputDatePickerFormField with Mate {
   /// InputDatePickerFormField InputDatePickerFormField({Key? key, DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, void Function(DateTime)? onDateSubmitted, void Function(DateTime)? onDateSaved, bool Function(DateTime)? selectableDayPredicate, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, bool autofocus = false})
   InputDatePickerFormField$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {DateTime? initialDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DateTime? initialDate} , defaultValue:none
     DateTime? initialDate,
 
-    /// optionalParameters: {required DateTime firstDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime firstDate} , defaultValue:none
     required DateTime firstDate,
 
-    /// optionalParameters: {required DateTime lastDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime lastDate} , defaultValue:none
     required DateTime lastDate,
 
-    /// optionalParameters: {void Function(DateTime)? onDateSubmitted} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(DateTime)? onDateSubmitted} , defaultValue:none
     ValueChanged<DateTime>? onDateSubmitted,
 
-    /// optionalParameters: {void Function(DateTime)? onDateSaved} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(DateTime)? onDateSaved} , defaultValue:none
     ValueChanged<DateTime>? onDateSaved,
 
-    /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , defaultValue:none
     SelectableDayPredicate? selectableDayPredicate,
 
-    /// optionalParameters: {String? errorFormatText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorFormatText} , defaultValue:none
     String? errorFormatText,
 
-    /// optionalParameters: {String? errorInvalidText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorInvalidText} , defaultValue:none
     String? errorInvalidText,
 
-    /// optionalParameters: {String? fieldHintText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fieldHintText} , defaultValue:none
     String? fieldHintText,
 
-    /// optionalParameters: {String? fieldLabelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fieldLabelText} , defaultValue:none
     String? fieldLabelText,
 
-    /// optionalParameters: {TextInputType? keyboardType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextInputType? keyboardType} , defaultValue:none
     TextInputType? keyboardType,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
   }) : super(
           key: key,
           initialDate: initialDate,
@@ -80,18 +80,18 @@ class InputDatePickerFormField$Mate extends InputDatePickerFormField with Mate {
           keyboardType: p.get('keyboardType').build(),
           autofocus: p.get('autofocus').build(),
         );
-    matePut('key', key);
-    matePut('initialDate', initialDate);
-    matePut('firstDate', firstDate);
-    matePut('lastDate', lastDate);
-    matePut('onDateSubmitted', onDateSubmitted);
-    matePut('onDateSaved', onDateSaved);
-    matePut('selectableDayPredicate', selectableDayPredicate);
-    matePut('errorFormatText', errorFormatText);
-    matePut('errorInvalidText', errorInvalidText);
-    matePut('fieldHintText', fieldHintText);
-    matePut('fieldLabelText', fieldLabelText);
-    matePut('keyboardType', keyboardType);
-    matePut('autofocus', autofocus);
+    mateDeclare('key', key);
+    mateDeclare('initialDate', initialDate);
+    mateDeclare('firstDate', firstDate);
+    mateDeclare('lastDate', lastDate);
+    mateDeclare('onDateSubmitted', onDateSubmitted);
+    mateDeclare('onDateSaved', onDateSaved);
+    mateDeclare('selectableDayPredicate', selectableDayPredicate);
+    mateDeclare('errorFormatText', errorFormatText);
+    mateDeclare('errorInvalidText', errorInvalidText);
+    mateDeclare('fieldHintText', fieldHintText);
+    mateDeclare('fieldLabelText', fieldLabelText);
+    mateDeclare('keyboardType', keyboardType);
+    mateDeclare('autofocus', autofocus);
   }
 }

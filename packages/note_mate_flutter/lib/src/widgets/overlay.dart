@@ -11,14 +11,14 @@ import 'dart:ui';
 class OverlayEntry$Mate extends OverlayEntry with Mate {
   /// OverlayEntry OverlayEntry({required Widget Function(BuildContext) builder, bool opaque = false, bool maintainState = false})
   OverlayEntry$Mate({
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , defaultValue:none
     required WidgetBuilder builder,
 
-    /// optionalParameters: {bool opaque = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool opaque,
+    /// optionalParameters: {bool opaque = false} , defaultValue:Literal
+    bool opaque = false,
 
-    /// optionalParameters: {bool maintainState = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool maintainState,
+    /// optionalParameters: {bool maintainState = false} , defaultValue:Literal
+    bool maintainState = false,
   }) : super(
           builder: builder,
           opaque: opaque,
@@ -29,9 +29,9 @@ class OverlayEntry$Mate extends OverlayEntry with Mate {
           opaque: p.get('opaque').build(),
           maintainState: p.get('maintainState').build(),
         );
-    matePut('builder', builder);
-    matePut('opaque', opaque);
-    matePut('maintainState', maintainState);
+    mateDeclare('builder', builder);
+    mateDeclare('opaque', opaque);
+    mateDeclare('maintainState', maintainState);
   }
 }
 
@@ -39,13 +39,13 @@ class OverlayEntry$Mate extends OverlayEntry with Mate {
 class Overlay$Mate extends Overlay with Mate {
   /// Overlay Overlay({Key? key, List<OverlayEntry> initialEntries = const <OverlayEntry>[], Clip clipBehavior = Clip.hardEdge})
   Overlay$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {List<OverlayEntry> initialEntries = const <OverlayEntry>[]} , hasDefaultValue:true, defaultValueCode:const <OverlayEntry>[]
+    /// optionalParameters: {List<OverlayEntry> initialEntries = const <OverlayEntry>[]} , defaultValue:unprocessed
     required List<OverlayEntry> initialEntries,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -57,9 +57,9 @@ class Overlay$Mate extends Overlay with Mate {
           initialEntries: p.get('initialEntries').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('initialEntries', initialEntries);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('initialEntries', initialEntries);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -68,11 +68,11 @@ class OverlayPortalController$Mate extends OverlayPortalController with Mate {
   /// OverlayPortalController OverlayPortalController({String? debugLabel})
   OverlayPortalController$Mate(
       {
-      /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {String? debugLabel} , defaultValue:none
       String? debugLabel})
       : super(debugLabel: debugLabel) {
     mateBuilder = (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
-    matePut('debugLabel', debugLabel);
+    mateDeclare('debugLabel', debugLabel);
   }
 }
 
@@ -80,16 +80,16 @@ class OverlayPortalController$Mate extends OverlayPortalController with Mate {
 class OverlayPortal$Mate extends OverlayPortal with Mate {
   /// OverlayPortal OverlayPortal({Key? key, required OverlayPortalController controller, required Widget Function(BuildContext) overlayChildBuilder, Widget? child})
   OverlayPortal$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required OverlayPortalController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required OverlayPortalController controller} , defaultValue:none
     required OverlayPortalController controller,
 
-    /// optionalParameters: {required Widget Function(BuildContext) overlayChildBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) overlayChildBuilder} , defaultValue:none
     required WidgetBuilder overlayChildBuilder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -103,24 +103,24 @@ class OverlayPortal$Mate extends OverlayPortal with Mate {
           overlayChildBuilder: p.get('overlayChildBuilder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('overlayChildBuilder', overlayChildBuilder);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('controller', controller);
+    mateDeclare('overlayChildBuilder', overlayChildBuilder);
+    mateDeclare('child', child);
   }
 
   /// OverlayPortal OverlayPortal.targetsRootOverlay({Key? key, required OverlayPortalController controller, required Widget Function(BuildContext) overlayChildBuilder, Widget? child})
   OverlayPortal$Mate.targetsRootOverlay({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required OverlayPortalController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required OverlayPortalController controller} , defaultValue:none
     required OverlayPortalController controller,
 
-    /// optionalParameters: {required Widget Function(BuildContext) overlayChildBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) overlayChildBuilder} , defaultValue:none
     required WidgetBuilder overlayChildBuilder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.targetsRootOverlay(
           key: key,
@@ -134,9 +134,9 @@ class OverlayPortal$Mate extends OverlayPortal with Mate {
           overlayChildBuilder: p.get('overlayChildBuilder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('overlayChildBuilder', overlayChildBuilder);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('controller', controller);
+    mateDeclare('overlayChildBuilder', overlayChildBuilder);
+    mateDeclare('child', child);
   }
 }

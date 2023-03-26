@@ -11,16 +11,16 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
   ClampedSimulation$Mate(
     /// requiredParameters: Simulation simulation
     Simulation simulation, {
-    /// optionalParameters: {double xMin = double.negativeInfinity} , hasDefaultValue:true, defaultValueCode:double.negativeInfinity
+    /// optionalParameters: {double xMin = double.negativeInfinity} , defaultValue:unprocessed
     required double xMin,
 
-    /// optionalParameters: {double xMax = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double xMax = double.infinity} , defaultValue:unprocessed
     required double xMax,
 
-    /// optionalParameters: {double dxMin = double.negativeInfinity} , hasDefaultValue:true, defaultValueCode:double.negativeInfinity
+    /// optionalParameters: {double dxMin = double.negativeInfinity} , defaultValue:unprocessed
     required double dxMin,
 
-    /// optionalParameters: {double dxMax = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double dxMax = double.infinity} , defaultValue:unprocessed
     required double dxMax,
   }) : super(
           simulation,
@@ -36,10 +36,10 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
           dxMin: p.get('dxMin').build(),
           dxMax: p.get('dxMax').build(),
         );
-    matePut('simulation', simulation);
-    matePut('xMin', xMin);
-    matePut('xMax', xMax);
-    matePut('dxMin', dxMin);
-    matePut('dxMax', dxMax);
+    mateDeclare('simulation', simulation);
+    mateDeclare('xMin', xMin);
+    mateDeclare('xMax', xMax);
+    mateDeclare('dxMin', dxMin);
+    mateDeclare('dxMax', dxMax);
   }
 }

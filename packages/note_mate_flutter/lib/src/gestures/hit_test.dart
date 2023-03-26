@@ -12,7 +12,7 @@ class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T> with Ma
       T target)
       : super(target) {
     mateBuilder = (p) => HitTestEntry$Mate<T>(p.get('target').value);
-    matePut('target', target);
+    mateDeclare('target', target);
   }
 }
 
@@ -25,6 +25,6 @@ class HitTestResult$Mate extends HitTestResult with Mate {
       HitTestResult result)
       : super.wrap(result) {
     mateBuilder = (p) => HitTestResult$Mate.wrap(p.get('result').value);
-    matePut('result', result);
+    mateDeclare('result', result);
   }
 }

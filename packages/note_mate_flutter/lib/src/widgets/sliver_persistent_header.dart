@@ -9,17 +9,17 @@ import 'dart:core';
 class SliverPersistentHeader$Mate extends SliverPersistentHeader with Mate {
   /// SliverPersistentHeader SliverPersistentHeader({Key? key, required SliverPersistentHeaderDelegate delegate, bool pinned = false, bool floating = false})
   SliverPersistentHeader$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required SliverPersistentHeaderDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliverPersistentHeaderDelegate delegate} , defaultValue:none
     required SliverPersistentHeaderDelegate delegate,
 
-    /// optionalParameters: {bool pinned = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool pinned,
+    /// optionalParameters: {bool pinned = false} , defaultValue:Literal
+    bool pinned = false,
 
-    /// optionalParameters: {bool floating = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool floating,
+    /// optionalParameters: {bool floating = false} , defaultValue:Literal
+    bool floating = false,
   }) : super(
           key: key,
           delegate: delegate,
@@ -32,9 +32,9 @@ class SliverPersistentHeader$Mate extends SliverPersistentHeader with Mate {
           pinned: p.get('pinned').build(),
           floating: p.get('floating').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('pinned', pinned);
-    matePut('floating', floating);
+    mateDeclare('key', key);
+    mateDeclare('delegate', delegate);
+    mateDeclare('pinned', pinned);
+    mateDeclare('floating', floating);
   }
 }

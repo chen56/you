@@ -10,13 +10,13 @@ import 'dart:ui';
 class RenderFlow$Mate extends RenderFlow with Mate {
   /// RenderFlow RenderFlow({List<RenderBox>? children, required FlowDelegate delegate, Clip clipBehavior = Clip.hardEdge})
   RenderFlow$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {required FlowDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlowDelegate delegate} , defaultValue:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           children: children,
@@ -28,8 +28,8 @@ class RenderFlow$Mate extends RenderFlow with Mate {
           delegate: p.get('delegate').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('children', children);
-    matePut('delegate', delegate);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
+    mateDeclare('delegate', delegate);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }

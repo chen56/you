@@ -9,26 +9,26 @@ import 'dart:core';
 class StarBorder$Mate extends StarBorder with Mate {
   /// StarBorder StarBorder({BorderSide side = BorderSide.none, double points = 5, double innerRadiusRatio = 0.4, double pointRounding = 0, double valleyRounding = 0, double rotation = 0, double squash = 0})
   StarBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
     required BorderSide side,
 
-    /// optionalParameters: {double points = 5} , hasDefaultValue:true, defaultValueCode:5
-    required double points,
+    /// optionalParameters: {double points = 5} , defaultValue:Literal
+    double points = 5,
 
-    /// optionalParameters: {double innerRadiusRatio = 0.4} , hasDefaultValue:true, defaultValueCode:0.4
-    required double innerRadiusRatio,
+    /// optionalParameters: {double innerRadiusRatio = 0.4} , defaultValue:Literal
+    double innerRadiusRatio = 0.4,
 
-    /// optionalParameters: {double pointRounding = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double pointRounding,
+    /// optionalParameters: {double pointRounding = 0} , defaultValue:Literal
+    double pointRounding = 0,
 
-    /// optionalParameters: {double valleyRounding = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double valleyRounding,
+    /// optionalParameters: {double valleyRounding = 0} , defaultValue:Literal
+    double valleyRounding = 0,
 
-    /// optionalParameters: {double rotation = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double rotation,
+    /// optionalParameters: {double rotation = 0} , defaultValue:Literal
+    double rotation = 0,
 
-    /// optionalParameters: {double squash = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double squash,
+    /// optionalParameters: {double squash = 0} , defaultValue:Literal
+    double squash = 0,
   }) : super(
           side: side,
           points: points,
@@ -47,31 +47,31 @@ class StarBorder$Mate extends StarBorder with Mate {
           rotation: p.get('rotation').build(),
           squash: p.get('squash').build(),
         );
-    matePut('side', side);
-    matePut('points', points);
-    matePut('innerRadiusRatio', innerRadiusRatio);
-    matePut('pointRounding', pointRounding);
-    matePut('valleyRounding', valleyRounding);
-    matePut('rotation', rotation);
-    matePut('squash', squash);
+    mateDeclare('side', side);
+    mateDeclare('points', points);
+    mateDeclare('innerRadiusRatio', innerRadiusRatio);
+    mateDeclare('pointRounding', pointRounding);
+    mateDeclare('valleyRounding', valleyRounding);
+    mateDeclare('rotation', rotation);
+    mateDeclare('squash', squash);
   }
 
   /// StarBorder StarBorder.polygon({BorderSide side = BorderSide.none, double sides = 5, double pointRounding = 0, double rotation = 0, double squash = 0})
   StarBorder$Mate.polygon({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
     required BorderSide side,
 
-    /// optionalParameters: {double sides = 5} , hasDefaultValue:true, defaultValueCode:5
-    required double sides,
+    /// optionalParameters: {double sides = 5} , defaultValue:Literal
+    double sides = 5,
 
-    /// optionalParameters: {double pointRounding = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double pointRounding,
+    /// optionalParameters: {double pointRounding = 0} , defaultValue:Literal
+    double pointRounding = 0,
 
-    /// optionalParameters: {double rotation = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double rotation,
+    /// optionalParameters: {double rotation = 0} , defaultValue:Literal
+    double rotation = 0,
 
-    /// optionalParameters: {double squash = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double squash,
+    /// optionalParameters: {double squash = 0} , defaultValue:Literal
+    double squash = 0,
   }) : super.polygon(
           side: side,
           sides: sides,
@@ -86,10 +86,10 @@ class StarBorder$Mate extends StarBorder with Mate {
           rotation: p.get('rotation').build(),
           squash: p.get('squash').build(),
         );
-    matePut('side', side);
-    matePut('sides', sides);
-    matePut('pointRounding', pointRounding);
-    matePut('rotation', rotation);
-    matePut('squash', squash);
+    mateDeclare('side', side);
+    mateDeclare('sides', sides);
+    mateDeclare('pointRounding', pointRounding);
+    mateDeclare('rotation', rotation);
+    mateDeclare('squash', squash);
   }
 }

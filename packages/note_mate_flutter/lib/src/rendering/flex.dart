@@ -11,31 +11,31 @@ import 'dart:ui';
 class RenderFlex$Mate extends RenderFlex with Mate {
   /// RenderFlex RenderFlex({List<RenderBox>? children, Axis direction = Axis.horizontal, MainAxisSize mainAxisSize = MainAxisSize.max, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, Clip clipBehavior = Clip.none})
   RenderFlex$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , hasDefaultValue:true, defaultValueCode:Axis.horizontal
+    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:unprocessed
     required Axis direction,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , hasDefaultValue:true, defaultValueCode:MainAxisSize.max
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:unprocessed
     required MainAxisSize mainAxisSize,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , hasDefaultValue:true, defaultValueCode:MainAxisAlignment.start
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:unprocessed
     required MainAxisAlignment mainAxisAlignment,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , hasDefaultValue:true, defaultValueCode:CrossAxisAlignment.center
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:unprocessed
     required CrossAxisAlignment crossAxisAlignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:unprocessed
     required VerticalDirection verticalDirection,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           children: children,
@@ -59,14 +59,14 @@ class RenderFlex$Mate extends RenderFlex with Mate {
           textBaseline: p.get('textBaseline').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('children', children);
-    matePut('direction', direction);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('mainAxisAlignment', mainAxisAlignment);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('textBaseline', textBaseline);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
+    mateDeclare('direction', direction);
+    mateDeclare('mainAxisSize', mainAxisSize);
+    mateDeclare('mainAxisAlignment', mainAxisAlignment);
+    mateDeclare('crossAxisAlignment', crossAxisAlignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('verticalDirection', verticalDirection);
+    mateDeclare('textBaseline', textBaseline);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }

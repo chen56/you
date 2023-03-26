@@ -32,10 +32,10 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           p.get('right').value,
           p.get('bottom').value,
         );
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
+    mateDeclare('left', left);
+    mateDeclare('top', top);
+    mateDeclare('right', right);
+    mateDeclare('bottom', bottom);
   }
 
   /// EdgeInsets EdgeInsets.all(double value)
@@ -45,22 +45,22 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
       double value)
       : super.all(value) {
     mateBuilder = (p) => EdgeInsets$Mate.all(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 
   /// EdgeInsets EdgeInsets.only({double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0})
   EdgeInsets$Mate.only({
-    /// optionalParameters: {double left = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double left,
+    /// optionalParameters: {double left = 0.0} , defaultValue:Literal
+    double left = 0.0,
 
-    /// optionalParameters: {double top = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double top,
+    /// optionalParameters: {double top = 0.0} , defaultValue:Literal
+    double top = 0.0,
 
-    /// optionalParameters: {double right = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double right,
+    /// optionalParameters: {double right = 0.0} , defaultValue:Literal
+    double right = 0.0,
 
-    /// optionalParameters: {double bottom = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double bottom,
+    /// optionalParameters: {double bottom = 0.0} , defaultValue:Literal
+    double bottom = 0.0,
   }) : super.only(
           left: left,
           top: top,
@@ -73,19 +73,19 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           right: p.get('right').build(),
           bottom: p.get('bottom').build(),
         );
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
+    mateDeclare('left', left);
+    mateDeclare('top', top);
+    mateDeclare('right', right);
+    mateDeclare('bottom', bottom);
   }
 
   /// EdgeInsets EdgeInsets.symmetric({double vertical = 0.0, double horizontal = 0.0})
   EdgeInsets$Mate.symmetric({
-    /// optionalParameters: {double vertical = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double vertical,
+    /// optionalParameters: {double vertical = 0.0} , defaultValue:Literal
+    double vertical = 0.0,
 
-    /// optionalParameters: {double horizontal = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double horizontal,
+    /// optionalParameters: {double horizontal = 0.0} , defaultValue:Literal
+    double horizontal = 0.0,
   }) : super.symmetric(
           vertical: vertical,
           horizontal: horizontal,
@@ -94,8 +94,8 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           vertical: p.get('vertical').build(),
           horizontal: p.get('horizontal').build(),
         );
-    matePut('vertical', vertical);
-    matePut('horizontal', horizontal);
+    mateDeclare('vertical', vertical);
+    mateDeclare('horizontal', horizontal);
   }
 
   /// EdgeInsets EdgeInsets.fromViewPadding(ViewPadding padding, double devicePixelRatio)
@@ -113,8 +113,8 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           p.get('padding').value,
           p.get('devicePixelRatio').value,
         );
-    matePut('padding', padding);
-    matePut('devicePixelRatio', devicePixelRatio);
+    mateDeclare('padding', padding);
+    mateDeclare('devicePixelRatio', devicePixelRatio);
   }
 }
 
@@ -145,25 +145,25 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           p.get('end').value,
           p.get('bottom').value,
         );
-    matePut('start', start);
-    matePut('top', top);
-    matePut('end', end);
-    matePut('bottom', bottom);
+    mateDeclare('start', start);
+    mateDeclare('top', top);
+    mateDeclare('end', end);
+    mateDeclare('bottom', bottom);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.only({double start = 0.0, double top = 0.0, double end = 0.0, double bottom = 0.0})
   EdgeInsetsDirectional$Mate.only({
-    /// optionalParameters: {double start = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double start,
+    /// optionalParameters: {double start = 0.0} , defaultValue:Literal
+    double start = 0.0,
 
-    /// optionalParameters: {double top = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double top,
+    /// optionalParameters: {double top = 0.0} , defaultValue:Literal
+    double top = 0.0,
 
-    /// optionalParameters: {double end = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double end,
+    /// optionalParameters: {double end = 0.0} , defaultValue:Literal
+    double end = 0.0,
 
-    /// optionalParameters: {double bottom = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double bottom,
+    /// optionalParameters: {double bottom = 0.0} , defaultValue:Literal
+    double bottom = 0.0,
   }) : super.only(
           start: start,
           top: top,
@@ -176,19 +176,19 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           end: p.get('end').build(),
           bottom: p.get('bottom').build(),
         );
-    matePut('start', start);
-    matePut('top', top);
-    matePut('end', end);
-    matePut('bottom', bottom);
+    mateDeclare('start', start);
+    mateDeclare('top', top);
+    mateDeclare('end', end);
+    mateDeclare('bottom', bottom);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.symmetric({double horizontal = 0.0, double vertical = 0.0})
   EdgeInsetsDirectional$Mate.symmetric({
-    /// optionalParameters: {double horizontal = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double horizontal,
+    /// optionalParameters: {double horizontal = 0.0} , defaultValue:Literal
+    double horizontal = 0.0,
 
-    /// optionalParameters: {double vertical = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double vertical,
+    /// optionalParameters: {double vertical = 0.0} , defaultValue:Literal
+    double vertical = 0.0,
   }) : super.symmetric(
           horizontal: horizontal,
           vertical: vertical,
@@ -197,8 +197,8 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           horizontal: p.get('horizontal').build(),
           vertical: p.get('vertical').build(),
         );
-    matePut('horizontal', horizontal);
-    matePut('vertical', vertical);
+    mateDeclare('horizontal', horizontal);
+    mateDeclare('vertical', vertical);
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.all(double value)
@@ -208,6 +208,6 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
       double value)
       : super.all(value) {
     mateBuilder = (p) => EdgeInsetsDirectional$Mate.all(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }

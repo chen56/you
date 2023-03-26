@@ -11,16 +11,16 @@ import 'package:flutter/src/painting/strut_style.dart';
 class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
   /// PlaceholderDimensions PlaceholderDimensions({required Size size, required PlaceholderAlignment alignment, TextBaseline? baseline, double? baselineOffset})
   PlaceholderDimensions$Mate({
-    /// optionalParameters: {required Size size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size size} , defaultValue:none
     required Size size,
 
-    /// optionalParameters: {required PlaceholderAlignment alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlaceholderAlignment alignment} , defaultValue:none
     required PlaceholderAlignment alignment,
 
-    /// optionalParameters: {TextBaseline? baseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? baseline} , defaultValue:none
     TextBaseline? baseline,
 
-    /// optionalParameters: {double? baselineOffset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? baselineOffset} , defaultValue:none
     double? baselineOffset,
   }) : super(
           size: size,
@@ -34,10 +34,10 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
           baseline: p.get('baseline').build(),
           baselineOffset: p.get('baselineOffset').build(),
         );
-    matePut('size', size);
-    matePut('alignment', alignment);
-    matePut('baseline', baseline);
-    matePut('baselineOffset', baselineOffset);
+    mateDeclare('size', size);
+    mateDeclare('alignment', alignment);
+    mateDeclare('baseline', baseline);
+    mateDeclare('baselineOffset', baselineOffset);
   }
 }
 
@@ -45,34 +45,34 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
 class TextPainter$Mate extends TextPainter with Mate {
   /// TextPainter TextPainter({InlineSpan? text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, double textScaleFactor = 1.0, int? maxLines, String? ellipsis, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior})
   TextPainter$Mate({
-    /// optionalParameters: {InlineSpan? text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InlineSpan? text} , defaultValue:none
     InlineSpan? text,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , hasDefaultValue:true, defaultValueCode:TextAlign.start
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
     required TextAlign textAlign,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double textScaleFactor,
+    /// optionalParameters: {double textScaleFactor = 1.0} , defaultValue:Literal
+    double textScaleFactor = 1.0,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , defaultValue:none
     int? maxLines,
 
-    /// optionalParameters: {String? ellipsis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ellipsis} , defaultValue:none
     String? ellipsis,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , hasDefaultValue:true, defaultValueCode:TextWidthBasis.parent
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
     required TextWidthBasis textWidthBasis,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
   }) : super(
           text: text,
@@ -98,15 +98,15 @@ class TextPainter$Mate extends TextPainter with Mate {
           textWidthBasis: p.get('textWidthBasis').build(),
           textHeightBehavior: p.get('textHeightBehavior').build(),
         );
-    matePut('text', text);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('maxLines', maxLines);
-    matePut('ellipsis', ellipsis);
-    matePut('locale', locale);
-    matePut('strutStyle', strutStyle);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
+    mateDeclare('text', text);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('textScaleFactor', textScaleFactor);
+    mateDeclare('maxLines', maxLines);
+    mateDeclare('ellipsis', ellipsis);
+    mateDeclare('locale', locale);
+    mateDeclare('strutStyle', strutStyle);
+    mateDeclare('textWidthBasis', textWidthBasis);
+    mateDeclare('textHeightBehavior', textHeightBehavior);
   }
 }

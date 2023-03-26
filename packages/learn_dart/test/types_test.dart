@@ -54,3 +54,13 @@ void main() {
 bool isNullableOf<T>(T t) {
   return null is T;
 }
+
+T declare<T>(String name, T t) {
+  print("declare: $name: $t");
+  return t;
+}
+
+class X {
+  String a;
+  X(this.a);
+}

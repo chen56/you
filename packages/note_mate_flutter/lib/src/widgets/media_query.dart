@@ -13,55 +13,55 @@ import 'package:flutter/src/widgets/framework.dart';
 class MediaQueryData$Mate extends MediaQueryData with Mate {
   /// MediaQueryData MediaQueryData({Size size = Size.zero, double devicePixelRatio = 1.0, double textScaleFactor = 1.0, Brightness platformBrightness = Brightness.light, EdgeInsets padding = EdgeInsets.zero, EdgeInsets viewInsets = EdgeInsets.zero, EdgeInsets systemGestureInsets = EdgeInsets.zero, EdgeInsets viewPadding = EdgeInsets.zero, bool alwaysUse24HourFormat = false, bool accessibleNavigation = false, bool invertColors = false, bool highContrast = false, bool disableAnimations = false, bool boldText = false, NavigationMode navigationMode = NavigationMode.traditional, DeviceGestureSettings gestureSettings = const DeviceGestureSettings(touchSlop: kTouchSlop), List<DisplayFeature> displayFeatures = const <ui.DisplayFeature>[]})
   MediaQueryData$Mate({
-    /// optionalParameters: {Size size = Size.zero} , hasDefaultValue:true, defaultValueCode:Size.zero
+    /// optionalParameters: {Size size = Size.zero} , defaultValue:unprocessed
     required Size size,
 
-    /// optionalParameters: {double devicePixelRatio = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double devicePixelRatio,
+    /// optionalParameters: {double devicePixelRatio = 1.0} , defaultValue:Literal
+    double devicePixelRatio = 1.0,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double textScaleFactor,
+    /// optionalParameters: {double textScaleFactor = 1.0} , defaultValue:Literal
+    double textScaleFactor = 1.0,
 
-    /// optionalParameters: {Brightness platformBrightness = Brightness.light} , hasDefaultValue:true, defaultValueCode:Brightness.light
+    /// optionalParameters: {Brightness platformBrightness = Brightness.light} , defaultValue:unprocessed
     required Brightness platformBrightness,
 
-    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsets padding,
 
-    /// optionalParameters: {EdgeInsets viewInsets = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsets viewInsets = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsets viewInsets,
 
-    /// optionalParameters: {EdgeInsets systemGestureInsets = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsets systemGestureInsets = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsets systemGestureInsets,
 
-    /// optionalParameters: {EdgeInsets viewPadding = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsets viewPadding = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsets viewPadding,
 
-    /// optionalParameters: {bool alwaysUse24HourFormat = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysUse24HourFormat,
+    /// optionalParameters: {bool alwaysUse24HourFormat = false} , defaultValue:Literal
+    bool alwaysUse24HourFormat = false,
 
-    /// optionalParameters: {bool accessibleNavigation = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool accessibleNavigation,
+    /// optionalParameters: {bool accessibleNavigation = false} , defaultValue:Literal
+    bool accessibleNavigation = false,
 
-    /// optionalParameters: {bool invertColors = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool invertColors,
+    /// optionalParameters: {bool invertColors = false} , defaultValue:Literal
+    bool invertColors = false,
 
-    /// optionalParameters: {bool highContrast = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool highContrast,
+    /// optionalParameters: {bool highContrast = false} , defaultValue:Literal
+    bool highContrast = false,
 
-    /// optionalParameters: {bool disableAnimations = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool disableAnimations,
+    /// optionalParameters: {bool disableAnimations = false} , defaultValue:Literal
+    bool disableAnimations = false,
 
-    /// optionalParameters: {bool boldText = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool boldText,
+    /// optionalParameters: {bool boldText = false} , defaultValue:Literal
+    bool boldText = false,
 
-    /// optionalParameters: {NavigationMode navigationMode = NavigationMode.traditional} , hasDefaultValue:true, defaultValueCode:NavigationMode.traditional
+    /// optionalParameters: {NavigationMode navigationMode = NavigationMode.traditional} , defaultValue:unprocessed
     required NavigationMode navigationMode,
 
-    /// optionalParameters: {DeviceGestureSettings gestureSettings = const DeviceGestureSettings(touchSlop: kTouchSlop)} , hasDefaultValue:true, defaultValueCode:const DeviceGestureSettings(touchSlop: kTouchSlop)
+    /// optionalParameters: {DeviceGestureSettings gestureSettings = const DeviceGestureSettings(touchSlop: kTouchSlop)} , defaultValue:unprocessed
     required DeviceGestureSettings gestureSettings,
 
-    /// optionalParameters: {List<DisplayFeature> displayFeatures = const <ui.DisplayFeature>[]} , hasDefaultValue:true, defaultValueCode:const <ui.DisplayFeature>[]
+    /// optionalParameters: {List<DisplayFeature> displayFeatures = const <ui.DisplayFeature>[]} , defaultValue:unprocessed
     required List<DisplayFeature> displayFeatures,
   }) : super(
           size: size,
@@ -101,30 +101,30 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           gestureSettings: p.get('gestureSettings').build(),
           displayFeatures: p.get('displayFeatures').build(),
         );
-    matePut('size', size);
-    matePut('devicePixelRatio', devicePixelRatio);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('platformBrightness', platformBrightness);
-    matePut('padding', padding);
-    matePut('viewInsets', viewInsets);
-    matePut('systemGestureInsets', systemGestureInsets);
-    matePut('viewPadding', viewPadding);
-    matePut('alwaysUse24HourFormat', alwaysUse24HourFormat);
-    matePut('accessibleNavigation', accessibleNavigation);
-    matePut('invertColors', invertColors);
-    matePut('highContrast', highContrast);
-    matePut('disableAnimations', disableAnimations);
-    matePut('boldText', boldText);
-    matePut('navigationMode', navigationMode);
-    matePut('gestureSettings', gestureSettings);
-    matePut('displayFeatures', displayFeatures);
+    mateDeclare('size', size);
+    mateDeclare('devicePixelRatio', devicePixelRatio);
+    mateDeclare('textScaleFactor', textScaleFactor);
+    mateDeclare('platformBrightness', platformBrightness);
+    mateDeclare('padding', padding);
+    mateDeclare('viewInsets', viewInsets);
+    mateDeclare('systemGestureInsets', systemGestureInsets);
+    mateDeclare('viewPadding', viewPadding);
+    mateDeclare('alwaysUse24HourFormat', alwaysUse24HourFormat);
+    mateDeclare('accessibleNavigation', accessibleNavigation);
+    mateDeclare('invertColors', invertColors);
+    mateDeclare('highContrast', highContrast);
+    mateDeclare('disableAnimations', disableAnimations);
+    mateDeclare('boldText', boldText);
+    mateDeclare('navigationMode', navigationMode);
+    mateDeclare('gestureSettings', gestureSettings);
+    mateDeclare('displayFeatures', displayFeatures);
   }
 
   /// MediaQueryData MediaQueryData.fromView(FlutterView view, {MediaQueryData? platformData})
   MediaQueryData$Mate.fromView(
     /// requiredParameters: FlutterView view
     FlutterView view, {
-    /// optionalParameters: {MediaQueryData? platformData} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MediaQueryData? platformData} , defaultValue:none
     MediaQueryData? platformData,
   }) : super.fromView(
           view,
@@ -134,8 +134,8 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           p.get('view').value,
           platformData: p.get('platformData').build(),
         );
-    matePut('view', view);
-    matePut('platformData', platformData);
+    mateDeclare('view', view);
+    mateDeclare('platformData', platformData);
   }
 }
 
@@ -143,13 +143,13 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
 class MediaQuery$Mate extends MediaQuery with Mate {
   /// MediaQuery MediaQuery({Key? key, required MediaQueryData data, required Widget child})
   MediaQuery$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required MediaQueryData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MediaQueryData data} , defaultValue:none
     required MediaQueryData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -161,8 +161,8 @@ class MediaQuery$Mate extends MediaQuery with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

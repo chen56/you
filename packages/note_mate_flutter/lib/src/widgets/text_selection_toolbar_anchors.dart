@@ -8,10 +8,10 @@ import 'dart:ui';
 class TextSelectionToolbarAnchors$Mate extends TextSelectionToolbarAnchors with Mate {
   /// TextSelectionToolbarAnchors TextSelectionToolbarAnchors({required Offset primaryAnchor, Offset? secondaryAnchor})
   TextSelectionToolbarAnchors$Mate({
-    /// optionalParameters: {required Offset primaryAnchor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset primaryAnchor} , defaultValue:none
     required Offset primaryAnchor,
 
-    /// optionalParameters: {Offset? secondaryAnchor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? secondaryAnchor} , defaultValue:none
     Offset? secondaryAnchor,
   }) : super(
           primaryAnchor: primaryAnchor,
@@ -21,7 +21,7 @@ class TextSelectionToolbarAnchors$Mate extends TextSelectionToolbarAnchors with 
           primaryAnchor: p.get('primaryAnchor').build(),
           secondaryAnchor: p.get('secondaryAnchor').build(),
         );
-    matePut('primaryAnchor', primaryAnchor);
-    matePut('secondaryAnchor', secondaryAnchor);
+    mateDeclare('primaryAnchor', primaryAnchor);
+    mateDeclare('secondaryAnchor', secondaryAnchor);
   }
 }

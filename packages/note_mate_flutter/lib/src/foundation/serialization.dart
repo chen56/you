@@ -13,6 +13,6 @@ class ReadBuffer$Mate extends ReadBuffer with Mate {
       ByteData data)
       : super(data) {
     mateBuilder = (p) => ReadBuffer$Mate(p.get('data').value);
-    matePut('data', data);
+    mateDeclare('data', data);
   }
 }

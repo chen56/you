@@ -14,25 +14,25 @@ import 'package:flutter/src/widgets/framework.dart';
 class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilder<T> with Mate {
   /// TweenAnimationBuilder<T> TweenAnimationBuilder({Key? key, required Tween<T> tween, required Duration duration, Curve curve = Curves.linear, required Widget Function(BuildContext, T, Widget?) builder, void Function()? onEnd, Widget? child})
   TweenAnimationBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Tween<T> tween} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Tween<T> tween} , defaultValue:none
     required Tween<T> tween,
 
-    /// optionalParameters: {required Duration duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
     required Curve curve,
 
-    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , defaultValue:none
     required ValueWidgetBuilder<T> builder,
 
-    /// optionalParameters: {void Function()? onEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
     VoidCallback? onEnd,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -52,12 +52,12 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('tween', tween);
-    matePut('duration', duration);
-    matePut('curve', curve);
-    matePut('builder', builder);
-    matePut('onEnd', onEnd);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('tween', tween);
+    mateDeclare('duration', duration);
+    mateDeclare('curve', curve);
+    mateDeclare('builder', builder);
+    mateDeclare('onEnd', onEnd);
+    mateDeclare('child', child);
   }
 }

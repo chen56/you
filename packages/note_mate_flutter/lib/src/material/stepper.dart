@@ -14,16 +14,16 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class ControlsDetails$Mate extends ControlsDetails with Mate {
   /// ControlsDetails ControlsDetails({required int currentStep, required int stepIndex, void Function()? onStepCancel, void Function()? onStepContinue})
   ControlsDetails$Mate({
-    /// optionalParameters: {required int currentStep} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int currentStep} , defaultValue:none
     required int currentStep,
 
-    /// optionalParameters: {required int stepIndex} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int stepIndex} , defaultValue:none
     required int stepIndex,
 
-    /// optionalParameters: {void Function()? onStepCancel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onStepCancel} , defaultValue:none
     VoidCallback? onStepCancel,
 
-    /// optionalParameters: {void Function()? onStepContinue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onStepContinue} , defaultValue:none
     VoidCallback? onStepContinue,
   }) : super(
           currentStep: currentStep,
@@ -37,10 +37,10 @@ class ControlsDetails$Mate extends ControlsDetails with Mate {
           onStepCancel: p.get('onStepCancel').build(),
           onStepContinue: p.get('onStepContinue').build(),
         );
-    matePut('currentStep', currentStep);
-    matePut('stepIndex', stepIndex);
-    matePut('onStepCancel', onStepCancel);
-    matePut('onStepContinue', onStepContinue);
+    mateDeclare('currentStep', currentStep);
+    mateDeclare('stepIndex', stepIndex);
+    mateDeclare('onStepCancel', onStepCancel);
+    mateDeclare('onStepContinue', onStepContinue);
   }
 }
 
@@ -48,22 +48,22 @@ class ControlsDetails$Mate extends ControlsDetails with Mate {
 class Step$Mate extends Step with Mate {
   /// Step Step({required Widget title, Widget? subtitle, required Widget content, StepState state = StepState.indexed, bool isActive = false, Widget? label})
   Step$Mate({
-    /// optionalParameters: {required Widget title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget title} , defaultValue:none
     required Widget title,
 
-    /// optionalParameters: {Widget? subtitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? subtitle} , defaultValue:none
     Widget? subtitle,
 
-    /// optionalParameters: {required Widget content} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget content} , defaultValue:none
     required Widget content,
 
-    /// optionalParameters: {StepState state = StepState.indexed} , hasDefaultValue:true, defaultValueCode:StepState.indexed
+    /// optionalParameters: {StepState state = StepState.indexed} , defaultValue:unprocessed
     required StepState state,
 
-    /// optionalParameters: {bool isActive = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isActive,
+    /// optionalParameters: {bool isActive = false} , defaultValue:Literal
+    bool isActive = false,
 
-    /// optionalParameters: {Widget? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? label} , defaultValue:none
     Widget? label,
   }) : super(
           title: title,
@@ -81,12 +81,12 @@ class Step$Mate extends Step with Mate {
           isActive: p.get('isActive').build(),
           label: p.get('label').build(),
         );
-    matePut('title', title);
-    matePut('subtitle', subtitle);
-    matePut('content', content);
-    matePut('state', state);
-    matePut('isActive', isActive);
-    matePut('label', label);
+    mateDeclare('title', title);
+    mateDeclare('subtitle', subtitle);
+    mateDeclare('content', content);
+    mateDeclare('state', state);
+    mateDeclare('isActive', isActive);
+    mateDeclare('label', label);
   }
 }
 
@@ -94,37 +94,37 @@ class Step$Mate extends Step with Mate {
 class Stepper$Mate extends Stepper with Mate {
   /// Stepper Stepper({Key? key, required List<Step> steps, ScrollPhysics? physics, StepperType type = StepperType.vertical, int currentStep = 0, void Function(int)? onStepTapped, void Function()? onStepContinue, void Function()? onStepCancel, Widget Function(BuildContext, ControlsDetails)? controlsBuilder, double? elevation, EdgeInsetsGeometry? margin})
   Stepper$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<Step> steps} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Step> steps} , defaultValue:none
     required List<Step> steps,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {StepperType type = StepperType.vertical} , hasDefaultValue:true, defaultValueCode:StepperType.vertical
+    /// optionalParameters: {StepperType type = StepperType.vertical} , defaultValue:unprocessed
     required StepperType type,
 
-    /// optionalParameters: {int currentStep = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int currentStep,
+    /// optionalParameters: {int currentStep = 0} , defaultValue:Literal
+    int currentStep = 0,
 
-    /// optionalParameters: {void Function(int)? onStepTapped} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onStepTapped} , defaultValue:none
     ValueChanged<int>? onStepTapped,
 
-    /// optionalParameters: {void Function()? onStepContinue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onStepContinue} , defaultValue:none
     VoidCallback? onStepContinue,
 
-    /// optionalParameters: {void Function()? onStepCancel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onStepCancel} , defaultValue:none
     VoidCallback? onStepCancel,
 
-    /// optionalParameters: {Widget Function(BuildContext, ControlsDetails)? controlsBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, ControlsDetails)? controlsBuilder} , defaultValue:none
     ControlsWidgetBuilder? controlsBuilder,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
     EdgeInsetsGeometry? margin,
   }) : super(
           key: key,
@@ -152,16 +152,16 @@ class Stepper$Mate extends Stepper with Mate {
           elevation: p.get('elevation').build(),
           margin: p.get('margin').build(),
         );
-    matePut('key', key);
-    matePut('steps', steps);
-    matePut('physics', physics);
-    matePut('type', type);
-    matePut('currentStep', currentStep);
-    matePut('onStepTapped', onStepTapped);
-    matePut('onStepContinue', onStepContinue);
-    matePut('onStepCancel', onStepCancel);
-    matePut('controlsBuilder', controlsBuilder);
-    matePut('elevation', elevation);
-    matePut('margin', margin);
+    mateDeclare('key', key);
+    mateDeclare('steps', steps);
+    mateDeclare('physics', physics);
+    mateDeclare('type', type);
+    mateDeclare('currentStep', currentStep);
+    mateDeclare('onStepTapped', onStepTapped);
+    mateDeclare('onStepContinue', onStepContinue);
+    mateDeclare('onStepCancel', onStepCancel);
+    mateDeclare('controlsBuilder', controlsBuilder);
+    mateDeclare('elevation', elevation);
+    mateDeclare('margin', margin);
   }
 }

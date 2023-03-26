@@ -9,13 +9,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class ScrollConfiguration$Mate extends ScrollConfiguration with Mate {
   /// ScrollConfiguration ScrollConfiguration({Key? key, required ScrollBehavior behavior, required Widget child})
   ScrollConfiguration$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ScrollBehavior behavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollBehavior behavior} , defaultValue:none
     required ScrollBehavior behavior,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -27,8 +27,8 @@ class ScrollConfiguration$Mate extends ScrollConfiguration with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('behavior', behavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('behavior', behavior);
+    mateDeclare('child', child);
   }
 }

@@ -13,19 +13,19 @@ import 'package:flutter/src/painting/borders.dart';
 class ShapeDecoration$Mate extends ShapeDecoration with Mate {
   /// ShapeDecoration ShapeDecoration({Color? color, DecorationImage? image, Gradient? gradient, List<BoxShadow>? shadows, required ShapeBorder shape})
   ShapeDecoration$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {DecorationImage? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DecorationImage? image} , defaultValue:none
     DecorationImage? image,
 
-    /// optionalParameters: {Gradient? gradient} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Gradient? gradient} , defaultValue:none
     Gradient? gradient,
 
-    /// optionalParameters: {List<BoxShadow>? shadows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<BoxShadow>? shadows} , defaultValue:none
     List<BoxShadow>? shadows,
 
-    /// optionalParameters: {required ShapeBorder shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ShapeBorder shape} , defaultValue:none
     required ShapeBorder shape,
   }) : super(
           color: color,
@@ -41,10 +41,10 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    matePut('color', color);
-    matePut('image', image);
-    matePut('gradient', gradient);
-    matePut('shadows', shadows);
-    matePut('shape', shape);
+    mateDeclare('color', color);
+    mateDeclare('image', image);
+    mateDeclare('gradient', gradient);
+    mateDeclare('shadows', shadows);
+    mateDeclare('shape', shape);
   }
 }

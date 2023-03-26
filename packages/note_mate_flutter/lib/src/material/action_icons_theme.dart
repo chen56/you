@@ -9,16 +9,16 @@ import 'package:flutter/src/foundation/key.dart';
 class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
   /// ActionIconThemeData ActionIconThemeData({Widget Function(BuildContext)? backButtonIconBuilder, Widget Function(BuildContext)? closeButtonIconBuilder, Widget Function(BuildContext)? drawerButtonIconBuilder, Widget Function(BuildContext)? endDrawerButtonIconBuilder})
   ActionIconThemeData$Mate({
-    /// optionalParameters: {Widget Function(BuildContext)? backButtonIconBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? backButtonIconBuilder} , defaultValue:none
     WidgetBuilder? backButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? closeButtonIconBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? closeButtonIconBuilder} , defaultValue:none
     WidgetBuilder? closeButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? drawerButtonIconBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? drawerButtonIconBuilder} , defaultValue:none
     WidgetBuilder? drawerButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? endDrawerButtonIconBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? endDrawerButtonIconBuilder} , defaultValue:none
     WidgetBuilder? endDrawerButtonIconBuilder,
   }) : super(
           backButtonIconBuilder: backButtonIconBuilder,
@@ -32,10 +32,10 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
           drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').build(),
           endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').build(),
         );
-    matePut('backButtonIconBuilder', backButtonIconBuilder);
-    matePut('closeButtonIconBuilder', closeButtonIconBuilder);
-    matePut('drawerButtonIconBuilder', drawerButtonIconBuilder);
-    matePut('endDrawerButtonIconBuilder', endDrawerButtonIconBuilder);
+    mateDeclare('backButtonIconBuilder', backButtonIconBuilder);
+    mateDeclare('closeButtonIconBuilder', closeButtonIconBuilder);
+    mateDeclare('drawerButtonIconBuilder', drawerButtonIconBuilder);
+    mateDeclare('endDrawerButtonIconBuilder', endDrawerButtonIconBuilder);
   }
 }
 
@@ -43,13 +43,13 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
 class ActionIconTheme$Mate extends ActionIconTheme with Mate {
   /// ActionIconTheme ActionIconTheme({Key? key, required ActionIconThemeData data, required Widget child})
   ActionIconTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ActionIconThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ActionIconThemeData data} , defaultValue:none
     required ActionIconThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -61,8 +61,8 @@ class ActionIconTheme$Mate extends ActionIconTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

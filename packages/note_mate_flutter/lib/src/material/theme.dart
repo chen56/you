@@ -13,13 +13,13 @@ import 'dart:ui';
 class Theme$Mate extends Theme with Mate {
   /// Theme Theme({Key? key, required ThemeData data, required Widget child})
   Theme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ThemeData data} , defaultValue:none
     required ThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -31,9 +31,9 @@ class Theme$Mate extends Theme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }
 
@@ -41,10 +41,10 @@ class Theme$Mate extends Theme with Mate {
 class ThemeDataTween$Mate extends ThemeDataTween with Mate {
   /// ThemeDataTween ThemeDataTween({ThemeData? begin, ThemeData? end})
   ThemeDataTween$Mate({
-    /// optionalParameters: {ThemeData? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? begin} , defaultValue:none
     ThemeData? begin,
 
-    /// optionalParameters: {ThemeData? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? end} , defaultValue:none
     ThemeData? end,
   }) : super(
           begin: begin,
@@ -54,8 +54,8 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
   }
 }
 
@@ -63,22 +63,22 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate {
 class AnimatedTheme$Mate extends AnimatedTheme with Mate {
   /// AnimatedTheme AnimatedTheme({Key? key, required ThemeData data, Curve curve = Curves.linear, Duration duration = kThemeAnimationDuration, void Function()? onEnd, required Widget child})
   AnimatedTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ThemeData data} , defaultValue:none
     required ThemeData data,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
     required Curve curve,
 
-    /// optionalParameters: {Duration duration = kThemeAnimationDuration} , hasDefaultValue:true, defaultValueCode:kThemeAnimationDuration
+    /// optionalParameters: {Duration duration = kThemeAnimationDuration} , defaultValue:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
     VoidCallback? onEnd,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -96,11 +96,11 @@ class AnimatedTheme$Mate extends AnimatedTheme with Mate {
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('curve', curve);
-    matePut('duration', duration);
-    matePut('onEnd', onEnd);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('curve', curve);
+    mateDeclare('duration', duration);
+    mateDeclare('onEnd', onEnd);
+    mateDeclare('child', child);
   }
 }

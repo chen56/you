@@ -13,6 +13,6 @@ class DisposableBuildContext$Mate<T extends State<StatefulWidget>> extends Dispo
       T _state)
       : super(_state) {
     mateBuilder = (p) => DisposableBuildContext$Mate<T>(p.get('_state').value);
-    matePut('_state', _state);
+    mateDeclare('_state', _state);
   }
 }

@@ -8,49 +8,49 @@ import 'package:flutter/src/painting/text_style.dart';
 class TextTheme$Mate extends TextTheme with Mate {
   /// TextTheme TextTheme({TextStyle? displayLarge, TextStyle? displayMedium, TextStyle? displaySmall, TextStyle? headlineLarge, TextStyle? headlineMedium, TextStyle? headlineSmall, TextStyle? titleLarge, TextStyle? titleMedium, TextStyle? titleSmall, TextStyle? bodyLarge, TextStyle? bodyMedium, TextStyle? bodySmall, TextStyle? labelLarge, TextStyle? labelMedium, TextStyle? labelSmall, TextStyle? headline1, TextStyle? headline2, TextStyle? headline3, TextStyle? headline4, TextStyle? headline5, TextStyle? headline6, TextStyle? subtitle1, TextStyle? subtitle2, TextStyle? bodyText1, TextStyle? bodyText2, TextStyle? caption, TextStyle? button, TextStyle? overline})
   TextTheme$Mate({
-    /// optionalParameters: {TextStyle? displayLarge} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? displayLarge} , defaultValue:none
     TextStyle? displayLarge,
 
-    /// optionalParameters: {TextStyle? displayMedium} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? displayMedium} , defaultValue:none
     TextStyle? displayMedium,
 
-    /// optionalParameters: {TextStyle? displaySmall} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? displaySmall} , defaultValue:none
     TextStyle? displaySmall,
 
-    /// optionalParameters: {TextStyle? headlineLarge} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? headlineLarge} , defaultValue:none
     TextStyle? headlineLarge,
 
-    /// optionalParameters: {TextStyle? headlineMedium} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? headlineMedium} , defaultValue:none
     TextStyle? headlineMedium,
 
-    /// optionalParameters: {TextStyle? headlineSmall} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? headlineSmall} , defaultValue:none
     TextStyle? headlineSmall,
 
-    /// optionalParameters: {TextStyle? titleLarge} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? titleLarge} , defaultValue:none
     TextStyle? titleLarge,
 
-    /// optionalParameters: {TextStyle? titleMedium} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? titleMedium} , defaultValue:none
     TextStyle? titleMedium,
 
-    /// optionalParameters: {TextStyle? titleSmall} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? titleSmall} , defaultValue:none
     TextStyle? titleSmall,
 
-    /// optionalParameters: {TextStyle? bodyLarge} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? bodyLarge} , defaultValue:none
     TextStyle? bodyLarge,
 
-    /// optionalParameters: {TextStyle? bodyMedium} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? bodyMedium} , defaultValue:none
     TextStyle? bodyMedium,
 
-    /// optionalParameters: {TextStyle? bodySmall} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? bodySmall} , defaultValue:none
     TextStyle? bodySmall,
 
-    /// optionalParameters: {TextStyle? labelLarge} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelLarge} , defaultValue:none
     TextStyle? labelLarge,
 
-    /// optionalParameters: {TextStyle? labelMedium} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelMedium} , defaultValue:none
     TextStyle? labelMedium,
 
-    /// optionalParameters: {TextStyle? labelSmall} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelSmall} , defaultValue:none
     TextStyle? labelSmall,
   }) : super(
           displayLarge: displayLarge,
@@ -86,20 +86,20 @@ class TextTheme$Mate extends TextTheme with Mate {
           labelMedium: p.get('labelMedium').build(),
           labelSmall: p.get('labelSmall').build(),
         );
-    matePut('displayLarge', displayLarge);
-    matePut('displayMedium', displayMedium);
-    matePut('displaySmall', displaySmall);
-    matePut('headlineLarge', headlineLarge);
-    matePut('headlineMedium', headlineMedium);
-    matePut('headlineSmall', headlineSmall);
-    matePut('titleLarge', titleLarge);
-    matePut('titleMedium', titleMedium);
-    matePut('titleSmall', titleSmall);
-    matePut('bodyLarge', bodyLarge);
-    matePut('bodyMedium', bodyMedium);
-    matePut('bodySmall', bodySmall);
-    matePut('labelLarge', labelLarge);
-    matePut('labelMedium', labelMedium);
-    matePut('labelSmall', labelSmall);
+    mateDeclare('displayLarge', displayLarge);
+    mateDeclare('displayMedium', displayMedium);
+    mateDeclare('displaySmall', displaySmall);
+    mateDeclare('headlineLarge', headlineLarge);
+    mateDeclare('headlineMedium', headlineMedium);
+    mateDeclare('headlineSmall', headlineSmall);
+    mateDeclare('titleLarge', titleLarge);
+    mateDeclare('titleMedium', titleMedium);
+    mateDeclare('titleSmall', titleSmall);
+    mateDeclare('bodyLarge', bodyLarge);
+    mateDeclare('bodyMedium', bodyMedium);
+    mateDeclare('bodySmall', bodySmall);
+    mateDeclare('labelLarge', labelLarge);
+    mateDeclare('labelMedium', labelMedium);
+    mateDeclare('labelSmall', labelSmall);
   }
 }

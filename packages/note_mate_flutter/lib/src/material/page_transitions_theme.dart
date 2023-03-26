@@ -10,12 +10,12 @@ class ZoomPageTransitionsBuilder$Mate extends ZoomPageTransitionsBuilder with Ma
   /// ZoomPageTransitionsBuilder ZoomPageTransitionsBuilder({bool allowEnterRouteSnapshotting = true})
   ZoomPageTransitionsBuilder$Mate(
       {
-      /// optionalParameters: {bool allowEnterRouteSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
-      required bool allowEnterRouteSnapshotting})
+      /// optionalParameters: {bool allowEnterRouteSnapshotting = true} , defaultValue:Literal
+      bool allowEnterRouteSnapshotting = true})
       : super(allowEnterRouteSnapshotting: allowEnterRouteSnapshotting) {
     mateBuilder = (p) =>
         ZoomPageTransitionsBuilder$Mate(allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').build());
-    matePut('allowEnterRouteSnapshotting', allowEnterRouteSnapshotting);
+    mateDeclare('allowEnterRouteSnapshotting', allowEnterRouteSnapshotting);
   }
 }
 
@@ -24,10 +24,10 @@ class PageTransitionsTheme$Mate extends PageTransitionsTheme with Mate {
   /// PageTransitionsTheme PageTransitionsTheme({Map<TargetPlatform, PageTransitionsBuilder> builders = _defaultBuilders})
   PageTransitionsTheme$Mate(
       {
-      /// optionalParameters: {Map<TargetPlatform, PageTransitionsBuilder> builders = _defaultBuilders} , hasDefaultValue:true, defaultValueCode:_defaultBuilders
+      /// optionalParameters: {Map<TargetPlatform, PageTransitionsBuilder> builders = _defaultBuilders} , defaultValue:unprocessed
       required Map<TargetPlatform, PageTransitionsBuilder> builders})
       : super(builders: builders) {
     mateBuilder = (p) => PageTransitionsTheme$Mate(builders: p.get('builders').build());
-    matePut('builders', builders);
+    mateDeclare('builders', builders);
   }
 }

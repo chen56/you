@@ -9,13 +9,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class CupertinoUserInterfaceLevel$Mate extends CupertinoUserInterfaceLevel with Mate {
   /// CupertinoUserInterfaceLevel CupertinoUserInterfaceLevel({Key? key, required CupertinoUserInterfaceLevelData data, required Widget child})
   CupertinoUserInterfaceLevel$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required CupertinoUserInterfaceLevelData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required CupertinoUserInterfaceLevelData data} , defaultValue:none
     required CupertinoUserInterfaceLevelData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -27,8 +27,8 @@ class CupertinoUserInterfaceLevel$Mate extends CupertinoUserInterfaceLevel with 
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

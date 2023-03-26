@@ -17,11 +17,11 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , hasDefaultValue:true, defaultValueCode:Tolerance.defaultTolerance
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:unprocessed
     required Tolerance tolerance,
 
-    /// optionalParameters: {double constantDeceleration = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double constantDeceleration,
+    /// optionalParameters: {double constantDeceleration = 0} , defaultValue:Literal
+    double constantDeceleration = 0,
   }) : super(
           drag,
           position,
@@ -36,11 +36,11 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
           tolerance: p.get('tolerance').build(),
           constantDeceleration: p.get('constantDeceleration').build(),
         );
-    matePut('drag', drag);
-    matePut('position', position);
-    matePut('velocity', velocity);
-    matePut('tolerance', tolerance);
-    matePut('constantDeceleration', constantDeceleration);
+    mateDeclare('drag', drag);
+    mateDeclare('position', position);
+    mateDeclare('velocity', velocity);
+    mateDeclare('tolerance', tolerance);
+    mateDeclare('constantDeceleration', constantDeceleration);
   }
 }
 
@@ -76,10 +76,10 @@ class BoundedFrictionSimulation$Mate extends BoundedFrictionSimulation with Mate
           p.get('_minX').value,
           p.get('_maxX').value,
         );
-    matePut('drag', drag);
-    matePut('position', position);
-    matePut('velocity', velocity);
-    matePut('_minX', _minX);
-    matePut('_maxX', _maxX);
+    mateDeclare('drag', drag);
+    mateDeclare('position', position);
+    mateDeclare('velocity', velocity);
+    mateDeclare('_minX', _minX);
+    mateDeclare('_maxX', _maxX);
   }
 }

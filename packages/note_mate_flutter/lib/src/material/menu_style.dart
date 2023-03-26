@@ -15,43 +15,43 @@ import 'package:flutter/src/painting/alignment.dart';
 class MenuStyle$Mate extends MenuStyle with Mate {
   /// MenuStyle MenuStyle({MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<double?>? elevation, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<Size?>? minimumSize, MaterialStateProperty<Size?>? fixedSize, MaterialStateProperty<Size?>? maximumSize, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<MouseCursor?>? mouseCursor, VisualDensity? visualDensity, AlignmentGeometry? alignment})
   MenuStyle$Mate({
-    /// optionalParameters: {MaterialStateProperty<Color?>? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? backgroundColor} , defaultValue:none
     MaterialStateProperty<Color?>? backgroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? shadowColor} , defaultValue:none
     MaterialStateProperty<Color?>? shadowColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? surfaceTintColor} , defaultValue:none
     MaterialStateProperty<Color?>? surfaceTintColor,
 
-    /// optionalParameters: {MaterialStateProperty<double?>? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<double?>? elevation} , defaultValue:none
     MaterialStateProperty<double?>? elevation,
 
-    /// optionalParameters: {MaterialStateProperty<EdgeInsetsGeometry?>? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<EdgeInsetsGeometry?>? padding} , defaultValue:none
     MaterialStateProperty<EdgeInsetsGeometry?>? padding,
 
-    /// optionalParameters: {MaterialStateProperty<Size?>? minimumSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Size?>? minimumSize} , defaultValue:none
     MaterialStateProperty<Size?>? minimumSize,
 
-    /// optionalParameters: {MaterialStateProperty<Size?>? fixedSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Size?>? fixedSize} , defaultValue:none
     MaterialStateProperty<Size?>? fixedSize,
 
-    /// optionalParameters: {MaterialStateProperty<Size?>? maximumSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Size?>? maximumSize} , defaultValue:none
     MaterialStateProperty<Size?>? maximumSize,
 
-    /// optionalParameters: {MaterialStateProperty<BorderSide?>? side} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<BorderSide?>? side} , defaultValue:none
     MaterialStateProperty<BorderSide?>? side,
 
-    /// optionalParameters: {MaterialStateProperty<OutlinedBorder?>? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<OutlinedBorder?>? shape} , defaultValue:none
     MaterialStateProperty<OutlinedBorder?>? shape,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
   }) : super(
           backgroundColor: backgroundColor,
@@ -83,18 +83,18 @@ class MenuStyle$Mate extends MenuStyle with Mate {
           visualDensity: p.get('visualDensity').build(),
           alignment: p.get('alignment').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('elevation', elevation);
-    matePut('padding', padding);
-    matePut('minimumSize', minimumSize);
-    matePut('fixedSize', fixedSize);
-    matePut('maximumSize', maximumSize);
-    matePut('side', side);
-    matePut('shape', shape);
-    matePut('mouseCursor', mouseCursor);
-    matePut('visualDensity', visualDensity);
-    matePut('alignment', alignment);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('padding', padding);
+    mateDeclare('minimumSize', minimumSize);
+    mateDeclare('fixedSize', fixedSize);
+    mateDeclare('maximumSize', maximumSize);
+    mateDeclare('side', side);
+    mateDeclare('shape', shape);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('alignment', alignment);
   }
 }

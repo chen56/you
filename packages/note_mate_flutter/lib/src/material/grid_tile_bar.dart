@@ -10,22 +10,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class GridTileBar$Mate extends GridTileBar with Mate {
   /// GridTileBar GridTileBar({Key? key, Color? backgroundColor, Widget? leading, Widget? title, Widget? subtitle, Widget? trailing})
   GridTileBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , defaultValue:none
     Widget? leading,
 
-    /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? title} , defaultValue:none
     Widget? title,
 
-    /// optionalParameters: {Widget? subtitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? subtitle} , defaultValue:none
     Widget? subtitle,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , defaultValue:none
     Widget? trailing,
   }) : super(
           key: key,
@@ -43,11 +43,11 @@ class GridTileBar$Mate extends GridTileBar with Mate {
           subtitle: p.get('subtitle').build(),
           trailing: p.get('trailing').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('leading', leading);
-    matePut('title', title);
-    matePut('subtitle', subtitle);
-    matePut('trailing', trailing);
+    mateDeclare('key', key);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('leading', leading);
+    mateDeclare('title', title);
+    mateDeclare('subtitle', subtitle);
+    mateDeclare('trailing', trailing);
   }
 }

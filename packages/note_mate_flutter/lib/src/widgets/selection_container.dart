@@ -10,16 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class SelectionContainer$Mate extends SelectionContainer with Mate {
   /// SelectionContainer SelectionContainer({Key? key, SelectionRegistrar? registrar, required SelectionContainerDelegate delegate, required Widget child})
   SelectionContainer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {SelectionRegistrar? registrar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SelectionRegistrar? registrar} , defaultValue:none
     SelectionRegistrar? registrar,
 
-    /// optionalParameters: {required SelectionContainerDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SelectionContainerDelegate delegate} , defaultValue:none
     required SelectionContainerDelegate delegate,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -33,18 +33,18 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('registrar', registrar);
-    matePut('delegate', delegate);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('registrar', registrar);
+    mateDeclare('delegate', delegate);
+    mateDeclare('child', child);
   }
 
   /// SelectionContainer SelectionContainer.disabled({Key? key, required Widget child})
   SelectionContainer$Mate.disabled({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super.disabled(
           key: key,
@@ -54,8 +54,8 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }
 
@@ -63,13 +63,13 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
 class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with Mate {
   /// SelectionRegistrarScope SelectionRegistrarScope({Key? key, required SelectionRegistrar registrar, required Widget child})
   SelectionRegistrarScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required SelectionRegistrar registrar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SelectionRegistrar registrar} , defaultValue:none
     required SelectionRegistrar registrar,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -81,8 +81,8 @@ class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with Mate {
           registrar: p.get('registrar').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('registrar', registrar);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('registrar', registrar);
+    mateDeclare('child', child);
   }
 }

@@ -16,62 +16,62 @@ import 'package:flutter/src/painting/borders.dart';
 class Checkbox$Mate extends Checkbox with Mate {
   /// Checkbox Checkbox({Key? key, required bool? value, bool tristate = false, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, OutlinedBorder? shape, BorderSide? side, bool isError = false})
   Checkbox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required bool? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool? value} , defaultValue:none
     required bool? value,
 
-    /// optionalParameters: {bool tristate = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool tristate,
+    /// optionalParameters: {bool tristate = false} , defaultValue:Literal
+    bool tristate = false,
 
-    /// optionalParameters: {required void Function(bool?)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(bool?)? onChanged} , defaultValue:none
     required ValueChanged<bool?>? onChanged,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , defaultValue:none
     Color? activeColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , defaultValue:none
     MaterialStateProperty<Color?>? fillColor,
 
-    /// optionalParameters: {Color? checkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? checkColor} , defaultValue:none
     Color? checkColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {OutlinedBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {BorderSide? side} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? side} , defaultValue:none
     BorderSide? side,
 
-    /// optionalParameters: {bool isError = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isError,
+    /// optionalParameters: {bool isError = false} , defaultValue:Literal
+    bool isError = false,
   }) : super(
           key: key,
           value: value,
@@ -114,24 +114,24 @@ class Checkbox$Mate extends Checkbox with Mate {
           side: p.get('side').build(),
           isError: p.get('isError').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('tristate', tristate);
-    matePut('onChanged', onChanged);
-    matePut('mouseCursor', mouseCursor);
-    matePut('activeColor', activeColor);
-    matePut('fillColor', fillColor);
-    matePut('checkColor', checkColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashRadius', splashRadius);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('visualDensity', visualDensity);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('shape', shape);
-    matePut('side', side);
-    matePut('isError', isError);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('tristate', tristate);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('activeColor', activeColor);
+    mateDeclare('fillColor', fillColor);
+    mateDeclare('checkColor', checkColor);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('overlayColor', overlayColor);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('shape', shape);
+    mateDeclare('side', side);
+    mateDeclare('isError', isError);
   }
 }

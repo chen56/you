@@ -13,34 +13,34 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class DialogTheme$Mate extends DialogTheme with Mate {
   /// DialogTheme DialogTheme({Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, AlignmentGeometry? alignment, Color? iconColor, TextStyle? titleTextStyle, TextStyle? contentTextStyle, EdgeInsetsGeometry? actionsPadding})
   DialogTheme$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , defaultValue:none
     Color? iconColor,
 
-    /// optionalParameters: {TextStyle? titleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? titleTextStyle} , defaultValue:none
     TextStyle? titleTextStyle,
 
-    /// optionalParameters: {TextStyle? contentTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? contentTextStyle} , defaultValue:none
     TextStyle? contentTextStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? actionsPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? actionsPadding} , defaultValue:none
     EdgeInsetsGeometry? actionsPadding,
   }) : super(
           backgroundColor: backgroundColor,
@@ -66,15 +66,15 @@ class DialogTheme$Mate extends DialogTheme with Mate {
           contentTextStyle: p.get('contentTextStyle').build(),
           actionsPadding: p.get('actionsPadding').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('shape', shape);
-    matePut('alignment', alignment);
-    matePut('iconColor', iconColor);
-    matePut('titleTextStyle', titleTextStyle);
-    matePut('contentTextStyle', contentTextStyle);
-    matePut('actionsPadding', actionsPadding);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('shape', shape);
+    mateDeclare('alignment', alignment);
+    mateDeclare('iconColor', iconColor);
+    mateDeclare('titleTextStyle', titleTextStyle);
+    mateDeclare('contentTextStyle', contentTextStyle);
+    mateDeclare('actionsPadding', actionsPadding);
   }
 }

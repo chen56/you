@@ -9,13 +9,13 @@ import 'dart:ui';
 class TextureBox$Mate extends TextureBox with Mate {
   /// TextureBox TextureBox({required int textureId, bool freeze = false, FilterQuality filterQuality = FilterQuality.low})
   TextureBox$Mate({
-    /// optionalParameters: {required int textureId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int textureId} , defaultValue:none
     required int textureId,
 
-    /// optionalParameters: {bool freeze = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool freeze,
+    /// optionalParameters: {bool freeze = false} , defaultValue:Literal
+    bool freeze = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
     required FilterQuality filterQuality,
   }) : super(
           textureId: textureId,
@@ -27,8 +27,8 @@ class TextureBox$Mate extends TextureBox with Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    matePut('textureId', textureId);
-    matePut('freeze', freeze);
-    matePut('filterQuality', filterQuality);
+    mateDeclare('textureId', textureId);
+    mateDeclare('freeze', freeze);
+    mateDeclare('filterQuality', filterQuality);
   }
 }

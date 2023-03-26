@@ -21,8 +21,8 @@ class Alignment$Mate extends Alignment with Mate {
           p.get('x').value,
           p.get('y').value,
         );
-    matePut('x', x);
-    matePut('y', y);
+    mateDeclare('x', x);
+    mateDeclare('y', y);
   }
 }
 
@@ -43,8 +43,8 @@ class AlignmentDirectional$Mate extends AlignmentDirectional with Mate {
           p.get('start').value,
           p.get('y').value,
         );
-    matePut('start', start);
-    matePut('y', y);
+    mateDeclare('start', start);
+    mateDeclare('y', y);
   }
 }
 
@@ -53,10 +53,10 @@ class TextAlignVertical$Mate extends TextAlignVertical with Mate {
   /// TextAlignVertical TextAlignVertical({required double y})
   TextAlignVertical$Mate(
       {
-      /// optionalParameters: {required double y} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required double y} , defaultValue:none
       required double y})
       : super(y: y) {
     mateBuilder = (p) => TextAlignVertical$Mate(y: p.get('y').build());
-    matePut('y', y);
+    mateDeclare('y', y);
   }
 }

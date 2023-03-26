@@ -12,6 +12,6 @@ class ValueKey$Mate<T> extends ValueKey<T> with Mate {
       T value)
       : super(value) {
     mateBuilder = (p) => ValueKey$Mate<T>(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }

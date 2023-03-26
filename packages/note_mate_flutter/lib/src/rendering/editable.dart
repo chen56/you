@@ -32,8 +32,8 @@ class TextSelectionPoint$Mate extends TextSelectionPoint with Mate {
           p.get('point').value,
           p.get('direction').value,
         );
-    matePut('point', point);
-    matePut('direction', direction);
+    mateDeclare('point', point);
+    mateDeclare('direction', direction);
   }
 }
 
@@ -41,133 +41,133 @@ class TextSelectionPoint$Mate extends TextSelectionPoint with Mate {
 class RenderEditable$Mate extends RenderEditable with Mate {
   /// RenderEditable RenderEditable({InlineSpan? text, required TextDirection textDirection, TextAlign textAlign = TextAlign.start, Color? cursorColor, Color? backgroundCursorColor, ValueNotifier<bool>? showCursor, bool? hasFocus, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, int? maxLines = 1, int? minLines, bool expands = false, StrutStyle? strutStyle, Color? selectionColor, double textScaleFactor = 1.0, TextSelection? selection, required ViewportOffset offset, void Function(Rect)? onCaretChanged, bool ignorePointer = false, bool readOnly = false, bool forceLine = true, TextHeightBehavior? textHeightBehavior, TextWidthBasis textWidthBasis = TextWidthBasis.parent, String obscuringCharacter = '•', bool obscureText = false, Locale? locale, double cursorWidth = 1.0, double? cursorHeight, Radius? cursorRadius, bool paintCursorAboveText = false, Offset cursorOffset = Offset.zero, double devicePixelRatio = 1.0, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, bool? enableInteractiveSelection, EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5), TextRange? promptRectRange, Color? promptRectColor, Clip clipBehavior = Clip.hardEdge, required TextSelectionDelegate textSelectionDelegate, RenderEditablePainter? painter, RenderEditablePainter? foregroundPainter, List<RenderBox>? children})
   RenderEditable$Mate({
-    /// optionalParameters: {InlineSpan? text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InlineSpan? text} , defaultValue:none
     InlineSpan? text,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , hasDefaultValue:true, defaultValueCode:TextAlign.start
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
     required TextAlign textAlign,
 
-    /// optionalParameters: {Color? cursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? cursorColor} , defaultValue:none
     Color? cursorColor,
 
-    /// optionalParameters: {Color? backgroundCursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundCursorColor} , defaultValue:none
     Color? backgroundCursorColor,
 
-    /// optionalParameters: {ValueNotifier<bool>? showCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ValueNotifier<bool>? showCursor} , defaultValue:none
     ValueNotifier<bool>? showCursor,
 
-    /// optionalParameters: {bool? hasFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? hasFocus} , defaultValue:none
     bool? hasFocus,
 
-    /// optionalParameters: {required LayerLink startHandleLayerLink} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink startHandleLayerLink} , defaultValue:none
     required LayerLink startHandleLayerLink,
 
-    /// optionalParameters: {required LayerLink endHandleLayerLink} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink endHandleLayerLink} , defaultValue:none
     required LayerLink endHandleLayerLink,
 
-    /// optionalParameters: {int? maxLines = 1} , hasDefaultValue:true, defaultValueCode:1
-    int? maxLines,
+    /// optionalParameters: {int? maxLines = 1} , defaultValue:Literal
+    int? maxLines = 1,
 
-    /// optionalParameters: {int? minLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? minLines} , defaultValue:none
     int? minLines,
 
-    /// optionalParameters: {bool expands = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool expands,
+    /// optionalParameters: {bool expands = false} , defaultValue:Literal
+    bool expands = false,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , defaultValue:none
     Color? selectionColor,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double textScaleFactor,
+    /// optionalParameters: {double textScaleFactor = 1.0} , defaultValue:Literal
+    double textScaleFactor = 1.0,
 
-    /// optionalParameters: {TextSelection? selection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextSelection? selection} , defaultValue:none
     TextSelection? selection,
 
-    /// optionalParameters: {required ViewportOffset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {void Function(Rect)? onCaretChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Rect)? onCaretChanged} , defaultValue:none
     CaretChangedHandler? onCaretChanged,
 
-    /// optionalParameters: {bool ignorePointer = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool ignorePointer,
+    /// optionalParameters: {bool ignorePointer = false} , defaultValue:Literal
+    bool ignorePointer = false,
 
-    /// optionalParameters: {bool readOnly = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool readOnly,
+    /// optionalParameters: {bool readOnly = false} , defaultValue:Literal
+    bool readOnly = false,
 
-    /// optionalParameters: {bool forceLine = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool forceLine,
+    /// optionalParameters: {bool forceLine = true} , defaultValue:Literal
+    bool forceLine = true,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , hasDefaultValue:true, defaultValueCode:TextWidthBasis.parent
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
     required TextWidthBasis textWidthBasis,
 
-    /// optionalParameters: {String obscuringCharacter = '•'} , hasDefaultValue:true, defaultValueCode:'•'
-    required String obscuringCharacter,
+    /// optionalParameters: {String obscuringCharacter = '•'} , defaultValue:Literal
+    String obscuringCharacter = '•',
 
-    /// optionalParameters: {bool obscureText = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscureText,
+    /// optionalParameters: {bool obscureText = false} , defaultValue:Literal
+    bool obscureText = false,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
 
-    /// optionalParameters: {double cursorWidth = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double cursorWidth,
+    /// optionalParameters: {double cursorWidth = 1.0} , defaultValue:Literal
+    double cursorWidth = 1.0,
 
-    /// optionalParameters: {double? cursorHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cursorHeight} , defaultValue:none
     double? cursorHeight,
 
-    /// optionalParameters: {Radius? cursorRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Radius? cursorRadius} , defaultValue:none
     Radius? cursorRadius,
 
-    /// optionalParameters: {bool paintCursorAboveText = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool paintCursorAboveText,
+    /// optionalParameters: {bool paintCursorAboveText = false} , defaultValue:Literal
+    bool paintCursorAboveText = false,
 
-    /// optionalParameters: {Offset cursorOffset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset cursorOffset = Offset.zero} , defaultValue:unprocessed
     required Offset cursorOffset,
 
-    /// optionalParameters: {double devicePixelRatio = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double devicePixelRatio,
+    /// optionalParameters: {double devicePixelRatio = 1.0} , defaultValue:Literal
+    double devicePixelRatio = 1.0,
 
-    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxHeightStyle.tight
+    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , defaultValue:unprocessed
     required BoxHeightStyle selectionHeightStyle,
 
-    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxWidthStyle.tight
+    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , defaultValue:unprocessed
     required BoxWidthStyle selectionWidthStyle,
 
-    /// optionalParameters: {bool? enableInteractiveSelection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableInteractiveSelection} , defaultValue:none
     bool? enableInteractiveSelection,
 
-    /// optionalParameters: {EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.fromLTRB(4, 4, 4, 5)
+    /// optionalParameters: {EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5)} , defaultValue:unprocessed
     required EdgeInsets floatingCursorAddedMargin,
 
-    /// optionalParameters: {TextRange? promptRectRange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextRange? promptRectRange} , defaultValue:none
     TextRange? promptRectRange,
 
-    /// optionalParameters: {Color? promptRectColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? promptRectColor} , defaultValue:none
     Color? promptRectColor,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {required TextSelectionDelegate textSelectionDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionDelegate textSelectionDelegate} , defaultValue:none
     required TextSelectionDelegate textSelectionDelegate,
 
-    /// optionalParameters: {RenderEditablePainter? painter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderEditablePainter? painter} , defaultValue:none
     RenderEditablePainter? painter,
 
-    /// optionalParameters: {RenderEditablePainter? foregroundPainter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderEditablePainter? foregroundPainter} , defaultValue:none
     RenderEditablePainter? foregroundPainter,
 
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
   }) : super(
           text: text,
@@ -259,48 +259,48 @@ class RenderEditable$Mate extends RenderEditable with Mate {
           foregroundPainter: p.get('foregroundPainter').build(),
           children: p.get('children').build(),
         );
-    matePut('text', text);
-    matePut('textDirection', textDirection);
-    matePut('textAlign', textAlign);
-    matePut('cursorColor', cursorColor);
-    matePut('backgroundCursorColor', backgroundCursorColor);
-    matePut('showCursor', showCursor);
-    matePut('hasFocus', hasFocus);
-    matePut('startHandleLayerLink', startHandleLayerLink);
-    matePut('endHandleLayerLink', endHandleLayerLink);
-    matePut('maxLines', maxLines);
-    matePut('minLines', minLines);
-    matePut('expands', expands);
-    matePut('strutStyle', strutStyle);
-    matePut('selectionColor', selectionColor);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('selection', selection);
-    matePut('offset', offset);
-    matePut('onCaretChanged', onCaretChanged);
-    matePut('ignorePointer', ignorePointer);
-    matePut('readOnly', readOnly);
-    matePut('forceLine', forceLine);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('obscuringCharacter', obscuringCharacter);
-    matePut('obscureText', obscureText);
-    matePut('locale', locale);
-    matePut('cursorWidth', cursorWidth);
-    matePut('cursorHeight', cursorHeight);
-    matePut('cursorRadius', cursorRadius);
-    matePut('paintCursorAboveText', paintCursorAboveText);
-    matePut('cursorOffset', cursorOffset);
-    matePut('devicePixelRatio', devicePixelRatio);
-    matePut('selectionHeightStyle', selectionHeightStyle);
-    matePut('selectionWidthStyle', selectionWidthStyle);
-    matePut('enableInteractiveSelection', enableInteractiveSelection);
-    matePut('floatingCursorAddedMargin', floatingCursorAddedMargin);
-    matePut('promptRectRange', promptRectRange);
-    matePut('promptRectColor', promptRectColor);
-    matePut('clipBehavior', clipBehavior);
-    matePut('textSelectionDelegate', textSelectionDelegate);
-    matePut('painter', painter);
-    matePut('foregroundPainter', foregroundPainter);
-    matePut('children', children);
+    mateDeclare('text', text);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('cursorColor', cursorColor);
+    mateDeclare('backgroundCursorColor', backgroundCursorColor);
+    mateDeclare('showCursor', showCursor);
+    mateDeclare('hasFocus', hasFocus);
+    mateDeclare('startHandleLayerLink', startHandleLayerLink);
+    mateDeclare('endHandleLayerLink', endHandleLayerLink);
+    mateDeclare('maxLines', maxLines);
+    mateDeclare('minLines', minLines);
+    mateDeclare('expands', expands);
+    mateDeclare('strutStyle', strutStyle);
+    mateDeclare('selectionColor', selectionColor);
+    mateDeclare('textScaleFactor', textScaleFactor);
+    mateDeclare('selection', selection);
+    mateDeclare('offset', offset);
+    mateDeclare('onCaretChanged', onCaretChanged);
+    mateDeclare('ignorePointer', ignorePointer);
+    mateDeclare('readOnly', readOnly);
+    mateDeclare('forceLine', forceLine);
+    mateDeclare('textHeightBehavior', textHeightBehavior);
+    mateDeclare('textWidthBasis', textWidthBasis);
+    mateDeclare('obscuringCharacter', obscuringCharacter);
+    mateDeclare('obscureText', obscureText);
+    mateDeclare('locale', locale);
+    mateDeclare('cursorWidth', cursorWidth);
+    mateDeclare('cursorHeight', cursorHeight);
+    mateDeclare('cursorRadius', cursorRadius);
+    mateDeclare('paintCursorAboveText', paintCursorAboveText);
+    mateDeclare('cursorOffset', cursorOffset);
+    mateDeclare('devicePixelRatio', devicePixelRatio);
+    mateDeclare('selectionHeightStyle', selectionHeightStyle);
+    mateDeclare('selectionWidthStyle', selectionWidthStyle);
+    mateDeclare('enableInteractiveSelection', enableInteractiveSelection);
+    mateDeclare('floatingCursorAddedMargin', floatingCursorAddedMargin);
+    mateDeclare('promptRectRange', promptRectRange);
+    mateDeclare('promptRectColor', promptRectColor);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('textSelectionDelegate', textSelectionDelegate);
+    mateDeclare('painter', painter);
+    mateDeclare('foregroundPainter', foregroundPainter);
+    mateDeclare('children', children);
   }
 }

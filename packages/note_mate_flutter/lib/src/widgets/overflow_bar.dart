@@ -13,31 +13,31 @@ import 'package:flutter/src/widgets/framework.dart';
 class OverflowBar$Mate extends OverflowBar with Mate {
   /// OverflowBar OverflowBar({Key? key, double spacing = 0.0, MainAxisAlignment? alignment, double overflowSpacing = 0.0, OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start, VerticalDirection overflowDirection = VerticalDirection.down, TextDirection? textDirection, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   OverflowBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double spacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double spacing,
+    /// optionalParameters: {double spacing = 0.0} , defaultValue:Literal
+    double spacing = 0.0,
 
-    /// optionalParameters: {MainAxisAlignment? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MainAxisAlignment? alignment} , defaultValue:none
     MainAxisAlignment? alignment,
 
-    /// optionalParameters: {double overflowSpacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double overflowSpacing,
+    /// optionalParameters: {double overflowSpacing = 0.0} , defaultValue:Literal
+    double overflowSpacing = 0.0,
 
-    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , hasDefaultValue:true, defaultValueCode:OverflowBarAlignment.start
+    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , defaultValue:unprocessed
     required OverflowBarAlignment overflowAlignment,
 
-    /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
+    /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , defaultValue:unprocessed
     required VerticalDirection overflowDirection,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
   }) : super(
           key: key,
@@ -61,14 +61,14 @@ class OverflowBar$Mate extends OverflowBar with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('spacing', spacing);
-    matePut('alignment', alignment);
-    matePut('overflowSpacing', overflowSpacing);
-    matePut('overflowAlignment', overflowAlignment);
-    matePut('overflowDirection', overflowDirection);
-    matePut('textDirection', textDirection);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('spacing', spacing);
+    mateDeclare('alignment', alignment);
+    mateDeclare('overflowSpacing', overflowSpacing);
+    mateDeclare('overflowAlignment', overflowAlignment);
+    mateDeclare('overflowDirection', overflowDirection);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
   }
 }

@@ -16,7 +16,7 @@ class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T> with Mate
       T value)
       : super(value) {
     mateBuilder = (p) => AlwaysStoppedAnimation$Mate<T>(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -29,7 +29,7 @@ class ProxyAnimation$Mate extends ProxyAnimation with Mate {
       Animation<double>? animation)
       : super(animation) {
     mateBuilder = (p) => ProxyAnimation$Mate(p.get('animation').value);
-    matePut('animation', animation);
+    mateDeclare('animation', animation);
   }
 }
 
@@ -42,7 +42,7 @@ class ReverseAnimation$Mate extends ReverseAnimation with Mate {
       Animation<double> parent)
       : super(parent) {
     mateBuilder = (p) => ReverseAnimation$Mate(p.get('parent').value);
-    matePut('parent', parent);
+    mateDeclare('parent', parent);
   }
 }
 
@@ -50,13 +50,13 @@ class ReverseAnimation$Mate extends ReverseAnimation with Mate {
 class CurvedAnimation$Mate extends CurvedAnimation with Mate {
   /// CurvedAnimation CurvedAnimation({required Animation<double> parent, required Curve curve, Curve? reverseCurve})
   CurvedAnimation$Mate({
-    /// optionalParameters: {required Animation<double> parent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> parent} , defaultValue:none
     required Animation<double> parent,
 
-    /// optionalParameters: {required Curve curve} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Curve curve} , defaultValue:none
     required Curve curve,
 
-    /// optionalParameters: {Curve? reverseCurve} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Curve? reverseCurve} , defaultValue:none
     Curve? reverseCurve,
   }) : super(
           parent: parent,
@@ -68,9 +68,9 @@ class CurvedAnimation$Mate extends CurvedAnimation with Mate {
           curve: p.get('curve').build(),
           reverseCurve: p.get('reverseCurve').build(),
         );
-    matePut('parent', parent);
-    matePut('curve', curve);
-    matePut('reverseCurve', reverseCurve);
+    mateDeclare('parent', parent);
+    mateDeclare('curve', curve);
+    mateDeclare('reverseCurve', reverseCurve);
   }
 }
 
@@ -83,7 +83,7 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate {
 
     /// requiredParameters: Animation<double>? _nextTrain
     Animation<double>? _nextTrain, {
-    /// optionalParameters: {void Function()? onSwitchedTrain} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onSwitchedTrain} , defaultValue:none
     VoidCallback? onSwitchedTrain,
   }) : super(
           _currentTrain,
@@ -95,9 +95,9 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate {
           p.get('_nextTrain').value,
           onSwitchedTrain: p.get('onSwitchedTrain').build(),
         );
-    matePut('_currentTrain', _currentTrain);
-    matePut('_nextTrain', _nextTrain);
-    matePut('onSwitchedTrain', onSwitchedTrain);
+    mateDeclare('_currentTrain', _currentTrain);
+    mateDeclare('_nextTrain', _nextTrain);
+    mateDeclare('onSwitchedTrain', onSwitchedTrain);
   }
 }
 
@@ -105,10 +105,10 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate {
 class AnimationMean$Mate extends AnimationMean with Mate {
   /// AnimationMean AnimationMean({required Animation<double> left, required Animation<double> right})
   AnimationMean$Mate({
-    /// optionalParameters: {required Animation<double> left} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> left} , defaultValue:none
     required Animation<double> left,
 
-    /// optionalParameters: {required Animation<double> right} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> right} , defaultValue:none
     required Animation<double> right,
   }) : super(
           left: left,
@@ -118,8 +118,8 @@ class AnimationMean$Mate extends AnimationMean with Mate {
           left: p.get('left').build(),
           right: p.get('right').build(),
         );
-    matePut('left', left);
-    matePut('right', right);
+    mateDeclare('left', left);
+    mateDeclare('right', right);
   }
 }
 
@@ -140,8 +140,8 @@ class AnimationMax$Mate<T extends num> extends AnimationMax<T> with Mate {
           p.get('first').value,
           p.get('next').value,
         );
-    matePut('first', first);
-    matePut('next', next);
+    mateDeclare('first', first);
+    mateDeclare('next', next);
   }
 }
 
@@ -162,7 +162,7 @@ class AnimationMin$Mate<T extends num> extends AnimationMin<T> with Mate {
           p.get('first').value,
           p.get('next').value,
         );
-    matePut('first', first);
-    matePut('next', next);
+    mateDeclare('first', first);
+    mateDeclare('next', next);
   }
 }

@@ -12,13 +12,13 @@ import 'package:flutter/src/rendering/viewport_offset.dart';
 class ScrollStartNotification$Mate extends ScrollStartNotification with Mate {
   /// ScrollStartNotification ScrollStartNotification({required ScrollMetrics metrics, required BuildContext? context, DragStartDetails? dragDetails})
   ScrollStartNotification$Mate({
-    /// optionalParameters: {required ScrollMetrics metrics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollMetrics metrics} , defaultValue:none
     required ScrollMetrics metrics,
 
-    /// optionalParameters: {required BuildContext? context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext? context} , defaultValue:none
     required BuildContext? context,
 
-    /// optionalParameters: {DragStartDetails? dragDetails} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DragStartDetails? dragDetails} , defaultValue:none
     DragStartDetails? dragDetails,
   }) : super(
           metrics: metrics,
@@ -30,9 +30,9 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate {
           context: p.get('context').build(),
           dragDetails: p.get('dragDetails').build(),
         );
-    matePut('metrics', metrics);
-    matePut('context', context);
-    matePut('dragDetails', dragDetails);
+    mateDeclare('metrics', metrics);
+    mateDeclare('context', context);
+    mateDeclare('dragDetails', dragDetails);
   }
 }
 
@@ -40,19 +40,19 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate {
 class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate {
   /// ScrollUpdateNotification ScrollUpdateNotification({required ScrollMetrics metrics, required BuildContext context, DragUpdateDetails? dragDetails, double? scrollDelta, int? depth})
   ScrollUpdateNotification$Mate({
-    /// optionalParameters: {required ScrollMetrics metrics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollMetrics metrics} , defaultValue:none
     required ScrollMetrics metrics,
 
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , defaultValue:none
     required BuildContext context,
 
-    /// optionalParameters: {DragUpdateDetails? dragDetails} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DragUpdateDetails? dragDetails} , defaultValue:none
     DragUpdateDetails? dragDetails,
 
-    /// optionalParameters: {double? scrollDelta} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scrollDelta} , defaultValue:none
     double? scrollDelta,
 
-    /// optionalParameters: {int? depth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? depth} , defaultValue:none
     int? depth,
   }) : super(
           metrics: metrics,
@@ -68,11 +68,11 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate {
           scrollDelta: p.get('scrollDelta').build(),
           depth: p.get('depth').build(),
         );
-    matePut('metrics', metrics);
-    matePut('context', context);
-    matePut('dragDetails', dragDetails);
-    matePut('scrollDelta', scrollDelta);
-    matePut('depth', depth);
+    mateDeclare('metrics', metrics);
+    mateDeclare('context', context);
+    mateDeclare('dragDetails', dragDetails);
+    mateDeclare('scrollDelta', scrollDelta);
+    mateDeclare('depth', depth);
   }
 }
 
@@ -80,20 +80,20 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate {
 class OverscrollNotification$Mate extends OverscrollNotification with Mate {
   /// OverscrollNotification OverscrollNotification({required ScrollMetrics metrics, required BuildContext context, DragUpdateDetails? dragDetails, required double overscroll, double velocity = 0.0})
   OverscrollNotification$Mate({
-    /// optionalParameters: {required ScrollMetrics metrics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollMetrics metrics} , defaultValue:none
     required ScrollMetrics metrics,
 
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , defaultValue:none
     required BuildContext context,
 
-    /// optionalParameters: {DragUpdateDetails? dragDetails} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DragUpdateDetails? dragDetails} , defaultValue:none
     DragUpdateDetails? dragDetails,
 
-    /// optionalParameters: {required double overscroll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double overscroll} , defaultValue:none
     required double overscroll,
 
-    /// optionalParameters: {double velocity = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double velocity,
+    /// optionalParameters: {double velocity = 0.0} , defaultValue:Literal
+    double velocity = 0.0,
   }) : super(
           metrics: metrics,
           context: context,
@@ -108,11 +108,11 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate {
           overscroll: p.get('overscroll').build(),
           velocity: p.get('velocity').build(),
         );
-    matePut('metrics', metrics);
-    matePut('context', context);
-    matePut('dragDetails', dragDetails);
-    matePut('overscroll', overscroll);
-    matePut('velocity', velocity);
+    mateDeclare('metrics', metrics);
+    mateDeclare('context', context);
+    mateDeclare('dragDetails', dragDetails);
+    mateDeclare('overscroll', overscroll);
+    mateDeclare('velocity', velocity);
   }
 }
 
@@ -120,13 +120,13 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate {
 class ScrollEndNotification$Mate extends ScrollEndNotification with Mate {
   /// ScrollEndNotification ScrollEndNotification({required ScrollMetrics metrics, required BuildContext context, DragEndDetails? dragDetails})
   ScrollEndNotification$Mate({
-    /// optionalParameters: {required ScrollMetrics metrics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollMetrics metrics} , defaultValue:none
     required ScrollMetrics metrics,
 
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , defaultValue:none
     required BuildContext context,
 
-    /// optionalParameters: {DragEndDetails? dragDetails} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DragEndDetails? dragDetails} , defaultValue:none
     DragEndDetails? dragDetails,
   }) : super(
           metrics: metrics,
@@ -138,9 +138,9 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate {
           context: p.get('context').build(),
           dragDetails: p.get('dragDetails').build(),
         );
-    matePut('metrics', metrics);
-    matePut('context', context);
-    matePut('dragDetails', dragDetails);
+    mateDeclare('metrics', metrics);
+    mateDeclare('context', context);
+    mateDeclare('dragDetails', dragDetails);
   }
 }
 
@@ -148,13 +148,13 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate {
 class UserScrollNotification$Mate extends UserScrollNotification with Mate {
   /// UserScrollNotification UserScrollNotification({required ScrollMetrics metrics, required BuildContext context, required ScrollDirection direction})
   UserScrollNotification$Mate({
-    /// optionalParameters: {required ScrollMetrics metrics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollMetrics metrics} , defaultValue:none
     required ScrollMetrics metrics,
 
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , defaultValue:none
     required BuildContext context,
 
-    /// optionalParameters: {required ScrollDirection direction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollDirection direction} , defaultValue:none
     required ScrollDirection direction,
   }) : super(
           metrics: metrics,
@@ -166,8 +166,8 @@ class UserScrollNotification$Mate extends UserScrollNotification with Mate {
           context: p.get('context').build(),
           direction: p.get('direction').build(),
         );
-    matePut('metrics', metrics);
-    matePut('context', context);
-    matePut('direction', direction);
+    mateDeclare('metrics', metrics);
+    mateDeclare('context', context);
+    mateDeclare('direction', direction);
   }
 }

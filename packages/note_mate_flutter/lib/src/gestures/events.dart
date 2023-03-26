@@ -9,50 +9,50 @@ import 'dart:ui';
 class PointerAddedEvent$Mate extends PointerAddedEvent with Mate {
   /// PointerAddedEvent PointerAddedEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerAddedEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distance,
+    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double orientation,
+    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double tilt,
+    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    double tilt = 0.0,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           pointer: pointer,
@@ -87,21 +87,21 @@ class PointerAddedEvent$Mate extends PointerAddedEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('pointer', pointer);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('obscured', obscured);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distance', distance);
-    matePut('distanceMax', distanceMax);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('orientation', orientation);
-    matePut('tilt', tilt);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('pointer', pointer);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distance', distance);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('orientation', orientation);
+    mateDeclare('tilt', tilt);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -109,44 +109,44 @@ class PointerAddedEvent$Mate extends PointerAddedEvent with Mate {
 class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate {
   /// PointerRemovedEvent PointerRemovedEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, PointerRemovedEvent? original, int embedderId = 0})
   PointerRemovedEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {PointerRemovedEvent? original} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {PointerRemovedEvent? original} , defaultValue:none
     PointerRemovedEvent? original,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           pointer: pointer,
@@ -177,19 +177,19 @@ class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate {
           original: p.get('original').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('pointer', pointer);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('obscured', obscured);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distanceMax', distanceMax);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('original', original);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('pointer', pointer);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('original', original);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -197,68 +197,68 @@ class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate {
 class PointerHoverEvent$Mate extends PointerHoverEvent with Mate {
   /// PointerHoverEvent PointerHoverEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool synthesized = false, int embedderId = 0})
   PointerHoverEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:unprocessed
     required Offset delta,
 
-    /// optionalParameters: {int buttons = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int buttons,
+    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distance,
+    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double size,
+    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMajor,
+    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMinor,
+    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double orientation,
+    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double tilt,
+    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    double tilt = 0.0,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    bool synthesized = false,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           kind: kind,
@@ -305,27 +305,27 @@ class PointerHoverEvent$Mate extends PointerHoverEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('kind', kind);
-    matePut('pointer', pointer);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('delta', delta);
-    matePut('buttons', buttons);
-    matePut('obscured', obscured);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distance', distance);
-    matePut('distanceMax', distanceMax);
-    matePut('size', size);
-    matePut('radiusMajor', radiusMajor);
-    matePut('radiusMinor', radiusMinor);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('orientation', orientation);
-    matePut('tilt', tilt);
-    matePut('synthesized', synthesized);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('kind', kind);
+    mateDeclare('pointer', pointer);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('delta', delta);
+    mateDeclare('buttons', buttons);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distance', distance);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('size', size);
+    mateDeclare('radiusMajor', radiusMajor);
+    mateDeclare('radiusMinor', radiusMinor);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('orientation', orientation);
+    mateDeclare('tilt', tilt);
+    mateDeclare('synthesized', synthesized);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -333,71 +333,71 @@ class PointerHoverEvent$Mate extends PointerHoverEvent with Mate {
 class PointerEnterEvent$Mate extends PointerEnterEvent with Mate {
   /// PointerEnterEvent PointerEnterEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
   PointerEnterEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:unprocessed
     required Offset delta,
 
-    /// optionalParameters: {int buttons = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int buttons,
+    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distance,
+    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double size,
+    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMajor,
+    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMinor,
+    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double orientation,
+    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double tilt,
+    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    double tilt = 0.0,
 
-    /// optionalParameters: {bool down = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool down,
+    /// optionalParameters: {bool down = false} , defaultValue:Literal
+    bool down = false,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    bool synthesized = false,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           pointer: pointer,
@@ -446,28 +446,28 @@ class PointerEnterEvent$Mate extends PointerEnterEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('pointer', pointer);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('delta', delta);
-    matePut('buttons', buttons);
-    matePut('obscured', obscured);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distance', distance);
-    matePut('distanceMax', distanceMax);
-    matePut('size', size);
-    matePut('radiusMajor', radiusMajor);
-    matePut('radiusMinor', radiusMinor);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('orientation', orientation);
-    matePut('tilt', tilt);
-    matePut('down', down);
-    matePut('synthesized', synthesized);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('pointer', pointer);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('delta', delta);
+    mateDeclare('buttons', buttons);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distance', distance);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('size', size);
+    mateDeclare('radiusMajor', radiusMajor);
+    mateDeclare('radiusMinor', radiusMinor);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('orientation', orientation);
+    mateDeclare('tilt', tilt);
+    mateDeclare('down', down);
+    mateDeclare('synthesized', synthesized);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -475,71 +475,71 @@ class PointerEnterEvent$Mate extends PointerEnterEvent with Mate {
 class PointerExitEvent$Mate extends PointerExitEvent with Mate {
   /// PointerExitEvent PointerExitEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
   PointerExitEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:unprocessed
     required Offset delta,
 
-    /// optionalParameters: {int buttons = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int buttons,
+    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distance,
+    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double size,
+    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMajor,
+    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMinor,
+    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double orientation,
+    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double tilt,
+    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    double tilt = 0.0,
 
-    /// optionalParameters: {bool down = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool down,
+    /// optionalParameters: {bool down = false} , defaultValue:Literal
+    bool down = false,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    bool synthesized = false,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           kind: kind,
@@ -588,28 +588,28 @@ class PointerExitEvent$Mate extends PointerExitEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('kind', kind);
-    matePut('pointer', pointer);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('delta', delta);
-    matePut('buttons', buttons);
-    matePut('obscured', obscured);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distance', distance);
-    matePut('distanceMax', distanceMax);
-    matePut('size', size);
-    matePut('radiusMajor', radiusMajor);
-    matePut('radiusMinor', radiusMinor);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('orientation', orientation);
-    matePut('tilt', tilt);
-    matePut('down', down);
-    matePut('synthesized', synthesized);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('kind', kind);
+    mateDeclare('pointer', pointer);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('delta', delta);
+    mateDeclare('buttons', buttons);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distance', distance);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('size', size);
+    mateDeclare('radiusMajor', radiusMajor);
+    mateDeclare('radiusMinor', radiusMinor);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('orientation', orientation);
+    mateDeclare('tilt', tilt);
+    mateDeclare('down', down);
+    mateDeclare('synthesized', synthesized);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -617,62 +617,62 @@ class PointerExitEvent$Mate extends PointerExitEvent with Mate {
 class PointerDownEvent$Mate extends PointerDownEvent with Mate {
   /// PointerDownEvent PointerDownEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerDownEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {int buttons = kPrimaryButton} , hasDefaultValue:true, defaultValueCode:kPrimaryButton
-    required int buttons,
+    /// optionalParameters: {int buttons = kPrimaryButton} , defaultValue:Literal
+    int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressure = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressure,
+    /// optionalParameters: {double pressure = 1.0} , defaultValue:Literal
+    double pressure = 1.0,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double size,
+    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMajor,
+    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMinor,
+    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double orientation,
+    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double tilt,
+    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    double tilt = 0.0,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           pointer: pointer,
@@ -715,25 +715,25 @@ class PointerDownEvent$Mate extends PointerDownEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('pointer', pointer);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('buttons', buttons);
-    matePut('obscured', obscured);
-    matePut('pressure', pressure);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distanceMax', distanceMax);
-    matePut('size', size);
-    matePut('radiusMajor', radiusMajor);
-    matePut('radiusMinor', radiusMinor);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('orientation', orientation);
-    matePut('tilt', tilt);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('pointer', pointer);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('buttons', buttons);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressure', pressure);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('size', size);
+    mateDeclare('radiusMajor', radiusMajor);
+    mateDeclare('radiusMinor', radiusMinor);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('orientation', orientation);
+    mateDeclare('tilt', tilt);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -741,71 +741,71 @@ class PointerDownEvent$Mate extends PointerDownEvent with Mate {
 class PointerMoveEvent$Mate extends PointerMoveEvent with Mate {
   /// PointerMoveEvent PointerMoveEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int platformData = 0, bool synthesized = false, int embedderId = 0})
   PointerMoveEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:unprocessed
     required Offset delta,
 
-    /// optionalParameters: {int buttons = kPrimaryButton} , hasDefaultValue:true, defaultValueCode:kPrimaryButton
-    required int buttons,
+    /// optionalParameters: {int buttons = kPrimaryButton} , defaultValue:Literal
+    int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressure = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressure,
+    /// optionalParameters: {double pressure = 1.0} , defaultValue:Literal
+    double pressure = 1.0,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double size,
+    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMajor,
+    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMinor,
+    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double orientation,
+    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double tilt,
+    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    double tilt = 0.0,
 
-    /// optionalParameters: {int platformData = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int platformData,
+    /// optionalParameters: {int platformData = 0} , defaultValue:Literal
+    int platformData = 0,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    bool synthesized = false,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           pointer: pointer,
@@ -854,28 +854,28 @@ class PointerMoveEvent$Mate extends PointerMoveEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('pointer', pointer);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('delta', delta);
-    matePut('buttons', buttons);
-    matePut('obscured', obscured);
-    matePut('pressure', pressure);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distanceMax', distanceMax);
-    matePut('size', size);
-    matePut('radiusMajor', radiusMajor);
-    matePut('radiusMinor', radiusMinor);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('orientation', orientation);
-    matePut('tilt', tilt);
-    matePut('platformData', platformData);
-    matePut('synthesized', synthesized);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('pointer', pointer);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('delta', delta);
+    mateDeclare('buttons', buttons);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressure', pressure);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('size', size);
+    mateDeclare('radiusMajor', radiusMajor);
+    mateDeclare('radiusMinor', radiusMinor);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('orientation', orientation);
+    mateDeclare('tilt', tilt);
+    mateDeclare('platformData', platformData);
+    mateDeclare('synthesized', synthesized);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -883,65 +883,65 @@ class PointerMoveEvent$Mate extends PointerMoveEvent with Mate {
 class PointerUpEvent$Mate extends PointerUpEvent with Mate {
   /// PointerUpEvent PointerUpEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressure = 0.0, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerUpEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {int buttons = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int buttons,
+    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressure = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double pressure,
+    /// optionalParameters: {double pressure = 0.0} , defaultValue:Literal
+    double pressure = 0.0,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distance,
+    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double size,
+    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMajor,
+    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMinor,
+    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double orientation,
+    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double tilt,
+    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    double tilt = 0.0,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           pointer: pointer,
@@ -986,26 +986,26 @@ class PointerUpEvent$Mate extends PointerUpEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('pointer', pointer);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('buttons', buttons);
-    matePut('obscured', obscured);
-    matePut('pressure', pressure);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distance', distance);
-    matePut('distanceMax', distanceMax);
-    matePut('size', size);
-    matePut('radiusMajor', radiusMajor);
-    matePut('radiusMinor', radiusMinor);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('orientation', orientation);
-    matePut('tilt', tilt);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('pointer', pointer);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('buttons', buttons);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressure', pressure);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distance', distance);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('size', size);
+    mateDeclare('radiusMajor', radiusMajor);
+    mateDeclare('radiusMinor', radiusMinor);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('orientation', orientation);
+    mateDeclare('tilt', tilt);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -1013,23 +1013,23 @@ class PointerUpEvent$Mate extends PointerUpEvent with Mate {
 class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
   /// PointerScrollEvent PointerScrollEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, Offset scrollDelta = Offset.zero, int embedderId = 0})
   PointerScrollEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.mouse
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {Offset scrollDelta = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset scrollDelta = Offset.zero} , defaultValue:unprocessed
     required Offset scrollDelta,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           kind: kind,
@@ -1046,12 +1046,12 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
           scrollDelta: p.get('scrollDelta').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('scrollDelta', scrollDelta);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('scrollDelta', scrollDelta);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -1059,20 +1059,20 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
 class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEvent with Mate {
   /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
   PointerScrollInertiaCancelEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.mouse
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           kind: kind,
@@ -1087,11 +1087,11 @@ class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEve
           position: p.get('position').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('embedderId', embedderId);
   }
 }
 
@@ -1099,23 +1099,23 @@ class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEve
 class PointerScaleEvent$Mate extends PointerScaleEvent with Mate {
   /// PointerScaleEvent PointerScaleEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0, double scale = 1.0})
   PointerScaleEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.mouse
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
   }) : super(
           timeStamp: timeStamp,
           kind: kind,
@@ -1132,12 +1132,12 @@ class PointerScaleEvent$Mate extends PointerScaleEvent with Mate {
           embedderId: p.get('embedderId').build(),
           scale: p.get('scale').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('embedderId', embedderId);
-    matePut('scale', scale);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('embedderId', embedderId);
+    mateDeclare('scale', scale);
   }
 }
 
@@ -1145,23 +1145,23 @@ class PointerScaleEvent$Mate extends PointerScaleEvent with Mate {
 class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
   /// PointerPanZoomStartEvent PointerPanZoomStartEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomStartEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    bool synthesized = false,
   }) : super(
           timeStamp: timeStamp,
           device: device,
@@ -1178,12 +1178,12 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
           embedderId: p.get('embedderId').build(),
           synthesized: p.get('synthesized').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('device', device);
-    matePut('pointer', pointer);
-    matePut('position', position);
-    matePut('embedderId', embedderId);
-    matePut('synthesized', synthesized);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('device', device);
+    mateDeclare('pointer', pointer);
+    mateDeclare('position', position);
+    mateDeclare('embedderId', embedderId);
+    mateDeclare('synthesized', synthesized);
   }
 }
 
@@ -1191,35 +1191,35 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
 class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate {
   /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
   PointerPanZoomUpdateEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
 
-    /// optionalParameters: {Offset pan = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset pan = Offset.zero} , defaultValue:unprocessed
     required Offset pan,
 
-    /// optionalParameters: {Offset panDelta = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset panDelta = Offset.zero} , defaultValue:unprocessed
     required Offset panDelta,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
 
-    /// optionalParameters: {double rotation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double rotation,
+    /// optionalParameters: {double rotation = 0.0} , defaultValue:Literal
+    double rotation = 0.0,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    bool synthesized = false,
   }) : super(
           timeStamp: timeStamp,
           device: device,
@@ -1244,16 +1244,16 @@ class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate
           rotation: p.get('rotation').build(),
           synthesized: p.get('synthesized').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('device', device);
-    matePut('pointer', pointer);
-    matePut('position', position);
-    matePut('embedderId', embedderId);
-    matePut('pan', pan);
-    matePut('panDelta', panDelta);
-    matePut('scale', scale);
-    matePut('rotation', rotation);
-    matePut('synthesized', synthesized);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('device', device);
+    mateDeclare('pointer', pointer);
+    mateDeclare('position', position);
+    mateDeclare('embedderId', embedderId);
+    mateDeclare('pan', pan);
+    mateDeclare('panDelta', panDelta);
+    mateDeclare('scale', scale);
+    mateDeclare('rotation', rotation);
+    mateDeclare('synthesized', synthesized);
   }
 }
 
@@ -1261,23 +1261,23 @@ class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate
 class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate {
   /// PointerPanZoomEndEvent PointerPanZoomEndEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomEndEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    bool synthesized = false,
   }) : super(
           timeStamp: timeStamp,
           device: device,
@@ -1294,12 +1294,12 @@ class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate {
           embedderId: p.get('embedderId').build(),
           synthesized: p.get('synthesized').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('device', device);
-    matePut('pointer', pointer);
-    matePut('position', position);
-    matePut('embedderId', embedderId);
-    matePut('synthesized', synthesized);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('device', device);
+    mateDeclare('pointer', pointer);
+    mateDeclare('position', position);
+    mateDeclare('embedderId', embedderId);
+    mateDeclare('synthesized', synthesized);
   }
 }
 
@@ -1307,62 +1307,62 @@ class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate {
 class PointerCancelEvent$Mate extends PointerCancelEvent with Mate {
   /// PointerCancelEvent PointerCancelEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerCancelEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:unprocessed
     required Duration timeStamp,
 
-    /// optionalParameters: {int pointer = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int pointer,
+    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , hasDefaultValue:true, defaultValueCode:PointerDeviceKind.touch
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:unprocessed
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int device = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int device,
+    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:unprocessed
     required Offset position,
 
-    /// optionalParameters: {int buttons = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int buttons,
+    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscured,
+    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMin,
+    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double pressureMax,
+    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distance,
+    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double distanceMax,
+    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double size,
+    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMajor,
+    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMinor,
+    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMin,
+    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double radiusMax,
+    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double orientation,
+    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double tilt,
+    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    double tilt = 0.0,
 
-    /// optionalParameters: {int embedderId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int embedderId,
+    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
           pointer: pointer,
@@ -1405,24 +1405,24 @@ class PointerCancelEvent$Mate extends PointerCancelEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    matePut('timeStamp', timeStamp);
-    matePut('pointer', pointer);
-    matePut('kind', kind);
-    matePut('device', device);
-    matePut('position', position);
-    matePut('buttons', buttons);
-    matePut('obscured', obscured);
-    matePut('pressureMin', pressureMin);
-    matePut('pressureMax', pressureMax);
-    matePut('distance', distance);
-    matePut('distanceMax', distanceMax);
-    matePut('size', size);
-    matePut('radiusMajor', radiusMajor);
-    matePut('radiusMinor', radiusMinor);
-    matePut('radiusMin', radiusMin);
-    matePut('radiusMax', radiusMax);
-    matePut('orientation', orientation);
-    matePut('tilt', tilt);
-    matePut('embedderId', embedderId);
+    mateDeclare('timeStamp', timeStamp);
+    mateDeclare('pointer', pointer);
+    mateDeclare('kind', kind);
+    mateDeclare('device', device);
+    mateDeclare('position', position);
+    mateDeclare('buttons', buttons);
+    mateDeclare('obscured', obscured);
+    mateDeclare('pressureMin', pressureMin);
+    mateDeclare('pressureMax', pressureMax);
+    mateDeclare('distance', distance);
+    mateDeclare('distanceMax', distanceMax);
+    mateDeclare('size', size);
+    mateDeclare('radiusMajor', radiusMajor);
+    mateDeclare('radiusMinor', radiusMinor);
+    mateDeclare('radiusMin', radiusMin);
+    mateDeclare('radiusMax', radiusMax);
+    mateDeclare('orientation', orientation);
+    mateDeclare('tilt', tilt);
+    mateDeclare('embedderId', embedderId);
   }
 }

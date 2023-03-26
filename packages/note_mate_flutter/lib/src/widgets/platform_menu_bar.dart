@@ -16,14 +16,14 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
   ShortcutSerialization$Mate.character(
     /// requiredParameters: String character
     String character, {
-    /// optionalParameters: {bool alt = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alt,
+    /// optionalParameters: {bool alt = false} , defaultValue:Literal
+    bool alt = false,
 
-    /// optionalParameters: {bool control = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool control,
+    /// optionalParameters: {bool control = false} , defaultValue:Literal
+    bool control = false,
 
-    /// optionalParameters: {bool meta = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool meta,
+    /// optionalParameters: {bool meta = false} , defaultValue:Literal
+    bool meta = false,
   }) : super.character(
           character,
           alt: alt,
@@ -36,27 +36,27 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           control: p.get('control').build(),
           meta: p.get('meta').build(),
         );
-    matePut('character', character);
-    matePut('alt', alt);
-    matePut('control', control);
-    matePut('meta', meta);
+    mateDeclare('character', character);
+    mateDeclare('alt', alt);
+    mateDeclare('control', control);
+    mateDeclare('meta', meta);
   }
 
   /// ShortcutSerialization ShortcutSerialization.modifier(LogicalKeyboardKey trigger, {bool alt = false, bool control = false, bool meta = false, bool shift = false})
   ShortcutSerialization$Mate.modifier(
     /// requiredParameters: LogicalKeyboardKey trigger
     LogicalKeyboardKey trigger, {
-    /// optionalParameters: {bool alt = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alt,
+    /// optionalParameters: {bool alt = false} , defaultValue:Literal
+    bool alt = false,
 
-    /// optionalParameters: {bool control = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool control,
+    /// optionalParameters: {bool control = false} , defaultValue:Literal
+    bool control = false,
 
-    /// optionalParameters: {bool meta = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool meta,
+    /// optionalParameters: {bool meta = false} , defaultValue:Literal
+    bool meta = false,
 
-    /// optionalParameters: {bool shift = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shift,
+    /// optionalParameters: {bool shift = false} , defaultValue:Literal
+    bool shift = false,
   }) : super.modifier(
           trigger,
           alt: alt,
@@ -71,11 +71,11 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           meta: p.get('meta').build(),
           shift: p.get('shift').build(),
         );
-    matePut('trigger', trigger);
-    matePut('alt', alt);
-    matePut('control', control);
-    matePut('meta', meta);
-    matePut('shift', shift);
+    mateDeclare('trigger', trigger);
+    mateDeclare('alt', alt);
+    mateDeclare('control', control);
+    mateDeclare('meta', meta);
+    mateDeclare('shift', shift);
   }
 }
 
@@ -84,11 +84,11 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
   /// DefaultPlatformMenuDelegate DefaultPlatformMenuDelegate({MethodChannel? channel})
   DefaultPlatformMenuDelegate$Mate(
       {
-      /// optionalParameters: {MethodChannel? channel} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {MethodChannel? channel} , defaultValue:none
       MethodChannel? channel})
       : super(channel: channel) {
     mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
-    matePut('channel', channel);
+    mateDeclare('channel', channel);
   }
 }
 
@@ -96,13 +96,13 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
 class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
   /// PlatformMenuBar PlatformMenuBar({Key? key, required List<PlatformMenuItem> menus, Widget? child, Widget? body})
   PlatformMenuBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<PlatformMenuItem> menus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<PlatformMenuItem> menus} , defaultValue:none
     required List<PlatformMenuItem> menus,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -114,9 +114,9 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
           menus: p.get('menus').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('menus', menus);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('menus', menus);
+    mateDeclare('child', child);
   }
 }
 
@@ -124,16 +124,16 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
 class PlatformMenu$Mate extends PlatformMenu with Mate {
   /// PlatformMenu PlatformMenu({required String label, void Function()? onOpen, void Function()? onClose, required List<PlatformMenuItem> menus})
   PlatformMenu$Mate({
-    /// optionalParameters: {required String label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String label} , defaultValue:none
     required String label,
 
-    /// optionalParameters: {void Function()? onOpen} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onOpen} , defaultValue:none
     VoidCallback? onOpen,
 
-    /// optionalParameters: {void Function()? onClose} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onClose} , defaultValue:none
     VoidCallback? onClose,
 
-    /// optionalParameters: {required List<PlatformMenuItem> menus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<PlatformMenuItem> menus} , defaultValue:none
     required List<PlatformMenuItem> menus,
   }) : super(
           label: label,
@@ -147,10 +147,10 @@ class PlatformMenu$Mate extends PlatformMenu with Mate {
           onClose: p.get('onClose').build(),
           menus: p.get('menus').build(),
         );
-    matePut('label', label);
-    matePut('onOpen', onOpen);
-    matePut('onClose', onClose);
-    matePut('menus', menus);
+    mateDeclare('label', label);
+    mateDeclare('onOpen', onOpen);
+    mateDeclare('onClose', onClose);
+    mateDeclare('menus', menus);
   }
 }
 
@@ -159,11 +159,11 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
   /// PlatformMenuItemGroup PlatformMenuItemGroup({required List<PlatformMenuItem> members})
   PlatformMenuItemGroup$Mate(
       {
-      /// optionalParameters: {required List<PlatformMenuItem> members} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required List<PlatformMenuItem> members} , defaultValue:none
       required List<PlatformMenuItem> members})
       : super(members: members) {
     mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
-    matePut('members', members);
+    mateDeclare('members', members);
   }
 }
 
@@ -171,16 +171,16 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
 class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
   /// PlatformMenuItem PlatformMenuItem({required String label, MenuSerializableShortcut? shortcut, void Function()? onSelected, Intent? onSelectedIntent})
   PlatformMenuItem$Mate({
-    /// optionalParameters: {required String label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String label} , defaultValue:none
     required String label,
 
-    /// optionalParameters: {MenuSerializableShortcut? shortcut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuSerializableShortcut? shortcut} , defaultValue:none
     MenuSerializableShortcut? shortcut,
 
-    /// optionalParameters: {void Function()? onSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onSelected} , defaultValue:none
     VoidCallback? onSelected,
 
-    /// optionalParameters: {Intent? onSelectedIntent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Intent? onSelectedIntent} , defaultValue:none
     Intent? onSelectedIntent,
   }) : super(
           label: label,
@@ -194,10 +194,10 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
           onSelected: p.get('onSelected').build(),
           onSelectedIntent: p.get('onSelectedIntent').build(),
         );
-    matePut('label', label);
-    matePut('shortcut', shortcut);
-    matePut('onSelected', onSelected);
-    matePut('onSelectedIntent', onSelectedIntent);
+    mateDeclare('label', label);
+    mateDeclare('shortcut', shortcut);
+    mateDeclare('onSelected', onSelected);
+    mateDeclare('onSelectedIntent', onSelectedIntent);
   }
 }
 
@@ -205,11 +205,11 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
 class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate {
   /// PlatformProvidedMenuItem PlatformProvidedMenuItem({required PlatformProvidedMenuItemType type, bool enabled = true})
   PlatformProvidedMenuItem$Mate({
-    /// optionalParameters: {required PlatformProvidedMenuItemType type} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformProvidedMenuItemType type} , defaultValue:none
     required PlatformProvidedMenuItemType type,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    bool enabled = true,
   }) : super(
           type: type,
           enabled: enabled,
@@ -218,7 +218,7 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate {
           type: p.get('type').build(),
           enabled: p.get('enabled').build(),
         );
-    matePut('type', type);
-    matePut('enabled', enabled);
+    mateDeclare('type', type);
+    mateDeclare('enabled', enabled);
   }
 }

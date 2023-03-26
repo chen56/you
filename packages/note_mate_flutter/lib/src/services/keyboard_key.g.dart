@@ -13,7 +13,7 @@ class LogicalKeyboardKey$Mate extends LogicalKeyboardKey with Mate {
       int keyId)
       : super(keyId) {
     mateBuilder = (p) => LogicalKeyboardKey$Mate(p.get('keyId').value);
-    matePut('keyId', keyId);
+    mateDeclare('keyId', keyId);
   }
 }
 
@@ -26,6 +26,6 @@ class PhysicalKeyboardKey$Mate extends PhysicalKeyboardKey with Mate {
       int usbHidUsage)
       : super(usbHidUsage) {
     mateBuilder = (p) => PhysicalKeyboardKey$Mate(p.get('usbHidUsage').value);
-    matePut('usbHidUsage', usbHidUsage);
+    mateDeclare('usbHidUsage', usbHidUsage);
   }
 }

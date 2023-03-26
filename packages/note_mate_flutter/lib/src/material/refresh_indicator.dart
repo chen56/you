@@ -12,40 +12,40 @@ import 'package:flutter/src/widgets/scroll_notification.dart';
 class RefreshIndicator$Mate extends RefreshIndicator with Mate {
   /// RefreshIndicator RefreshIndicator({Key? key, required Widget child, double displacement = 40.0, double edgeOffset = 0.0, required Future<void> Function() onRefresh, Color? color, Color? backgroundColor, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, String? semanticsLabel, String? semanticsValue, double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth, RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge})
   RefreshIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {double displacement = 40.0} , hasDefaultValue:true, defaultValueCode:40.0
-    required double displacement,
+    /// optionalParameters: {double displacement = 40.0} , defaultValue:Literal
+    double displacement = 40.0,
 
-    /// optionalParameters: {double edgeOffset = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double edgeOffset,
+    /// optionalParameters: {double edgeOffset = 0.0} , defaultValue:Literal
+    double edgeOffset = 0.0,
 
-    /// optionalParameters: {required Future<void> Function() onRefresh} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Future<void> Function() onRefresh} , defaultValue:none
     required RefreshCallback onRefresh,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , hasDefaultValue:true, defaultValueCode:defaultScrollNotificationPredicate
+    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
     required ScrollNotificationPredicate notificationPredicate,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {String? semanticsValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsValue} , defaultValue:none
     String? semanticsValue,
 
-    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , hasDefaultValue:true, defaultValueCode:RefreshProgressIndicator.defaultStrokeWidth
+    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , defaultValue:unprocessed
     required double strokeWidth,
 
-    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , hasDefaultValue:true, defaultValueCode:RefreshIndicatorTriggerMode.onEdge
+    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , defaultValue:unprocessed
     required RefreshIndicatorTriggerMode triggerMode,
   }) : super(
           key: key,
@@ -75,56 +75,56 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
           strokeWidth: p.get('strokeWidth').build(),
           triggerMode: p.get('triggerMode').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('displacement', displacement);
-    matePut('edgeOffset', edgeOffset);
-    matePut('onRefresh', onRefresh);
-    matePut('color', color);
-    matePut('backgroundColor', backgroundColor);
-    matePut('notificationPredicate', notificationPredicate);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('semanticsValue', semanticsValue);
-    matePut('strokeWidth', strokeWidth);
-    matePut('triggerMode', triggerMode);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('displacement', displacement);
+    mateDeclare('edgeOffset', edgeOffset);
+    mateDeclare('onRefresh', onRefresh);
+    mateDeclare('color', color);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('notificationPredicate', notificationPredicate);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('semanticsValue', semanticsValue);
+    mateDeclare('strokeWidth', strokeWidth);
+    mateDeclare('triggerMode', triggerMode);
   }
 
   /// RefreshIndicator RefreshIndicator.adaptive({Key? key, required Widget child, double displacement = 40.0, double edgeOffset = 0.0, required Future<void> Function() onRefresh, Color? color, Color? backgroundColor, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, String? semanticsLabel, String? semanticsValue, double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth, RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge})
   RefreshIndicator$Mate.adaptive({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {double displacement = 40.0} , hasDefaultValue:true, defaultValueCode:40.0
-    required double displacement,
+    /// optionalParameters: {double displacement = 40.0} , defaultValue:Literal
+    double displacement = 40.0,
 
-    /// optionalParameters: {double edgeOffset = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double edgeOffset,
+    /// optionalParameters: {double edgeOffset = 0.0} , defaultValue:Literal
+    double edgeOffset = 0.0,
 
-    /// optionalParameters: {required Future<void> Function() onRefresh} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Future<void> Function() onRefresh} , defaultValue:none
     required RefreshCallback onRefresh,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , hasDefaultValue:true, defaultValueCode:defaultScrollNotificationPredicate
+    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
     required ScrollNotificationPredicate notificationPredicate,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {String? semanticsValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsValue} , defaultValue:none
     String? semanticsValue,
 
-    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , hasDefaultValue:true, defaultValueCode:RefreshProgressIndicator.defaultStrokeWidth
+    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , defaultValue:unprocessed
     required double strokeWidth,
 
-    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , hasDefaultValue:true, defaultValueCode:RefreshIndicatorTriggerMode.onEdge
+    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , defaultValue:unprocessed
     required RefreshIndicatorTriggerMode triggerMode,
   }) : super.adaptive(
           key: key,
@@ -154,17 +154,17 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
           strokeWidth: p.get('strokeWidth').build(),
           triggerMode: p.get('triggerMode').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('displacement', displacement);
-    matePut('edgeOffset', edgeOffset);
-    matePut('onRefresh', onRefresh);
-    matePut('color', color);
-    matePut('backgroundColor', backgroundColor);
-    matePut('notificationPredicate', notificationPredicate);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('semanticsValue', semanticsValue);
-    matePut('strokeWidth', strokeWidth);
-    matePut('triggerMode', triggerMode);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('displacement', displacement);
+    mateDeclare('edgeOffset', edgeOffset);
+    mateDeclare('onRefresh', onRefresh);
+    mateDeclare('color', color);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('notificationPredicate', notificationPredicate);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('semanticsValue', semanticsValue);
+    mateDeclare('strokeWidth', strokeWidth);
+    mateDeclare('triggerMode', triggerMode);
   }
 }

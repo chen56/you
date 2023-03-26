@@ -9,19 +9,19 @@ import 'dart:core';
 class BoxShadow$Mate extends BoxShadow with Mate {
   /// BoxShadow BoxShadow({Color color = const Color(_kColorDefault), Offset offset = Offset.zero, double blurRadius = 0.0, double spreadRadius = 0.0, BlurStyle blurStyle = BlurStyle.normal})
   BoxShadow$Mate({
-    /// optionalParameters: {Color color = const Color(_kColorDefault)} , hasDefaultValue:true, defaultValueCode:const Color(_kColorDefault)
+    /// optionalParameters: {Color color = const Color(_kColorDefault)} , defaultValue:unprocessed
     required Color color,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
     required Offset offset,
 
-    /// optionalParameters: {double blurRadius = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double blurRadius,
+    /// optionalParameters: {double blurRadius = 0.0} , defaultValue:Literal
+    double blurRadius = 0.0,
 
-    /// optionalParameters: {double spreadRadius = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double spreadRadius,
+    /// optionalParameters: {double spreadRadius = 0.0} , defaultValue:Literal
+    double spreadRadius = 0.0,
 
-    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , hasDefaultValue:true, defaultValueCode:BlurStyle.normal
+    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , defaultValue:unprocessed
     required BlurStyle blurStyle,
   }) : super(
           color: color,
@@ -37,10 +37,10 @@ class BoxShadow$Mate extends BoxShadow with Mate {
           spreadRadius: p.get('spreadRadius').build(),
           blurStyle: p.get('blurStyle').build(),
         );
-    matePut('color', color);
-    matePut('offset', offset);
-    matePut('blurRadius', blurRadius);
-    matePut('spreadRadius', spreadRadius);
-    matePut('blurStyle', blurStyle);
+    mateDeclare('color', color);
+    mateDeclare('offset', offset);
+    mateDeclare('blurRadius', blurRadius);
+    mateDeclare('spreadRadius', spreadRadius);
+    mateDeclare('blurStyle', blurStyle);
   }
 }

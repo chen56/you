@@ -10,10 +10,10 @@ import 'package:vector_math/vector_math_64.dart';
 class AnnotationEntry$Mate<T> extends AnnotationEntry<T> with Mate {
   /// AnnotationEntry<T> AnnotationEntry({required T annotation, required Offset localPosition})
   AnnotationEntry$Mate({
-    /// optionalParameters: {required T annotation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T annotation} , defaultValue:none
     required T annotation,
 
-    /// optionalParameters: {required Offset localPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset localPosition} , defaultValue:none
     required Offset localPosition,
   }) : super(
           annotation: annotation,
@@ -23,8 +23,8 @@ class AnnotationEntry$Mate<T> extends AnnotationEntry<T> with Mate {
           annotation: p.get('annotation').build(),
           localPosition: p.get('localPosition').build(),
         );
-    matePut('annotation', annotation);
-    matePut('localPosition', localPosition);
+    mateDeclare('annotation', annotation);
+    mateDeclare('localPosition', localPosition);
   }
 }
 
@@ -37,7 +37,7 @@ class LayerHandle$Mate<T extends Layer> extends LayerHandle<T> with Mate {
       T? _layer)
       : super(_layer) {
     mateBuilder = (p) => LayerHandle$Mate<T>(p.get('_layer').value);
-    matePut('_layer', _layer);
+    mateDeclare('_layer', _layer);
   }
 }
 
@@ -50,7 +50,7 @@ class PictureLayer$Mate extends PictureLayer with Mate {
       Rect canvasBounds)
       : super(canvasBounds) {
     mateBuilder = (p) => PictureLayer$Mate(p.get('canvasBounds').value);
-    matePut('canvasBounds', canvasBounds);
+    mateDeclare('canvasBounds', canvasBounds);
   }
 }
 
@@ -58,16 +58,16 @@ class PictureLayer$Mate extends PictureLayer with Mate {
 class TextureLayer$Mate extends TextureLayer with Mate {
   /// TextureLayer TextureLayer({required Rect rect, required int textureId, bool freeze = false, FilterQuality filterQuality = ui.FilterQuality.low})
   TextureLayer$Mate({
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , defaultValue:none
     required Rect rect,
 
-    /// optionalParameters: {required int textureId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int textureId} , defaultValue:none
     required int textureId,
 
-    /// optionalParameters: {bool freeze = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool freeze,
+    /// optionalParameters: {bool freeze = false} , defaultValue:Literal
+    bool freeze = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = ui.FilterQuality.low} , hasDefaultValue:true, defaultValueCode:ui.FilterQuality.low
+    /// optionalParameters: {FilterQuality filterQuality = ui.FilterQuality.low} , defaultValue:unprocessed
     required FilterQuality filterQuality,
   }) : super(
           rect: rect,
@@ -81,10 +81,10 @@ class TextureLayer$Mate extends TextureLayer with Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    matePut('rect', rect);
-    matePut('textureId', textureId);
-    matePut('freeze', freeze);
-    matePut('filterQuality', filterQuality);
+    mateDeclare('rect', rect);
+    mateDeclare('textureId', textureId);
+    mateDeclare('freeze', freeze);
+    mateDeclare('filterQuality', filterQuality);
   }
 }
 
@@ -92,10 +92,10 @@ class TextureLayer$Mate extends TextureLayer with Mate {
 class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
   /// PlatformViewLayer PlatformViewLayer({required Rect rect, required int viewId})
   PlatformViewLayer$Mate({
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , defaultValue:none
     required Rect rect,
 
-    /// optionalParameters: {required int viewId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int viewId} , defaultValue:none
     required int viewId,
   }) : super(
           rect: rect,
@@ -105,8 +105,8 @@ class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
           rect: p.get('rect').build(),
           viewId: p.get('viewId').build(),
         );
-    matePut('rect', rect);
-    matePut('viewId', viewId);
+    mateDeclare('rect', rect);
+    mateDeclare('viewId', viewId);
   }
 }
 
@@ -114,19 +114,19 @@ class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
 class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
   /// PerformanceOverlayLayer PerformanceOverlayLayer({required Rect overlayRect, required int optionsMask, required int rasterizerThreshold, required bool checkerboardRasterCacheImages, required bool checkerboardOffscreenLayers})
   PerformanceOverlayLayer$Mate({
-    /// optionalParameters: {required Rect overlayRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect overlayRect} , defaultValue:none
     required Rect overlayRect,
 
-    /// optionalParameters: {required int optionsMask} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int optionsMask} , defaultValue:none
     required int optionsMask,
 
-    /// optionalParameters: {required int rasterizerThreshold} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int rasterizerThreshold} , defaultValue:none
     required int rasterizerThreshold,
 
-    /// optionalParameters: {required bool checkerboardRasterCacheImages} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool checkerboardRasterCacheImages} , defaultValue:none
     required bool checkerboardRasterCacheImages,
 
-    /// optionalParameters: {required bool checkerboardOffscreenLayers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool checkerboardOffscreenLayers} , defaultValue:none
     required bool checkerboardOffscreenLayers,
   }) : super(
           overlayRect: overlayRect,
@@ -142,11 +142,11 @@ class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    matePut('overlayRect', overlayRect);
-    matePut('optionsMask', optionsMask);
-    matePut('rasterizerThreshold', rasterizerThreshold);
-    matePut('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    matePut('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateDeclare('overlayRect', overlayRect);
+    mateDeclare('optionsMask', optionsMask);
+    mateDeclare('rasterizerThreshold', rasterizerThreshold);
+    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
   }
 }
 
@@ -155,11 +155,11 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
   /// OffsetLayer OffsetLayer({Offset offset = Offset.zero})
   OffsetLayer$Mate(
       {
-      /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+      /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
       required Offset offset})
       : super(offset: offset) {
     mateBuilder = (p) => OffsetLayer$Mate(offset: p.get('offset').build());
-    matePut('offset', offset);
+    mateDeclare('offset', offset);
   }
 }
 
@@ -167,10 +167,10 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
 class ClipRectLayer$Mate extends ClipRectLayer with Mate {
   /// ClipRectLayer ClipRectLayer({Rect? clipRect, Clip clipBehavior = Clip.hardEdge})
   ClipRectLayer$Mate({
-    /// optionalParameters: {Rect? clipRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? clipRect} , defaultValue:none
     Rect? clipRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           clipRect: clipRect,
@@ -180,8 +180,8 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate {
           clipRect: p.get('clipRect').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('clipRect', clipRect);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('clipRect', clipRect);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -189,10 +189,10 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate {
 class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
   /// ClipRRectLayer ClipRRectLayer({RRect? clipRRect, Clip clipBehavior = Clip.antiAlias})
   ClipRRectLayer$Mate({
-    /// optionalParameters: {RRect? clipRRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RRect? clipRRect} , defaultValue:none
     RRect? clipRRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           clipRRect: clipRRect,
@@ -202,8 +202,8 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
           clipRRect: p.get('clipRRect').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('clipRRect', clipRRect);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('clipRRect', clipRRect);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -211,10 +211,10 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
 class ClipPathLayer$Mate extends ClipPathLayer with Mate {
   /// ClipPathLayer ClipPathLayer({Path? clipPath, Clip clipBehavior = Clip.antiAlias})
   ClipPathLayer$Mate({
-    /// optionalParameters: {Path? clipPath} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Path? clipPath} , defaultValue:none
     Path? clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           clipPath: clipPath,
@@ -224,8 +224,8 @@ class ClipPathLayer$Mate extends ClipPathLayer with Mate {
           clipPath: p.get('clipPath').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('clipPath', clipPath);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('clipPath', clipPath);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -234,11 +234,11 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
   /// ColorFilterLayer ColorFilterLayer({ColorFilter? colorFilter})
   ColorFilterLayer$Mate(
       {
-      /// optionalParameters: {ColorFilter? colorFilter} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ColorFilter? colorFilter} , defaultValue:none
       ColorFilter? colorFilter})
       : super(colorFilter: colorFilter) {
     mateBuilder = (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
-    matePut('colorFilter', colorFilter);
+    mateDeclare('colorFilter', colorFilter);
   }
 }
 
@@ -246,10 +246,10 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
 class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
   /// ImageFilterLayer ImageFilterLayer({ImageFilter? imageFilter, Offset offset = Offset.zero})
   ImageFilterLayer$Mate({
-    /// optionalParameters: {ImageFilter? imageFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageFilter? imageFilter} , defaultValue:none
     ImageFilter? imageFilter,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
     required Offset offset,
   }) : super(
           imageFilter: imageFilter,
@@ -259,8 +259,8 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
           imageFilter: p.get('imageFilter').build(),
           offset: p.get('offset').build(),
         );
-    matePut('imageFilter', imageFilter);
-    matePut('offset', offset);
+    mateDeclare('imageFilter', imageFilter);
+    mateDeclare('offset', offset);
   }
 }
 
@@ -268,10 +268,10 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
 class TransformLayer$Mate extends TransformLayer with Mate {
   /// TransformLayer TransformLayer({Matrix4? transform, Offset offset = Offset.zero})
   TransformLayer$Mate({
-    /// optionalParameters: {Matrix4? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Matrix4? transform} , defaultValue:none
     Matrix4? transform,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
     required Offset offset,
   }) : super(
           transform: transform,
@@ -281,8 +281,8 @@ class TransformLayer$Mate extends TransformLayer with Mate {
           transform: p.get('transform').build(),
           offset: p.get('offset').build(),
         );
-    matePut('transform', transform);
-    matePut('offset', offset);
+    mateDeclare('transform', transform);
+    mateDeclare('offset', offset);
   }
 }
 
@@ -290,10 +290,10 @@ class TransformLayer$Mate extends TransformLayer with Mate {
 class OpacityLayer$Mate extends OpacityLayer with Mate {
   /// OpacityLayer OpacityLayer({int? alpha, Offset offset = Offset.zero})
   OpacityLayer$Mate({
-    /// optionalParameters: {int? alpha} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? alpha} , defaultValue:none
     int? alpha,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
     required Offset offset,
   }) : super(
           alpha: alpha,
@@ -303,8 +303,8 @@ class OpacityLayer$Mate extends OpacityLayer with Mate {
           alpha: p.get('alpha').build(),
           offset: p.get('offset').build(),
         );
-    matePut('alpha', alpha);
-    matePut('offset', offset);
+    mateDeclare('alpha', alpha);
+    mateDeclare('offset', offset);
   }
 }
 
@@ -312,13 +312,13 @@ class OpacityLayer$Mate extends OpacityLayer with Mate {
 class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
   /// ShaderMaskLayer ShaderMaskLayer({Shader? shader, Rect? maskRect, BlendMode? blendMode})
   ShaderMaskLayer$Mate({
-    /// optionalParameters: {Shader? shader} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Shader? shader} , defaultValue:none
     Shader? shader,
 
-    /// optionalParameters: {Rect? maskRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? maskRect} , defaultValue:none
     Rect? maskRect,
 
-    /// optionalParameters: {BlendMode? blendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? blendMode} , defaultValue:none
     BlendMode? blendMode,
   }) : super(
           shader: shader,
@@ -330,9 +330,9 @@ class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
           maskRect: p.get('maskRect').build(),
           blendMode: p.get('blendMode').build(),
         );
-    matePut('shader', shader);
-    matePut('maskRect', maskRect);
-    matePut('blendMode', blendMode);
+    mateDeclare('shader', shader);
+    mateDeclare('maskRect', maskRect);
+    mateDeclare('blendMode', blendMode);
   }
 }
 
@@ -340,10 +340,10 @@ class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
 class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
   /// BackdropFilterLayer BackdropFilterLayer({ImageFilter? filter, BlendMode blendMode = BlendMode.srcOver})
   BackdropFilterLayer$Mate({
-    /// optionalParameters: {ImageFilter? filter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageFilter? filter} , defaultValue:none
     ImageFilter? filter,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , hasDefaultValue:true, defaultValueCode:BlendMode.srcOver
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:unprocessed
     required BlendMode blendMode,
   }) : super(
           filter: filter,
@@ -353,8 +353,8 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
           filter: p.get('filter').build(),
           blendMode: p.get('blendMode').build(),
         );
-    matePut('filter', filter);
-    matePut('blendMode', blendMode);
+    mateDeclare('filter', filter);
+    mateDeclare('blendMode', blendMode);
   }
 }
 
@@ -362,19 +362,19 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
 class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
   /// PhysicalModelLayer PhysicalModelLayer({Path? clipPath, Clip clipBehavior = Clip.none, double? elevation, Color? color, Color? shadowColor})
   PhysicalModelLayer$Mate({
-    /// optionalParameters: {Path? clipPath} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Path? clipPath} , defaultValue:none
     Path? clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
   }) : super(
           clipPath: clipPath,
@@ -390,11 +390,11 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    matePut('clipPath', clipPath);
-    matePut('clipBehavior', clipBehavior);
-    matePut('elevation', elevation);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
+    mateDeclare('clipPath', clipPath);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('elevation', elevation);
+    mateDeclare('color', color);
+    mateDeclare('shadowColor', shadowColor);
   }
 }
 
@@ -402,10 +402,10 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
 class LeaderLayer$Mate extends LeaderLayer with Mate {
   /// LeaderLayer LeaderLayer({required LayerLink link, Offset offset = Offset.zero})
   LeaderLayer$Mate({
-    /// optionalParameters: {required LayerLink link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink link} , defaultValue:none
     required LayerLink link,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
     required Offset offset,
   }) : super(
           link: link,
@@ -415,8 +415,8 @@ class LeaderLayer$Mate extends LeaderLayer with Mate {
           link: p.get('link').build(),
           offset: p.get('offset').build(),
         );
-    matePut('link', link);
-    matePut('offset', offset);
+    mateDeclare('link', link);
+    mateDeclare('offset', offset);
   }
 }
 
@@ -424,16 +424,16 @@ class LeaderLayer$Mate extends LeaderLayer with Mate {
 class FollowerLayer$Mate extends FollowerLayer with Mate {
   /// FollowerLayer FollowerLayer({required LayerLink link, bool? showWhenUnlinked = true, Offset? unlinkedOffset = Offset.zero, Offset? linkedOffset = Offset.zero})
   FollowerLayer$Mate({
-    /// optionalParameters: {required LayerLink link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink link} , defaultValue:none
     required LayerLink link,
 
-    /// optionalParameters: {bool? showWhenUnlinked = true} , hasDefaultValue:true, defaultValueCode:true
-    bool? showWhenUnlinked,
+    /// optionalParameters: {bool? showWhenUnlinked = true} , defaultValue:Literal
+    bool? showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , defaultValue:unprocessed
     Offset? unlinkedOffset,
 
-    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , defaultValue:unprocessed
     Offset? linkedOffset,
   }) : super(
           link: link,
@@ -447,10 +447,10 @@ class FollowerLayer$Mate extends FollowerLayer with Mate {
           unlinkedOffset: p.get('unlinkedOffset').build(),
           linkedOffset: p.get('linkedOffset').build(),
         );
-    matePut('link', link);
-    matePut('showWhenUnlinked', showWhenUnlinked);
-    matePut('unlinkedOffset', unlinkedOffset);
-    matePut('linkedOffset', linkedOffset);
+    mateDeclare('link', link);
+    mateDeclare('showWhenUnlinked', showWhenUnlinked);
+    mateDeclare('unlinkedOffset', unlinkedOffset);
+    mateDeclare('linkedOffset', linkedOffset);
   }
 }
 
@@ -460,14 +460,14 @@ class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T
   AnnotatedRegionLayer$Mate(
     /// requiredParameters: T value
     T value, {
-    /// optionalParameters: {Size? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? size} , defaultValue:none
     Size? size,
 
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , defaultValue:none
     Offset? offset,
 
-    /// optionalParameters: {bool opaque = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool opaque,
+    /// optionalParameters: {bool opaque = false} , defaultValue:Literal
+    bool opaque = false,
   }) : super(
           value,
           size: size,
@@ -480,9 +480,9 @@ class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T
           offset: p.get('offset').build(),
           opaque: p.get('opaque').build(),
         );
-    matePut('value', value);
-    matePut('size', size);
-    matePut('offset', offset);
-    matePut('opaque', opaque);
+    mateDeclare('value', value);
+    mateDeclare('size', size);
+    mateDeclare('offset', offset);
+    mateDeclare('opaque', opaque);
   }
 }

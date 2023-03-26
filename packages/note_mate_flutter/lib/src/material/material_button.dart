@@ -18,100 +18,100 @@ import 'package:flutter/src/widgets/framework.dart';
 class MaterialButton$Mate extends MaterialButton with Mate {
   /// MaterialButton MaterialButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHighlightChanged, MouseCursor? mouseCursor, ButtonTextTheme? textTheme, Color? textColor, Color? disabledTextColor, Color? color, Color? disabledColor, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Brightness? colorBrightness, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, Duration? animationDuration, double? minWidth, double? height, bool enableFeedback = true, Widget? child})
   MaterialButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
     VoidCallback? onLongPress,
 
-    /// optionalParameters: {void Function(bool)? onHighlightChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHighlightChanged} , defaultValue:none
     ValueChanged<bool>? onHighlightChanged,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {ButtonTextTheme? textTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonTextTheme? textTheme} , defaultValue:none
     ButtonTextTheme? textTheme,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , defaultValue:none
     Color? textColor,
 
-    /// optionalParameters: {Color? disabledTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledTextColor} , defaultValue:none
     Color? disabledTextColor,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , defaultValue:none
     Color? highlightColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , defaultValue:none
     Color? splashColor,
 
-    /// optionalParameters: {Brightness? colorBrightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? colorBrightness} , defaultValue:none
     Brightness? colorBrightness,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {double? focusElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? focusElevation} , defaultValue:none
     double? focusElevation,
 
-    /// optionalParameters: {double? hoverElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? hoverElevation} , defaultValue:none
     double? hoverElevation,
 
-    /// optionalParameters: {double? highlightElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? highlightElevation} , defaultValue:none
     double? highlightElevation,
 
-    /// optionalParameters: {double? disabledElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? disabledElevation} , defaultValue:none
     double? disabledElevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {Duration? animationDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? animationDuration} , defaultValue:none
     Duration? animationDuration,
 
-    /// optionalParameters: {double? minWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minWidth} , defaultValue:none
     double? minWidth,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {bool enableFeedback = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableFeedback,
+    /// optionalParameters: {bool enableFeedback = true} , defaultValue:Literal
+    bool enableFeedback = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -181,37 +181,37 @@ class MaterialButton$Mate extends MaterialButton with Mate {
           enableFeedback: p.get('enableFeedback').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('onLongPress', onLongPress);
-    matePut('onHighlightChanged', onHighlightChanged);
-    matePut('mouseCursor', mouseCursor);
-    matePut('textTheme', textTheme);
-    matePut('textColor', textColor);
-    matePut('disabledTextColor', disabledTextColor);
-    matePut('color', color);
-    matePut('disabledColor', disabledColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('highlightColor', highlightColor);
-    matePut('splashColor', splashColor);
-    matePut('colorBrightness', colorBrightness);
-    matePut('elevation', elevation);
-    matePut('focusElevation', focusElevation);
-    matePut('hoverElevation', hoverElevation);
-    matePut('highlightElevation', highlightElevation);
-    matePut('disabledElevation', disabledElevation);
-    matePut('padding', padding);
-    matePut('visualDensity', visualDensity);
-    matePut('shape', shape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('animationDuration', animationDuration);
-    matePut('minWidth', minWidth);
-    matePut('height', height);
-    matePut('enableFeedback', enableFeedback);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('onLongPress', onLongPress);
+    mateDeclare('onHighlightChanged', onHighlightChanged);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('textTheme', textTheme);
+    mateDeclare('textColor', textColor);
+    mateDeclare('disabledTextColor', disabledTextColor);
+    mateDeclare('color', color);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('highlightColor', highlightColor);
+    mateDeclare('splashColor', splashColor);
+    mateDeclare('colorBrightness', colorBrightness);
+    mateDeclare('elevation', elevation);
+    mateDeclare('focusElevation', focusElevation);
+    mateDeclare('hoverElevation', hoverElevation);
+    mateDeclare('highlightElevation', highlightElevation);
+    mateDeclare('disabledElevation', disabledElevation);
+    mateDeclare('padding', padding);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('shape', shape);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('animationDuration', animationDuration);
+    mateDeclare('minWidth', minWidth);
+    mateDeclare('height', height);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('child', child);
   }
 }

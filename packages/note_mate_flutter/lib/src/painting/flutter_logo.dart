@@ -9,13 +9,13 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class FlutterLogoDecoration$Mate extends FlutterLogoDecoration with Mate {
   /// FlutterLogoDecoration FlutterLogoDecoration({Color textColor = const Color(0xFF757575), FlutterLogoStyle style = FlutterLogoStyle.markOnly, EdgeInsets margin = EdgeInsets.zero})
   FlutterLogoDecoration$Mate({
-    /// optionalParameters: {Color textColor = const Color(0xFF757575)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF757575)
+    /// optionalParameters: {Color textColor = const Color(0xFF757575)} , defaultValue:unprocessed
     required Color textColor,
 
-    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , hasDefaultValue:true, defaultValueCode:FlutterLogoStyle.markOnly
+    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , defaultValue:unprocessed
     required FlutterLogoStyle style,
 
-    /// optionalParameters: {EdgeInsets margin = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsets margin = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsets margin,
   }) : super(
           textColor: textColor,
@@ -27,8 +27,8 @@ class FlutterLogoDecoration$Mate extends FlutterLogoDecoration with Mate {
           style: p.get('style').build(),
           margin: p.get('margin').build(),
         );
-    matePut('textColor', textColor);
-    matePut('style', style);
-    matePut('margin', margin);
+    mateDeclare('textColor', textColor);
+    mateDeclare('style', style);
+    mateDeclare('margin', margin);
   }
 }

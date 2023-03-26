@@ -21,112 +21,112 @@ import 'package:flutter/src/widgets/router.dart';
 class MaterialApp$Mate extends MaterialApp with Mate {
   /// MaterialApp MaterialApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, Widget? home, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, String? initialRoute, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
   MaterialApp$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , defaultValue:none
     GlobalKey<NavigatorState>? navigatorKey,
 
-    /// optionalParameters: {GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey} , defaultValue:none
     GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey,
 
-    /// optionalParameters: {Widget? home} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? home} , defaultValue:none
     Widget? home,
 
-    /// optionalParameters: {Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}} , hasDefaultValue:true, defaultValueCode:const <String, WidgetBuilder>{}
+    /// optionalParameters: {Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}} , defaultValue:unprocessed
     required Map<String, WidgetBuilder> routes,
 
-    /// optionalParameters: {String? initialRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? initialRoute} , defaultValue:none
     String? initialRoute,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , defaultValue:none
     RouteFactory? onGenerateRoute,
 
-    /// optionalParameters: {List<Route<dynamic>> Function(String)? onGenerateInitialRoutes} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Route<dynamic>> Function(String)? onGenerateInitialRoutes} , defaultValue:none
     InitialRouteListFactory? onGenerateInitialRoutes,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , defaultValue:none
     RouteFactory? onUnknownRoute,
 
-    /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , hasDefaultValue:true, defaultValueCode:const <NavigatorObserver>[]
+    /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , defaultValue:unprocessed
     required List<NavigatorObserver> navigatorObservers,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget?)? builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget?)? builder} , defaultValue:none
     TransitionBuilder? builder,
 
-    /// optionalParameters: {String title = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String title,
+    /// optionalParameters: {String title = ''} , defaultValue:Literal
+    String title = '',
 
-    /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , defaultValue:none
     GenerateAppTitle? onGenerateTitle,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {ThemeData? theme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? theme} , defaultValue:none
     ThemeData? theme,
 
-    /// optionalParameters: {ThemeData? darkTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? darkTheme} , defaultValue:none
     ThemeData? darkTheme,
 
-    /// optionalParameters: {ThemeData? highContrastTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? highContrastTheme} , defaultValue:none
     ThemeData? highContrastTheme,
 
-    /// optionalParameters: {ThemeData? highContrastDarkTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? highContrastDarkTheme} , defaultValue:none
     ThemeData? highContrastDarkTheme,
 
-    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , hasDefaultValue:true, defaultValueCode:ThemeMode.system
+    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , defaultValue:unprocessed
     ThemeMode? themeMode,
 
-    /// optionalParameters: {Duration themeAnimationDuration = kThemeAnimationDuration} , hasDefaultValue:true, defaultValueCode:kThemeAnimationDuration
+    /// optionalParameters: {Duration themeAnimationDuration = kThemeAnimationDuration} , defaultValue:unprocessed
     required Duration themeAnimationDuration,
 
-    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
+    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , defaultValue:unprocessed
     required Curve themeAnimationCurve,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
 
-    /// optionalParameters: {Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates} , defaultValue:none
     Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
 
-    /// optionalParameters: {Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback} , defaultValue:none
     LocaleListResolutionCallback? localeListResolutionCallback,
 
-    /// optionalParameters: {Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback} , defaultValue:none
     LocaleResolutionCallback? localeResolutionCallback,
 
-    /// optionalParameters: {Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')]} , hasDefaultValue:true, defaultValueCode:const <Locale>[Locale('en', 'US')]
+    /// optionalParameters: {Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')]} , defaultValue:unprocessed
     required Iterable<Locale> supportedLocales,
 
-    /// optionalParameters: {bool debugShowMaterialGrid = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool debugShowMaterialGrid,
+    /// optionalParameters: {bool debugShowMaterialGrid = false} , defaultValue:Literal
+    bool debugShowMaterialGrid = false,
 
-    /// optionalParameters: {bool showPerformanceOverlay = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showPerformanceOverlay,
+    /// optionalParameters: {bool showPerformanceOverlay = false} , defaultValue:Literal
+    bool showPerformanceOverlay = false,
 
-    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardRasterCacheImages,
+    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , defaultValue:Literal
+    bool checkerboardRasterCacheImages = false,
 
-    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardOffscreenLayers,
+    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , defaultValue:Literal
+    bool checkerboardOffscreenLayers = false,
 
-    /// optionalParameters: {bool showSemanticsDebugger = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showSemanticsDebugger,
+    /// optionalParameters: {bool showSemanticsDebugger = false} , defaultValue:Literal
+    bool showSemanticsDebugger = false,
 
-    /// optionalParameters: {bool debugShowCheckedModeBanner = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool debugShowCheckedModeBanner,
+    /// optionalParameters: {bool debugShowCheckedModeBanner = true} , defaultValue:Literal
+    bool debugShowCheckedModeBanner = true,
 
-    /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , defaultValue:none
     Map<ShortcutActivator, Intent>? shortcuts,
 
-    /// optionalParameters: {Map<Type, Action<Intent>>? actions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<Type, Action<Intent>>? actions} , defaultValue:none
     Map<Type, Action<Intent>>? actions,
 
-    /// optionalParameters: {String? restorationScopeId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationScopeId} , defaultValue:none
     String? restorationScopeId,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
     ScrollBehavior? scrollBehavior,
   }) : super(
           key: key,
@@ -204,143 +204,143 @@ class MaterialApp$Mate extends MaterialApp with Mate {
           restorationScopeId: p.get('restorationScopeId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
         );
-    matePut('key', key);
-    matePut('navigatorKey', navigatorKey);
-    matePut('scaffoldMessengerKey', scaffoldMessengerKey);
-    matePut('home', home);
-    matePut('routes', routes);
-    matePut('initialRoute', initialRoute);
-    matePut('onGenerateRoute', onGenerateRoute);
-    matePut('onGenerateInitialRoutes', onGenerateInitialRoutes);
-    matePut('onUnknownRoute', onUnknownRoute);
-    matePut('navigatorObservers', navigatorObservers);
-    matePut('builder', builder);
-    matePut('title', title);
-    matePut('onGenerateTitle', onGenerateTitle);
-    matePut('color', color);
-    matePut('theme', theme);
-    matePut('darkTheme', darkTheme);
-    matePut('highContrastTheme', highContrastTheme);
-    matePut('highContrastDarkTheme', highContrastDarkTheme);
-    matePut('themeMode', themeMode);
-    matePut('themeAnimationDuration', themeAnimationDuration);
-    matePut('themeAnimationCurve', themeAnimationCurve);
-    matePut('locale', locale);
-    matePut('localizationsDelegates', localizationsDelegates);
-    matePut('localeListResolutionCallback', localeListResolutionCallback);
-    matePut('localeResolutionCallback', localeResolutionCallback);
-    matePut('supportedLocales', supportedLocales);
-    matePut('debugShowMaterialGrid', debugShowMaterialGrid);
-    matePut('showPerformanceOverlay', showPerformanceOverlay);
-    matePut('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    matePut('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
-    matePut('showSemanticsDebugger', showSemanticsDebugger);
-    matePut('debugShowCheckedModeBanner', debugShowCheckedModeBanner);
-    matePut('shortcuts', shortcuts);
-    matePut('actions', actions);
-    matePut('restorationScopeId', restorationScopeId);
-    matePut('scrollBehavior', scrollBehavior);
+    mateDeclare('key', key);
+    mateDeclare('navigatorKey', navigatorKey);
+    mateDeclare('scaffoldMessengerKey', scaffoldMessengerKey);
+    mateDeclare('home', home);
+    mateDeclare('routes', routes);
+    mateDeclare('initialRoute', initialRoute);
+    mateDeclare('onGenerateRoute', onGenerateRoute);
+    mateDeclare('onGenerateInitialRoutes', onGenerateInitialRoutes);
+    mateDeclare('onUnknownRoute', onUnknownRoute);
+    mateDeclare('navigatorObservers', navigatorObservers);
+    mateDeclare('builder', builder);
+    mateDeclare('title', title);
+    mateDeclare('onGenerateTitle', onGenerateTitle);
+    mateDeclare('color', color);
+    mateDeclare('theme', theme);
+    mateDeclare('darkTheme', darkTheme);
+    mateDeclare('highContrastTheme', highContrastTheme);
+    mateDeclare('highContrastDarkTheme', highContrastDarkTheme);
+    mateDeclare('themeMode', themeMode);
+    mateDeclare('themeAnimationDuration', themeAnimationDuration);
+    mateDeclare('themeAnimationCurve', themeAnimationCurve);
+    mateDeclare('locale', locale);
+    mateDeclare('localizationsDelegates', localizationsDelegates);
+    mateDeclare('localeListResolutionCallback', localeListResolutionCallback);
+    mateDeclare('localeResolutionCallback', localeResolutionCallback);
+    mateDeclare('supportedLocales', supportedLocales);
+    mateDeclare('debugShowMaterialGrid', debugShowMaterialGrid);
+    mateDeclare('showPerformanceOverlay', showPerformanceOverlay);
+    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateDeclare('showSemanticsDebugger', showSemanticsDebugger);
+    mateDeclare('debugShowCheckedModeBanner', debugShowCheckedModeBanner);
+    mateDeclare('shortcuts', shortcuts);
+    mateDeclare('actions', actions);
+    mateDeclare('restorationScopeId', restorationScopeId);
+    mateDeclare('scrollBehavior', scrollBehavior);
   }
 
   /// MaterialApp MaterialApp.router({Key? key, GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, ThemeData? theme, ThemeData? darkTheme, ThemeData? highContrastTheme, ThemeData? highContrastDarkTheme, ThemeMode? themeMode = ThemeMode.system, Duration themeAnimationDuration = kThemeAnimationDuration, Curve themeAnimationCurve = Curves.linear, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool debugShowMaterialGrid = false, bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
   MaterialApp$Mate.router({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey} , defaultValue:none
     GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey,
 
-    /// optionalParameters: {RouteInformationProvider? routeInformationProvider} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteInformationProvider? routeInformationProvider} , defaultValue:none
     RouteInformationProvider? routeInformationProvider,
 
-    /// optionalParameters: {RouteInformationParser<Object>? routeInformationParser} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteInformationParser<Object>? routeInformationParser} , defaultValue:none
     RouteInformationParser<Object>? routeInformationParser,
 
-    /// optionalParameters: {RouterDelegate<Object>? routerDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouterDelegate<Object>? routerDelegate} , defaultValue:none
     RouterDelegate<Object>? routerDelegate,
 
-    /// optionalParameters: {RouterConfig<Object>? routerConfig} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouterConfig<Object>? routerConfig} , defaultValue:none
     RouterConfig<Object>? routerConfig,
 
-    /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , defaultValue:none
     BackButtonDispatcher? backButtonDispatcher,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget?)? builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget?)? builder} , defaultValue:none
     TransitionBuilder? builder,
 
-    /// optionalParameters: {String title = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String title,
+    /// optionalParameters: {String title = ''} , defaultValue:Literal
+    String title = '',
 
-    /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , defaultValue:none
     GenerateAppTitle? onGenerateTitle,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {ThemeData? theme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? theme} , defaultValue:none
     ThemeData? theme,
 
-    /// optionalParameters: {ThemeData? darkTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? darkTheme} , defaultValue:none
     ThemeData? darkTheme,
 
-    /// optionalParameters: {ThemeData? highContrastTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? highContrastTheme} , defaultValue:none
     ThemeData? highContrastTheme,
 
-    /// optionalParameters: {ThemeData? highContrastDarkTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ThemeData? highContrastDarkTheme} , defaultValue:none
     ThemeData? highContrastDarkTheme,
 
-    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , hasDefaultValue:true, defaultValueCode:ThemeMode.system
+    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , defaultValue:unprocessed
     ThemeMode? themeMode,
 
-    /// optionalParameters: {Duration themeAnimationDuration = kThemeAnimationDuration} , hasDefaultValue:true, defaultValueCode:kThemeAnimationDuration
+    /// optionalParameters: {Duration themeAnimationDuration = kThemeAnimationDuration} , defaultValue:unprocessed
     required Duration themeAnimationDuration,
 
-    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
+    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , defaultValue:unprocessed
     required Curve themeAnimationCurve,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
 
-    /// optionalParameters: {Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates} , defaultValue:none
     Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
 
-    /// optionalParameters: {Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback} , defaultValue:none
     LocaleListResolutionCallback? localeListResolutionCallback,
 
-    /// optionalParameters: {Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback} , defaultValue:none
     LocaleResolutionCallback? localeResolutionCallback,
 
-    /// optionalParameters: {Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')]} , hasDefaultValue:true, defaultValueCode:const <Locale>[Locale('en', 'US')]
+    /// optionalParameters: {Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')]} , defaultValue:unprocessed
     required Iterable<Locale> supportedLocales,
 
-    /// optionalParameters: {bool debugShowMaterialGrid = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool debugShowMaterialGrid,
+    /// optionalParameters: {bool debugShowMaterialGrid = false} , defaultValue:Literal
+    bool debugShowMaterialGrid = false,
 
-    /// optionalParameters: {bool showPerformanceOverlay = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showPerformanceOverlay,
+    /// optionalParameters: {bool showPerformanceOverlay = false} , defaultValue:Literal
+    bool showPerformanceOverlay = false,
 
-    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardRasterCacheImages,
+    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , defaultValue:Literal
+    bool checkerboardRasterCacheImages = false,
 
-    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardOffscreenLayers,
+    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , defaultValue:Literal
+    bool checkerboardOffscreenLayers = false,
 
-    /// optionalParameters: {bool showSemanticsDebugger = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showSemanticsDebugger,
+    /// optionalParameters: {bool showSemanticsDebugger = false} , defaultValue:Literal
+    bool showSemanticsDebugger = false,
 
-    /// optionalParameters: {bool debugShowCheckedModeBanner = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool debugShowCheckedModeBanner,
+    /// optionalParameters: {bool debugShowCheckedModeBanner = true} , defaultValue:Literal
+    bool debugShowCheckedModeBanner = true,
 
-    /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , defaultValue:none
     Map<ShortcutActivator, Intent>? shortcuts,
 
-    /// optionalParameters: {Map<Type, Action<Intent>>? actions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<Type, Action<Intent>>? actions} , defaultValue:none
     Map<Type, Action<Intent>>? actions,
 
-    /// optionalParameters: {String? restorationScopeId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationScopeId} , defaultValue:none
     String? restorationScopeId,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
     ScrollBehavior? scrollBehavior,
   }) : super.router(
           key: key,
@@ -412,38 +412,38 @@ class MaterialApp$Mate extends MaterialApp with Mate {
           restorationScopeId: p.get('restorationScopeId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scaffoldMessengerKey', scaffoldMessengerKey);
-    matePut('routeInformationProvider', routeInformationProvider);
-    matePut('routeInformationParser', routeInformationParser);
-    matePut('routerDelegate', routerDelegate);
-    matePut('routerConfig', routerConfig);
-    matePut('backButtonDispatcher', backButtonDispatcher);
-    matePut('builder', builder);
-    matePut('title', title);
-    matePut('onGenerateTitle', onGenerateTitle);
-    matePut('color', color);
-    matePut('theme', theme);
-    matePut('darkTheme', darkTheme);
-    matePut('highContrastTheme', highContrastTheme);
-    matePut('highContrastDarkTheme', highContrastDarkTheme);
-    matePut('themeMode', themeMode);
-    matePut('themeAnimationDuration', themeAnimationDuration);
-    matePut('themeAnimationCurve', themeAnimationCurve);
-    matePut('locale', locale);
-    matePut('localizationsDelegates', localizationsDelegates);
-    matePut('localeListResolutionCallback', localeListResolutionCallback);
-    matePut('localeResolutionCallback', localeResolutionCallback);
-    matePut('supportedLocales', supportedLocales);
-    matePut('debugShowMaterialGrid', debugShowMaterialGrid);
-    matePut('showPerformanceOverlay', showPerformanceOverlay);
-    matePut('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    matePut('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
-    matePut('showSemanticsDebugger', showSemanticsDebugger);
-    matePut('debugShowCheckedModeBanner', debugShowCheckedModeBanner);
-    matePut('shortcuts', shortcuts);
-    matePut('actions', actions);
-    matePut('restorationScopeId', restorationScopeId);
-    matePut('scrollBehavior', scrollBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scaffoldMessengerKey', scaffoldMessengerKey);
+    mateDeclare('routeInformationProvider', routeInformationProvider);
+    mateDeclare('routeInformationParser', routeInformationParser);
+    mateDeclare('routerDelegate', routerDelegate);
+    mateDeclare('routerConfig', routerConfig);
+    mateDeclare('backButtonDispatcher', backButtonDispatcher);
+    mateDeclare('builder', builder);
+    mateDeclare('title', title);
+    mateDeclare('onGenerateTitle', onGenerateTitle);
+    mateDeclare('color', color);
+    mateDeclare('theme', theme);
+    mateDeclare('darkTheme', darkTheme);
+    mateDeclare('highContrastTheme', highContrastTheme);
+    mateDeclare('highContrastDarkTheme', highContrastDarkTheme);
+    mateDeclare('themeMode', themeMode);
+    mateDeclare('themeAnimationDuration', themeAnimationDuration);
+    mateDeclare('themeAnimationCurve', themeAnimationCurve);
+    mateDeclare('locale', locale);
+    mateDeclare('localizationsDelegates', localizationsDelegates);
+    mateDeclare('localeListResolutionCallback', localeListResolutionCallback);
+    mateDeclare('localeResolutionCallback', localeResolutionCallback);
+    mateDeclare('supportedLocales', supportedLocales);
+    mateDeclare('debugShowMaterialGrid', debugShowMaterialGrid);
+    mateDeclare('showPerformanceOverlay', showPerformanceOverlay);
+    mateDeclare('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
+    mateDeclare('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateDeclare('showSemanticsDebugger', showSemanticsDebugger);
+    mateDeclare('debugShowCheckedModeBanner', debugShowCheckedModeBanner);
+    mateDeclare('shortcuts', shortcuts);
+    mateDeclare('actions', actions);
+    mateDeclare('restorationScopeId', restorationScopeId);
+    mateDeclare('scrollBehavior', scrollBehavior);
   }
 }

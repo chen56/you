@@ -8,14 +8,14 @@ import 'dart:core';
 class RawKeyEventDataFuchsia$Mate extends RawKeyEventDataFuchsia with Mate {
   /// RawKeyEventDataFuchsia RawKeyEventDataFuchsia({int hidUsage = 0, int codePoint = 0, int modifiers = 0})
   RawKeyEventDataFuchsia$Mate({
-    /// optionalParameters: {int hidUsage = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int hidUsage,
+    /// optionalParameters: {int hidUsage = 0} , defaultValue:Literal
+    int hidUsage = 0,
 
-    /// optionalParameters: {int codePoint = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int codePoint,
+    /// optionalParameters: {int codePoint = 0} , defaultValue:Literal
+    int codePoint = 0,
 
-    /// optionalParameters: {int modifiers = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int modifiers,
+    /// optionalParameters: {int modifiers = 0} , defaultValue:Literal
+    int modifiers = 0,
   }) : super(
           hidUsage: hidUsage,
           codePoint: codePoint,
@@ -26,8 +26,8 @@ class RawKeyEventDataFuchsia$Mate extends RawKeyEventDataFuchsia with Mate {
           codePoint: p.get('codePoint').build(),
           modifiers: p.get('modifiers').build(),
         );
-    matePut('hidUsage', hidUsage);
-    matePut('codePoint', codePoint);
-    matePut('modifiers', modifiers);
+    mateDeclare('hidUsage', hidUsage);
+    mateDeclare('codePoint', codePoint);
+    mateDeclare('modifiers', modifiers);
   }
 }

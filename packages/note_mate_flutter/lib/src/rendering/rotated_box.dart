@@ -9,10 +9,10 @@ import 'package:flutter/src/rendering/box.dart';
 class RenderRotatedBox$Mate extends RenderRotatedBox with Mate {
   /// RenderRotatedBox RenderRotatedBox({required int quarterTurns, RenderBox? child})
   RenderRotatedBox$Mate({
-    /// optionalParameters: {required int quarterTurns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int quarterTurns} , defaultValue:none
     required int quarterTurns,
 
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
   }) : super(
           quarterTurns: quarterTurns,
@@ -22,7 +22,7 @@ class RenderRotatedBox$Mate extends RenderRotatedBox with Mate {
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),
         );
-    matePut('quarterTurns', quarterTurns);
-    matePut('child', child);
+    mateDeclare('quarterTurns', quarterTurns);
+    mateDeclare('child', child);
   }
 }

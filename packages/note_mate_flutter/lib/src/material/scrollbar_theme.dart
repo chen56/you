@@ -12,37 +12,37 @@ import 'package:flutter/src/widgets/framework.dart';
 class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate {
   /// ScrollbarThemeData ScrollbarThemeData({MaterialStateProperty<bool?>? thumbVisibility, MaterialStateProperty<double?>? thickness, MaterialStateProperty<bool?>? trackVisibility, Radius? radius, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackBorderColor, double? crossAxisMargin, double? mainAxisMargin, double? minThumbLength, bool? interactive, bool? isAlwaysShown, bool? showTrackOnHover})
   ScrollbarThemeData$Mate({
-    /// optionalParameters: {MaterialStateProperty<bool?>? thumbVisibility} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<bool?>? thumbVisibility} , defaultValue:none
     MaterialStateProperty<bool?>? thumbVisibility,
 
-    /// optionalParameters: {MaterialStateProperty<double?>? thickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<double?>? thickness} , defaultValue:none
     MaterialStateProperty<double?>? thickness,
 
-    /// optionalParameters: {MaterialStateProperty<bool?>? trackVisibility} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<bool?>? trackVisibility} , defaultValue:none
     MaterialStateProperty<bool?>? trackVisibility,
 
-    /// optionalParameters: {Radius? radius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Radius? radius} , defaultValue:none
     Radius? radius,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , defaultValue:none
     MaterialStateProperty<Color?>? thumbColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , defaultValue:none
     MaterialStateProperty<Color?>? trackColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackBorderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackBorderColor} , defaultValue:none
     MaterialStateProperty<Color?>? trackBorderColor,
 
-    /// optionalParameters: {double? crossAxisMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? crossAxisMargin} , defaultValue:none
     double? crossAxisMargin,
 
-    /// optionalParameters: {double? mainAxisMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? mainAxisMargin} , defaultValue:none
     double? mainAxisMargin,
 
-    /// optionalParameters: {double? minThumbLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minThumbLength} , defaultValue:none
     double? minThumbLength,
 
-    /// optionalParameters: {bool? interactive} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? interactive} , defaultValue:none
     bool? interactive,
   }) : super(
           thumbVisibility: thumbVisibility,
@@ -70,17 +70,17 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate {
           minThumbLength: p.get('minThumbLength').build(),
           interactive: p.get('interactive').build(),
         );
-    matePut('thumbVisibility', thumbVisibility);
-    matePut('thickness', thickness);
-    matePut('trackVisibility', trackVisibility);
-    matePut('radius', radius);
-    matePut('thumbColor', thumbColor);
-    matePut('trackColor', trackColor);
-    matePut('trackBorderColor', trackBorderColor);
-    matePut('crossAxisMargin', crossAxisMargin);
-    matePut('mainAxisMargin', mainAxisMargin);
-    matePut('minThumbLength', minThumbLength);
-    matePut('interactive', interactive);
+    mateDeclare('thumbVisibility', thumbVisibility);
+    mateDeclare('thickness', thickness);
+    mateDeclare('trackVisibility', trackVisibility);
+    mateDeclare('radius', radius);
+    mateDeclare('thumbColor', thumbColor);
+    mateDeclare('trackColor', trackColor);
+    mateDeclare('trackBorderColor', trackBorderColor);
+    mateDeclare('crossAxisMargin', crossAxisMargin);
+    mateDeclare('mainAxisMargin', mainAxisMargin);
+    mateDeclare('minThumbLength', minThumbLength);
+    mateDeclare('interactive', interactive);
   }
 }
 
@@ -88,13 +88,13 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate {
 class ScrollbarTheme$Mate extends ScrollbarTheme with Mate {
   /// ScrollbarTheme ScrollbarTheme({Key? key, required ScrollbarThemeData data, required Widget child})
   ScrollbarTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ScrollbarThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollbarThemeData data} , defaultValue:none
     required ScrollbarThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -106,8 +106,8 @@ class ScrollbarTheme$Mate extends ScrollbarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

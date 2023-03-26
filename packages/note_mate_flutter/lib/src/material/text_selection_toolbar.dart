@@ -12,19 +12,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class TextSelectionToolbar$Mate extends TextSelectionToolbar with Mate {
   /// TextSelectionToolbar TextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder, required List<Widget> children})
   TextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Offset anchorAbove} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset anchorAbove} , defaultValue:none
     required Offset anchorAbove,
 
-    /// optionalParameters: {required Offset anchorBelow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset anchorBelow} , defaultValue:none
     required Offset anchorBelow,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder} , hasDefaultValue:true, defaultValueCode:_defaultToolbarBuilder
+    /// optionalParameters: {Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder} , defaultValue:unprocessed
     required ToolbarBuilder toolbarBuilder,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , defaultValue:none
     required List<Widget> children,
   }) : super(
           key: key,
@@ -40,10 +40,10 @@ class TextSelectionToolbar$Mate extends TextSelectionToolbar with Mate {
           toolbarBuilder: p.get('toolbarBuilder').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('anchorAbove', anchorAbove);
-    matePut('anchorBelow', anchorBelow);
-    matePut('toolbarBuilder', toolbarBuilder);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('anchorAbove', anchorAbove);
+    mateDeclare('anchorBelow', anchorBelow);
+    mateDeclare('toolbarBuilder', toolbarBuilder);
+    mateDeclare('children', children);
   }
 }

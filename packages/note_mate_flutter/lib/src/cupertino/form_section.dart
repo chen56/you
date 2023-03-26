@@ -13,28 +13,28 @@ import 'package:flutter/src/painting/box_decoration.dart';
 class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
   /// CupertinoFormSection CupertinoFormSection({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = EdgeInsets.zero, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
   CupertinoFormSection$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , defaultValue:none
     required List<Widget> children,
 
-    /// optionalParameters: {Widget? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? header} , defaultValue:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? footer} , defaultValue:none
     Widget? footer,
 
-    /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsetsGeometry margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , hasDefaultValue:true, defaultValueCode:CupertinoColors.systemGroupedBackground
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:unprocessed
     required Color backgroundColor,
 
-    /// optionalParameters: {BoxDecoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -56,40 +56,40 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('header', header);
-    matePut('footer', footer);
-    matePut('margin', margin);
-    matePut('backgroundColor', backgroundColor);
-    matePut('decoration', decoration);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('children', children);
+    mateDeclare('header', header);
+    mateDeclare('footer', footer);
+    mateDeclare('margin', margin);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('decoration', decoration);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 
   /// CupertinoFormSection CupertinoFormSection.insetGrouped({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
   CupertinoFormSection$Mate.insetGrouped({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , defaultValue:none
     required List<Widget> children,
 
-    /// optionalParameters: {Widget? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? header} , defaultValue:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? footer} , defaultValue:none
     Widget? footer,
 
-    /// optionalParameters: {EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin} , hasDefaultValue:true, defaultValueCode:_kFormDefaultInsetGroupedRowsMargin
+    /// optionalParameters: {EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin} , defaultValue:unprocessed
     required EdgeInsetsGeometry margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , hasDefaultValue:true, defaultValueCode:CupertinoColors.systemGroupedBackground
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:unprocessed
     required Color backgroundColor,
 
-    /// optionalParameters: {BoxDecoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.insetGrouped(
           key: key,
@@ -111,13 +111,13 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('header', header);
-    matePut('footer', footer);
-    matePut('margin', margin);
-    matePut('backgroundColor', backgroundColor);
-    matePut('decoration', decoration);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('children', children);
+    mateDeclare('header', header);
+    mateDeclare('footer', footer);
+    mateDeclare('margin', margin);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('decoration', decoration);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }

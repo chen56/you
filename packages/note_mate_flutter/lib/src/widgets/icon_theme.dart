@@ -10,13 +10,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class IconTheme$Mate extends IconTheme with Mate {
   /// IconTheme IconTheme({Key? key, required IconThemeData data, required Widget child})
   IconTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required IconThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required IconThemeData data} , defaultValue:none
     required IconThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -28,8 +28,8 @@ class IconTheme$Mate extends IconTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

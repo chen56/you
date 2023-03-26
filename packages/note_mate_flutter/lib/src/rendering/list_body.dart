@@ -10,10 +10,10 @@ import 'package:flutter/src/painting/basic_types.dart';
 class RenderListBody$Mate extends RenderListBody with Mate {
   /// RenderListBody RenderListBody({List<RenderBox>? children, AxisDirection axisDirection = AxisDirection.down})
   RenderListBody$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , hasDefaultValue:true, defaultValueCode:AxisDirection.down
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:unprocessed
     required AxisDirection axisDirection,
   }) : super(
           children: children,
@@ -23,7 +23,7 @@ class RenderListBody$Mate extends RenderListBody with Mate {
           children: p.get('children').build(),
           axisDirection: p.get('axisDirection').build(),
         );
-    matePut('children', children);
-    matePut('axisDirection', axisDirection);
+    mateDeclare('children', children);
+    mateDeclare('axisDirection', axisDirection);
   }
 }

@@ -13,25 +13,25 @@ import 'package:flutter/src/widgets/framework.dart';
 class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Mate {
   /// GlowingOverscrollIndicator GlowingOverscrollIndicator({Key? key, bool showLeading = true, bool showTrailing = true, required AxisDirection axisDirection, required Color color, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Widget? child})
   GlowingOverscrollIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool showLeading = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showLeading,
+    /// optionalParameters: {bool showLeading = true} , defaultValue:Literal
+    bool showLeading = true,
 
-    /// optionalParameters: {bool showTrailing = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showTrailing,
+    /// optionalParameters: {bool showTrailing = true} , defaultValue:Literal
+    bool showTrailing = true,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection axisDirection} , defaultValue:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , hasDefaultValue:true, defaultValueCode:defaultScrollNotificationPredicate
+    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
     required ScrollNotificationPredicate notificationPredicate,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -51,13 +51,13 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Ma
           notificationPredicate: p.get('notificationPredicate').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('showLeading', showLeading);
-    matePut('showTrailing', showTrailing);
-    matePut('axisDirection', axisDirection);
-    matePut('color', color);
-    matePut('notificationPredicate', notificationPredicate);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('showLeading', showLeading);
+    mateDeclare('showTrailing', showTrailing);
+    mateDeclare('axisDirection', axisDirection);
+    mateDeclare('color', color);
+    mateDeclare('notificationPredicate', notificationPredicate);
+    mateDeclare('child', child);
   }
 }
 
@@ -65,19 +65,19 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Ma
 class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator with Mate {
   /// StretchingOverscrollIndicator StretchingOverscrollIndicator({Key? key, required AxisDirection axisDirection, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Clip clipBehavior = Clip.hardEdge, Widget? child})
   StretchingOverscrollIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection axisDirection} , defaultValue:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , hasDefaultValue:true, defaultValueCode:defaultScrollNotificationPredicate
+    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
     required ScrollNotificationPredicate notificationPredicate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -93,11 +93,11 @@ class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator w
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('axisDirection', axisDirection);
-    matePut('notificationPredicate', notificationPredicate);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('axisDirection', axisDirection);
+    mateDeclare('notificationPredicate', notificationPredicate);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -106,10 +106,10 @@ class OverscrollIndicatorNotification$Mate extends OverscrollIndicatorNotificati
   /// OverscrollIndicatorNotification OverscrollIndicatorNotification({required bool leading})
   OverscrollIndicatorNotification$Mate(
       {
-      /// optionalParameters: {required bool leading} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required bool leading} , defaultValue:none
       required bool leading})
       : super(leading: leading) {
     mateBuilder = (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
-    matePut('leading', leading);
+    mateDeclare('leading', leading);
   }
 }

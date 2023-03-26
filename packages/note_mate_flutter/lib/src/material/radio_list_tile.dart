@@ -19,88 +19,88 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 class RadioListTile$Mate<T> extends RadioListTile<T> with Mate {
   /// RadioListTile<T> RadioListTile({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, MouseCursor? mouseCursor, bool toggleable = false, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, bool autofocus = false, EdgeInsetsGeometry? contentPadding, ShapeBorder? shape, Color? tileColor, Color? selectedTileColor, VisualDensity? visualDensity, FocusNode? focusNode, void Function(bool)? onFocusChange, bool? enableFeedback})
   RadioListTile$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , defaultValue:none
     required T value,
 
-    /// optionalParameters: {required T? groupValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T? groupValue} , defaultValue:none
     required T? groupValue,
 
-    /// optionalParameters: {required void Function(T?)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(T?)? onChanged} , defaultValue:none
     required ValueChanged<T?>? onChanged,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {bool toggleable = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool toggleable,
+    /// optionalParameters: {bool toggleable = false} , defaultValue:Literal
+    bool toggleable = false,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , defaultValue:none
     Color? activeColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , defaultValue:none
     MaterialStateProperty<Color?>? fillColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? title} , defaultValue:none
     Widget? title,
 
-    /// optionalParameters: {Widget? subtitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? subtitle} , defaultValue:none
     Widget? subtitle,
 
-    /// optionalParameters: {bool isThreeLine = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isThreeLine,
+    /// optionalParameters: {bool isThreeLine = false} , defaultValue:Literal
+    bool isThreeLine = false,
 
-    /// optionalParameters: {bool? dense} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? dense} , defaultValue:none
     bool? dense,
 
-    /// optionalParameters: {Widget? secondary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? secondary} , defaultValue:none
     Widget? secondary,
 
-    /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool selected,
+    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    bool selected = false,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , hasDefaultValue:true, defaultValueCode:ListTileControlAffinity.platform
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:unprocessed
     required ListTileControlAffinity controlAffinity,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , defaultValue:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tileColor} , defaultValue:none
     Color? tileColor,
 
-    /// optionalParameters: {Color? selectedTileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedTileColor} , defaultValue:none
     Color? selectedTileColor,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
   }) : super(
           key: key,
@@ -162,33 +162,33 @@ class RadioListTile$Mate<T> extends RadioListTile<T> with Mate {
           onFocusChange: p.get('onFocusChange').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('groupValue', groupValue);
-    matePut('onChanged', onChanged);
-    matePut('mouseCursor', mouseCursor);
-    matePut('toggleable', toggleable);
-    matePut('activeColor', activeColor);
-    matePut('fillColor', fillColor);
-    matePut('hoverColor', hoverColor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashRadius', splashRadius);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('title', title);
-    matePut('subtitle', subtitle);
-    matePut('isThreeLine', isThreeLine);
-    matePut('dense', dense);
-    matePut('secondary', secondary);
-    matePut('selected', selected);
-    matePut('controlAffinity', controlAffinity);
-    matePut('autofocus', autofocus);
-    matePut('contentPadding', contentPadding);
-    matePut('shape', shape);
-    matePut('tileColor', tileColor);
-    matePut('selectedTileColor', selectedTileColor);
-    matePut('visualDensity', visualDensity);
-    matePut('focusNode', focusNode);
-    matePut('onFocusChange', onFocusChange);
-    matePut('enableFeedback', enableFeedback);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('groupValue', groupValue);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('toggleable', toggleable);
+    mateDeclare('activeColor', activeColor);
+    mateDeclare('fillColor', fillColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('overlayColor', overlayColor);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('title', title);
+    mateDeclare('subtitle', subtitle);
+    mateDeclare('isThreeLine', isThreeLine);
+    mateDeclare('dense', dense);
+    mateDeclare('secondary', secondary);
+    mateDeclare('selected', selected);
+    mateDeclare('controlAffinity', controlAffinity);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('contentPadding', contentPadding);
+    mateDeclare('shape', shape);
+    mateDeclare('tileColor', tileColor);
+    mateDeclare('selectedTileColor', selectedTileColor);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('enableFeedback', enableFeedback);
   }
 }

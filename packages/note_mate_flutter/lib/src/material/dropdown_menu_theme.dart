@@ -12,13 +12,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate {
   /// DropdownMenuThemeData DropdownMenuThemeData({TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle})
   DropdownMenuThemeData$Mate({
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , defaultValue:none
     InputDecorationTheme? inputDecorationTheme,
 
-    /// optionalParameters: {MenuStyle? menuStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuStyle? menuStyle} , defaultValue:none
     MenuStyle? menuStyle,
   }) : super(
           textStyle: textStyle,
@@ -30,9 +30,9 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate {
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
           menuStyle: p.get('menuStyle').build(),
         );
-    matePut('textStyle', textStyle);
-    matePut('inputDecorationTheme', inputDecorationTheme);
-    matePut('menuStyle', menuStyle);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('inputDecorationTheme', inputDecorationTheme);
+    mateDeclare('menuStyle', menuStyle);
   }
 }
 
@@ -40,13 +40,13 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate {
 class DropdownMenuTheme$Mate extends DropdownMenuTheme with Mate {
   /// DropdownMenuTheme DropdownMenuTheme({Key? key, required DropdownMenuThemeData data, required Widget child})
   DropdownMenuTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required DropdownMenuThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DropdownMenuThemeData data} , defaultValue:none
     required DropdownMenuThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -58,8 +58,8 @@ class DropdownMenuTheme$Mate extends DropdownMenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

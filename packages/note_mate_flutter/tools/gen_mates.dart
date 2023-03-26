@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/results.dart';
+import 'package:analyzer/dart/ast/ast.dart' as ast;
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/nullability_suffix.dart';
 import 'package:analyzer/dart/element/type.dart' as t;
@@ -13,7 +14,7 @@ import 'package:dart_style/dart_style.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import "package:path/path.dart" as path;
-
+import 'package:analyzer/src/dart/element/element.dart';
 import 'package:note/env.dart';
 
 // ref: ElementDisplayStringBuilder 代码生成
@@ -21,8 +22,8 @@ main() async {
   _log("## main");
   List<String> include = [
     "package:flutter",
-    // "package:flutter/src/widgets/annotated_region.dart",
-    "package:flutter/src/foundation/diagnostics.dart",
+    "package:flutter/src/painting/colors.dart",
+    // "package:flutter/src/foundation/diagnostics.dart",
     // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
   ];
@@ -31,7 +32,7 @@ main() async {
     env: Env(),
     entryFile: path.normalize(path.absolute("tools/gen_mates_sample.dart")),
     mateFilter: (lib) =>
-        lib.identifier.endsWith(".dart") && include.any((uri) => lib.identifier.startsWith(uri)),
+    lib.identifier.endsWith(".dart") && include.any((uri) => lib.identifier.startsWith(uri)),
     // writeFS: MemoryFileSystem(),
     writeFS: const LocalFileSystem(),
     // libPath: 比如包package:flutter/material.dart 应提供的libPath: material.dart
@@ -57,7 +58,7 @@ Future<void> genAll({
     resourceProvider: PhysicalResourceProvider.INSTANCE,
   );
   var entryLib = (await collection.contexts.first.currentSession.getResolvedLibrary(entryFile)
-          as ResolvedLibraryResult)
+  as ResolvedLibraryResult)
       .element;
 
   _log("## collect lib start, create LibNode tree and remove duplicate,");
@@ -132,14 +133,16 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
       return typeRef(type, debugRef: debugRef);
     }
     if (element is TypeParameterElement) {
-      return TypeReference((b) => b
+      return TypeReference((b) =>
+      b
         ..symbol = element.name
         ..bound = element.bound == null ? null : typeRef(element.bound!, debugRef: debugRef));
     }
     //TypeParameterizedElement
     //EnumOrAugmentationElement
     if (element is TypeParameterizedElement) {
-      return TypeReference((b) => b
+      return TypeReference((b) =>
+      b
         ..symbol = element.name
         ..url = typeRefers[element]?.identifier
         ..types.addAll(element.typeParameters.map((e) => elementRef(e, debugRef: debugRef))));
@@ -164,7 +167,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
     // T Function<T>(T) -> Callback<T>
     if (type.alias != null) {
       final alias = type.alias!;
-      return TypeReference((b) => b
+      return TypeReference((b) =>
+      b
         ..symbol = alias.element.name
         ..url = alias.element.library.identifier
         ..isNullable = type.nullabilitySuffix == NullabilitySuffix.question
@@ -175,7 +179,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
     // class Button
     // class XButton<T>
     if (type is t.ParameterizedType) {
-      TypeReference ref = TypeReference((b) => b
+      TypeReference ref = TypeReference((b) =>
+      b
         ..symbol = type.element?.name
         ..isNullable = type.nullabilitySuffix == NullabilitySuffix.question
         ..url = lib?.identifier
@@ -184,7 +189,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
     }
 
     if (type is t.FunctionType) {
-      code.FunctionType ref = code.FunctionType((b) => b
+      code.FunctionType ref = code.FunctionType((b) =>
+      b
         ..returnType = typeRef(type.returnType, debugRef: debugRef)
         ..types.addAll(type.typeFormals.map((e) => elementRef(e, debugRef: debugRef)))
         ..requiredParameters.addAll(type.parameters
@@ -228,8 +234,7 @@ class LibNode {
   LibNode? parent;
   LibraryElement lib;
 
-  LibNode(
-    this.lib, {
+  LibNode(this.lib, {
     this.parent,
     required List<LibraryElement> children,
     required Set<LibraryElement> allLibs,
@@ -299,7 +304,9 @@ bool parameterFilter(ParameterElement parameter) {
 bool constructorFilter(ConstructorElement constructor) {
   return !constructor.isFactory &&
       !constructor.name.startsWith("_") &&
-      constructor.parameters.where(parameterFilter).isNotEmpty;
+      constructor.parameters
+          .where(parameterFilter)
+          .isNotEmpty;
 }
 
 bool classFilter(ClassElement clazz) {
@@ -309,7 +316,9 @@ bool classFilter(ClassElement clazz) {
   return !clazz.isAbstract &&
       !clazz.name.startsWith("_") &&
       !clazz.library.typeProvider.isNonSubtypableClass(clazz) &&
-      clazz.constructors.where(constructorFilter).isNotEmpty &&
+      clazz.constructors
+          .where(constructorFilter)
+          .isNotEmpty &&
       // This application cannot tree shake icons fonts. It has non-constant instances of IconData at the following locations:
       // file:///Users/cccc/git/chen56/note/note_mate_flutter/lib/src/widgets/icon_data.dart:30:23
       // Target web_release_bundle failed: Exception: Avoid non-constant invocations of IconData or try to build again with --no-tree-shake-icons.
@@ -318,7 +327,9 @@ bool classFilter(ClassElement clazz) {
 
 bool libFilter(LibraryElement lib) {
   bool notPrivate = !path.basename(lib.identifier).startsWith("_");
-  return notPrivate && lib.definingCompilationUnit.classes.where(classFilter).isNotEmpty;
+  return notPrivate && lib.definingCompilationUnit.classes
+      .where(classFilter)
+      .isNotEmpty;
 }
 
 extension _InterfaceElement on InterfaceElement {
@@ -335,6 +346,28 @@ extension _InterfaceElement on InterfaceElement {
   }
 }
 
+({String info, Code? code}) resolveDefaultValue(ParameterElement param) {
+  if (!param.hasDefaultValue) return (info:"none", code:null);
+  if (param is! ConstVariableElement) {
+    return (info:"is!ConstVariableElement", code:null);
+  }
+
+  ConstVariableElement constParam = param as ConstVariableElement;
+
+  // TypedLiteral有点麻烦，暂时不处理了，可能带import前缀之类的:
+  //     List<DisplayFeature> displayFeatures = const <ui.DisplayFeature>[],
+  if (constParam.constantInitializer is ast.Literal &&
+      constParam.constantInitializer is! ast.TypedLiteral) {
+    return (info:"Literal", code:Code(param.defaultValueCode!));
+  }
+
+  if (constParam is SuperFormalParameterElement) {
+    return resolveDefaultValue(
+        (constParam as SuperFormalParameterElement).superConstructorParameter!);
+  }
+
+  return (info:"unprocessed", code:null);
+}
 // class SyntaxErrorInAssetException
 //   constructor
 //     parameterassetId  AssetId   AssetId assetId
@@ -348,36 +381,38 @@ void _genLibMate({
 }) {
   _log("_genLibMate: identifier:${lib.identifier} importedLibraries:${lib.importedLibraries}  ");
 
-  Library buildLib = Library((libb) => libb
+  Library buildLib = Library((libb) =>
+  libb
     ..name = lib.name.isEmpty ? null : lib.name
     ..comments.addAll(["/// Generated by gen_maters.dart, please don't edit! "])
-    // 既然不处理参数缺省值，就不加乱七八糟的import了
-    // ..directives.add(Directive((b) => b
-    //   ..type = DirectiveType.import
-    //   // import lib self
-    //   ..url = lib.identifier))
-    // ..directives.addAll(lib.libraryImports.where((e) => e.prefix != null).where((e) {
-    //   String uri = (e.uri as DirectiveUriWithLibrary).relativeUri.toString();
-    //   return uri.isNotEmpty && uri[0] != '_';
-    // }).map((libImport) => code.Directive((b) => b
-    //   ..type = DirectiveType.import
-    //   ..url = (libImport.uri as DirectiveUriWithLibrary).relativeUriString
-    //   ..as = libImport.prefix?.element.name
-    //   ..show.addAll(libImport.combinators
-    //       .whereType<ShowElementCombinator>()
-    //       .expand((show) => show.shownNames))
-    //   ..hide.addAll(libImport.combinators
-    //       .whereType<HideElementCombinator>()
-    //       .expand((hide) => hide.hiddenNames)))))
-    // 如果有combinators就别导出了
-    // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
-    // 瞎导出会导出不存在的元素
-    // ..directives.add(Directive((b) => b
-    //   ..type = DirectiveType.import
-    //   ..url = "package:note/mate.dart")
-    //   ..show.add("Mate"))
+  // 既然不处理参数缺省值，就不加乱七八糟的import了
+  // ..directives.add(Directive((b) => b
+  //   ..type = DirectiveType.import
+  //   // import lib self
+  //   ..url = lib.identifier))
+  // ..directives.addAll(lib.libraryImports.where((e) => e.prefix != null).where((e) {
+  //   String uri = (e.uri as DirectiveUriWithLibrary).relativeUri.toString();
+  //   return uri.isNotEmpty && uri[0] != '_';
+  // }).map((libImport) => code.Directive((b) => b
+  //   ..type = DirectiveType.import
+  //   ..url = (libImport.uri as DirectiveUriWithLibrary).relativeUriString
+  //   ..as = libImport.prefix?.element.name
+  //   ..show.addAll(libImport.combinators
+  //       .whereType<ShowElementCombinator>()
+  //       .expand((show) => show.shownNames))
+  //   ..hide.addAll(libImport.combinators
+  //       .whereType<HideElementCombinator>()
+  //       .expand((hide) => hide.hiddenNames)))))
+  // 如果有combinators就别导出了
+  // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
+  // 瞎导出会导出不存在的元素
+  // ..directives.add(Directive((b) => b
+  //   ..type = DirectiveType.import
+  //   ..url = "package:note/mate.dart")
+  //   ..show.add("Mate"))
     ..directives.addAll(lib.libraryExports.where((e) => e.combinators.isEmpty).map((libExport) =>
-        Directive((b) => b
+        Directive((b) =>
+        b
           ..type = DirectiveType.export
           ..url = (libExport.uri as DirectiveUriWithLibrary).relativeUriString
           ..show.addAll(libExport.combinators
@@ -389,34 +424,37 @@ void _genLibMate({
     ..body.addAll(lib.definingCompilationUnit.classes.where(classFilter).map((clazz) {
       String mateClassName = "${clazz.name}\$Mate";
 
-      return Class((b) => b
+      return Class((b) =>
+      b
         ..docs.add("/// ${clazz.getDisplayString(withNullability: true)}")
         ..name = mateClassName
         ..abstract = clazz.isAbstract
         ..extend = typeRefers.typeRef(clazz.thisType, debugRef: clazz)
-        ..mixins.add(TypeReference((b) => b
-              // ..symbol = clazz.isSubClassOf(
-              //     className: "Widget", package: "package:flutter/src/widgets/framework.dart")
-              //     ? "WidgetMate"
-              //     : "Mate"
-              ..symbol = "Mate"
-              ..url = "package:note/mate.dart"
-            // Mate 暂时不要类型参数了
-            // ..types.add(refer(mateClassName)),
-            ))
+        ..mixins.add(TypeReference((b) =>
+        b
+        // ..symbol = clazz.isSubClassOf(
+        //     className: "Widget", package: "package:flutter/src/widgets/framework.dart")
+        //     ? "WidgetMate"
+        //     : "Mate"
+          ..symbol = "Mate"
+          ..url = "package:note/mate.dart"
+          // Mate 暂时不要类型参数了
+          // ..types.add(refer(mateClassName)),
+        ))
         ..types.addAll(clazz.typeParameters
             .map((typeParam) => typeRefers.elementRef(typeParam, debugRef: clazz)))
         ..constructors.addAll(clazz.constructors.where(constructorFilter).map((constructor) {
           return Constructor((b) {
-            Expression constructorEx = TypeReference((b) => b
+            Expression constructorEx = TypeReference((b) =>
+            b
               ..symbol = mateClassName
               ..types.addAll(
-                  // 1.类型参数不需要bound
-                  // class AnnotatedRegion$Mate<T extends Object>
-                  //     -> mateBuilder = AnnotatedRegion$Mate<T>()
-                  // 2.命名构造器的范型参数要加到类型名后，而不是方法名后
-                  // class ObjectFlagProperty<T>
-                  //    ->ObjectFlagProperty<String>.has()
+                // 1.类型参数不需要bound
+                // class AnnotatedRegion$Mate<T extends Object>
+                //     -> mateBuilder = AnnotatedRegion$Mate<T>()
+                // 2.命名构造器的范型参数要加到类型名后，而不是方法名后
+                // class ObjectFlagProperty<T>
+                //    ->ObjectFlagProperty<String>.has()
                   clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
             // 命名构造器的情况
             if (constructor.name.isNotEmpty) {
@@ -427,54 +465,55 @@ void _genLibMate({
             b
               ..name = constructor.name.isEmpty ? null : constructor.name
               ..docs.addAll(["/// $constructor"])
-              // A const constructor can't have a body. but we need body.
+            // A const constructor can't have a body. but we need body.
               ..constant = false
               ..factory = constructor.isFactory
+            // lib code_builder's requiredParameters == lib analyzer's isPositional
               ..requiredParameters
-                  .addAll(parameters.where((e) => !e.isNamed).map((param) => Parameter((b) => b
+                  .addAll(parameters.where((e) => e.isPositional).map((param) =>
+                  Parameter((b) =>
+                  b
                     ..docs.add(
                         "/// requiredParameters: ${param.getDisplayString(withNullability: true)} ")
                     ..type = typeRefers.elementRef(param, debugRef: clazz)
                     ..name = param.name
-                    ..named = false)))
+                    ..named = param.isNamed
+                  // analyzer's positional args no required keyword
+                    ..required = false)))
               ..optionalParameters
-                  .addAll(parameters.where((e) => e.isNamed).map((param) => Parameter((b) {
-                        b
-                          ..docs.add(
-                              "/// optionalParameters: ${param.getDisplayString(withNullability: true)} , hasDefaultValue:${param.hasDefaultValue}, defaultValueCode:${param.defaultValueCode}")
-                          ..name = param.name
-                          ..named = true
-                          ..type = typeRefers.elementRef(param, debugRef: clazz);
+                  .addAll(parameters.where((e) => !e.isPositional).map((param) =>
+                  Parameter((b) {
+                    b
+                      ..name = param.name
+                      ..named = param.isNamed
+                      ..required = param.isRequired
+                      ..type = typeRefers.elementRef(param, debugRef: clazz);
+                    // default value handle: The default parameter processing is too complicated,
+                    // so use whitelist mode, We only deal with what we understand
 
-                        b
-                          ..defaultTo = null //不需要处理缺省值，已在initializers都supper()了
-                          ..required = param.isRequired ||
-                              param.type.nullabilitySuffix == NullabilitySuffix.none;
-                        //
-                        // if (param.hasDefaultValue) {
-                        //   // 缺省值表达式处理有些复杂，只能处理一个是一个了，不可能全覆盖
-                        //   // 只能正则识别可处理的表达式：字面量等
-                        //   b
-                        //     ..defaultTo = Code(param.defaultValueCode!)
-                        //     ..required = false;
-                        // } else {
-                        //   b
-                        //     ..defaultTo = null
-                        //     ..required = param.isRequired ||
-                        //         param.type.nullabilitySuffix == NullabilitySuffix.none;
-                        // }
-                      })))
+                    var resolveResult = resolveDefaultValue(param);
+                    b.docs.add(
+                        "/// optionalParameters: ${param.getDisplayString(
+                            withNullability: true)} , defaultValue:${resolveResult.info}");
+                    b.defaultTo = resolveResult.code;
+
+                    //有缺省值的，但无法处理的，就加个required，自己投参吧
+                    if (param.hasDefaultValue && resolveResult.code == null) {
+                      b.required = param.isRequired ||
+                          param.type.nullabilitySuffix == NullabilitySuffix.none;
+                    }
+                  })))
               ..initializers.add(
                   refer(constructor.name.isEmpty ? "super" : "super.${constructor.name}")
                       .call(
-                          constructor.parameters
-                              .where((e) => e.isPositional)
-                              .map((e) => refer(e.name)),
-                          Map.fromEntries(parameters
-                              .where((e) => e.isNamed)
-                              .map((e) => MapEntry(e.name, refer(e.name)))))
+                      constructor.parameters
+                          .where((e) => e.isPositional)
+                          .map((e) => refer(e.name)),
+                      Map.fromEntries(parameters
+                          .where((e) => e.isNamed)
+                          .map((e) => MapEntry(e.name, refer(e.name)))))
                       .code)
-              // ref: package:note/lib/experiment_mates.dart
+            // ref: package:note/lib/experiment_mates.dart
               ..body = Block.of([
                 // refer("mateParams")
                 //     .assign(refer("ObjectParam", "package:note/mate.dart").call([], {
@@ -498,25 +537,30 @@ void _genLibMate({
                 //     .statement,
                 refer("mateBuilder")
                     .assign(Method((b) {
-                      var positionalArgs = parameters.where((e) => e.isPositional).map(
+                  var positionalArgs = parameters.where((e) => e.isPositional).map(
                           (e) => refer("p.get").call([code.literal(e.name)]).property("value"));
-                      var namedArgs = Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
-                          MapEntry(e.name,
-                              refer("p.get").call([literal(e.name)]).property("build").call([]))));
-                      var c = TypeReference((b) => b
-                        ..symbol = mateClassName
-                        ..types.addAll(
-                            clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
-                      b
-                        ..name = ''
-                        ..requiredParameters.add(Parameter((b) => b.name = "p"))
-                        //缺省构造器的name为"",只有命名构造器有name
-                        ..body = constructor.name.isEmpty
-                            ? c.newInstance(positionalArgs, namedArgs).code
-                            : c.newInstanceNamed(constructor.name, positionalArgs, namedArgs).code;
-                    }).closure)
+                  var namedArgs = Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
+                      MapEntry(e.name,
+                          refer("p.get").call([literal(e.name)]).property("build").call([]))));
+                  var c = TypeReference((b) =>
+                  b
+                    ..symbol = mateClassName
+                    ..types.addAll(
+                        clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
+                  b
+                    ..name = ''
+                    ..requiredParameters.add(Parameter((b) => b.name = "p"))
+                  //缺省构造器的name为"",只有命名构造器有name
+                    ..body = constructor.name.isEmpty
+                        ? c
+                        .newInstance(positionalArgs, namedArgs)
+                        .code
+                        : c
+                        .newInstanceNamed(constructor.name, positionalArgs, namedArgs)
+                        .code;
+                }).closure)
                     .statement,
-                ...parameters.map((e) => Code("matePut('${e.name}', ${e.name});")),
+                ...parameters.map((e) => Code("mateDeclare('${e.name}', ${e.name});")),
               ]);
           });
         })));
@@ -525,11 +569,11 @@ void _genLibMate({
 
   String writeContent = buildLib
       .accept(
-        DartEmitter(
-          allocator: Allocator(), // reference的 import 不增加前缀 ”_i1“ 这种形式
-          useNullSafetySyntax: true,
-        ),
-      )
+    DartEmitter(
+      allocator: Allocator(), // reference的 import 不增加前缀 ”_i1“ 这种形式
+      useNullSafetySyntax: true,
+    ),
+  )
       .toString();
   writeContent = dartFormatter.format(writeContent);
   writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
@@ -557,15 +601,18 @@ _genEnums({
     */
   var emitter = DartEmitter(allocator: Allocator(), useNullSafetySyntax: true);
 
-  var statements = typeRefers.keys.whereType<EnumElement>().map((e) => refer("result")
+  var statements = typeRefers.keys.whereType<EnumElement>().map((e) =>
+  refer("result")
       .index(typeRefers.elementRef(e, debugRef: e))
       .assign(typeRefers.elementRef(e, debugRef: e).property("values"))
       .statement);
 
   Library lib = Library(
-    (b) => b
+        (b) =>
+    b
       ..comments.addAll(["/// Generated by gen_maters.dart, please don't edit! "])
-      ..directives.add(Directive((b) => b
+      ..directives.add(Directive((b) =>
+      b
         ..type = DirectiveType.import
         ..url = "package:note/mate.dart"))
       ..body.add(Code("""

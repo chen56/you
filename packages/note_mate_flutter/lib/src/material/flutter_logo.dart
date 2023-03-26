@@ -12,22 +12,22 @@ import 'package:flutter/src/animation/curves.dart';
 class FlutterLogo$Mate extends FlutterLogo with Mate {
   /// FlutterLogo FlutterLogo({Key? key, double? size, Color textColor = const Color(0xFF757575), FlutterLogoStyle style = FlutterLogoStyle.markOnly, Duration duration = const Duration(milliseconds: 750), Curve curve = Curves.fastOutSlowIn})
   FlutterLogo$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? size} , defaultValue:none
     double? size,
 
-    /// optionalParameters: {Color textColor = const Color(0xFF757575)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF757575)
+    /// optionalParameters: {Color textColor = const Color(0xFF757575)} , defaultValue:unprocessed
     required Color textColor,
 
-    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , hasDefaultValue:true, defaultValueCode:FlutterLogoStyle.markOnly
+    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , defaultValue:unprocessed
     required FlutterLogoStyle style,
 
-    /// optionalParameters: {Duration duration = const Duration(milliseconds: 750)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 750)
+    /// optionalParameters: {Duration duration = const Duration(milliseconds: 750)} , defaultValue:unprocessed
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , hasDefaultValue:true, defaultValueCode:Curves.fastOutSlowIn
+    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , defaultValue:unprocessed
     required Curve curve,
   }) : super(
           key: key,
@@ -45,11 +45,11 @@ class FlutterLogo$Mate extends FlutterLogo with Mate {
           duration: p.get('duration').build(),
           curve: p.get('curve').build(),
         );
-    matePut('key', key);
-    matePut('size', size);
-    matePut('textColor', textColor);
-    matePut('style', style);
-    matePut('duration', duration);
-    matePut('curve', curve);
+    mateDeclare('key', key);
+    mateDeclare('size', size);
+    mateDeclare('textColor', textColor);
+    mateDeclare('style', style);
+    mateDeclare('duration', duration);
+    mateDeclare('curve', curve);
   }
 }

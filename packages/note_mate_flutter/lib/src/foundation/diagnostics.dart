@@ -8,80 +8,80 @@ import 'dart:core';
 class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
   /// TextTreeConfiguration TextTreeConfiguration({required String prefixLineOne, required String prefixOtherLines, required String prefixLastChildLineOne, required String prefixOtherLinesRootNode, required String linkCharacter, required String propertyPrefixIfChildren, required String propertyPrefixNoChildren, String lineBreak = '\n', bool lineBreakProperties = true, String afterName = ':', String afterDescriptionIfBody = '', String afterDescription = '', String beforeProperties = '', String afterProperties = '', String mandatoryAfterProperties = '', String propertySeparator = '', String bodyIndent = '', String footer = '', bool showChildren = true, bool addBlankLineIfNoChildren = true, bool isNameOnOwnLine = false, bool isBlankLineBetweenPropertiesAndChildren = true, String beforeName = '', String suffixLineOne = '', String mandatoryFooter = ''})
   TextTreeConfiguration$Mate({
-    /// optionalParameters: {required String prefixLineOne} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String prefixLineOne} , defaultValue:none
     required String prefixLineOne,
 
-    /// optionalParameters: {required String prefixOtherLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String prefixOtherLines} , defaultValue:none
     required String prefixOtherLines,
 
-    /// optionalParameters: {required String prefixLastChildLineOne} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String prefixLastChildLineOne} , defaultValue:none
     required String prefixLastChildLineOne,
 
-    /// optionalParameters: {required String prefixOtherLinesRootNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String prefixOtherLinesRootNode} , defaultValue:none
     required String prefixOtherLinesRootNode,
 
-    /// optionalParameters: {required String linkCharacter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String linkCharacter} , defaultValue:none
     required String linkCharacter,
 
-    /// optionalParameters: {required String propertyPrefixIfChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String propertyPrefixIfChildren} , defaultValue:none
     required String propertyPrefixIfChildren,
 
-    /// optionalParameters: {required String propertyPrefixNoChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String propertyPrefixNoChildren} , defaultValue:none
     required String propertyPrefixNoChildren,
 
-    /// optionalParameters: {String lineBreak = '\n'} , hasDefaultValue:true, defaultValueCode:'\n'
-    required String lineBreak,
+    /// optionalParameters: {String lineBreak = '\n'} , defaultValue:Literal
+    String lineBreak = '\n',
 
-    /// optionalParameters: {bool lineBreakProperties = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool lineBreakProperties,
+    /// optionalParameters: {bool lineBreakProperties = true} , defaultValue:Literal
+    bool lineBreakProperties = true,
 
-    /// optionalParameters: {String afterName = ':'} , hasDefaultValue:true, defaultValueCode:':'
-    required String afterName,
+    /// optionalParameters: {String afterName = ':'} , defaultValue:Literal
+    String afterName = ':',
 
-    /// optionalParameters: {String afterDescriptionIfBody = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String afterDescriptionIfBody,
+    /// optionalParameters: {String afterDescriptionIfBody = ''} , defaultValue:Literal
+    String afterDescriptionIfBody = '',
 
-    /// optionalParameters: {String afterDescription = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String afterDescription,
+    /// optionalParameters: {String afterDescription = ''} , defaultValue:Literal
+    String afterDescription = '',
 
-    /// optionalParameters: {String beforeProperties = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String beforeProperties,
+    /// optionalParameters: {String beforeProperties = ''} , defaultValue:Literal
+    String beforeProperties = '',
 
-    /// optionalParameters: {String afterProperties = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String afterProperties,
+    /// optionalParameters: {String afterProperties = ''} , defaultValue:Literal
+    String afterProperties = '',
 
-    /// optionalParameters: {String mandatoryAfterProperties = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String mandatoryAfterProperties,
+    /// optionalParameters: {String mandatoryAfterProperties = ''} , defaultValue:Literal
+    String mandatoryAfterProperties = '',
 
-    /// optionalParameters: {String propertySeparator = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String propertySeparator,
+    /// optionalParameters: {String propertySeparator = ''} , defaultValue:Literal
+    String propertySeparator = '',
 
-    /// optionalParameters: {String bodyIndent = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String bodyIndent,
+    /// optionalParameters: {String bodyIndent = ''} , defaultValue:Literal
+    String bodyIndent = '',
 
-    /// optionalParameters: {String footer = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String footer,
+    /// optionalParameters: {String footer = ''} , defaultValue:Literal
+    String footer = '',
 
-    /// optionalParameters: {bool showChildren = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showChildren,
+    /// optionalParameters: {bool showChildren = true} , defaultValue:Literal
+    bool showChildren = true,
 
-    /// optionalParameters: {bool addBlankLineIfNoChildren = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addBlankLineIfNoChildren,
+    /// optionalParameters: {bool addBlankLineIfNoChildren = true} , defaultValue:Literal
+    bool addBlankLineIfNoChildren = true,
 
-    /// optionalParameters: {bool isNameOnOwnLine = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isNameOnOwnLine,
+    /// optionalParameters: {bool isNameOnOwnLine = false} , defaultValue:Literal
+    bool isNameOnOwnLine = false,
 
-    /// optionalParameters: {bool isBlankLineBetweenPropertiesAndChildren = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool isBlankLineBetweenPropertiesAndChildren,
+    /// optionalParameters: {bool isBlankLineBetweenPropertiesAndChildren = true} , defaultValue:Literal
+    bool isBlankLineBetweenPropertiesAndChildren = true,
 
-    /// optionalParameters: {String beforeName = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String beforeName,
+    /// optionalParameters: {String beforeName = ''} , defaultValue:Literal
+    String beforeName = '',
 
-    /// optionalParameters: {String suffixLineOne = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String suffixLineOne,
+    /// optionalParameters: {String suffixLineOne = ''} , defaultValue:Literal
+    String suffixLineOne = '',
 
-    /// optionalParameters: {String mandatoryFooter = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String mandatoryFooter,
+    /// optionalParameters: {String mandatoryFooter = ''} , defaultValue:Literal
+    String mandatoryFooter = '',
   }) : super(
           prefixLineOne: prefixLineOne,
           prefixOtherLines: prefixOtherLines,
@@ -136,31 +136,31 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           suffixLineOne: p.get('suffixLineOne').build(),
           mandatoryFooter: p.get('mandatoryFooter').build(),
         );
-    matePut('prefixLineOne', prefixLineOne);
-    matePut('prefixOtherLines', prefixOtherLines);
-    matePut('prefixLastChildLineOne', prefixLastChildLineOne);
-    matePut('prefixOtherLinesRootNode', prefixOtherLinesRootNode);
-    matePut('linkCharacter', linkCharacter);
-    matePut('propertyPrefixIfChildren', propertyPrefixIfChildren);
-    matePut('propertyPrefixNoChildren', propertyPrefixNoChildren);
-    matePut('lineBreak', lineBreak);
-    matePut('lineBreakProperties', lineBreakProperties);
-    matePut('afterName', afterName);
-    matePut('afterDescriptionIfBody', afterDescriptionIfBody);
-    matePut('afterDescription', afterDescription);
-    matePut('beforeProperties', beforeProperties);
-    matePut('afterProperties', afterProperties);
-    matePut('mandatoryAfterProperties', mandatoryAfterProperties);
-    matePut('propertySeparator', propertySeparator);
-    matePut('bodyIndent', bodyIndent);
-    matePut('footer', footer);
-    matePut('showChildren', showChildren);
-    matePut('addBlankLineIfNoChildren', addBlankLineIfNoChildren);
-    matePut('isNameOnOwnLine', isNameOnOwnLine);
-    matePut('isBlankLineBetweenPropertiesAndChildren', isBlankLineBetweenPropertiesAndChildren);
-    matePut('beforeName', beforeName);
-    matePut('suffixLineOne', suffixLineOne);
-    matePut('mandatoryFooter', mandatoryFooter);
+    mateDeclare('prefixLineOne', prefixLineOne);
+    mateDeclare('prefixOtherLines', prefixOtherLines);
+    mateDeclare('prefixLastChildLineOne', prefixLastChildLineOne);
+    mateDeclare('prefixOtherLinesRootNode', prefixOtherLinesRootNode);
+    mateDeclare('linkCharacter', linkCharacter);
+    mateDeclare('propertyPrefixIfChildren', propertyPrefixIfChildren);
+    mateDeclare('propertyPrefixNoChildren', propertyPrefixNoChildren);
+    mateDeclare('lineBreak', lineBreak);
+    mateDeclare('lineBreakProperties', lineBreakProperties);
+    mateDeclare('afterName', afterName);
+    mateDeclare('afterDescriptionIfBody', afterDescriptionIfBody);
+    mateDeclare('afterDescription', afterDescription);
+    mateDeclare('beforeProperties', beforeProperties);
+    mateDeclare('afterProperties', afterProperties);
+    mateDeclare('mandatoryAfterProperties', mandatoryAfterProperties);
+    mateDeclare('propertySeparator', propertySeparator);
+    mateDeclare('bodyIndent', bodyIndent);
+    mateDeclare('footer', footer);
+    mateDeclare('showChildren', showChildren);
+    mateDeclare('addBlankLineIfNoChildren', addBlankLineIfNoChildren);
+    mateDeclare('isNameOnOwnLine', isNameOnOwnLine);
+    mateDeclare('isBlankLineBetweenPropertiesAndChildren', isBlankLineBetweenPropertiesAndChildren);
+    mateDeclare('beforeName', beforeName);
+    mateDeclare('suffixLineOne', suffixLineOne);
+    mateDeclare('mandatoryFooter', mandatoryFooter);
   }
 }
 
@@ -168,16 +168,16 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
 class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
   /// TextTreeRenderer TextTreeRenderer({DiagnosticLevel minLevel = DiagnosticLevel.debug, int wrapWidth = 100, int wrapWidthProperties = 65, int maxDescendentsTruncatableNode = -1})
   TextTreeRenderer$Mate({
-    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.debug
+    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , defaultValue:unprocessed
     required DiagnosticLevel minLevel,
 
-    /// optionalParameters: {int wrapWidth = 100} , hasDefaultValue:true, defaultValueCode:100
-    required int wrapWidth,
+    /// optionalParameters: {int wrapWidth = 100} , defaultValue:Literal
+    int wrapWidth = 100,
 
-    /// optionalParameters: {int wrapWidthProperties = 65} , hasDefaultValue:true, defaultValueCode:65
-    required int wrapWidthProperties,
+    /// optionalParameters: {int wrapWidthProperties = 65} , defaultValue:Literal
+    int wrapWidthProperties = 65,
 
-    /// optionalParameters: {int maxDescendentsTruncatableNode = -1} , hasDefaultValue:true, defaultValueCode:-1
+    /// optionalParameters: {int maxDescendentsTruncatableNode = -1} , defaultValue:unprocessed
     required int maxDescendentsTruncatableNode,
   }) : super(
           minLevel: minLevel,
@@ -191,10 +191,10 @@ class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
           wrapWidthProperties: p.get('wrapWidthProperties').build(),
           maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').build(),
         );
-    matePut('minLevel', minLevel);
-    matePut('wrapWidth', wrapWidth);
-    matePut('wrapWidthProperties', wrapWidthProperties);
-    matePut('maxDescendentsTruncatableNode', maxDescendentsTruncatableNode);
+    mateDeclare('minLevel', minLevel);
+    mateDeclare('wrapWidth', wrapWidth);
+    mateDeclare('wrapWidthProperties', wrapWidthProperties);
+    mateDeclare('maxDescendentsTruncatableNode', maxDescendentsTruncatableNode);
   }
 }
 
@@ -207,10 +207,10 @@ class MessageProperty$Mate extends MessageProperty with Mate {
 
     /// requiredParameters: String message
     String message, {
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:unprocessed
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -224,10 +224,10 @@ class MessageProperty$Mate extends MessageProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('message', message);
-    matePut('style', style);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('message', message);
+    mateDeclare('style', style);
+    mateDeclare('level', level);
   }
 }
 
@@ -240,28 +240,28 @@ class StringProperty$Mate extends StringProperty with Mate {
 
     /// requiredParameters: String? value
     String? value, {
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , defaultValue:none
     String? description,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {bool quoted = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool quoted,
+    /// optionalParameters: {bool quoted = true} , defaultValue:Literal
+    bool quoted = true,
 
-    /// optionalParameters: {String? ifEmpty} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifEmpty} , defaultValue:none
     String? ifEmpty,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -287,16 +287,16 @@ class StringProperty$Mate extends StringProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('description', description);
-    matePut('tooltip', tooltip);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('quoted', quoted);
-    matePut('ifEmpty', ifEmpty);
-    matePut('style', style);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('description', description);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('showName', showName);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('quoted', quoted);
+    mateDeclare('ifEmpty', ifEmpty);
+    mateDeclare('style', style);
+    mateDeclare('level', level);
   }
 }
 
@@ -309,25 +309,25 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
 
     /// requiredParameters: double? value
     double? value, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {String? unit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? unit} , defaultValue:none
     String? unit,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -351,15 +351,15 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifNull', ifNull);
-    matePut('unit', unit);
-    matePut('tooltip', tooltip);
-    matePut('defaultValue', defaultValue);
-    matePut('showName', showName);
-    matePut('style', style);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('unit', unit);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('showName', showName);
+    mateDeclare('style', style);
+    mateDeclare('level', level);
   }
 
   /// DoubleProperty DoubleProperty.lazy(String name, double? Function() computeValue, {String? ifNull, bool showName = true, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
@@ -369,22 +369,22 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
 
     /// requiredParameters: double? Function() computeValue
     ComputePropertyValueCallback<double> computeValue, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {String? unit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? unit} , defaultValue:none
     String? unit,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super.lazy(
           name,
@@ -406,14 +406,14 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('computeValue', computeValue);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('unit', unit);
-    matePut('tooltip', tooltip);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('computeValue', computeValue);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('showName', showName);
+    mateDeclare('unit', unit);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('level', level);
   }
 }
 
@@ -426,22 +426,22 @@ class IntProperty$Mate extends IntProperty with Mate {
 
     /// requiredParameters: int? value
     int? value, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {String? unit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? unit} , defaultValue:none
     String? unit,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -463,14 +463,14 @@ class IntProperty$Mate extends IntProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('unit', unit);
-    matePut('defaultValue', defaultValue);
-    matePut('style', style);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('showName', showName);
+    mateDeclare('unit', unit);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('style', style);
+    mateDeclare('level', level);
   }
 }
 
@@ -483,19 +483,19 @@ class PercentProperty$Mate extends PercentProperty with Mate {
 
     /// requiredParameters: double? fraction
     double? fraction, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {String? unit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? unit} , defaultValue:none
     String? unit,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -515,13 +515,13 @@ class PercentProperty$Mate extends PercentProperty with Mate {
           unit: p.get('unit').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('fraction', fraction);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('tooltip', tooltip);
-    matePut('unit', unit);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('fraction', fraction);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('showName', showName);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('unit', unit);
+    mateDeclare('level', level);
   }
 }
 
@@ -531,22 +531,22 @@ class FlagProperty$Mate extends FlagProperty with Mate {
   FlagProperty$Mate(
     /// requiredParameters: String name
     String name, {
-    /// optionalParameters: {required bool? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool? value} , defaultValue:none
     required bool? value,
 
-    /// optionalParameters: {String? ifTrue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifTrue} , defaultValue:none
     String? ifTrue,
 
-    /// optionalParameters: {String? ifFalse} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifFalse} , defaultValue:none
     String? ifFalse,
 
-    /// optionalParameters: {bool showName = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showName,
+    /// optionalParameters: {bool showName = false} , defaultValue:Literal
+    bool showName = false,
 
-    /// optionalParameters: {Object? defaultValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? defaultValue} , defaultValue:none
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -566,13 +566,13 @@ class FlagProperty$Mate extends FlagProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifTrue', ifTrue);
-    matePut('ifFalse', ifFalse);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('ifTrue', ifTrue);
+    mateDeclare('ifFalse', ifFalse);
+    mateDeclare('showName', showName);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('level', level);
   }
 }
 
@@ -585,25 +585,25 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
 
     /// requiredParameters: Iterable<T>? value
     Iterable<T>? value, {
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty = '[]'} , hasDefaultValue:true, defaultValueCode:'[]'
-    String? ifEmpty,
+    /// optionalParameters: {String? ifEmpty = '[]'} , defaultValue:Literal
+    String? ifEmpty = '[]',
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showSeparator = true} , defaultValue:is!ConstVariableElement
     required bool showSeparator,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -627,15 +627,15 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('defaultValue', defaultValue);
-    matePut('ifNull', ifNull);
-    matePut('ifEmpty', ifEmpty);
-    matePut('style', style);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('ifEmpty', ifEmpty);
+    mateDeclare('style', style);
+    mateDeclare('showName', showName);
+    mateDeclare('showSeparator', showSeparator);
+    mateDeclare('level', level);
   }
 }
 
@@ -648,10 +648,10 @@ class EnumProperty$Mate<T> extends EnumProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -665,10 +665,10 @@ class EnumProperty$Mate<T> extends EnumProperty<T> with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('level', level);
   }
 }
 
@@ -681,16 +681,16 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {String? ifPresent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifPresent} , defaultValue:none
     String? ifPresent,
 
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showName,
+    /// optionalParameters: {bool showName = false} , defaultValue:Literal
+    bool showName = false,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -708,12 +708,12 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           showName: p.get('showName').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifPresent', ifPresent);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('ifPresent', ifPresent);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('showName', showName);
+    mateDeclare('level', level);
   }
 
   /// ObjectFlagProperty<T> ObjectFlagProperty.has(String name, T? value, {DiagnosticLevel level = DiagnosticLevel.info})
@@ -723,7 +723,7 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super.has(
           name,
@@ -735,9 +735,9 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           p.get('value').value,
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('level', level);
   }
 }
 
@@ -750,16 +750,16 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
 
     /// requiredParameters: Map<String, T?> value
     Map<String, T?> value, {
-    /// optionalParameters: {String? ifEmpty} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifEmpty} , defaultValue:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showSeparator = true} , defaultValue:is!ConstVariableElement
     required bool showSeparator,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -777,12 +777,12 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifEmpty', ifEmpty);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('ifEmpty', ifEmpty);
+    mateDeclare('showName', showName);
+    mateDeclare('showSeparator', showSeparator);
+    mateDeclare('level', level);
   }
 }
 
@@ -795,46 +795,46 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , defaultValue:none
     String? description,
 
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifEmpty} , defaultValue:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , defaultValue:Literal
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , defaultValue:Literal
+    bool showSeparator = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:unprocessed
     Object? defaultValue,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {bool missingIfNull = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool missingIfNull,
+    /// optionalParameters: {bool missingIfNull = false} , defaultValue:Literal
+    bool missingIfNull = false,
 
-    /// optionalParameters: {String? linePrefix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? linePrefix} , defaultValue:none
     String? linePrefix,
 
-    /// optionalParameters: {bool expandableValue = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool expandableValue,
+    /// optionalParameters: {bool expandableValue = false} , defaultValue:Literal
+    bool expandableValue = false,
 
-    /// optionalParameters: {bool allowWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowWrap,
+    /// optionalParameters: {bool allowWrap = true} , defaultValue:Literal
+    bool allowWrap = true,
 
-    /// optionalParameters: {bool allowNameWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowNameWrap,
+    /// optionalParameters: {bool allowNameWrap = true} , defaultValue:Literal
+    bool allowNameWrap = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:none
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -872,22 +872,22 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('description', description);
-    matePut('ifNull', ifNull);
-    matePut('ifEmpty', ifEmpty);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('defaultValue', defaultValue);
-    matePut('tooltip', tooltip);
-    matePut('missingIfNull', missingIfNull);
-    matePut('linePrefix', linePrefix);
-    matePut('expandableValue', expandableValue);
-    matePut('allowWrap', allowWrap);
-    matePut('allowNameWrap', allowNameWrap);
-    matePut('style', style);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('description', description);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('ifEmpty', ifEmpty);
+    mateDeclare('showName', showName);
+    mateDeclare('showSeparator', showSeparator);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('missingIfNull', missingIfNull);
+    mateDeclare('linePrefix', linePrefix);
+    mateDeclare('expandableValue', expandableValue);
+    mateDeclare('allowWrap', allowWrap);
+    mateDeclare('allowNameWrap', allowNameWrap);
+    mateDeclare('style', style);
+    mateDeclare('level', level);
   }
 
   /// DiagnosticsProperty<T> DiagnosticsProperty.lazy(String? name, T? Function() computeValue, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
@@ -897,43 +897,43 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 
     /// requiredParameters: T? Function() computeValue
     ComputePropertyValueCallback<T> computeValue, {
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , defaultValue:none
     String? description,
 
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifEmpty} , defaultValue:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , defaultValue:Literal
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , defaultValue:Literal
+    bool showSeparator = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:unprocessed
     Object? defaultValue,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {bool missingIfNull = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool missingIfNull,
+    /// optionalParameters: {bool missingIfNull = false} , defaultValue:Literal
+    bool missingIfNull = false,
 
-    /// optionalParameters: {bool expandableValue = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool expandableValue,
+    /// optionalParameters: {bool expandableValue = false} , defaultValue:Literal
+    bool expandableValue = false,
 
-    /// optionalParameters: {bool allowWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowWrap,
+    /// optionalParameters: {bool allowWrap = true} , defaultValue:Literal
+    bool allowWrap = true,
 
-    /// optionalParameters: {bool allowNameWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowNameWrap,
+    /// optionalParameters: {bool allowNameWrap = true} , defaultValue:Literal
+    bool allowNameWrap = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:none
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
     required DiagnosticLevel level,
   }) : super.lazy(
           name,
@@ -969,21 +969,21 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('computeValue', computeValue);
-    matePut('description', description);
-    matePut('ifNull', ifNull);
-    matePut('ifEmpty', ifEmpty);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('defaultValue', defaultValue);
-    matePut('tooltip', tooltip);
-    matePut('missingIfNull', missingIfNull);
-    matePut('expandableValue', expandableValue);
-    matePut('allowWrap', allowWrap);
-    matePut('allowNameWrap', allowNameWrap);
-    matePut('style', style);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('computeValue', computeValue);
+    mateDeclare('description', description);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('ifEmpty', ifEmpty);
+    mateDeclare('showName', showName);
+    mateDeclare('showSeparator', showSeparator);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('missingIfNull', missingIfNull);
+    mateDeclare('expandableValue', expandableValue);
+    mateDeclare('allowWrap', allowWrap);
+    mateDeclare('allowNameWrap', allowNameWrap);
+    mateDeclare('style', style);
+    mateDeclare('level', level);
   }
 }
 
@@ -991,13 +991,13 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNode<T> with Mate {
   /// DiagnosticableNode<T> DiagnosticableNode({String? name, required T value, required DiagnosticsTreeStyle? style})
   DiagnosticableNode$Mate({
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , defaultValue:none
     String? name,
 
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , defaultValue:none
     required T value,
 
-    /// optionalParameters: {required DiagnosticsTreeStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DiagnosticsTreeStyle? style} , defaultValue:none
     required DiagnosticsTreeStyle? style,
   }) : super(
           name: name,
@@ -1009,9 +1009,9 @@ class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNo
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('style', style);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('style', style);
   }
 }
 
@@ -1019,13 +1019,13 @@ class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNo
 class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
   /// DiagnosticableTreeNode DiagnosticableTreeNode({String? name, required DiagnosticableTree value, required DiagnosticsTreeStyle? style})
   DiagnosticableTreeNode$Mate({
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , defaultValue:none
     String? name,
 
-    /// optionalParameters: {required DiagnosticableTree value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DiagnosticableTree value} , defaultValue:none
     required DiagnosticableTree value,
 
-    /// optionalParameters: {required DiagnosticsTreeStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DiagnosticsTreeStyle? style} , defaultValue:none
     required DiagnosticsTreeStyle? style,
   }) : super(
           name: name,
@@ -1037,9 +1037,9 @@ class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('style', style);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('style', style);
   }
 }
 
@@ -1052,7 +1052,7 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with 
       List<DiagnosticsNode> properties)
       : super.fromProperties(properties) {
     mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value);
-    matePut('properties', properties);
+    mateDeclare('properties', properties);
   }
 }
 
@@ -1060,37 +1060,37 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with 
 class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
   /// DiagnosticsBlock DiagnosticsBlock({String? name, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace, bool showName = true, bool showSeparator = true, String? linePrefix, Object? value, String? description, DiagnosticLevel level = DiagnosticLevel.info, bool allowTruncate = false, List<DiagnosticsNode> children = const <DiagnosticsNode>[], List<DiagnosticsNode> properties = const <DiagnosticsNode>[]})
   DiagnosticsBlock$Mate({
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , defaultValue:none
     String? name,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.whitespace
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , defaultValue:none
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , defaultValue:Literal
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , defaultValue:Literal
+    bool showSeparator = true,
 
-    /// optionalParameters: {String? linePrefix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? linePrefix} , defaultValue:none
     String? linePrefix,
 
-    /// optionalParameters: {Object? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? value} , defaultValue:none
     Object? value,
 
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , defaultValue:none
     String? description,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
     required DiagnosticLevel level,
 
-    /// optionalParameters: {bool allowTruncate = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool allowTruncate,
+    /// optionalParameters: {bool allowTruncate = false} , defaultValue:Literal
+    bool allowTruncate = false,
 
-    /// optionalParameters: {List<DiagnosticsNode> children = const <DiagnosticsNode>[]} , hasDefaultValue:true, defaultValueCode:const <DiagnosticsNode>[]
+    /// optionalParameters: {List<DiagnosticsNode> children = const <DiagnosticsNode>[]} , defaultValue:unprocessed
     required List<DiagnosticsNode> children,
 
-    /// optionalParameters: {List<DiagnosticsNode> properties = const <DiagnosticsNode>[]} , hasDefaultValue:true, defaultValueCode:const <DiagnosticsNode>[]
+    /// optionalParameters: {List<DiagnosticsNode> properties = const <DiagnosticsNode>[]} , defaultValue:unprocessed
     required List<DiagnosticsNode> properties,
   }) : super(
           name: name,
@@ -1118,16 +1118,16 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
           children: p.get('children').build(),
           properties: p.get('properties').build(),
         );
-    matePut('name', name);
-    matePut('style', style);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('linePrefix', linePrefix);
-    matePut('value', value);
-    matePut('description', description);
-    matePut('level', level);
-    matePut('allowTruncate', allowTruncate);
-    matePut('children', children);
-    matePut('properties', properties);
+    mateDeclare('name', name);
+    mateDeclare('style', style);
+    mateDeclare('showName', showName);
+    mateDeclare('showSeparator', showSeparator);
+    mateDeclare('linePrefix', linePrefix);
+    mateDeclare('value', value);
+    mateDeclare('description', description);
+    mateDeclare('level', level);
+    mateDeclare('allowTruncate', allowTruncate);
+    mateDeclare('children', children);
+    mateDeclare('properties', properties);
   }
 }

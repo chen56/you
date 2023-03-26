@@ -11,28 +11,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class SafeArea$Mate extends SafeArea with Mate {
   /// SafeArea SafeArea({Key? key, bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, bool maintainBottomViewPadding = false, required Widget child})
   SafeArea$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool left = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool left,
+    /// optionalParameters: {bool left = true} , defaultValue:Literal
+    bool left = true,
 
-    /// optionalParameters: {bool top = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool top,
+    /// optionalParameters: {bool top = true} , defaultValue:Literal
+    bool top = true,
 
-    /// optionalParameters: {bool right = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool right,
+    /// optionalParameters: {bool right = true} , defaultValue:Literal
+    bool right = true,
 
-    /// optionalParameters: {bool bottom = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool bottom,
+    /// optionalParameters: {bool bottom = true} , defaultValue:Literal
+    bool bottom = true,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsets minimum,
 
-    /// optionalParameters: {bool maintainBottomViewPadding = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool maintainBottomViewPadding,
+    /// optionalParameters: {bool maintainBottomViewPadding = false} , defaultValue:Literal
+    bool maintainBottomViewPadding = false,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -54,14 +54,14 @@ class SafeArea$Mate extends SafeArea with Mate {
           maintainBottomViewPadding: p.get('maintainBottomViewPadding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('minimum', minimum);
-    matePut('maintainBottomViewPadding', maintainBottomViewPadding);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('left', left);
+    mateDeclare('top', top);
+    mateDeclare('right', right);
+    mateDeclare('bottom', bottom);
+    mateDeclare('minimum', minimum);
+    mateDeclare('maintainBottomViewPadding', maintainBottomViewPadding);
+    mateDeclare('child', child);
   }
 }
 
@@ -69,25 +69,25 @@ class SafeArea$Mate extends SafeArea with Mate {
 class SliverSafeArea$Mate extends SliverSafeArea with Mate {
   /// SliverSafeArea SliverSafeArea({Key? key, bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, required Widget sliver})
   SliverSafeArea$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool left = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool left,
+    /// optionalParameters: {bool left = true} , defaultValue:Literal
+    bool left = true,
 
-    /// optionalParameters: {bool top = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool top,
+    /// optionalParameters: {bool top = true} , defaultValue:Literal
+    bool top = true,
 
-    /// optionalParameters: {bool right = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool right,
+    /// optionalParameters: {bool right = true} , defaultValue:Literal
+    bool right = true,
 
-    /// optionalParameters: {bool bottom = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool bottom,
+    /// optionalParameters: {bool bottom = true} , defaultValue:Literal
+    bool bottom = true,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , defaultValue:unprocessed
     required EdgeInsets minimum,
 
-    /// optionalParameters: {required Widget sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget sliver} , defaultValue:none
     required Widget sliver,
   }) : super(
           key: key,
@@ -107,12 +107,12 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
           minimum: p.get('minimum').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('key', key);
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('minimum', minimum);
-    matePut('sliver', sliver);
+    mateDeclare('key', key);
+    mateDeclare('left', left);
+    mateDeclare('top', top);
+    mateDeclare('right', right);
+    mateDeclare('bottom', bottom);
+    mateDeclare('minimum', minimum);
+    mateDeclare('sliver', sliver);
   }
 }

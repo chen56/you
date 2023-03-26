@@ -14,34 +14,34 @@ import 'package:flutter/src/widgets/framework.dart';
 class Viewport$Mate extends Viewport with Mate {
   /// Viewport Viewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, double anchor = 0.0, required ViewportOffset offset, Key? center, double? cacheExtent, CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel, Clip clipBehavior = Clip.hardEdge, List<Widget> slivers = const <Widget>[]})
   Viewport$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , hasDefaultValue:true, defaultValueCode:AxisDirection.down
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:unprocessed
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {AxisDirection? crossAxisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AxisDirection? crossAxisDirection} , defaultValue:none
     AxisDirection? crossAxisDirection,
 
-    /// optionalParameters: {double anchor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double anchor,
+    /// optionalParameters: {double anchor = 0.0} , defaultValue:Literal
+    double anchor = 0.0,
 
-    /// optionalParameters: {required ViewportOffset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {Key? center} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? center} , defaultValue:none
     Key? center,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , hasDefaultValue:true, defaultValueCode:CacheExtentStyle.pixel
+    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , defaultValue:unprocessed
     required CacheExtentStyle cacheExtentStyle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> slivers,
   }) : super(
           key: key,
@@ -67,16 +67,16 @@ class Viewport$Mate extends Viewport with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           slivers: p.get('slivers').build(),
         );
-    matePut('key', key);
-    matePut('axisDirection', axisDirection);
-    matePut('crossAxisDirection', crossAxisDirection);
-    matePut('anchor', anchor);
-    matePut('offset', offset);
-    matePut('center', center);
-    matePut('cacheExtent', cacheExtent);
-    matePut('cacheExtentStyle', cacheExtentStyle);
-    matePut('clipBehavior', clipBehavior);
-    matePut('slivers', slivers);
+    mateDeclare('key', key);
+    mateDeclare('axisDirection', axisDirection);
+    mateDeclare('crossAxisDirection', crossAxisDirection);
+    mateDeclare('anchor', anchor);
+    mateDeclare('offset', offset);
+    mateDeclare('center', center);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('cacheExtentStyle', cacheExtentStyle);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('slivers', slivers);
   }
 }
 
@@ -84,22 +84,22 @@ class Viewport$Mate extends Viewport with Mate {
 class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
   /// ShrinkWrappingViewport ShrinkWrappingViewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<Widget> slivers = const <Widget>[]})
   ShrinkWrappingViewport$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , hasDefaultValue:true, defaultValueCode:AxisDirection.down
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:unprocessed
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {AxisDirection? crossAxisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AxisDirection? crossAxisDirection} , defaultValue:none
     AxisDirection? crossAxisDirection,
 
-    /// optionalParameters: {required ViewportOffset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> slivers,
   }) : super(
           key: key,
@@ -117,11 +117,11 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           slivers: p.get('slivers').build(),
         );
-    matePut('key', key);
-    matePut('axisDirection', axisDirection);
-    matePut('crossAxisDirection', crossAxisDirection);
-    matePut('offset', offset);
-    matePut('clipBehavior', clipBehavior);
-    matePut('slivers', slivers);
+    mateDeclare('key', key);
+    mateDeclare('axisDirection', axisDirection);
+    mateDeclare('crossAxisDirection', crossAxisDirection);
+    mateDeclare('offset', offset);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('slivers', slivers);
   }
 }

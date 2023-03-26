@@ -17,43 +17,43 @@ import 'package:flutter/src/material/material_state.dart';
 class MenuAnchor$Mate extends MenuAnchor with Mate {
   /// MenuAnchor MenuAnchor({Key? key, MenuController? controller, FocusNode? childFocusNode, MenuStyle? style, Offset? alignmentOffset = Offset.zero, Clip clipBehavior = Clip.none, bool anchorTapClosesMenu = false, void Function()? onOpen, void Function()? onClose, bool crossAxisUnconstrained = true, required List<Widget> menuChildren, Widget Function(BuildContext, MenuController, Widget?)? builder, Widget? child})
   MenuAnchor$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {MenuController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuController? controller} , defaultValue:none
     MenuController? controller,
 
-    /// optionalParameters: {FocusNode? childFocusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? childFocusNode} , defaultValue:none
     FocusNode? childFocusNode,
 
-    /// optionalParameters: {MenuStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuStyle? style} , defaultValue:none
     MenuStyle? style,
 
-    /// optionalParameters: {Offset? alignmentOffset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
+    /// optionalParameters: {Offset? alignmentOffset = Offset.zero} , defaultValue:unprocessed
     Offset? alignmentOffset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {bool anchorTapClosesMenu = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool anchorTapClosesMenu,
+    /// optionalParameters: {bool anchorTapClosesMenu = false} , defaultValue:Literal
+    bool anchorTapClosesMenu = false,
 
-    /// optionalParameters: {void Function()? onOpen} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onOpen} , defaultValue:none
     VoidCallback? onOpen,
 
-    /// optionalParameters: {void Function()? onClose} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onClose} , defaultValue:none
     VoidCallback? onClose,
 
-    /// optionalParameters: {bool crossAxisUnconstrained = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool crossAxisUnconstrained,
+    /// optionalParameters: {bool crossAxisUnconstrained = true} , defaultValue:Literal
+    bool crossAxisUnconstrained = true,
 
-    /// optionalParameters: {required List<Widget> menuChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> menuChildren} , defaultValue:none
     required List<Widget> menuChildren,
 
-    /// optionalParameters: {Widget Function(BuildContext, MenuController, Widget?)? builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, MenuController, Widget?)? builder} , defaultValue:none
     MenuAnchorChildBuilder? builder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -85,19 +85,19 @@ class MenuAnchor$Mate extends MenuAnchor with Mate {
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('childFocusNode', childFocusNode);
-    matePut('style', style);
-    matePut('alignmentOffset', alignmentOffset);
-    matePut('clipBehavior', clipBehavior);
-    matePut('anchorTapClosesMenu', anchorTapClosesMenu);
-    matePut('onOpen', onOpen);
-    matePut('onClose', onClose);
-    matePut('crossAxisUnconstrained', crossAxisUnconstrained);
-    matePut('menuChildren', menuChildren);
-    matePut('builder', builder);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('controller', controller);
+    mateDeclare('childFocusNode', childFocusNode);
+    mateDeclare('style', style);
+    mateDeclare('alignmentOffset', alignmentOffset);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('anchorTapClosesMenu', anchorTapClosesMenu);
+    mateDeclare('onOpen', onOpen);
+    mateDeclare('onClose', onClose);
+    mateDeclare('crossAxisUnconstrained', crossAxisUnconstrained);
+    mateDeclare('menuChildren', menuChildren);
+    mateDeclare('builder', builder);
+    mateDeclare('child', child);
   }
 }
 
@@ -105,19 +105,19 @@ class MenuAnchor$Mate extends MenuAnchor with Mate {
 class MenuBar$Mate extends MenuBar with Mate {
   /// MenuBar MenuBar({Key? key, MenuStyle? style, Clip clipBehavior = Clip.none, MenuController? controller, required List<Widget> children})
   MenuBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {MenuStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuStyle? style} , defaultValue:none
     MenuStyle? style,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {MenuController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuController? controller} , defaultValue:none
     MenuController? controller,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , defaultValue:none
     required List<Widget> children,
   }) : super(
           key: key,
@@ -133,11 +133,11 @@ class MenuBar$Mate extends MenuBar with Mate {
           controller: p.get('controller').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('style', style);
-    matePut('clipBehavior', clipBehavior);
-    matePut('controller', controller);
-    matePut('children', children);
+    mateDeclare('key', key);
+    mateDeclare('style', style);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('controller', controller);
+    mateDeclare('children', children);
   }
 }
 
@@ -145,43 +145,43 @@ class MenuBar$Mate extends MenuBar with Mate {
 class MenuItemButton$Mate extends MenuItemButton with Mate {
   /// MenuItemButton MenuItemButton({Key? key, void Function()? onPressed, void Function(bool)? onHover, bool requestFocusOnHover = true, void Function(bool)? onFocusChange, FocusNode? focusNode, MenuSerializableShortcut? shortcut, ButtonStyle? style, MaterialStatesController? statesController, Clip clipBehavior = Clip.none, Widget? leadingIcon, Widget? trailingIcon, required Widget? child})
   MenuItemButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {void Function(bool)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHover} , defaultValue:none
     ValueChanged<bool>? onHover,
 
-    /// optionalParameters: {bool requestFocusOnHover = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool requestFocusOnHover,
+    /// optionalParameters: {bool requestFocusOnHover = true} , defaultValue:Literal
+    bool requestFocusOnHover = true,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {MenuSerializableShortcut? shortcut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuSerializableShortcut? shortcut} , defaultValue:none
     MenuSerializableShortcut? shortcut,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
     ButtonStyle? style,
 
-    /// optionalParameters: {MaterialStatesController? statesController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? leadingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leadingIcon} , defaultValue:none
     Widget? leadingIcon,
 
-    /// optionalParameters: {Widget? trailingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailingIcon} , defaultValue:none
     Widget? trailingIcon,
 
-    /// optionalParameters: {required Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? child} , defaultValue:none
     required Widget? child,
   }) : super(
           key: key,
@@ -213,19 +213,19 @@ class MenuItemButton$Mate extends MenuItemButton with Mate {
           trailingIcon: p.get('trailingIcon').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('onHover', onHover);
-    matePut('requestFocusOnHover', requestFocusOnHover);
-    matePut('onFocusChange', onFocusChange);
-    matePut('focusNode', focusNode);
-    matePut('shortcut', shortcut);
-    matePut('style', style);
-    matePut('statesController', statesController);
-    matePut('clipBehavior', clipBehavior);
-    matePut('leadingIcon', leadingIcon);
-    matePut('trailingIcon', trailingIcon);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('onHover', onHover);
+    mateDeclare('requestFocusOnHover', requestFocusOnHover);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('shortcut', shortcut);
+    mateDeclare('style', style);
+    mateDeclare('statesController', statesController);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('leadingIcon', leadingIcon);
+    mateDeclare('trailingIcon', trailingIcon);
+    mateDeclare('child', child);
   }
 }
 
@@ -233,46 +233,46 @@ class MenuItemButton$Mate extends MenuItemButton with Mate {
 class CheckboxMenuButton$Mate extends CheckboxMenuButton with Mate {
   /// CheckboxMenuButton CheckboxMenuButton({Key? key, required bool? value, bool tristate = false, bool isError = false, required void Function(bool?)? onChanged, void Function(bool)? onHover, void Function(bool)? onFocusChange, FocusNode? focusNode, MenuSerializableShortcut? shortcut, ButtonStyle? style, MaterialStatesController? statesController, Clip clipBehavior = Clip.none, Widget? trailingIcon, required Widget? child})
   CheckboxMenuButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required bool? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool? value} , defaultValue:none
     required bool? value,
 
-    /// optionalParameters: {bool tristate = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool tristate,
+    /// optionalParameters: {bool tristate = false} , defaultValue:Literal
+    bool tristate = false,
 
-    /// optionalParameters: {bool isError = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isError,
+    /// optionalParameters: {bool isError = false} , defaultValue:Literal
+    bool isError = false,
 
-    /// optionalParameters: {required void Function(bool?)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(bool?)? onChanged} , defaultValue:none
     required ValueChanged<bool?>? onChanged,
 
-    /// optionalParameters: {void Function(bool)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHover} , defaultValue:none
     ValueChanged<bool>? onHover,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {MenuSerializableShortcut? shortcut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuSerializableShortcut? shortcut} , defaultValue:none
     MenuSerializableShortcut? shortcut,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
     ButtonStyle? style,
 
-    /// optionalParameters: {MaterialStatesController? statesController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? trailingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailingIcon} , defaultValue:none
     Widget? trailingIcon,
 
-    /// optionalParameters: {required Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? child} , defaultValue:none
     required Widget? child,
   }) : super(
           key: key,
@@ -306,20 +306,20 @@ class CheckboxMenuButton$Mate extends CheckboxMenuButton with Mate {
           trailingIcon: p.get('trailingIcon').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('tristate', tristate);
-    matePut('isError', isError);
-    matePut('onChanged', onChanged);
-    matePut('onHover', onHover);
-    matePut('onFocusChange', onFocusChange);
-    matePut('focusNode', focusNode);
-    matePut('shortcut', shortcut);
-    matePut('style', style);
-    matePut('statesController', statesController);
-    matePut('clipBehavior', clipBehavior);
-    matePut('trailingIcon', trailingIcon);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('tristate', tristate);
+    mateDeclare('isError', isError);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('onHover', onHover);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('shortcut', shortcut);
+    mateDeclare('style', style);
+    mateDeclare('statesController', statesController);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('trailingIcon', trailingIcon);
+    mateDeclare('child', child);
   }
 }
 
@@ -327,46 +327,46 @@ class CheckboxMenuButton$Mate extends CheckboxMenuButton with Mate {
 class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with Mate {
   /// RadioMenuButton<T> RadioMenuButton({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, bool toggleable = false, void Function(bool)? onHover, void Function(bool)? onFocusChange, FocusNode? focusNode, MenuSerializableShortcut? shortcut, ButtonStyle? style, MaterialStatesController? statesController, Clip clipBehavior = Clip.none, Widget? trailingIcon, required Widget? child})
   RadioMenuButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , defaultValue:none
     required T value,
 
-    /// optionalParameters: {required T? groupValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T? groupValue} , defaultValue:none
     required T? groupValue,
 
-    /// optionalParameters: {required void Function(T?)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(T?)? onChanged} , defaultValue:none
     required ValueChanged<T?>? onChanged,
 
-    /// optionalParameters: {bool toggleable = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool toggleable,
+    /// optionalParameters: {bool toggleable = false} , defaultValue:Literal
+    bool toggleable = false,
 
-    /// optionalParameters: {void Function(bool)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHover} , defaultValue:none
     ValueChanged<bool>? onHover,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {MenuSerializableShortcut? shortcut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuSerializableShortcut? shortcut} , defaultValue:none
     MenuSerializableShortcut? shortcut,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
     ButtonStyle? style,
 
-    /// optionalParameters: {MaterialStatesController? statesController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {Widget? trailingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailingIcon} , defaultValue:none
     Widget? trailingIcon,
 
-    /// optionalParameters: {required Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? child} , defaultValue:none
     required Widget? child,
   }) : super(
           key: key,
@@ -400,20 +400,20 @@ class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with Mate {
           trailingIcon: p.get('trailingIcon').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('groupValue', groupValue);
-    matePut('onChanged', onChanged);
-    matePut('toggleable', toggleable);
-    matePut('onHover', onHover);
-    matePut('onFocusChange', onFocusChange);
-    matePut('focusNode', focusNode);
-    matePut('shortcut', shortcut);
-    matePut('style', style);
-    matePut('statesController', statesController);
-    matePut('clipBehavior', clipBehavior);
-    matePut('trailingIcon', trailingIcon);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('groupValue', groupValue);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('toggleable', toggleable);
+    mateDeclare('onHover', onHover);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('shortcut', shortcut);
+    mateDeclare('style', style);
+    mateDeclare('statesController', statesController);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('trailingIcon', trailingIcon);
+    mateDeclare('child', child);
   }
 }
 
@@ -421,49 +421,49 @@ class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with Mate {
 class SubmenuButton$Mate extends SubmenuButton with Mate {
   /// SubmenuButton SubmenuButton({Key? key, void Function(bool)? onHover, void Function(bool)? onFocusChange, void Function()? onOpen, void Function()? onClose, ButtonStyle? style, MenuStyle? menuStyle, Offset? alignmentOffset, Clip clipBehavior = Clip.none, FocusNode? focusNode, MaterialStatesController? statesController, Widget? leadingIcon, Widget? trailingIcon, required List<Widget> menuChildren, required Widget? child})
   SubmenuButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function(bool)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHover} , defaultValue:none
     ValueChanged<bool>? onHover,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {void Function()? onOpen} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onOpen} , defaultValue:none
     VoidCallback? onOpen,
 
-    /// optionalParameters: {void Function()? onClose} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onClose} , defaultValue:none
     VoidCallback? onClose,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
     ButtonStyle? style,
 
-    /// optionalParameters: {MenuStyle? menuStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuStyle? menuStyle} , defaultValue:none
     MenuStyle? menuStyle,
 
-    /// optionalParameters: {Offset? alignmentOffset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? alignmentOffset} , defaultValue:none
     Offset? alignmentOffset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {MaterialStatesController? statesController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {Widget? leadingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leadingIcon} , defaultValue:none
     Widget? leadingIcon,
 
-    /// optionalParameters: {Widget? trailingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailingIcon} , defaultValue:none
     Widget? trailingIcon,
 
-    /// optionalParameters: {required List<Widget> menuChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> menuChildren} , defaultValue:none
     required List<Widget> menuChildren,
 
-    /// optionalParameters: {required Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? child} , defaultValue:none
     required Widget? child,
   }) : super(
           key: key,
@@ -499,21 +499,21 @@ class SubmenuButton$Mate extends SubmenuButton with Mate {
           menuChildren: p.get('menuChildren').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onHover', onHover);
-    matePut('onFocusChange', onFocusChange);
-    matePut('onOpen', onOpen);
-    matePut('onClose', onClose);
-    matePut('style', style);
-    matePut('menuStyle', menuStyle);
-    matePut('alignmentOffset', alignmentOffset);
-    matePut('clipBehavior', clipBehavior);
-    matePut('focusNode', focusNode);
-    matePut('statesController', statesController);
-    matePut('leadingIcon', leadingIcon);
-    matePut('trailingIcon', trailingIcon);
-    matePut('menuChildren', menuChildren);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onHover', onHover);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('onOpen', onOpen);
+    mateDeclare('onClose', onClose);
+    mateDeclare('style', style);
+    mateDeclare('menuStyle', menuStyle);
+    mateDeclare('alignmentOffset', alignmentOffset);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('statesController', statesController);
+    mateDeclare('leadingIcon', leadingIcon);
+    mateDeclare('trailingIcon', trailingIcon);
+    mateDeclare('menuChildren', menuChildren);
+    mateDeclare('child', child);
   }
 }
 
@@ -522,11 +522,11 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate {
   /// DismissMenuAction DismissMenuAction({required MenuController controller})
   DismissMenuAction$Mate(
       {
-      /// optionalParameters: {required MenuController controller} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required MenuController controller} , defaultValue:none
       required MenuController controller})
       : super(controller: controller) {
     mateBuilder = (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
-    matePut('controller', controller);
+    mateDeclare('controller', controller);
   }
 }
 
@@ -534,16 +534,16 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate {
 class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding with Mate {
   /// MenuAcceleratorCallbackBinding MenuAcceleratorCallbackBinding({Key? key, void Function()? onInvoke, bool hasSubmenu = false, required Widget child})
   MenuAcceleratorCallbackBinding$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function()? onInvoke} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onInvoke} , defaultValue:none
     VoidCallback? onInvoke,
 
-    /// optionalParameters: {bool hasSubmenu = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool hasSubmenu,
+    /// optionalParameters: {bool hasSubmenu = false} , defaultValue:Literal
+    bool hasSubmenu = false,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -557,10 +557,10 @@ class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
           hasSubmenu: p.get('hasSubmenu').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onInvoke', onInvoke);
-    matePut('hasSubmenu', hasSubmenu);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onInvoke', onInvoke);
+    mateDeclare('hasSubmenu', hasSubmenu);
+    mateDeclare('child', child);
   }
 }
 
@@ -570,10 +570,10 @@ class MenuAcceleratorLabel$Mate extends MenuAcceleratorLabel with Mate {
   MenuAcceleratorLabel$Mate(
     /// requiredParameters: String label
     String label, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget Function(BuildContext, String, int) builder = defaultLabelBuilder} , hasDefaultValue:true, defaultValueCode:defaultLabelBuilder
+    /// optionalParameters: {Widget Function(BuildContext, String, int) builder = defaultLabelBuilder} , defaultValue:unprocessed
     required MenuAcceleratorChildBuilder builder,
   }) : super(
           label,
@@ -585,8 +585,8 @@ class MenuAcceleratorLabel$Mate extends MenuAcceleratorLabel with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    matePut('label', label);
-    matePut('key', key);
-    matePut('builder', builder);
+    mateDeclare('label', label);
+    mateDeclare('key', key);
+    mateDeclare('builder', builder);
   }
 }

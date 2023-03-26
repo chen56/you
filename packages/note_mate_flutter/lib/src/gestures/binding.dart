@@ -12,29 +12,29 @@ import 'package:flutter/src/foundation/assertions.dart';
 class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDetailsForPointerEventDispatcher with Mate {
   /// FlutterErrorDetailsForPointerEventDispatcher FlutterErrorDetailsForPointerEventDispatcher({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, PointerEvent? event, HitTestEntry<HitTestTarget>? hitTestEntry, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetailsForPointerEventDispatcher$Mate({
-    /// optionalParameters: {required Object exception} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object exception} , defaultValue:none
     required Object exception,
 
-    /// optionalParameters: {StackTrace? stack} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StackTrace? stack} , defaultValue:none
     StackTrace? stack,
 
-    /// optionalParameters: {String? library = 'Flutter framework'} , hasDefaultValue:true, defaultValueCode:'Flutter framework'
-    String? library,
+    /// optionalParameters: {String? library = 'Flutter framework'} , defaultValue:Literal
+    String? library = 'Flutter framework',
 
-    /// optionalParameters: {DiagnosticsNode? context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DiagnosticsNode? context} , defaultValue:none
     DiagnosticsNode? context,
 
-    /// optionalParameters: {PointerEvent? event} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {PointerEvent? event} , defaultValue:none
     PointerEvent? event,
 
-    /// optionalParameters: {HitTestEntry<HitTestTarget>? hitTestEntry} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {HitTestEntry<HitTestTarget>? hitTestEntry} , defaultValue:none
     HitTestEntry<HitTestTarget>? hitTestEntry,
 
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , defaultValue:none
     InformationCollector? informationCollector,
 
-    /// optionalParameters: {bool silent = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool silent,
+    /// optionalParameters: {bool silent = false} , defaultValue:Literal
+    bool silent = false,
   }) : super(
           exception: exception,
           stack: stack,
@@ -55,13 +55,13 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    matePut('exception', exception);
-    matePut('stack', stack);
-    matePut('library', library);
-    matePut('context', context);
-    matePut('event', event);
-    matePut('hitTestEntry', hitTestEntry);
-    matePut('informationCollector', informationCollector);
-    matePut('silent', silent);
+    mateDeclare('exception', exception);
+    mateDeclare('stack', stack);
+    mateDeclare('library', library);
+    mateDeclare('context', context);
+    mateDeclare('event', event);
+    mateDeclare('hitTestEntry', hitTestEntry);
+    mateDeclare('informationCollector', informationCollector);
+    mateDeclare('silent', silent);
   }
 }

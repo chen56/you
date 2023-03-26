@@ -10,13 +10,13 @@ import 'package:flutter/src/animation/animation.dart';
 class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
   /// RenderSliverOpacity RenderSliverOpacity({double opacity = 1.0, bool alwaysIncludeSemantics = false, RenderSliver? sliver})
   RenderSliverOpacity$Mate({
-    /// optionalParameters: {double opacity = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double opacity,
+    /// optionalParameters: {double opacity = 1.0} , defaultValue:Literal
+    double opacity = 1.0,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysIncludeSemantics,
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {RenderSliver? sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
     RenderSliver? sliver,
   }) : super(
           opacity: opacity,
@@ -28,9 +28,9 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('opacity', opacity);
-    matePut('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    matePut('sliver', sliver);
+    mateDeclare('opacity', opacity);
+    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateDeclare('sliver', sliver);
   }
 }
 
@@ -38,13 +38,13 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
 class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate {
   /// RenderSliverIgnorePointer RenderSliverIgnorePointer({RenderSliver? sliver, bool ignoring = true, bool? ignoringSemantics})
   RenderSliverIgnorePointer$Mate({
-    /// optionalParameters: {RenderSliver? sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
     RenderSliver? sliver,
 
-    /// optionalParameters: {bool ignoring = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool ignoring,
+    /// optionalParameters: {bool ignoring = true} , defaultValue:Literal
+    bool ignoring = true,
 
-    /// optionalParameters: {bool? ignoringSemantics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? ignoringSemantics} , defaultValue:none
     bool? ignoringSemantics,
   }) : super(
           sliver: sliver,
@@ -56,9 +56,9 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    matePut('sliver', sliver);
-    matePut('ignoring', ignoring);
-    matePut('ignoringSemantics', ignoringSemantics);
+    mateDeclare('sliver', sliver);
+    mateDeclare('ignoring', ignoring);
+    mateDeclare('ignoringSemantics', ignoringSemantics);
   }
 }
 
@@ -66,10 +66,10 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
 class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
   /// RenderSliverOffstage RenderSliverOffstage({bool offstage = true, RenderSliver? sliver})
   RenderSliverOffstage$Mate({
-    /// optionalParameters: {bool offstage = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool offstage,
+    /// optionalParameters: {bool offstage = true} , defaultValue:Literal
+    bool offstage = true,
 
-    /// optionalParameters: {RenderSliver? sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
     RenderSliver? sliver,
   }) : super(
           offstage: offstage,
@@ -79,8 +79,8 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
           offstage: p.get('offstage').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('offstage', offstage);
-    matePut('sliver', sliver);
+    mateDeclare('offstage', offstage);
+    mateDeclare('sliver', sliver);
   }
 }
 
@@ -88,13 +88,13 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
 class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with Mate {
   /// RenderSliverAnimatedOpacity RenderSliverAnimatedOpacity({required Animation<double> opacity, bool alwaysIncludeSemantics = false, RenderSliver? sliver})
   RenderSliverAnimatedOpacity$Mate({
-    /// optionalParameters: {required Animation<double> opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> opacity} , defaultValue:none
     required Animation<double> opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysIncludeSemantics,
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {RenderSliver? sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
     RenderSliver? sliver,
   }) : super(
           opacity: opacity,
@@ -106,8 +106,8 @@ class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with 
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('opacity', opacity);
-    matePut('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    matePut('sliver', sliver);
+    mateDeclare('opacity', opacity);
+    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateDeclare('sliver', sliver);
   }
 }

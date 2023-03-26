@@ -8,34 +8,34 @@ import 'dart:core';
 class StackFrame$Mate extends StackFrame with Mate {
   /// StackFrame StackFrame({required int number, required int column, required int line, required String packageScheme, required String package, required String packagePath, String className = '', required String method, bool isConstructor = false, required String source})
   StackFrame$Mate({
-    /// optionalParameters: {required int number} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int number} , defaultValue:none
     required int number,
 
-    /// optionalParameters: {required int column} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int column} , defaultValue:none
     required int column,
 
-    /// optionalParameters: {required int line} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int line} , defaultValue:none
     required int line,
 
-    /// optionalParameters: {required String packageScheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String packageScheme} , defaultValue:none
     required String packageScheme,
 
-    /// optionalParameters: {required String package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String package} , defaultValue:none
     required String package,
 
-    /// optionalParameters: {required String packagePath} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String packagePath} , defaultValue:none
     required String packagePath,
 
-    /// optionalParameters: {String className = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String className,
+    /// optionalParameters: {String className = ''} , defaultValue:Literal
+    String className = '',
 
-    /// optionalParameters: {required String method} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String method} , defaultValue:none
     required String method,
 
-    /// optionalParameters: {bool isConstructor = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isConstructor,
+    /// optionalParameters: {bool isConstructor = false} , defaultValue:Literal
+    bool isConstructor = false,
 
-    /// optionalParameters: {required String source} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String source} , defaultValue:none
     required String source,
   }) : super(
           number: number,
@@ -61,15 +61,15 @@ class StackFrame$Mate extends StackFrame with Mate {
           isConstructor: p.get('isConstructor').build(),
           source: p.get('source').build(),
         );
-    matePut('number', number);
-    matePut('column', column);
-    matePut('line', line);
-    matePut('packageScheme', packageScheme);
-    matePut('package', package);
-    matePut('packagePath', packagePath);
-    matePut('className', className);
-    matePut('method', method);
-    matePut('isConstructor', isConstructor);
-    matePut('source', source);
+    mateDeclare('number', number);
+    mateDeclare('column', column);
+    mateDeclare('line', line);
+    mateDeclare('packageScheme', packageScheme);
+    mateDeclare('package', package);
+    mateDeclare('packagePath', packagePath);
+    mateDeclare('className', className);
+    mateDeclare('method', method);
+    mateDeclare('isConstructor', isConstructor);
+    mateDeclare('source', source);
   }
 }

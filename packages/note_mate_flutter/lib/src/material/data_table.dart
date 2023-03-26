@@ -18,16 +18,16 @@ import 'package:flutter/src/rendering/table_border.dart';
 class DataColumn$Mate extends DataColumn with Mate {
   /// DataColumn DataColumn({required Widget label, String? tooltip, bool numeric = false, void Function(int, bool)? onSort})
   DataColumn$Mate({
-    /// optionalParameters: {required Widget label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget label} , defaultValue:none
     required Widget label,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
 
-    /// optionalParameters: {bool numeric = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool numeric,
+    /// optionalParameters: {bool numeric = false} , defaultValue:Literal
+    bool numeric = false,
 
-    /// optionalParameters: {void Function(int, bool)? onSort} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int, bool)? onSort} , defaultValue:none
     DataColumnSortCallback? onSort,
   }) : super(
           label: label,
@@ -41,10 +41,10 @@ class DataColumn$Mate extends DataColumn with Mate {
           numeric: p.get('numeric').build(),
           onSort: p.get('onSort').build(),
         );
-    matePut('label', label);
-    matePut('tooltip', tooltip);
-    matePut('numeric', numeric);
-    matePut('onSort', onSort);
+    mateDeclare('label', label);
+    mateDeclare('tooltip', tooltip);
+    mateDeclare('numeric', numeric);
+    mateDeclare('onSort', onSort);
   }
 }
 
@@ -52,22 +52,22 @@ class DataColumn$Mate extends DataColumn with Mate {
 class DataRow$Mate extends DataRow with Mate {
   /// DataRow DataRow({LocalKey? key, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
   DataRow$Mate({
-    /// optionalParameters: {LocalKey? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LocalKey? key} , defaultValue:none
     LocalKey? key,
 
-    /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool selected,
+    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    bool selected = false,
 
-    /// optionalParameters: {void Function(bool?)? onSelectChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool?)? onSelectChanged} , defaultValue:none
     ValueChanged<bool?>? onSelectChanged,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? color} , defaultValue:none
     MaterialStateProperty<Color?>? color,
 
-    /// optionalParameters: {required List<DataCell> cells} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<DataCell> cells} , defaultValue:none
     required List<DataCell> cells,
   }) : super(
           key: key,
@@ -85,32 +85,32 @@ class DataRow$Mate extends DataRow with Mate {
           color: p.get('color').build(),
           cells: p.get('cells').build(),
         );
-    matePut('key', key);
-    matePut('selected', selected);
-    matePut('onSelectChanged', onSelectChanged);
-    matePut('onLongPress', onLongPress);
-    matePut('color', color);
-    matePut('cells', cells);
+    mateDeclare('key', key);
+    mateDeclare('selected', selected);
+    mateDeclare('onSelectChanged', onSelectChanged);
+    mateDeclare('onLongPress', onLongPress);
+    mateDeclare('color', color);
+    mateDeclare('cells', cells);
   }
 
   /// DataRow DataRow.byIndex({int? index, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
   DataRow$Mate.byIndex({
-    /// optionalParameters: {int? index} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? index} , defaultValue:none
     int? index,
 
-    /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool selected,
+    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    bool selected = false,
 
-    /// optionalParameters: {void Function(bool?)? onSelectChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool?)? onSelectChanged} , defaultValue:none
     ValueChanged<bool?>? onSelectChanged,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? color} , defaultValue:none
     MaterialStateProperty<Color?>? color,
 
-    /// optionalParameters: {required List<DataCell> cells} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<DataCell> cells} , defaultValue:none
     required List<DataCell> cells,
   }) : super.byIndex(
           index: index,
@@ -128,12 +128,12 @@ class DataRow$Mate extends DataRow with Mate {
           color: p.get('color').build(),
           cells: p.get('cells').build(),
         );
-    matePut('index', index);
-    matePut('selected', selected);
-    matePut('onSelectChanged', onSelectChanged);
-    matePut('onLongPress', onLongPress);
-    matePut('color', color);
-    matePut('cells', cells);
+    mateDeclare('index', index);
+    mateDeclare('selected', selected);
+    mateDeclare('onSelectChanged', onSelectChanged);
+    mateDeclare('onLongPress', onLongPress);
+    mateDeclare('color', color);
+    mateDeclare('cells', cells);
   }
 }
 
@@ -143,25 +143,25 @@ class DataCell$Mate extends DataCell with Mate {
   DataCell$Mate(
     /// requiredParameters: Widget child
     Widget child, {
-    /// optionalParameters: {bool placeholder = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool placeholder,
+    /// optionalParameters: {bool placeholder = false} , defaultValue:Literal
+    bool placeholder = false,
 
-    /// optionalParameters: {bool showEditIcon = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showEditIcon,
+    /// optionalParameters: {bool showEditIcon = false} , defaultValue:Literal
+    bool showEditIcon = false,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , defaultValue:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , defaultValue:none
     GestureTapDownCallback? onTapDown,
 
-    /// optionalParameters: {void Function()? onDoubleTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDoubleTap} , defaultValue:none
     GestureTapCallback? onDoubleTap,
 
-    /// optionalParameters: {void Function()? onTapCancel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTapCancel} , defaultValue:none
     GestureTapCancelCallback? onTapCancel,
   }) : super(
           child,
@@ -183,14 +183,14 @@ class DataCell$Mate extends DataCell with Mate {
           onDoubleTap: p.get('onDoubleTap').build(),
           onTapCancel: p.get('onTapCancel').build(),
         );
-    matePut('child', child);
-    matePut('placeholder', placeholder);
-    matePut('showEditIcon', showEditIcon);
-    matePut('onTap', onTap);
-    matePut('onLongPress', onLongPress);
-    matePut('onTapDown', onTapDown);
-    matePut('onDoubleTap', onDoubleTap);
-    matePut('onTapCancel', onTapCancel);
+    mateDeclare('child', child);
+    mateDeclare('placeholder', placeholder);
+    mateDeclare('showEditIcon', showEditIcon);
+    mateDeclare('onTap', onTap);
+    mateDeclare('onLongPress', onLongPress);
+    mateDeclare('onTapDown', onTapDown);
+    mateDeclare('onDoubleTap', onDoubleTap);
+    mateDeclare('onTapCancel', onTapCancel);
   }
 }
 
@@ -198,70 +198,70 @@ class DataCell$Mate extends DataCell with Mate {
 class DataTable$Mate extends DataTable with Mate {
   /// DataTable DataTable({Key? key, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, bool showCheckboxColumn = true, bool showBottomBorder = false, double? dividerThickness, required List<DataRow> rows, double? checkboxHorizontalMargin, TableBorder? border, Clip clipBehavior = Clip.none})
   DataTable$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<DataColumn> columns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<DataColumn> columns} , defaultValue:none
     required List<DataColumn> columns,
 
-    /// optionalParameters: {int? sortColumnIndex} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? sortColumnIndex} , defaultValue:none
     int? sortColumnIndex,
 
-    /// optionalParameters: {bool sortAscending = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool sortAscending,
+    /// optionalParameters: {bool sortAscending = true} , defaultValue:Literal
+    bool sortAscending = true,
 
-    /// optionalParameters: {void Function(bool?)? onSelectAll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool?)? onSelectAll} , defaultValue:none
     ValueSetter<bool?>? onSelectAll,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , defaultValue:none
     Decoration? decoration,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , defaultValue:none
     MaterialStateProperty<Color?>? dataRowColor,
 
-    /// optionalParameters: {double? dataRowMinHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dataRowMinHeight} , defaultValue:none
     double? dataRowMinHeight,
 
-    /// optionalParameters: {double? dataRowMaxHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dataRowMaxHeight} , defaultValue:none
     double? dataRowMaxHeight,
 
-    /// optionalParameters: {TextStyle? dataTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? dataTextStyle} , defaultValue:none
     TextStyle? dataTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , defaultValue:none
     MaterialStateProperty<Color?>? headingRowColor,
 
-    /// optionalParameters: {double? headingRowHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? headingRowHeight} , defaultValue:none
     double? headingRowHeight,
 
-    /// optionalParameters: {TextStyle? headingTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? headingTextStyle} , defaultValue:none
     TextStyle? headingTextStyle,
 
-    /// optionalParameters: {double? horizontalMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? horizontalMargin} , defaultValue:none
     double? horizontalMargin,
 
-    /// optionalParameters: {double? columnSpacing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? columnSpacing} , defaultValue:none
     double? columnSpacing,
 
-    /// optionalParameters: {bool showCheckboxColumn = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showCheckboxColumn,
+    /// optionalParameters: {bool showCheckboxColumn = true} , defaultValue:Literal
+    bool showCheckboxColumn = true,
 
-    /// optionalParameters: {bool showBottomBorder = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showBottomBorder,
+    /// optionalParameters: {bool showBottomBorder = false} , defaultValue:Literal
+    bool showBottomBorder = false,
 
-    /// optionalParameters: {double? dividerThickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dividerThickness} , defaultValue:none
     double? dividerThickness,
 
-    /// optionalParameters: {required List<DataRow> rows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<DataRow> rows} , defaultValue:none
     required List<DataRow> rows,
 
-    /// optionalParameters: {double? checkboxHorizontalMargin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? checkboxHorizontalMargin} , defaultValue:none
     double? checkboxHorizontalMargin,
 
-    /// optionalParameters: {TableBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TableBorder? border} , defaultValue:none
     TableBorder? border,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -311,28 +311,28 @@ class DataTable$Mate extends DataTable with Mate {
           border: p.get('border').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('columns', columns);
-    matePut('sortColumnIndex', sortColumnIndex);
-    matePut('sortAscending', sortAscending);
-    matePut('onSelectAll', onSelectAll);
-    matePut('decoration', decoration);
-    matePut('dataRowColor', dataRowColor);
-    matePut('dataRowMinHeight', dataRowMinHeight);
-    matePut('dataRowMaxHeight', dataRowMaxHeight);
-    matePut('dataTextStyle', dataTextStyle);
-    matePut('headingRowColor', headingRowColor);
-    matePut('headingRowHeight', headingRowHeight);
-    matePut('headingTextStyle', headingTextStyle);
-    matePut('horizontalMargin', horizontalMargin);
-    matePut('columnSpacing', columnSpacing);
-    matePut('showCheckboxColumn', showCheckboxColumn);
-    matePut('showBottomBorder', showBottomBorder);
-    matePut('dividerThickness', dividerThickness);
-    matePut('rows', rows);
-    matePut('checkboxHorizontalMargin', checkboxHorizontalMargin);
-    matePut('border', border);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('columns', columns);
+    mateDeclare('sortColumnIndex', sortColumnIndex);
+    mateDeclare('sortAscending', sortAscending);
+    mateDeclare('onSelectAll', onSelectAll);
+    mateDeclare('decoration', decoration);
+    mateDeclare('dataRowColor', dataRowColor);
+    mateDeclare('dataRowMinHeight', dataRowMinHeight);
+    mateDeclare('dataRowMaxHeight', dataRowMaxHeight);
+    mateDeclare('dataTextStyle', dataTextStyle);
+    mateDeclare('headingRowColor', headingRowColor);
+    mateDeclare('headingRowHeight', headingRowHeight);
+    mateDeclare('headingTextStyle', headingTextStyle);
+    mateDeclare('horizontalMargin', horizontalMargin);
+    mateDeclare('columnSpacing', columnSpacing);
+    mateDeclare('showCheckboxColumn', showCheckboxColumn);
+    mateDeclare('showBottomBorder', showBottomBorder);
+    mateDeclare('dividerThickness', dividerThickness);
+    mateDeclare('rows', rows);
+    mateDeclare('checkboxHorizontalMargin', checkboxHorizontalMargin);
+    mateDeclare('border', border);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -340,25 +340,25 @@ class DataTable$Mate extends DataTable with Mate {
 class TableRowInkWell$Mate extends TableRowInkWell with Mate {
   /// TableRowInkWell TableRowInkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(bool)? onHighlightChanged, MaterialStateProperty<Color?>? overlayColor})
   TableRowInkWell$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , defaultValue:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function()? onDoubleTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDoubleTap} , defaultValue:none
     GestureTapCallback? onDoubleTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(bool)? onHighlightChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHighlightChanged} , defaultValue:none
     ValueChanged<bool>? onHighlightChanged,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
   }) : super(
           key: key,
@@ -378,12 +378,12 @@ class TableRowInkWell$Mate extends TableRowInkWell with Mate {
           onHighlightChanged: p.get('onHighlightChanged').build(),
           overlayColor: p.get('overlayColor').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onTap', onTap);
-    matePut('onDoubleTap', onDoubleTap);
-    matePut('onLongPress', onLongPress);
-    matePut('onHighlightChanged', onHighlightChanged);
-    matePut('overlayColor', overlayColor);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('onTap', onTap);
+    mateDeclare('onDoubleTap', onDoubleTap);
+    mateDeclare('onLongPress', onLongPress);
+    mateDeclare('onHighlightChanged', onHighlightChanged);
+    mateDeclare('overlayColor', overlayColor);
   }
 }

@@ -15,55 +15,55 @@ import 'package:flutter/src/animation/animation.dart';
 class MaterialBanner$Mate extends MaterialBanner with Mate {
   /// MaterialBanner MaterialBanner({Key? key, required Widget content, TextStyle? contentTextStyle, required List<Widget> actions, double? elevation, Widget? leading, Color? backgroundColor, Color? surfaceTintColor, Color? shadowColor, Color? dividerColor, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? leadingPadding, bool forceActionsBelow = false, OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end, Animation<double>? animation, void Function()? onVisible})
   MaterialBanner$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget content} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget content} , defaultValue:none
     required Widget content,
 
-    /// optionalParameters: {TextStyle? contentTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? contentTextStyle} , defaultValue:none
     TextStyle? contentTextStyle,
 
-    /// optionalParameters: {required List<Widget> actions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> actions} , defaultValue:none
     required List<Widget> actions,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , defaultValue:none
     Widget? leading,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , defaultValue:none
     Color? dividerColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , defaultValue:none
     EdgeInsetsGeometry? leadingPadding,
 
-    /// optionalParameters: {bool forceActionsBelow = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool forceActionsBelow,
+    /// optionalParameters: {bool forceActionsBelow = false} , defaultValue:Literal
+    bool forceActionsBelow = false,
 
-    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , hasDefaultValue:true, defaultValueCode:OverflowBarAlignment.end
+    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , defaultValue:unprocessed
     required OverflowBarAlignment overflowAlignment,
 
-    /// optionalParameters: {Animation<double>? animation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? animation} , defaultValue:none
     Animation<double>? animation,
 
-    /// optionalParameters: {void Function()? onVisible} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onVisible} , defaultValue:none
     VoidCallback? onVisible,
   }) : super(
           key: key,
@@ -103,22 +103,22 @@ class MaterialBanner$Mate extends MaterialBanner with Mate {
           animation: p.get('animation').build(),
           onVisible: p.get('onVisible').build(),
         );
-    matePut('key', key);
-    matePut('content', content);
-    matePut('contentTextStyle', contentTextStyle);
-    matePut('actions', actions);
-    matePut('elevation', elevation);
-    matePut('leading', leading);
-    matePut('backgroundColor', backgroundColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('shadowColor', shadowColor);
-    matePut('dividerColor', dividerColor);
-    matePut('padding', padding);
-    matePut('margin', margin);
-    matePut('leadingPadding', leadingPadding);
-    matePut('forceActionsBelow', forceActionsBelow);
-    matePut('overflowAlignment', overflowAlignment);
-    matePut('animation', animation);
-    matePut('onVisible', onVisible);
+    mateDeclare('key', key);
+    mateDeclare('content', content);
+    mateDeclare('contentTextStyle', contentTextStyle);
+    mateDeclare('actions', actions);
+    mateDeclare('elevation', elevation);
+    mateDeclare('leading', leading);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('dividerColor', dividerColor);
+    mateDeclare('padding', padding);
+    mateDeclare('margin', margin);
+    mateDeclare('leadingPadding', leadingPadding);
+    mateDeclare('forceActionsBelow', forceActionsBelow);
+    mateDeclare('overflowAlignment', overflowAlignment);
+    mateDeclare('animation', animation);
+    mateDeclare('onVisible', onVisible);
   }
 }

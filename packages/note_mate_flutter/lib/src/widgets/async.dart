@@ -23,8 +23,8 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           p.get('state').value,
           p.get('data').value,
         );
-    matePut('state', state);
-    matePut('data', data);
+    mateDeclare('state', state);
+    mateDeclare('data', data);
   }
 
   /// AsyncSnapshot<T> AsyncSnapshot.withError(ConnectionState state, Object error, [StackTrace stackTrace = StackTrace.empty])
@@ -47,9 +47,9 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           p.get('error').value,
           p.get('stackTrace').value,
         );
-    matePut('state', state);
-    matePut('error', error);
-    matePut('stackTrace', stackTrace);
+    mateDeclare('state', state);
+    mateDeclare('error', error);
+    mateDeclare('stackTrace', stackTrace);
   }
 }
 
@@ -57,16 +57,16 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
 class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
   /// StreamBuilder<T> StreamBuilder({Key? key, T? initialData, Stream<T>? stream, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   StreamBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {T? initialData} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? initialData} , defaultValue:none
     T? initialData,
 
-    /// optionalParameters: {Stream<T>? stream} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Stream<T>? stream} , defaultValue:none
     Stream<T>? stream,
 
-    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , defaultValue:none
     required AsyncWidgetBuilder<T> builder,
   }) : super(
           key: key,
@@ -80,10 +80,10 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
           stream: p.get('stream').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('initialData', initialData);
-    matePut('stream', stream);
-    matePut('builder', builder);
+    mateDeclare('key', key);
+    mateDeclare('initialData', initialData);
+    mateDeclare('stream', stream);
+    mateDeclare('builder', builder);
   }
 }
 
@@ -91,16 +91,16 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
 class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate {
   /// FutureBuilder<T> FutureBuilder({Key? key, Future<T>? future, T? initialData, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   FutureBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Future<T>? future} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Future<T>? future} , defaultValue:none
     Future<T>? future,
 
-    /// optionalParameters: {T? initialData} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? initialData} , defaultValue:none
     T? initialData,
 
-    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , defaultValue:none
     required AsyncWidgetBuilder<T> builder,
   }) : super(
           key: key,
@@ -114,9 +114,9 @@ class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate {
           initialData: p.get('initialData').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('future', future);
-    matePut('initialData', initialData);
-    matePut('builder', builder);
+    mateDeclare('key', key);
+    mateDeclare('future', future);
+    mateDeclare('initialData', initialData);
+    mateDeclare('builder', builder);
   }
 }

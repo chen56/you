@@ -9,31 +9,31 @@ import 'package:flutter/src/painting/text_style.dart';
 class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
   /// CupertinoTextThemeData CupertinoTextThemeData({Color primaryColor = CupertinoColors.systemBlue, TextStyle? textStyle, TextStyle? actionTextStyle, TextStyle? tabLabelTextStyle, TextStyle? navTitleTextStyle, TextStyle? navLargeTitleTextStyle, TextStyle? navActionTextStyle, TextStyle? pickerTextStyle, TextStyle? dateTimePickerTextStyle})
   CupertinoTextThemeData$Mate({
-    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , hasDefaultValue:true, defaultValueCode:CupertinoColors.systemBlue
+    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , defaultValue:unprocessed
     required Color primaryColor,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {TextStyle? actionTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? actionTextStyle} , defaultValue:none
     TextStyle? actionTextStyle,
 
-    /// optionalParameters: {TextStyle? tabLabelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? tabLabelTextStyle} , defaultValue:none
     TextStyle? tabLabelTextStyle,
 
-    /// optionalParameters: {TextStyle? navTitleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? navTitleTextStyle} , defaultValue:none
     TextStyle? navTitleTextStyle,
 
-    /// optionalParameters: {TextStyle? navLargeTitleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? navLargeTitleTextStyle} , defaultValue:none
     TextStyle? navLargeTitleTextStyle,
 
-    /// optionalParameters: {TextStyle? navActionTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? navActionTextStyle} , defaultValue:none
     TextStyle? navActionTextStyle,
 
-    /// optionalParameters: {TextStyle? pickerTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? pickerTextStyle} , defaultValue:none
     TextStyle? pickerTextStyle,
 
-    /// optionalParameters: {TextStyle? dateTimePickerTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? dateTimePickerTextStyle} , defaultValue:none
     TextStyle? dateTimePickerTextStyle,
   }) : super(
           primaryColor: primaryColor,
@@ -57,14 +57,14 @@ class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
           pickerTextStyle: p.get('pickerTextStyle').build(),
           dateTimePickerTextStyle: p.get('dateTimePickerTextStyle').build(),
         );
-    matePut('primaryColor', primaryColor);
-    matePut('textStyle', textStyle);
-    matePut('actionTextStyle', actionTextStyle);
-    matePut('tabLabelTextStyle', tabLabelTextStyle);
-    matePut('navTitleTextStyle', navTitleTextStyle);
-    matePut('navLargeTitleTextStyle', navLargeTitleTextStyle);
-    matePut('navActionTextStyle', navActionTextStyle);
-    matePut('pickerTextStyle', pickerTextStyle);
-    matePut('dateTimePickerTextStyle', dateTimePickerTextStyle);
+    mateDeclare('primaryColor', primaryColor);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('actionTextStyle', actionTextStyle);
+    mateDeclare('tabLabelTextStyle', tabLabelTextStyle);
+    mateDeclare('navTitleTextStyle', navTitleTextStyle);
+    mateDeclare('navLargeTitleTextStyle', navLargeTitleTextStyle);
+    mateDeclare('navActionTextStyle', navActionTextStyle);
+    mateDeclare('pickerTextStyle', pickerTextStyle);
+    mateDeclare('dateTimePickerTextStyle', dateTimePickerTextStyle);
   }
 }

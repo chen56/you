@@ -22,40 +22,40 @@ import 'package:flutter/src/widgets/focus_traversal.dart';
 class Dialog$Mate extends Dialog with Mate {
   /// Dialog Dialog({Key? key, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Duration insetAnimationDuration = const Duration(milliseconds: 100), Curve insetAnimationCurve = Curves.decelerate, EdgeInsets? insetPadding = _defaultInsetPadding, Clip clipBehavior = Clip.none, ShapeBorder? shape, AlignmentGeometry? alignment, Widget? child})
   Dialog$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Duration insetAnimationDuration = const Duration(milliseconds: 100)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 100)
+    /// optionalParameters: {Duration insetAnimationDuration = const Duration(milliseconds: 100)} , defaultValue:unprocessed
     required Duration insetAnimationDuration,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , hasDefaultValue:true, defaultValueCode:Curves.decelerate
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:unprocessed
     required Curve insetAnimationCurve,
 
-    /// optionalParameters: {EdgeInsets? insetPadding = _defaultInsetPadding} , hasDefaultValue:true, defaultValueCode:_defaultInsetPadding
+    /// optionalParameters: {EdgeInsets? insetPadding = _defaultInsetPadding} , defaultValue:unprocessed
     EdgeInsets? insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -85,35 +85,35 @@ class Dialog$Mate extends Dialog with Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('insetAnimationDuration', insetAnimationDuration);
-    matePut('insetAnimationCurve', insetAnimationCurve);
-    matePut('insetPadding', insetPadding);
-    matePut('clipBehavior', clipBehavior);
-    matePut('shape', shape);
-    matePut('alignment', alignment);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('insetAnimationDuration', insetAnimationDuration);
+    mateDeclare('insetAnimationCurve', insetAnimationCurve);
+    mateDeclare('insetPadding', insetPadding);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('shape', shape);
+    mateDeclare('alignment', alignment);
+    mateDeclare('child', child);
   }
 
   /// Dialog Dialog.fullscreen({Key? key, Color? backgroundColor, Duration insetAnimationDuration = Duration.zero, Curve insetAnimationCurve = Curves.decelerate, Widget? child})
   Dialog$Mate.fullscreen({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Duration insetAnimationDuration = Duration.zero} , hasDefaultValue:true, defaultValueCode:Duration.zero
+    /// optionalParameters: {Duration insetAnimationDuration = Duration.zero} , defaultValue:unprocessed
     required Duration insetAnimationDuration,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , hasDefaultValue:true, defaultValueCode:Curves.decelerate
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:unprocessed
     required Curve insetAnimationCurve,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.fullscreen(
           key: key,
@@ -129,11 +129,11 @@ class Dialog$Mate extends Dialog with Mate {
           insetAnimationCurve: p.get('insetAnimationCurve').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('insetAnimationDuration', insetAnimationDuration);
-    matePut('insetAnimationCurve', insetAnimationCurve);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('insetAnimationDuration', insetAnimationDuration);
+    mateDeclare('insetAnimationCurve', insetAnimationCurve);
+    mateDeclare('child', child);
   }
 }
 
@@ -141,86 +141,86 @@ class Dialog$Mate extends Dialog with Mate {
 class AlertDialog$Mate extends AlertDialog with Mate {
   /// AlertDialog AlertDialog({Key? key, Widget? icon, EdgeInsetsGeometry? iconPadding, Color? iconColor, Widget? title, EdgeInsetsGeometry? titlePadding, TextStyle? titleTextStyle, Widget? content, EdgeInsetsGeometry? contentPadding, TextStyle? contentTextStyle, List<Widget>? actions, EdgeInsetsGeometry? actionsPadding, MainAxisAlignment? actionsAlignment, OverflowBarAlignment? actionsOverflowAlignment, VerticalDirection? actionsOverflowDirection, double? actionsOverflowButtonSpacing, EdgeInsetsGeometry? buttonPadding, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, String? semanticLabel, EdgeInsets insetPadding = _defaultInsetPadding, Clip clipBehavior = Clip.none, ShapeBorder? shape, AlignmentGeometry? alignment, bool scrollable = false})
   AlertDialog$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? icon} , defaultValue:none
     Widget? icon,
 
-    /// optionalParameters: {EdgeInsetsGeometry? iconPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? iconPadding} , defaultValue:none
     EdgeInsetsGeometry? iconPadding,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , defaultValue:none
     Color? iconColor,
 
-    /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? title} , defaultValue:none
     Widget? title,
 
-    /// optionalParameters: {EdgeInsetsGeometry? titlePadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? titlePadding} , defaultValue:none
     EdgeInsetsGeometry? titlePadding,
 
-    /// optionalParameters: {TextStyle? titleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? titleTextStyle} , defaultValue:none
     TextStyle? titleTextStyle,
 
-    /// optionalParameters: {Widget? content} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? content} , defaultValue:none
     Widget? content,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , defaultValue:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {TextStyle? contentTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? contentTextStyle} , defaultValue:none
     TextStyle? contentTextStyle,
 
-    /// optionalParameters: {List<Widget>? actions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? actions} , defaultValue:none
     List<Widget>? actions,
 
-    /// optionalParameters: {EdgeInsetsGeometry? actionsPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? actionsPadding} , defaultValue:none
     EdgeInsetsGeometry? actionsPadding,
 
-    /// optionalParameters: {MainAxisAlignment? actionsAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MainAxisAlignment? actionsAlignment} , defaultValue:none
     MainAxisAlignment? actionsAlignment,
 
-    /// optionalParameters: {OverflowBarAlignment? actionsOverflowAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {OverflowBarAlignment? actionsOverflowAlignment} , defaultValue:none
     OverflowBarAlignment? actionsOverflowAlignment,
 
-    /// optionalParameters: {VerticalDirection? actionsOverflowDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VerticalDirection? actionsOverflowDirection} , defaultValue:none
     VerticalDirection? actionsOverflowDirection,
 
-    /// optionalParameters: {double? actionsOverflowButtonSpacing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? actionsOverflowButtonSpacing} , defaultValue:none
     double? actionsOverflowButtonSpacing,
 
-    /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , defaultValue:none
     EdgeInsetsGeometry? buttonPadding,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , defaultValue:none
     String? semanticLabel,
 
-    /// optionalParameters: {EdgeInsets insetPadding = _defaultInsetPadding} , hasDefaultValue:true, defaultValueCode:_defaultInsetPadding
+    /// optionalParameters: {EdgeInsets insetPadding = _defaultInsetPadding} , defaultValue:unprocessed
     required EdgeInsets insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {bool scrollable = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool scrollable,
+    /// optionalParameters: {bool scrollable = false} , defaultValue:Literal
+    bool scrollable = false,
   }) : super(
           key: key,
           icon: icon,
@@ -279,33 +279,33 @@ class AlertDialog$Mate extends AlertDialog with Mate {
           alignment: p.get('alignment').build(),
           scrollable: p.get('scrollable').build(),
         );
-    matePut('key', key);
-    matePut('icon', icon);
-    matePut('iconPadding', iconPadding);
-    matePut('iconColor', iconColor);
-    matePut('title', title);
-    matePut('titlePadding', titlePadding);
-    matePut('titleTextStyle', titleTextStyle);
-    matePut('content', content);
-    matePut('contentPadding', contentPadding);
-    matePut('contentTextStyle', contentTextStyle);
-    matePut('actions', actions);
-    matePut('actionsPadding', actionsPadding);
-    matePut('actionsAlignment', actionsAlignment);
-    matePut('actionsOverflowAlignment', actionsOverflowAlignment);
-    matePut('actionsOverflowDirection', actionsOverflowDirection);
-    matePut('actionsOverflowButtonSpacing', actionsOverflowButtonSpacing);
-    matePut('buttonPadding', buttonPadding);
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('semanticLabel', semanticLabel);
-    matePut('insetPadding', insetPadding);
-    matePut('clipBehavior', clipBehavior);
-    matePut('shape', shape);
-    matePut('alignment', alignment);
-    matePut('scrollable', scrollable);
+    mateDeclare('key', key);
+    mateDeclare('icon', icon);
+    mateDeclare('iconPadding', iconPadding);
+    mateDeclare('iconColor', iconColor);
+    mateDeclare('title', title);
+    mateDeclare('titlePadding', titlePadding);
+    mateDeclare('titleTextStyle', titleTextStyle);
+    mateDeclare('content', content);
+    mateDeclare('contentPadding', contentPadding);
+    mateDeclare('contentTextStyle', contentTextStyle);
+    mateDeclare('actions', actions);
+    mateDeclare('actionsPadding', actionsPadding);
+    mateDeclare('actionsAlignment', actionsAlignment);
+    mateDeclare('actionsOverflowAlignment', actionsOverflowAlignment);
+    mateDeclare('actionsOverflowDirection', actionsOverflowDirection);
+    mateDeclare('actionsOverflowButtonSpacing', actionsOverflowButtonSpacing);
+    mateDeclare('buttonPadding', buttonPadding);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('semanticLabel', semanticLabel);
+    mateDeclare('insetPadding', insetPadding);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('shape', shape);
+    mateDeclare('alignment', alignment);
+    mateDeclare('scrollable', scrollable);
   }
 }
 
@@ -313,16 +313,16 @@ class AlertDialog$Mate extends AlertDialog with Mate {
 class SimpleDialogOption$Mate extends SimpleDialogOption with Mate {
   /// SimpleDialogOption SimpleDialogOption({Key? key, void Function()? onPressed, EdgeInsets? padding, Widget? child})
   SimpleDialogOption$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {EdgeInsets? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsets? padding} , defaultValue:none
     EdgeInsets? padding,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -336,10 +336,10 @@ class SimpleDialogOption$Mate extends SimpleDialogOption with Mate {
           padding: p.get('padding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('padding', padding);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('padding', padding);
+    mateDeclare('child', child);
   }
 }
 
@@ -347,49 +347,49 @@ class SimpleDialogOption$Mate extends SimpleDialogOption with Mate {
 class SimpleDialog$Mate extends SimpleDialog with Mate {
   /// SimpleDialog SimpleDialog({Key? key, Widget? title, EdgeInsetsGeometry titlePadding = const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0), TextStyle? titleTextStyle, List<Widget>? children, EdgeInsetsGeometry contentPadding = const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0), Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, String? semanticLabel, EdgeInsets insetPadding = _defaultInsetPadding, Clip clipBehavior = Clip.none, ShapeBorder? shape, AlignmentGeometry? alignment})
   SimpleDialog$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? title} , defaultValue:none
     Widget? title,
 
-    /// optionalParameters: {EdgeInsetsGeometry titlePadding = const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0)
+    /// optionalParameters: {EdgeInsetsGeometry titlePadding = const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0)} , defaultValue:unprocessed
     required EdgeInsetsGeometry titlePadding,
 
-    /// optionalParameters: {TextStyle? titleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? titleTextStyle} , defaultValue:none
     TextStyle? titleTextStyle,
 
-    /// optionalParameters: {List<Widget>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? children} , defaultValue:none
     List<Widget>? children,
 
-    /// optionalParameters: {EdgeInsetsGeometry contentPadding = const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0)
+    /// optionalParameters: {EdgeInsetsGeometry contentPadding = const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0)} , defaultValue:unprocessed
     required EdgeInsetsGeometry contentPadding,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , defaultValue:none
     String? semanticLabel,
 
-    /// optionalParameters: {EdgeInsets insetPadding = _defaultInsetPadding} , hasDefaultValue:true, defaultValueCode:_defaultInsetPadding
+    /// optionalParameters: {EdgeInsets insetPadding = _defaultInsetPadding} , defaultValue:unprocessed
     required EdgeInsets insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
   }) : super(
           key: key,
@@ -425,21 +425,21 @@ class SimpleDialog$Mate extends SimpleDialog with Mate {
           shape: p.get('shape').build(),
           alignment: p.get('alignment').build(),
         );
-    matePut('key', key);
-    matePut('title', title);
-    matePut('titlePadding', titlePadding);
-    matePut('titleTextStyle', titleTextStyle);
-    matePut('children', children);
-    matePut('contentPadding', contentPadding);
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('semanticLabel', semanticLabel);
-    matePut('insetPadding', insetPadding);
-    matePut('clipBehavior', clipBehavior);
-    matePut('shape', shape);
-    matePut('alignment', alignment);
+    mateDeclare('key', key);
+    mateDeclare('title', title);
+    mateDeclare('titlePadding', titlePadding);
+    mateDeclare('titleTextStyle', titleTextStyle);
+    mateDeclare('children', children);
+    mateDeclare('contentPadding', contentPadding);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('semanticLabel', semanticLabel);
+    mateDeclare('insetPadding', insetPadding);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('shape', shape);
+    mateDeclare('alignment', alignment);
   }
 }
 
@@ -447,34 +447,34 @@ class SimpleDialog$Mate extends SimpleDialog with Mate {
 class DialogRoute$Mate<T> extends DialogRoute<T> with Mate {
   /// DialogRoute<T> DialogRoute({required BuildContext context, required Widget Function(BuildContext) builder, CapturedThemes? themes, Color? barrierColor = Colors.black54, bool barrierDismissible = true, String? barrierLabel, bool useSafeArea = true, RouteSettings? settings, Offset? anchorPoint, TraversalEdgeBehavior? traversalEdgeBehavior})
   DialogRoute$Mate({
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , defaultValue:none
     required BuildContext context,
 
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , defaultValue:none
     required WidgetBuilder builder,
 
-    /// optionalParameters: {CapturedThemes? themes} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CapturedThemes? themes} , defaultValue:none
     CapturedThemes? themes,
 
-    /// optionalParameters: {Color? barrierColor = Colors.black54} , hasDefaultValue:true, defaultValueCode:Colors.black54
+    /// optionalParameters: {Color? barrierColor = Colors.black54} , defaultValue:is!ConstVariableElement
     Color? barrierColor,
 
-    /// optionalParameters: {bool barrierDismissible = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool barrierDismissible = true} , defaultValue:is!ConstVariableElement
     required bool barrierDismissible,
 
-    /// optionalParameters: {String? barrierLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? barrierLabel} , defaultValue:none
     String? barrierLabel,
 
-    /// optionalParameters: {bool useSafeArea = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool useSafeArea,
+    /// optionalParameters: {bool useSafeArea = true} , defaultValue:Literal
+    bool useSafeArea = true,
 
-    /// optionalParameters: {RouteSettings? settings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteSettings? settings} , defaultValue:none
     RouteSettings? settings,
 
-    /// optionalParameters: {Offset? anchorPoint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? anchorPoint} , defaultValue:none
     Offset? anchorPoint,
 
-    /// optionalParameters: {TraversalEdgeBehavior? traversalEdgeBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TraversalEdgeBehavior? traversalEdgeBehavior} , defaultValue:none
     TraversalEdgeBehavior? traversalEdgeBehavior,
   }) : super(
           context: context,
@@ -500,15 +500,15 @@ class DialogRoute$Mate<T> extends DialogRoute<T> with Mate {
           anchorPoint: p.get('anchorPoint').build(),
           traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),
         );
-    matePut('context', context);
-    matePut('builder', builder);
-    matePut('themes', themes);
-    matePut('barrierColor', barrierColor);
-    matePut('barrierDismissible', barrierDismissible);
-    matePut('barrierLabel', barrierLabel);
-    matePut('useSafeArea', useSafeArea);
-    matePut('settings', settings);
-    matePut('anchorPoint', anchorPoint);
-    matePut('traversalEdgeBehavior', traversalEdgeBehavior);
+    mateDeclare('context', context);
+    mateDeclare('builder', builder);
+    mateDeclare('themes', themes);
+    mateDeclare('barrierColor', barrierColor);
+    mateDeclare('barrierDismissible', barrierDismissible);
+    mateDeclare('barrierLabel', barrierLabel);
+    mateDeclare('useSafeArea', useSafeArea);
+    mateDeclare('settings', settings);
+    mateDeclare('anchorPoint', anchorPoint);
+    mateDeclare('traversalEdgeBehavior', traversalEdgeBehavior);
   }
 }

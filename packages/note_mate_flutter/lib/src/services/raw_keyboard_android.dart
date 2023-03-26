@@ -8,38 +8,38 @@ import 'dart:core';
 class RawKeyEventDataAndroid$Mate extends RawKeyEventDataAndroid with Mate {
   /// RawKeyEventDataAndroid RawKeyEventDataAndroid({int flags = 0, int codePoint = 0, int plainCodePoint = 0, int keyCode = 0, int scanCode = 0, int metaState = 0, int eventSource = 0, int vendorId = 0, int productId = 0, int deviceId = 0, int repeatCount = 0})
   RawKeyEventDataAndroid$Mate({
-    /// optionalParameters: {int flags = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int flags,
+    /// optionalParameters: {int flags = 0} , defaultValue:Literal
+    int flags = 0,
 
-    /// optionalParameters: {int codePoint = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int codePoint,
+    /// optionalParameters: {int codePoint = 0} , defaultValue:Literal
+    int codePoint = 0,
 
-    /// optionalParameters: {int plainCodePoint = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int plainCodePoint,
+    /// optionalParameters: {int plainCodePoint = 0} , defaultValue:Literal
+    int plainCodePoint = 0,
 
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    int keyCode = 0,
 
-    /// optionalParameters: {int scanCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int scanCode,
+    /// optionalParameters: {int scanCode = 0} , defaultValue:Literal
+    int scanCode = 0,
 
-    /// optionalParameters: {int metaState = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int metaState,
+    /// optionalParameters: {int metaState = 0} , defaultValue:Literal
+    int metaState = 0,
 
-    /// optionalParameters: {int eventSource = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int eventSource,
+    /// optionalParameters: {int eventSource = 0} , defaultValue:Literal
+    int eventSource = 0,
 
-    /// optionalParameters: {int vendorId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int vendorId,
+    /// optionalParameters: {int vendorId = 0} , defaultValue:Literal
+    int vendorId = 0,
 
-    /// optionalParameters: {int productId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int productId,
+    /// optionalParameters: {int productId = 0} , defaultValue:Literal
+    int productId = 0,
 
-    /// optionalParameters: {int deviceId = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int deviceId,
+    /// optionalParameters: {int deviceId = 0} , defaultValue:Literal
+    int deviceId = 0,
 
-    /// optionalParameters: {int repeatCount = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int repeatCount,
+    /// optionalParameters: {int repeatCount = 0} , defaultValue:Literal
+    int repeatCount = 0,
   }) : super(
           flags: flags,
           codePoint: codePoint,
@@ -66,16 +66,16 @@ class RawKeyEventDataAndroid$Mate extends RawKeyEventDataAndroid with Mate {
           deviceId: p.get('deviceId').build(),
           repeatCount: p.get('repeatCount').build(),
         );
-    matePut('flags', flags);
-    matePut('codePoint', codePoint);
-    matePut('plainCodePoint', plainCodePoint);
-    matePut('keyCode', keyCode);
-    matePut('scanCode', scanCode);
-    matePut('metaState', metaState);
-    matePut('eventSource', eventSource);
-    matePut('vendorId', vendorId);
-    matePut('productId', productId);
-    matePut('deviceId', deviceId);
-    matePut('repeatCount', repeatCount);
+    mateDeclare('flags', flags);
+    mateDeclare('codePoint', codePoint);
+    mateDeclare('plainCodePoint', plainCodePoint);
+    mateDeclare('keyCode', keyCode);
+    mateDeclare('scanCode', scanCode);
+    mateDeclare('metaState', metaState);
+    mateDeclare('eventSource', eventSource);
+    mateDeclare('vendorId', vendorId);
+    mateDeclare('productId', productId);
+    mateDeclare('deviceId', deviceId);
+    mateDeclare('repeatCount', repeatCount);
   }
 }

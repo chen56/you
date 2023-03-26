@@ -13,49 +13,49 @@ import 'package:flutter/src/rendering/proxy_box.dart';
 class Dismissible$Mate extends Dismissible with Mate {
   /// Dismissible Dismissible({required Key key, required Widget child, Widget? background, Widget? secondaryBackground, Future<bool?> Function(DismissDirection)? confirmDismiss, void Function()? onResize, void Function(DismissUpdateDetails)? onUpdate, void Function(DismissDirection)? onDismissed, DismissDirection direction = DismissDirection.horizontal, Duration? resizeDuration = const Duration(milliseconds: 300), Map<DismissDirection, double> dismissThresholds = const <DismissDirection, double>{}, Duration movementDuration = const Duration(milliseconds: 200), double crossAxisEndOffset = 0.0, DragStartBehavior dragStartBehavior = DragStartBehavior.start, HitTestBehavior behavior = HitTestBehavior.opaque})
   Dismissible$Mate({
-    /// optionalParameters: {required Key key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Key key} , defaultValue:none
     required Key key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {Widget? background} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? background} , defaultValue:none
     Widget? background,
 
-    /// optionalParameters: {Widget? secondaryBackground} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? secondaryBackground} , defaultValue:none
     Widget? secondaryBackground,
 
-    /// optionalParameters: {Future<bool?> Function(DismissDirection)? confirmDismiss} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Future<bool?> Function(DismissDirection)? confirmDismiss} , defaultValue:none
     ConfirmDismissCallback? confirmDismiss,
 
-    /// optionalParameters: {void Function()? onResize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onResize} , defaultValue:none
     VoidCallback? onResize,
 
-    /// optionalParameters: {void Function(DismissUpdateDetails)? onUpdate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(DismissUpdateDetails)? onUpdate} , defaultValue:none
     DismissUpdateCallback? onUpdate,
 
-    /// optionalParameters: {void Function(DismissDirection)? onDismissed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(DismissDirection)? onDismissed} , defaultValue:none
     DismissDirectionCallback? onDismissed,
 
-    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , hasDefaultValue:true, defaultValueCode:DismissDirection.horizontal
+    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , defaultValue:unprocessed
     required DismissDirection direction,
 
-    /// optionalParameters: {Duration? resizeDuration = const Duration(milliseconds: 300)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 300)
+    /// optionalParameters: {Duration? resizeDuration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
     Duration? resizeDuration,
 
-    /// optionalParameters: {Map<DismissDirection, double> dismissThresholds = const <DismissDirection, double>{}} , hasDefaultValue:true, defaultValueCode:const <DismissDirection, double>{}
+    /// optionalParameters: {Map<DismissDirection, double> dismissThresholds = const <DismissDirection, double>{}} , defaultValue:unprocessed
     required Map<DismissDirection, double> dismissThresholds,
 
-    /// optionalParameters: {Duration movementDuration = const Duration(milliseconds: 200)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 200)
+    /// optionalParameters: {Duration movementDuration = const Duration(milliseconds: 200)} , defaultValue:unprocessed
     required Duration movementDuration,
 
-    /// optionalParameters: {double crossAxisEndOffset = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double crossAxisEndOffset,
+    /// optionalParameters: {double crossAxisEndOffset = 0.0} , defaultValue:Literal
+    double crossAxisEndOffset = 0.0,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.opaque} , hasDefaultValue:true, defaultValueCode:HitTestBehavior.opaque
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.opaque} , defaultValue:unprocessed
     required HitTestBehavior behavior,
   }) : super(
           key: key,
@@ -91,21 +91,21 @@ class Dismissible$Mate extends Dismissible with Mate {
           dragStartBehavior: p.get('dragStartBehavior').build(),
           behavior: p.get('behavior').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('background', background);
-    matePut('secondaryBackground', secondaryBackground);
-    matePut('confirmDismiss', confirmDismiss);
-    matePut('onResize', onResize);
-    matePut('onUpdate', onUpdate);
-    matePut('onDismissed', onDismissed);
-    matePut('direction', direction);
-    matePut('resizeDuration', resizeDuration);
-    matePut('dismissThresholds', dismissThresholds);
-    matePut('movementDuration', movementDuration);
-    matePut('crossAxisEndOffset', crossAxisEndOffset);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('behavior', behavior);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('background', background);
+    mateDeclare('secondaryBackground', secondaryBackground);
+    mateDeclare('confirmDismiss', confirmDismiss);
+    mateDeclare('onResize', onResize);
+    mateDeclare('onUpdate', onUpdate);
+    mateDeclare('onDismissed', onDismissed);
+    mateDeclare('direction', direction);
+    mateDeclare('resizeDuration', resizeDuration);
+    mateDeclare('dismissThresholds', dismissThresholds);
+    mateDeclare('movementDuration', movementDuration);
+    mateDeclare('crossAxisEndOffset', crossAxisEndOffset);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('behavior', behavior);
   }
 }
 
@@ -113,17 +113,17 @@ class Dismissible$Mate extends Dismissible with Mate {
 class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate {
   /// DismissUpdateDetails DismissUpdateDetails({DismissDirection direction = DismissDirection.horizontal, bool reached = false, bool previousReached = false, double progress = 0.0})
   DismissUpdateDetails$Mate({
-    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , hasDefaultValue:true, defaultValueCode:DismissDirection.horizontal
+    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , defaultValue:unprocessed
     required DismissDirection direction,
 
-    /// optionalParameters: {bool reached = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reached,
+    /// optionalParameters: {bool reached = false} , defaultValue:Literal
+    bool reached = false,
 
-    /// optionalParameters: {bool previousReached = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool previousReached,
+    /// optionalParameters: {bool previousReached = false} , defaultValue:Literal
+    bool previousReached = false,
 
-    /// optionalParameters: {double progress = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double progress,
+    /// optionalParameters: {double progress = 0.0} , defaultValue:Literal
+    double progress = 0.0,
   }) : super(
           direction: direction,
           reached: reached,
@@ -136,9 +136,9 @@ class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate {
           previousReached: p.get('previousReached').build(),
           progress: p.get('progress').build(),
         );
-    matePut('direction', direction);
-    matePut('reached', reached);
-    matePut('previousReached', previousReached);
-    matePut('progress', progress);
+    mateDeclare('direction', direction);
+    mateDeclare('reached', reached);
+    mateDeclare('previousReached', previousReached);
+    mateDeclare('progress', progress);
   }
 }

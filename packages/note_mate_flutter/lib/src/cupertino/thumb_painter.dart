@@ -10,10 +10,10 @@ import 'package:flutter/src/painting/box_shadow.dart';
 class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
   /// CupertinoThumbPainter CupertinoThumbPainter({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSliderBoxShadows})
   CupertinoThumbPainter$Mate({
-    /// optionalParameters: {Color color = CupertinoColors.white} , hasDefaultValue:true, defaultValueCode:CupertinoColors.white
+    /// optionalParameters: {Color color = CupertinoColors.white} , defaultValue:unprocessed
     required Color color,
 
-    /// optionalParameters: {List<BoxShadow> shadows = _kSliderBoxShadows} , hasDefaultValue:true, defaultValueCode:_kSliderBoxShadows
+    /// optionalParameters: {List<BoxShadow> shadows = _kSliderBoxShadows} , defaultValue:unprocessed
     required List<BoxShadow> shadows,
   }) : super(
           color: color,
@@ -23,16 +23,16 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
           color: p.get('color').build(),
           shadows: p.get('shadows').build(),
         );
-    matePut('color', color);
-    matePut('shadows', shadows);
+    mateDeclare('color', color);
+    mateDeclare('shadows', shadows);
   }
 
   /// CupertinoThumbPainter CupertinoThumbPainter.switchThumb({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSwitchBoxShadows})
   CupertinoThumbPainter$Mate.switchThumb({
-    /// optionalParameters: {Color color = CupertinoColors.white} , hasDefaultValue:true, defaultValueCode:CupertinoColors.white
+    /// optionalParameters: {Color color = CupertinoColors.white} , defaultValue:unprocessed
     required Color color,
 
-    /// optionalParameters: {List<BoxShadow> shadows = _kSwitchBoxShadows} , hasDefaultValue:true, defaultValueCode:_kSwitchBoxShadows
+    /// optionalParameters: {List<BoxShadow> shadows = _kSwitchBoxShadows} , defaultValue:unprocessed
     required List<BoxShadow> shadows,
   }) : super.switchThumb(
           color: color,
@@ -42,7 +42,7 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
           color: p.get('color').build(),
           shadows: p.get('shadows').build(),
         );
-    matePut('color', color);
-    matePut('shadows', shadows);
+    mateDeclare('color', color);
+    mateDeclare('shadows', shadows);
   }
 }

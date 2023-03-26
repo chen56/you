@@ -12,19 +12,19 @@ import 'package:flutter/src/painting/alignment.dart';
 class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton with Mate {
   /// TextSelectionToolbarTextButton TextSelectionToolbarTextButton({Key? key, required Widget child, required EdgeInsets padding, void Function()? onPressed, AlignmentGeometry? alignment})
   TextSelectionToolbarTextButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {required EdgeInsets padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EdgeInsets padding} , defaultValue:none
     required EdgeInsets padding,
 
-    /// optionalParameters: {void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
   }) : super(
           key: key,
@@ -40,10 +40,10 @@ class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton
           onPressed: p.get('onPressed').build(),
           alignment: p.get('alignment').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('padding', padding);
-    matePut('onPressed', onPressed);
-    matePut('alignment', alignment);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('padding', padding);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('alignment', alignment);
   }
 }

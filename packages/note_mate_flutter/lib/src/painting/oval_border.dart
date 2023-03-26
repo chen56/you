@@ -9,11 +9,11 @@ import 'dart:core';
 class OvalBorder$Mate extends OvalBorder with Mate {
   /// OvalBorder OvalBorder({BorderSide side = BorderSide.none, double eccentricity = 1.0})
   OvalBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
     required BorderSide side,
 
-    /// optionalParameters: {double eccentricity = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double eccentricity,
+    /// optionalParameters: {double eccentricity = 1.0} , defaultValue:Literal
+    double eccentricity = 1.0,
   }) : super(
           side: side,
           eccentricity: eccentricity,
@@ -22,7 +22,7 @@ class OvalBorder$Mate extends OvalBorder with Mate {
           side: p.get('side').build(),
           eccentricity: p.get('eccentricity').build(),
         );
-    matePut('side', side);
-    matePut('eccentricity', eccentricity);
+    mateDeclare('side', side);
+    mateDeclare('eccentricity', eccentricity);
   }
 }

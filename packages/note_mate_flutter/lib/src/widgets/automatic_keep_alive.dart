@@ -10,10 +10,10 @@ import 'package:flutter/src/foundation/change_notifier.dart';
 class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with Mate {
   /// AutomaticKeepAlive AutomaticKeepAlive({Key? key, required Widget child})
   AutomaticKeepAlive$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -23,8 +23,8 @@ class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }
 
@@ -37,6 +37,6 @@ class KeepAliveNotification$Mate extends KeepAliveNotification with Mate {
       Listenable handle)
       : super(handle) {
     mateBuilder = (p) => KeepAliveNotification$Mate(p.get('handle').value);
-    matePut('handle', handle);
+    mateDeclare('handle', handle);
   }
 }

@@ -15,7 +15,7 @@ class GradientRotation$Mate extends GradientRotation with Mate {
       double radians)
       : super(radians) {
     mateBuilder = (p) => GradientRotation$Mate(p.get('radians').value);
-    matePut('radians', radians);
+    mateDeclare('radians', radians);
   }
 }
 
@@ -23,22 +23,22 @@ class GradientRotation$Mate extends GradientRotation with Mate {
 class LinearGradient$Mate extends LinearGradient with Mate {
   /// LinearGradient LinearGradient({AlignmentGeometry begin = Alignment.centerLeft, AlignmentGeometry end = Alignment.centerRight, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform})
   LinearGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry begin = Alignment.centerLeft} , hasDefaultValue:true, defaultValueCode:Alignment.centerLeft
+    /// optionalParameters: {AlignmentGeometry begin = Alignment.centerLeft} , defaultValue:unprocessed
     required AlignmentGeometry begin,
 
-    /// optionalParameters: {AlignmentGeometry end = Alignment.centerRight} , hasDefaultValue:true, defaultValueCode:Alignment.centerRight
+    /// optionalParameters: {AlignmentGeometry end = Alignment.centerRight} , defaultValue:unprocessed
     required AlignmentGeometry end,
 
-    /// optionalParameters: {required List<Color> colors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Color> colors} , defaultValue:none
     required List<Color> colors,
 
-    /// optionalParameters: {List<double>? stops} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<double>? stops} , defaultValue:none
     List<double>? stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , hasDefaultValue:true, defaultValueCode:TileMode.clamp
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , defaultValue:unprocessed
     required TileMode tileMode,
 
-    /// optionalParameters: {GradientTransform? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GradientTransform? transform} , defaultValue:none
     GradientTransform? transform,
   }) : super(
           begin: begin,
@@ -56,12 +56,12 @@ class LinearGradient$Mate extends LinearGradient with Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
-    matePut('colors', colors);
-    matePut('stops', stops);
-    matePut('tileMode', tileMode);
-    matePut('transform', transform);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
+    mateDeclare('colors', colors);
+    mateDeclare('stops', stops);
+    mateDeclare('tileMode', tileMode);
+    mateDeclare('transform', transform);
   }
 }
 
@@ -69,28 +69,28 @@ class LinearGradient$Mate extends LinearGradient with Mate {
 class RadialGradient$Mate extends RadialGradient with Mate {
   /// RadialGradient RadialGradient({AlignmentGeometry center = Alignment.center, double radius = 0.5, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, AlignmentGeometry? focal, double focalRadius = 0.0, GradientTransform? transform})
   RadialGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry center,
 
-    /// optionalParameters: {double radius = 0.5} , hasDefaultValue:true, defaultValueCode:0.5
-    required double radius,
+    /// optionalParameters: {double radius = 0.5} , defaultValue:Literal
+    double radius = 0.5,
 
-    /// optionalParameters: {required List<Color> colors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Color> colors} , defaultValue:none
     required List<Color> colors,
 
-    /// optionalParameters: {List<double>? stops} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<double>? stops} , defaultValue:none
     List<double>? stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , hasDefaultValue:true, defaultValueCode:TileMode.clamp
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , defaultValue:unprocessed
     required TileMode tileMode,
 
-    /// optionalParameters: {AlignmentGeometry? focal} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? focal} , defaultValue:none
     AlignmentGeometry? focal,
 
-    /// optionalParameters: {double focalRadius = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double focalRadius,
+    /// optionalParameters: {double focalRadius = 0.0} , defaultValue:Literal
+    double focalRadius = 0.0,
 
-    /// optionalParameters: {GradientTransform? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GradientTransform? transform} , defaultValue:none
     GradientTransform? transform,
   }) : super(
           center: center,
@@ -112,14 +112,14 @@ class RadialGradient$Mate extends RadialGradient with Mate {
           focalRadius: p.get('focalRadius').build(),
           transform: p.get('transform').build(),
         );
-    matePut('center', center);
-    matePut('radius', radius);
-    matePut('colors', colors);
-    matePut('stops', stops);
-    matePut('tileMode', tileMode);
-    matePut('focal', focal);
-    matePut('focalRadius', focalRadius);
-    matePut('transform', transform);
+    mateDeclare('center', center);
+    mateDeclare('radius', radius);
+    mateDeclare('colors', colors);
+    mateDeclare('stops', stops);
+    mateDeclare('tileMode', tileMode);
+    mateDeclare('focal', focal);
+    mateDeclare('focalRadius', focalRadius);
+    mateDeclare('transform', transform);
   }
 }
 
@@ -127,25 +127,25 @@ class RadialGradient$Mate extends RadialGradient with Mate {
 class SweepGradient$Mate extends SweepGradient with Mate {
   /// SweepGradient SweepGradient({AlignmentGeometry center = Alignment.center, double startAngle = 0.0, double endAngle = math.pi * 2, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform})
   SweepGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry center,
 
-    /// optionalParameters: {double startAngle = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double startAngle,
+    /// optionalParameters: {double startAngle = 0.0} , defaultValue:Literal
+    double startAngle = 0.0,
 
-    /// optionalParameters: {double endAngle = math.pi * 2} , hasDefaultValue:true, defaultValueCode:math.pi * 2
+    /// optionalParameters: {double endAngle = math.pi * 2} , defaultValue:unprocessed
     required double endAngle,
 
-    /// optionalParameters: {required List<Color> colors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Color> colors} , defaultValue:none
     required List<Color> colors,
 
-    /// optionalParameters: {List<double>? stops} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<double>? stops} , defaultValue:none
     List<double>? stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , hasDefaultValue:true, defaultValueCode:TileMode.clamp
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , defaultValue:unprocessed
     required TileMode tileMode,
 
-    /// optionalParameters: {GradientTransform? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GradientTransform? transform} , defaultValue:none
     GradientTransform? transform,
   }) : super(
           center: center,
@@ -165,12 +165,12 @@ class SweepGradient$Mate extends SweepGradient with Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    matePut('center', center);
-    matePut('startAngle', startAngle);
-    matePut('endAngle', endAngle);
-    matePut('colors', colors);
-    matePut('stops', stops);
-    matePut('tileMode', tileMode);
-    matePut('transform', transform);
+    mateDeclare('center', center);
+    mateDeclare('startAngle', startAngle);
+    mateDeclare('endAngle', endAngle);
+    mateDeclare('colors', colors);
+    mateDeclare('stops', stops);
+    mateDeclare('tileMode', tileMode);
+    mateDeclare('transform', transform);
   }
 }

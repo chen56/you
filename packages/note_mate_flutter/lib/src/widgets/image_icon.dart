@@ -13,16 +13,16 @@ class ImageIcon$Mate extends ImageIcon with Mate {
   ImageIcon$Mate(
     /// requiredParameters: ImageProvider<Object>? image
     ImageProvider<Object>? image, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? size} , defaultValue:none
     double? size,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , defaultValue:none
     String? semanticLabel,
   }) : super(
           image,
@@ -38,10 +38,10 @@ class ImageIcon$Mate extends ImageIcon with Mate {
           color: p.get('color').build(),
           semanticLabel: p.get('semanticLabel').build(),
         );
-    matePut('image', image);
-    matePut('key', key);
-    matePut('size', size);
-    matePut('color', color);
-    matePut('semanticLabel', semanticLabel);
+    mateDeclare('image', image);
+    mateDeclare('key', key);
+    mateDeclare('size', size);
+    mateDeclare('color', color);
+    mateDeclare('semanticLabel', semanticLabel);
   }
 }

@@ -11,20 +11,20 @@ import 'package:flutter/src/foundation/key.dart';
 class MaterialPageRoute$Mate<T> extends MaterialPageRoute<T> with Mate {
   /// MaterialPageRoute<T> MaterialPageRoute({required Widget Function(BuildContext) builder, RouteSettings? settings, bool maintainState = true, bool fullscreenDialog = false, bool allowSnapshotting = true})
   MaterialPageRoute$Mate({
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , defaultValue:none
     required WidgetBuilder builder,
 
-    /// optionalParameters: {RouteSettings? settings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteSettings? settings} , defaultValue:none
     RouteSettings? settings,
 
-    /// optionalParameters: {bool maintainState = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool maintainState,
+    /// optionalParameters: {bool maintainState = true} , defaultValue:Literal
+    bool maintainState = true,
 
-    /// optionalParameters: {bool fullscreenDialog = false} , hasDefaultValue:true, defaultValueCode:false
+    /// optionalParameters: {bool fullscreenDialog = false} , defaultValue:is!ConstVariableElement
     required bool fullscreenDialog,
 
-    /// optionalParameters: {bool allowSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowSnapshotting,
+    /// optionalParameters: {bool allowSnapshotting = true} , defaultValue:Literal
+    bool allowSnapshotting = true,
   }) : super(
           builder: builder,
           settings: settings,
@@ -39,11 +39,11 @@ class MaterialPageRoute$Mate<T> extends MaterialPageRoute<T> with Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    matePut('builder', builder);
-    matePut('settings', settings);
-    matePut('maintainState', maintainState);
-    matePut('fullscreenDialog', fullscreenDialog);
-    matePut('allowSnapshotting', allowSnapshotting);
+    mateDeclare('builder', builder);
+    mateDeclare('settings', settings);
+    mateDeclare('maintainState', maintainState);
+    mateDeclare('fullscreenDialog', fullscreenDialog);
+    mateDeclare('allowSnapshotting', allowSnapshotting);
   }
 }
 
@@ -51,28 +51,28 @@ class MaterialPageRoute$Mate<T> extends MaterialPageRoute<T> with Mate {
 class MaterialPage$Mate<T> extends MaterialPage<T> with Mate {
   /// MaterialPage<T> MaterialPage({required Widget child, bool maintainState = true, bool fullscreenDialog = false, bool allowSnapshotting = true, LocalKey? key, String? name, Object? arguments, String? restorationId})
   MaterialPage$Mate({
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {bool maintainState = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool maintainState,
+    /// optionalParameters: {bool maintainState = true} , defaultValue:Literal
+    bool maintainState = true,
 
-    /// optionalParameters: {bool fullscreenDialog = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool fullscreenDialog,
+    /// optionalParameters: {bool fullscreenDialog = false} , defaultValue:Literal
+    bool fullscreenDialog = false,
 
-    /// optionalParameters: {bool allowSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowSnapshotting,
+    /// optionalParameters: {bool allowSnapshotting = true} , defaultValue:Literal
+    bool allowSnapshotting = true,
 
-    /// optionalParameters: {LocalKey? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LocalKey? key} , defaultValue:none
     LocalKey? key,
 
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , defaultValue:none
     String? name,
 
-    /// optionalParameters: {Object? arguments} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? arguments} , defaultValue:none
     Object? arguments,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
   }) : super(
           child: child,
@@ -94,13 +94,13 @@ class MaterialPage$Mate<T> extends MaterialPage<T> with Mate {
           arguments: p.get('arguments').build(),
           restorationId: p.get('restorationId').build(),
         );
-    matePut('child', child);
-    matePut('maintainState', maintainState);
-    matePut('fullscreenDialog', fullscreenDialog);
-    matePut('allowSnapshotting', allowSnapshotting);
-    matePut('key', key);
-    matePut('name', name);
-    matePut('arguments', arguments);
-    matePut('restorationId', restorationId);
+    mateDeclare('child', child);
+    mateDeclare('maintainState', maintainState);
+    mateDeclare('fullscreenDialog', fullscreenDialog);
+    mateDeclare('allowSnapshotting', allowSnapshotting);
+    mateDeclare('key', key);
+    mateDeclare('name', name);
+    mateDeclare('arguments', arguments);
+    mateDeclare('restorationId', restorationId);
   }
 }

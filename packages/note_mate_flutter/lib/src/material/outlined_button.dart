@@ -15,37 +15,37 @@ import 'package:flutter/src/widgets/framework.dart';
 class OutlinedButton$Mate extends OutlinedButton with Mate {
   /// OutlinedButton OutlinedButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget? child})
   OutlinedButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
     VoidCallback? onLongPress,
 
-    /// optionalParameters: {void Function(bool)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHover} , defaultValue:none
     ValueChanged<bool>? onHover,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
     ButtonStyle? style,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:none
     required Clip clipBehavior,
 
-    /// optionalParameters: {MaterialStatesController? statesController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {required Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? child} , defaultValue:none
     required Widget? child,
   }) : super(
           key: key,
@@ -73,16 +73,16 @@ class OutlinedButton$Mate extends OutlinedButton with Mate {
           statesController: p.get('statesController').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('onLongPress', onLongPress);
-    matePut('onHover', onHover);
-    matePut('onFocusChange', onFocusChange);
-    matePut('style', style);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('clipBehavior', clipBehavior);
-    matePut('statesController', statesController);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('onLongPress', onLongPress);
+    mateDeclare('onHover', onHover);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('style', style);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('statesController', statesController);
+    mateDeclare('child', child);
   }
 }

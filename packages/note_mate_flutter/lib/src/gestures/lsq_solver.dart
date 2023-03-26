@@ -13,7 +13,7 @@ class PolynomialFit$Mate extends PolynomialFit with Mate {
       int degree)
       : super(degree) {
     mateBuilder = (p) => PolynomialFit$Mate(p.get('degree').value);
-    matePut('degree', degree);
+    mateDeclare('degree', degree);
   }
 }
 
@@ -39,8 +39,8 @@ class LeastSquaresSolver$Mate extends LeastSquaresSolver with Mate {
           p.get('y').value,
           p.get('w').value,
         );
-    matePut('x', x);
-    matePut('y', y);
-    matePut('w', w);
+    mateDeclare('x', x);
+    mateDeclare('y', y);
+    mateDeclare('w', w);
   }
 }

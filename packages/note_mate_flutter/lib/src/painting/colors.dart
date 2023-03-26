@@ -33,10 +33,10 @@ class HSVColor$Mate extends HSVColor with Mate {
           p.get('saturation').value,
           p.get('value').value,
         );
-    matePut('alpha', alpha);
-    matePut('hue', hue);
-    matePut('saturation', saturation);
-    matePut('value', value);
+    mateDeclare('alpha', alpha);
+    mateDeclare('hue', hue);
+    mateDeclare('saturation', saturation);
+    mateDeclare('value', value);
   }
 }
 
@@ -67,10 +67,10 @@ class HSLColor$Mate extends HSLColor with Mate {
           p.get('saturation').value,
           p.get('lightness').value,
         );
-    matePut('alpha', alpha);
-    matePut('hue', hue);
-    matePut('saturation', saturation);
-    matePut('lightness', lightness);
+    mateDeclare('alpha', alpha);
+    mateDeclare('hue', hue);
+    mateDeclare('saturation', saturation);
+    mateDeclare('lightness', lightness);
   }
 }
 
@@ -91,8 +91,8 @@ class ColorSwatch$Mate<T> extends ColorSwatch<T> with Mate {
           p.get('primary').value,
           p.get('_swatch').value,
         );
-    matePut('primary', primary);
-    matePut('_swatch', _swatch);
+    mateDeclare('primary', primary);
+    mateDeclare('_swatch', _swatch);
   }
 }
 
@@ -105,16 +105,16 @@ class ColorProperty$Mate extends ColorProperty with Mate {
 
     /// requiredParameters: Color? value
     Color? value, {
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -132,11 +132,11 @@ class ColorProperty$Mate extends ColorProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('style', style);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('showName', showName);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('style', style);
+    mateDeclare('level', level);
   }
 }

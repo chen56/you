@@ -12,22 +12,22 @@ import 'package:flutter/src/widgets/icon_data.dart';
 class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Mate {
   /// CupertinoContextMenuAction CupertinoContextMenuAction({Key? key, required Widget child, bool isDefaultAction = false, bool isDestructiveAction = false, void Function()? onPressed, IconData? trailingIcon})
   CupertinoContextMenuAction$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {bool isDefaultAction = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isDefaultAction,
+    /// optionalParameters: {bool isDefaultAction = false} , defaultValue:Literal
+    bool isDefaultAction = false,
 
-    /// optionalParameters: {bool isDestructiveAction = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isDestructiveAction,
+    /// optionalParameters: {bool isDestructiveAction = false} , defaultValue:Literal
+    bool isDestructiveAction = false,
 
-    /// optionalParameters: {void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {IconData? trailingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconData? trailingIcon} , defaultValue:none
     IconData? trailingIcon,
   }) : super(
           key: key,
@@ -45,11 +45,11 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Ma
           onPressed: p.get('onPressed').build(),
           trailingIcon: p.get('trailingIcon').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('isDefaultAction', isDefaultAction);
-    matePut('isDestructiveAction', isDestructiveAction);
-    matePut('onPressed', onPressed);
-    matePut('trailingIcon', trailingIcon);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('isDefaultAction', isDefaultAction);
+    mateDeclare('isDestructiveAction', isDestructiveAction);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('trailingIcon', trailingIcon);
   }
 }

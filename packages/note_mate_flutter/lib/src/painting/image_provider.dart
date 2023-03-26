@@ -13,22 +13,22 @@ import 'dart:typed_data';
 class ImageConfiguration$Mate extends ImageConfiguration with Mate {
   /// ImageConfiguration ImageConfiguration({AssetBundle? bundle, double? devicePixelRatio, Locale? locale, TextDirection? textDirection, Size? size, TargetPlatform? platform})
   ImageConfiguration$Mate({
-    /// optionalParameters: {AssetBundle? bundle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AssetBundle? bundle} , defaultValue:none
     AssetBundle? bundle,
 
-    /// optionalParameters: {double? devicePixelRatio} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? devicePixelRatio} , defaultValue:none
     double? devicePixelRatio,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Size? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? size} , defaultValue:none
     Size? size,
 
-    /// optionalParameters: {TargetPlatform? platform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TargetPlatform? platform} , defaultValue:none
     TargetPlatform? platform,
   }) : super(
           bundle: bundle,
@@ -46,12 +46,12 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate {
           size: p.get('size').build(),
           platform: p.get('platform').build(),
         );
-    matePut('bundle', bundle);
-    matePut('devicePixelRatio', devicePixelRatio);
-    matePut('locale', locale);
-    matePut('textDirection', textDirection);
-    matePut('size', size);
-    matePut('platform', platform);
+    mateDeclare('bundle', bundle);
+    mateDeclare('devicePixelRatio', devicePixelRatio);
+    mateDeclare('locale', locale);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('size', size);
+    mateDeclare('platform', platform);
   }
 }
 
@@ -59,13 +59,13 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate {
 class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate {
   /// AssetBundleImageKey AssetBundleImageKey({required AssetBundle bundle, required String name, required double scale})
   AssetBundleImageKey$Mate({
-    /// optionalParameters: {required AssetBundle bundle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AssetBundle bundle} , defaultValue:none
     required AssetBundle bundle,
 
-    /// optionalParameters: {required String name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String name} , defaultValue:none
     required String name,
 
-    /// optionalParameters: {required double scale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double scale} , defaultValue:none
     required double scale,
   }) : super(
           bundle: bundle,
@@ -77,9 +77,9 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate {
           name: p.get('name').build(),
           scale: p.get('scale').build(),
         );
-    matePut('bundle', bundle);
-    matePut('name', name);
-    matePut('scale', scale);
+    mateDeclare('bundle', bundle);
+    mateDeclare('name', name);
+    mateDeclare('scale', scale);
   }
 }
 
@@ -89,17 +89,17 @@ class ResizeImage$Mate extends ResizeImage with Mate {
   ResizeImage$Mate(
     /// requiredParameters: ImageProvider<Object> imageProvider
     ImageProvider<Object> imageProvider, {
-    /// optionalParameters: {int? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? width} , defaultValue:none
     int? width,
 
-    /// optionalParameters: {int? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? height} , defaultValue:none
     int? height,
 
-    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , hasDefaultValue:true, defaultValueCode:ResizeImagePolicy.exact
+    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , defaultValue:unprocessed
     required ResizeImagePolicy policy,
 
-    /// optionalParameters: {bool allowUpscaling = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool allowUpscaling,
+    /// optionalParameters: {bool allowUpscaling = false} , defaultValue:Literal
+    bool allowUpscaling = false,
   }) : super(
           imageProvider,
           width: width,
@@ -114,11 +114,11 @@ class ResizeImage$Mate extends ResizeImage with Mate {
           policy: p.get('policy').build(),
           allowUpscaling: p.get('allowUpscaling').build(),
         );
-    matePut('imageProvider', imageProvider);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('policy', policy);
-    matePut('allowUpscaling', allowUpscaling);
+    mateDeclare('imageProvider', imageProvider);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
+    mateDeclare('policy', policy);
+    mateDeclare('allowUpscaling', allowUpscaling);
   }
 }
 
@@ -128,8 +128,8 @@ class FileImage$Mate extends FileImage with Mate {
   FileImage$Mate(
     /// requiredParameters: File file
     File file, {
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
   }) : super(
           file,
           scale: scale,
@@ -138,8 +138,8 @@ class FileImage$Mate extends FileImage with Mate {
           p.get('file').value,
           scale: p.get('scale').build(),
         );
-    matePut('file', file);
-    matePut('scale', scale);
+    mateDeclare('file', file);
+    mateDeclare('scale', scale);
   }
 }
 
@@ -149,8 +149,8 @@ class MemoryImage$Mate extends MemoryImage with Mate {
   MemoryImage$Mate(
     /// requiredParameters: Uint8List bytes
     Uint8List bytes, {
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
   }) : super(
           bytes,
           scale: scale,
@@ -159,8 +159,8 @@ class MemoryImage$Mate extends MemoryImage with Mate {
           p.get('bytes').value,
           scale: p.get('scale').build(),
         );
-    matePut('bytes', bytes);
-    matePut('scale', scale);
+    mateDeclare('bytes', bytes);
+    mateDeclare('scale', scale);
   }
 }
 
@@ -170,13 +170,13 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
   ExactAssetImage$Mate(
     /// requiredParameters: String assetName
     String assetName, {
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
 
-    /// optionalParameters: {AssetBundle? bundle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AssetBundle? bundle} , defaultValue:none
     AssetBundle? bundle,
 
-    /// optionalParameters: {String? package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? package} , defaultValue:none
     String? package,
   }) : super(
           assetName,
@@ -190,10 +190,10 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
           bundle: p.get('bundle').build(),
           package: p.get('package').build(),
         );
-    matePut('assetName', assetName);
-    matePut('scale', scale);
-    matePut('bundle', bundle);
-    matePut('package', package);
+    mateDeclare('assetName', assetName);
+    mateDeclare('scale', scale);
+    mateDeclare('bundle', bundle);
+    mateDeclare('package', package);
   }
 }
 
@@ -201,10 +201,10 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
 class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate {
   /// NetworkImageLoadException NetworkImageLoadException({required int statusCode, required Uri uri})
   NetworkImageLoadException$Mate({
-    /// optionalParameters: {required int statusCode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int statusCode} , defaultValue:none
     required int statusCode,
 
-    /// optionalParameters: {required Uri uri} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Uri uri} , defaultValue:none
     required Uri uri,
   }) : super(
           statusCode: statusCode,
@@ -214,7 +214,7 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate
           statusCode: p.get('statusCode').build(),
           uri: p.get('uri').build(),
         );
-    matePut('statusCode', statusCode);
-    matePut('uri', uri);
+    mateDeclare('statusCode', statusCode);
+    mateDeclare('uri', uri);
   }
 }

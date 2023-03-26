@@ -34,10 +34,10 @@ class RelativeRect$Mate extends RelativeRect with Mate {
           p.get('right').value,
           p.get('bottom').value,
         );
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
+    mateDeclare('left', left);
+    mateDeclare('top', top);
+    mateDeclare('right', right);
+    mateDeclare('bottom', bottom);
   }
 }
 
@@ -45,19 +45,19 @@ class RelativeRect$Mate extends RelativeRect with Mate {
 class RenderStack$Mate extends RenderStack with Mate {
   /// RenderStack RenderStack({List<RenderBox>? children, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge})
   RenderStack$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , hasDefaultValue:true, defaultValueCode:AlignmentDirectional.topStart
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , hasDefaultValue:true, defaultValueCode:StackFit.loose
+    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:unprocessed
     required StackFit fit,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           children: children,
@@ -73,11 +73,11 @@ class RenderStack$Mate extends RenderStack with Mate {
           fit: p.get('fit').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('children', children);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
-    matePut('fit', fit);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('fit', fit);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -85,23 +85,23 @@ class RenderStack$Mate extends RenderStack with Mate {
 class RenderIndexedStack$Mate extends RenderIndexedStack with Mate {
   /// RenderIndexedStack RenderIndexedStack({List<RenderBox>? children, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge, int? index = 0})
   RenderIndexedStack$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , hasDefaultValue:true, defaultValueCode:AlignmentDirectional.topStart
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , hasDefaultValue:true, defaultValueCode:StackFit.loose
+    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:unprocessed
     required StackFit fit,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {int? index = 0} , hasDefaultValue:true, defaultValueCode:0
-    int? index,
+    /// optionalParameters: {int? index = 0} , defaultValue:Literal
+    int? index = 0,
   }) : super(
           children: children,
           alignment: alignment,
@@ -118,11 +118,11 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           index: p.get('index').build(),
         );
-    matePut('children', children);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
-    matePut('fit', fit);
-    matePut('clipBehavior', clipBehavior);
-    matePut('index', index);
+    mateDeclare('children', children);
+    mateDeclare('alignment', alignment);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('fit', fit);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('index', index);
   }
 }

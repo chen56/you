@@ -8,20 +8,20 @@ import 'dart:core';
 class RawKeyEventDataWeb$Mate extends RawKeyEventDataWeb with Mate {
   /// RawKeyEventDataWeb RawKeyEventDataWeb({required String code, required String key, int location = 0, int metaState = modifierNone, int keyCode = 0})
   RawKeyEventDataWeb$Mate({
-    /// optionalParameters: {required String code} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String code} , defaultValue:none
     required String code,
 
-    /// optionalParameters: {required String key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String key} , defaultValue:none
     required String key,
 
-    /// optionalParameters: {int location = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int location,
+    /// optionalParameters: {int location = 0} , defaultValue:Literal
+    int location = 0,
 
-    /// optionalParameters: {int metaState = modifierNone} , hasDefaultValue:true, defaultValueCode:modifierNone
+    /// optionalParameters: {int metaState = modifierNone} , defaultValue:unprocessed
     required int metaState,
 
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    int keyCode = 0,
   }) : super(
           code: code,
           key: key,
@@ -36,10 +36,10 @@ class RawKeyEventDataWeb$Mate extends RawKeyEventDataWeb with Mate {
           metaState: p.get('metaState').build(),
           keyCode: p.get('keyCode').build(),
         );
-    matePut('code', code);
-    matePut('key', key);
-    matePut('location', location);
-    matePut('metaState', metaState);
-    matePut('keyCode', keyCode);
+    mateDeclare('code', code);
+    mateDeclare('key', key);
+    mateDeclare('location', location);
+    mateDeclare('metaState', metaState);
+    mateDeclare('keyCode', keyCode);
   }
 }

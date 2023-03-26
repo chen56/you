@@ -12,22 +12,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class BannerPainter$Mate extends BannerPainter with Mate {
   /// BannerPainter BannerPainter({required String message, required TextDirection textDirection, required BannerLocation location, required TextDirection layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   BannerPainter$Mate({
-    /// optionalParameters: {required String message} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String message} , defaultValue:none
     required String message,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {required BannerLocation location} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BannerLocation location} , defaultValue:none
     required BannerLocation location,
 
-    /// optionalParameters: {required TextDirection layoutDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection layoutDirection} , defaultValue:none
     required TextDirection layoutDirection,
 
-    /// optionalParameters: {Color color = _kColor} , hasDefaultValue:true, defaultValueCode:_kColor
+    /// optionalParameters: {Color color = _kColor} , defaultValue:unprocessed
     required Color color,
 
-    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , hasDefaultValue:true, defaultValueCode:_kTextStyle
+    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , defaultValue:unprocessed
     required TextStyle textStyle,
   }) : super(
           message: message,
@@ -45,12 +45,12 @@ class BannerPainter$Mate extends BannerPainter with Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    matePut('message', message);
-    matePut('textDirection', textDirection);
-    matePut('location', location);
-    matePut('layoutDirection', layoutDirection);
-    matePut('color', color);
-    matePut('textStyle', textStyle);
+    mateDeclare('message', message);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('location', location);
+    mateDeclare('layoutDirection', layoutDirection);
+    mateDeclare('color', color);
+    mateDeclare('textStyle', textStyle);
   }
 }
 
@@ -58,28 +58,28 @@ class BannerPainter$Mate extends BannerPainter with Mate {
 class Banner$Mate extends Banner with Mate {
   /// Banner Banner({Key? key, Widget? child, required String message, TextDirection? textDirection, required BannerLocation location, TextDirection? layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   Banner$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {required String message} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String message} , defaultValue:none
     required String message,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {required BannerLocation location} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BannerLocation location} , defaultValue:none
     required BannerLocation location,
 
-    /// optionalParameters: {TextDirection? layoutDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? layoutDirection} , defaultValue:none
     TextDirection? layoutDirection,
 
-    /// optionalParameters: {Color color = _kColor} , hasDefaultValue:true, defaultValueCode:_kColor
+    /// optionalParameters: {Color color = _kColor} , defaultValue:unprocessed
     required Color color,
 
-    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , hasDefaultValue:true, defaultValueCode:_kTextStyle
+    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , defaultValue:unprocessed
     required TextStyle textStyle,
   }) : super(
           key: key,
@@ -101,14 +101,14 @@ class Banner$Mate extends Banner with Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('message', message);
-    matePut('textDirection', textDirection);
-    matePut('location', location);
-    matePut('layoutDirection', layoutDirection);
-    matePut('color', color);
-    matePut('textStyle', textStyle);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('message', message);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('location', location);
+    mateDeclare('layoutDirection', layoutDirection);
+    mateDeclare('color', color);
+    mateDeclare('textStyle', textStyle);
   }
 }
 
@@ -116,10 +116,10 @@ class Banner$Mate extends Banner with Mate {
 class CheckedModeBanner$Mate extends CheckedModeBanner with Mate {
   /// CheckedModeBanner CheckedModeBanner({Key? key, required Widget child})
   CheckedModeBanner$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -129,7 +129,7 @@ class CheckedModeBanner$Mate extends CheckedModeBanner with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }

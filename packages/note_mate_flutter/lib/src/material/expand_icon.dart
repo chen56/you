@@ -12,28 +12,28 @@ import 'dart:ui';
 class ExpandIcon$Mate extends ExpandIcon with Mate {
   /// ExpandIcon ExpandIcon({Key? key, bool isExpanded = false, double size = 24.0, required void Function(bool)? onPressed, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Color? color, Color? disabledColor, Color? expandedColor})
   ExpandIcon$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool isExpanded = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isExpanded,
+    /// optionalParameters: {bool isExpanded = false} , defaultValue:Literal
+    bool isExpanded = false,
 
-    /// optionalParameters: {double size = 24.0} , hasDefaultValue:true, defaultValueCode:24.0
-    required double size,
+    /// optionalParameters: {double size = 24.0} , defaultValue:Literal
+    double size = 24.0,
 
-    /// optionalParameters: {required void Function(bool)? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(bool)? onPressed} , defaultValue:none
     required ValueChanged<bool>? onPressed,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(8.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.all(8.0)
+    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(8.0)} , defaultValue:unprocessed
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? expandedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? expandedColor} , defaultValue:none
     Color? expandedColor,
   }) : super(
           key: key,
@@ -55,13 +55,13 @@ class ExpandIcon$Mate extends ExpandIcon with Mate {
           disabledColor: p.get('disabledColor').build(),
           expandedColor: p.get('expandedColor').build(),
         );
-    matePut('key', key);
-    matePut('isExpanded', isExpanded);
-    matePut('size', size);
-    matePut('onPressed', onPressed);
-    matePut('padding', padding);
-    matePut('color', color);
-    matePut('disabledColor', disabledColor);
-    matePut('expandedColor', expandedColor);
+    mateDeclare('key', key);
+    mateDeclare('isExpanded', isExpanded);
+    mateDeclare('size', size);
+    mateDeclare('onPressed', onPressed);
+    mateDeclare('padding', padding);
+    mateDeclare('color', color);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('expandedColor', expandedColor);
   }
 }

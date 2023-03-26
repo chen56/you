@@ -15,43 +15,43 @@ import 'package:flutter/src/painting/border_radius.dart';
 class NavigationBar$Mate extends NavigationBar with Mate {
   /// NavigationBar NavigationBar({Key? key, Duration? animationDuration, int selectedIndex = 0, required List<Widget> destinations, void Function(int)? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior})
   NavigationBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Duration? animationDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? animationDuration} , defaultValue:none
     Duration? animationDuration,
 
-    /// optionalParameters: {int selectedIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int selectedIndex,
+    /// optionalParameters: {int selectedIndex = 0} , defaultValue:Literal
+    int selectedIndex = 0,
 
-    /// optionalParameters: {required List<Widget> destinations} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> destinations} , defaultValue:none
     required List<Widget> destinations,
 
-    /// optionalParameters: {void Function(int)? onDestinationSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onDestinationSelected} , defaultValue:none
     ValueChanged<int>? onDestinationSelected,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {NavigationDestinationLabelBehavior? labelBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {NavigationDestinationLabelBehavior? labelBehavior} , defaultValue:none
     NavigationDestinationLabelBehavior? labelBehavior,
   }) : super(
           key: key,
@@ -83,19 +83,19 @@ class NavigationBar$Mate extends NavigationBar with Mate {
           height: p.get('height').build(),
           labelBehavior: p.get('labelBehavior').build(),
         );
-    matePut('key', key);
-    matePut('animationDuration', animationDuration);
-    matePut('selectedIndex', selectedIndex);
-    matePut('destinations', destinations);
-    matePut('onDestinationSelected', onDestinationSelected);
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorShape', indicatorShape);
-    matePut('height', height);
-    matePut('labelBehavior', labelBehavior);
+    mateDeclare('key', key);
+    mateDeclare('animationDuration', animationDuration);
+    mateDeclare('selectedIndex', selectedIndex);
+    mateDeclare('destinations', destinations);
+    mateDeclare('onDestinationSelected', onDestinationSelected);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('indicatorColor', indicatorColor);
+    mateDeclare('indicatorShape', indicatorShape);
+    mateDeclare('height', height);
+    mateDeclare('labelBehavior', labelBehavior);
   }
 }
 
@@ -103,19 +103,19 @@ class NavigationBar$Mate extends NavigationBar with Mate {
 class NavigationDestination$Mate extends NavigationDestination with Mate {
   /// NavigationDestination NavigationDestination({Key? key, required Widget icon, Widget? selectedIcon, required String label, String? tooltip})
   NavigationDestination$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget icon} , defaultValue:none
     required Widget icon,
 
-    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? selectedIcon} , defaultValue:none
     Widget? selectedIcon,
 
-    /// optionalParameters: {required String label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String label} , defaultValue:none
     required String label,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , defaultValue:none
     String? tooltip,
   }) : super(
           key: key,
@@ -131,11 +131,11 @@ class NavigationDestination$Mate extends NavigationDestination with Mate {
           label: p.get('label').build(),
           tooltip: p.get('tooltip').build(),
         );
-    matePut('key', key);
-    matePut('icon', icon);
-    matePut('selectedIcon', selectedIcon);
-    matePut('label', label);
-    matePut('tooltip', tooltip);
+    mateDeclare('key', key);
+    mateDeclare('icon', icon);
+    mateDeclare('selectedIcon', selectedIcon);
+    mateDeclare('label', label);
+    mateDeclare('tooltip', tooltip);
   }
 }
 
@@ -143,25 +143,25 @@ class NavigationDestination$Mate extends NavigationDestination with Mate {
 class NavigationIndicator$Mate extends NavigationIndicator with Mate {
   /// NavigationIndicator NavigationIndicator({Key? key, required Animation<double> animation, Color? color, double width = _kIndicatorWidth, double height = _kIndicatorHeight, BorderRadius borderRadius = const BorderRadius.all(Radius.circular(16)), ShapeBorder? shape})
   NavigationIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> animation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> animation} , defaultValue:none
     required Animation<double> animation,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {double width = _kIndicatorWidth} , hasDefaultValue:true, defaultValueCode:_kIndicatorWidth
+    /// optionalParameters: {double width = _kIndicatorWidth} , defaultValue:unprocessed
     required double width,
 
-    /// optionalParameters: {double height = _kIndicatorHeight} , hasDefaultValue:true, defaultValueCode:_kIndicatorHeight
+    /// optionalParameters: {double height = _kIndicatorHeight} , defaultValue:unprocessed
     required double height,
 
-    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(16))} , hasDefaultValue:true, defaultValueCode:const BorderRadius.all(Radius.circular(16))
+    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(16))} , defaultValue:unprocessed
     required BorderRadius borderRadius,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
   }) : super(
           key: key,
@@ -181,12 +181,12 @@ class NavigationIndicator$Mate extends NavigationIndicator with Mate {
           borderRadius: p.get('borderRadius').build(),
           shape: p.get('shape').build(),
         );
-    matePut('key', key);
-    matePut('animation', animation);
-    matePut('color', color);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('borderRadius', borderRadius);
-    matePut('shape', shape);
+    mateDeclare('key', key);
+    mateDeclare('animation', animation);
+    mateDeclare('color', color);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('shape', shape);
   }
 }

@@ -13,31 +13,31 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class Drawer$Mate extends Drawer with Mate {
   /// Drawer Drawer({Key? key, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, double? width, Widget? child, String? semanticLabel})
   Drawer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , defaultValue:none
     String? semanticLabel,
   }) : super(
           key: key,
@@ -61,15 +61,15 @@ class Drawer$Mate extends Drawer with Mate {
           child: p.get('child').build(),
           semanticLabel: p.get('semanticLabel').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('shape', shape);
-    matePut('width', width);
-    matePut('child', child);
-    matePut('semanticLabel', semanticLabel);
+    mateDeclare('key', key);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('shape', shape);
+    mateDeclare('width', width);
+    mateDeclare('child', child);
+    mateDeclare('semanticLabel', semanticLabel);
   }
 }
 
@@ -77,32 +77,32 @@ class Drawer$Mate extends Drawer with Mate {
 class DrawerController$Mate extends DrawerController with Mate {
   /// DrawerController DrawerController({GlobalKey<State<StatefulWidget>>? key, required Widget child, required DrawerAlignment alignment, bool isDrawerOpen = false, void Function(bool)? drawerCallback, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? scrimColor, double? edgeDragWidth, bool enableOpenDragGesture = true})
   DrawerController$Mate({
-    /// optionalParameters: {GlobalKey<State<StatefulWidget>>? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GlobalKey<State<StatefulWidget>>? key} , defaultValue:none
     GlobalKey<State<StatefulWidget>>? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {required DrawerAlignment alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DrawerAlignment alignment} , defaultValue:none
     required DrawerAlignment alignment,
 
-    /// optionalParameters: {bool isDrawerOpen = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isDrawerOpen,
+    /// optionalParameters: {bool isDrawerOpen = false} , defaultValue:Literal
+    bool isDrawerOpen = false,
 
-    /// optionalParameters: {void Function(bool)? drawerCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? drawerCallback} , defaultValue:none
     DrawerCallback? drawerCallback,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {Color? scrimColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scrimColor} , defaultValue:none
     Color? scrimColor,
 
-    /// optionalParameters: {double? edgeDragWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? edgeDragWidth} , defaultValue:none
     double? edgeDragWidth,
 
-    /// optionalParameters: {bool enableOpenDragGesture = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableOpenDragGesture,
+    /// optionalParameters: {bool enableOpenDragGesture = true} , defaultValue:Literal
+    bool enableOpenDragGesture = true,
   }) : super(
           key: key,
           child: child,
@@ -125,14 +125,14 @@ class DrawerController$Mate extends DrawerController with Mate {
           edgeDragWidth: p.get('edgeDragWidth').build(),
           enableOpenDragGesture: p.get('enableOpenDragGesture').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('alignment', alignment);
-    matePut('isDrawerOpen', isDrawerOpen);
-    matePut('drawerCallback', drawerCallback);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('scrimColor', scrimColor);
-    matePut('edgeDragWidth', edgeDragWidth);
-    matePut('enableOpenDragGesture', enableOpenDragGesture);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('alignment', alignment);
+    mateDeclare('isDrawerOpen', isDrawerOpen);
+    mateDeclare('drawerCallback', drawerCallback);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('scrimColor', scrimColor);
+    mateDeclare('edgeDragWidth', edgeDragWidth);
+    mateDeclare('enableOpenDragGesture', enableOpenDragGesture);
   }
 }

@@ -10,16 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
   /// DefaultSelectionStyle DefaultSelectionStyle({Key? key, Color? cursorColor, Color? selectionColor, required Widget child})
   DefaultSelectionStyle$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? cursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? cursorColor} , defaultValue:none
     Color? cursorColor,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , defaultValue:none
     Color? selectionColor,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -33,19 +33,19 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
           selectionColor: p.get('selectionColor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('cursorColor', cursorColor);
-    matePut('selectionColor', selectionColor);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('cursorColor', cursorColor);
+    mateDeclare('selectionColor', selectionColor);
+    mateDeclare('child', child);
   }
 
   /// DefaultSelectionStyle DefaultSelectionStyle.fallback({Key? key})
   DefaultSelectionStyle$Mate.fallback(
       {
-      /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super.fallback(key: key) {
     mateBuilder = (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
-    matePut('key', key);
+    mateDeclare('key', key);
   }
 }

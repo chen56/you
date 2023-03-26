@@ -13,44 +13,44 @@ import 'package:flutter/src/widgets/framework.dart';
 class CupertinoPicker$Mate extends CupertinoPicker with Mate {
   /// CupertinoPicker CupertinoPicker({Key? key, double diameterRatio = _kDefaultDiameterRatio, Color? backgroundColor, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, FixedExtentScrollController? scrollController, double squeeze = _kSqueeze, required double itemExtent, required void Function(int)? onSelectedItemChanged, required List<Widget> children, Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay(), bool looping = false})
   CupertinoPicker$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double diameterRatio = _kDefaultDiameterRatio} , hasDefaultValue:true, defaultValueCode:_kDefaultDiameterRatio
+    /// optionalParameters: {double diameterRatio = _kDefaultDiameterRatio} , defaultValue:unprocessed
     required double diameterRatio,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double offAxisFraction = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double offAxisFraction,
+    /// optionalParameters: {double offAxisFraction = 0.0} , defaultValue:Literal
+    double offAxisFraction = 0.0,
 
-    /// optionalParameters: {bool useMagnifier = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool useMagnifier,
+    /// optionalParameters: {bool useMagnifier = false} , defaultValue:Literal
+    bool useMagnifier = false,
 
-    /// optionalParameters: {double magnification = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double magnification,
+    /// optionalParameters: {double magnification = 1.0} , defaultValue:Literal
+    double magnification = 1.0,
 
-    /// optionalParameters: {FixedExtentScrollController? scrollController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FixedExtentScrollController? scrollController} , defaultValue:none
     FixedExtentScrollController? scrollController,
 
-    /// optionalParameters: {double squeeze = _kSqueeze} , hasDefaultValue:true, defaultValueCode:_kSqueeze
+    /// optionalParameters: {double squeeze = _kSqueeze} , defaultValue:unprocessed
     required double squeeze,
 
-    /// optionalParameters: {required double itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double itemExtent} , defaultValue:none
     required double itemExtent,
 
-    /// optionalParameters: {required void Function(int)? onSelectedItemChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(int)? onSelectedItemChanged} , defaultValue:none
     required ValueChanged<int>? onSelectedItemChanged,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , defaultValue:none
     required List<Widget> children,
 
-    /// optionalParameters: {Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()} , hasDefaultValue:true, defaultValueCode:const CupertinoPickerDefaultSelectionOverlay()
+    /// optionalParameters: {Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()} , defaultValue:unprocessed
     Widget? selectionOverlay,
 
-    /// optionalParameters: {bool looping = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool looping,
+    /// optionalParameters: {bool looping = false} , defaultValue:Literal
+    bool looping = false,
   }) : super(
           key: key,
           diameterRatio: diameterRatio,
@@ -81,60 +81,60 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           selectionOverlay: p.get('selectionOverlay').build(),
           looping: p.get('looping').build(),
         );
-    matePut('key', key);
-    matePut('diameterRatio', diameterRatio);
-    matePut('backgroundColor', backgroundColor);
-    matePut('offAxisFraction', offAxisFraction);
-    matePut('useMagnifier', useMagnifier);
-    matePut('magnification', magnification);
-    matePut('scrollController', scrollController);
-    matePut('squeeze', squeeze);
-    matePut('itemExtent', itemExtent);
-    matePut('onSelectedItemChanged', onSelectedItemChanged);
-    matePut('children', children);
-    matePut('selectionOverlay', selectionOverlay);
-    matePut('looping', looping);
+    mateDeclare('key', key);
+    mateDeclare('diameterRatio', diameterRatio);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('offAxisFraction', offAxisFraction);
+    mateDeclare('useMagnifier', useMagnifier);
+    mateDeclare('magnification', magnification);
+    mateDeclare('scrollController', scrollController);
+    mateDeclare('squeeze', squeeze);
+    mateDeclare('itemExtent', itemExtent);
+    mateDeclare('onSelectedItemChanged', onSelectedItemChanged);
+    mateDeclare('children', children);
+    mateDeclare('selectionOverlay', selectionOverlay);
+    mateDeclare('looping', looping);
   }
 
   /// CupertinoPicker CupertinoPicker.builder({Key? key, double diameterRatio = _kDefaultDiameterRatio, Color? backgroundColor, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, FixedExtentScrollController? scrollController, double squeeze = _kSqueeze, required double itemExtent, required void Function(int)? onSelectedItemChanged, required Widget? Function(BuildContext, int) itemBuilder, int? childCount, Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()})
   CupertinoPicker$Mate.builder({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double diameterRatio = _kDefaultDiameterRatio} , hasDefaultValue:true, defaultValueCode:_kDefaultDiameterRatio
+    /// optionalParameters: {double diameterRatio = _kDefaultDiameterRatio} , defaultValue:unprocessed
     required double diameterRatio,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double offAxisFraction = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double offAxisFraction,
+    /// optionalParameters: {double offAxisFraction = 0.0} , defaultValue:Literal
+    double offAxisFraction = 0.0,
 
-    /// optionalParameters: {bool useMagnifier = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool useMagnifier,
+    /// optionalParameters: {bool useMagnifier = false} , defaultValue:Literal
+    bool useMagnifier = false,
 
-    /// optionalParameters: {double magnification = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double magnification,
+    /// optionalParameters: {double magnification = 1.0} , defaultValue:Literal
+    double magnification = 1.0,
 
-    /// optionalParameters: {FixedExtentScrollController? scrollController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FixedExtentScrollController? scrollController} , defaultValue:none
     FixedExtentScrollController? scrollController,
 
-    /// optionalParameters: {double squeeze = _kSqueeze} , hasDefaultValue:true, defaultValueCode:_kSqueeze
+    /// optionalParameters: {double squeeze = _kSqueeze} , defaultValue:unprocessed
     required double squeeze,
 
-    /// optionalParameters: {required double itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double itemExtent} , defaultValue:none
     required double itemExtent,
 
-    /// optionalParameters: {required void Function(int)? onSelectedItemChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(int)? onSelectedItemChanged} , defaultValue:none
     required ValueChanged<int>? onSelectedItemChanged,
 
-    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , defaultValue:none
     required NullableIndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {int? childCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? childCount} , defaultValue:none
     int? childCount,
 
-    /// optionalParameters: {Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()} , hasDefaultValue:true, defaultValueCode:const CupertinoPickerDefaultSelectionOverlay()
+    /// optionalParameters: {Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()} , defaultValue:unprocessed
     Widget? selectionOverlay,
   }) : super.builder(
           key: key,
@@ -166,19 +166,19 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           childCount: p.get('childCount').build(),
           selectionOverlay: p.get('selectionOverlay').build(),
         );
-    matePut('key', key);
-    matePut('diameterRatio', diameterRatio);
-    matePut('backgroundColor', backgroundColor);
-    matePut('offAxisFraction', offAxisFraction);
-    matePut('useMagnifier', useMagnifier);
-    matePut('magnification', magnification);
-    matePut('scrollController', scrollController);
-    matePut('squeeze', squeeze);
-    matePut('itemExtent', itemExtent);
-    matePut('onSelectedItemChanged', onSelectedItemChanged);
-    matePut('itemBuilder', itemBuilder);
-    matePut('childCount', childCount);
-    matePut('selectionOverlay', selectionOverlay);
+    mateDeclare('key', key);
+    mateDeclare('diameterRatio', diameterRatio);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('offAxisFraction', offAxisFraction);
+    mateDeclare('useMagnifier', useMagnifier);
+    mateDeclare('magnification', magnification);
+    mateDeclare('scrollController', scrollController);
+    mateDeclare('squeeze', squeeze);
+    mateDeclare('itemExtent', itemExtent);
+    mateDeclare('onSelectedItemChanged', onSelectedItemChanged);
+    mateDeclare('itemBuilder', itemBuilder);
+    mateDeclare('childCount', childCount);
+    mateDeclare('selectionOverlay', selectionOverlay);
   }
 }
 
@@ -186,17 +186,17 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
 class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefaultSelectionOverlay with Mate {
   /// CupertinoPickerDefaultSelectionOverlay CupertinoPickerDefaultSelectionOverlay({Key? key, Color background = CupertinoColors.tertiarySystemFill, bool capStartEdge = true, bool capEndEdge = true})
   CupertinoPickerDefaultSelectionOverlay$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color background = CupertinoColors.tertiarySystemFill} , hasDefaultValue:true, defaultValueCode:CupertinoColors.tertiarySystemFill
+    /// optionalParameters: {Color background = CupertinoColors.tertiarySystemFill} , defaultValue:unprocessed
     required Color background,
 
-    /// optionalParameters: {bool capStartEdge = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool capStartEdge,
+    /// optionalParameters: {bool capStartEdge = true} , defaultValue:Literal
+    bool capStartEdge = true,
 
-    /// optionalParameters: {bool capEndEdge = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool capEndEdge,
+    /// optionalParameters: {bool capEndEdge = true} , defaultValue:Literal
+    bool capEndEdge = true,
   }) : super(
           key: key,
           background: background,
@@ -209,9 +209,9 @@ class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefault
           capStartEdge: p.get('capStartEdge').build(),
           capEndEdge: p.get('capEndEdge').build(),
         );
-    matePut('key', key);
-    matePut('background', background);
-    matePut('capStartEdge', capStartEdge);
-    matePut('capEndEdge', capEndEdge);
+    mateDeclare('key', key);
+    mateDeclare('background', background);
+    mateDeclare('capStartEdge', capStartEdge);
+    mateDeclare('capEndEdge', capEndEdge);
   }
 }

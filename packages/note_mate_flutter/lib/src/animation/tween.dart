@@ -10,10 +10,10 @@ import 'package:flutter/src/animation/curves.dart';
 class Tween$Mate<T extends Object?> extends Tween<T> with Mate {
   /// Tween<T> Tween({T? begin, T? end})
   Tween$Mate({
-    /// optionalParameters: {T? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? begin} , defaultValue:none
     T? begin,
 
-    /// optionalParameters: {T? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? end} , defaultValue:none
     T? end,
   }) : super(
           begin: begin,
@@ -23,8 +23,8 @@ class Tween$Mate<T extends Object?> extends Tween<T> with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
   }
 }
 
@@ -37,7 +37,7 @@ class ReverseTween$Mate<T extends Object?> extends ReverseTween<T> with Mate {
       Tween<T> parent)
       : super(parent) {
     mateBuilder = (p) => ReverseTween$Mate<T>(p.get('parent').value);
-    matePut('parent', parent);
+    mateDeclare('parent', parent);
   }
 }
 
@@ -45,10 +45,10 @@ class ReverseTween$Mate<T extends Object?> extends ReverseTween<T> with Mate {
 class ColorTween$Mate extends ColorTween with Mate {
   /// ColorTween ColorTween({Color? begin, Color? end})
   ColorTween$Mate({
-    /// optionalParameters: {Color? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? begin} , defaultValue:none
     Color? begin,
 
-    /// optionalParameters: {Color? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? end} , defaultValue:none
     Color? end,
   }) : super(
           begin: begin,
@@ -58,8 +58,8 @@ class ColorTween$Mate extends ColorTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
   }
 }
 
@@ -67,10 +67,10 @@ class ColorTween$Mate extends ColorTween with Mate {
 class SizeTween$Mate extends SizeTween with Mate {
   /// SizeTween SizeTween({Size? begin, Size? end})
   SizeTween$Mate({
-    /// optionalParameters: {Size? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? begin} , defaultValue:none
     Size? begin,
 
-    /// optionalParameters: {Size? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? end} , defaultValue:none
     Size? end,
   }) : super(
           begin: begin,
@@ -80,8 +80,8 @@ class SizeTween$Mate extends SizeTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
   }
 }
 
@@ -89,10 +89,10 @@ class SizeTween$Mate extends SizeTween with Mate {
 class RectTween$Mate extends RectTween with Mate {
   /// RectTween RectTween({Rect? begin, Rect? end})
   RectTween$Mate({
-    /// optionalParameters: {Rect? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? begin} , defaultValue:none
     Rect? begin,
 
-    /// optionalParameters: {Rect? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? end} , defaultValue:none
     Rect? end,
   }) : super(
           begin: begin,
@@ -102,8 +102,8 @@ class RectTween$Mate extends RectTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
   }
 }
 
@@ -111,10 +111,10 @@ class RectTween$Mate extends RectTween with Mate {
 class IntTween$Mate extends IntTween with Mate {
   /// IntTween IntTween({int? begin, int? end})
   IntTween$Mate({
-    /// optionalParameters: {int? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? begin} , defaultValue:none
     int? begin,
 
-    /// optionalParameters: {int? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? end} , defaultValue:none
     int? end,
   }) : super(
           begin: begin,
@@ -124,8 +124,8 @@ class IntTween$Mate extends IntTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
   }
 }
 
@@ -133,10 +133,10 @@ class IntTween$Mate extends IntTween with Mate {
 class StepTween$Mate extends StepTween with Mate {
   /// StepTween StepTween({int? begin, int? end})
   StepTween$Mate({
-    /// optionalParameters: {int? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? begin} , defaultValue:none
     int? begin,
 
-    /// optionalParameters: {int? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? end} , defaultValue:none
     int? end,
   }) : super(
           begin: begin,
@@ -146,8 +146,8 @@ class StepTween$Mate extends StepTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
   }
 }
 
@@ -160,7 +160,7 @@ class ConstantTween$Mate<T> extends ConstantTween<T> with Mate {
       T value)
       : super(value) {
     mateBuilder = (p) => ConstantTween$Mate<T>(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -169,10 +169,10 @@ class CurveTween$Mate extends CurveTween with Mate {
   /// CurveTween CurveTween({required Curve curve})
   CurveTween$Mate(
       {
-      /// optionalParameters: {required Curve curve} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required Curve curve} , defaultValue:none
       required Curve curve})
       : super(curve: curve) {
     mateBuilder = (p) => CurveTween$Mate(curve: p.get('curve').build());
-    matePut('curve', curve);
+    mateDeclare('curve', curve);
   }
 }

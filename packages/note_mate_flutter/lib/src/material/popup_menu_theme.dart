@@ -15,34 +15,34 @@ import 'package:flutter/src/widgets/framework.dart';
 class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate {
   /// PopupMenuThemeData PopupMenuThemeData({Color? color, ShapeBorder? shape, double? elevation, Color? shadowColor, Color? surfaceTintColor, TextStyle? textStyle, MaterialStateProperty<TextStyle?>? labelTextStyle, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, PopupMenuPosition? position})
   PopupMenuThemeData$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , defaultValue:none
     MaterialStateProperty<TextStyle?>? labelTextStyle,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {PopupMenuPosition? position} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {PopupMenuPosition? position} , defaultValue:none
     PopupMenuPosition? position,
   }) : super(
           color: color,
@@ -68,16 +68,16 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           position: p.get('position').build(),
         );
-    matePut('color', color);
-    matePut('shape', shape);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('textStyle', textStyle);
-    matePut('labelTextStyle', labelTextStyle);
-    matePut('enableFeedback', enableFeedback);
-    matePut('mouseCursor', mouseCursor);
-    matePut('position', position);
+    mateDeclare('color', color);
+    mateDeclare('shape', shape);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('labelTextStyle', labelTextStyle);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('position', position);
   }
 }
 
@@ -85,13 +85,13 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate {
 class PopupMenuTheme$Mate extends PopupMenuTheme with Mate {
   /// PopupMenuTheme PopupMenuTheme({Key? key, required PopupMenuThemeData data, required Widget child})
   PopupMenuTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required PopupMenuThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PopupMenuThemeData data} , defaultValue:none
     required PopupMenuThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -103,8 +103,8 @@ class PopupMenuTheme$Mate extends PopupMenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

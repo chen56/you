@@ -9,10 +9,10 @@ class RenderSliverList$Mate extends RenderSliverList with Mate {
   /// RenderSliverList RenderSliverList({required RenderSliverBoxChildManager childManager})
   RenderSliverList$Mate(
       {
-      /// optionalParameters: {required RenderSliverBoxChildManager childManager} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required RenderSliverBoxChildManager childManager} , defaultValue:none
       required RenderSliverBoxChildManager childManager})
       : super(childManager: childManager) {
     mateBuilder = (p) => RenderSliverList$Mate(childManager: p.get('childManager').build());
-    matePut('childManager', childManager);
+    mateDeclare('childManager', childManager);
   }
 }

@@ -14,28 +14,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class BadgeThemeData$Mate extends BadgeThemeData with Mate {
   /// BadgeThemeData BadgeThemeData({Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset})
   BadgeThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , defaultValue:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? smallSize} , defaultValue:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? largeSize} , defaultValue:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , defaultValue:none
     Offset? offset,
   }) : super(
           backgroundColor: backgroundColor,
@@ -57,14 +57,14 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
           alignment: p.get('alignment').build(),
           offset: p.get('offset').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('textColor', textColor);
-    matePut('smallSize', smallSize);
-    matePut('largeSize', largeSize);
-    matePut('textStyle', textStyle);
-    matePut('padding', padding);
-    matePut('alignment', alignment);
-    matePut('offset', offset);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('textColor', textColor);
+    mateDeclare('smallSize', smallSize);
+    mateDeclare('largeSize', largeSize);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('padding', padding);
+    mateDeclare('alignment', alignment);
+    mateDeclare('offset', offset);
   }
 }
 
@@ -72,13 +72,13 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
 class BadgeTheme$Mate extends BadgeTheme with Mate {
   /// BadgeTheme BadgeTheme({Key? key, required BadgeThemeData data, required Widget child})
   BadgeTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required BadgeThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BadgeThemeData data} , defaultValue:none
     required BadgeThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -90,8 +90,8 @@ class BadgeTheme$Mate extends BadgeTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

@@ -11,16 +11,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class Localizations$Mate extends Localizations with Mate {
   /// Localizations Localizations({Key? key, required Locale locale, required List<LocalizationsDelegate<dynamic>> delegates, Widget? child})
   Localizations$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Locale locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Locale locale} , defaultValue:none
     required Locale locale,
 
-    /// optionalParameters: {required List<LocalizationsDelegate<dynamic>> delegates} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<LocalizationsDelegate<dynamic>> delegates} , defaultValue:none
     required List<LocalizationsDelegate<dynamic>> delegates,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -34,9 +34,9 @@ class Localizations$Mate extends Localizations with Mate {
           delegates: p.get('delegates').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('locale', locale);
-    matePut('delegates', delegates);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('locale', locale);
+    mateDeclare('delegates', delegates);
+    mateDeclare('child', child);
   }
 }

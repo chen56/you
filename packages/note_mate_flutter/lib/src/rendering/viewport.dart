@@ -12,10 +12,10 @@ import 'package:flutter/src/rendering/sliver.dart';
 class RevealedOffset$Mate extends RevealedOffset with Mate {
   /// RevealedOffset RevealedOffset({required double offset, required Rect rect})
   RevealedOffset$Mate({
-    /// optionalParameters: {required double offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double offset} , defaultValue:none
     required double offset,
 
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , defaultValue:none
     required Rect rect,
   }) : super(
           offset: offset,
@@ -25,8 +25,8 @@ class RevealedOffset$Mate extends RevealedOffset with Mate {
           offset: p.get('offset').build(),
           rect: p.get('rect').build(),
         );
-    matePut('offset', offset);
-    matePut('rect', rect);
+    mateDeclare('offset', offset);
+    mateDeclare('rect', rect);
   }
 }
 
@@ -34,31 +34,31 @@ class RevealedOffset$Mate extends RevealedOffset with Mate {
 class RenderViewport$Mate extends RenderViewport with Mate {
   /// RenderViewport RenderViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, double? cacheExtent, CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel, Clip clipBehavior = Clip.hardEdge})
   RenderViewport$Mate({
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , hasDefaultValue:true, defaultValueCode:AxisDirection.down
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:is!ConstVariableElement
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required AxisDirection crossAxisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection crossAxisDirection} , defaultValue:none
     required AxisDirection crossAxisDirection,
 
-    /// optionalParameters: {required ViewportOffset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {double anchor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double anchor,
+    /// optionalParameters: {double anchor = 0.0} , defaultValue:Literal
+    double anchor = 0.0,
 
-    /// optionalParameters: {List<RenderSliver>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderSliver>? children} , defaultValue:none
     List<RenderSliver>? children,
 
-    /// optionalParameters: {RenderSliver? center} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderSliver? center} , defaultValue:none
     RenderSliver? center,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , hasDefaultValue:true, defaultValueCode:CacheExtentStyle.pixel
+    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , defaultValue:is!ConstVariableElement
     required CacheExtentStyle cacheExtentStyle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:is!ConstVariableElement
     required Clip clipBehavior,
   }) : super(
           axisDirection: axisDirection,
@@ -82,15 +82,15 @@ class RenderViewport$Mate extends RenderViewport with Mate {
           cacheExtentStyle: p.get('cacheExtentStyle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('axisDirection', axisDirection);
-    matePut('crossAxisDirection', crossAxisDirection);
-    matePut('offset', offset);
-    matePut('anchor', anchor);
-    matePut('children', children);
-    matePut('center', center);
-    matePut('cacheExtent', cacheExtent);
-    matePut('cacheExtentStyle', cacheExtentStyle);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('axisDirection', axisDirection);
+    mateDeclare('crossAxisDirection', crossAxisDirection);
+    mateDeclare('offset', offset);
+    mateDeclare('anchor', anchor);
+    mateDeclare('children', children);
+    mateDeclare('center', center);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('cacheExtentStyle', cacheExtentStyle);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -98,19 +98,19 @@ class RenderViewport$Mate extends RenderViewport with Mate {
 class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport with Mate {
   /// RenderShrinkWrappingViewport RenderShrinkWrappingViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<RenderSliver>? children})
   RenderShrinkWrappingViewport$Mate({
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , hasDefaultValue:true, defaultValueCode:AxisDirection.down
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:is!ConstVariableElement
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required AxisDirection crossAxisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection crossAxisDirection} , defaultValue:none
     required AxisDirection crossAxisDirection,
 
-    /// optionalParameters: {required ViewportOffset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:is!ConstVariableElement
     required Clip clipBehavior,
 
-    /// optionalParameters: {List<RenderSliver>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderSliver>? children} , defaultValue:none
     List<RenderSliver>? children,
   }) : super(
           axisDirection: axisDirection,
@@ -126,10 +126,10 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport wit
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('axisDirection', axisDirection);
-    matePut('crossAxisDirection', crossAxisDirection);
-    matePut('offset', offset);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateDeclare('axisDirection', axisDirection);
+    mateDeclare('crossAxisDirection', crossAxisDirection);
+    mateDeclare('offset', offset);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('children', children);
   }
 }

@@ -9,16 +9,16 @@ import 'package:flutter/src/services/text_input.dart';
 class AutofillConfiguration$Mate extends AutofillConfiguration with Mate {
   /// AutofillConfiguration AutofillConfiguration({required String uniqueIdentifier, required List<String> autofillHints, required TextEditingValue currentEditingValue, String? hintText})
   AutofillConfiguration$Mate({
-    /// optionalParameters: {required String uniqueIdentifier} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String uniqueIdentifier} , defaultValue:none
     required String uniqueIdentifier,
 
-    /// optionalParameters: {required List<String> autofillHints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<String> autofillHints} , defaultValue:none
     required List<String> autofillHints,
 
-    /// optionalParameters: {required TextEditingValue currentEditingValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextEditingValue currentEditingValue} , defaultValue:none
     required TextEditingValue currentEditingValue,
 
-    /// optionalParameters: {String? hintText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? hintText} , defaultValue:none
     String? hintText,
   }) : super(
           uniqueIdentifier: uniqueIdentifier,
@@ -32,9 +32,9 @@ class AutofillConfiguration$Mate extends AutofillConfiguration with Mate {
           currentEditingValue: p.get('currentEditingValue').build(),
           hintText: p.get('hintText').build(),
         );
-    matePut('uniqueIdentifier', uniqueIdentifier);
-    matePut('autofillHints', autofillHints);
-    matePut('currentEditingValue', currentEditingValue);
-    matePut('hintText', hintText);
+    mateDeclare('uniqueIdentifier', uniqueIdentifier);
+    mateDeclare('autofillHints', autofillHints);
+    mateDeclare('currentEditingValue', currentEditingValue);
+    mateDeclare('hintText', hintText);
   }
 }

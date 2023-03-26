@@ -9,25 +9,25 @@ import 'package:flutter/src/painting/border_radius.dart';
 class TableBorder$Mate extends TableBorder with Mate {
   /// TableBorder TableBorder({BorderSide top = BorderSide.none, BorderSide right = BorderSide.none, BorderSide bottom = BorderSide.none, BorderSide left = BorderSide.none, BorderSide horizontalInside = BorderSide.none, BorderSide verticalInside = BorderSide.none, BorderRadius borderRadius = BorderRadius.zero})
   TableBorder$Mate({
-    /// optionalParameters: {BorderSide top = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide top = BorderSide.none} , defaultValue:unprocessed
     required BorderSide top,
 
-    /// optionalParameters: {BorderSide right = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide right = BorderSide.none} , defaultValue:unprocessed
     required BorderSide right,
 
-    /// optionalParameters: {BorderSide bottom = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide bottom = BorderSide.none} , defaultValue:unprocessed
     required BorderSide bottom,
 
-    /// optionalParameters: {BorderSide left = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide left = BorderSide.none} , defaultValue:unprocessed
     required BorderSide left,
 
-    /// optionalParameters: {BorderSide horizontalInside = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide horizontalInside = BorderSide.none} , defaultValue:unprocessed
     required BorderSide horizontalInside,
 
-    /// optionalParameters: {BorderSide verticalInside = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+    /// optionalParameters: {BorderSide verticalInside = BorderSide.none} , defaultValue:unprocessed
     required BorderSide verticalInside,
 
-    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , hasDefaultValue:true, defaultValueCode:BorderRadius.zero
+    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , defaultValue:unprocessed
     required BorderRadius borderRadius,
   }) : super(
           top: top,
@@ -47,12 +47,12 @@ class TableBorder$Mate extends TableBorder with Mate {
           verticalInside: p.get('verticalInside').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('left', left);
-    matePut('horizontalInside', horizontalInside);
-    matePut('verticalInside', verticalInside);
-    matePut('borderRadius', borderRadius);
+    mateDeclare('top', top);
+    mateDeclare('right', right);
+    mateDeclare('bottom', bottom);
+    mateDeclare('left', left);
+    mateDeclare('horizontalInside', horizontalInside);
+    mateDeclare('verticalInside', verticalInside);
+    mateDeclare('borderRadius', borderRadius);
   }
 }

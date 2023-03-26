@@ -20,19 +20,19 @@ import 'package:flutter/src/foundation/change_notifier.dart';
 class SlideTransition$Mate extends SlideTransition with Mate {
   /// SlideTransition SlideTransition({Key? key, required Animation<Offset> position, bool transformHitTests = true, TextDirection? textDirection, Widget? child})
   SlideTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<Offset> position} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<Offset> position} , defaultValue:none
     required Animation<Offset> position,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    bool transformHitTests = true,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -48,11 +48,11 @@ class SlideTransition$Mate extends SlideTransition with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('position', position);
-    matePut('transformHitTests', transformHitTests);
-    matePut('textDirection', textDirection);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('position', position);
+    mateDeclare('transformHitTests', transformHitTests);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('child', child);
   }
 }
 
@@ -60,19 +60,19 @@ class SlideTransition$Mate extends SlideTransition with Mate {
 class ScaleTransition$Mate extends ScaleTransition with Mate {
   /// ScaleTransition ScaleTransition({Key? key, required Animation<double> scale, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
   ScaleTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> scale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> scale} , defaultValue:none
     required Animation<double> scale,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {Alignment alignment = Alignment.center} , defaultValue:unprocessed
     required Alignment alignment,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -88,11 +88,11 @@ class ScaleTransition$Mate extends ScaleTransition with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('scale', scale);
-    matePut('alignment', alignment);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('scale', scale);
+    mateDeclare('alignment', alignment);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('child', child);
   }
 }
 
@@ -100,19 +100,19 @@ class ScaleTransition$Mate extends ScaleTransition with Mate {
 class RotationTransition$Mate extends RotationTransition with Mate {
   /// RotationTransition RotationTransition({Key? key, required Animation<double> turns, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
   RotationTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> turns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> turns} , defaultValue:none
     required Animation<double> turns,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {Alignment alignment = Alignment.center} , defaultValue:unprocessed
     required Alignment alignment,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -128,11 +128,11 @@ class RotationTransition$Mate extends RotationTransition with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('turns', turns);
-    matePut('alignment', alignment);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('turns', turns);
+    mateDeclare('alignment', alignment);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('child', child);
   }
 }
 
@@ -140,19 +140,19 @@ class RotationTransition$Mate extends RotationTransition with Mate {
 class SizeTransition$Mate extends SizeTransition with Mate {
   /// SizeTransition SizeTransition({Key? key, Axis axis = Axis.vertical, required Animation<double> sizeFactor, double axisAlignment = 0.0, Widget? child})
   SizeTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis axis = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis axis = Axis.vertical} , defaultValue:unprocessed
     required Axis axis,
 
-    /// optionalParameters: {required Animation<double> sizeFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> sizeFactor} , defaultValue:none
     required Animation<double> sizeFactor,
 
-    /// optionalParameters: {double axisAlignment = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double axisAlignment,
+    /// optionalParameters: {double axisAlignment = 0.0} , defaultValue:Literal
+    double axisAlignment = 0.0,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -168,11 +168,11 @@ class SizeTransition$Mate extends SizeTransition with Mate {
           axisAlignment: p.get('axisAlignment').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('axis', axis);
-    matePut('sizeFactor', sizeFactor);
-    matePut('axisAlignment', axisAlignment);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('axis', axis);
+    mateDeclare('sizeFactor', sizeFactor);
+    mateDeclare('axisAlignment', axisAlignment);
+    mateDeclare('child', child);
   }
 }
 
@@ -180,16 +180,16 @@ class SizeTransition$Mate extends SizeTransition with Mate {
 class FadeTransition$Mate extends FadeTransition with Mate {
   /// FadeTransition FadeTransition({Key? key, required Animation<double> opacity, bool alwaysIncludeSemantics = false, Widget? child})
   FadeTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> opacity} , defaultValue:none
     required Animation<double> opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysIncludeSemantics,
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -203,10 +203,10 @@ class FadeTransition$Mate extends FadeTransition with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('opacity', opacity);
-    matePut('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('opacity', opacity);
+    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateDeclare('child', child);
   }
 }
 
@@ -214,16 +214,16 @@ class FadeTransition$Mate extends FadeTransition with Mate {
 class SliverFadeTransition$Mate extends SliverFadeTransition with Mate {
   /// SliverFadeTransition SliverFadeTransition({Key? key, required Animation<double> opacity, bool alwaysIncludeSemantics = false, Widget? sliver})
   SliverFadeTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> opacity} , defaultValue:none
     required Animation<double> opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysIncludeSemantics,
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {Widget? sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? sliver} , defaultValue:none
     Widget? sliver,
   }) : super(
           key: key,
@@ -237,10 +237,10 @@ class SliverFadeTransition$Mate extends SliverFadeTransition with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('key', key);
-    matePut('opacity', opacity);
-    matePut('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    matePut('sliver', sliver);
+    mateDeclare('key', key);
+    mateDeclare('opacity', opacity);
+    mateDeclare('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateDeclare('sliver', sliver);
   }
 }
 
@@ -248,10 +248,10 @@ class SliverFadeTransition$Mate extends SliverFadeTransition with Mate {
 class RelativeRectTween$Mate extends RelativeRectTween with Mate {
   /// RelativeRectTween RelativeRectTween({RelativeRect? begin, RelativeRect? end})
   RelativeRectTween$Mate({
-    /// optionalParameters: {RelativeRect? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RelativeRect? begin} , defaultValue:none
     RelativeRect? begin,
 
-    /// optionalParameters: {RelativeRect? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RelativeRect? end} , defaultValue:none
     RelativeRect? end,
   }) : super(
           begin: begin,
@@ -261,8 +261,8 @@ class RelativeRectTween$Mate extends RelativeRectTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateDeclare('begin', begin);
+    mateDeclare('end', end);
   }
 }
 
@@ -270,13 +270,13 @@ class RelativeRectTween$Mate extends RelativeRectTween with Mate {
 class PositionedTransition$Mate extends PositionedTransition with Mate {
   /// PositionedTransition PositionedTransition({Key? key, required Animation<RelativeRect> rect, required Widget child})
   PositionedTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<RelativeRect> rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<RelativeRect> rect} , defaultValue:none
     required Animation<RelativeRect> rect,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -288,9 +288,9 @@ class PositionedTransition$Mate extends PositionedTransition with Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('rect', rect);
+    mateDeclare('child', child);
   }
 }
 
@@ -298,16 +298,16 @@ class PositionedTransition$Mate extends PositionedTransition with Mate {
 class RelativePositionedTransition$Mate extends RelativePositionedTransition with Mate {
   /// RelativePositionedTransition RelativePositionedTransition({Key? key, required Animation<Rect?> rect, required Size size, required Widget child})
   RelativePositionedTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<Rect?> rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<Rect?> rect} , defaultValue:none
     required Animation<Rect?> rect,
 
-    /// optionalParameters: {required Size size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size size} , defaultValue:none
     required Size size,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -321,10 +321,10 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition wit
           size: p.get('size').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('size', size);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('rect', rect);
+    mateDeclare('size', size);
+    mateDeclare('child', child);
   }
 }
 
@@ -332,16 +332,16 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition wit
 class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with Mate {
   /// DecoratedBoxTransition DecoratedBoxTransition({Key? key, required Animation<Decoration> decoration, DecorationPosition position = DecorationPosition.background, required Widget child})
   DecoratedBoxTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<Decoration> decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<Decoration> decoration} , defaultValue:none
     required Animation<Decoration> decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , hasDefaultValue:true, defaultValueCode:DecorationPosition.background
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , defaultValue:unprocessed
     required DecorationPosition position,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -355,10 +355,10 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with Mate {
           position: p.get('position').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('decoration', decoration);
-    matePut('position', position);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('decoration', decoration);
+    mateDeclare('position', position);
+    mateDeclare('child', child);
   }
 }
 
@@ -366,19 +366,19 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with Mate {
 class AlignTransition$Mate extends AlignTransition with Mate {
   /// AlignTransition AlignTransition({Key? key, required Animation<AlignmentGeometry> alignment, required Widget child, double? widthFactor, double? heightFactor})
   AlignTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<AlignmentGeometry> alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<AlignmentGeometry> alignment} , defaultValue:none
     required Animation<AlignmentGeometry> alignment,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , defaultValue:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , defaultValue:none
     double? heightFactor,
   }) : super(
           key: key,
@@ -394,11 +394,11 @@ class AlignTransition$Mate extends AlignTransition with Mate {
           widthFactor: p.get('widthFactor').build(),
           heightFactor: p.get('heightFactor').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('child', child);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
+    mateDeclare('key', key);
+    mateDeclare('alignment', alignment);
+    mateDeclare('child', child);
+    mateDeclare('widthFactor', widthFactor);
+    mateDeclare('heightFactor', heightFactor);
   }
 }
 
@@ -406,25 +406,25 @@ class AlignTransition$Mate extends AlignTransition with Mate {
 class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Mate {
   /// DefaultTextStyleTransition DefaultTextStyleTransition({Key? key, required Animation<TextStyle> style, required Widget child, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines})
   DefaultTextStyleTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Animation<TextStyle> style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<TextStyle> style} , defaultValue:none
     required Animation<TextStyle> style,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , defaultValue:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {bool softWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool softWrap,
+    /// optionalParameters: {bool softWrap = true} , defaultValue:Literal
+    bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , hasDefaultValue:true, defaultValueCode:TextOverflow.clip
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:unprocessed
     required TextOverflow overflow,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , defaultValue:none
     int? maxLines,
   }) : super(
           key: key,
@@ -444,13 +444,13 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Ma
           overflow: p.get('overflow').build(),
           maxLines: p.get('maxLines').build(),
         );
-    matePut('key', key);
-    matePut('style', style);
-    matePut('child', child);
-    matePut('textAlign', textAlign);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('maxLines', maxLines);
+    mateDeclare('key', key);
+    mateDeclare('style', style);
+    mateDeclare('child', child);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('softWrap', softWrap);
+    mateDeclare('overflow', overflow);
+    mateDeclare('maxLines', maxLines);
   }
 }
 
@@ -458,16 +458,16 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Ma
 class ListenableBuilder$Mate extends ListenableBuilder with Mate {
   /// ListenableBuilder ListenableBuilder({Key? key, required Listenable listenable, required Widget Function(BuildContext, Widget?) builder, Widget? child})
   ListenableBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Listenable listenable} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Listenable listenable} , defaultValue:none
     required Listenable listenable,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Widget?) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Widget?) builder} , defaultValue:none
     required TransitionBuilder builder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -481,10 +481,10 @@ class ListenableBuilder$Mate extends ListenableBuilder with Mate {
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('listenable', listenable);
-    matePut('builder', builder);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('listenable', listenable);
+    mateDeclare('builder', builder);
+    mateDeclare('child', child);
   }
 }
 
@@ -492,16 +492,16 @@ class ListenableBuilder$Mate extends ListenableBuilder with Mate {
 class AnimatedBuilder$Mate extends AnimatedBuilder with Mate {
   /// AnimatedBuilder AnimatedBuilder({Key? key, required Listenable animation, required Widget Function(BuildContext, Widget?) builder, Widget? child})
   AnimatedBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Listenable animation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Listenable animation} , defaultValue:none
     required Listenable animation,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Widget?) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Widget?) builder} , defaultValue:none
     required TransitionBuilder builder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -515,9 +515,9 @@ class AnimatedBuilder$Mate extends AnimatedBuilder with Mate {
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('animation', animation);
-    matePut('builder', builder);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('animation', animation);
+    mateDeclare('builder', builder);
+    mateDeclare('child', child);
   }
 }

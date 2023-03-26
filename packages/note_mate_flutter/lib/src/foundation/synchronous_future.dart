@@ -12,6 +12,6 @@ class SynchronousFuture$Mate<T> extends SynchronousFuture<T> with Mate {
       T _value)
       : super(_value) {
     mateBuilder = (p) => SynchronousFuture$Mate<T>(p.get('_value').value);
-    matePut('_value', _value);
+    mateDeclare('_value', _value);
   }
 }

@@ -16,22 +16,22 @@ import 'package:flutter/src/foundation/basic_types.dart';
 class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate {
   /// DropdownMenuEntry<T> DropdownMenuEntry({required T value, required String label, Widget? leadingIcon, Widget? trailingIcon, bool enabled = true, ButtonStyle? style})
   DropdownMenuEntry$Mate({
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , defaultValue:none
     required T value,
 
-    /// optionalParameters: {required String label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String label} , defaultValue:none
     required String label,
 
-    /// optionalParameters: {Widget? leadingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leadingIcon} , defaultValue:none
     Widget? leadingIcon,
 
-    /// optionalParameters: {Widget? trailingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailingIcon} , defaultValue:none
     Widget? trailingIcon,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    bool enabled = true,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
     ButtonStyle? style,
   }) : super(
           value: value,
@@ -49,12 +49,12 @@ class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate {
           enabled: p.get('enabled').build(),
           style: p.get('style').build(),
         );
-    matePut('value', value);
-    matePut('label', label);
-    matePut('leadingIcon', leadingIcon);
-    matePut('trailingIcon', trailingIcon);
-    matePut('enabled', enabled);
-    matePut('style', style);
+    mateDeclare('value', value);
+    mateDeclare('label', label);
+    mateDeclare('leadingIcon', leadingIcon);
+    mateDeclare('trailingIcon', trailingIcon);
+    mateDeclare('enabled', enabled);
+    mateDeclare('style', style);
   }
 }
 
@@ -62,61 +62,61 @@ class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate {
 class DropdownMenu$Mate<T> extends DropdownMenu<T> with Mate {
   /// DropdownMenu<T> DropdownMenu({Key? key, bool enabled = true, double? width, double? menuHeight, Widget? leadingIcon, Widget? trailingIcon, Widget? label, String? hintText, Widget? selectedTrailingIcon, bool enableFilter = false, bool enableSearch = true, TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle, TextEditingController? controller, T? initialSelection, void Function(T?)? onSelected, bool? requestFocusOnTap, required List<DropdownMenuEntry<T>> dropdownMenuEntries})
   DropdownMenu$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    bool enabled = true,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? menuHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? menuHeight} , defaultValue:none
     double? menuHeight,
 
-    /// optionalParameters: {Widget? leadingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leadingIcon} , defaultValue:none
     Widget? leadingIcon,
 
-    /// optionalParameters: {Widget? trailingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailingIcon} , defaultValue:none
     Widget? trailingIcon,
 
-    /// optionalParameters: {Widget? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? label} , defaultValue:none
     Widget? label,
 
-    /// optionalParameters: {String? hintText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? hintText} , defaultValue:none
     String? hintText,
 
-    /// optionalParameters: {Widget? selectedTrailingIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? selectedTrailingIcon} , defaultValue:none
     Widget? selectedTrailingIcon,
 
-    /// optionalParameters: {bool enableFilter = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool enableFilter,
+    /// optionalParameters: {bool enableFilter = false} , defaultValue:Literal
+    bool enableFilter = false,
 
-    /// optionalParameters: {bool enableSearch = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableSearch,
+    /// optionalParameters: {bool enableSearch = true} , defaultValue:Literal
+    bool enableSearch = true,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , defaultValue:none
     InputDecorationTheme? inputDecorationTheme,
 
-    /// optionalParameters: {MenuStyle? menuStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MenuStyle? menuStyle} , defaultValue:none
     MenuStyle? menuStyle,
 
-    /// optionalParameters: {TextEditingController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextEditingController? controller} , defaultValue:none
     TextEditingController? controller,
 
-    /// optionalParameters: {T? initialSelection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? initialSelection} , defaultValue:none
     T? initialSelection,
 
-    /// optionalParameters: {void Function(T?)? onSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(T?)? onSelected} , defaultValue:none
     ValueChanged<T?>? onSelected,
 
-    /// optionalParameters: {bool? requestFocusOnTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? requestFocusOnTap} , defaultValue:none
     bool? requestFocusOnTap,
 
-    /// optionalParameters: {required List<DropdownMenuEntry<T>> dropdownMenuEntries} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<DropdownMenuEntry<T>> dropdownMenuEntries} , defaultValue:none
     required List<DropdownMenuEntry<T>> dropdownMenuEntries,
   }) : super(
           key: key,
@@ -160,24 +160,24 @@ class DropdownMenu$Mate<T> extends DropdownMenu<T> with Mate {
           requestFocusOnTap: p.get('requestFocusOnTap').build(),
           dropdownMenuEntries: p.get('dropdownMenuEntries').build(),
         );
-    matePut('key', key);
-    matePut('enabled', enabled);
-    matePut('width', width);
-    matePut('menuHeight', menuHeight);
-    matePut('leadingIcon', leadingIcon);
-    matePut('trailingIcon', trailingIcon);
-    matePut('label', label);
-    matePut('hintText', hintText);
-    matePut('selectedTrailingIcon', selectedTrailingIcon);
-    matePut('enableFilter', enableFilter);
-    matePut('enableSearch', enableSearch);
-    matePut('textStyle', textStyle);
-    matePut('inputDecorationTheme', inputDecorationTheme);
-    matePut('menuStyle', menuStyle);
-    matePut('controller', controller);
-    matePut('initialSelection', initialSelection);
-    matePut('onSelected', onSelected);
-    matePut('requestFocusOnTap', requestFocusOnTap);
-    matePut('dropdownMenuEntries', dropdownMenuEntries);
+    mateDeclare('key', key);
+    mateDeclare('enabled', enabled);
+    mateDeclare('width', width);
+    mateDeclare('menuHeight', menuHeight);
+    mateDeclare('leadingIcon', leadingIcon);
+    mateDeclare('trailingIcon', trailingIcon);
+    mateDeclare('label', label);
+    mateDeclare('hintText', hintText);
+    mateDeclare('selectedTrailingIcon', selectedTrailingIcon);
+    mateDeclare('enableFilter', enableFilter);
+    mateDeclare('enableSearch', enableSearch);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('inputDecorationTheme', inputDecorationTheme);
+    mateDeclare('menuStyle', menuStyle);
+    mateDeclare('controller', controller);
+    mateDeclare('initialSelection', initialSelection);
+    mateDeclare('onSelected', onSelected);
+    mateDeclare('requestFocusOnTap', requestFocusOnTap);
+    mateDeclare('dropdownMenuEntries', dropdownMenuEntries);
   }
 }

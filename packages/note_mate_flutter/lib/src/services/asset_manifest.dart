@@ -8,13 +8,13 @@ import 'dart:core';
 class AssetMetadata$Mate extends AssetMetadata with Mate {
   /// AssetMetadata AssetMetadata({required String key, required double? targetDevicePixelRatio, required bool main})
   AssetMetadata$Mate({
-    /// optionalParameters: {required String key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String key} , defaultValue:none
     required String key,
 
-    /// optionalParameters: {required double? targetDevicePixelRatio} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? targetDevicePixelRatio} , defaultValue:none
     required double? targetDevicePixelRatio,
 
-    /// optionalParameters: {required bool main} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool main} , defaultValue:none
     required bool main,
   }) : super(
           key: key,
@@ -26,8 +26,8 @@ class AssetMetadata$Mate extends AssetMetadata with Mate {
           targetDevicePixelRatio: p.get('targetDevicePixelRatio').build(),
           main: p.get('main').build(),
         );
-    matePut('key', key);
-    matePut('targetDevicePixelRatio', targetDevicePixelRatio);
-    matePut('main', main);
+    mateDeclare('key', key);
+    mateDeclare('targetDevicePixelRatio', targetDevicePixelRatio);
+    mateDeclare('main', main);
   }
 }

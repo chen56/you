@@ -14,28 +14,28 @@ import 'package:flutter/src/painting/gradient.dart';
 class BoxDecoration$Mate extends BoxDecoration with Mate {
   /// BoxDecoration BoxDecoration({Color? color, DecorationImage? image, BoxBorder? border, BorderRadiusGeometry? borderRadius, List<BoxShadow>? boxShadow, Gradient? gradient, BlendMode? backgroundBlendMode, BoxShape shape = BoxShape.rectangle})
   BoxDecoration$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {DecorationImage? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DecorationImage? image} , defaultValue:none
     DecorationImage? image,
 
-    /// optionalParameters: {BoxBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxBorder? border} , defaultValue:none
     BoxBorder? border,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadiusGeometry? borderRadius} , defaultValue:none
     BorderRadiusGeometry? borderRadius,
 
-    /// optionalParameters: {List<BoxShadow>? boxShadow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<BoxShadow>? boxShadow} , defaultValue:none
     List<BoxShadow>? boxShadow,
 
-    /// optionalParameters: {Gradient? gradient} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Gradient? gradient} , defaultValue:none
     Gradient? gradient,
 
-    /// optionalParameters: {BlendMode? backgroundBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? backgroundBlendMode} , defaultValue:none
     BlendMode? backgroundBlendMode,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , hasDefaultValue:true, defaultValueCode:BoxShape.rectangle
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:unprocessed
     required BoxShape shape,
   }) : super(
           color: color,
@@ -57,13 +57,13 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
           backgroundBlendMode: p.get('backgroundBlendMode').build(),
           shape: p.get('shape').build(),
         );
-    matePut('color', color);
-    matePut('image', image);
-    matePut('border', border);
-    matePut('borderRadius', borderRadius);
-    matePut('boxShadow', boxShadow);
-    matePut('gradient', gradient);
-    matePut('backgroundBlendMode', backgroundBlendMode);
-    matePut('shape', shape);
+    mateDeclare('color', color);
+    mateDeclare('image', image);
+    mateDeclare('border', border);
+    mateDeclare('borderRadius', borderRadius);
+    mateDeclare('boxShadow', boxShadow);
+    mateDeclare('gradient', gradient);
+    mateDeclare('backgroundBlendMode', backgroundBlendMode);
+    mateDeclare('shape', shape);
   }
 }

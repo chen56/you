@@ -9,10 +9,10 @@ class SpellCheckSuggestionsToolbarLayoutDelegate$Mate extends SpellCheckSuggesti
   /// SpellCheckSuggestionsToolbarLayoutDelegate SpellCheckSuggestionsToolbarLayoutDelegate({required Offset anchor})
   SpellCheckSuggestionsToolbarLayoutDelegate$Mate(
       {
-      /// optionalParameters: {required Offset anchor} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required Offset anchor} , defaultValue:none
       required Offset anchor})
       : super(anchor: anchor) {
     mateBuilder = (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
-    matePut('anchor', anchor);
+    mateDeclare('anchor', anchor);
   }
 }

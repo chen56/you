@@ -19,55 +19,55 @@ import 'package:flutter/src/rendering/sliver_grid.dart';
 class CustomScrollView$Mate extends CustomScrollView with Mate {
   /// CustomScrollView CustomScrollView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, ScrollBehavior? scrollBehavior, bool shrinkWrap = false, Key? center, double anchor = 0.0, double? cacheExtent, List<Widget> slivers = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   CustomScrollView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
     ScrollBehavior? scrollBehavior,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {Key? center} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? center} , defaultValue:none
     Key? center,
 
-    /// optionalParameters: {double anchor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double anchor,
+    /// optionalParameters: {double anchor = 0.0} , defaultValue:Literal
+    double anchor = 0.0,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> slivers,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -107,23 +107,23 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('scrollBehavior', scrollBehavior);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('center', center);
-    matePut('anchor', anchor);
-    matePut('cacheExtent', cacheExtent);
-    matePut('slivers', slivers);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('scrollBehavior', scrollBehavior);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('center', center);
+    mateDeclare('anchor', anchor);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('slivers', slivers);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -131,64 +131,64 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
 class ListView$Mate extends ListView with Mate {
   /// ListView ListView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {double? itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? itemExtent} , defaultValue:none
     double? itemExtent,
 
-    /// optionalParameters: {Widget? prototypeItem} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prototypeItem} , defaultValue:none
     Widget? prototypeItem,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addAutomaticKeepAlives,
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addRepaintBoundaries,
+    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addSemanticIndexes,
+    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    bool addSemanticIndexes = true,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -234,94 +234,94 @@ class ListView$Mate extends ListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('itemExtent', itemExtent);
-    matePut('prototypeItem', prototypeItem);
-    matePut('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    matePut('addRepaintBoundaries', addRepaintBoundaries);
-    matePut('addSemanticIndexes', addSemanticIndexes);
-    matePut('cacheExtent', cacheExtent);
-    matePut('children', children);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('itemExtent', itemExtent);
+    mateDeclare('prototypeItem', prototypeItem);
+    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
+    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('children', children);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate.builder({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {double? itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? itemExtent} , defaultValue:none
     double? itemExtent,
 
-    /// optionalParameters: {Widget? prototypeItem} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prototypeItem} , defaultValue:none
     Widget? prototypeItem,
 
-    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , defaultValue:none
     required NullableIndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , defaultValue:none
     ChildIndexGetter? findChildIndexCallback,
 
-    /// optionalParameters: {int? itemCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? itemCount} , defaultValue:none
     int? itemCount,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addAutomaticKeepAlives,
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addRepaintBoundaries,
+    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addSemanticIndexes,
+    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    bool addSemanticIndexes = true,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.builder(
           key: key,
@@ -371,90 +371,90 @@ class ListView$Mate extends ListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('itemExtent', itemExtent);
-    matePut('prototypeItem', prototypeItem);
-    matePut('itemBuilder', itemBuilder);
-    matePut('findChildIndexCallback', findChildIndexCallback);
-    matePut('itemCount', itemCount);
-    matePut('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    matePut('addRepaintBoundaries', addRepaintBoundaries);
-    matePut('addSemanticIndexes', addSemanticIndexes);
-    matePut('cacheExtent', cacheExtent);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('itemExtent', itemExtent);
+    mateDeclare('prototypeItem', prototypeItem);
+    mateDeclare('itemBuilder', itemBuilder);
+    mateDeclare('findChildIndexCallback', findChildIndexCallback);
+    mateDeclare('itemCount', itemCount);
+    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
+    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.separated({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required Widget Function(BuildContext, int) separatorBuilder, required int itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate.separated({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , defaultValue:none
     required NullableIndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , defaultValue:none
     ChildIndexGetter? findChildIndexCallback,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int) separatorBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, int) separatorBuilder} , defaultValue:none
     required IndexedWidgetBuilder separatorBuilder,
 
-    /// optionalParameters: {required int itemCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int itemCount} , defaultValue:none
     required int itemCount,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addAutomaticKeepAlives,
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addRepaintBoundaries,
+    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addSemanticIndexes,
+    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    bool addSemanticIndexes = true,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.separated(
           key: key,
@@ -500,79 +500,79 @@ class ListView$Mate extends ListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('itemBuilder', itemBuilder);
-    matePut('findChildIndexCallback', findChildIndexCallback);
-    matePut('separatorBuilder', separatorBuilder);
-    matePut('itemCount', itemCount);
-    matePut('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    matePut('addRepaintBoundaries', addRepaintBoundaries);
-    matePut('addSemanticIndexes', addSemanticIndexes);
-    matePut('cacheExtent', cacheExtent);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('itemBuilder', itemBuilder);
+    mateDeclare('findChildIndexCallback', findChildIndexCallback);
+    mateDeclare('separatorBuilder', separatorBuilder);
+    mateDeclare('itemCount', itemCount);
+    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
+    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 
   /// ListView ListView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate.custom({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {double? itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? itemExtent} , defaultValue:none
     double? itemExtent,
 
-    /// optionalParameters: {Widget? prototypeItem} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prototypeItem} , defaultValue:none
     Widget? prototypeItem,
 
-    /// optionalParameters: {required SliverChildDelegate childrenDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliverChildDelegate childrenDelegate} , defaultValue:none
     required SliverChildDelegate childrenDelegate,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.custom(
           key: key,
@@ -612,23 +612,23 @@ class ListView$Mate extends ListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('itemExtent', itemExtent);
-    matePut('prototypeItem', prototypeItem);
-    matePut('childrenDelegate', childrenDelegate);
-    matePut('cacheExtent', cacheExtent);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('itemExtent', itemExtent);
+    mateDeclare('prototypeItem', prototypeItem);
+    mateDeclare('childrenDelegate', childrenDelegate);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }
 
@@ -636,61 +636,61 @@ class ListView$Mate extends ListView with Mate {
 class GridView$Mate extends GridView with Mate {
   /// GridView GridView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Clip clipBehavior = Clip.hardEdge, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId})
   GridView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {required SliverGridDelegate gridDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliverGridDelegate gridDelegate} , defaultValue:none
     required SliverGridDelegate gridDelegate,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addAutomaticKeepAlives,
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addRepaintBoundaries,
+    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addSemanticIndexes,
+    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    bool addSemanticIndexes = true,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
   }) : super(
           key: key,
@@ -734,90 +734,90 @@ class GridView$Mate extends GridView with Mate {
           keyboardDismissBehavior: p.get('keyboardDismissBehavior').build(),
           restorationId: p.get('restorationId').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('gridDelegate', gridDelegate);
-    matePut('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    matePut('addRepaintBoundaries', addRepaintBoundaries);
-    matePut('addSemanticIndexes', addSemanticIndexes);
-    matePut('cacheExtent', cacheExtent);
-    matePut('children', children);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('clipBehavior', clipBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('gridDelegate', gridDelegate);
+    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
+    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('children', children);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
   }
 
   /// GridView GridView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   GridView$Mate.builder({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {required SliverGridDelegate gridDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliverGridDelegate gridDelegate} , defaultValue:none
     required SliverGridDelegate gridDelegate,
 
-    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , defaultValue:none
     required NullableIndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , defaultValue:none
     ChildIndexGetter? findChildIndexCallback,
 
-    /// optionalParameters: {int? itemCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? itemCount} , defaultValue:none
     int? itemCount,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addAutomaticKeepAlives,
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addRepaintBoundaries,
+    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addSemanticIndexes,
+    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    bool addSemanticIndexes = true,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.builder(
           key: key,
@@ -865,77 +865,77 @@ class GridView$Mate extends GridView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('gridDelegate', gridDelegate);
-    matePut('itemBuilder', itemBuilder);
-    matePut('findChildIndexCallback', findChildIndexCallback);
-    matePut('itemCount', itemCount);
-    matePut('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    matePut('addRepaintBoundaries', addRepaintBoundaries);
-    matePut('addSemanticIndexes', addSemanticIndexes);
-    matePut('cacheExtent', cacheExtent);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('gridDelegate', gridDelegate);
+    mateDeclare('itemBuilder', itemBuilder);
+    mateDeclare('findChildIndexCallback', findChildIndexCallback);
+    mateDeclare('itemCount', itemCount);
+    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
+    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   GridView$Mate.custom({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {required SliverGridDelegate gridDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliverGridDelegate gridDelegate} , defaultValue:none
     required SliverGridDelegate gridDelegate,
 
-    /// optionalParameters: {required SliverChildDelegate childrenDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliverChildDelegate childrenDelegate} , defaultValue:none
     required SliverChildDelegate childrenDelegate,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.custom(
           key: key,
@@ -973,90 +973,90 @@ class GridView$Mate extends GridView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('gridDelegate', gridDelegate);
-    matePut('childrenDelegate', childrenDelegate);
-    matePut('cacheExtent', cacheExtent);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('gridDelegate', gridDelegate);
+    mateDeclare('childrenDelegate', childrenDelegate);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.count({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required int crossAxisCount, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   GridView$Mate.count({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {required int crossAxisCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int crossAxisCount} , defaultValue:none
     required int crossAxisCount,
 
-    /// optionalParameters: {double mainAxisSpacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double mainAxisSpacing,
+    /// optionalParameters: {double mainAxisSpacing = 0.0} , defaultValue:Literal
+    double mainAxisSpacing = 0.0,
 
-    /// optionalParameters: {double crossAxisSpacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double crossAxisSpacing,
+    /// optionalParameters: {double crossAxisSpacing = 0.0} , defaultValue:Literal
+    double crossAxisSpacing = 0.0,
 
-    /// optionalParameters: {double childAspectRatio = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double childAspectRatio,
+    /// optionalParameters: {double childAspectRatio = 1.0} , defaultValue:Literal
+    double childAspectRatio = 1.0,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addAutomaticKeepAlives,
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addRepaintBoundaries,
+    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addSemanticIndexes,
+    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    bool addSemanticIndexes = true,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.count(
           key: key,
@@ -1106,96 +1106,96 @@ class GridView$Mate extends GridView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('crossAxisCount', crossAxisCount);
-    matePut('mainAxisSpacing', mainAxisSpacing);
-    matePut('crossAxisSpacing', crossAxisSpacing);
-    matePut('childAspectRatio', childAspectRatio);
-    matePut('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    matePut('addRepaintBoundaries', addRepaintBoundaries);
-    matePut('addSemanticIndexes', addSemanticIndexes);
-    matePut('cacheExtent', cacheExtent);
-    matePut('children', children);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('crossAxisCount', crossAxisCount);
+    mateDeclare('mainAxisSpacing', mainAxisSpacing);
+    mateDeclare('crossAxisSpacing', crossAxisSpacing);
+    mateDeclare('childAspectRatio', childAspectRatio);
+    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
+    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('children', children);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 
   /// GridView GridView.extent({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   GridView$Mate.extent({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {required double maxCrossAxisExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double maxCrossAxisExtent} , defaultValue:none
     required double maxCrossAxisExtent,
 
-    /// optionalParameters: {double mainAxisSpacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double mainAxisSpacing,
+    /// optionalParameters: {double mainAxisSpacing = 0.0} , defaultValue:Literal
+    double mainAxisSpacing = 0.0,
 
-    /// optionalParameters: {double crossAxisSpacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double crossAxisSpacing,
+    /// optionalParameters: {double crossAxisSpacing = 0.0} , defaultValue:Literal
+    double crossAxisSpacing = 0.0,
 
-    /// optionalParameters: {double childAspectRatio = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double childAspectRatio,
+    /// optionalParameters: {double childAspectRatio = 1.0} , defaultValue:Literal
+    double childAspectRatio = 1.0,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addAutomaticKeepAlives,
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addRepaintBoundaries,
+    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addSemanticIndexes,
+    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    bool addSemanticIndexes = true,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super.extent(
           key: key,
@@ -1245,27 +1245,27 @@ class GridView$Mate extends GridView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('controller', controller);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('padding', padding);
-    matePut('maxCrossAxisExtent', maxCrossAxisExtent);
-    matePut('mainAxisSpacing', mainAxisSpacing);
-    matePut('crossAxisSpacing', crossAxisSpacing);
-    matePut('childAspectRatio', childAspectRatio);
-    matePut('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    matePut('addRepaintBoundaries', addRepaintBoundaries);
-    matePut('addSemanticIndexes', addSemanticIndexes);
-    matePut('cacheExtent', cacheExtent);
-    matePut('children', children);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('controller', controller);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('shrinkWrap', shrinkWrap);
+    mateDeclare('padding', padding);
+    mateDeclare('maxCrossAxisExtent', maxCrossAxisExtent);
+    mateDeclare('mainAxisSpacing', mainAxisSpacing);
+    mateDeclare('crossAxisSpacing', crossAxisSpacing);
+    mateDeclare('childAspectRatio', childAspectRatio);
+    mateDeclare('addAutomaticKeepAlives', addAutomaticKeepAlives);
+    mateDeclare('addRepaintBoundaries', addRepaintBoundaries);
+    mateDeclare('addSemanticIndexes', addSemanticIndexes);
+    mateDeclare('cacheExtent', cacheExtent);
+    mateDeclare('children', children);
+    mateDeclare('semanticChildCount', semanticChildCount);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }

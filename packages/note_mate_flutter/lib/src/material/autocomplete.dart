@@ -11,28 +11,28 @@ import 'package:flutter/src/services/text_input.dart';
 class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
   /// Autocomplete<T> Autocomplete({Key? key, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder, void Function(T)? onSelected, double optionsMaxHeight = 200.0, Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder, TextEditingValue? initialValue})
   Autocomplete$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , defaultValue:none
     required AutocompleteOptionsBuilder<T> optionsBuilder,
 
-    /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , hasDefaultValue:true, defaultValueCode:RawAutocomplete.defaultStringForOption
+    /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , defaultValue:unprocessed
     required AutocompleteOptionToString<T> displayStringForOption,
 
-    /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , hasDefaultValue:true, defaultValueCode:_defaultFieldViewBuilder
+    /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , defaultValue:unprocessed
     required AutocompleteFieldViewBuilder fieldViewBuilder,
 
-    /// optionalParameters: {void Function(T)? onSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(T)? onSelected} , defaultValue:none
     AutocompleteOnSelected<T>? onSelected,
 
-    /// optionalParameters: {double optionsMaxHeight = 200.0} , hasDefaultValue:true, defaultValueCode:200.0
-    required double optionsMaxHeight,
+    /// optionalParameters: {double optionsMaxHeight = 200.0} , defaultValue:Literal
+    double optionsMaxHeight = 200.0,
 
-    /// optionalParameters: {Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder} , defaultValue:none
     AutocompleteOptionsViewBuilder<T>? optionsViewBuilder,
 
-    /// optionalParameters: {TextEditingValue? initialValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextEditingValue? initialValue} , defaultValue:none
     TextEditingValue? initialValue,
   }) : super(
           key: key,
@@ -54,13 +54,13 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
           initialValue: p.get('initialValue').build(),
         );
-    matePut('key', key);
-    matePut('optionsBuilder', optionsBuilder);
-    matePut('displayStringForOption', displayStringForOption);
-    matePut('fieldViewBuilder', fieldViewBuilder);
-    matePut('onSelected', onSelected);
-    matePut('optionsMaxHeight', optionsMaxHeight);
-    matePut('optionsViewBuilder', optionsViewBuilder);
-    matePut('initialValue', initialValue);
+    mateDeclare('key', key);
+    mateDeclare('optionsBuilder', optionsBuilder);
+    mateDeclare('displayStringForOption', displayStringForOption);
+    mateDeclare('fieldViewBuilder', fieldViewBuilder);
+    mateDeclare('onSelected', onSelected);
+    mateDeclare('optionsMaxHeight', optionsMaxHeight);
+    mateDeclare('optionsViewBuilder', optionsViewBuilder);
+    mateDeclare('initialValue', initialValue);
   }
 }

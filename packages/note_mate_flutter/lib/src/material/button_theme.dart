@@ -15,55 +15,55 @@ import 'package:flutter/src/widgets/framework.dart';
 class ButtonTheme$Mate extends ButtonTheme with Mate {
   /// ButtonTheme ButtonTheme({Key? key, ButtonTextTheme textTheme = ButtonTextTheme.normal, ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded, double minWidth = 88.0, double height = 36.0, EdgeInsetsGeometry? padding, ShapeBorder? shape, bool alignedDropdown = false, Color? buttonColor, Color? disabledColor, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, ColorScheme? colorScheme, MaterialTapTargetSize? materialTapTargetSize, required Widget child})
   ButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , hasDefaultValue:true, defaultValueCode:ButtonTextTheme.normal
+    /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , defaultValue:unprocessed
     required ButtonTextTheme textTheme,
 
-    /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , hasDefaultValue:true, defaultValueCode:ButtonBarLayoutBehavior.padded
+    /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , defaultValue:unprocessed
     required ButtonBarLayoutBehavior layoutBehavior,
 
-    /// optionalParameters: {double minWidth = 88.0} , hasDefaultValue:true, defaultValueCode:88.0
-    required double minWidth,
+    /// optionalParameters: {double minWidth = 88.0} , defaultValue:Literal
+    double minWidth = 88.0,
 
-    /// optionalParameters: {double height = 36.0} , hasDefaultValue:true, defaultValueCode:36.0
-    required double height,
+    /// optionalParameters: {double height = 36.0} , defaultValue:Literal
+    double height = 36.0,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {bool alignedDropdown = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alignedDropdown,
+    /// optionalParameters: {bool alignedDropdown = false} , defaultValue:Literal
+    bool alignedDropdown = false,
 
-    /// optionalParameters: {Color? buttonColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? buttonColor} , defaultValue:none
     Color? buttonColor,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , defaultValue:none
     Color? highlightColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , defaultValue:none
     Color? splashColor,
 
-    /// optionalParameters: {ColorScheme? colorScheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ColorScheme? colorScheme} , defaultValue:none
     ColorScheme? colorScheme,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -103,34 +103,34 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('textTheme', textTheme);
-    matePut('layoutBehavior', layoutBehavior);
-    matePut('minWidth', minWidth);
-    matePut('height', height);
-    matePut('padding', padding);
-    matePut('shape', shape);
-    matePut('alignedDropdown', alignedDropdown);
-    matePut('buttonColor', buttonColor);
-    matePut('disabledColor', disabledColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('highlightColor', highlightColor);
-    matePut('splashColor', splashColor);
-    matePut('colorScheme', colorScheme);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('textTheme', textTheme);
+    mateDeclare('layoutBehavior', layoutBehavior);
+    mateDeclare('minWidth', minWidth);
+    mateDeclare('height', height);
+    mateDeclare('padding', padding);
+    mateDeclare('shape', shape);
+    mateDeclare('alignedDropdown', alignedDropdown);
+    mateDeclare('buttonColor', buttonColor);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('highlightColor', highlightColor);
+    mateDeclare('splashColor', splashColor);
+    mateDeclare('colorScheme', colorScheme);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('child', child);
   }
 
   /// ButtonTheme ButtonTheme.fromButtonThemeData({Key? key, required ButtonThemeData data, required Widget child})
   ButtonTheme$Mate.fromButtonThemeData({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ButtonThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ButtonThemeData data} , defaultValue:none
     required ButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super.fromButtonThemeData(
           key: key,
@@ -142,9 +142,9 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }
 
@@ -152,49 +152,49 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
 class ButtonThemeData$Mate extends ButtonThemeData with Mate {
   /// ButtonThemeData ButtonThemeData({ButtonTextTheme textTheme = ButtonTextTheme.normal, double minWidth = 88.0, double height = 36.0, EdgeInsetsGeometry? padding, ShapeBorder? shape, ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded, bool alignedDropdown = false, Color? buttonColor, Color? disabledColor, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, ColorScheme? colorScheme, MaterialTapTargetSize? materialTapTargetSize})
   ButtonThemeData$Mate({
-    /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , hasDefaultValue:true, defaultValueCode:ButtonTextTheme.normal
+    /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , defaultValue:unprocessed
     required ButtonTextTheme textTheme,
 
-    /// optionalParameters: {double minWidth = 88.0} , hasDefaultValue:true, defaultValueCode:88.0
-    required double minWidth,
+    /// optionalParameters: {double minWidth = 88.0} , defaultValue:Literal
+    double minWidth = 88.0,
 
-    /// optionalParameters: {double height = 36.0} , hasDefaultValue:true, defaultValueCode:36.0
-    required double height,
+    /// optionalParameters: {double height = 36.0} , defaultValue:Literal
+    double height = 36.0,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , hasDefaultValue:true, defaultValueCode:ButtonBarLayoutBehavior.padded
+    /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , defaultValue:unprocessed
     required ButtonBarLayoutBehavior layoutBehavior,
 
-    /// optionalParameters: {bool alignedDropdown = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alignedDropdown,
+    /// optionalParameters: {bool alignedDropdown = false} , defaultValue:Literal
+    bool alignedDropdown = false,
 
-    /// optionalParameters: {Color? buttonColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? buttonColor} , defaultValue:none
     Color? buttonColor,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , defaultValue:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , defaultValue:none
     Color? highlightColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , defaultValue:none
     Color? splashColor,
 
-    /// optionalParameters: {ColorScheme? colorScheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ColorScheme? colorScheme} , defaultValue:none
     ColorScheme? colorScheme,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
   }) : super(
           textTheme: textTheme,
@@ -230,20 +230,20 @@ class ButtonThemeData$Mate extends ButtonThemeData with Mate {
           colorScheme: p.get('colorScheme').build(),
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
         );
-    matePut('textTheme', textTheme);
-    matePut('minWidth', minWidth);
-    matePut('height', height);
-    matePut('padding', padding);
-    matePut('shape', shape);
-    matePut('layoutBehavior', layoutBehavior);
-    matePut('alignedDropdown', alignedDropdown);
-    matePut('buttonColor', buttonColor);
-    matePut('disabledColor', disabledColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('highlightColor', highlightColor);
-    matePut('splashColor', splashColor);
-    matePut('colorScheme', colorScheme);
-    matePut('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('textTheme', textTheme);
+    mateDeclare('minWidth', minWidth);
+    mateDeclare('height', height);
+    mateDeclare('padding', padding);
+    mateDeclare('shape', shape);
+    mateDeclare('layoutBehavior', layoutBehavior);
+    mateDeclare('alignedDropdown', alignedDropdown);
+    mateDeclare('buttonColor', buttonColor);
+    mateDeclare('disabledColor', disabledColor);
+    mateDeclare('focusColor', focusColor);
+    mateDeclare('hoverColor', hoverColor);
+    mateDeclare('highlightColor', highlightColor);
+    mateDeclare('splashColor', splashColor);
+    mateDeclare('colorScheme', colorScheme);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
   }
 }

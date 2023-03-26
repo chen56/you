@@ -16,7 +16,7 @@ class NumericFocusOrder$Mate extends NumericFocusOrder with Mate {
       double order)
       : super(order) {
     mateBuilder = (p) => NumericFocusOrder$Mate(p.get('order').value);
-    matePut('order', order);
+    mateDeclare('order', order);
   }
 }
 
@@ -29,7 +29,7 @@ class LexicalFocusOrder$Mate extends LexicalFocusOrder with Mate {
       String order)
       : super(order) {
     mateBuilder = (p) => LexicalFocusOrder$Mate(p.get('order').value);
-    matePut('order', order);
+    mateDeclare('order', order);
   }
 }
 
@@ -38,11 +38,11 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
   /// OrderedTraversalPolicy OrderedTraversalPolicy({FocusTraversalPolicy? secondary})
   OrderedTraversalPolicy$Mate(
       {
-      /// optionalParameters: {FocusTraversalPolicy? secondary} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {FocusTraversalPolicy? secondary} , defaultValue:none
       FocusTraversalPolicy? secondary})
       : super(secondary: secondary) {
     mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
-    matePut('secondary', secondary);
+    mateDeclare('secondary', secondary);
   }
 }
 
@@ -50,13 +50,13 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
 class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
   /// FocusTraversalOrder FocusTraversalOrder({Key? key, required FocusOrder order, required Widget child})
   FocusTraversalOrder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required FocusOrder order} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FocusOrder order} , defaultValue:none
     required FocusOrder order,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -68,9 +68,9 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
           order: p.get('order').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('order', order);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('order', order);
+    mateDeclare('child', child);
   }
 }
 
@@ -78,19 +78,19 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
 class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
   /// FocusTraversalGroup FocusTraversalGroup({Key? key, FocusTraversalPolicy? policy, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true, required Widget child})
   FocusTraversalGroup$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {FocusTraversalPolicy? policy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusTraversalPolicy? policy} , defaultValue:none
     FocusTraversalPolicy? policy,
 
-    /// optionalParameters: {bool descendantsAreFocusable = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool descendantsAreFocusable,
+    /// optionalParameters: {bool descendantsAreFocusable = true} , defaultValue:Literal
+    bool descendantsAreFocusable = true,
 
-    /// optionalParameters: {bool descendantsAreTraversable = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool descendantsAreTraversable,
+    /// optionalParameters: {bool descendantsAreTraversable = true} , defaultValue:Literal
+    bool descendantsAreTraversable = true,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -106,11 +106,11 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
           descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('policy', policy);
-    matePut('descendantsAreFocusable', descendantsAreFocusable);
-    matePut('descendantsAreTraversable', descendantsAreTraversable);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('policy', policy);
+    mateDeclare('descendantsAreFocusable', descendantsAreFocusable);
+    mateDeclare('descendantsAreTraversable', descendantsAreTraversable);
+    mateDeclare('child', child);
   }
 }
 
@@ -123,7 +123,7 @@ class RequestFocusIntent$Mate extends RequestFocusIntent with Mate {
       FocusNode focusNode)
       : super(focusNode) {
     mateBuilder = (p) => RequestFocusIntent$Mate(p.get('focusNode').value);
-    matePut('focusNode', focusNode);
+    mateDeclare('focusNode', focusNode);
   }
 }
 
@@ -133,8 +133,8 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
   DirectionalFocusIntent$Mate(
     /// requiredParameters: TraversalDirection direction
     TraversalDirection direction, {
-    /// optionalParameters: {bool ignoreTextFields = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool ignoreTextFields,
+    /// optionalParameters: {bool ignoreTextFields = true} , defaultValue:Literal
+    bool ignoreTextFields = true,
   }) : super(
           direction,
           ignoreTextFields: ignoreTextFields,
@@ -143,8 +143,8 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
           p.get('direction').value,
           ignoreTextFields: p.get('ignoreTextFields').build(),
         );
-    matePut('direction', direction);
-    matePut('ignoreTextFields', ignoreTextFields);
+    mateDeclare('direction', direction);
+    mateDeclare('ignoreTextFields', ignoreTextFields);
   }
 }
 
@@ -152,13 +152,13 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
 class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate {
   /// ExcludeFocusTraversal ExcludeFocusTraversal({Key? key, bool excluding = true, required Widget child})
   ExcludeFocusTraversal$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool excluding = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool excluding,
+    /// optionalParameters: {bool excluding = true} , defaultValue:Literal
+    bool excluding = true,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -170,8 +170,8 @@ class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('excluding', excluding);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('excluding', excluding);
+    mateDeclare('child', child);
   }
 }

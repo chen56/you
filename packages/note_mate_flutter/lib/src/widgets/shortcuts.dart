@@ -37,10 +37,10 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
           p.get('key3').value,
           p.get('key4').value,
         );
-    matePut('key1', key1);
-    matePut('key2', key2);
-    matePut('key3', key3);
-    matePut('key4', key4);
+    mateDeclare('key1', key1);
+    mateDeclare('key2', key2);
+    mateDeclare('key3', key3);
+    mateDeclare('key4', key4);
   }
 
   /// KeySet<T> KeySet.fromSet(Set<T> keys)
@@ -50,7 +50,7 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
       Set<T> keys)
       : super.fromSet(keys) {
     mateBuilder = (p) => KeySet$Mate<T>.fromSet(p.get('keys').value);
-    matePut('keys', keys);
+    mateDeclare('keys', keys);
   }
 }
 
@@ -81,10 +81,10 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
           p.get('key3').value,
           p.get('key4').value,
         );
-    matePut('key1', key1);
-    matePut('key2', key2);
-    matePut('key3', key3);
-    matePut('key4', key4);
+    mateDeclare('key1', key1);
+    mateDeclare('key2', key2);
+    mateDeclare('key3', key3);
+    mateDeclare('key4', key4);
   }
 
   /// LogicalKeySet LogicalKeySet.fromSet(Set<LogicalKeyboardKey> keys)
@@ -94,7 +94,7 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
       Set<LogicalKeyboardKey> keys)
       : super.fromSet(keys) {
     mateBuilder = (p) => LogicalKeySet$Mate.fromSet(p.get('keys').value);
-    matePut('keys', keys);
+    mateDeclare('keys', keys);
   }
 }
 
@@ -107,16 +107,16 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
 
     /// requiredParameters: Map<ShortcutActivator, Intent> value
     Map<ShortcutActivator, Intent> value, {
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {Object defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
     required Object defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
 
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , defaultValue:none
     String? description,
   }) : super(
           name,
@@ -134,12 +134,12 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
           level: p.get('level').build(),
           description: p.get('description').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
-    matePut('description', description);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('showName', showName);
+    mateDeclare('defaultValue', defaultValue);
+    mateDeclare('level', level);
+    mateDeclare('description', description);
   }
 }
 
@@ -149,20 +149,20 @@ class SingleActivator$Mate extends SingleActivator with Mate {
   SingleActivator$Mate(
     /// requiredParameters: LogicalKeyboardKey trigger
     LogicalKeyboardKey trigger, {
-    /// optionalParameters: {bool control = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool control,
+    /// optionalParameters: {bool control = false} , defaultValue:Literal
+    bool control = false,
 
-    /// optionalParameters: {bool shift = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shift,
+    /// optionalParameters: {bool shift = false} , defaultValue:Literal
+    bool shift = false,
 
-    /// optionalParameters: {bool alt = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alt,
+    /// optionalParameters: {bool alt = false} , defaultValue:Literal
+    bool alt = false,
 
-    /// optionalParameters: {bool meta = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool meta,
+    /// optionalParameters: {bool meta = false} , defaultValue:Literal
+    bool meta = false,
 
-    /// optionalParameters: {bool includeRepeats = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool includeRepeats,
+    /// optionalParameters: {bool includeRepeats = true} , defaultValue:Literal
+    bool includeRepeats = true,
   }) : super(
           trigger,
           control: control,
@@ -179,12 +179,12 @@ class SingleActivator$Mate extends SingleActivator with Mate {
           meta: p.get('meta').build(),
           includeRepeats: p.get('includeRepeats').build(),
         );
-    matePut('trigger', trigger);
-    matePut('control', control);
-    matePut('shift', shift);
-    matePut('alt', alt);
-    matePut('meta', meta);
-    matePut('includeRepeats', includeRepeats);
+    mateDeclare('trigger', trigger);
+    mateDeclare('control', control);
+    mateDeclare('shift', shift);
+    mateDeclare('alt', alt);
+    mateDeclare('meta', meta);
+    mateDeclare('includeRepeats', includeRepeats);
   }
 }
 
@@ -194,17 +194,17 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
   CharacterActivator$Mate(
     /// requiredParameters: String character
     String character, {
-    /// optionalParameters: {bool alt = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alt,
+    /// optionalParameters: {bool alt = false} , defaultValue:Literal
+    bool alt = false,
 
-    /// optionalParameters: {bool control = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool control,
+    /// optionalParameters: {bool control = false} , defaultValue:Literal
+    bool control = false,
 
-    /// optionalParameters: {bool meta = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool meta,
+    /// optionalParameters: {bool meta = false} , defaultValue:Literal
+    bool meta = false,
 
-    /// optionalParameters: {bool includeRepeats = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool includeRepeats,
+    /// optionalParameters: {bool includeRepeats = true} , defaultValue:Literal
+    bool includeRepeats = true,
   }) : super(
           character,
           alt: alt,
@@ -219,11 +219,11 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
           meta: p.get('meta').build(),
           includeRepeats: p.get('includeRepeats').build(),
         );
-    matePut('character', character);
-    matePut('alt', alt);
-    matePut('control', control);
-    matePut('meta', meta);
-    matePut('includeRepeats', includeRepeats);
+    mateDeclare('character', character);
+    mateDeclare('alt', alt);
+    mateDeclare('control', control);
+    mateDeclare('meta', meta);
+    mateDeclare('includeRepeats', includeRepeats);
   }
 }
 
@@ -231,11 +231,11 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
 class ShortcutManager$Mate extends ShortcutManager with Mate {
   /// ShortcutManager ShortcutManager({Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}, bool modal = false})
   ShortcutManager$Mate({
-    /// optionalParameters: {Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}} , hasDefaultValue:true, defaultValueCode:const <ShortcutActivator, Intent>{}
+    /// optionalParameters: {Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}} , defaultValue:unprocessed
     required Map<ShortcutActivator, Intent> shortcuts,
 
-    /// optionalParameters: {bool modal = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool modal,
+    /// optionalParameters: {bool modal = false} , defaultValue:Literal
+    bool modal = false,
   }) : super(
           shortcuts: shortcuts,
           modal: modal,
@@ -244,8 +244,8 @@ class ShortcutManager$Mate extends ShortcutManager with Mate {
           shortcuts: p.get('shortcuts').build(),
           modal: p.get('modal').build(),
         );
-    matePut('shortcuts', shortcuts);
-    matePut('modal', modal);
+    mateDeclare('shortcuts', shortcuts);
+    mateDeclare('modal', modal);
   }
 }
 
@@ -253,16 +253,16 @@ class ShortcutManager$Mate extends ShortcutManager with Mate {
 class Shortcuts$Mate extends Shortcuts with Mate {
   /// Shortcuts Shortcuts({Key? key, required Map<ShortcutActivator, Intent> shortcuts, required Widget child, String? debugLabel})
   Shortcuts$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Map<ShortcutActivator, Intent> shortcuts} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<ShortcutActivator, Intent> shortcuts} , defaultValue:none
     required Map<ShortcutActivator, Intent> shortcuts,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
   }) : super(
           key: key,
@@ -276,24 +276,24 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: p.get('child').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('key', key);
-    matePut('shortcuts', shortcuts);
-    matePut('child', child);
-    matePut('debugLabel', debugLabel);
+    mateDeclare('key', key);
+    mateDeclare('shortcuts', shortcuts);
+    mateDeclare('child', child);
+    mateDeclare('debugLabel', debugLabel);
   }
 
   /// Shortcuts Shortcuts.manager({Key? key, required ShortcutManager manager, required Widget child, String? debugLabel})
   Shortcuts$Mate.manager({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required ShortcutManager manager} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ShortcutManager manager} , defaultValue:none
     required ShortcutManager manager,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
   }) : super.manager(
           key: key,
@@ -307,10 +307,10 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: p.get('child').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('key', key);
-    matePut('manager', manager);
-    matePut('child', child);
-    matePut('debugLabel', debugLabel);
+    mateDeclare('key', key);
+    mateDeclare('manager', manager);
+    mateDeclare('child', child);
+    mateDeclare('debugLabel', debugLabel);
   }
 }
 
@@ -318,13 +318,13 @@ class Shortcuts$Mate extends Shortcuts with Mate {
 class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
   /// CallbackShortcuts CallbackShortcuts({Key? key, required Map<ShortcutActivator, void Function()> bindings, required Widget child})
   CallbackShortcuts$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Map<ShortcutActivator, void Function()> bindings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<ShortcutActivator, void Function()> bindings} , defaultValue:none
     required Map<ShortcutActivator, VoidCallback> bindings,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -336,9 +336,9 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
           bindings: p.get('bindings').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('bindings', bindings);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('bindings', bindings);
+    mateDeclare('child', child);
   }
 }
 
@@ -346,10 +346,10 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
 class ShortcutRegistrar$Mate extends ShortcutRegistrar with Mate {
   /// ShortcutRegistrar ShortcutRegistrar({Key? key, required Widget child})
   ShortcutRegistrar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -359,7 +359,7 @@ class ShortcutRegistrar$Mate extends ShortcutRegistrar with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
   }
 }

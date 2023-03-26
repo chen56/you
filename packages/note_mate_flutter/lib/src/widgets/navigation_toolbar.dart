@@ -10,22 +10,22 @@ import 'dart:core';
 class NavigationToolbar$Mate extends NavigationToolbar with Mate {
   /// NavigationToolbar NavigationToolbar({Key? key, Widget? leading, Widget? middle, Widget? trailing, bool centerMiddle = true, double middleSpacing = kMiddleSpacing})
   NavigationToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , defaultValue:none
     Widget? leading,
 
-    /// optionalParameters: {Widget? middle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? middle} , defaultValue:none
     Widget? middle,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , defaultValue:none
     Widget? trailing,
 
-    /// optionalParameters: {bool centerMiddle = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool centerMiddle,
+    /// optionalParameters: {bool centerMiddle = true} , defaultValue:Literal
+    bool centerMiddle = true,
 
-    /// optionalParameters: {double middleSpacing = kMiddleSpacing} , hasDefaultValue:true, defaultValueCode:kMiddleSpacing
+    /// optionalParameters: {double middleSpacing = kMiddleSpacing} , defaultValue:unprocessed
     required double middleSpacing,
   }) : super(
           key: key,
@@ -43,11 +43,11 @@ class NavigationToolbar$Mate extends NavigationToolbar with Mate {
           centerMiddle: p.get('centerMiddle').build(),
           middleSpacing: p.get('middleSpacing').build(),
         );
-    matePut('key', key);
-    matePut('leading', leading);
-    matePut('middle', middle);
-    matePut('trailing', trailing);
-    matePut('centerMiddle', centerMiddle);
-    matePut('middleSpacing', middleSpacing);
+    mateDeclare('key', key);
+    mateDeclare('leading', leading);
+    mateDeclare('middle', middle);
+    mateDeclare('trailing', trailing);
+    mateDeclare('centerMiddle', centerMiddle);
+    mateDeclare('middleSpacing', middleSpacing);
   }
 }

@@ -11,11 +11,11 @@ import 'package:flutter/src/widgets/focus_traversal.dart';
 class LocalHistoryEntry$Mate extends LocalHistoryEntry with Mate {
   /// LocalHistoryEntry LocalHistoryEntry({void Function()? onRemove, bool impliesAppBarDismissal = true})
   LocalHistoryEntry$Mate({
-    /// optionalParameters: {void Function()? onRemove} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onRemove} , defaultValue:none
     VoidCallback? onRemove,
 
-    /// optionalParameters: {bool impliesAppBarDismissal = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool impliesAppBarDismissal,
+    /// optionalParameters: {bool impliesAppBarDismissal = true} , defaultValue:Literal
+    bool impliesAppBarDismissal = true,
   }) : super(
           onRemove: onRemove,
           impliesAppBarDismissal: impliesAppBarDismissal,
@@ -24,8 +24,8 @@ class LocalHistoryEntry$Mate extends LocalHistoryEntry with Mate {
           onRemove: p.get('onRemove').build(),
           impliesAppBarDismissal: p.get('impliesAppBarDismissal').build(),
         );
-    matePut('onRemove', onRemove);
-    matePut('impliesAppBarDismissal', impliesAppBarDismissal);
+    mateDeclare('onRemove', onRemove);
+    mateDeclare('impliesAppBarDismissal', impliesAppBarDismissal);
   }
 }
 
@@ -33,31 +33,31 @@ class LocalHistoryEntry$Mate extends LocalHistoryEntry with Mate {
 class RawDialogRoute$Mate<T> extends RawDialogRoute<T> with Mate {
   /// RawDialogRoute<T> RawDialogRoute({required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder, bool barrierDismissible = true, Color? barrierColor = const Color(0x80000000), String? barrierLabel, Duration transitionDuration = const Duration(milliseconds: 200), Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder, RouteSettings? settings, Offset? anchorPoint, TraversalEdgeBehavior? traversalEdgeBehavior})
   RawDialogRoute$Mate({
-    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder} , defaultValue:none
     required RoutePageBuilder pageBuilder,
 
-    /// optionalParameters: {bool barrierDismissible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool barrierDismissible,
+    /// optionalParameters: {bool barrierDismissible = true} , defaultValue:Literal
+    bool barrierDismissible = true,
 
-    /// optionalParameters: {Color? barrierColor = const Color(0x80000000)} , hasDefaultValue:true, defaultValueCode:const Color(0x80000000)
+    /// optionalParameters: {Color? barrierColor = const Color(0x80000000)} , defaultValue:unprocessed
     Color? barrierColor,
 
-    /// optionalParameters: {String? barrierLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? barrierLabel} , defaultValue:none
     String? barrierLabel,
 
-    /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 200)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 200)
+    /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 200)} , defaultValue:unprocessed
     required Duration transitionDuration,
 
-    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder} , defaultValue:none
     RouteTransitionsBuilder? transitionBuilder,
 
-    /// optionalParameters: {RouteSettings? settings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteSettings? settings} , defaultValue:none
     RouteSettings? settings,
 
-    /// optionalParameters: {Offset? anchorPoint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? anchorPoint} , defaultValue:none
     Offset? anchorPoint,
 
-    /// optionalParameters: {TraversalEdgeBehavior? traversalEdgeBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TraversalEdgeBehavior? traversalEdgeBehavior} , defaultValue:none
     TraversalEdgeBehavior? traversalEdgeBehavior,
   }) : super(
           pageBuilder: pageBuilder,
@@ -81,14 +81,14 @@ class RawDialogRoute$Mate<T> extends RawDialogRoute<T> with Mate {
           anchorPoint: p.get('anchorPoint').build(),
           traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),
         );
-    matePut('pageBuilder', pageBuilder);
-    matePut('barrierDismissible', barrierDismissible);
-    matePut('barrierColor', barrierColor);
-    matePut('barrierLabel', barrierLabel);
-    matePut('transitionDuration', transitionDuration);
-    matePut('transitionBuilder', transitionBuilder);
-    matePut('settings', settings);
-    matePut('anchorPoint', anchorPoint);
-    matePut('traversalEdgeBehavior', traversalEdgeBehavior);
+    mateDeclare('pageBuilder', pageBuilder);
+    mateDeclare('barrierDismissible', barrierDismissible);
+    mateDeclare('barrierColor', barrierColor);
+    mateDeclare('barrierLabel', barrierLabel);
+    mateDeclare('transitionDuration', transitionDuration);
+    mateDeclare('transitionBuilder', transitionBuilder);
+    mateDeclare('settings', settings);
+    mateDeclare('anchorPoint', anchorPoint);
+    mateDeclare('traversalEdgeBehavior', traversalEdgeBehavior);
   }
 }

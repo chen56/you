@@ -339,7 +339,7 @@ mixin Mate {
   //fixme builderRefer改为真实值
   late final code.Reference builderRefer = code.refer(runtimeType.toString());
 
-  Param<V> matePut<V>(String name, V init) {
+  Param<V> mateDeclare<V>(String name, V init) {
     var param = _convertToParam(name: name, nullable: utils.isNullableOf<V>(init), init: init);
     _mateParams[name] = param;
     return param;

@@ -11,10 +11,10 @@ class AssetImage$Mate extends AssetImage with Mate {
   AssetImage$Mate(
     /// requiredParameters: String assetName
     String assetName, {
-    /// optionalParameters: {AssetBundle? bundle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AssetBundle? bundle} , defaultValue:none
     AssetBundle? bundle,
 
-    /// optionalParameters: {String? package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? package} , defaultValue:none
     String? package,
   }) : super(
           assetName,
@@ -26,8 +26,8 @@ class AssetImage$Mate extends AssetImage with Mate {
           bundle: p.get('bundle').build(),
           package: p.get('package').build(),
         );
-    matePut('assetName', assetName);
-    matePut('bundle', bundle);
-    matePut('package', package);
+    mateDeclare('assetName', assetName);
+    mateDeclare('bundle', bundle);
+    mateDeclare('package', package);
   }
 }

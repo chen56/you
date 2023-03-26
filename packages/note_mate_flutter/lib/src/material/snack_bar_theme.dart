@@ -12,40 +12,40 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class SnackBarThemeData$Mate extends SnackBarThemeData with Mate {
   /// SnackBarThemeData SnackBarThemeData({Color? backgroundColor, Color? actionTextColor, Color? disabledActionTextColor, TextStyle? contentTextStyle, double? elevation, ShapeBorder? shape, SnackBarBehavior? behavior, double? width, EdgeInsets? insetPadding, bool? showCloseIcon, Color? closeIconColor, double? actionOverflowThreshold})
   SnackBarThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? actionTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? actionTextColor} , defaultValue:none
     Color? actionTextColor,
 
-    /// optionalParameters: {Color? disabledActionTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledActionTextColor} , defaultValue:none
     Color? disabledActionTextColor,
 
-    /// optionalParameters: {TextStyle? contentTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? contentTextStyle} , defaultValue:none
     TextStyle? contentTextStyle,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {SnackBarBehavior? behavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SnackBarBehavior? behavior} , defaultValue:none
     SnackBarBehavior? behavior,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {EdgeInsets? insetPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsets? insetPadding} , defaultValue:none
     EdgeInsets? insetPadding,
 
-    /// optionalParameters: {bool? showCloseIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showCloseIcon} , defaultValue:none
     bool? showCloseIcon,
 
-    /// optionalParameters: {Color? closeIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? closeIconColor} , defaultValue:none
     Color? closeIconColor,
 
-    /// optionalParameters: {double? actionOverflowThreshold} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? actionOverflowThreshold} , defaultValue:none
     double? actionOverflowThreshold,
   }) : super(
           backgroundColor: backgroundColor,
@@ -75,17 +75,17 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate {
           closeIconColor: p.get('closeIconColor').build(),
           actionOverflowThreshold: p.get('actionOverflowThreshold').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('actionTextColor', actionTextColor);
-    matePut('disabledActionTextColor', disabledActionTextColor);
-    matePut('contentTextStyle', contentTextStyle);
-    matePut('elevation', elevation);
-    matePut('shape', shape);
-    matePut('behavior', behavior);
-    matePut('width', width);
-    matePut('insetPadding', insetPadding);
-    matePut('showCloseIcon', showCloseIcon);
-    matePut('closeIconColor', closeIconColor);
-    matePut('actionOverflowThreshold', actionOverflowThreshold);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('actionTextColor', actionTextColor);
+    mateDeclare('disabledActionTextColor', disabledActionTextColor);
+    mateDeclare('contentTextStyle', contentTextStyle);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shape', shape);
+    mateDeclare('behavior', behavior);
+    mateDeclare('width', width);
+    mateDeclare('insetPadding', insetPadding);
+    mateDeclare('showCloseIcon', showCloseIcon);
+    mateDeclare('closeIconColor', closeIconColor);
+    mateDeclare('actionOverflowThreshold', actionOverflowThreshold);
   }
 }

@@ -9,22 +9,22 @@ import 'package:flutter/src/painting/basic_types.dart';
 class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
   /// FixedScrollMetrics FixedScrollMetrics({required double? minScrollExtent, required double? maxScrollExtent, required double? pixels, required double? viewportDimension, required AxisDirection axisDirection, required double devicePixelRatio})
   FixedScrollMetrics$Mate({
-    /// optionalParameters: {required double? minScrollExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? minScrollExtent} , defaultValue:none
     required double? minScrollExtent,
 
-    /// optionalParameters: {required double? maxScrollExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? maxScrollExtent} , defaultValue:none
     required double? maxScrollExtent,
 
-    /// optionalParameters: {required double? pixels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? pixels} , defaultValue:none
     required double? pixels,
 
-    /// optionalParameters: {required double? viewportDimension} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? viewportDimension} , defaultValue:none
     required double? viewportDimension,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection axisDirection} , defaultValue:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required double devicePixelRatio} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double devicePixelRatio} , defaultValue:none
     required double devicePixelRatio,
   }) : super(
           minScrollExtent: minScrollExtent,
@@ -42,11 +42,11 @@ class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
           axisDirection: p.get('axisDirection').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    matePut('minScrollExtent', minScrollExtent);
-    matePut('maxScrollExtent', maxScrollExtent);
-    matePut('pixels', pixels);
-    matePut('viewportDimension', viewportDimension);
-    matePut('axisDirection', axisDirection);
-    matePut('devicePixelRatio', devicePixelRatio);
+    mateDeclare('minScrollExtent', minScrollExtent);
+    mateDeclare('maxScrollExtent', maxScrollExtent);
+    mateDeclare('pixels', pixels);
+    mateDeclare('viewportDimension', viewportDimension);
+    mateDeclare('axisDirection', axisDirection);
+    mateDeclare('devicePixelRatio', devicePixelRatio);
   }
 }

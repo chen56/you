@@ -10,37 +10,37 @@ import 'package:flutter/src/painting/text_style.dart';
 class StrutStyle$Mate extends StrutStyle with Mate {
   /// StrutStyle StrutStyle({String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
   StrutStyle$Mate({
-    /// optionalParameters: {String? fontFamily} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fontFamily} , defaultValue:none
     String? fontFamily,
 
-    /// optionalParameters: {List<String>? fontFamilyFallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<String>? fontFamilyFallback} , defaultValue:none
     List<String>? fontFamilyFallback,
 
-    /// optionalParameters: {double? fontSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? fontSize} , defaultValue:none
     double? fontSize,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , defaultValue:none
     TextLeadingDistribution? leadingDistribution,
 
-    /// optionalParameters: {double? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? leading} , defaultValue:none
     double? leading,
 
-    /// optionalParameters: {FontWeight? fontWeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FontWeight? fontWeight} , defaultValue:none
     FontWeight? fontWeight,
 
-    /// optionalParameters: {FontStyle? fontStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FontStyle? fontStyle} , defaultValue:none
     FontStyle? fontStyle,
 
-    /// optionalParameters: {bool? forceStrutHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? forceStrutHeight} , defaultValue:none
     bool? forceStrutHeight,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
 
-    /// optionalParameters: {String? package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? package} , defaultValue:none
     String? package,
   }) : super(
           fontFamily: fontFamily,
@@ -68,54 +68,54 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           debugLabel: p.get('debugLabel').build(),
           package: p.get('package').build(),
         );
-    matePut('fontFamily', fontFamily);
-    matePut('fontFamilyFallback', fontFamilyFallback);
-    matePut('fontSize', fontSize);
-    matePut('height', height);
-    matePut('leadingDistribution', leadingDistribution);
-    matePut('leading', leading);
-    matePut('fontWeight', fontWeight);
-    matePut('fontStyle', fontStyle);
-    matePut('forceStrutHeight', forceStrutHeight);
-    matePut('debugLabel', debugLabel);
-    matePut('package', package);
+    mateDeclare('fontFamily', fontFamily);
+    mateDeclare('fontFamilyFallback', fontFamilyFallback);
+    mateDeclare('fontSize', fontSize);
+    mateDeclare('height', height);
+    mateDeclare('leadingDistribution', leadingDistribution);
+    mateDeclare('leading', leading);
+    mateDeclare('fontWeight', fontWeight);
+    mateDeclare('fontStyle', fontStyle);
+    mateDeclare('forceStrutHeight', forceStrutHeight);
+    mateDeclare('debugLabel', debugLabel);
+    mateDeclare('package', package);
   }
 
   /// StrutStyle StrutStyle.fromTextStyle(TextStyle textStyle, {String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
   StrutStyle$Mate.fromTextStyle(
     /// requiredParameters: TextStyle textStyle
     TextStyle textStyle, {
-    /// optionalParameters: {String? fontFamily} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fontFamily} , defaultValue:none
     String? fontFamily,
 
-    /// optionalParameters: {List<String>? fontFamilyFallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<String>? fontFamilyFallback} , defaultValue:none
     List<String>? fontFamilyFallback,
 
-    /// optionalParameters: {double? fontSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? fontSize} , defaultValue:none
     double? fontSize,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , defaultValue:none
     TextLeadingDistribution? leadingDistribution,
 
-    /// optionalParameters: {double? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? leading} , defaultValue:none
     double? leading,
 
-    /// optionalParameters: {FontWeight? fontWeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FontWeight? fontWeight} , defaultValue:none
     FontWeight? fontWeight,
 
-    /// optionalParameters: {FontStyle? fontStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FontStyle? fontStyle} , defaultValue:none
     FontStyle? fontStyle,
 
-    /// optionalParameters: {bool? forceStrutHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? forceStrutHeight} , defaultValue:none
     bool? forceStrutHeight,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
 
-    /// optionalParameters: {String? package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? package} , defaultValue:none
     String? package,
   }) : super.fromTextStyle(
           textStyle,
@@ -145,17 +145,17 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           debugLabel: p.get('debugLabel').build(),
           package: p.get('package').build(),
         );
-    matePut('textStyle', textStyle);
-    matePut('fontFamily', fontFamily);
-    matePut('fontFamilyFallback', fontFamilyFallback);
-    matePut('fontSize', fontSize);
-    matePut('height', height);
-    matePut('leadingDistribution', leadingDistribution);
-    matePut('leading', leading);
-    matePut('fontWeight', fontWeight);
-    matePut('fontStyle', fontStyle);
-    matePut('forceStrutHeight', forceStrutHeight);
-    matePut('debugLabel', debugLabel);
-    matePut('package', package);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('fontFamily', fontFamily);
+    mateDeclare('fontFamilyFallback', fontFamilyFallback);
+    mateDeclare('fontSize', fontSize);
+    mateDeclare('height', height);
+    mateDeclare('leadingDistribution', leadingDistribution);
+    mateDeclare('leading', leading);
+    mateDeclare('fontWeight', fontWeight);
+    mateDeclare('fontStyle', fontStyle);
+    mateDeclare('forceStrutHeight', forceStrutHeight);
+    mateDeclare('debugLabel', debugLabel);
+    mateDeclare('package', package);
   }
 }

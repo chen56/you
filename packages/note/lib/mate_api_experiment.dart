@@ -32,13 +32,13 @@ class ContainerMate extends Container with Mate {
           child: p.get("child").build(),
         );
     //这里会换成代码生成，凡是可以取到类型的，都可以支持编辑
-    matePut("key", key);
-    matePut("alignment", alignment);
-    matePut("color", color);
-    matePut("clipBehavior", clipBehavior);
-    widthMate = matePut("width", width);
-    heightMate = matePut("height", height);
-    matePut("child", child);
+    mateDeclare("key", key);
+    mateDeclare("alignment", alignment);
+    mateDeclare("color", color);
+    mateDeclare("clipBehavior", clipBehavior);
+    widthMate = mateDeclare("width", width);
+    heightMate = mateDeclare("height", height);
+    mateDeclare("child", child);
   }
 
   ContainerMate configMate({required void Function(ContainerMate self) config}) {
@@ -61,9 +61,9 @@ class ColumnMate extends Column with Mate {
           mainAxisAlignment: p.get("mainAxisAlignment").build(),
           children: p.get("children").build(),
         );
-    matePut("key", key);
-    matePut("mainAxisAlignment", mainAxisAlignment);
-    matePut("children", children);
+    mateDeclare("key", key);
+    mateDeclare("mainAxisAlignment", mainAxisAlignment);
+    mateDeclare("children", children);
   }
 }
 
@@ -85,9 +85,9 @@ class CenterMate extends Center with Mate {
           heightFactor: p.get("heightFactor").build(),
           child: p.get("child").build(),
         );
-    matePut("key", key);
-    matePut("widthFactor", widthFactor);
-    matePut("heightFactor", heightFactor);
-    matePut("child", child);
+    mateDeclare("key", key);
+    mateDeclare("widthFactor", widthFactor);
+    mateDeclare("heightFactor", heightFactor);
+    mateDeclare("child", child);
   }
 }

@@ -8,14 +8,14 @@ import 'dart:core';
 class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate {
   /// RawKeyDownEvent RawKeyDownEvent({required RawKeyEventData data, String? character, bool repeat = false})
   RawKeyDownEvent$Mate({
-    /// optionalParameters: {required RawKeyEventData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RawKeyEventData data} , defaultValue:none
     required RawKeyEventData data,
 
-    /// optionalParameters: {String? character} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? character} , defaultValue:none
     String? character,
 
-    /// optionalParameters: {bool repeat = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool repeat,
+    /// optionalParameters: {bool repeat = false} , defaultValue:Literal
+    bool repeat = false,
   }) : super(
           data: data,
           character: character,
@@ -26,9 +26,9 @@ class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate {
           character: p.get('character').build(),
           repeat: p.get('repeat').build(),
         );
-    matePut('data', data);
-    matePut('character', character);
-    matePut('repeat', repeat);
+    mateDeclare('data', data);
+    mateDeclare('character', character);
+    mateDeclare('repeat', repeat);
   }
 }
 
@@ -36,10 +36,10 @@ class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate {
 class RawKeyUpEvent$Mate extends RawKeyUpEvent with Mate {
   /// RawKeyUpEvent RawKeyUpEvent({required RawKeyEventData data, String? character})
   RawKeyUpEvent$Mate({
-    /// optionalParameters: {required RawKeyEventData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RawKeyEventData data} , defaultValue:none
     required RawKeyEventData data,
 
-    /// optionalParameters: {String? character} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? character} , defaultValue:none
     String? character,
   }) : super(
           data: data,
@@ -49,7 +49,7 @@ class RawKeyUpEvent$Mate extends RawKeyUpEvent with Mate {
           data: p.get('data').build(),
           character: p.get('character').build(),
         );
-    matePut('data', data);
-    matePut('character', character);
+    mateDeclare('data', data);
+    mateDeclare('character', character);
   }
 }

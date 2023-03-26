@@ -13,6 +13,6 @@ class FontLoader$Mate extends FontLoader with Mate {
       String family)
       : super(family) {
     mateBuilder = (p) => FontLoader$Mate(p.get('family').value);
-    matePut('family', family);
+    mateDeclare('family', family);
   }
 }

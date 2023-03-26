@@ -11,22 +11,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class GridPaper$Mate extends GridPaper with Mate {
   /// GridPaper GridPaper({Key? key, Color color = const Color(0x7FC3E8F3), double interval = 100.0, int divisions = 2, int subdivisions = 5, Widget? child})
   GridPaper$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color color = const Color(0x7FC3E8F3)} , hasDefaultValue:true, defaultValueCode:const Color(0x7FC3E8F3)
+    /// optionalParameters: {Color color = const Color(0x7FC3E8F3)} , defaultValue:unprocessed
     required Color color,
 
-    /// optionalParameters: {double interval = 100.0} , hasDefaultValue:true, defaultValueCode:100.0
-    required double interval,
+    /// optionalParameters: {double interval = 100.0} , defaultValue:Literal
+    double interval = 100.0,
 
-    /// optionalParameters: {int divisions = 2} , hasDefaultValue:true, defaultValueCode:2
-    required int divisions,
+    /// optionalParameters: {int divisions = 2} , defaultValue:Literal
+    int divisions = 2,
 
-    /// optionalParameters: {int subdivisions = 5} , hasDefaultValue:true, defaultValueCode:5
-    required int subdivisions,
+    /// optionalParameters: {int subdivisions = 5} , defaultValue:Literal
+    int subdivisions = 5,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -44,11 +44,11 @@ class GridPaper$Mate extends GridPaper with Mate {
           subdivisions: p.get('subdivisions').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('interval', interval);
-    matePut('divisions', divisions);
-    matePut('subdivisions', subdivisions);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('color', color);
+    mateDeclare('interval', interval);
+    mateDeclare('divisions', divisions);
+    mateDeclare('subdivisions', subdivisions);
+    mateDeclare('child', child);
   }
 }

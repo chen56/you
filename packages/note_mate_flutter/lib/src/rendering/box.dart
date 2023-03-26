@@ -10,16 +10,16 @@ import 'package:flutter/src/gestures/hit_test.dart';
 class BoxConstraints$Mate extends BoxConstraints with Mate {
   /// BoxConstraints BoxConstraints({double minWidth = 0.0, double maxWidth = double.infinity, double minHeight = 0.0, double maxHeight = double.infinity})
   BoxConstraints$Mate({
-    /// optionalParameters: {double minWidth = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double minWidth,
+    /// optionalParameters: {double minWidth = 0.0} , defaultValue:Literal
+    double minWidth = 0.0,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double maxWidth = double.infinity} , defaultValue:unprocessed
     required double maxWidth,
 
-    /// optionalParameters: {double minHeight = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double minHeight,
+    /// optionalParameters: {double minHeight = 0.0} , defaultValue:Literal
+    double minHeight = 0.0,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double maxHeight = double.infinity} , defaultValue:unprocessed
     required double maxHeight,
   }) : super(
           minWidth: minWidth,
@@ -33,10 +33,10 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           minHeight: p.get('minHeight').build(),
           maxHeight: p.get('maxHeight').build(),
         );
-    matePut('minWidth', minWidth);
-    matePut('maxWidth', maxWidth);
-    matePut('minHeight', minHeight);
-    matePut('maxHeight', maxHeight);
+    mateDeclare('minWidth', minWidth);
+    mateDeclare('maxWidth', maxWidth);
+    mateDeclare('minHeight', minHeight);
+    mateDeclare('maxHeight', maxHeight);
   }
 
   /// BoxConstraints BoxConstraints.tight(Size size)
@@ -46,15 +46,15 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
       Size size)
       : super.tight(size) {
     mateBuilder = (p) => BoxConstraints$Mate.tight(p.get('size').value);
-    matePut('size', size);
+    mateDeclare('size', size);
   }
 
   /// BoxConstraints BoxConstraints.tightFor({double? width, double? height})
   BoxConstraints$Mate.tightFor({
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
   }) : super.tightFor(
           width: width,
@@ -64,16 +64,16 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    matePut('width', width);
-    matePut('height', height);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
   }
 
   /// BoxConstraints BoxConstraints.tightForFinite({double width = double.infinity, double height = double.infinity})
   BoxConstraints$Mate.tightForFinite({
-    /// optionalParameters: {double width = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double width = double.infinity} , defaultValue:unprocessed
     required double width,
 
-    /// optionalParameters: {double height = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
+    /// optionalParameters: {double height = double.infinity} , defaultValue:unprocessed
     required double height,
   }) : super.tightForFinite(
           width: width,
@@ -83,8 +83,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    matePut('width', width);
-    matePut('height', height);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
   }
 
   /// BoxConstraints BoxConstraints.loose(Size size)
@@ -94,15 +94,15 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
       Size size)
       : super.loose(size) {
     mateBuilder = (p) => BoxConstraints$Mate.loose(p.get('size').value);
-    matePut('size', size);
+    mateDeclare('size', size);
   }
 
   /// BoxConstraints BoxConstraints.expand({double? width, double? height})
   BoxConstraints$Mate.expand({
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , defaultValue:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , defaultValue:none
     double? height,
   }) : super.expand(
           width: width,
@@ -112,8 +112,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    matePut('width', width);
-    matePut('height', height);
+    mateDeclare('width', width);
+    mateDeclare('height', height);
   }
 }
 
@@ -126,7 +126,7 @@ class BoxHitTestResult$Mate extends BoxHitTestResult with Mate {
       HitTestResult result)
       : super.wrap(result) {
     mateBuilder = (p) => BoxHitTestResult$Mate.wrap(p.get('result').value);
-    matePut('result', result);
+    mateDeclare('result', result);
   }
 }
 
@@ -147,7 +147,7 @@ class BoxHitTestEntry$Mate extends BoxHitTestEntry with Mate {
           p.get('target').value,
           p.get('localPosition').value,
         );
-    matePut('target', target);
-    matePut('localPosition', localPosition);
+    mateDeclare('target', target);
+    mateDeclare('localPosition', localPosition);
   }
 }

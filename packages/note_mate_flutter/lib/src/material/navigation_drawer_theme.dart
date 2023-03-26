@@ -15,34 +15,34 @@ import 'package:flutter/src/widgets/framework.dart';
 class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate {
   /// NavigationDrawerThemeData NavigationDrawerThemeData({double? tileHeight, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, Size? indicatorSize, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme})
   NavigationDrawerThemeData$Mate({
-    /// optionalParameters: {double? tileHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? tileHeight} , defaultValue:none
     double? tileHeight,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {Size? indicatorSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? indicatorSize} , defaultValue:none
     Size? indicatorSize,
 
-    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , defaultValue:none
     MaterialStateProperty<TextStyle?>? labelTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , defaultValue:none
     MaterialStateProperty<IconThemeData?>? iconTheme,
   }) : super(
           tileHeight: tileHeight,
@@ -68,16 +68,16 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
           labelTextStyle: p.get('labelTextStyle').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    matePut('tileHeight', tileHeight);
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorShape', indicatorShape);
-    matePut('indicatorSize', indicatorSize);
-    matePut('labelTextStyle', labelTextStyle);
-    matePut('iconTheme', iconTheme);
+    mateDeclare('tileHeight', tileHeight);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('elevation', elevation);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('indicatorColor', indicatorColor);
+    mateDeclare('indicatorShape', indicatorShape);
+    mateDeclare('indicatorSize', indicatorSize);
+    mateDeclare('labelTextStyle', labelTextStyle);
+    mateDeclare('iconTheme', iconTheme);
   }
 }
 
@@ -85,13 +85,13 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
 class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate {
   /// NavigationDrawerTheme NavigationDrawerTheme({Key? key, required NavigationDrawerThemeData data, required Widget child})
   NavigationDrawerTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required NavigationDrawerThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required NavigationDrawerThemeData data} , defaultValue:none
     required NavigationDrawerThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -103,8 +103,8 @@ class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

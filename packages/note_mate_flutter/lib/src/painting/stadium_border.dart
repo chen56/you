@@ -9,10 +9,10 @@ class StadiumBorder$Mate extends StadiumBorder with Mate {
   /// StadiumBorder StadiumBorder({BorderSide side = BorderSide.none})
   StadiumBorder$Mate(
       {
-      /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
+      /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
       required BorderSide side})
       : super(side: side) {
     mateBuilder = (p) => StadiumBorder$Mate(side: p.get('side').build());
-    matePut('side', side);
+    mateDeclare('side', side);
   }
 }

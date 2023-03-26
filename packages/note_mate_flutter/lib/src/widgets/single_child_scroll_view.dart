@@ -17,40 +17,40 @@ import 'package:flutter/src/widgets/scroll_view.dart';
 class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
   /// SingleChildScrollView SingleChildScrollView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, EdgeInsetsGeometry? padding, bool? primary, ScrollPhysics? physics, ScrollController? controller, Widget? child, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual})
   SingleChildScrollView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
     required Axis scrollDirection,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    bool reverse = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , defaultValue:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
     required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
   }) : super(
           key: key,
@@ -80,17 +80,17 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
           restorationId: p.get('restorationId').build(),
           keyboardDismissBehavior: p.get('keyboardDismissBehavior').build(),
         );
-    matePut('key', key);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('padding', padding);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('controller', controller);
-    matePut('child', child);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('clipBehavior', clipBehavior);
-    matePut('restorationId', restorationId);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateDeclare('key', key);
+    mateDeclare('scrollDirection', scrollDirection);
+    mateDeclare('reverse', reverse);
+    mateDeclare('padding', padding);
+    mateDeclare('primary', primary);
+    mateDeclare('physics', physics);
+    mateDeclare('controller', controller);
+    mateDeclare('child', child);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('clipBehavior', clipBehavior);
+    mateDeclare('restorationId', restorationId);
+    mateDeclare('keyboardDismissBehavior', keyboardDismissBehavior);
   }
 }

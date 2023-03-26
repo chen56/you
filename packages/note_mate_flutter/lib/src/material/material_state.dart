@@ -13,7 +13,7 @@ class MaterialStatePropertyAll$Mate<T> extends MaterialStatePropertyAll<T> with 
       T value)
       : super(value) {
     mateBuilder = (p) => MaterialStatePropertyAll$Mate<T>(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }
 
@@ -26,6 +26,6 @@ class MaterialStatesController$Mate extends MaterialStatesController with Mate {
       Set<MaterialState>? value)
       : super(value) {
     mateBuilder = (p) => MaterialStatesController$Mate(p.get('value').value);
-    matePut('value', value);
+    mateDeclare('value', value);
   }
 }

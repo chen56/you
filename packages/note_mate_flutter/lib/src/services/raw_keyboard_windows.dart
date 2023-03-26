@@ -8,17 +8,17 @@ import 'dart:core';
 class RawKeyEventDataWindows$Mate extends RawKeyEventDataWindows with Mate {
   /// RawKeyEventDataWindows RawKeyEventDataWindows({int keyCode = 0, int scanCode = 0, int characterCodePoint = 0, int modifiers = 0})
   RawKeyEventDataWindows$Mate({
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    int keyCode = 0,
 
-    /// optionalParameters: {int scanCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int scanCode,
+    /// optionalParameters: {int scanCode = 0} , defaultValue:Literal
+    int scanCode = 0,
 
-    /// optionalParameters: {int characterCodePoint = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int characterCodePoint,
+    /// optionalParameters: {int characterCodePoint = 0} , defaultValue:Literal
+    int characterCodePoint = 0,
 
-    /// optionalParameters: {int modifiers = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int modifiers,
+    /// optionalParameters: {int modifiers = 0} , defaultValue:Literal
+    int modifiers = 0,
   }) : super(
           keyCode: keyCode,
           scanCode: scanCode,
@@ -31,9 +31,9 @@ class RawKeyEventDataWindows$Mate extends RawKeyEventDataWindows with Mate {
           characterCodePoint: p.get('characterCodePoint').build(),
           modifiers: p.get('modifiers').build(),
         );
-    matePut('keyCode', keyCode);
-    matePut('scanCode', scanCode);
-    matePut('characterCodePoint', characterCodePoint);
-    matePut('modifiers', modifiers);
+    mateDeclare('keyCode', keyCode);
+    mateDeclare('scanCode', scanCode);
+    mateDeclare('characterCodePoint', characterCodePoint);
+    mateDeclare('modifiers', modifiers);
   }
 }

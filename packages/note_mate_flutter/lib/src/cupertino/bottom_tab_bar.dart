@@ -13,34 +13,34 @@ import 'package:flutter/src/painting/box_border.dart';
 class CupertinoTabBar$Mate extends CupertinoTabBar with Mate {
   /// CupertinoTabBar CupertinoTabBar({Key? key, required List<BottomNavigationBarItem> items, void Function(int)? onTap, int currentIndex = 0, Color? backgroundColor, Color? activeColor, Color inactiveColor = _kDefaultTabBarInactiveColor, double iconSize = 30.0, double height = _kTabBarHeight, Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))})
   CupertinoTabBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required List<BottomNavigationBarItem> items} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<BottomNavigationBarItem> items} , defaultValue:none
     required List<BottomNavigationBarItem> items,
 
-    /// optionalParameters: {void Function(int)? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onTap} , defaultValue:none
     ValueChanged<int>? onTap,
 
-    /// optionalParameters: {int currentIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int currentIndex,
+    /// optionalParameters: {int currentIndex = 0} , defaultValue:Literal
+    int currentIndex = 0,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , defaultValue:none
     Color? activeColor,
 
-    /// optionalParameters: {Color inactiveColor = _kDefaultTabBarInactiveColor} , hasDefaultValue:true, defaultValueCode:_kDefaultTabBarInactiveColor
+    /// optionalParameters: {Color inactiveColor = _kDefaultTabBarInactiveColor} , defaultValue:unprocessed
     required Color inactiveColor,
 
-    /// optionalParameters: {double iconSize = 30.0} , hasDefaultValue:true, defaultValueCode:30.0
-    required double iconSize,
+    /// optionalParameters: {double iconSize = 30.0} , defaultValue:Literal
+    double iconSize = 30.0,
 
-    /// optionalParameters: {double height = _kTabBarHeight} , hasDefaultValue:true, defaultValueCode:_kTabBarHeight
+    /// optionalParameters: {double height = _kTabBarHeight} , defaultValue:unprocessed
     required double height,
 
-    /// optionalParameters: {Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))} , hasDefaultValue:true, defaultValueCode:const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))
+    /// optionalParameters: {Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))} , defaultValue:unprocessed
     Border? border,
   }) : super(
           key: key,
@@ -66,15 +66,15 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with Mate {
           height: p.get('height').build(),
           border: p.get('border').build(),
         );
-    matePut('key', key);
-    matePut('items', items);
-    matePut('onTap', onTap);
-    matePut('currentIndex', currentIndex);
-    matePut('backgroundColor', backgroundColor);
-    matePut('activeColor', activeColor);
-    matePut('inactiveColor', inactiveColor);
-    matePut('iconSize', iconSize);
-    matePut('height', height);
-    matePut('border', border);
+    mateDeclare('key', key);
+    mateDeclare('items', items);
+    mateDeclare('onTap', onTap);
+    mateDeclare('currentIndex', currentIndex);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('activeColor', activeColor);
+    mateDeclare('inactiveColor', inactiveColor);
+    mateDeclare('iconSize', iconSize);
+    mateDeclare('height', height);
+    mateDeclare('border', border);
   }
 }

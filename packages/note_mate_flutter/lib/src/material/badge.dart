@@ -14,40 +14,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class Badge$Mate extends Badge with Mate {
   /// Badge Badge({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, Widget? label, bool isLabelVisible = true, Widget? child})
   Badge$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , defaultValue:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? smallSize} , defaultValue:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? largeSize} , defaultValue:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , defaultValue:none
     Offset? offset,
 
-    /// optionalParameters: {Widget? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? label} , defaultValue:none
     Widget? label,
 
-    /// optionalParameters: {bool isLabelVisible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool isLabelVisible,
+    /// optionalParameters: {bool isLabelVisible = true} , defaultValue:Literal
+    bool isLabelVisible = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super(
           key: key,
@@ -77,56 +77,56 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('textColor', textColor);
-    matePut('smallSize', smallSize);
-    matePut('largeSize', largeSize);
-    matePut('textStyle', textStyle);
-    matePut('padding', padding);
-    matePut('alignment', alignment);
-    matePut('offset', offset);
-    matePut('label', label);
-    matePut('isLabelVisible', isLabelVisible);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('textColor', textColor);
+    mateDeclare('smallSize', smallSize);
+    mateDeclare('largeSize', largeSize);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('padding', padding);
+    mateDeclare('alignment', alignment);
+    mateDeclare('offset', offset);
+    mateDeclare('label', label);
+    mateDeclare('isLabelVisible', isLabelVisible);
+    mateDeclare('child', child);
   }
 
   /// Badge Badge.count({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, required int count, bool isLabelVisible = true, Widget? child})
   Badge$Mate.count({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , defaultValue:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? smallSize} , defaultValue:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? largeSize} , defaultValue:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , defaultValue:none
     Offset? offset,
 
-    /// optionalParameters: {required int count} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int count} , defaultValue:none
     required int count,
 
-    /// optionalParameters: {bool isLabelVisible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool isLabelVisible,
+    /// optionalParameters: {bool isLabelVisible = true} , defaultValue:Literal
+    bool isLabelVisible = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
   }) : super.count(
           key: key,
@@ -156,17 +156,17 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('textColor', textColor);
-    matePut('smallSize', smallSize);
-    matePut('largeSize', largeSize);
-    matePut('textStyle', textStyle);
-    matePut('padding', padding);
-    matePut('alignment', alignment);
-    matePut('offset', offset);
-    matePut('count', count);
-    matePut('isLabelVisible', isLabelVisible);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('textColor', textColor);
+    mateDeclare('smallSize', smallSize);
+    mateDeclare('largeSize', largeSize);
+    mateDeclare('textStyle', textStyle);
+    mateDeclare('padding', padding);
+    mateDeclare('alignment', alignment);
+    mateDeclare('offset', offset);
+    mateDeclare('count', count);
+    mateDeclare('isLabelVisible', isLabelVisible);
+    mateDeclare('child', child);
   }
 }

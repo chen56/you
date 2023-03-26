@@ -23,115 +23,115 @@ import 'package:flutter/src/painting/borders.dart';
 class SwitchListTile$Mate extends SwitchListTile with Mate {
   /// SwitchListTile SwitchListTile({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, EdgeInsetsGeometry? contentPadding, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, ShapeBorder? shape, Color? selectedTileColor, VisualDensity? visualDensity, bool? enableFeedback, Color? hoverColor})
   SwitchListTile$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required bool value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool value} , defaultValue:none
     required bool value,
 
-    /// optionalParameters: {required void Function(bool)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(bool)? onChanged} , defaultValue:none
     required ValueChanged<bool>? onChanged,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , defaultValue:none
     Color? activeColor,
 
-    /// optionalParameters: {Color? activeTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeTrackColor} , defaultValue:none
     Color? activeTrackColor,
 
-    /// optionalParameters: {Color? inactiveThumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inactiveThumbColor} , defaultValue:none
     Color? inactiveThumbColor,
 
-    /// optionalParameters: {Color? inactiveTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inactiveTrackColor} , defaultValue:none
     Color? inactiveTrackColor,
 
-    /// optionalParameters: {ImageProvider<Object>? activeThumbImage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageProvider<Object>? activeThumbImage} , defaultValue:none
     ImageProvider<Object>? activeThumbImage,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onActiveThumbImageError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onActiveThumbImageError} , defaultValue:none
     ImageErrorListener? onActiveThumbImageError,
 
-    /// optionalParameters: {ImageProvider<Object>? inactiveThumbImage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageProvider<Object>? inactiveThumbImage} , defaultValue:none
     ImageProvider<Object>? inactiveThumbImage,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onInactiveThumbImageError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onInactiveThumbImageError} , defaultValue:none
     ImageErrorListener? onInactiveThumbImageError,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , defaultValue:none
     MaterialStateProperty<Color?>? thumbColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , defaultValue:none
     MaterialStateProperty<Color?>? trackColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , defaultValue:none
     MaterialStateProperty<Color?>? trackOutlineColor,
 
-    /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , defaultValue:none
     MaterialStateProperty<Icon?>? thumbIcon,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tileColor} , defaultValue:none
     Color? tileColor,
 
-    /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? title} , defaultValue:none
     Widget? title,
 
-    /// optionalParameters: {Widget? subtitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? subtitle} , defaultValue:none
     Widget? subtitle,
 
-    /// optionalParameters: {bool isThreeLine = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isThreeLine,
+    /// optionalParameters: {bool isThreeLine = false} , defaultValue:Literal
+    bool isThreeLine = false,
 
-    /// optionalParameters: {bool? dense} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? dense} , defaultValue:none
     bool? dense,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , defaultValue:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {Widget? secondary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? secondary} , defaultValue:none
     Widget? secondary,
 
-    /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool selected,
+    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    bool selected = false,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , hasDefaultValue:true, defaultValueCode:ListTileControlAffinity.platform
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:unprocessed
     required ListTileControlAffinity controlAffinity,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Color? selectedTileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedTileColor} , defaultValue:none
     Color? selectedTileColor,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
   }) : super(
           key: key,
@@ -211,159 +211,159 @@ class SwitchListTile$Mate extends SwitchListTile with Mate {
           enableFeedback: p.get('enableFeedback').build(),
           hoverColor: p.get('hoverColor').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('onChanged', onChanged);
-    matePut('activeColor', activeColor);
-    matePut('activeTrackColor', activeTrackColor);
-    matePut('inactiveThumbColor', inactiveThumbColor);
-    matePut('inactiveTrackColor', inactiveTrackColor);
-    matePut('activeThumbImage', activeThumbImage);
-    matePut('onActiveThumbImageError', onActiveThumbImageError);
-    matePut('inactiveThumbImage', inactiveThumbImage);
-    matePut('onInactiveThumbImageError', onInactiveThumbImageError);
-    matePut('thumbColor', thumbColor);
-    matePut('trackColor', trackColor);
-    matePut('trackOutlineColor', trackOutlineColor);
-    matePut('thumbIcon', thumbIcon);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('mouseCursor', mouseCursor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashRadius', splashRadius);
-    matePut('focusNode', focusNode);
-    matePut('onFocusChange', onFocusChange);
-    matePut('autofocus', autofocus);
-    matePut('tileColor', tileColor);
-    matePut('title', title);
-    matePut('subtitle', subtitle);
-    matePut('isThreeLine', isThreeLine);
-    matePut('dense', dense);
-    matePut('contentPadding', contentPadding);
-    matePut('secondary', secondary);
-    matePut('selected', selected);
-    matePut('controlAffinity', controlAffinity);
-    matePut('shape', shape);
-    matePut('selectedTileColor', selectedTileColor);
-    matePut('visualDensity', visualDensity);
-    matePut('enableFeedback', enableFeedback);
-    matePut('hoverColor', hoverColor);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('activeColor', activeColor);
+    mateDeclare('activeTrackColor', activeTrackColor);
+    mateDeclare('inactiveThumbColor', inactiveThumbColor);
+    mateDeclare('inactiveTrackColor', inactiveTrackColor);
+    mateDeclare('activeThumbImage', activeThumbImage);
+    mateDeclare('onActiveThumbImageError', onActiveThumbImageError);
+    mateDeclare('inactiveThumbImage', inactiveThumbImage);
+    mateDeclare('onInactiveThumbImageError', onInactiveThumbImageError);
+    mateDeclare('thumbColor', thumbColor);
+    mateDeclare('trackColor', trackColor);
+    mateDeclare('trackOutlineColor', trackOutlineColor);
+    mateDeclare('thumbIcon', thumbIcon);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('overlayColor', overlayColor);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('tileColor', tileColor);
+    mateDeclare('title', title);
+    mateDeclare('subtitle', subtitle);
+    mateDeclare('isThreeLine', isThreeLine);
+    mateDeclare('dense', dense);
+    mateDeclare('contentPadding', contentPadding);
+    mateDeclare('secondary', secondary);
+    mateDeclare('selected', selected);
+    mateDeclare('controlAffinity', controlAffinity);
+    mateDeclare('shape', shape);
+    mateDeclare('selectedTileColor', selectedTileColor);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('hoverColor', hoverColor);
   }
 
   /// SwitchListTile SwitchListTile.adaptive({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, bool? applyCupertinoTheme, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, EdgeInsetsGeometry? contentPadding, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, ShapeBorder? shape, Color? selectedTileColor, VisualDensity? visualDensity, bool? enableFeedback, Color? hoverColor})
   SwitchListTile$Mate.adaptive({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required bool value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool value} , defaultValue:none
     required bool value,
 
-    /// optionalParameters: {required void Function(bool)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(bool)? onChanged} , defaultValue:none
     required ValueChanged<bool>? onChanged,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , defaultValue:none
     Color? activeColor,
 
-    /// optionalParameters: {Color? activeTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeTrackColor} , defaultValue:none
     Color? activeTrackColor,
 
-    /// optionalParameters: {Color? inactiveThumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inactiveThumbColor} , defaultValue:none
     Color? inactiveThumbColor,
 
-    /// optionalParameters: {Color? inactiveTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inactiveTrackColor} , defaultValue:none
     Color? inactiveTrackColor,
 
-    /// optionalParameters: {ImageProvider<Object>? activeThumbImage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageProvider<Object>? activeThumbImage} , defaultValue:none
     ImageProvider<Object>? activeThumbImage,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onActiveThumbImageError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onActiveThumbImageError} , defaultValue:none
     ImageErrorListener? onActiveThumbImageError,
 
-    /// optionalParameters: {ImageProvider<Object>? inactiveThumbImage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageProvider<Object>? inactiveThumbImage} , defaultValue:none
     ImageProvider<Object>? inactiveThumbImage,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onInactiveThumbImageError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onInactiveThumbImageError} , defaultValue:none
     ImageErrorListener? onInactiveThumbImageError,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , defaultValue:none
     MaterialStateProperty<Color?>? thumbColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , defaultValue:none
     MaterialStateProperty<Color?>? trackColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , defaultValue:none
     MaterialStateProperty<Color?>? trackOutlineColor,
 
-    /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , defaultValue:none
     MaterialStateProperty<Icon?>? thumbIcon,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
     required DragStartBehavior dragStartBehavior,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? splashRadius} , defaultValue:none
     double? splashRadius,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {bool? applyCupertinoTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? applyCupertinoTheme} , defaultValue:none
     bool? applyCupertinoTheme,
 
-    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tileColor} , defaultValue:none
     Color? tileColor,
 
-    /// optionalParameters: {Widget? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? title} , defaultValue:none
     Widget? title,
 
-    /// optionalParameters: {Widget? subtitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? subtitle} , defaultValue:none
     Widget? subtitle,
 
-    /// optionalParameters: {bool isThreeLine = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isThreeLine,
+    /// optionalParameters: {bool isThreeLine = false} , defaultValue:Literal
+    bool isThreeLine = false,
 
-    /// optionalParameters: {bool? dense} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? dense} , defaultValue:none
     bool? dense,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , defaultValue:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {Widget? secondary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? secondary} , defaultValue:none
     Widget? secondary,
 
-    /// optionalParameters: {bool selected = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool selected,
+    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    bool selected = false,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , hasDefaultValue:true, defaultValueCode:ListTileControlAffinity.platform
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:unprocessed
     required ListTileControlAffinity controlAffinity,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Color? selectedTileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedTileColor} , defaultValue:none
     Color? selectedTileColor,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
   }) : super.adaptive(
           key: key,
@@ -445,43 +445,43 @@ class SwitchListTile$Mate extends SwitchListTile with Mate {
           enableFeedback: p.get('enableFeedback').build(),
           hoverColor: p.get('hoverColor').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('onChanged', onChanged);
-    matePut('activeColor', activeColor);
-    matePut('activeTrackColor', activeTrackColor);
-    matePut('inactiveThumbColor', inactiveThumbColor);
-    matePut('inactiveTrackColor', inactiveTrackColor);
-    matePut('activeThumbImage', activeThumbImage);
-    matePut('onActiveThumbImageError', onActiveThumbImageError);
-    matePut('inactiveThumbImage', inactiveThumbImage);
-    matePut('onInactiveThumbImageError', onInactiveThumbImageError);
-    matePut('thumbColor', thumbColor);
-    matePut('trackColor', trackColor);
-    matePut('trackOutlineColor', trackOutlineColor);
-    matePut('thumbIcon', thumbIcon);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('mouseCursor', mouseCursor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashRadius', splashRadius);
-    matePut('focusNode', focusNode);
-    matePut('onFocusChange', onFocusChange);
-    matePut('autofocus', autofocus);
-    matePut('applyCupertinoTheme', applyCupertinoTheme);
-    matePut('tileColor', tileColor);
-    matePut('title', title);
-    matePut('subtitle', subtitle);
-    matePut('isThreeLine', isThreeLine);
-    matePut('dense', dense);
-    matePut('contentPadding', contentPadding);
-    matePut('secondary', secondary);
-    matePut('selected', selected);
-    matePut('controlAffinity', controlAffinity);
-    matePut('shape', shape);
-    matePut('selectedTileColor', selectedTileColor);
-    matePut('visualDensity', visualDensity);
-    matePut('enableFeedback', enableFeedback);
-    matePut('hoverColor', hoverColor);
+    mateDeclare('key', key);
+    mateDeclare('value', value);
+    mateDeclare('onChanged', onChanged);
+    mateDeclare('activeColor', activeColor);
+    mateDeclare('activeTrackColor', activeTrackColor);
+    mateDeclare('inactiveThumbColor', inactiveThumbColor);
+    mateDeclare('inactiveTrackColor', inactiveTrackColor);
+    mateDeclare('activeThumbImage', activeThumbImage);
+    mateDeclare('onActiveThumbImageError', onActiveThumbImageError);
+    mateDeclare('inactiveThumbImage', inactiveThumbImage);
+    mateDeclare('onInactiveThumbImageError', onInactiveThumbImageError);
+    mateDeclare('thumbColor', thumbColor);
+    mateDeclare('trackColor', trackColor);
+    mateDeclare('trackOutlineColor', trackOutlineColor);
+    mateDeclare('thumbIcon', thumbIcon);
+    mateDeclare('materialTapTargetSize', materialTapTargetSize);
+    mateDeclare('dragStartBehavior', dragStartBehavior);
+    mateDeclare('mouseCursor', mouseCursor);
+    mateDeclare('overlayColor', overlayColor);
+    mateDeclare('splashRadius', splashRadius);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('applyCupertinoTheme', applyCupertinoTheme);
+    mateDeclare('tileColor', tileColor);
+    mateDeclare('title', title);
+    mateDeclare('subtitle', subtitle);
+    mateDeclare('isThreeLine', isThreeLine);
+    mateDeclare('dense', dense);
+    mateDeclare('contentPadding', contentPadding);
+    mateDeclare('secondary', secondary);
+    mateDeclare('selected', selected);
+    mateDeclare('controlAffinity', controlAffinity);
+    mateDeclare('shape', shape);
+    mateDeclare('selectedTileColor', selectedTileColor);
+    mateDeclare('visualDensity', visualDensity);
+    mateDeclare('enableFeedback', enableFeedback);
+    mateDeclare('hoverColor', hoverColor);
   }
 }

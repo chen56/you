@@ -13,28 +13,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
   /// MaterialBannerThemeData MaterialBannerThemeData({Color? backgroundColor, Color? surfaceTintColor, Color? shadowColor, Color? dividerColor, TextStyle? contentTextStyle, double? elevation, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? leadingPadding})
   MaterialBannerThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , defaultValue:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , defaultValue:none
     Color? dividerColor,
 
-    /// optionalParameters: {TextStyle? contentTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? contentTextStyle} , defaultValue:none
     TextStyle? contentTextStyle,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , defaultValue:none
     EdgeInsetsGeometry? leadingPadding,
   }) : super(
           backgroundColor: backgroundColor,
@@ -56,14 +56,14 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
           padding: p.get('padding').build(),
           leadingPadding: p.get('leadingPadding').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('shadowColor', shadowColor);
-    matePut('dividerColor', dividerColor);
-    matePut('contentTextStyle', contentTextStyle);
-    matePut('elevation', elevation);
-    matePut('padding', padding);
-    matePut('leadingPadding', leadingPadding);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('surfaceTintColor', surfaceTintColor);
+    mateDeclare('shadowColor', shadowColor);
+    mateDeclare('dividerColor', dividerColor);
+    mateDeclare('contentTextStyle', contentTextStyle);
+    mateDeclare('elevation', elevation);
+    mateDeclare('padding', padding);
+    mateDeclare('leadingPadding', leadingPadding);
   }
 }
 
@@ -71,13 +71,13 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
 class MaterialBannerTheme$Mate extends MaterialBannerTheme with Mate {
   /// MaterialBannerTheme MaterialBannerTheme({Key? key, MaterialBannerThemeData? data, required Widget child})
   MaterialBannerTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {MaterialBannerThemeData? data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialBannerThemeData? data} , defaultValue:none
     MaterialBannerThemeData? data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -89,8 +89,8 @@ class MaterialBannerTheme$Mate extends MaterialBannerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('data', data);
+    mateDeclare('child', child);
   }
 }

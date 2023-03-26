@@ -15,31 +15,31 @@ import 'package:flutter/src/painting/inline_span.dart';
 class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
   /// DefaultTextStyle DefaultTextStyle({Key? key, required TextStyle style, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, required Widget child})
   DefaultTextStyle$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required TextStyle style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextStyle style} , defaultValue:none
     required TextStyle style,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , defaultValue:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {bool softWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool softWrap,
+    /// optionalParameters: {bool softWrap = true} , defaultValue:Literal
+    bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , hasDefaultValue:true, defaultValueCode:TextOverflow.clip
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:unprocessed
     required TextOverflow overflow,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , defaultValue:none
     int? maxLines,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , hasDefaultValue:true, defaultValueCode:TextWidthBasis.parent
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
     required TextWidthBasis textWidthBasis,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -63,25 +63,25 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('style', style);
-    matePut('textAlign', textAlign);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('maxLines', maxLines);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('style', style);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('softWrap', softWrap);
+    mateDeclare('overflow', overflow);
+    mateDeclare('maxLines', maxLines);
+    mateDeclare('textWidthBasis', textWidthBasis);
+    mateDeclare('textHeightBehavior', textHeightBehavior);
+    mateDeclare('child', child);
   }
 
   /// DefaultTextStyle DefaultTextStyle.fallback({Key? key})
   DefaultTextStyle$Mate.fallback(
       {
-      /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super.fallback(key: key) {
     mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
-    matePut('key', key);
+    mateDeclare('key', key);
   }
 }
 
@@ -89,13 +89,13 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
 class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate {
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required TextHeightBehavior textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextHeightBehavior textHeightBehavior} , defaultValue:none
     required TextHeightBehavior textHeightBehavior,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -107,9 +107,9 @@ class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('textHeightBehavior', textHeightBehavior);
+    mateDeclare('child', child);
   }
 }
 
@@ -119,46 +119,46 @@ class Text$Mate extends Text with Mate {
   Text$Mate(
     /// requiredParameters: String data
     String data, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , defaultValue:none
     TextStyle? style,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , defaultValue:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
 
-    /// optionalParameters: {bool? softWrap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? softWrap} , defaultValue:none
     bool? softWrap,
 
-    /// optionalParameters: {TextOverflow? overflow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextOverflow? overflow} , defaultValue:none
     TextOverflow? overflow,
 
-    /// optionalParameters: {double? textScaleFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? textScaleFactor} , defaultValue:none
     double? textScaleFactor,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , defaultValue:none
     int? maxLines,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {TextWidthBasis? textWidthBasis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextWidthBasis? textWidthBasis} , defaultValue:none
     TextWidthBasis? textWidthBasis,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , defaultValue:none
     Color? selectionColor,
   }) : super(
           data,
@@ -194,67 +194,67 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    matePut('data', data);
-    matePut('key', key);
-    matePut('style', style);
-    matePut('strutStyle', strutStyle);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('locale', locale);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('maxLines', maxLines);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('selectionColor', selectionColor);
+    mateDeclare('data', data);
+    mateDeclare('key', key);
+    mateDeclare('style', style);
+    mateDeclare('strutStyle', strutStyle);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('locale', locale);
+    mateDeclare('softWrap', softWrap);
+    mateDeclare('overflow', overflow);
+    mateDeclare('textScaleFactor', textScaleFactor);
+    mateDeclare('maxLines', maxLines);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('textWidthBasis', textWidthBasis);
+    mateDeclare('textHeightBehavior', textHeightBehavior);
+    mateDeclare('selectionColor', selectionColor);
   }
 
   /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
   Text$Mate.rich(
     /// requiredParameters: InlineSpan textSpan
     InlineSpan textSpan, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , defaultValue:none
     TextStyle? style,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , defaultValue:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
 
-    /// optionalParameters: {bool? softWrap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? softWrap} , defaultValue:none
     bool? softWrap,
 
-    /// optionalParameters: {TextOverflow? overflow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextOverflow? overflow} , defaultValue:none
     TextOverflow? overflow,
 
-    /// optionalParameters: {double? textScaleFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? textScaleFactor} , defaultValue:none
     double? textScaleFactor,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , defaultValue:none
     int? maxLines,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,
 
-    /// optionalParameters: {TextWidthBasis? textWidthBasis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextWidthBasis? textWidthBasis} , defaultValue:none
     TextWidthBasis? textWidthBasis,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , defaultValue:none
     Color? selectionColor,
   }) : super.rich(
           textSpan,
@@ -290,20 +290,20 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    matePut('textSpan', textSpan);
-    matePut('key', key);
-    matePut('style', style);
-    matePut('strutStyle', strutStyle);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('locale', locale);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('maxLines', maxLines);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('selectionColor', selectionColor);
+    mateDeclare('textSpan', textSpan);
+    mateDeclare('key', key);
+    mateDeclare('style', style);
+    mateDeclare('strutStyle', strutStyle);
+    mateDeclare('textAlign', textAlign);
+    mateDeclare('textDirection', textDirection);
+    mateDeclare('locale', locale);
+    mateDeclare('softWrap', softWrap);
+    mateDeclare('overflow', overflow);
+    mateDeclare('textScaleFactor', textScaleFactor);
+    mateDeclare('maxLines', maxLines);
+    mateDeclare('semanticsLabel', semanticsLabel);
+    mateDeclare('textWidthBasis', textWidthBasis);
+    mateDeclare('textHeightBehavior', textHeightBehavior);
+    mateDeclare('selectionColor', selectionColor);
   }
 }

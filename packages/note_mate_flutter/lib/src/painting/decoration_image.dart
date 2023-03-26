@@ -14,44 +14,44 @@ import 'package:vector_math/vector_math_64.dart';
 class DecorationImage$Mate extends DecorationImage with Mate {
   /// DecorationImage DecorationImage({required ImageProvider<Object> image, void Function(Object, StackTrace?)? onError, ColorFilter? colorFilter, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, Rect? centerSlice, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, double scale = 1.0, double opacity = 1.0, FilterQuality filterQuality = FilterQuality.low, bool invertColors = false, bool isAntiAlias = false})
   DecorationImage$Mate({
-    /// optionalParameters: {required ImageProvider<Object> image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageProvider<Object> image} , defaultValue:none
     required ImageProvider<Object> image,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onError} , defaultValue:none
     ImageErrorListener? onError,
 
-    /// optionalParameters: {ColorFilter? colorFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ColorFilter? colorFilter} , defaultValue:none
     ColorFilter? colorFilter,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
     required ImageRepeat repeat,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    double scale = 1.0,
 
-    /// optionalParameters: {double opacity = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double opacity,
+    /// optionalParameters: {double opacity = 1.0} , defaultValue:Literal
+    double opacity = 1.0,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
     required FilterQuality filterQuality,
 
-    /// optionalParameters: {bool invertColors = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool invertColors,
+    /// optionalParameters: {bool invertColors = false} , defaultValue:Literal
+    bool invertColors = false,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
+    bool isAntiAlias = false,
   }) : super(
           image: image,
           onError: onError,
@@ -82,19 +82,19 @@ class DecorationImage$Mate extends DecorationImage with Mate {
           invertColors: p.get('invertColors').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    matePut('image', image);
-    matePut('onError', onError);
-    matePut('colorFilter', colorFilter);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('centerSlice', centerSlice);
-    matePut('repeat', repeat);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('scale', scale);
-    matePut('opacity', opacity);
-    matePut('filterQuality', filterQuality);
-    matePut('invertColors', invertColors);
-    matePut('isAntiAlias', isAntiAlias);
+    mateDeclare('image', image);
+    mateDeclare('onError', onError);
+    mateDeclare('colorFilter', colorFilter);
+    mateDeclare('fit', fit);
+    mateDeclare('alignment', alignment);
+    mateDeclare('centerSlice', centerSlice);
+    mateDeclare('repeat', repeat);
+    mateDeclare('matchTextDirection', matchTextDirection);
+    mateDeclare('scale', scale);
+    mateDeclare('opacity', opacity);
+    mateDeclare('filterQuality', filterQuality);
+    mateDeclare('invertColors', invertColors);
+    mateDeclare('isAntiAlias', isAntiAlias);
   }
 }
 
@@ -102,13 +102,13 @@ class DecorationImage$Mate extends DecorationImage with Mate {
 class ImageTilingInfo$Mate extends ImageTilingInfo with Mate {
   /// ImageTilingInfo ImageTilingInfo({required TileMode tmx, required TileMode tmy, required Matrix4 transform})
   ImageTilingInfo$Mate({
-    /// optionalParameters: {required TileMode tmx} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TileMode tmx} , defaultValue:none
     required TileMode tmx,
 
-    /// optionalParameters: {required TileMode tmy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TileMode tmy} , defaultValue:none
     required TileMode tmy,
 
-    /// optionalParameters: {required Matrix4 transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Matrix4 transform} , defaultValue:none
     required Matrix4 transform,
   }) : super(
           tmx: tmx,
@@ -120,8 +120,8 @@ class ImageTilingInfo$Mate extends ImageTilingInfo with Mate {
           tmy: p.get('tmy').build(),
           transform: p.get('transform').build(),
         );
-    matePut('tmx', tmx);
-    matePut('tmy', tmy);
-    matePut('transform', transform);
+    mateDeclare('tmx', tmx);
+    mateDeclare('tmy', tmy);
+    mateDeclare('transform', transform);
   }
 }

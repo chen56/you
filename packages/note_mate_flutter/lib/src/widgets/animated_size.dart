@@ -13,25 +13,25 @@ import 'dart:ui';
 class AnimatedSize$Mate extends AnimatedSize with Mate {
   /// AnimatedSize AnimatedSize({Key? key, Widget? child, AlignmentGeometry alignment = Alignment.center, Curve curve = Curves.linear, required Duration duration, Duration? reverseDuration, Clip clipBehavior = Clip.hardEdge})
   AnimatedSize$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
     required Curve curve,
 
-    /// optionalParameters: {required Duration duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
 
-    /// optionalParameters: {Duration? reverseDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? reverseDuration} , defaultValue:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
     required Clip clipBehavior,
   }) : super(
           key: key,
@@ -51,12 +51,12 @@ class AnimatedSize$Mate extends AnimatedSize with Mate {
           reverseDuration: p.get('reverseDuration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('alignment', alignment);
-    matePut('curve', curve);
-    matePut('duration', duration);
-    matePut('reverseDuration', reverseDuration);
-    matePut('clipBehavior', clipBehavior);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('alignment', alignment);
+    mateDeclare('curve', curve);
+    mateDeclare('duration', duration);
+    mateDeclare('reverseDuration', reverseDuration);
+    mateDeclare('clipBehavior', clipBehavior);
   }
 }

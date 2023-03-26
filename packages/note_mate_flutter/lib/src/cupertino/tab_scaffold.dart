@@ -13,11 +13,11 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate {
   /// CupertinoTabController CupertinoTabController({int initialIndex = 0})
   CupertinoTabController$Mate(
       {
-      /// optionalParameters: {int initialIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-      required int initialIndex})
+      /// optionalParameters: {int initialIndex = 0} , defaultValue:Literal
+      int initialIndex = 0})
       : super(initialIndex: initialIndex) {
     mateBuilder = (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
-    matePut('initialIndex', initialIndex);
+    mateDeclare('initialIndex', initialIndex);
   }
 }
 
@@ -25,25 +25,25 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate {
 class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with Mate {
   /// CupertinoTabScaffold CupertinoTabScaffold({Key? key, required CupertinoTabBar tabBar, required Widget Function(BuildContext, int) tabBuilder, CupertinoTabController? controller, Color? backgroundColor, bool resizeToAvoidBottomInset = true, String? restorationId})
   CupertinoTabScaffold$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required CupertinoTabBar tabBar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required CupertinoTabBar tabBar} , defaultValue:none
     required CupertinoTabBar tabBar,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int) tabBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, int) tabBuilder} , defaultValue:none
     required IndexedWidgetBuilder tabBuilder,
 
-    /// optionalParameters: {CupertinoTabController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CupertinoTabController? controller} , defaultValue:none
     CupertinoTabController? controller,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {bool resizeToAvoidBottomInset = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool resizeToAvoidBottomInset,
+    /// optionalParameters: {bool resizeToAvoidBottomInset = true} , defaultValue:Literal
+    bool resizeToAvoidBottomInset = true,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
   }) : super(
           key: key,
@@ -63,13 +63,13 @@ class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with Mate {
           resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').build(),
           restorationId: p.get('restorationId').build(),
         );
-    matePut('key', key);
-    matePut('tabBar', tabBar);
-    matePut('tabBuilder', tabBuilder);
-    matePut('controller', controller);
-    matePut('backgroundColor', backgroundColor);
-    matePut('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
-    matePut('restorationId', restorationId);
+    mateDeclare('key', key);
+    mateDeclare('tabBar', tabBar);
+    mateDeclare('tabBuilder', tabBuilder);
+    mateDeclare('controller', controller);
+    mateDeclare('backgroundColor', backgroundColor);
+    mateDeclare('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
+    mateDeclare('restorationId', restorationId);
   }
 }
 
@@ -78,10 +78,10 @@ class RestorableCupertinoTabController$Mate extends RestorableCupertinoTabContro
   /// RestorableCupertinoTabController RestorableCupertinoTabController({int initialIndex = 0})
   RestorableCupertinoTabController$Mate(
       {
-      /// optionalParameters: {int initialIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-      required int initialIndex})
+      /// optionalParameters: {int initialIndex = 0} , defaultValue:Literal
+      int initialIndex = 0})
       : super(initialIndex: initialIndex) {
     mateBuilder = (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
-    matePut('initialIndex', initialIndex);
+    mateDeclare('initialIndex', initialIndex);
   }
 }

@@ -9,10 +9,10 @@ class ContextMenuController$Mate extends ContextMenuController with Mate {
   /// ContextMenuController ContextMenuController({void Function()? onRemove})
   ContextMenuController$Mate(
       {
-      /// optionalParameters: {void Function()? onRemove} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {void Function()? onRemove} , defaultValue:none
       VoidCallback? onRemove})
       : super(onRemove: onRemove) {
     mateBuilder = (p) => ContextMenuController$Mate(onRemove: p.get('onRemove').build());
-    matePut('onRemove', onRemove);
+    mateDeclare('onRemove', onRemove);
   }
 }

@@ -12,46 +12,46 @@ import 'package:flutter/src/foundation/basic_types.dart';
 class Focus$Mate extends Focus with Mate {
   /// Focus Focus({Key? key, required Widget child, FocusNode? focusNode, FocusNode? parentNode, bool autofocus = false, void Function(bool)? onFocusChange, KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent, KeyEventResult Function(FocusNode, RawKeyEvent)? onKey, bool? canRequestFocus, bool? skipTraversal, bool? descendantsAreFocusable, bool? descendantsAreTraversable, bool includeSemantics = true, String? debugLabel})
   Focus$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {FocusNode? parentNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? parentNode} , defaultValue:none
     FocusNode? parentNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , defaultValue:none
     FocusOnKeyEventCallback? onKeyEvent,
 
-    /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , defaultValue:none
     FocusOnKeyCallback? onKey,
 
-    /// optionalParameters: {bool? canRequestFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? canRequestFocus} , defaultValue:none
     bool? canRequestFocus,
 
-    /// optionalParameters: {bool? skipTraversal} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? skipTraversal} , defaultValue:none
     bool? skipTraversal,
 
-    /// optionalParameters: {bool? descendantsAreFocusable} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? descendantsAreFocusable} , defaultValue:none
     bool? descendantsAreFocusable,
 
-    /// optionalParameters: {bool? descendantsAreTraversable} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? descendantsAreTraversable} , defaultValue:none
     bool? descendantsAreTraversable,
 
-    /// optionalParameters: {bool includeSemantics = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool includeSemantics,
+    /// optionalParameters: {bool includeSemantics = true} , defaultValue:Literal
+    bool includeSemantics = true,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
   }) : super(
           key: key,
@@ -85,20 +85,20 @@ class Focus$Mate extends Focus with Mate {
           includeSemantics: p.get('includeSemantics').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('focusNode', focusNode);
-    matePut('parentNode', parentNode);
-    matePut('autofocus', autofocus);
-    matePut('onFocusChange', onFocusChange);
-    matePut('onKeyEvent', onKeyEvent);
-    matePut('onKey', onKey);
-    matePut('canRequestFocus', canRequestFocus);
-    matePut('skipTraversal', skipTraversal);
-    matePut('descendantsAreFocusable', descendantsAreFocusable);
-    matePut('descendantsAreTraversable', descendantsAreTraversable);
-    matePut('includeSemantics', includeSemantics);
-    matePut('debugLabel', debugLabel);
+    mateDeclare('key', key);
+    mateDeclare('child', child);
+    mateDeclare('focusNode', focusNode);
+    mateDeclare('parentNode', parentNode);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('onKeyEvent', onKeyEvent);
+    mateDeclare('onKey', onKey);
+    mateDeclare('canRequestFocus', canRequestFocus);
+    mateDeclare('skipTraversal', skipTraversal);
+    mateDeclare('descendantsAreFocusable', descendantsAreFocusable);
+    mateDeclare('descendantsAreTraversable', descendantsAreTraversable);
+    mateDeclare('includeSemantics', includeSemantics);
+    mateDeclare('debugLabel', debugLabel);
   }
 }
 
@@ -106,37 +106,37 @@ class Focus$Mate extends Focus with Mate {
 class FocusScope$Mate extends FocusScope with Mate {
   /// FocusScope FocusScope({Key? key, FocusScopeNode? node, FocusNode? parentNode, required Widget child, bool autofocus = false, void Function(bool)? onFocusChange, bool? canRequestFocus, bool? skipTraversal, KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent, KeyEventResult Function(FocusNode, RawKeyEvent)? onKey, String? debugLabel})
   FocusScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {FocusScopeNode? node} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusScopeNode? node} , defaultValue:none
     FocusScopeNode? node,
 
-    /// optionalParameters: {FocusNode? parentNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? parentNode} , defaultValue:none
     FocusNode? parentNode,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    bool autofocus = false,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {bool? canRequestFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? canRequestFocus} , defaultValue:none
     bool? canRequestFocus,
 
-    /// optionalParameters: {bool? skipTraversal} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? skipTraversal} , defaultValue:none
     bool? skipTraversal,
 
-    /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , defaultValue:none
     FocusOnKeyEventCallback? onKeyEvent,
 
-    /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , defaultValue:none
     FocusOnKeyCallback? onKey,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , defaultValue:none
     String? debugLabel,
   }) : super(
           key: key,
@@ -164,17 +164,17 @@ class FocusScope$Mate extends FocusScope with Mate {
           onKey: p.get('onKey').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('key', key);
-    matePut('node', node);
-    matePut('parentNode', parentNode);
-    matePut('child', child);
-    matePut('autofocus', autofocus);
-    matePut('onFocusChange', onFocusChange);
-    matePut('canRequestFocus', canRequestFocus);
-    matePut('skipTraversal', skipTraversal);
-    matePut('onKeyEvent', onKeyEvent);
-    matePut('onKey', onKey);
-    matePut('debugLabel', debugLabel);
+    mateDeclare('key', key);
+    mateDeclare('node', node);
+    mateDeclare('parentNode', parentNode);
+    mateDeclare('child', child);
+    mateDeclare('autofocus', autofocus);
+    mateDeclare('onFocusChange', onFocusChange);
+    mateDeclare('canRequestFocus', canRequestFocus);
+    mateDeclare('skipTraversal', skipTraversal);
+    mateDeclare('onKeyEvent', onKeyEvent);
+    mateDeclare('onKey', onKey);
+    mateDeclare('debugLabel', debugLabel);
   }
 }
 
@@ -182,13 +182,13 @@ class FocusScope$Mate extends FocusScope with Mate {
 class ExcludeFocus$Mate extends ExcludeFocus with Mate {
   /// ExcludeFocus ExcludeFocus({Key? key, bool excluding = true, required Widget child})
   ExcludeFocus$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {bool excluding = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool excluding,
+    /// optionalParameters: {bool excluding = true} , defaultValue:Literal
+    bool excluding = true,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
   }) : super(
           key: key,
@@ -200,8 +200,8 @@ class ExcludeFocus$Mate extends ExcludeFocus with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('excluding', excluding);
-    matePut('child', child);
+    mateDeclare('key', key);
+    mateDeclare('excluding', excluding);
+    mateDeclare('child', child);
   }
 }

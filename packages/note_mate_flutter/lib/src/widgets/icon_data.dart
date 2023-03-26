@@ -14,16 +14,16 @@ class IconDataProperty$Mate extends IconDataProperty with Mate {
 
     /// requiredParameters: IconData? value
     IconData? value, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , defaultValue:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
+    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
     required bool showName,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
     required DiagnosticsTreeStyle style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
     required DiagnosticLevel level,
   }) : super(
           name,
@@ -41,11 +41,11 @@ class IconDataProperty$Mate extends IconDataProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('style', style);
-    matePut('level', level);
+    mateDeclare('name', name);
+    mateDeclare('value', value);
+    mateDeclare('ifNull', ifNull);
+    mateDeclare('showName', showName);
+    mateDeclare('style', style);
+    mateDeclare('level', level);
   }
 }
