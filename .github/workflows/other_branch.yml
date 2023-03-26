@@ -46,7 +46,7 @@ jobs:
 
       # build
       - run: flutter --version
-      - run: brew install bash
+#      - run: brew install bash
       - run: ./bake get
       - run: ./bake test
       - run: ./bake build

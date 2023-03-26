@@ -24,12 +24,12 @@ set -o functrace #trap inherited in function
 # 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
 # ------------------------------------------------------------------------------
 
-if ((BASH_VERSINFO[0] < 4)); then
-  echo "Error: 您bash版本过低(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
-  apt install bash  # ubuntu
-  brew install bash # mac"
-  exit 1
-fi
+#if ((BASH_VERSINFO[0] < 4)); then
+#  echo "Error: 您bash版本过低(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
+#  apt install bash  # ubuntu
+#  brew install bash # mac"
+#  exit 1
+#fi
 
 # copy from flutter
 # ----------------------
