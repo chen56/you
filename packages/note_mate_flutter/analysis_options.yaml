@@ -34,7 +34,6 @@ analyzer:
     depend_on_referenced_packages: ignore
     # gen_mates.dart应过滤
     invalid_use_of_visible_for_testing_member: ignore
-#    unused_import: ignore
 #   exclude:
 #     - path/to/excluded/files/**
 
