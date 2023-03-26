@@ -19,6 +19,8 @@ class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate {
           borderSide: borderSide,
           borderRadius: borderRadius,
         ) {
+    mateCreateName = 'UnderlineInputBorder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UnderlineInputBorder$Mate(
           borderSide: p.get('borderSide').build(),
           borderRadius: p.get('borderRadius').build(),
@@ -45,6 +47,8 @@ class OutlineInputBorder$Mate extends OutlineInputBorder with Mate {
           borderRadius: borderRadius,
           gapPadding: gapPadding,
         ) {
+    mateCreateName = 'OutlineInputBorder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OutlineInputBorder$Mate(
           borderSide: p.get('borderSide').build(),
           borderRadius: p.get('borderRadius').build(),

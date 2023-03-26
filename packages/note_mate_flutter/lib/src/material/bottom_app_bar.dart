@@ -54,6 +54,8 @@ class BottomAppBar$Mate extends BottomAppBar with Mate {
           surfaceTintColor: surfaceTintColor,
           height: height,
         ) {
+    mateCreateName = 'BottomAppBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomAppBar$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),

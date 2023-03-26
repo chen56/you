@@ -23,6 +23,8 @@ class TooltipVisibility$Mate extends TooltipVisibility with Mate {
           visible: visible,
           child: child,
         ) {
+    mateCreateName = 'TooltipVisibility';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TooltipVisibility$Mate(
           key: p.get('key').build(),
           visible: p.get('visible').build(),

@@ -58,6 +58,8 @@ class CircleAvatar$Mate extends CircleAvatar with Mate {
           minRadius: minRadius,
           maxRadius: maxRadius,
         ) {
+    mateCreateName = 'CircleAvatar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircleAvatar$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

@@ -38,6 +38,8 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate {
           size: size,
           platform: platform,
         ) {
+    mateCreateName = 'ImageConfiguration';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ImageConfiguration$Mate(
           bundle: p.get('bundle').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
@@ -72,6 +74,8 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate {
           name: name,
           scale: scale,
         ) {
+    mateCreateName = 'AssetBundleImageKey';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AssetBundleImageKey$Mate(
           bundle: p.get('bundle').build(),
           name: p.get('name').build(),
@@ -107,6 +111,8 @@ class ResizeImage$Mate extends ResizeImage with Mate {
           policy: policy,
           allowUpscaling: allowUpscaling,
         ) {
+    mateCreateName = 'ResizeImage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ResizeImage$Mate(
           p.get('imageProvider').value,
           width: p.get('width').build(),
@@ -134,6 +140,8 @@ class FileImage$Mate extends FileImage with Mate {
           file,
           scale: scale,
         ) {
+    mateCreateName = 'FileImage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FileImage$Mate(
           p.get('file').value,
           scale: p.get('scale').build(),
@@ -155,6 +163,8 @@ class MemoryImage$Mate extends MemoryImage with Mate {
           bytes,
           scale: scale,
         ) {
+    mateCreateName = 'MemoryImage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MemoryImage$Mate(
           p.get('bytes').value,
           scale: p.get('scale').build(),
@@ -184,6 +194,8 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
           bundle: bundle,
           package: package,
         ) {
+    mateCreateName = 'ExactAssetImage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExactAssetImage$Mate(
           p.get('assetName').value,
           scale: p.get('scale').build(),
@@ -198,8 +210,7 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
 }
 
 /// class NetworkImageLoadException implements Exception
-class NetworkImageLoadException$Mate extends NetworkImageLoadException
-    with Mate {
+class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate {
   /// NetworkImageLoadException NetworkImageLoadException({required int statusCode, required Uri uri})
   NetworkImageLoadException$Mate({
     /// optionalParameters: {required int statusCode} , defaultValue:none
@@ -211,6 +222,8 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException
           statusCode: statusCode,
           uri: uri,
         ) {
+    mateCreateName = 'NetworkImageLoadException';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NetworkImageLoadException$Mate(
           statusCode: p.get('statusCode').build(),
           uri: p.get('uri').build(),

@@ -13,8 +13,9 @@ class SelectedContent$Mate extends SelectedContent with Mate {
       /// optionalParameters: {required String plainText} , defaultValue:none
       required String plainText})
       : super(plainText: plainText) {
-    mateBuilder =
-        (p) => SelectedContent$Mate(plainText: p.get('plainText').build());
+    mateCreateName = 'SelectedContent';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => SelectedContent$Mate(plainText: p.get('plainText').build());
     mateUse('plainText', plainText);
   }
 }
@@ -27,8 +28,9 @@ class SelectWordSelectionEvent$Mate extends SelectWordSelectionEvent with Mate {
       /// optionalParameters: {required Offset globalPosition} , defaultValue:none
       required Offset globalPosition})
       : super(globalPosition: globalPosition) {
-    mateBuilder = (p) => SelectWordSelectionEvent$Mate(
-        globalPosition: p.get('globalPosition').build());
+    mateCreateName = 'SelectWordSelectionEvent';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').build());
     mateUse('globalPosition', globalPosition);
   }
 }
@@ -41,8 +43,9 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate {
       /// optionalParameters: {required Offset globalPosition} , defaultValue:none
       required Offset globalPosition})
       : super.forStart(globalPosition: globalPosition) {
-    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(
-        globalPosition: p.get('globalPosition').build());
+    mateCreateName = 'SelectionEdgeUpdateEvent.forStart';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').build());
     mateUse('globalPosition', globalPosition);
   }
 
@@ -52,15 +55,15 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate {
       /// optionalParameters: {required Offset globalPosition} , defaultValue:none
       required Offset globalPosition})
       : super.forEnd(globalPosition: globalPosition) {
-    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(
-        globalPosition: p.get('globalPosition').build());
+    mateCreateName = 'SelectionEdgeUpdateEvent.forEnd';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').build());
     mateUse('globalPosition', globalPosition);
   }
 }
 
 /// class GranularlyExtendSelectionEvent extends SelectionEvent
-class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
-    with Mate {
+class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent with Mate {
   /// GranularlyExtendSelectionEvent GranularlyExtendSelectionEvent({required bool forward, required bool isEnd, required TextGranularity granularity})
   GranularlyExtendSelectionEvent$Mate({
     /// optionalParameters: {required bool forward} , defaultValue:none
@@ -76,6 +79,8 @@ class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
           isEnd: isEnd,
           granularity: granularity,
         ) {
+    mateCreateName = 'GranularlyExtendSelectionEvent';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => GranularlyExtendSelectionEvent$Mate(
           forward: p.get('forward').build(),
           isEnd: p.get('isEnd').build(),
@@ -88,8 +93,7 @@ class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
 }
 
 /// class DirectionallyExtendSelectionEvent extends SelectionEvent
-class DirectionallyExtendSelectionEvent$Mate
-    extends DirectionallyExtendSelectionEvent with Mate {
+class DirectionallyExtendSelectionEvent$Mate extends DirectionallyExtendSelectionEvent with Mate {
   /// DirectionallyExtendSelectionEvent DirectionallyExtendSelectionEvent({required double dx, required bool isEnd, required SelectionExtendDirection direction})
   DirectionallyExtendSelectionEvent$Mate({
     /// optionalParameters: {required double dx} , defaultValue:none
@@ -105,6 +109,8 @@ class DirectionallyExtendSelectionEvent$Mate
           isEnd: isEnd,
           direction: direction,
         ) {
+    mateCreateName = 'DirectionallyExtendSelectionEvent';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => DirectionallyExtendSelectionEvent$Mate(
           dx: p.get('dx').build(),
           isEnd: p.get('isEnd').build(),
@@ -137,6 +143,8 @@ class SelectionGeometry$Mate extends SelectionGeometry with Mate {
           status: status,
           hasContent: hasContent,
         ) {
+    mateCreateName = 'SelectionGeometry';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectionGeometry$Mate(
           startSelectionPoint: p.get('startSelectionPoint').build(),
           endSelectionPoint: p.get('endSelectionPoint').build(),
@@ -167,6 +175,8 @@ class SelectionPoint$Mate extends SelectionPoint with Mate {
           lineHeight: lineHeight,
           handleType: handleType,
         ) {
+    mateCreateName = 'SelectionPoint';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectionPoint$Mate(
           localPosition: p.get('localPosition').build(),
           lineHeight: p.get('lineHeight').build(),

@@ -30,6 +30,8 @@ class TransformProperty$Mate extends TransformProperty with Mate {
           defaultValue: defaultValue,
           level: level,
         ) {
+    mateCreateName = 'TransformProperty';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TransformProperty$Mate(
           p.get('name').value,
           p.get('value').value,

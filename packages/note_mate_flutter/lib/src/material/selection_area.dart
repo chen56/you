@@ -44,6 +44,8 @@ class SelectionArea$Mate extends SelectionArea with Mate {
           onSelectionChanged: onSelectionChanged,
           child: child,
         ) {
+    mateCreateName = 'SelectionArea';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectionArea$Mate(
           key: p.get('key').build(),
           focusNode: p.get('focusNode').build(),

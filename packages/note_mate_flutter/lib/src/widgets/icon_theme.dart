@@ -23,6 +23,8 @@ class IconTheme$Mate extends IconTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'IconTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IconTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

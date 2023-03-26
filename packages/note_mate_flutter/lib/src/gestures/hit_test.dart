@@ -4,14 +4,15 @@ import 'package:flutter/src/gestures/hit_test.dart';
 import 'package:note/mate.dart';
 
 /// class HitTestEntry<T extends HitTestTarget>
-class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T>
-    with Mate {
+class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T> with Mate {
   /// HitTestEntry<T> HitTestEntry(T target)
   HitTestEntry$Mate(
 
       /// requiredParameters: T target
       T target)
       : super(target) {
+    mateCreateName = 'HitTestEntry';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HitTestEntry$Mate<T>(p.get('target').value);
     mateUse('target', target);
   }
@@ -25,6 +26,8 @@ class HitTestResult$Mate extends HitTestResult with Mate {
       /// requiredParameters: HitTestResult result
       HitTestResult result)
       : super.wrap(result) {
+    mateCreateName = 'HitTestResult.wrap';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HitTestResult$Mate.wrap(p.get('result').value);
     mateUse('result', result);
   }

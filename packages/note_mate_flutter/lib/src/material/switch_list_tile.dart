@@ -172,6 +172,8 @@ class SwitchListTile$Mate extends SwitchListTile with Mate {
           enableFeedback: enableFeedback,
           hoverColor: hoverColor,
         ) {
+    mateCreateName = 'SwitchListTile';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SwitchListTile$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -405,6 +407,8 @@ class SwitchListTile$Mate extends SwitchListTile with Mate {
           enableFeedback: enableFeedback,
           hoverColor: hoverColor,
         ) {
+    mateCreateName = 'SwitchListTile.adaptive';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SwitchListTile$Mate.adaptive(
           key: p.get('key').build(),
           value: p.get('value').build(),

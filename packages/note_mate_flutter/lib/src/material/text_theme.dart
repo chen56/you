@@ -69,6 +69,8 @@ class TextTheme$Mate extends TextTheme with Mate {
           labelMedium: labelMedium,
           labelSmall: labelSmall,
         ) {
+    mateCreateName = 'TextTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextTheme$Mate(
           displayLarge: p.get('displayLarge').build(),
           displayMedium: p.get('displayMedium').build(),

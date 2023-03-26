@@ -25,10 +25,11 @@ class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate {
           keyCode: keyCode,
           modifiers: modifiers,
         ) {
+    mateCreateName = 'RawKeyEventDataIos';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataIos$Mate(
           characters: p.get('characters').build(),
-          charactersIgnoringModifiers:
-              p.get('charactersIgnoringModifiers').build(),
+          charactersIgnoringModifiers: p.get('charactersIgnoringModifiers').build(),
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
         );

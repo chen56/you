@@ -28,6 +28,8 @@ class TextSelectionPoint$Mate extends TextSelectionPoint with Mate {
           point,
           direction,
         ) {
+    mateCreateName = 'TextSelectionPoint';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionPoint$Mate(
           p.get('point').value,
           p.get('direction').value,
@@ -214,6 +216,8 @@ class RenderEditable$Mate extends RenderEditable with Mate {
           foregroundPainter: foregroundPainter,
           children: children,
         ) {
+    mateCreateName = 'RenderEditable';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderEditable$Mate(
           text: p.get('text').build(),
           textDirection: p.get('textDirection').build(),
@@ -249,8 +253,7 @@ class RenderEditable$Mate extends RenderEditable with Mate {
           devicePixelRatio: p.get('devicePixelRatio').build(),
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           floatingCursorAddedMargin: p.get('floatingCursorAddedMargin').build(),
           promptRectRange: p.get('promptRectRange').build(),
           promptRectColor: p.get('promptRectColor').build(),

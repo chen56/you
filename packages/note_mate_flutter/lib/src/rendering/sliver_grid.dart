@@ -26,6 +26,8 @@ class SliverGridGeometry$Mate extends SliverGridGeometry with Mate {
           mainAxisExtent: mainAxisExtent,
           crossAxisExtent: crossAxisExtent,
         ) {
+    mateCreateName = 'SliverGridGeometry';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGridGeometry$Mate(
           scrollOffset: p.get('scrollOffset').build(),
           crossAxisOffset: p.get('crossAxisOffset').build(),
@@ -40,8 +42,7 @@ class SliverGridGeometry$Mate extends SliverGridGeometry with Mate {
 }
 
 /// class SliverGridRegularTileLayout extends SliverGridLayout
-class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout
-    with Mate {
+class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout with Mate {
   /// SliverGridRegularTileLayout SliverGridRegularTileLayout({required int crossAxisCount, required double mainAxisStride, required double crossAxisStride, required double childMainAxisExtent, required double childCrossAxisExtent, required bool reverseCrossAxis})
   SliverGridRegularTileLayout$Mate({
     /// optionalParameters: {required int crossAxisCount} , defaultValue:none
@@ -69,6 +70,8 @@ class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout
           childCrossAxisExtent: childCrossAxisExtent,
           reverseCrossAxis: reverseCrossAxis,
         ) {
+    mateCreateName = 'SliverGridRegularTileLayout';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGridRegularTileLayout$Mate(
           crossAxisCount: p.get('crossAxisCount').build(),
           mainAxisStride: p.get('mainAxisStride').build(),
@@ -87,8 +90,7 @@ class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout
 }
 
 /// class SliverGridDelegateWithFixedCrossAxisCount extends SliverGridDelegate
-class SliverGridDelegateWithFixedCrossAxisCount$Mate
-    extends SliverGridDelegateWithFixedCrossAxisCount with Mate {
+class SliverGridDelegateWithFixedCrossAxisCount$Mate extends SliverGridDelegateWithFixedCrossAxisCount with Mate {
   /// SliverGridDelegateWithFixedCrossAxisCount SliverGridDelegateWithFixedCrossAxisCount({required int crossAxisCount, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, double? mainAxisExtent})
   SliverGridDelegateWithFixedCrossAxisCount$Mate({
     /// optionalParameters: {required int crossAxisCount} , defaultValue:none
@@ -112,6 +114,8 @@ class SliverGridDelegateWithFixedCrossAxisCount$Mate
           childAspectRatio: childAspectRatio,
           mainAxisExtent: mainAxisExtent,
         ) {
+    mateCreateName = 'SliverGridDelegateWithFixedCrossAxisCount';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverGridDelegateWithFixedCrossAxisCount$Mate(
           crossAxisCount: p.get('crossAxisCount').build(),
           mainAxisSpacing: p.get('mainAxisSpacing').build(),
@@ -128,8 +132,7 @@ class SliverGridDelegateWithFixedCrossAxisCount$Mate
 }
 
 /// class SliverGridDelegateWithMaxCrossAxisExtent extends SliverGridDelegate
-class SliverGridDelegateWithMaxCrossAxisExtent$Mate
-    extends SliverGridDelegateWithMaxCrossAxisExtent with Mate {
+class SliverGridDelegateWithMaxCrossAxisExtent$Mate extends SliverGridDelegateWithMaxCrossAxisExtent with Mate {
   /// SliverGridDelegateWithMaxCrossAxisExtent SliverGridDelegateWithMaxCrossAxisExtent({required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, double? mainAxisExtent})
   SliverGridDelegateWithMaxCrossAxisExtent$Mate({
     /// optionalParameters: {required double maxCrossAxisExtent} , defaultValue:none
@@ -153,6 +156,8 @@ class SliverGridDelegateWithMaxCrossAxisExtent$Mate
           childAspectRatio: childAspectRatio,
           mainAxisExtent: mainAxisExtent,
         ) {
+    mateCreateName = 'SliverGridDelegateWithMaxCrossAxisExtent';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverGridDelegateWithMaxCrossAxisExtent$Mate(
           maxCrossAxisExtent: p.get('maxCrossAxisExtent').build(),
           mainAxisSpacing: p.get('mainAxisSpacing').build(),
@@ -181,6 +186,8 @@ class RenderSliverGrid$Mate extends RenderSliverGrid with Mate {
           childManager: childManager,
           gridDelegate: gridDelegate,
         ) {
+    mateCreateName = 'RenderSliverGrid';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverGrid$Mate(
           childManager: p.get('childManager').build(),
           gridDelegate: p.get('gridDelegate').build(),

@@ -28,6 +28,8 @@ class ChipTheme$Mate extends ChipTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'ChipTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ChipTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
@@ -124,6 +126,8 @@ class ChipThemeData$Mate extends ChipThemeData with Mate {
           pressElevation: pressElevation,
           iconTheme: iconTheme,
         ) {
+    mateCreateName = 'ChipThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ChipThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           deleteIconColor: p.get('deleteIconColor').build(),

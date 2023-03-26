@@ -17,6 +17,8 @@ class OrientationBuilder$Mate extends OrientationBuilder with Mate {
           key: key,
           builder: builder,
         ) {
+    mateCreateName = 'OrientationBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OrientationBuilder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),

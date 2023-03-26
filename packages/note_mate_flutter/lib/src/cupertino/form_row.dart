@@ -35,6 +35,8 @@ class CupertinoFormRow$Mate extends CupertinoFormRow with Mate {
           helper: helper,
           error: error,
         ) {
+    mateCreateName = 'CupertinoFormRow';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFormRow$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

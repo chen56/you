@@ -147,6 +147,8 @@ class MaterialButton$Mate extends MaterialButton with Mate {
           enableFeedback: enableFeedback,
           child: child,
         ) {
+    mateCreateName = 'MaterialButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialButton$Mate(
           key: p.get('key').build(),
           onPressed: p.get('onPressed').build(),

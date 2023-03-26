@@ -25,6 +25,8 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate {
           inputDecorationTheme: inputDecorationTheme,
           menuStyle: menuStyle,
         ) {
+    mateCreateName = 'DropdownMenuThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuThemeData$Mate(
           textStyle: p.get('textStyle').build(),
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
@@ -53,6 +55,8 @@ class DropdownMenuTheme$Mate extends DropdownMenuTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'DropdownMenuTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

@@ -11,8 +11,7 @@ import 'dart:ui';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class TweenAnimationBuilder<T extends Object?> extends ImplicitlyAnimatedWidget
-class TweenAnimationBuilder$Mate<T extends Object?>
-    extends TweenAnimationBuilder<T> with Mate {
+class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilder<T> with Mate {
   /// TweenAnimationBuilder<T> TweenAnimationBuilder({Key? key, required Tween<T> tween, required Duration duration, Curve curve = Curves.linear, required Widget Function(BuildContext, T, Widget?) builder, void Function()? onEnd, Widget? child})
   TweenAnimationBuilder$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -44,6 +43,8 @@ class TweenAnimationBuilder$Mate<T extends Object?>
           onEnd: onEnd,
           child: child,
         ) {
+    mateCreateName = 'TweenAnimationBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TweenAnimationBuilder$Mate<T>(
           key: p.get('key').build(),
           tween: p.get('tween').build(),

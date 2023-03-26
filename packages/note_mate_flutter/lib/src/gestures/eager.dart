@@ -19,6 +19,8 @@ class EagerGestureRecognizer$Mate extends EagerGestureRecognizer with Mate {
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
+    mateCreateName = 'EagerGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => EagerGestureRecognizer$Mate(
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),

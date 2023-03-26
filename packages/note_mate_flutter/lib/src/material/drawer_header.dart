@@ -42,6 +42,8 @@ class DrawerHeader$Mate extends DrawerHeader with Mate {
           curve: curve,
           child: child,
         ) {
+    mateCreateName = 'DrawerHeader';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerHeader$Mate(
           key: p.get('key').build(),
           decoration: p.get('decoration').build(),

@@ -7,8 +7,7 @@ import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class VerticalDragGestureRecognizer extends DragGestureRecognizer
-class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
-    with Mate {
+class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer with Mate {
   /// VerticalDragGestureRecognizer VerticalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   VerticalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
@@ -24,6 +23,8 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
+    mateCreateName = 'VerticalDragGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VerticalDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
           supportedDevices: p.get('supportedDevices').build(),
@@ -36,8 +37,7 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
 }
 
 /// class HorizontalDragGestureRecognizer extends DragGestureRecognizer
-class HorizontalDragGestureRecognizer$Mate
-    extends HorizontalDragGestureRecognizer with Mate {
+class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecognizer with Mate {
   /// HorizontalDragGestureRecognizer HorizontalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   HorizontalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
@@ -53,6 +53,8 @@ class HorizontalDragGestureRecognizer$Mate
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
+    mateCreateName = 'HorizontalDragGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HorizontalDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
           supportedDevices: p.get('supportedDevices').build(),
@@ -81,6 +83,8 @@ class PanGestureRecognizer$Mate extends PanGestureRecognizer with Mate {
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
+    mateCreateName = 'PanGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PanGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
           supportedDevices: p.get('supportedDevices').build(),

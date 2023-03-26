@@ -14,8 +14,9 @@ class OutlinedButtonThemeData$Mate extends OutlinedButtonThemeData with Mate {
       /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
-    mateBuilder =
-        (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
+    mateCreateName = 'OutlinedButtonThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
     mateUse('style', style);
   }
 }
@@ -37,6 +38,8 @@ class OutlinedButtonTheme$Mate extends OutlinedButtonTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'OutlinedButtonTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OutlinedButtonTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

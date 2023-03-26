@@ -35,6 +35,8 @@ class NavigationToolbar$Mate extends NavigationToolbar with Mate {
           centerMiddle: centerMiddle,
           middleSpacing: middleSpacing,
         ) {
+    mateCreateName = 'NavigationToolbar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationToolbar$Mate(
           key: p.get('key').build(),
           leading: p.get('leading').build(),

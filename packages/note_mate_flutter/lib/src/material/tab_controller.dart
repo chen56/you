@@ -28,6 +28,8 @@ class TabController$Mate extends TabController with Mate {
           length: length,
           vsync: vsync,
         ) {
+    mateCreateName = 'TabController';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabController$Mate(
           initialIndex: p.get('initialIndex').build(),
           animationDuration: p.get('animationDuration').build(),
@@ -66,6 +68,8 @@ class DefaultTabController$Mate extends DefaultTabController with Mate {
           child: child,
           animationDuration: animationDuration,
         ) {
+    mateCreateName = 'DefaultTabController';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DefaultTabController$Mate(
           key: p.get('key').build(),
           length: p.get('length').build(),

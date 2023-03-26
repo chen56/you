@@ -54,6 +54,8 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with Mate {
           height: height,
           border: border,
         ) {
+    mateCreateName = 'CupertinoTabBar';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabBar$Mate(
           key: p.get('key').build(),
           items: p.get('items').build(),

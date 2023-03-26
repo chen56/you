@@ -21,6 +21,8 @@ class RouteInformation$Mate extends RouteInformation with Mate {
           location: location,
           state: state,
         ) {
+    mateCreateName = 'RouteInformation';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RouteInformation$Mate(
           location: p.get('location').build(),
           state: p.get('state').build(),
@@ -51,6 +53,8 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate {
           routerDelegate: routerDelegate,
           backButtonDispatcher: backButtonDispatcher,
         ) {
+    mateCreateName = 'RouterConfig';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RouterConfig$Mate<T>(
           routeInformationProvider: p.get('routeInformationProvider').build(),
           routeInformationParser: p.get('routeInformationParser').build(),
@@ -93,6 +97,8 @@ class Router$Mate<T> extends Router<T> with Mate {
           backButtonDispatcher: backButtonDispatcher,
           restorationScopeId: restorationScopeId,
         ) {
+    mateCreateName = 'Router';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Router$Mate<T>(
           key: p.get('key').build(),
           routeInformationProvider: p.get('routeInformationProvider').build(),
@@ -111,14 +117,15 @@ class Router$Mate<T> extends Router<T> with Mate {
 }
 
 /// class ChildBackButtonDispatcher extends BackButtonDispatcher
-class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher
-    with Mate {
+class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate {
   /// ChildBackButtonDispatcher ChildBackButtonDispatcher(BackButtonDispatcher parent)
   ChildBackButtonDispatcher$Mate(
 
       /// requiredParameters: BackButtonDispatcher parent
       BackButtonDispatcher parent)
       : super(parent) {
+    mateCreateName = 'ChildBackButtonDispatcher';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ChildBackButtonDispatcher$Mate(p.get('parent').value);
     mateUse('parent', parent);
   }
@@ -141,6 +148,8 @@ class BackButtonListener$Mate extends BackButtonListener with Mate {
           child: child,
           onBackButtonPressed: onBackButtonPressed,
         ) {
+    mateCreateName = 'BackButtonListener';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BackButtonListener$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -153,16 +162,17 @@ class BackButtonListener$Mate extends BackButtonListener with Mate {
 }
 
 /// class PlatformRouteInformationProvider extends RouteInformationProvider with WidgetsBindingObserver, ChangeNotifier
-class PlatformRouteInformationProvider$Mate
-    extends PlatformRouteInformationProvider with Mate {
+class PlatformRouteInformationProvider$Mate extends PlatformRouteInformationProvider with Mate {
   /// PlatformRouteInformationProvider PlatformRouteInformationProvider({required RouteInformation initialRouteInformation})
   PlatformRouteInformationProvider$Mate(
       {
       /// optionalParameters: {required RouteInformation initialRouteInformation} , defaultValue:none
       required RouteInformation initialRouteInformation})
       : super(initialRouteInformation: initialRouteInformation) {
-    mateBuilder = (p) => PlatformRouteInformationProvider$Mate(
-        initialRouteInformation: p.get('initialRouteInformation').build());
+    mateCreateName = 'PlatformRouteInformationProvider';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder =
+        (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
     mateUse('initialRouteInformation', initialRouteInformation);
   }
 }

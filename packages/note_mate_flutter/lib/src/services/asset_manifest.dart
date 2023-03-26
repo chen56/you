@@ -21,6 +21,8 @@ class AssetMetadata$Mate extends AssetMetadata with Mate {
           targetDevicePixelRatio: targetDevicePixelRatio,
           main: main,
         ) {
+    mateCreateName = 'AssetMetadata';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => AssetMetadata$Mate(
           key: p.get('key').build(),
           targetDevicePixelRatio: p.get('targetDevicePixelRatio').build(),

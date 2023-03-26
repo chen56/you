@@ -86,6 +86,8 @@ class TextSelectionOverlay$Mate extends TextSelectionOverlay with Mate {
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
+    mateCreateName = 'TextSelectionOverlay';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionOverlay$Mate(
           value: p.get('value').build(),
           context: p.get('context').build(),
@@ -226,6 +228,8 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate {
           onSelectionHandleTapped: onSelectionHandleTapped,
           magnifierConfiguration: magnifierConfiguration,
         ) {
+    mateCreateName = 'SelectionOverlay';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectionOverlay$Mate(
           context: p.get('context').build(),
           debugRequiredFor: p.get('debugRequiredFor').build(),
@@ -282,23 +286,22 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate {
 }
 
 /// class TextSelectionGestureDetectorBuilder
-class TextSelectionGestureDetectorBuilder$Mate
-    extends TextSelectionGestureDetectorBuilder with Mate {
+class TextSelectionGestureDetectorBuilder$Mate extends TextSelectionGestureDetectorBuilder with Mate {
   /// TextSelectionGestureDetectorBuilder TextSelectionGestureDetectorBuilder({required TextSelectionGestureDetectorBuilderDelegate delegate})
   TextSelectionGestureDetectorBuilder$Mate(
       {
       /// optionalParameters: {required TextSelectionGestureDetectorBuilderDelegate delegate} , defaultValue:none
       required TextSelectionGestureDetectorBuilderDelegate delegate})
       : super(delegate: delegate) {
-    mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(
-        delegate: p.get('delegate').build());
+    mateCreateName = 'TextSelectionGestureDetectorBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.get('delegate').build());
     mateUse('delegate', delegate);
   }
 }
 
 /// class TextSelectionGestureDetector extends StatefulWidget
-class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector
-    with Mate {
+class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector with Mate {
   /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -370,6 +373,8 @@ class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'TextSelectionGestureDetector';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionGestureDetector$Mate(
           key: p.get('key').build(),
           onTapDown: p.get('onTapDown').build(),
@@ -417,8 +422,9 @@ class ClipboardStatusNotifier$Mate extends ClipboardStatusNotifier with Mate {
       /// optionalParameters: {ClipboardStatus value = ClipboardStatus.unknown} , defaultValue:unprocessed
       required ClipboardStatus value})
       : super(value: value) {
-    mateBuilder =
-        (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
+    mateCreateName = 'ClipboardStatusNotifier';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
     mateUse('value', value);
   }
 }

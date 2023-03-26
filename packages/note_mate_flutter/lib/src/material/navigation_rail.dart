@@ -97,6 +97,8 @@ class NavigationRail$Mate extends NavigationRail with Mate {
           indicatorColor: indicatorColor,
           indicatorShape: indicatorShape,
         ) {
+    mateCreateName = 'NavigationRail';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRail$Mate(
           key: p.get('key').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -143,8 +145,7 @@ class NavigationRail$Mate extends NavigationRail with Mate {
 }
 
 /// class NavigationRailDestination
-class NavigationRailDestination$Mate extends NavigationRailDestination
-    with Mate {
+class NavigationRailDestination$Mate extends NavigationRailDestination with Mate {
   /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding})
   NavigationRailDestination$Mate({
     /// optionalParameters: {required Widget icon} , defaultValue:none
@@ -172,6 +173,8 @@ class NavigationRailDestination$Mate extends NavigationRailDestination
           label: label,
           padding: padding,
         ) {
+    mateCreateName = 'NavigationRailDestination';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRailDestination$Mate(
           icon: p.get('icon').build(),
           selectedIcon: p.get('selectedIcon').build(),

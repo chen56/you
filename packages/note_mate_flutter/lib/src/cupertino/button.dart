@@ -55,6 +55,8 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
           alignment: alignment,
           onPressed: onPressed,
         ) {
+    mateCreateName = 'CupertinoButton';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoButton$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -118,6 +120,8 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
           alignment: alignment,
           onPressed: onPressed,
         ) {
+    mateCreateName = 'CupertinoButton.filled';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoButton$Mate.filled(
           key: p.get('key').build(),
           child: p.get('child').build(),

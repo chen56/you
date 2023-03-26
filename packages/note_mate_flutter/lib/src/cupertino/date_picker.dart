@@ -66,6 +66,8 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with Mate {
           backgroundColor: backgroundColor,
           showDayOfWeek: showDayOfWeek,
         ) {
+    mateCreateName = 'CupertinoDatePicker';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDatePicker$Mate(
           key: p.get('key').build(),
           mode: p.get('mode').build(),
@@ -134,6 +136,8 @@ class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with Mate {
           backgroundColor: backgroundColor,
           onTimerDurationChanged: onTimerDurationChanged,
         ) {
+    mateCreateName = 'CupertinoTimerPicker';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTimerPicker$Mate(
           key: p.get('key').build(),
           mode: p.get('mode').build(),

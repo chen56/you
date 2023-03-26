@@ -47,6 +47,8 @@ class AboutListTile$Mate extends AboutListTile with Mate {
           aboutBoxChildren: aboutBoxChildren,
           dense: dense,
         ) {
+    mateCreateName = 'AboutListTile';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AboutListTile$Mate(
           key: p.get('key').build(),
           icon: p.get('icon').build(),
@@ -99,6 +101,8 @@ class AboutDialog$Mate extends AboutDialog with Mate {
           applicationLegalese: applicationLegalese,
           children: children,
         ) {
+    mateCreateName = 'AboutDialog';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AboutDialog$Mate(
           key: p.get('key').build(),
           applicationName: p.get('applicationName').build(),
@@ -141,6 +145,8 @@ class LicensePage$Mate extends LicensePage with Mate {
           applicationIcon: applicationIcon,
           applicationLegalese: applicationLegalese,
         ) {
+    mateCreateName = 'LicensePage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LicensePage$Mate(
           key: p.get('key').build(),
           applicationName: p.get('applicationName').build(),

@@ -34,6 +34,8 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
           transform: transform,
           tags: tags,
         ) {
+    mateCreateName = 'CustomPainterSemantics';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CustomPainterSemantics$Mate(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
@@ -78,6 +80,8 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate {
           willChange: willChange,
           child: child,
         ) {
+    mateCreateName = 'RenderCustomPaint';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderCustomPaint$Mate(
           painter: p.get('painter').build(),
           foregroundPainter: p.get('foregroundPainter').build(),

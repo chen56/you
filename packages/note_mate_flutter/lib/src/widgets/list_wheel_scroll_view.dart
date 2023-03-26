@@ -14,38 +14,37 @@ import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'package:flutter/src/rendering/viewport_offset.dart';
 
 /// class ListWheelChildListDelegate extends ListWheelChildDelegate
-class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate
-    with Mate {
+class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Mate {
   /// ListWheelChildListDelegate ListWheelChildListDelegate({required List<Widget> children})
   ListWheelChildListDelegate$Mate(
       {
       /// optionalParameters: {required List<Widget> children} , defaultValue:none
       required List<Widget> children})
       : super(children: children) {
-    mateBuilder = (p) =>
-        ListWheelChildListDelegate$Mate(children: p.get('children').build());
+    mateCreateName = 'ListWheelChildListDelegate';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => ListWheelChildListDelegate$Mate(children: p.get('children').build());
     mateUse('children', children);
   }
 }
 
 /// class ListWheelChildLoopingListDelegate extends ListWheelChildDelegate
-class ListWheelChildLoopingListDelegate$Mate
-    extends ListWheelChildLoopingListDelegate with Mate {
+class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDelegate with Mate {
   /// ListWheelChildLoopingListDelegate ListWheelChildLoopingListDelegate({required List<Widget> children})
   ListWheelChildLoopingListDelegate$Mate(
       {
       /// optionalParameters: {required List<Widget> children} , defaultValue:none
       required List<Widget> children})
       : super(children: children) {
-    mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(
-        children: p.get('children').build());
+    mateCreateName = 'ListWheelChildLoopingListDelegate';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build());
     mateUse('children', children);
   }
 }
 
 /// class ListWheelChildBuilderDelegate extends ListWheelChildDelegate
-class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate
-    with Mate {
+class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate with Mate {
   /// ListWheelChildBuilderDelegate ListWheelChildBuilderDelegate({required Widget? Function(BuildContext, int) builder, int? childCount})
   ListWheelChildBuilderDelegate$Mate({
     /// optionalParameters: {required Widget? Function(BuildContext, int) builder} , defaultValue:none
@@ -57,6 +56,8 @@ class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate
           builder: builder,
           childCount: childCount,
         ) {
+    mateCreateName = 'ListWheelChildBuilderDelegate';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListWheelChildBuilderDelegate$Mate(
           builder: p.get('builder').build(),
           childCount: p.get('childCount').build(),
@@ -67,16 +68,16 @@ class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate
 }
 
 /// class FixedExtentScrollController extends ScrollController
-class FixedExtentScrollController$Mate extends FixedExtentScrollController
-    with Mate {
+class FixedExtentScrollController$Mate extends FixedExtentScrollController with Mate {
   /// FixedExtentScrollController FixedExtentScrollController({int initialItem = 0})
   FixedExtentScrollController$Mate(
       {
       /// optionalParameters: {int initialItem = 0} , defaultValue:Literal
       int initialItem = 0})
       : super(initialItem: initialItem) {
-    mateBuilder = (p) => FixedExtentScrollController$Mate(
-        initialItem: p.get('initialItem').build());
+    mateCreateName = 'FixedExtentScrollController';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
     mateUse('initialItem', initialItem);
   }
 }
@@ -114,6 +115,8 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate {
           itemIndex: itemIndex,
           devicePixelRatio: devicePixelRatio,
         ) {
+    mateCreateName = 'FixedExtentMetrics';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FixedExtentMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),
           maxScrollExtent: p.get('maxScrollExtent').build(),
@@ -141,8 +144,9 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate {
       /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateBuilder =
-        (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
+    mateCreateName = 'FixedExtentScrollPhysics';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse('parent', parent);
   }
 }
@@ -220,6 +224,8 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: scrollBehavior,
           children: children,
         ) {
+    mateCreateName = 'ListWheelScrollView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListWheelScrollView$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -233,8 +239,7 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
           onSelectedItemChanged: p.get('onSelectedItemChanged').build(),
-          renderChildrenOutsideViewport:
-              p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
@@ -330,6 +335,8 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: scrollBehavior,
           childDelegate: childDelegate,
         ) {
+    mateCreateName = 'ListWheelScrollView.useDelegate';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListWheelScrollView$Mate.useDelegate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -343,8 +350,7 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
           onSelectedItemChanged: p.get('onSelectedItemChanged').build(),
-          renderChildrenOutsideViewport:
-              p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
@@ -378,6 +384,8 @@ class ListWheelElement$Mate extends ListWheelElement with Mate {
       /// requiredParameters: ListWheelViewport widget
       ListWheelViewport widget)
       : super(widget) {
+    mateCreateName = 'ListWheelElement';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListWheelElement$Mate(p.get('widget').value);
     mateUse('widget', widget);
   }
@@ -440,6 +448,8 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
           childDelegate: childDelegate,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ListWheelViewport';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListWheelViewport$Mate(
           key: p.get('key').build(),
           diameterRatio: p.get('diameterRatio').build(),
@@ -450,8 +460,7 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
           overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
-          renderChildrenOutsideViewport:
-              p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
           offset: p.get('offset').build(),
           childDelegate: p.get('childDelegate').build(),
           clipBehavior: p.get('clipBehavior').build(),

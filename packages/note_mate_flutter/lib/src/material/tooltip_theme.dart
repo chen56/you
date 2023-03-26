@@ -67,6 +67,8 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
           triggerMode: triggerMode,
           enableFeedback: enableFeedback,
         ) {
+    mateCreateName = 'TooltipThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TooltipThemeData$Mate(
           height: p.get('height').build(),
           padding: p.get('padding').build(),
@@ -115,6 +117,8 @@ class TooltipTheme$Mate extends TooltipTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'TooltipTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TooltipTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

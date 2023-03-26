@@ -143,6 +143,8 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
           rangeSelectionBackgroundColor: rangeSelectionBackgroundColor,
           rangeSelectionOverlayColor: rangeSelectionOverlayColor,
         ) {
+    mateCreateName = 'DatePickerThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           elevation: p.get('elevation').build(),
@@ -165,25 +167,17 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
           yearForegroundColor: p.get('yearForegroundColor').build(),
           yearBackgroundColor: p.get('yearBackgroundColor').build(),
           yearOverlayColor: p.get('yearOverlayColor').build(),
-          rangePickerBackgroundColor:
-              p.get('rangePickerBackgroundColor').build(),
+          rangePickerBackgroundColor: p.get('rangePickerBackgroundColor').build(),
           rangePickerElevation: p.get('rangePickerElevation').build(),
           rangePickerShadowColor: p.get('rangePickerShadowColor').build(),
-          rangePickerSurfaceTintColor:
-              p.get('rangePickerSurfaceTintColor').build(),
+          rangePickerSurfaceTintColor: p.get('rangePickerSurfaceTintColor').build(),
           rangePickerShape: p.get('rangePickerShape').build(),
-          rangePickerHeaderBackgroundColor:
-              p.get('rangePickerHeaderBackgroundColor').build(),
-          rangePickerHeaderForegroundColor:
-              p.get('rangePickerHeaderForegroundColor').build(),
-          rangePickerHeaderHeadlineStyle:
-              p.get('rangePickerHeaderHeadlineStyle').build(),
-          rangePickerHeaderHelpStyle:
-              p.get('rangePickerHeaderHelpStyle').build(),
-          rangeSelectionBackgroundColor:
-              p.get('rangeSelectionBackgroundColor').build(),
-          rangeSelectionOverlayColor:
-              p.get('rangeSelectionOverlayColor').build(),
+          rangePickerHeaderBackgroundColor: p.get('rangePickerHeaderBackgroundColor').build(),
+          rangePickerHeaderForegroundColor: p.get('rangePickerHeaderForegroundColor').build(),
+          rangePickerHeaderHeadlineStyle: p.get('rangePickerHeaderHeadlineStyle').build(),
+          rangePickerHeaderHelpStyle: p.get('rangePickerHeaderHelpStyle').build(),
+          rangeSelectionBackgroundColor: p.get('rangeSelectionBackgroundColor').build(),
+          rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').build(),
         );
     mateUse('backgroundColor', backgroundColor);
     mateUse('elevation', elevation);
@@ -211,10 +205,8 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
     mateUse('rangePickerShadowColor', rangePickerShadowColor);
     mateUse('rangePickerSurfaceTintColor', rangePickerSurfaceTintColor);
     mateUse('rangePickerShape', rangePickerShape);
-    mateUse(
-        'rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor);
-    mateUse(
-        'rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor);
+    mateUse('rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor);
+    mateUse('rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor);
     mateUse('rangePickerHeaderHeadlineStyle', rangePickerHeaderHeadlineStyle);
     mateUse('rangePickerHeaderHelpStyle', rangePickerHeaderHelpStyle);
     mateUse('rangeSelectionBackgroundColor', rangeSelectionBackgroundColor);
@@ -239,6 +231,8 @@ class DatePickerTheme$Mate extends DatePickerTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'DatePickerTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

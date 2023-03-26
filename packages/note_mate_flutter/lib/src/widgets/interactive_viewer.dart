@@ -88,6 +88,8 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           child: child,
         ) {
+    mateCreateName = 'InteractiveViewer';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InteractiveViewer$Mate(
           key: p.get('key').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -96,8 +98,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           constrained: p.get('constrained').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient:
-              p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -116,8 +117,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
     mateUse('constrained', constrained);
     mateUse('maxScale', maxScale);
     mateUse('minScale', minScale);
-    mateUse(
-        'interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
+    mateUse('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
     mateUse('onInteractionEnd', onInteractionEnd);
     mateUse('onInteractionStart', onInteractionStart);
     mateUse('onInteractionUpdate', onInteractionUpdate);
@@ -201,6 +201,8 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           builder: builder,
         ) {
+    mateCreateName = 'InteractiveViewer.builder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InteractiveViewer$Mate.builder(
           key: p.get('key').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -208,8 +210,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           boundaryMargin: p.get('boundaryMargin').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient:
-              p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -227,8 +228,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
     mateUse('boundaryMargin', boundaryMargin);
     mateUse('maxScale', maxScale);
     mateUse('minScale', minScale);
-    mateUse(
-        'interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
+    mateUse('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
     mateUse('onInteractionEnd', onInteractionEnd);
     mateUse('onInteractionStart', onInteractionStart);
     mateUse('onInteractionUpdate', onInteractionUpdate);
@@ -250,6 +250,8 @@ class TransformationController$Mate extends TransformationController with Mate {
       /// requiredParameters: [Matrix4? value]
       Matrix4? value)
       : super(value) {
+    mateCreateName = 'TransformationController';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TransformationController$Mate(p.get('value').value);
     mateUse('value', value);
   }

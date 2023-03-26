@@ -82,6 +82,8 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           gestureSettings: gestureSettings,
           displayFeatures: displayFeatures,
         ) {
+    mateCreateName = 'MediaQueryData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MediaQueryData$Mate(
           size: p.get('size').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
@@ -130,6 +132,8 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           view,
           platformData: platformData,
         ) {
+    mateCreateName = 'MediaQueryData.fromView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MediaQueryData$Mate.fromView(
           p.get('view').value,
           platformData: p.get('platformData').build(),
@@ -156,6 +160,8 @@ class MediaQuery$Mate extends MediaQuery with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'MediaQuery';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MediaQuery$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

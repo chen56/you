@@ -6,8 +6,7 @@ import 'package:flutter/src/widgets/scroll_metrics.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class ScrollMetricsNotification extends Notification with ViewportNotificationMixin
-class ScrollMetricsNotification$Mate extends ScrollMetricsNotification
-    with Mate {
+class ScrollMetricsNotification$Mate extends ScrollMetricsNotification with Mate {
   /// ScrollMetricsNotification ScrollMetricsNotification({required ScrollMetrics metrics, required BuildContext context})
   ScrollMetricsNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , defaultValue:none
@@ -19,6 +18,8 @@ class ScrollMetricsNotification$Mate extends ScrollMetricsNotification
           metrics: metrics,
           context: context,
         ) {
+    mateCreateName = 'ScrollMetricsNotification';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollMetricsNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),

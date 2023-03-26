@@ -26,6 +26,8 @@ class GridTile$Mate extends GridTile with Mate {
           footer: footer,
           child: child,
         ) {
+    mateCreateName = 'GridTile';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridTile$Mate(
           key: p.get('key').build(),
           header: p.get('header').build(),

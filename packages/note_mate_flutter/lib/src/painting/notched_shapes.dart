@@ -17,6 +17,8 @@ class AutomaticNotchedShape$Mate extends AutomaticNotchedShape with Mate {
           host,
           guest,
         ) {
+    mateCreateName = 'AutomaticNotchedShape';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AutomaticNotchedShape$Mate(
           p.get('host').value,
           p.get('guest').value,

@@ -24,6 +24,8 @@ class RestorationScope$Mate extends RestorationScope with Mate {
           restorationId: restorationId,
           child: child,
         ) {
+    mateCreateName = 'RestorationScope';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RestorationScope$Mate(
           key: p.get('key').build(),
           restorationId: p.get('restorationId').build(),
@@ -36,8 +38,7 @@ class RestorationScope$Mate extends RestorationScope with Mate {
 }
 
 /// class UnmanagedRestorationScope extends InheritedWidget
-class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope
-    with Mate {
+class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate {
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -53,6 +54,8 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope
           bucket: bucket,
           child: child,
         ) {
+    mateCreateName = 'UnmanagedRestorationScope';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UnmanagedRestorationScope$Mate(
           key: p.get('key').build(),
           bucket: p.get('bucket').build(),
@@ -81,6 +84,8 @@ class RootRestorationScope$Mate extends RootRestorationScope with Mate {
           restorationId: restorationId,
           child: child,
         ) {
+    mateCreateName = 'RootRestorationScope';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RootRestorationScope$Mate(
           key: p.get('key').build(),
           restorationId: p.get('restorationId').build(),

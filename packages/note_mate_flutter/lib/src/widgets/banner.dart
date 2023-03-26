@@ -37,6 +37,8 @@ class BannerPainter$Mate extends BannerPainter with Mate {
           color: color,
           textStyle: textStyle,
         ) {
+    mateCreateName = 'BannerPainter';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BannerPainter$Mate(
           message: p.get('message').build(),
           textDirection: p.get('textDirection').build(),
@@ -91,6 +93,8 @@ class Banner$Mate extends Banner with Mate {
           color: color,
           textStyle: textStyle,
         ) {
+    mateCreateName = 'Banner';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Banner$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -125,6 +129,8 @@ class CheckedModeBanner$Mate extends CheckedModeBanner with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'CheckedModeBanner';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckedModeBanner$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

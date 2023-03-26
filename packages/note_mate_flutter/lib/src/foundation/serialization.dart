@@ -12,6 +12,8 @@ class ReadBuffer$Mate extends ReadBuffer with Mate {
       /// requiredParameters: ByteData data
       ByteData data)
       : super(data) {
+    mateCreateName = 'ReadBuffer';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ReadBuffer$Mate(p.get('data').value);
     mateUse('data', data);
   }

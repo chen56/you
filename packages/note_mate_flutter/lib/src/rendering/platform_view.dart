@@ -29,6 +29,8 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate {
           gestureRecognizers: gestureRecognizers,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderAndroidView';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAndroidView$Mate(
           viewController: p.get('viewController').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
@@ -59,6 +61,8 @@ class RenderUiKitView$Mate extends RenderUiKitView with Mate {
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'RenderUiKitView';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderUiKitView$Mate(
           viewController: p.get('viewController').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
@@ -87,6 +91,8 @@ class PlatformViewRenderBox$Mate extends PlatformViewRenderBox with Mate {
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'PlatformViewRenderBox';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlatformViewRenderBox$Mate(
           controller: p.get('controller').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),

@@ -24,6 +24,8 @@ class ImageInfo$Mate extends ImageInfo with Mate {
           scale: scale,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'ImageInfo';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ImageInfo$Mate(
           image: p.get('image').build(),
           scale: p.get('scale').build(),
@@ -51,6 +53,8 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
           onChunk: onChunk,
           onError: onError,
         ) {
+    mateCreateName = 'ImageStreamListener';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ImageStreamListener$Mate(
           p.get('onImage').value,
           onChunk: p.get('onChunk').build(),
@@ -75,6 +79,8 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
           cumulativeBytesLoaded: cumulativeBytesLoaded,
           expectedTotalBytes: expectedTotalBytes,
         ) {
+    mateCreateName = 'ImageChunkEvent';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ImageChunkEvent$Mate(
           cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
           expectedTotalBytes: p.get('expectedTotalBytes').build(),
@@ -85,8 +91,7 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
 }
 
 /// class OneFrameImageStreamCompleter extends ImageStreamCompleter
-class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter
-    with Mate {
+class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter with Mate {
   /// OneFrameImageStreamCompleter OneFrameImageStreamCompleter(Future<ImageInfo> image, {Iterable<DiagnosticsNode> Function()? informationCollector})
   OneFrameImageStreamCompleter$Mate(
     /// requiredParameters: Future<ImageInfo> image
@@ -97,6 +102,8 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter
           image,
           informationCollector: informationCollector,
         ) {
+    mateCreateName = 'OneFrameImageStreamCompleter';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OneFrameImageStreamCompleter$Mate(
           p.get('image').value,
           informationCollector: p.get('informationCollector').build(),
@@ -107,8 +114,7 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter
 }
 
 /// class MultiFrameImageStreamCompleter extends ImageStreamCompleter
-class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
-    with Mate {
+class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter with Mate {
   /// MultiFrameImageStreamCompleter MultiFrameImageStreamCompleter({required Future<Codec> codec, required double scale, String? debugLabel, Stream<ImageChunkEvent>? chunkEvents, Iterable<DiagnosticsNode> Function()? informationCollector})
   MultiFrameImageStreamCompleter$Mate({
     /// optionalParameters: {required Future<Codec> codec} , defaultValue:none
@@ -132,6 +138,8 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           chunkEvents: chunkEvents,
           informationCollector: informationCollector,
         ) {
+    mateCreateName = 'MultiFrameImageStreamCompleter';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MultiFrameImageStreamCompleter$Mate(
           codec: p.get('codec').build(),
           scale: p.get('scale').build(),

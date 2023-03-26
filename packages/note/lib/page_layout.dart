@@ -338,35 +338,6 @@ class _ParamAndCodeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var paramView = DataTable(
-      dataRowMinHeight: 25,
-      dataRowMaxHeight: 25,
-      // hide header
-      headingRowHeight: 0,
-      columns: const [
-        DataColumn(label: Text("")),
-        // DataColumn(label: Text("")),
-      ],
-      rows: [
-        ...rootParam
-            // hide null value
-            .flat(test: (param) => param.init != null)
-            .map(
-              (e) => DataRow(
-                cells: [
-                  DataCell(Row(
-                    children: [
-                      Expanded(child: editors.nameWidget(context, e)),
-                      Expanded(child: editors.valueWidget(context, e))
-                    ],
-                  )),
-                  // DataCell(editors.valueWidget(context, e)),
-                ],
-              ),
-            )
-            .toList()
-      ],
-    );
     Widget paramRow(Param param) {
       var row = TextButton(
         child: Row(
@@ -401,7 +372,7 @@ class _ParamAndCodeView extends StatelessWidget {
     var codeView = HighlightView(
       // The original code to be highlighted
       // fixme editors
-      rootParam.toSampleCodeString(),
+      rootParam.toSampleCodeString(snippet: false),
 
       // Specify language
       // It is recommended to give it a value for performance

@@ -15,6 +15,8 @@ class NumericFocusOrder$Mate extends NumericFocusOrder with Mate {
       /// requiredParameters: double order
       double order)
       : super(order) {
+    mateCreateName = 'NumericFocusOrder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NumericFocusOrder$Mate(p.get('order').value);
     mateUse('order', order);
   }
@@ -28,6 +30,8 @@ class LexicalFocusOrder$Mate extends LexicalFocusOrder with Mate {
       /// requiredParameters: String order
       String order)
       : super(order) {
+    mateCreateName = 'LexicalFocusOrder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LexicalFocusOrder$Mate(p.get('order').value);
     mateUse('order', order);
   }
@@ -41,8 +45,9 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
       /// optionalParameters: {FocusTraversalPolicy? secondary} , defaultValue:none
       FocusTraversalPolicy? secondary})
       : super(secondary: secondary) {
-    mateBuilder = (p) =>
-        OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
+    mateCreateName = 'OrderedTraversalPolicy';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
     mateUse('secondary', secondary);
   }
 }
@@ -64,6 +69,8 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
           order: order,
           child: child,
         ) {
+    mateCreateName = 'FocusTraversalOrder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FocusTraversalOrder$Mate(
           key: p.get('key').build(),
           order: p.get('order').build(),
@@ -100,6 +107,8 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
           descendantsAreTraversable: descendantsAreTraversable,
           child: child,
         ) {
+    mateCreateName = 'FocusTraversalGroup';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FocusTraversalGroup$Mate(
           key: p.get('key').build(),
           policy: p.get('policy').build(),
@@ -123,6 +132,8 @@ class RequestFocusIntent$Mate extends RequestFocusIntent with Mate {
       /// requiredParameters: FocusNode focusNode
       FocusNode focusNode)
       : super(focusNode) {
+    mateCreateName = 'RequestFocusIntent';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RequestFocusIntent$Mate(p.get('focusNode').value);
     mateUse('focusNode', focusNode);
   }
@@ -140,6 +151,8 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
           direction,
           ignoreTextFields: ignoreTextFields,
         ) {
+    mateCreateName = 'DirectionalFocusIntent';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DirectionalFocusIntent$Mate(
           p.get('direction').value,
           ignoreTextFields: p.get('ignoreTextFields').build(),
@@ -166,6 +179,8 @@ class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate {
           excluding: excluding,
           child: child,
         ) {
+    mateCreateName = 'ExcludeFocusTraversal';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExcludeFocusTraversal$Mate(
           key: p.get('key').build(),
           excluding: p.get('excluding').build(),

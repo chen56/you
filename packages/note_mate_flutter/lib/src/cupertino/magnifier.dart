@@ -46,14 +46,15 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate {
           horizontalScreenEdgePadding: horizontalScreenEdgePadding,
           magnifierInfo: magnifierInfo,
         ) {
+    mateCreateName = 'CupertinoTextMagnifier';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextMagnifier$Mate(
           key: p.get('key').build(),
           animationCurve: p.get('animationCurve').build(),
           controller: p.get('controller').build(),
           dragResistance: p.get('dragResistance').build(),
           hideBelowThreshold: p.get('hideBelowThreshold').build(),
-          horizontalScreenEdgePadding:
-              p.get('horizontalScreenEdgePadding').build(),
+          horizontalScreenEdgePadding: p.get('horizontalScreenEdgePadding').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
     mateUse('key', key);
@@ -99,12 +100,13 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate {
           borderSide: borderSide,
           inOutAnimation: inOutAnimation,
         ) {
+    mateCreateName = 'CupertinoMagnifier';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoMagnifier$Mate(
           key: p.get('key').build(),
           size: p.get('size').build(),
           borderRadius: p.get('borderRadius').build(),
-          additionalFocalPointOffset:
-              p.get('additionalFocalPointOffset').build(),
+          additionalFocalPointOffset: p.get('additionalFocalPointOffset').build(),
           shadows: p.get('shadows').build(),
           borderSide: p.get('borderSide').build(),
           inOutAnimation: p.get('inOutAnimation').build(),

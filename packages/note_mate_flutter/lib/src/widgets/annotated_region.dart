@@ -7,8 +7,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class AnnotatedRegion<T extends Object> extends SingleChildRenderObjectWidget
-class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T>
-    with Mate {
+class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Mate {
   /// AnnotatedRegion<T> AnnotatedRegion({Key? key, required Widget child, required T value, bool sized = true})
   AnnotatedRegion$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -28,6 +27,8 @@ class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T>
           value: value,
           sized: sized,
         ) {
+    mateCreateName = 'AnnotatedRegion';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnnotatedRegion$Mate<T>(
           key: p.get('key').build(),
           child: p.get('child').build(),

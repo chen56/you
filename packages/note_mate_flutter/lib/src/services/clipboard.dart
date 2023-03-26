@@ -12,6 +12,8 @@ class ClipboardData$Mate extends ClipboardData with Mate {
       /// optionalParameters: {String? text} , defaultValue:none
       String? text})
       : super(text: text) {
+    mateCreateName = 'ClipboardData';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ClipboardData$Mate(text: p.get('text').build());
     mateUse('text', text);
   }

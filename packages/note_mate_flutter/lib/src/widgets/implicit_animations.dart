@@ -30,6 +30,8 @@ class BoxConstraintsTween$Mate extends BoxConstraintsTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'BoxConstraintsTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BoxConstraintsTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -52,6 +54,8 @@ class DecorationTween$Mate extends DecorationTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'DecorationTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DecorationTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -74,6 +78,8 @@ class EdgeInsetsTween$Mate extends EdgeInsetsTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'EdgeInsetsTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EdgeInsetsTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -96,6 +102,8 @@ class EdgeInsetsGeometryTween$Mate extends EdgeInsetsGeometryTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'EdgeInsetsGeometryTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EdgeInsetsGeometryTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -118,6 +126,8 @@ class BorderRadiusTween$Mate extends BorderRadiusTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'BorderRadiusTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BorderRadiusTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -140,6 +150,8 @@ class BorderTween$Mate extends BorderTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'BorderTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BorderTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -162,6 +174,8 @@ class Matrix4Tween$Mate extends Matrix4Tween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'Matrix4Tween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Matrix4Tween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -184,6 +198,8 @@ class TextStyleTween$Mate extends TextStyleTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'TextStyleTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextStyleTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -266,6 +282,8 @@ class AnimatedContainer$Mate extends AnimatedContainer with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedContainer';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedContainer$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -334,6 +352,8 @@ class AnimatedPadding$Mate extends AnimatedPadding with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedPadding';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedPadding$Mate(
           key: p.get('key').build(),
           padding: p.get('padding').build(),
@@ -388,6 +408,8 @@ class AnimatedAlign$Mate extends AnimatedAlign with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedAlign';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedAlign$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -458,6 +480,8 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedPositioned';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedPositioned$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -511,6 +535,8 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedPositioned.fromRect';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedPositioned$Mate.fromRect(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -529,8 +555,7 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
 }
 
 /// class AnimatedPositionedDirectional extends ImplicitlyAnimatedWidget
-class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional
-    with Mate {
+class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional with Mate {
   /// AnimatedPositionedDirectional AnimatedPositionedDirectional({Key? key, required Widget child, double? start, double? top, double? end, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositionedDirectional$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -578,6 +603,8 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedPositionedDirectional';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedPositionedDirectional$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -642,6 +669,8 @@ class AnimatedScale$Mate extends AnimatedScale with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedScale';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedScale$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -700,6 +729,8 @@ class AnimatedRotation$Mate extends AnimatedRotation with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedRotation';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedRotation$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -750,6 +781,8 @@ class AnimatedSlide$Mate extends AnimatedSlide with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedSlide';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedSlide$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -800,6 +833,8 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with Mate {
           onEnd: onEnd,
           alwaysIncludeSemantics: alwaysIncludeSemantics,
         ) {
+    mateCreateName = 'AnimatedOpacity';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedOpacity$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -852,6 +887,8 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with Mate {
           onEnd: onEnd,
           alwaysIncludeSemantics: alwaysIncludeSemantics,
         ) {
+    mateCreateName = 'SliverAnimatedOpacity';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverAnimatedOpacity$Mate(
           key: p.get('key').build(),
           sliver: p.get('sliver').build(),
@@ -924,6 +961,8 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedDefaultTextStyle';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedDefaultTextStyle$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1010,6 +1049,8 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedPhysicalModel';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedPhysicalModel$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1042,8 +1083,7 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
 }
 
 /// class AnimatedFractionallySizedBox extends ImplicitlyAnimatedWidget
-class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox
-    with Mate {
+class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox with Mate {
   /// AnimatedFractionallySizedBox AnimatedFractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedFractionallySizedBox$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -1079,6 +1119,8 @@ class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox
           duration: duration,
           onEnd: onEnd,
         ) {
+    mateCreateName = 'AnimatedFractionallySizedBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedFractionallySizedBox$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),

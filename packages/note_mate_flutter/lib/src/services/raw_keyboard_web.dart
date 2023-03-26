@@ -29,6 +29,8 @@ class RawKeyEventDataWeb$Mate extends RawKeyEventDataWeb with Mate {
           metaState: metaState,
           keyCode: keyCode,
         ) {
+    mateCreateName = 'RawKeyEventDataWeb';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataWeb$Mate(
           code: p.get('code').build(),
           key: p.get('key').build(),

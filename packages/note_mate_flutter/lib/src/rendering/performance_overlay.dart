@@ -25,13 +25,13 @@ class RenderPerformanceOverlay$Mate extends RenderPerformanceOverlay with Mate {
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
+    mateCreateName = 'RenderPerformanceOverlay';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPerformanceOverlay$Mate(
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
     mateUse('optionsMask', optionsMask);
     mateUse('rasterizerThreshold', rasterizerThreshold);

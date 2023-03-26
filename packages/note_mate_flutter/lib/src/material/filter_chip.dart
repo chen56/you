@@ -131,6 +131,8 @@ class FilterChip$Mate extends FilterChip with Mate {
           checkmarkColor: checkmarkColor,
           avatarBorder: avatarBorder,
         ) {
+    mateCreateName = 'FilterChip';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilterChip$Mate(
           key: p.get('key').build(),
           avatar: p.get('avatar').build(),

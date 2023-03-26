@@ -33,8 +33,9 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       /// optionalParameters: {String? text} , defaultValue:none
       String? text})
       : super(text: text) {
-    mateBuilder =
-        (p) => TextEditingController$Mate(text: p.get('text').build());
+    mateCreateName = 'TextEditingController';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => TextEditingController$Mate(text: p.get('text').build());
     mateUse('text', text);
   }
 
@@ -44,8 +45,9 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       /// requiredParameters: TextEditingValue? value
       TextEditingValue? value)
       : super.fromValue(value) {
-    mateBuilder =
-        (p) => TextEditingController$Mate.fromValue(p.get('value').value);
+    mateCreateName = 'TextEditingController.fromValue';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => TextEditingController$Mate.fromValue(p.get('value').value);
     mateUse('value', value);
   }
 }
@@ -71,6 +73,8 @@ class ToolbarOptions$Mate extends ToolbarOptions with Mate {
           paste: paste,
           selectAll: selectAll,
         ) {
+    mateCreateName = 'ToolbarOptions';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToolbarOptions$Mate(
           copy: p.get('copy').build(),
           cut: p.get('cut').build(),
@@ -85,8 +89,7 @@ class ToolbarOptions$Mate extends ToolbarOptions with Mate {
 }
 
 /// class ContentInsertionConfiguration
-class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration
-    with Mate {
+class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration with Mate {
   /// ContentInsertionConfiguration ContentInsertionConfiguration({required void Function(KeyboardInsertedContent) onContentInserted, List<String> allowedMimeTypes = kDefaultContentInsertionMimeTypes})
   ContentInsertionConfiguration$Mate({
     /// optionalParameters: {required void Function(KeyboardInsertedContent) onContentInserted} , defaultValue:none
@@ -98,6 +101,8 @@ class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration
           onContentInserted: onContentInserted,
           allowedMimeTypes: allowedMimeTypes,
         ) {
+    mateCreateName = 'ContentInsertionConfiguration';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ContentInsertionConfiguration$Mate(
           onContentInserted: p.get('onContentInserted').build(),
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
@@ -384,6 +389,8 @@ class EditableText$Mate extends EditableText with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
+    mateCreateName = 'EditableText';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EditableText$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -438,22 +445,18 @@ class EditableText$Mate extends EditableText with Mate {
           scrollPadding: p.get('scrollPadding').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
-          autocorrectionTextRectColor:
-              p.get('autocorrectionTextRectColor').build(),
+          autocorrectionTextRectColor: p.get('autocorrectionTextRectColor').build(),
           autofillHints: p.get('autofillHints').build(),
           autofillClient: p.get('autofillClient').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning:
-              p.get('enableIMEPersonalizedLearning').build(),
-          contentInsertionConfiguration:
-              p.get('contentInsertionConfiguration').build(),
+          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),

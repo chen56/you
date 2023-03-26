@@ -115,6 +115,8 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ReorderableListView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableListView$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -270,6 +272,8 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ReorderableListView.builder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableListView$Mate.builder(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),

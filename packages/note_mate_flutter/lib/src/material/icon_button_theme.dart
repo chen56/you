@@ -14,8 +14,9 @@ class IconButtonThemeData$Mate extends IconButtonThemeData with Mate {
       /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
-    mateBuilder =
-        (p) => IconButtonThemeData$Mate(style: p.get('style').build());
+    mateCreateName = 'IconButtonThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => IconButtonThemeData$Mate(style: p.get('style').build());
     mateUse('style', style);
   }
 }
@@ -37,6 +38,8 @@ class IconButtonTheme$Mate extends IconButtonTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'IconButtonTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IconButtonTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

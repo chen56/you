@@ -11,8 +11,9 @@ class MouseCursorManager$Mate extends MouseCursorManager with Mate {
       /// requiredParameters: MouseCursor fallbackMouseCursor
       MouseCursor fallbackMouseCursor)
       : super(fallbackMouseCursor) {
-    mateBuilder =
-        (p) => MouseCursorManager$Mate(p.get('fallbackMouseCursor').value);
+    mateCreateName = 'MouseCursorManager';
+    matePackageUrl = 'package:flutter/services.dart';
+    mateBuilder = (p) => MouseCursorManager$Mate(p.get('fallbackMouseCursor').value);
     mateUse('fallbackMouseCursor', fallbackMouseCursor);
   }
 }

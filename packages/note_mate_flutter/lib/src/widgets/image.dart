@@ -99,6 +99,8 @@ class Image$Mate extends Image with Mate {
           isAntiAlias: isAntiAlias,
           filterQuality: filterQuality,
         ) {
+    mateCreateName = 'Image';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Image$Mate(
           key: p.get('key').build(),
           image: p.get('image').build(),
@@ -241,6 +243,8 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
+    mateCreateName = 'Image.network';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Image$Mate.network(
           p.get('src').value,
           key: p.get('key').build(),
@@ -383,6 +387,8 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
+    mateCreateName = 'Image.file';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Image$Mate.file(
           p.get('file').value,
           key: p.get('key').build(),
@@ -529,6 +535,8 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
+    mateCreateName = 'Image.asset';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Image$Mate.asset(
           p.get('name').value,
           key: p.get('key').build(),
@@ -671,6 +679,8 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
+    mateCreateName = 'Image.memory';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Image$Mate.memory(
           p.get('bytes').value,
           key: p.get('key').build(),

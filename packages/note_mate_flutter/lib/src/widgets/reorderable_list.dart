@@ -107,6 +107,8 @@ class ReorderableList$Mate extends ReorderableList with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ReorderableList';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableList$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -201,6 +203,8 @@ class SliverReorderableList$Mate extends SliverReorderableList with Mate {
           prototypeItem: prototypeItem,
           proxyDecorator: proxyDecorator,
         ) {
+    mateCreateName = 'SliverReorderableList';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverReorderableList$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -227,8 +231,7 @@ class SliverReorderableList$Mate extends SliverReorderableList with Mate {
 }
 
 /// class ReorderableDragStartListener extends StatelessWidget
-class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
-    with Mate {
+class ReorderableDragStartListener$Mate extends ReorderableDragStartListener with Mate {
   /// ReorderableDragStartListener ReorderableDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDragStartListener$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -248,6 +251,8 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
           index: index,
           enabled: enabled,
         ) {
+    mateCreateName = 'ReorderableDragStartListener';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableDragStartListener$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -262,8 +267,7 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
 }
 
 /// class ReorderableDelayedDragStartListener extends ReorderableDragStartListener
-class ReorderableDelayedDragStartListener$Mate
-    extends ReorderableDelayedDragStartListener with Mate {
+class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragStartListener with Mate {
   /// ReorderableDelayedDragStartListener ReorderableDelayedDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDelayedDragStartListener$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -283,6 +287,8 @@ class ReorderableDelayedDragStartListener$Mate
           index: index,
           enabled: enabled,
         ) {
+    mateCreateName = 'ReorderableDelayedDragStartListener';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableDelayedDragStartListener$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

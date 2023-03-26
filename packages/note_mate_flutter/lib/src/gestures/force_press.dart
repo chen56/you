@@ -23,6 +23,8 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate {
           localPosition: localPosition,
           pressure: pressure,
         ) {
+    mateCreateName = 'ForcePressDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ForcePressDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
@@ -35,8 +37,7 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate {
 }
 
 /// class ForcePressGestureRecognizer extends OneSequenceGestureRecognizer
-class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer
-    with Mate {
+class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with Mate {
   /// ForcePressGestureRecognizer ForcePressGestureRecognizer({double startPressure = 0.4, double peakPressure = 0.85, double Function(double, double, double) interpolation = _inverseLerp, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ForcePressGestureRecognizer$Mate({
     /// optionalParameters: {double startPressure = 0.4} , defaultValue:Literal
@@ -64,6 +65,8 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
+    mateCreateName = 'ForcePressGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ForcePressGestureRecognizer$Mate(
           startPressure: p.get('startPressure').build(),
           peakPressure: p.get('peakPressure').build(),

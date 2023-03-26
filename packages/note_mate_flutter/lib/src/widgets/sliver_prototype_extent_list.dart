@@ -8,8 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 
 /// class SliverPrototypeExtentList extends SliverMultiBoxAdaptorWidget
-class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList
-    with Mate {
+class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate {
   /// SliverPrototypeExtentList SliverPrototypeExtentList({Key? key, required SliverChildDelegate delegate, required Widget prototypeItem})
   SliverPrototypeExtentList$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -25,6 +24,8 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList
           delegate: delegate,
           prototypeItem: prototypeItem,
         ) {
+    mateCreateName = 'SliverPrototypeExtentList';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
@@ -70,6 +71,8 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
+    mateCreateName = 'SliverPrototypeExtentList.builder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate.builder(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -117,6 +120,8 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
+    mateCreateName = 'SliverPrototypeExtentList.list';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate.list(
           key: p.get('key').build(),
           children: p.get('children').build(),

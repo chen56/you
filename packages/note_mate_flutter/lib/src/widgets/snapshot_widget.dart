@@ -14,8 +14,9 @@ class SnapshotController$Mate extends SnapshotController with Mate {
       /// optionalParameters: {bool allowSnapshotting = false} , defaultValue:Literal
       bool allowSnapshotting = false})
       : super(allowSnapshotting: allowSnapshotting) {
-    mateBuilder = (p) => SnapshotController$Mate(
-        allowSnapshotting: p.get('allowSnapshotting').build());
+    mateCreateName = 'SnapshotController';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
     mateUse('allowSnapshotting', allowSnapshotting);
   }
 }
@@ -49,6 +50,8 @@ class SnapshotWidget$Mate extends SnapshotWidget with Mate {
           controller: controller,
           child: child,
         ) {
+    mateCreateName = 'SnapshotWidget';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SnapshotWidget$Mate(
           key: p.get('key').build(),
           mode: p.get('mode').build(),

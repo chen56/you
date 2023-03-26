@@ -6,8 +6,7 @@ import 'dart:core';
 import 'dart:ui';
 
 /// class ApplicationSwitcherDescription
-class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription
-    with Mate {
+class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription with Mate {
   /// ApplicationSwitcherDescription ApplicationSwitcherDescription({String? label, int? primaryColor})
   ApplicationSwitcherDescription$Mate({
     /// optionalParameters: {String? label} , defaultValue:none
@@ -19,6 +18,8 @@ class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription
           label: label,
           primaryColor: primaryColor,
         ) {
+    mateCreateName = 'ApplicationSwitcherDescription';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ApplicationSwitcherDescription$Mate(
           label: p.get('label').build(),
           primaryColor: p.get('primaryColor').build(),
@@ -59,33 +60,28 @@ class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate {
           systemNavigationBarColor: systemNavigationBarColor,
           systemNavigationBarDividerColor: systemNavigationBarDividerColor,
           systemNavigationBarIconBrightness: systemNavigationBarIconBrightness,
-          systemNavigationBarContrastEnforced:
-              systemNavigationBarContrastEnforced,
+          systemNavigationBarContrastEnforced: systemNavigationBarContrastEnforced,
           statusBarColor: statusBarColor,
           statusBarBrightness: statusBarBrightness,
           statusBarIconBrightness: statusBarIconBrightness,
           systemStatusBarContrastEnforced: systemStatusBarContrastEnforced,
         ) {
+    mateCreateName = 'SystemUiOverlayStyle';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SystemUiOverlayStyle$Mate(
           systemNavigationBarColor: p.get('systemNavigationBarColor').build(),
-          systemNavigationBarDividerColor:
-              p.get('systemNavigationBarDividerColor').build(),
-          systemNavigationBarIconBrightness:
-              p.get('systemNavigationBarIconBrightness').build(),
-          systemNavigationBarContrastEnforced:
-              p.get('systemNavigationBarContrastEnforced').build(),
+          systemNavigationBarDividerColor: p.get('systemNavigationBarDividerColor').build(),
+          systemNavigationBarIconBrightness: p.get('systemNavigationBarIconBrightness').build(),
+          systemNavigationBarContrastEnforced: p.get('systemNavigationBarContrastEnforced').build(),
           statusBarColor: p.get('statusBarColor').build(),
           statusBarBrightness: p.get('statusBarBrightness').build(),
           statusBarIconBrightness: p.get('statusBarIconBrightness').build(),
-          systemStatusBarContrastEnforced:
-              p.get('systemStatusBarContrastEnforced').build(),
+          systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').build(),
         );
     mateUse('systemNavigationBarColor', systemNavigationBarColor);
     mateUse('systemNavigationBarDividerColor', systemNavigationBarDividerColor);
-    mateUse(
-        'systemNavigationBarIconBrightness', systemNavigationBarIconBrightness);
-    mateUse('systemNavigationBarContrastEnforced',
-        systemNavigationBarContrastEnforced);
+    mateUse('systemNavigationBarIconBrightness', systemNavigationBarIconBrightness);
+    mateUse('systemNavigationBarContrastEnforced', systemNavigationBarContrastEnforced);
     mateUse('statusBarColor', statusBarColor);
     mateUse('statusBarBrightness', statusBarBrightness);
     mateUse('statusBarIconBrightness', statusBarIconBrightness);

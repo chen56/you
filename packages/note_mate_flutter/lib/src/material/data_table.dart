@@ -35,6 +35,8 @@ class DataColumn$Mate extends DataColumn with Mate {
           numeric: numeric,
           onSort: onSort,
         ) {
+    mateCreateName = 'DataColumn';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataColumn$Mate(
           label: p.get('label').build(),
           tooltip: p.get('tooltip').build(),
@@ -77,6 +79,8 @@ class DataRow$Mate extends DataRow with Mate {
           color: color,
           cells: cells,
         ) {
+    mateCreateName = 'DataRow';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataRow$Mate(
           key: p.get('key').build(),
           selected: p.get('selected').build(),
@@ -120,6 +124,8 @@ class DataRow$Mate extends DataRow with Mate {
           color: color,
           cells: cells,
         ) {
+    mateCreateName = 'DataRow.byIndex';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataRow$Mate.byIndex(
           index: p.get('index').build(),
           selected: p.get('selected').build(),
@@ -173,6 +179,8 @@ class DataCell$Mate extends DataCell with Mate {
           onDoubleTap: onDoubleTap,
           onTapCancel: onTapCancel,
         ) {
+    mateCreateName = 'DataCell';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataCell$Mate(
           p.get('child').value,
           placeholder: p.get('placeholder').build(),
@@ -287,6 +295,8 @@ class DataTable$Mate extends DataTable with Mate {
           border: border,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'DataTable';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataTable$Mate(
           key: p.get('key').build(),
           columns: p.get('columns').build(),
@@ -369,6 +379,8 @@ class TableRowInkWell$Mate extends TableRowInkWell with Mate {
           onHighlightChanged: onHighlightChanged,
           overlayColor: overlayColor,
         ) {
+    mateCreateName = 'TableRowInkWell';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TableRowInkWell$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

@@ -21,6 +21,8 @@ class PaintingContext$Mate extends PaintingContext with Mate {
           _containerLayer,
           estimatedBounds,
         ) {
+    mateCreateName = 'PaintingContext';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PaintingContext$Mate(
           p.get('_containerLayer').value,
           p.get('estimatedBounds').value,
@@ -51,6 +53,8 @@ class PipelineOwner$Mate extends PipelineOwner with Mate {
           onSemanticsUpdate: onSemanticsUpdate,
           onSemanticsOwnerDisposed: onSemanticsOwnerDisposed,
         ) {
+    mateCreateName = 'PipelineOwner';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PipelineOwner$Mate(
           onNeedVisualUpdate: p.get('onNeedVisualUpdate').build(),
           onSemanticsOwnerCreated: p.get('onSemanticsOwnerCreated').build(),
@@ -72,6 +76,8 @@ class DiagnosticsDebugCreator$Mate extends DiagnosticsDebugCreator with Mate {
       /// requiredParameters: Object value
       Object value)
       : super(value) {
+    mateCreateName = 'DiagnosticsDebugCreator';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => DiagnosticsDebugCreator$Mate(p.get('value').value);
     mateUse('value', value);
   }

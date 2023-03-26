@@ -120,6 +120,8 @@ class Switch$Mate extends Switch with Mate {
           onFocusChange: onFocusChange,
           autofocus: autofocus,
         ) {
+    mateCreateName = 'Switch';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Switch$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -281,6 +283,8 @@ class Switch$Mate extends Switch with Mate {
           autofocus: autofocus,
           applyCupertinoTheme: applyCupertinoTheme,
         ) {
+    mateCreateName = 'Switch.adaptive';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Switch$Mate.adaptive(
           key: p.get('key').build(),
           value: p.get('value').build(),

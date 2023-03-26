@@ -36,6 +36,8 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
           surfaceTintColor: surfaceTintColor,
           padding: padding,
         ) {
+    mateCreateName = 'BottomAppBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomAppBarTheme$Mate(
           color: p.get('color').build(),
           elevation: p.get('elevation').build(),

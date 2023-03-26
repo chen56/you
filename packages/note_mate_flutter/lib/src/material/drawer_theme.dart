@@ -45,6 +45,8 @@ class DrawerThemeData$Mate extends DrawerThemeData with Mate {
           endShape: endShape,
           width: width,
         ) {
+    mateCreateName = 'DrawerThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           scrimColor: p.get('scrimColor').build(),
@@ -83,6 +85,8 @@ class DrawerTheme$Mate extends DrawerTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'DrawerTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

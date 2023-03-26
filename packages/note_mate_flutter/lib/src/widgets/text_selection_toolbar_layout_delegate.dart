@@ -6,8 +6,7 @@ import 'dart:ui';
 import 'dart:core';
 
 /// class TextSelectionToolbarLayoutDelegate extends SingleChildLayoutDelegate
-class TextSelectionToolbarLayoutDelegate$Mate
-    extends TextSelectionToolbarLayoutDelegate with Mate {
+class TextSelectionToolbarLayoutDelegate$Mate extends TextSelectionToolbarLayoutDelegate with Mate {
   /// TextSelectionToolbarLayoutDelegate TextSelectionToolbarLayoutDelegate({required Offset anchorAbove, required Offset anchorBelow, bool? fitsAbove})
   TextSelectionToolbarLayoutDelegate$Mate({
     /// optionalParameters: {required Offset anchorAbove} , defaultValue:none
@@ -23,6 +22,8 @@ class TextSelectionToolbarLayoutDelegate$Mate
           anchorBelow: anchorBelow,
           fitsAbove: fitsAbove,
         ) {
+    mateCreateName = 'TextSelectionToolbarLayoutDelegate';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionToolbarLayoutDelegate$Mate(
           anchorAbove: p.get('anchorAbove').build(),
           anchorBelow: p.get('anchorBelow').build(),

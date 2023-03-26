@@ -63,6 +63,8 @@ class ButtonBar$Mate extends ButtonBar with Mate {
           overflowButtonSpacing: overflowButtonSpacing,
           children: children,
         ) {
+    mateCreateName = 'ButtonBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonBar$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),

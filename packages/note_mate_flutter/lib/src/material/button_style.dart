@@ -106,6 +106,8 @@ class ButtonStyle$Mate extends ButtonStyle with Mate {
           alignment: alignment,
           splashFactory: splashFactory,
         ) {
+    mateCreateName = 'ButtonStyle';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonStyle$Mate(
           textStyle: p.get('textStyle').build(),
           backgroundColor: p.get('backgroundColor').build(),

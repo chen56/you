@@ -65,6 +65,8 @@ class InputDatePickerFormField$Mate extends InputDatePickerFormField with Mate {
           keyboardType: keyboardType,
           autofocus: autofocus,
         ) {
+    mateCreateName = 'InputDatePickerFormField';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDatePickerFormField$Mate(
           key: p.get('key').build(),
           initialDate: p.get('initialDate').build(),

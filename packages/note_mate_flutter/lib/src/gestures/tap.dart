@@ -23,6 +23,8 @@ class TapDownDetails$Mate extends TapDownDetails with Mate {
           localPosition: localPosition,
           kind: kind,
         ) {
+    mateCreateName = 'TapDownDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => TapDownDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
@@ -51,6 +53,8 @@ class TapUpDetails$Mate extends TapUpDetails with Mate {
           globalPosition: globalPosition,
           localPosition: localPosition,
         ) {
+    mateCreateName = 'TapUpDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => TapUpDetails$Mate(
           kind: p.get('kind').build(),
           globalPosition: p.get('globalPosition').build(),
@@ -79,6 +83,8 @@ class TapGestureRecognizer$Mate extends TapGestureRecognizer with Mate {
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
+    mateCreateName = 'TapGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => TapGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
           supportedDevices: p.get('supportedDevices').build(),

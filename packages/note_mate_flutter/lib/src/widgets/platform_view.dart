@@ -52,6 +52,8 @@ class AndroidView$Mate extends AndroidView with Mate {
           creationParamsCodec: creationParamsCodec,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'AndroidView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AndroidView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
@@ -112,6 +114,8 @@ class UiKitView$Mate extends UiKitView with Mate {
           creationParamsCodec: creationParamsCodec,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'UiKitView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UiKitView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
@@ -150,6 +154,8 @@ class HtmlElementView$Mate extends HtmlElementView with Mate {
           viewType: viewType,
           onPlatformViewCreated: onPlatformViewCreated,
         ) {
+    mateCreateName = 'HtmlElementView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => HtmlElementView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
@@ -182,6 +188,8 @@ class PlatformViewLink$Mate extends PlatformViewLink with Mate {
           onCreatePlatformView: onCreatePlatformView,
           viewType: viewType,
         ) {
+    mateCreateName = 'PlatformViewLink';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PlatformViewLink$Mate(
           key: p.get('key').build(),
           surfaceFactory: p.get('surfaceFactory').build(),
@@ -216,6 +224,8 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'PlatformViewSurface';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PlatformViewSurface$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -250,6 +260,8 @@ class AndroidViewSurface$Mate extends AndroidViewSurface with Mate {
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'AndroidViewSurface';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AndroidViewSurface$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),

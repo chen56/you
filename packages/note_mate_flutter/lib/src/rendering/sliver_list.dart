@@ -12,8 +12,9 @@ class RenderSliverList$Mate extends RenderSliverList with Mate {
       /// optionalParameters: {required RenderSliverBoxChildManager childManager} , defaultValue:none
       required RenderSliverBoxChildManager childManager})
       : super(childManager: childManager) {
-    mateBuilder = (p) =>
-        RenderSliverList$Mate(childManager: p.get('childManager').build());
+    mateCreateName = 'RenderSliverList';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => RenderSliverList$Mate(childManager: p.get('childManager').build());
     mateUse('childManager', childManager);
   }
 }

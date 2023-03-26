@@ -50,6 +50,8 @@ class OverflowBar$Mate extends OverflowBar with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
+    mateCreateName = 'OverflowBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OverflowBar$Mate(
           key: p.get('key').build(),
           spacing: p.get('spacing').build(),

@@ -55,6 +55,8 @@ class CupertinoScrollbar$Mate extends CupertinoScrollbar with Mate {
           notificationPredicate: notificationPredicate,
           scrollbarOrientation: scrollbarOrientation,
         ) {
+    mateCreateName = 'CupertinoScrollbar';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoScrollbar$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

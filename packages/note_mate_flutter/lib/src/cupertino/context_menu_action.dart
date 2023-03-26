@@ -9,8 +9,7 @@ import 'dart:ui';
 import 'package:flutter/src/widgets/icon_data.dart';
 
 /// class CupertinoContextMenuAction extends StatefulWidget
-class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction
-    with Mate {
+class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Mate {
   /// CupertinoContextMenuAction CupertinoContextMenuAction({Key? key, required Widget child, bool isDefaultAction = false, bool isDestructiveAction = false, void Function()? onPressed, IconData? trailingIcon})
   CupertinoContextMenuAction$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -38,6 +37,8 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction
           onPressed: onPressed,
           trailingIcon: trailingIcon,
         ) {
+    mateCreateName = 'CupertinoContextMenuAction';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoContextMenuAction$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

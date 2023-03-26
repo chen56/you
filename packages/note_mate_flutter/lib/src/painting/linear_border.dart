@@ -18,6 +18,8 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
           size: size,
           alignment: alignment,
         ) {
+    mateCreateName = 'LinearBorderEdge';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearBorderEdge$Mate(
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
@@ -52,6 +54,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           top: top,
           bottom: bottom,
         ) {
+    mateCreateName = 'LinearBorder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearBorder$Mate(
           side: p.get('side').build(),
           start: p.get('start').build(),
@@ -81,6 +85,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: alignment,
           size: size,
         ) {
+    mateCreateName = 'LinearBorder.start';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearBorder$Mate.start(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
@@ -106,6 +112,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: alignment,
           size: size,
         ) {
+    mateCreateName = 'LinearBorder.end';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearBorder$Mate.end(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
@@ -131,6 +139,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: alignment,
           size: size,
         ) {
+    mateCreateName = 'LinearBorder.top';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearBorder$Mate.top(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
@@ -156,6 +166,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: alignment,
           size: size,
         ) {
+    mateCreateName = 'LinearBorder.bottom';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearBorder$Mate.bottom(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),

@@ -12,6 +12,8 @@ class Category$Mate extends Category with Mate {
       /// requiredParameters: List<String> sections
       List<String> sections)
       : super(sections) {
+    mateCreateName = 'Category';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Category$Mate(p.get('sections').value);
     mateUse('sections', sections);
   }
@@ -25,6 +27,8 @@ class DocumentationIcon$Mate extends DocumentationIcon with Mate {
       /// requiredParameters: String url
       String url)
       : super(url) {
+    mateCreateName = 'DocumentationIcon';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DocumentationIcon$Mate(p.get('url').value);
     mateUse('url', url);
   }
@@ -38,6 +42,8 @@ class Summary$Mate extends Summary with Mate {
       /// requiredParameters: String text
       String text)
       : super(text) {
+    mateCreateName = 'Summary';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Summary$Mate(p.get('text').value);
     mateUse('text', text);
   }

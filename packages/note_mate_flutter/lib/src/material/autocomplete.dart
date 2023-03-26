@@ -44,6 +44,8 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
           optionsViewBuilder: optionsViewBuilder,
           initialValue: initialValue,
         ) {
+    mateCreateName = 'Autocomplete';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Autocomplete$Mate<T>(
           key: p.get('key').build(),
           optionsBuilder: p.get('optionsBuilder').build(),

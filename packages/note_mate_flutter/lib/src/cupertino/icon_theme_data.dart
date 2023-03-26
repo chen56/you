@@ -42,6 +42,8 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
           opacity: opacity,
           shadows: shadows,
         ) {
+    mateCreateName = 'CupertinoIconThemeData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoIconThemeData$Mate(
           size: p.get('size').build(),
           fill: p.get('fill').build(),

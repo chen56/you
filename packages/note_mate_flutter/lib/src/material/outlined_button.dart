@@ -60,6 +60,8 @@ class OutlinedButton$Mate extends OutlinedButton with Mate {
           statesController: statesController,
           child: child,
         ) {
+    mateCreateName = 'OutlinedButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OutlinedButton$Mate(
           key: p.get('key').build(),
           onPressed: p.get('onPressed').build(),

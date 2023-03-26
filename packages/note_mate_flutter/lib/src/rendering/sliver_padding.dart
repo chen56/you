@@ -23,6 +23,8 @@ class RenderSliverPadding$Mate extends RenderSliverPadding with Mate {
           textDirection: textDirection,
           child: child,
         ) {
+    mateCreateName = 'RenderSliverPadding';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverPadding$Mate(
           padding: p.get('padding').build(),
           textDirection: p.get('textDirection').build(),

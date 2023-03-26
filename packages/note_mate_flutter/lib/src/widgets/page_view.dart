@@ -30,6 +30,8 @@ class PageController$Mate extends PageController with Mate {
           keepPage: keepPage,
           viewportFraction: viewportFraction,
         ) {
+    mateCreateName = 'PageController';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PageController$Mate(
           initialPage: p.get('initialPage').build(),
           keepPage: p.get('keepPage').build(),
@@ -74,6 +76,8 @@ class PageMetrics$Mate extends PageMetrics with Mate {
           viewportFraction: viewportFraction,
           devicePixelRatio: devicePixelRatio,
         ) {
+    mateCreateName = 'PageMetrics';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PageMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),
           maxScrollExtent: p.get('maxScrollExtent').build(),
@@ -101,8 +105,9 @@ class PageScrollPhysics$Mate extends PageScrollPhysics with Mate {
       /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateBuilder =
-        (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
+    mateCreateName = 'PageScrollPhysics';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse('parent', parent);
   }
 }
@@ -168,6 +173,8 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: scrollBehavior,
           padEnds: padEnds,
         ) {
+    mateCreateName = 'PageView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PageView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -267,6 +274,8 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: scrollBehavior,
           padEnds: padEnds,
         ) {
+    mateCreateName = 'PageView.builder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PageView$Mate.builder(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -362,6 +371,8 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: scrollBehavior,
           padEnds: padEnds,
         ) {
+    mateCreateName = 'PageView.custom';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PageView$Mate.custom(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),

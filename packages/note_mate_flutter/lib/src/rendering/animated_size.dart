@@ -46,6 +46,8 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate {
           child: child,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderAnimatedSize';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAnimatedSize$Mate(
           vsync: p.get('vsync').build(),
           duration: p.get('duration').build(),

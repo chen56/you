@@ -61,6 +61,8 @@ class AnimatedList$Mate extends AnimatedList with Mate {
           padding: padding,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'AnimatedList';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedList$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -137,6 +139,8 @@ class AnimatedGrid$Mate extends AnimatedGrid with Mate {
           padding: padding,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'AnimatedGrid';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedGrid$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -185,6 +189,8 @@ class SliverAnimatedList$Mate extends SliverAnimatedList with Mate {
           findChildIndexCallback: findChildIndexCallback,
           initialItemCount: initialItemCount,
         ) {
+    mateCreateName = 'SliverAnimatedList';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverAnimatedList$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -223,6 +229,8 @@ class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with Mate {
           findChildIndexCallback: findChildIndexCallback,
           initialItemCount: initialItemCount,
         ) {
+    mateCreateName = 'SliverAnimatedGrid';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverAnimatedGrid$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),

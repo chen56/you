@@ -52,6 +52,8 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
           textHeightBehavior: textHeightBehavior,
           child: child,
         ) {
+    mateCreateName = 'DefaultTextStyle';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DefaultTextStyle$Mate(
           key: p.get('key').build(),
           style: p.get('style').build(),
@@ -80,15 +82,15 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
       /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super.fallback(key: key) {
-    mateBuilder =
-        (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
+    mateCreateName = 'DefaultTextStyle.fallback';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
     mateUse('key', key);
   }
 }
 
 /// class DefaultTextHeightBehavior extends InheritedTheme
-class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior
-    with Mate {
+class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate {
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -104,6 +106,8 @@ class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior
           textHeightBehavior: textHeightBehavior,
           child: child,
         ) {
+    mateCreateName = 'DefaultTextHeightBehavior';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DefaultTextHeightBehavior$Mate(
           key: p.get('key').build(),
           textHeightBehavior: p.get('textHeightBehavior').build(),
@@ -179,6 +183,8 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: textHeightBehavior,
           selectionColor: selectionColor,
         ) {
+    mateCreateName = 'Text';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Text$Mate(
           p.get('data').value,
           key: p.get('key').build(),
@@ -275,6 +281,8 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: textHeightBehavior,
           selectionColor: selectionColor,
         ) {
+    mateCreateName = 'Text.rich';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Text$Mate.rich(
           p.get('textSpan').value,
           key: p.get('key').build(),

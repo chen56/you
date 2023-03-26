@@ -80,6 +80,8 @@ class DatePickerDialog$Mate extends DatePickerDialog with Mate {
           keyboardType: keyboardType,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'DatePickerDialog';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerDialog$Mate(
           key: p.get('key').build(),
           initialDate: p.get('initialDate').build(),
@@ -196,6 +198,8 @@ class DateRangePickerDialog$Mate extends DateRangePickerDialog with Mate {
           fieldEndLabelText: fieldEndLabelText,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'DateRangePickerDialog';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DateRangePickerDialog$Mate(
           key: p.get('key').build(),
           initialDateRange: p.get('initialDateRange').build(),

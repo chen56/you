@@ -17,6 +17,8 @@ class MaterialPointArcTween$Mate extends MaterialPointArcTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'MaterialPointArcTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialPointArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -39,6 +41,8 @@ class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate {
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'MaterialRectArcTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialRectArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -49,8 +53,7 @@ class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate {
 }
 
 /// class MaterialRectCenterArcTween extends RectTween
-class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween
-    with Mate {
+class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween with Mate {
   /// MaterialRectCenterArcTween MaterialRectCenterArcTween({Rect? begin, Rect? end})
   MaterialRectCenterArcTween$Mate({
     /// optionalParameters: {Rect? begin} , defaultValue:none
@@ -62,6 +65,8 @@ class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'MaterialRectCenterArcTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialRectCenterArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),

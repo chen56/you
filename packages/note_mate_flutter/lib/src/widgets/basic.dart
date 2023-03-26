@@ -53,6 +53,8 @@ class Directionality$Mate extends Directionality with Mate {
           textDirection: textDirection,
           child: child,
         ) {
+    mateCreateName = 'Directionality';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Directionality$Mate(
           key: p.get('key').build(),
           textDirection: p.get('textDirection').build(),
@@ -85,6 +87,8 @@ class Opacity$Mate extends Opacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           child: child,
         ) {
+    mateCreateName = 'Opacity';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Opacity$Mate(
           key: p.get('key').build(),
           opacity: p.get('opacity').build(),
@@ -119,6 +123,8 @@ class ShaderMask$Mate extends ShaderMask with Mate {
           blendMode: blendMode,
           child: child,
         ) {
+    mateCreateName = 'ShaderMask';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ShaderMask$Mate(
           key: p.get('key').build(),
           shaderCallback: p.get('shaderCallback').build(),
@@ -153,6 +159,8 @@ class BackdropFilter$Mate extends BackdropFilter with Mate {
           child: child,
           blendMode: blendMode,
         ) {
+    mateCreateName = 'BackdropFilter';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BackdropFilter$Mate(
           key: p.get('key').build(),
           filter: p.get('filter').build(),
@@ -199,6 +207,8 @@ class CustomPaint$Mate extends CustomPaint with Mate {
           willChange: willChange,
           child: child,
         ) {
+    mateCreateName = 'CustomPaint';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CustomPaint$Mate(
           key: p.get('key').build(),
           painter: p.get('painter').build(),
@@ -239,6 +249,8 @@ class ClipRect$Mate extends ClipRect with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'ClipRect';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ClipRect$Mate(
           key: p.get('key').build(),
           clipper: p.get('clipper').build(),
@@ -277,6 +289,8 @@ class ClipRRect$Mate extends ClipRRect with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'ClipRRect';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ClipRRect$Mate(
           key: p.get('key').build(),
           borderRadius: p.get('borderRadius').build(),
@@ -313,6 +327,8 @@ class ClipOval$Mate extends ClipOval with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'ClipOval';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ClipOval$Mate(
           key: p.get('key').build(),
           clipper: p.get('clipper').build(),
@@ -347,6 +363,8 @@ class ClipPath$Mate extends ClipPath with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'ClipPath';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ClipPath$Mate(
           key: p.get('key').build(),
           clipper: p.get('clipper').build(),
@@ -397,6 +415,8 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
           shadowColor: shadowColor,
           child: child,
         ) {
+    mateCreateName = 'PhysicalModel';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PhysicalModel$Mate(
           key: p.get('key').build(),
           shape: p.get('shape').build(),
@@ -451,6 +471,8 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
           shadowColor: shadowColor,
           child: child,
         ) {
+    mateCreateName = 'PhysicalShape';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PhysicalShape$Mate(
           key: p.get('key').build(),
           clipper: p.get('clipper').build(),
@@ -503,6 +525,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Transform$Mate(
           key: p.get('key').build(),
           transform: p.get('transform').build(),
@@ -552,6 +576,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform.rotate';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Transform$Mate.rotate(
           key: p.get('key').build(),
           angle: p.get('angle').build(),
@@ -593,6 +619,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform.translate';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Transform$Mate.translate(
           key: p.get('key').build(),
           offset: p.get('offset').build(),
@@ -646,6 +674,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform.scale';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Transform$Mate.scale(
           key: p.get('key').build(),
           scale: p.get('scale').build(),
@@ -699,6 +729,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform.flip';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Transform$Mate.flip(
           key: p.get('key').build(),
           flipX: p.get('flipX').build(),
@@ -719,8 +751,7 @@ class Transform$Mate extends Transform with Mate {
 }
 
 /// class CompositedTransformTarget extends SingleChildRenderObjectWidget
-class CompositedTransformTarget$Mate extends CompositedTransformTarget
-    with Mate {
+class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate {
   /// CompositedTransformTarget CompositedTransformTarget({Key? key, required LayerLink link, Widget? child})
   CompositedTransformTarget$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -736,6 +767,8 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget
           link: link,
           child: child,
         ) {
+    mateCreateName = 'CompositedTransformTarget';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CompositedTransformTarget$Mate(
           key: p.get('key').build(),
           link: p.get('link').build(),
@@ -748,8 +781,7 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget
 }
 
 /// class CompositedTransformFollower extends SingleChildRenderObjectWidget
-class CompositedTransformFollower$Mate extends CompositedTransformFollower
-    with Mate {
+class CompositedTransformFollower$Mate extends CompositedTransformFollower with Mate {
   /// CompositedTransformFollower CompositedTransformFollower({Key? key, required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment targetAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, Widget? child})
   CompositedTransformFollower$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -781,6 +813,8 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower
           followerAnchor: followerAnchor,
           child: child,
         ) {
+    mateCreateName = 'CompositedTransformFollower';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CompositedTransformFollower$Mate(
           key: p.get('key').build(),
           link: p.get('link').build(),
@@ -825,6 +859,8 @@ class FittedBox$Mate extends FittedBox with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'FittedBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FittedBox$Mate(
           key: p.get('key').build(),
           fit: p.get('fit').build(),
@@ -861,6 +897,8 @@ class FractionalTranslation$Mate extends FractionalTranslation with Mate {
           transformHitTests: transformHitTests,
           child: child,
         ) {
+    mateCreateName = 'FractionalTranslation';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FractionalTranslation$Mate(
           key: p.get('key').build(),
           translation: p.get('translation').build(),
@@ -891,6 +929,8 @@ class RotatedBox$Mate extends RotatedBox with Mate {
           quarterTurns: quarterTurns,
           child: child,
         ) {
+    mateCreateName = 'RotatedBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RotatedBox$Mate(
           key: p.get('key').build(),
           quarterTurns: p.get('quarterTurns').build(),
@@ -919,6 +959,8 @@ class Padding$Mate extends Padding with Mate {
           padding: padding,
           child: child,
         ) {
+    mateCreateName = 'Padding';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Padding$Mate(
           key: p.get('key').build(),
           padding: p.get('padding').build(),
@@ -955,6 +997,8 @@ class Align$Mate extends Align with Mate {
           heightFactor: heightFactor,
           child: child,
         ) {
+    mateCreateName = 'Align';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Align$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -991,6 +1035,8 @@ class Center$Mate extends Center with Mate {
           heightFactor: heightFactor,
           child: child,
         ) {
+    mateCreateName = 'Center';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Center$Mate(
           key: p.get('key').build(),
           widthFactor: p.get('widthFactor').build(),
@@ -1021,6 +1067,8 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
           delegate: delegate,
           child: child,
         ) {
+    mateCreateName = 'CustomSingleChildLayout';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CustomSingleChildLayout$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
@@ -1049,6 +1097,8 @@ class LayoutId$Mate extends LayoutId with Mate {
           id: id,
           child: child,
         ) {
+    mateCreateName = 'LayoutId';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LayoutId$Mate(
           key: p.get('key').build(),
           id: p.get('id').build(),
@@ -1077,6 +1127,8 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
           delegate: delegate,
           children: children,
         ) {
+    mateCreateName = 'CustomMultiChildLayout';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CustomMultiChildLayout$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
@@ -1109,6 +1161,8 @@ class SizedBox$Mate extends SizedBox with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'SizedBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SizedBox$Mate(
           key: p.get('key').build(),
           width: p.get('width').build(),
@@ -1132,6 +1186,8 @@ class SizedBox$Mate extends SizedBox with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'SizedBox.expand';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SizedBox$Mate.expand(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1151,6 +1207,8 @@ class SizedBox$Mate extends SizedBox with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'SizedBox.shrink';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SizedBox$Mate.shrink(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1174,6 +1232,8 @@ class SizedBox$Mate extends SizedBox with Mate {
           child: child,
           size: size,
         ) {
+    mateCreateName = 'SizedBox.fromSize';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SizedBox$Mate.fromSize(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1199,6 +1259,8 @@ class SizedBox$Mate extends SizedBox with Mate {
           child: child,
           dimension: dimension,
         ) {
+    mateCreateName = 'SizedBox.square';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SizedBox$Mate.square(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1227,6 +1289,8 @@ class ConstrainedBox$Mate extends ConstrainedBox with Mate {
           constraints: constraints,
           child: child,
         ) {
+    mateCreateName = 'ConstrainedBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ConstrainedBox$Mate(
           key: p.get('key').build(),
           constraints: p.get('constraints').build(),
@@ -1271,6 +1335,8 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
           clipBehavior: clipBehavior,
           debugTransformType: debugTransformType,
         ) {
+    mateCreateName = 'ConstraintsTransformBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ConstraintsTransformBox$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1319,6 +1385,8 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
           constrainedAxis: constrainedAxis,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'UnconstrainedBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UnconstrainedBox$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1361,6 +1429,8 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
           heightFactor: heightFactor,
           child: child,
         ) {
+    mateCreateName = 'FractionallySizedBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FractionallySizedBox$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -1397,6 +1467,8 @@ class LimitedBox$Mate extends LimitedBox with Mate {
           maxHeight: maxHeight,
           child: child,
         ) {
+    mateCreateName = 'LimitedBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LimitedBox$Mate(
           key: p.get('key').build(),
           maxWidth: p.get('maxWidth').build(),
@@ -1443,6 +1515,8 @@ class OverflowBox$Mate extends OverflowBox with Mate {
           maxHeight: maxHeight,
           child: child,
         ) {
+    mateCreateName = 'OverflowBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OverflowBox$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -1483,6 +1557,8 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
           alignment: alignment,
           child: child,
         ) {
+    mateCreateName = 'SizedOverflowBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SizedOverflowBox$Mate(
           key: p.get('key').build(),
           size: p.get('size').build(),
@@ -1513,6 +1589,8 @@ class Offstage$Mate extends Offstage with Mate {
           offstage: offstage,
           child: child,
         ) {
+    mateCreateName = 'Offstage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Offstage$Mate(
           key: p.get('key').build(),
           offstage: p.get('offstage').build(),
@@ -1541,6 +1619,8 @@ class AspectRatio$Mate extends AspectRatio with Mate {
           aspectRatio: aspectRatio,
           child: child,
         ) {
+    mateCreateName = 'AspectRatio';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AspectRatio$Mate(
           key: p.get('key').build(),
           aspectRatio: p.get('aspectRatio').build(),
@@ -1573,6 +1653,8 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
           stepHeight: stepHeight,
           child: child,
         ) {
+    mateCreateName = 'IntrinsicWidth';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IntrinsicWidth$Mate(
           key: p.get('key').build(),
           stepWidth: p.get('stepWidth').build(),
@@ -1599,6 +1681,8 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'IntrinsicHeight';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IntrinsicHeight$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1629,6 +1713,8 @@ class Baseline$Mate extends Baseline with Mate {
           baselineType: baselineType,
           child: child,
         ) {
+    mateCreateName = 'Baseline';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Baseline$Mate(
           key: p.get('key').build(),
           baseline: p.get('baseline').build(),
@@ -1655,6 +1741,8 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'SliverToBoxAdapter';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverToBoxAdapter$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1681,6 +1769,8 @@ class SliverPadding$Mate extends SliverPadding with Mate {
           padding: padding,
           sliver: sliver,
         ) {
+    mateCreateName = 'SliverPadding';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverPadding$Mate(
           key: p.get('key').build(),
           padding: p.get('padding').build(),
@@ -1713,6 +1803,8 @@ class ListBody$Mate extends ListBody with Mate {
           reverse: reverse,
           children: children,
         ) {
+    mateCreateName = 'ListBody';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListBody$Mate(
           key: p.get('key').build(),
           mainAxis: p.get('mainAxis').build(),
@@ -1755,6 +1847,8 @@ class Stack$Mate extends Stack with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
+    mateCreateName = 'Stack';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Stack$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -1805,6 +1899,8 @@ class IndexedStack$Mate extends IndexedStack with Mate {
           index: index,
           children: children,
         ) {
+    mateCreateName = 'IndexedStack';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IndexedStack$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -1861,6 +1957,8 @@ class Positioned$Mate extends Positioned with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'Positioned';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Positioned$Mate(
           key: p.get('key').build(),
           left: p.get('left').build(),
@@ -1896,6 +1994,8 @@ class Positioned$Mate extends Positioned with Mate {
           rect: rect,
           child: child,
         ) {
+    mateCreateName = 'Positioned.fromRect';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Positioned$Mate.fromRect(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
@@ -1921,6 +2021,8 @@ class Positioned$Mate extends Positioned with Mate {
           rect: rect,
           child: child,
         ) {
+    mateCreateName = 'Positioned.fromRelativeRect';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Positioned$Mate.fromRelativeRect(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
@@ -1958,6 +2060,8 @@ class Positioned$Mate extends Positioned with Mate {
           bottom: bottom,
           child: child,
         ) {
+    mateCreateName = 'Positioned.fill';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Positioned$Mate.fill(
           key: p.get('key').build(),
           left: p.get('left').build(),
@@ -2012,6 +2116,8 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'PositionedDirectional';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PositionedDirectional$Mate(
           key: p.get('key').build(),
           start: p.get('start').build(),
@@ -2078,6 +2184,8 @@ class Flex$Mate extends Flex with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
+    mateCreateName = 'Flex';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Flex$Mate(
           key: p.get('key').build(),
           direction: p.get('direction').build(),
@@ -2140,6 +2248,8 @@ class Row$Mate extends Row with Mate {
           textBaseline: textBaseline,
           children: children,
         ) {
+    mateCreateName = 'Row';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Row$Mate(
           key: p.get('key').build(),
           mainAxisAlignment: p.get('mainAxisAlignment').build(),
@@ -2198,6 +2308,8 @@ class Column$Mate extends Column with Mate {
           textBaseline: textBaseline,
           children: children,
         ) {
+    mateCreateName = 'Column';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Column$Mate(
           key: p.get('key').build(),
           mainAxisAlignment: p.get('mainAxisAlignment').build(),
@@ -2240,6 +2352,8 @@ class Flexible$Mate extends Flexible with Mate {
           fit: fit,
           child: child,
         ) {
+    mateCreateName = 'Flexible';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Flexible$Mate(
           key: p.get('key').build(),
           flex: p.get('flex').build(),
@@ -2270,6 +2384,8 @@ class Expanded$Mate extends Expanded with Mate {
           flex: flex,
           child: child,
         ) {
+    mateCreateName = 'Expanded';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Expanded$Mate(
           key: p.get('key').build(),
           flex: p.get('flex').build(),
@@ -2330,6 +2446,8 @@ class Wrap$Mate extends Wrap with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
+    mateCreateName = 'Wrap';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Wrap$Mate(
           key: p.get('key').build(),
           direction: p.get('direction').build(),
@@ -2378,6 +2496,8 @@ class Flow$Mate extends Flow with Mate {
           children: children,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'Flow';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Flow$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
@@ -2409,6 +2529,8 @@ class Flow$Mate extends Flow with Mate {
           children: children,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'Flow.unwrapped';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Flow$Mate.unwrapped(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
@@ -2483,6 +2605,8 @@ class RichText$Mate extends RichText with Mate {
           selectionRegistrar: selectionRegistrar,
           selectionColor: selectionColor,
         ) {
+    mateCreateName = 'RichText';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RichText$Mate(
           key: p.get('key').build(),
           text: p.get('text').build(),
@@ -2589,6 +2713,8 @@ class RawImage$Mate extends RawImage with Mate {
           filterQuality: filterQuality,
           isAntiAlias: isAntiAlias,
         ) {
+    mateCreateName = 'RawImage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RawImage$Mate(
           key: p.get('key').build(),
           image: p.get('image').build(),
@@ -2645,6 +2771,8 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
           bundle: bundle,
           child: child,
         ) {
+    mateCreateName = 'DefaultAssetBundle';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DefaultAssetBundle$Mate(
           key: p.get('key').build(),
           bundle: p.get('bundle').build(),
@@ -2673,6 +2801,8 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
           onBuild: onBuild,
           onUnmount: onUnmount,
         ) {
+    mateCreateName = 'WidgetToRenderBoxAdapter';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => WidgetToRenderBoxAdapter$Mate(
           renderBox: p.get('renderBox').build(),
           onBuild: p.get('onBuild').build(),
@@ -2737,6 +2867,8 @@ class Listener$Mate extends Listener with Mate {
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'Listener';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Listener$Mate(
           key: p.get('key').build(),
           onPointerDown: p.get('onPointerDown').build(),
@@ -2803,6 +2935,8 @@ class MouseRegion$Mate extends MouseRegion with Mate {
           hitTestBehavior: hitTestBehavior,
           child: child,
         ) {
+    mateCreateName = 'MouseRegion';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MouseRegion$Mate(
           key: p.get('key').build(),
           onEnter: p.get('onEnter').build(),
@@ -2837,6 +2971,8 @@ class RepaintBoundary$Mate extends RepaintBoundary with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'RepaintBoundary';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RepaintBoundary$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -2867,6 +3003,8 @@ class IgnorePointer$Mate extends IgnorePointer with Mate {
           ignoringSemantics: ignoringSemantics,
           child: child,
         ) {
+    mateCreateName = 'IgnorePointer';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IgnorePointer$Mate(
           key: p.get('key').build(),
           ignoring: p.get('ignoring').build(),
@@ -2901,6 +3039,8 @@ class AbsorbPointer$Mate extends AbsorbPointer with Mate {
           child: child,
           ignoringSemantics: ignoringSemantics,
         ) {
+    mateCreateName = 'AbsorbPointer';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AbsorbPointer$Mate(
           key: p.get('key').build(),
           absorbing: p.get('absorbing').build(),
@@ -2935,6 +3075,8 @@ class MetaData$Mate extends MetaData with Mate {
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'MetaData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MetaData$Mate(
           key: p.get('key').build(),
           metaData: p.get('metaData').build(),
@@ -3209,6 +3351,8 @@ class Semantics$Mate extends Semantics with Mate {
           onDidLoseAccessibilityFocus: onDidLoseAccessibilityFocus,
           customSemanticsActions: customSemanticsActions,
         ) {
+    mateCreateName = 'Semantics';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Semantics$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -3267,16 +3411,12 @@ class Semantics$Mate extends Semantics with Mate {
           onCut: p.get('onCut').build(),
           onPaste: p.get('onPaste').build(),
           onDismiss: p.get('onDismiss').build(),
-          onMoveCursorForwardByCharacter:
-              p.get('onMoveCursorForwardByCharacter').build(),
-          onMoveCursorBackwardByCharacter:
-              p.get('onMoveCursorBackwardByCharacter').build(),
+          onMoveCursorForwardByCharacter: p.get('onMoveCursorForwardByCharacter').build(),
+          onMoveCursorBackwardByCharacter: p.get('onMoveCursorBackwardByCharacter').build(),
           onSetSelection: p.get('onSetSelection').build(),
           onSetText: p.get('onSetText').build(),
-          onDidGainAccessibilityFocus:
-              p.get('onDidGainAccessibilityFocus').build(),
-          onDidLoseAccessibilityFocus:
-              p.get('onDidLoseAccessibilityFocus').build(),
+          onDidGainAccessibilityFocus: p.get('onDidGainAccessibilityFocus').build(),
+          onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
     mateUse('key', key);
@@ -3372,6 +3512,8 @@ class Semantics$Mate extends Semantics with Mate {
           excludeSemantics: excludeSemantics,
           properties: properties,
         ) {
+    mateCreateName = 'Semantics.fromProperties';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Semantics$Mate.fromProperties(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -3402,6 +3544,8 @@ class MergeSemantics$Mate extends MergeSemantics with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'MergeSemantics';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MergeSemantics$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -3428,6 +3572,8 @@ class BlockSemantics$Mate extends BlockSemantics with Mate {
           blocking: blocking,
           child: child,
         ) {
+    mateCreateName = 'BlockSemantics';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BlockSemantics$Mate(
           key: p.get('key').build(),
           blocking: p.get('blocking').build(),
@@ -3456,6 +3602,8 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
           excluding: excluding,
           child: child,
         ) {
+    mateCreateName = 'ExcludeSemantics';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExcludeSemantics$Mate(
           key: p.get('key').build(),
           excluding: p.get('excluding').build(),
@@ -3484,6 +3632,8 @@ class IndexedSemantics$Mate extends IndexedSemantics with Mate {
           index: index,
           child: child,
         ) {
+    mateCreateName = 'IndexedSemantics';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IndexedSemantics$Mate(
           key: p.get('key').build(),
           index: p.get('index').build(),
@@ -3508,6 +3658,8 @@ class KeyedSubtree$Mate extends KeyedSubtree with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'KeyedSubtree';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => KeyedSubtree$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -3530,6 +3682,8 @@ class Builder$Mate extends Builder with Mate {
           key: key,
           builder: builder,
         ) {
+    mateCreateName = 'Builder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Builder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
@@ -3552,6 +3706,8 @@ class StatefulBuilder$Mate extends StatefulBuilder with Mate {
           key: key,
           builder: builder,
         ) {
+    mateCreateName = 'StatefulBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => StatefulBuilder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
@@ -3578,6 +3734,8 @@ class ColoredBox$Mate extends ColoredBox with Mate {
           child: child,
           key: key,
         ) {
+    mateCreateName = 'ColoredBox';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColoredBox$Mate(
           color: p.get('color').build(),
           child: p.get('child').build(),

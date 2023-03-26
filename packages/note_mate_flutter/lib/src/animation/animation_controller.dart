@@ -42,6 +42,8 @@ class AnimationController$Mate extends AnimationController with Mate {
           animationBehavior: animationBehavior,
           vsync: vsync,
         ) {
+    mateCreateName = 'AnimationController';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationController$Mate(
           value: p.get('value').build(),
           duration: p.get('duration').build(),
@@ -89,6 +91,8 @@ class AnimationController$Mate extends AnimationController with Mate {
           vsync: vsync,
           animationBehavior: animationBehavior,
         ) {
+    mateCreateName = 'AnimationController.unbounded';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationController$Mate.unbounded(
           value: p.get('value').build(),
           duration: p.get('duration').build(),

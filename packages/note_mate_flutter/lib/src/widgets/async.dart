@@ -19,6 +19,8 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           state,
           data,
         ) {
+    mateCreateName = 'AsyncSnapshot.withData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AsyncSnapshot$Mate<T>.withData(
           p.get('state').value,
           p.get('data').value,
@@ -42,6 +44,8 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           error,
           stackTrace,
         ) {
+    mateCreateName = 'AsyncSnapshot.withError';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AsyncSnapshot$Mate<T>.withError(
           p.get('state').value,
           p.get('error').value,
@@ -74,6 +78,8 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
           stream: stream,
           builder: builder,
         ) {
+    mateCreateName = 'StreamBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => StreamBuilder$Mate<T>(
           key: p.get('key').build(),
           initialData: p.get('initialData').build(),
@@ -108,6 +114,8 @@ class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate {
           initialData: initialData,
           builder: builder,
         ) {
+    mateCreateName = 'FutureBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FutureBuilder$Mate<T>(
           key: p.get('key').build(),
           future: p.get('future').build(),

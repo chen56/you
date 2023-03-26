@@ -100,7 +100,7 @@ Param<T> _convertToParam<T>({
         paramMap: init._mateParams,
         nullable: nullable,
         builder: init.mateBuilder,
-        builderRefer: init.builderRefer);
+        builderRefer: code.refer(init.mateCreateName, init.matePackageUrl));
   }
 
   if (utils.isSubtype<List, T>() || utils.isSubtype<List?, T>()) {
@@ -214,7 +214,7 @@ class ObjectParam<T> extends Param<T> {
           builder: mate.mateBuilder,
           paramMap: mate._mateParams,
           nullable: false, //根对象
-          builderRefer: mate.builderRefer,
+          builderRefer: code.refer(mate.mateCreateName, mate.matePackageUrl),
         );
 
   Param<E> use<E>(String name, E init) {
@@ -336,8 +336,8 @@ class ReadonlyEditor extends Editor<double> {
 mixin Mate {
   final Map<String, Param> _mateParams = {};
   late final Object Function(ObjectParam param) mateBuilder;
-  //fixme builderRefer改为真实值
-  late final code.Reference builderRefer = code.refer(runtimeType.toString());
+  late final String mateCreateName;
+  late final String matePackageUrl;
 
   Param<V> mateUse<V>(String name, V init, {dynamic defaultValue}) {
     var param = _convertToParam(name: name, nullable: utils.isNullableOf<V>(init), init: init);

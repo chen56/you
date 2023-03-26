@@ -17,6 +17,8 @@ class FractionalOffset$Mate extends FractionalOffset with Mate {
           dx,
           dy,
         ) {
+    mateCreateName = 'FractionalOffset';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FractionalOffset$Mate(
           p.get('dx').value,
           p.get('dy').value,

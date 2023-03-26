@@ -18,6 +18,8 @@ class CircleBorder$Mate extends CircleBorder with Mate {
           side: side,
           eccentricity: eccentricity,
         ) {
+    mateCreateName = 'CircleBorder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircleBorder$Mate(
           side: p.get('side').build(),
           eccentricity: p.get('eccentricity').build(),

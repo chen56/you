@@ -30,6 +30,8 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           control: control,
           meta: meta,
         ) {
+    mateCreateName = 'ShortcutSerialization.character';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ShortcutSerialization$Mate.character(
           p.get('character').value,
           alt: p.get('alt').build(),
@@ -64,6 +66,8 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           meta: meta,
           shift: shift,
         ) {
+    mateCreateName = 'ShortcutSerialization.modifier';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ShortcutSerialization$Mate.modifier(
           p.get('trigger').value,
           alt: p.get('alt').build(),
@@ -80,16 +84,16 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
 }
 
 /// class DefaultPlatformMenuDelegate extends PlatformMenuDelegate
-class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate
-    with Mate {
+class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with Mate {
   /// DefaultPlatformMenuDelegate DefaultPlatformMenuDelegate({MethodChannel? channel})
   DefaultPlatformMenuDelegate$Mate(
       {
       /// optionalParameters: {MethodChannel? channel} , defaultValue:none
       MethodChannel? channel})
       : super(channel: channel) {
-    mateBuilder = (p) =>
-        DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
+    mateCreateName = 'DefaultPlatformMenuDelegate';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
     mateUse('channel', channel);
   }
 }
@@ -111,6 +115,8 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
           menus: menus,
           child: child,
         ) {
+    mateCreateName = 'PlatformMenuBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PlatformMenuBar$Mate(
           key: p.get('key').build(),
           menus: p.get('menus').build(),
@@ -143,6 +149,8 @@ class PlatformMenu$Mate extends PlatformMenu with Mate {
           onClose: onClose,
           menus: menus,
         ) {
+    mateCreateName = 'PlatformMenu';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PlatformMenu$Mate(
           label: p.get('label').build(),
           onOpen: p.get('onOpen').build(),
@@ -164,8 +172,9 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
       /// optionalParameters: {required List<PlatformMenuItem> members} , defaultValue:none
       required List<PlatformMenuItem> members})
       : super(members: members) {
-    mateBuilder =
-        (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
+    mateCreateName = 'PlatformMenuItemGroup';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
     mateUse('members', members);
   }
 }
@@ -191,6 +200,8 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
           onSelected: onSelected,
           onSelectedIntent: onSelectedIntent,
         ) {
+    mateCreateName = 'PlatformMenuItem';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PlatformMenuItem$Mate(
           label: p.get('label').build(),
           shortcut: p.get('shortcut').build(),
@@ -217,6 +228,8 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate {
           type: type,
           enabled: enabled,
         ) {
+    mateCreateName = 'PlatformProvidedMenuItem';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PlatformProvidedMenuItem$Mate(
           type: p.get('type').build(),
           enabled: p.get('enabled').build(),

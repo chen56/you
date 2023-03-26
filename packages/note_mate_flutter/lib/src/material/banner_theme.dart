@@ -46,6 +46,8 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
           padding: padding,
           leadingPadding: leadingPadding,
         ) {
+    mateCreateName = 'MaterialBannerThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialBannerThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           surfaceTintColor: p.get('surfaceTintColor').build(),
@@ -84,6 +86,8 @@ class MaterialBannerTheme$Mate extends MaterialBannerTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'MaterialBannerTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialBannerTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

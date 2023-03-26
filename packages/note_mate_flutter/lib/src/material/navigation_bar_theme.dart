@@ -57,6 +57,8 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate {
           iconTheme: iconTheme,
           labelBehavior: labelBehavior,
         ) {
+    mateCreateName = 'NavigationBarThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationBarThemeData$Mate(
           height: p.get('height').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -99,6 +101,8 @@ class NavigationBarTheme$Mate extends NavigationBarTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'NavigationBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationBarTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

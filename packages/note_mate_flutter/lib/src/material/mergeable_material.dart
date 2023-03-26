@@ -25,6 +25,8 @@ class MaterialSlice$Mate extends MaterialSlice with Mate {
           child: child,
           color: color,
         ) {
+    mateCreateName = 'MaterialSlice';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialSlice$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -49,6 +51,8 @@ class MaterialGap$Mate extends MaterialGap with Mate {
           key: key,
           size: size,
         ) {
+    mateCreateName = 'MaterialGap';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialGap$Mate(
           key: p.get('key').build(),
           size: p.get('size').build(),
@@ -87,6 +91,8 @@ class MergeableMaterial$Mate extends MergeableMaterial with Mate {
           children: children,
           dividerColor: dividerColor,
         ) {
+    mateCreateName = 'MergeableMaterial';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MergeableMaterial$Mate(
           key: p.get('key').build(),
           mainAxis: p.get('mainAxis').build(),

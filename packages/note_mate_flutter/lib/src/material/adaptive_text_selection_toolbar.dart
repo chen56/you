@@ -14,8 +14,7 @@ import 'package:flutter/src/rendering/selection.dart';
 import 'package:flutter/src/widgets/selectable_region.dart';
 
 /// class AdaptiveTextSelectionToolbar extends StatelessWidget
-class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
-    with Mate {
+class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar with Mate {
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -31,6 +30,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           children: children,
           anchors: anchors,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -56,6 +57,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           buttonItems: buttonItems,
           anchors: anchors,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.buttonItems';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.buttonItems(
           key: p.get('key').build(),
           buttonItems: p.get('buttonItems').build(),
@@ -97,6 +100,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           onSelectAll: onSelectAll,
           anchors: anchors,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.editable';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.editable(
           key: p.get('key').build(),
           clipboardStatus: p.get('clipboardStatus').build(),
@@ -126,6 +131,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           key: key,
           editableTextState: editableTextState,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.editableText';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.editableText(
           key: p.get('key').build(),
           editableTextState: p.get('editableTextState').build(),
@@ -157,6 +164,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           selectionGeometry: selectionGeometry,
           anchors: anchors,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.selectable';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.selectable(
           key: p.get('key').build(),
           onCopy: p.get('onCopy').build(),
@@ -182,6 +191,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
           key: key,
           selectableRegionState: selectableRegionState,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.selectableRegion';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.selectableRegion(
           key: p.get('key').build(),
           selectableRegionState: p.get('selectableRegionState').build(),

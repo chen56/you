@@ -48,6 +48,8 @@ class Tab$Mate extends Tab with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'Tab';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Tab$Mate(
           key: p.get('key').build(),
           text: p.get('text').build(),
@@ -170,6 +172,8 @@ class TabBar$Mate extends TabBar with Mate {
           splashFactory: splashFactory,
           splashBorderRadius: splashBorderRadius,
         ) {
+    mateCreateName = 'TabBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBar$Mate(
           key: p.get('key').build(),
           tabs: p.get('tabs').build(),
@@ -177,8 +181,7 @@ class TabBar$Mate extends TabBar with Mate {
           isScrollable: p.get('isScrollable').build(),
           padding: p.get('padding').build(),
           indicatorColor: p.get('indicatorColor').build(),
-          automaticIndicatorColorAdjustment:
-              p.get('automaticIndicatorColorAdjustment').build(),
+          automaticIndicatorColorAdjustment: p.get('automaticIndicatorColorAdjustment').build(),
           indicatorWeight: p.get('indicatorWeight').build(),
           indicatorPadding: p.get('indicatorPadding').build(),
           indicator: p.get('indicator').build(),
@@ -204,8 +207,7 @@ class TabBar$Mate extends TabBar with Mate {
     mateUse('isScrollable', isScrollable);
     mateUse('padding', padding);
     mateUse('indicatorColor', indicatorColor);
-    mateUse(
-        'automaticIndicatorColorAdjustment', automaticIndicatorColorAdjustment);
+    mateUse('automaticIndicatorColorAdjustment', automaticIndicatorColorAdjustment);
     mateUse('indicatorWeight', indicatorWeight);
     mateUse('indicatorPadding', indicatorPadding);
     mateUse('indicator', indicator);
@@ -260,6 +262,8 @@ class TabBarView$Mate extends TabBarView with Mate {
           viewportFraction: viewportFraction,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'TabBarView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBarView$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -304,6 +308,8 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
           size: size,
           borderStyle: borderStyle,
         ) {
+    mateCreateName = 'TabPageSelectorIndicator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabPageSelectorIndicator$Mate(
           key: p.get('key').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -348,6 +354,8 @@ class TabPageSelector$Mate extends TabPageSelector with Mate {
           selectedColor: selectedColor,
           borderStyle: borderStyle,
         ) {
+    mateCreateName = 'TabPageSelector';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabPageSelector$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),

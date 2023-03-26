@@ -19,6 +19,8 @@ class ViewConfiguration$Mate extends ViewConfiguration with Mate {
           size: size,
           devicePixelRatio: devicePixelRatio,
         ) {
+    mateCreateName = 'ViewConfiguration';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ViewConfiguration$Mate(
           size: p.get('size').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
@@ -45,6 +47,8 @@ class RenderView$Mate extends RenderView with Mate {
           configuration: configuration,
           window: window,
         ) {
+    mateCreateName = 'RenderView';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderView$Mate(
           child: p.get('child').build(),
           configuration: p.get('configuration').build(),

@@ -61,6 +61,8 @@ class SliverConstraints$Mate extends SliverConstraints with Mate {
           remainingCacheExtent: remainingCacheExtent,
           cacheOrigin: cacheOrigin,
         ) {
+    mateCreateName = 'SliverConstraints';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverConstraints$Mate(
           axisDirection: p.get('axisDirection').build(),
           growthDirection: p.get('growthDirection').build(),
@@ -139,14 +141,15 @@ class SliverGeometry$Mate extends SliverGeometry with Mate {
           scrollOffsetCorrection: scrollOffsetCorrection,
           cacheExtent: cacheExtent,
         ) {
+    mateCreateName = 'SliverGeometry';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGeometry$Mate(
           scrollExtent: p.get('scrollExtent').build(),
           paintExtent: p.get('paintExtent').build(),
           paintOrigin: p.get('paintOrigin').build(),
           layoutExtent: p.get('layoutExtent').build(),
           maxPaintExtent: p.get('maxPaintExtent').build(),
-          maxScrollObstructionExtent:
-              p.get('maxScrollObstructionExtent').build(),
+          maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').build(),
           hitTestExtent: p.get('hitTestExtent').build(),
           visible: p.get('visible').build(),
           hasVisualOverflow: p.get('hasVisualOverflow').build(),
@@ -175,6 +178,8 @@ class SliverHitTestResult$Mate extends SliverHitTestResult with Mate {
       /// requiredParameters: HitTestResult result
       HitTestResult result)
       : super.wrap(result) {
+    mateCreateName = 'SliverHitTestResult.wrap';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverHitTestResult$Mate.wrap(p.get('result').value);
     mateUse('result', result);
   }
@@ -196,6 +201,8 @@ class SliverHitTestEntry$Mate extends SliverHitTestEntry with Mate {
           mainAxisPosition: mainAxisPosition,
           crossAxisPosition: crossAxisPosition,
         ) {
+    mateCreateName = 'SliverHitTestEntry';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverHitTestEntry$Mate(
           p.get('target').value,
           mainAxisPosition: p.get('mainAxisPosition').build(),
@@ -215,8 +222,9 @@ class RenderSliverToBoxAdapter$Mate extends RenderSliverToBoxAdapter with Mate {
       /// optionalParameters: {RenderBox? child} , defaultValue:none
       RenderBox? child})
       : super(child: child) {
-    mateBuilder =
-        (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
+    mateCreateName = 'RenderSliverToBoxAdapter';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
     mateUse('child', child);
   }
 }

@@ -62,6 +62,8 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
           topMargin: topMargin,
           hasLeading: hasLeading,
         ) {
+    mateCreateName = 'CupertinoListSection';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListSection$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -141,6 +143,8 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
           topMargin: topMargin,
           hasLeading: hasLeading,
         ) {
+    mateCreateName = 'CupertinoListSection.insetGrouped';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListSection$Mate.insetGrouped(
           key: p.get('key').build(),
           children: p.get('children').build(),

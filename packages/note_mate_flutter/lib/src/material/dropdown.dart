@@ -44,6 +44,8 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
           alignment: alignment,
           child: child,
         ) {
+    mateCreateName = 'DropdownMenuItem';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuItem$Mate<T>(
           key: p.get('key').build(),
           onTap: p.get('onTap').build(),
@@ -62,8 +64,7 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
 }
 
 /// class DropdownButtonHideUnderline extends InheritedWidget
-class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
-    with Mate {
+class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with Mate {
   /// DropdownButtonHideUnderline DropdownButtonHideUnderline({Key? key, required Widget child})
   DropdownButtonHideUnderline$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -75,6 +76,8 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
           key: key,
           child: child,
         ) {
+    mateCreateName = 'DropdownButtonHideUnderline';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButtonHideUnderline$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -197,6 +200,8 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
           borderRadius: borderRadius,
           padding: padding,
         ) {
+    mateCreateName = 'DropdownButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButton$Mate<T>(
           key: p.get('key').build(),
           items: p.get('items').build(),
@@ -257,8 +262,7 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
 }
 
 /// class DropdownButtonFormField<T> extends FormField<T>
-class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T>
-    with Mate {
+class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Mate {
   /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButtonFormField$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -382,6 +386,8 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T>
           borderRadius: borderRadius,
           padding: padding,
         ) {
+    mateCreateName = 'DropdownButtonFormField';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButtonFormField$Mate<T>(
           key: p.get('key').build(),
           items: p.get('items').build(),

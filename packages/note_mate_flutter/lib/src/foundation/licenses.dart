@@ -17,6 +17,8 @@ class LicenseParagraph$Mate extends LicenseParagraph with Mate {
           text,
           indent,
         ) {
+    mateCreateName = 'LicenseParagraph';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => LicenseParagraph$Mate(
           p.get('text').value,
           p.get('indent').value,
@@ -27,8 +29,7 @@ class LicenseParagraph$Mate extends LicenseParagraph with Mate {
 }
 
 /// class LicenseEntryWithLineBreaks extends LicenseEntry
-class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks
-    with Mate {
+class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks with Mate {
   /// LicenseEntryWithLineBreaks LicenseEntryWithLineBreaks(List<String> packages, String text)
   LicenseEntryWithLineBreaks$Mate(
     /// requiredParameters: List<String> packages
@@ -40,6 +41,8 @@ class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks
           packages,
           text,
         ) {
+    mateCreateName = 'LicenseEntryWithLineBreaks';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => LicenseEntryWithLineBreaks$Mate(
           p.get('packages').value,
           p.get('text').value,

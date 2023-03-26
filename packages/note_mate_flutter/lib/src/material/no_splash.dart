@@ -27,6 +27,8 @@ class NoSplash$Mate extends NoSplash with Mate {
           color: color,
           onRemoved: onRemoved,
         ) {
+    mateCreateName = 'NoSplash';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NoSplash$Mate(
           controller: p.get('controller').build(),
           referenceBox: p.get('referenceBox').build(),

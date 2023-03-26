@@ -26,6 +26,8 @@ class TextSelection$Mate extends TextSelection with Mate {
           affinity: affinity,
           isDirectional: isDirectional,
         ) {
+    mateCreateName = 'TextSelection';
+    matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => TextSelection$Mate(
           baseOffset: p.get('baseOffset').build(),
           extentOffset: p.get('extentOffset').build(),
@@ -49,6 +51,8 @@ class TextSelection$Mate extends TextSelection with Mate {
           offset: offset,
           affinity: affinity,
         ) {
+    mateCreateName = 'TextSelection.collapsed';
+    matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => TextSelection$Mate.collapsed(
           offset: p.get('offset').build(),
           affinity: p.get('affinity').build(),
@@ -63,8 +67,9 @@ class TextSelection$Mate extends TextSelection with Mate {
       /// requiredParameters: TextPosition position
       TextPosition position)
       : super.fromPosition(position) {
-    mateBuilder =
-        (p) => TextSelection$Mate.fromPosition(p.get('position').value);
+    mateCreateName = 'TextSelection.fromPosition';
+    matePackageUrl = 'package:flutter/semantics.dart';
+    mateBuilder = (p) => TextSelection$Mate.fromPosition(p.get('position').value);
     mateUse('position', position);
   }
 }

@@ -133,6 +133,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
+    mateCreateName = 'ColorScheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate(
           brightness: p.get('brightness').build(),
           primary: p.get('primary').build(),
@@ -326,6 +328,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
+    mateCreateName = 'ColorScheme.light';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.light(
           brightness: p.get('brightness').build(),
           primary: p.get('primary').build(),
@@ -519,6 +523,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
+    mateCreateName = 'ColorScheme.dark';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.dark(
           brightness: p.get('brightness').build(),
           primary: p.get('primary').build(),
@@ -712,6 +718,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
+    mateCreateName = 'ColorScheme.highContrastLight';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.highContrastLight(
           brightness: p.get('brightness').build(),
           primary: p.get('primary').build(),
@@ -905,6 +913,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
+    mateCreateName = 'ColorScheme.highContrastDark';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.highContrastDark(
           brightness: p.get('brightness').build(),
           primary: p.get('primary').build(),

@@ -25,6 +25,8 @@ class Border$Mate extends Border with Mate {
           bottom: bottom,
           left: left,
         ) {
+    mateCreateName = 'Border';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Border$Mate(
           top: p.get('top').build(),
           right: p.get('right').build(),
@@ -43,6 +45,8 @@ class Border$Mate extends Border with Mate {
       /// requiredParameters: BorderSide side
       BorderSide side)
       : super.fromBorderSide(side) {
+    mateCreateName = 'Border.fromBorderSide';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Border$Mate.fromBorderSide(p.get('side').value);
     mateUse('side', side);
   }
@@ -58,6 +62,8 @@ class Border$Mate extends Border with Mate {
           vertical: vertical,
           horizontal: horizontal,
         ) {
+    mateCreateName = 'Border.symmetric';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Border$Mate.symmetric(
           vertical: p.get('vertical').build(),
           horizontal: p.get('horizontal').build(),
@@ -88,6 +94,8 @@ class BorderDirectional$Mate extends BorderDirectional with Mate {
           end: end,
           bottom: bottom,
         ) {
+    mateCreateName = 'BorderDirectional';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BorderDirectional$Mate(
           top: p.get('top').build(),
           start: p.get('start').build(),

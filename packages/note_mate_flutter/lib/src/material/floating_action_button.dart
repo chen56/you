@@ -114,6 +114,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           isExtended: isExtended,
           enableFeedback: enableFeedback,
         ) {
+    mateCreateName = 'FloatingActionButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FloatingActionButton$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -257,6 +259,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           materialTapTargetSize: materialTapTargetSize,
           enableFeedback: enableFeedback,
         ) {
+    mateCreateName = 'FloatingActionButton.small';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FloatingActionButton$Mate.small(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -396,6 +400,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           materialTapTargetSize: materialTapTargetSize,
           enableFeedback: enableFeedback,
         ) {
+    mateCreateName = 'FloatingActionButton.large';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FloatingActionButton$Mate.large(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -555,6 +561,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           label: label,
           enableFeedback: enableFeedback,
         ) {
+    mateCreateName = 'FloatingActionButton.extended';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FloatingActionButton$Mate.extended(
           key: p.get('key').build(),
           tooltip: p.get('tooltip').build(),

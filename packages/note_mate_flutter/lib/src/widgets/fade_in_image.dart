@@ -99,6 +99,8 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           repeat: repeat,
           matchTextDirection: matchTextDirection,
         ) {
+    mateCreateName = 'FadeInImage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FadeInImage$Mate(
           key: p.get('key').build(),
           placeholder: p.get('placeholder').build(),
@@ -250,6 +252,8 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           imageCacheWidth: imageCacheWidth,
           imageCacheHeight: imageCacheHeight,
         ) {
+    mateCreateName = 'FadeInImage.memoryNetwork';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FadeInImage$Mate.memoryNetwork(
           key: p.get('key').build(),
           placeholder: p.get('placeholder').build(),
@@ -417,6 +421,8 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           imageCacheWidth: imageCacheWidth,
           imageCacheHeight: imageCacheHeight,
         ) {
+    mateCreateName = 'FadeInImage.assetNetwork';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FadeInImage$Mate.assetNetwork(
           key: p.get('key').build(),
           placeholder: p.get('placeholder').build(),

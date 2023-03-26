@@ -30,6 +30,8 @@ class RenderProxyBox$Mate extends RenderProxyBox with Mate {
       /// requiredParameters: [RenderBox? child]
       RenderBox? child)
       : super(child) {
+    mateCreateName = 'RenderProxyBox';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderProxyBox$Mate(p.get('child').value);
     mateUse('child', child);
   }
@@ -48,6 +50,8 @@ class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate {
           child: child,
           additionalConstraints: additionalConstraints,
         ) {
+    mateCreateName = 'RenderConstrainedBox';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderConstrainedBox$Mate(
           child: p.get('child').build(),
           additionalConstraints: p.get('additionalConstraints').build(),
@@ -74,6 +78,8 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate {
           maxWidth: maxWidth,
           maxHeight: maxHeight,
         ) {
+    mateCreateName = 'RenderLimitedBox';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderLimitedBox$Mate(
           child: p.get('child').build(),
           maxWidth: p.get('maxWidth').build(),
@@ -98,6 +104,8 @@ class RenderAspectRatio$Mate extends RenderAspectRatio with Mate {
           child: child,
           aspectRatio: aspectRatio,
         ) {
+    mateCreateName = 'RenderAspectRatio';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAspectRatio$Mate(
           child: p.get('child').build(),
           aspectRatio: p.get('aspectRatio').build(),
@@ -124,6 +132,8 @@ class RenderIntrinsicWidth$Mate extends RenderIntrinsicWidth with Mate {
           stepHeight: stepHeight,
           child: child,
         ) {
+    mateCreateName = 'RenderIntrinsicWidth';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIntrinsicWidth$Mate(
           stepWidth: p.get('stepWidth').build(),
           stepHeight: p.get('stepHeight').build(),
@@ -143,8 +153,9 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate {
       /// optionalParameters: {RenderBox? child} , defaultValue:none
       RenderBox? child})
       : super(child: child) {
-    mateBuilder =
-        (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
+    mateCreateName = 'RenderIntrinsicHeight';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
     mateUse('child', child);
   }
 }
@@ -166,6 +177,8 @@ class RenderOpacity$Mate extends RenderOpacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           child: child,
         ) {
+    mateCreateName = 'RenderOpacity';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderOpacity$Mate(
           opacity: p.get('opacity').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
@@ -194,6 +207,8 @@ class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           child: child,
         ) {
+    mateCreateName = 'RenderAnimatedOpacity';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAnimatedOpacity$Mate(
           opacity: p.get('opacity').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
@@ -222,6 +237,8 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate {
           shaderCallback: shaderCallback,
           blendMode: blendMode,
         ) {
+    mateCreateName = 'RenderShaderMask';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderShaderMask$Mate(
           child: p.get('child').build(),
           shaderCallback: p.get('shaderCallback').build(),
@@ -250,6 +267,8 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate {
           filter: filter,
           blendMode: blendMode,
         ) {
+    mateCreateName = 'RenderBackdropFilter';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderBackdropFilter$Mate(
           child: p.get('child').build(),
           filter: p.get('filter').build(),
@@ -274,6 +293,8 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate {
           shape: shape,
           textDirection: textDirection,
         ) {
+    mateCreateName = 'ShapeBorderClipper';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ShapeBorderClipper$Mate(
           shape: p.get('shape').build(),
           textDirection: p.get('textDirection').build(),
@@ -300,6 +321,8 @@ class RenderClipRect$Mate extends RenderClipRect with Mate {
           clipper: clipper,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderClipRect';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderClipRect$Mate(
           child: p.get('child').build(),
           clipper: p.get('clipper').build(),
@@ -336,6 +359,8 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate {
           clipBehavior: clipBehavior,
           textDirection: textDirection,
         ) {
+    mateCreateName = 'RenderClipRRect';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderClipRRect$Mate(
           child: p.get('child').build(),
           borderRadius: p.get('borderRadius').build(),
@@ -368,6 +393,8 @@ class RenderClipOval$Mate extends RenderClipOval with Mate {
           clipper: clipper,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderClipOval';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderClipOval$Mate(
           child: p.get('child').build(),
           clipper: p.get('clipper').build(),
@@ -396,6 +423,8 @@ class RenderClipPath$Mate extends RenderClipPath with Mate {
           clipper: clipper,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderClipPath';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderClipPath$Mate(
           child: p.get('child').build(),
           clipper: p.get('clipper').build(),
@@ -440,6 +469,8 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate {
           color: color,
           shadowColor: shadowColor,
         ) {
+    mateCreateName = 'RenderPhysicalModel';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPhysicalModel$Mate(
           child: p.get('child').build(),
           shape: p.get('shape').build(),
@@ -488,6 +519,8 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate {
           color: color,
           shadowColor: shadowColor,
         ) {
+    mateCreateName = 'RenderPhysicalShape';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPhysicalShape$Mate(
           child: p.get('child').build(),
           clipper: p.get('clipper').build(),
@@ -526,6 +559,8 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate {
           configuration: configuration,
           child: child,
         ) {
+    mateCreateName = 'RenderDecoratedBox';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderDecoratedBox$Mate(
           decoration: p.get('decoration').build(),
           position: p.get('position').build(),
@@ -572,6 +607,8 @@ class RenderTransform$Mate extends RenderTransform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'RenderTransform';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderTransform$Mate(
           transform: p.get('transform').build(),
           origin: p.get('origin').build(),
@@ -616,6 +653,8 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate {
           child: child,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderFittedBox';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFittedBox$Mate(
           fit: p.get('fit').build(),
           alignment: p.get('alignment').build(),
@@ -632,8 +671,7 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate {
 }
 
 /// class RenderFractionalTranslation extends RenderProxyBox
-class RenderFractionalTranslation$Mate extends RenderFractionalTranslation
-    with Mate {
+class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with Mate {
   /// RenderFractionalTranslation RenderFractionalTranslation({required Offset translation, bool transformHitTests = true, RenderBox? child})
   RenderFractionalTranslation$Mate({
     /// optionalParameters: {required Offset translation} , defaultValue:none
@@ -649,6 +687,8 @@ class RenderFractionalTranslation$Mate extends RenderFractionalTranslation
           transformHitTests: transformHitTests,
           child: child,
         ) {
+    mateCreateName = 'RenderFractionalTranslation';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFractionalTranslation$Mate(
           translation: p.get('translation').build(),
           transformHitTests: p.get('transformHitTests').build(),
@@ -709,6 +749,8 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate {
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'RenderPointerListener';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPointerListener$Mate(
           onPointerDown: p.get('onPointerDown').build(),
           onPointerMove: p.get('onPointerMove').build(),
@@ -773,6 +815,8 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate {
           child: child,
           hitTestBehavior: hitTestBehavior,
         ) {
+    mateCreateName = 'RenderMouseRegion';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderMouseRegion$Mate(
           onEnter: p.get('onEnter').build(),
           onHover: p.get('onHover').build(),
@@ -802,8 +846,9 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate {
       /// optionalParameters: {RenderBox? child} , defaultValue:none
       RenderBox? child})
       : super(child: child) {
-    mateBuilder =
-        (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
+    mateCreateName = 'RenderRepaintBoundary';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
     mateUse('child', child);
   }
 }
@@ -825,6 +870,8 @@ class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate {
           ignoring: ignoring,
           ignoringSemantics: ignoringSemantics,
         ) {
+    mateCreateName = 'RenderIgnorePointer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIgnorePointer$Mate(
           child: p.get('child').build(),
           ignoring: p.get('ignoring').build(),
@@ -849,6 +896,8 @@ class RenderOffstage$Mate extends RenderOffstage with Mate {
           offstage: offstage,
           child: child,
         ) {
+    mateCreateName = 'RenderOffstage';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderOffstage$Mate(
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
@@ -875,6 +924,8 @@ class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate {
           absorbing: absorbing,
           ignoringSemantics: ignoringSemantics,
         ) {
+    mateCreateName = 'RenderAbsorbPointer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAbsorbPointer$Mate(
           child: p.get('child').build(),
           absorbing: p.get('absorbing').build(),
@@ -903,6 +954,8 @@ class RenderMetaData$Mate extends RenderMetaData with Mate {
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'RenderMetaData';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderMetaData$Mate(
           metaData: p.get('metaData').build(),
           behavior: p.get('behavior').build(),
@@ -915,8 +968,7 @@ class RenderMetaData$Mate extends RenderMetaData with Mate {
 }
 
 /// class RenderSemanticsGestureHandler extends RenderProxyBoxWithHitTestBehavior
-class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
-    with Mate {
+class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler with Mate {
   /// RenderSemanticsGestureHandler RenderSemanticsGestureHandler({RenderBox? child, void Function()? onTap, void Function()? onLongPress, void Function(DragUpdateDetails)? onHorizontalDragUpdate, void Function(DragUpdateDetails)? onVerticalDragUpdate, double scrollFactor = 0.8, HitTestBehavior behavior = HitTestBehavior.deferToChild})
   RenderSemanticsGestureHandler$Mate({
     /// optionalParameters: {RenderBox? child} , defaultValue:none
@@ -948,6 +1000,8 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
           scrollFactor: scrollFactor,
           behavior: behavior,
         ) {
+    mateCreateName = 'RenderSemanticsGestureHandler';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RenderSemanticsGestureHandler$Mate(
           child: p.get('child').build(),
           onTap: p.get('onTap').build(),
@@ -968,8 +1022,7 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
 }
 
 /// class RenderSemanticsAnnotations extends RenderProxyBox
-class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations
-    with Mate {
+class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Mate {
   /// RenderSemanticsAnnotations RenderSemanticsAnnotations({RenderBox? child, required SemanticsProperties properties, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, TextDirection? textDirection})
   RenderSemanticsAnnotations$Mate({
     /// optionalParameters: {RenderBox? child} , defaultValue:none
@@ -997,6 +1050,8 @@ class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations
           excludeSemantics: excludeSemantics,
           textDirection: textDirection,
         ) {
+    mateCreateName = 'RenderSemanticsAnnotations';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSemanticsAnnotations$Mate(
           child: p.get('child').build(),
           properties: p.get('properties').build(),
@@ -1027,6 +1082,8 @@ class RenderBlockSemantics$Mate extends RenderBlockSemantics with Mate {
           child: child,
           blocking: blocking,
         ) {
+    mateCreateName = 'RenderBlockSemantics';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderBlockSemantics$Mate(
           child: p.get('child').build(),
           blocking: p.get('blocking').build(),
@@ -1044,8 +1101,9 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate {
       /// optionalParameters: {RenderBox? child} , defaultValue:none
       RenderBox? child})
       : super(child: child) {
-    mateBuilder =
-        (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
+    mateCreateName = 'RenderMergeSemantics';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
     mateUse('child', child);
   }
 }
@@ -1063,6 +1121,8 @@ class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate {
           child: child,
           excluding: excluding,
         ) {
+    mateCreateName = 'RenderExcludeSemantics';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderExcludeSemantics$Mate(
           child: p.get('child').build(),
           excluding: p.get('excluding').build(),
@@ -1085,6 +1145,8 @@ class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate {
           child: child,
           index: index,
         ) {
+    mateCreateName = 'RenderIndexedSemantics';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIndexedSemantics$Mate(
           child: p.get('child').build(),
           index: p.get('index').build(),
@@ -1107,6 +1169,8 @@ class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate {
           link: link,
           child: child,
         ) {
+    mateCreateName = 'RenderLeaderLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderLeaderLayer$Mate(
           link: p.get('link').build(),
           child: p.get('child').build(),
@@ -1145,6 +1209,8 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
           followerAnchor: followerAnchor,
           child: child,
         ) {
+    mateCreateName = 'RenderFollowerLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFollowerLayer$Mate(
           link: p.get('link').build(),
           showWhenUnlinked: p.get('showWhenUnlinked').build(),
@@ -1163,8 +1229,7 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
 }
 
 /// class RenderAnnotatedRegion<T extends Object> extends RenderProxyBox
-class RenderAnnotatedRegion$Mate<T extends Object>
-    extends RenderAnnotatedRegion<T> with Mate {
+class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion<T> with Mate {
   /// RenderAnnotatedRegion<T> RenderAnnotatedRegion({required T value, required bool sized, RenderBox? child})
   RenderAnnotatedRegion$Mate({
     /// optionalParameters: {required T value} , defaultValue:none
@@ -1180,6 +1245,8 @@ class RenderAnnotatedRegion$Mate<T extends Object>
           sized: sized,
           child: child,
         ) {
+    mateCreateName = 'RenderAnnotatedRegion';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAnnotatedRegion$Mate<T>(
           value: p.get('value').build(),
           sized: p.get('sized').build(),

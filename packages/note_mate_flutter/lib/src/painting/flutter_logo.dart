@@ -22,6 +22,8 @@ class FlutterLogoDecoration$Mate extends FlutterLogoDecoration with Mate {
           style: style,
           margin: margin,
         ) {
+    mateCreateName = 'FlutterLogoDecoration';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlutterLogoDecoration$Mate(
           textColor: p.get('textColor').build(),
           style: p.get('style').build(),

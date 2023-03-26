@@ -55,6 +55,8 @@ class Icon$Mate extends Icon with Mate {
           semanticLabel: semanticLabel,
           textDirection: textDirection,
         ) {
+    mateCreateName = 'Icon';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Icon$Mate(
           p.get('icon').value,
           key: p.get('key').build(),

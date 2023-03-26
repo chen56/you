@@ -58,6 +58,8 @@ class Card$Mate extends Card with Mate {
           child: child,
           semanticContainer: semanticContainer,
         ) {
+    mateCreateName = 'Card';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Card$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),

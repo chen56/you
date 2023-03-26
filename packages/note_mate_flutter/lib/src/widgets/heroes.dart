@@ -39,6 +39,8 @@ class Hero$Mate extends Hero with Mate {
           transitionOnUserGestures: transitionOnUserGestures,
           child: child,
         ) {
+    mateCreateName = 'Hero';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Hero$Mate(
           key: p.get('key').build(),
           tag: p.get('tag').build(),
@@ -66,8 +68,9 @@ class HeroController$Mate extends HeroController with Mate {
       /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , defaultValue:none
       CreateRectTween? createRectTween})
       : super(createRectTween: createRectTween) {
-    mateBuilder = (p) =>
-        HeroController$Mate(createRectTween: p.get('createRectTween').build());
+    mateCreateName = 'HeroController';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => HeroController$Mate(createRectTween: p.get('createRectTween').build());
     mateUse('createRectTween', createRectTween);
   }
 }
@@ -89,6 +92,8 @@ class HeroMode$Mate extends HeroMode with Mate {
           child: child,
           enabled: enabled,
         ) {
+    mateCreateName = 'HeroMode';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => HeroMode$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

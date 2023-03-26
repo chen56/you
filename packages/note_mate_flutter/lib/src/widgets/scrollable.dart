@@ -65,6 +65,8 @@ class Scrollable$Mate extends Scrollable with Mate {
           scrollBehavior: scrollBehavior,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'Scrollable';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Scrollable$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),
@@ -110,6 +112,8 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate {
           onScrollViewScrolled: onScrollViewScrolled,
           velocityScalar: velocityScalar,
         ) {
+    mateCreateName = 'EdgeDraggingAutoScroller';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EdgeDraggingAutoScroller$Mate(
           p.get('scrollable').value,
           onScrollViewScrolled: p.get('onScrollViewScrolled').build(),
@@ -138,6 +142,8 @@ class ScrollableDetails$Mate extends ScrollableDetails with Mate {
           controller: controller,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ScrollableDetails';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollableDetails$Mate(
           direction: p.get('direction').build(),
           controller: p.get('controller').build(),
@@ -162,6 +168,8 @@ class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate {
           type: type,
           metrics: metrics,
         ) {
+    mateCreateName = 'ScrollIncrementDetails';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollIncrementDetails$Mate(
           type: p.get('type').build(),
           metrics: p.get('metrics').build(),
@@ -184,6 +192,8 @@ class ScrollIntent$Mate extends ScrollIntent with Mate {
           direction: direction,
           type: type,
         ) {
+    mateCreateName = 'ScrollIntent';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollIntent$Mate(
           direction: p.get('direction').build(),
           type: p.get('type').build(),

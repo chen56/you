@@ -65,6 +65,8 @@ class BottomSheet$Mate extends BottomSheet with Mate {
           onClosing: onClosing,
           builder: builder,
         ) {
+    mateCreateName = 'BottomSheet';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomSheet$Mate(
           key: p.get('key').build(),
           animationController: p.get('animationController').build(),
@@ -167,6 +169,8 @@ class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate {
           anchorPoint: anchorPoint,
           useSafeArea: useSafeArea,
         ) {
+    mateCreateName = 'ModalBottomSheetRoute';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ModalBottomSheetRoute$Mate<T>(
           builder: p.get('builder').build(),
           capturedThemes: p.get('capturedThemes').build(),
@@ -182,8 +186,7 @@ class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate {
           enableDrag: p.get('enableDrag').build(),
           isScrollControlled: p.get('isScrollControlled').build(),
           settings: p.get('settings').build(),
-          transitionAnimationController:
-              p.get('transitionAnimationController').build(),
+          transitionAnimationController: p.get('transitionAnimationController').build(),
           anchorPoint: p.get('anchorPoint').build(),
           useSafeArea: p.get('useSafeArea').build(),
         );

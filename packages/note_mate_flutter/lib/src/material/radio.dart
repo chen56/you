@@ -80,6 +80,8 @@ class Radio$Mate<T> extends Radio<T> with Mate {
           focusNode: focusNode,
           autofocus: autofocus,
         ) {
+    mateCreateName = 'Radio';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Radio$Mate<T>(
           key: p.get('key').build(),
           value: p.get('value').build(),

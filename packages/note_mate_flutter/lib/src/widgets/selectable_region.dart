@@ -43,6 +43,8 @@ class SelectableRegion$Mate extends SelectableRegion with Mate {
           magnifierConfiguration: magnifierConfiguration,
           onSelectionChanged: onSelectionChanged,
         ) {
+    mateCreateName = 'SelectableRegion';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectableRegion$Mate(
           key: p.get('key').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),

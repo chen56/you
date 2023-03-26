@@ -35,6 +35,8 @@ class Divider$Mate extends Divider with Mate {
           endIndent: endIndent,
           color: color,
         ) {
+    mateCreateName = 'Divider';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Divider$Mate(
           key: p.get('key').build(),
           height: p.get('height').build(),
@@ -81,6 +83,8 @@ class VerticalDivider$Mate extends VerticalDivider with Mate {
           endIndent: endIndent,
           color: color,
         ) {
+    mateCreateName = 'VerticalDivider';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => VerticalDivider$Mate(
           key: p.get('key').build(),
           width: p.get('width').build(),

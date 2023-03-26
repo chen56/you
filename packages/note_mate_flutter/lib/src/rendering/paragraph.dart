@@ -11,16 +11,16 @@ import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/rendering/selection.dart';
 
 /// class PlaceholderSpanIndexSemanticsTag extends SemanticsTag
-class PlaceholderSpanIndexSemanticsTag$Mate
-    extends PlaceholderSpanIndexSemanticsTag with Mate {
+class PlaceholderSpanIndexSemanticsTag$Mate extends PlaceholderSpanIndexSemanticsTag with Mate {
   /// PlaceholderSpanIndexSemanticsTag PlaceholderSpanIndexSemanticsTag(int index)
   PlaceholderSpanIndexSemanticsTag$Mate(
 
       /// requiredParameters: int index
       int index)
       : super(index) {
-    mateBuilder =
-        (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
+    mateCreateName = 'PlaceholderSpanIndexSemanticsTag';
+    matePackageUrl = 'package:flutter/rendering.dart';
+    mateBuilder = (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
     mateUse('index', index);
   }
 }
@@ -85,6 +85,8 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
           selectionColor: selectionColor,
           registrar: registrar,
         ) {
+    mateCreateName = 'RenderParagraph';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderParagraph$Mate(
           p.get('text').value,
           textAlign: p.get('textAlign').build(),

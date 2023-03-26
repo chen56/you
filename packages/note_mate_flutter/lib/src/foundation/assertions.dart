@@ -23,6 +23,8 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate {
           className: className,
           method: method,
         ) {
+    mateCreateName = 'PartialStackFrame';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => PartialStackFrame$Mate(
           package: p.get('package').build(),
           className: p.get('className').build(),
@@ -35,8 +37,7 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate {
 }
 
 /// class RepetitiveStackFrameFilter extends StackFilter
-class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter
-    with Mate {
+class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Mate {
   /// RepetitiveStackFrameFilter RepetitiveStackFrameFilter({required List<PartialStackFrame> frames, required String replacement})
   RepetitiveStackFrameFilter$Mate({
     /// optionalParameters: {required List<PartialStackFrame> frames} , defaultValue:none
@@ -48,6 +49,8 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter
           frames: frames,
           replacement: replacement,
         ) {
+    mateCreateName = 'RepetitiveStackFrameFilter';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => RepetitiveStackFrameFilter$Mate(
           frames: p.get('frames').build(),
           replacement: p.get('replacement').build(),
@@ -65,6 +68,8 @@ class ErrorDescription$Mate extends ErrorDescription with Mate {
       /// requiredParameters: String message
       String message)
       : super(message) {
+    mateCreateName = 'ErrorDescription';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorDescription$Mate(p.get('message').value);
     mateUse('message', message);
   }
@@ -78,6 +83,8 @@ class ErrorSummary$Mate extends ErrorSummary with Mate {
       /// requiredParameters: String message
       String message)
       : super(message) {
+    mateCreateName = 'ErrorSummary';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorSummary$Mate(p.get('message').value);
     mateUse('message', message);
   }
@@ -91,6 +98,8 @@ class ErrorHint$Mate extends ErrorHint with Mate {
       /// requiredParameters: String message
       String message)
       : super(message) {
+    mateCreateName = 'ErrorHint';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorHint$Mate(p.get('message').value);
     mateUse('message', message);
   }
@@ -129,6 +138,8 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate {
           informationCollector: informationCollector,
           silent: silent,
         ) {
+    mateCreateName = 'FlutterErrorDetails';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlutterErrorDetails$Mate(
           exception: p.get('exception').build(),
           stack: p.get('stack').build(),
@@ -156,8 +167,9 @@ class FlutterError$Mate extends FlutterError with Mate {
       /// requiredParameters: List<DiagnosticsNode> diagnostics
       List<DiagnosticsNode> diagnostics)
       : super.fromParts(diagnostics) {
-    mateBuilder =
-        (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
+    mateCreateName = 'FlutterError.fromParts';
+    matePackageUrl = 'package:flutter/foundation.dart';
+    mateBuilder = (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
     mateUse('diagnostics', diagnostics);
   }
 }
@@ -182,6 +194,8 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
           stackFilter: stackFilter,
           showSeparator: showSeparator,
         ) {
+    mateCreateName = 'DiagnosticsStackTrace';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsStackTrace$Mate(
           p.get('name').value,
           p.get('stack').value,
@@ -208,6 +222,8 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
           frame: frame,
           showSeparator: showSeparator,
         ) {
+    mateCreateName = 'DiagnosticsStackTrace.singleFrame';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsStackTrace$Mate.singleFrame(
           p.get('name').value,
           frame: p.get('frame').build(),

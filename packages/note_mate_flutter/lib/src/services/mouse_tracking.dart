@@ -26,6 +26,8 @@ class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate {
           cursor: cursor,
           validForMouseTracker: validForMouseTracker,
         ) {
+    mateCreateName = 'MouseTrackerAnnotation';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MouseTrackerAnnotation$Mate(
           onEnter: p.get('onEnter').build(),
           onExit: p.get('onExit').build(),

@@ -14,6 +14,8 @@ class BackButtonIcon$Mate extends BackButtonIcon with Mate {
       /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super(key: key) {
+    mateCreateName = 'BackButtonIcon';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BackButtonIcon$Mate(key: p.get('key').build());
     mateUse('key', key);
   }
@@ -40,6 +42,8 @@ class BackButton$Mate extends BackButton with Mate {
           style: style,
           onPressed: onPressed,
         ) {
+    mateCreateName = 'BackButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BackButton$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
@@ -61,6 +65,8 @@ class CloseButtonIcon$Mate extends CloseButtonIcon with Mate {
       /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super(key: key) {
+    mateCreateName = 'CloseButtonIcon';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CloseButtonIcon$Mate(key: p.get('key').build());
     mateUse('key', key);
   }
@@ -87,6 +93,8 @@ class CloseButton$Mate extends CloseButton with Mate {
           onPressed: onPressed,
           style: style,
         ) {
+    mateCreateName = 'CloseButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CloseButton$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
@@ -108,6 +116,8 @@ class DrawerButtonIcon$Mate extends DrawerButtonIcon with Mate {
       /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super(key: key) {
+    mateCreateName = 'DrawerButtonIcon';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerButtonIcon$Mate(key: p.get('key').build());
     mateUse('key', key);
   }
@@ -130,6 +140,8 @@ class DrawerButton$Mate extends DrawerButton with Mate {
           style: style,
           onPressed: onPressed,
         ) {
+    mateCreateName = 'DrawerButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerButton$Mate(
           key: p.get('key').build(),
           style: p.get('style').build(),
@@ -149,6 +161,8 @@ class EndDrawerButtonIcon$Mate extends EndDrawerButtonIcon with Mate {
       /// optionalParameters: {Key? key} , defaultValue:none
       Key? key})
       : super(key: key) {
+    mateCreateName = 'EndDrawerButtonIcon';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EndDrawerButtonIcon$Mate(key: p.get('key').build());
     mateUse('key', key);
   }
@@ -171,6 +185,8 @@ class EndDrawerButton$Mate extends EndDrawerButton with Mate {
           style: style,
           onPressed: onPressed,
         ) {
+    mateCreateName = 'EndDrawerButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EndDrawerButton$Mate(
           key: p.get('key').build(),
           style: p.get('style').build(),

@@ -23,6 +23,8 @@ class SemanticsDebugger$Mate extends SemanticsDebugger with Mate {
           child: child,
           labelStyle: labelStyle,
         ) {
+    mateCreateName = 'SemanticsDebugger';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SemanticsDebugger$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

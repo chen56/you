@@ -28,6 +28,8 @@ class Localizations$Mate extends Localizations with Mate {
           delegates: delegates,
           child: child,
         ) {
+    mateCreateName = 'Localizations';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Localizations$Mate(
           key: p.get('key').build(),
           locale: p.get('locale').build(),

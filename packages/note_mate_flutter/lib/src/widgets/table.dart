@@ -27,6 +27,8 @@ class TableRow$Mate extends TableRow with Mate {
           decoration: decoration,
           children: children,
         ) {
+    mateCreateName = 'TableRow';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TableRow$Mate(
           key: p.get('key').build(),
           decoration: p.get('decoration').build(),
@@ -75,6 +77,8 @@ class Table$Mate extends Table with Mate {
           defaultVerticalAlignment: defaultVerticalAlignment,
           textBaseline: textBaseline,
         ) {
+    mateCreateName = 'Table';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Table$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -113,6 +117,8 @@ class TableCell$Mate extends TableCell with Mate {
           verticalAlignment: verticalAlignment,
           child: child,
         ) {
+    mateCreateName = 'TableCell';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TableCell$Mate(
           key: p.get('key').build(),
           verticalAlignment: p.get('verticalAlignment').build(),

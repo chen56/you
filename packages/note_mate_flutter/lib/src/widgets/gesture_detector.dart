@@ -29,6 +29,8 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends GestureRecognizer>
           _constructor,
           _initializer,
         ) {
+    mateCreateName = 'GestureRecognizerFactoryWithHandlers';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GestureRecognizerFactoryWithHandlers$Mate<T>(
           p.get('_constructor').value,
           p.get('_initializer').value,
@@ -303,6 +305,8 @@ class GestureDetector$Mate extends GestureDetector with Mate {
           trackpadScrollToScaleFactor: trackpadScrollToScaleFactor,
           supportedDevices: supportedDevices,
         ) {
+    mateCreateName = 'GestureDetector';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GestureDetector$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -328,20 +332,17 @@ class GestureDetector$Mate extends GestureDetector with Mate {
           onLongPressUp: p.get('onLongPressUp').build(),
           onLongPressEnd: p.get('onLongPressEnd').build(),
           onSecondaryLongPressDown: p.get('onSecondaryLongPressDown').build(),
-          onSecondaryLongPressCancel:
-              p.get('onSecondaryLongPressCancel').build(),
+          onSecondaryLongPressCancel: p.get('onSecondaryLongPressCancel').build(),
           onSecondaryLongPress: p.get('onSecondaryLongPress').build(),
           onSecondaryLongPressStart: p.get('onSecondaryLongPressStart').build(),
-          onSecondaryLongPressMoveUpdate:
-              p.get('onSecondaryLongPressMoveUpdate').build(),
+          onSecondaryLongPressMoveUpdate: p.get('onSecondaryLongPressMoveUpdate').build(),
           onSecondaryLongPressUp: p.get('onSecondaryLongPressUp').build(),
           onSecondaryLongPressEnd: p.get('onSecondaryLongPressEnd').build(),
           onTertiaryLongPressDown: p.get('onTertiaryLongPressDown').build(),
           onTertiaryLongPressCancel: p.get('onTertiaryLongPressCancel').build(),
           onTertiaryLongPress: p.get('onTertiaryLongPress').build(),
           onTertiaryLongPressStart: p.get('onTertiaryLongPressStart').build(),
-          onTertiaryLongPressMoveUpdate:
-              p.get('onTertiaryLongPressMoveUpdate').build(),
+          onTertiaryLongPressMoveUpdate: p.get('onTertiaryLongPressMoveUpdate').build(),
           onTertiaryLongPressUp: p.get('onTertiaryLongPressUp').build(),
           onTertiaryLongPressEnd: p.get('onTertiaryLongPressEnd').build(),
           onVerticalDragDown: p.get('onVerticalDragDown').build(),
@@ -370,8 +371,7 @@ class GestureDetector$Mate extends GestureDetector with Mate {
           excludeFromSemantics: p.get('excludeFromSemantics').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
-          trackpadScrollToScaleFactor:
-              p.get('trackpadScrollToScaleFactor').build(),
+          trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
           supportedDevices: p.get('supportedDevices').build(),
         );
     mateUse('key', key);
@@ -471,6 +471,8 @@ class RawGestureDetector$Mate extends RawGestureDetector with Mate {
           excludeFromSemantics: excludeFromSemantics,
           semantics: semantics,
         ) {
+    mateCreateName = 'RawGestureDetector';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RawGestureDetector$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

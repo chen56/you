@@ -26,6 +26,8 @@ class ScaffoldMessenger$Mate extends ScaffoldMessenger with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'ScaffoldMessenger';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldMessenger$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -36,8 +38,7 @@ class ScaffoldMessenger$Mate extends ScaffoldMessenger with Mate {
 }
 
 /// class ScaffoldPrelayoutGeometry
-class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry
-    with Mate {
+class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry with Mate {
   /// ScaffoldPrelayoutGeometry ScaffoldPrelayoutGeometry({required Size bottomSheetSize, required double contentBottom, required double contentTop, required Size floatingActionButtonSize, required EdgeInsets minInsets, required EdgeInsets minViewPadding, required Size scaffoldSize, required Size snackBarSize, required Size materialBannerSize, required TextDirection textDirection})
   ScaffoldPrelayoutGeometry$Mate({
     /// optionalParameters: {required Size bottomSheetSize} , defaultValue:none
@@ -81,6 +82,8 @@ class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry
           materialBannerSize: materialBannerSize,
           textDirection: textDirection,
         ) {
+    mateCreateName = 'ScaffoldPrelayoutGeometry';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldPrelayoutGeometry$Mate(
           bottomSheetSize: p.get('bottomSheetSize').build(),
           contentBottom: p.get('contentBottom').build(),
@@ -119,6 +122,8 @@ class ScaffoldGeometry$Mate extends ScaffoldGeometry with Mate {
           bottomNavigationBarTop: bottomNavigationBarTop,
           floatingActionButtonArea: floatingActionButtonArea,
         ) {
+    mateCreateName = 'ScaffoldGeometry';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldGeometry$Mate(
           bottomNavigationBarTop: p.get('bottomNavigationBarTop').build(),
           floatingActionButtonArea: p.get('floatingActionButtonArea').build(),
@@ -233,15 +238,15 @@ class Scaffold$Mate extends Scaffold with Mate {
           endDrawerEnableOpenDragGesture: endDrawerEnableOpenDragGesture,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'Scaffold';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Scaffold$Mate(
           key: p.get('key').build(),
           appBar: p.get('appBar').build(),
           body: p.get('body').build(),
           floatingActionButton: p.get('floatingActionButton').build(),
-          floatingActionButtonLocation:
-              p.get('floatingActionButtonLocation').build(),
-          floatingActionButtonAnimator:
-              p.get('floatingActionButtonAnimator').build(),
+          floatingActionButtonLocation: p.get('floatingActionButtonLocation').build(),
+          floatingActionButtonAnimator: p.get('floatingActionButtonAnimator').build(),
           persistentFooterButtons: p.get('persistentFooterButtons').build(),
           persistentFooterAlignment: p.get('persistentFooterAlignment').build(),
           drawer: p.get('drawer').build(),
@@ -258,10 +263,8 @@ class Scaffold$Mate extends Scaffold with Mate {
           extendBodyBehindAppBar: p.get('extendBodyBehindAppBar').build(),
           drawerScrimColor: p.get('drawerScrimColor').build(),
           drawerEdgeDragWidth: p.get('drawerEdgeDragWidth').build(),
-          drawerEnableOpenDragGesture:
-              p.get('drawerEnableOpenDragGesture').build(),
-          endDrawerEnableOpenDragGesture:
-              p.get('endDrawerEnableOpenDragGesture').build(),
+          drawerEnableOpenDragGesture: p.get('drawerEnableOpenDragGesture').build(),
+          endDrawerEnableOpenDragGesture: p.get('endDrawerEnableOpenDragGesture').build(),
           restorationId: p.get('restorationId').build(),
         );
     mateUse('key', key);

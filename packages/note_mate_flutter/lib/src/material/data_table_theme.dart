@@ -63,6 +63,8 @@ class DataTableThemeData$Mate extends DataTableThemeData with Mate {
           dividerThickness: dividerThickness,
           checkboxHorizontalMargin: checkboxHorizontalMargin,
         ) {
+    mateCreateName = 'DataTableThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataTableThemeData$Mate(
           decoration: p.get('decoration').build(),
           dataRowColor: p.get('dataRowColor').build(),
@@ -109,6 +111,8 @@ class DataTableTheme$Mate extends DataTableTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'DataTableTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataTableTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

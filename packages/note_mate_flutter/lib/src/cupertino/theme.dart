@@ -25,6 +25,8 @@ class CupertinoTheme$Mate extends CupertinoTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'CupertinoTheme';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
@@ -69,6 +71,8 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           applyThemeToAll: applyThemeToAll,
         ) {
+    mateCreateName = 'CupertinoThemeData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoThemeData$Mate(
           brightness: p.get('brightness').build(),
           primaryColor: p.get('primaryColor').build(),
@@ -118,6 +122,8 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           scaffoldBackgroundColor,
           applyThemeToAll,
         ) {
+    mateCreateName = 'CupertinoThemeData.raw';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoThemeData$Mate.raw(
           p.get('brightness').value,
           p.get('primaryColor').value,
@@ -138,8 +144,7 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
 }
 
 /// class NoDefaultCupertinoThemeData
-class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData
-    with Mate {
+class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with Mate {
   /// NoDefaultCupertinoThemeData NoDefaultCupertinoThemeData({Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll})
   NoDefaultCupertinoThemeData$Mate({
     /// optionalParameters: {Brightness? brightness} , defaultValue:none
@@ -171,6 +176,8 @@ class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           applyThemeToAll: applyThemeToAll,
         ) {
+    mateCreateName = 'NoDefaultCupertinoThemeData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => NoDefaultCupertinoThemeData$Mate(
           brightness: p.get('brightness').build(),
           primaryColor: p.get('primaryColor').build(),

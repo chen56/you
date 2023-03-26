@@ -41,6 +41,8 @@ class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate {
           enabled: enabled,
           style: style,
         ) {
+    mateCreateName = 'DropdownMenuEntry';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuEntry$Mate<T>(
           value: p.get('value').build(),
           label: p.get('label').build(),
@@ -139,6 +141,8 @@ class DropdownMenu$Mate<T> extends DropdownMenu<T> with Mate {
           requestFocusOnTap: requestFocusOnTap,
           dropdownMenuEntries: dropdownMenuEntries,
         ) {
+    mateCreateName = 'DropdownMenu';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenu$Mate<T>(
           key: p.get('key').build(),
           enabled: p.get('enabled').build(),

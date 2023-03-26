@@ -55,6 +55,8 @@ class Viewport$Mate extends Viewport with Mate {
           clipBehavior: clipBehavior,
           slivers: slivers,
         ) {
+    mateCreateName = 'Viewport';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Viewport$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),
@@ -109,6 +111,8 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
           clipBehavior: clipBehavior,
           slivers: slivers,
         ) {
+    mateCreateName = 'ShrinkWrappingViewport';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ShrinkWrappingViewport$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),

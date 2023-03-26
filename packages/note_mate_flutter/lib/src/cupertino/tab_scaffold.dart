@@ -16,8 +16,9 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate {
       /// optionalParameters: {int initialIndex = 0} , defaultValue:Literal
       int initialIndex = 0})
       : super(initialIndex: initialIndex) {
-    mateBuilder = (p) => CupertinoTabController$Mate(
-        initialIndex: p.get('initialIndex').build());
+    mateCreateName = 'CupertinoTabController';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
     mateUse('initialIndex', initialIndex);
   }
 }
@@ -55,6 +56,8 @@ class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with Mate {
           resizeToAvoidBottomInset: resizeToAvoidBottomInset,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'CupertinoTabScaffold';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabScaffold$Mate(
           key: p.get('key').build(),
           tabBar: p.get('tabBar').build(),
@@ -75,16 +78,16 @@ class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with Mate {
 }
 
 /// class RestorableCupertinoTabController extends RestorableChangeNotifier<CupertinoTabController>
-class RestorableCupertinoTabController$Mate
-    extends RestorableCupertinoTabController with Mate {
+class RestorableCupertinoTabController$Mate extends RestorableCupertinoTabController with Mate {
   /// RestorableCupertinoTabController RestorableCupertinoTabController({int initialIndex = 0})
   RestorableCupertinoTabController$Mate(
       {
       /// optionalParameters: {int initialIndex = 0} , defaultValue:Literal
       int initialIndex = 0})
       : super(initialIndex: initialIndex) {
-    mateBuilder = (p) => RestorableCupertinoTabController$Mate(
-        initialIndex: p.get('initialIndex').build());
+    mateCreateName = 'RestorableCupertinoTabController';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
     mateUse('initialIndex', initialIndex);
   }
 }

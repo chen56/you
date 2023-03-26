@@ -161,6 +161,8 @@ class ListTile$Mate extends ListTile with Mate {
           minLeadingWidth: minLeadingWidth,
           titleAlignment: titleAlignment,
         ) {
+    mateCreateName = 'ListTile';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTile$Mate(
           key: p.get('key').build(),
           leading: p.get('leading').build(),
@@ -177,8 +179,7 @@ class ListTile$Mate extends ListTile with Mate {
           textColor: p.get('textColor').build(),
           titleTextStyle: p.get('titleTextStyle').build(),
           subtitleTextStyle: p.get('subtitleTextStyle').build(),
-          leadingAndTrailingTextStyle:
-              p.get('leadingAndTrailingTextStyle').build(),
+          leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').build(),
           contentPadding: p.get('contentPadding').build(),
           enabled: p.get('enabled').build(),
           onTap: p.get('onTap').build(),

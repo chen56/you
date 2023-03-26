@@ -10,8 +10,7 @@ import 'dart:ui';
 import 'package:flutter/src/painting/edge_insets.dart';
 
 /// class CupertinoSegmentedControl<T extends Object> extends StatefulWidget
-class CupertinoSegmentedControl$Mate<T extends Object>
-    extends CupertinoSegmentedControl<T> with Mate {
+class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmentedControl<T> with Mate {
   /// CupertinoSegmentedControl<T> CupertinoSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T) onValueChanged, T? groupValue, Color? unselectedColor, Color? selectedColor, Color? borderColor, Color? pressedColor, EdgeInsetsGeometry? padding})
   CupertinoSegmentedControl$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -51,6 +50,8 @@ class CupertinoSegmentedControl$Mate<T extends Object>
           pressedColor: pressedColor,
           padding: padding,
         ) {
+    mateCreateName = 'CupertinoSegmentedControl';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSegmentedControl$Mate<T>(
           key: p.get('key').build(),
           children: p.get('children').build(),

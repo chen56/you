@@ -59,6 +59,8 @@ class InkHighlight$Mate extends InkHighlight with Mate {
           onRemoved: onRemoved,
           fadeDuration: fadeDuration,
         ) {
+    mateCreateName = 'InkHighlight';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkHighlight$Mate(
           controller: p.get('controller').build(),
           referenceBox: p.get('referenceBox').build(),

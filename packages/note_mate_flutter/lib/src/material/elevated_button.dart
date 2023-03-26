@@ -60,6 +60,8 @@ class ElevatedButton$Mate extends ElevatedButton with Mate {
           statesController: statesController,
           child: child,
         ) {
+    mateCreateName = 'ElevatedButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ElevatedButton$Mate(
           key: p.get('key').build(),
           onPressed: p.get('onPressed').build(),

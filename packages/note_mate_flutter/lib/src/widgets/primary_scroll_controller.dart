@@ -34,18 +34,18 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           scrollDirection: scrollDirection,
           child: child,
         ) {
+    mateCreateName = 'PrimaryScrollController';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PrimaryScrollController$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
-          automaticallyInheritForPlatforms:
-              p.get('automaticallyInheritForPlatforms').build(),
+          automaticallyInheritForPlatforms: p.get('automaticallyInheritForPlatforms').build(),
           scrollDirection: p.get('scrollDirection').build(),
           child: p.get('child').build(),
         );
     mateUse('key', key);
     mateUse('controller', controller);
-    mateUse(
-        'automaticallyInheritForPlatforms', automaticallyInheritForPlatforms);
+    mateUse('automaticallyInheritForPlatforms', automaticallyInheritForPlatforms);
     mateUse('scrollDirection', scrollDirection);
     mateUse('child', child);
   }
@@ -61,6 +61,8 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'PrimaryScrollController.none';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PrimaryScrollController$Mate.none(
           key: p.get('key').build(),
           child: p.get('child').build(),

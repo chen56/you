@@ -46,6 +46,8 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: decoration,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'CupertinoFormSection';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFormSection$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -101,6 +103,8 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: decoration,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'CupertinoFormSection.insetGrouped';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFormSection$Mate.insetGrouped(
           key: p.get('key').build(),
           children: p.get('children').build(),

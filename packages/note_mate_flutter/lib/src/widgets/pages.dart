@@ -60,6 +60,8 @@ class PageRouteBuilder$Mate<T> extends PageRouteBuilder<T> with Mate {
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
+    mateCreateName = 'PageRouteBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PageRouteBuilder$Mate<T>(
           settings: p.get('settings').build(),
           pageBuilder: p.get('pageBuilder').build(),

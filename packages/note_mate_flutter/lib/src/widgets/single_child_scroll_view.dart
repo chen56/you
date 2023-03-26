@@ -66,6 +66,8 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
           restorationId: restorationId,
           keyboardDismissBehavior: keyboardDismissBehavior,
         ) {
+    mateCreateName = 'SingleChildScrollView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SingleChildScrollView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),

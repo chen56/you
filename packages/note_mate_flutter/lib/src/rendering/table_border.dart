@@ -38,6 +38,8 @@ class TableBorder$Mate extends TableBorder with Mate {
           verticalInside: verticalInside,
           borderRadius: borderRadius,
         ) {
+    mateCreateName = 'TableBorder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TableBorder$Mate(
           top: p.get('top').build(),
           right: p.get('right').build(),

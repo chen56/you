@@ -5,16 +5,16 @@ import 'package:note/mate.dart';
 import 'dart:ui';
 
 /// class DesktopTextSelectionToolbarLayoutDelegate extends SingleChildLayoutDelegate
-class DesktopTextSelectionToolbarLayoutDelegate$Mate
-    extends DesktopTextSelectionToolbarLayoutDelegate with Mate {
+class DesktopTextSelectionToolbarLayoutDelegate$Mate extends DesktopTextSelectionToolbarLayoutDelegate with Mate {
   /// DesktopTextSelectionToolbarLayoutDelegate DesktopTextSelectionToolbarLayoutDelegate({required Offset anchor})
   DesktopTextSelectionToolbarLayoutDelegate$Mate(
       {
       /// optionalParameters: {required Offset anchor} , defaultValue:none
       required Offset anchor})
       : super(anchor: anchor) {
-    mateBuilder = (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(
-        anchor: p.get('anchor').build());
+    mateCreateName = 'DesktopTextSelectionToolbarLayoutDelegate';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
     mateUse('anchor', anchor);
   }
 }

@@ -89,6 +89,8 @@ class Tooltip$Mate extends Tooltip with Mate {
           onTriggered: onTriggered,
           child: child,
         ) {
+    mateCreateName = 'Tooltip';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Tooltip$Mate(
           key: p.get('key').build(),
           message: p.get('message').build(),

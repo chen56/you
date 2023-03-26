@@ -30,6 +30,8 @@ class BoxShadow$Mate extends BoxShadow with Mate {
           spreadRadius: spreadRadius,
           blurStyle: blurStyle,
         ) {
+    mateCreateName = 'BoxShadow';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BoxShadow$Mate(
           color: p.get('color').build(),
           offset: p.get('offset').build(),

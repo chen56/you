@@ -12,6 +12,8 @@ class StadiumBorder$Mate extends StadiumBorder with Mate {
       /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
       required BorderSide side})
       : super(side: side) {
+    mateCreateName = 'StadiumBorder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => StadiumBorder$Mate(side: p.get('side').build());
     mateUse('side', side);
   }

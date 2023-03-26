@@ -26,6 +26,8 @@ class BorderSide$Mate extends BorderSide with Mate {
           style: style,
           strokeAlign: strokeAlign,
         ) {
+    mateCreateName = 'BorderSide';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BorderSide$Mate(
           color: p.get('color').build(),
           width: p.get('width').build(),

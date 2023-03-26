@@ -88,6 +88,8 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'CustomScrollView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CustomScrollView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -212,6 +214,8 @@ class ListView$Mate extends ListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ListView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -347,6 +351,8 @@ class ListView$Mate extends ListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ListView.builder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListView$Mate.builder(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -478,6 +484,8 @@ class ListView$Mate extends ListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ListView.separated';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListView$Mate.separated(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -593,6 +601,8 @@ class ListView$Mate extends ListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ListView.custom';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListView$Mate.custom(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -713,6 +723,8 @@ class GridView$Mate extends GridView with Mate {
           keyboardDismissBehavior: keyboardDismissBehavior,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'GridView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -842,6 +854,8 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'GridView.builder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridView$Mate.builder(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -955,6 +969,8 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'GridView.custom';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridView$Mate.custom(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -1082,6 +1098,8 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'GridView.count';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridView$Mate.count(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -1221,6 +1239,8 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'GridView.extent';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridView$Mate.extent(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),

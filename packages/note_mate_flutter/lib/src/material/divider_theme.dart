@@ -32,6 +32,8 @@ class DividerThemeData$Mate extends DividerThemeData with Mate {
           indent: indent,
           endIndent: endIndent,
         ) {
+    mateCreateName = 'DividerThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DividerThemeData$Mate(
           color: p.get('color').build(),
           space: p.get('space').build(),
@@ -64,6 +66,8 @@ class DividerTheme$Mate extends DividerTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'DividerTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DividerTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

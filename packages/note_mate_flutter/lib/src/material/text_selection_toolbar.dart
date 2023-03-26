@@ -33,6 +33,8 @@ class TextSelectionToolbar$Mate extends TextSelectionToolbar with Mate {
           toolbarBuilder: toolbarBuilder,
           children: children,
         ) {
+    mateCreateName = 'TextSelectionToolbar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionToolbar$Mate(
           key: p.get('key').build(),
           anchorAbove: p.get('anchorAbove').build(),

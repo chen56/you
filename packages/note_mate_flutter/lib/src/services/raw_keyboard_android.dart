@@ -53,6 +53,8 @@ class RawKeyEventDataAndroid$Mate extends RawKeyEventDataAndroid with Mate {
           deviceId: deviceId,
           repeatCount: repeatCount,
         ) {
+    mateCreateName = 'RawKeyEventDataAndroid';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataAndroid$Mate(
           flags: p.get('flags').build(),
           codePoint: p.get('codePoint').build(),

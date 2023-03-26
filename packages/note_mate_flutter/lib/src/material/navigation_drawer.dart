@@ -54,6 +54,8 @@ class NavigationDrawer$Mate extends NavigationDrawer with Mate {
           onDestinationSelected: onDestinationSelected,
           selectedIndex: selectedIndex,
         ) {
+    mateCreateName = 'NavigationDrawer';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawer$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -80,8 +82,7 @@ class NavigationDrawer$Mate extends NavigationDrawer with Mate {
 }
 
 /// class NavigationDrawerDestination extends StatelessWidget
-class NavigationDrawerDestination$Mate extends NavigationDrawerDestination
-    with Mate {
+class NavigationDrawerDestination$Mate extends NavigationDrawerDestination with Mate {
   /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
   NavigationDrawerDestination$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -105,6 +106,8 @@ class NavigationDrawerDestination$Mate extends NavigationDrawerDestination
           selectedIcon: selectedIcon,
           label: label,
         ) {
+    mateCreateName = 'NavigationDrawerDestination';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawerDestination$Mate(
           key: p.get('key').build(),
           backgroundColor: p.get('backgroundColor').build(),

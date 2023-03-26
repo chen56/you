@@ -22,6 +22,8 @@ class ScrollConfiguration$Mate extends ScrollConfiguration with Mate {
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'ScrollConfiguration';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollConfiguration$Mate(
           key: p.get('key').build(),
           behavior: p.get('behavior').build(),

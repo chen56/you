@@ -46,6 +46,8 @@ class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
           pickerTextStyle: pickerTextStyle,
           dateTimePickerTextStyle: dateTimePickerTextStyle,
         ) {
+    mateCreateName = 'CupertinoTextThemeData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextThemeData$Mate(
           primaryColor: p.get('primaryColor').build(),
           textStyle: p.get('textStyle').build(),

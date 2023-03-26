@@ -14,8 +14,9 @@ class MenuButtonThemeData$Mate extends MenuButtonThemeData with Mate {
       /// optionalParameters: {ButtonStyle? style} , defaultValue:none
       ButtonStyle? style})
       : super(style: style) {
-    mateBuilder =
-        (p) => MenuButtonThemeData$Mate(style: p.get('style').build());
+    mateCreateName = 'MenuButtonThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => MenuButtonThemeData$Mate(style: p.get('style').build());
     mateUse('style', style);
   }
 }
@@ -37,6 +38,8 @@ class MenuButtonTheme$Mate extends MenuButtonTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'MenuButtonTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuButtonTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

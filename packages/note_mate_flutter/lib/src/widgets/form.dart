@@ -33,6 +33,8 @@ class Form$Mate extends Form with Mate {
           onChanged: onChanged,
           autovalidateMode: autovalidateMode,
         ) {
+    mateCreateName = 'Form';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Form$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -85,6 +87,8 @@ class FormField$Mate<T> extends FormField<T> with Mate {
           autovalidateMode: autovalidateMode,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'FormField';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FormField$Mate<T>(
           key: p.get('key').build(),
           builder: p.get('builder').build(),

@@ -78,6 +78,8 @@ class AppBarTheme$Mate extends AppBarTheme with Mate {
           titleTextStyle: titleTextStyle,
           systemOverlayStyle: systemOverlayStyle,
         ) {
+    mateCreateName = 'AppBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AppBarTheme$Mate(
           color: p.get('color').build(),
           backgroundColor: p.get('backgroundColor').build(),

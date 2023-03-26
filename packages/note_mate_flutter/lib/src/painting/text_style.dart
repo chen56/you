@@ -115,6 +115,8 @@ class TextStyle$Mate extends TextStyle with Mate {
           package: package,
           overflow: overflow,
         ) {
+    mateCreateName = 'TextStyle';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextStyle$Mate(
           inherit: p.get('inherit').build(),
           color: p.get('color').build(),

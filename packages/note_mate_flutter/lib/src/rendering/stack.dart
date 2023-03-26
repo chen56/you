@@ -28,6 +28,8 @@ class RelativeRect$Mate extends RelativeRect with Mate {
           right,
           bottom,
         ) {
+    mateCreateName = 'RelativeRect.fromLTRB';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RelativeRect$Mate.fromLTRB(
           p.get('left').value,
           p.get('top').value,
@@ -66,6 +68,8 @@ class RenderStack$Mate extends RenderStack with Mate {
           fit: fit,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderStack';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderStack$Mate(
           children: p.get('children').build(),
           alignment: p.get('alignment').build(),
@@ -110,6 +114,8 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate {
           clipBehavior: clipBehavior,
           index: index,
         ) {
+    mateCreateName = 'RenderIndexedStack';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIndexedStack$Mate(
           children: p.get('children').build(),
           alignment: p.get('alignment').build(),

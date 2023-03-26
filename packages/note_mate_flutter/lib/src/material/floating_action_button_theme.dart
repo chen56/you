@@ -12,8 +12,7 @@ import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 
 /// class FloatingActionButtonThemeData with Diagnosticable
-class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData
-    with Mate {
+class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData with Mate {
   /// FloatingActionButtonThemeData FloatingActionButtonThemeData({Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? disabledElevation, double? highlightElevation, ShapeBorder? shape, bool? enableFeedback, double? iconSize, BoxConstraints? sizeConstraints, BoxConstraints? smallSizeConstraints, BoxConstraints? largeSizeConstraints, BoxConstraints? extendedSizeConstraints, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, MaterialStateProperty<MouseCursor?>? mouseCursor})
   FloatingActionButtonThemeData$Mate({
     /// optionalParameters: {Color? foregroundColor} , defaultValue:none
@@ -101,6 +100,8 @@ class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData
           extendedTextStyle: extendedTextStyle,
           mouseCursor: mouseCursor,
         ) {
+    mateCreateName = 'FloatingActionButtonThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FloatingActionButtonThemeData$Mate(
           foregroundColor: p.get('foregroundColor').build(),
           backgroundColor: p.get('backgroundColor').build(),

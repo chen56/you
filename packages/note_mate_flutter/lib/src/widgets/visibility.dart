@@ -47,6 +47,8 @@ class Visibility$Mate extends Visibility with Mate {
           maintainSemantics: maintainSemantics,
           maintainInteractivity: maintainInteractivity,
         ) {
+    mateCreateName = 'Visibility';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Visibility$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -88,6 +90,8 @@ class Visibility$Mate extends Visibility with Mate {
           replacement: replacement,
           visible: visible,
         ) {
+    mateCreateName = 'Visibility.maintain';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Visibility$Mate.maintain(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -142,6 +146,8 @@ class SliverVisibility$Mate extends SliverVisibility with Mate {
           maintainSemantics: maintainSemantics,
           maintainInteractivity: maintainInteractivity,
         ) {
+    mateCreateName = 'SliverVisibility';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverVisibility$Mate(
           key: p.get('key').build(),
           sliver: p.get('sliver').build(),
@@ -183,6 +189,8 @@ class SliverVisibility$Mate extends SliverVisibility with Mate {
           replacementSliver: replacementSliver,
           visible: visible,
         ) {
+    mateCreateName = 'SliverVisibility.maintain';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverVisibility$Mate.maintain(
           key: p.get('key').build(),
           sliver: p.get('sliver').build(),

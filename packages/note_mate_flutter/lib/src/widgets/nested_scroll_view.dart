@@ -67,6 +67,8 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
           restorationId: restorationId,
           scrollBehavior: scrollBehavior,
         ) {
+    mateCreateName = 'NestedScrollView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NestedScrollView$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -113,6 +115,8 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
           handle: handle,
           sliver: sliver,
         ) {
+    mateCreateName = 'SliverOverlapAbsorber';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverOverlapAbsorber$Mate(
           key: p.get('key').build(),
           handle: p.get('handle').build(),
@@ -125,8 +129,7 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
 }
 
 /// class RenderSliverOverlapAbsorber extends RenderSliver with RenderObjectWithChildMixin<RenderSliver>
-class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber
-    with Mate {
+class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with Mate {
   /// RenderSliverOverlapAbsorber RenderSliverOverlapAbsorber({required SliverOverlapAbsorberHandle handle, RenderSliver? sliver})
   RenderSliverOverlapAbsorber$Mate({
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
@@ -138,6 +141,8 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber
           handle: handle,
           sliver: sliver,
         ) {
+    mateCreateName = 'RenderSliverOverlapAbsorber';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RenderSliverOverlapAbsorber$Mate(
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
@@ -164,6 +169,8 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
           handle: handle,
           sliver: sliver,
         ) {
+    mateCreateName = 'SliverOverlapInjector';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverOverlapInjector$Mate(
           key: p.get('key').build(),
           handle: p.get('handle').build(),
@@ -176,16 +183,16 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
 }
 
 /// class RenderSliverOverlapInjector extends RenderSliver
-class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector
-    with Mate {
+class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with Mate {
   /// RenderSliverOverlapInjector RenderSliverOverlapInjector({required SliverOverlapAbsorberHandle handle})
   RenderSliverOverlapInjector$Mate(
       {
       /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
       required SliverOverlapAbsorberHandle handle})
       : super(handle: handle) {
-    mateBuilder = (p) =>
-        RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
+    mateCreateName = 'RenderSliverOverlapInjector';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
     mateUse('handle', handle);
   }
 }
@@ -231,6 +238,8 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
           handle: handle,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'NestedScrollViewViewport';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NestedScrollViewViewport$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),
@@ -255,8 +264,7 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
 }
 
 /// class RenderNestedScrollViewViewport extends RenderViewport
-class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
-    with Mate {
+class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport with Mate {
   /// RenderNestedScrollViewViewport RenderNestedScrollViewViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   RenderNestedScrollViewViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:is!ConstVariableElement
@@ -292,6 +300,8 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
           handle: handle,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderNestedScrollViewViewport';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RenderNestedScrollViewViewport$Mate(
           axisDirection: p.get('axisDirection').build(),
           crossAxisDirection: p.get('crossAxisDirection').build(),

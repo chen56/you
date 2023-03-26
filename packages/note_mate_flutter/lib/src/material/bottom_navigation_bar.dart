@@ -108,6 +108,8 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with Mate {
           landscapeLayout: landscapeLayout,
           useLegacyColorScheme: useLegacyColorScheme,
         ) {
+    mateCreateName = 'BottomNavigationBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBar$Mate(
           key: p.get('key').build(),
           items: p.get('items').build(),

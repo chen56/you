@@ -26,6 +26,8 @@ class AutofillConfiguration$Mate extends AutofillConfiguration with Mate {
           currentEditingValue: currentEditingValue,
           hintText: hintText,
         ) {
+    mateCreateName = 'AutofillConfiguration';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => AutofillConfiguration$Mate(
           uniqueIdentifier: p.get('uniqueIdentifier').build(),
           autofillHints: p.get('autofillHints').build(),

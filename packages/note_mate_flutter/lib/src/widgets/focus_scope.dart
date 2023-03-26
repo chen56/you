@@ -69,6 +69,8 @@ class Focus$Mate extends Focus with Mate {
           includeSemantics: includeSemantics,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'Focus';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Focus$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -151,6 +153,8 @@ class FocusScope$Mate extends FocusScope with Mate {
           onKey: onKey,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'FocusScope';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FocusScope$Mate(
           key: p.get('key').build(),
           node: p.get('node').build(),
@@ -195,6 +199,8 @@ class ExcludeFocus$Mate extends ExcludeFocus with Mate {
           excluding: excluding,
           child: child,
         ) {
+    mateCreateName = 'ExcludeFocus';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExcludeFocus$Mate(
           key: p.get('key').build(),
           excluding: p.get('excluding').build(),

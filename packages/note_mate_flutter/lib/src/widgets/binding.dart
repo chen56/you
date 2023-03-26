@@ -7,8 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 
 /// class RenderObjectToWidgetAdapter<T extends RenderObject> extends RenderObjectWidget
-class RenderObjectToWidgetAdapter$Mate<T extends RenderObject>
-    extends RenderObjectToWidgetAdapter<T> with Mate {
+class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObjectToWidgetAdapter<T> with Mate {
   /// RenderObjectToWidgetAdapter<T> RenderObjectToWidgetAdapter({Widget? child, required RenderObjectWithChildMixin<T> container, String? debugShortDescription})
   RenderObjectToWidgetAdapter$Mate({
     /// optionalParameters: {Widget? child} , defaultValue:none
@@ -24,6 +23,8 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject>
           container: container,
           debugShortDescription: debugShortDescription,
         ) {
+    mateCreateName = 'RenderObjectToWidgetAdapter';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RenderObjectToWidgetAdapter$Mate<T>(
           child: p.get('child').build(),
           container: p.get('container').build(),
@@ -36,16 +37,16 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject>
 }
 
 /// class RenderObjectToWidgetElement<T extends RenderObject> extends RootRenderObjectElement
-class RenderObjectToWidgetElement$Mate<T extends RenderObject>
-    extends RenderObjectToWidgetElement<T> with Mate {
+class RenderObjectToWidgetElement$Mate<T extends RenderObject> extends RenderObjectToWidgetElement<T> with Mate {
   /// RenderObjectToWidgetElement<T> RenderObjectToWidgetElement(RenderObjectToWidgetAdapter<T> widget)
   RenderObjectToWidgetElement$Mate(
 
       /// requiredParameters: RenderObjectToWidgetAdapter<T> widget
       RenderObjectToWidgetAdapter<T> widget)
       : super(widget) {
-    mateBuilder =
-        (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
+    mateCreateName = 'RenderObjectToWidgetElement';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
     mateUse('widget', widget);
   }
 }

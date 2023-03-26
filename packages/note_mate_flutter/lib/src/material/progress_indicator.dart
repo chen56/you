@@ -44,6 +44,8 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
           semanticsLabel: semanticsLabel,
           semanticsValue: semanticsValue,
         ) {
+    mateCreateName = 'LinearProgressIndicator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearProgressIndicator$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -66,8 +68,7 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
 }
 
 /// class CircularProgressIndicator extends ProgressIndicator
-class CircularProgressIndicator$Mate extends CircularProgressIndicator
-    with Mate {
+class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate {
   /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -103,6 +104,8 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator
           semanticsLabel: semanticsLabel,
           semanticsValue: semanticsValue,
         ) {
+    mateCreateName = 'CircularProgressIndicator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircularProgressIndicator$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -154,6 +157,8 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator
           semanticsLabel: semanticsLabel,
           semanticsValue: semanticsValue,
         ) {
+    mateCreateName = 'CircularProgressIndicator.adaptive';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircularProgressIndicator$Mate.adaptive(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -210,6 +215,8 @@ class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Mate {
           semanticsLabel: semanticsLabel,
           semanticsValue: semanticsValue,
         ) {
+    mateCreateName = 'RefreshProgressIndicator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshProgressIndicator$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),

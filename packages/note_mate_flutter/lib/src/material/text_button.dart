@@ -60,6 +60,8 @@ class TextButton$Mate extends TextButton with Mate {
           statesController: statesController,
           child: child,
         ) {
+    mateCreateName = 'TextButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextButton$Mate(
           key: p.get('key').build(),
           onPressed: p.get('onPressed').build(),

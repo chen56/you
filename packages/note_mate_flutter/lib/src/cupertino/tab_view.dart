@@ -48,6 +48,8 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
           navigatorObservers: navigatorObservers,
           restorationScopeId: restorationScopeId,
         ) {
+    mateCreateName = 'CupertinoTabView';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabView$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),

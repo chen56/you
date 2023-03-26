@@ -66,6 +66,8 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           selectionOverlay: selectionOverlay,
           looping: looping,
         ) {
+    mateCreateName = 'CupertinoPicker';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPicker$Mate(
           key: p.get('key').build(),
           diameterRatio: p.get('diameterRatio').build(),
@@ -151,6 +153,8 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           childCount: childCount,
           selectionOverlay: selectionOverlay,
         ) {
+    mateCreateName = 'CupertinoPicker.builder';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPicker$Mate.builder(
           key: p.get('key').build(),
           diameterRatio: p.get('diameterRatio').build(),
@@ -183,8 +187,7 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
 }
 
 /// class CupertinoPickerDefaultSelectionOverlay extends StatelessWidget
-class CupertinoPickerDefaultSelectionOverlay$Mate
-    extends CupertinoPickerDefaultSelectionOverlay with Mate {
+class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefaultSelectionOverlay with Mate {
   /// CupertinoPickerDefaultSelectionOverlay CupertinoPickerDefaultSelectionOverlay({Key? key, Color background = CupertinoColors.tertiarySystemFill, bool capStartEdge = true, bool capEndEdge = true})
   CupertinoPickerDefaultSelectionOverlay$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -204,6 +207,8 @@ class CupertinoPickerDefaultSelectionOverlay$Mate
           capStartEdge: capStartEdge,
           capEndEdge: capEndEdge,
         ) {
+    mateCreateName = 'CupertinoPickerDefaultSelectionOverlay';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPickerDefaultSelectionOverlay$Mate(
           key: p.get('key').build(),
           background: p.get('background').build(),

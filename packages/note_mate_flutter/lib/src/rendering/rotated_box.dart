@@ -18,6 +18,8 @@ class RenderRotatedBox$Mate extends RenderRotatedBox with Mate {
           quarterTurns: quarterTurns,
           child: child,
         ) {
+    mateCreateName = 'RenderRotatedBox';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderRotatedBox$Mate(
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),

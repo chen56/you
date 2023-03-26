@@ -24,6 +24,8 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
           localFocalPoint: localFocalPoint,
           pointerCount: pointerCount,
         ) {
+    mateCreateName = 'ScaleStartDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleStartDetails$Mate(
           focalPoint: p.get('focalPoint').build(),
           localFocalPoint: p.get('localFocalPoint').build(),
@@ -72,6 +74,8 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
           pointerCount: pointerCount,
           focalPointDelta: focalPointDelta,
         ) {
+    mateCreateName = 'ScaleUpdateDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleUpdateDetails$Mate(
           focalPoint: p.get('focalPoint').build(),
           localFocalPoint: p.get('localFocalPoint').build(),
@@ -110,6 +114,8 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate {
           scaleVelocity: scaleVelocity,
           pointerCount: pointerCount,
         ) {
+    mateCreateName = 'ScaleEndDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleEndDetails$Mate(
           velocity: p.get('velocity').build(),
           scaleVelocity: p.get('scaleVelocity').build(),
@@ -150,14 +156,15 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           trackpadScrollToScaleFactor: trackpadScrollToScaleFactor,
         ) {
+    mateCreateName = 'ScaleGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
-          trackpadScrollToScaleFactor:
-              p.get('trackpadScrollToScaleFactor').build(),
+          trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
         );
     mateUse('debugOwner', debugOwner);
     mateUse('supportedDevices', supportedDevices);

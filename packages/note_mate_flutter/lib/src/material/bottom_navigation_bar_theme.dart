@@ -13,8 +13,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class BottomNavigationBarThemeData with Diagnosticable
-class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData
-    with Mate {
+class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData with Mate {
   /// BottomNavigationBarThemeData BottomNavigationBarThemeData({Color? backgroundColor, double? elevation, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, Color? selectedItemColor, Color? unselectedItemColor, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, BottomNavigationBarType? type, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, MaterialStateProperty<MouseCursor?>? mouseCursor})
   BottomNavigationBarThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , defaultValue:none
@@ -74,6 +73,8 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData
           landscapeLayout: landscapeLayout,
           mouseCursor: mouseCursor,
         ) {
+    mateCreateName = 'BottomNavigationBarThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBarThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           elevation: p.get('elevation').build(),
@@ -124,6 +125,8 @@ class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'BottomNavigationBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBarTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

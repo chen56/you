@@ -32,6 +32,8 @@ class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
           reverseBuilder: reverseBuilder,
           child: child,
         ) {
+    mateCreateName = 'DualTransitionBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DualTransitionBuilder$Mate(
           key: p.get('key').build(),
           animation: p.get('animation').build(),

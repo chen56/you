@@ -13,8 +13,7 @@ import 'package:flutter/src/widgets/editable_text.dart';
 import 'package:flutter/src/rendering/selection.dart';
 
 /// class CupertinoAdaptiveTextSelectionToolbar extends StatelessWidget
-class CupertinoAdaptiveTextSelectionToolbar$Mate
-    extends CupertinoAdaptiveTextSelectionToolbar with Mate {
+class CupertinoAdaptiveTextSelectionToolbar$Mate extends CupertinoAdaptiveTextSelectionToolbar with Mate {
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -30,6 +29,8 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate
           children: children,
           anchors: anchors,
         ) {
+    mateCreateName = 'CupertinoAdaptiveTextSelectionToolbar';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -55,6 +56,8 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate
           buttonItems: buttonItems,
           anchors: anchors,
         ) {
+    mateCreateName = 'CupertinoAdaptiveTextSelectionToolbar.buttonItems';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.buttonItems(
           key: p.get('key').build(),
           buttonItems: p.get('buttonItems').build(),
@@ -96,6 +99,8 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate
           onSelectAll: onSelectAll,
           anchors: anchors,
         ) {
+    mateCreateName = 'CupertinoAdaptiveTextSelectionToolbar.editable';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editable(
           key: p.get('key').build(),
           clipboardStatus: p.get('clipboardStatus').build(),
@@ -125,11 +130,12 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate
           key: key,
           editableTextState: editableTextState,
         ) {
-    mateBuilder =
-        (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editableText(
-              key: p.get('key').build(),
-              editableTextState: p.get('editableTextState').build(),
-            );
+    mateCreateName = 'CupertinoAdaptiveTextSelectionToolbar.editableText';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editableText(
+          key: p.get('key').build(),
+          editableTextState: p.get('editableTextState').build(),
+        );
     mateUse('key', key);
     mateUse('editableTextState', editableTextState);
   }
@@ -157,6 +163,8 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate
           selectionGeometry: selectionGeometry,
           anchors: anchors,
         ) {
+    mateCreateName = 'CupertinoAdaptiveTextSelectionToolbar.selectable';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.selectable(
           key: p.get('key').build(),
           onCopy: p.get('onCopy').build(),

@@ -26,12 +26,13 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
           drawerButtonIconBuilder: drawerButtonIconBuilder,
           endDrawerButtonIconBuilder: endDrawerButtonIconBuilder,
         ) {
+    mateCreateName = 'ActionIconThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ActionIconThemeData$Mate(
           backButtonIconBuilder: p.get('backButtonIconBuilder').build(),
           closeButtonIconBuilder: p.get('closeButtonIconBuilder').build(),
           drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').build(),
-          endDrawerButtonIconBuilder:
-              p.get('endDrawerButtonIconBuilder').build(),
+          endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').build(),
         );
     mateUse('backButtonIconBuilder', backButtonIconBuilder);
     mateUse('closeButtonIconBuilder', closeButtonIconBuilder);
@@ -57,6 +58,8 @@ class ActionIconTheme$Mate extends ActionIconTheme with Mate {
           data: data,
           child: child,
         ) {
+    mateCreateName = 'ActionIconTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ActionIconTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

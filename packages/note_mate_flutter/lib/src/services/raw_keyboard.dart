@@ -21,6 +21,8 @@ class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate {
           character: character,
           repeat: repeat,
         ) {
+    mateCreateName = 'RawKeyDownEvent';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyDownEvent$Mate(
           data: p.get('data').build(),
           character: p.get('character').build(),
@@ -45,6 +47,8 @@ class RawKeyUpEvent$Mate extends RawKeyUpEvent with Mate {
           data: data,
           character: character,
         ) {
+    mateCreateName = 'RawKeyUpEvent';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyUpEvent$Mate(
           data: p.get('data').build(),
           character: p.get('character').build(),

@@ -7,8 +7,7 @@ import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/animation/curves.dart';
 
 /// class OverScrollHeaderStretchConfiguration
-class OverScrollHeaderStretchConfiguration$Mate
-    extends OverScrollHeaderStretchConfiguration with Mate {
+class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchConfiguration with Mate {
   /// OverScrollHeaderStretchConfiguration OverScrollHeaderStretchConfiguration({double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger})
   OverScrollHeaderStretchConfiguration$Mate({
     /// optionalParameters: {double stretchTriggerOffset = 100.0} , defaultValue:Literal
@@ -20,6 +19,8 @@ class OverScrollHeaderStretchConfiguration$Mate
           stretchTriggerOffset: stretchTriggerOffset,
           onStretchTrigger: onStretchTrigger,
         ) {
+    mateCreateName = 'OverScrollHeaderStretchConfiguration';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => OverScrollHeaderStretchConfiguration$Mate(
           stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
           onStretchTrigger: p.get('onStretchTrigger').build(),
@@ -30,8 +31,7 @@ class OverScrollHeaderStretchConfiguration$Mate
 }
 
 /// class PersistentHeaderShowOnScreenConfiguration
-class PersistentHeaderShowOnScreenConfiguration$Mate
-    extends PersistentHeaderShowOnScreenConfiguration with Mate {
+class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderShowOnScreenConfiguration with Mate {
   /// PersistentHeaderShowOnScreenConfiguration PersistentHeaderShowOnScreenConfiguration({double minShowOnScreenExtent = double.negativeInfinity, double maxShowOnScreenExtent = double.infinity})
   PersistentHeaderShowOnScreenConfiguration$Mate({
     /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , defaultValue:unprocessed
@@ -43,6 +43,8 @@ class PersistentHeaderShowOnScreenConfiguration$Mate
           minShowOnScreenExtent: minShowOnScreenExtent,
           maxShowOnScreenExtent: maxShowOnScreenExtent,
         ) {
+    mateCreateName = 'PersistentHeaderShowOnScreenConfiguration';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PersistentHeaderShowOnScreenConfiguration$Mate(
           minShowOnScreenExtent: p.get('minShowOnScreenExtent').build(),
           maxShowOnScreenExtent: p.get('maxShowOnScreenExtent').build(),
@@ -53,8 +55,7 @@ class PersistentHeaderShowOnScreenConfiguration$Mate
 }
 
 /// class FloatingHeaderSnapConfiguration
-class FloatingHeaderSnapConfiguration$Mate
-    extends FloatingHeaderSnapConfiguration with Mate {
+class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfiguration with Mate {
   /// FloatingHeaderSnapConfiguration FloatingHeaderSnapConfiguration({Curve curve = Curves.ease, Duration duration = const Duration(milliseconds: 300)})
   FloatingHeaderSnapConfiguration$Mate({
     /// optionalParameters: {Curve curve = Curves.ease} , defaultValue:unprocessed
@@ -66,6 +67,8 @@ class FloatingHeaderSnapConfiguration$Mate
           curve: curve,
           duration: duration,
         ) {
+    mateCreateName = 'FloatingHeaderSnapConfiguration';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FloatingHeaderSnapConfiguration$Mate(
           curve: p.get('curve').build(),
           duration: p.get('duration').build(),

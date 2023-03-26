@@ -17,6 +17,8 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate {
       /// optionalParameters: {double? flex} , defaultValue:none
       double? flex})
       : super(flex: flex) {
+    mateCreateName = 'IntrinsicColumnWidth';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build());
     mateUse('flex', flex);
   }
@@ -30,6 +32,8 @@ class FixedColumnWidth$Mate extends FixedColumnWidth with Mate {
       /// requiredParameters: double value
       double value)
       : super(value) {
+    mateCreateName = 'FixedColumnWidth';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FixedColumnWidth$Mate(p.get('value').value);
     mateUse('value', value);
   }
@@ -43,6 +47,8 @@ class FractionColumnWidth$Mate extends FractionColumnWidth with Mate {
       /// requiredParameters: double value
       double value)
       : super(value) {
+    mateCreateName = 'FractionColumnWidth';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FractionColumnWidth$Mate(p.get('value').value);
     mateUse('value', value);
   }
@@ -56,6 +62,8 @@ class FlexColumnWidth$Mate extends FlexColumnWidth with Mate {
       /// requiredParameters: [double value = 1.0]
       double value)
       : super(value) {
+    mateCreateName = 'FlexColumnWidth';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlexColumnWidth$Mate(p.get('value').value);
     mateUse('value', value);
   }
@@ -74,6 +82,8 @@ class MaxColumnWidth$Mate extends MaxColumnWidth with Mate {
           a,
           b,
         ) {
+    mateCreateName = 'MaxColumnWidth';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaxColumnWidth$Mate(
           p.get('a').value,
           p.get('b').value,
@@ -96,6 +106,8 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
           a,
           b,
         ) {
+    mateCreateName = 'MinColumnWidth';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MinColumnWidth$Mate(
           p.get('a').value,
           p.get('b').value,
@@ -154,6 +166,8 @@ class RenderTable$Mate extends RenderTable with Mate {
           textBaseline: textBaseline,
           children: children,
         ) {
+    mateCreateName = 'RenderTable';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderTable$Mate(
           columns: p.get('columns').build(),
           rows: p.get('rows').build(),

@@ -38,6 +38,8 @@ class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
           onKey: onKey,
           child: child,
         ) {
+    mateCreateName = 'RawKeyboardListener';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RawKeyboardListener$Mate(
           key: p.get('key').build(),
           focusNode: p.get('focusNode').build(),

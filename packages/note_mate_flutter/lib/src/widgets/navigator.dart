@@ -22,6 +22,8 @@ class RouteSettings$Mate extends RouteSettings with Mate {
           name: name,
           arguments: arguments,
         ) {
+    mateCreateName = 'RouteSettings';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RouteSettings$Mate(
           name: p.get('name').build(),
           arguments: p.get('arguments').build(),
@@ -48,6 +50,8 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           controller: controller,
           child: child,
         ) {
+    mateCreateName = 'HeroControllerScope';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => HeroControllerScope$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -69,6 +73,8 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'HeroControllerScope.none';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => HeroControllerScope$Mate.none(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -139,6 +145,8 @@ class Navigator$Mate extends Navigator with Mate {
           restorationScopeId: restorationScopeId,
           routeTraversalEdgeBehavior: routeTraversalEdgeBehavior,
         ) {
+    mateCreateName = 'Navigator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Navigator$Mate(
           key: p.get('key').build(),
           pages: p.get('pages').build(),
@@ -148,14 +156,12 @@ class Navigator$Mate extends Navigator with Mate {
           onGenerateRoute: p.get('onGenerateRoute').build(),
           onUnknownRoute: p.get('onUnknownRoute').build(),
           transitionDelegate: p.get('transitionDelegate').build(),
-          reportsRouteUpdateToEngine:
-              p.get('reportsRouteUpdateToEngine').build(),
+          reportsRouteUpdateToEngine: p.get('reportsRouteUpdateToEngine').build(),
           clipBehavior: p.get('clipBehavior').build(),
           observers: p.get('observers').build(),
           requestFocus: p.get('requestFocus').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
-          routeTraversalEdgeBehavior:
-              p.get('routeTraversalEdgeBehavior').build(),
+          routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
         );
     mateUse('key', key);
     mateUse('pages', pages);
@@ -191,6 +197,8 @@ class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate {
           onPresent: onPresent,
           onComplete: onComplete,
         ) {
+    mateCreateName = 'RestorableRouteFuture';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RestorableRouteFuture$Mate<T>(
           navigatorFinder: p.get('navigatorFinder').build(),
           onPresent: p.get('onPresent').build(),

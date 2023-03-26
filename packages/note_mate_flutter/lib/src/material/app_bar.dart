@@ -135,6 +135,8 @@ class AppBar$Mate extends AppBar with Mate {
           systemOverlayStyle: systemOverlayStyle,
           forceMaterialTransparency: forceMaterialTransparency,
         ) {
+    mateCreateName = 'AppBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AppBar$Mate(
           key: p.get('key').build(),
           leading: p.get('leading').build(),
@@ -343,6 +345,8 @@ class SliverAppBar$Mate extends SliverAppBar with Mate {
           systemOverlayStyle: systemOverlayStyle,
           forceMaterialTransparency: forceMaterialTransparency,
         ) {
+    mateCreateName = 'SliverAppBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverAppBar$Mate(
           key: p.get('key').build(),
           leading: p.get('leading').build(),

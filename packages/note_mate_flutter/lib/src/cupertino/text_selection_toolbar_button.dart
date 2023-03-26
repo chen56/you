@@ -9,8 +9,7 @@ import 'dart:core';
 import 'package:flutter/src/widgets/context_menu_button_item.dart';
 
 /// class CupertinoTextSelectionToolbarButton extends StatelessWidget
-class CupertinoTextSelectionToolbarButton$Mate
-    extends CupertinoTextSelectionToolbarButton with Mate {
+class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToolbarButton with Mate {
   /// CupertinoTextSelectionToolbarButton CupertinoTextSelectionToolbarButton({Key? key, void Function()? onPressed, required Widget child})
   CupertinoTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -26,6 +25,8 @@ class CupertinoTextSelectionToolbarButton$Mate
           onPressed: onPressed,
           child: child,
         ) {
+    mateCreateName = 'CupertinoTextSelectionToolbarButton';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextSelectionToolbarButton$Mate(
           key: p.get('key').build(),
           onPressed: p.get('onPressed').build(),
@@ -51,6 +52,8 @@ class CupertinoTextSelectionToolbarButton$Mate
           onPressed: onPressed,
           text: text,
         ) {
+    mateCreateName = 'CupertinoTextSelectionToolbarButton.text';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextSelectionToolbarButton$Mate.text(
           key: p.get('key').build(),
           onPressed: p.get('onPressed').build(),
@@ -72,6 +75,8 @@ class CupertinoTextSelectionToolbarButton$Mate
           key: key,
           buttonItem: buttonItem,
         ) {
+    mateCreateName = 'CupertinoTextSelectionToolbarButton.buttonItem';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextSelectionToolbarButton$Mate.buttonItem(
           key: p.get('key').build(),
           buttonItem: p.get('buttonItem').build(),

@@ -445,21 +445,21 @@ void _genLibMate({
             .map((typeParam) => typeRefers.elementRef(typeParam, debugRef: clazz)))
         ..constructors.addAll(clazz.constructors.where(constructorFilter).map((constructor) {
           return Constructor((b) {
-            Expression constructorEx = TypeReference((b) =>
-            b
-              ..symbol = mateClassName
-              ..types.addAll(
-                // 1.类型参数不需要bound
-                // class AnnotatedRegion$Mate<T extends Object>
-                //     -> mateBuilder = AnnotatedRegion$Mate<T>()
-                // 2.命名构造器的范型参数要加到类型名后，而不是方法名后
-                // class ObjectFlagProperty<T>
-                //    ->ObjectFlagProperty<String>.has()
-                  clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
-            // 命名构造器的情况
-            if (constructor.name.isNotEmpty) {
-              constructorEx = constructorEx.property(constructor.name);
-            }
+            // Expression constructorEx = TypeReference((b) =>
+            // b
+            //   ..symbol = mateClassName
+            //   ..types.addAll(
+            //     // 1.类型参数不需要bound
+            //     // class AnnotatedRegion$Mate<T extends Object>
+            //     //     -> mateBuilder = AnnotatedRegion$Mate<T>()
+            //     // 2.命名构造器的范型参数要加到类型名后，而不是方法名后
+            //     // class ObjectFlagProperty<T>
+            //     //    ->ObjectFlagProperty<String>.has()
+            //       clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
+            // // 命名构造器的情况
+            // if (constructor.name.isNotEmpty) {
+            //   constructorEx = constructorEx.property(constructor.name);
+            // }
             var parameters = constructor.parameters.where(parameterFilter);
 
             b
@@ -535,6 +535,8 @@ void _genLibMate({
                 //             .code).closure,
                 //     }))
                 //     .statement,
+                refer("mateCreateName").assign(literalString(constructor.displayName)).statement,
+                refer("matePackageUrl").assign(literalString(typeRefers.elementRef(clazz, debugRef: clazz).url!)).statement,
                 refer("mateBuilder")
                     .assign(Method((b) {
                   var positionalArgs = parameters.where((e) => e.isPositional).map(
@@ -552,12 +554,8 @@ void _genLibMate({
                     ..requiredParameters.add(Parameter((b) => b.name = "p"))
                   //缺省构造器的name为"",只有命名构造器有name
                     ..body = constructor.name.isEmpty
-                        ? c
-                        .newInstance(positionalArgs, namedArgs)
-                        .code
-                        : c
-                        .newInstanceNamed(constructor.name, positionalArgs, namedArgs)
-                        .code;
+                        ? c.newInstance(positionalArgs, namedArgs).code
+                        : c.newInstanceNamed(constructor.name, positionalArgs, namedArgs).code;
                 }).closure)
                     .statement,
                 ...parameters.map((e) => Code("mateUse('${e.name}', ${e.name});")),

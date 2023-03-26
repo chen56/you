@@ -36,6 +36,8 @@ class GridPaper$Mate extends GridPaper with Mate {
           subdivisions: subdivisions,
           child: child,
         ) {
+    mateCreateName = 'GridPaper';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridPaper$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),

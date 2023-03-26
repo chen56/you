@@ -43,6 +43,7 @@ build(Pen pen, BuildContext context) {
       ),
     ),
   ));
+  pen.sampleMate(Center$Mate());
 
   pen.markdown(r'''
 ## xxx

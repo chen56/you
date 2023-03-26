@@ -10,8 +10,7 @@ import 'package:flutter/src/widgets/scroll_notification.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class GlowingOverscrollIndicator extends StatefulWidget
-class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator
-    with Mate {
+class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Mate {
   /// GlowingOverscrollIndicator GlowingOverscrollIndicator({Key? key, bool showLeading = true, bool showTrailing = true, required AxisDirection axisDirection, required Color color, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Widget? child})
   GlowingOverscrollIndicator$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -43,6 +42,8 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator
           notificationPredicate: notificationPredicate,
           child: child,
         ) {
+    mateCreateName = 'GlowingOverscrollIndicator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GlowingOverscrollIndicator$Mate(
           key: p.get('key').build(),
           showLeading: p.get('showLeading').build(),
@@ -63,8 +64,7 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator
 }
 
 /// class StretchingOverscrollIndicator extends StatefulWidget
-class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator
-    with Mate {
+class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator with Mate {
   /// StretchingOverscrollIndicator StretchingOverscrollIndicator({Key? key, required AxisDirection axisDirection, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Clip clipBehavior = Clip.hardEdge, Widget? child})
   StretchingOverscrollIndicator$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -88,6 +88,8 @@ class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'StretchingOverscrollIndicator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => StretchingOverscrollIndicator$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),
@@ -104,16 +106,16 @@ class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator
 }
 
 /// class OverscrollIndicatorNotification extends Notification with ViewportNotificationMixin
-class OverscrollIndicatorNotification$Mate
-    extends OverscrollIndicatorNotification with Mate {
+class OverscrollIndicatorNotification$Mate extends OverscrollIndicatorNotification with Mate {
   /// OverscrollIndicatorNotification OverscrollIndicatorNotification({required bool leading})
   OverscrollIndicatorNotification$Mate(
       {
       /// optionalParameters: {required bool leading} , defaultValue:none
       required bool leading})
       : super(leading: leading) {
-    mateBuilder = (p) =>
-        OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
+    mateCreateName = 'OverscrollIndicatorNotification';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
     mateUse('leading', leading);
   }
 }

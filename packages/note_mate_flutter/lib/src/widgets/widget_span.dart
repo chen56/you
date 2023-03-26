@@ -27,6 +27,8 @@ class WidgetSpan$Mate extends WidgetSpan with Mate {
           baseline: baseline,
           style: style,
         ) {
+    mateCreateName = 'WidgetSpan';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => WidgetSpan$Mate(
           child: p.get('child').build(),
           alignment: p.get('alignment').build(),

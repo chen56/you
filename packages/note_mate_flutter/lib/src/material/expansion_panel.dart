@@ -33,6 +33,8 @@ class ExpansionPanel$Mate extends ExpansionPanel with Mate {
           canTapOnHeader: canTapOnHeader,
           backgroundColor: backgroundColor,
         ) {
+    mateCreateName = 'ExpansionPanel';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanel$Mate(
           headerBuilder: p.get('headerBuilder').build(),
           body: p.get('body').build(),
@@ -73,6 +75,8 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate {
           canTapOnHeader: canTapOnHeader,
           backgroundColor: backgroundColor,
         ) {
+    mateCreateName = 'ExpansionPanelRadio';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelRadio$Mate(
           value: p.get('value').build(),
           headerBuilder: p.get('headerBuilder').build(),
@@ -125,6 +129,8 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: elevation,
           expandIconColor: expandIconColor,
         ) {
+    mateCreateName = 'ExpansionPanelList';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelList$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -184,6 +190,8 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: elevation,
           expandIconColor: expandIconColor,
         ) {
+    mateCreateName = 'ExpansionPanelList.radio';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelList$Mate.radio(
           key: p.get('key').build(),
           children: p.get('children').build(),

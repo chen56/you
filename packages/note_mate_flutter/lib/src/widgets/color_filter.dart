@@ -23,6 +23,8 @@ class ColorFiltered$Mate extends ColorFiltered with Mate {
           child: child,
           key: key,
         ) {
+    mateCreateName = 'ColorFiltered';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorFiltered$Mate(
           colorFilter: p.get('colorFilter').build(),
           child: p.get('child').build(),

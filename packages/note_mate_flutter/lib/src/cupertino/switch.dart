@@ -49,6 +49,8 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
           focusColor: focusColor,
           dragStartBehavior: dragStartBehavior,
         ) {
+    mateCreateName = 'CupertinoSwitch';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSwitch$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),

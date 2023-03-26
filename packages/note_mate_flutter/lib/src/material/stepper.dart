@@ -31,6 +31,8 @@ class ControlsDetails$Mate extends ControlsDetails with Mate {
           onStepCancel: onStepCancel,
           onStepContinue: onStepContinue,
         ) {
+    mateCreateName = 'ControlsDetails';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ControlsDetails$Mate(
           currentStep: p.get('currentStep').build(),
           stepIndex: p.get('stepIndex').build(),
@@ -73,6 +75,8 @@ class Step$Mate extends Step with Mate {
           isActive: isActive,
           label: label,
         ) {
+    mateCreateName = 'Step';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Step$Mate(
           title: p.get('title').build(),
           subtitle: p.get('subtitle').build(),
@@ -139,6 +143,8 @@ class Stepper$Mate extends Stepper with Mate {
           elevation: elevation,
           margin: margin,
         ) {
+    mateCreateName = 'Stepper';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Stepper$Mate(
           key: p.get('key').build(),
           steps: p.get('steps').build(),

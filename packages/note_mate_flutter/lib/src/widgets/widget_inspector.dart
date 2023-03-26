@@ -24,6 +24,8 @@ class WidgetInspector$Mate extends WidgetInspector with Mate {
           child: child,
           selectButtonBuilder: selectButtonBuilder,
         ) {
+    mateCreateName = 'WidgetInspector';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => WidgetInspector$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -48,6 +50,8 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
           description,
           url,
         ) {
+    mateCreateName = 'DevToolsDeepLinkProperty';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DevToolsDeepLinkProperty$Mate(
           p.get('description').value,
           p.get('url').value,
@@ -58,8 +62,7 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
 }
 
 /// class InspectorSerializationDelegate implements DiagnosticsSerializationDelegate
-class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
-    with Mate {
+class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate with Mate {
   /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
     /// optionalParameters: {String? groupName} , defaultValue:none
@@ -87,8 +90,7 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     Map<String, Object>? Function(
       DiagnosticsNode,
       InspectorSerializationDelegate,
-    )?
-        addAdditionalPropertiesCallback,
+    )? addAdditionalPropertiesCallback,
   }) : super(
           groupName: groupName,
           summaryTree: summaryTree,
@@ -99,17 +101,17 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
           service: service,
           addAdditionalPropertiesCallback: addAdditionalPropertiesCallback,
         ) {
+    mateCreateName = 'InspectorSerializationDelegate';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InspectorSerializationDelegate$Mate(
           groupName: p.get('groupName').build(),
           summaryTree: p.get('summaryTree').build(),
-          maxDescendantsTruncatableNode:
-              p.get('maxDescendantsTruncatableNode').build(),
+          maxDescendantsTruncatableNode: p.get('maxDescendantsTruncatableNode').build(),
           expandPropertyValues: p.get('expandPropertyValues').build(),
           subtreeDepth: p.get('subtreeDepth').build(),
           includeProperties: p.get('includeProperties').build(),
           service: p.get('service').build(),
-          addAdditionalPropertiesCallback:
-              p.get('addAdditionalPropertiesCallback').build(),
+          addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
         );
     mateUse('groupName', groupName);
     mateUse('summaryTree', summaryTree);

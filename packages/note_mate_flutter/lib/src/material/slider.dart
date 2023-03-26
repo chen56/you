@@ -92,6 +92,8 @@ class Slider$Mate extends Slider with Mate {
           focusNode: focusNode,
           autofocus: autofocus,
         ) {
+    mateCreateName = 'Slider';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Slider$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -213,6 +215,8 @@ class Slider$Mate extends Slider with Mate {
           focusNode: focusNode,
           autofocus: autofocus,
         ) {
+    mateCreateName = 'Slider.adaptive';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Slider$Mate.adaptive(
           key: p.get('key').build(),
           value: p.get('value').build(),

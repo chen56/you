@@ -13,6 +13,8 @@ class SawTooth$Mate extends SawTooth with Mate {
       /// requiredParameters: int count
       int count)
       : super(count) {
+    mateCreateName = 'SawTooth';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SawTooth$Mate(p.get('count').value);
     mateUse('count', count);
   }
@@ -34,6 +36,8 @@ class Interval$Mate extends Interval with Mate {
           end,
           curve: curve,
         ) {
+    mateCreateName = 'Interval';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => Interval$Mate(
           p.get('begin').value,
           p.get('end').value,
@@ -53,6 +57,8 @@ class Threshold$Mate extends Threshold with Mate {
       /// requiredParameters: double threshold
       double threshold)
       : super(threshold) {
+    mateCreateName = 'Threshold';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => Threshold$Mate(p.get('threshold').value);
     mateUse('threshold', threshold);
   }
@@ -79,6 +85,8 @@ class Cubic$Mate extends Cubic with Mate {
           c,
           d,
         ) {
+    mateCreateName = 'Cubic';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => Cubic$Mate(
           p.get('a').value,
           p.get('b').value,
@@ -117,6 +125,8 @@ class ThreePointCubic$Mate extends ThreePointCubic with Mate {
           a2,
           b2,
         ) {
+    mateCreateName = 'ThreePointCubic';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ThreePointCubic$Mate(
           p.get('a1').value,
           p.get('b1').value,
@@ -145,6 +155,8 @@ class Curve2DSample$Mate extends Curve2DSample with Mate {
           t,
           value,
         ) {
+    mateCreateName = 'Curve2DSample';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => Curve2DSample$Mate(
           p.get('t').value,
           p.get('value').value,
@@ -174,6 +186,8 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate {
           startHandle: startHandle,
           endHandle: endHandle,
         ) {
+    mateCreateName = 'CatmullRomSpline';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CatmullRomSpline$Mate(
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
@@ -204,6 +218,8 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate {
           startHandle: startHandle,
           endHandle: endHandle,
         ) {
+    mateCreateName = 'CatmullRomSpline.precompute';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CatmullRomSpline$Mate.precompute(
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
@@ -229,6 +245,8 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate {
           controlPoints,
           tension: tension,
         ) {
+    mateCreateName = 'CatmullRomCurve';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CatmullRomCurve$Mate(
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
@@ -247,6 +265,8 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate {
           controlPoints,
           tension: tension,
         ) {
+    mateCreateName = 'CatmullRomCurve.precompute';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CatmullRomCurve$Mate.precompute(
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
@@ -264,6 +284,8 @@ class FlippedCurve$Mate extends FlippedCurve with Mate {
       /// requiredParameters: Curve curve
       Curve curve)
       : super(curve) {
+    mateCreateName = 'FlippedCurve';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => FlippedCurve$Mate(p.get('curve').value);
     mateUse('curve', curve);
   }
@@ -277,6 +299,8 @@ class ElasticInCurve$Mate extends ElasticInCurve with Mate {
       /// requiredParameters: [double period = 0.4]
       double period)
       : super(period) {
+    mateCreateName = 'ElasticInCurve';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ElasticInCurve$Mate(p.get('period').value);
     mateUse('period', period);
   }
@@ -290,6 +314,8 @@ class ElasticOutCurve$Mate extends ElasticOutCurve with Mate {
       /// requiredParameters: [double period = 0.4]
       double period)
       : super(period) {
+    mateCreateName = 'ElasticOutCurve';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ElasticOutCurve$Mate(p.get('period').value);
     mateUse('period', period);
   }
@@ -303,6 +329,8 @@ class ElasticInOutCurve$Mate extends ElasticInOutCurve with Mate {
       /// requiredParameters: [double period = 0.4]
       double period)
       : super(period) {
+    mateCreateName = 'ElasticInOutCurve';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ElasticInOutCurve$Mate(p.get('period').value);
     mateUse('period', period);
   }

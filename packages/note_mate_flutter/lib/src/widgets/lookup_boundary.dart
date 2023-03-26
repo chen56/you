@@ -18,6 +18,8 @@ class LookupBoundary$Mate extends LookupBoundary with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'LookupBoundary';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LookupBoundary$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

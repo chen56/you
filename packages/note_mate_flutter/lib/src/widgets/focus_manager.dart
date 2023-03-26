@@ -38,6 +38,8 @@ class FocusNode$Mate extends FocusNode with Mate {
           descendantsAreFocusable: descendantsAreFocusable,
           descendantsAreTraversable: descendantsAreTraversable,
         ) {
+    mateCreateName = 'FocusNode';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FocusNode$Mate(
           debugLabel: p.get('debugLabel').build(),
           onKey: p.get('onKey').build(),
@@ -86,6 +88,8 @@ class FocusScopeNode$Mate extends FocusScopeNode with Mate {
           canRequestFocus: canRequestFocus,
           traversalEdgeBehavior: traversalEdgeBehavior,
         ) {
+    mateCreateName = 'FocusScopeNode';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FocusScopeNode$Mate(
           debugLabel: p.get('debugLabel').build(),
           onKeyEvent: p.get('onKeyEvent').build(),

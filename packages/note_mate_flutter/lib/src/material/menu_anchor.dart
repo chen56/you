@@ -70,6 +70,8 @@ class MenuAnchor$Mate extends MenuAnchor with Mate {
           builder: builder,
           child: child,
         ) {
+    mateCreateName = 'MenuAnchor';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuAnchor$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -126,6 +128,8 @@ class MenuBar$Mate extends MenuBar with Mate {
           controller: controller,
           children: children,
         ) {
+    mateCreateName = 'MenuBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuBar$Mate(
           key: p.get('key').build(),
           style: p.get('style').build(),
@@ -198,6 +202,8 @@ class MenuItemButton$Mate extends MenuItemButton with Mate {
           trailingIcon: trailingIcon,
           child: child,
         ) {
+    mateCreateName = 'MenuItemButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuItemButton$Mate(
           key: p.get('key').build(),
           onPressed: p.get('onPressed').build(),
@@ -290,6 +296,8 @@ class CheckboxMenuButton$Mate extends CheckboxMenuButton with Mate {
           trailingIcon: trailingIcon,
           child: child,
         ) {
+    mateCreateName = 'CheckboxMenuButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckboxMenuButton$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -384,6 +392,8 @@ class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with Mate {
           trailingIcon: trailingIcon,
           child: child,
         ) {
+    mateCreateName = 'RadioMenuButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RadioMenuButton$Mate<T>(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -482,6 +492,8 @@ class SubmenuButton$Mate extends SubmenuButton with Mate {
           menuChildren: menuChildren,
           child: child,
         ) {
+    mateCreateName = 'SubmenuButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SubmenuButton$Mate(
           key: p.get('key').build(),
           onHover: p.get('onHover').build(),
@@ -525,15 +537,15 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate {
       /// optionalParameters: {required MenuController controller} , defaultValue:none
       required MenuController controller})
       : super(controller: controller) {
-    mateBuilder =
-        (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
+    mateCreateName = 'DismissMenuAction';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
     mateUse('controller', controller);
   }
 }
 
 /// class MenuAcceleratorCallbackBinding extends InheritedWidget
-class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
-    with Mate {
+class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding with Mate {
   /// MenuAcceleratorCallbackBinding MenuAcceleratorCallbackBinding({Key? key, void Function()? onInvoke, bool hasSubmenu = false, required Widget child})
   MenuAcceleratorCallbackBinding$Mate({
     /// optionalParameters: {Key? key} , defaultValue:none
@@ -553,6 +565,8 @@ class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
           hasSubmenu: hasSubmenu,
           child: child,
         ) {
+    mateCreateName = 'MenuAcceleratorCallbackBinding';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuAcceleratorCallbackBinding$Mate(
           key: p.get('key').build(),
           onInvoke: p.get('onInvoke').build(),
@@ -582,6 +596,8 @@ class MenuAcceleratorLabel$Mate extends MenuAcceleratorLabel with Mate {
           key: key,
           builder: builder,
         ) {
+    mateCreateName = 'MenuAcceleratorLabel';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuAcceleratorLabel$Mate(
           p.get('label').value,
           key: p.get('key').build(),

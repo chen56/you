@@ -20,6 +20,8 @@ class TapRegionSurface$Mate extends TapRegionSurface with Mate {
           key: key,
           child: child,
         ) {
+    mateCreateName = 'TapRegionSurface';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TapRegionSurface$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -66,6 +68,8 @@ class TapRegion$Mate extends TapRegion with Mate {
           groupId: groupId,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'TapRegion';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TapRegion$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -120,6 +124,8 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate {
           groupId: groupId,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'RenderTapRegion';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RenderTapRegion$Mate(
           registry: p.get('registry').build(),
           enabled: p.get('enabled').build(),
@@ -168,6 +174,8 @@ class TextFieldTapRegion$Mate extends TextFieldTapRegion with Mate {
           onTapInside: onTapInside,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'TextFieldTapRegion';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextFieldTapRegion$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

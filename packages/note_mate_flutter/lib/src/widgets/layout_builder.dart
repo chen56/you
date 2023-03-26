@@ -17,12 +17,13 @@ class LayoutBuilder$Mate extends LayoutBuilder with Mate {
     required Widget Function(
       BuildContext,
       BoxConstraints,
-    )
-        builder,
+    ) builder,
   }) : super(
           key: key,
           builder: builder,
         ) {
+    mateCreateName = 'LayoutBuilder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LayoutBuilder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),

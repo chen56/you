@@ -39,6 +39,8 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate {
           constantDeceleration: constantDeceleration,
           tolerance: tolerance,
         ) {
+    mateCreateName = 'BouncingScrollSimulation';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BouncingScrollSimulation$Mate(
           position: p.get('position').build(),
           velocity: p.get('velocity').build(),
@@ -79,6 +81,8 @@ class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate {
           friction: friction,
           tolerance: tolerance,
         ) {
+    mateCreateName = 'ClampingScrollSimulation';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ClampingScrollSimulation$Mate(
           position: p.get('position').build(),
           velocity: p.get('velocity').build(),

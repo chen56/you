@@ -25,6 +25,8 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate {
           context: context,
           dragDetails: dragDetails,
         ) {
+    mateCreateName = 'ScrollStartNotification';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollStartNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
@@ -61,6 +63,8 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate {
           scrollDelta: scrollDelta,
           depth: depth,
         ) {
+    mateCreateName = 'ScrollUpdateNotification';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollUpdateNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
@@ -101,6 +105,8 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate {
           overscroll: overscroll,
           velocity: velocity,
         ) {
+    mateCreateName = 'OverscrollNotification';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OverscrollNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
@@ -133,6 +139,8 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate {
           context: context,
           dragDetails: dragDetails,
         ) {
+    mateCreateName = 'ScrollEndNotification';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollEndNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
@@ -161,6 +169,8 @@ class UserScrollNotification$Mate extends UserScrollNotification with Mate {
           context: context,
           direction: direction,
         ) {
+    mateCreateName = 'UserScrollNotification';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UserScrollNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),

@@ -29,6 +29,8 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
           dxMin: dxMin,
           dxMax: dxMax,
         ) {
+    mateCreateName = 'ClampedSimulation';
+    matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => ClampedSimulation$Mate(
           p.get('simulation').value,
           xMin: p.get('xMin').build(),
