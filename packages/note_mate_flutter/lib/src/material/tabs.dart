@@ -8,9 +8,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/material/tab_controller.dart';
 import 'dart:ui';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/decoration.dart';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
@@ -95,8 +97,8 @@ class TabBar$Mate extends TabBar with Mate {
     /// optionalParameters: {double indicatorWeight = 2.0} , defaultValue:Literal
     double indicatorWeight = 2.0,
 
-    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsetsGeometry indicatorPadding,
+    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero,
 
     /// optionalParameters: {Decoration? indicator} , defaultValue:none
     Decoration? indicator,
@@ -122,8 +124,8 @@ class TabBar$Mate extends TabBar with Mate {
     /// optionalParameters: {TextStyle? unselectedLabelStyle} , defaultValue:none
     TextStyle? unselectedLabelStyle,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
     MaterialStateProperty<Color?>? overlayColor,
@@ -245,14 +247,14 @@ class TabBarView$Mate extends TabBarView with Mate {
     /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {double viewportFraction = 1.0} , defaultValue:Literal
     double viewportFraction = 1.0,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           children: children,
@@ -299,8 +301,8 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
     /// optionalParameters: {required double size} , defaultValue:none
     required double size,
 
-    /// optionalParameters: {BorderStyle borderStyle = BorderStyle.solid} , defaultValue:unprocessed
-    required BorderStyle borderStyle,
+    /// optionalParameters: {BorderStyle borderStyle = BorderStyle.solid} , defaultValue:PrefixedIdentifier
+    BorderStyle borderStyle = BorderStyle.solid,
   }) : super(
           key: key,
           backgroundColor: backgroundColor,

@@ -39,8 +39,8 @@ class FilledButton$Mate extends FilledButton with Mate {
     /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
     bool autofocus = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
@@ -114,8 +114,8 @@ class FilledButton$Mate extends FilledButton with Mate {
     /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
     bool autofocus = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,

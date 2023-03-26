@@ -8,6 +8,7 @@ import 'package:flutter/src/painting/basic_types.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
@@ -22,7 +23,7 @@ class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Ma
       required List<Widget> children})
       : super(children: children) {
     mateCreateName = 'ListWheelChildListDelegate';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildListDelegate$Mate(children: p.get('children').build());
     mateUse('children', children);
   }
@@ -37,7 +38,7 @@ class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDe
       required List<Widget> children})
       : super(children: children) {
     mateCreateName = 'ListWheelChildLoopingListDelegate';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build());
     mateUse('children', children);
   }
@@ -57,7 +58,7 @@ class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate w
           childCount: childCount,
         ) {
     mateCreateName = 'ListWheelChildBuilderDelegate';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildBuilderDelegate$Mate(
           builder: p.get('builder').build(),
           childCount: p.get('childCount').build(),
@@ -76,7 +77,7 @@ class FixedExtentScrollController$Mate extends FixedExtentScrollController with 
       int initialItem = 0})
       : super(initialItem: initialItem) {
     mateCreateName = 'FixedExtentScrollController';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
     mateUse('initialItem', initialItem);
   }
@@ -116,7 +117,7 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate {
           devicePixelRatio: devicePixelRatio,
         ) {
     mateCreateName = 'FixedExtentMetrics';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),
           maxScrollExtent: p.get('maxScrollExtent').build(),
@@ -145,7 +146,7 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate {
       ScrollPhysics? parent})
       : super(parent: parent) {
     mateCreateName = 'FixedExtentScrollPhysics';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse('parent', parent);
   }
@@ -164,11 +165,11 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
     /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , defaultValue:unprocessed
-    required double diameterRatio,
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , defaultValue:PrefixedIdentifier
+    double diameterRatio = RenderListWheelViewport.defaultDiameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , defaultValue:unprocessed
-    required double perspective,
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , defaultValue:PrefixedIdentifier
+    double perspective = RenderListWheelViewport.defaultPerspective,
 
     /// optionalParameters: {double offAxisFraction = 0.0} , defaultValue:Literal
     double offAxisFraction = 0.0,
@@ -194,8 +195,8 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
     /// optionalParameters: {bool renderChildrenOutsideViewport = false} , defaultValue:Literal
     bool renderChildrenOutsideViewport = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
@@ -225,7 +226,7 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           children: children,
         ) {
     mateCreateName = 'ListWheelScrollView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelScrollView$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -275,11 +276,11 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
     /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , defaultValue:unprocessed
-    required double diameterRatio,
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , defaultValue:PrefixedIdentifier
+    double diameterRatio = RenderListWheelViewport.defaultDiameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , defaultValue:unprocessed
-    required double perspective,
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , defaultValue:PrefixedIdentifier
+    double perspective = RenderListWheelViewport.defaultPerspective,
 
     /// optionalParameters: {double offAxisFraction = 0.0} , defaultValue:Literal
     double offAxisFraction = 0.0,
@@ -305,8 +306,8 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
     /// optionalParameters: {bool renderChildrenOutsideViewport = false} , defaultValue:Literal
     bool renderChildrenOutsideViewport = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
@@ -336,7 +337,7 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           childDelegate: childDelegate,
         ) {
     mateCreateName = 'ListWheelScrollView.useDelegate';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelScrollView$Mate.useDelegate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -385,7 +386,7 @@ class ListWheelElement$Mate extends ListWheelElement with Mate {
       ListWheelViewport widget)
       : super(widget) {
     mateCreateName = 'ListWheelElement';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelElement$Mate(p.get('widget').value);
     mateUse('widget', widget);
   }
@@ -398,11 +399,11 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , defaultValue:unprocessed
-    required double diameterRatio,
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , defaultValue:PrefixedIdentifier
+    double diameterRatio = RenderListWheelViewport.defaultDiameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , defaultValue:unprocessed
-    required double perspective,
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , defaultValue:PrefixedIdentifier
+    double perspective = RenderListWheelViewport.defaultPerspective,
 
     /// optionalParameters: {double offAxisFraction = 0.0} , defaultValue:Literal
     double offAxisFraction = 0.0,
@@ -431,8 +432,8 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
     /// optionalParameters: {required ListWheelChildDelegate childDelegate} , defaultValue:none
     required ListWheelChildDelegate childDelegate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           diameterRatio: diameterRatio,
@@ -449,7 +450,7 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'ListWheelViewport';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelViewport$Mate(
           key: p.get('key').build(),
           diameterRatio: p.get('diameterRatio').build(),

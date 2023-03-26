@@ -8,6 +8,7 @@ import 'dart:core';
 import 'package:flutter/src/material/data_table.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:flutter/src/material/data_table_source.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
@@ -73,8 +74,8 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with Mate {
     /// optionalParameters: {void Function(int?)? onRowsPerPageChanged} , defaultValue:none
     ValueChanged<int?>? onRowsPerPageChanged,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {Color? arrowHeadColor} , defaultValue:none
     Color? arrowHeadColor,

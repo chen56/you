@@ -3,6 +3,7 @@
 import 'package:flutter/src/material/color_scheme.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/material.dart';
 
 /// class ColorScheme with Diagnosticable
 class ColorScheme$Mate extends ColorScheme with Mate {
@@ -203,14 +204,14 @@ class ColorScheme$Mate extends ColorScheme with Mate {
 
   /// ColorScheme ColorScheme.light({Brightness brightness = Brightness.light, Color primary = const Color(0xff6200ee), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffb00020), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700b3), Color? secondaryVariant = const Color(0xff018786)})
   ColorScheme$Mate.light({
-    /// optionalParameters: {Brightness brightness = Brightness.light} , defaultValue:unprocessed
-    required Brightness brightness,
+    /// optionalParameters: {Brightness brightness = Brightness.light} , defaultValue:PrefixedIdentifier
+    Brightness brightness = Brightness.light,
 
     /// optionalParameters: {Color primary = const Color(0xff6200ee)} , defaultValue:unprocessed
     required Color primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.white} , defaultValue:unprocessed
-    required Color onPrimary,
+    /// optionalParameters: {Color onPrimary = Colors.white} , defaultValue:PrefixedIdentifier
+    Color onPrimary = Colors.white,
 
     /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
@@ -221,8 +222,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , defaultValue:unprocessed
     required Color secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:unprocessed
-    required Color onSecondary,
+    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onSecondary = Colors.black,
 
     /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
@@ -245,8 +246,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color error = const Color(0xffb00020)} , defaultValue:unprocessed
     required Color error,
 
-    /// optionalParameters: {Color onError = Colors.white} , defaultValue:unprocessed
-    required Color onError,
+    /// optionalParameters: {Color onError = Colors.white} , defaultValue:PrefixedIdentifier
+    Color onError = Colors.white,
 
     /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
@@ -254,17 +255,17 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color? onErrorContainer} , defaultValue:none
     Color? onErrorContainer,
 
-    /// optionalParameters: {Color background = Colors.white} , defaultValue:unprocessed
-    required Color background,
+    /// optionalParameters: {Color background = Colors.white} , defaultValue:PrefixedIdentifier
+    Color background = Colors.white,
 
-    /// optionalParameters: {Color onBackground = Colors.black} , defaultValue:unprocessed
-    required Color onBackground,
+    /// optionalParameters: {Color onBackground = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onBackground = Colors.black,
 
-    /// optionalParameters: {Color surface = Colors.white} , defaultValue:unprocessed
-    required Color surface,
+    /// optionalParameters: {Color surface = Colors.white} , defaultValue:PrefixedIdentifier
+    Color surface = Colors.white,
 
-    /// optionalParameters: {Color onSurface = Colors.black} , defaultValue:unprocessed
-    required Color onSurface,
+    /// optionalParameters: {Color onSurface = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onSurface = Colors.black,
 
     /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,
@@ -398,14 +399,14 @@ class ColorScheme$Mate extends ColorScheme with Mate {
 
   /// ColorScheme ColorScheme.dark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffbb86fc), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffcf6679), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700B3), Color? secondaryVariant = const Color(0xff03dac6)})
   ColorScheme$Mate.dark({
-    /// optionalParameters: {Brightness brightness = Brightness.dark} , defaultValue:unprocessed
-    required Brightness brightness,
+    /// optionalParameters: {Brightness brightness = Brightness.dark} , defaultValue:PrefixedIdentifier
+    Brightness brightness = Brightness.dark,
 
     /// optionalParameters: {Color primary = const Color(0xffbb86fc)} , defaultValue:unprocessed
     required Color primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.black} , defaultValue:unprocessed
-    required Color onPrimary,
+    /// optionalParameters: {Color onPrimary = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onPrimary = Colors.black,
 
     /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
@@ -416,8 +417,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , defaultValue:unprocessed
     required Color secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:unprocessed
-    required Color onSecondary,
+    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onSecondary = Colors.black,
 
     /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
@@ -440,8 +441,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color error = const Color(0xffcf6679)} , defaultValue:unprocessed
     required Color error,
 
-    /// optionalParameters: {Color onError = Colors.black} , defaultValue:unprocessed
-    required Color onError,
+    /// optionalParameters: {Color onError = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onError = Colors.black,
 
     /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
@@ -452,14 +453,14 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color background = const Color(0xff121212)} , defaultValue:unprocessed
     required Color background,
 
-    /// optionalParameters: {Color onBackground = Colors.white} , defaultValue:unprocessed
-    required Color onBackground,
+    /// optionalParameters: {Color onBackground = Colors.white} , defaultValue:PrefixedIdentifier
+    Color onBackground = Colors.white,
 
     /// optionalParameters: {Color surface = const Color(0xff121212)} , defaultValue:unprocessed
     required Color surface,
 
-    /// optionalParameters: {Color onSurface = Colors.white} , defaultValue:unprocessed
-    required Color onSurface,
+    /// optionalParameters: {Color onSurface = Colors.white} , defaultValue:PrefixedIdentifier
+    Color onSurface = Colors.white,
 
     /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,
@@ -593,14 +594,14 @@ class ColorScheme$Mate extends ColorScheme with Mate {
 
   /// ColorScheme ColorScheme.highContrastLight({Brightness brightness = Brightness.light, Color primary = const Color(0xff0000ba), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff790000), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff000088), Color? secondaryVariant = const Color(0xff018786)})
   ColorScheme$Mate.highContrastLight({
-    /// optionalParameters: {Brightness brightness = Brightness.light} , defaultValue:unprocessed
-    required Brightness brightness,
+    /// optionalParameters: {Brightness brightness = Brightness.light} , defaultValue:PrefixedIdentifier
+    Brightness brightness = Brightness.light,
 
     /// optionalParameters: {Color primary = const Color(0xff0000ba)} , defaultValue:unprocessed
     required Color primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.white} , defaultValue:unprocessed
-    required Color onPrimary,
+    /// optionalParameters: {Color onPrimary = Colors.white} , defaultValue:PrefixedIdentifier
+    Color onPrimary = Colors.white,
 
     /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
@@ -611,8 +612,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , defaultValue:unprocessed
     required Color secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:unprocessed
-    required Color onSecondary,
+    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onSecondary = Colors.black,
 
     /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
@@ -635,8 +636,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color error = const Color(0xff790000)} , defaultValue:unprocessed
     required Color error,
 
-    /// optionalParameters: {Color onError = Colors.white} , defaultValue:unprocessed
-    required Color onError,
+    /// optionalParameters: {Color onError = Colors.white} , defaultValue:PrefixedIdentifier
+    Color onError = Colors.white,
 
     /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
@@ -644,17 +645,17 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color? onErrorContainer} , defaultValue:none
     Color? onErrorContainer,
 
-    /// optionalParameters: {Color background = Colors.white} , defaultValue:unprocessed
-    required Color background,
+    /// optionalParameters: {Color background = Colors.white} , defaultValue:PrefixedIdentifier
+    Color background = Colors.white,
 
-    /// optionalParameters: {Color onBackground = Colors.black} , defaultValue:unprocessed
-    required Color onBackground,
+    /// optionalParameters: {Color onBackground = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onBackground = Colors.black,
 
-    /// optionalParameters: {Color surface = Colors.white} , defaultValue:unprocessed
-    required Color surface,
+    /// optionalParameters: {Color surface = Colors.white} , defaultValue:PrefixedIdentifier
+    Color surface = Colors.white,
 
-    /// optionalParameters: {Color onSurface = Colors.black} , defaultValue:unprocessed
-    required Color onSurface,
+    /// optionalParameters: {Color onSurface = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onSurface = Colors.black,
 
     /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,
@@ -788,14 +789,14 @@ class ColorScheme$Mate extends ColorScheme with Mate {
 
   /// ColorScheme ColorScheme.highContrastDark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffefb7ff), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff9b374d), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xffbe9eff), Color? secondaryVariant = const Color(0xff66fff9)})
   ColorScheme$Mate.highContrastDark({
-    /// optionalParameters: {Brightness brightness = Brightness.dark} , defaultValue:unprocessed
-    required Brightness brightness,
+    /// optionalParameters: {Brightness brightness = Brightness.dark} , defaultValue:PrefixedIdentifier
+    Brightness brightness = Brightness.dark,
 
     /// optionalParameters: {Color primary = const Color(0xffefb7ff)} , defaultValue:unprocessed
     required Color primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.black} , defaultValue:unprocessed
-    required Color onPrimary,
+    /// optionalParameters: {Color onPrimary = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onPrimary = Colors.black,
 
     /// optionalParameters: {Color? primaryContainer} , defaultValue:none
     Color? primaryContainer,
@@ -806,8 +807,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , defaultValue:unprocessed
     required Color secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:unprocessed
-    required Color onSecondary,
+    /// optionalParameters: {Color onSecondary = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onSecondary = Colors.black,
 
     /// optionalParameters: {Color? secondaryContainer} , defaultValue:none
     Color? secondaryContainer,
@@ -830,8 +831,8 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color error = const Color(0xff9b374d)} , defaultValue:unprocessed
     required Color error,
 
-    /// optionalParameters: {Color onError = Colors.black} , defaultValue:unprocessed
-    required Color onError,
+    /// optionalParameters: {Color onError = Colors.black} , defaultValue:PrefixedIdentifier
+    Color onError = Colors.black,
 
     /// optionalParameters: {Color? errorContainer} , defaultValue:none
     Color? errorContainer,
@@ -842,14 +843,14 @@ class ColorScheme$Mate extends ColorScheme with Mate {
     /// optionalParameters: {Color background = const Color(0xff121212)} , defaultValue:unprocessed
     required Color background,
 
-    /// optionalParameters: {Color onBackground = Colors.white} , defaultValue:unprocessed
-    required Color onBackground,
+    /// optionalParameters: {Color onBackground = Colors.white} , defaultValue:PrefixedIdentifier
+    Color onBackground = Colors.white,
 
     /// optionalParameters: {Color surface = const Color(0xff121212)} , defaultValue:unprocessed
     required Color surface,
 
-    /// optionalParameters: {Color onSurface = Colors.white} , defaultValue:unprocessed
-    required Color onSurface,
+    /// optionalParameters: {Color onSurface = Colors.white} , defaultValue:PrefixedIdentifier
+    Color onSurface = Colors.white,
 
     /// optionalParameters: {Color? surfaceVariant} , defaultValue:none
     Color? surfaceVariant,

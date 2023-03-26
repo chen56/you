@@ -22,7 +22,7 @@ class AssetImage$Mate extends AssetImage with Mate {
           package: package,
         ) {
     mateCreateName = 'AssetImage';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => AssetImage$Mate(
           p.get('assetName').value,
           bundle: p.get('bundle').build(),

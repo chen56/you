@@ -7,6 +7,7 @@ import 'dart:ui';
 import 'package:flutter/src/rendering/box.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 
 /// class RenderPadding extends RenderShiftedBox
 class RenderPadding$Mate extends RenderPadding with Mate {
@@ -51,8 +52,8 @@ class RenderPositionedBox$Mate extends RenderPositionedBox with Mate {
     /// optionalParameters: {double? heightFactor} , defaultValue:none
     double? heightFactor,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
@@ -99,8 +100,8 @@ class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox wit
     /// optionalParameters: {double? maxHeight} , defaultValue:none
     double? maxHeight,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
@@ -138,8 +139,8 @@ class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox wit
 class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox with Mate {
   /// RenderConstraintsTransformBox RenderConstraintsTransformBox({required AlignmentGeometry alignment = Alignment.center, required TextDirection? textDirection, required BoxConstraints Function(BoxConstraints) constraintsTransform, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderConstraintsTransformBox$Mate({
-    /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {required TextDirection? textDirection} , defaultValue:none
     required TextDirection? textDirection,
@@ -150,8 +151,8 @@ class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox w
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super(
           alignment: alignment,
           textDirection: textDirection,
@@ -186,8 +187,8 @@ class RenderSizedOverflowBox$Mate extends RenderSizedOverflowBox with Mate {
     /// optionalParameters: {required Size requestedSize} , defaultValue:none
     required Size requestedSize,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
@@ -225,8 +226,8 @@ class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOve
     /// optionalParameters: {double? heightFactor} , defaultValue:none
     double? heightFactor,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,

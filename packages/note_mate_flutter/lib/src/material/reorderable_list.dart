@@ -8,10 +8,13 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/reorderable_list.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/scroll_view.dart';
+import 'package:flutter/widgets.dart';
 import 'dart:ui';
 
 /// class ReorderableListView extends StatefulWidget
@@ -54,8 +57,8 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
     /// optionalParameters: {Widget? footer} , defaultValue:none
     Widget? footer,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -78,17 +81,17 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
     /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           children: children,
@@ -210,8 +213,8 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
     /// optionalParameters: {Widget? footer} , defaultValue:none
     Widget? footer,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -234,17 +237,17 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
     /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.builder(
           key: key,
           itemBuilder: itemBuilder,

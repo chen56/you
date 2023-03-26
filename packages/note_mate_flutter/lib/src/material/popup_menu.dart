@@ -10,6 +10,7 @@ import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/material/popup_menu_theme.dart';
@@ -219,8 +220,8 @@ class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with Mate {
     /// optionalParameters: {double? iconSize} , defaultValue:none
     double? iconSize,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset offset = Offset.zero,
 
     /// optionalParameters: {bool enabled = true} , defaultValue:Literal
     bool enabled = true,
@@ -240,8 +241,8 @@ class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with Mate {
     /// optionalParameters: {PopupMenuPosition? position} , defaultValue:none
     PopupMenuPosition? position,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
           itemBuilder: itemBuilder,

@@ -47,7 +47,7 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
           semanticsOnTapHint: semanticsOnTapHint,
         ) {
     mateCreateName = 'ModalBarrier';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ModalBarrier$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
@@ -107,7 +107,7 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
           semanticsOnTapHint: semanticsOnTapHint,
         ) {
     mateCreateName = 'AnimatedModalBarrier';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedModalBarrier$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),

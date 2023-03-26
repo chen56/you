@@ -4,6 +4,7 @@ import 'package:flutter/src/physics/friction_simulation.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/physics/tolerance.dart';
+import 'package:flutter/physics.dart';
 
 /// class FrictionSimulation extends Simulation
 class FrictionSimulation$Mate extends FrictionSimulation with Mate {
@@ -17,8 +18,8 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:unprocessed
-    required Tolerance tolerance,
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    Tolerance tolerance = Tolerance.defaultTolerance,
 
     /// optionalParameters: {double constantDeceleration = 0} , defaultValue:Literal
     double constantDeceleration = 0,

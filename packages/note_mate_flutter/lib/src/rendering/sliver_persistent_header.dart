@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 
 /// class OverScrollHeaderStretchConfiguration
 class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchConfiguration with Mate {
@@ -34,11 +35,11 @@ class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchC
 class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderShowOnScreenConfiguration with Mate {
   /// PersistentHeaderShowOnScreenConfiguration PersistentHeaderShowOnScreenConfiguration({double minShowOnScreenExtent = double.negativeInfinity, double maxShowOnScreenExtent = double.infinity})
   PersistentHeaderShowOnScreenConfiguration$Mate({
-    /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , defaultValue:unprocessed
-    required double minShowOnScreenExtent,
+    /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , defaultValue:PrefixedIdentifier
+    double minShowOnScreenExtent = double.negativeInfinity,
 
-    /// optionalParameters: {double maxShowOnScreenExtent = double.infinity} , defaultValue:unprocessed
-    required double maxShowOnScreenExtent,
+    /// optionalParameters: {double maxShowOnScreenExtent = double.infinity} , defaultValue:PrefixedIdentifier
+    double maxShowOnScreenExtent = double.infinity,
   }) : super(
           minShowOnScreenExtent: minShowOnScreenExtent,
           maxShowOnScreenExtent: maxShowOnScreenExtent,
@@ -58,8 +59,8 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderSho
 class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfiguration with Mate {
   /// FloatingHeaderSnapConfiguration FloatingHeaderSnapConfiguration({Curve curve = Curves.ease, Duration duration = const Duration(milliseconds: 300)})
   FloatingHeaderSnapConfiguration$Mate({
-    /// optionalParameters: {Curve curve = Curves.ease} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.ease} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.ease,
 
     /// optionalParameters: {Duration duration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
     required Duration duration,

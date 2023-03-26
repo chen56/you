@@ -3,6 +3,7 @@
 import 'package:flutter/src/rendering/view.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 
@@ -10,8 +11,8 @@ import 'package:flutter/src/rendering/box.dart';
 class ViewConfiguration$Mate extends ViewConfiguration with Mate {
   /// ViewConfiguration ViewConfiguration({Size size = Size.zero, double devicePixelRatio = 1.0})
   ViewConfiguration$Mate({
-    /// optionalParameters: {Size size = Size.zero} , defaultValue:unprocessed
-    required Size size,
+    /// optionalParameters: {Size size = Size.zero} , defaultValue:PrefixedIdentifier
+    Size size = Size.zero,
 
     /// optionalParameters: {double devicePixelRatio = 1.0} , defaultValue:Literal
     double devicePixelRatio = 1.0,

@@ -25,7 +25,7 @@ class OverlayEntry$Mate extends OverlayEntry with Mate {
           maintainState: maintainState,
         ) {
     mateCreateName = 'OverlayEntry';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverlayEntry$Mate(
           builder: p.get('builder').build(),
           opaque: p.get('opaque').build(),
@@ -47,15 +47,15 @@ class Overlay$Mate extends Overlay with Mate {
     /// optionalParameters: {List<OverlayEntry> initialEntries = const <OverlayEntry>[]} , defaultValue:unprocessed
     required List<OverlayEntry> initialEntries,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           initialEntries: initialEntries,
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'Overlay';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Overlay$Mate(
           key: p.get('key').build(),
           initialEntries: p.get('initialEntries').build(),
@@ -76,7 +76,7 @@ class OverlayPortalController$Mate extends OverlayPortalController with Mate {
       String? debugLabel})
       : super(debugLabel: debugLabel) {
     mateCreateName = 'OverlayPortalController';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
     mateUse('debugLabel', debugLabel);
   }
@@ -104,7 +104,7 @@ class OverlayPortal$Mate extends OverlayPortal with Mate {
           child: child,
         ) {
     mateCreateName = 'OverlayPortal';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverlayPortal$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -137,7 +137,7 @@ class OverlayPortal$Mate extends OverlayPortal with Mate {
           child: child,
         ) {
     mateCreateName = 'OverlayPortal.targetsRootOverlay';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverlayPortal$Mate.targetsRootOverlay(
           key: p.get('key').build(),
           controller: p.get('controller').build(),

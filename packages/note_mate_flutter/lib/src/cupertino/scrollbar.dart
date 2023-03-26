@@ -26,13 +26,13 @@ class CupertinoScrollbar$Mate extends CupertinoScrollbar with Mate {
     /// optionalParameters: {bool? thumbVisibility} , defaultValue:none
     bool? thumbVisibility,
 
-    /// optionalParameters: {double thickness = defaultThickness} , defaultValue:none
+    /// optionalParameters: {double thickness = defaultThickness} , defaultValue:unprocessed
     required double thickness,
 
     /// optionalParameters: {double thicknessWhileDragging = defaultThicknessWhileDragging} , defaultValue:unprocessed
     required double thicknessWhileDragging,
 
-    /// optionalParameters: {Radius radius = defaultRadius} , defaultValue:none
+    /// optionalParameters: {Radius radius = defaultRadius} , defaultValue:unprocessed
     required Radius radius,
 
     /// optionalParameters: {Radius radiusWhileDragging = defaultRadiusWhileDragging} , defaultValue:unprocessed

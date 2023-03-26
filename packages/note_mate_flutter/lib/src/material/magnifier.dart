@@ -6,9 +6,11 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/foundation/change_notifier.dart';
 import 'package:flutter/src/widgets/magnifier.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/box_shadow.dart';
+import 'package:flutter/material.dart';
 
 /// class TextMagnifier extends StatefulWidget
 class TextMagnifier$Mate extends TextMagnifier with Mate {
@@ -41,8 +43,8 @@ class Magnifier$Mate extends Magnifier with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , defaultValue:unprocessed
-    required Offset additionalFocalPointOffset,
+    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset additionalFocalPointOffset = Offset.zero,
 
     /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(_borderRadius))} , defaultValue:unprocessed
     required BorderRadius borderRadius,
@@ -53,8 +55,8 @@ class Magnifier$Mate extends Magnifier with Mate {
     /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(blurRadius: 1.5, offset: Offset(0, 2), spreadRadius: 0.75, color: Color.fromARGB(25, 0, 0, 0))]} , defaultValue:unprocessed
     required List<BoxShadow> shadows,
 
-    /// optionalParameters: {Size size = Magnifier.kDefaultMagnifierSize} , defaultValue:unprocessed
-    required Size size,
+    /// optionalParameters: {Size size = Magnifier.kDefaultMagnifierSize} , defaultValue:PrefixedIdentifier
+    Size size = Magnifier.kDefaultMagnifierSize,
   }) : super(
           key: key,
           additionalFocalPointOffset: additionalFocalPointOffset,

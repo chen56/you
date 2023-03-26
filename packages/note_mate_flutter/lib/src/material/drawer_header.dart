@@ -7,6 +7,7 @@ import 'package:flutter/src/painting/decoration.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'dart:core';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class DrawerHeader extends StatelessWidget
@@ -28,8 +29,8 @@ class DrawerHeader$Mate extends DrawerHeader with Mate {
     /// optionalParameters: {Duration duration = const Duration(milliseconds: 250)} , defaultValue:unprocessed
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.fastOutSlowIn,
 
     /// optionalParameters: {required Widget? child} , defaultValue:none
     required Widget? child,

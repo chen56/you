@@ -37,7 +37,7 @@ class Placeholder$Mate extends Placeholder with Mate {
           child: child,
         ) {
     mateCreateName = 'Placeholder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Placeholder$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),

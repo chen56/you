@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/material/theme_data.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'dart:ui';
 
@@ -73,10 +74,10 @@ class AnimatedTheme$Mate extends AnimatedTheme with Mate {
     /// optionalParameters: {required ThemeData data} , defaultValue:none
     required ThemeData data,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
-    /// optionalParameters: {Duration duration = kThemeAnimationDuration} , defaultValue:none
+    /// optionalParameters: {Duration duration = kThemeAnimationDuration} , defaultValue:unprocessed
     required Duration duration,
 
     /// optionalParameters: {void Function()? onEnd} , defaultValue:none

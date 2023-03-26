@@ -15,6 +15,8 @@ import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/text_painter.dart';
 
 /// class BoxConstraintsTween extends Tween<BoxConstraints>
@@ -31,7 +33,7 @@ class BoxConstraintsTween$Mate extends BoxConstraintsTween with Mate {
           end: end,
         ) {
     mateCreateName = 'BoxConstraintsTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BoxConstraintsTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -55,7 +57,7 @@ class DecorationTween$Mate extends DecorationTween with Mate {
           end: end,
         ) {
     mateCreateName = 'DecorationTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DecorationTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -79,7 +81,7 @@ class EdgeInsetsTween$Mate extends EdgeInsetsTween with Mate {
           end: end,
         ) {
     mateCreateName = 'EdgeInsetsTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => EdgeInsetsTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -103,7 +105,7 @@ class EdgeInsetsGeometryTween$Mate extends EdgeInsetsGeometryTween with Mate {
           end: end,
         ) {
     mateCreateName = 'EdgeInsetsGeometryTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => EdgeInsetsGeometryTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -127,7 +129,7 @@ class BorderRadiusTween$Mate extends BorderRadiusTween with Mate {
           end: end,
         ) {
     mateCreateName = 'BorderRadiusTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BorderRadiusTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -151,7 +153,7 @@ class BorderTween$Mate extends BorderTween with Mate {
           end: end,
         ) {
     mateCreateName = 'BorderTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BorderTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -175,7 +177,7 @@ class Matrix4Tween$Mate extends Matrix4Tween with Mate {
           end: end,
         ) {
     mateCreateName = 'Matrix4Tween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Matrix4Tween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -199,7 +201,7 @@ class TextStyleTween$Mate extends TextStyleTween with Mate {
           end: end,
         ) {
     mateCreateName = 'TextStyleTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextStyleTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -252,11 +254,11 @@ class AnimatedContainer$Mate extends AnimatedContainer with Mate {
     /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -283,7 +285,7 @@ class AnimatedContainer$Mate extends AnimatedContainer with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedContainer';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedContainer$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -336,8 +338,8 @@ class AnimatedPadding$Mate extends AnimatedPadding with Mate {
     /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -353,7 +355,7 @@ class AnimatedPadding$Mate extends AnimatedPadding with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedPadding';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedPadding$Mate(
           key: p.get('key').build(),
           padding: p.get('padding').build(),
@@ -390,8 +392,8 @@ class AnimatedAlign$Mate extends AnimatedAlign with Mate {
     /// optionalParameters: {double? widthFactor} , defaultValue:none
     double? widthFactor,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -409,7 +411,7 @@ class AnimatedAlign$Mate extends AnimatedAlign with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedAlign';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedAlign$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -459,8 +461,8 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
     /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -481,7 +483,7 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedPositioned';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedPositioned$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -519,8 +521,8 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
     /// optionalParameters: {required Rect rect} , defaultValue:none
     required Rect rect,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -536,7 +538,7 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedPositioned.fromRect';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedPositioned$Mate.fromRect(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -582,8 +584,8 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional w
     /// optionalParameters: {double? height} , defaultValue:none
     double? height,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -604,7 +606,7 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional w
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedPositionedDirectional';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedPositionedDirectional$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -645,14 +647,14 @@ class AnimatedScale$Mate extends AnimatedScale with Mate {
     /// optionalParameters: {required double scale} , defaultValue:none
     required double scale,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , defaultValue:unprocessed
-    required Alignment alignment,
+    /// optionalParameters: {Alignment alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    Alignment alignment = Alignment.center,
 
     /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -670,7 +672,7 @@ class AnimatedScale$Mate extends AnimatedScale with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedScale';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedScale$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -705,14 +707,14 @@ class AnimatedRotation$Mate extends AnimatedRotation with Mate {
     /// optionalParameters: {required double turns} , defaultValue:none
     required double turns,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , defaultValue:unprocessed
-    required Alignment alignment,
+    /// optionalParameters: {Alignment alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    Alignment alignment = Alignment.center,
 
     /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -730,7 +732,7 @@ class AnimatedRotation$Mate extends AnimatedRotation with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedRotation';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedRotation$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -765,8 +767,8 @@ class AnimatedSlide$Mate extends AnimatedSlide with Mate {
     /// optionalParameters: {required Offset offset} , defaultValue:none
     required Offset offset,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -782,7 +784,7 @@ class AnimatedSlide$Mate extends AnimatedSlide with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedSlide';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedSlide$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -813,8 +815,8 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with Mate {
     /// optionalParameters: {required double opacity} , defaultValue:none
     required double opacity,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -834,7 +836,7 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
         ) {
     mateCreateName = 'AnimatedOpacity';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedOpacity$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -867,8 +869,8 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with Mate {
     /// optionalParameters: {required double opacity} , defaultValue:none
     required double opacity,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -888,7 +890,7 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
         ) {
     mateCreateName = 'SliverAnimatedOpacity';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverAnimatedOpacity$Mate(
           key: p.get('key').build(),
           sliver: p.get('sliver').build(),
@@ -927,20 +929,20 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Mate {
     /// optionalParameters: {bool softWrap = true} , defaultValue:Literal
     bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:unprocessed
-    required TextOverflow overflow,
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:PrefixedIdentifier
+    TextOverflow overflow = TextOverflow.clip,
 
     /// optionalParameters: {int? maxLines} , defaultValue:none
     int? maxLines,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
-    required TextWidthBasis textWidthBasis,
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:PrefixedIdentifier
+    TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -962,7 +964,7 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedDefaultTextStyle';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedDefaultTextStyle$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1005,11 +1007,11 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
     /// optionalParameters: {required BoxShape shape} , defaultValue:none
     required BoxShape shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , defaultValue:unprocessed
-    required BorderRadius borderRadius,
+    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , defaultValue:PrefixedIdentifier
+    BorderRadius borderRadius = BorderRadius.zero,
 
     /// optionalParameters: {required double elevation} , defaultValue:none
     required double elevation,
@@ -1026,8 +1028,8 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
     /// optionalParameters: {bool animateShadowColor = true} , defaultValue:Literal
     bool animateShadowColor = true,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -1050,7 +1052,7 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedPhysicalModel';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedPhysicalModel$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1089,8 +1091,8 @@ class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox wit
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
@@ -1101,8 +1103,8 @@ class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox wit
     /// optionalParameters: {double? widthFactor} , defaultValue:none
     double? widthFactor,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -1120,7 +1122,7 @@ class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox wit
           onEnd: onEnd,
         ) {
     mateCreateName = 'AnimatedFractionallySizedBox';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedFractionallySizedBox$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),

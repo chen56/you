@@ -3,6 +3,7 @@
 import 'package:flutter/src/services/text_input.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
+import 'package:flutter/services.dart';
 import 'dart:ui';
 import 'package:flutter/src/services/autofill.dart';
 import 'package:flutter/src/services/text_editing.dart';
@@ -21,7 +22,7 @@ class TextInputType$Mate extends TextInputType with Mate {
           decimal: decimal,
         ) {
     mateCreateName = 'TextInputType.numberWithOptions';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextInputType$Mate.numberWithOptions(
           signed: p.get('signed').build(),
           decimal: p.get('decimal').build(),
@@ -35,8 +36,8 @@ class TextInputType$Mate extends TextInputType with Mate {
 class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
   /// TextInputConfiguration TextInputConfiguration({TextInputType inputType = TextInputType.text, bool readOnly = false, bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, bool enableInteractiveSelection = true, String? actionLabel, TextInputAction inputAction = TextInputAction.done, Brightness keyboardAppearance = Brightness.light, TextCapitalization textCapitalization = TextCapitalization.none, AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled, bool enableIMEPersonalizedLearning = true, List<String> allowedMimeTypes = const <String>[], bool enableDeltaModel = false})
   TextInputConfiguration$Mate({
-    /// optionalParameters: {TextInputType inputType = TextInputType.text} , defaultValue:unprocessed
-    required TextInputType inputType,
+    /// optionalParameters: {TextInputType inputType = TextInputType.text} , defaultValue:PrefixedIdentifier
+    TextInputType inputType = TextInputType.text,
 
     /// optionalParameters: {bool readOnly = false} , defaultValue:Literal
     bool readOnly = false,
@@ -62,17 +63,17 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
     /// optionalParameters: {String? actionLabel} , defaultValue:none
     String? actionLabel,
 
-    /// optionalParameters: {TextInputAction inputAction = TextInputAction.done} , defaultValue:unprocessed
-    required TextInputAction inputAction,
+    /// optionalParameters: {TextInputAction inputAction = TextInputAction.done} , defaultValue:PrefixedIdentifier
+    TextInputAction inputAction = TextInputAction.done,
 
-    /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , defaultValue:unprocessed
-    required Brightness keyboardAppearance,
+    /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , defaultValue:PrefixedIdentifier
+    Brightness keyboardAppearance = Brightness.light,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:unprocessed
-    required TextCapitalization textCapitalization,
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:PrefixedIdentifier
+    TextCapitalization textCapitalization = TextCapitalization.none,
 
-    /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , defaultValue:unprocessed
-    required AutofillConfiguration autofillConfiguration,
+    /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , defaultValue:PrefixedIdentifier
+    AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled,
 
     /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , defaultValue:Literal
     bool enableIMEPersonalizedLearning = true,
@@ -173,15 +174,15 @@ class TextEditingValue$Mate extends TextEditingValue with Mate {
     /// optionalParameters: {TextSelection selection = const TextSelection.collapsed(offset: -1)} , defaultValue:unprocessed
     required TextSelection selection,
 
-    /// optionalParameters: {TextRange composing = TextRange.empty} , defaultValue:unprocessed
-    required TextRange composing,
+    /// optionalParameters: {TextRange composing = TextRange.empty} , defaultValue:PrefixedIdentifier
+    TextRange composing = TextRange.empty,
   }) : super(
           text: text,
           selection: selection,
           composing: composing,
         ) {
     mateCreateName = 'TextEditingValue';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingValue$Mate(
           text: p.get('text').build(),
           selection: p.get('selection').build(),
@@ -203,8 +204,8 @@ class SelectionRect$Mate extends SelectionRect with Mate {
     /// optionalParameters: {required Rect bounds} , defaultValue:none
     required Rect bounds,
 
-    /// optionalParameters: {TextDirection direction = TextDirection.ltr} , defaultValue:unprocessed
-    required TextDirection direction,
+    /// optionalParameters: {TextDirection direction = TextDirection.ltr} , defaultValue:PrefixedIdentifier
+    TextDirection direction = TextDirection.ltr,
   }) : super(
           position: position,
           bounds: bounds,

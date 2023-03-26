@@ -9,6 +9,7 @@ import 'dart:ui';
 import 'package:flutter/src/animation/animation.dart';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/decoration_image.dart';
 import 'dart:io';
 import 'package:flutter/src/services/asset_bundle.dart';
@@ -57,11 +58,11 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
@@ -75,8 +76,8 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
     bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
   }) : super(
           key: key,
           image: image,
@@ -100,7 +101,7 @@ class Image$Mate extends Image with Mate {
           filterQuality: filterQuality,
         ) {
     mateCreateName = 'Image';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate(
           key: p.get('key').build(),
           image: p.get('image').build(),
@@ -188,11 +189,11 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
@@ -203,8 +204,8 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {bool gaplessPlayback = false} , defaultValue:Literal
     bool gaplessPlayback = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
 
     /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
     bool isAntiAlias = false,
@@ -244,7 +245,7 @@ class Image$Mate extends Image with Mate {
           cacheHeight: cacheHeight,
         ) {
     mateCreateName = 'Image.network';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.network(
           p.get('src').value,
           key: p.get('key').build(),
@@ -337,11 +338,11 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
@@ -355,8 +356,8 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
     bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
 
     /// optionalParameters: {int? cacheWidth} , defaultValue:none
     int? cacheWidth,
@@ -388,7 +389,7 @@ class Image$Mate extends Image with Mate {
           cacheHeight: cacheHeight,
         ) {
     mateCreateName = 'Image.file';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.file(
           p.get('file').value,
           key: p.get('key').build(),
@@ -480,11 +481,11 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
@@ -501,8 +502,8 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {String? package} , defaultValue:none
     String? package,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
 
     /// optionalParameters: {int? cacheWidth} , defaultValue:none
     int? cacheWidth,
@@ -536,7 +537,7 @@ class Image$Mate extends Image with Mate {
           cacheHeight: cacheHeight,
         ) {
     mateCreateName = 'Image.asset';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.asset(
           p.get('name').value,
           key: p.get('key').build(),
@@ -629,11 +630,11 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
@@ -647,8 +648,8 @@ class Image$Mate extends Image with Mate {
     /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
     bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
 
     /// optionalParameters: {int? cacheWidth} , defaultValue:none
     int? cacheWidth,
@@ -680,7 +681,7 @@ class Image$Mate extends Image with Mate {
           cacheHeight: cacheHeight,
         ) {
     mateCreateName = 'Image.memory';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.memory(
           p.get('bytes').value,
           key: p.get('key').build(),

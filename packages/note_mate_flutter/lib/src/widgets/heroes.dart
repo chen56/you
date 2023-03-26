@@ -40,7 +40,7 @@ class Hero$Mate extends Hero with Mate {
           child: child,
         ) {
     mateCreateName = 'Hero';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Hero$Mate(
           key: p.get('key').build(),
           tag: p.get('tag').build(),
@@ -69,7 +69,7 @@ class HeroController$Mate extends HeroController with Mate {
       CreateRectTween? createRectTween})
       : super(createRectTween: createRectTween) {
     mateCreateName = 'HeroController';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroController$Mate(createRectTween: p.get('createRectTween').build());
     mateUse('createRectTween', createRectTween);
   }
@@ -93,7 +93,7 @@ class HeroMode$Mate extends HeroMode with Mate {
           enabled: enabled,
         ) {
     mateCreateName = 'HeroMode';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroMode$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

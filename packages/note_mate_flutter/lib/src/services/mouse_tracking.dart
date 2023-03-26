@@ -3,6 +3,7 @@
 import 'package:flutter/src/services/mouse_tracking.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
+import 'package:flutter/services.dart';
 import 'dart:core';
 
 /// class MouseTrackerAnnotation with Diagnosticable
@@ -15,8 +16,8 @@ class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate {
     /// optionalParameters: {void Function(PointerExitEvent)? onExit} , defaultValue:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:unprocessed
-    required MouseCursor cursor,
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:PrefixedIdentifier
+    MouseCursor cursor = MouseCursor.defer,
 
     /// optionalParameters: {bool validForMouseTracker = true} , defaultValue:Literal
     bool validForMouseTracker = true,

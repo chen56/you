@@ -9,6 +9,7 @@ import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/painting/strut_style.dart';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/text_selection.dart';
 import 'package:flutter/src/gestures/tap.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
@@ -74,8 +75,8 @@ class SelectableText$Mate extends SelectableText with Mate {
     /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , defaultValue:unprocessed
     required BoxWidthStyle selectionWidthStyle,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool enableInteractiveSelection = true} , defaultValue:Literal
     bool enableInteractiveSelection = true,
@@ -256,8 +257,8 @@ class SelectableText$Mate extends SelectableText with Mate {
     /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , defaultValue:unprocessed
     required BoxWidthStyle selectionWidthStyle,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool enableInteractiveSelection = true} , defaultValue:Literal
     bool enableInteractiveSelection = true,

@@ -19,7 +19,7 @@ class FractionalOffsetTween$Mate extends FractionalOffsetTween with Mate {
           end: end,
         ) {
     mateCreateName = 'FractionalOffsetTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FractionalOffsetTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -43,7 +43,7 @@ class AlignmentTween$Mate extends AlignmentTween with Mate {
           end: end,
         ) {
     mateCreateName = 'AlignmentTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => AlignmentTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -67,7 +67,7 @@ class AlignmentGeometryTween$Mate extends AlignmentGeometryTween with Mate {
           end: end,
         ) {
     mateCreateName = 'AlignmentGeometryTween';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => AlignmentGeometryTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),

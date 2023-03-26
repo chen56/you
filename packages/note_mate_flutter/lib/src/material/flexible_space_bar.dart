@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/material.dart';
 
 /// class FlexibleSpaceBar extends StatefulWidget
 class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
@@ -26,8 +27,8 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
     /// optionalParameters: {EdgeInsetsGeometry? titlePadding} , defaultValue:none
     EdgeInsetsGeometry? titlePadding,
 
-    /// optionalParameters: {CollapseMode collapseMode = CollapseMode.parallax} , defaultValue:unprocessed
-    required CollapseMode collapseMode,
+    /// optionalParameters: {CollapseMode collapseMode = CollapseMode.parallax} , defaultValue:PrefixedIdentifier
+    CollapseMode collapseMode = CollapseMode.parallax,
 
     /// optionalParameters: {List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground]} , defaultValue:unprocessed
     required List<StretchMode> stretchModes,

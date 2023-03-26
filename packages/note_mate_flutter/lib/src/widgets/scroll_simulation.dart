@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/physics/spring_simulation.dart';
 import 'package:flutter/src/physics/tolerance.dart';
+import 'package:flutter/physics.dart';
 
 /// class BouncingScrollSimulation extends Simulation
 class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate {
@@ -28,8 +29,8 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate {
     /// optionalParameters: {double constantDeceleration = 0} , defaultValue:Literal
     double constantDeceleration = 0,
 
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:unprocessed
-    required Tolerance tolerance,
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           position: position,
           velocity: velocity,
@@ -40,7 +41,7 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate {
           tolerance: tolerance,
         ) {
     mateCreateName = 'BouncingScrollSimulation';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BouncingScrollSimulation$Mate(
           position: p.get('position').build(),
           velocity: p.get('velocity').build(),
@@ -73,8 +74,8 @@ class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate {
     /// optionalParameters: {double friction = 0.015} , defaultValue:Literal
     double friction = 0.015,
 
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:unprocessed
-    required Tolerance tolerance,
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           position: position,
           velocity: velocity,
@@ -82,7 +83,7 @@ class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate {
           tolerance: tolerance,
         ) {
     mateCreateName = 'ClampingScrollSimulation';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ClampingScrollSimulation$Mate(
           position: p.get('position').build(),
           velocity: p.get('velocity').build(),

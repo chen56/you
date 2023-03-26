@@ -19,7 +19,7 @@ class ScrollNotificationObserver$Mate extends ScrollNotificationObserver with Ma
           child: child,
         ) {
     mateCreateName = 'ScrollNotificationObserver';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollNotificationObserver$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

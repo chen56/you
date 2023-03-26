@@ -197,8 +197,8 @@ class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Mate {
     /// optionalParameters: {Animation<Color?>? valueColor} , defaultValue:none
     Animation<Color?>? valueColor,
 
-    /// optionalParameters: {double strokeWidth = defaultStrokeWidth} , defaultValue:Literal
-    double strokeWidth = 4.0,
+    /// optionalParameters: {double strokeWidth = defaultStrokeWidth} , defaultValue:unprocessed
+    required double strokeWidth,
 
     /// optionalParameters: {String? semanticsLabel} , defaultValue:none
     String? semanticsLabel,

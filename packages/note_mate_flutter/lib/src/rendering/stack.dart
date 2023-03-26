@@ -5,7 +5,9 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'dart:ui';
+import 'package:flutter/rendering.dart';
 
 /// class RelativeRect
 class RelativeRect$Mate extends RelativeRect with Mate {
@@ -29,7 +31,7 @@ class RelativeRect$Mate extends RelativeRect with Mate {
           bottom,
         ) {
     mateCreateName = 'RelativeRect.fromLTRB';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RelativeRect$Mate.fromLTRB(
           p.get('left').value,
           p.get('top').value,
@@ -50,17 +52,17 @@ class RenderStack$Mate extends RenderStack with Mate {
     /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = AlignmentDirectional.topStart,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:unprocessed
-    required StackFit fit,
+    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:PrefixedIdentifier
+    StackFit fit = StackFit.loose,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           children: children,
           alignment: alignment,
@@ -92,17 +94,17 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate {
     /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = AlignmentDirectional.topStart,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:unprocessed
-    required StackFit fit,
+    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:PrefixedIdentifier
+    StackFit fit = StackFit.loose,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {int? index = 0} , defaultValue:Literal
     int? index = 0,

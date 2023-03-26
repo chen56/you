@@ -5,9 +5,12 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:ui';
+import 'package:flutter/widgets.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/rendering/proxy_box.dart';
+import 'package:flutter/rendering.dart';
 
 /// class Dismissible extends StatefulWidget
 class Dismissible$Mate extends Dismissible with Mate {
@@ -37,8 +40,8 @@ class Dismissible$Mate extends Dismissible with Mate {
     /// optionalParameters: {void Function(DismissDirection)? onDismissed} , defaultValue:none
     DismissDirectionCallback? onDismissed,
 
-    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , defaultValue:unprocessed
-    required DismissDirection direction,
+    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , defaultValue:PrefixedIdentifier
+    DismissDirection direction = DismissDirection.horizontal,
 
     /// optionalParameters: {Duration? resizeDuration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
     Duration? resizeDuration,
@@ -52,11 +55,11 @@ class Dismissible$Mate extends Dismissible with Mate {
     /// optionalParameters: {double crossAxisEndOffset = 0.0} , defaultValue:Literal
     double crossAxisEndOffset = 0.0,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.opaque} , defaultValue:unprocessed
-    required HitTestBehavior behavior,
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.opaque} , defaultValue:PrefixedIdentifier
+    HitTestBehavior behavior = HitTestBehavior.opaque,
   }) : super(
           key: key,
           child: child,
@@ -75,7 +78,7 @@ class Dismissible$Mate extends Dismissible with Mate {
           behavior: behavior,
         ) {
     mateCreateName = 'Dismissible';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Dismissible$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -115,8 +118,8 @@ class Dismissible$Mate extends Dismissible with Mate {
 class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate {
   /// DismissUpdateDetails DismissUpdateDetails({DismissDirection direction = DismissDirection.horizontal, bool reached = false, bool previousReached = false, double progress = 0.0})
   DismissUpdateDetails$Mate({
-    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , defaultValue:unprocessed
-    required DismissDirection direction,
+    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , defaultValue:PrefixedIdentifier
+    DismissDirection direction = DismissDirection.horizontal,
 
     /// optionalParameters: {bool reached = false} , defaultValue:Literal
     bool reached = false,
@@ -133,7 +136,7 @@ class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate {
           progress: progress,
         ) {
     mateCreateName = 'DismissUpdateDetails';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DismissUpdateDetails$Mate(
           direction: p.get('direction').build(),
           reached: p.get('reached').build(),

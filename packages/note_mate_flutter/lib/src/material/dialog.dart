@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/painting/alignment.dart';
@@ -15,6 +16,7 @@ import 'package:flutter/src/rendering/flex.dart';
 import 'package:flutter/src/widgets/overflow_bar.dart';
 import 'package:flutter/src/painting/basic_types.dart';
 import 'package:flutter/src/widgets/inherited_theme.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/navigator.dart';
 import 'package:flutter/src/widgets/focus_traversal.dart';
 
@@ -40,14 +42,14 @@ class Dialog$Mate extends Dialog with Mate {
     /// optionalParameters: {Duration insetAnimationDuration = const Duration(milliseconds: 100)} , defaultValue:unprocessed
     required Duration insetAnimationDuration,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:unprocessed
-    required Curve insetAnimationCurve,
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:PrefixedIdentifier
+    Curve insetAnimationCurve = Curves.decelerate,
 
     /// optionalParameters: {EdgeInsets? insetPadding = _defaultInsetPadding} , defaultValue:unprocessed
     EdgeInsets? insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
@@ -109,11 +111,11 @@ class Dialog$Mate extends Dialog with Mate {
     /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Duration insetAnimationDuration = Duration.zero} , defaultValue:unprocessed
-    required Duration insetAnimationDuration,
+    /// optionalParameters: {Duration insetAnimationDuration = Duration.zero} , defaultValue:PrefixedIdentifier
+    Duration insetAnimationDuration = Duration.zero,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:unprocessed
-    required Curve insetAnimationCurve,
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:PrefixedIdentifier
+    Curve insetAnimationCurve = Curves.decelerate,
 
     /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
@@ -214,8 +216,8 @@ class AlertDialog$Mate extends AlertDialog with Mate {
     /// optionalParameters: {EdgeInsets insetPadding = _defaultInsetPadding} , defaultValue:unprocessed
     required EdgeInsets insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
@@ -391,8 +393,8 @@ class SimpleDialog$Mate extends SimpleDialog with Mate {
     /// optionalParameters: {EdgeInsets insetPadding = _defaultInsetPadding} , defaultValue:unprocessed
     required EdgeInsets insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
@@ -466,8 +468,8 @@ class DialogRoute$Mate<T> extends DialogRoute<T> with Mate {
     /// optionalParameters: {CapturedThemes? themes} , defaultValue:none
     CapturedThemes? themes,
 
-    /// optionalParameters: {Color? barrierColor = Colors.black54} , defaultValue:is!ConstVariableElement
-    Color? barrierColor,
+    /// optionalParameters: {Color? barrierColor = Colors.black54} , defaultValue:PrefixedIdentifier
+    Color? barrierColor = Colors.black54,
 
     /// optionalParameters: {bool barrierDismissible = true} , defaultValue:is!ConstVariableElement
     required bool barrierDismissible,

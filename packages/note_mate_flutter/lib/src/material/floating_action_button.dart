@@ -10,6 +10,7 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/material/theme_data.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/painting/text_style.dart';
 
@@ -71,8 +72,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
@@ -221,8 +222,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
@@ -362,8 +363,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,
@@ -494,8 +495,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
     /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {MouseCursor? mouseCursor = SystemMouseCursors.click} , defaultValue:unprocessed
-    MouseCursor? mouseCursor,
+    /// optionalParameters: {MouseCursor? mouseCursor = SystemMouseCursors.click} , defaultValue:PrefixedIdentifier
+    MouseCursor? mouseCursor = SystemMouseCursors.click,
 
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
@@ -506,8 +507,8 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,

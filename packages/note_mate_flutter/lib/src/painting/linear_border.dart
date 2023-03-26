@@ -4,6 +4,7 @@ import 'package:flutter/src/painting/linear_border.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 
 /// class LinearBorderEdge
 class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
@@ -19,7 +20,7 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
           alignment: alignment,
         ) {
     mateCreateName = 'LinearBorderEdge';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorderEdge$Mate(
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
@@ -33,8 +34,8 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
 class LinearBorder$Mate extends LinearBorder with Mate {
   /// LinearBorder LinearBorder({BorderSide side = BorderSide.none, LinearBorderEdge? start, LinearBorderEdge? end, LinearBorderEdge? top, LinearBorderEdge? bottom})
   LinearBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
     /// optionalParameters: {LinearBorderEdge? start} , defaultValue:none
     LinearBorderEdge? start,
@@ -55,7 +56,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           bottom: bottom,
         ) {
     mateCreateName = 'LinearBorder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate(
           side: p.get('side').build(),
           start: p.get('start').build(),
@@ -72,8 +73,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
 
   /// LinearBorder LinearBorder.start({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.start({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
     /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
     double alignment = 0.0,
@@ -86,7 +87,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           size: size,
         ) {
     mateCreateName = 'LinearBorder.start';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.start(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
@@ -99,8 +100,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
 
   /// LinearBorder LinearBorder.end({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.end({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
     /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
     double alignment = 0.0,
@@ -113,7 +114,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           size: size,
         ) {
     mateCreateName = 'LinearBorder.end';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.end(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
@@ -126,8 +127,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
 
   /// LinearBorder LinearBorder.top({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.top({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
     /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
     double alignment = 0.0,
@@ -140,7 +141,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           size: size,
         ) {
     mateCreateName = 'LinearBorder.top';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.top(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
@@ -153,8 +154,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
 
   /// LinearBorder LinearBorder.bottom({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.bottom({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
     /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
     double alignment = 0.0,
@@ -167,7 +168,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           size: size,
         ) {
     mateCreateName = 'LinearBorder.bottom';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.bottom(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),

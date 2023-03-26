@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/text_style.dart';
 
@@ -35,8 +36,8 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate {
     /// optionalParameters: {Duration insetAnimationDuration = const Duration(milliseconds: 100)} , defaultValue:unprocessed
     required Duration insetAnimationDuration,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:unprocessed
-    required Curve insetAnimationCurve,
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:PrefixedIdentifier
+    Curve insetAnimationCurve = Curves.decelerate,
   }) : super(
           key: key,
           title: title,

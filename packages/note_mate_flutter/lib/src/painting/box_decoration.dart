@@ -9,6 +9,7 @@ import 'package:flutter/src/painting/border_radius.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/box_shadow.dart';
 import 'package:flutter/src/painting/gradient.dart';
+import 'package:flutter/painting.dart';
 
 /// class BoxDecoration extends Decoration
 class BoxDecoration$Mate extends BoxDecoration with Mate {
@@ -35,8 +36,8 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
     /// optionalParameters: {BlendMode? backgroundBlendMode} , defaultValue:none
     BlendMode? backgroundBlendMode,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:unprocessed
-    required BoxShape shape,
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:PrefixedIdentifier
+    BoxShape shape = BoxShape.rectangle,
   }) : super(
           color: color,
           image: image,
@@ -48,7 +49,7 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
           shape: shape,
         ) {
     mateCreateName = 'BoxDecoration';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BoxDecoration$Mate(
           color: p.get('color').build(),
           image: p.get('image').build(),

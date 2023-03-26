@@ -269,8 +269,8 @@ class DataTable$Mate extends DataTable with Mate {
     /// optionalParameters: {TableBorder? border} , defaultValue:none
     TableBorder? border,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
           columns: columns,

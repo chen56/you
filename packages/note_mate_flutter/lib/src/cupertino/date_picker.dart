@@ -3,11 +3,13 @@
 import 'package:flutter/src/cupertino/date_picker.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:core';
 import 'package:flutter/src/cupertino/localizations.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 
 /// class CupertinoDatePicker extends StatefulWidget
 class CupertinoDatePicker$Mate extends CupertinoDatePicker with Mate {
@@ -16,8 +18,8 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime} , defaultValue:unprocessed
-    required CupertinoDatePickerMode mode,
+    /// optionalParameters: {CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime} , defaultValue:PrefixedIdentifier
+    CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime,
 
     /// optionalParameters: {required void Function(DateTime) onDateTimeChanged} , defaultValue:none
     required ValueChanged<DateTime> onDateTimeChanged,
@@ -106,11 +108,11 @@ class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms} , defaultValue:unprocessed
-    required CupertinoTimerPickerMode mode,
+    /// optionalParameters: {CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms} , defaultValue:PrefixedIdentifier
+    CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms,
 
-    /// optionalParameters: {Duration initialTimerDuration = Duration.zero} , defaultValue:unprocessed
-    required Duration initialTimerDuration,
+    /// optionalParameters: {Duration initialTimerDuration = Duration.zero} , defaultValue:PrefixedIdentifier
+    Duration initialTimerDuration = Duration.zero,
 
     /// optionalParameters: {int minuteInterval = 1} , defaultValue:Literal
     int minuteInterval = 1,
@@ -118,8 +120,8 @@ class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with Mate {
     /// optionalParameters: {int secondInterval = 1} , defaultValue:Literal
     int secondInterval = 1,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {Color? backgroundColor} , defaultValue:none
     Color? backgroundColor,

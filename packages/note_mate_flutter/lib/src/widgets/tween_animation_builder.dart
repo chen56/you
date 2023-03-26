@@ -6,6 +6,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/animation/tween.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/widgets/value_listenable_builder.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/framework.dart';
@@ -23,8 +24,8 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , defaultValue:none
     required ValueWidgetBuilder<T> builder,
@@ -44,7 +45,7 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
           child: child,
         ) {
     mateCreateName = 'TweenAnimationBuilder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TweenAnimationBuilder$Mate<T>(
           key: p.get('key').build(),
           tween: p.get('tween').build(),

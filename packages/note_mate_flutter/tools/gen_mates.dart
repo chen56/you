@@ -22,7 +22,7 @@ main() async {
   _log("## main");
   List<String> include = [
     "package:flutter",
-    "package:flutter/src/painting/colors.dart",
+    "package:flutter/src/material/dialog.dart",
     // "package:flutter/src/foundation/diagnostics.dart",
     // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
@@ -346,7 +346,7 @@ extension _InterfaceElement on InterfaceElement {
   }
 }
 
-({String info, Code? code}) resolveDefaultValue(ParameterElement param) {
+({String info, Code? code}) resolveDefaultValue(ParameterElement param, TypeRefers typeRefers) {
   if (!param.hasDefaultValue) return (info:"none", code:null);
   if (param is! ConstVariableElement) {
     return (info:"is!ConstVariableElement", code:null);
@@ -360,10 +360,18 @@ extension _InterfaceElement on InterfaceElement {
       constParam.constantInitializer is! ast.TypedLiteral) {
     return (info:"Literal", code:Code(param.defaultValueCode!));
   }
+  if (constParam.constantInitializer is ast.PrefixedIdentifier) {
+    var x = constParam.constantInitializer as ast.PrefixedIdentifier;
+    var ref = typeRefers.elementRef(x.prefix.staticElement!, debugRef: param);
 
-  if (constParam is SuperFormalParameterElement) {
-    return resolveDefaultValue(
-        (constParam as SuperFormalParameterElement).superConstructorParameter!);
+    return (info:"PrefixedIdentifier", code: code
+        .refer("${x.prefix}.${x.identifier}", ref.url)
+        .code);
+  }
+
+  if (constParam.constantInitializer == null && constParam is SuperFormalParameterElement) {
+    var x = constParam as SuperFormalParameterElement;
+    return resolveDefaultValue(x.superConstructorParameter!, typeRefers);
   }
 
   return (info:"unprocessed", code:null);
@@ -406,10 +414,18 @@ void _genLibMate({
   // 如果有combinators就别导出了
   // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
   // 瞎导出会导出不存在的元素
-  // ..directives.add(Directive((b) => b
-  //   ..type = DirectiveType.import
-  //   ..url = "package:note/mate.dart")
-  //   ..show.add("Mate"))
+    ..directives.addAll([
+      // Directive((b) =>
+    // b
+    //   ..type = DirectiveType.import
+    //   ..url = "dart:core")
+    //   ,
+    //   Directive((b) =>
+    //   b
+    //     ..type = DirectiveType.import
+    //     ..url = "dart:ui")
+    //   ,
+    ])
     ..directives.addAll(lib.libraryExports.where((e) => e.combinators.isEmpty).map((libExport) =>
         Directive((b) =>
         b
@@ -491,16 +507,20 @@ void _genLibMate({
                     // default value handle: The default parameter processing is too complicated,
                     // so use whitelist mode, We only deal with what we understand
 
-                    var resolveResult = resolveDefaultValue(param);
+                    var resolveResult = resolveDefaultValue(param, typeRefers);
                     b.docs.add(
                         "/// optionalParameters: ${param.getDisplayString(
                             withNullability: true)} , defaultValue:${resolveResult.info}");
                     b.defaultTo = resolveResult.code;
 
                     //有缺省值的，但无法处理的，就加个required，自己投参吧
-                    if (param.hasDefaultValue && resolveResult.code == null) {
-                      b.required = param.isRequired ||
-                          param.type.nullabilitySuffix == NullabilitySuffix.none;
+                    if (param.hasDefaultValue) {
+                      if (resolveResult.code == null) {
+                        b.required = param.isRequired ||
+                            param.type.nullabilitySuffix == NullabilitySuffix.none;
+                      } else {
+                        b.required = false;
+                      }
                     }
                   })))
               ..initializers.add(
@@ -535,8 +555,14 @@ void _genLibMate({
                 //             .code).closure,
                 //     }))
                 //     .statement,
-                refer("mateCreateName").assign(literalString(constructor.displayName)).statement,
-                refer("matePackageUrl").assign(literalString(typeRefers.elementRef(clazz, debugRef: clazz).url!)).statement,
+                refer("mateCreateName")
+                    .assign(literalString(constructor.displayName))
+                    .statement,
+                refer("matePackageUrl")
+                    .assign(literalString(typeRefers
+                    .elementRef(clazz, debugRef: clazz)
+                    .url!))
+                    .statement,
                 refer("mateBuilder")
                     .assign(Method((b) {
                   var positionalArgs = parameters.where((e) => e.isPositional).map(
@@ -554,8 +580,12 @@ void _genLibMate({
                     ..requiredParameters.add(Parameter((b) => b.name = "p"))
                   //缺省构造器的name为"",只有命名构造器有name
                     ..body = constructor.name.isEmpty
-                        ? c.newInstance(positionalArgs, namedArgs).code
-                        : c.newInstanceNamed(constructor.name, positionalArgs, namedArgs).code;
+                        ? c
+                        .newInstance(positionalArgs, namedArgs)
+                        .code
+                        : c
+                        .newInstanceNamed(constructor.name, positionalArgs, namedArgs)
+                        .code;
                 }).closure)
                     .statement,
                 ...parameters.map((e) => Code("mateUse('${e.name}', ${e.name});")),
@@ -597,7 +627,7 @@ _genEnums({
       return result;
     }
     */
-  var emitter = DartEmitter(allocator: Allocator(), useNullSafetySyntax: true);
+  var emitter = DartEmitter(allocator: Allocator.simplePrefixing(), useNullSafetySyntax: true);
 
   var statements = typeRefers.keys.whereType<EnumElement>().map((e) =>
   refer("result")
@@ -626,7 +656,7 @@ _genEnums({
 
   // reference的 import 不增加前缀 ”_i1“ 这种形式
   String writeContent = lib.accept(emitter).toString();
-  writeContent = dartFormatter.format(writeContent);
+  // writeContent = dartFormatter.format(writeContent);
   writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
   writeFS.file(toFile).writeAsStringSync(writeContent);
 }

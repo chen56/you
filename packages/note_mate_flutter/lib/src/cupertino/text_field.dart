@@ -10,7 +10,9 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/services/text_input.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/painting/strut_style.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/alignment.dart';
@@ -18,6 +20,7 @@ import 'package:flutter/src/services/text_formatter.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/widgets/tap_region.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/text_selection.dart';
 import 'package:flutter/src/gestures/tap.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
@@ -53,17 +56,17 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {Widget? prefix} , defaultValue:none
     Widget? prefix,
 
-    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , defaultValue:unprocessed
-    required OverlayVisibilityMode prefixMode,
+    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , defaultValue:PrefixedIdentifier
+    OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always,
 
     /// optionalParameters: {Widget? suffix} , defaultValue:none
     Widget? suffix,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , defaultValue:unprocessed
-    required OverlayVisibilityMode suffixMode,
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , defaultValue:PrefixedIdentifier
+    OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always,
 
-    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , defaultValue:unprocessed
-    required OverlayVisibilityMode clearButtonMode,
+    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , defaultValue:PrefixedIdentifier
+    OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never,
 
     /// optionalParameters: {TextInputType? keyboardType} , defaultValue:none
     TextInputType? keyboardType,
@@ -71,8 +74,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {TextInputAction? textInputAction} , defaultValue:none
     TextInputAction? textInputAction,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:unprocessed
-    required TextCapitalization textCapitalization,
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:PrefixedIdentifier
+    TextCapitalization textCapitalization = TextCapitalization.none,
 
     /// optionalParameters: {TextStyle? style} , defaultValue:none
     TextStyle? style,
@@ -80,8 +83,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    TextAlign textAlign = TextAlign.start,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , defaultValue:none
     TextAlignVertical? textAlignVertical,
@@ -173,8 +176,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , defaultValue:unprocessed
     required EdgeInsets scrollPadding,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool? enableInteractiveSelection} , defaultValue:none
     bool? enableInteractiveSelection,
@@ -197,8 +200,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , defaultValue:none
     ContentInsertionConfiguration? contentInsertionConfiguration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
@@ -440,17 +443,17 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {Widget? prefix} , defaultValue:none
     Widget? prefix,
 
-    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , defaultValue:unprocessed
-    required OverlayVisibilityMode prefixMode,
+    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , defaultValue:PrefixedIdentifier
+    OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always,
 
     /// optionalParameters: {Widget? suffix} , defaultValue:none
     Widget? suffix,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , defaultValue:unprocessed
-    required OverlayVisibilityMode suffixMode,
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , defaultValue:PrefixedIdentifier
+    OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always,
 
-    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , defaultValue:unprocessed
-    required OverlayVisibilityMode clearButtonMode,
+    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , defaultValue:PrefixedIdentifier
+    OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never,
 
     /// optionalParameters: {TextInputType? keyboardType} , defaultValue:none
     TextInputType? keyboardType,
@@ -458,8 +461,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {TextInputAction? textInputAction} , defaultValue:none
     TextInputAction? textInputAction,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:unprocessed
-    required TextCapitalization textCapitalization,
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:PrefixedIdentifier
+    TextCapitalization textCapitalization = TextCapitalization.none,
 
     /// optionalParameters: {TextStyle? style} , defaultValue:none
     TextStyle? style,
@@ -467,8 +470,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    TextAlign textAlign = TextAlign.start,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , defaultValue:none
     TextAlignVertical? textAlignVertical,
@@ -560,8 +563,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , defaultValue:unprocessed
     required EdgeInsets scrollPadding,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool? enableInteractiveSelection} , defaultValue:none
     bool? enableInteractiveSelection,
@@ -584,8 +587,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
     /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , defaultValue:none
     ContentInsertionConfiguration? contentInsertionConfiguration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,

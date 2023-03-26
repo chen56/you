@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/painting/decoration.dart';
 import 'package:flutter/src/rendering/proxy_box.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/alignment.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
@@ -23,8 +24,8 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
     /// optionalParameters: {required Decoration decoration} , defaultValue:none
     required Decoration decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , defaultValue:unprocessed
-    required DecorationPosition position,
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , defaultValue:PrefixedIdentifier
+    DecorationPosition position = DecorationPosition.background,
 
     /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
@@ -35,7 +36,7 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
           child: child,
         ) {
     mateCreateName = 'DecoratedBox';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DecoratedBox$Mate(
           key: p.get('key').build(),
           decoration: p.get('decoration').build(),
@@ -92,8 +93,8 @@ class Container$Mate extends Container with Mate {
     /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
           alignment: alignment,
@@ -111,7 +112,7 @@ class Container$Mate extends Container with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'Container';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Container$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),

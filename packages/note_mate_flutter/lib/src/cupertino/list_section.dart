@@ -7,6 +7,7 @@ import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/painting/box_decoration.dart';
 
 /// class CupertinoListSection extends StatelessWidget
@@ -28,14 +29,14 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
     /// optionalParameters: {EdgeInsetsGeometry margin = _kDefaultRowsMargin} , defaultValue:unprocessed
     required EdgeInsetsGeometry margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:unprocessed
-    required Color backgroundColor,
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:PrefixedIdentifier
+    Color backgroundColor = CupertinoColors.systemGroupedBackground,
 
     /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {double dividerMargin = _kBaseDividerMargin} , defaultValue:unprocessed
     required double dividerMargin,
@@ -109,14 +110,14 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
     /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:unprocessed
-    required Color backgroundColor,
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:PrefixedIdentifier
+    Color backgroundColor = CupertinoColors.systemGroupedBackground,
 
     /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {double dividerMargin = _kInsetDividerMargin} , defaultValue:unprocessed
     required double dividerMargin,

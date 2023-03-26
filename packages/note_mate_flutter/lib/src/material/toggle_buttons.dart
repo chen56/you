@@ -13,6 +13,7 @@ import 'dart:ui';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 
 /// class ToggleButtons extends StatelessWidget
 class ToggleButtons$Mate extends ToggleButtons with Mate {
@@ -87,11 +88,11 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
     /// optionalParameters: {double? borderWidth} , defaultValue:none
     double? borderWidth,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:unprocessed
-    required Axis direction,
+    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    Axis direction = Axis.horizontal,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:unprocessed
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    VerticalDirection verticalDirection = VerticalDirection.down,
   }) : super(
           key: key,
           children: children,

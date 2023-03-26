@@ -8,6 +8,7 @@ import 'package:flutter/src/painting/image_stream.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 /// class DecorationImage
@@ -26,14 +27,14 @@ class DecorationImage$Mate extends DecorationImage with Mate {
     /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
     bool matchTextDirection = false,
@@ -44,8 +45,8 @@ class DecorationImage$Mate extends DecorationImage with Mate {
     /// optionalParameters: {double opacity = 1.0} , defaultValue:Literal
     double opacity = 1.0,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
 
     /// optionalParameters: {bool invertColors = false} , defaultValue:Literal
     bool invertColors = false,
@@ -68,7 +69,7 @@ class DecorationImage$Mate extends DecorationImage with Mate {
           isAntiAlias: isAntiAlias,
         ) {
     mateCreateName = 'DecorationImage';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => DecorationImage$Mate(
           image: p.get('image').build(),
           onError: p.get('onError').build(),
@@ -118,7 +119,7 @@ class ImageTilingInfo$Mate extends ImageTilingInfo with Mate {
           transform: transform,
         ) {
     mateCreateName = 'ImageTilingInfo';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageTilingInfo$Mate(
           tmx: p.get('tmx').build(),
           tmy: p.get('tmy').build(),

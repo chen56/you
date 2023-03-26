@@ -3,8 +3,11 @@
 import 'package:flutter/src/widgets/media_query.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/src/gestures/gesture_settings.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -13,8 +16,8 @@ import 'package:flutter/src/widgets/framework.dart';
 class MediaQueryData$Mate extends MediaQueryData with Mate {
   /// MediaQueryData MediaQueryData({Size size = Size.zero, double devicePixelRatio = 1.0, double textScaleFactor = 1.0, Brightness platformBrightness = Brightness.light, EdgeInsets padding = EdgeInsets.zero, EdgeInsets viewInsets = EdgeInsets.zero, EdgeInsets systemGestureInsets = EdgeInsets.zero, EdgeInsets viewPadding = EdgeInsets.zero, bool alwaysUse24HourFormat = false, bool accessibleNavigation = false, bool invertColors = false, bool highContrast = false, bool disableAnimations = false, bool boldText = false, NavigationMode navigationMode = NavigationMode.traditional, DeviceGestureSettings gestureSettings = const DeviceGestureSettings(touchSlop: kTouchSlop), List<DisplayFeature> displayFeatures = const <ui.DisplayFeature>[]})
   MediaQueryData$Mate({
-    /// optionalParameters: {Size size = Size.zero} , defaultValue:unprocessed
-    required Size size,
+    /// optionalParameters: {Size size = Size.zero} , defaultValue:PrefixedIdentifier
+    Size size = Size.zero,
 
     /// optionalParameters: {double devicePixelRatio = 1.0} , defaultValue:Literal
     double devicePixelRatio = 1.0,
@@ -22,20 +25,20 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
     /// optionalParameters: {double textScaleFactor = 1.0} , defaultValue:Literal
     double textScaleFactor = 1.0,
 
-    /// optionalParameters: {Brightness platformBrightness = Brightness.light} , defaultValue:unprocessed
-    required Brightness platformBrightness,
+    /// optionalParameters: {Brightness platformBrightness = Brightness.light} , defaultValue:PrefixedIdentifier
+    Brightness platformBrightness = Brightness.light,
 
-    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets padding,
+    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets padding = EdgeInsets.zero,
 
-    /// optionalParameters: {EdgeInsets viewInsets = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets viewInsets,
+    /// optionalParameters: {EdgeInsets viewInsets = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets viewInsets = EdgeInsets.zero,
 
-    /// optionalParameters: {EdgeInsets systemGestureInsets = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets systemGestureInsets,
+    /// optionalParameters: {EdgeInsets systemGestureInsets = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets systemGestureInsets = EdgeInsets.zero,
 
-    /// optionalParameters: {EdgeInsets viewPadding = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets viewPadding,
+    /// optionalParameters: {EdgeInsets viewPadding = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets viewPadding = EdgeInsets.zero,
 
     /// optionalParameters: {bool alwaysUse24HourFormat = false} , defaultValue:Literal
     bool alwaysUse24HourFormat = false,
@@ -55,8 +58,8 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
     /// optionalParameters: {bool boldText = false} , defaultValue:Literal
     bool boldText = false,
 
-    /// optionalParameters: {NavigationMode navigationMode = NavigationMode.traditional} , defaultValue:unprocessed
-    required NavigationMode navigationMode,
+    /// optionalParameters: {NavigationMode navigationMode = NavigationMode.traditional} , defaultValue:PrefixedIdentifier
+    NavigationMode navigationMode = NavigationMode.traditional,
 
     /// optionalParameters: {DeviceGestureSettings gestureSettings = const DeviceGestureSettings(touchSlop: kTouchSlop)} , defaultValue:unprocessed
     required DeviceGestureSettings gestureSettings,
@@ -83,7 +86,7 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           displayFeatures: displayFeatures,
         ) {
     mateCreateName = 'MediaQueryData';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MediaQueryData$Mate(
           size: p.get('size').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
@@ -133,7 +136,7 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           platformData: platformData,
         ) {
     mateCreateName = 'MediaQueryData.fromView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MediaQueryData$Mate.fromView(
           p.get('view').value,
           platformData: p.get('platformData').build(),
@@ -161,7 +164,7 @@ class MediaQuery$Mate extends MediaQuery with Mate {
           child: child,
         ) {
     mateCreateName = 'MediaQuery';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MediaQuery$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),

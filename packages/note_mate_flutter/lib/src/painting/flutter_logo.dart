@@ -3,6 +3,7 @@
 import 'package:flutter/src/painting/flutter_logo.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 
 /// class FlutterLogoDecoration extends Decoration
@@ -12,18 +13,18 @@ class FlutterLogoDecoration$Mate extends FlutterLogoDecoration with Mate {
     /// optionalParameters: {Color textColor = const Color(0xFF757575)} , defaultValue:unprocessed
     required Color textColor,
 
-    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , defaultValue:unprocessed
-    required FlutterLogoStyle style,
+    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , defaultValue:PrefixedIdentifier
+    FlutterLogoStyle style = FlutterLogoStyle.markOnly,
 
-    /// optionalParameters: {EdgeInsets margin = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets margin,
+    /// optionalParameters: {EdgeInsets margin = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets margin = EdgeInsets.zero,
   }) : super(
           textColor: textColor,
           style: style,
           margin: margin,
         ) {
     mateCreateName = 'FlutterLogoDecoration';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => FlutterLogoDecoration$Mate(
           textColor: p.get('textColor').build(),
           style: p.get('style').build(),

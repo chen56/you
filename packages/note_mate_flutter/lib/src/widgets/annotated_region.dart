@@ -28,7 +28,7 @@ class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Mat
           sized: sized,
         ) {
     mateCreateName = 'AnnotatedRegion';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnnotatedRegion$Mate<T>(
           key: p.get('key').build(),
           child: p.get('child').build(),

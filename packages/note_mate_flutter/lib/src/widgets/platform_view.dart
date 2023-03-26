@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/services/platform_views.dart';
 import 'package:flutter/src/rendering/platform_view.dart';
+import 'package:flutter/rendering.dart';
 import 'dart:ui';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
@@ -24,8 +25,8 @@ class AndroidView$Mate extends AndroidView with Mate {
     /// optionalParameters: {void Function(int)? onPlatformViewCreated} , defaultValue:none
     PlatformViewCreatedCallback? onPlatformViewCreated,
 
-    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , defaultValue:unprocessed
-    required PlatformViewHitTestBehavior hitTestBehavior,
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , defaultValue:PrefixedIdentifier
+    PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque,
 
     /// optionalParameters: {TextDirection? layoutDirection} , defaultValue:none
     TextDirection? layoutDirection,
@@ -39,8 +40,8 @@ class AndroidView$Mate extends AndroidView with Mate {
     /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , defaultValue:none
     MessageCodec<dynamic>? creationParamsCodec,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           viewType: viewType,
@@ -53,7 +54,7 @@ class AndroidView$Mate extends AndroidView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'AndroidView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AndroidView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
@@ -90,8 +91,8 @@ class UiKitView$Mate extends UiKitView with Mate {
     /// optionalParameters: {void Function(int)? onPlatformViewCreated} , defaultValue:none
     PlatformViewCreatedCallback? onPlatformViewCreated,
 
-    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , defaultValue:unprocessed
-    required PlatformViewHitTestBehavior hitTestBehavior,
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , defaultValue:PrefixedIdentifier
+    PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque,
 
     /// optionalParameters: {TextDirection? layoutDirection} , defaultValue:none
     TextDirection? layoutDirection,
@@ -115,7 +116,7 @@ class UiKitView$Mate extends UiKitView with Mate {
           gestureRecognizers: gestureRecognizers,
         ) {
     mateCreateName = 'UiKitView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UiKitView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
@@ -155,7 +156,7 @@ class HtmlElementView$Mate extends HtmlElementView with Mate {
           onPlatformViewCreated: onPlatformViewCreated,
         ) {
     mateCreateName = 'HtmlElementView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HtmlElementView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
@@ -189,7 +190,7 @@ class PlatformViewLink$Mate extends PlatformViewLink with Mate {
           viewType: viewType,
         ) {
     mateCreateName = 'PlatformViewLink';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformViewLink$Mate(
           key: p.get('key').build(),
           surfaceFactory: p.get('surfaceFactory').build(),
@@ -225,7 +226,7 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
           gestureRecognizers: gestureRecognizers,
         ) {
     mateCreateName = 'PlatformViewSurface';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformViewSurface$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -261,7 +262,7 @@ class AndroidViewSurface$Mate extends AndroidViewSurface with Mate {
           gestureRecognizers: gestureRecognizers,
         ) {
     mateCreateName = 'AndroidViewSurface';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AndroidViewSurface$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),

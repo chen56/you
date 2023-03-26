@@ -6,6 +6,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
+import 'package:flutter/widgets.dart';
 
 /// class AnimatedSwitcher extends StatefulWidget
 class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
@@ -23,17 +25,17 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
     /// optionalParameters: {Duration? reverseDuration} , defaultValue:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Curve switchInCurve = Curves.linear} , defaultValue:unprocessed
-    required Curve switchInCurve,
+    /// optionalParameters: {Curve switchInCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve switchInCurve = Curves.linear,
 
-    /// optionalParameters: {Curve switchOutCurve = Curves.linear} , defaultValue:unprocessed
-    required Curve switchOutCurve,
+    /// optionalParameters: {Curve switchOutCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve switchOutCurve = Curves.linear,
 
-    /// optionalParameters: {Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder} , defaultValue:unprocessed
-    required AnimatedSwitcherTransitionBuilder transitionBuilder,
+    /// optionalParameters: {Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder} , defaultValue:PrefixedIdentifier
+    AnimatedSwitcherTransitionBuilder transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder,
 
-    /// optionalParameters: {Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder} , defaultValue:unprocessed
-    required AnimatedSwitcherLayoutBuilder layoutBuilder,
+    /// optionalParameters: {Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder} , defaultValue:PrefixedIdentifier
+    AnimatedSwitcherLayoutBuilder layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder,
   }) : super(
           key: key,
           child: child,
@@ -45,7 +47,7 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
           layoutBuilder: layoutBuilder,
         ) {
     mateCreateName = 'AnimatedSwitcher';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedSwitcher$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

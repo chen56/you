@@ -4,9 +4,11 @@ import 'package:flutter/src/widgets/viewport.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/viewport_offset.dart';
 import 'package:flutter/src/rendering/viewport.dart';
+import 'package:flutter/rendering.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -17,8 +19,8 @@ class Viewport$Mate extends Viewport with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:unprocessed
-    required AxisDirection axisDirection,
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:PrefixedIdentifier
+    AxisDirection axisDirection = AxisDirection.down,
 
     /// optionalParameters: {AxisDirection? crossAxisDirection} , defaultValue:none
     AxisDirection? crossAxisDirection,
@@ -35,11 +37,11 @@ class Viewport$Mate extends Viewport with Mate {
     /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , defaultValue:unprocessed
-    required CacheExtentStyle cacheExtentStyle,
+    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , defaultValue:PrefixedIdentifier
+    CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> slivers,
@@ -56,7 +58,7 @@ class Viewport$Mate extends Viewport with Mate {
           slivers: slivers,
         ) {
     mateCreateName = 'Viewport';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Viewport$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),
@@ -89,8 +91,8 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:unprocessed
-    required AxisDirection axisDirection,
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:PrefixedIdentifier
+    AxisDirection axisDirection = AxisDirection.down,
 
     /// optionalParameters: {AxisDirection? crossAxisDirection} , defaultValue:none
     AxisDirection? crossAxisDirection,
@@ -98,8 +100,8 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
     /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> slivers,
@@ -112,7 +114,7 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
           slivers: slivers,
         ) {
     mateCreateName = 'ShrinkWrappingViewport';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShrinkWrappingViewport$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),

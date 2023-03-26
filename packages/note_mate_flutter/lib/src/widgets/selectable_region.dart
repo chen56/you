@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/widgets/text_selection.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/magnifier.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/rendering/selection.dart';
 
@@ -29,8 +30,8 @@ class SelectableRegion$Mate extends SelectableRegion with Mate {
     /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , defaultValue:unprocessed
-    required TextMagnifierConfiguration magnifierConfiguration,
+    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , defaultValue:PrefixedIdentifier
+    TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled,
 
     /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , defaultValue:none
     ValueChanged<SelectedContent?>? onSelectionChanged,
@@ -44,7 +45,7 @@ class SelectableRegion$Mate extends SelectableRegion with Mate {
           onSelectionChanged: onSelectionChanged,
         ) {
     mateCreateName = 'SelectableRegion';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectableRegion$Mate(
           key: p.get('key').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),

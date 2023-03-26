@@ -8,6 +8,7 @@ import 'dart:ui';
 import 'package:flutter/src/widgets/list_wheel_scroll_view.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/cupertino.dart';
 
 /// class CupertinoPicker extends StatefulWidget
 class CupertinoPicker$Mate extends CupertinoPicker with Mate {
@@ -193,8 +194,8 @@ class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefault
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Color background = CupertinoColors.tertiarySystemFill} , defaultValue:unprocessed
-    required Color background,
+    /// optionalParameters: {Color background = CupertinoColors.tertiarySystemFill} , defaultValue:PrefixedIdentifier
+    Color background = CupertinoColors.tertiarySystemFill,
 
     /// optionalParameters: {bool capStartEdge = true} , defaultValue:Literal
     bool capStartEdge = true,

@@ -9,7 +9,9 @@ import 'dart:core';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/material/theme_data.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
@@ -67,11 +69,11 @@ class RawMaterialButton$Mate extends RawMaterialButton with Mate {
     /// optionalParameters: {double disabledElevation = 0.0} , defaultValue:Literal
     double disabledElevation = 0.0,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsetsGeometry padding,
+    /// optionalParameters: {EdgeInsetsGeometry padding = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsetsGeometry padding = EdgeInsets.zero,
 
-    /// optionalParameters: {VisualDensity visualDensity = VisualDensity.standard} , defaultValue:unprocessed
-    required VisualDensity visualDensity,
+    /// optionalParameters: {VisualDensity visualDensity = VisualDensity.standard} , defaultValue:PrefixedIdentifier
+    VisualDensity visualDensity = VisualDensity.standard,
 
     /// optionalParameters: {BoxConstraints constraints = const BoxConstraints(minWidth: 88.0, minHeight: 36.0)} , defaultValue:unprocessed
     required BoxConstraints constraints,
@@ -82,8 +84,8 @@ class RawMaterialButton$Mate extends RawMaterialButton with Mate {
     /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , defaultValue:unprocessed
     required Duration animationDuration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,

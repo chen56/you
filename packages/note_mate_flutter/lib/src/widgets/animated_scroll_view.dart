@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
@@ -25,8 +26,8 @@ class AnimatedList$Mate extends AnimatedList with Mate {
     /// optionalParameters: {int initialItemCount = 0} , defaultValue:Literal
     int initialItemCount = 0,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -46,8 +47,8 @@ class AnimatedList$Mate extends AnimatedList with Mate {
     /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           itemBuilder: itemBuilder,
@@ -62,7 +63,7 @@ class AnimatedList$Mate extends AnimatedList with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'AnimatedList';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedList$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -106,8 +107,8 @@ class AnimatedGrid$Mate extends AnimatedGrid with Mate {
     /// optionalParameters: {int initialItemCount = 0} , defaultValue:Literal
     int initialItemCount = 0,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -124,8 +125,8 @@ class AnimatedGrid$Mate extends AnimatedGrid with Mate {
     /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           itemBuilder: itemBuilder,
@@ -140,7 +141,7 @@ class AnimatedGrid$Mate extends AnimatedGrid with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'AnimatedGrid';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedGrid$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -190,7 +191,7 @@ class SliverAnimatedList$Mate extends SliverAnimatedList with Mate {
           initialItemCount: initialItemCount,
         ) {
     mateCreateName = 'SliverAnimatedList';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverAnimatedList$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -230,7 +231,7 @@ class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with Mate {
           initialItemCount: initialItemCount,
         ) {
     mateCreateName = 'SliverAnimatedGrid';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverAnimatedGrid$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),

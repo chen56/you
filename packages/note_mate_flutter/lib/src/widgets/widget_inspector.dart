@@ -25,7 +25,7 @@ class WidgetInspector$Mate extends WidgetInspector with Mate {
           selectButtonBuilder: selectButtonBuilder,
         ) {
     mateCreateName = 'WidgetInspector';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WidgetInspector$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -51,7 +51,7 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
           url,
         ) {
     mateCreateName = 'DevToolsDeepLinkProperty';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DevToolsDeepLinkProperty$Mate(
           p.get('description').value,
           p.get('url').value,
@@ -102,7 +102,7 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
           addAdditionalPropertiesCallback: addAdditionalPropertiesCallback,
         ) {
     mateCreateName = 'InspectorSerializationDelegate';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InspectorSerializationDelegate$Mate(
           groupName: p.get('groupName').build(),
           summaryTree: p.get('summaryTree').build(),

@@ -29,7 +29,7 @@ class SliverFillViewport$Mate extends SliverFillViewport with Mate {
           padEnds: padEnds,
         ) {
     mateCreateName = 'SliverFillViewport';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverFillViewport$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
@@ -65,7 +65,7 @@ class SliverFillRemaining$Mate extends SliverFillRemaining with Mate {
           fillOverscroll: fillOverscroll,
         ) {
     mateCreateName = 'SliverFillRemaining';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverFillRemaining$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

@@ -28,7 +28,7 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
           child: child,
         ) {
     mateCreateName = 'DefaultSelectionStyle';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultSelectionStyle$Mate(
           key: p.get('key').build(),
           cursorColor: p.get('cursorColor').build(),
@@ -48,7 +48,7 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
       Key? key})
       : super.fallback(key: key) {
     mateCreateName = 'DefaultSelectionStyle.fallback';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
     mateUse('key', key);
   }

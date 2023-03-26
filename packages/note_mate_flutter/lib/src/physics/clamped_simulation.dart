@@ -11,17 +11,17 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
   ClampedSimulation$Mate(
     /// requiredParameters: Simulation simulation
     Simulation simulation, {
-    /// optionalParameters: {double xMin = double.negativeInfinity} , defaultValue:unprocessed
-    required double xMin,
+    /// optionalParameters: {double xMin = double.negativeInfinity} , defaultValue:PrefixedIdentifier
+    double xMin = double.negativeInfinity,
 
-    /// optionalParameters: {double xMax = double.infinity} , defaultValue:unprocessed
-    required double xMax,
+    /// optionalParameters: {double xMax = double.infinity} , defaultValue:PrefixedIdentifier
+    double xMax = double.infinity,
 
-    /// optionalParameters: {double dxMin = double.negativeInfinity} , defaultValue:unprocessed
-    required double dxMin,
+    /// optionalParameters: {double dxMin = double.negativeInfinity} , defaultValue:PrefixedIdentifier
+    double dxMin = double.negativeInfinity,
 
-    /// optionalParameters: {double dxMax = double.infinity} , defaultValue:unprocessed
-    required double dxMax,
+    /// optionalParameters: {double dxMax = double.infinity} , defaultValue:PrefixedIdentifier
+    double dxMax = double.infinity,
   }) : super(
           simulation,
           xMin: xMin,

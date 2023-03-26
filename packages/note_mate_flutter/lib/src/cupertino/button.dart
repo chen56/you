@@ -6,9 +6,11 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 
 /// class CupertinoButton extends StatefulWidget
 class CupertinoButton$Mate extends CupertinoButton with Mate {
@@ -26,8 +28,8 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
     /// optionalParameters: {Color? color} , defaultValue:none
     Color? color,
 
-    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , defaultValue:unprocessed
-    required Color disabledColor,
+    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , defaultValue:PrefixedIdentifier
+    Color disabledColor = CupertinoColors.quaternarySystemFill,
 
     /// optionalParameters: {double? minSize = kMinInteractiveDimensionCupertino} , defaultValue:unprocessed
     double? minSize,
@@ -38,8 +40,8 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
     /// optionalParameters: {BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0))} , defaultValue:unprocessed
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
     required VoidCallback? onPressed,
@@ -92,8 +94,8 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
     /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , defaultValue:unprocessed
-    required Color disabledColor,
+    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , defaultValue:PrefixedIdentifier
+    Color disabledColor = CupertinoColors.quaternarySystemFill,
 
     /// optionalParameters: {double? minSize = kMinInteractiveDimensionCupertino} , defaultValue:unprocessed
     double? minSize,
@@ -104,8 +106,8 @@ class CupertinoButton$Mate extends CupertinoButton with Mate {
     /// optionalParameters: {BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0))} , defaultValue:unprocessed
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
     required VoidCallback? onPressed,

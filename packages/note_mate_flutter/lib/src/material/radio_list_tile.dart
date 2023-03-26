@@ -11,6 +11,7 @@ import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/material/theme_data.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/material/list_tile.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
@@ -73,8 +74,8 @@ class RadioListTile$Mate<T> extends RadioListTile<T> with Mate {
     /// optionalParameters: {bool selected = false} , defaultValue:Literal
     bool selected = false,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:unprocessed
-    required ListTileControlAffinity controlAffinity,
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:PrefixedIdentifier
+    ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform,
 
     /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
     bool autofocus = false,

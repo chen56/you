@@ -33,7 +33,7 @@ class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
           child: child,
         ) {
     mateCreateName = 'DualTransitionBuilder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DualTransitionBuilder$Mate(
           key: p.get('key').build(),
           animation: p.get('animation').build(),

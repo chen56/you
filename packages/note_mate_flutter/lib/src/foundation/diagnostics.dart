@@ -3,6 +3,7 @@
 import 'package:flutter/src/foundation/diagnostics.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
+import 'package:flutter/foundation.dart';
 
 /// class TextTreeConfiguration
 class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
@@ -170,8 +171,8 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
 class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
   /// TextTreeRenderer TextTreeRenderer({DiagnosticLevel minLevel = DiagnosticLevel.debug, int wrapWidth = 100, int wrapWidthProperties = 65, int maxDescendentsTruncatableNode = -1})
   TextTreeRenderer$Mate({
-    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , defaultValue:unprocessed
-    required DiagnosticLevel minLevel,
+    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , defaultValue:PrefixedIdentifier
+    DiagnosticLevel minLevel = DiagnosticLevel.debug,
 
     /// optionalParameters: {int wrapWidth = 100} , defaultValue:Literal
     int wrapWidth = 100,
@@ -211,11 +212,11 @@ class MessageProperty$Mate extends MessageProperty with Mate {
 
     /// requiredParameters: String message
     String message, {
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:unprocessed
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:PrefixedIdentifier
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           message,
@@ -562,8 +563,8 @@ class FlagProperty$Mate extends FlagProperty with Mate {
     /// optionalParameters: {Object? defaultValue} , defaultValue:none
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value: value,
@@ -859,11 +860,11 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
     /// optionalParameters: {bool allowNameWrap = true} , defaultValue:Literal
     bool allowNameWrap = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:none
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:PrefixedIdentifier
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -960,11 +961,11 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
     /// optionalParameters: {bool allowNameWrap = true} , defaultValue:Literal
     bool allowNameWrap = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:none
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:PrefixedIdentifier
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super.lazy(
           name,
           computeValue,
@@ -1101,8 +1102,8 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
     /// optionalParameters: {String? name} , defaultValue:none
     String? name,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , defaultValue:none
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , defaultValue:PrefixedIdentifier
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace,
 
     /// optionalParameters: {bool showName = true} , defaultValue:Literal
     bool showName = true,
@@ -1119,8 +1120,8 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
     /// optionalParameters: {String? description} , defaultValue:none
     String? description,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:unprocessed
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    DiagnosticLevel level = DiagnosticLevel.info,
 
     /// optionalParameters: {bool allowTruncate = false} , defaultValue:Literal
     bool allowTruncate = false,

@@ -11,7 +11,9 @@ import 'package:flutter/src/painting/box_decoration.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/services/text_input.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/icon.dart';
 import 'package:flutter/src/cupertino/text_field.dart';
@@ -51,14 +53,14 @@ class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Mate {
     /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {TextInputType? keyboardType = TextInputType.text} , defaultValue:unprocessed
-    TextInputType? keyboardType,
+    /// optionalParameters: {TextInputType? keyboardType = TextInputType.text} , defaultValue:PrefixedIdentifier
+    TextInputType? keyboardType = TextInputType.text,
 
     /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsetsDirectional.fromSTEB(5.5, 8, 5.5, 8)} , defaultValue:unprocessed
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Color itemColor = CupertinoColors.secondaryLabel} , defaultValue:unprocessed
-    required Color itemColor,
+    /// optionalParameters: {Color itemColor = CupertinoColors.secondaryLabel} , defaultValue:PrefixedIdentifier
+    Color itemColor = CupertinoColors.secondaryLabel,
 
     /// optionalParameters: {double itemSize = 20.0} , defaultValue:Literal
     double itemSize = 20.0,
@@ -75,8 +77,8 @@ class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Mate {
     /// optionalParameters: {Icon suffixIcon = const Icon(CupertinoIcons.xmark_circle_fill)} , defaultValue:unprocessed
     required Icon suffixIcon,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing} , defaultValue:unprocessed
-    required OverlayVisibilityMode suffixMode,
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing} , defaultValue:PrefixedIdentifier
+    OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing,
 
     /// optionalParameters: {void Function()? onSuffixTap} , defaultValue:none
     VoidCallback? onSuffixTap,

@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 
 /// class CupertinoSlider extends StatefulWidget
 class CupertinoSlider$Mate extends CupertinoSlider with Mate {
@@ -38,8 +39,8 @@ class CupertinoSlider$Mate extends CupertinoSlider with Mate {
     /// optionalParameters: {Color? activeColor} , defaultValue:none
     Color? activeColor,
 
-    /// optionalParameters: {Color thumbColor = CupertinoColors.white} , defaultValue:unprocessed
-    required Color thumbColor,
+    /// optionalParameters: {Color thumbColor = CupertinoColors.white} , defaultValue:PrefixedIdentifier
+    Color thumbColor = CupertinoColors.white,
   }) : super(
           key: key,
           value: value,

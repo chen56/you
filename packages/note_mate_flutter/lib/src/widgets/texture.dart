@@ -19,8 +19,8 @@ class Texture$Mate extends Texture with Mate {
     /// optionalParameters: {bool freeze = false} , defaultValue:Literal
     bool freeze = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
   }) : super(
           key: key,
           textureId: textureId,
@@ -28,7 +28,7 @@ class Texture$Mate extends Texture with Mate {
           filterQuality: filterQuality,
         ) {
     mateCreateName = 'Texture';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Texture$Mate(
           key: p.get('key').build(),
           textureId: p.get('textureId').build(),

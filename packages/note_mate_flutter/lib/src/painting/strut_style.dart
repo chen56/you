@@ -56,7 +56,7 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           package: package,
         ) {
     mateCreateName = 'StrutStyle';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StrutStyle$Mate(
           fontFamily: p.get('fontFamily').build(),
           fontFamilyFallback: p.get('fontFamilyFallback').build(),
@@ -134,7 +134,7 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           package: package,
         ) {
     mateCreateName = 'StrutStyle.fromTextStyle';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StrutStyle$Mate.fromTextStyle(
           p.get('textStyle').value,
           fontFamily: p.get('fontFamily').build(),

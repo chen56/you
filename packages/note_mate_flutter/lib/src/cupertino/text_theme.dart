@@ -3,14 +3,15 @@
 import 'package:flutter/src/cupertino/text_theme.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/painting/text_style.dart';
 
 /// class CupertinoTextThemeData with Diagnosticable
 class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
   /// CupertinoTextThemeData CupertinoTextThemeData({Color primaryColor = CupertinoColors.systemBlue, TextStyle? textStyle, TextStyle? actionTextStyle, TextStyle? tabLabelTextStyle, TextStyle? navTitleTextStyle, TextStyle? navLargeTitleTextStyle, TextStyle? navActionTextStyle, TextStyle? pickerTextStyle, TextStyle? dateTimePickerTextStyle})
   CupertinoTextThemeData$Mate({
-    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , defaultValue:unprocessed
-    required Color primaryColor,
+    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , defaultValue:PrefixedIdentifier
+    Color primaryColor = CupertinoColors.systemBlue,
 
     /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
     TextStyle? textStyle,

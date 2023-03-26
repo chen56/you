@@ -13,6 +13,7 @@ import 'package:flutter/src/gestures/force_press.dart';
 import 'package:flutter/src/gestures/scale.dart';
 import 'package:flutter/src/rendering/proxy_box.dart';
 import 'dart:core';
+import 'package:flutter/gestures.dart';
 import 'dart:ui';
 
 /// class GestureRecognizerFactoryWithHandlers<T extends GestureRecognizer> extends GestureRecognizerFactory<T>
@@ -30,7 +31,7 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends GestureRecognizer>
           _initializer,
         ) {
     mateCreateName = 'GestureRecognizerFactoryWithHandlers';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GestureRecognizerFactoryWithHandlers$Mate<T>(
           p.get('_constructor').value,
           p.get('_initializer').value,
@@ -227,8 +228,8 @@ class GestureDetector$Mate extends GestureDetector with Mate {
     /// optionalParameters: {bool excludeFromSemantics = false} , defaultValue:Literal
     bool excludeFromSemantics = false,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool trackpadScrollCausesScale = false} , defaultValue:Literal
     bool trackpadScrollCausesScale = false,
@@ -306,7 +307,7 @@ class GestureDetector$Mate extends GestureDetector with Mate {
           supportedDevices: supportedDevices,
         ) {
     mateCreateName = 'GestureDetector';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GestureDetector$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -472,7 +473,7 @@ class RawGestureDetector$Mate extends RawGestureDetector with Mate {
           semantics: semantics,
         ) {
     mateCreateName = 'RawGestureDetector';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawGestureDetector$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

@@ -12,6 +12,7 @@ import 'package:flutter/src/painting/image_provider.dart';
 import 'package:flutter/src/painting/image_stream.dart';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/decoration_image.dart';
 import 'package:flutter/src/material/material.dart';
 import 'package:flutter/src/rendering/box.dart';
@@ -89,14 +90,14 @@ class Ink$Mate extends Ink with Mate {
     /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
     bool matchTextDirection = false,

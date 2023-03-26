@@ -23,7 +23,7 @@ class ImageSizeInfo$Mate extends ImageSizeInfo with Mate {
           imageSize: imageSize,
         ) {
     mateCreateName = 'ImageSizeInfo';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageSizeInfo$Mate(
           source: p.get('source').build(),
           displaySize: p.get('displaySize').build(),

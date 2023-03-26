@@ -11,6 +11,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/material/input_border.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/painting/borders.dart';
 
 /// class InputDecorator extends StatefulWidget
@@ -425,8 +426,8 @@ class InputDecoration$Mate extends InputDecoration with Mate {
     /// optionalParameters: {Color? hoverColor} , defaultValue:none
     Color? hoverColor,
 
-    /// optionalParameters: {InputBorder? border = InputBorder.none} , defaultValue:unprocessed
-    InputBorder? border,
+    /// optionalParameters: {InputBorder? border = InputBorder.none} , defaultValue:PrefixedIdentifier
+    InputBorder? border = InputBorder.none,
 
     /// optionalParameters: {bool enabled = true} , defaultValue:Literal
     bool enabled = true,
@@ -497,11 +498,11 @@ class InputDecorationTheme$Mate extends InputDecorationTheme with Mate {
     /// optionalParameters: {int? errorMaxLines} , defaultValue:none
     int? errorMaxLines,
 
-    /// optionalParameters: {FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto} , defaultValue:unprocessed
-    required FloatingLabelBehavior floatingLabelBehavior,
+    /// optionalParameters: {FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto} , defaultValue:PrefixedIdentifier
+    FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto,
 
-    /// optionalParameters: {FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start} , defaultValue:unprocessed
-    required FloatingLabelAlignment floatingLabelAlignment,
+    /// optionalParameters: {FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start} , defaultValue:PrefixedIdentifier
+    FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start,
 
     /// optionalParameters: {bool isDense = false} , defaultValue:Literal
     bool isDense = false,

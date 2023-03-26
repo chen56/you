@@ -19,7 +19,7 @@ class View$Mate extends View with Mate {
           child: child,
         ) {
     mateCreateName = 'View';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => View$Mate(
           view: p.get('view').build(),
           child: p.get('child').build(),

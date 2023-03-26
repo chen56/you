@@ -20,7 +20,7 @@ class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with Mate {
           child: child,
         ) {
     mateCreateName = 'AutomaticKeepAlive';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutomaticKeepAlive$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -39,7 +39,7 @@ class KeepAliveNotification$Mate extends KeepAliveNotification with Mate {
       Listenable handle)
       : super(handle) {
     mateCreateName = 'KeepAliveNotification';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeepAliveNotification$Mate(p.get('handle').value);
     mateUse('handle', handle);
   }

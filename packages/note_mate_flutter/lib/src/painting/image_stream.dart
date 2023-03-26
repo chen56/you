@@ -25,7 +25,7 @@ class ImageInfo$Mate extends ImageInfo with Mate {
           debugLabel: debugLabel,
         ) {
     mateCreateName = 'ImageInfo';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageInfo$Mate(
           image: p.get('image').build(),
           scale: p.get('scale').build(),
@@ -54,7 +54,7 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
           onError: onError,
         ) {
     mateCreateName = 'ImageStreamListener';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageStreamListener$Mate(
           p.get('onImage').value,
           onChunk: p.get('onChunk').build(),
@@ -80,7 +80,7 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
           expectedTotalBytes: expectedTotalBytes,
         ) {
     mateCreateName = 'ImageChunkEvent';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageChunkEvent$Mate(
           cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
           expectedTotalBytes: p.get('expectedTotalBytes').build(),
@@ -103,7 +103,7 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
           informationCollector: informationCollector,
         ) {
     mateCreateName = 'OneFrameImageStreamCompleter';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => OneFrameImageStreamCompleter$Mate(
           p.get('image').value,
           informationCollector: p.get('informationCollector').build(),
@@ -139,7 +139,7 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           informationCollector: informationCollector,
         ) {
     mateCreateName = 'MultiFrameImageStreamCompleter';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => MultiFrameImageStreamCompleter$Mate(
           codec: p.get('codec').build(),
           scale: p.get('scale').build(),

@@ -21,7 +21,7 @@ class ScrollAwareImageProvider$Mate<T extends Object> extends ScrollAwareImagePr
           imageProvider: imageProvider,
         ) {
     mateCreateName = 'ScrollAwareImageProvider';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollAwareImageProvider$Mate<T>(
           context: p.get('context').build(),
           imageProvider: p.get('imageProvider').build(),

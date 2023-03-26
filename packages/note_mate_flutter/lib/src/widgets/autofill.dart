@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/autofill.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/widgets.dart';
 
 /// class AutofillGroup extends StatefulWidget
 class AutofillGroup$Mate extends AutofillGroup with Mate {
@@ -15,15 +16,15 @@ class AutofillGroup$Mate extends AutofillGroup with Mate {
     /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
 
-    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , defaultValue:unprocessed
-    required AutofillContextAction onDisposeAction,
+    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , defaultValue:PrefixedIdentifier
+    AutofillContextAction onDisposeAction = AutofillContextAction.commit,
   }) : super(
           key: key,
           child: child,
           onDisposeAction: onDisposeAction,
         ) {
     mateCreateName = 'AutofillGroup';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutofillGroup$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

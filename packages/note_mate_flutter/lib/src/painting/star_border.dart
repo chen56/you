@@ -3,14 +3,15 @@
 import 'package:flutter/src/painting/star_border.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 
 /// class StarBorder extends OutlinedBorder
 class StarBorder$Mate extends StarBorder with Mate {
   /// StarBorder StarBorder({BorderSide side = BorderSide.none, double points = 5, double innerRadiusRatio = 0.4, double pointRounding = 0, double valleyRounding = 0, double rotation = 0, double squash = 0})
   StarBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
     /// optionalParameters: {double points = 5} , defaultValue:Literal
     double points = 5,
@@ -39,7 +40,7 @@ class StarBorder$Mate extends StarBorder with Mate {
           squash: squash,
         ) {
     mateCreateName = 'StarBorder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StarBorder$Mate(
           side: p.get('side').build(),
           points: p.get('points').build(),
@@ -60,8 +61,8 @@ class StarBorder$Mate extends StarBorder with Mate {
 
   /// StarBorder StarBorder.polygon({BorderSide side = BorderSide.none, double sides = 5, double pointRounding = 0, double rotation = 0, double squash = 0})
   StarBorder$Mate.polygon({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
     /// optionalParameters: {double sides = 5} , defaultValue:Literal
     double sides = 5,
@@ -82,7 +83,7 @@ class StarBorder$Mate extends StarBorder with Mate {
           squash: squash,
         ) {
     mateCreateName = 'StarBorder.polygon';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StarBorder$Mate.polygon(
           side: p.get('side').build(),
           sides: p.get('sides').build(),

@@ -23,7 +23,7 @@ class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with Mate {
           builder: builder,
         ) {
     mateCreateName = 'SliverLayoutBuilder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverLayoutBuilder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),

@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/widgets/scroll_notification.dart';
+import 'package:flutter/material.dart';
 
 /// class RefreshIndicator extends StatefulWidget
 class RefreshIndicator$Mate extends RefreshIndicator with Mate {
@@ -42,11 +43,11 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
     /// optionalParameters: {String? semanticsValue} , defaultValue:none
     String? semanticsValue,
 
-    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , defaultValue:unprocessed
-    required double strokeWidth,
+    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , defaultValue:PrefixedIdentifier
+    double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth,
 
-    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , defaultValue:unprocessed
-    required RefreshIndicatorTriggerMode triggerMode,
+    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , defaultValue:PrefixedIdentifier
+    RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge,
   }) : super(
           key: key,
           child: child,
@@ -123,11 +124,11 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
     /// optionalParameters: {String? semanticsValue} , defaultValue:none
     String? semanticsValue,
 
-    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , defaultValue:unprocessed
-    required double strokeWidth,
+    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , defaultValue:PrefixedIdentifier
+    double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth,
 
-    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , defaultValue:unprocessed
-    required RefreshIndicatorTriggerMode triggerMode,
+    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , defaultValue:PrefixedIdentifier
+    RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge,
   }) : super.adaptive(
           key: key,
           child: child,

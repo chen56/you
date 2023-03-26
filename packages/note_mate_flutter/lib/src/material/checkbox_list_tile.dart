@@ -13,6 +13,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/material/list_tile.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 
 /// class CheckboxListTile extends StatelessWidget
@@ -94,8 +95,8 @@ class CheckboxListTile$Mate extends CheckboxListTile with Mate {
     /// optionalParameters: {bool selected = false} , defaultValue:Literal
     bool selected = false,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:unprocessed
-    required ListTileControlAffinity controlAffinity,
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:PrefixedIdentifier
+    ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , defaultValue:none
     EdgeInsetsGeometry? contentPadding,

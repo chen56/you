@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
@@ -59,8 +60,8 @@ class Step$Mate extends Step with Mate {
     /// optionalParameters: {required Widget content} , defaultValue:none
     required Widget content,
 
-    /// optionalParameters: {StepState state = StepState.indexed} , defaultValue:unprocessed
-    required StepState state,
+    /// optionalParameters: {StepState state = StepState.indexed} , defaultValue:PrefixedIdentifier
+    StepState state = StepState.indexed,
 
     /// optionalParameters: {bool isActive = false} , defaultValue:Literal
     bool isActive = false,
@@ -107,8 +108,8 @@ class Stepper$Mate extends Stepper with Mate {
     /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {StepperType type = StepperType.vertical} , defaultValue:unprocessed
-    required StepperType type,
+    /// optionalParameters: {StepperType type = StepperType.vertical} , defaultValue:PrefixedIdentifier
+    StepperType type = StepperType.vertical,
 
     /// optionalParameters: {int currentStep = 0} , defaultValue:Literal
     int currentStep = 0,

@@ -26,7 +26,7 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate {
           dragDetails: dragDetails,
         ) {
     mateCreateName = 'ScrollStartNotification';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollStartNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
@@ -64,7 +64,7 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate {
           depth: depth,
         ) {
     mateCreateName = 'ScrollUpdateNotification';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollUpdateNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
@@ -106,7 +106,7 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate {
           velocity: velocity,
         ) {
     mateCreateName = 'OverscrollNotification';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverscrollNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
@@ -140,7 +140,7 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate {
           dragDetails: dragDetails,
         ) {
     mateCreateName = 'ScrollEndNotification';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollEndNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
@@ -170,7 +170,7 @@ class UserScrollNotification$Mate extends UserScrollNotification with Mate {
           direction: direction,
         ) {
     mateCreateName = 'UserScrollNotification';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UserScrollNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),

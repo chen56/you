@@ -52,7 +52,7 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
           initialValue: initialValue,
         ) {
     mateCreateName = 'RawAutocomplete';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawAutocomplete$Mate<T>(
           key: p.get('key').build(),
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
@@ -94,7 +94,7 @@ class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption w
           child: child,
         ) {
     mateCreateName = 'AutocompleteHighlightedOption';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutocompleteHighlightedOption$Mate(
           key: p.get('key').build(),
           highlightIndexNotifier: p.get('highlightIndexNotifier').build(),

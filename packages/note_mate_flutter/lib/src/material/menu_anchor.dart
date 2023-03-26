@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/material/menu_style.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
@@ -29,11 +30,11 @@ class MenuAnchor$Mate extends MenuAnchor with Mate {
     /// optionalParameters: {MenuStyle? style} , defaultValue:none
     MenuStyle? style,
 
-    /// optionalParameters: {Offset? alignmentOffset = Offset.zero} , defaultValue:unprocessed
-    Offset? alignmentOffset,
+    /// optionalParameters: {Offset? alignmentOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset? alignmentOffset = Offset.zero,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {bool anchorTapClosesMenu = false} , defaultValue:Literal
     bool anchorTapClosesMenu = false,
@@ -113,8 +114,8 @@ class MenuBar$Mate extends MenuBar with Mate {
     /// optionalParameters: {MenuStyle? style} , defaultValue:none
     MenuStyle? style,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {MenuController? controller} , defaultValue:none
     MenuController? controller,
@@ -176,8 +177,8 @@ class MenuItemButton$Mate extends MenuItemButton with Mate {
     /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {Widget? leadingIcon} , defaultValue:none
     Widget? leadingIcon,
@@ -272,8 +273,8 @@ class CheckboxMenuButton$Mate extends CheckboxMenuButton with Mate {
     /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {Widget? trailingIcon} , defaultValue:none
     Widget? trailingIcon,
@@ -368,8 +369,8 @@ class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with Mate {
     /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {Widget? trailingIcon} , defaultValue:none
     Widget? trailingIcon,
@@ -455,8 +456,8 @@ class SubmenuButton$Mate extends SubmenuButton with Mate {
     /// optionalParameters: {Offset? alignmentOffset} , defaultValue:none
     Offset? alignmentOffset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
     FocusNode? focusNode,

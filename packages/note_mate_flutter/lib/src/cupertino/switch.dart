@@ -7,6 +7,7 @@ import 'dart:core';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 
 /// class CupertinoSwitch extends StatefulWidget
 class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
@@ -36,8 +37,8 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
     /// optionalParameters: {Color? focusColor} , defaultValue:none
     Color? focusColor,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
   }) : super(
           key: key,
           value: value,

@@ -3,6 +3,7 @@
 import 'package:flutter/src/material/button_theme.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/material.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/painting/borders.dart';
@@ -18,11 +19,11 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , defaultValue:unprocessed
-    required ButtonTextTheme textTheme,
+    /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , defaultValue:PrefixedIdentifier
+    ButtonTextTheme textTheme = ButtonTextTheme.normal,
 
-    /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , defaultValue:unprocessed
-    required ButtonBarLayoutBehavior layoutBehavior,
+    /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , defaultValue:PrefixedIdentifier
+    ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded,
 
     /// optionalParameters: {double minWidth = 88.0} , defaultValue:Literal
     double minWidth = 88.0,
@@ -156,8 +157,8 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
 class ButtonThemeData$Mate extends ButtonThemeData with Mate {
   /// ButtonThemeData ButtonThemeData({ButtonTextTheme textTheme = ButtonTextTheme.normal, double minWidth = 88.0, double height = 36.0, EdgeInsetsGeometry? padding, ShapeBorder? shape, ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded, bool alignedDropdown = false, Color? buttonColor, Color? disabledColor, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, ColorScheme? colorScheme, MaterialTapTargetSize? materialTapTargetSize})
   ButtonThemeData$Mate({
-    /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , defaultValue:unprocessed
-    required ButtonTextTheme textTheme,
+    /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , defaultValue:PrefixedIdentifier
+    ButtonTextTheme textTheme = ButtonTextTheme.normal,
 
     /// optionalParameters: {double minWidth = 88.0} , defaultValue:Literal
     double minWidth = 88.0,
@@ -171,8 +172,8 @@ class ButtonThemeData$Mate extends ButtonThemeData with Mate {
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , defaultValue:unprocessed
-    required ButtonBarLayoutBehavior layoutBehavior,
+    /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , defaultValue:PrefixedIdentifier
+    ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded,
 
     /// optionalParameters: {bool alignedDropdown = false} , defaultValue:Literal
     bool alignedDropdown = false,

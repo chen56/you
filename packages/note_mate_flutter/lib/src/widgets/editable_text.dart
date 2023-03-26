@@ -12,18 +12,22 @@ import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/painting/strut_style.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/text_painter.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/text_selection.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/tap_region.dart';
 import 'package:flutter/src/services/text_formatter.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/services/autofill.dart';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'package:flutter/src/widgets/spell_check.dart';
 import 'package:flutter/src/widgets/magnifier.dart';
+import 'package:flutter/widgets.dart';
 
 /// class TextEditingController extends ValueNotifier<TextEditingValue>
 class TextEditingController$Mate extends TextEditingController with Mate {
@@ -34,7 +38,7 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       String? text})
       : super(text: text) {
     mateCreateName = 'TextEditingController';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextEditingController$Mate(text: p.get('text').build());
     mateUse('text', text);
   }
@@ -46,7 +50,7 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       TextEditingValue? value)
       : super.fromValue(value) {
     mateCreateName = 'TextEditingController.fromValue';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextEditingController$Mate.fromValue(p.get('value').value);
     mateUse('value', value);
   }
@@ -74,7 +78,7 @@ class ToolbarOptions$Mate extends ToolbarOptions with Mate {
           selectAll: selectAll,
         ) {
     mateCreateName = 'ToolbarOptions';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ToolbarOptions$Mate(
           copy: p.get('copy').build(),
           cut: p.get('cut').build(),
@@ -102,7 +106,7 @@ class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration w
           allowedMimeTypes: allowedMimeTypes,
         ) {
     mateCreateName = 'ContentInsertionConfiguration';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ContentInsertionConfiguration$Mate(
           onContentInserted: p.get('onContentInserted').build(),
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
@@ -158,8 +162,8 @@ class EditableText$Mate extends EditableText with Mate {
     /// optionalParameters: {required Color backgroundCursorColor} , defaultValue:none
     required Color backgroundCursorColor,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    TextAlign textAlign = TextAlign.start,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
@@ -185,8 +189,8 @@ class EditableText$Mate extends EditableText with Mate {
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
-    required TextWidthBasis textWidthBasis,
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:PrefixedIdentifier
+    TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
     /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
     bool autofocus = false,
@@ -209,8 +213,8 @@ class EditableText$Mate extends EditableText with Mate {
     /// optionalParameters: {TextInputAction? textInputAction} , defaultValue:none
     TextInputAction? textInputAction,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:unprocessed
-    required TextCapitalization textCapitalization,
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:PrefixedIdentifier
+    TextCapitalization textCapitalization = TextCapitalization.none,
 
     /// optionalParameters: {void Function(String)? onChanged} , defaultValue:none
     ValueChanged<String>? onChanged,
@@ -269,11 +273,11 @@ class EditableText$Mate extends EditableText with Mate {
     /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , defaultValue:unprocessed
     required EdgeInsets scrollPadding,
 
-    /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , defaultValue:unprocessed
-    required Brightness keyboardAppearance,
+    /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , defaultValue:PrefixedIdentifier
+    Brightness keyboardAppearance = Brightness.light,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool? enableInteractiveSelection} , defaultValue:none
     bool? enableInteractiveSelection,
@@ -293,8 +297,8 @@ class EditableText$Mate extends EditableText with Mate {
     /// optionalParameters: {AutofillClient? autofillClient} , defaultValue:none
     AutofillClient? autofillClient,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
@@ -317,8 +321,8 @@ class EditableText$Mate extends EditableText with Mate {
     /// optionalParameters: {SpellCheckConfiguration? spellCheckConfiguration} , defaultValue:none
     SpellCheckConfiguration? spellCheckConfiguration,
 
-    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , defaultValue:unprocessed
-    required TextMagnifierConfiguration magnifierConfiguration,
+    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , defaultValue:PrefixedIdentifier
+    TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled,
   }) : super(
           key: key,
           controller: controller,
@@ -390,7 +394,7 @@ class EditableText$Mate extends EditableText with Mate {
           magnifierConfiguration: magnifierConfiguration,
         ) {
     mateCreateName = 'EditableText';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => EditableText$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),

@@ -7,6 +7,8 @@ import 'dart:ui';
 import 'package:flutter/src/rendering/table_border.dart';
 import 'package:flutter/src/painting/decoration.dart';
 import 'package:flutter/src/painting/image_provider.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/rendering/box.dart';
 
 /// class IntrinsicColumnWidth extends TableColumnWidth
@@ -18,7 +20,7 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate {
       double? flex})
       : super(flex: flex) {
     mateCreateName = 'IntrinsicColumnWidth';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build());
     mateUse('flex', flex);
   }
@@ -33,7 +35,7 @@ class FixedColumnWidth$Mate extends FixedColumnWidth with Mate {
       double value)
       : super(value) {
     mateCreateName = 'FixedColumnWidth';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FixedColumnWidth$Mate(p.get('value').value);
     mateUse('value', value);
   }
@@ -48,7 +50,7 @@ class FractionColumnWidth$Mate extends FractionColumnWidth with Mate {
       double value)
       : super(value) {
     mateCreateName = 'FractionColumnWidth';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FractionColumnWidth$Mate(p.get('value').value);
     mateUse('value', value);
   }
@@ -63,7 +65,7 @@ class FlexColumnWidth$Mate extends FlexColumnWidth with Mate {
       double value)
       : super(value) {
     mateCreateName = 'FlexColumnWidth';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FlexColumnWidth$Mate(p.get('value').value);
     mateUse('value', value);
   }
@@ -83,7 +85,7 @@ class MaxColumnWidth$Mate extends MaxColumnWidth with Mate {
           b,
         ) {
     mateCreateName = 'MaxColumnWidth';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => MaxColumnWidth$Mate(
           p.get('a').value,
           p.get('b').value,
@@ -107,7 +109,7 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
           b,
         ) {
     mateCreateName = 'MinColumnWidth';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => MinColumnWidth$Mate(
           p.get('a').value,
           p.get('b').value,
@@ -142,11 +144,11 @@ class RenderTable$Mate extends RenderTable with Mate {
     /// optionalParameters: {List<Decoration?>? rowDecorations} , defaultValue:none
     List<Decoration?>? rowDecorations,
 
-    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , defaultValue:unprocessed
-    required ImageConfiguration configuration,
+    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , defaultValue:PrefixedIdentifier
+    ImageConfiguration configuration = ImageConfiguration.empty,
 
-    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , defaultValue:unprocessed
-    required TableCellVerticalAlignment defaultVerticalAlignment,
+    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , defaultValue:PrefixedIdentifier
+    TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top,
 
     /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,

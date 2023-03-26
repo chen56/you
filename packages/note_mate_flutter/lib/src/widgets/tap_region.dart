@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/proxy_box.dart';
+import 'package:flutter/rendering.dart';
 
 /// class TapRegionSurface extends SingleChildRenderObjectWidget
 class TapRegionSurface$Mate extends TapRegionSurface with Mate {
@@ -21,7 +22,7 @@ class TapRegionSurface$Mate extends TapRegionSurface with Mate {
           child: child,
         ) {
     mateCreateName = 'TapRegionSurface';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapRegionSurface$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -44,8 +45,8 @@ class TapRegion$Mate extends TapRegion with Mate {
     /// optionalParameters: {bool enabled = true} , defaultValue:Literal
     bool enabled = true,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:unprocessed
-    required HitTestBehavior behavior,
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , defaultValue:none
     TapRegionCallback? onTapOutside,
@@ -69,7 +70,7 @@ class TapRegion$Mate extends TapRegion with Mate {
           debugLabel: debugLabel,
         ) {
     mateCreateName = 'TapRegion';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapRegion$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -107,8 +108,8 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate {
     /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , defaultValue:none
     TapRegionCallback? onTapInside,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:unprocessed
-    required HitTestBehavior behavior,
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
     /// optionalParameters: {Object? groupId} , defaultValue:none
     Object? groupId,
@@ -125,7 +126,7 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate {
           debugLabel: debugLabel,
         ) {
     mateCreateName = 'RenderTapRegion';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderTapRegion$Mate(
           registry: p.get('registry').build(),
           enabled: p.get('enabled').build(),
@@ -175,7 +176,7 @@ class TextFieldTapRegion$Mate extends TextFieldTapRegion with Mate {
           debugLabel: debugLabel,
         ) {
     mateCreateName = 'TextFieldTapRegion';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextFieldTapRegion$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

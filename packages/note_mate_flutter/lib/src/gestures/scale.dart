@@ -3,16 +3,18 @@
 import 'package:flutter/src/gestures/scale.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class ScaleStartDetails
 class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
   /// ScaleStartDetails ScaleStartDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, int pointerCount = 0})
   ScaleStartDetails$Mate({
-    /// optionalParameters: {Offset focalPoint = Offset.zero} , defaultValue:unprocessed
-    required Offset focalPoint,
+    /// optionalParameters: {Offset focalPoint = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset focalPoint = Offset.zero,
 
     /// optionalParameters: {Offset? localFocalPoint} , defaultValue:none
     Offset? localFocalPoint,
@@ -41,8 +43,8 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
 class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
   /// ScaleUpdateDetails ScaleUpdateDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, double scale = 1.0, double horizontalScale = 1.0, double verticalScale = 1.0, double rotation = 0.0, int pointerCount = 0, Offset focalPointDelta = Offset.zero})
   ScaleUpdateDetails$Mate({
-    /// optionalParameters: {Offset focalPoint = Offset.zero} , defaultValue:unprocessed
-    required Offset focalPoint,
+    /// optionalParameters: {Offset focalPoint = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset focalPoint = Offset.zero,
 
     /// optionalParameters: {Offset? localFocalPoint} , defaultValue:none
     Offset? localFocalPoint,
@@ -62,8 +64,8 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
     /// optionalParameters: {int pointerCount = 0} , defaultValue:Literal
     int pointerCount = 0,
 
-    /// optionalParameters: {Offset focalPointDelta = Offset.zero} , defaultValue:unprocessed
-    required Offset focalPointDelta,
+    /// optionalParameters: {Offset focalPointDelta = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset focalPointDelta = Offset.zero,
   }) : super(
           focalPoint: focalPoint,
           localFocalPoint: localFocalPoint,
@@ -101,8 +103,8 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
 class ScaleEndDetails$Mate extends ScaleEndDetails with Mate {
   /// ScaleEndDetails ScaleEndDetails({Velocity velocity = Velocity.zero, double scaleVelocity = 0, int pointerCount = 0})
   ScaleEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:unprocessed
-    required Velocity velocity,
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:PrefixedIdentifier
+    Velocity velocity = Velocity.zero,
 
     /// optionalParameters: {double scaleVelocity = 0} , defaultValue:Literal
     double scaleVelocity = 0,
@@ -140,8 +142,8 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate {
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
     AllowedButtonsFilter? allowedButtonsFilter,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.down} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.down} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.down,
 
     /// optionalParameters: {bool trackpadScrollCausesScale = false} , defaultValue:Literal
     bool trackpadScrollCausesScale = false,

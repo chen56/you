@@ -4,6 +4,7 @@ import 'package:flutter/src/cupertino/magnifier.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/widgets/magnifier.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/change_notifier.dart';
@@ -20,8 +21,8 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Curve animationCurve = Curves.easeOut} , defaultValue:unprocessed
-    required Curve animationCurve,
+    /// optionalParameters: {Curve animationCurve = Curves.easeOut} , defaultValue:PrefixedIdentifier
+    Curve animationCurve = Curves.easeOut,
 
     /// optionalParameters: {required MagnifierController controller} , defaultValue:none
     required MagnifierController controller,
@@ -80,8 +81,8 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate {
     /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.elliptical(60, 50))} , defaultValue:unprocessed
     required BorderRadius borderRadius,
 
-    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , defaultValue:unprocessed
-    required Offset additionalFocalPointOffset,
+    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset additionalFocalPointOffset = Offset.zero,
 
     /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)]} , defaultValue:unprocessed
     required List<BoxShadow> shadows,

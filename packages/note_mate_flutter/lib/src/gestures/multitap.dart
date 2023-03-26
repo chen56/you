@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/animation.dart';
 
 /// class DoubleTapGestureRecognizer extends GestureRecognizer
 class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Mate {
@@ -16,7 +17,7 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , defaultValue:unprocessed
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -40,8 +41,8 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
 class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate {
   /// MultiTapGestureRecognizer MultiTapGestureRecognizer({Duration longTapDelay = Duration.zero, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   MultiTapGestureRecognizer$Mate({
-    /// optionalParameters: {Duration longTapDelay = Duration.zero} , defaultValue:unprocessed
-    required Duration longTapDelay,
+    /// optionalParameters: {Duration longTapDelay = Duration.zero} , defaultValue:PrefixedIdentifier
+    Duration longTapDelay = Duration.zero,
 
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
     Object? debugOwner,
@@ -76,8 +77,8 @@ class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate
 class SerialTapDownDetails$Mate extends SerialTapDownDetails with Mate {
   /// SerialTapDownDetails SerialTapDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, required PointerDeviceKind kind, int buttons = 0, int count = 1})
   SerialTapDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
@@ -133,8 +134,8 @@ class SerialTapCancelDetails$Mate extends SerialTapCancelDetails with Mate {
 class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate {
   /// SerialTapUpDetails SerialTapUpDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind, int count = 1})
   SerialTapUpDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,

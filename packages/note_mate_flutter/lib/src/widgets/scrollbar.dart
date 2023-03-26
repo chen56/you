@@ -6,6 +6,7 @@ import 'dart:ui';
 import 'package:flutter/src/animation/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -34,8 +35,8 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate {
     /// optionalParameters: {double thickness = _kScrollbarThickness} , defaultValue:unprocessed
     required double thickness,
 
-    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets padding,
+    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets padding = EdgeInsets.zero,
 
     /// optionalParameters: {double mainAxisMargin = 0.0} , defaultValue:Literal
     double mainAxisMargin = 0.0,
@@ -82,7 +83,7 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate {
           ignorePointer: ignorePointer,
         ) {
     mateCreateName = 'ScrollbarPainter';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollbarPainter$Mate(
           color: p.get('color').build(),
           fadeoutOpacityAnimation: p.get('fadeoutOpacityAnimation').build(),
@@ -172,8 +173,8 @@ class RawScrollbar$Mate extends RawScrollbar with Mate {
     /// optionalParameters: {Duration timeToFade = _kScrollbarTimeToFade} , defaultValue:unprocessed
     required Duration timeToFade,
 
-    /// optionalParameters: {Duration pressDuration = Duration.zero} , defaultValue:unprocessed
-    required Duration pressDuration,
+    /// optionalParameters: {Duration pressDuration = Duration.zero} , defaultValue:PrefixedIdentifier
+    Duration pressDuration = Duration.zero,
 
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
     required ScrollNotificationPredicate notificationPredicate,
@@ -218,7 +219,7 @@ class RawScrollbar$Mate extends RawScrollbar with Mate {
           padding: padding,
         ) {
     mateCreateName = 'RawScrollbar';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawScrollbar$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

@@ -6,6 +6,7 @@ import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/painting/inline_span.dart';
 import 'package:flutter/src/painting/strut_style.dart';
+import 'package:flutter/painting.dart';
 
 /// class PlaceholderDimensions
 class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
@@ -29,7 +30,7 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
           baselineOffset: baselineOffset,
         ) {
     mateCreateName = 'PlaceholderDimensions';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => PlaceholderDimensions$Mate(
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
@@ -50,8 +51,8 @@ class TextPainter$Mate extends TextPainter with Mate {
     /// optionalParameters: {InlineSpan? text} , defaultValue:none
     InlineSpan? text,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    TextAlign textAlign = TextAlign.start,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
@@ -71,8 +72,8 @@ class TextPainter$Mate extends TextPainter with Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
-    required TextWidthBasis textWidthBasis,
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:PrefixedIdentifier
+    TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
@@ -89,7 +90,7 @@ class TextPainter$Mate extends TextPainter with Mate {
           textHeightBehavior: textHeightBehavior,
         ) {
     mateCreateName = 'TextPainter';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => TextPainter$Mate(
           text: p.get('text').build(),
           textAlign: p.get('textAlign').build(),

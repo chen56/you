@@ -7,9 +7,11 @@ import 'package:flutter/src/painting/image_provider.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/image.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/decoration_image.dart';
 import 'dart:typed_data';
 import 'package:flutter/src/services/asset_bundle.dart';
@@ -42,14 +44,14 @@ class FadeInImage$Mate extends FadeInImage with Mate {
     /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
     required Duration fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:unprocessed
-    required Curve fadeOutCurve,
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:PrefixedIdentifier
+    Curve fadeOutCurve = Curves.easeOut,
 
     /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , defaultValue:unprocessed
     required Duration fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:unprocessed
-    required Curve fadeInCurve,
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:PrefixedIdentifier
+    Curve fadeInCurve = Curves.easeIn,
 
     /// optionalParameters: {double? width} , defaultValue:none
     double? width,
@@ -63,17 +65,17 @@ class FadeInImage$Mate extends FadeInImage with Mate {
     /// optionalParameters: {BoxFit? placeholderFit} , defaultValue:none
     BoxFit? placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
 
     /// optionalParameters: {FilterQuality? placeholderFilterQuality} , defaultValue:none
     FilterQuality? placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
     bool matchTextDirection = false,
@@ -100,7 +102,7 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           matchTextDirection: matchTextDirection,
         ) {
     mateCreateName = 'FadeInImage';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FadeInImage$Mate(
           key: p.get('key').build(),
           placeholder: p.get('placeholder').build(),
@@ -177,14 +179,14 @@ class FadeInImage$Mate extends FadeInImage with Mate {
     /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
     required Duration fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:unprocessed
-    required Curve fadeOutCurve,
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:PrefixedIdentifier
+    Curve fadeOutCurve = Curves.easeOut,
 
     /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , defaultValue:unprocessed
     required Duration fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:unprocessed
-    required Curve fadeInCurve,
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:PrefixedIdentifier
+    Curve fadeInCurve = Curves.easeIn,
 
     /// optionalParameters: {double? width} , defaultValue:none
     double? width,
@@ -198,17 +200,17 @@ class FadeInImage$Mate extends FadeInImage with Mate {
     /// optionalParameters: {BoxFit? placeholderFit} , defaultValue:none
     BoxFit? placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
 
     /// optionalParameters: {FilterQuality? placeholderFilterQuality} , defaultValue:none
     FilterQuality? placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
     bool matchTextDirection = false,
@@ -253,7 +255,7 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           imageCacheHeight: imageCacheHeight,
         ) {
     mateCreateName = 'FadeInImage.memoryNetwork';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FadeInImage$Mate.memoryNetwork(
           key: p.get('key').build(),
           placeholder: p.get('placeholder').build(),
@@ -345,14 +347,14 @@ class FadeInImage$Mate extends FadeInImage with Mate {
     /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
     required Duration fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:unprocessed
-    required Curve fadeOutCurve,
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:PrefixedIdentifier
+    Curve fadeOutCurve = Curves.easeOut,
 
     /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , defaultValue:unprocessed
     required Duration fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:unprocessed
-    required Curve fadeInCurve,
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:PrefixedIdentifier
+    Curve fadeInCurve = Curves.easeIn,
 
     /// optionalParameters: {double? width} , defaultValue:none
     double? width,
@@ -366,17 +368,17 @@ class FadeInImage$Mate extends FadeInImage with Mate {
     /// optionalParameters: {BoxFit? placeholderFit} , defaultValue:none
     BoxFit? placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
 
     /// optionalParameters: {FilterQuality? placeholderFilterQuality} , defaultValue:none
     FilterQuality? placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
     bool matchTextDirection = false,
@@ -422,7 +424,7 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           imageCacheHeight: imageCacheHeight,
         ) {
     mateCreateName = 'FadeInImage.assetNetwork';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FadeInImage$Mate.assetNetwork(
           key: p.get('key').build(),
           placeholder: p.get('placeholder').build(),

@@ -3,6 +3,7 @@
 import 'package:flutter/src/animation/curves.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
+import 'package:flutter/animation.dart';
 import 'dart:ui';
 
 /// class SawTooth extends Curve
@@ -29,8 +30,8 @@ class Interval$Mate extends Interval with Mate {
 
     /// requiredParameters: double end
     double end, {
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
   }) : super(
           begin,
           end,

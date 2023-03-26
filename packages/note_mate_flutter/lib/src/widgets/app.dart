@@ -140,7 +140,7 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
           restorationScopeId: restorationScopeId,
         ) {
     mateCreateName = 'WidgetsApp';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WidgetsApp$Mate(
           key: p.get('key').build(),
           navigatorKey: p.get('navigatorKey').build(),
@@ -313,7 +313,7 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
           restorationScopeId: restorationScopeId,
         ) {
     mateCreateName = 'WidgetsApp.router';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WidgetsApp$Mate.router(
           key: p.get('key').build(),
           routeInformationProvider: p.get('routeInformationProvider').build(),

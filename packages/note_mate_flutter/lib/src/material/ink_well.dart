@@ -10,6 +10,7 @@ import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:core';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/painting/box_border.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'dart:ui';
@@ -56,8 +57,8 @@ class InkResponse$Mate extends InkResponse with Mate {
     /// optionalParameters: {bool containedInkWell = false} , defaultValue:Literal
     bool containedInkWell = false,
 
-    /// optionalParameters: {BoxShape highlightShape = BoxShape.circle} , defaultValue:unprocessed
-    required BoxShape highlightShape,
+    /// optionalParameters: {BoxShape highlightShape = BoxShape.circle} , defaultValue:PrefixedIdentifier
+    BoxShape highlightShape = BoxShape.circle,
 
     /// optionalParameters: {double? radius} , defaultValue:none
     double? radius,

@@ -39,7 +39,7 @@ class KeyboardListener$Mate extends KeyboardListener with Mate {
           child: child,
         ) {
     mateCreateName = 'KeyboardListener';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeyboardListener$Mate(
           key: p.get('key').build(),
           focusNode: p.get('focusNode').build(),

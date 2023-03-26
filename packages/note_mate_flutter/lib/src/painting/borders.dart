@@ -4,6 +4,7 @@ import 'package:flutter/src/painting/borders.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
 import 'dart:core';
+import 'package:flutter/painting.dart';
 
 /// class BorderSide with Diagnosticable
 class BorderSide$Mate extends BorderSide with Mate {
@@ -15,8 +16,8 @@ class BorderSide$Mate extends BorderSide with Mate {
     /// optionalParameters: {double width = 1.0} , defaultValue:Literal
     double width = 1.0,
 
-    /// optionalParameters: {BorderStyle style = BorderStyle.solid} , defaultValue:unprocessed
-    required BorderStyle style,
+    /// optionalParameters: {BorderStyle style = BorderStyle.solid} , defaultValue:PrefixedIdentifier
+    BorderStyle style = BorderStyle.solid,
 
     /// optionalParameters: {double strokeAlign = strokeAlignInside} , defaultValue:unprocessed
     required double strokeAlign,
@@ -27,7 +28,7 @@ class BorderSide$Mate extends BorderSide with Mate {
           strokeAlign: strokeAlign,
         ) {
     mateCreateName = 'BorderSide';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderSide$Mate(
           color: p.get('color').build(),
           width: p.get('width').build(),

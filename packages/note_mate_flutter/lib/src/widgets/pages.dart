@@ -61,7 +61,7 @@ class PageRouteBuilder$Mate<T> extends PageRouteBuilder<T> with Mate {
           allowSnapshotting: allowSnapshotting,
         ) {
     mateCreateName = 'PageRouteBuilder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageRouteBuilder$Mate<T>(
           settings: p.get('settings').build(),
           pageBuilder: p.get('pageBuilder').build(),

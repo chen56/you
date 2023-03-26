@@ -6,7 +6,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/material/date.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 
 /// class CalendarDatePicker extends StatefulWidget
 class CalendarDatePicker$Mate extends CalendarDatePicker with Mate {
@@ -33,8 +35,8 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with Mate {
     /// optionalParameters: {void Function(DateTime)? onDisplayedMonthChanged} , defaultValue:none
     ValueChanged<DateTime>? onDisplayedMonthChanged,
 
-    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , defaultValue:unprocessed
-    required DatePickerMode initialCalendarMode,
+    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , defaultValue:PrefixedIdentifier
+    DatePickerMode initialCalendarMode = DatePickerMode.day,
 
     /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , defaultValue:none
     SelectableDayPredicate? selectableDayPredicate,
@@ -99,8 +101,8 @@ class YearPicker$Mate extends YearPicker with Mate {
     /// optionalParameters: {required void Function(DateTime) onChanged} , defaultValue:none
     required ValueChanged<DateTime> onChanged,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
   }) : super(
           key: key,
           currentDate: currentDate,

@@ -5,7 +5,9 @@ import 'package:note/mate.dart';
 import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/services/keyboard_key.g.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class TapDragDownDetails with Diagnosticable
@@ -34,7 +36,7 @@ class TapDragDownDetails$Mate extends TapDragDownDetails with Mate {
           keysPressedOnDown: keysPressedOnDown,
         ) {
     mateCreateName = 'TapDragDownDetails';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragDownDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
@@ -76,7 +78,7 @@ class TapDragUpDetails$Mate extends TapDragUpDetails with Mate {
           keysPressedOnDown: keysPressedOnDown,
         ) {
     mateCreateName = 'TapDragUpDetails';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragUpDetails$Mate(
           kind: p.get('kind').build(),
           globalPosition: p.get('globalPosition').build(),
@@ -122,7 +124,7 @@ class TapDragStartDetails$Mate extends TapDragStartDetails with Mate {
           keysPressedOnDown: keysPressedOnDown,
         ) {
     mateCreateName = 'TapDragStartDetails';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragStartDetails$Mate(
           sourceTimeStamp: p.get('sourceTimeStamp').build(),
           globalPosition: p.get('globalPosition').build(),
@@ -147,8 +149,8 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
     /// optionalParameters: {Duration? sourceTimeStamp} , defaultValue:none
     Duration? sourceTimeStamp,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:unprocessed
-    required Offset delta,
+    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset delta = Offset.zero,
 
     /// optionalParameters: {double? primaryDelta} , defaultValue:none
     double? primaryDelta,
@@ -186,7 +188,7 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
           keysPressedOnDown: keysPressedOnDown,
         ) {
     mateCreateName = 'TapDragUpdateDetails';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragUpdateDetails$Mate(
           sourceTimeStamp: p.get('sourceTimeStamp').build(),
           delta: p.get('delta').build(),
@@ -216,8 +218,8 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
 class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
   /// TapDragEndDetails TapDragEndDetails({Velocity velocity = Velocity.zero, double? primaryVelocity, required int consecutiveTapCount, required Set<LogicalKeyboardKey> keysPressedOnDown})
   TapDragEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:unprocessed
-    required Velocity velocity,
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:PrefixedIdentifier
+    Velocity velocity = Velocity.zero,
 
     /// optionalParameters: {double? primaryVelocity} , defaultValue:none
     double? primaryVelocity,
@@ -234,7 +236,7 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
           keysPressedOnDown: keysPressedOnDown,
         ) {
     mateCreateName = 'TapDragEndDetails';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragEndDetails$Mate(
           velocity: p.get('velocity').build(),
           primaryVelocity: p.get('primaryVelocity').build(),
@@ -266,7 +268,7 @@ class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with 
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
     mateCreateName = 'TapAndDragGestureRecognizer';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapAndDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
           supportedDevices: p.get('supportedDevices').build(),

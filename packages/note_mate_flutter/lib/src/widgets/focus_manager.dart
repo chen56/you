@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/focus_traversal.dart';
+import 'package:flutter/widgets.dart';
 
 /// class FocusNode with DiagnosticableTreeMixin, ChangeNotifier
 class FocusNode$Mate extends FocusNode with Mate {
@@ -39,7 +40,7 @@ class FocusNode$Mate extends FocusNode with Mate {
           descendantsAreTraversable: descendantsAreTraversable,
         ) {
     mateCreateName = 'FocusNode';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FocusNode$Mate(
           debugLabel: p.get('debugLabel').build(),
           onKey: p.get('onKey').build(),
@@ -78,8 +79,8 @@ class FocusScopeNode$Mate extends FocusScopeNode with Mate {
     /// optionalParameters: {bool canRequestFocus = true} , defaultValue:Literal
     bool canRequestFocus = true,
 
-    /// optionalParameters: {TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop} , defaultValue:unprocessed
-    required TraversalEdgeBehavior traversalEdgeBehavior,
+    /// optionalParameters: {TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop} , defaultValue:PrefixedIdentifier
+    TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop,
   }) : super(
           debugLabel: debugLabel,
           onKeyEvent: onKeyEvent,
@@ -89,7 +90,7 @@ class FocusScopeNode$Mate extends FocusScopeNode with Mate {
           traversalEdgeBehavior: traversalEdgeBehavior,
         ) {
     mateCreateName = 'FocusScopeNode';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FocusScopeNode$Mate(
           debugLabel: p.get('debugLabel').build(),
           onKeyEvent: p.get('onKeyEvent').build(),

@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/snapshot_widget.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class SnapshotController extends ChangeNotifier
@@ -15,7 +16,7 @@ class SnapshotController$Mate extends SnapshotController with Mate {
       bool allowSnapshotting = false})
       : super(allowSnapshotting: allowSnapshotting) {
     mateCreateName = 'SnapshotController';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
     mateUse('allowSnapshotting', allowSnapshotting);
   }
@@ -28,8 +29,8 @@ class SnapshotWidget$Mate extends SnapshotWidget with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {SnapshotMode mode = SnapshotMode.normal} , defaultValue:unprocessed
-    required SnapshotMode mode,
+    /// optionalParameters: {SnapshotMode mode = SnapshotMode.normal} , defaultValue:PrefixedIdentifier
+    SnapshotMode mode = SnapshotMode.normal,
 
     /// optionalParameters: {SnapshotPainter painter = const _DefaultSnapshotPainter()} , defaultValue:unprocessed
     required SnapshotPainter painter,
@@ -51,7 +52,7 @@ class SnapshotWidget$Mate extends SnapshotWidget with Mate {
           child: child,
         ) {
     mateCreateName = 'SnapshotWidget';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SnapshotWidget$Mate(
           key: p.get('key').build(),
           mode: p.get('mode').build(),

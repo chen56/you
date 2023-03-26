@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 
 /// class MaterialSlice extends MergeableMaterialItem
 class MaterialSlice$Mate extends MaterialSlice with Mate {
@@ -69,8 +70,8 @@ class MergeableMaterial$Mate extends MergeableMaterial with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis mainAxis = Axis.vertical} , defaultValue:unprocessed
-    required Axis mainAxis,
+    /// optionalParameters: {Axis mainAxis = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis mainAxis = Axis.vertical,
 
     /// optionalParameters: {double elevation = 2} , defaultValue:Literal
     double elevation = 2,

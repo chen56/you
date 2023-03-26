@@ -5,10 +5,12 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'package:flutter/src/rendering/sliver.dart';
@@ -24,8 +26,8 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
     /// optionalParameters: {ScrollController? controller} , defaultValue:none
     ScrollController? controller,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -39,14 +41,14 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
     /// optionalParameters: {required Widget body} , defaultValue:none
     required Widget body,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool floatHeaderSlivers = false} , defaultValue:Literal
     bool floatHeaderSlivers = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
@@ -68,7 +70,7 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
           scrollBehavior: scrollBehavior,
         ) {
     mateCreateName = 'NestedScrollView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NestedScrollView$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -116,7 +118,7 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
           sliver: sliver,
         ) {
     mateCreateName = 'SliverOverlapAbsorber';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverOverlapAbsorber$Mate(
           key: p.get('key').build(),
           handle: p.get('handle').build(),
@@ -142,7 +144,7 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with 
           sliver: sliver,
         ) {
     mateCreateName = 'RenderSliverOverlapAbsorber';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderSliverOverlapAbsorber$Mate(
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
@@ -170,7 +172,7 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
           sliver: sliver,
         ) {
     mateCreateName = 'SliverOverlapInjector';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverOverlapInjector$Mate(
           key: p.get('key').build(),
           handle: p.get('handle').build(),
@@ -191,7 +193,7 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with 
       required SliverOverlapAbsorberHandle handle})
       : super(handle: handle) {
     mateCreateName = 'RenderSliverOverlapInjector';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
     mateUse('handle', handle);
   }
@@ -204,8 +206,8 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:unprocessed
-    required AxisDirection axisDirection,
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:PrefixedIdentifier
+    AxisDirection axisDirection = AxisDirection.down,
 
     /// optionalParameters: {AxisDirection? crossAxisDirection} , defaultValue:none
     AxisDirection? crossAxisDirection,
@@ -225,8 +227,8 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
     required SliverOverlapAbsorberHandle handle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           axisDirection: axisDirection,
@@ -239,7 +241,7 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'NestedScrollViewViewport';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NestedScrollViewViewport$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),
@@ -301,7 +303,7 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'RenderNestedScrollViewViewport';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderNestedScrollViewViewport$Mate(
           axisDirection: p.get('axisDirection').build(),
           crossAxisDirection: p.get('crossAxisDirection').build(),

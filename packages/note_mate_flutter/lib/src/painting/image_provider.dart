@@ -6,6 +6,7 @@ import 'package:flutter/src/services/asset_bundle.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/foundation/platform.dart';
+import 'package:flutter/painting.dart';
 import 'dart:io';
 import 'dart:typed_data';
 
@@ -39,7 +40,7 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate {
           platform: platform,
         ) {
     mateCreateName = 'ImageConfiguration';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageConfiguration$Mate(
           bundle: p.get('bundle').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
@@ -75,7 +76,7 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate {
           scale: scale,
         ) {
     mateCreateName = 'AssetBundleImageKey';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => AssetBundleImageKey$Mate(
           bundle: p.get('bundle').build(),
           name: p.get('name').build(),
@@ -99,8 +100,8 @@ class ResizeImage$Mate extends ResizeImage with Mate {
     /// optionalParameters: {int? height} , defaultValue:none
     int? height,
 
-    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , defaultValue:unprocessed
-    required ResizeImagePolicy policy,
+    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , defaultValue:PrefixedIdentifier
+    ResizeImagePolicy policy = ResizeImagePolicy.exact,
 
     /// optionalParameters: {bool allowUpscaling = false} , defaultValue:Literal
     bool allowUpscaling = false,
@@ -112,7 +113,7 @@ class ResizeImage$Mate extends ResizeImage with Mate {
           allowUpscaling: allowUpscaling,
         ) {
     mateCreateName = 'ResizeImage';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ResizeImage$Mate(
           p.get('imageProvider').value,
           width: p.get('width').build(),
@@ -141,7 +142,7 @@ class FileImage$Mate extends FileImage with Mate {
           scale: scale,
         ) {
     mateCreateName = 'FileImage';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => FileImage$Mate(
           p.get('file').value,
           scale: p.get('scale').build(),
@@ -164,7 +165,7 @@ class MemoryImage$Mate extends MemoryImage with Mate {
           scale: scale,
         ) {
     mateCreateName = 'MemoryImage';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => MemoryImage$Mate(
           p.get('bytes').value,
           scale: p.get('scale').build(),
@@ -195,7 +196,7 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
           package: package,
         ) {
     mateCreateName = 'ExactAssetImage';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ExactAssetImage$Mate(
           p.get('assetName').value,
           scale: p.get('scale').build(),
@@ -223,7 +224,7 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate
           uri: uri,
         ) {
     mateCreateName = 'NetworkImageLoadException';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => NetworkImageLoadException$Mate(
           statusCode: p.get('statusCode').build(),
           uri: p.get('uri').build(),

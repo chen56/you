@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/platform.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class PrimaryScrollController extends InheritedWidget
@@ -22,8 +23,8 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
     /// optionalParameters: {Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms} , defaultValue:unprocessed
     required Set<TargetPlatform> automaticallyInheritForPlatforms,
 
-    /// optionalParameters: {Axis? scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    Axis? scrollDirection,
+    /// optionalParameters: {Axis? scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis? scrollDirection = Axis.vertical,
 
     /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
@@ -35,7 +36,7 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           child: child,
         ) {
     mateCreateName = 'PrimaryScrollController';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PrimaryScrollController$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -62,7 +63,7 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           child: child,
         ) {
     mateCreateName = 'PrimaryScrollController.none';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PrimaryScrollController$Mate.none(
           key: p.get('key').build(),
           child: p.get('child').build(),

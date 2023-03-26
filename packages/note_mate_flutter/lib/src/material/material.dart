@@ -3,6 +3,7 @@
 import 'package:flutter/src/material/material.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/material.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/painting/text_style.dart';
@@ -17,8 +18,8 @@ class Material$Mate extends Material with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {MaterialType type = MaterialType.canvas} , defaultValue:unprocessed
-    required MaterialType type,
+    /// optionalParameters: {MaterialType type = MaterialType.canvas} , defaultValue:PrefixedIdentifier
+    MaterialType type = MaterialType.canvas,
 
     /// optionalParameters: {double elevation = 0.0} , defaultValue:Literal
     double elevation = 0.0,
@@ -44,8 +45,8 @@ class Material$Mate extends Material with Mate {
     /// optionalParameters: {bool borderOnForeground = true} , defaultValue:Literal
     bool borderOnForeground = true,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , defaultValue:unprocessed
     required Duration animationDuration,

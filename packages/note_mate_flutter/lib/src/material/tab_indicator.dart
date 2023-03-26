@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 
 /// class UnderlineTabIndicator extends Decoration
 class UnderlineTabIndicator$Mate extends UnderlineTabIndicator with Mate {
@@ -16,8 +17,8 @@ class UnderlineTabIndicator$Mate extends UnderlineTabIndicator with Mate {
     /// optionalParameters: {BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white)} , defaultValue:unprocessed
     required BorderSide borderSide,
 
-    /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsetsGeometry insets,
+    /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsetsGeometry insets = EdgeInsets.zero,
   }) : super(
           borderRadius: borderRadius,
           borderSide: borderSide,

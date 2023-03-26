@@ -3,6 +3,7 @@
 import 'package:flutter/src/animation/animation_controller.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/scheduler/ticker.dart';
 
 /// class AnimationController extends Animation<double> with AnimationEagerListenerMixin, AnimationLocalListenersMixin, AnimationLocalStatusListenersMixin
@@ -27,8 +28,8 @@ class AnimationController$Mate extends AnimationController with Mate {
     /// optionalParameters: {double upperBound = 1.0} , defaultValue:Literal
     double upperBound = 1.0,
 
-    /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.normal} , defaultValue:unprocessed
-    required AnimationBehavior animationBehavior,
+    /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.normal} , defaultValue:PrefixedIdentifier
+    AnimationBehavior animationBehavior = AnimationBehavior.normal,
 
     /// optionalParameters: {required TickerProvider vsync} , defaultValue:none
     required TickerProvider vsync,
@@ -81,8 +82,8 @@ class AnimationController$Mate extends AnimationController with Mate {
     /// optionalParameters: {required TickerProvider vsync} , defaultValue:none
     required TickerProvider vsync,
 
-    /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.preserve} , defaultValue:unprocessed
-    required AnimationBehavior animationBehavior,
+    /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.preserve} , defaultValue:PrefixedIdentifier
+    AnimationBehavior animationBehavior = AnimationBehavior.preserve,
   }) : super.unbounded(
           value: value,
           duration: duration,

@@ -7,6 +7,7 @@ import 'dart:ui';
 import 'package:flutter/src/semantics/semantics.dart';
 import 'package:vector_math/vector_math_64.dart';
 import 'dart:core';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/rendering/box.dart';
 
 /// class CustomPainterSemantics
@@ -35,7 +36,7 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
           tags: tags,
         ) {
     mateCreateName = 'CustomPainterSemantics';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => CustomPainterSemantics$Mate(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
@@ -61,8 +62,8 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate {
     /// optionalParameters: {CustomPainter? foregroundPainter} , defaultValue:none
     CustomPainter? foregroundPainter,
 
-    /// optionalParameters: {Size preferredSize = Size.zero} , defaultValue:unprocessed
-    required Size preferredSize,
+    /// optionalParameters: {Size preferredSize = Size.zero} , defaultValue:PrefixedIdentifier
+    Size preferredSize = Size.zero,
 
     /// optionalParameters: {bool isComplex = false} , defaultValue:Literal
     bool isComplex = false,

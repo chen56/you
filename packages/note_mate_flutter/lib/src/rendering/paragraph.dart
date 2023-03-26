@@ -6,6 +6,7 @@ import 'dart:core';
 import 'package:flutter/src/painting/inline_span.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/text_painter.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/strut_style.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/rendering/selection.dart';
@@ -31,8 +32,8 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
   RenderParagraph$Mate(
     /// requiredParameters: InlineSpan text
     InlineSpan text, {
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    TextAlign textAlign = TextAlign.start,
 
     /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
     required TextDirection textDirection,
@@ -40,8 +41,8 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
     /// optionalParameters: {bool softWrap = true} , defaultValue:Literal
     bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:unprocessed
-    required TextOverflow overflow,
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:PrefixedIdentifier
+    TextOverflow overflow = TextOverflow.clip,
 
     /// optionalParameters: {double textScaleFactor = 1.0} , defaultValue:Literal
     double textScaleFactor = 1.0,
@@ -55,8 +56,8 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
-    required TextWidthBasis textWidthBasis,
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:PrefixedIdentifier
+    TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,

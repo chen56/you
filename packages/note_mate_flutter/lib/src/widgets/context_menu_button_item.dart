@@ -3,6 +3,7 @@
 import 'package:flutter/src/widgets/context_menu_button_item.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/widgets.dart';
 import 'dart:core';
 
 /// class ContextMenuButtonItem
@@ -12,8 +13,8 @@ class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate {
     /// optionalParameters: {required void Function() onPressed} , defaultValue:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , defaultValue:unprocessed
-    required ContextMenuButtonType type,
+    /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , defaultValue:PrefixedIdentifier
+    ContextMenuButtonType type = ContextMenuButtonType.custom,
 
     /// optionalParameters: {String? label} , defaultValue:none
     String? label,
@@ -23,7 +24,7 @@ class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate {
           label: label,
         ) {
     mateCreateName = 'ContextMenuButtonItem';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ContextMenuButtonItem$Mate(
           onPressed: p.get('onPressed').build(),
           type: p.get('type').build(),

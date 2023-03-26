@@ -10,7 +10,9 @@ import 'dart:core';
 import 'package:flutter/src/widgets/app.dart';
 import 'dart:ui';
 import 'package:flutter/src/material/theme_data.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/widgets/localizations.dart';
 import 'package:flutter/src/widgets/shortcuts.dart';
 import 'package:flutter/src/widgets/actions.dart';
@@ -75,14 +77,14 @@ class MaterialApp$Mate extends MaterialApp with Mate {
     /// optionalParameters: {ThemeData? highContrastDarkTheme} , defaultValue:none
     ThemeData? highContrastDarkTheme,
 
-    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , defaultValue:unprocessed
-    ThemeMode? themeMode,
+    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , defaultValue:PrefixedIdentifier
+    ThemeMode? themeMode = ThemeMode.system,
 
     /// optionalParameters: {Duration themeAnimationDuration = kThemeAnimationDuration} , defaultValue:unprocessed
     required Duration themeAnimationDuration,
 
-    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , defaultValue:unprocessed
-    required Curve themeAnimationCurve,
+    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve themeAnimationCurve = Curves.linear,
 
     /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,
@@ -291,14 +293,14 @@ class MaterialApp$Mate extends MaterialApp with Mate {
     /// optionalParameters: {ThemeData? highContrastDarkTheme} , defaultValue:none
     ThemeData? highContrastDarkTheme,
 
-    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , defaultValue:unprocessed
-    ThemeMode? themeMode,
+    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , defaultValue:PrefixedIdentifier
+    ThemeMode? themeMode = ThemeMode.system,
 
     /// optionalParameters: {Duration themeAnimationDuration = kThemeAnimationDuration} , defaultValue:unprocessed
     required Duration themeAnimationDuration,
 
-    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , defaultValue:unprocessed
-    required Curve themeAnimationCurve,
+    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve themeAnimationCurve = Curves.linear,
 
     /// optionalParameters: {Locale? locale} , defaultValue:none
     Locale? locale,

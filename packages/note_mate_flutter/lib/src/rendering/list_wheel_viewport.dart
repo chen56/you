@@ -44,8 +44,8 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
     /// optionalParameters: {bool renderChildrenOutsideViewport = false} , defaultValue:Literal
     bool renderChildrenOutsideViewport = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,

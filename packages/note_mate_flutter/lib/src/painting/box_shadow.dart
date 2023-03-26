@@ -3,6 +3,7 @@
 import 'package:flutter/src/painting/box_shadow.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 
 /// class BoxShadow extends Shadow
@@ -12,8 +13,8 @@ class BoxShadow$Mate extends BoxShadow with Mate {
     /// optionalParameters: {Color color = const Color(_kColorDefault)} , defaultValue:unprocessed
     required Color color,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset offset = Offset.zero,
 
     /// optionalParameters: {double blurRadius = 0.0} , defaultValue:Literal
     double blurRadius = 0.0,
@@ -21,8 +22,8 @@ class BoxShadow$Mate extends BoxShadow with Mate {
     /// optionalParameters: {double spreadRadius = 0.0} , defaultValue:Literal
     double spreadRadius = 0.0,
 
-    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , defaultValue:unprocessed
-    required BlurStyle blurStyle,
+    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , defaultValue:PrefixedIdentifier
+    BlurStyle blurStyle = BlurStyle.normal,
   }) : super(
           color: color,
           offset: offset,
@@ -31,7 +32,7 @@ class BoxShadow$Mate extends BoxShadow with Mate {
           blurStyle: blurStyle,
         ) {
     mateCreateName = 'BoxShadow';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BoxShadow$Mate(
           color: p.get('color').build(),
           offset: p.get('offset').build(),

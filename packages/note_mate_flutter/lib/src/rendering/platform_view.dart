@@ -21,8 +21,8 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate {
     /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , defaultValue:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           viewController: viewController,
           hitTestBehavior: hitTestBehavior,

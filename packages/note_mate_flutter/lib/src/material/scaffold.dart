@@ -10,8 +10,10 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/preferred_size.dart';
 import 'package:flutter/src/material/floating_action_button_location.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/material/drawer.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 
 /// class ScaffoldMessenger extends StatefulWidget
 class ScaffoldMessenger$Mate extends ScaffoldMessenger with Mate {
@@ -158,8 +160,8 @@ class Scaffold$Mate extends Scaffold with Mate {
     /// optionalParameters: {List<Widget>? persistentFooterButtons} , defaultValue:none
     List<Widget>? persistentFooterButtons,
 
-    /// optionalParameters: {AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd} , defaultValue:unprocessed
-    required AlignmentDirectional persistentFooterAlignment,
+    /// optionalParameters: {AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd} , defaultValue:PrefixedIdentifier
+    AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd,
 
     /// optionalParameters: {Widget? drawer} , defaultValue:none
     Widget? drawer,
@@ -188,8 +190,8 @@ class Scaffold$Mate extends Scaffold with Mate {
     /// optionalParameters: {bool primary = true} , defaultValue:Literal
     bool primary = true,
 
-    /// optionalParameters: {DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior drawerDragStartBehavior,
+    /// optionalParameters: {DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool extendBody = false} , defaultValue:Literal
     bool extendBody = false,

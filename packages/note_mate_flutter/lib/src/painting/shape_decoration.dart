@@ -35,7 +35,7 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
           shape: shape,
         ) {
     mateCreateName = 'ShapeDecoration';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ShapeDecoration$Mate(
           color: p.get('color').build(),
           image: p.get('image').build(),

@@ -37,7 +37,7 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
           debugLabel: debugLabel,
         ) {
     mateCreateName = 'ScrollPositionWithSingleContext';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollPositionWithSingleContext$Mate(
           physics: p.get('physics').build(),
           context: p.get('context').build(),

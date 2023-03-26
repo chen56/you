@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/painting/text_style.dart';
@@ -31,8 +32,8 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
     /// optionalParameters: {bool enabled = true} , defaultValue:Literal
     bool enabled = true,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = AlignmentDirectional.centerStart,
 
     /// optionalParameters: {required Widget child} , defaultValue:none
     required Widget child,
@@ -163,8 +164,8 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
     /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = AlignmentDirectional.centerStart,
 
     /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
     BorderRadius? borderRadius,
@@ -346,8 +347,8 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Ma
     /// optionalParameters: {bool? enableFeedback} , defaultValue:none
     bool? enableFeedback,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = AlignmentDirectional.centerStart,
 
     /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
     BorderRadius? borderRadius,

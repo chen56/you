@@ -16,8 +16,8 @@ class RenderFlow$Mate extends RenderFlow with Mate {
     /// optionalParameters: {required FlowDelegate delegate} , defaultValue:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           children: children,
           delegate: delegate,

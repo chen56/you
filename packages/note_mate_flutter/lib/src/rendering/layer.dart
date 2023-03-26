@@ -4,6 +4,7 @@ import 'package:flutter/src/rendering/layer.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
 import 'dart:core';
+import 'package:flutter/animation.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 /// class AnnotationEntry<T>
@@ -167,8 +168,8 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
   /// OffsetLayer OffsetLayer({Offset offset = Offset.zero})
   OffsetLayer$Mate(
       {
-      /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
-      required Offset offset})
+      /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+      Offset offset = Offset.zero})
       : super(offset: offset) {
     mateCreateName = 'OffsetLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
@@ -184,8 +185,8 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate {
     /// optionalParameters: {Rect? clipRect} , defaultValue:none
     Rect? clipRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           clipRect: clipRect,
           clipBehavior: clipBehavior,
@@ -208,8 +209,8 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
     /// optionalParameters: {RRect? clipRRect} , defaultValue:none
     RRect? clipRRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.antiAlias,
   }) : super(
           clipRRect: clipRRect,
           clipBehavior: clipBehavior,
@@ -232,8 +233,8 @@ class ClipPathLayer$Mate extends ClipPathLayer with Mate {
     /// optionalParameters: {Path? clipPath} , defaultValue:none
     Path? clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.antiAlias,
   }) : super(
           clipPath: clipPath,
           clipBehavior: clipBehavior,
@@ -271,8 +272,8 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
     /// optionalParameters: {ImageFilter? imageFilter} , defaultValue:none
     ImageFilter? imageFilter,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset offset = Offset.zero,
   }) : super(
           imageFilter: imageFilter,
           offset: offset,
@@ -295,8 +296,8 @@ class TransformLayer$Mate extends TransformLayer with Mate {
     /// optionalParameters: {Matrix4? transform} , defaultValue:none
     Matrix4? transform,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset offset = Offset.zero,
   }) : super(
           transform: transform,
           offset: offset,
@@ -319,8 +320,8 @@ class OpacityLayer$Mate extends OpacityLayer with Mate {
     /// optionalParameters: {int? alpha} , defaultValue:none
     int? alpha,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset offset = Offset.zero,
   }) : super(
           alpha: alpha,
           offset: offset,
@@ -373,8 +374,8 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
     /// optionalParameters: {ImageFilter? filter} , defaultValue:none
     ImageFilter? filter,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:unprocessed
-    required BlendMode blendMode,
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:PrefixedIdentifier
+    BlendMode blendMode = BlendMode.srcOver,
   }) : super(
           filter: filter,
           blendMode: blendMode,
@@ -397,8 +398,8 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
     /// optionalParameters: {Path? clipPath} , defaultValue:none
     Path? clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {double? elevation} , defaultValue:none
     double? elevation,
@@ -439,8 +440,8 @@ class LeaderLayer$Mate extends LeaderLayer with Mate {
     /// optionalParameters: {required LayerLink link} , defaultValue:none
     required LayerLink link,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset offset = Offset.zero,
   }) : super(
           link: link,
           offset: offset,
@@ -466,11 +467,11 @@ class FollowerLayer$Mate extends FollowerLayer with Mate {
     /// optionalParameters: {bool? showWhenUnlinked = true} , defaultValue:Literal
     bool? showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , defaultValue:unprocessed
-    Offset? unlinkedOffset,
+    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset? unlinkedOffset = Offset.zero,
 
-    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , defaultValue:unprocessed
-    Offset? linkedOffset,
+    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset? linkedOffset = Offset.zero,
   }) : super(
           link: link,
           showWhenUnlinked: showWhenUnlinked,

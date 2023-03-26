@@ -12,11 +12,13 @@ import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/widgets/icon.dart';
 import 'package:flutter/src/material/theme_data.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/material/list_tile.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/painting/borders.dart';
 
 /// class SwitchListTile extends StatelessWidget
@@ -71,8 +73,8 @@ class SwitchListTile$Mate extends SwitchListTile with Mate {
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
@@ -116,8 +118,8 @@ class SwitchListTile$Mate extends SwitchListTile with Mate {
     /// optionalParameters: {bool selected = false} , defaultValue:Literal
     bool selected = false,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:unprocessed
-    required ListTileControlAffinity controlAffinity,
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:PrefixedIdentifier
+    ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform,
 
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,
@@ -302,8 +304,8 @@ class SwitchListTile$Mate extends SwitchListTile with Mate {
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
@@ -350,8 +352,8 @@ class SwitchListTile$Mate extends SwitchListTile with Mate {
     /// optionalParameters: {bool selected = false} , defaultValue:Literal
     bool selected = false,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:unprocessed
-    required ListTileControlAffinity controlAffinity,
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:PrefixedIdentifier
+    ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform,
 
     /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
     ShapeBorder? shape,

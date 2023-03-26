@@ -6,9 +6,11 @@ import 'dart:core';
 import 'package:flutter/src/painting/basic_types.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'package:flutter/src/widgets/sliver.dart';
@@ -31,7 +33,7 @@ class PageController$Mate extends PageController with Mate {
           viewportFraction: viewportFraction,
         ) {
     mateCreateName = 'PageController';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageController$Mate(
           initialPage: p.get('initialPage').build(),
           keepPage: p.get('keepPage').build(),
@@ -77,7 +79,7 @@ class PageMetrics$Mate extends PageMetrics with Mate {
           devicePixelRatio: devicePixelRatio,
         ) {
     mateCreateName = 'PageMetrics';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),
           maxScrollExtent: p.get('maxScrollExtent').build(),
@@ -106,7 +108,7 @@ class PageScrollPhysics$Mate extends PageScrollPhysics with Mate {
       ScrollPhysics? parent})
       : super(parent: parent) {
     mateCreateName = 'PageScrollPhysics';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse('parent', parent);
   }
@@ -119,8 +121,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.horizontal,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -140,8 +142,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool allowImplicitScrolling = false} , defaultValue:Literal
     bool allowImplicitScrolling = false,
@@ -149,8 +151,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
     ScrollBehavior? scrollBehavior,
@@ -174,7 +176,7 @@ class PageView$Mate extends PageView with Mate {
           padEnds: padEnds,
         ) {
     mateCreateName = 'PageView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -212,8 +214,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.horizontal,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -239,8 +241,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {int? itemCount} , defaultValue:none
     int? itemCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool allowImplicitScrolling = false} , defaultValue:Literal
     bool allowImplicitScrolling = false,
@@ -248,8 +250,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
     ScrollBehavior? scrollBehavior,
@@ -275,7 +277,7 @@ class PageView$Mate extends PageView with Mate {
           padEnds: padEnds,
         ) {
     mateCreateName = 'PageView.builder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageView$Mate.builder(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -317,8 +319,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.horizontal,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -338,8 +340,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {required SliverChildDelegate childrenDelegate} , defaultValue:none
     required SliverChildDelegate childrenDelegate,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {bool allowImplicitScrolling = false} , defaultValue:Literal
     bool allowImplicitScrolling = false,
@@ -347,8 +349,8 @@ class PageView$Mate extends PageView with Mate {
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
     ScrollBehavior? scrollBehavior,
@@ -372,7 +374,7 @@ class PageView$Mate extends PageView with Mate {
           padEnds: padEnds,
         ) {
     mateCreateName = 'PageView.custom';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageView$Mate.custom(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),

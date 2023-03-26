@@ -22,7 +22,7 @@ class PaintingContext$Mate extends PaintingContext with Mate {
           estimatedBounds,
         ) {
     mateCreateName = 'PaintingContext';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PaintingContext$Mate(
           p.get('_containerLayer').value,
           p.get('estimatedBounds').value,

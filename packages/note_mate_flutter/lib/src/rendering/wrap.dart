@@ -5,6 +5,8 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'dart:ui';
 
 /// class RenderWrap extends RenderBox with ContainerRenderObjectMixin<RenderBox, WrapParentData>, RenderBoxContainerDefaultsMixin<RenderBox, WrapParentData>
@@ -14,32 +16,32 @@ class RenderWrap$Mate extends RenderWrap with Mate {
     /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:unprocessed
-    required Axis direction,
+    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    Axis direction = Axis.horizontal,
 
-    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , defaultValue:unprocessed
-    required WrapAlignment alignment,
+    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , defaultValue:PrefixedIdentifier
+    WrapAlignment alignment = WrapAlignment.start,
 
     /// optionalParameters: {double spacing = 0.0} , defaultValue:Literal
     double spacing = 0.0,
 
-    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , defaultValue:unprocessed
-    required WrapAlignment runAlignment,
+    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , defaultValue:PrefixedIdentifier
+    WrapAlignment runAlignment = WrapAlignment.start,
 
     /// optionalParameters: {double runSpacing = 0.0} , defaultValue:Literal
     double runSpacing = 0.0,
 
-    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , defaultValue:unprocessed
-    required WrapCrossAlignment crossAxisAlignment,
+    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , defaultValue:PrefixedIdentifier
+    WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:unprocessed
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super(
           children: children,
           direction: direction,

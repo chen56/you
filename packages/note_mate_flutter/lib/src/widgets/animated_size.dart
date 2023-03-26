@@ -5,7 +5,9 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'dart:ui';
 
@@ -19,11 +21,11 @@ class AnimatedSize$Mate extends AnimatedSize with Mate {
     /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
     /// optionalParameters: {required Duration duration} , defaultValue:none
     required Duration duration,
@@ -31,8 +33,8 @@ class AnimatedSize$Mate extends AnimatedSize with Mate {
     /// optionalParameters: {Duration? reverseDuration} , defaultValue:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           child: child,
@@ -43,7 +45,7 @@ class AnimatedSize$Mate extends AnimatedSize with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'AnimatedSize';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedSize$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

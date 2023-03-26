@@ -15,7 +15,7 @@ class Accumulator$Mate extends Accumulator with Mate {
       int _value)
       : super(_value) {
     mateCreateName = 'Accumulator';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Accumulator$Mate(p.get('_value').value);
     mateUse('_value', _value);
   }
@@ -46,7 +46,7 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
           recognizer: recognizer,
         ) {
     mateCreateName = 'InlineSpanSemanticsInformation';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => InlineSpanSemanticsInformation$Mate(
           p.get('text').value,
           isPlaceholder: p.get('isPlaceholder').build(),

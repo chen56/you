@@ -11,6 +11,8 @@ import 'package:flutter/src/painting/strut_style.dart';
 import 'package:flutter/src/services/text_editing.dart';
 import 'package:flutter/src/rendering/viewport_offset.dart';
 import 'package:flutter/src/painting/text_painter.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/services/text_input.dart';
 import 'package:flutter/src/rendering/box.dart';
@@ -29,7 +31,7 @@ class TextSelectionPoint$Mate extends TextSelectionPoint with Mate {
           direction,
         ) {
     mateCreateName = 'TextSelectionPoint';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TextSelectionPoint$Mate(
           p.get('point').value,
           p.get('direction').value,
@@ -49,8 +51,8 @@ class RenderEditable$Mate extends RenderEditable with Mate {
     /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    TextAlign textAlign = TextAlign.start,
 
     /// optionalParameters: {Color? cursorColor} , defaultValue:none
     Color? cursorColor,
@@ -109,8 +111,8 @@ class RenderEditable$Mate extends RenderEditable with Mate {
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:unprocessed
-    required TextWidthBasis textWidthBasis,
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:PrefixedIdentifier
+    TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
     /// optionalParameters: {String obscuringCharacter = '•'} , defaultValue:Literal
     String obscuringCharacter = '•',
@@ -133,8 +135,8 @@ class RenderEditable$Mate extends RenderEditable with Mate {
     /// optionalParameters: {bool paintCursorAboveText = false} , defaultValue:Literal
     bool paintCursorAboveText = false,
 
-    /// optionalParameters: {Offset cursorOffset = Offset.zero} , defaultValue:unprocessed
-    required Offset cursorOffset,
+    /// optionalParameters: {Offset cursorOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset cursorOffset = Offset.zero,
 
     /// optionalParameters: {double devicePixelRatio = 1.0} , defaultValue:Literal
     double devicePixelRatio = 1.0,
@@ -157,8 +159,8 @@ class RenderEditable$Mate extends RenderEditable with Mate {
     /// optionalParameters: {Color? promptRectColor} , defaultValue:none
     Color? promptRectColor,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {required TextSelectionDelegate textSelectionDelegate} , defaultValue:none
     required TextSelectionDelegate textSelectionDelegate,

@@ -4,12 +4,15 @@ import 'package:flutter/src/widgets/scroll_view.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/widgets.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/sliver.dart';
@@ -22,8 +25,8 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -58,17 +61,17 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           scrollDirection: scrollDirection,
@@ -89,7 +92,7 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'CustomScrollView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CustomScrollView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -136,8 +139,8 @@ class ListView$Mate extends ListView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -181,17 +184,17 @@ class ListView$Mate extends ListView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           scrollDirection: scrollDirection,
@@ -215,7 +218,7 @@ class ListView$Mate extends ListView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'ListView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -265,8 +268,8 @@ class ListView$Mate extends ListView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -316,17 +319,17 @@ class ListView$Mate extends ListView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.builder(
           key: key,
           scrollDirection: scrollDirection,
@@ -352,7 +355,7 @@ class ListView$Mate extends ListView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'ListView.builder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListView$Mate.builder(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -406,8 +409,8 @@ class ListView$Mate extends ListView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -451,17 +454,17 @@ class ListView$Mate extends ListView with Mate {
     /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.separated(
           key: key,
           scrollDirection: scrollDirection,
@@ -485,7 +488,7 @@ class ListView$Mate extends ListView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'ListView.separated';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListView$Mate.separated(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -535,8 +538,8 @@ class ListView$Mate extends ListView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -571,17 +574,17 @@ class ListView$Mate extends ListView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.custom(
           key: key,
           scrollDirection: scrollDirection,
@@ -602,7 +605,7 @@ class ListView$Mate extends ListView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'ListView.custom';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListView$Mate.custom(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -649,8 +652,8 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -691,14 +694,14 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
@@ -724,7 +727,7 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
         ) {
     mateCreateName = 'GridView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -772,8 +775,8 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -820,17 +823,17 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.builder(
           key: key,
           scrollDirection: scrollDirection,
@@ -855,7 +858,7 @@ class GridView$Mate extends GridView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'GridView.builder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate.builder(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -907,8 +910,8 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -940,17 +943,17 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.custom(
           key: key,
           scrollDirection: scrollDirection,
@@ -970,7 +973,7 @@ class GridView$Mate extends GridView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'GridView.custom';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate.custom(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -1012,8 +1015,8 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -1063,17 +1066,17 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.count(
           key: key,
           scrollDirection: scrollDirection,
@@ -1099,7 +1102,7 @@ class GridView$Mate extends GridView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'GridView.count';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate.count(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),
@@ -1153,8 +1156,8 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -1204,17 +1207,17 @@ class GridView$Mate extends GridView with Mate {
     /// optionalParameters: {int? semanticChildCount} , defaultValue:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.extent(
           key: key,
           scrollDirection: scrollDirection,
@@ -1240,7 +1243,7 @@ class GridView$Mate extends GridView with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'GridView.extent';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate.extent(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),

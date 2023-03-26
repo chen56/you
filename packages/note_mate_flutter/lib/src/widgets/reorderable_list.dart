@@ -7,10 +7,13 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/scroll_view.dart';
+import 'package:flutter/widgets.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/sliver.dart';
 
@@ -48,8 +51,8 @@ class ReorderableList$Mate extends ReorderableList with Mate {
     /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -72,17 +75,17 @@ class ReorderableList$Mate extends ReorderableList with Mate {
     /// optionalParameters: {double? cacheExtent} , defaultValue:none
     double? cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           itemBuilder: itemBuilder,
@@ -108,7 +111,7 @@ class ReorderableList$Mate extends ReorderableList with Mate {
           clipBehavior: clipBehavior,
         ) {
     mateCreateName = 'ReorderableList';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ReorderableList$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -204,7 +207,7 @@ class SliverReorderableList$Mate extends SliverReorderableList with Mate {
           proxyDecorator: proxyDecorator,
         ) {
     mateCreateName = 'SliverReorderableList';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverReorderableList$Mate(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -252,7 +255,7 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener wit
           enabled: enabled,
         ) {
     mateCreateName = 'ReorderableDragStartListener';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ReorderableDragStartListener$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -288,7 +291,7 @@ class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragSta
           enabled: enabled,
         ) {
     mateCreateName = 'ReorderableDelayedDragStartListener';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ReorderableDelayedDragStartListener$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),

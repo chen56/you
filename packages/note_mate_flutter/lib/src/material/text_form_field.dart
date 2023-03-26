@@ -8,6 +8,7 @@ import 'dart:core';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/material/input_decorator.dart';
 import 'package:flutter/src/services/text_input.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/painting/strut_style.dart';
 import 'dart:ui';
@@ -47,8 +48,8 @@ class TextFormField$Mate extends TextFormField with Mate {
     /// optionalParameters: {TextInputType? keyboardType} , defaultValue:none
     TextInputType? keyboardType,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:unprocessed
-    required TextCapitalization textCapitalization,
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , defaultValue:PrefixedIdentifier
+    TextCapitalization textCapitalization = TextCapitalization.none,
 
     /// optionalParameters: {TextInputAction? textInputAction} , defaultValue:none
     TextInputAction? textInputAction,
@@ -62,8 +63,8 @@ class TextFormField$Mate extends TextFormField with Mate {
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:unprocessed
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    TextAlign textAlign = TextAlign.start,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , defaultValue:none
     TextAlignVertical? textAlignVertical,

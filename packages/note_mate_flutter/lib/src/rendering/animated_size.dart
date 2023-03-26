@@ -5,7 +5,9 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/scheduler/ticker.dart';
 import 'dart:core';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'dart:ui';
 import 'package:flutter/src/rendering/box.dart';
 
@@ -22,11 +24,11 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate {
     /// optionalParameters: {Duration? reverseDuration} , defaultValue:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.linear,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
@@ -34,8 +36,8 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate {
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           vsync: vsync,
           duration: duration,

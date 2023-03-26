@@ -5,6 +5,8 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'dart:ui';
 
 /// class RenderFlex extends RenderBox with ContainerRenderObjectMixin<RenderBox, FlexParentData>, RenderBoxContainerDefaultsMixin<RenderBox, FlexParentData>, DebugOverflowIndicatorMixin
@@ -14,29 +16,29 @@ class RenderFlex$Mate extends RenderFlex with Mate {
     /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:unprocessed
-    required Axis direction,
+    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    Axis direction = Axis.horizontal,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:unprocessed
-    required MainAxisSize mainAxisSize,
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:PrefixedIdentifier
+    MainAxisSize mainAxisSize = MainAxisSize.max,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:unprocessed
-    required MainAxisAlignment mainAxisAlignment,
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:PrefixedIdentifier
+    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:unprocessed
-    required CrossAxisAlignment crossAxisAlignment,
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:PrefixedIdentifier
+    CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:unprocessed
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    VerticalDirection verticalDirection = VerticalDirection.down,
 
     /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super(
           children: children,
           direction: direction,

@@ -12,7 +12,7 @@ class InheritedModelElement$Mate<T> extends InheritedModelElement<T> with Mate {
       InheritedModel<T> widget)
       : super(widget) {
     mateCreateName = 'InheritedModelElement';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InheritedModelElement$Mate<T>(p.get('widget').value);
     mateUse('widget', widget);
   }

@@ -56,7 +56,7 @@ class Icon$Mate extends Icon with Mate {
           textDirection: textDirection,
         ) {
     mateCreateName = 'Icon';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Icon$Mate(
           p.get('icon').value,
           key: p.get('key').build(),

@@ -3,6 +3,7 @@
 import 'package:flutter/src/gestures/tap.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/recognizer.dart';
 
@@ -10,8 +11,8 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class TapDownDetails$Mate extends TapDownDetails with Mate {
   /// TapDownDetails TapDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   TapDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
@@ -43,8 +44,8 @@ class TapUpDetails$Mate extends TapUpDetails with Mate {
     /// optionalParameters: {required PointerDeviceKind kind} , defaultValue:none
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,

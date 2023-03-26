@@ -43,7 +43,7 @@ class IconThemeData$Mate extends IconThemeData with Mate {
           shadows: shadows,
         ) {
     mateCreateName = 'IconThemeData';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IconThemeData$Mate(
           size: p.get('size').build(),
           fill: p.get('fill').build(),

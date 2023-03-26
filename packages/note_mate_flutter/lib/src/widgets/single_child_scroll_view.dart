@@ -4,14 +4,17 @@ import 'package:flutter/src/widgets/single_child_scroll_view.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/scroll_view.dart';
+import 'package:flutter/widgets.dart';
 
 /// class SingleChildScrollView extends StatelessWidget
 class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
@@ -20,8 +23,8 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:unprocessed
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    Axis scrollDirection = Axis.vertical,
 
     /// optionalParameters: {bool reverse = false} , defaultValue:Literal
     bool reverse = false,
@@ -41,17 +44,17 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
     /// optionalParameters: {Widget? child} , defaultValue:none
     Widget? child,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:unprocessed
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
   }) : super(
           key: key,
           scrollDirection: scrollDirection,
@@ -67,7 +70,7 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
           keyboardDismissBehavior: keyboardDismissBehavior,
         ) {
     mateCreateName = 'SingleChildScrollView';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SingleChildScrollView$Mate(
           key: p.get('key').build(),
           scrollDirection: p.get('scrollDirection').build(),

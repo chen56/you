@@ -3,7 +3,9 @@
 import 'package:flutter/src/gestures/long_press.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
+import 'package:flutter/gestures.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/recognizer.dart';
 
@@ -11,8 +13,8 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class LongPressDownDetails$Mate extends LongPressDownDetails with Mate {
   /// LongPressDownDetails LongPressDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   LongPressDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
@@ -41,8 +43,8 @@ class LongPressDownDetails$Mate extends LongPressDownDetails with Mate {
 class LongPressStartDetails$Mate extends LongPressStartDetails with Mate {
   /// LongPressStartDetails LongPressStartDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   LongPressStartDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
@@ -65,14 +67,14 @@ class LongPressStartDetails$Mate extends LongPressStartDetails with Mate {
 class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Mate {
   /// LongPressMoveUpdateDetails LongPressMoveUpdateDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Offset offsetFromOrigin = Offset.zero, Offset? localOffsetFromOrigin})
   LongPressMoveUpdateDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
 
-    /// optionalParameters: {Offset offsetFromOrigin = Offset.zero} , defaultValue:unprocessed
-    required Offset offsetFromOrigin,
+    /// optionalParameters: {Offset offsetFromOrigin = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset offsetFromOrigin = Offset.zero,
 
     /// optionalParameters: {Offset? localOffsetFromOrigin} , defaultValue:none
     Offset? localOffsetFromOrigin,
@@ -101,14 +103,14 @@ class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Ma
 class LongPressEndDetails$Mate extends LongPressEndDetails with Mate {
   /// LongPressEndDetails LongPressEndDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Velocity velocity = Velocity.zero})
   LongPressEndDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
 
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:unprocessed
-    required Velocity velocity,
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:PrefixedIdentifier
+    Velocity velocity = Velocity.zero,
   }) : super(
           globalPosition: globalPosition,
           localPosition: localPosition,
@@ -143,7 +145,7 @@ class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Ma
     /// optionalParameters: {Object? debugOwner} , defaultValue:none
     Object? debugOwner,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , defaultValue:unprocessed
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           duration: duration,

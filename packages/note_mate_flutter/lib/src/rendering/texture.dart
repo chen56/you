@@ -15,8 +15,8 @@ class TextureBox$Mate extends TextureBox with Mate {
     /// optionalParameters: {bool freeze = false} , defaultValue:Literal
     bool freeze = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
   }) : super(
           textureId: textureId,
           freeze: freeze,

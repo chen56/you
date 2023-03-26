@@ -31,7 +31,7 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
     mateCreateName = 'PerformanceOverlay';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PerformanceOverlay$Mate(
           key: p.get('key').build(),
           optionsMask: p.get('optionsMask').build(),
@@ -66,7 +66,7 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
     mateCreateName = 'PerformanceOverlay.allEnabled';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PerformanceOverlay$Mate.allEnabled(
           key: p.get('key').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),

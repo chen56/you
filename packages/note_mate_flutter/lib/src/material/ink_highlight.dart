@@ -6,6 +6,7 @@ import 'package:flutter/src/material/material.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/box_border.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/borders.dart';
@@ -26,8 +27,8 @@ class InkHighlight$Mate extends InkHighlight with Mate {
     /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:unprocessed
-    required BoxShape shape,
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:PrefixedIdentifier
+    BoxShape shape = BoxShape.rectangle,
 
     /// optionalParameters: {double? radius} , defaultValue:none
     double? radius,

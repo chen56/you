@@ -3,6 +3,7 @@
 import 'package:flutter/src/cupertino/thumb_painter.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/box_shadow.dart';
 
@@ -10,8 +11,8 @@ import 'package:flutter/src/painting/box_shadow.dart';
 class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
   /// CupertinoThumbPainter CupertinoThumbPainter({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSliderBoxShadows})
   CupertinoThumbPainter$Mate({
-    /// optionalParameters: {Color color = CupertinoColors.white} , defaultValue:unprocessed
-    required Color color,
+    /// optionalParameters: {Color color = CupertinoColors.white} , defaultValue:PrefixedIdentifier
+    Color color = CupertinoColors.white,
 
     /// optionalParameters: {List<BoxShadow> shadows = _kSliderBoxShadows} , defaultValue:unprocessed
     required List<BoxShadow> shadows,
@@ -31,8 +32,8 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
 
   /// CupertinoThumbPainter CupertinoThumbPainter.switchThumb({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSwitchBoxShadows})
   CupertinoThumbPainter$Mate.switchThumb({
-    /// optionalParameters: {Color color = CupertinoColors.white} , defaultValue:unprocessed
-    required Color color,
+    /// optionalParameters: {Color color = CupertinoColors.white} , defaultValue:PrefixedIdentifier
+    Color color = CupertinoColors.white,
 
     /// optionalParameters: {List<BoxShadow> shadows = _kSwitchBoxShadows} , defaultValue:unprocessed
     required List<BoxShadow> shadows,

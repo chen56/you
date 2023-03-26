@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/material/time.dart';
 import 'dart:core';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/media_query.dart';
 
 /// class TimePickerDialog extends StatefulWidget
@@ -38,8 +39,8 @@ class TimePickerDialog$Mate extends TimePickerDialog with Mate {
     /// optionalParameters: {String? restorationId} , defaultValue:none
     String? restorationId,
 
-    /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , defaultValue:unprocessed
-    required TimePickerEntryMode initialEntryMode,
+    /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , defaultValue:PrefixedIdentifier
+    TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial,
 
     /// optionalParameters: {Orientation? orientation} , defaultValue:none
     Orientation? orientation,

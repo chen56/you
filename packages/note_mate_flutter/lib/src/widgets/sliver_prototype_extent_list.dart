@@ -25,7 +25,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           prototypeItem: prototypeItem,
         ) {
     mateCreateName = 'SliverPrototypeExtentList';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
@@ -72,7 +72,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           addSemanticIndexes: addSemanticIndexes,
         ) {
     mateCreateName = 'SliverPrototypeExtentList.builder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate.builder(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -121,7 +121,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           addSemanticIndexes: addSemanticIndexes,
         ) {
     mateCreateName = 'SliverPrototypeExtentList.list';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate.list(
           key: p.get('key').build(),
           children: p.get('children').build(),

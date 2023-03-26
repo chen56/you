@@ -15,8 +15,8 @@ class TextSelection$Mate extends TextSelection with Mate {
     /// optionalParameters: {required int extentOffset} , defaultValue:none
     required int extentOffset,
 
-    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , defaultValue:unprocessed
-    required TextAffinity affinity,
+    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , defaultValue:PrefixedIdentifier
+    TextAffinity affinity = TextAffinity.downstream,
 
     /// optionalParameters: {bool isDirectional = false} , defaultValue:Literal
     bool isDirectional = false,
@@ -45,8 +45,8 @@ class TextSelection$Mate extends TextSelection with Mate {
     /// optionalParameters: {required int offset} , defaultValue:none
     required int offset,
 
-    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , defaultValue:unprocessed
-    required TextAffinity affinity,
+    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , defaultValue:PrefixedIdentifier
+    TextAffinity affinity = TextAffinity.downstream,
   }) : super.collapsed(
           offset: offset,
           affinity: affinity,

@@ -3,23 +3,24 @@
 import 'package:flutter/src/painting/beveled_rectangle_border.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 
 /// class BeveledRectangleBorder extends OutlinedBorder
 class BeveledRectangleBorder$Mate extends BeveledRectangleBorder with Mate {
   /// BeveledRectangleBorder BeveledRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   BeveledRectangleBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , defaultValue:unprocessed
-    required BorderRadiusGeometry borderRadius,
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , defaultValue:PrefixedIdentifier
+    BorderRadiusGeometry borderRadius = BorderRadius.zero,
   }) : super(
           side: side,
           borderRadius: borderRadius,
         ) {
     mateCreateName = 'BeveledRectangleBorder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BeveledRectangleBorder$Mate(
           side: p.get('side').build(),
           borderRadius: p.get('borderRadius').build(),

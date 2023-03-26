@@ -32,7 +32,7 @@ class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate {
           tooltip: tooltip,
         ) {
     mateCreateName = 'BottomNavigationBarItem';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BottomNavigationBarItem$Mate(
           icon: p.get('icon').build(),
           label: p.get('label').build(),

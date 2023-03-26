@@ -287,10 +287,10 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate {
     /// optionalParameters: {String? barrierLabel} , defaultValue:none
     String? barrierLabel,
 
-    /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 250)} , defaultValue:is!ConstVariableElement
+    /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 250)} , defaultValue:unprocessed
     required Duration transitionDuration,
 
-    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder = _buildCupertinoDialogTransitions} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder = _buildCupertinoDialogTransitions} , defaultValue:unprocessed
     RouteTransitionsBuilder? transitionBuilder,
 
     /// optionalParameters: {RouteSettings? settings} , defaultValue:none

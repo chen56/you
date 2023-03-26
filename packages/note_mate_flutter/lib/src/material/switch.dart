@@ -12,6 +12,7 @@ import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/widgets/icon.dart';
 import 'package:flutter/src/material/theme_data.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
 
@@ -67,8 +68,8 @@ class Switch$Mate extends Switch with Mate {
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,
@@ -226,8 +227,8 @@ class Switch$Mate extends Switch with Mate {
     /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , defaultValue:none
     MaterialStateProperty<Icon?>? thumbIcon,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
     MouseCursor? mouseCursor,

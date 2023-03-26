@@ -22,7 +22,7 @@ class RouteInformation$Mate extends RouteInformation with Mate {
           state: state,
         ) {
     mateCreateName = 'RouteInformation';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RouteInformation$Mate(
           location: p.get('location').build(),
           state: p.get('state').build(),
@@ -54,7 +54,7 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate {
           backButtonDispatcher: backButtonDispatcher,
         ) {
     mateCreateName = 'RouterConfig';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RouterConfig$Mate<T>(
           routeInformationProvider: p.get('routeInformationProvider').build(),
           routeInformationParser: p.get('routeInformationParser').build(),
@@ -98,7 +98,7 @@ class Router$Mate<T> extends Router<T> with Mate {
           restorationScopeId: restorationScopeId,
         ) {
     mateCreateName = 'Router';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Router$Mate<T>(
           key: p.get('key').build(),
           routeInformationProvider: p.get('routeInformationProvider').build(),
@@ -125,7 +125,7 @@ class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate
       BackButtonDispatcher parent)
       : super(parent) {
     mateCreateName = 'ChildBackButtonDispatcher';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ChildBackButtonDispatcher$Mate(p.get('parent').value);
     mateUse('parent', parent);
   }
@@ -149,7 +149,7 @@ class BackButtonListener$Mate extends BackButtonListener with Mate {
           onBackButtonPressed: onBackButtonPressed,
         ) {
     mateCreateName = 'BackButtonListener';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BackButtonListener$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -170,7 +170,7 @@ class PlatformRouteInformationProvider$Mate extends PlatformRouteInformationProv
       required RouteInformation initialRouteInformation})
       : super(initialRouteInformation: initialRouteInformation) {
     mateCreateName = 'PlatformRouteInformationProvider';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder =
         (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
     mateUse('initialRouteInformation', initialRouteInformation);

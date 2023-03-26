@@ -5,7 +5,9 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/flex.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -25,17 +27,17 @@ class OverflowBar$Mate extends OverflowBar with Mate {
     /// optionalParameters: {double overflowSpacing = 0.0} , defaultValue:Literal
     double overflowSpacing = 0.0,
 
-    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , defaultValue:unprocessed
-    required OverflowBarAlignment overflowAlignment,
+    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , defaultValue:PrefixedIdentifier
+    OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start,
 
-    /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , defaultValue:unprocessed
-    required VerticalDirection overflowDirection,
+    /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    VerticalDirection overflowDirection = VerticalDirection.down,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
     required List<Widget> children,
@@ -51,7 +53,7 @@ class OverflowBar$Mate extends OverflowBar with Mate {
           children: children,
         ) {
     mateCreateName = 'OverflowBar';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverflowBar$Mate(
           key: p.get('key').build(),
           spacing: p.get('spacing').build(),

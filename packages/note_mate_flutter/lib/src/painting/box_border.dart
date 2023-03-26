@@ -3,22 +3,23 @@
 import 'package:flutter/src/painting/box_border.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 
 /// class Border extends BoxBorder
 class Border$Mate extends Border with Mate {
   /// Border Border({BorderSide top = BorderSide.none, BorderSide right = BorderSide.none, BorderSide bottom = BorderSide.none, BorderSide left = BorderSide.none})
   Border$Mate({
-    /// optionalParameters: {BorderSide top = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide top,
+    /// optionalParameters: {BorderSide top = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide top = BorderSide.none,
 
-    /// optionalParameters: {BorderSide right = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide right,
+    /// optionalParameters: {BorderSide right = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide right = BorderSide.none,
 
-    /// optionalParameters: {BorderSide bottom = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide bottom,
+    /// optionalParameters: {BorderSide bottom = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide bottom = BorderSide.none,
 
-    /// optionalParameters: {BorderSide left = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide left,
+    /// optionalParameters: {BorderSide left = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide left = BorderSide.none,
   }) : super(
           top: top,
           right: right,
@@ -26,7 +27,7 @@ class Border$Mate extends Border with Mate {
           left: left,
         ) {
     mateCreateName = 'Border';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Border$Mate(
           top: p.get('top').build(),
           right: p.get('right').build(),
@@ -46,24 +47,24 @@ class Border$Mate extends Border with Mate {
       BorderSide side)
       : super.fromBorderSide(side) {
     mateCreateName = 'Border.fromBorderSide';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Border$Mate.fromBorderSide(p.get('side').value);
     mateUse('side', side);
   }
 
   /// Border Border.symmetric({BorderSide vertical = BorderSide.none, BorderSide horizontal = BorderSide.none})
   Border$Mate.symmetric({
-    /// optionalParameters: {BorderSide vertical = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide vertical,
+    /// optionalParameters: {BorderSide vertical = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide vertical = BorderSide.none,
 
-    /// optionalParameters: {BorderSide horizontal = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide horizontal,
+    /// optionalParameters: {BorderSide horizontal = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide horizontal = BorderSide.none,
   }) : super.symmetric(
           vertical: vertical,
           horizontal: horizontal,
         ) {
     mateCreateName = 'Border.symmetric';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Border$Mate.symmetric(
           vertical: p.get('vertical').build(),
           horizontal: p.get('horizontal').build(),
@@ -77,17 +78,17 @@ class Border$Mate extends Border with Mate {
 class BorderDirectional$Mate extends BorderDirectional with Mate {
   /// BorderDirectional BorderDirectional({BorderSide top = BorderSide.none, BorderSide start = BorderSide.none, BorderSide end = BorderSide.none, BorderSide bottom = BorderSide.none})
   BorderDirectional$Mate({
-    /// optionalParameters: {BorderSide top = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide top,
+    /// optionalParameters: {BorderSide top = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide top = BorderSide.none,
 
-    /// optionalParameters: {BorderSide start = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide start,
+    /// optionalParameters: {BorderSide start = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide start = BorderSide.none,
 
-    /// optionalParameters: {BorderSide end = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide end,
+    /// optionalParameters: {BorderSide end = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide end = BorderSide.none,
 
-    /// optionalParameters: {BorderSide bottom = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide bottom,
+    /// optionalParameters: {BorderSide bottom = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide bottom = BorderSide.none,
   }) : super(
           top: top,
           start: start,
@@ -95,7 +96,7 @@ class BorderDirectional$Mate extends BorderDirectional with Mate {
           bottom: bottom,
         ) {
     mateCreateName = 'BorderDirectional';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderDirectional$Mate(
           top: p.get('top').build(),
           start: p.get('start').build(),

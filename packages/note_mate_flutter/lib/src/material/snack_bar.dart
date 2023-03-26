@@ -11,6 +11,7 @@ import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/material/snack_bar_theme.dart';
 import 'package:flutter/src/animation/animation.dart';
 import 'package:flutter/src/widgets/dismissible.dart';
+import 'package:flutter/widgets.dart';
 
 /// class SnackBarAction extends StatefulWidget
 class SnackBarAction$Mate extends SnackBarAction with Mate {
@@ -106,11 +107,11 @@ class SnackBar$Mate extends SnackBar with Mate {
     /// optionalParameters: {void Function()? onVisible} , defaultValue:none
     VoidCallback? onVisible,
 
-    /// optionalParameters: {DismissDirection dismissDirection = DismissDirection.down} , defaultValue:unprocessed
-    required DismissDirection dismissDirection,
+    /// optionalParameters: {DismissDirection dismissDirection = DismissDirection.down} , defaultValue:PrefixedIdentifier
+    DismissDirection dismissDirection = DismissDirection.down,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           content: content,

@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class SafeArea extends StatelessWidget
@@ -26,8 +27,8 @@ class SafeArea$Mate extends SafeArea with Mate {
     /// optionalParameters: {bool bottom = true} , defaultValue:Literal
     bool bottom = true,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets minimum,
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets minimum = EdgeInsets.zero,
 
     /// optionalParameters: {bool maintainBottomViewPadding = false} , defaultValue:Literal
     bool maintainBottomViewPadding = false,
@@ -45,7 +46,7 @@ class SafeArea$Mate extends SafeArea with Mate {
           child: child,
         ) {
     mateCreateName = 'SafeArea';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SafeArea$Mate(
           key: p.get('key').build(),
           left: p.get('left').build(),
@@ -86,8 +87,8 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
     /// optionalParameters: {bool bottom = true} , defaultValue:Literal
     bool bottom = true,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets minimum,
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets minimum = EdgeInsets.zero,
 
     /// optionalParameters: {required Widget sliver} , defaultValue:none
     required Widget sliver,
@@ -101,7 +102,7 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
           sliver: sliver,
         ) {
     mateCreateName = 'SliverSafeArea';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverSafeArea$Mate(
           key: p.get('key').build(),
           left: p.get('left').build(),

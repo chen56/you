@@ -9,6 +9,7 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/widgets/shortcuts.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
+import 'package:flutter/services.dart';
 import 'dart:ui';
 
 /// class ActionListener extends StatefulWidget
@@ -33,7 +34,7 @@ class ActionListener$Mate extends ActionListener with Mate {
           child: child,
         ) {
     mateCreateName = 'ActionListener';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ActionListener$Mate(
           key: p.get('key').build(),
           listener: p.get('listener').build(),
@@ -56,7 +57,7 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate 
       required OnInvokeCallback<T> onInvoke})
       : super(onInvoke: onInvoke) {
     mateCreateName = 'CallbackAction';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
     mateUse('onInvoke', onInvoke);
   }
@@ -84,7 +85,7 @@ class Actions$Mate extends Actions with Mate {
           child: child,
         ) {
     mateCreateName = 'Actions';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Actions$Mate(
           key: p.get('key').build(),
           dispatcher: p.get('dispatcher').build(),
@@ -135,8 +136,8 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with Mate {
     /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {MouseCursor mouseCursor = MouseCursor.defer} , defaultValue:unprocessed
-    required MouseCursor mouseCursor,
+    /// optionalParameters: {MouseCursor mouseCursor = MouseCursor.defer} , defaultValue:PrefixedIdentifier
+    MouseCursor mouseCursor = MouseCursor.defer,
 
     /// optionalParameters: {bool includeFocusSemantics = true} , defaultValue:Literal
     bool includeFocusSemantics = true,
@@ -160,7 +161,7 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with Mate {
           child: child,
         ) {
     mateCreateName = 'FocusableActionDetector';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FocusableActionDetector$Mate(
           key: p.get('key').build(),
           enabled: p.get('enabled').build(),
@@ -203,7 +204,7 @@ class VoidCallbackIntent$Mate extends VoidCallbackIntent with Mate {
       VoidCallback callback)
       : super(callback) {
     mateCreateName = 'VoidCallbackIntent';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => VoidCallbackIntent$Mate(p.get('callback').value);
     mateUse('callback', callback);
   }
@@ -218,7 +219,7 @@ class DoNothingAction$Mate extends DoNothingAction with Mate {
       bool consumesKey = true})
       : super(consumesKey: consumesKey) {
     mateCreateName = 'DoNothingAction';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
     mateUse('consumesKey', consumesKey);
   }
@@ -233,7 +234,7 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate {
       required List<Intent> orderedIntents})
       : super(orderedIntents: orderedIntents) {
     mateCreateName = 'PrioritizedIntents';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build());
     mateUse('orderedIntents', orderedIntents);
   }

@@ -4,6 +4,7 @@ import 'package:flutter/src/physics/spring_simulation.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/physics/tolerance.dart';
+import 'package:flutter/physics.dart';
 
 /// class SpringDescription
 class SpringDescription$Mate extends SpringDescription with Mate {
@@ -77,8 +78,8 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:unprocessed
-    required Tolerance tolerance,
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           spring,
           start,
@@ -118,8 +119,8 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:unprocessed
-    required Tolerance tolerance,
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           spring,
           start,

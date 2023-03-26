@@ -7,7 +7,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/basic_types.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/rendering/proxy_box.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
 
@@ -33,8 +35,8 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
     /// optionalParameters: {Widget? childWhenDragging} , defaultValue:none
     Widget? childWhenDragging,
 
-    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , defaultValue:unprocessed
-    required Offset feedbackOffset,
+    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset feedbackOffset = Offset.zero,
 
     /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , defaultValue:unprocessed
     required DragAnchorStrategy dragAnchorStrategy,
@@ -69,8 +71,8 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
     /// optionalParameters: {bool rootOverlay = false} , defaultValue:Literal
     bool rootOverlay = false,
 
-    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild} , defaultValue:unprocessed
-    required HitTestBehavior hitTestBehavior,
+    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
     AllowedButtonsFilter? allowedButtonsFilter,
@@ -97,7 +99,7 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
     mateCreateName = 'Draggable';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Draggable$Mate<T>(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -225,7 +227,7 @@ class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> wi
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
     mateCreateName = 'LongPressDraggable';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LongPressDraggable$Mate<T>(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -287,7 +289,7 @@ class DraggableDetails$Mate extends DraggableDetails with Mate {
           offset: offset,
         ) {
     mateCreateName = 'DraggableDetails';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DraggableDetails$Mate(
           wasAccepted: p.get('wasAccepted').build(),
           velocity: p.get('velocity').build(),
@@ -313,7 +315,7 @@ class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate {
           offset: offset,
         ) {
     mateCreateName = 'DragTargetDetails';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DragTargetDetails$Mate<T>(
           data: p.get('data').build(),
           offset: p.get('offset').build(),
@@ -348,8 +350,8 @@ class DragTarget$Mate<T extends Object> extends DragTarget<T> with Mate {
     /// optionalParameters: {void Function(DragTargetDetails<T>)? onMove} , defaultValue:none
     DragTargetMove<T>? onMove,
 
-    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.translucent} , defaultValue:unprocessed
-    required HitTestBehavior hitTestBehavior,
+    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.translucent} , defaultValue:PrefixedIdentifier
+    HitTestBehavior hitTestBehavior = HitTestBehavior.translucent,
   }) : super(
           key: key,
           builder: builder,
@@ -361,7 +363,7 @@ class DragTarget$Mate<T extends Object> extends DragTarget<T> with Mate {
           hitTestBehavior: hitTestBehavior,
         ) {
     mateCreateName = 'DragTarget';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DragTarget$Mate<T>(
           key: p.get('key').build(),
           builder: p.get('builder').build(),

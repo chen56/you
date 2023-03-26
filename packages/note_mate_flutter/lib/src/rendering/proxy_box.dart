@@ -8,19 +8,23 @@ import 'package:flutter/src/animation/animation.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/painting/border_radius.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/box_border.dart';
 import 'package:flutter/src/painting/decoration.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/painting/image_provider.dart';
 import 'package:vector_math/vector_math_64.dart';
 import 'package:flutter/src/painting/alignment.dart';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/services/mouse_tracking.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/gestures/tap.dart';
 import 'package:flutter/src/gestures/long_press.dart';
 import 'package:flutter/src/gestures/drag_details.dart';
 import 'package:flutter/src/semantics/semantics.dart';
 import 'package:flutter/src/rendering/layer.dart';
+import 'package:flutter/animation.dart';
 
 /// class RenderProxyBox extends RenderBox with RenderObjectWithChildMixin<RenderBox>, RenderProxyBoxMixin<RenderBox>
 class RenderProxyBox$Mate extends RenderProxyBox with Mate {
@@ -68,11 +72,11 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate {
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , defaultValue:unprocessed
-    required double maxWidth,
+    /// optionalParameters: {double maxWidth = double.infinity} , defaultValue:PrefixedIdentifier
+    double maxWidth = double.infinity,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , defaultValue:unprocessed
-    required double maxHeight,
+    /// optionalParameters: {double maxHeight = double.infinity} , defaultValue:PrefixedIdentifier
+    double maxHeight = double.infinity,
   }) : super(
           child: child,
           maxWidth: maxWidth,
@@ -230,8 +234,8 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate {
     /// optionalParameters: {required Shader Function(Rect) shaderCallback} , defaultValue:none
     required ShaderCallback shaderCallback,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , defaultValue:unprocessed
-    required BlendMode blendMode,
+    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , defaultValue:PrefixedIdentifier
+    BlendMode blendMode = BlendMode.modulate,
   }) : super(
           child: child,
           shaderCallback: shaderCallback,
@@ -260,8 +264,8 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate {
     /// optionalParameters: {required ImageFilter filter} , defaultValue:none
     required ImageFilter filter,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:unprocessed
-    required BlendMode blendMode,
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:PrefixedIdentifier
+    BlendMode blendMode = BlendMode.srcOver,
   }) : super(
           child: child,
           filter: filter,
@@ -294,7 +298,7 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate {
           textDirection: textDirection,
         ) {
     mateCreateName = 'ShapeBorderClipper';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ShapeBorderClipper$Mate(
           shape: p.get('shape').build(),
           textDirection: p.get('textDirection').build(),
@@ -341,8 +345,8 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate {
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , defaultValue:unprocessed
-    required BorderRadiusGeometry borderRadius,
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , defaultValue:PrefixedIdentifier
+    BorderRadiusGeometry borderRadius = BorderRadius.zero,
 
     /// optionalParameters: {CustomClipper<RRect>? clipper} , defaultValue:none
     CustomClipper<RRect>? clipper,
@@ -443,8 +447,8 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate {
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:unprocessed
-    required BoxShape shape,
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:PrefixedIdentifier
+    BoxShape shape = BoxShape.rectangle,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:is!ConstVariableElement
     required Clip clipBehavior,
@@ -458,7 +462,7 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate {
     /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:none
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:unprocessed
     required Color shadowColor,
   }) : super(
           child: child,
@@ -509,7 +513,7 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate {
     /// optionalParameters: {required Color color} , defaultValue:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:none
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:unprocessed
     required Color shadowColor,
   }) : super(
           child: child,
@@ -545,11 +549,11 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate {
     /// optionalParameters: {required Decoration decoration} , defaultValue:none
     required Decoration decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , defaultValue:unprocessed
-    required DecorationPosition position,
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , defaultValue:PrefixedIdentifier
+    DecorationPosition position = DecorationPosition.background,
 
-    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , defaultValue:unprocessed
-    required ImageConfiguration configuration,
+    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , defaultValue:PrefixedIdentifier
+    ImageConfiguration configuration = ImageConfiguration.empty,
 
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
@@ -632,11 +636,11 @@ class RenderTransform$Mate extends RenderTransform with Mate {
 class RenderFittedBox$Mate extends RenderFittedBox with Mate {
   /// RenderFittedBox RenderFittedBox({BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderFittedBox$Mate({
-    /// optionalParameters: {BoxFit fit = BoxFit.contain} , defaultValue:unprocessed
-    required BoxFit fit,
+    /// optionalParameters: {BoxFit fit = BoxFit.contain} , defaultValue:PrefixedIdentifier
+    BoxFit fit = BoxFit.contain,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
     /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
     TextDirection? textDirection,
@@ -644,8 +648,8 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate {
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super(
           fit: fit,
           alignment: alignment,
@@ -731,8 +735,8 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate {
     /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , defaultValue:none
     PointerSignalEventListener? onPointerSignal,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:unprocessed
-    required HitTestBehavior behavior,
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
@@ -791,8 +795,8 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate {
     /// optionalParameters: {void Function(PointerExitEvent)? onExit} , defaultValue:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:unprocessed
-    required MouseCursor cursor,
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:PrefixedIdentifier
+    MouseCursor cursor = MouseCursor.defer,
 
     /// optionalParameters: {bool validForMouseTracker = true} , defaultValue:Literal
     bool validForMouseTracker = true,
@@ -803,8 +807,8 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate {
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
 
-    /// optionalParameters: {HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque} , defaultValue:unprocessed
-    HitTestBehavior? hitTestBehavior,
+    /// optionalParameters: {HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque} , defaultValue:PrefixedIdentifier
+    HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque,
   }) : super(
           onEnter: onEnter,
           onHover: onHover,
@@ -944,8 +948,8 @@ class RenderMetaData$Mate extends RenderMetaData with Mate {
     /// optionalParameters: {dynamic metaData} , defaultValue:none
     dynamic metaData,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:unprocessed
-    required HitTestBehavior behavior,
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,
@@ -989,8 +993,8 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler w
     /// optionalParameters: {double scrollFactor = 0.8} , defaultValue:Literal
     double scrollFactor = 0.8,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:unprocessed
-    required HitTestBehavior behavior,
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    HitTestBehavior behavior = HitTestBehavior.deferToChild,
   }) : super(
           child: child,
           onTap: onTap,
@@ -1001,7 +1005,7 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler w
           behavior: behavior,
         ) {
     mateCreateName = 'RenderSemanticsGestureHandler';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSemanticsGestureHandler$Mate(
           child: p.get('child').build(),
           onTap: p.get('onTap').build(),
@@ -1190,14 +1194,14 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
     /// optionalParameters: {bool showWhenUnlinked = true} , defaultValue:Literal
     bool showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:unprocessed
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset offset = Offset.zero,
 
-    /// optionalParameters: {Alignment leaderAnchor = Alignment.topLeft} , defaultValue:unprocessed
-    required Alignment leaderAnchor,
+    /// optionalParameters: {Alignment leaderAnchor = Alignment.topLeft} , defaultValue:PrefixedIdentifier
+    Alignment leaderAnchor = Alignment.topLeft,
 
-    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , defaultValue:unprocessed
-    required Alignment followerAnchor,
+    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , defaultValue:PrefixedIdentifier
+    Alignment followerAnchor = Alignment.topLeft,
 
     /// optionalParameters: {RenderBox? child} , defaultValue:none
     RenderBox? child,

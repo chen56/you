@@ -4,7 +4,9 @@ import 'package:flutter/src/widgets/interactive_viewer.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:ui';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/scale.dart';
 import 'package:flutter/src/painting/alignment.dart';
@@ -18,14 +20,14 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , defaultValue:unprocessed
-    required PanAxis panAxis,
+    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , defaultValue:PrefixedIdentifier
+    PanAxis panAxis = PanAxis.free,
 
-    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets boundaryMargin,
+    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets boundaryMargin = EdgeInsets.zero,
 
     /// optionalParameters: {bool constrained = true} , defaultValue:Literal
     bool constrained = true,
@@ -89,7 +91,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           child: child,
         ) {
     mateCreateName = 'InteractiveViewer';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InteractiveViewer$Mate(
           key: p.get('key').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -135,14 +137,14 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
     /// optionalParameters: {Key? key} , defaultValue:none
     Key? key,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , defaultValue:unprocessed
-    required PanAxis panAxis,
+    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , defaultValue:PrefixedIdentifier
+    PanAxis panAxis = PanAxis.free,
 
-    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsets boundaryMargin,
+    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsets boundaryMargin = EdgeInsets.zero,
 
     /// optionalParameters: {double maxScale = 2.5} , defaultValue:Literal
     double maxScale = 2.5,
@@ -202,7 +204,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           builder: builder,
         ) {
     mateCreateName = 'InteractiveViewer.builder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InteractiveViewer$Mate.builder(
           key: p.get('key').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -251,7 +253,7 @@ class TransformationController$Mate extends TransformationController with Mate {
       Matrix4? value)
       : super(value) {
     mateCreateName = 'TransformationController';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TransformationController$Mate(p.get('value').value);
     mateUse('value', value);
   }

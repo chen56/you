@@ -9,6 +9,7 @@ import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/overflow_bar.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/src/animation/animation.dart';
 
 /// class MaterialBanner extends StatefulWidget
@@ -57,8 +58,8 @@ class MaterialBanner$Mate extends MaterialBanner with Mate {
     /// optionalParameters: {bool forceActionsBelow = false} , defaultValue:Literal
     bool forceActionsBelow = false,
 
-    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , defaultValue:unprocessed
-    required OverflowBarAlignment overflowAlignment,
+    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , defaultValue:PrefixedIdentifier
+    OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end,
 
     /// optionalParameters: {Animation<double>? animation} , defaultValue:none
     Animation<double>? animation,

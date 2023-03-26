@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 
 /// class RenderListBody extends RenderBox with ContainerRenderObjectMixin<RenderBox, ListBodyParentData>, RenderBoxContainerDefaultsMixin<RenderBox, ListBodyParentData>
 class RenderListBody$Mate extends RenderListBody with Mate {
@@ -13,8 +14,8 @@ class RenderListBody$Mate extends RenderListBody with Mate {
     /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:unprocessed
-    required AxisDirection axisDirection,
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:PrefixedIdentifier
+    AxisDirection axisDirection = AxisDirection.down,
   }) : super(
           children: children,
           axisDirection: axisDirection,

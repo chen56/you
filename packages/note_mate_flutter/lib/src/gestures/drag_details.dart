@@ -3,15 +3,17 @@
 import 'package:flutter/src/gestures/drag_details.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
+import 'package:flutter/gestures.dart';
 
 /// class DragDownDetails
 class DragDownDetails$Mate extends DragDownDetails with Mate {
   /// DragDownDetails DragDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   DragDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
@@ -37,8 +39,8 @@ class DragStartDetails$Mate extends DragStartDetails with Mate {
     /// optionalParameters: {Duration? sourceTimeStamp} , defaultValue:none
     Duration? sourceTimeStamp,
 
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:unprocessed
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset globalPosition = Offset.zero,
 
     /// optionalParameters: {Offset? localPosition} , defaultValue:none
     Offset? localPosition,
@@ -73,8 +75,8 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate {
     /// optionalParameters: {Duration? sourceTimeStamp} , defaultValue:none
     Duration? sourceTimeStamp,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:unprocessed
-    required Offset delta,
+    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:PrefixedIdentifier
+    Offset delta = Offset.zero,
 
     /// optionalParameters: {double? primaryDelta} , defaultValue:none
     double? primaryDelta,
@@ -112,8 +114,8 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate {
 class DragEndDetails$Mate extends DragEndDetails with Mate {
   /// DragEndDetails DragEndDetails({Velocity velocity = Velocity.zero, double? primaryVelocity})
   DragEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:unprocessed
-    required Velocity velocity,
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:PrefixedIdentifier
+    Velocity velocity = Velocity.zero,
 
     /// optionalParameters: {double? primaryVelocity} , defaultValue:none
     double? primaryVelocity,

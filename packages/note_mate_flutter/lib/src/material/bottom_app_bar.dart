@@ -25,8 +25,8 @@ class BottomAppBar$Mate extends BottomAppBar with Mate {
     /// optionalParameters: {NotchedShape? shape} , defaultValue:none
     NotchedShape? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
 
     /// optionalParameters: {double notchMargin = 4.0} , defaultValue:Literal
     double notchMargin = 4.0,

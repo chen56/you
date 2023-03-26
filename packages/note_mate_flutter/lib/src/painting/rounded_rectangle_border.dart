@@ -3,23 +3,24 @@
 import 'package:flutter/src/painting/rounded_rectangle_border.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 
 /// class RoundedRectangleBorder extends OutlinedBorder
 class RoundedRectangleBorder$Mate extends RoundedRectangleBorder with Mate {
   /// RoundedRectangleBorder RoundedRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   RoundedRectangleBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:unprocessed
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , defaultValue:unprocessed
-    required BorderRadiusGeometry borderRadius,
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , defaultValue:PrefixedIdentifier
+    BorderRadiusGeometry borderRadius = BorderRadius.zero,
   }) : super(
           side: side,
           borderRadius: borderRadius,
         ) {
     mateCreateName = 'RoundedRectangleBorder';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => RoundedRectangleBorder$Mate(
           side: p.get('side').build(),
           borderRadius: p.get('borderRadius').build(),

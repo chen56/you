@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/material/date.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/services/text_input.dart';
 
 /// class DatePickerDialog extends StatefulWidget
@@ -26,8 +27,8 @@ class DatePickerDialog$Mate extends DatePickerDialog with Mate {
     /// optionalParameters: {DateTime? currentDate} , defaultValue:none
     DateTime? currentDate,
 
-    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , defaultValue:unprocessed
-    required DatePickerEntryMode initialEntryMode,
+    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , defaultValue:PrefixedIdentifier
+    DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar,
 
     /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , defaultValue:none
     SelectableDayPredicate? selectableDayPredicate,
@@ -41,8 +42,8 @@ class DatePickerDialog$Mate extends DatePickerDialog with Mate {
     /// optionalParameters: {String? helpText} , defaultValue:none
     String? helpText,
 
-    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , defaultValue:unprocessed
-    required DatePickerMode initialCalendarMode,
+    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , defaultValue:PrefixedIdentifier
+    DatePickerMode initialCalendarMode = DatePickerMode.day,
 
     /// optionalParameters: {String? errorFormatText} , defaultValue:none
     String? errorFormatText,
@@ -140,8 +141,8 @@ class DateRangePickerDialog$Mate extends DateRangePickerDialog with Mate {
     /// optionalParameters: {DateTime? currentDate} , defaultValue:none
     DateTime? currentDate,
 
-    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , defaultValue:unprocessed
-    required DatePickerEntryMode initialEntryMode,
+    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , defaultValue:PrefixedIdentifier
+    DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar,
 
     /// optionalParameters: {String? helpText} , defaultValue:none
     String? helpText,

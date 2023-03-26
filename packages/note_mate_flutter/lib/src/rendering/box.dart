@@ -13,14 +13,14 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
     /// optionalParameters: {double minWidth = 0.0} , defaultValue:Literal
     double minWidth = 0.0,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , defaultValue:unprocessed
-    required double maxWidth,
+    /// optionalParameters: {double maxWidth = double.infinity} , defaultValue:PrefixedIdentifier
+    double maxWidth = double.infinity,
 
     /// optionalParameters: {double minHeight = 0.0} , defaultValue:Literal
     double minHeight = 0.0,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , defaultValue:unprocessed
-    required double maxHeight,
+    /// optionalParameters: {double maxHeight = double.infinity} , defaultValue:PrefixedIdentifier
+    double maxHeight = double.infinity,
   }) : super(
           minWidth: minWidth,
           maxWidth: maxWidth,
@@ -28,7 +28,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           maxHeight: maxHeight,
         ) {
     mateCreateName = 'BoxConstraints';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate(
           minWidth: p.get('minWidth').build(),
           maxWidth: p.get('maxWidth').build(),
@@ -48,7 +48,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
       Size size)
       : super.tight(size) {
     mateCreateName = 'BoxConstraints.tight';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tight(p.get('size').value);
     mateUse('size', size);
   }
@@ -65,7 +65,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           height: height,
         ) {
     mateCreateName = 'BoxConstraints.tightFor';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tightFor(
           width: p.get('width').build(),
           height: p.get('height').build(),
@@ -76,17 +76,17 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
 
   /// BoxConstraints BoxConstraints.tightForFinite({double width = double.infinity, double height = double.infinity})
   BoxConstraints$Mate.tightForFinite({
-    /// optionalParameters: {double width = double.infinity} , defaultValue:unprocessed
-    required double width,
+    /// optionalParameters: {double width = double.infinity} , defaultValue:PrefixedIdentifier
+    double width = double.infinity,
 
-    /// optionalParameters: {double height = double.infinity} , defaultValue:unprocessed
-    required double height,
+    /// optionalParameters: {double height = double.infinity} , defaultValue:PrefixedIdentifier
+    double height = double.infinity,
   }) : super.tightForFinite(
           width: width,
           height: height,
         ) {
     mateCreateName = 'BoxConstraints.tightForFinite';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tightForFinite(
           width: p.get('width').build(),
           height: p.get('height').build(),
@@ -102,7 +102,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
       Size size)
       : super.loose(size) {
     mateCreateName = 'BoxConstraints.loose';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.loose(p.get('size').value);
     mateUse('size', size);
   }
@@ -119,7 +119,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           height: height,
         ) {
     mateCreateName = 'BoxConstraints.expand';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.expand(
           width: p.get('width').build(),
           height: p.get('height').build(),

@@ -23,7 +23,7 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
           data: data,
         ) {
     mateCreateName = 'KeyboardInsertedContent';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyboardInsertedContent$Mate(
           mimeType: p.get('mimeType').build(),
           uri: p.get('uri').build(),
@@ -41,7 +41,7 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
       Map<String, dynamic> metadata)
       : super.fromJson(metadata) {
     mateCreateName = 'KeyboardInsertedContent.fromJson';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
     mateUse('metadata', metadata);
   }

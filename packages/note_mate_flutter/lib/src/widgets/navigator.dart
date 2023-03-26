@@ -6,6 +6,7 @@ import 'dart:core';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/heroes.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/widgets.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/focus_traversal.dart';
 
@@ -23,7 +24,7 @@ class RouteSettings$Mate extends RouteSettings with Mate {
           arguments: arguments,
         ) {
     mateCreateName = 'RouteSettings';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RouteSettings$Mate(
           name: p.get('name').build(),
           arguments: p.get('arguments').build(),
@@ -51,7 +52,7 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           child: child,
         ) {
     mateCreateName = 'HeroControllerScope';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroControllerScope$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -74,7 +75,7 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           child: child,
         ) {
     mateCreateName = 'HeroControllerScope.none';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroControllerScope$Mate.none(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -100,8 +101,8 @@ class Navigator$Mate extends Navigator with Mate {
     /// optionalParameters: {String? initialRoute} , defaultValue:none
     String? initialRoute,
 
-    /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , defaultValue:unprocessed
-    required RouteListFactory onGenerateInitialRoutes,
+    /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , defaultValue:PrefixedIdentifier
+    RouteListFactory onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , defaultValue:none
     RouteFactory? onGenerateRoute,
@@ -115,8 +116,8 @@ class Navigator$Mate extends Navigator with Mate {
     /// optionalParameters: {bool reportsRouteUpdateToEngine = false} , defaultValue:Literal
     bool reportsRouteUpdateToEngine = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {List<NavigatorObserver> observers = const <NavigatorObserver>[]} , defaultValue:unprocessed
     required List<NavigatorObserver> observers,
@@ -146,7 +147,7 @@ class Navigator$Mate extends Navigator with Mate {
           routeTraversalEdgeBehavior: routeTraversalEdgeBehavior,
         ) {
     mateCreateName = 'Navigator';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Navigator$Mate(
           key: p.get('key').build(),
           pages: p.get('pages').build(),
@@ -198,7 +199,7 @@ class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate {
           onComplete: onComplete,
         ) {
     mateCreateName = 'RestorableRouteFuture';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableRouteFuture$Mate<T>(
           navigatorFinder: p.get('navigatorFinder').build(),
           onPresent: p.get('onPresent').build(),

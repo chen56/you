@@ -6,7 +6,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/painting/box_decoration.dart';
 
 /// class CupertinoFormSection extends StatelessWidget
@@ -25,17 +27,17 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
     /// optionalParameters: {Widget? footer} , defaultValue:none
     Widget? footer,
 
-    /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , defaultValue:unprocessed
-    required EdgeInsetsGeometry margin,
+    /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    EdgeInsetsGeometry margin = EdgeInsets.zero,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:unprocessed
-    required Color backgroundColor,
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:PrefixedIdentifier
+    Color backgroundColor = CupertinoColors.systemGroupedBackground,
 
     /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
           children: children,
@@ -85,14 +87,14 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
     /// optionalParameters: {EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin} , defaultValue:unprocessed
     required EdgeInsetsGeometry margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:unprocessed
-    required Color backgroundColor,
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:PrefixedIdentifier
+    Color backgroundColor = CupertinoColors.systemGroupedBackground,
 
     /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:unprocessed
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    Clip clipBehavior = Clip.none,
   }) : super.insetGrouped(
           key: key,
           children: children,

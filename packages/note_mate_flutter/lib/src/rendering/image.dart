@@ -7,6 +7,7 @@ import 'dart:core';
 import 'package:flutter/src/animation/animation.dart';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/decoration_image.dart';
 
 /// class RenderImage extends RenderBox
@@ -40,11 +41,11 @@ class RenderImage$Mate extends RenderImage with Mate {
     /// optionalParameters: {BoxFit? fit} , defaultValue:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:unprocessed
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
     /// optionalParameters: {Rect? centerSlice} , defaultValue:none
     Rect? centerSlice,
@@ -61,8 +62,8 @@ class RenderImage$Mate extends RenderImage with Mate {
     /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
     bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:unprocessed
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    FilterQuality filterQuality = FilterQuality.low,
   }) : super(
           image: image,
           debugImageLabel: debugImageLabel,

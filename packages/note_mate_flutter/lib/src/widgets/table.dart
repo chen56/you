@@ -9,6 +9,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/rendering/table.dart';
 import 'dart:ui';
 import 'package:flutter/src/rendering/table_border.dart';
+import 'package:flutter/rendering.dart';
 
 /// class TableRow
 class TableRow$Mate extends TableRow with Mate {
@@ -28,7 +29,7 @@ class TableRow$Mate extends TableRow with Mate {
           children: children,
         ) {
     mateCreateName = 'TableRow';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TableRow$Mate(
           key: p.get('key').build(),
           decoration: p.get('decoration').build(),
@@ -62,8 +63,8 @@ class Table$Mate extends Table with Mate {
     /// optionalParameters: {TableBorder? border} , defaultValue:none
     TableBorder? border,
 
-    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , defaultValue:unprocessed
-    required TableCellVerticalAlignment defaultVerticalAlignment,
+    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , defaultValue:PrefixedIdentifier
+    TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top,
 
     /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
     TextBaseline? textBaseline,
@@ -78,7 +79,7 @@ class Table$Mate extends Table with Mate {
           textBaseline: textBaseline,
         ) {
     mateCreateName = 'Table';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Table$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -118,7 +119,7 @@ class TableCell$Mate extends TableCell with Mate {
           child: child,
         ) {
     mateCreateName = 'TableCell';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TableCell$Mate(
           key: p.get('key').build(),
           verticalAlignment: p.get('verticalAlignment').build(),

@@ -5,7 +5,9 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 
 /// class AnimatedCrossFade extends StatefulWidget
@@ -21,17 +23,17 @@ class AnimatedCrossFade$Mate extends AnimatedCrossFade with Mate {
     /// optionalParameters: {required Widget secondChild} , defaultValue:none
     required Widget secondChild,
 
-    /// optionalParameters: {Curve firstCurve = Curves.linear} , defaultValue:unprocessed
-    required Curve firstCurve,
+    /// optionalParameters: {Curve firstCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve firstCurve = Curves.linear,
 
-    /// optionalParameters: {Curve secondCurve = Curves.linear} , defaultValue:unprocessed
-    required Curve secondCurve,
+    /// optionalParameters: {Curve secondCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve secondCurve = Curves.linear,
 
-    /// optionalParameters: {Curve sizeCurve = Curves.linear} , defaultValue:unprocessed
-    required Curve sizeCurve,
+    /// optionalParameters: {Curve sizeCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    Curve sizeCurve = Curves.linear,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.topCenter} , defaultValue:unprocessed
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.topCenter} , defaultValue:PrefixedIdentifier
+    AlignmentGeometry alignment = Alignment.topCenter,
 
     /// optionalParameters: {required CrossFadeState crossFadeState} , defaultValue:none
     required CrossFadeState crossFadeState,
@@ -62,7 +64,7 @@ class AnimatedCrossFade$Mate extends AnimatedCrossFade with Mate {
           excludeBottomFocus: excludeBottomFocus,
         ) {
     mateCreateName = 'AnimatedCrossFade';
-    matePackageUrl = 'package:flutter/material.dart';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedCrossFade$Mate(
           key: p.get('key').build(),
           firstChild: p.get('firstChild').build(),

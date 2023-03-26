@@ -8,6 +8,7 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'dart:ui';
+import 'package:flutter/material.dart';
 
 /// class UserAccountsDrawerHeader extends StatefulWidget
 class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
@@ -43,8 +44,8 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
     /// optionalParameters: {void Function()? onDetailsPressed} , defaultValue:none
     VoidCallback? onDetailsPressed,
 
-    /// optionalParameters: {Color arrowColor = Colors.white} , defaultValue:unprocessed
-    required Color arrowColor,
+    /// optionalParameters: {Color arrowColor = Colors.white} , defaultValue:PrefixedIdentifier
+    Color arrowColor = Colors.white,
   }) : super(
           key: key,
           decoration: decoration,

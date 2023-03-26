@@ -6,7 +6,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/painting/flutter_logo.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 
 /// class FlutterLogo extends StatelessWidget
 class FlutterLogo$Mate extends FlutterLogo with Mate {
@@ -21,14 +23,14 @@ class FlutterLogo$Mate extends FlutterLogo with Mate {
     /// optionalParameters: {Color textColor = const Color(0xFF757575)} , defaultValue:unprocessed
     required Color textColor,
 
-    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , defaultValue:unprocessed
-    required FlutterLogoStyle style,
+    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , defaultValue:PrefixedIdentifier
+    FlutterLogoStyle style = FlutterLogoStyle.markOnly,
 
     /// optionalParameters: {Duration duration = const Duration(milliseconds: 750)} , defaultValue:unprocessed
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , defaultValue:unprocessed
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , defaultValue:PrefixedIdentifier
+    Curve curve = Curves.fastOutSlowIn,
   }) : super(
           key: key,
           size: size,

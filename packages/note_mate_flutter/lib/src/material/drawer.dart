@@ -8,6 +8,7 @@ import 'dart:core';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 
 /// class Drawer extends StatelessWidget
 class Drawer$Mate extends Drawer with Mate {
@@ -94,8 +95,8 @@ class DrawerController$Mate extends DrawerController with Mate {
     /// optionalParameters: {void Function(bool)? drawerCallback} , defaultValue:none
     DrawerCallback? drawerCallback,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:unprocessed
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {Color? scrimColor} , defaultValue:none
     Color? scrimColor,
