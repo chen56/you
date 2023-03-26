@@ -22,6 +22,8 @@ class ContainerMate extends Container with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = "Container";
+    matePackageUrl = "package:flutter/material.dart";
     mateBuilder = (p) => ContainerMate(
           key: p.get("key").build(),
           alignment: p.get("alignment").build(),
@@ -56,6 +58,9 @@ class ColumnMate extends Column with Mate {
           mainAxisAlignment: mainAxisAlignment,
           children: children,
         ) {
+    mateCreateName = "Column";
+    matePackageUrl = "package:flutter/material.dart";
+
     mateBuilder = (p) => ColumnMate(
           key: p.get("key").build(),
           mainAxisAlignment: p.get("mainAxisAlignment").build(),
@@ -79,6 +84,9 @@ class CenterMate extends Center with Mate {
           heightFactor: heightFactor,
           child: child,
         ) {
+    mateCreateName = "Center";
+    matePackageUrl = "package:flutter/material.dart";
+
     mateBuilder = (p) => CenterMate(
           key: p.get("key").build(),
           widthFactor: p.get("widthFactor").build(),
