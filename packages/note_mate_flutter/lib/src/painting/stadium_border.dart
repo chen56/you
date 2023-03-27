@@ -16,6 +16,6 @@ class StadiumBorder$Mate extends StadiumBorder with Mate {
     mateCreateName = 'StadiumBorder';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StadiumBorder$Mate(side: p.get('side').build());
-    mateUse('side', side);
+    mateUse('side', side, isNamed: true);
   }
 }

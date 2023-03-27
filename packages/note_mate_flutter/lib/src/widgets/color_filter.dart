@@ -30,8 +30,8 @@ class ColorFiltered$Mate extends ColorFiltered with Mate {
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse('colorFilter', colorFilter);
-    mateUse('child', child);
-    mateUse('key', key);
+    mateUse('colorFilter', colorFilter, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('key', key, isNamed: true);
   }
 }

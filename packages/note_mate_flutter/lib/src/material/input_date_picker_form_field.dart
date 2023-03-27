@@ -82,18 +82,18 @@ class InputDatePickerFormField$Mate extends InputDatePickerFormField with Mate {
           keyboardType: p.get('keyboardType').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateUse('key', key);
-    mateUse('initialDate', initialDate);
-    mateUse('firstDate', firstDate);
-    mateUse('lastDate', lastDate);
-    mateUse('onDateSubmitted', onDateSubmitted);
-    mateUse('onDateSaved', onDateSaved);
-    mateUse('selectableDayPredicate', selectableDayPredicate);
-    mateUse('errorFormatText', errorFormatText);
-    mateUse('errorInvalidText', errorInvalidText);
-    mateUse('fieldHintText', fieldHintText);
-    mateUse('fieldLabelText', fieldLabelText);
-    mateUse('keyboardType', keyboardType);
-    mateUse('autofocus', autofocus);
+    mateUse('key', key, isNamed: true);
+    mateUse('initialDate', initialDate, isNamed: true);
+    mateUse('firstDate', firstDate, isNamed: true);
+    mateUse('lastDate', lastDate, isNamed: true);
+    mateUse('onDateSubmitted', onDateSubmitted, isNamed: true);
+    mateUse('onDateSaved', onDateSaved, isNamed: true);
+    mateUse('selectableDayPredicate', selectableDayPredicate, isNamed: true);
+    mateUse('errorFormatText', errorFormatText, isNamed: true);
+    mateUse('errorInvalidText', errorInvalidText, isNamed: true);
+    mateUse('fieldHintText', fieldHintText, isNamed: true);
+    mateUse('fieldLabelText', fieldLabelText, isNamed: true);
+    mateUse('keyboardType', keyboardType, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
   }
 }

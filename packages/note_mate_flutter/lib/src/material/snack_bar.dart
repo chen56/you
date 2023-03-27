@@ -47,11 +47,11 @@ class SnackBarAction$Mate extends SnackBarAction with Mate {
           label: p.get('label').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse('key', key);
-    mateUse('textColor', textColor);
-    mateUse('disabledTextColor', disabledTextColor);
-    mateUse('label', label);
-    mateUse('onPressed', onPressed);
+    mateUse('key', key, isNamed: true);
+    mateUse('textColor', textColor, isNamed: true);
+    mateUse('disabledTextColor', disabledTextColor, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
   }
 }
 
@@ -154,23 +154,23 @@ class SnackBar$Mate extends SnackBar with Mate {
           dismissDirection: p.get('dismissDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('content', content);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('margin', margin);
-    mateUse('padding', padding);
-    mateUse('width', width);
-    mateUse('shape', shape);
-    mateUse('behavior', behavior);
-    mateUse('action', action);
-    mateUse('actionOverflowThreshold', actionOverflowThreshold);
-    mateUse('showCloseIcon', showCloseIcon);
-    mateUse('closeIconColor', closeIconColor);
-    mateUse('duration', duration);
-    mateUse('animation', animation);
-    mateUse('onVisible', onVisible);
-    mateUse('dismissDirection', dismissDirection);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('content', content, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
+    mateUse('action', action, isNamed: true);
+    mateUse('actionOverflowThreshold', actionOverflowThreshold, isNamed: true);
+    mateUse('showCloseIcon', showCloseIcon, isNamed: true);
+    mateUse('closeIconColor', closeIconColor, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('animation', animation, isNamed: true);
+    mateUse('onVisible', onVisible, isNamed: true);
+    mateUse('dismissDirection', dismissDirection, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }

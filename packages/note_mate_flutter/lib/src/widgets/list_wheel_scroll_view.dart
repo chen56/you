@@ -25,7 +25,7 @@ class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Ma
     mateCreateName = 'ListWheelChildListDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildListDelegate$Mate(children: p.get('children').build());
-    mateUse('children', children);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -40,7 +40,7 @@ class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDe
     mateCreateName = 'ListWheelChildLoopingListDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build());
-    mateUse('children', children);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -63,8 +63,8 @@ class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate w
           builder: p.get('builder').build(),
           childCount: p.get('childCount').build(),
         );
-    mateUse('builder', builder);
-    mateUse('childCount', childCount);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('childCount', childCount, isNamed: true);
   }
 }
 
@@ -79,7 +79,7 @@ class FixedExtentScrollController$Mate extends FixedExtentScrollController with 
     mateCreateName = 'FixedExtentScrollController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
-    mateUse('initialItem', initialItem);
+    mateUse('initialItem', initialItem, isNamed: true);
   }
 }
 
@@ -127,13 +127,13 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate {
           itemIndex: p.get('itemIndex').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateUse('minScrollExtent', minScrollExtent);
-    mateUse('maxScrollExtent', maxScrollExtent);
-    mateUse('pixels', pixels);
-    mateUse('viewportDimension', viewportDimension);
-    mateUse('axisDirection', axisDirection);
-    mateUse('itemIndex', itemIndex);
-    mateUse('devicePixelRatio', devicePixelRatio);
+    mateUse('minScrollExtent', minScrollExtent, isNamed: true);
+    mateUse('maxScrollExtent', maxScrollExtent, isNamed: true);
+    mateUse('pixels', pixels, isNamed: true);
+    mateUse('viewportDimension', viewportDimension, isNamed: true);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('itemIndex', itemIndex, isNamed: true);
+    mateUse('devicePixelRatio', devicePixelRatio, isNamed: true);
   }
 }
 
@@ -148,7 +148,7 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate {
     mateCreateName = 'FixedExtentScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
-    mateUse('parent', parent);
+    mateUse('parent', parent, isNamed: true);
   }
 }
 
@@ -246,23 +246,23 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('controller', controller);
-    mateUse('physics', physics);
-    mateUse('diameterRatio', diameterRatio);
-    mateUse('perspective', perspective);
-    mateUse('offAxisFraction', offAxisFraction);
-    mateUse('useMagnifier', useMagnifier);
-    mateUse('magnification', magnification);
-    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    mateUse('itemExtent', itemExtent);
-    mateUse('squeeze', squeeze);
-    mateUse('onSelectedItemChanged', onSelectedItemChanged);
-    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('restorationId', restorationId);
-    mateUse('scrollBehavior', scrollBehavior);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('diameterRatio', diameterRatio, isNamed: true);
+    mateUse('perspective', perspective, isNamed: true);
+    mateUse('offAxisFraction', offAxisFraction, isNamed: true);
+    mateUse('useMagnifier', useMagnifier, isNamed: true);
+    mateUse('magnification', magnification, isNamed: true);
+    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('squeeze', squeeze, isNamed: true);
+    mateUse('onSelectedItemChanged', onSelectedItemChanged, isNamed: true);
+    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 
   /// ListWheelScrollView ListWheelScrollView.useDelegate({Key? key, ScrollController? controller, ScrollPhysics? physics, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, void Function(int)? onSelectedItemChanged, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, required ListWheelChildDelegate childDelegate})
@@ -357,23 +357,23 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           childDelegate: p.get('childDelegate').build(),
         );
-    mateUse('key', key);
-    mateUse('controller', controller);
-    mateUse('physics', physics);
-    mateUse('diameterRatio', diameterRatio);
-    mateUse('perspective', perspective);
-    mateUse('offAxisFraction', offAxisFraction);
-    mateUse('useMagnifier', useMagnifier);
-    mateUse('magnification', magnification);
-    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    mateUse('itemExtent', itemExtent);
-    mateUse('squeeze', squeeze);
-    mateUse('onSelectedItemChanged', onSelectedItemChanged);
-    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('restorationId', restorationId);
-    mateUse('scrollBehavior', scrollBehavior);
-    mateUse('childDelegate', childDelegate);
+    mateUse('key', key, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('diameterRatio', diameterRatio, isNamed: true);
+    mateUse('perspective', perspective, isNamed: true);
+    mateUse('offAxisFraction', offAxisFraction, isNamed: true);
+    mateUse('useMagnifier', useMagnifier, isNamed: true);
+    mateUse('magnification', magnification, isNamed: true);
+    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('squeeze', squeeze, isNamed: true);
+    mateUse('onSelectedItemChanged', onSelectedItemChanged, isNamed: true);
+    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
+    mateUse('childDelegate', childDelegate, isNamed: true);
   }
 }
 
@@ -388,7 +388,7 @@ class ListWheelElement$Mate extends ListWheelElement with Mate {
     mateCreateName = 'ListWheelElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelElement$Mate(p.get('widget').value);
-    mateUse('widget', widget);
+    mateUse('widget', widget, isNamed: false);
   }
 }
 
@@ -466,18 +466,18 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
           childDelegate: p.get('childDelegate').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('diameterRatio', diameterRatio);
-    mateUse('perspective', perspective);
-    mateUse('offAxisFraction', offAxisFraction);
-    mateUse('useMagnifier', useMagnifier);
-    mateUse('magnification', magnification);
-    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    mateUse('itemExtent', itemExtent);
-    mateUse('squeeze', squeeze);
-    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    mateUse('offset', offset);
-    mateUse('childDelegate', childDelegate);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('diameterRatio', diameterRatio, isNamed: true);
+    mateUse('perspective', perspective, isNamed: true);
+    mateUse('offAxisFraction', offAxisFraction, isNamed: true);
+    mateUse('useMagnifier', useMagnifier, isNamed: true);
+    mateUse('magnification', magnification, isNamed: true);
+    mateUse('overAndUnderCenterOpacity', overAndUnderCenterOpacity, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('squeeze', squeeze, isNamed: true);
+    mateUse('renderChildrenOutsideViewport', renderChildrenOutsideViewport, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('childDelegate', childDelegate, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }

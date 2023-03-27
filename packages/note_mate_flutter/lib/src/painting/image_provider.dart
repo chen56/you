@@ -49,12 +49,12 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate {
           size: p.get('size').build(),
           platform: p.get('platform').build(),
         );
-    mateUse('bundle', bundle);
-    mateUse('devicePixelRatio', devicePixelRatio);
-    mateUse('locale', locale);
-    mateUse('textDirection', textDirection);
-    mateUse('size', size);
-    mateUse('platform', platform);
+    mateUse('bundle', bundle, isNamed: true);
+    mateUse('devicePixelRatio', devicePixelRatio, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('size', size, isNamed: true);
+    mateUse('platform', platform, isNamed: true);
   }
 }
 
@@ -82,9 +82,9 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate {
           name: p.get('name').build(),
           scale: p.get('scale').build(),
         );
-    mateUse('bundle', bundle);
-    mateUse('name', name);
-    mateUse('scale', scale);
+    mateUse('bundle', bundle, isNamed: true);
+    mateUse('name', name, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
   }
 }
 
@@ -121,11 +121,11 @@ class ResizeImage$Mate extends ResizeImage with Mate {
           policy: p.get('policy').build(),
           allowUpscaling: p.get('allowUpscaling').build(),
         );
-    mateUse('imageProvider', imageProvider);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('policy', policy);
-    mateUse('allowUpscaling', allowUpscaling);
+    mateUse('imageProvider', imageProvider, isNamed: false);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('policy', policy, isNamed: true);
+    mateUse('allowUpscaling', allowUpscaling, isNamed: true);
   }
 }
 
@@ -147,8 +147,8 @@ class FileImage$Mate extends FileImage with Mate {
           p.get('file').value,
           scale: p.get('scale').build(),
         );
-    mateUse('file', file);
-    mateUse('scale', scale);
+    mateUse('file', file, isNamed: false);
+    mateUse('scale', scale, isNamed: true);
   }
 }
 
@@ -170,8 +170,8 @@ class MemoryImage$Mate extends MemoryImage with Mate {
           p.get('bytes').value,
           scale: p.get('scale').build(),
         );
-    mateUse('bytes', bytes);
-    mateUse('scale', scale);
+    mateUse('bytes', bytes, isNamed: false);
+    mateUse('scale', scale, isNamed: true);
   }
 }
 
@@ -203,10 +203,10 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
           bundle: p.get('bundle').build(),
           package: p.get('package').build(),
         );
-    mateUse('assetName', assetName);
-    mateUse('scale', scale);
-    mateUse('bundle', bundle);
-    mateUse('package', package);
+    mateUse('assetName', assetName, isNamed: false);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('bundle', bundle, isNamed: true);
+    mateUse('package', package, isNamed: true);
   }
 }
 
@@ -229,7 +229,7 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate
           statusCode: p.get('statusCode').build(),
           uri: p.get('uri').build(),
         );
-    mateUse('statusCode', statusCode);
-    mateUse('uri', uri);
+    mateUse('statusCode', statusCode, isNamed: true);
+    mateUse('uri', uri, isNamed: true);
   }
 }

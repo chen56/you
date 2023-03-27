@@ -36,10 +36,10 @@ class SliverFillViewport$Mate extends SliverFillViewport with Mate {
           viewportFraction: p.get('viewportFraction').build(),
           padEnds: p.get('padEnds').build(),
         );
-    mateUse('key', key);
-    mateUse('delegate', delegate);
-    mateUse('viewportFraction', viewportFraction);
-    mateUse('padEnds', padEnds);
+    mateUse('key', key, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
+    mateUse('viewportFraction', viewportFraction, isNamed: true);
+    mateUse('padEnds', padEnds, isNamed: true);
   }
 }
 
@@ -72,9 +72,9 @@ class SliverFillRemaining$Mate extends SliverFillRemaining with Mate {
           hasScrollBody: p.get('hasScrollBody').build(),
           fillOverscroll: p.get('fillOverscroll').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('hasScrollBody', hasScrollBody);
-    mateUse('fillOverscroll', fillOverscroll);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('hasScrollBody', hasScrollBody, isNamed: true);
+    mateUse('fillOverscroll', fillOverscroll, isNamed: true);
   }
 }

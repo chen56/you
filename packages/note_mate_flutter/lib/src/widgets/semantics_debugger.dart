@@ -30,8 +30,8 @@ class SemanticsDebugger$Mate extends SemanticsDebugger with Mate {
           child: p.get('child').build(),
           labelStyle: p.get('labelStyle').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('labelStyle', labelStyle);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('labelStyle', labelStyle, isNamed: true);
   }
 }

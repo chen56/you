@@ -30,9 +30,9 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate {
           className: p.get('className').build(),
           method: p.get('method').build(),
         );
-    mateUse('package', package);
-    mateUse('className', className);
-    mateUse('method', method);
+    mateUse('package', package, isNamed: true);
+    mateUse('className', className, isNamed: true);
+    mateUse('method', method, isNamed: true);
   }
 }
 
@@ -55,8 +55,8 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Ma
           frames: p.get('frames').build(),
           replacement: p.get('replacement').build(),
         );
-    mateUse('frames', frames);
-    mateUse('replacement', replacement);
+    mateUseList('frames', frames, isNamed: true);
+    mateUse('replacement', replacement, isNamed: true);
   }
 }
 
@@ -71,7 +71,7 @@ class ErrorDescription$Mate extends ErrorDescription with Mate {
     mateCreateName = 'ErrorDescription';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorDescription$Mate(p.get('message').value);
-    mateUse('message', message);
+    mateUse('message', message, isNamed: false);
   }
 }
 
@@ -86,7 +86,7 @@ class ErrorSummary$Mate extends ErrorSummary with Mate {
     mateCreateName = 'ErrorSummary';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorSummary$Mate(p.get('message').value);
-    mateUse('message', message);
+    mateUse('message', message, isNamed: false);
   }
 }
 
@@ -101,7 +101,7 @@ class ErrorHint$Mate extends ErrorHint with Mate {
     mateCreateName = 'ErrorHint';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorHint$Mate(p.get('message').value);
-    mateUse('message', message);
+    mateUse('message', message, isNamed: false);
   }
 }
 
@@ -149,13 +149,13 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate {
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    mateUse('exception', exception);
-    mateUse('stack', stack);
-    mateUse('library', library);
-    mateUse('context', context);
-    mateUse('stackFilter', stackFilter);
-    mateUse('informationCollector', informationCollector);
-    mateUse('silent', silent);
+    mateUse('exception', exception, isNamed: true);
+    mateUse('stack', stack, isNamed: true);
+    mateUse('library', library, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('stackFilter', stackFilter, isNamed: true);
+    mateUse('informationCollector', informationCollector, isNamed: true);
+    mateUse('silent', silent, isNamed: true);
   }
 }
 
@@ -170,7 +170,7 @@ class FlutterError$Mate extends FlutterError with Mate {
     mateCreateName = 'FlutterError.fromParts';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
-    mateUse('diagnostics', diagnostics);
+    mateUseList('diagnostics', diagnostics, isNamed: false);
   }
 }
 
@@ -202,10 +202,10 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
           stackFilter: p.get('stackFilter').build(),
           showSeparator: p.get('showSeparator').build(),
         );
-    mateUse('name', name);
-    mateUse('stack', stack);
-    mateUse('stackFilter', stackFilter);
-    mateUse('showSeparator', showSeparator);
+    mateUse('name', name, isNamed: false);
+    mateUse('stack', stack, isNamed: false);
+    mateUse('stackFilter', stackFilter, isNamed: true);
+    mateUse('showSeparator', showSeparator, isNamed: true);
   }
 
   /// DiagnosticsStackTrace DiagnosticsStackTrace.singleFrame(String name, {required String frame, bool showSeparator = true})
@@ -229,8 +229,8 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
           frame: p.get('frame').build(),
           showSeparator: p.get('showSeparator').build(),
         );
-    mateUse('name', name);
-    mateUse('frame', frame);
-    mateUse('showSeparator', showSeparator);
+    mateUse('name', name, isNamed: false);
+    mateUse('frame', frame, isNamed: true);
+    mateUse('showSeparator', showSeparator, isNamed: true);
   }
 }

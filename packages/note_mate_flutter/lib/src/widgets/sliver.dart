@@ -55,14 +55,14 @@ class SliverChildBuilderDelegate$Mate extends SliverChildBuilderDelegate with Ma
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
         );
-    mateUse('builder', builder);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('childCount', childCount);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
-    mateUse('semanticIndexCallback', semanticIndexCallback);
-    mateUse('semanticIndexOffset', semanticIndexOffset);
+    mateUse('builder', builder, isNamed: false);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('childCount', childCount, isNamed: true);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
+    mateUse('semanticIndexCallback', semanticIndexCallback, isNamed: true);
+    mateUse('semanticIndexOffset', semanticIndexOffset, isNamed: true);
   }
 }
 
@@ -104,12 +104,12 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate {
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
         );
-    mateUse('children', children);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
-    mateUse('semanticIndexCallback', semanticIndexCallback);
-    mateUse('semanticIndexOffset', semanticIndexOffset);
+    mateUseList('children', children, isNamed: false);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
+    mateUse('semanticIndexCallback', semanticIndexCallback, isNamed: true);
+    mateUse('semanticIndexOffset', semanticIndexOffset, isNamed: true);
   }
 
   /// SliverChildListDelegate SliverChildListDelegate.fixed(List<Widget> children, {bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback, int semanticIndexOffset = 0})
@@ -148,12 +148,12 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate {
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
         );
-    mateUse('children', children);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
-    mateUse('semanticIndexCallback', semanticIndexCallback);
-    mateUse('semanticIndexOffset', semanticIndexOffset);
+    mateUseList('children', children, isNamed: false);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
+    mateUse('semanticIndexCallback', semanticIndexCallback, isNamed: true);
+    mateUse('semanticIndexOffset', semanticIndexOffset, isNamed: true);
   }
 }
 
@@ -176,8 +176,8 @@ class SliverList$Mate extends SliverList with Mate {
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
         );
-    mateUse('key', key);
-    mateUse('delegate', delegate);
+    mateUse('key', key, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
   }
 
   /// SliverList SliverList.builder({Key? key, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -222,13 +222,13 @@ class SliverList$Mate extends SliverList with Mate {
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('itemCount', itemCount);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('itemCount', itemCount, isNamed: true);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
   }
 
   /// SliverList SliverList.separated({Key? key, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required Widget? Function(BuildContext, int) separatorBuilder, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -278,14 +278,14 @@ class SliverList$Mate extends SliverList with Mate {
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('separatorBuilder', separatorBuilder);
-    mateUse('itemCount', itemCount);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('separatorBuilder', separatorBuilder, isNamed: true);
+    mateUse('itemCount', itemCount, isNamed: true);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
   }
 
   /// SliverList SliverList.list({Key? key, required List<Widget> children, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -320,11 +320,11 @@ class SliverList$Mate extends SliverList with Mate {
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
   }
 }
 
@@ -352,9 +352,9 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with Mate {
           delegate: p.get('delegate').build(),
           itemExtent: p.get('itemExtent').build(),
         );
-    mateUse('key', key);
-    mateUse('delegate', delegate);
-    mateUse('itemExtent', itemExtent);
+    mateUse('key', key, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
   }
 
   /// SliverFixedExtentList SliverFixedExtentList.builder({Key? key, required Widget? Function(BuildContext, int) itemBuilder, required double itemExtent, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -404,14 +404,14 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with Mate {
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('itemExtent', itemExtent);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('itemCount', itemCount);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('itemCount', itemCount, isNamed: true);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
   }
 
   /// SliverFixedExtentList SliverFixedExtentList.list({Key? key, required List<Widget> children, required double itemExtent, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -451,12 +451,12 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with Mate {
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('itemExtent', itemExtent);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
   }
 }
 
@@ -484,9 +484,9 @@ class SliverGrid$Mate extends SliverGrid with Mate {
           delegate: p.get('delegate').build(),
           gridDelegate: p.get('gridDelegate').build(),
         );
-    mateUse('key', key);
-    mateUse('delegate', delegate);
-    mateUse('gridDelegate', gridDelegate);
+    mateUse('key', key, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
+    mateUse('gridDelegate', gridDelegate, isNamed: true);
   }
 
   /// SliverGrid SliverGrid.builder({Key? key, required SliverGridDelegate gridDelegate, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
@@ -536,14 +536,14 @@ class SliverGrid$Mate extends SliverGrid with Mate {
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse('key', key);
-    mateUse('gridDelegate', gridDelegate);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('itemCount', itemCount);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries);
-    mateUse('addSemanticIndexes', addSemanticIndexes);
+    mateUse('key', key, isNamed: true);
+    mateUse('gridDelegate', gridDelegate, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('itemCount', itemCount, isNamed: true);
+    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
+    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
+    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
   }
 
   /// SliverGrid SliverGrid.count({Key? key, required int crossAxisCount, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, List<Widget> children = const <Widget>[]})
@@ -583,12 +583,12 @@ class SliverGrid$Mate extends SliverGrid with Mate {
           childAspectRatio: p.get('childAspectRatio').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('crossAxisCount', crossAxisCount);
-    mateUse('mainAxisSpacing', mainAxisSpacing);
-    mateUse('crossAxisSpacing', crossAxisSpacing);
-    mateUse('childAspectRatio', childAspectRatio);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('crossAxisCount', crossAxisCount, isNamed: true);
+    mateUse('mainAxisSpacing', mainAxisSpacing, isNamed: true);
+    mateUse('crossAxisSpacing', crossAxisSpacing, isNamed: true);
+    mateUse('childAspectRatio', childAspectRatio, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 
   /// SliverGrid SliverGrid.extent({Key? key, required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, List<Widget> children = const <Widget>[]})
@@ -628,12 +628,12 @@ class SliverGrid$Mate extends SliverGrid with Mate {
           childAspectRatio: p.get('childAspectRatio').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('maxCrossAxisExtent', maxCrossAxisExtent);
-    mateUse('mainAxisSpacing', mainAxisSpacing);
-    mateUse('crossAxisSpacing', crossAxisSpacing);
-    mateUse('childAspectRatio', childAspectRatio);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('maxCrossAxisExtent', maxCrossAxisExtent, isNamed: true);
+    mateUse('mainAxisSpacing', mainAxisSpacing, isNamed: true);
+    mateUse('crossAxisSpacing', crossAxisSpacing, isNamed: true);
+    mateUse('childAspectRatio', childAspectRatio, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -655,8 +655,8 @@ class SliverMultiBoxAdaptorElement$Mate extends SliverMultiBoxAdaptorElement wit
           p.get('widget').value,
           replaceMovedChildren: p.get('replaceMovedChildren').build(),
         );
-    mateUse('widget', widget);
-    mateUse('replaceMovedChildren', replaceMovedChildren);
+    mateUse('widget', widget, isNamed: false);
+    mateUse('replaceMovedChildren', replaceMovedChildren, isNamed: true);
   }
 }
 
@@ -689,10 +689,10 @@ class SliverOpacity$Mate extends SliverOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key);
-    mateUse('opacity', opacity);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateUse('sliver', sliver);
+    mateUse('key', key, isNamed: true);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -725,10 +725,10 @@ class SliverIgnorePointer$Mate extends SliverIgnorePointer with Mate {
           ignoringSemantics: p.get('ignoringSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key);
-    mateUse('ignoring', ignoring);
-    mateUse('ignoringSemantics', ignoringSemantics);
-    mateUse('sliver', sliver);
+    mateUse('key', key, isNamed: true);
+    mateUse('ignoring', ignoring, isNamed: true);
+    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -756,9 +756,9 @@ class SliverOffstage$Mate extends SliverOffstage with Mate {
           offstage: p.get('offstage').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key);
-    mateUse('offstage', offstage);
-    mateUse('sliver', sliver);
+    mateUse('key', key, isNamed: true);
+    mateUse('offstage', offstage, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -786,8 +786,8 @@ class KeepAlive$Mate extends KeepAlive with Mate {
           keepAlive: p.get('keepAlive').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('keepAlive', keepAlive);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('keepAlive', keepAlive, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

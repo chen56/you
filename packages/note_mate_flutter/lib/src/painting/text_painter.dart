@@ -37,10 +37,10 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
           baseline: p.get('baseline').build(),
           baselineOffset: p.get('baselineOffset').build(),
         );
-    mateUse('size', size);
-    mateUse('alignment', alignment);
-    mateUse('baseline', baseline);
-    mateUse('baselineOffset', baselineOffset);
+    mateUse('size', size, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('baseline', baseline, isNamed: true);
+    mateUse('baselineOffset', baselineOffset, isNamed: true);
   }
 }
 
@@ -103,15 +103,15 @@ class TextPainter$Mate extends TextPainter with Mate {
           textWidthBasis: p.get('textWidthBasis').build(),
           textHeightBehavior: p.get('textHeightBehavior').build(),
         );
-    mateUse('text', text);
-    mateUse('textAlign', textAlign);
-    mateUse('textDirection', textDirection);
-    mateUse('textScaleFactor', textScaleFactor);
-    mateUse('maxLines', maxLines);
-    mateUse('ellipsis', ellipsis);
-    mateUse('locale', locale);
-    mateUse('strutStyle', strutStyle);
-    mateUse('textWidthBasis', textWidthBasis);
-    mateUse('textHeightBehavior', textHeightBehavior);
+    mateUse('text', text, isNamed: true);
+    mateUse('textAlign', textAlign, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('textScaleFactor', textScaleFactor, isNamed: true);
+    mateUse('maxLines', maxLines, isNamed: true);
+    mateUse('ellipsis', ellipsis, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUse('strutStyle', strutStyle, isNamed: true);
+    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
+    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
   }
 }

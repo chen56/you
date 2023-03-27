@@ -85,19 +85,19 @@ class NavigationBar$Mate extends NavigationBar with Mate {
           height: p.get('height').build(),
           labelBehavior: p.get('labelBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('animationDuration', animationDuration);
-    mateUse('selectedIndex', selectedIndex);
-    mateUse('destinations', destinations);
-    mateUse('onDestinationSelected', onDestinationSelected);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('indicatorShape', indicatorShape);
-    mateUse('height', height);
-    mateUse('labelBehavior', labelBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('animationDuration', animationDuration, isNamed: true);
+    mateUse('selectedIndex', selectedIndex, isNamed: true);
+    mateUseList('destinations', destinations, isNamed: true);
+    mateUse('onDestinationSelected', onDestinationSelected, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('indicatorShape', indicatorShape, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('labelBehavior', labelBehavior, isNamed: true);
   }
 }
 
@@ -135,11 +135,11 @@ class NavigationDestination$Mate extends NavigationDestination with Mate {
           label: p.get('label').build(),
           tooltip: p.get('tooltip').build(),
         );
-    mateUse('key', key);
-    mateUse('icon', icon);
-    mateUse('selectedIcon', selectedIcon);
-    mateUse('label', label);
-    mateUse('tooltip', tooltip);
+    mateUse('key', key, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('selectedIcon', selectedIcon, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
   }
 }
 
@@ -187,12 +187,12 @@ class NavigationIndicator$Mate extends NavigationIndicator with Mate {
           borderRadius: p.get('borderRadius').build(),
           shape: p.get('shape').build(),
         );
-    mateUse('key', key);
-    mateUse('animation', animation);
-    mateUse('color', color);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('borderRadius', borderRadius);
-    mateUse('shape', shape);
+    mateUse('key', key, isNamed: true);
+    mateUse('animation', animation, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
   }
 }

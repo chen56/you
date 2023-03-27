@@ -64,9 +64,9 @@ class Directionality$Mate extends Directionality with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('textDirection', textDirection);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -99,10 +99,10 @@ class Opacity$Mate extends Opacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('opacity', opacity);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -135,10 +135,10 @@ class ShaderMask$Mate extends ShaderMask with Mate {
           blendMode: p.get('blendMode').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('shaderCallback', shaderCallback);
-    mateUse('blendMode', blendMode);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('shaderCallback', shaderCallback, isNamed: true);
+    mateUse('blendMode', blendMode, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -171,10 +171,10 @@ class BackdropFilter$Mate extends BackdropFilter with Mate {
           child: p.get('child').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse('key', key);
-    mateUse('filter', filter);
-    mateUse('child', child);
-    mateUse('blendMode', blendMode);
+    mateUse('key', key, isNamed: true);
+    mateUse('filter', filter, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('blendMode', blendMode, isNamed: true);
   }
 }
 
@@ -222,13 +222,13 @@ class CustomPaint$Mate extends CustomPaint with Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('painter', painter);
-    mateUse('foregroundPainter', foregroundPainter);
-    mateUse('size', size);
-    mateUse('isComplex', isComplex);
-    mateUse('willChange', willChange);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('painter', painter, isNamed: true);
+    mateUse('foregroundPainter', foregroundPainter, isNamed: true);
+    mateUse('size', size, isNamed: true);
+    mateUse('isComplex', isComplex, isNamed: true);
+    mateUse('willChange', willChange, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -261,10 +261,10 @@ class ClipRect$Mate extends ClipRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -302,11 +302,11 @@ class ClipRRect$Mate extends ClipRRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('borderRadius', borderRadius);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -339,10 +339,10 @@ class ClipOval$Mate extends ClipOval with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -375,10 +375,10 @@ class ClipPath$Mate extends ClipPath with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -431,14 +431,14 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('borderRadius', borderRadius);
-    mateUse('elevation', elevation);
-    mateUse('color', color);
-    mateUse('shadowColor', shadowColor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -486,13 +486,13 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('elevation', elevation);
-    mateUse('color', color);
-    mateUse('shadowColor', shadowColor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -540,13 +540,13 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('transform', transform);
-    mateUse('origin', origin);
-    mateUse('alignment', alignment);
-    mateUse('transformHitTests', transformHitTests);
-    mateUse('filterQuality', filterQuality);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('transform', transform, isNamed: true);
+    mateUse('origin', origin, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('transformHitTests', transformHitTests, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Transform Transform.rotate({Key? key, required double angle, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
@@ -591,13 +591,13 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('angle', angle);
-    mateUse('origin', origin);
-    mateUse('alignment', alignment);
-    mateUse('transformHitTests', transformHitTests);
-    mateUse('filterQuality', filterQuality);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('angle', angle, isNamed: true);
+    mateUse('origin', origin, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('transformHitTests', transformHitTests, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Transform Transform.translate({Key? key, required Offset offset, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
@@ -632,11 +632,11 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('offset', offset);
-    mateUse('transformHitTests', transformHitTests);
-    mateUse('filterQuality', filterQuality);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('transformHitTests', transformHitTests, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Transform Transform.scale({Key? key, double? scale, double? scaleX, double? scaleY, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
@@ -691,15 +691,15 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('scale', scale);
-    mateUse('scaleX', scaleX);
-    mateUse('scaleY', scaleY);
-    mateUse('origin', origin);
-    mateUse('alignment', alignment);
-    mateUse('transformHitTests', transformHitTests);
-    mateUse('filterQuality', filterQuality);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('scaleX', scaleX, isNamed: true);
+    mateUse('scaleY', scaleY, isNamed: true);
+    mateUse('origin', origin, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('transformHitTests', transformHitTests, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Transform Transform.flip({Key? key, bool flipX = false, bool flipY = false, Offset? origin, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
@@ -744,13 +744,13 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('flipX', flipX);
-    mateUse('flipY', flipY);
-    mateUse('origin', origin);
-    mateUse('transformHitTests', transformHitTests);
-    mateUse('filterQuality', filterQuality);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('flipX', flipX, isNamed: true);
+    mateUse('flipY', flipY, isNamed: true);
+    mateUse('origin', origin, isNamed: true);
+    mateUse('transformHitTests', transformHitTests, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -778,9 +778,9 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('link', link);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('link', link, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -828,13 +828,13 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower with 
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('link', link);
-    mateUse('showWhenUnlinked', showWhenUnlinked);
-    mateUse('offset', offset);
-    mateUse('targetAnchor', targetAnchor);
-    mateUse('followerAnchor', followerAnchor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('link', link, isNamed: true);
+    mateUse('showWhenUnlinked', showWhenUnlinked, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('targetAnchor', targetAnchor, isNamed: true);
+    mateUse('followerAnchor', followerAnchor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -872,11 +872,11 @@ class FittedBox$Mate extends FittedBox with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('fit', fit);
-    mateUse('alignment', alignment);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -909,10 +909,10 @@ class FractionalTranslation$Mate extends FractionalTranslation with Mate {
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('translation', translation);
-    mateUse('transformHitTests', transformHitTests);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('translation', translation, isNamed: true);
+    mateUse('transformHitTests', transformHitTests, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -940,9 +940,9 @@ class RotatedBox$Mate extends RotatedBox with Mate {
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('quarterTurns', quarterTurns);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('quarterTurns', quarterTurns, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -970,9 +970,9 @@ class Padding$Mate extends Padding with Mate {
           padding: p.get('padding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('padding', padding);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1010,11 +1010,11 @@ class Align$Mate extends Align with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('widthFactor', widthFactor);
-    mateUse('heightFactor', heightFactor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('widthFactor', widthFactor, isNamed: true);
+    mateUse('heightFactor', heightFactor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1047,10 +1047,10 @@ class Center$Mate extends Center with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('widthFactor', widthFactor);
-    mateUse('heightFactor', heightFactor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('widthFactor', widthFactor, isNamed: true);
+    mateUse('heightFactor', heightFactor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1078,9 +1078,9 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('delegate', delegate);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1108,9 +1108,9 @@ class LayoutId$Mate extends LayoutId with Mate {
           id: p.get('id').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('id', id);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('id', id, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1138,9 +1138,9 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
           delegate: p.get('delegate').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('delegate', delegate);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -1173,10 +1173,10 @@ class SizedBox$Mate extends SizedBox with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// SizedBox SizedBox.expand({Key? key, Widget? child})
@@ -1196,8 +1196,8 @@ class SizedBox$Mate extends SizedBox with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// SizedBox SizedBox.shrink({Key? key, Widget? child})
@@ -1217,8 +1217,8 @@ class SizedBox$Mate extends SizedBox with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// SizedBox SizedBox.fromSize({Key? key, Widget? child, Size? size})
@@ -1243,9 +1243,9 @@ class SizedBox$Mate extends SizedBox with Mate {
           child: p.get('child').build(),
           size: p.get('size').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('size', size);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('size', size, isNamed: true);
   }
 
   /// SizedBox SizedBox.square({Key? key, Widget? child, double? dimension})
@@ -1270,9 +1270,9 @@ class SizedBox$Mate extends SizedBox with Mate {
           child: p.get('child').build(),
           dimension: p.get('dimension').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('dimension', dimension);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('dimension', dimension, isNamed: true);
   }
 }
 
@@ -1300,9 +1300,9 @@ class ConstrainedBox$Mate extends ConstrainedBox with Mate {
           constraints: p.get('constraints').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('constraints', constraints);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1350,13 +1350,13 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           debugTransformType: p.get('debugTransformType').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('textDirection', textDirection);
-    mateUse('alignment', alignment);
-    mateUse('constraintsTransform', constraintsTransform);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('debugTransformType', debugTransformType);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('constraintsTransform', constraintsTransform, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('debugTransformType', debugTransformType, isNamed: true);
   }
 }
 
@@ -1399,12 +1399,12 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
           constrainedAxis: p.get('constrainedAxis').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('textDirection', textDirection);
-    mateUse('alignment', alignment);
-    mateUse('constrainedAxis', constrainedAxis);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('constrainedAxis', constrainedAxis, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -1442,11 +1442,11 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('widthFactor', widthFactor);
-    mateUse('heightFactor', heightFactor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('widthFactor', widthFactor, isNamed: true);
+    mateUse('heightFactor', heightFactor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1479,10 +1479,10 @@ class LimitedBox$Mate extends LimitedBox with Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('maxWidth', maxWidth);
-    mateUse('maxHeight', maxHeight);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('maxWidth', maxWidth, isNamed: true);
+    mateUse('maxHeight', maxHeight, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1530,13 +1530,13 @@ class OverflowBox$Mate extends OverflowBox with Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('minWidth', minWidth);
-    mateUse('maxWidth', maxWidth);
-    mateUse('minHeight', minHeight);
-    mateUse('maxHeight', maxHeight);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('minWidth', minWidth, isNamed: true);
+    mateUse('maxWidth', maxWidth, isNamed: true);
+    mateUse('minHeight', minHeight, isNamed: true);
+    mateUse('maxHeight', maxHeight, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1569,10 +1569,10 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('size', size);
-    mateUse('alignment', alignment);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('size', size, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1600,9 +1600,9 @@ class Offstage$Mate extends Offstage with Mate {
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('offstage', offstage);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('offstage', offstage, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1630,9 +1630,9 @@ class AspectRatio$Mate extends AspectRatio with Mate {
           aspectRatio: p.get('aspectRatio').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('aspectRatio', aspectRatio);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('aspectRatio', aspectRatio, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1665,10 +1665,10 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('stepWidth', stepWidth);
-    mateUse('stepHeight', stepHeight);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('stepWidth', stepWidth, isNamed: true);
+    mateUse('stepHeight', stepHeight, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1691,8 +1691,8 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1725,10 +1725,10 @@ class Baseline$Mate extends Baseline with Mate {
           baselineType: p.get('baselineType').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('baseline', baseline);
-    mateUse('baselineType', baselineType);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('baseline', baseline, isNamed: true);
+    mateUse('baselineType', baselineType, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1751,8 +1751,8 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1780,9 +1780,9 @@ class SliverPadding$Mate extends SliverPadding with Mate {
           padding: p.get('padding').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key);
-    mateUse('padding', padding);
-    mateUse('sliver', sliver);
+    mateUse('key', key, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -1815,10 +1815,10 @@ class ListBody$Mate extends ListBody with Mate {
           reverse: p.get('reverse').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('mainAxis', mainAxis);
-    mateUse('reverse', reverse);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('mainAxis', mainAxis, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -1861,12 +1861,12 @@ class Stack$Mate extends Stack with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('textDirection', textDirection);
-    mateUse('fit', fit);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -1914,13 +1914,13 @@ class IndexedStack$Mate extends IndexedStack with Mate {
           index: p.get('index').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('textDirection', textDirection);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('sizing', sizing);
-    mateUse('index', index);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('sizing', sizing, isNamed: true);
+    mateUse('index', index, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -1973,14 +1973,14 @@ class Positioned$Mate extends Positioned with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('left', left);
-    mateUse('top', top);
-    mateUse('right', right);
-    mateUse('bottom', bottom);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('left', left, isNamed: true);
+    mateUse('top', top, isNamed: true);
+    mateUse('right', right, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Positioned Positioned.fromRect({Key? key, required Rect rect, required Widget child})
@@ -2005,9 +2005,9 @@ class Positioned$Mate extends Positioned with Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('rect', rect);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('rect', rect, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Positioned Positioned.fromRelativeRect({Key? key, required RelativeRect rect, required Widget child})
@@ -2032,9 +2032,9 @@ class Positioned$Mate extends Positioned with Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('rect', rect);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('rect', rect, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Positioned Positioned.fill({Key? key, double? left = 0.0, double? top = 0.0, double? right = 0.0, double? bottom = 0.0, required Widget child})
@@ -2074,12 +2074,12 @@ class Positioned$Mate extends Positioned with Mate {
           bottom: p.get('bottom').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('left', left);
-    mateUse('top', top);
-    mateUse('right', right);
-    mateUse('bottom', bottom);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('left', left, isNamed: true);
+    mateUse('top', top, isNamed: true);
+    mateUse('right', right, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -2132,14 +2132,14 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('start', start);
-    mateUse('top', top);
-    mateUse('end', end);
-    mateUse('bottom', bottom);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('start', start, isNamed: true);
+    mateUse('top', top, isNamed: true);
+    mateUse('end', end, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -2202,16 +2202,16 @@ class Flex$Mate extends Flex with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('direction', direction);
-    mateUse('mainAxisAlignment', mainAxisAlignment);
-    mateUse('mainAxisSize', mainAxisSize);
-    mateUse('crossAxisAlignment', crossAxisAlignment);
-    mateUse('textDirection', textDirection);
-    mateUse('verticalDirection', verticalDirection);
-    mateUse('textBaseline', textBaseline);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('direction', direction, isNamed: true);
+    mateUse('mainAxisAlignment', mainAxisAlignment, isNamed: true);
+    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
+    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('verticalDirection', verticalDirection, isNamed: true);
+    mateUse('textBaseline', textBaseline, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -2264,14 +2264,14 @@ class Row$Mate extends Row with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('mainAxisAlignment', mainAxisAlignment);
-    mateUse('mainAxisSize', mainAxisSize);
-    mateUse('crossAxisAlignment', crossAxisAlignment);
-    mateUse('textDirection', textDirection);
-    mateUse('verticalDirection', verticalDirection);
-    mateUse('textBaseline', textBaseline);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('mainAxisAlignment', mainAxisAlignment, isNamed: true);
+    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
+    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('verticalDirection', verticalDirection, isNamed: true);
+    mateUse('textBaseline', textBaseline, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -2324,14 +2324,14 @@ class Column$Mate extends Column with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('mainAxisAlignment', mainAxisAlignment);
-    mateUse('mainAxisSize', mainAxisSize);
-    mateUse('crossAxisAlignment', crossAxisAlignment);
-    mateUse('textDirection', textDirection);
-    mateUse('verticalDirection', verticalDirection);
-    mateUse('textBaseline', textBaseline);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('mainAxisAlignment', mainAxisAlignment, isNamed: true);
+    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
+    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('verticalDirection', verticalDirection, isNamed: true);
+    mateUse('textBaseline', textBaseline, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -2364,10 +2364,10 @@ class Flexible$Mate extends Flexible with Mate {
           fit: p.get('fit').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('flex', flex);
-    mateUse('fit', fit);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('flex', flex, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -2395,9 +2395,9 @@ class Expanded$Mate extends Expanded with Mate {
           flex: p.get('flex').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('flex', flex);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('flex', flex, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -2465,17 +2465,17 @@ class Wrap$Mate extends Wrap with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('direction', direction);
-    mateUse('alignment', alignment);
-    mateUse('spacing', spacing);
-    mateUse('runAlignment', runAlignment);
-    mateUse('runSpacing', runSpacing);
-    mateUse('crossAxisAlignment', crossAxisAlignment);
-    mateUse('textDirection', textDirection);
-    mateUse('verticalDirection', verticalDirection);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('direction', direction, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('spacing', spacing, isNamed: true);
+    mateUse('runAlignment', runAlignment, isNamed: true);
+    mateUse('runSpacing', runSpacing, isNamed: true);
+    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('verticalDirection', verticalDirection, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -2508,10 +2508,10 @@ class Flow$Mate extends Flow with Mate {
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('delegate', delegate);
-    mateUse('children', children);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 
   /// Flow Flow.unwrapped({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
@@ -2541,10 +2541,10 @@ class Flow$Mate extends Flow with Mate {
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('delegate', delegate);
-    mateUse('children', children);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -2627,20 +2627,20 @@ class RichText$Mate extends RichText with Mate {
           selectionRegistrar: p.get('selectionRegistrar').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateUse('key', key);
-    mateUse('text', text);
-    mateUse('textAlign', textAlign);
-    mateUse('textDirection', textDirection);
-    mateUse('softWrap', softWrap);
-    mateUse('overflow', overflow);
-    mateUse('textScaleFactor', textScaleFactor);
-    mateUse('maxLines', maxLines);
-    mateUse('locale', locale);
-    mateUse('strutStyle', strutStyle);
-    mateUse('textWidthBasis', textWidthBasis);
-    mateUse('textHeightBehavior', textHeightBehavior);
-    mateUse('selectionRegistrar', selectionRegistrar);
-    mateUse('selectionColor', selectionColor);
+    mateUse('key', key, isNamed: true);
+    mateUse('text', text, isNamed: true);
+    mateUse('textAlign', textAlign, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('softWrap', softWrap, isNamed: true);
+    mateUse('overflow', overflow, isNamed: true);
+    mateUse('textScaleFactor', textScaleFactor, isNamed: true);
+    mateUse('maxLines', maxLines, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUse('strutStyle', strutStyle, isNamed: true);
+    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
+    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
+    mateUse('selectionRegistrar', selectionRegistrar, isNamed: true);
+    mateUse('selectionColor', selectionColor, isNamed: true);
   }
 }
 
@@ -2738,23 +2738,23 @@ class RawImage$Mate extends RawImage with Mate {
           filterQuality: p.get('filterQuality').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    mateUse('key', key);
-    mateUse('image', image);
-    mateUse('debugImageLabel', debugImageLabel);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('scale', scale);
-    mateUse('color', color);
-    mateUse('opacity', opacity);
-    mateUse('colorBlendMode', colorBlendMode);
-    mateUse('fit', fit);
-    mateUse('alignment', alignment);
-    mateUse('repeat', repeat);
-    mateUse('centerSlice', centerSlice);
-    mateUse('matchTextDirection', matchTextDirection);
-    mateUse('invertColors', invertColors);
-    mateUse('filterQuality', filterQuality);
-    mateUse('isAntiAlias', isAntiAlias);
+    mateUse('key', key, isNamed: true);
+    mateUse('image', image, isNamed: true);
+    mateUse('debugImageLabel', debugImageLabel, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('colorBlendMode', colorBlendMode, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('repeat', repeat, isNamed: true);
+    mateUse('centerSlice', centerSlice, isNamed: true);
+    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
+    mateUse('invertColors', invertColors, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('isAntiAlias', isAntiAlias, isNamed: true);
   }
 }
 
@@ -2782,9 +2782,9 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
           bundle: p.get('bundle').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('bundle', bundle);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('bundle', bundle, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -2812,9 +2812,9 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
           onBuild: p.get('onBuild').build(),
           onUnmount: p.get('onUnmount').build(),
         );
-    mateUse('renderBox', renderBox);
-    mateUse('onBuild', onBuild);
-    mateUse('onUnmount', onUnmount);
+    mateUse('renderBox', renderBox, isNamed: true);
+    mateUse('onBuild', onBuild, isNamed: true);
+    mateUse('onUnmount', onUnmount, isNamed: true);
   }
 }
 
@@ -2887,18 +2887,18 @@ class Listener$Mate extends Listener with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onPointerDown', onPointerDown);
-    mateUse('onPointerMove', onPointerMove);
-    mateUse('onPointerUp', onPointerUp);
-    mateUse('onPointerHover', onPointerHover);
-    mateUse('onPointerCancel', onPointerCancel);
-    mateUse('onPointerPanZoomStart', onPointerPanZoomStart);
-    mateUse('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
-    mateUse('onPointerPanZoomEnd', onPointerPanZoomEnd);
-    mateUse('onPointerSignal', onPointerSignal);
-    mateUse('behavior', behavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onPointerDown', onPointerDown, isNamed: true);
+    mateUse('onPointerMove', onPointerMove, isNamed: true);
+    mateUse('onPointerUp', onPointerUp, isNamed: true);
+    mateUse('onPointerHover', onPointerHover, isNamed: true);
+    mateUse('onPointerCancel', onPointerCancel, isNamed: true);
+    mateUse('onPointerPanZoomStart', onPointerPanZoomStart, isNamed: true);
+    mateUse('onPointerPanZoomUpdate', onPointerPanZoomUpdate, isNamed: true);
+    mateUse('onPointerPanZoomEnd', onPointerPanZoomEnd, isNamed: true);
+    mateUse('onPointerSignal', onPointerSignal, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -2951,14 +2951,14 @@ class MouseRegion$Mate extends MouseRegion with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onEnter', onEnter);
-    mateUse('onExit', onExit);
-    mateUse('onHover', onHover);
-    mateUse('cursor', cursor);
-    mateUse('opaque', opaque);
-    mateUse('hitTestBehavior', hitTestBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onEnter', onEnter, isNamed: true);
+    mateUse('onExit', onExit, isNamed: true);
+    mateUse('onHover', onHover, isNamed: true);
+    mateUse('cursor', cursor, isNamed: true);
+    mateUse('opaque', opaque, isNamed: true);
+    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -2981,8 +2981,8 @@ class RepaintBoundary$Mate extends RepaintBoundary with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -3015,10 +3015,10 @@ class IgnorePointer$Mate extends IgnorePointer with Mate {
           ignoringSemantics: p.get('ignoringSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('ignoring', ignoring);
-    mateUse('ignoringSemantics', ignoringSemantics);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('ignoring', ignoring, isNamed: true);
+    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -3051,10 +3051,10 @@ class AbsorbPointer$Mate extends AbsorbPointer with Mate {
           child: p.get('child').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse('key', key);
-    mateUse('absorbing', absorbing);
-    mateUse('child', child);
-    mateUse('ignoringSemantics', ignoringSemantics);
+    mateUse('key', key, isNamed: true);
+    mateUse('absorbing', absorbing, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
   }
 }
 
@@ -3087,10 +3087,10 @@ class MetaData$Mate extends MetaData with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('metaData', metaData);
-    mateUse('behavior', behavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('metaData', metaData, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -3423,70 +3423,70 @@ class Semantics$Mate extends Semantics with Mate {
           onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('container', container);
-    mateUse('explicitChildNodes', explicitChildNodes);
-    mateUse('excludeSemantics', excludeSemantics);
-    mateUse('enabled', enabled);
-    mateUse('checked', checked);
-    mateUse('mixed', mixed);
-    mateUse('selected', selected);
-    mateUse('toggled', toggled);
-    mateUse('button', button);
-    mateUse('slider', slider);
-    mateUse('keyboardKey', keyboardKey);
-    mateUse('link', link);
-    mateUse('header', header);
-    mateUse('textField', textField);
-    mateUse('readOnly', readOnly);
-    mateUse('focusable', focusable);
-    mateUse('focused', focused);
-    mateUse('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
-    mateUse('obscured', obscured);
-    mateUse('multiline', multiline);
-    mateUse('scopesRoute', scopesRoute);
-    mateUse('namesRoute', namesRoute);
-    mateUse('hidden', hidden);
-    mateUse('image', image);
-    mateUse('liveRegion', liveRegion);
-    mateUse('maxValueLength', maxValueLength);
-    mateUse('currentValueLength', currentValueLength);
-    mateUse('label', label);
-    mateUse('attributedLabel', attributedLabel);
-    mateUse('value', value);
-    mateUse('attributedValue', attributedValue);
-    mateUse('increasedValue', increasedValue);
-    mateUse('attributedIncreasedValue', attributedIncreasedValue);
-    mateUse('decreasedValue', decreasedValue);
-    mateUse('attributedDecreasedValue', attributedDecreasedValue);
-    mateUse('hint', hint);
-    mateUse('attributedHint', attributedHint);
-    mateUse('tooltip', tooltip);
-    mateUse('onTapHint', onTapHint);
-    mateUse('onLongPressHint', onLongPressHint);
-    mateUse('textDirection', textDirection);
-    mateUse('sortKey', sortKey);
-    mateUse('tagForChildren', tagForChildren);
-    mateUse('onTap', onTap);
-    mateUse('onLongPress', onLongPress);
-    mateUse('onScrollLeft', onScrollLeft);
-    mateUse('onScrollRight', onScrollRight);
-    mateUse('onScrollUp', onScrollUp);
-    mateUse('onScrollDown', onScrollDown);
-    mateUse('onIncrease', onIncrease);
-    mateUse('onDecrease', onDecrease);
-    mateUse('onCopy', onCopy);
-    mateUse('onCut', onCut);
-    mateUse('onPaste', onPaste);
-    mateUse('onDismiss', onDismiss);
-    mateUse('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
-    mateUse('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
-    mateUse('onSetSelection', onSetSelection);
-    mateUse('onSetText', onSetText);
-    mateUse('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
-    mateUse('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
-    mateUse('customSemanticsActions', customSemanticsActions);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('container', container, isNamed: true);
+    mateUse('explicitChildNodes', explicitChildNodes, isNamed: true);
+    mateUse('excludeSemantics', excludeSemantics, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('checked', checked, isNamed: true);
+    mateUse('mixed', mixed, isNamed: true);
+    mateUse('selected', selected, isNamed: true);
+    mateUse('toggled', toggled, isNamed: true);
+    mateUse('button', button, isNamed: true);
+    mateUse('slider', slider, isNamed: true);
+    mateUse('keyboardKey', keyboardKey, isNamed: true);
+    mateUse('link', link, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUse('textField', textField, isNamed: true);
+    mateUse('readOnly', readOnly, isNamed: true);
+    mateUse('focusable', focusable, isNamed: true);
+    mateUse('focused', focused, isNamed: true);
+    mateUse('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup, isNamed: true);
+    mateUse('obscured', obscured, isNamed: true);
+    mateUse('multiline', multiline, isNamed: true);
+    mateUse('scopesRoute', scopesRoute, isNamed: true);
+    mateUse('namesRoute', namesRoute, isNamed: true);
+    mateUse('hidden', hidden, isNamed: true);
+    mateUse('image', image, isNamed: true);
+    mateUse('liveRegion', liveRegion, isNamed: true);
+    mateUse('maxValueLength', maxValueLength, isNamed: true);
+    mateUse('currentValueLength', currentValueLength, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('attributedLabel', attributedLabel, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('attributedValue', attributedValue, isNamed: true);
+    mateUse('increasedValue', increasedValue, isNamed: true);
+    mateUse('attributedIncreasedValue', attributedIncreasedValue, isNamed: true);
+    mateUse('decreasedValue', decreasedValue, isNamed: true);
+    mateUse('attributedDecreasedValue', attributedDecreasedValue, isNamed: true);
+    mateUse('hint', hint, isNamed: true);
+    mateUse('attributedHint', attributedHint, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('onTapHint', onTapHint, isNamed: true);
+    mateUse('onLongPressHint', onLongPressHint, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('sortKey', sortKey, isNamed: true);
+    mateUse('tagForChildren', tagForChildren, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('onLongPress', onLongPress, isNamed: true);
+    mateUse('onScrollLeft', onScrollLeft, isNamed: true);
+    mateUse('onScrollRight', onScrollRight, isNamed: true);
+    mateUse('onScrollUp', onScrollUp, isNamed: true);
+    mateUse('onScrollDown', onScrollDown, isNamed: true);
+    mateUse('onIncrease', onIncrease, isNamed: true);
+    mateUse('onDecrease', onDecrease, isNamed: true);
+    mateUse('onCopy', onCopy, isNamed: true);
+    mateUse('onCut', onCut, isNamed: true);
+    mateUse('onPaste', onPaste, isNamed: true);
+    mateUse('onDismiss', onDismiss, isNamed: true);
+    mateUse('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter, isNamed: true);
+    mateUse('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter, isNamed: true);
+    mateUse('onSetSelection', onSetSelection, isNamed: true);
+    mateUse('onSetText', onSetText, isNamed: true);
+    mateUse('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus, isNamed: true);
+    mateUse('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus, isNamed: true);
+    mateUse('customSemanticsActions', customSemanticsActions, isNamed: true);
   }
 
   /// Semantics Semantics.fromProperties({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, required SemanticsProperties properties})
@@ -3526,12 +3526,12 @@ class Semantics$Mate extends Semantics with Mate {
           excludeSemantics: p.get('excludeSemantics').build(),
           properties: p.get('properties').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('container', container);
-    mateUse('explicitChildNodes', explicitChildNodes);
-    mateUse('excludeSemantics', excludeSemantics);
-    mateUse('properties', properties);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('container', container, isNamed: true);
+    mateUse('explicitChildNodes', explicitChildNodes, isNamed: true);
+    mateUse('excludeSemantics', excludeSemantics, isNamed: true);
+    mateUse('properties', properties, isNamed: true);
   }
 }
 
@@ -3554,8 +3554,8 @@ class MergeSemantics$Mate extends MergeSemantics with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -3583,9 +3583,9 @@ class BlockSemantics$Mate extends BlockSemantics with Mate {
           blocking: p.get('blocking').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('blocking', blocking);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('blocking', blocking, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -3613,9 +3613,9 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('excluding', excluding);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('excluding', excluding, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -3643,9 +3643,9 @@ class IndexedSemantics$Mate extends IndexedSemantics with Mate {
           index: p.get('index').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('index', index);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('index', index, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -3668,8 +3668,8 @@ class KeyedSubtree$Mate extends KeyedSubtree with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -3692,8 +3692,8 @@ class Builder$Mate extends Builder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key);
-    mateUse('builder', builder);
+    mateUse('key', key, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
   }
 }
 
@@ -3716,8 +3716,8 @@ class StatefulBuilder$Mate extends StatefulBuilder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key);
-    mateUse('builder', builder);
+    mateUse('key', key, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
   }
 }
 
@@ -3745,8 +3745,8 @@ class ColoredBox$Mate extends ColoredBox with Mate {
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse('color', color);
-    mateUse('child', child);
-    mateUse('key', key);
+    mateUse('color', color, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('key', key, isNamed: true);
   }
 }

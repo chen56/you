@@ -35,9 +35,9 @@ class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Mate
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('valueListenable', valueListenable);
-    mateUse('builder', builder);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('valueListenable', valueListenable, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

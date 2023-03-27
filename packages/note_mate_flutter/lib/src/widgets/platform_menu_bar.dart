@@ -38,10 +38,10 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           control: p.get('control').build(),
           meta: p.get('meta').build(),
         );
-    mateUse('character', character);
-    mateUse('alt', alt);
-    mateUse('control', control);
-    mateUse('meta', meta);
+    mateUse('character', character, isNamed: false);
+    mateUse('alt', alt, isNamed: true);
+    mateUse('control', control, isNamed: true);
+    mateUse('meta', meta, isNamed: true);
   }
 
   /// ShortcutSerialization ShortcutSerialization.modifier(LogicalKeyboardKey trigger, {bool alt = false, bool control = false, bool meta = false, bool shift = false})
@@ -75,11 +75,11 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           meta: p.get('meta').build(),
           shift: p.get('shift').build(),
         );
-    mateUse('trigger', trigger);
-    mateUse('alt', alt);
-    mateUse('control', control);
-    mateUse('meta', meta);
-    mateUse('shift', shift);
+    mateUse('trigger', trigger, isNamed: false);
+    mateUse('alt', alt, isNamed: true);
+    mateUse('control', control, isNamed: true);
+    mateUse('meta', meta, isNamed: true);
+    mateUse('shift', shift, isNamed: true);
   }
 }
 
@@ -94,7 +94,7 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
     mateCreateName = 'DefaultPlatformMenuDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
-    mateUse('channel', channel);
+    mateUse('channel', channel, isNamed: true);
   }
 }
 
@@ -122,9 +122,9 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
           menus: p.get('menus').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('menus', menus);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUseList('menus', menus, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -157,10 +157,10 @@ class PlatformMenu$Mate extends PlatformMenu with Mate {
           onClose: p.get('onClose').build(),
           menus: p.get('menus').build(),
         );
-    mateUse('label', label);
-    mateUse('onOpen', onOpen);
-    mateUse('onClose', onClose);
-    mateUse('menus', menus);
+    mateUse('label', label, isNamed: true);
+    mateUse('onOpen', onOpen, isNamed: true);
+    mateUse('onClose', onClose, isNamed: true);
+    mateUseList('menus', menus, isNamed: true);
   }
 }
 
@@ -175,7 +175,7 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
     mateCreateName = 'PlatformMenuItemGroup';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
-    mateUse('members', members);
+    mateUseList('members', members, isNamed: true);
   }
 }
 
@@ -208,10 +208,10 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
           onSelected: p.get('onSelected').build(),
           onSelectedIntent: p.get('onSelectedIntent').build(),
         );
-    mateUse('label', label);
-    mateUse('shortcut', shortcut);
-    mateUse('onSelected', onSelected);
-    mateUse('onSelectedIntent', onSelectedIntent);
+    mateUse('label', label, isNamed: true);
+    mateUse('shortcut', shortcut, isNamed: true);
+    mateUse('onSelected', onSelected, isNamed: true);
+    mateUse('onSelectedIntent', onSelectedIntent, isNamed: true);
   }
 }
 
@@ -234,7 +234,7 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate {
           type: p.get('type').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('type', type);
-    mateUse('enabled', enabled);
+    mateUse('type', type, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
   }
 }

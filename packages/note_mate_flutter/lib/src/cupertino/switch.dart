@@ -63,14 +63,14 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
           focusColor: p.get('focusColor').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('onChanged', onChanged);
-    mateUse('activeColor', activeColor);
-    mateUse('trackColor', trackColor);
-    mateUse('thumbColor', thumbColor);
-    mateUse('applyTheme', applyTheme);
-    mateUse('focusColor', focusColor);
-    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('activeColor', activeColor, isNamed: true);
+    mateUse('trackColor', trackColor, isNamed: true);
+    mateUse('thumbColor', thumbColor, isNamed: true);
+    mateUse('applyTheme', applyTheme, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
   }
 }

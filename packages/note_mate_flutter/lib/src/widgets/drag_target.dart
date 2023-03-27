@@ -122,26 +122,26 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('feedback', feedback);
-    mateUse('data', data);
-    mateUse('axis', axis);
-    mateUse('childWhenDragging', childWhenDragging);
-    mateUse('feedbackOffset', feedbackOffset);
-    mateUse('dragAnchorStrategy', dragAnchorStrategy);
-    mateUse('affinity', affinity);
-    mateUse('maxSimultaneousDrags', maxSimultaneousDrags);
-    mateUse('onDragStarted', onDragStarted);
-    mateUse('onDragUpdate', onDragUpdate);
-    mateUse('onDraggableCanceled', onDraggableCanceled);
-    mateUse('onDragEnd', onDragEnd);
-    mateUse('onDragCompleted', onDragCompleted);
-    mateUse('ignoringFeedbackSemantics', ignoringFeedbackSemantics);
-    mateUse('ignoringFeedbackPointer', ignoringFeedbackPointer);
-    mateUse('rootOverlay', rootOverlay);
-    mateUse('hitTestBehavior', hitTestBehavior);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('feedback', feedback, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('axis', axis, isNamed: true);
+    mateUse('childWhenDragging', childWhenDragging, isNamed: true);
+    mateUse('feedbackOffset', feedbackOffset, isNamed: true);
+    mateUse('dragAnchorStrategy', dragAnchorStrategy, isNamed: true);
+    mateUse('affinity', affinity, isNamed: true);
+    mateUse('maxSimultaneousDrags', maxSimultaneousDrags, isNamed: true);
+    mateUse('onDragStarted', onDragStarted, isNamed: true);
+    mateUse('onDragUpdate', onDragUpdate, isNamed: true);
+    mateUse('onDraggableCanceled', onDraggableCanceled, isNamed: true);
+    mateUse('onDragEnd', onDragEnd, isNamed: true);
+    mateUse('onDragCompleted', onDragCompleted, isNamed: true);
+    mateUse('ignoringFeedbackSemantics', ignoringFeedbackSemantics, isNamed: true);
+    mateUse('ignoringFeedbackPointer', ignoringFeedbackPointer, isNamed: true);
+    mateUse('rootOverlay', rootOverlay, isNamed: true);
+    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }
 
@@ -249,25 +249,25 @@ class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> wi
           delay: p.get('delay').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('feedback', feedback);
-    mateUse('data', data);
-    mateUse('axis', axis);
-    mateUse('childWhenDragging', childWhenDragging);
-    mateUse('feedbackOffset', feedbackOffset);
-    mateUse('dragAnchorStrategy', dragAnchorStrategy);
-    mateUse('maxSimultaneousDrags', maxSimultaneousDrags);
-    mateUse('onDragStarted', onDragStarted);
-    mateUse('onDragUpdate', onDragUpdate);
-    mateUse('onDraggableCanceled', onDraggableCanceled);
-    mateUse('onDragEnd', onDragEnd);
-    mateUse('onDragCompleted', onDragCompleted);
-    mateUse('hapticFeedbackOnStart', hapticFeedbackOnStart);
-    mateUse('ignoringFeedbackSemantics', ignoringFeedbackSemantics);
-    mateUse('ignoringFeedbackPointer', ignoringFeedbackPointer);
-    mateUse('delay', delay);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('feedback', feedback, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('axis', axis, isNamed: true);
+    mateUse('childWhenDragging', childWhenDragging, isNamed: true);
+    mateUse('feedbackOffset', feedbackOffset, isNamed: true);
+    mateUse('dragAnchorStrategy', dragAnchorStrategy, isNamed: true);
+    mateUse('maxSimultaneousDrags', maxSimultaneousDrags, isNamed: true);
+    mateUse('onDragStarted', onDragStarted, isNamed: true);
+    mateUse('onDragUpdate', onDragUpdate, isNamed: true);
+    mateUse('onDraggableCanceled', onDraggableCanceled, isNamed: true);
+    mateUse('onDragEnd', onDragEnd, isNamed: true);
+    mateUse('onDragCompleted', onDragCompleted, isNamed: true);
+    mateUse('hapticFeedbackOnStart', hapticFeedbackOnStart, isNamed: true);
+    mateUse('ignoringFeedbackSemantics', ignoringFeedbackSemantics, isNamed: true);
+    mateUse('ignoringFeedbackPointer', ignoringFeedbackPointer, isNamed: true);
+    mateUse('delay', delay, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }
 
@@ -295,9 +295,9 @@ class DraggableDetails$Mate extends DraggableDetails with Mate {
           velocity: p.get('velocity').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('wasAccepted', wasAccepted);
-    mateUse('velocity', velocity);
-    mateUse('offset', offset);
+    mateUse('wasAccepted', wasAccepted, isNamed: true);
+    mateUse('velocity', velocity, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
   }
 }
 
@@ -320,8 +320,8 @@ class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate {
           data: p.get('data').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('data', data);
-    mateUse('offset', offset);
+    mateUse('data', data, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
   }
 }
 
@@ -374,13 +374,13 @@ class DragTarget$Mate<T extends Object> extends DragTarget<T> with Mate {
           onMove: p.get('onMove').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('builder', builder);
-    mateUse('onWillAccept', onWillAccept);
-    mateUse('onAccept', onAccept);
-    mateUse('onAcceptWithDetails', onAcceptWithDetails);
-    mateUse('onLeave', onLeave);
-    mateUse('onMove', onMove);
-    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('onWillAccept', onWillAccept, isNamed: true);
+    mateUse('onAccept', onAccept, isNamed: true);
+    mateUse('onAcceptWithDetails', onAcceptWithDetails, isNamed: true);
+    mateUse('onLeave', onLeave, isNamed: true);
+    mateUse('onMove', onMove, isNamed: true);
+    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
   }
 }

@@ -29,8 +29,8 @@ class SemanticsActionEvent$Mate extends SemanticsActionEvent with Mate {
           nodeId: p.get('nodeId').build(),
           arguments: p.get('arguments').build(),
         );
-    mateUse('type', type);
-    mateUse('nodeId', nodeId);
-    mateUse('arguments', arguments);
+    mateUse('type', type, isNamed: true);
+    mateUse('nodeId', nodeId, isNamed: true);
+    mateUse('arguments', arguments, isNamed: true);
   }
 }

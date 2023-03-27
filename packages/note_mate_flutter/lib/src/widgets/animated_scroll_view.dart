@@ -77,17 +77,17 @@ class AnimatedList$Mate extends AnimatedList with Mate {
           padding: p.get('padding').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('initialItemCount', initialItemCount);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('controller', controller);
-    mateUse('primary', primary);
-    mateUse('physics', physics);
-    mateUse('shrinkWrap', shrinkWrap);
-    mateUse('padding', padding);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('initialItemCount', initialItemCount, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('primary', primary, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('shrinkWrap', shrinkWrap, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -155,17 +155,17 @@ class AnimatedGrid$Mate extends AnimatedGrid with Mate {
           padding: p.get('padding').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('gridDelegate', gridDelegate);
-    mateUse('initialItemCount', initialItemCount);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('controller', controller);
-    mateUse('primary', primary);
-    mateUse('physics', physics);
-    mateUse('padding', padding);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('gridDelegate', gridDelegate, isNamed: true);
+    mateUse('initialItemCount', initialItemCount, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('primary', primary, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -198,10 +198,10 @@ class SliverAnimatedList$Mate extends SliverAnimatedList with Mate {
           findChildIndexCallback: p.get('findChildIndexCallback').build(),
           initialItemCount: p.get('initialItemCount').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('initialItemCount', initialItemCount);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('initialItemCount', initialItemCount, isNamed: true);
   }
 }
 
@@ -239,10 +239,10 @@ class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with Mate {
           findChildIndexCallback: p.get('findChildIndexCallback').build(),
           initialItemCount: p.get('initialItemCount').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('gridDelegate', gridDelegate);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('initialItemCount', initialItemCount);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('gridDelegate', gridDelegate, isNamed: true);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('initialItemCount', initialItemCount, isNamed: true);
   }
 }

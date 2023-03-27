@@ -18,7 +18,7 @@ class SnapshotController$Mate extends SnapshotController with Mate {
     mateCreateName = 'SnapshotController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
-    mateUse('allowSnapshotting', allowSnapshotting);
+    mateUse('allowSnapshotting', allowSnapshotting, isNamed: true);
   }
 }
 
@@ -61,11 +61,11 @@ class SnapshotWidget$Mate extends SnapshotWidget with Mate {
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('mode', mode);
-    mateUse('painter', painter);
-    mateUse('autoresize', autoresize);
-    mateUse('controller', controller);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('mode', mode, isNamed: true);
+    mateUse('painter', painter, isNamed: true);
+    mateUse('autoresize', autoresize, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

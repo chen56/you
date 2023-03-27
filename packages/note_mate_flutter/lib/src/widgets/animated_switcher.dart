@@ -58,13 +58,13 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
           transitionBuilder: p.get('transitionBuilder').build(),
           layoutBuilder: p.get('layoutBuilder').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('duration', duration);
-    mateUse('reverseDuration', reverseDuration);
-    mateUse('switchInCurve', switchInCurve);
-    mateUse('switchOutCurve', switchOutCurve);
-    mateUse('transitionBuilder', transitionBuilder);
-    mateUse('layoutBuilder', layoutBuilder);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('reverseDuration', reverseDuration, isNamed: true);
+    mateUse('switchInCurve', switchInCurve, isNamed: true);
+    mateUse('switchOutCurve', switchOutCurve, isNamed: true);
+    mateUse('transitionBuilder', transitionBuilder, isNamed: true);
+    mateUse('layoutBuilder', layoutBuilder, isNamed: true);
   }
 }

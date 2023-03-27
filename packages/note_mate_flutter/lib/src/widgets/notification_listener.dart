@@ -29,8 +29,8 @@ class NotificationListener$Mate<T extends Notification> extends NotificationList
           child: p.get('child').build(),
           onNotification: p.get('onNotification').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('onNotification', onNotification);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('onNotification', onNotification, isNamed: true);
   }
 }

@@ -24,7 +24,7 @@ class ScrollMetricsNotification$Mate extends ScrollMetricsNotification with Mate
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
         );
-    mateUse('metrics', metrics);
-    mateUse('context', context);
+    mateUse('metrics', metrics, isNamed: true);
+    mateUse('context', context, isNamed: true);
   }
 }

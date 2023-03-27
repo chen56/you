@@ -102,22 +102,22 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate {
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
           ignorePointer: p.get('ignorePointer').build(),
         );
-    mateUse('color', color);
-    mateUse('fadeoutOpacityAnimation', fadeoutOpacityAnimation);
-    mateUse('trackColor', trackColor);
-    mateUse('trackBorderColor', trackBorderColor);
-    mateUse('textDirection', textDirection);
-    mateUse('thickness', thickness);
-    mateUse('padding', padding);
-    mateUse('mainAxisMargin', mainAxisMargin);
-    mateUse('crossAxisMargin', crossAxisMargin);
-    mateUse('radius', radius);
-    mateUse('trackRadius', trackRadius);
-    mateUse('shape', shape);
-    mateUse('minLength', minLength);
-    mateUse('minOverscrollLength', minOverscrollLength);
-    mateUse('scrollbarOrientation', scrollbarOrientation);
-    mateUse('ignorePointer', ignorePointer);
+    mateUse('color', color, isNamed: true);
+    mateUse('fadeoutOpacityAnimation', fadeoutOpacityAnimation, isNamed: true);
+    mateUse('trackColor', trackColor, isNamed: true);
+    mateUse('trackBorderColor', trackBorderColor, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('thickness', thickness, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('mainAxisMargin', mainAxisMargin, isNamed: true);
+    mateUse('crossAxisMargin', crossAxisMargin, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
+    mateUse('trackRadius', trackRadius, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('minLength', minLength, isNamed: true);
+    mateUse('minOverscrollLength', minOverscrollLength, isNamed: true);
+    mateUse('scrollbarOrientation', scrollbarOrientation, isNamed: true);
+    mateUse('ignorePointer', ignorePointer, isNamed: true);
   }
 }
 
@@ -245,28 +245,28 @@ class RawScrollbar$Mate extends RawScrollbar with Mate {
           crossAxisMargin: p.get('crossAxisMargin').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('controller', controller);
-    mateUse('thumbVisibility', thumbVisibility);
-    mateUse('shape', shape);
-    mateUse('radius', radius);
-    mateUse('thickness', thickness);
-    mateUse('thumbColor', thumbColor);
-    mateUse('minThumbLength', minThumbLength);
-    mateUse('minOverscrollLength', minOverscrollLength);
-    mateUse('trackVisibility', trackVisibility);
-    mateUse('trackRadius', trackRadius);
-    mateUse('trackColor', trackColor);
-    mateUse('trackBorderColor', trackBorderColor);
-    mateUse('fadeDuration', fadeDuration);
-    mateUse('timeToFade', timeToFade);
-    mateUse('pressDuration', pressDuration);
-    mateUse('notificationPredicate', notificationPredicate);
-    mateUse('interactive', interactive);
-    mateUse('scrollbarOrientation', scrollbarOrientation);
-    mateUse('mainAxisMargin', mainAxisMargin);
-    mateUse('crossAxisMargin', crossAxisMargin);
-    mateUse('padding', padding);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('thumbVisibility', thumbVisibility, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
+    mateUse('thickness', thickness, isNamed: true);
+    mateUse('thumbColor', thumbColor, isNamed: true);
+    mateUse('minThumbLength', minThumbLength, isNamed: true);
+    mateUse('minOverscrollLength', minOverscrollLength, isNamed: true);
+    mateUse('trackVisibility', trackVisibility, isNamed: true);
+    mateUse('trackRadius', trackRadius, isNamed: true);
+    mateUse('trackColor', trackColor, isNamed: true);
+    mateUse('trackBorderColor', trackBorderColor, isNamed: true);
+    mateUse('fadeDuration', fadeDuration, isNamed: true);
+    mateUse('timeToFade', timeToFade, isNamed: true);
+    mateUse('pressDuration', pressDuration, isNamed: true);
+    mateUse('notificationPredicate', notificationPredicate, isNamed: true);
+    mateUse('interactive', interactive, isNamed: true);
+    mateUse('scrollbarOrientation', scrollbarOrientation, isNamed: true);
+    mateUse('mainAxisMargin', mainAxisMargin, isNamed: true);
+    mateUse('crossAxisMargin', crossAxisMargin, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
   }
 }

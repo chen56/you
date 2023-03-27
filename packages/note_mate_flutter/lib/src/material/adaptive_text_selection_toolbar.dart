@@ -37,9 +37,9 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           children: p.get('children').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('anchors', anchors);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('anchors', anchors, isNamed: true);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
@@ -64,9 +64,9 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           buttonItems: p.get('buttonItems').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse('key', key);
-    mateUse('buttonItems', buttonItems);
-    mateUse('anchors', anchors);
+    mateUse('key', key, isNamed: true);
+    mateUseList('buttonItems', buttonItems, isNamed: true);
+    mateUse('anchors', anchors, isNamed: true);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
@@ -111,13 +111,13 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           onSelectAll: p.get('onSelectAll').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse('key', key);
-    mateUse('clipboardStatus', clipboardStatus);
-    mateUse('onCopy', onCopy);
-    mateUse('onCut', onCut);
-    mateUse('onPaste', onPaste);
-    mateUse('onSelectAll', onSelectAll);
-    mateUse('anchors', anchors);
+    mateUse('key', key, isNamed: true);
+    mateUse('clipboardStatus', clipboardStatus, isNamed: true);
+    mateUse('onCopy', onCopy, isNamed: true);
+    mateUse('onCut', onCut, isNamed: true);
+    mateUse('onPaste', onPaste, isNamed: true);
+    mateUse('onSelectAll', onSelectAll, isNamed: true);
+    mateUse('anchors', anchors, isNamed: true);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
@@ -137,8 +137,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           key: p.get('key').build(),
           editableTextState: p.get('editableTextState').build(),
         );
-    mateUse('key', key);
-    mateUse('editableTextState', editableTextState);
+    mateUse('key', key, isNamed: true);
+    mateUse('editableTextState', editableTextState, isNamed: true);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
@@ -173,11 +173,11 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           selectionGeometry: p.get('selectionGeometry').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse('key', key);
-    mateUse('onCopy', onCopy);
-    mateUse('onSelectAll', onSelectAll);
-    mateUse('selectionGeometry', selectionGeometry);
-    mateUse('anchors', anchors);
+    mateUse('key', key, isNamed: true);
+    mateUse('onCopy', onCopy, isNamed: true);
+    mateUse('onSelectAll', onSelectAll, isNamed: true);
+    mateUse('selectionGeometry', selectionGeometry, isNamed: true);
+    mateUse('anchors', anchors, isNamed: true);
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectableRegion({Key? key, required SelectableRegionState selectableRegionState})
@@ -197,7 +197,7 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           key: p.get('key').build(),
           selectableRegionState: p.get('selectableRegionState').build(),
         );
-    mateUse('key', key);
-    mateUse('selectableRegionState', selectableRegionState);
+    mateUse('key', key, isNamed: true);
+    mateUse('selectableRegionState', selectableRegionState, isNamed: true);
   }
 }

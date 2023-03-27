@@ -57,13 +57,13 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    mateUse('exception', exception);
-    mateUse('stack', stack);
-    mateUse('library', library);
-    mateUse('context', context);
-    mateUse('event', event);
-    mateUse('hitTestEntry', hitTestEntry);
-    mateUse('informationCollector', informationCollector);
-    mateUse('silent', silent);
+    mateUse('exception', exception, isNamed: true);
+    mateUse('stack', stack, isNamed: true);
+    mateUse('library', library, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('event', event, isNamed: true);
+    mateUse('hitTestEntry', hitTestEntry, isNamed: true);
+    mateUse('informationCollector', informationCollector, isNamed: true);
+    mateUse('silent', silent, isNamed: true);
   }
 }

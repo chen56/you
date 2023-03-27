@@ -136,28 +136,28 @@ class ReorderableList$Mate extends ReorderableList with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('itemCount', itemCount);
-    mateUse('onReorder', onReorder);
-    mateUse('onReorderStart', onReorderStart);
-    mateUse('onReorderEnd', onReorderEnd);
-    mateUse('itemExtent', itemExtent);
-    mateUse('prototypeItem', prototypeItem);
-    mateUse('proxyDecorator', proxyDecorator);
-    mateUse('padding', padding);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('controller', controller);
-    mateUse('primary', primary);
-    mateUse('physics', physics);
-    mateUse('shrinkWrap', shrinkWrap);
-    mateUse('anchor', anchor);
-    mateUse('cacheExtent', cacheExtent);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateUse('restorationId', restorationId);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('itemCount', itemCount, isNamed: true);
+    mateUse('onReorder', onReorder, isNamed: true);
+    mateUse('onReorderStart', onReorderStart, isNamed: true);
+    mateUse('onReorderEnd', onReorderEnd, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('prototypeItem', prototypeItem, isNamed: true);
+    mateUse('proxyDecorator', proxyDecorator, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('primary', primary, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('shrinkWrap', shrinkWrap, isNamed: true);
+    mateUse('anchor', anchor, isNamed: true);
+    mateUse('cacheExtent', cacheExtent, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -220,16 +220,16 @@ class SliverReorderableList$Mate extends SliverReorderableList with Mate {
           prototypeItem: p.get('prototypeItem').build(),
           proxyDecorator: p.get('proxyDecorator').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('itemCount', itemCount);
-    mateUse('onReorder', onReorder);
-    mateUse('onReorderStart', onReorderStart);
-    mateUse('onReorderEnd', onReorderEnd);
-    mateUse('itemExtent', itemExtent);
-    mateUse('prototypeItem', prototypeItem);
-    mateUse('proxyDecorator', proxyDecorator);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('itemCount', itemCount, isNamed: true);
+    mateUse('onReorder', onReorder, isNamed: true);
+    mateUse('onReorderStart', onReorderStart, isNamed: true);
+    mateUse('onReorderEnd', onReorderEnd, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('prototypeItem', prototypeItem, isNamed: true);
+    mateUse('proxyDecorator', proxyDecorator, isNamed: true);
   }
 }
 
@@ -262,10 +262,10 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener wit
           index: p.get('index').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('index', index);
-    mateUse('enabled', enabled);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('index', index, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
   }
 }
 
@@ -298,9 +298,9 @@ class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragSta
           index: p.get('index').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('index', index);
-    mateUse('enabled', enabled);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('index', index, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
   }
 }

@@ -35,10 +35,10 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
           selectionColor: p.get('selectionColor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('cursorColor', cursorColor);
-    mateUse('selectionColor', selectionColor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('cursorColor', cursorColor, isNamed: true);
+    mateUse('selectionColor', selectionColor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// DefaultSelectionStyle DefaultSelectionStyle.fallback({Key? key})
@@ -50,6 +50,6 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
     mateCreateName = 'DefaultSelectionStyle.fallback';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
-    mateUse('key', key);
+    mateUse('key', key, isNamed: true);
   }
 }

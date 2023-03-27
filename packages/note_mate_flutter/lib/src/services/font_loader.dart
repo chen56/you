@@ -15,6 +15,6 @@ class FontLoader$Mate extends FontLoader with Mate {
     mateCreateName = 'FontLoader';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FontLoader$Mate(p.get('family').value);
-    mateUse('family', family);
+    mateUse('family', family, isNamed: false);
   }
 }

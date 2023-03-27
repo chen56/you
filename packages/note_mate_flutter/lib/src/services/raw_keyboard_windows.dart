@@ -33,9 +33,9 @@ class RawKeyEventDataWindows$Mate extends RawKeyEventDataWindows with Mate {
           characterCodePoint: p.get('characterCodePoint').build(),
           modifiers: p.get('modifiers').build(),
         );
-    mateUse('keyCode', keyCode);
-    mateUse('scanCode', scanCode);
-    mateUse('characterCodePoint', characterCodePoint);
-    mateUse('modifiers', modifiers);
+    mateUse('keyCode', keyCode, isNamed: true);
+    mateUse('scanCode', scanCode, isNamed: true);
+    mateUse('characterCodePoint', characterCodePoint, isNamed: true);
+    mateUse('modifiers', modifiers, isNamed: true);
   }
 }

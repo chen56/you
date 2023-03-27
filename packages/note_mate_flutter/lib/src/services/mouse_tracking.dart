@@ -35,9 +35,9 @@ class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate {
           cursor: p.get('cursor').build(),
           validForMouseTracker: p.get('validForMouseTracker').build(),
         );
-    mateUse('onEnter', onEnter);
-    mateUse('onExit', onExit);
-    mateUse('cursor', cursor);
-    mateUse('validForMouseTracker', validForMouseTracker);
+    mateUse('onEnter', onEnter, isNamed: true);
+    mateUse('onExit', onExit, isNamed: true);
+    mateUse('cursor', cursor, isNamed: true);
+    mateUse('validForMouseTracker', validForMouseTracker, isNamed: true);
   }
 }

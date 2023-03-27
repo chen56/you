@@ -83,19 +83,19 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with Mate {
           transitionBetweenRoutes: p.get('transitionBetweenRoutes').build(),
           heroTag: p.get('heroTag').build(),
         );
-    mateUse('key', key);
-    mateUse('leading', leading);
-    mateUse('automaticallyImplyLeading', automaticallyImplyLeading);
-    mateUse('automaticallyImplyMiddle', automaticallyImplyMiddle);
-    mateUse('previousPageTitle', previousPageTitle);
-    mateUse('middle', middle);
-    mateUse('trailing', trailing);
-    mateUse('border', border);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('brightness', brightness);
-    mateUse('padding', padding);
-    mateUse('transitionBetweenRoutes', transitionBetweenRoutes);
-    mateUse('heroTag', heroTag);
+    mateUse('key', key, isNamed: true);
+    mateUse('leading', leading, isNamed: true);
+    mateUse('automaticallyImplyLeading', automaticallyImplyLeading, isNamed: true);
+    mateUse('automaticallyImplyMiddle', automaticallyImplyMiddle, isNamed: true);
+    mateUse('previousPageTitle', previousPageTitle, isNamed: true);
+    mateUse('middle', middle, isNamed: true);
+    mateUse('trailing', trailing, isNamed: true);
+    mateUse('border', border, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('brightness', brightness, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('transitionBetweenRoutes', transitionBetweenRoutes, isNamed: true);
+    mateUse('heroTag', heroTag, isNamed: true);
   }
 }
 
@@ -188,22 +188,22 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar wit
           heroTag: p.get('heroTag').build(),
           stretch: p.get('stretch').build(),
         );
-    mateUse('key', key);
-    mateUse('largeTitle', largeTitle);
-    mateUse('leading', leading);
-    mateUse('automaticallyImplyLeading', automaticallyImplyLeading);
-    mateUse('automaticallyImplyTitle', automaticallyImplyTitle);
-    mateUse('alwaysShowMiddle', alwaysShowMiddle);
-    mateUse('previousPageTitle', previousPageTitle);
-    mateUse('middle', middle);
-    mateUse('trailing', trailing);
-    mateUse('border', border);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('brightness', brightness);
-    mateUse('padding', padding);
-    mateUse('transitionBetweenRoutes', transitionBetweenRoutes);
-    mateUse('heroTag', heroTag);
-    mateUse('stretch', stretch);
+    mateUse('key', key, isNamed: true);
+    mateUse('largeTitle', largeTitle, isNamed: true);
+    mateUse('leading', leading, isNamed: true);
+    mateUse('automaticallyImplyLeading', automaticallyImplyLeading, isNamed: true);
+    mateUse('automaticallyImplyTitle', automaticallyImplyTitle, isNamed: true);
+    mateUse('alwaysShowMiddle', alwaysShowMiddle, isNamed: true);
+    mateUse('previousPageTitle', previousPageTitle, isNamed: true);
+    mateUse('middle', middle, isNamed: true);
+    mateUse('trailing', trailing, isNamed: true);
+    mateUse('border', border, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('brightness', brightness, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('transitionBetweenRoutes', transitionBetweenRoutes, isNamed: true);
+    mateUse('heroTag', heroTag, isNamed: true);
+    mateUse('stretch', stretch, isNamed: true);
   }
 }
 
@@ -236,9 +236,9 @@ class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackBu
           previousPageTitle: p.get('previousPageTitle').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse('key', key);
-    mateUse('color', color);
-    mateUse('previousPageTitle', previousPageTitle);
-    mateUse('onPressed', onPressed);
+    mateUse('key', key, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('previousPageTitle', previousPageTitle, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
   }
 }

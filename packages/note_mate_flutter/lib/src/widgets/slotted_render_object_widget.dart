@@ -14,6 +14,6 @@ class SlottedRenderObjectElement$Mate<S> extends SlottedRenderObjectElement<S> w
     mateCreateName = 'SlottedRenderObjectElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SlottedRenderObjectElement$Mate<S>(p.get('widget').value);
-    mateUse('widget', widget);
+    mateUse('widget', widget, isNamed: false);
   }
 }

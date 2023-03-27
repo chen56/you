@@ -69,15 +69,15 @@ class TextSpan$Mate extends TextSpan with Mate {
           locale: p.get('locale').build(),
           spellOut: p.get('spellOut').build(),
         );
-    mateUse('text', text);
-    mateUse('children', children);
-    mateUse('style', style);
-    mateUse('recognizer', recognizer);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('onEnter', onEnter);
-    mateUse('onExit', onExit);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('locale', locale);
-    mateUse('spellOut', spellOut);
+    mateUse('text', text, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('recognizer', recognizer, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('onEnter', onEnter, isNamed: true);
+    mateUse('onExit', onExit, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUse('spellOut', spellOut, isNamed: true);
   }
 }

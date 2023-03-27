@@ -38,8 +38,8 @@ class BoxConstraintsTween$Mate extends BoxConstraintsTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -62,8 +62,8 @@ class DecorationTween$Mate extends DecorationTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -86,8 +86,8 @@ class EdgeInsetsTween$Mate extends EdgeInsetsTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -110,8 +110,8 @@ class EdgeInsetsGeometryTween$Mate extends EdgeInsetsGeometryTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -134,8 +134,8 @@ class BorderRadiusTween$Mate extends BorderRadiusTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -158,8 +158,8 @@ class BorderTween$Mate extends BorderTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -182,8 +182,8 @@ class Matrix4Tween$Mate extends Matrix4Tween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -206,8 +206,8 @@ class TextStyleTween$Mate extends TextStyleTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -305,23 +305,23 @@ class AnimatedContainer$Mate extends AnimatedContainer with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('padding', padding);
-    mateUse('color', color);
-    mateUse('decoration', decoration);
-    mateUse('foregroundDecoration', foregroundDecoration);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('constraints', constraints);
-    mateUse('margin', margin);
-    mateUse('transform', transform);
-    mateUse('transformAlignment', transformAlignment);
-    mateUse('child', child);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('foregroundDecoration', foregroundDecoration, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('transform', transform, isNamed: true);
+    mateUse('transformAlignment', transformAlignment, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -364,12 +364,12 @@ class AnimatedPadding$Mate extends AnimatedPadding with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('padding', padding);
-    mateUse('child', child);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -422,14 +422,14 @@ class AnimatedAlign$Mate extends AnimatedAlign with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('child', child);
-    mateUse('heightFactor', heightFactor);
-    mateUse('widthFactor', widthFactor);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('heightFactor', heightFactor, isNamed: true);
+    mateUse('widthFactor', widthFactor, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -497,17 +497,17 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('left', left);
-    mateUse('top', top);
-    mateUse('right', right);
-    mateUse('bottom', bottom);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('left', left, isNamed: true);
+    mateUse('top', top, isNamed: true);
+    mateUse('right', right, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 
   /// AnimatedPositioned AnimatedPositioned.fromRect({Key? key, required Widget child, required Rect rect, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
@@ -547,12 +547,12 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('rect', rect);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('rect', rect, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -620,17 +620,17 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional w
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('start', start);
-    mateUse('top', top);
-    mateUse('end', end);
-    mateUse('bottom', bottom);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('start', start, isNamed: true);
+    mateUse('top', top, isNamed: true);
+    mateUse('end', end, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -683,14 +683,14 @@ class AnimatedScale$Mate extends AnimatedScale with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('scale', scale);
-    mateUse('alignment', alignment);
-    mateUse('filterQuality', filterQuality);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -743,14 +743,14 @@ class AnimatedRotation$Mate extends AnimatedRotation with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('turns', turns);
-    mateUse('alignment', alignment);
-    mateUse('filterQuality', filterQuality);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('turns', turns, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -793,12 +793,12 @@ class AnimatedSlide$Mate extends AnimatedSlide with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('offset', offset);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -846,13 +846,13 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with Mate {
           onEnd: p.get('onEnd').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('opacity', opacity);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
   }
 }
 
@@ -900,13 +900,13 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with Mate {
           onEnd: p.get('onEnd').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
         );
-    mateUse('key', key);
-    mateUse('sliver', sliver);
-    mateUse('opacity', opacity);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
+    mateUse('key', key, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
   }
 }
 
@@ -979,18 +979,18 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('style', style);
-    mateUse('textAlign', textAlign);
-    mateUse('softWrap', softWrap);
-    mateUse('overflow', overflow);
-    mateUse('maxLines', maxLines);
-    mateUse('textWidthBasis', textWidthBasis);
-    mateUse('textHeightBehavior', textHeightBehavior);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('textAlign', textAlign, isNamed: true);
+    mateUse('softWrap', softWrap, isNamed: true);
+    mateUse('overflow', overflow, isNamed: true);
+    mateUse('maxLines', maxLines, isNamed: true);
+    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
+    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -1068,19 +1068,19 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('borderRadius', borderRadius);
-    mateUse('elevation', elevation);
-    mateUse('color', color);
-    mateUse('animateColor', animateColor);
-    mateUse('shadowColor', shadowColor);
-    mateUse('animateShadowColor', animateShadowColor);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('animateColor', animateColor, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('animateShadowColor', animateShadowColor, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }
 
@@ -1133,13 +1133,13 @@ class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox wit
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('child', child);
-    mateUse('heightFactor', heightFactor);
-    mateUse('widthFactor', widthFactor);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('heightFactor', heightFactor, isNamed: true);
+    mateUse('widthFactor', widthFactor, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
   }
 }

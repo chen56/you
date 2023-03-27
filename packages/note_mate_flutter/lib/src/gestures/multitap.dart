@@ -31,9 +31,9 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }
 
@@ -66,10 +66,10 @@ class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('longTapDelay', longTapDelay);
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('longTapDelay', longTapDelay, isNamed: true);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }
 
@@ -107,11 +107,11 @@ class SerialTapDownDetails$Mate extends SerialTapDownDetails with Mate {
           buttons: p.get('buttons').build(),
           count: p.get('count').build(),
         );
-    mateUse('globalPosition', globalPosition);
-    mateUse('localPosition', localPosition);
-    mateUse('kind', kind);
-    mateUse('buttons', buttons);
-    mateUse('count', count);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('kind', kind, isNamed: true);
+    mateUse('buttons', buttons, isNamed: true);
+    mateUse('count', count, isNamed: true);
   }
 }
 
@@ -126,7 +126,7 @@ class SerialTapCancelDetails$Mate extends SerialTapCancelDetails with Mate {
     mateCreateName = 'SerialTapCancelDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapCancelDetails$Mate(count: p.get('count').build());
-    mateUse('count', count);
+    mateUse('count', count, isNamed: true);
   }
 }
 
@@ -159,10 +159,10 @@ class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate {
           kind: p.get('kind').build(),
           count: p.get('count').build(),
         );
-    mateUse('globalPosition', globalPosition);
-    mateUse('localPosition', localPosition);
-    mateUse('kind', kind);
-    mateUse('count', count);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('kind', kind, isNamed: true);
+    mateUse('count', count, isNamed: true);
   }
 }
 
@@ -190,8 +190,8 @@ class SerialTapGestureRecognizer$Mate extends SerialTapGestureRecognizer with Ma
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }

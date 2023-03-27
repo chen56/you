@@ -23,8 +23,8 @@ class MethodCall$Mate extends MethodCall with Mate {
           p.get('method').value,
           p.get('arguments').value,
         );
-    mateUse('method', method);
-    mateUse('arguments', arguments);
+    mateUse('method', method, isNamed: false);
+    mateUse('arguments', arguments, isNamed: false);
   }
 }
 
@@ -57,10 +57,10 @@ class PlatformException$Mate extends PlatformException with Mate {
           details: p.get('details').build(),
           stacktrace: p.get('stacktrace').build(),
         );
-    mateUse('code', code);
-    mateUse('message', message);
-    mateUse('details', details);
-    mateUse('stacktrace', stacktrace);
+    mateUse('code', code, isNamed: true);
+    mateUse('message', message, isNamed: true);
+    mateUse('details', details, isNamed: true);
+    mateUse('stacktrace', stacktrace, isNamed: true);
   }
 }
 
@@ -75,6 +75,6 @@ class MissingPluginException$Mate extends MissingPluginException with Mate {
     mateCreateName = 'MissingPluginException';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MissingPluginException$Mate(p.get('message').value);
-    mateUse('message', message);
+    mateUse('message', message, isNamed: false);
   }
 }

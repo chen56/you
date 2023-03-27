@@ -43,10 +43,10 @@ class DataColumn$Mate extends DataColumn with Mate {
           numeric: p.get('numeric').build(),
           onSort: p.get('onSort').build(),
         );
-    mateUse('label', label);
-    mateUse('tooltip', tooltip);
-    mateUse('numeric', numeric);
-    mateUse('onSort', onSort);
+    mateUse('label', label, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('numeric', numeric, isNamed: true);
+    mateUse('onSort', onSort, isNamed: true);
   }
 }
 
@@ -89,12 +89,12 @@ class DataRow$Mate extends DataRow with Mate {
           color: p.get('color').build(),
           cells: p.get('cells').build(),
         );
-    mateUse('key', key);
-    mateUse('selected', selected);
-    mateUse('onSelectChanged', onSelectChanged);
-    mateUse('onLongPress', onLongPress);
-    mateUse('color', color);
-    mateUse('cells', cells);
+    mateUse('key', key, isNamed: true);
+    mateUse('selected', selected, isNamed: true);
+    mateUse('onSelectChanged', onSelectChanged, isNamed: true);
+    mateUse('onLongPress', onLongPress, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUseList('cells', cells, isNamed: true);
   }
 
   /// DataRow DataRow.byIndex({int? index, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
@@ -134,12 +134,12 @@ class DataRow$Mate extends DataRow with Mate {
           color: p.get('color').build(),
           cells: p.get('cells').build(),
         );
-    mateUse('index', index);
-    mateUse('selected', selected);
-    mateUse('onSelectChanged', onSelectChanged);
-    mateUse('onLongPress', onLongPress);
-    mateUse('color', color);
-    mateUse('cells', cells);
+    mateUse('index', index, isNamed: true);
+    mateUse('selected', selected, isNamed: true);
+    mateUse('onSelectChanged', onSelectChanged, isNamed: true);
+    mateUse('onLongPress', onLongPress, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUseList('cells', cells, isNamed: true);
   }
 }
 
@@ -191,14 +191,14 @@ class DataCell$Mate extends DataCell with Mate {
           onDoubleTap: p.get('onDoubleTap').build(),
           onTapCancel: p.get('onTapCancel').build(),
         );
-    mateUse('child', child);
-    mateUse('placeholder', placeholder);
-    mateUse('showEditIcon', showEditIcon);
-    mateUse('onTap', onTap);
-    mateUse('onLongPress', onLongPress);
-    mateUse('onTapDown', onTapDown);
-    mateUse('onDoubleTap', onDoubleTap);
-    mateUse('onTapCancel', onTapCancel);
+    mateUse('child', child, isNamed: false);
+    mateUse('placeholder', placeholder, isNamed: true);
+    mateUse('showEditIcon', showEditIcon, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('onLongPress', onLongPress, isNamed: true);
+    mateUse('onTapDown', onTapDown, isNamed: true);
+    mateUse('onDoubleTap', onDoubleTap, isNamed: true);
+    mateUse('onTapCancel', onTapCancel, isNamed: true);
   }
 }
 
@@ -321,28 +321,28 @@ class DataTable$Mate extends DataTable with Mate {
           border: p.get('border').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('columns', columns);
-    mateUse('sortColumnIndex', sortColumnIndex);
-    mateUse('sortAscending', sortAscending);
-    mateUse('onSelectAll', onSelectAll);
-    mateUse('decoration', decoration);
-    mateUse('dataRowColor', dataRowColor);
-    mateUse('dataRowMinHeight', dataRowMinHeight);
-    mateUse('dataRowMaxHeight', dataRowMaxHeight);
-    mateUse('dataTextStyle', dataTextStyle);
-    mateUse('headingRowColor', headingRowColor);
-    mateUse('headingRowHeight', headingRowHeight);
-    mateUse('headingTextStyle', headingTextStyle);
-    mateUse('horizontalMargin', horizontalMargin);
-    mateUse('columnSpacing', columnSpacing);
-    mateUse('showCheckboxColumn', showCheckboxColumn);
-    mateUse('showBottomBorder', showBottomBorder);
-    mateUse('dividerThickness', dividerThickness);
-    mateUse('rows', rows);
-    mateUse('checkboxHorizontalMargin', checkboxHorizontalMargin);
-    mateUse('border', border);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUseList('columns', columns, isNamed: true);
+    mateUse('sortColumnIndex', sortColumnIndex, isNamed: true);
+    mateUse('sortAscending', sortAscending, isNamed: true);
+    mateUse('onSelectAll', onSelectAll, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('dataRowColor', dataRowColor, isNamed: true);
+    mateUse('dataRowMinHeight', dataRowMinHeight, isNamed: true);
+    mateUse('dataRowMaxHeight', dataRowMaxHeight, isNamed: true);
+    mateUse('dataTextStyle', dataTextStyle, isNamed: true);
+    mateUse('headingRowColor', headingRowColor, isNamed: true);
+    mateUse('headingRowHeight', headingRowHeight, isNamed: true);
+    mateUse('headingTextStyle', headingTextStyle, isNamed: true);
+    mateUse('horizontalMargin', horizontalMargin, isNamed: true);
+    mateUse('columnSpacing', columnSpacing, isNamed: true);
+    mateUse('showCheckboxColumn', showCheckboxColumn, isNamed: true);
+    mateUse('showBottomBorder', showBottomBorder, isNamed: true);
+    mateUse('dividerThickness', dividerThickness, isNamed: true);
+    mateUseList('rows', rows, isNamed: true);
+    mateUse('checkboxHorizontalMargin', checkboxHorizontalMargin, isNamed: true);
+    mateUse('border', border, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -390,12 +390,12 @@ class TableRowInkWell$Mate extends TableRowInkWell with Mate {
           onHighlightChanged: p.get('onHighlightChanged').build(),
           overlayColor: p.get('overlayColor').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('onTap', onTap);
-    mateUse('onDoubleTap', onDoubleTap);
-    mateUse('onLongPress', onLongPress);
-    mateUse('onHighlightChanged', onHighlightChanged);
-    mateUse('overlayColor', overlayColor);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('onDoubleTap', onDoubleTap, isNamed: true);
+    mateUse('onLongPress', onLongPress, isNamed: true);
+    mateUse('onHighlightChanged', onHighlightChanged, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
   }
 }

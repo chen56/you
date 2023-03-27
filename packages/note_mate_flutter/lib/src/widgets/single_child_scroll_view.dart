@@ -85,17 +85,17 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
           restorationId: p.get('restorationId').build(),
           keyboardDismissBehavior: p.get('keyboardDismissBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('padding', padding);
-    mateUse('primary', primary);
-    mateUse('physics', physics);
-    mateUse('controller', controller);
-    mateUse('child', child);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('restorationId', restorationId);
-    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('primary', primary, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior, isNamed: true);
   }
 }

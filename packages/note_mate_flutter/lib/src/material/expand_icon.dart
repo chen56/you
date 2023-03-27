@@ -57,13 +57,13 @@ class ExpandIcon$Mate extends ExpandIcon with Mate {
           disabledColor: p.get('disabledColor').build(),
           expandedColor: p.get('expandedColor').build(),
         );
-    mateUse('key', key);
-    mateUse('isExpanded', isExpanded);
-    mateUse('size', size);
-    mateUse('onPressed', onPressed);
-    mateUse('padding', padding);
-    mateUse('color', color);
-    mateUse('disabledColor', disabledColor);
-    mateUse('expandedColor', expandedColor);
+    mateUse('key', key, isNamed: true);
+    mateUse('isExpanded', isExpanded, isNamed: true);
+    mateUse('size', size, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('expandedColor', expandedColor, isNamed: true);
   }
 }

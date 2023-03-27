@@ -74,16 +74,16 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
           onDetailsPressed: p.get('onDetailsPressed').build(),
           arrowColor: p.get('arrowColor').build(),
         );
-    mateUse('key', key);
-    mateUse('decoration', decoration);
-    mateUse('margin', margin);
-    mateUse('currentAccountPicture', currentAccountPicture);
-    mateUse('otherAccountsPictures', otherAccountsPictures);
-    mateUse('currentAccountPictureSize', currentAccountPictureSize);
-    mateUse('otherAccountsPicturesSize', otherAccountsPicturesSize);
-    mateUse('accountName', accountName);
-    mateUse('accountEmail', accountEmail);
-    mateUse('onDetailsPressed', onDetailsPressed);
-    mateUse('arrowColor', arrowColor);
+    mateUse('key', key, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('currentAccountPicture', currentAccountPicture, isNamed: true);
+    mateUseList('otherAccountsPictures', otherAccountsPictures, isNamed: true);
+    mateUse('currentAccountPictureSize', currentAccountPictureSize, isNamed: true);
+    mateUse('otherAccountsPicturesSize', otherAccountsPicturesSize, isNamed: true);
+    mateUse('accountName', accountName, isNamed: true);
+    mateUse('accountEmail', accountEmail, isNamed: true);
+    mateUse('onDetailsPressed', onDetailsPressed, isNamed: true);
+    mateUse('arrowColor', arrowColor, isNamed: true);
   }
 }

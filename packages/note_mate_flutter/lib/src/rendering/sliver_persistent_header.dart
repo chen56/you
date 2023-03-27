@@ -26,8 +26,8 @@ class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchC
           stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
           onStretchTrigger: p.get('onStretchTrigger').build(),
         );
-    mateUse('stretchTriggerOffset', stretchTriggerOffset);
-    mateUse('onStretchTrigger', onStretchTrigger);
+    mateUse('stretchTriggerOffset', stretchTriggerOffset, isNamed: true);
+    mateUse('onStretchTrigger', onStretchTrigger, isNamed: true);
   }
 }
 
@@ -50,8 +50,8 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderSho
           minShowOnScreenExtent: p.get('minShowOnScreenExtent').build(),
           maxShowOnScreenExtent: p.get('maxShowOnScreenExtent').build(),
         );
-    mateUse('minShowOnScreenExtent', minShowOnScreenExtent);
-    mateUse('maxShowOnScreenExtent', maxShowOnScreenExtent);
+    mateUse('minShowOnScreenExtent', minShowOnScreenExtent, isNamed: true);
+    mateUse('maxShowOnScreenExtent', maxShowOnScreenExtent, isNamed: true);
   }
 }
 
@@ -74,7 +74,7 @@ class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfigurati
           curve: p.get('curve').build(),
           duration: p.get('duration').build(),
         );
-    mateUse('curve', curve);
-    mateUse('duration', duration);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
   }
 }

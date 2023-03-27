@@ -131,28 +131,28 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate {
           padding: p.get('padding').build(),
           shape: p.get('shape').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('cancelButtonStyle', cancelButtonStyle);
-    mateUse('confirmButtonStyle', confirmButtonStyle);
-    mateUse('dayPeriodBorderSide', dayPeriodBorderSide);
-    mateUse('dayPeriodColor', dayPeriodColor);
-    mateUse('dayPeriodShape', dayPeriodShape);
-    mateUse('dayPeriodTextColor', dayPeriodTextColor);
-    mateUse('dayPeriodTextStyle', dayPeriodTextStyle);
-    mateUse('dialBackgroundColor', dialBackgroundColor);
-    mateUse('dialHandColor', dialHandColor);
-    mateUse('dialTextColor', dialTextColor);
-    mateUse('dialTextStyle', dialTextStyle);
-    mateUse('elevation', elevation);
-    mateUse('entryModeIconColor', entryModeIconColor);
-    mateUse('helpTextStyle', helpTextStyle);
-    mateUse('hourMinuteColor', hourMinuteColor);
-    mateUse('hourMinuteShape', hourMinuteShape);
-    mateUse('hourMinuteTextColor', hourMinuteTextColor);
-    mateUse('hourMinuteTextStyle', hourMinuteTextStyle);
-    mateUse('inputDecorationTheme', inputDecorationTheme);
-    mateUse('padding', padding);
-    mateUse('shape', shape);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('cancelButtonStyle', cancelButtonStyle, isNamed: true);
+    mateUse('confirmButtonStyle', confirmButtonStyle, isNamed: true);
+    mateUse('dayPeriodBorderSide', dayPeriodBorderSide, isNamed: true);
+    mateUse('dayPeriodColor', dayPeriodColor, isNamed: true);
+    mateUse('dayPeriodShape', dayPeriodShape, isNamed: true);
+    mateUse('dayPeriodTextColor', dayPeriodTextColor, isNamed: true);
+    mateUse('dayPeriodTextStyle', dayPeriodTextStyle, isNamed: true);
+    mateUse('dialBackgroundColor', dialBackgroundColor, isNamed: true);
+    mateUse('dialHandColor', dialHandColor, isNamed: true);
+    mateUse('dialTextColor', dialTextColor, isNamed: true);
+    mateUse('dialTextStyle', dialTextStyle, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('entryModeIconColor', entryModeIconColor, isNamed: true);
+    mateUse('helpTextStyle', helpTextStyle, isNamed: true);
+    mateUse('hourMinuteColor', hourMinuteColor, isNamed: true);
+    mateUse('hourMinuteShape', hourMinuteShape, isNamed: true);
+    mateUse('hourMinuteTextColor', hourMinuteTextColor, isNamed: true);
+    mateUse('hourMinuteTextStyle', hourMinuteTextStyle, isNamed: true);
+    mateUse('inputDecorationTheme', inputDecorationTheme, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
   }
 }
 
@@ -180,8 +180,8 @@ class TimePickerTheme$Mate extends TimePickerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

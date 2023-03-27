@@ -41,11 +41,11 @@ class DividerThemeData$Mate extends DividerThemeData with Mate {
           indent: p.get('indent').build(),
           endIndent: p.get('endIndent').build(),
         );
-    mateUse('color', color);
-    mateUse('space', space);
-    mateUse('thickness', thickness);
-    mateUse('indent', indent);
-    mateUse('endIndent', endIndent);
+    mateUse('color', color, isNamed: true);
+    mateUse('space', space, isNamed: true);
+    mateUse('thickness', thickness, isNamed: true);
+    mateUse('indent', indent, isNamed: true);
+    mateUse('endIndent', endIndent, isNamed: true);
   }
 }
 
@@ -73,8 +73,8 @@ class DividerTheme$Mate extends DividerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

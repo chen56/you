@@ -98,21 +98,21 @@ class AppBarTheme$Mate extends AppBarTheme with Mate {
           titleTextStyle: p.get('titleTextStyle').build(),
           systemOverlayStyle: p.get('systemOverlayStyle').build(),
         );
-    mateUse('color', color);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('foregroundColor', foregroundColor);
-    mateUse('elevation', elevation);
-    mateUse('scrolledUnderElevation', scrolledUnderElevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('shape', shape);
-    mateUse('iconTheme', iconTheme);
-    mateUse('actionsIconTheme', actionsIconTheme);
-    mateUse('centerTitle', centerTitle);
-    mateUse('titleSpacing', titleSpacing);
-    mateUse('toolbarHeight', toolbarHeight);
-    mateUse('toolbarTextStyle', toolbarTextStyle);
-    mateUse('titleTextStyle', titleTextStyle);
-    mateUse('systemOverlayStyle', systemOverlayStyle);
+    mateUse('color', color, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('foregroundColor', foregroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('scrolledUnderElevation', scrolledUnderElevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('iconTheme', iconTheme, isNamed: true);
+    mateUse('actionsIconTheme', actionsIconTheme, isNamed: true);
+    mateUse('centerTitle', centerTitle, isNamed: true);
+    mateUse('titleSpacing', titleSpacing, isNamed: true);
+    mateUse('toolbarHeight', toolbarHeight, isNamed: true);
+    mateUse('toolbarTextStyle', toolbarTextStyle, isNamed: true);
+    mateUse('titleTextStyle', titleTextStyle, isNamed: true);
+    mateUse('systemOverlayStyle', systemOverlayStyle, isNamed: true);
   }
 }

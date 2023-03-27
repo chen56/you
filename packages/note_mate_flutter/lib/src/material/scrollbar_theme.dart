@@ -72,17 +72,17 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate {
           minThumbLength: p.get('minThumbLength').build(),
           interactive: p.get('interactive').build(),
         );
-    mateUse('thumbVisibility', thumbVisibility);
-    mateUse('thickness', thickness);
-    mateUse('trackVisibility', trackVisibility);
-    mateUse('radius', radius);
-    mateUse('thumbColor', thumbColor);
-    mateUse('trackColor', trackColor);
-    mateUse('trackBorderColor', trackBorderColor);
-    mateUse('crossAxisMargin', crossAxisMargin);
-    mateUse('mainAxisMargin', mainAxisMargin);
-    mateUse('minThumbLength', minThumbLength);
-    mateUse('interactive', interactive);
+    mateUse('thumbVisibility', thumbVisibility, isNamed: true);
+    mateUse('thickness', thickness, isNamed: true);
+    mateUse('trackVisibility', trackVisibility, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
+    mateUse('thumbColor', thumbColor, isNamed: true);
+    mateUse('trackColor', trackColor, isNamed: true);
+    mateUse('trackBorderColor', trackBorderColor, isNamed: true);
+    mateUse('crossAxisMargin', crossAxisMargin, isNamed: true);
+    mateUse('mainAxisMargin', mainAxisMargin, isNamed: true);
+    mateUse('minThumbLength', minThumbLength, isNamed: true);
+    mateUse('interactive', interactive, isNamed: true);
   }
 }
 
@@ -110,8 +110,8 @@ class ScrollbarTheme$Mate extends ScrollbarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

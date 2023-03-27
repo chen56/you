@@ -64,15 +64,15 @@ class Drawer$Mate extends Drawer with Mate {
           child: p.get('child').build(),
           semanticLabel: p.get('semanticLabel').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('shape', shape);
-    mateUse('width', width);
-    mateUse('child', child);
-    mateUse('semanticLabel', semanticLabel);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('semanticLabel', semanticLabel, isNamed: true);
   }
 }
 
@@ -130,14 +130,14 @@ class DrawerController$Mate extends DrawerController with Mate {
           edgeDragWidth: p.get('edgeDragWidth').build(),
           enableOpenDragGesture: p.get('enableOpenDragGesture').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('alignment', alignment);
-    mateUse('isDrawerOpen', isDrawerOpen);
-    mateUse('drawerCallback', drawerCallback);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('scrimColor', scrimColor);
-    mateUse('edgeDragWidth', edgeDragWidth);
-    mateUse('enableOpenDragGesture', enableOpenDragGesture);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('isDrawerOpen', isDrawerOpen, isNamed: true);
+    mateUse('drawerCallback', drawerCallback, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('scrimColor', scrimColor, isNamed: true);
+    mateUse('edgeDragWidth', edgeDragWidth, isNamed: true);
+    mateUse('enableOpenDragGesture', enableOpenDragGesture, isNamed: true);
   }
 }

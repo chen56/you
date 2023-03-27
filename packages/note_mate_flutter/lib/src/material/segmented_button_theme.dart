@@ -25,8 +25,8 @@ class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate {
           style: p.get('style').build(),
           selectedIcon: p.get('selectedIcon').build(),
         );
-    mateUse('style', style);
-    mateUse('selectedIcon', selectedIcon);
+    mateUse('style', style, isNamed: true);
+    mateUse('selectedIcon', selectedIcon, isNamed: true);
   }
 }
 
@@ -54,8 +54,8 @@ class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

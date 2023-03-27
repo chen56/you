@@ -34,8 +34,8 @@ class ScaffoldMessenger$Mate extends ScaffoldMessenger with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -98,16 +98,16 @@ class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry with Mate
           materialBannerSize: p.get('materialBannerSize').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('bottomSheetSize', bottomSheetSize);
-    mateUse('contentBottom', contentBottom);
-    mateUse('contentTop', contentTop);
-    mateUse('floatingActionButtonSize', floatingActionButtonSize);
-    mateUse('minInsets', minInsets);
-    mateUse('minViewPadding', minViewPadding);
-    mateUse('scaffoldSize', scaffoldSize);
-    mateUse('snackBarSize', snackBarSize);
-    mateUse('materialBannerSize', materialBannerSize);
-    mateUse('textDirection', textDirection);
+    mateUse('bottomSheetSize', bottomSheetSize, isNamed: true);
+    mateUse('contentBottom', contentBottom, isNamed: true);
+    mateUse('contentTop', contentTop, isNamed: true);
+    mateUse('floatingActionButtonSize', floatingActionButtonSize, isNamed: true);
+    mateUse('minInsets', minInsets, isNamed: true);
+    mateUse('minViewPadding', minViewPadding, isNamed: true);
+    mateUse('scaffoldSize', scaffoldSize, isNamed: true);
+    mateUse('snackBarSize', snackBarSize, isNamed: true);
+    mateUse('materialBannerSize', materialBannerSize, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
   }
 }
 
@@ -130,8 +130,8 @@ class ScaffoldGeometry$Mate extends ScaffoldGeometry with Mate {
           bottomNavigationBarTop: p.get('bottomNavigationBarTop').build(),
           floatingActionButtonArea: p.get('floatingActionButtonArea').build(),
         );
-    mateUse('bottomNavigationBarTop', bottomNavigationBarTop);
-    mateUse('floatingActionButtonArea', floatingActionButtonArea);
+    mateUse('bottomNavigationBarTop', bottomNavigationBarTop, isNamed: true);
+    mateUse('floatingActionButtonArea', floatingActionButtonArea, isNamed: true);
   }
 }
 
@@ -269,30 +269,30 @@ class Scaffold$Mate extends Scaffold with Mate {
           endDrawerEnableOpenDragGesture: p.get('endDrawerEnableOpenDragGesture').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse('key', key);
-    mateUse('appBar', appBar);
-    mateUse('body', body);
-    mateUse('floatingActionButton', floatingActionButton);
-    mateUse('floatingActionButtonLocation', floatingActionButtonLocation);
-    mateUse('floatingActionButtonAnimator', floatingActionButtonAnimator);
-    mateUse('persistentFooterButtons', persistentFooterButtons);
-    mateUse('persistentFooterAlignment', persistentFooterAlignment);
-    mateUse('drawer', drawer);
-    mateUse('onDrawerChanged', onDrawerChanged);
-    mateUse('endDrawer', endDrawer);
-    mateUse('onEndDrawerChanged', onEndDrawerChanged);
-    mateUse('bottomNavigationBar', bottomNavigationBar);
-    mateUse('bottomSheet', bottomSheet);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
-    mateUse('primary', primary);
-    mateUse('drawerDragStartBehavior', drawerDragStartBehavior);
-    mateUse('extendBody', extendBody);
-    mateUse('extendBodyBehindAppBar', extendBodyBehindAppBar);
-    mateUse('drawerScrimColor', drawerScrimColor);
-    mateUse('drawerEdgeDragWidth', drawerEdgeDragWidth);
-    mateUse('drawerEnableOpenDragGesture', drawerEnableOpenDragGesture);
-    mateUse('endDrawerEnableOpenDragGesture', endDrawerEnableOpenDragGesture);
-    mateUse('restorationId', restorationId);
+    mateUse('key', key, isNamed: true);
+    mateUse('appBar', appBar, isNamed: true);
+    mateUse('body', body, isNamed: true);
+    mateUse('floatingActionButton', floatingActionButton, isNamed: true);
+    mateUse('floatingActionButtonLocation', floatingActionButtonLocation, isNamed: true);
+    mateUse('floatingActionButtonAnimator', floatingActionButtonAnimator, isNamed: true);
+    mateUseList('persistentFooterButtons', persistentFooterButtons, isNamed: true);
+    mateUse('persistentFooterAlignment', persistentFooterAlignment, isNamed: true);
+    mateUse('drawer', drawer, isNamed: true);
+    mateUse('onDrawerChanged', onDrawerChanged, isNamed: true);
+    mateUse('endDrawer', endDrawer, isNamed: true);
+    mateUse('onEndDrawerChanged', onEndDrawerChanged, isNamed: true);
+    mateUse('bottomNavigationBar', bottomNavigationBar, isNamed: true);
+    mateUse('bottomSheet', bottomSheet, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('resizeToAvoidBottomInset', resizeToAvoidBottomInset, isNamed: true);
+    mateUse('primary', primary, isNamed: true);
+    mateUse('drawerDragStartBehavior', drawerDragStartBehavior, isNamed: true);
+    mateUse('extendBody', extendBody, isNamed: true);
+    mateUse('extendBodyBehindAppBar', extendBodyBehindAppBar, isNamed: true);
+    mateUse('drawerScrimColor', drawerScrimColor, isNamed: true);
+    mateUse('drawerEdgeDragWidth', drawerEdgeDragWidth, isNamed: true);
+    mateUse('drawerEnableOpenDragGesture', drawerEnableOpenDragGesture, isNamed: true);
+    mateUse('endDrawerEnableOpenDragGesture', endDrawerEnableOpenDragGesture, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
   }
 }

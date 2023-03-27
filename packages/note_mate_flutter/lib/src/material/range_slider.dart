@@ -89,19 +89,19 @@ class RangeSlider$Mate extends RangeSlider with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           semanticFormatterCallback: p.get('semanticFormatterCallback').build(),
         );
-    mateUse('key', key);
-    mateUse('values', values);
-    mateUse('onChanged', onChanged);
-    mateUse('onChangeStart', onChangeStart);
-    mateUse('onChangeEnd', onChangeEnd);
-    mateUse('min', min);
-    mateUse('max', max);
-    mateUse('divisions', divisions);
-    mateUse('labels', labels);
-    mateUse('activeColor', activeColor);
-    mateUse('inactiveColor', inactiveColor);
-    mateUse('overlayColor', overlayColor);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('semanticFormatterCallback', semanticFormatterCallback);
+    mateUse('key', key, isNamed: true);
+    mateUse('values', values, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('onChangeStart', onChangeStart, isNamed: true);
+    mateUse('onChangeEnd', onChangeEnd, isNamed: true);
+    mateUse('min', min, isNamed: true);
+    mateUse('max', max, isNamed: true);
+    mateUse('divisions', divisions, isNamed: true);
+    mateUse('labels', labels, isNamed: true);
+    mateUse('activeColor', activeColor, isNamed: true);
+    mateUse('inactiveColor', inactiveColor, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('semanticFormatterCallback', semanticFormatterCallback, isNamed: true);
   }
 }

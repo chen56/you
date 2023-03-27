@@ -36,9 +36,9 @@ class Localizations$Mate extends Localizations with Mate {
           delegates: p.get('delegates').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('locale', locale);
-    mateUse('delegates', delegates);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUseList('delegates', delegates, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

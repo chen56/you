@@ -24,7 +24,7 @@ class DefaultTextEditingShortcuts$Mate extends DefaultTextEditingShortcuts with 
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

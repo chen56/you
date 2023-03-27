@@ -32,9 +32,9 @@ class CupertinoTheme$Mate extends CupertinoTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -82,13 +82,13 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').build(),
           applyThemeToAll: p.get('applyThemeToAll').build(),
         );
-    mateUse('brightness', brightness);
-    mateUse('primaryColor', primaryColor);
-    mateUse('primaryContrastingColor', primaryContrastingColor);
-    mateUse('textTheme', textTheme);
-    mateUse('barBackgroundColor', barBackgroundColor);
-    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    mateUse('applyThemeToAll', applyThemeToAll);
+    mateUse('brightness', brightness, isNamed: true);
+    mateUse('primaryColor', primaryColor, isNamed: true);
+    mateUse('primaryContrastingColor', primaryContrastingColor, isNamed: true);
+    mateUse('textTheme', textTheme, isNamed: true);
+    mateUse('barBackgroundColor', barBackgroundColor, isNamed: true);
+    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor, isNamed: true);
+    mateUse('applyThemeToAll', applyThemeToAll, isNamed: true);
   }
 
   /// CupertinoThemeData CupertinoThemeData.raw(Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll)
@@ -133,13 +133,13 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           p.get('scaffoldBackgroundColor').value,
           p.get('applyThemeToAll').value,
         );
-    mateUse('brightness', brightness);
-    mateUse('primaryColor', primaryColor);
-    mateUse('primaryContrastingColor', primaryContrastingColor);
-    mateUse('textTheme', textTheme);
-    mateUse('barBackgroundColor', barBackgroundColor);
-    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    mateUse('applyThemeToAll', applyThemeToAll);
+    mateUse('brightness', brightness, isNamed: false);
+    mateUse('primaryColor', primaryColor, isNamed: false);
+    mateUse('primaryContrastingColor', primaryContrastingColor, isNamed: false);
+    mateUse('textTheme', textTheme, isNamed: false);
+    mateUse('barBackgroundColor', barBackgroundColor, isNamed: false);
+    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor, isNamed: false);
+    mateUse('applyThemeToAll', applyThemeToAll, isNamed: false);
   }
 }
 
@@ -187,12 +187,12 @@ class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with 
           scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').build(),
           applyThemeToAll: p.get('applyThemeToAll').build(),
         );
-    mateUse('brightness', brightness);
-    mateUse('primaryColor', primaryColor);
-    mateUse('primaryContrastingColor', primaryContrastingColor);
-    mateUse('textTheme', textTheme);
-    mateUse('barBackgroundColor', barBackgroundColor);
-    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    mateUse('applyThemeToAll', applyThemeToAll);
+    mateUse('brightness', brightness, isNamed: true);
+    mateUse('primaryColor', primaryColor, isNamed: true);
+    mateUse('primaryContrastingColor', primaryContrastingColor, isNamed: true);
+    mateUse('textTheme', textTheme, isNamed: true);
+    mateUse('barBackgroundColor', barBackgroundColor, isNamed: true);
+    mateUse('scaffoldBackgroundColor', scaffoldBackgroundColor, isNamed: true);
+    mateUse('applyThemeToAll', applyThemeToAll, isNamed: true);
   }
 }

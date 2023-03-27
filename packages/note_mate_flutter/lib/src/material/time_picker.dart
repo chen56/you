@@ -77,17 +77,17 @@ class TimePickerDialog$Mate extends TimePickerDialog with Mate {
           orientation: p.get('orientation').build(),
           onEntryModeChanged: p.get('onEntryModeChanged').build(),
         );
-    mateUse('key', key);
-    mateUse('initialTime', initialTime);
-    mateUse('cancelText', cancelText);
-    mateUse('confirmText', confirmText);
-    mateUse('helpText', helpText);
-    mateUse('errorInvalidText', errorInvalidText);
-    mateUse('hourLabelText', hourLabelText);
-    mateUse('minuteLabelText', minuteLabelText);
-    mateUse('restorationId', restorationId);
-    mateUse('initialEntryMode', initialEntryMode);
-    mateUse('orientation', orientation);
-    mateUse('onEntryModeChanged', onEntryModeChanged);
+    mateUse('key', key, isNamed: true);
+    mateUse('initialTime', initialTime, isNamed: true);
+    mateUse('cancelText', cancelText, isNamed: true);
+    mateUse('confirmText', confirmText, isNamed: true);
+    mateUse('helpText', helpText, isNamed: true);
+    mateUse('errorInvalidText', errorInvalidText, isNamed: true);
+    mateUse('hourLabelText', hourLabelText, isNamed: true);
+    mateUse('minuteLabelText', minuteLabelText, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('initialEntryMode', initialEntryMode, isNamed: true);
+    mateUse('orientation', orientation, isNamed: true);
+    mateUse('onEntryModeChanged', onEntryModeChanged, isNamed: true);
   }
 }

@@ -42,10 +42,10 @@ class TextSelectionToolbar$Mate extends TextSelectionToolbar with Mate {
           toolbarBuilder: p.get('toolbarBuilder').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('anchorAbove', anchorAbove);
-    mateUse('anchorBelow', anchorBelow);
-    mateUse('toolbarBuilder', toolbarBuilder);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('anchorAbove', anchorAbove, isNamed: true);
+    mateUse('anchorBelow', anchorBelow, isNamed: true);
+    mateUse('toolbarBuilder', toolbarBuilder, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }

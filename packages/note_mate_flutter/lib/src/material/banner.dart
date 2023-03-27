@@ -106,22 +106,22 @@ class MaterialBanner$Mate extends MaterialBanner with Mate {
           animation: p.get('animation').build(),
           onVisible: p.get('onVisible').build(),
         );
-    mateUse('key', key);
-    mateUse('content', content);
-    mateUse('contentTextStyle', contentTextStyle);
-    mateUse('actions', actions);
-    mateUse('elevation', elevation);
-    mateUse('leading', leading);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('shadowColor', shadowColor);
-    mateUse('dividerColor', dividerColor);
-    mateUse('padding', padding);
-    mateUse('margin', margin);
-    mateUse('leadingPadding', leadingPadding);
-    mateUse('forceActionsBelow', forceActionsBelow);
-    mateUse('overflowAlignment', overflowAlignment);
-    mateUse('animation', animation);
-    mateUse('onVisible', onVisible);
+    mateUse('key', key, isNamed: true);
+    mateUse('content', content, isNamed: true);
+    mateUse('contentTextStyle', contentTextStyle, isNamed: true);
+    mateUseList('actions', actions, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('leading', leading, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('dividerColor', dividerColor, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('leadingPadding', leadingPadding, isNamed: true);
+    mateUse('forceActionsBelow', forceActionsBelow, isNamed: true);
+    mateUse('overflowAlignment', overflowAlignment, isNamed: true);
+    mateUse('animation', animation, isNamed: true);
+    mateUse('onVisible', onVisible, isNamed: true);
   }
 }

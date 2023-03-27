@@ -34,10 +34,10 @@ class Border$Mate extends Border with Mate {
           bottom: p.get('bottom').build(),
           left: p.get('left').build(),
         );
-    mateUse('top', top);
-    mateUse('right', right);
-    mateUse('bottom', bottom);
-    mateUse('left', left);
+    mateUse('top', top, isNamed: true);
+    mateUse('right', right, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('left', left, isNamed: true);
   }
 
   /// Border Border.fromBorderSide(BorderSide side)
@@ -49,7 +49,7 @@ class Border$Mate extends Border with Mate {
     mateCreateName = 'Border.fromBorderSide';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Border$Mate.fromBorderSide(p.get('side').value);
-    mateUse('side', side);
+    mateUse('side', side, isNamed: false);
   }
 
   /// Border Border.symmetric({BorderSide vertical = BorderSide.none, BorderSide horizontal = BorderSide.none})
@@ -69,8 +69,8 @@ class Border$Mate extends Border with Mate {
           vertical: p.get('vertical').build(),
           horizontal: p.get('horizontal').build(),
         );
-    mateUse('vertical', vertical);
-    mateUse('horizontal', horizontal);
+    mateUse('vertical', vertical, isNamed: true);
+    mateUse('horizontal', horizontal, isNamed: true);
   }
 }
 
@@ -103,9 +103,9 @@ class BorderDirectional$Mate extends BorderDirectional with Mate {
           end: p.get('end').build(),
           bottom: p.get('bottom').build(),
         );
-    mateUse('top', top);
-    mateUse('start', start);
-    mateUse('end', end);
-    mateUse('bottom', bottom);
+    mateUse('top', top, isNamed: true);
+    mateUse('start', start, isNamed: true);
+    mateUse('end', end, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
   }
 }

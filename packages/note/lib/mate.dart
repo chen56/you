@@ -10,7 +10,9 @@ abstract class Param<T> extends ChangeNotifier {
   String name;
   Param? parent;
   final T init;
+  // fixme 这个nullable是否可以改成isOptional
   final bool nullable;
+  final bool isNamed;
   T _value;
 
   T get value => _value;
@@ -34,6 +36,7 @@ abstract class Param<T> extends ChangeNotifier {
     this.name = "",
     required this.init,
     this.nullable = false,
+    this.isNamed = false,
   }) : _value = init;
 
   bool get isNullable => nullable;
@@ -86,35 +89,52 @@ abstract class Param<T> extends ChangeNotifier {
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
-Param<T> _convertToParam<T>({
+Param<T> _toSingleParam<T>({
   required String name,
   required T init,
   required bool nullable,
+  required bool isNamed,
 }) {
+  assert(!(utils.isSubtype<List, T>() || utils.isSubtype<List?, T>()),
+      "list use useList() : init:$init");
+
   if (init is Param<T>) return init;
 
   if (init is Mate) {
     return ObjectParam<T>(
-        name: name,
-        init: init,
-        paramMap: init._mateParams,
-        nullable: nullable,
-        builder: init.mateBuilder,
-        builderRefer: code.refer(init.mateCreateName, init.matePackageUrl));
+      name: name,
+      init: init,
+      paramMap: init._mateParams,
+      builder: init.mateBuilder,
+      builderRefer: code.refer(init.mateCreateName, init.matePackageUrl),
+      nullable: nullable,
+      isNamed: isNamed,
+    );
   }
+  return ValueParam<T>(
+    name: name,
+    init: init,
+    nullable: nullable,
+    isNamed: isNamed,
+  );
+}
 
-  if (utils.isSubtype<List, T>() || utils.isSubtype<List?, T>()) {
-    List<Param> params = [];
-    if (!nullable) {
-      init as List;
-      for (int i = 0; i < init.length; i++) {
-        params.add(_convertToParam(name: "[$i]", init: init[i], nullable: nullable));
-      }
-    }
-    return ListParam(name: name, init: init, nullable: nullable, params: params);
+ListParam<E> _toListParam<E>({
+  required String name,
+  required List<E>? init,
+  required bool isNamed,
+}) {
+  List<E> notNull = init ?? [];
+  List<Param<E>> params = [];
+  for (int i = 0; i < notNull.length; i++) {
+    params.add(_toSingleParam(
+      name: "[$i]",
+      init: notNull[i],
+      nullable: true,
+      isNamed: isNamed,
+    ));
   }
-
-  return ValueParam(name: name, init: init, nullable: nullable);
+  return ListParam<E>(name: name, init: notNull, params: params);
 }
 
 class ValueParam<T> extends Param<T> {
@@ -122,6 +142,7 @@ class ValueParam<T> extends Param<T> {
     super.name,
     required super.init,
     super.nullable,
+    super.isNamed,
   });
 
   @override
@@ -145,25 +166,25 @@ class ValueParam<T> extends Param<T> {
   }
 }
 
-class ListParam<T> extends Param<T> {
-  late List<Param> params;
+class ListParam<E> extends Param<List<E>> {
+  late final List<Param<E>> params;
 
   ListParam({
     super.name,
     required super.init,
     required this.params,
-    super.nullable,
-  }) {
+    super.isNamed,
+  }) : super(nullable: false) {
     for (var e in params) {
       e.parent = this;
     }
   }
 
   @override
-  T build() => params.map((e) => e.build()).toList() as T;
+  List<E> build() => params.map((e) => e.build()).toList();
 
   @override
-  Iterable<Param> get children => params;
+  Iterable<Param<E>> get children => params;
 
   @override
   code.Expression toCodeExpression({required Editors editors}) {
@@ -180,8 +201,9 @@ class ObjectParam<T> extends Param<T> {
     required super.init,
     required this.builder,
     Map<String, Param>? paramMap,
-    super.nullable,
     required this.builderRefer,
+    super.nullable,
+    super.isNamed,
   }) : _paramMap = paramMap ?? {} {
     _paramMap.forEach((key, value) {
       value.parent = this;
@@ -217,8 +239,36 @@ class ObjectParam<T> extends Param<T> {
           builderRefer: code.refer(mate.mateCreateName, mate.matePackageUrl),
         );
 
-  Param<E> use<E>(String name, E init) {
-    var param = _convertToParam<E>(name: name, nullable: utils.isNullableOf<E>(init), init: init);
+  Param<E> use<E>(
+    String name,
+    E init, {
+    bool isNamed = true,
+    dynamic defaultValue,
+  }) {
+    var param = _toSingleParam<E>(
+      name: name,
+      nullable: utils.isNullableOf<E>(init),
+      init: init,
+      isNamed: isNamed,
+    );
+    _paramMap[name] = param;
+    return param;
+  }
+
+  /// 为简化list参数，不按原可空与否处理，而统一为：
+  /// - 进来的init为可空List<E>?
+  /// - 出去的返回值为非空List<E>
+  ListParam<E> useList<E>(
+    String name,
+    List<E>? init, {
+    bool isNamed = true,
+    dynamic defaultValue,
+  }) {
+    var param = _toListParam(
+      name: name,
+      init: init,
+      isNamed: isNamed,
+    );
     _paramMap[name] = param;
     return param;
   }
@@ -273,10 +323,15 @@ class ObjectParam<T> extends Param<T> {
 
   @override
   code.Expression toCodeExpression({required Editors editors}) {
-    var filteredParams = Map.fromEntries(_paramMap.entries
-        .where((e) => e.value.init != null)
+    var filtered = _paramMap.entries.where((e) => e.value.init != null);
+
+    var positionalArguments = filtered
+        .where((e) => !e.value.isNamed)
+        .map((e) => e.value.toCodeExpression(editors: editors));
+    var namedArguments = Map.fromEntries(filtered
+        .where((e) => e.value.isNamed)
         .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
-    return builderRefer.call([], filteredParams);
+    return builderRefer.call(positionalArguments, namedArguments);
   }
 }
 
@@ -339,8 +394,32 @@ mixin Mate {
   late final String mateCreateName;
   late final String matePackageUrl;
 
-  Param<V> mateUse<V>(String name, V init, {dynamic defaultValue}) {
-    var param = _convertToParam(name: name, nullable: utils.isNullableOf<V>(init), init: init);
+  Param<V> mateUse<V>(
+    String name,
+    V init, {
+    required bool isNamed,
+    dynamic defaultValue,
+  }) {
+    var param = _toSingleParam(
+        name: name, nullable: utils.isNullableOf<V>(init), init: init, isNamed: isNamed);
+    _mateParams[name] = param;
+    return param;
+  }
+
+  /// 为简化list参数，不按原可空与否处理，而统一为：
+  /// - 进来的init为可空List<E>?
+  /// - 出去的返回值为非空List<E>
+  Param<List<E>> mateUseList<E>(
+    String name,
+    List<E>? init, {
+    required bool isNamed,
+    dynamic defaultValue,
+  }) {
+    var param = _toListParam(
+      name: name,
+      init: init,
+      isNamed: isNamed,
+    );
     _mateParams[name] = param;
     return param;
   }

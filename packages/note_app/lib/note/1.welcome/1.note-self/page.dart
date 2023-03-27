@@ -43,7 +43,11 @@ build(Pen pen, BuildContext context) {
       ),
     ),
   ));
-  pen.sampleMate(Center$Mate());
+  pen.sampleMate(Text$Mate("s", textAlign: TextAlign.center));
+  // pen.sampleMate(Wrap$Mate(children: [
+  //   ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+  // ]));
+  pen.sampleMate(ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")));
 
   pen.markdown(r'''
 ## xxx

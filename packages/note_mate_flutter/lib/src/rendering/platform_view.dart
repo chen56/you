@@ -37,10 +37,10 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate {
           gestureRecognizers: p.get('gestureRecognizers').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('viewController', viewController);
-    mateUse('hitTestBehavior', hitTestBehavior);
-    mateUse('gestureRecognizers', gestureRecognizers);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('viewController', viewController, isNamed: true);
+    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
+    mateUse('gestureRecognizers', gestureRecognizers, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -68,9 +68,9 @@ class RenderUiKitView$Mate extends RenderUiKitView with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateUse('viewController', viewController);
-    mateUse('hitTestBehavior', hitTestBehavior);
-    mateUse('gestureRecognizers', gestureRecognizers);
+    mateUse('viewController', viewController, isNamed: true);
+    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
+    mateUse('gestureRecognizers', gestureRecognizers, isNamed: true);
   }
 }
 
@@ -98,8 +98,8 @@ class PlatformViewRenderBox$Mate extends PlatformViewRenderBox with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateUse('controller', controller);
-    mateUse('hitTestBehavior', hitTestBehavior);
-    mateUse('gestureRecognizers', gestureRecognizers);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
+    mateUse('gestureRecognizers', gestureRecognizers, isNamed: true);
   }
 }

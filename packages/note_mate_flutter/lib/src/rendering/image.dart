@@ -104,22 +104,22 @@ class RenderImage$Mate extends RenderImage with Mate {
           isAntiAlias: p.get('isAntiAlias').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateUse('image', image);
-    mateUse('debugImageLabel', debugImageLabel);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('scale', scale);
-    mateUse('color', color);
-    mateUse('opacity', opacity);
-    mateUse('colorBlendMode', colorBlendMode);
-    mateUse('fit', fit);
-    mateUse('alignment', alignment);
-    mateUse('repeat', repeat);
-    mateUse('centerSlice', centerSlice);
-    mateUse('matchTextDirection', matchTextDirection);
-    mateUse('textDirection', textDirection);
-    mateUse('invertColors', invertColors);
-    mateUse('isAntiAlias', isAntiAlias);
-    mateUse('filterQuality', filterQuality);
+    mateUse('image', image, isNamed: true);
+    mateUse('debugImageLabel', debugImageLabel, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('colorBlendMode', colorBlendMode, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('repeat', repeat, isNamed: true);
+    mateUse('centerSlice', centerSlice, isNamed: true);
+    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('invertColors', invertColors, isNamed: true);
+    mateUse('isAntiAlias', isAntiAlias, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
   }
 }

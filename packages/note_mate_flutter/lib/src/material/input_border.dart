@@ -25,8 +25,8 @@ class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate {
           borderSide: p.get('borderSide').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    mateUse('borderSide', borderSide);
-    mateUse('borderRadius', borderRadius);
+    mateUse('borderSide', borderSide, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
   }
 }
 
@@ -54,8 +54,8 @@ class OutlineInputBorder$Mate extends OutlineInputBorder with Mate {
           borderRadius: p.get('borderRadius').build(),
           gapPadding: p.get('gapPadding').build(),
         );
-    mateUse('borderSide', borderSide);
-    mateUse('borderRadius', borderRadius);
-    mateUse('gapPadding', gapPadding);
+    mateUse('borderSide', borderSide, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('gapPadding', gapPadding, isNamed: true);
   }
 }

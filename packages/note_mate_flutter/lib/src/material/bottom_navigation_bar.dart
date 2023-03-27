@@ -135,28 +135,28 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with Mate {
           landscapeLayout: p.get('landscapeLayout').build(),
           useLegacyColorScheme: p.get('useLegacyColorScheme').build(),
         );
-    mateUse('key', key);
-    mateUse('items', items);
-    mateUse('onTap', onTap);
-    mateUse('currentIndex', currentIndex);
-    mateUse('elevation', elevation);
-    mateUse('type', type);
-    mateUse('fixedColor', fixedColor);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('iconSize', iconSize);
-    mateUse('selectedItemColor', selectedItemColor);
-    mateUse('unselectedItemColor', unselectedItemColor);
-    mateUse('selectedIconTheme', selectedIconTheme);
-    mateUse('unselectedIconTheme', unselectedIconTheme);
-    mateUse('selectedFontSize', selectedFontSize);
-    mateUse('unselectedFontSize', unselectedFontSize);
-    mateUse('selectedLabelStyle', selectedLabelStyle);
-    mateUse('unselectedLabelStyle', unselectedLabelStyle);
-    mateUse('showSelectedLabels', showSelectedLabels);
-    mateUse('showUnselectedLabels', showUnselectedLabels);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('landscapeLayout', landscapeLayout);
-    mateUse('useLegacyColorScheme', useLegacyColorScheme);
+    mateUse('key', key, isNamed: true);
+    mateUseList('items', items, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('currentIndex', currentIndex, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('type', type, isNamed: true);
+    mateUse('fixedColor', fixedColor, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('iconSize', iconSize, isNamed: true);
+    mateUse('selectedItemColor', selectedItemColor, isNamed: true);
+    mateUse('unselectedItemColor', unselectedItemColor, isNamed: true);
+    mateUse('selectedIconTheme', selectedIconTheme, isNamed: true);
+    mateUse('unselectedIconTheme', unselectedIconTheme, isNamed: true);
+    mateUse('selectedFontSize', selectedFontSize, isNamed: true);
+    mateUse('unselectedFontSize', unselectedFontSize, isNamed: true);
+    mateUse('selectedLabelStyle', selectedLabelStyle, isNamed: true);
+    mateUse('unselectedLabelStyle', unselectedLabelStyle, isNamed: true);
+    mateUse('showSelectedLabels', showSelectedLabels, isNamed: true);
+    mateUse('showUnselectedLabels', showUnselectedLabels, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('landscapeLayout', landscapeLayout, isNamed: true);
+    mateUse('useLegacyColorScheme', useLegacyColorScheme, isNamed: true);
   }
 }

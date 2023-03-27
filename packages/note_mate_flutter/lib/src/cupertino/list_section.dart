@@ -79,18 +79,18 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
           topMargin: p.get('topMargin').build(),
           hasLeading: p.get('hasLeading').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('header', header);
-    mateUse('footer', footer);
-    mateUse('margin', margin);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('decoration', decoration);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('dividerMargin', dividerMargin);
-    mateUse('additionalDividerMargin', additionalDividerMargin);
-    mateUse('topMargin', topMargin);
-    mateUse('hasLeading', hasLeading);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUse('footer', footer, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('dividerMargin', dividerMargin, isNamed: true);
+    mateUse('additionalDividerMargin', additionalDividerMargin, isNamed: true);
+    mateUse('topMargin', topMargin, isNamed: true);
+    mateUse('hasLeading', hasLeading, isNamed: true);
   }
 
   /// CupertinoListSection CupertinoListSection.insetGrouped({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry? margin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.hardEdge, double dividerMargin = _kInsetDividerMargin, double? additionalDividerMargin, double? topMargin, bool hasLeading = true})
@@ -160,17 +160,17 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
           topMargin: p.get('topMargin').build(),
           hasLeading: p.get('hasLeading').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('header', header);
-    mateUse('footer', footer);
-    mateUse('margin', margin);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('decoration', decoration);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('dividerMargin', dividerMargin);
-    mateUse('additionalDividerMargin', additionalDividerMargin);
-    mateUse('topMargin', topMargin);
-    mateUse('hasLeading', hasLeading);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUse('footer', footer, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('dividerMargin', dividerMargin, isNamed: true);
+    mateUse('additionalDividerMargin', additionalDividerMargin, isNamed: true);
+    mateUse('topMargin', topMargin, isNamed: true);
+    mateUse('hasLeading', hasLeading, isNamed: true);
   }
 }

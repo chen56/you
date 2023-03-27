@@ -84,19 +84,19 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
           triggerMode: p.get('triggerMode').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('height', height);
-    mateUse('padding', padding);
-    mateUse('margin', margin);
-    mateUse('verticalOffset', verticalOffset);
-    mateUse('preferBelow', preferBelow);
-    mateUse('excludeFromSemantics', excludeFromSemantics);
-    mateUse('decoration', decoration);
-    mateUse('textStyle', textStyle);
-    mateUse('textAlign', textAlign);
-    mateUse('waitDuration', waitDuration);
-    mateUse('showDuration', showDuration);
-    mateUse('triggerMode', triggerMode);
-    mateUse('enableFeedback', enableFeedback);
+    mateUse('height', height, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('verticalOffset', verticalOffset, isNamed: true);
+    mateUse('preferBelow', preferBelow, isNamed: true);
+    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('textAlign', textAlign, isNamed: true);
+    mateUse('waitDuration', waitDuration, isNamed: true);
+    mateUse('showDuration', showDuration, isNamed: true);
+    mateUse('triggerMode', triggerMode, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
   }
 }
 
@@ -124,8 +124,8 @@ class TooltipTheme$Mate extends TooltipTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -18,7 +18,7 @@ class DeleteCharacterIntent$Mate extends DeleteCharacterIntent with Mate {
     mateCreateName = 'DeleteCharacterIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -33,7 +33,7 @@ class DeleteToNextWordBoundaryIntent$Mate extends DeleteToNextWordBoundaryIntent
     mateCreateName = 'DeleteToNextWordBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -48,7 +48,7 @@ class DeleteToLineBreakIntent$Mate extends DeleteToLineBreakIntent with Mate {
     mateCreateName = 'DeleteToLineBreakIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -71,8 +71,8 @@ class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIn
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse('forward', forward);
-    mateUse('collapseSelection', collapseSelection);
+    mateUse('forward', forward, isNamed: true);
+    mateUse('collapseSelection', collapseSelection, isNamed: true);
   }
 }
 
@@ -95,8 +95,8 @@ class ExtendSelectionToNextWordBoundaryIntent$Mate extends ExtendSelectionToNext
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse('forward', forward);
-    mateUse('collapseSelection', collapseSelection);
+    mateUse('forward', forward, isNamed: true);
+    mateUse('collapseSelection', collapseSelection, isNamed: true);
   }
 }
 
@@ -112,7 +112,7 @@ class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate
     mateCreateName = 'ExtendSelectionToNextWordBoundaryOrCaretLocationIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -127,7 +127,7 @@ class ExpandSelectionToDocumentBoundaryIntent$Mate extends ExpandSelectionToDocu
     mateCreateName = 'ExpandSelectionToDocumentBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -142,7 +142,7 @@ class ExpandSelectionToLineBreakIntent$Mate extends ExpandSelectionToLineBreakIn
     mateCreateName = 'ExpandSelectionToLineBreakIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -175,10 +175,10 @@ class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIn
           collapseAtReversal: p.get('collapseAtReversal').build(),
           continuesAtWrap: p.get('continuesAtWrap').build(),
         );
-    mateUse('forward', forward);
-    mateUse('collapseSelection', collapseSelection);
-    mateUse('collapseAtReversal', collapseAtReversal);
-    mateUse('continuesAtWrap', continuesAtWrap);
+    mateUse('forward', forward, isNamed: true);
+    mateUse('collapseSelection', collapseSelection, isNamed: true);
+    mateUse('collapseAtReversal', collapseAtReversal, isNamed: true);
+    mateUse('continuesAtWrap', continuesAtWrap, isNamed: true);
   }
 }
 
@@ -202,8 +202,8 @@ class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelection
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse('forward', forward);
-    mateUse('collapseSelection', collapseSelection);
+    mateUse('forward', forward, isNamed: true);
+    mateUse('collapseSelection', collapseSelection, isNamed: true);
   }
 }
 
@@ -227,8 +227,8 @@ class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelection
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse('forward', forward);
-    mateUse('collapseSelection', collapseSelection);
+    mateUse('forward', forward, isNamed: true);
+    mateUse('collapseSelection', collapseSelection, isNamed: true);
   }
 }
 
@@ -251,8 +251,8 @@ class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionT
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse('forward', forward);
-    mateUse('collapseSelection', collapseSelection);
+    mateUse('forward', forward, isNamed: true);
+    mateUse('collapseSelection', collapseSelection, isNamed: true);
   }
 }
 
@@ -269,7 +269,7 @@ class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder =
         (p) => ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -292,8 +292,8 @@ class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocu
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse('forward', forward);
-    mateUse('collapseSelection', collapseSelection);
+    mateUse('forward', forward, isNamed: true);
+    mateUse('collapseSelection', collapseSelection, isNamed: true);
   }
 }
 
@@ -308,7 +308,7 @@ class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent
     mateCreateName = 'ScrollToDocumentBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -323,7 +323,7 @@ class ExtendSelectionByPageIntent$Mate extends ExtendSelectionByPageIntent with 
     mateCreateName = 'ExtendSelectionByPageIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionByPageIntent$Mate(forward: p.get('forward').build());
-    mateUse('forward', forward);
+    mateUse('forward', forward, isNamed: true);
   }
 }
 
@@ -338,7 +338,7 @@ class SelectAllTextIntent$Mate extends SelectAllTextIntent with Mate {
     mateCreateName = 'SelectAllTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectAllTextIntent$Mate(p.get('cause').value);
-    mateUse('cause', cause);
+    mateUse('cause', cause, isNamed: false);
   }
 }
 
@@ -353,7 +353,7 @@ class CopySelectionTextIntent$Mate extends CopySelectionTextIntent with Mate {
     mateCreateName = 'CopySelectionTextIntent.cut';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CopySelectionTextIntent$Mate.cut(p.get('cause').value);
-    mateUse('cause', cause);
+    mateUse('cause', cause, isNamed: false);
   }
 }
 
@@ -368,7 +368,7 @@ class PasteTextIntent$Mate extends PasteTextIntent with Mate {
     mateCreateName = 'PasteTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PasteTextIntent$Mate(p.get('cause').value);
-    mateUse('cause', cause);
+    mateUse('cause', cause, isNamed: false);
   }
 }
 
@@ -383,7 +383,7 @@ class RedoTextIntent$Mate extends RedoTextIntent with Mate {
     mateCreateName = 'RedoTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RedoTextIntent$Mate(p.get('cause').value);
-    mateUse('cause', cause);
+    mateUse('cause', cause, isNamed: false);
   }
 }
 
@@ -416,10 +416,10 @@ class ReplaceTextIntent$Mate extends ReplaceTextIntent with Mate {
           p.get('replacementRange').value,
           p.get('cause').value,
         );
-    mateUse('currentTextEditingValue', currentTextEditingValue);
-    mateUse('replacementText', replacementText);
-    mateUse('replacementRange', replacementRange);
-    mateUse('cause', cause);
+    mateUse('currentTextEditingValue', currentTextEditingValue, isNamed: false);
+    mateUse('replacementText', replacementText, isNamed: false);
+    mateUse('replacementRange', replacementRange, isNamed: false);
+    mateUse('cause', cause, isNamed: false);
   }
 }
 
@@ -434,7 +434,7 @@ class UndoTextIntent$Mate extends UndoTextIntent with Mate {
     mateCreateName = 'UndoTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UndoTextIntent$Mate(p.get('cause').value);
-    mateUse('cause', cause);
+    mateUse('cause', cause, isNamed: false);
   }
 }
 
@@ -462,8 +462,8 @@ class UpdateSelectionIntent$Mate extends UpdateSelectionIntent with Mate {
           p.get('newSelection').value,
           p.get('cause').value,
         );
-    mateUse('currentTextEditingValue', currentTextEditingValue);
-    mateUse('newSelection', newSelection);
-    mateUse('cause', cause);
+    mateUse('currentTextEditingValue', currentTextEditingValue, isNamed: false);
+    mateUse('newSelection', newSelection, isNamed: false);
+    mateUse('cause', cause, isNamed: false);
   }
 }

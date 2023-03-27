@@ -47,11 +47,11 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Ma
           onPressed: p.get('onPressed').build(),
           trailingIcon: p.get('trailingIcon').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('isDefaultAction', isDefaultAction);
-    mateUse('isDestructiveAction', isDestructiveAction);
-    mateUse('onPressed', onPressed);
-    mateUse('trailingIcon', trailingIcon);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('isDefaultAction', isDefaultAction, isNamed: true);
+    mateUse('isDestructiveAction', isDestructiveAction, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('trailingIcon', trailingIcon, isNamed: true);
   }
 }

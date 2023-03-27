@@ -115,25 +115,25 @@ class Slider$Mate extends Slider with Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('secondaryTrackValue', secondaryTrackValue);
-    mateUse('onChanged', onChanged);
-    mateUse('onChangeStart', onChangeStart);
-    mateUse('onChangeEnd', onChangeEnd);
-    mateUse('min', min);
-    mateUse('max', max);
-    mateUse('divisions', divisions);
-    mateUse('label', label);
-    mateUse('activeColor', activeColor);
-    mateUse('inactiveColor', inactiveColor);
-    mateUse('secondaryActiveColor', secondaryActiveColor);
-    mateUse('thumbColor', thumbColor);
-    mateUse('overlayColor', overlayColor);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('semanticFormatterCallback', semanticFormatterCallback);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('secondaryTrackValue', secondaryTrackValue, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('onChangeStart', onChangeStart, isNamed: true);
+    mateUse('onChangeEnd', onChangeEnd, isNamed: true);
+    mateUse('min', min, isNamed: true);
+    mateUse('max', max, isNamed: true);
+    mateUse('divisions', divisions, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('activeColor', activeColor, isNamed: true);
+    mateUse('inactiveColor', inactiveColor, isNamed: true);
+    mateUse('secondaryActiveColor', secondaryActiveColor, isNamed: true);
+    mateUse('thumbColor', thumbColor, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('semanticFormatterCallback', semanticFormatterCallback, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
   }
 
   /// Slider Slider.adaptive({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, MouseCursor? mouseCursor, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
@@ -238,24 +238,24 @@ class Slider$Mate extends Slider with Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('secondaryTrackValue', secondaryTrackValue);
-    mateUse('onChanged', onChanged);
-    mateUse('onChangeStart', onChangeStart);
-    mateUse('onChangeEnd', onChangeEnd);
-    mateUse('min', min);
-    mateUse('max', max);
-    mateUse('divisions', divisions);
-    mateUse('label', label);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('activeColor', activeColor);
-    mateUse('inactiveColor', inactiveColor);
-    mateUse('secondaryActiveColor', secondaryActiveColor);
-    mateUse('thumbColor', thumbColor);
-    mateUse('overlayColor', overlayColor);
-    mateUse('semanticFormatterCallback', semanticFormatterCallback);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('secondaryTrackValue', secondaryTrackValue, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('onChangeStart', onChangeStart, isNamed: true);
+    mateUse('onChangeEnd', onChangeEnd, isNamed: true);
+    mateUse('min', min, isNamed: true);
+    mateUse('max', max, isNamed: true);
+    mateUse('divisions', divisions, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('activeColor', activeColor, isNamed: true);
+    mateUse('inactiveColor', inactiveColor, isNamed: true);
+    mateUse('secondaryActiveColor', secondaryActiveColor, isNamed: true);
+    mateUse('thumbColor', thumbColor, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('semanticFormatterCallback', semanticFormatterCallback, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
   }
 }

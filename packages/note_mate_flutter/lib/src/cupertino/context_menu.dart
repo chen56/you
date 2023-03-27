@@ -35,10 +35,10 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate {
           child: p.get('child').build(),
           enableHapticFeedback: p.get('enableHapticFeedback').build(),
         );
-    mateUse('key', key);
-    mateUse('actions', actions);
-    mateUse('child', child);
-    mateUse('enableHapticFeedback', enableHapticFeedback);
+    mateUse('key', key, isNamed: true);
+    mateUseList('actions', actions, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('enableHapticFeedback', enableHapticFeedback, isNamed: true);
   }
 
   /// CupertinoContextMenu CupertinoContextMenu.builder({Key? key, required List<Widget> actions, required Widget Function(BuildContext, Animation<double>) builder, bool enableHapticFeedback = false})
@@ -68,9 +68,9 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate {
           builder: p.get('builder').build(),
           enableHapticFeedback: p.get('enableHapticFeedback').build(),
         );
-    mateUse('key', key);
-    mateUse('actions', actions);
-    mateUse('builder', builder);
-    mateUse('enableHapticFeedback', enableHapticFeedback);
+    mateUse('key', key, isNamed: true);
+    mateUseList('actions', actions, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('enableHapticFeedback', enableHapticFeedback, isNamed: true);
   }
 }

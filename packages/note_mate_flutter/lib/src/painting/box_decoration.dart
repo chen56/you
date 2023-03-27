@@ -60,13 +60,13 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
           backgroundBlendMode: p.get('backgroundBlendMode').build(),
           shape: p.get('shape').build(),
         );
-    mateUse('color', color);
-    mateUse('image', image);
-    mateUse('border', border);
-    mateUse('borderRadius', borderRadius);
-    mateUse('boxShadow', boxShadow);
-    mateUse('gradient', gradient);
-    mateUse('backgroundBlendMode', backgroundBlendMode);
-    mateUse('shape', shape);
+    mateUse('color', color, isNamed: true);
+    mateUse('image', image, isNamed: true);
+    mateUse('border', border, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUseList('boxShadow', boxShadow, isNamed: true);
+    mateUse('gradient', gradient, isNamed: true);
+    mateUse('backgroundBlendMode', backgroundBlendMode, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
   }
 }

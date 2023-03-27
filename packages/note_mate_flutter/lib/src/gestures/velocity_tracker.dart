@@ -16,7 +16,7 @@ class Velocity$Mate extends Velocity with Mate {
     mateCreateName = 'Velocity';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build());
-    mateUse('pixelsPerSecond', pixelsPerSecond);
+    mateUse('pixelsPerSecond', pixelsPerSecond, isNamed: true);
   }
 }
 
@@ -49,10 +49,10 @@ class VelocityEstimate$Mate extends VelocityEstimate with Mate {
           duration: p.get('duration').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('pixelsPerSecond', pixelsPerSecond);
-    mateUse('confidence', confidence);
-    mateUse('duration', duration);
-    mateUse('offset', offset);
+    mateUse('pixelsPerSecond', pixelsPerSecond, isNamed: true);
+    mateUse('confidence', confidence, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
   }
 }
 
@@ -67,7 +67,7 @@ class VelocityTracker$Mate extends VelocityTracker with Mate {
     mateCreateName = 'VelocityTracker.withKind';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VelocityTracker$Mate.withKind(p.get('kind').value);
-    mateUse('kind', kind);
+    mateUse('kind', kind, isNamed: false);
   }
 }
 
@@ -82,7 +82,7 @@ class IOSScrollViewFlingVelocityTracker$Mate extends IOSScrollViewFlingVelocityT
     mateCreateName = 'IOSScrollViewFlingVelocityTracker';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    mateUse('kind', kind);
+    mateUse('kind', kind, isNamed: false);
   }
 }
 
@@ -97,6 +97,6 @@ class MacOSScrollViewFlingVelocityTracker$Mate extends MacOSScrollViewFlingVeloc
     mateCreateName = 'MacOSScrollViewFlingVelocityTracker';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    mateUse('kind', kind);
+    mateUse('kind', kind, isNamed: false);
   }
 }

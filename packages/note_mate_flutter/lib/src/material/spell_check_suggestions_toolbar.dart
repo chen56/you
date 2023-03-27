@@ -31,8 +31,8 @@ class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar wit
           anchor: p.get('anchor').build(),
           buttonItems: p.get('buttonItems').build(),
         );
-    mateUse('key', key);
-    mateUse('anchor', anchor);
-    mateUse('buttonItems', buttonItems);
+    mateUse('key', key, isNamed: true);
+    mateUse('anchor', anchor, isNamed: true);
+    mateUseList('buttonItems', buttonItems, isNamed: true);
   }
 }

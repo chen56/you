@@ -31,9 +31,9 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: p.get('onPressed').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onPressed', onPressed);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
@@ -63,9 +63,9 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: p.get('onPressed').build(),
           text: p.get('text').build(),
         );
-    mateUse('key', key);
-    mateUse('context', context);
-    mateUse('onPressed', onPressed);
-    mateUse('text', text);
+    mateUse('key', key, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('text', text, isNamed: true);
   }
 }

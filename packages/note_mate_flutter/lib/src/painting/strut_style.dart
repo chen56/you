@@ -70,17 +70,17 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           debugLabel: p.get('debugLabel').build(),
           package: p.get('package').build(),
         );
-    mateUse('fontFamily', fontFamily);
-    mateUse('fontFamilyFallback', fontFamilyFallback);
-    mateUse('fontSize', fontSize);
-    mateUse('height', height);
-    mateUse('leadingDistribution', leadingDistribution);
-    mateUse('leading', leading);
-    mateUse('fontWeight', fontWeight);
-    mateUse('fontStyle', fontStyle);
-    mateUse('forceStrutHeight', forceStrutHeight);
-    mateUse('debugLabel', debugLabel);
-    mateUse('package', package);
+    mateUse('fontFamily', fontFamily, isNamed: true);
+    mateUseList('fontFamilyFallback', fontFamilyFallback, isNamed: true);
+    mateUse('fontSize', fontSize, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('leadingDistribution', leadingDistribution, isNamed: true);
+    mateUse('leading', leading, isNamed: true);
+    mateUse('fontWeight', fontWeight, isNamed: true);
+    mateUse('fontStyle', fontStyle, isNamed: true);
+    mateUse('forceStrutHeight', forceStrutHeight, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse('package', package, isNamed: true);
   }
 
   /// StrutStyle StrutStyle.fromTextStyle(TextStyle textStyle, {String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
@@ -149,17 +149,17 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           debugLabel: p.get('debugLabel').build(),
           package: p.get('package').build(),
         );
-    mateUse('textStyle', textStyle);
-    mateUse('fontFamily', fontFamily);
-    mateUse('fontFamilyFallback', fontFamilyFallback);
-    mateUse('fontSize', fontSize);
-    mateUse('height', height);
-    mateUse('leadingDistribution', leadingDistribution);
-    mateUse('leading', leading);
-    mateUse('fontWeight', fontWeight);
-    mateUse('fontStyle', fontStyle);
-    mateUse('forceStrutHeight', forceStrutHeight);
-    mateUse('debugLabel', debugLabel);
-    mateUse('package', package);
+    mateUse('textStyle', textStyle, isNamed: false);
+    mateUse('fontFamily', fontFamily, isNamed: true);
+    mateUseList('fontFamilyFallback', fontFamilyFallback, isNamed: true);
+    mateUse('fontSize', fontSize, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('leadingDistribution', leadingDistribution, isNamed: true);
+    mateUse('leading', leading, isNamed: true);
+    mateUse('fontWeight', fontWeight, isNamed: true);
+    mateUse('fontStyle', fontStyle, isNamed: true);
+    mateUse('forceStrutHeight', forceStrutHeight, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse('package', package, isNamed: true);
   }
 }

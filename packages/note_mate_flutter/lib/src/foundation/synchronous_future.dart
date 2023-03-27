@@ -14,6 +14,6 @@ class SynchronousFuture$Mate<T> extends SynchronousFuture<T> with Mate {
     mateCreateName = 'SynchronousFuture';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => SynchronousFuture$Mate<T>(p.get('_value').value);
-    mateUse('_value', _value);
+    mateUse('_value', _value, isNamed: false);
   }
 }

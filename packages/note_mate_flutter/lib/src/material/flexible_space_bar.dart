@@ -57,14 +57,14 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
           stretchModes: p.get('stretchModes').build(),
           expandedTitleScale: p.get('expandedTitleScale').build(),
         );
-    mateUse('key', key);
-    mateUse('title', title);
-    mateUse('background', background);
-    mateUse('centerTitle', centerTitle);
-    mateUse('titlePadding', titlePadding);
-    mateUse('collapseMode', collapseMode);
-    mateUse('stretchModes', stretchModes);
-    mateUse('expandedTitleScale', expandedTitleScale);
+    mateUse('key', key, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('background', background, isNamed: true);
+    mateUse('centerTitle', centerTitle, isNamed: true);
+    mateUse('titlePadding', titlePadding, isNamed: true);
+    mateUse('collapseMode', collapseMode, isNamed: true);
+    mateUseList('stretchModes', stretchModes, isNamed: true);
+    mateUse('expandedTitleScale', expandedTitleScale, isNamed: true);
   }
 }
 
@@ -112,12 +112,12 @@ class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Mate {
           child: p.get('child').build(),
           isScrolledUnder: p.get('isScrolledUnder').build(),
         );
-    mateUse('key', key);
-    mateUse('toolbarOpacity', toolbarOpacity);
-    mateUse('minExtent', minExtent);
-    mateUse('maxExtent', maxExtent);
-    mateUse('currentExtent', currentExtent);
-    mateUse('child', child);
-    mateUse('isScrolledUnder', isScrolledUnder);
+    mateUse('key', key, isNamed: true);
+    mateUse('toolbarOpacity', toolbarOpacity, isNamed: true);
+    mateUse('minExtent', minExtent, isNamed: true);
+    mateUse('maxExtent', maxExtent, isNamed: true);
+    mateUse('currentExtent', currentExtent, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('isScrolledUnder', isScrolledUnder, isNamed: true);
   }
 }

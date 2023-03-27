@@ -43,11 +43,11 @@ class IconDataProperty$Mate extends IconDataProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('ifNull', ifNull);
-    mateUse('showName', showName);
-    mateUse('style', style);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }

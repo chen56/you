@@ -30,9 +30,9 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('opacity', opacity);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateUse('sliver', sliver);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -60,9 +60,9 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse('sliver', sliver);
-    mateUse('ignoring', ignoring);
-    mateUse('ignoringSemantics', ignoringSemantics);
+    mateUse('sliver', sliver, isNamed: true);
+    mateUse('ignoring', ignoring, isNamed: true);
+    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
   }
 }
 
@@ -85,8 +85,8 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
           offstage: p.get('offstage').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('offstage', offstage);
-    mateUse('sliver', sliver);
+    mateUse('offstage', offstage, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -114,8 +114,8 @@ class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with 
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('opacity', opacity);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateUse('sliver', sliver);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }

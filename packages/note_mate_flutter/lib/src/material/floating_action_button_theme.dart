@@ -125,26 +125,26 @@ class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData w
           extendedTextStyle: p.get('extendedTextStyle').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse('foregroundColor', foregroundColor);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('splashColor', splashColor);
-    mateUse('elevation', elevation);
-    mateUse('focusElevation', focusElevation);
-    mateUse('hoverElevation', hoverElevation);
-    mateUse('disabledElevation', disabledElevation);
-    mateUse('highlightElevation', highlightElevation);
-    mateUse('shape', shape);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('iconSize', iconSize);
-    mateUse('sizeConstraints', sizeConstraints);
-    mateUse('smallSizeConstraints', smallSizeConstraints);
-    mateUse('largeSizeConstraints', largeSizeConstraints);
-    mateUse('extendedSizeConstraints', extendedSizeConstraints);
-    mateUse('extendedIconLabelSpacing', extendedIconLabelSpacing);
-    mateUse('extendedPadding', extendedPadding);
-    mateUse('extendedTextStyle', extendedTextStyle);
-    mateUse('mouseCursor', mouseCursor);
+    mateUse('foregroundColor', foregroundColor, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('focusElevation', focusElevation, isNamed: true);
+    mateUse('hoverElevation', hoverElevation, isNamed: true);
+    mateUse('disabledElevation', disabledElevation, isNamed: true);
+    mateUse('highlightElevation', highlightElevation, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('iconSize', iconSize, isNamed: true);
+    mateUse('sizeConstraints', sizeConstraints, isNamed: true);
+    mateUse('smallSizeConstraints', smallSizeConstraints, isNamed: true);
+    mateUse('largeSizeConstraints', largeSizeConstraints, isNamed: true);
+    mateUse('extendedSizeConstraints', extendedSizeConstraints, isNamed: true);
+    mateUse('extendedIconLabelSpacing', extendedIconLabelSpacing, isNamed: true);
+    mateUse('extendedPadding', extendedPadding, isNamed: true);
+    mateUse('extendedTextStyle', extendedTextStyle, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
   }
 }

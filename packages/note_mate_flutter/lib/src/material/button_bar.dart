@@ -79,17 +79,17 @@ class ButtonBar$Mate extends ButtonBar with Mate {
           overflowButtonSpacing: p.get('overflowButtonSpacing').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('mainAxisSize', mainAxisSize);
-    mateUse('buttonTextTheme', buttonTextTheme);
-    mateUse('buttonMinWidth', buttonMinWidth);
-    mateUse('buttonHeight', buttonHeight);
-    mateUse('buttonPadding', buttonPadding);
-    mateUse('buttonAlignedDropdown', buttonAlignedDropdown);
-    mateUse('layoutBehavior', layoutBehavior);
-    mateUse('overflowDirection', overflowDirection);
-    mateUse('overflowButtonSpacing', overflowButtonSpacing);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
+    mateUse('buttonTextTheme', buttonTextTheme, isNamed: true);
+    mateUse('buttonMinWidth', buttonMinWidth, isNamed: true);
+    mateUse('buttonHeight', buttonHeight, isNamed: true);
+    mateUse('buttonPadding', buttonPadding, isNamed: true);
+    mateUse('buttonAlignedDropdown', buttonAlignedDropdown, isNamed: true);
+    mateUse('layoutBehavior', layoutBehavior, isNamed: true);
+    mateUse('overflowDirection', overflowDirection, isNamed: true);
+    mateUse('overflowButtonSpacing', overflowButtonSpacing, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }

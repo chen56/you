@@ -132,27 +132,27 @@ class ActionChip$Mate extends ActionChip with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateUse('key', key);
-    mateUse('avatar', avatar);
-    mateUse('label', label);
-    mateUse('labelStyle', labelStyle);
-    mateUse('labelPadding', labelPadding);
-    mateUse('onPressed', onPressed);
-    mateUse('pressElevation', pressElevation);
-    mateUse('tooltip', tooltip);
-    mateUse('side', side);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('disabledColor', disabledColor);
-    mateUse('padding', padding);
-    mateUse('visualDensity', visualDensity);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('iconTheme', iconTheme);
+    mateUse('key', key, isNamed: true);
+    mateUse('avatar', avatar, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('labelStyle', labelStyle, isNamed: true);
+    mateUse('labelPadding', labelPadding, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('pressElevation', pressElevation, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('side', side, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('visualDensity', visualDensity, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('iconTheme', iconTheme, isNamed: true);
   }
 }

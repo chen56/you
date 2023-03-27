@@ -64,15 +64,15 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with Mate {
           initialCalendarMode: p.get('initialCalendarMode').build(),
           selectableDayPredicate: p.get('selectableDayPredicate').build(),
         );
-    mateUse('key', key);
-    mateUse('initialDate', initialDate);
-    mateUse('firstDate', firstDate);
-    mateUse('lastDate', lastDate);
-    mateUse('currentDate', currentDate);
-    mateUse('onDateChanged', onDateChanged);
-    mateUse('onDisplayedMonthChanged', onDisplayedMonthChanged);
-    mateUse('initialCalendarMode', initialCalendarMode);
-    mateUse('selectableDayPredicate', selectableDayPredicate);
+    mateUse('key', key, isNamed: true);
+    mateUse('initialDate', initialDate, isNamed: true);
+    mateUse('firstDate', firstDate, isNamed: true);
+    mateUse('lastDate', lastDate, isNamed: true);
+    mateUse('currentDate', currentDate, isNamed: true);
+    mateUse('onDateChanged', onDateChanged, isNamed: true);
+    mateUse('onDisplayedMonthChanged', onDisplayedMonthChanged, isNamed: true);
+    mateUse('initialCalendarMode', initialCalendarMode, isNamed: true);
+    mateUse('selectableDayPredicate', selectableDayPredicate, isNamed: true);
   }
 }
 
@@ -125,13 +125,13 @@ class YearPicker$Mate extends YearPicker with Mate {
           onChanged: p.get('onChanged').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('currentDate', currentDate);
-    mateUse('firstDate', firstDate);
-    mateUse('lastDate', lastDate);
-    mateUse('initialDate', initialDate);
-    mateUse('selectedDate', selectedDate);
-    mateUse('onChanged', onChanged);
-    mateUse('dragStartBehavior', dragStartBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('currentDate', currentDate, isNamed: true);
+    mateUse('firstDate', firstDate, isNamed: true);
+    mateUse('lastDate', lastDate, isNamed: true);
+    mateUse('initialDate', initialDate, isNamed: true);
+    mateUse('selectedDate', selectedDate, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
   }
 }

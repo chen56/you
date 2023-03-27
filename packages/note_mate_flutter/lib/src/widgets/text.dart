@@ -66,15 +66,15 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('style', style);
-    mateUse('textAlign', textAlign);
-    mateUse('softWrap', softWrap);
-    mateUse('overflow', overflow);
-    mateUse('maxLines', maxLines);
-    mateUse('textWidthBasis', textWidthBasis);
-    mateUse('textHeightBehavior', textHeightBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('textAlign', textAlign, isNamed: true);
+    mateUse('softWrap', softWrap, isNamed: true);
+    mateUse('overflow', overflow, isNamed: true);
+    mateUse('maxLines', maxLines, isNamed: true);
+    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
+    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// DefaultTextStyle DefaultTextStyle.fallback({Key? key})
@@ -86,7 +86,7 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
     mateCreateName = 'DefaultTextStyle.fallback';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
-    mateUse('key', key);
+    mateUse('key', key, isNamed: true);
   }
 }
 
@@ -114,9 +114,9 @@ class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('textHeightBehavior', textHeightBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -203,21 +203,21 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateUse('data', data);
-    mateUse('key', key);
-    mateUse('style', style);
-    mateUse('strutStyle', strutStyle);
-    mateUse('textAlign', textAlign);
-    mateUse('textDirection', textDirection);
-    mateUse('locale', locale);
-    mateUse('softWrap', softWrap);
-    mateUse('overflow', overflow);
-    mateUse('textScaleFactor', textScaleFactor);
-    mateUse('maxLines', maxLines);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('textWidthBasis', textWidthBasis);
-    mateUse('textHeightBehavior', textHeightBehavior);
-    mateUse('selectionColor', selectionColor);
+    mateUse('data', data, isNamed: false);
+    mateUse('key', key, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('strutStyle', strutStyle, isNamed: true);
+    mateUse('textAlign', textAlign, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUse('softWrap', softWrap, isNamed: true);
+    mateUse('overflow', overflow, isNamed: true);
+    mateUse('textScaleFactor', textScaleFactor, isNamed: true);
+    mateUse('maxLines', maxLines, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
+    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
+    mateUse('selectionColor', selectionColor, isNamed: true);
   }
 
   /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
@@ -301,20 +301,20 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateUse('textSpan', textSpan);
-    mateUse('key', key);
-    mateUse('style', style);
-    mateUse('strutStyle', strutStyle);
-    mateUse('textAlign', textAlign);
-    mateUse('textDirection', textDirection);
-    mateUse('locale', locale);
-    mateUse('softWrap', softWrap);
-    mateUse('overflow', overflow);
-    mateUse('textScaleFactor', textScaleFactor);
-    mateUse('maxLines', maxLines);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('textWidthBasis', textWidthBasis);
-    mateUse('textHeightBehavior', textHeightBehavior);
-    mateUse('selectionColor', selectionColor);
+    mateUse('textSpan', textSpan, isNamed: false);
+    mateUse('key', key, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('strutStyle', strutStyle, isNamed: true);
+    mateUse('textAlign', textAlign, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUse('softWrap', softWrap, isNamed: true);
+    mateUse('overflow', overflow, isNamed: true);
+    mateUse('textScaleFactor', textScaleFactor, isNamed: true);
+    mateUse('maxLines', maxLines, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
+    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
+    mateUse('selectionColor', selectionColor, isNamed: true);
   }
 }

@@ -153,31 +153,31 @@ class ChoiceChip$Mate extends ChoiceChip with Mate {
           selectedShadowColor: p.get('selectedShadowColor').build(),
           avatarBorder: p.get('avatarBorder').build(),
         );
-    mateUse('key', key);
-    mateUse('avatar', avatar);
-    mateUse('label', label);
-    mateUse('labelStyle', labelStyle);
-    mateUse('labelPadding', labelPadding);
-    mateUse('onSelected', onSelected);
-    mateUse('pressElevation', pressElevation);
-    mateUse('selected', selected);
-    mateUse('selectedColor', selectedColor);
-    mateUse('disabledColor', disabledColor);
-    mateUse('tooltip', tooltip);
-    mateUse('side', side);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('padding', padding);
-    mateUse('visualDensity', visualDensity);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('iconTheme', iconTheme);
-    mateUse('selectedShadowColor', selectedShadowColor);
-    mateUse('avatarBorder', avatarBorder);
+    mateUse('key', key, isNamed: true);
+    mateUse('avatar', avatar, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('labelStyle', labelStyle, isNamed: true);
+    mateUse('labelPadding', labelPadding, isNamed: true);
+    mateUse('onSelected', onSelected, isNamed: true);
+    mateUse('pressElevation', pressElevation, isNamed: true);
+    mateUse('selected', selected, isNamed: true);
+    mateUse('selectedColor', selectedColor, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('side', side, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('visualDensity', visualDensity, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('iconTheme', iconTheme, isNamed: true);
+    mateUse('selectedShadowColor', selectedShadowColor, isNamed: true);
+    mateUse('avatarBorder', avatarBorder, isNamed: true);
   }
 }

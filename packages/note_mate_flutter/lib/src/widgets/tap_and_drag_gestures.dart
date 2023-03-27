@@ -44,11 +44,11 @@ class TapDragDownDetails$Mate extends TapDragDownDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('globalPosition', globalPosition);
-    mateUse('localPosition', localPosition);
-    mateUse('kind', kind);
-    mateUse('consecutiveTapCount', consecutiveTapCount);
-    mateUse('keysPressedOnDown', keysPressedOnDown);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('kind', kind, isNamed: true);
+    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
+    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
   }
 }
 
@@ -86,11 +86,11 @@ class TapDragUpDetails$Mate extends TapDragUpDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('kind', kind);
-    mateUse('globalPosition', globalPosition);
-    mateUse('localPosition', localPosition);
-    mateUse('consecutiveTapCount', consecutiveTapCount);
-    mateUse('keysPressedOnDown', keysPressedOnDown);
+    mateUse('kind', kind, isNamed: true);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
+    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
   }
 }
 
@@ -133,12 +133,12 @@ class TapDragStartDetails$Mate extends TapDragStartDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('sourceTimeStamp', sourceTimeStamp);
-    mateUse('globalPosition', globalPosition);
-    mateUse('localPosition', localPosition);
-    mateUse('kind', kind);
-    mateUse('consecutiveTapCount', consecutiveTapCount);
-    mateUse('keysPressedOnDown', keysPressedOnDown);
+    mateUse('sourceTimeStamp', sourceTimeStamp, isNamed: true);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('kind', kind, isNamed: true);
+    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
+    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
   }
 }
 
@@ -201,16 +201,16 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('sourceTimeStamp', sourceTimeStamp);
-    mateUse('delta', delta);
-    mateUse('primaryDelta', primaryDelta);
-    mateUse('globalPosition', globalPosition);
-    mateUse('kind', kind);
-    mateUse('localPosition', localPosition);
-    mateUse('offsetFromOrigin', offsetFromOrigin);
-    mateUse('localOffsetFromOrigin', localOffsetFromOrigin);
-    mateUse('consecutiveTapCount', consecutiveTapCount);
-    mateUse('keysPressedOnDown', keysPressedOnDown);
+    mateUse('sourceTimeStamp', sourceTimeStamp, isNamed: true);
+    mateUse('delta', delta, isNamed: true);
+    mateUse('primaryDelta', primaryDelta, isNamed: true);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('kind', kind, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('offsetFromOrigin', offsetFromOrigin, isNamed: true);
+    mateUse('localOffsetFromOrigin', localOffsetFromOrigin, isNamed: true);
+    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
+    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
   }
 }
 
@@ -243,10 +243,10 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('velocity', velocity);
-    mateUse('primaryVelocity', primaryVelocity);
-    mateUse('consecutiveTapCount', consecutiveTapCount);
-    mateUse('keysPressedOnDown', keysPressedOnDown);
+    mateUse('velocity', velocity, isNamed: true);
+    mateUse('primaryVelocity', primaryVelocity, isNamed: true);
+    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
+    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
   }
 }
 
@@ -274,8 +274,8 @@ class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with 
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }

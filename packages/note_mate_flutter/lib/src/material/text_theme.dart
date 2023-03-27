@@ -88,20 +88,20 @@ class TextTheme$Mate extends TextTheme with Mate {
           labelMedium: p.get('labelMedium').build(),
           labelSmall: p.get('labelSmall').build(),
         );
-    mateUse('displayLarge', displayLarge);
-    mateUse('displayMedium', displayMedium);
-    mateUse('displaySmall', displaySmall);
-    mateUse('headlineLarge', headlineLarge);
-    mateUse('headlineMedium', headlineMedium);
-    mateUse('headlineSmall', headlineSmall);
-    mateUse('titleLarge', titleLarge);
-    mateUse('titleMedium', titleMedium);
-    mateUse('titleSmall', titleSmall);
-    mateUse('bodyLarge', bodyLarge);
-    mateUse('bodyMedium', bodyMedium);
-    mateUse('bodySmall', bodySmall);
-    mateUse('labelLarge', labelLarge);
-    mateUse('labelMedium', labelMedium);
-    mateUse('labelSmall', labelSmall);
+    mateUse('displayLarge', displayLarge, isNamed: true);
+    mateUse('displayMedium', displayMedium, isNamed: true);
+    mateUse('displaySmall', displaySmall, isNamed: true);
+    mateUse('headlineLarge', headlineLarge, isNamed: true);
+    mateUse('headlineMedium', headlineMedium, isNamed: true);
+    mateUse('headlineSmall', headlineSmall, isNamed: true);
+    mateUse('titleLarge', titleLarge, isNamed: true);
+    mateUse('titleMedium', titleMedium, isNamed: true);
+    mateUse('titleSmall', titleSmall, isNamed: true);
+    mateUse('bodyLarge', bodyLarge, isNamed: true);
+    mateUse('bodyMedium', bodyMedium, isNamed: true);
+    mateUse('bodySmall', bodySmall, isNamed: true);
+    mateUse('labelLarge', labelLarge, isNamed: true);
+    mateUse('labelMedium', labelMedium, isNamed: true);
+    mateUse('labelSmall', labelSmall, isNamed: true);
   }
 }

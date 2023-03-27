@@ -19,7 +19,7 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate {
     mateCreateName = 'CupertinoTabController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
-    mateUse('initialIndex', initialIndex);
+    mateUse('initialIndex', initialIndex, isNamed: true);
   }
 }
 
@@ -67,13 +67,13 @@ class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with Mate {
           resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse('key', key);
-    mateUse('tabBar', tabBar);
-    mateUse('tabBuilder', tabBuilder);
-    mateUse('controller', controller);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
-    mateUse('restorationId', restorationId);
+    mateUse('key', key, isNamed: true);
+    mateUse('tabBar', tabBar, isNamed: true);
+    mateUse('tabBuilder', tabBuilder, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('resizeToAvoidBottomInset', resizeToAvoidBottomInset, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
   }
 }
 
@@ -88,6 +88,6 @@ class RestorableCupertinoTabController$Mate extends RestorableCupertinoTabContro
     mateCreateName = 'RestorableCupertinoTabController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
-    mateUse('initialIndex', initialIndex);
+    mateUse('initialIndex', initialIndex, isNamed: true);
   }
 }

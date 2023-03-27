@@ -137,28 +137,28 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           controlAffinity: p.get('controlAffinity').build(),
         );
-    mateUse('key', key);
-    mateUse('leading', leading);
-    mateUse('title', title);
-    mateUse('subtitle', subtitle);
-    mateUse('onExpansionChanged', onExpansionChanged);
-    mateUse('children', children);
-    mateUse('trailing', trailing);
-    mateUse('initiallyExpanded', initiallyExpanded);
-    mateUse('maintainState', maintainState);
-    mateUse('tilePadding', tilePadding);
-    mateUse('expandedCrossAxisAlignment', expandedCrossAxisAlignment);
-    mateUse('expandedAlignment', expandedAlignment);
-    mateUse('childrenPadding', childrenPadding);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('collapsedBackgroundColor', collapsedBackgroundColor);
-    mateUse('textColor', textColor);
-    mateUse('collapsedTextColor', collapsedTextColor);
-    mateUse('iconColor', iconColor);
-    mateUse('collapsedIconColor', collapsedIconColor);
-    mateUse('shape', shape);
-    mateUse('collapsedShape', collapsedShape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('controlAffinity', controlAffinity);
+    mateUse('key', key, isNamed: true);
+    mateUse('leading', leading, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('subtitle', subtitle, isNamed: true);
+    mateUse('onExpansionChanged', onExpansionChanged, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('trailing', trailing, isNamed: true);
+    mateUse('initiallyExpanded', initiallyExpanded, isNamed: true);
+    mateUse('maintainState', maintainState, isNamed: true);
+    mateUse('tilePadding', tilePadding, isNamed: true);
+    mateUse('expandedCrossAxisAlignment', expandedCrossAxisAlignment, isNamed: true);
+    mateUse('expandedAlignment', expandedAlignment, isNamed: true);
+    mateUse('childrenPadding', childrenPadding, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('collapsedBackgroundColor', collapsedBackgroundColor, isNamed: true);
+    mateUse('textColor', textColor, isNamed: true);
+    mateUse('collapsedTextColor', collapsedTextColor, isNamed: true);
+    mateUse('iconColor', iconColor, isNamed: true);
+    mateUse('collapsedIconColor', collapsedIconColor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('collapsedShape', collapsedShape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('controlAffinity', controlAffinity, isNamed: true);
   }
 }

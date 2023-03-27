@@ -85,18 +85,18 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('controller', controller);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('physics', physics);
-    mateUse('headerSliverBuilder', headerSliverBuilder);
-    mateUse('body', body);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('floatHeaderSlivers', floatHeaderSlivers);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('restorationId', restorationId);
-    mateUse('scrollBehavior', scrollBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('headerSliverBuilder', headerSliverBuilder, isNamed: true);
+    mateUse('body', body, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('floatHeaderSlivers', floatHeaderSlivers, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
   }
 }
 
@@ -124,9 +124,9 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key);
-    mateUse('handle', handle);
-    mateUse('sliver', sliver);
+    mateUse('key', key, isNamed: true);
+    mateUse('handle', handle, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -149,8 +149,8 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with 
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('handle', handle);
-    mateUse('sliver', sliver);
+    mateUse('handle', handle, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -178,9 +178,9 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key);
-    mateUse('handle', handle);
-    mateUse('sliver', sliver);
+    mateUse('key', key, isNamed: true);
+    mateUse('handle', handle, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }
 
@@ -195,7 +195,7 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with 
     mateCreateName = 'RenderSliverOverlapInjector';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
-    mateUse('handle', handle);
+    mateUse('handle', handle, isNamed: true);
   }
 }
 
@@ -253,15 +253,15 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
           handle: p.get('handle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('axisDirection', axisDirection);
-    mateUse('crossAxisDirection', crossAxisDirection);
-    mateUse('anchor', anchor);
-    mateUse('offset', offset);
-    mateUse('center', center);
-    mateUse('slivers', slivers);
-    mateUse('handle', handle);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('crossAxisDirection', crossAxisDirection, isNamed: true);
+    mateUse('anchor', anchor, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('center', center, isNamed: true);
+    mateUseList('slivers', slivers, isNamed: true);
+    mateUse('handle', handle, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -314,13 +314,13 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
           handle: p.get('handle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('axisDirection', axisDirection);
-    mateUse('crossAxisDirection', crossAxisDirection);
-    mateUse('offset', offset);
-    mateUse('anchor', anchor);
-    mateUse('children', children);
-    mateUse('center', center);
-    mateUse('handle', handle);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('crossAxisDirection', crossAxisDirection, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('anchor', anchor, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('center', center, isNamed: true);
+    mateUse('handle', handle, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }

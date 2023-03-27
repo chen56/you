@@ -60,14 +60,14 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('header', header);
-    mateUse('footer', footer);
-    mateUse('margin', margin);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('decoration', decoration);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUse('footer', footer, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 
   /// CupertinoFormSection CupertinoFormSection.insetGrouped({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
@@ -117,13 +117,13 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('header', header);
-    mateUse('footer', footer);
-    mateUse('margin', margin);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('decoration', decoration);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUse('footer', footer, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }

@@ -77,18 +77,18 @@ class SliverConstraints$Mate extends SliverConstraints with Mate {
           remainingCacheExtent: p.get('remainingCacheExtent').build(),
           cacheOrigin: p.get('cacheOrigin').build(),
         );
-    mateUse('axisDirection', axisDirection);
-    mateUse('growthDirection', growthDirection);
-    mateUse('userScrollDirection', userScrollDirection);
-    mateUse('scrollOffset', scrollOffset);
-    mateUse('precedingScrollExtent', precedingScrollExtent);
-    mateUse('overlap', overlap);
-    mateUse('remainingPaintExtent', remainingPaintExtent);
-    mateUse('crossAxisExtent', crossAxisExtent);
-    mateUse('crossAxisDirection', crossAxisDirection);
-    mateUse('viewportMainAxisExtent', viewportMainAxisExtent);
-    mateUse('remainingCacheExtent', remainingCacheExtent);
-    mateUse('cacheOrigin', cacheOrigin);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('growthDirection', growthDirection, isNamed: true);
+    mateUse('userScrollDirection', userScrollDirection, isNamed: true);
+    mateUse('scrollOffset', scrollOffset, isNamed: true);
+    mateUse('precedingScrollExtent', precedingScrollExtent, isNamed: true);
+    mateUse('overlap', overlap, isNamed: true);
+    mateUse('remainingPaintExtent', remainingPaintExtent, isNamed: true);
+    mateUse('crossAxisExtent', crossAxisExtent, isNamed: true);
+    mateUse('crossAxisDirection', crossAxisDirection, isNamed: true);
+    mateUse('viewportMainAxisExtent', viewportMainAxisExtent, isNamed: true);
+    mateUse('remainingCacheExtent', remainingCacheExtent, isNamed: true);
+    mateUse('cacheOrigin', cacheOrigin, isNamed: true);
   }
 }
 
@@ -156,17 +156,17 @@ class SliverGeometry$Mate extends SliverGeometry with Mate {
           scrollOffsetCorrection: p.get('scrollOffsetCorrection').build(),
           cacheExtent: p.get('cacheExtent').build(),
         );
-    mateUse('scrollExtent', scrollExtent);
-    mateUse('paintExtent', paintExtent);
-    mateUse('paintOrigin', paintOrigin);
-    mateUse('layoutExtent', layoutExtent);
-    mateUse('maxPaintExtent', maxPaintExtent);
-    mateUse('maxScrollObstructionExtent', maxScrollObstructionExtent);
-    mateUse('hitTestExtent', hitTestExtent);
-    mateUse('visible', visible);
-    mateUse('hasVisualOverflow', hasVisualOverflow);
-    mateUse('scrollOffsetCorrection', scrollOffsetCorrection);
-    mateUse('cacheExtent', cacheExtent);
+    mateUse('scrollExtent', scrollExtent, isNamed: true);
+    mateUse('paintExtent', paintExtent, isNamed: true);
+    mateUse('paintOrigin', paintOrigin, isNamed: true);
+    mateUse('layoutExtent', layoutExtent, isNamed: true);
+    mateUse('maxPaintExtent', maxPaintExtent, isNamed: true);
+    mateUse('maxScrollObstructionExtent', maxScrollObstructionExtent, isNamed: true);
+    mateUse('hitTestExtent', hitTestExtent, isNamed: true);
+    mateUse('visible', visible, isNamed: true);
+    mateUse('hasVisualOverflow', hasVisualOverflow, isNamed: true);
+    mateUse('scrollOffsetCorrection', scrollOffsetCorrection, isNamed: true);
+    mateUse('cacheExtent', cacheExtent, isNamed: true);
   }
 }
 
@@ -181,7 +181,7 @@ class SliverHitTestResult$Mate extends SliverHitTestResult with Mate {
     mateCreateName = 'SliverHitTestResult.wrap';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverHitTestResult$Mate.wrap(p.get('result').value);
-    mateUse('result', result);
+    mateUse('result', result, isNamed: false);
   }
 }
 
@@ -208,9 +208,9 @@ class SliverHitTestEntry$Mate extends SliverHitTestEntry with Mate {
           mainAxisPosition: p.get('mainAxisPosition').build(),
           crossAxisPosition: p.get('crossAxisPosition').build(),
         );
-    mateUse('target', target);
-    mateUse('mainAxisPosition', mainAxisPosition);
-    mateUse('crossAxisPosition', crossAxisPosition);
+    mateUse('target', target, isNamed: false);
+    mateUse('mainAxisPosition', mainAxisPosition, isNamed: true);
+    mateUse('crossAxisPosition', crossAxisPosition, isNamed: true);
   }
 }
 
@@ -225,6 +225,6 @@ class RenderSliverToBoxAdapter$Mate extends RenderSliverToBoxAdapter with Mate {
     mateCreateName = 'RenderSliverToBoxAdapter';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
-    mateUse('child', child);
+    mateUse('child', child, isNamed: true);
   }
 }

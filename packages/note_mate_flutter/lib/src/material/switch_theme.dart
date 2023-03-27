@@ -60,14 +60,14 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate {
           splashRadius: p.get('splashRadius').build(),
           thumbIcon: p.get('thumbIcon').build(),
         );
-    mateUse('thumbColor', thumbColor);
-    mateUse('trackColor', trackColor);
-    mateUse('trackOutlineColor', trackOutlineColor);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('overlayColor', overlayColor);
-    mateUse('splashRadius', splashRadius);
-    mateUse('thumbIcon', thumbIcon);
+    mateUse('thumbColor', thumbColor, isNamed: true);
+    mateUse('trackColor', trackColor, isNamed: true);
+    mateUse('trackOutlineColor', trackOutlineColor, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('splashRadius', splashRadius, isNamed: true);
+    mateUse('thumbIcon', thumbIcon, isNamed: true);
   }
 }
 
@@ -95,8 +95,8 @@ class SwitchTheme$Mate extends SwitchTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

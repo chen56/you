@@ -30,9 +30,9 @@ class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGesture
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }
 
@@ -60,9 +60,9 @@ class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestu
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }
 
@@ -90,9 +90,9 @@ class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRe
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }
 
@@ -125,9 +125,9 @@ class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureReco
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('delay', delay);
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('delay', delay, isNamed: true);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }

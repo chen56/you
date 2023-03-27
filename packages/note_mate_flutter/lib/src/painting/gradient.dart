@@ -18,7 +18,7 @@ class GradientRotation$Mate extends GradientRotation with Mate {
     mateCreateName = 'GradientRotation';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => GradientRotation$Mate(p.get('radians').value);
-    mateUse('radians', radians);
+    mateUse('radians', radians, isNamed: false);
   }
 }
 
@@ -61,12 +61,12 @@ class LinearGradient$Mate extends LinearGradient with Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
-    mateUse('colors', colors);
-    mateUse('stops', stops);
-    mateUse('tileMode', tileMode);
-    mateUse('transform', transform);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
+    mateUseList('colors', colors, isNamed: true);
+    mateUseList('stops', stops, isNamed: true);
+    mateUse('tileMode', tileMode, isNamed: true);
+    mateUse('transform', transform, isNamed: true);
   }
 }
 
@@ -119,14 +119,14 @@ class RadialGradient$Mate extends RadialGradient with Mate {
           focalRadius: p.get('focalRadius').build(),
           transform: p.get('transform').build(),
         );
-    mateUse('center', center);
-    mateUse('radius', radius);
-    mateUse('colors', colors);
-    mateUse('stops', stops);
-    mateUse('tileMode', tileMode);
-    mateUse('focal', focal);
-    mateUse('focalRadius', focalRadius);
-    mateUse('transform', transform);
+    mateUse('center', center, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
+    mateUseList('colors', colors, isNamed: true);
+    mateUseList('stops', stops, isNamed: true);
+    mateUse('tileMode', tileMode, isNamed: true);
+    mateUse('focal', focal, isNamed: true);
+    mateUse('focalRadius', focalRadius, isNamed: true);
+    mateUse('transform', transform, isNamed: true);
   }
 }
 
@@ -174,12 +174,12 @@ class SweepGradient$Mate extends SweepGradient with Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    mateUse('center', center);
-    mateUse('startAngle', startAngle);
-    mateUse('endAngle', endAngle);
-    mateUse('colors', colors);
-    mateUse('stops', stops);
-    mateUse('tileMode', tileMode);
-    mateUse('transform', transform);
+    mateUse('center', center, isNamed: true);
+    mateUse('startAngle', startAngle, isNamed: true);
+    mateUse('endAngle', endAngle, isNamed: true);
+    mateUseList('colors', colors, isNamed: true);
+    mateUseList('stops', stops, isNamed: true);
+    mateUse('tileMode', tileMode, isNamed: true);
+    mateUse('transform', transform, isNamed: true);
   }
 }

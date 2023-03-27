@@ -30,8 +30,8 @@ class TickerMode$Mate extends TickerMode with Mate {
           enabled: p.get('enabled').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('enabled', enabled);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

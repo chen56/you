@@ -27,8 +27,8 @@ class PaintingContext$Mate extends PaintingContext with Mate {
           p.get('_containerLayer').value,
           p.get('estimatedBounds').value,
         );
-    mateUse('_containerLayer', _containerLayer);
-    mateUse('estimatedBounds', estimatedBounds);
+    mateUse('_containerLayer', _containerLayer, isNamed: false);
+    mateUse('estimatedBounds', estimatedBounds, isNamed: false);
   }
 }
 
@@ -61,10 +61,10 @@ class PipelineOwner$Mate extends PipelineOwner with Mate {
           onSemanticsUpdate: p.get('onSemanticsUpdate').build(),
           onSemanticsOwnerDisposed: p.get('onSemanticsOwnerDisposed').build(),
         );
-    mateUse('onNeedVisualUpdate', onNeedVisualUpdate);
-    mateUse('onSemanticsOwnerCreated', onSemanticsOwnerCreated);
-    mateUse('onSemanticsUpdate', onSemanticsUpdate);
-    mateUse('onSemanticsOwnerDisposed', onSemanticsOwnerDisposed);
+    mateUse('onNeedVisualUpdate', onNeedVisualUpdate, isNamed: true);
+    mateUse('onSemanticsOwnerCreated', onSemanticsOwnerCreated, isNamed: true);
+    mateUse('onSemanticsUpdate', onSemanticsUpdate, isNamed: true);
+    mateUse('onSemanticsOwnerDisposed', onSemanticsOwnerDisposed, isNamed: true);
   }
 }
 
@@ -79,6 +79,6 @@ class DiagnosticsDebugCreator$Mate extends DiagnosticsDebugCreator with Mate {
     mateCreateName = 'DiagnosticsDebugCreator';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => DiagnosticsDebugCreator$Mate(p.get('value').value);
-    mateUse('value', value);
+    mateUse('value', value, isNamed: false);
   }
 }

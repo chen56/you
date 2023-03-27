@@ -41,10 +41,10 @@ class ActionListener$Mate extends ActionListener with Mate {
           action: p.get('action').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('listener', listener);
-    mateUse('action', action);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('listener', listener, isNamed: true);
+    mateUse('action', action, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -59,7 +59,7 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate 
     mateCreateName = 'CallbackAction';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
-    mateUse('onInvoke', onInvoke);
+    mateUse('onInvoke', onInvoke, isNamed: true);
   }
 }
 
@@ -92,10 +92,10 @@ class Actions$Mate extends Actions with Mate {
           actions: p.get('actions').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('dispatcher', dispatcher);
-    mateUse('actions', actions);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('dispatcher', dispatcher, isNamed: true);
+    mateUse('actions', actions, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -178,20 +178,20 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with Mate {
           includeFocusSemantics: p.get('includeFocusSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('enabled', enabled);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('descendantsAreFocusable', descendantsAreFocusable);
-    mateUse('descendantsAreTraversable', descendantsAreTraversable);
-    mateUse('shortcuts', shortcuts);
-    mateUse('actions', actions);
-    mateUse('onShowFocusHighlight', onShowFocusHighlight);
-    mateUse('onShowHoverHighlight', onShowHoverHighlight);
-    mateUse('onFocusChange', onFocusChange);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('includeFocusSemantics', includeFocusSemantics);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('descendantsAreFocusable', descendantsAreFocusable, isNamed: true);
+    mateUse('descendantsAreTraversable', descendantsAreTraversable, isNamed: true);
+    mateUse('shortcuts', shortcuts, isNamed: true);
+    mateUse('actions', actions, isNamed: true);
+    mateUse('onShowFocusHighlight', onShowFocusHighlight, isNamed: true);
+    mateUse('onShowHoverHighlight', onShowHoverHighlight, isNamed: true);
+    mateUse('onFocusChange', onFocusChange, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('includeFocusSemantics', includeFocusSemantics, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -206,7 +206,7 @@ class VoidCallbackIntent$Mate extends VoidCallbackIntent with Mate {
     mateCreateName = 'VoidCallbackIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => VoidCallbackIntent$Mate(p.get('callback').value);
-    mateUse('callback', callback);
+    mateUse('callback', callback, isNamed: false);
   }
 }
 
@@ -221,7 +221,7 @@ class DoNothingAction$Mate extends DoNothingAction with Mate {
     mateCreateName = 'DoNothingAction';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
-    mateUse('consumesKey', consumesKey);
+    mateUse('consumesKey', consumesKey, isNamed: true);
   }
 }
 
@@ -236,6 +236,6 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate {
     mateCreateName = 'PrioritizedIntents';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build());
-    mateUse('orderedIntents', orderedIntents);
+    mateUseList('orderedIntents', orderedIntents, isNamed: true);
   }
 }

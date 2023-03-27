@@ -42,11 +42,11 @@ class ExpansionPanel$Mate extends ExpansionPanel with Mate {
           canTapOnHeader: p.get('canTapOnHeader').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    mateUse('headerBuilder', headerBuilder);
-    mateUse('body', body);
-    mateUse('isExpanded', isExpanded);
-    mateUse('canTapOnHeader', canTapOnHeader);
-    mateUse('backgroundColor', backgroundColor);
+    mateUse('headerBuilder', headerBuilder, isNamed: true);
+    mateUse('body', body, isNamed: true);
+    mateUse('isExpanded', isExpanded, isNamed: true);
+    mateUse('canTapOnHeader', canTapOnHeader, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
   }
 }
 
@@ -84,11 +84,11 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate {
           canTapOnHeader: p.get('canTapOnHeader').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    mateUse('value', value);
-    mateUse('headerBuilder', headerBuilder);
-    mateUse('body', body);
-    mateUse('canTapOnHeader', canTapOnHeader);
-    mateUse('backgroundColor', backgroundColor);
+    mateUse('value', value, isNamed: true);
+    mateUse('headerBuilder', headerBuilder, isNamed: true);
+    mateUse('body', body, isNamed: true);
+    mateUse('canTapOnHeader', canTapOnHeader, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
   }
 }
 
@@ -141,14 +141,14 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: p.get('elevation').build(),
           expandIconColor: p.get('expandIconColor').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('expansionCallback', expansionCallback);
-    mateUse('animationDuration', animationDuration);
-    mateUse('expandedHeaderPadding', expandedHeaderPadding);
-    mateUse('dividerColor', dividerColor);
-    mateUse('elevation', elevation);
-    mateUse('expandIconColor', expandIconColor);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('expansionCallback', expansionCallback, isNamed: true);
+    mateUse('animationDuration', animationDuration, isNamed: true);
+    mateUse('expandedHeaderPadding', expandedHeaderPadding, isNamed: true);
+    mateUse('dividerColor', dividerColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('expandIconColor', expandIconColor, isNamed: true);
   }
 
   /// ExpansionPanelList ExpansionPanelList.radio({Key? key, List<ExpansionPanel> children = const <ExpansionPanelRadio>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, Object? initialOpenPanelValue, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor})
@@ -203,14 +203,14 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: p.get('elevation').build(),
           expandIconColor: p.get('expandIconColor').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('expansionCallback', expansionCallback);
-    mateUse('animationDuration', animationDuration);
-    mateUse('initialOpenPanelValue', initialOpenPanelValue);
-    mateUse('expandedHeaderPadding', expandedHeaderPadding);
-    mateUse('dividerColor', dividerColor);
-    mateUse('elevation', elevation);
-    mateUse('expandIconColor', expandIconColor);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('expansionCallback', expansionCallback, isNamed: true);
+    mateUse('animationDuration', animationDuration, isNamed: true);
+    mateUse('initialOpenPanelValue', initialOpenPanelValue, isNamed: true);
+    mateUse('expandedHeaderPadding', expandedHeaderPadding, isNamed: true);
+    mateUse('dividerColor', dividerColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('expandIconColor', expandIconColor, isNamed: true);
   }
 }

@@ -65,15 +65,15 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate {
           shape: p.get('shape').build(),
           side: p.get('side').build(),
         );
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('fillColor', fillColor);
-    mateUse('checkColor', checkColor);
-    mateUse('overlayColor', overlayColor);
-    mateUse('splashRadius', splashRadius);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('visualDensity', visualDensity);
-    mateUse('shape', shape);
-    mateUse('side', side);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('fillColor', fillColor, isNamed: true);
+    mateUse('checkColor', checkColor, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('splashRadius', splashRadius, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('visualDensity', visualDensity, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('side', side, isNamed: true);
   }
 }
 
@@ -101,8 +101,8 @@ class CheckboxTheme$Mate extends CheckboxTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

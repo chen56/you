@@ -25,8 +25,8 @@ class RenderSliverFillViewport$Mate extends RenderSliverFillViewport with Mate {
           childManager: p.get('childManager').build(),
           viewportFraction: p.get('viewportFraction').build(),
         );
-    mateUse('childManager', childManager);
-    mateUse('viewportFraction', viewportFraction);
+    mateUse('childManager', childManager, isNamed: true);
+    mateUse('viewportFraction', viewportFraction, isNamed: true);
   }
 }
 
@@ -41,7 +41,7 @@ class RenderSliverFillRemainingWithScrollable$Mate extends RenderSliverFillRemai
     mateCreateName = 'RenderSliverFillRemainingWithScrollable';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFillRemainingWithScrollable$Mate(child: p.get('child').build());
-    mateUse('child', child);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -56,7 +56,7 @@ class RenderSliverFillRemaining$Mate extends RenderSliverFillRemaining with Mate
     mateCreateName = 'RenderSliverFillRemaining';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFillRemaining$Mate(child: p.get('child').build());
-    mateUse('child', child);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -71,6 +71,6 @@ class RenderSliverFillRemainingAndOverscroll$Mate extends RenderSliverFillRemain
     mateCreateName = 'RenderSliverFillRemainingAndOverscroll';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFillRemainingAndOverscroll$Mate(child: p.get('child').build());
-    mateUse('child', child);
+    mateUse('child', child, isNamed: true);
   }
 }

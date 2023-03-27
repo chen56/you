@@ -57,14 +57,14 @@ class DrawerThemeData$Mate extends DrawerThemeData with Mate {
           endShape: p.get('endShape').build(),
           width: p.get('width').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('scrimColor', scrimColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('shape', shape);
-    mateUse('endShape', endShape);
-    mateUse('width', width);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('scrimColor', scrimColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('endShape', endShape, isNamed: true);
+    mateUse('width', width, isNamed: true);
   }
 }
 
@@ -92,8 +92,8 @@ class DrawerTheme$Mate extends DrawerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

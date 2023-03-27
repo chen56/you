@@ -118,25 +118,25 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate {
           visualDensity: p.get('visualDensity').build(),
           titleAlignment: p.get('titleAlignment').build(),
         );
-    mateUse('dense', dense);
-    mateUse('shape', shape);
-    mateUse('style', style);
-    mateUse('selectedColor', selectedColor);
-    mateUse('iconColor', iconColor);
-    mateUse('textColor', textColor);
-    mateUse('titleTextStyle', titleTextStyle);
-    mateUse('subtitleTextStyle', subtitleTextStyle);
-    mateUse('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle);
-    mateUse('contentPadding', contentPadding);
-    mateUse('tileColor', tileColor);
-    mateUse('selectedTileColor', selectedTileColor);
-    mateUse('horizontalTitleGap', horizontalTitleGap);
-    mateUse('minVerticalPadding', minVerticalPadding);
-    mateUse('minLeadingWidth', minLeadingWidth);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('visualDensity', visualDensity);
-    mateUse('titleAlignment', titleAlignment);
+    mateUse('dense', dense, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('selectedColor', selectedColor, isNamed: true);
+    mateUse('iconColor', iconColor, isNamed: true);
+    mateUse('textColor', textColor, isNamed: true);
+    mateUse('titleTextStyle', titleTextStyle, isNamed: true);
+    mateUse('subtitleTextStyle', subtitleTextStyle, isNamed: true);
+    mateUse('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle, isNamed: true);
+    mateUse('contentPadding', contentPadding, isNamed: true);
+    mateUse('tileColor', tileColor, isNamed: true);
+    mateUse('selectedTileColor', selectedTileColor, isNamed: true);
+    mateUse('horizontalTitleGap', horizontalTitleGap, isNamed: true);
+    mateUse('minVerticalPadding', minVerticalPadding, isNamed: true);
+    mateUse('minLeadingWidth', minLeadingWidth, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('visualDensity', visualDensity, isNamed: true);
+    mateUse('titleAlignment', titleAlignment, isNamed: true);
   }
 }
 
@@ -234,22 +234,22 @@ class ListTileTheme$Mate extends ListTileTheme with Mate {
           minLeadingWidth: p.get('minLeadingWidth').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('dense', dense);
-    mateUse('shape', shape);
-    mateUse('style', style);
-    mateUse('selectedColor', selectedColor);
-    mateUse('iconColor', iconColor);
-    mateUse('textColor', textColor);
-    mateUse('contentPadding', contentPadding);
-    mateUse('tileColor', tileColor);
-    mateUse('selectedTileColor', selectedTileColor);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('horizontalTitleGap', horizontalTitleGap);
-    mateUse('minVerticalPadding', minVerticalPadding);
-    mateUse('minLeadingWidth', minLeadingWidth);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('dense', dense, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('selectedColor', selectedColor, isNamed: true);
+    mateUse('iconColor', iconColor, isNamed: true);
+    mateUse('textColor', textColor, isNamed: true);
+    mateUse('contentPadding', contentPadding, isNamed: true);
+    mateUse('tileColor', tileColor, isNamed: true);
+    mateUse('selectedTileColor', selectedTileColor, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('horizontalTitleGap', horizontalTitleGap, isNamed: true);
+    mateUse('minVerticalPadding', minVerticalPadding, isNamed: true);
+    mateUse('minLeadingWidth', minLeadingWidth, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

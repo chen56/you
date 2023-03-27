@@ -29,9 +29,9 @@ class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate {
           p.get('textDirection').value,
           assertiveness: p.get('assertiveness').build(),
         );
-    mateUse('message', message);
-    mateUse('textDirection', textDirection);
-    mateUse('assertiveness', assertiveness);
+    mateUse('message', message, isNamed: false);
+    mateUse('textDirection', textDirection, isNamed: false);
+    mateUse('assertiveness', assertiveness, isNamed: true);
   }
 }
 
@@ -46,6 +46,6 @@ class TooltipSemanticsEvent$Mate extends TooltipSemanticsEvent with Mate {
     mateCreateName = 'TooltipSemanticsEvent';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => TooltipSemanticsEvent$Mate(p.get('message').value);
-    mateUse('message', message);
+    mateUse('message', message, isNamed: false);
   }
 }

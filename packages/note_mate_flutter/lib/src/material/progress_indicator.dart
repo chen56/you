@@ -56,14 +56,14 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('color', color);
-    mateUse('valueColor', valueColor);
-    mateUse('minHeight', minHeight);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('semanticsValue', semanticsValue);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('valueColor', valueColor, isNamed: true);
+    mateUse('minHeight', minHeight, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('semanticsValue', semanticsValue, isNamed: true);
   }
 }
 
@@ -116,14 +116,14 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('color', color);
-    mateUse('valueColor', valueColor);
-    mateUse('strokeWidth', strokeWidth);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('semanticsValue', semanticsValue);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('valueColor', valueColor, isNamed: true);
+    mateUse('strokeWidth', strokeWidth, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('semanticsValue', semanticsValue, isNamed: true);
   }
 
   /// CircularProgressIndicator CircularProgressIndicator.adaptive({Key? key, double? value, Color? backgroundColor, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
@@ -168,13 +168,13 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('valueColor', valueColor);
-    mateUse('strokeWidth', strokeWidth);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('semanticsValue', semanticsValue);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('valueColor', valueColor, isNamed: true);
+    mateUse('strokeWidth', strokeWidth, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('semanticsValue', semanticsValue, isNamed: true);
   }
 }
 
@@ -227,13 +227,13 @@ class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Mate {
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('color', color);
-    mateUse('valueColor', valueColor);
-    mateUse('strokeWidth', strokeWidth);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('semanticsValue', semanticsValue);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('valueColor', valueColor, isNamed: true);
+    mateUse('strokeWidth', strokeWidth, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('semanticsValue', semanticsValue, isNamed: true);
   }
 }

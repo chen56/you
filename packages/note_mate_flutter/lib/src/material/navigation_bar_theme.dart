@@ -71,16 +71,16 @@ class NavigationBarThemeData$Mate extends NavigationBarThemeData with Mate {
           iconTheme: p.get('iconTheme').build(),
           labelBehavior: p.get('labelBehavior').build(),
         );
-    mateUse('height', height);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('indicatorShape', indicatorShape);
-    mateUse('labelTextStyle', labelTextStyle);
-    mateUse('iconTheme', iconTheme);
-    mateUse('labelBehavior', labelBehavior);
+    mateUse('height', height, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('indicatorShape', indicatorShape, isNamed: true);
+    mateUse('labelTextStyle', labelTextStyle, isNamed: true);
+    mateUse('iconTheme', iconTheme, isNamed: true);
+    mateUse('labelBehavior', labelBehavior, isNamed: true);
   }
 }
 
@@ -108,8 +108,8 @@ class NavigationBarTheme$Mate extends NavigationBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

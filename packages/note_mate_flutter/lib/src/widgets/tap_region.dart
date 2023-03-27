@@ -27,8 +27,8 @@ class TapRegionSurface$Mate extends TapRegionSurface with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -81,14 +81,14 @@ class TapRegion$Mate extends TapRegion with Mate {
           groupId: p.get('groupId').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('enabled', enabled);
-    mateUse('behavior', behavior);
-    mateUse('onTapOutside', onTapOutside);
-    mateUse('onTapInside', onTapInside);
-    mateUse('groupId', groupId);
-    mateUse('debugLabel', debugLabel);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
+    mateUse('onTapOutside', onTapOutside, isNamed: true);
+    mateUse('onTapInside', onTapInside, isNamed: true);
+    mateUse('groupId', groupId, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }
 
@@ -136,13 +136,13 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate {
           groupId: p.get('groupId').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('registry', registry);
-    mateUse('enabled', enabled);
-    mateUse('onTapOutside', onTapOutside);
-    mateUse('onTapInside', onTapInside);
-    mateUse('behavior', behavior);
-    mateUse('groupId', groupId);
-    mateUse('debugLabel', debugLabel);
+    mateUse('registry', registry, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('onTapOutside', onTapOutside, isNamed: true);
+    mateUse('onTapInside', onTapInside, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
+    mateUse('groupId', groupId, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }
 
@@ -185,11 +185,11 @@ class TextFieldTapRegion$Mate extends TextFieldTapRegion with Mate {
           onTapInside: p.get('onTapInside').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('enabled', enabled);
-    mateUse('onTapOutside', onTapOutside);
-    mateUse('onTapInside', onTapInside);
-    mateUse('debugLabel', debugLabel);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('onTapOutside', onTapOutside, isNamed: true);
+    mateUse('onTapInside', onTapInside, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }

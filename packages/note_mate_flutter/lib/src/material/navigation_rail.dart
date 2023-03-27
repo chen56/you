@@ -121,26 +121,26 @@ class NavigationRail$Mate extends NavigationRail with Mate {
           indicatorColor: p.get('indicatorColor').build(),
           indicatorShape: p.get('indicatorShape').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('extended', extended);
-    mateUse('leading', leading);
-    mateUse('trailing', trailing);
-    mateUse('destinations', destinations);
-    mateUse('selectedIndex', selectedIndex);
-    mateUse('onDestinationSelected', onDestinationSelected);
-    mateUse('elevation', elevation);
-    mateUse('groupAlignment', groupAlignment);
-    mateUse('labelType', labelType);
-    mateUse('unselectedLabelTextStyle', unselectedLabelTextStyle);
-    mateUse('selectedLabelTextStyle', selectedLabelTextStyle);
-    mateUse('unselectedIconTheme', unselectedIconTheme);
-    mateUse('selectedIconTheme', selectedIconTheme);
-    mateUse('minWidth', minWidth);
-    mateUse('minExtendedWidth', minExtendedWidth);
-    mateUse('useIndicator', useIndicator);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('indicatorShape', indicatorShape);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('extended', extended, isNamed: true);
+    mateUse('leading', leading, isNamed: true);
+    mateUse('trailing', trailing, isNamed: true);
+    mateUseList('destinations', destinations, isNamed: true);
+    mateUse('selectedIndex', selectedIndex, isNamed: true);
+    mateUse('onDestinationSelected', onDestinationSelected, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('groupAlignment', groupAlignment, isNamed: true);
+    mateUse('labelType', labelType, isNamed: true);
+    mateUse('unselectedLabelTextStyle', unselectedLabelTextStyle, isNamed: true);
+    mateUse('selectedLabelTextStyle', selectedLabelTextStyle, isNamed: true);
+    mateUse('unselectedIconTheme', unselectedIconTheme, isNamed: true);
+    mateUse('selectedIconTheme', selectedIconTheme, isNamed: true);
+    mateUse('minWidth', minWidth, isNamed: true);
+    mateUse('minExtendedWidth', minExtendedWidth, isNamed: true);
+    mateUse('useIndicator', useIndicator, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('indicatorShape', indicatorShape, isNamed: true);
   }
 }
 
@@ -183,11 +183,11 @@ class NavigationRailDestination$Mate extends NavigationRailDestination with Mate
           label: p.get('label').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('icon', icon);
-    mateUse('selectedIcon', selectedIcon);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('indicatorShape', indicatorShape);
-    mateUse('label', label);
-    mateUse('padding', padding);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('selectedIcon', selectedIcon, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('indicatorShape', indicatorShape, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
   }
 }

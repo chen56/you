@@ -38,10 +38,10 @@ class RawKeyEventDataWeb$Mate extends RawKeyEventDataWeb with Mate {
           metaState: p.get('metaState').build(),
           keyCode: p.get('keyCode').build(),
         );
-    mateUse('code', code);
-    mateUse('key', key);
-    mateUse('location', location);
-    mateUse('metaState', metaState);
-    mateUse('keyCode', keyCode);
+    mateUse('code', code, isNamed: true);
+    mateUse('key', key, isNamed: true);
+    mateUse('location', location, isNamed: true);
+    mateUse('metaState', metaState, isNamed: true);
+    mateUse('keyCode', keyCode, isNamed: true);
   }
 }

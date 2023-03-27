@@ -112,24 +112,24 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('panAxis', panAxis);
-    mateUse('boundaryMargin', boundaryMargin);
-    mateUse('constrained', constrained);
-    mateUse('maxScale', maxScale);
-    mateUse('minScale', minScale);
-    mateUse('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
-    mateUse('onInteractionEnd', onInteractionEnd);
-    mateUse('onInteractionStart', onInteractionStart);
-    mateUse('onInteractionUpdate', onInteractionUpdate);
-    mateUse('panEnabled', panEnabled);
-    mateUse('scaleEnabled', scaleEnabled);
-    mateUse('scaleFactor', scaleFactor);
-    mateUse('transformationController', transformationController);
-    mateUse('alignment', alignment);
-    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('panAxis', panAxis, isNamed: true);
+    mateUse('boundaryMargin', boundaryMargin, isNamed: true);
+    mateUse('constrained', constrained, isNamed: true);
+    mateUse('maxScale', maxScale, isNamed: true);
+    mateUse('minScale', minScale, isNamed: true);
+    mateUse('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient, isNamed: true);
+    mateUse('onInteractionEnd', onInteractionEnd, isNamed: true);
+    mateUse('onInteractionStart', onInteractionStart, isNamed: true);
+    mateUse('onInteractionUpdate', onInteractionUpdate, isNamed: true);
+    mateUse('panEnabled', panEnabled, isNamed: true);
+    mateUse('scaleEnabled', scaleEnabled, isNamed: true);
+    mateUse('scaleFactor', scaleFactor, isNamed: true);
+    mateUse('transformationController', transformationController, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// InteractiveViewer InteractiveViewer.builder({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = 200.0, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget Function(BuildContext, Quad) builder})
@@ -224,23 +224,23 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('panAxis', panAxis);
-    mateUse('boundaryMargin', boundaryMargin);
-    mateUse('maxScale', maxScale);
-    mateUse('minScale', minScale);
-    mateUse('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
-    mateUse('onInteractionEnd', onInteractionEnd);
-    mateUse('onInteractionStart', onInteractionStart);
-    mateUse('onInteractionUpdate', onInteractionUpdate);
-    mateUse('panEnabled', panEnabled);
-    mateUse('scaleEnabled', scaleEnabled);
-    mateUse('scaleFactor', scaleFactor);
-    mateUse('transformationController', transformationController);
-    mateUse('alignment', alignment);
-    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    mateUse('builder', builder);
+    mateUse('key', key, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('panAxis', panAxis, isNamed: true);
+    mateUse('boundaryMargin', boundaryMargin, isNamed: true);
+    mateUse('maxScale', maxScale, isNamed: true);
+    mateUse('minScale', minScale, isNamed: true);
+    mateUse('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient, isNamed: true);
+    mateUse('onInteractionEnd', onInteractionEnd, isNamed: true);
+    mateUse('onInteractionStart', onInteractionStart, isNamed: true);
+    mateUse('onInteractionUpdate', onInteractionUpdate, isNamed: true);
+    mateUse('panEnabled', panEnabled, isNamed: true);
+    mateUse('scaleEnabled', scaleEnabled, isNamed: true);
+    mateUse('scaleFactor', scaleFactor, isNamed: true);
+    mateUse('transformationController', transformationController, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
   }
 }
 
@@ -255,6 +255,6 @@ class TransformationController$Mate extends TransformationController with Mate {
     mateCreateName = 'TransformationController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TransformationController$Mate(p.get('value').value);
-    mateUse('value', value);
+    mateUse('value', value, isNamed: false);
   }
 }

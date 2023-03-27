@@ -16,7 +16,7 @@ class SelectedContent$Mate extends SelectedContent with Mate {
     mateCreateName = 'SelectedContent';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectedContent$Mate(plainText: p.get('plainText').build());
-    mateUse('plainText', plainText);
+    mateUse('plainText', plainText, isNamed: true);
   }
 }
 
@@ -31,7 +31,7 @@ class SelectWordSelectionEvent$Mate extends SelectWordSelectionEvent with Mate {
     mateCreateName = 'SelectWordSelectionEvent';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').build());
-    mateUse('globalPosition', globalPosition);
+    mateUse('globalPosition', globalPosition, isNamed: true);
   }
 }
 
@@ -46,7 +46,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate {
     mateCreateName = 'SelectionEdgeUpdateEvent.forStart';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').build());
-    mateUse('globalPosition', globalPosition);
+    mateUse('globalPosition', globalPosition, isNamed: true);
   }
 
   /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forEnd({required Offset globalPosition})
@@ -58,7 +58,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate {
     mateCreateName = 'SelectionEdgeUpdateEvent.forEnd';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').build());
-    mateUse('globalPosition', globalPosition);
+    mateUse('globalPosition', globalPosition, isNamed: true);
   }
 }
 
@@ -86,9 +86,9 @@ class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
           isEnd: p.get('isEnd').build(),
           granularity: p.get('granularity').build(),
         );
-    mateUse('forward', forward);
-    mateUse('isEnd', isEnd);
-    mateUse('granularity', granularity);
+    mateUse('forward', forward, isNamed: true);
+    mateUse('isEnd', isEnd, isNamed: true);
+    mateUse('granularity', granularity, isNamed: true);
   }
 }
 
@@ -116,9 +116,9 @@ class DirectionallyExtendSelectionEvent$Mate extends DirectionallyExtendSelectio
           isEnd: p.get('isEnd').build(),
           direction: p.get('direction').build(),
         );
-    mateUse('dx', dx);
-    mateUse('isEnd', isEnd);
-    mateUse('direction', direction);
+    mateUse('dx', dx, isNamed: true);
+    mateUse('isEnd', isEnd, isNamed: true);
+    mateUse('direction', direction, isNamed: true);
   }
 }
 
@@ -151,10 +151,10 @@ class SelectionGeometry$Mate extends SelectionGeometry with Mate {
           status: p.get('status').build(),
           hasContent: p.get('hasContent').build(),
         );
-    mateUse('startSelectionPoint', startSelectionPoint);
-    mateUse('endSelectionPoint', endSelectionPoint);
-    mateUse('status', status);
-    mateUse('hasContent', hasContent);
+    mateUse('startSelectionPoint', startSelectionPoint, isNamed: true);
+    mateUse('endSelectionPoint', endSelectionPoint, isNamed: true);
+    mateUse('status', status, isNamed: true);
+    mateUse('hasContent', hasContent, isNamed: true);
   }
 }
 
@@ -182,8 +182,8 @@ class SelectionPoint$Mate extends SelectionPoint with Mate {
           lineHeight: p.get('lineHeight').build(),
           handleType: p.get('handleType').build(),
         );
-    mateUse('localPosition', localPosition);
-    mateUse('lineHeight', lineHeight);
-    mateUse('handleType', handleType);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('lineHeight', lineHeight, isNamed: true);
+    mateUse('handleType', handleType, isNamed: true);
   }
 }

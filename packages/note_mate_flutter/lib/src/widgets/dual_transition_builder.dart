@@ -41,10 +41,10 @@ class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
           reverseBuilder: p.get('reverseBuilder').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('animation', animation);
-    mateUse('forwardBuilder', forwardBuilder);
-    mateUse('reverseBuilder', reverseBuilder);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('animation', animation, isNamed: true);
+    mateUse('forwardBuilder', forwardBuilder, isNamed: true);
+    mateUse('reverseBuilder', reverseBuilder, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

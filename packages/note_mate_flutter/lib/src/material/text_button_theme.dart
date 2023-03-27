@@ -17,7 +17,7 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate {
     mateCreateName = 'TextButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextButtonThemeData$Mate(style: p.get('style').build());
-    mateUse('style', style);
+    mateUse('style', style, isNamed: true);
   }
 }
 
@@ -45,8 +45,8 @@ class TextButtonTheme$Mate extends TextButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

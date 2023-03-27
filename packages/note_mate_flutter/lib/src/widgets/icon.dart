@@ -70,16 +70,16 @@ class Icon$Mate extends Icon with Mate {
           semanticLabel: p.get('semanticLabel').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('icon', icon);
-    mateUse('key', key);
-    mateUse('size', size);
-    mateUse('fill', fill);
-    mateUse('weight', weight);
-    mateUse('grade', grade);
-    mateUse('opticalSize', opticalSize);
-    mateUse('color', color);
-    mateUse('shadows', shadows);
-    mateUse('semanticLabel', semanticLabel);
-    mateUse('textDirection', textDirection);
+    mateUse('icon', icon, isNamed: false);
+    mateUse('key', key, isNamed: true);
+    mateUse('size', size, isNamed: true);
+    mateUse('fill', fill, isNamed: true);
+    mateUse('weight', weight, isNamed: true);
+    mateUse('grade', grade, isNamed: true);
+    mateUse('opticalSize', opticalSize, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUseList('shadows', shadows, isNamed: true);
+    mateUse('semanticLabel', semanticLabel, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
   }
 }

@@ -31,8 +31,8 @@ class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSele
           anchor: p.get('anchor').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('anchor', anchor);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('anchor', anchor, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }

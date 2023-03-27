@@ -17,7 +17,7 @@ class ElevatedButtonThemeData$Mate extends ElevatedButtonThemeData with Mate {
     mateCreateName = 'ElevatedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
-    mateUse('style', style);
+    mateUse('style', style, isNamed: true);
   }
 }
 
@@ -45,8 +45,8 @@ class ElevatedButtonTheme$Mate extends ElevatedButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -47,12 +47,12 @@ class BannerPainter$Mate extends BannerPainter with Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    mateUse('message', message);
-    mateUse('textDirection', textDirection);
-    mateUse('location', location);
-    mateUse('layoutDirection', layoutDirection);
-    mateUse('color', color);
-    mateUse('textStyle', textStyle);
+    mateUse('message', message, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('location', location, isNamed: true);
+    mateUse('layoutDirection', layoutDirection, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
   }
 }
 
@@ -105,14 +105,14 @@ class Banner$Mate extends Banner with Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('message', message);
-    mateUse('textDirection', textDirection);
-    mateUse('location', location);
-    mateUse('layoutDirection', layoutDirection);
-    mateUse('color', color);
-    mateUse('textStyle', textStyle);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('message', message, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('location', location, isNamed: true);
+    mateUse('layoutDirection', layoutDirection, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
   }
 }
 
@@ -135,7 +135,7 @@ class CheckedModeBanner$Mate extends CheckedModeBanner with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

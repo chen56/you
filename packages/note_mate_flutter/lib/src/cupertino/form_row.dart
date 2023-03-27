@@ -45,11 +45,11 @@ class CupertinoFormRow$Mate extends CupertinoFormRow with Mate {
           helper: p.get('helper').build(),
           error: p.get('error').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('prefix', prefix);
-    mateUse('padding', padding);
-    mateUse('helper', helper);
-    mateUse('error', error);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('prefix', prefix, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('helper', helper, isNamed: true);
+    mateUse('error', error, isNamed: true);
   }
 }

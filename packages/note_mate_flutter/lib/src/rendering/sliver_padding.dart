@@ -30,8 +30,8 @@ class RenderSliverPadding$Mate extends RenderSliverPadding with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse('padding', padding);
-    mateUse('textDirection', textDirection);
-    mateUse('child', child);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

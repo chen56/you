@@ -26,8 +26,8 @@ class ViewConfiguration$Mate extends ViewConfiguration with Mate {
           size: p.get('size').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateUse('size', size);
-    mateUse('devicePixelRatio', devicePixelRatio);
+    mateUse('size', size, isNamed: true);
+    mateUse('devicePixelRatio', devicePixelRatio, isNamed: true);
   }
 }
 
@@ -55,8 +55,8 @@ class RenderView$Mate extends RenderView with Mate {
           configuration: p.get('configuration').build(),
           window: p.get('window').build(),
         );
-    mateUse('child', child);
-    mateUse('configuration', configuration);
-    mateUse('window', window);
+    mateUse('child', child, isNamed: true);
+    mateUse('configuration', configuration, isNamed: true);
+    mateUse('window', window, isNamed: true);
   }
 }

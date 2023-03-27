@@ -22,7 +22,7 @@ class PlaceholderSpanIndexSemanticsTag$Mate extends PlaceholderSpanIndexSemantic
     mateCreateName = 'PlaceholderSpanIndexSemanticsTag';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
-    mateUse('index', index);
+    mateUse('index', index, isNamed: false);
   }
 }
 
@@ -104,19 +104,19 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
           selectionColor: p.get('selectionColor').build(),
           registrar: p.get('registrar').build(),
         );
-    mateUse('text', text);
-    mateUse('textAlign', textAlign);
-    mateUse('textDirection', textDirection);
-    mateUse('softWrap', softWrap);
-    mateUse('overflow', overflow);
-    mateUse('textScaleFactor', textScaleFactor);
-    mateUse('maxLines', maxLines);
-    mateUse('locale', locale);
-    mateUse('strutStyle', strutStyle);
-    mateUse('textWidthBasis', textWidthBasis);
-    mateUse('textHeightBehavior', textHeightBehavior);
-    mateUse('children', children);
-    mateUse('selectionColor', selectionColor);
-    mateUse('registrar', registrar);
+    mateUse('text', text, isNamed: false);
+    mateUse('textAlign', textAlign, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('softWrap', softWrap, isNamed: true);
+    mateUse('overflow', overflow, isNamed: true);
+    mateUse('textScaleFactor', textScaleFactor, isNamed: true);
+    mateUse('maxLines', maxLines, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUse('strutStyle', strutStyle, isNamed: true);
+    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
+    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('selectionColor', selectionColor, isNamed: true);
+    mateUse('registrar', registrar, isNamed: true);
   }
 }

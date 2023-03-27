@@ -46,11 +46,11 @@ class GridPaper$Mate extends GridPaper with Mate {
           subdivisions: p.get('subdivisions').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('color', color);
-    mateUse('interval', interval);
-    mateUse('divisions', divisions);
-    mateUse('subdivisions', subdivisions);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('interval', interval, isNamed: true);
+    mateUse('divisions', divisions, isNamed: true);
+    mateUse('subdivisions', subdivisions, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

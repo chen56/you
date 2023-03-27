@@ -25,8 +25,8 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
         );
-    mateUse('size', size);
-    mateUse('alignment', alignment);
+    mateUse('size', size, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
   }
 }
 
@@ -64,11 +64,11 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    mateUse('side', side);
-    mateUse('start', start);
-    mateUse('end', end);
-    mateUse('top', top);
-    mateUse('bottom', bottom);
+    mateUse('side', side, isNamed: true);
+    mateUse('start', start, isNamed: true);
+    mateUse('end', end, isNamed: true);
+    mateUse('top', top, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
   }
 
   /// LinearBorder LinearBorder.start({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -93,9 +93,9 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse('side', side);
-    mateUse('alignment', alignment);
-    mateUse('size', size);
+    mateUse('side', side, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('size', size, isNamed: true);
   }
 
   /// LinearBorder LinearBorder.end({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -120,9 +120,9 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse('side', side);
-    mateUse('alignment', alignment);
-    mateUse('size', size);
+    mateUse('side', side, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('size', size, isNamed: true);
   }
 
   /// LinearBorder LinearBorder.top({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -147,9 +147,9 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse('side', side);
-    mateUse('alignment', alignment);
-    mateUse('size', size);
+    mateUse('side', side, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('size', size, isNamed: true);
   }
 
   /// LinearBorder LinearBorder.bottom({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
@@ -174,8 +174,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse('side', side);
-    mateUse('alignment', alignment);
-    mateUse('size', size);
+    mateUse('side', side, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('size', size, isNamed: true);
   }
 }

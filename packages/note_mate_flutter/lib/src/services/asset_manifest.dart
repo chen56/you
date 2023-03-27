@@ -28,8 +28,8 @@ class AssetMetadata$Mate extends AssetMetadata with Mate {
           targetDevicePixelRatio: p.get('targetDevicePixelRatio').build(),
           main: p.get('main').build(),
         );
-    mateUse('key', key);
-    mateUse('targetDevicePixelRatio', targetDevicePixelRatio);
-    mateUse('main', main);
+    mateUse('key', key, isNamed: true);
+    mateUse('targetDevicePixelRatio', targetDevicePixelRatio, isNamed: true);
+    mateUse('main', main, isNamed: true);
   }
 }

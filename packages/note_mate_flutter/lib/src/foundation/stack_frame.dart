@@ -63,15 +63,15 @@ class StackFrame$Mate extends StackFrame with Mate {
           isConstructor: p.get('isConstructor').build(),
           source: p.get('source').build(),
         );
-    mateUse('number', number);
-    mateUse('column', column);
-    mateUse('line', line);
-    mateUse('packageScheme', packageScheme);
-    mateUse('package', package);
-    mateUse('packagePath', packagePath);
-    mateUse('className', className);
-    mateUse('method', method);
-    mateUse('isConstructor', isConstructor);
-    mateUse('source', source);
+    mateUse('number', number, isNamed: true);
+    mateUse('column', column, isNamed: true);
+    mateUse('line', line, isNamed: true);
+    mateUse('packageScheme', packageScheme, isNamed: true);
+    mateUse('package', package, isNamed: true);
+    mateUse('packagePath', packagePath, isNamed: true);
+    mateUse('className', className, isNamed: true);
+    mateUse('method', method, isNamed: true);
+    mateUse('isConstructor', isConstructor, isNamed: true);
+    mateUse('source', source, isNamed: true);
   }
 }

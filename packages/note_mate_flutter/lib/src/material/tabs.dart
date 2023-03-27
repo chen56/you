@@ -60,12 +60,12 @@ class Tab$Mate extends Tab with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('text', text);
-    mateUse('icon', icon);
-    mateUse('iconMargin', iconMargin);
-    mateUse('height', height);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('text', text, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('iconMargin', iconMargin, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -203,31 +203,31 @@ class TabBar$Mate extends TabBar with Mate {
           splashFactory: p.get('splashFactory').build(),
           splashBorderRadius: p.get('splashBorderRadius').build(),
         );
-    mateUse('key', key);
-    mateUse('tabs', tabs);
-    mateUse('controller', controller);
-    mateUse('isScrollable', isScrollable);
-    mateUse('padding', padding);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('automaticIndicatorColorAdjustment', automaticIndicatorColorAdjustment);
-    mateUse('indicatorWeight', indicatorWeight);
-    mateUse('indicatorPadding', indicatorPadding);
-    mateUse('indicator', indicator);
-    mateUse('indicatorSize', indicatorSize);
-    mateUse('dividerColor', dividerColor);
-    mateUse('labelColor', labelColor);
-    mateUse('labelStyle', labelStyle);
-    mateUse('labelPadding', labelPadding);
-    mateUse('unselectedLabelColor', unselectedLabelColor);
-    mateUse('unselectedLabelStyle', unselectedLabelStyle);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('overlayColor', overlayColor);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('onTap', onTap);
-    mateUse('physics', physics);
-    mateUse('splashFactory', splashFactory);
-    mateUse('splashBorderRadius', splashBorderRadius);
+    mateUse('key', key, isNamed: true);
+    mateUseList('tabs', tabs, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('isScrollable', isScrollable, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('automaticIndicatorColorAdjustment', automaticIndicatorColorAdjustment, isNamed: true);
+    mateUse('indicatorWeight', indicatorWeight, isNamed: true);
+    mateUse('indicatorPadding', indicatorPadding, isNamed: true);
+    mateUse('indicator', indicator, isNamed: true);
+    mateUse('indicatorSize', indicatorSize, isNamed: true);
+    mateUse('dividerColor', dividerColor, isNamed: true);
+    mateUse('labelColor', labelColor, isNamed: true);
+    mateUse('labelStyle', labelStyle, isNamed: true);
+    mateUse('labelPadding', labelPadding, isNamed: true);
+    mateUse('unselectedLabelColor', unselectedLabelColor, isNamed: true);
+    mateUse('unselectedLabelStyle', unselectedLabelStyle, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('splashFactory', splashFactory, isNamed: true);
+    mateUse('splashBorderRadius', splashBorderRadius, isNamed: true);
   }
 }
 
@@ -275,13 +275,13 @@ class TabBarView$Mate extends TabBarView with Mate {
           viewportFraction: p.get('viewportFraction').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('controller', controller);
-    mateUse('physics', physics);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('viewportFraction', viewportFraction);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('viewportFraction', viewportFraction, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -319,11 +319,11 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
           size: p.get('size').build(),
           borderStyle: p.get('borderStyle').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('borderColor', borderColor);
-    mateUse('size', size);
-    mateUse('borderStyle', borderStyle);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('borderColor', borderColor, isNamed: true);
+    mateUse('size', size, isNamed: true);
+    mateUse('borderStyle', borderStyle, isNamed: true);
   }
 }
 
@@ -366,11 +366,11 @@ class TabPageSelector$Mate extends TabPageSelector with Mate {
           selectedColor: p.get('selectedColor').build(),
           borderStyle: p.get('borderStyle').build(),
         );
-    mateUse('key', key);
-    mateUse('controller', controller);
-    mateUse('indicatorSize', indicatorSize);
-    mateUse('color', color);
-    mateUse('selectedColor', selectedColor);
-    mateUse('borderStyle', borderStyle);
+    mateUse('key', key, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('indicatorSize', indicatorSize, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('selectedColor', selectedColor, isNamed: true);
+    mateUse('borderStyle', borderStyle, isNamed: true);
   }
 }

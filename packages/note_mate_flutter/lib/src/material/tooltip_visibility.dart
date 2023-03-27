@@ -30,8 +30,8 @@ class TooltipVisibility$Mate extends TooltipVisibility with Mate {
           visible: p.get('visible').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('visible', visible);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('visible', visible, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -73,16 +73,16 @@ class CircleAvatar$Mate extends CircleAvatar with Mate {
           minRadius: p.get('minRadius').build(),
           maxRadius: p.get('maxRadius').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('backgroundImage', backgroundImage);
-    mateUse('foregroundImage', foregroundImage);
-    mateUse('onBackgroundImageError', onBackgroundImageError);
-    mateUse('onForegroundImageError', onForegroundImageError);
-    mateUse('foregroundColor', foregroundColor);
-    mateUse('radius', radius);
-    mateUse('minRadius', minRadius);
-    mateUse('maxRadius', maxRadius);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('backgroundImage', backgroundImage, isNamed: true);
+    mateUse('foregroundImage', foregroundImage, isNamed: true);
+    mateUse('onBackgroundImageError', onBackgroundImageError, isNamed: true);
+    mateUse('onForegroundImageError', onForegroundImageError, isNamed: true);
+    mateUse('foregroundColor', foregroundColor, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
+    mateUse('minRadius', minRadius, isNamed: true);
+    mateUse('maxRadius', maxRadius, isNamed: true);
   }
 }

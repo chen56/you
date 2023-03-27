@@ -55,12 +55,12 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onTap', onTap);
-    mateUse('value', value);
-    mateUse('enabled', enabled);
-    mateUse('alignment', alignment);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -83,8 +83,8 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with 
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -232,33 +232,33 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
           borderRadius: p.get('borderRadius').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('key', key);
-    mateUse('items', items);
-    mateUse('selectedItemBuilder', selectedItemBuilder);
-    mateUse('value', value);
-    mateUse('hint', hint);
-    mateUse('disabledHint', disabledHint);
-    mateUse('onChanged', onChanged);
-    mateUse('onTap', onTap);
-    mateUse('elevation', elevation);
-    mateUse('style', style);
-    mateUse('underline', underline);
-    mateUse('icon', icon);
-    mateUse('iconDisabledColor', iconDisabledColor);
-    mateUse('iconEnabledColor', iconEnabledColor);
-    mateUse('iconSize', iconSize);
-    mateUse('isDense', isDense);
-    mateUse('isExpanded', isExpanded);
-    mateUse('itemHeight', itemHeight);
-    mateUse('focusColor', focusColor);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('dropdownColor', dropdownColor);
-    mateUse('menuMaxHeight', menuMaxHeight);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('alignment', alignment);
-    mateUse('borderRadius', borderRadius);
-    mateUse('padding', padding);
+    mateUse('key', key, isNamed: true);
+    mateUseList('items', items, isNamed: true);
+    mateUse('selectedItemBuilder', selectedItemBuilder, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('hint', hint, isNamed: true);
+    mateUse('disabledHint', disabledHint, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('underline', underline, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('iconDisabledColor', iconDisabledColor, isNamed: true);
+    mateUse('iconEnabledColor', iconEnabledColor, isNamed: true);
+    mateUse('iconSize', iconSize, isNamed: true);
+    mateUse('isDense', isDense, isNamed: true);
+    mateUse('isExpanded', isExpanded, isNamed: true);
+    mateUse('itemHeight', itemHeight, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('dropdownColor', dropdownColor, isNamed: true);
+    mateUse('menuMaxHeight', menuMaxHeight, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
   }
 }
 
@@ -421,35 +421,35 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Ma
           borderRadius: p.get('borderRadius').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('key', key);
-    mateUse('items', items);
-    mateUse('selectedItemBuilder', selectedItemBuilder);
-    mateUse('value', value);
-    mateUse('hint', hint);
-    mateUse('disabledHint', disabledHint);
-    mateUse('onChanged', onChanged);
-    mateUse('onTap', onTap);
-    mateUse('elevation', elevation);
-    mateUse('style', style);
-    mateUse('icon', icon);
-    mateUse('iconDisabledColor', iconDisabledColor);
-    mateUse('iconEnabledColor', iconEnabledColor);
-    mateUse('iconSize', iconSize);
-    mateUse('isDense', isDense);
-    mateUse('isExpanded', isExpanded);
-    mateUse('itemHeight', itemHeight);
-    mateUse('focusColor', focusColor);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('dropdownColor', dropdownColor);
-    mateUse('decoration', decoration);
-    mateUse('onSaved', onSaved);
-    mateUse('validator', validator);
-    mateUse('autovalidateMode', autovalidateMode);
-    mateUse('menuMaxHeight', menuMaxHeight);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('alignment', alignment);
-    mateUse('borderRadius', borderRadius);
-    mateUse('padding', padding);
+    mateUse('key', key, isNamed: true);
+    mateUseList('items', items, isNamed: true);
+    mateUse('selectedItemBuilder', selectedItemBuilder, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('hint', hint, isNamed: true);
+    mateUse('disabledHint', disabledHint, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('iconDisabledColor', iconDisabledColor, isNamed: true);
+    mateUse('iconEnabledColor', iconEnabledColor, isNamed: true);
+    mateUse('iconSize', iconSize, isNamed: true);
+    mateUse('isDense', isDense, isNamed: true);
+    mateUse('isExpanded', isExpanded, isNamed: true);
+    mateUse('itemHeight', itemHeight, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('dropdownColor', dropdownColor, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('onSaved', onSaved, isNamed: true);
+    mateUse('validator', validator, isNamed: true);
+    mateUse('autovalidateMode', autovalidateMode, isNamed: true);
+    mateUse('menuMaxHeight', menuMaxHeight, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
   }
 }

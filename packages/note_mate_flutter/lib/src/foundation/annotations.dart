@@ -15,7 +15,7 @@ class Category$Mate extends Category with Mate {
     mateCreateName = 'Category';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Category$Mate(p.get('sections').value);
-    mateUse('sections', sections);
+    mateUseList('sections', sections, isNamed: false);
   }
 }
 
@@ -30,7 +30,7 @@ class DocumentationIcon$Mate extends DocumentationIcon with Mate {
     mateCreateName = 'DocumentationIcon';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DocumentationIcon$Mate(p.get('url').value);
-    mateUse('url', url);
+    mateUse('url', url, isNamed: false);
   }
 }
 
@@ -45,6 +45,6 @@ class Summary$Mate extends Summary with Mate {
     mateCreateName = 'Summary';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Summary$Mate(p.get('text').value);
-    mateUse('text', text);
+    mateUse('text', text, isNamed: false);
   }
 }

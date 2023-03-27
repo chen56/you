@@ -63,14 +63,14 @@ class RenderFlex$Mate extends RenderFlex with Mate {
           textBaseline: p.get('textBaseline').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('children', children);
-    mateUse('direction', direction);
-    mateUse('mainAxisSize', mainAxisSize);
-    mateUse('mainAxisAlignment', mainAxisAlignment);
-    mateUse('crossAxisAlignment', crossAxisAlignment);
-    mateUse('textDirection', textDirection);
-    mateUse('verticalDirection', verticalDirection);
-    mateUse('textBaseline', textBaseline);
-    mateUse('clipBehavior', clipBehavior);
+    mateUseList('children', children, isNamed: true);
+    mateUse('direction', direction, isNamed: true);
+    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
+    mateUse('mainAxisAlignment', mainAxisAlignment, isNamed: true);
+    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('verticalDirection', verticalDirection, isNamed: true);
+    mateUse('textBaseline', textBaseline, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }

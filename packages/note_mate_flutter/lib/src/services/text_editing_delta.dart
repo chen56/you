@@ -40,11 +40,11 @@ class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('oldText', oldText);
-    mateUse('textInserted', textInserted);
-    mateUse('insertionOffset', insertionOffset);
-    mateUse('selection', selection);
-    mateUse('composing', composing);
+    mateUse('oldText', oldText, isNamed: true);
+    mateUse('textInserted', textInserted, isNamed: true);
+    mateUse('insertionOffset', insertionOffset, isNamed: true);
+    mateUse('selection', selection, isNamed: true);
+    mateUse('composing', composing, isNamed: true);
   }
 }
 
@@ -77,10 +77,10 @@ class TextEditingDeltaDeletion$Mate extends TextEditingDeltaDeletion with Mate {
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('oldText', oldText);
-    mateUse('deletedRange', deletedRange);
-    mateUse('selection', selection);
-    mateUse('composing', composing);
+    mateUse('oldText', oldText, isNamed: true);
+    mateUse('deletedRange', deletedRange, isNamed: true);
+    mateUse('selection', selection, isNamed: true);
+    mateUse('composing', composing, isNamed: true);
   }
 }
 
@@ -118,11 +118,11 @@ class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with 
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('oldText', oldText);
-    mateUse('replacementText', replacementText);
-    mateUse('replacedRange', replacedRange);
-    mateUse('selection', selection);
-    mateUse('composing', composing);
+    mateUse('oldText', oldText, isNamed: true);
+    mateUse('replacementText', replacementText, isNamed: true);
+    mateUse('replacedRange', replacedRange, isNamed: true);
+    mateUse('selection', selection, isNamed: true);
+    mateUse('composing', composing, isNamed: true);
   }
 }
 
@@ -150,8 +150,8 @@ class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate w
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('oldText', oldText);
-    mateUse('selection', selection);
-    mateUse('composing', composing);
+    mateUse('oldText', oldText, isNamed: true);
+    mateUse('selection', selection, isNamed: true);
+    mateUse('composing', composing, isNamed: true);
   }
 }

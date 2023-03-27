@@ -55,12 +55,12 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('tween', tween);
-    mateUse('duration', duration);
-    mateUse('curve', curve);
-    mateUse('builder', builder);
-    mateUse('onEnd', onEnd);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('tween', tween, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

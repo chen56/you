@@ -22,8 +22,8 @@ main() async {
   _log("## main");
   List<String> include = [
     "package:flutter",
-    "package:flutter/src/material/dialog.dart",
-    // "package:flutter/src/foundation/diagnostics.dart",
+    // "package:flutter/src/material/dialog.dart",
+    "package:flutter/src/material/elevated_button.dart",
     // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
   ];
@@ -416,15 +416,15 @@ void _genLibMate({
   // 瞎导出会导出不存在的元素
     ..directives.addAll([
       // Directive((b) =>
-    // b
-    //   ..type = DirectiveType.import
-    //   ..url = "dart:core")
-    //   ,
-    //   Directive((b) =>
-    //   b
-    //     ..type = DirectiveType.import
-    //     ..url = "dart:ui")
-    //   ,
+      // b
+      //   ..type = DirectiveType.import
+      //   ..url = "dart:core")
+      //   ,
+      //   Directive((b) =>
+      //   b
+      //     ..type = DirectiveType.import
+      //     ..url = "dart:ui")
+      //   ,
     ])
     ..directives.addAll(lib.libraryExports.where((e) => e.combinators.isEmpty).map((libExport) =>
         Directive((b) =>
@@ -588,7 +588,11 @@ void _genLibMate({
                         .code;
                 }).closure)
                     .statement,
-                ...parameters.map((e) => Code("mateUse('${e.name}', ${e.name});")),
+                ...parameters.map((e) {
+                  return e.type.isDartCoreList
+                      ? Code("mateUseList('${e.name}', ${e.name}, isNamed:${e.isNamed});")
+                      : Code("mateUse('${e.name}', ${e.name}, isNamed:${e.isNamed});");
+                }),
               ]);
           });
         })));

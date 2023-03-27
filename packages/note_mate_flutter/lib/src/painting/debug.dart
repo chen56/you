@@ -29,8 +29,8 @@ class ImageSizeInfo$Mate extends ImageSizeInfo with Mate {
           displaySize: p.get('displaySize').build(),
           imageSize: p.get('imageSize').build(),
         );
-    mateUse('source', source);
-    mateUse('displaySize', displaySize);
-    mateUse('imageSize', imageSize);
+    mateUse('source', source, isNamed: true);
+    mateUse('displaySize', displaySize, isNamed: true);
+    mateUse('imageSize', imageSize, isNamed: true);
   }
 }

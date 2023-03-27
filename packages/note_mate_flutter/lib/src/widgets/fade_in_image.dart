@@ -125,26 +125,26 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           repeat: p.get('repeat').build(),
           matchTextDirection: p.get('matchTextDirection').build(),
         );
-    mateUse('key', key);
-    mateUse('placeholder', placeholder);
-    mateUse('placeholderErrorBuilder', placeholderErrorBuilder);
-    mateUse('image', image);
-    mateUse('imageErrorBuilder', imageErrorBuilder);
-    mateUse('excludeFromSemantics', excludeFromSemantics);
-    mateUse('imageSemanticLabel', imageSemanticLabel);
-    mateUse('fadeOutDuration', fadeOutDuration);
-    mateUse('fadeOutCurve', fadeOutCurve);
-    mateUse('fadeInDuration', fadeInDuration);
-    mateUse('fadeInCurve', fadeInCurve);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('fit', fit);
-    mateUse('placeholderFit', placeholderFit);
-    mateUse('filterQuality', filterQuality);
-    mateUse('placeholderFilterQuality', placeholderFilterQuality);
-    mateUse('alignment', alignment);
-    mateUse('repeat', repeat);
-    mateUse('matchTextDirection', matchTextDirection);
+    mateUse('key', key, isNamed: true);
+    mateUse('placeholder', placeholder, isNamed: true);
+    mateUse('placeholderErrorBuilder', placeholderErrorBuilder, isNamed: true);
+    mateUse('image', image, isNamed: true);
+    mateUse('imageErrorBuilder', imageErrorBuilder, isNamed: true);
+    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
+    mateUse('imageSemanticLabel', imageSemanticLabel, isNamed: true);
+    mateUse('fadeOutDuration', fadeOutDuration, isNamed: true);
+    mateUse('fadeOutCurve', fadeOutCurve, isNamed: true);
+    mateUse('fadeInDuration', fadeInDuration, isNamed: true);
+    mateUse('fadeInCurve', fadeInCurve, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('placeholderFit', placeholderFit, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('placeholderFilterQuality', placeholderFilterQuality, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('repeat', repeat, isNamed: true);
+    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
   }
 
   /// FadeInImage FadeInImage.memoryNetwork({Key? key, required Uint8List placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, double placeholderScale = 1.0, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
@@ -284,32 +284,32 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           imageCacheWidth: p.get('imageCacheWidth').build(),
           imageCacheHeight: p.get('imageCacheHeight').build(),
         );
-    mateUse('key', key);
-    mateUse('placeholder', placeholder);
-    mateUse('placeholderErrorBuilder', placeholderErrorBuilder);
-    mateUse('image', image);
-    mateUse('imageErrorBuilder', imageErrorBuilder);
-    mateUse('placeholderScale', placeholderScale);
-    mateUse('imageScale', imageScale);
-    mateUse('excludeFromSemantics', excludeFromSemantics);
-    mateUse('imageSemanticLabel', imageSemanticLabel);
-    mateUse('fadeOutDuration', fadeOutDuration);
-    mateUse('fadeOutCurve', fadeOutCurve);
-    mateUse('fadeInDuration', fadeInDuration);
-    mateUse('fadeInCurve', fadeInCurve);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('fit', fit);
-    mateUse('placeholderFit', placeholderFit);
-    mateUse('filterQuality', filterQuality);
-    mateUse('placeholderFilterQuality', placeholderFilterQuality);
-    mateUse('alignment', alignment);
-    mateUse('repeat', repeat);
-    mateUse('matchTextDirection', matchTextDirection);
-    mateUse('placeholderCacheWidth', placeholderCacheWidth);
-    mateUse('placeholderCacheHeight', placeholderCacheHeight);
-    mateUse('imageCacheWidth', imageCacheWidth);
-    mateUse('imageCacheHeight', imageCacheHeight);
+    mateUse('key', key, isNamed: true);
+    mateUse('placeholder', placeholder, isNamed: true);
+    mateUse('placeholderErrorBuilder', placeholderErrorBuilder, isNamed: true);
+    mateUse('image', image, isNamed: true);
+    mateUse('imageErrorBuilder', imageErrorBuilder, isNamed: true);
+    mateUse('placeholderScale', placeholderScale, isNamed: true);
+    mateUse('imageScale', imageScale, isNamed: true);
+    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
+    mateUse('imageSemanticLabel', imageSemanticLabel, isNamed: true);
+    mateUse('fadeOutDuration', fadeOutDuration, isNamed: true);
+    mateUse('fadeOutCurve', fadeOutCurve, isNamed: true);
+    mateUse('fadeInDuration', fadeInDuration, isNamed: true);
+    mateUse('fadeInCurve', fadeInCurve, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('placeholderFit', placeholderFit, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('placeholderFilterQuality', placeholderFilterQuality, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('repeat', repeat, isNamed: true);
+    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
+    mateUse('placeholderCacheWidth', placeholderCacheWidth, isNamed: true);
+    mateUse('placeholderCacheHeight', placeholderCacheHeight, isNamed: true);
+    mateUse('imageCacheWidth', imageCacheWidth, isNamed: true);
+    mateUse('imageCacheHeight', imageCacheHeight, isNamed: true);
   }
 
   /// FadeInImage FadeInImage.assetNetwork({Key? key, required String placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, AssetBundle? bundle, double? placeholderScale, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
@@ -454,32 +454,32 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           imageCacheWidth: p.get('imageCacheWidth').build(),
           imageCacheHeight: p.get('imageCacheHeight').build(),
         );
-    mateUse('key', key);
-    mateUse('placeholder', placeholder);
-    mateUse('placeholderErrorBuilder', placeholderErrorBuilder);
-    mateUse('image', image);
-    mateUse('imageErrorBuilder', imageErrorBuilder);
-    mateUse('bundle', bundle);
-    mateUse('placeholderScale', placeholderScale);
-    mateUse('imageScale', imageScale);
-    mateUse('excludeFromSemantics', excludeFromSemantics);
-    mateUse('imageSemanticLabel', imageSemanticLabel);
-    mateUse('fadeOutDuration', fadeOutDuration);
-    mateUse('fadeOutCurve', fadeOutCurve);
-    mateUse('fadeInDuration', fadeInDuration);
-    mateUse('fadeInCurve', fadeInCurve);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('fit', fit);
-    mateUse('placeholderFit', placeholderFit);
-    mateUse('filterQuality', filterQuality);
-    mateUse('placeholderFilterQuality', placeholderFilterQuality);
-    mateUse('alignment', alignment);
-    mateUse('repeat', repeat);
-    mateUse('matchTextDirection', matchTextDirection);
-    mateUse('placeholderCacheWidth', placeholderCacheWidth);
-    mateUse('placeholderCacheHeight', placeholderCacheHeight);
-    mateUse('imageCacheWidth', imageCacheWidth);
-    mateUse('imageCacheHeight', imageCacheHeight);
+    mateUse('key', key, isNamed: true);
+    mateUse('placeholder', placeholder, isNamed: true);
+    mateUse('placeholderErrorBuilder', placeholderErrorBuilder, isNamed: true);
+    mateUse('image', image, isNamed: true);
+    mateUse('imageErrorBuilder', imageErrorBuilder, isNamed: true);
+    mateUse('bundle', bundle, isNamed: true);
+    mateUse('placeholderScale', placeholderScale, isNamed: true);
+    mateUse('imageScale', imageScale, isNamed: true);
+    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
+    mateUse('imageSemanticLabel', imageSemanticLabel, isNamed: true);
+    mateUse('fadeOutDuration', fadeOutDuration, isNamed: true);
+    mateUse('fadeOutCurve', fadeOutCurve, isNamed: true);
+    mateUse('fadeInDuration', fadeInDuration, isNamed: true);
+    mateUse('fadeInCurve', fadeInCurve, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('placeholderFit', placeholderFit, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('placeholderFilterQuality', placeholderFilterQuality, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('repeat', repeat, isNamed: true);
+    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
+    mateUse('placeholderCacheWidth', placeholderCacheWidth, isNamed: true);
+    mateUse('placeholderCacheHeight', placeholderCacheHeight, isNamed: true);
+    mateUse('imageCacheWidth', imageCacheWidth, isNamed: true);
+    mateUse('imageCacheHeight', imageCacheHeight, isNamed: true);
   }
 }

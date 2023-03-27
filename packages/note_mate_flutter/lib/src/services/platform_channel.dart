@@ -30,9 +30,9 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate {
           p.get('codec').value,
           binaryMessenger: p.get('binaryMessenger').build(),
         );
-    mateUse('name', name);
-    mateUse('codec', codec);
-    mateUse('binaryMessenger', binaryMessenger);
+    mateUse('name', name, isNamed: false);
+    mateUse('codec', codec, isNamed: false);
+    mateUse('binaryMessenger', binaryMessenger, isNamed: true);
   }
 }
 
@@ -60,9 +60,9 @@ class MethodChannel$Mate extends MethodChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse('name', name);
-    mateUse('codec', codec);
-    mateUse('binaryMessenger', binaryMessenger);
+    mateUse('name', name, isNamed: false);
+    mateUse('codec', codec, isNamed: false);
+    mateUse('binaryMessenger', binaryMessenger, isNamed: false);
   }
 }
 
@@ -90,9 +90,9 @@ class OptionalMethodChannel$Mate extends OptionalMethodChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse('name', name);
-    mateUse('codec', codec);
-    mateUse('binaryMessenger', binaryMessenger);
+    mateUse('name', name, isNamed: false);
+    mateUse('codec', codec, isNamed: false);
+    mateUse('binaryMessenger', binaryMessenger, isNamed: false);
   }
 }
 
@@ -120,8 +120,8 @@ class EventChannel$Mate extends EventChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse('name', name);
-    mateUse('codec', codec);
-    mateUse('binaryMessenger', binaryMessenger);
+    mateUse('name', name, isNamed: false);
+    mateUse('codec', codec, isNamed: false);
+    mateUse('binaryMessenger', binaryMessenger, isNamed: false);
   }
 }

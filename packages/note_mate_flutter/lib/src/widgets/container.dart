@@ -43,10 +43,10 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
           position: p.get('position').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('decoration', decoration);
-    mateUse('position', position);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('position', position, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -129,19 +129,19 @@ class Container$Mate extends Container with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('alignment', alignment);
-    mateUse('padding', padding);
-    mateUse('color', color);
-    mateUse('decoration', decoration);
-    mateUse('foregroundDecoration', foregroundDecoration);
-    mateUse('width', width);
-    mateUse('height', height);
-    mateUse('constraints', constraints);
-    mateUse('margin', margin);
-    mateUse('transform', transform);
-    mateUse('transformAlignment', transformAlignment);
-    mateUse('child', child);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('foregroundDecoration', foregroundDecoration, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
+    mateUse('transform', transform, isNamed: true);
+    mateUse('transformAlignment', transformAlignment, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }

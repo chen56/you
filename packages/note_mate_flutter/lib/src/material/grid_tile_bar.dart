@@ -45,11 +45,11 @@ class GridTileBar$Mate extends GridTileBar with Mate {
           subtitle: p.get('subtitle').build(),
           trailing: p.get('trailing').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('leading', leading);
-    mateUse('title', title);
-    mateUse('subtitle', subtitle);
-    mateUse('trailing', trailing);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('leading', leading, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('subtitle', subtitle, isNamed: true);
+    mateUse('trailing', trailing, isNamed: true);
   }
 }

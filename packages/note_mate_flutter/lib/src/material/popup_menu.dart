@@ -34,8 +34,8 @@ class PopupMenuDivider$Mate extends PopupMenuDivider with Mate {
           key: p.get('key').build(),
           height: p.get('height').build(),
         );
-    mateUse('key', key);
-    mateUse('height', height);
+    mateUse('key', key, isNamed: true);
+    mateUse('height', height, isNamed: true);
   }
 }
 
@@ -98,16 +98,16 @@ class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('onTap', onTap);
-    mateUse('enabled', enabled);
-    mateUse('height', height);
-    mateUse('padding', padding);
-    mateUse('textStyle', textStyle);
-    mateUse('labelTextStyle', labelTextStyle);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('labelTextStyle', labelTextStyle, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -160,14 +160,14 @@ class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('checked', checked);
-    mateUse('enabled', enabled);
-    mateUse('padding', padding);
-    mateUse('height', height);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('checked', checked, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -295,28 +295,28 @@ class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with Mate {
           position: p.get('position').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('initialValue', initialValue);
-    mateUse('onOpened', onOpened);
-    mateUse('onSelected', onSelected);
-    mateUse('onCanceled', onCanceled);
-    mateUse('tooltip', tooltip);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('padding', padding);
-    mateUse('child', child);
-    mateUse('splashRadius', splashRadius);
-    mateUse('icon', icon);
-    mateUse('iconSize', iconSize);
-    mateUse('offset', offset);
-    mateUse('enabled', enabled);
-    mateUse('shape', shape);
-    mateUse('color', color);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('constraints', constraints);
-    mateUse('position', position);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('initialValue', initialValue, isNamed: true);
+    mateUse('onOpened', onOpened, isNamed: true);
+    mateUse('onSelected', onSelected, isNamed: true);
+    mateUse('onCanceled', onCanceled, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('splashRadius', splashRadius, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('iconSize', iconSize, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('position', position, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }

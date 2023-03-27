@@ -22,8 +22,8 @@ class Ticker$Mate extends Ticker with Mate {
           p.get('_onTick').value,
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('_onTick', _onTick);
-    mateUse('debugLabel', debugLabel);
+    mateUse('_onTick', _onTick, isNamed: false);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }
 
@@ -38,6 +38,6 @@ class TickerCanceled$Mate extends TickerCanceled with Mate {
     mateCreateName = 'TickerCanceled';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TickerCanceled$Mate(p.get('ticker').value);
-    mateUse('ticker', ticker);
+    mateUse('ticker', ticker, isNamed: false);
   }
 }

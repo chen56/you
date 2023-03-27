@@ -48,11 +48,11 @@ class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
           onKey: p.get('onKey').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('includeSemantics', includeSemantics);
-    mateUse('onKey', onKey);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('includeSemantics', includeSemantics, isNamed: true);
+    mateUse('onKey', onKey, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

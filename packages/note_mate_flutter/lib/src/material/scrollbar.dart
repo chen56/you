@@ -69,15 +69,15 @@ class Scrollbar$Mate extends Scrollbar with Mate {
           interactive: p.get('interactive').build(),
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('controller', controller);
-    mateUse('thumbVisibility', thumbVisibility);
-    mateUse('trackVisibility', trackVisibility);
-    mateUse('thickness', thickness);
-    mateUse('radius', radius);
-    mateUse('notificationPredicate', notificationPredicate);
-    mateUse('interactive', interactive);
-    mateUse('scrollbarOrientation', scrollbarOrientation);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('thumbVisibility', thumbVisibility, isNamed: true);
+    mateUse('trackVisibility', trackVisibility, isNamed: true);
+    mateUse('thickness', thickness, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
+    mateUse('notificationPredicate', notificationPredicate, isNamed: true);
+    mateUse('interactive', interactive, isNamed: true);
+    mateUse('scrollbarOrientation', scrollbarOrientation, isNamed: true);
   }
 }

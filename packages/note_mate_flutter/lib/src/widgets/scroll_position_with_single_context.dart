@@ -46,11 +46,11 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
           oldPosition: p.get('oldPosition').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('physics', physics);
-    mateUse('context', context);
-    mateUse('initialPixels', initialPixels);
-    mateUse('keepScrollOffset', keepScrollOffset);
-    mateUse('oldPosition', oldPosition);
-    mateUse('debugLabel', debugLabel);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('initialPixels', initialPixels, isNamed: true);
+    mateUse('keepScrollOffset', keepScrollOffset, isNamed: true);
+    mateUse('oldPosition', oldPosition, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }

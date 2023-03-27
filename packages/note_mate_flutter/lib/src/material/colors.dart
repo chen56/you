@@ -24,8 +24,8 @@ class MaterialColor$Mate extends MaterialColor with Mate {
           p.get('primary').value,
           p.get('swatch').value,
         );
-    mateUse('primary', primary);
-    mateUse('swatch', swatch);
+    mateUse('primary', primary, isNamed: false);
+    mateUse('swatch', swatch, isNamed: false);
   }
 }
 
@@ -48,7 +48,7 @@ class MaterialAccentColor$Mate extends MaterialAccentColor with Mate {
           p.get('primary').value,
           p.get('swatch').value,
         );
-    mateUse('primary', primary);
-    mateUse('swatch', swatch);
+    mateUse('primary', primary, isNamed: false);
+    mateUse('swatch', swatch, isNamed: false);
   }
 }

@@ -80,17 +80,17 @@ class TabBarTheme$Mate extends TabBarTheme with Mate {
           splashFactory: p.get('splashFactory').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse('indicator', indicator);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('indicatorSize', indicatorSize);
-    mateUse('dividerColor', dividerColor);
-    mateUse('labelColor', labelColor);
-    mateUse('labelPadding', labelPadding);
-    mateUse('labelStyle', labelStyle);
-    mateUse('unselectedLabelColor', unselectedLabelColor);
-    mateUse('unselectedLabelStyle', unselectedLabelStyle);
-    mateUse('overlayColor', overlayColor);
-    mateUse('splashFactory', splashFactory);
-    mateUse('mouseCursor', mouseCursor);
+    mateUse('indicator', indicator, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('indicatorSize', indicatorSize, isNamed: true);
+    mateUse('dividerColor', dividerColor, isNamed: true);
+    mateUse('labelColor', labelColor, isNamed: true);
+    mateUse('labelPadding', labelPadding, isNamed: true);
+    mateUse('labelStyle', labelStyle, isNamed: true);
+    mateUse('unselectedLabelColor', unselectedLabelColor, isNamed: true);
+    mateUse('unselectedLabelStyle', unselectedLabelStyle, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('splashFactory', splashFactory, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
   }
 }

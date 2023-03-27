@@ -26,8 +26,8 @@ class LocalHistoryEntry$Mate extends LocalHistoryEntry with Mate {
           onRemove: p.get('onRemove').build(),
           impliesAppBarDismissal: p.get('impliesAppBarDismissal').build(),
         );
-    mateUse('onRemove', onRemove);
-    mateUse('impliesAppBarDismissal', impliesAppBarDismissal);
+    mateUse('onRemove', onRemove, isNamed: true);
+    mateUse('impliesAppBarDismissal', impliesAppBarDismissal, isNamed: true);
   }
 }
 
@@ -85,14 +85,14 @@ class RawDialogRoute$Mate<T> extends RawDialogRoute<T> with Mate {
           anchorPoint: p.get('anchorPoint').build(),
           traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),
         );
-    mateUse('pageBuilder', pageBuilder);
-    mateUse('barrierDismissible', barrierDismissible);
-    mateUse('barrierColor', barrierColor);
-    mateUse('barrierLabel', barrierLabel);
-    mateUse('transitionDuration', transitionDuration);
-    mateUse('transitionBuilder', transitionBuilder);
-    mateUse('settings', settings);
-    mateUse('anchorPoint', anchorPoint);
-    mateUse('traversalEdgeBehavior', traversalEdgeBehavior);
+    mateUse('pageBuilder', pageBuilder, isNamed: true);
+    mateUse('barrierDismissible', barrierDismissible, isNamed: true);
+    mateUse('barrierColor', barrierColor, isNamed: true);
+    mateUse('barrierLabel', barrierLabel, isNamed: true);
+    mateUse('transitionDuration', transitionDuration, isNamed: true);
+    mateUse('transitionBuilder', transitionBuilder, isNamed: true);
+    mateUse('settings', settings, isNamed: true);
+    mateUse('anchorPoint', anchorPoint, isNamed: true);
+    mateUse('traversalEdgeBehavior', traversalEdgeBehavior, isNamed: true);
   }
 }

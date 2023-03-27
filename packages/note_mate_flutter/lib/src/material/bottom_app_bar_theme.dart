@@ -46,11 +46,11 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('color', color);
-    mateUse('elevation', elevation);
-    mateUse('shape', shape);
-    mateUse('height', height);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('padding', padding);
+    mateUse('color', color, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
   }
 }

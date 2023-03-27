@@ -33,9 +33,9 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
           localFocalPoint: p.get('localFocalPoint').build(),
           pointerCount: p.get('pointerCount').build(),
         );
-    mateUse('focalPoint', focalPoint);
-    mateUse('localFocalPoint', localFocalPoint);
-    mateUse('pointerCount', pointerCount);
+    mateUse('focalPoint', focalPoint, isNamed: true);
+    mateUse('localFocalPoint', localFocalPoint, isNamed: true);
+    mateUse('pointerCount', pointerCount, isNamed: true);
   }
 }
 
@@ -88,14 +88,14 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
           pointerCount: p.get('pointerCount').build(),
           focalPointDelta: p.get('focalPointDelta').build(),
         );
-    mateUse('focalPoint', focalPoint);
-    mateUse('localFocalPoint', localFocalPoint);
-    mateUse('scale', scale);
-    mateUse('horizontalScale', horizontalScale);
-    mateUse('verticalScale', verticalScale);
-    mateUse('rotation', rotation);
-    mateUse('pointerCount', pointerCount);
-    mateUse('focalPointDelta', focalPointDelta);
+    mateUse('focalPoint', focalPoint, isNamed: true);
+    mateUse('localFocalPoint', localFocalPoint, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('horizontalScale', horizontalScale, isNamed: true);
+    mateUse('verticalScale', verticalScale, isNamed: true);
+    mateUse('rotation', rotation, isNamed: true);
+    mateUse('pointerCount', pointerCount, isNamed: true);
+    mateUse('focalPointDelta', focalPointDelta, isNamed: true);
   }
 }
 
@@ -123,9 +123,9 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate {
           scaleVelocity: p.get('scaleVelocity').build(),
           pointerCount: p.get('pointerCount').build(),
         );
-    mateUse('velocity', velocity);
-    mateUse('scaleVelocity', scaleVelocity);
-    mateUse('pointerCount', pointerCount);
+    mateUse('velocity', velocity, isNamed: true);
+    mateUse('scaleVelocity', scaleVelocity, isNamed: true);
+    mateUse('pointerCount', pointerCount, isNamed: true);
   }
 }
 
@@ -168,11 +168,11 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
         );
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    mateUse('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale, isNamed: true);
+    mateUse('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor, isNamed: true);
   }
 }

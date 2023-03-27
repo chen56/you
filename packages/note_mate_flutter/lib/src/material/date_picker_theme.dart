@@ -179,38 +179,38 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
           rangeSelectionBackgroundColor: p.get('rangeSelectionBackgroundColor').build(),
           rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('shape', shape);
-    mateUse('headerBackgroundColor', headerBackgroundColor);
-    mateUse('headerForegroundColor', headerForegroundColor);
-    mateUse('headerHeadlineStyle', headerHeadlineStyle);
-    mateUse('headerHelpStyle', headerHelpStyle);
-    mateUse('weekdayStyle', weekdayStyle);
-    mateUse('dayStyle', dayStyle);
-    mateUse('dayForegroundColor', dayForegroundColor);
-    mateUse('dayBackgroundColor', dayBackgroundColor);
-    mateUse('dayOverlayColor', dayOverlayColor);
-    mateUse('todayForegroundColor', todayForegroundColor);
-    mateUse('todayBackgroundColor', todayBackgroundColor);
-    mateUse('todayBorder', todayBorder);
-    mateUse('yearStyle', yearStyle);
-    mateUse('yearForegroundColor', yearForegroundColor);
-    mateUse('yearBackgroundColor', yearBackgroundColor);
-    mateUse('yearOverlayColor', yearOverlayColor);
-    mateUse('rangePickerBackgroundColor', rangePickerBackgroundColor);
-    mateUse('rangePickerElevation', rangePickerElevation);
-    mateUse('rangePickerShadowColor', rangePickerShadowColor);
-    mateUse('rangePickerSurfaceTintColor', rangePickerSurfaceTintColor);
-    mateUse('rangePickerShape', rangePickerShape);
-    mateUse('rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor);
-    mateUse('rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor);
-    mateUse('rangePickerHeaderHeadlineStyle', rangePickerHeaderHeadlineStyle);
-    mateUse('rangePickerHeaderHelpStyle', rangePickerHeaderHelpStyle);
-    mateUse('rangeSelectionBackgroundColor', rangeSelectionBackgroundColor);
-    mateUse('rangeSelectionOverlayColor', rangeSelectionOverlayColor);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('headerBackgroundColor', headerBackgroundColor, isNamed: true);
+    mateUse('headerForegroundColor', headerForegroundColor, isNamed: true);
+    mateUse('headerHeadlineStyle', headerHeadlineStyle, isNamed: true);
+    mateUse('headerHelpStyle', headerHelpStyle, isNamed: true);
+    mateUse('weekdayStyle', weekdayStyle, isNamed: true);
+    mateUse('dayStyle', dayStyle, isNamed: true);
+    mateUse('dayForegroundColor', dayForegroundColor, isNamed: true);
+    mateUse('dayBackgroundColor', dayBackgroundColor, isNamed: true);
+    mateUse('dayOverlayColor', dayOverlayColor, isNamed: true);
+    mateUse('todayForegroundColor', todayForegroundColor, isNamed: true);
+    mateUse('todayBackgroundColor', todayBackgroundColor, isNamed: true);
+    mateUse('todayBorder', todayBorder, isNamed: true);
+    mateUse('yearStyle', yearStyle, isNamed: true);
+    mateUse('yearForegroundColor', yearForegroundColor, isNamed: true);
+    mateUse('yearBackgroundColor', yearBackgroundColor, isNamed: true);
+    mateUse('yearOverlayColor', yearOverlayColor, isNamed: true);
+    mateUse('rangePickerBackgroundColor', rangePickerBackgroundColor, isNamed: true);
+    mateUse('rangePickerElevation', rangePickerElevation, isNamed: true);
+    mateUse('rangePickerShadowColor', rangePickerShadowColor, isNamed: true);
+    mateUse('rangePickerSurfaceTintColor', rangePickerSurfaceTintColor, isNamed: true);
+    mateUse('rangePickerShape', rangePickerShape, isNamed: true);
+    mateUse('rangePickerHeaderBackgroundColor', rangePickerHeaderBackgroundColor, isNamed: true);
+    mateUse('rangePickerHeaderForegroundColor', rangePickerHeaderForegroundColor, isNamed: true);
+    mateUse('rangePickerHeaderHeadlineStyle', rangePickerHeaderHeadlineStyle, isNamed: true);
+    mateUse('rangePickerHeaderHelpStyle', rangePickerHeaderHelpStyle, isNamed: true);
+    mateUse('rangeSelectionBackgroundColor', rangeSelectionBackgroundColor, isNamed: true);
+    mateUse('rangeSelectionOverlayColor', rangeSelectionOverlayColor, isNamed: true);
   }
 }
 
@@ -238,8 +238,8 @@ class DatePickerTheme$Mate extends DatePickerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

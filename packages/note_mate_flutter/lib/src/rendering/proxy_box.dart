@@ -37,7 +37,7 @@ class RenderProxyBox$Mate extends RenderProxyBox with Mate {
     mateCreateName = 'RenderProxyBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderProxyBox$Mate(p.get('child').value);
-    mateUse('child', child);
+    mateUse('child', child, isNamed: false);
   }
 }
 
@@ -60,8 +60,8 @@ class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate {
           child: p.get('child').build(),
           additionalConstraints: p.get('additionalConstraints').build(),
         );
-    mateUse('child', child);
-    mateUse('additionalConstraints', additionalConstraints);
+    mateUse('child', child, isNamed: true);
+    mateUse('additionalConstraints', additionalConstraints, isNamed: true);
   }
 }
 
@@ -89,9 +89,9 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate {
           maxWidth: p.get('maxWidth').build(),
           maxHeight: p.get('maxHeight').build(),
         );
-    mateUse('child', child);
-    mateUse('maxWidth', maxWidth);
-    mateUse('maxHeight', maxHeight);
+    mateUse('child', child, isNamed: true);
+    mateUse('maxWidth', maxWidth, isNamed: true);
+    mateUse('maxHeight', maxHeight, isNamed: true);
   }
 }
 
@@ -114,8 +114,8 @@ class RenderAspectRatio$Mate extends RenderAspectRatio with Mate {
           child: p.get('child').build(),
           aspectRatio: p.get('aspectRatio').build(),
         );
-    mateUse('child', child);
-    mateUse('aspectRatio', aspectRatio);
+    mateUse('child', child, isNamed: true);
+    mateUse('aspectRatio', aspectRatio, isNamed: true);
   }
 }
 
@@ -143,9 +143,9 @@ class RenderIntrinsicWidth$Mate extends RenderIntrinsicWidth with Mate {
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('stepWidth', stepWidth);
-    mateUse('stepHeight', stepHeight);
-    mateUse('child', child);
+    mateUse('stepWidth', stepWidth, isNamed: true);
+    mateUse('stepHeight', stepHeight, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -160,7 +160,7 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate {
     mateCreateName = 'RenderIntrinsicHeight';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
-    mateUse('child', child);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -188,9 +188,9 @@ class RenderOpacity$Mate extends RenderOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('opacity', opacity);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateUse('child', child);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -218,9 +218,9 @@ class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('opacity', opacity);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    mateUse('child', child);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -248,9 +248,9 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate {
           shaderCallback: p.get('shaderCallback').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse('child', child);
-    mateUse('shaderCallback', shaderCallback);
-    mateUse('blendMode', blendMode);
+    mateUse('child', child, isNamed: true);
+    mateUse('shaderCallback', shaderCallback, isNamed: true);
+    mateUse('blendMode', blendMode, isNamed: true);
   }
 }
 
@@ -278,9 +278,9 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate {
           filter: p.get('filter').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse('child', child);
-    mateUse('filter', filter);
-    mateUse('blendMode', blendMode);
+    mateUse('child', child, isNamed: true);
+    mateUse('filter', filter, isNamed: true);
+    mateUse('blendMode', blendMode, isNamed: true);
   }
 }
 
@@ -303,8 +303,8 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate {
           shape: p.get('shape').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('shape', shape);
-    mateUse('textDirection', textDirection);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
   }
 }
 
@@ -332,9 +332,9 @@ class RenderClipRect$Mate extends RenderClipRect with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('child', child);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('child', child, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -372,11 +372,11 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('child', child);
-    mateUse('borderRadius', borderRadius);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('textDirection', textDirection);
+    mateUse('child', child, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
   }
 }
 
@@ -404,9 +404,9 @@ class RenderClipOval$Mate extends RenderClipOval with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('child', child);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('child', child, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -434,9 +434,9 @@ class RenderClipPath$Mate extends RenderClipPath with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('child', child);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('child', child, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -484,13 +484,13 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateUse('child', child);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('borderRadius', borderRadius);
-    mateUse('elevation', elevation);
-    mateUse('color', color);
-    mateUse('shadowColor', shadowColor);
+    mateUse('child', child, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
   }
 }
 
@@ -533,12 +533,12 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateUse('child', child);
-    mateUse('clipper', clipper);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('elevation', elevation);
-    mateUse('color', color);
-    mateUse('shadowColor', shadowColor);
+    mateUse('child', child, isNamed: true);
+    mateUse('clipper', clipper, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
   }
 }
 
@@ -571,10 +571,10 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate {
           configuration: p.get('configuration').build(),
           child: p.get('child').build(),
         );
-    mateUse('decoration', decoration);
-    mateUse('position', position);
-    mateUse('configuration', configuration);
-    mateUse('child', child);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('position', position, isNamed: true);
+    mateUse('configuration', configuration, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -622,13 +622,13 @@ class RenderTransform$Mate extends RenderTransform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('transform', transform);
-    mateUse('origin', origin);
-    mateUse('alignment', alignment);
-    mateUse('textDirection', textDirection);
-    mateUse('transformHitTests', transformHitTests);
-    mateUse('filterQuality', filterQuality);
-    mateUse('child', child);
+    mateUse('transform', transform, isNamed: true);
+    mateUse('origin', origin, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('transformHitTests', transformHitTests, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -666,11 +666,11 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('fit', fit);
-    mateUse('alignment', alignment);
-    mateUse('textDirection', textDirection);
-    mateUse('child', child);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -698,9 +698,9 @@ class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with 
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    mateUse('translation', translation);
-    mateUse('transformHitTests', transformHitTests);
-    mateUse('child', child);
+    mateUse('translation', translation, isNamed: true);
+    mateUse('transformHitTests', transformHitTests, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -768,17 +768,17 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('onPointerDown', onPointerDown);
-    mateUse('onPointerMove', onPointerMove);
-    mateUse('onPointerUp', onPointerUp);
-    mateUse('onPointerHover', onPointerHover);
-    mateUse('onPointerCancel', onPointerCancel);
-    mateUse('onPointerPanZoomStart', onPointerPanZoomStart);
-    mateUse('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
-    mateUse('onPointerPanZoomEnd', onPointerPanZoomEnd);
-    mateUse('onPointerSignal', onPointerSignal);
-    mateUse('behavior', behavior);
-    mateUse('child', child);
+    mateUse('onPointerDown', onPointerDown, isNamed: true);
+    mateUse('onPointerMove', onPointerMove, isNamed: true);
+    mateUse('onPointerUp', onPointerUp, isNamed: true);
+    mateUse('onPointerHover', onPointerHover, isNamed: true);
+    mateUse('onPointerCancel', onPointerCancel, isNamed: true);
+    mateUse('onPointerPanZoomStart', onPointerPanZoomStart, isNamed: true);
+    mateUse('onPointerPanZoomUpdate', onPointerPanZoomUpdate, isNamed: true);
+    mateUse('onPointerPanZoomEnd', onPointerPanZoomEnd, isNamed: true);
+    mateUse('onPointerSignal', onPointerSignal, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -831,14 +831,14 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate {
           child: p.get('child').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
         );
-    mateUse('onEnter', onEnter);
-    mateUse('onHover', onHover);
-    mateUse('onExit', onExit);
-    mateUse('cursor', cursor);
-    mateUse('validForMouseTracker', validForMouseTracker);
-    mateUse('opaque', opaque);
-    mateUse('child', child);
-    mateUse('hitTestBehavior', hitTestBehavior);
+    mateUse('onEnter', onEnter, isNamed: true);
+    mateUse('onHover', onHover, isNamed: true);
+    mateUse('onExit', onExit, isNamed: true);
+    mateUse('cursor', cursor, isNamed: true);
+    mateUse('validForMouseTracker', validForMouseTracker, isNamed: true);
+    mateUse('opaque', opaque, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
   }
 }
 
@@ -853,7 +853,7 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate {
     mateCreateName = 'RenderRepaintBoundary';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
-    mateUse('child', child);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -881,9 +881,9 @@ class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate {
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse('child', child);
-    mateUse('ignoring', ignoring);
-    mateUse('ignoringSemantics', ignoringSemantics);
+    mateUse('child', child, isNamed: true);
+    mateUse('ignoring', ignoring, isNamed: true);
+    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
   }
 }
 
@@ -906,8 +906,8 @@ class RenderOffstage$Mate extends RenderOffstage with Mate {
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    mateUse('offstage', offstage);
-    mateUse('child', child);
+    mateUse('offstage', offstage, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -935,9 +935,9 @@ class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate {
           absorbing: p.get('absorbing').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse('child', child);
-    mateUse('absorbing', absorbing);
-    mateUse('ignoringSemantics', ignoringSemantics);
+    mateUse('child', child, isNamed: true);
+    mateUse('absorbing', absorbing, isNamed: true);
+    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
   }
 }
 
@@ -965,9 +965,9 @@ class RenderMetaData$Mate extends RenderMetaData with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('metaData', metaData);
-    mateUse('behavior', behavior);
-    mateUse('child', child);
+    mateUse('metaData', metaData, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1015,13 +1015,13 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler w
           scrollFactor: p.get('scrollFactor').build(),
           behavior: p.get('behavior').build(),
         );
-    mateUse('child', child);
-    mateUse('onTap', onTap);
-    mateUse('onLongPress', onLongPress);
-    mateUse('onHorizontalDragUpdate', onHorizontalDragUpdate);
-    mateUse('onVerticalDragUpdate', onVerticalDragUpdate);
-    mateUse('scrollFactor', scrollFactor);
-    mateUse('behavior', behavior);
+    mateUse('child', child, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('onLongPress', onLongPress, isNamed: true);
+    mateUse('onHorizontalDragUpdate', onHorizontalDragUpdate, isNamed: true);
+    mateUse('onVerticalDragUpdate', onVerticalDragUpdate, isNamed: true);
+    mateUse('scrollFactor', scrollFactor, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
   }
 }
 
@@ -1064,12 +1064,12 @@ class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Ma
           excludeSemantics: p.get('excludeSemantics').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('child', child);
-    mateUse('properties', properties);
-    mateUse('container', container);
-    mateUse('explicitChildNodes', explicitChildNodes);
-    mateUse('excludeSemantics', excludeSemantics);
-    mateUse('textDirection', textDirection);
+    mateUse('child', child, isNamed: true);
+    mateUse('properties', properties, isNamed: true);
+    mateUse('container', container, isNamed: true);
+    mateUse('explicitChildNodes', explicitChildNodes, isNamed: true);
+    mateUse('excludeSemantics', excludeSemantics, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
   }
 }
 
@@ -1092,8 +1092,8 @@ class RenderBlockSemantics$Mate extends RenderBlockSemantics with Mate {
           child: p.get('child').build(),
           blocking: p.get('blocking').build(),
         );
-    mateUse('child', child);
-    mateUse('blocking', blocking);
+    mateUse('child', child, isNamed: true);
+    mateUse('blocking', blocking, isNamed: true);
   }
 }
 
@@ -1108,7 +1108,7 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate {
     mateCreateName = 'RenderMergeSemantics';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
-    mateUse('child', child);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1131,8 +1131,8 @@ class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate {
           child: p.get('child').build(),
           excluding: p.get('excluding').build(),
         );
-    mateUse('child', child);
-    mateUse('excluding', excluding);
+    mateUse('child', child, isNamed: true);
+    mateUse('excluding', excluding, isNamed: true);
   }
 }
 
@@ -1155,8 +1155,8 @@ class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate {
           child: p.get('child').build(),
           index: p.get('index').build(),
         );
-    mateUse('child', child);
-    mateUse('index', index);
+    mateUse('child', child, isNamed: true);
+    mateUse('index', index, isNamed: true);
   }
 }
 
@@ -1179,8 +1179,8 @@ class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate {
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    mateUse('link', link);
-    mateUse('child', child);
+    mateUse('link', link, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1223,12 +1223,12 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    mateUse('link', link);
-    mateUse('showWhenUnlinked', showWhenUnlinked);
-    mateUse('offset', offset);
-    mateUse('leaderAnchor', leaderAnchor);
-    mateUse('followerAnchor', followerAnchor);
-    mateUse('child', child);
+    mateUse('link', link, isNamed: true);
+    mateUse('showWhenUnlinked', showWhenUnlinked, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('leaderAnchor', leaderAnchor, isNamed: true);
+    mateUse('followerAnchor', followerAnchor, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -1256,8 +1256,8 @@ class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion
           sized: p.get('sized').build(),
           child: p.get('child').build(),
         );
-    mateUse('value', value);
-    mateUse('sized', sized);
-    mateUse('child', child);
+    mateUse('value', value, isNamed: true);
+    mateUse('sized', sized, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

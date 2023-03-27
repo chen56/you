@@ -132,27 +132,27 @@ class ButtonStyle$Mate extends ButtonStyle with Mate {
           alignment: p.get('alignment').build(),
           splashFactory: p.get('splashFactory').build(),
         );
-    mateUse('textStyle', textStyle);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('foregroundColor', foregroundColor);
-    mateUse('overlayColor', overlayColor);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('elevation', elevation);
-    mateUse('padding', padding);
-    mateUse('minimumSize', minimumSize);
-    mateUse('fixedSize', fixedSize);
-    mateUse('maximumSize', maximumSize);
-    mateUse('iconColor', iconColor);
-    mateUse('iconSize', iconSize);
-    mateUse('side', side);
-    mateUse('shape', shape);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('visualDensity', visualDensity);
-    mateUse('tapTargetSize', tapTargetSize);
-    mateUse('animationDuration', animationDuration);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('alignment', alignment);
-    mateUse('splashFactory', splashFactory);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('foregroundColor', foregroundColor, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('minimumSize', minimumSize, isNamed: true);
+    mateUse('fixedSize', fixedSize, isNamed: true);
+    mateUse('maximumSize', maximumSize, isNamed: true);
+    mateUse('iconColor', iconColor, isNamed: true);
+    mateUse('iconSize', iconSize, isNamed: true);
+    mateUse('side', side, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('visualDensity', visualDensity, isNamed: true);
+    mateUse('tapTargetSize', tapTargetSize, isNamed: true);
+    mateUse('animationDuration', animationDuration, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('splashFactory', splashFactory, isNamed: true);
   }
 }

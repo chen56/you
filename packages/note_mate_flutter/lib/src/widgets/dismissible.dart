@@ -96,21 +96,21 @@ class Dismissible$Mate extends Dismissible with Mate {
           dragStartBehavior: p.get('dragStartBehavior').build(),
           behavior: p.get('behavior').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('background', background);
-    mateUse('secondaryBackground', secondaryBackground);
-    mateUse('confirmDismiss', confirmDismiss);
-    mateUse('onResize', onResize);
-    mateUse('onUpdate', onUpdate);
-    mateUse('onDismissed', onDismissed);
-    mateUse('direction', direction);
-    mateUse('resizeDuration', resizeDuration);
-    mateUse('dismissThresholds', dismissThresholds);
-    mateUse('movementDuration', movementDuration);
-    mateUse('crossAxisEndOffset', crossAxisEndOffset);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('behavior', behavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('background', background, isNamed: true);
+    mateUse('secondaryBackground', secondaryBackground, isNamed: true);
+    mateUse('confirmDismiss', confirmDismiss, isNamed: true);
+    mateUse('onResize', onResize, isNamed: true);
+    mateUse('onUpdate', onUpdate, isNamed: true);
+    mateUse('onDismissed', onDismissed, isNamed: true);
+    mateUse('direction', direction, isNamed: true);
+    mateUse('resizeDuration', resizeDuration, isNamed: true);
+    mateUse('dismissThresholds', dismissThresholds, isNamed: true);
+    mateUse('movementDuration', movementDuration, isNamed: true);
+    mateUse('crossAxisEndOffset', crossAxisEndOffset, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
   }
 }
 
@@ -143,9 +143,9 @@ class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate {
           previousReached: p.get('previousReached').build(),
           progress: p.get('progress').build(),
         );
-    mateUse('direction', direction);
-    mateUse('reached', reached);
-    mateUse('previousReached', previousReached);
-    mateUse('progress', progress);
+    mateUse('direction', direction, isNamed: true);
+    mateUse('reached', reached, isNamed: true);
+    mateUse('previousReached', previousReached, isNamed: true);
+    mateUse('progress', progress, isNamed: true);
   }
 }

@@ -24,8 +24,8 @@ class FractionalOffsetTween$Mate extends FractionalOffsetTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -48,8 +48,8 @@ class AlignmentTween$Mate extends AlignmentTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -72,7 +72,7 @@ class AlignmentGeometryTween$Mate extends AlignmentGeometryTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }

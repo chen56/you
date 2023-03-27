@@ -59,14 +59,14 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
           alignment: p.get('alignment').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('textColor', textColor);
-    mateUse('smallSize', smallSize);
-    mateUse('largeSize', largeSize);
-    mateUse('textStyle', textStyle);
-    mateUse('padding', padding);
-    mateUse('alignment', alignment);
-    mateUse('offset', offset);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('textColor', textColor, isNamed: true);
+    mateUse('smallSize', smallSize, isNamed: true);
+    mateUse('largeSize', largeSize, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
   }
 }
 
@@ -94,8 +94,8 @@ class BadgeTheme$Mate extends BadgeTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

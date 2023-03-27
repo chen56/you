@@ -57,14 +57,14 @@ class SafeArea$Mate extends SafeArea with Mate {
           maintainBottomViewPadding: p.get('maintainBottomViewPadding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('left', left);
-    mateUse('top', top);
-    mateUse('right', right);
-    mateUse('bottom', bottom);
-    mateUse('minimum', minimum);
-    mateUse('maintainBottomViewPadding', maintainBottomViewPadding);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('left', left, isNamed: true);
+    mateUse('top', top, isNamed: true);
+    mateUse('right', right, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('minimum', minimum, isNamed: true);
+    mateUse('maintainBottomViewPadding', maintainBottomViewPadding, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -112,12 +112,12 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
           minimum: p.get('minimum').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key);
-    mateUse('left', left);
-    mateUse('top', top);
-    mateUse('right', right);
-    mateUse('bottom', bottom);
-    mateUse('minimum', minimum);
-    mateUse('sliver', sliver);
+    mateUse('key', key, isNamed: true);
+    mateUse('left', left, isNamed: true);
+    mateUse('top', top, isNamed: true);
+    mateUse('right', right, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('minimum', minimum, isNamed: true);
+    mateUse('sliver', sliver, isNamed: true);
   }
 }

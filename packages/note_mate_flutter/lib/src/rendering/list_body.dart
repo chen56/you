@@ -26,7 +26,7 @@ class RenderListBody$Mate extends RenderListBody with Mate {
           children: p.get('children').build(),
           axisDirection: p.get('axisDirection').build(),
         );
-    mateUse('children', children);
-    mateUse('axisDirection', axisDirection);
+    mateUseList('children', children, isNamed: true);
+    mateUse('axisDirection', axisDirection, isNamed: true);
   }
 }

@@ -40,10 +40,10 @@ class MagnifierInfo$Mate extends MagnifierInfo with Mate {
           fieldBounds: p.get('fieldBounds').build(),
           currentLineBoundaries: p.get('currentLineBoundaries').build(),
         );
-    mateUse('globalGesturePosition', globalGesturePosition);
-    mateUse('caretRect', caretRect);
-    mateUse('fieldBounds', fieldBounds);
-    mateUse('currentLineBoundaries', currentLineBoundaries);
+    mateUse('globalGesturePosition', globalGesturePosition, isNamed: true);
+    mateUse('caretRect', caretRect, isNamed: true);
+    mateUse('fieldBounds', fieldBounds, isNamed: true);
+    mateUse('currentLineBoundaries', currentLineBoundaries, isNamed: true);
   }
 }
 
@@ -66,8 +66,8 @@ class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration with Ma
           magnifierBuilder: p.get('magnifierBuilder').build(),
           shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').build(),
         );
-    mateUse('magnifierBuilder', magnifierBuilder);
-    mateUse('shouldDisplayHandlesInMagnifier', shouldDisplayHandlesInMagnifier);
+    mateUse('magnifierBuilder', magnifierBuilder, isNamed: true);
+    mateUse('shouldDisplayHandlesInMagnifier', shouldDisplayHandlesInMagnifier, isNamed: true);
   }
 }
 
@@ -82,7 +82,7 @@ class MagnifierController$Mate extends MagnifierController with Mate {
     mateCreateName = 'MagnifierController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MagnifierController$Mate(animationController: p.get('animationController').build());
-    mateUse('animationController', animationController);
+    mateUse('animationController', animationController, isNamed: true);
   }
 }
 
@@ -110,9 +110,9 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate {
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    mateUse('opacity', opacity);
-    mateUse('shadows', shadows);
-    mateUse('shape', shape);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUseList('shadows', shadows, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
   }
 }
 
@@ -155,11 +155,11 @@ class RawMagnifier$Mate extends RawMagnifier with Mate {
           magnificationScale: p.get('magnificationScale').build(),
           size: p.get('size').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('decoration', decoration);
-    mateUse('focalPointOffset', focalPointOffset);
-    mateUse('magnificationScale', magnificationScale);
-    mateUse('size', size);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('focalPointOffset', focalPointOffset, isNamed: true);
+    mateUse('magnificationScale', magnificationScale, isNamed: true);
+    mateUse('size', size, isNamed: true);
   }
 }

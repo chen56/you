@@ -15,6 +15,6 @@ class DesktopTextSelectionToolbarLayoutDelegate$Mate extends DesktopTextSelectio
     mateCreateName = 'DesktopTextSelectionToolbarLayoutDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
-    mateUse('anchor', anchor);
+    mateUse('anchor', anchor, isNamed: true);
   }
 }

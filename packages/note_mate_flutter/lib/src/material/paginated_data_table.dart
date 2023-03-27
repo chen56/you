@@ -147,30 +147,30 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with Mate {
           controller: p.get('controller').build(),
           primary: p.get('primary').build(),
         );
-    mateUse('key', key);
-    mateUse('header', header);
-    mateUse('actions', actions);
-    mateUse('columns', columns);
-    mateUse('sortColumnIndex', sortColumnIndex);
-    mateUse('sortAscending', sortAscending);
-    mateUse('onSelectAll', onSelectAll);
-    mateUse('dataRowMinHeight', dataRowMinHeight);
-    mateUse('dataRowMaxHeight', dataRowMaxHeight);
-    mateUse('headingRowHeight', headingRowHeight);
-    mateUse('horizontalMargin', horizontalMargin);
-    mateUse('columnSpacing', columnSpacing);
-    mateUse('showCheckboxColumn', showCheckboxColumn);
-    mateUse('showFirstLastButtons', showFirstLastButtons);
-    mateUse('initialFirstRowIndex', initialFirstRowIndex);
-    mateUse('onPageChanged', onPageChanged);
-    mateUse('rowsPerPage', rowsPerPage);
-    mateUse('availableRowsPerPage', availableRowsPerPage);
-    mateUse('onRowsPerPageChanged', onRowsPerPageChanged);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('arrowHeadColor', arrowHeadColor);
-    mateUse('source', source);
-    mateUse('checkboxHorizontalMargin', checkboxHorizontalMargin);
-    mateUse('controller', controller);
-    mateUse('primary', primary);
+    mateUse('key', key, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUseList('actions', actions, isNamed: true);
+    mateUseList('columns', columns, isNamed: true);
+    mateUse('sortColumnIndex', sortColumnIndex, isNamed: true);
+    mateUse('sortAscending', sortAscending, isNamed: true);
+    mateUse('onSelectAll', onSelectAll, isNamed: true);
+    mateUse('dataRowMinHeight', dataRowMinHeight, isNamed: true);
+    mateUse('dataRowMaxHeight', dataRowMaxHeight, isNamed: true);
+    mateUse('headingRowHeight', headingRowHeight, isNamed: true);
+    mateUse('horizontalMargin', horizontalMargin, isNamed: true);
+    mateUse('columnSpacing', columnSpacing, isNamed: true);
+    mateUse('showCheckboxColumn', showCheckboxColumn, isNamed: true);
+    mateUse('showFirstLastButtons', showFirstLastButtons, isNamed: true);
+    mateUse('initialFirstRowIndex', initialFirstRowIndex, isNamed: true);
+    mateUse('onPageChanged', onPageChanged, isNamed: true);
+    mateUse('rowsPerPage', rowsPerPage, isNamed: true);
+    mateUseList('availableRowsPerPage', availableRowsPerPage, isNamed: true);
+    mateUse('onRowsPerPageChanged', onRowsPerPageChanged, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('arrowHeadColor', arrowHeadColor, isNamed: true);
+    mateUse('source', source, isNamed: true);
+    mateUse('checkboxHorizontalMargin', checkboxHorizontalMargin, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('primary', primary, isNamed: true);
   }
 }

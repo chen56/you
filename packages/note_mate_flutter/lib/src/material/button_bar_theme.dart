@@ -64,15 +64,15 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
           layoutBehavior: p.get('layoutBehavior').build(),
           overflowDirection: p.get('overflowDirection').build(),
         );
-    mateUse('alignment', alignment);
-    mateUse('mainAxisSize', mainAxisSize);
-    mateUse('buttonTextTheme', buttonTextTheme);
-    mateUse('buttonMinWidth', buttonMinWidth);
-    mateUse('buttonHeight', buttonHeight);
-    mateUse('buttonPadding', buttonPadding);
-    mateUse('buttonAlignedDropdown', buttonAlignedDropdown);
-    mateUse('layoutBehavior', layoutBehavior);
-    mateUse('overflowDirection', overflowDirection);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
+    mateUse('buttonTextTheme', buttonTextTheme, isNamed: true);
+    mateUse('buttonMinWidth', buttonMinWidth, isNamed: true);
+    mateUse('buttonHeight', buttonHeight, isNamed: true);
+    mateUse('buttonPadding', buttonPadding, isNamed: true);
+    mateUse('buttonAlignedDropdown', buttonAlignedDropdown, isNamed: true);
+    mateUse('layoutBehavior', layoutBehavior, isNamed: true);
+    mateUse('overflowDirection', overflowDirection, isNamed: true);
   }
 }
 
@@ -100,8 +100,8 @@ class ButtonBarTheme$Mate extends ButtonBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

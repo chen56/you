@@ -24,7 +24,7 @@ class RenderSliverFixedExtentList$Mate extends RenderSliverFixedExtentList with 
           childManager: p.get('childManager').build(),
           itemExtent: p.get('itemExtent').build(),
         );
-    mateUse('childManager', childManager);
-    mateUse('itemExtent', itemExtent);
+    mateUse('childManager', childManager, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
   }
 }

@@ -54,13 +54,13 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
           opacity: p.get('opacity').build(),
           shadows: p.get('shadows').build(),
         );
-    mateUse('size', size);
-    mateUse('fill', fill);
-    mateUse('weight', weight);
-    mateUse('grade', grade);
-    mateUse('opticalSize', opticalSize);
-    mateUse('color', color);
-    mateUse('opacity', opacity);
-    mateUse('shadows', shadows);
+    mateUse('size', size, isNamed: true);
+    mateUse('fill', fill, isNamed: true);
+    mateUse('weight', weight, isNamed: true);
+    mateUse('grade', grade, isNamed: true);
+    mateUse('opticalSize', opticalSize, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUseList('shadows', shadows, isNamed: true);
   }
 }

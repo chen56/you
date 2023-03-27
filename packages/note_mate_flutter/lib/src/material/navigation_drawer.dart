@@ -68,16 +68,16 @@ class NavigationDrawer$Mate extends NavigationDrawer with Mate {
           onDestinationSelected: p.get('onDestinationSelected').build(),
           selectedIndex: p.get('selectedIndex').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('elevation', elevation);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('indicatorShape', indicatorShape);
-    mateUse('onDestinationSelected', onDestinationSelected);
-    mateUse('selectedIndex', selectedIndex);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('indicatorShape', indicatorShape, isNamed: true);
+    mateUse('onDestinationSelected', onDestinationSelected, isNamed: true);
+    mateUse('selectedIndex', selectedIndex, isNamed: true);
   }
 }
 
@@ -115,10 +115,10 @@ class NavigationDrawerDestination$Mate extends NavigationDrawerDestination with 
           selectedIcon: p.get('selectedIcon').build(),
           label: p.get('label').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('icon', icon);
-    mateUse('selectedIcon', selectedIcon);
-    mateUse('label', label);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('selectedIcon', selectedIcon, isNamed: true);
+    mateUse('label', label, isNamed: true);
   }
 }

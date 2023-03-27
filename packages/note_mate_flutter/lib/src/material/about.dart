@@ -60,15 +60,15 @@ class AboutListTile$Mate extends AboutListTile with Mate {
           aboutBoxChildren: p.get('aboutBoxChildren').build(),
           dense: p.get('dense').build(),
         );
-    mateUse('key', key);
-    mateUse('icon', icon);
-    mateUse('child', child);
-    mateUse('applicationName', applicationName);
-    mateUse('applicationVersion', applicationVersion);
-    mateUse('applicationIcon', applicationIcon);
-    mateUse('applicationLegalese', applicationLegalese);
-    mateUse('aboutBoxChildren', aboutBoxChildren);
-    mateUse('dense', dense);
+    mateUse('key', key, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('applicationName', applicationName, isNamed: true);
+    mateUse('applicationVersion', applicationVersion, isNamed: true);
+    mateUse('applicationIcon', applicationIcon, isNamed: true);
+    mateUse('applicationLegalese', applicationLegalese, isNamed: true);
+    mateUseList('aboutBoxChildren', aboutBoxChildren, isNamed: true);
+    mateUse('dense', dense, isNamed: true);
   }
 }
 
@@ -111,12 +111,12 @@ class AboutDialog$Mate extends AboutDialog with Mate {
           applicationLegalese: p.get('applicationLegalese').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('applicationName', applicationName);
-    mateUse('applicationVersion', applicationVersion);
-    mateUse('applicationIcon', applicationIcon);
-    mateUse('applicationLegalese', applicationLegalese);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('applicationName', applicationName, isNamed: true);
+    mateUse('applicationVersion', applicationVersion, isNamed: true);
+    mateUse('applicationIcon', applicationIcon, isNamed: true);
+    mateUse('applicationLegalese', applicationLegalese, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -154,10 +154,10 @@ class LicensePage$Mate extends LicensePage with Mate {
           applicationIcon: p.get('applicationIcon').build(),
           applicationLegalese: p.get('applicationLegalese').build(),
         );
-    mateUse('key', key);
-    mateUse('applicationName', applicationName);
-    mateUse('applicationVersion', applicationVersion);
-    mateUse('applicationIcon', applicationIcon);
-    mateUse('applicationLegalese', applicationLegalese);
+    mateUse('key', key, isNamed: true);
+    mateUse('applicationName', applicationName, isNamed: true);
+    mateUse('applicationVersion', applicationVersion, isNamed: true);
+    mateUse('applicationIcon', applicationIcon, isNamed: true);
+    mateUse('applicationLegalese', applicationLegalese, isNamed: true);
   }
 }

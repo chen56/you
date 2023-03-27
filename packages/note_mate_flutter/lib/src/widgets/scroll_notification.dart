@@ -32,9 +32,9 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate {
           context: p.get('context').build(),
           dragDetails: p.get('dragDetails').build(),
         );
-    mateUse('metrics', metrics);
-    mateUse('context', context);
-    mateUse('dragDetails', dragDetails);
+    mateUse('metrics', metrics, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('dragDetails', dragDetails, isNamed: true);
   }
 }
 
@@ -72,11 +72,11 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate {
           scrollDelta: p.get('scrollDelta').build(),
           depth: p.get('depth').build(),
         );
-    mateUse('metrics', metrics);
-    mateUse('context', context);
-    mateUse('dragDetails', dragDetails);
-    mateUse('scrollDelta', scrollDelta);
-    mateUse('depth', depth);
+    mateUse('metrics', metrics, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('dragDetails', dragDetails, isNamed: true);
+    mateUse('scrollDelta', scrollDelta, isNamed: true);
+    mateUse('depth', depth, isNamed: true);
   }
 }
 
@@ -114,11 +114,11 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate {
           overscroll: p.get('overscroll').build(),
           velocity: p.get('velocity').build(),
         );
-    mateUse('metrics', metrics);
-    mateUse('context', context);
-    mateUse('dragDetails', dragDetails);
-    mateUse('overscroll', overscroll);
-    mateUse('velocity', velocity);
+    mateUse('metrics', metrics, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('dragDetails', dragDetails, isNamed: true);
+    mateUse('overscroll', overscroll, isNamed: true);
+    mateUse('velocity', velocity, isNamed: true);
   }
 }
 
@@ -146,9 +146,9 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate {
           context: p.get('context').build(),
           dragDetails: p.get('dragDetails').build(),
         );
-    mateUse('metrics', metrics);
-    mateUse('context', context);
-    mateUse('dragDetails', dragDetails);
+    mateUse('metrics', metrics, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('dragDetails', dragDetails, isNamed: true);
   }
 }
 
@@ -176,8 +176,8 @@ class UserScrollNotification$Mate extends UserScrollNotification with Mate {
           context: p.get('context').build(),
           direction: p.get('direction').build(),
         );
-    mateUse('metrics', metrics);
-    mateUse('context', context);
-    mateUse('direction', direction);
+    mateUse('metrics', metrics, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('direction', direction, isNamed: true);
   }
 }

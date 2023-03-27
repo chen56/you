@@ -145,31 +145,31 @@ class TextStyle$Mate extends TextStyle with Mate {
           package: p.get('package').build(),
           overflow: p.get('overflow').build(),
         );
-    mateUse('inherit', inherit);
-    mateUse('color', color);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('fontSize', fontSize);
-    mateUse('fontWeight', fontWeight);
-    mateUse('fontStyle', fontStyle);
-    mateUse('letterSpacing', letterSpacing);
-    mateUse('wordSpacing', wordSpacing);
-    mateUse('textBaseline', textBaseline);
-    mateUse('height', height);
-    mateUse('leadingDistribution', leadingDistribution);
-    mateUse('locale', locale);
-    mateUse('foreground', foreground);
-    mateUse('background', background);
-    mateUse('shadows', shadows);
-    mateUse('fontFeatures', fontFeatures);
-    mateUse('fontVariations', fontVariations);
-    mateUse('decoration', decoration);
-    mateUse('decorationColor', decorationColor);
-    mateUse('decorationStyle', decorationStyle);
-    mateUse('decorationThickness', decorationThickness);
-    mateUse('debugLabel', debugLabel);
-    mateUse('fontFamily', fontFamily);
-    mateUse('fontFamilyFallback', fontFamilyFallback);
-    mateUse('package', package);
-    mateUse('overflow', overflow);
+    mateUse('inherit', inherit, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('fontSize', fontSize, isNamed: true);
+    mateUse('fontWeight', fontWeight, isNamed: true);
+    mateUse('fontStyle', fontStyle, isNamed: true);
+    mateUse('letterSpacing', letterSpacing, isNamed: true);
+    mateUse('wordSpacing', wordSpacing, isNamed: true);
+    mateUse('textBaseline', textBaseline, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('leadingDistribution', leadingDistribution, isNamed: true);
+    mateUse('locale', locale, isNamed: true);
+    mateUse('foreground', foreground, isNamed: true);
+    mateUse('background', background, isNamed: true);
+    mateUseList('shadows', shadows, isNamed: true);
+    mateUseList('fontFeatures', fontFeatures, isNamed: true);
+    mateUseList('fontVariations', fontVariations, isNamed: true);
+    mateUse('decoration', decoration, isNamed: true);
+    mateUse('decorationColor', decorationColor, isNamed: true);
+    mateUse('decorationStyle', decorationStyle, isNamed: true);
+    mateUse('decorationThickness', decorationThickness, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse('fontFamily', fontFamily, isNamed: true);
+    mateUseList('fontFamilyFallback', fontFamilyFallback, isNamed: true);
+    mateUse('package', package, isNamed: true);
+    mateUse('overflow', overflow, isNamed: true);
   }
 }

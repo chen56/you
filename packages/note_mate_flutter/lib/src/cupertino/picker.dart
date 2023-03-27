@@ -84,19 +84,19 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           selectionOverlay: p.get('selectionOverlay').build(),
           looping: p.get('looping').build(),
         );
-    mateUse('key', key);
-    mateUse('diameterRatio', diameterRatio);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('offAxisFraction', offAxisFraction);
-    mateUse('useMagnifier', useMagnifier);
-    mateUse('magnification', magnification);
-    mateUse('scrollController', scrollController);
-    mateUse('squeeze', squeeze);
-    mateUse('itemExtent', itemExtent);
-    mateUse('onSelectedItemChanged', onSelectedItemChanged);
-    mateUse('children', children);
-    mateUse('selectionOverlay', selectionOverlay);
-    mateUse('looping', looping);
+    mateUse('key', key, isNamed: true);
+    mateUse('diameterRatio', diameterRatio, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('offAxisFraction', offAxisFraction, isNamed: true);
+    mateUse('useMagnifier', useMagnifier, isNamed: true);
+    mateUse('magnification', magnification, isNamed: true);
+    mateUse('scrollController', scrollController, isNamed: true);
+    mateUse('squeeze', squeeze, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('onSelectedItemChanged', onSelectedItemChanged, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('selectionOverlay', selectionOverlay, isNamed: true);
+    mateUse('looping', looping, isNamed: true);
   }
 
   /// CupertinoPicker CupertinoPicker.builder({Key? key, double diameterRatio = _kDefaultDiameterRatio, Color? backgroundColor, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, FixedExtentScrollController? scrollController, double squeeze = _kSqueeze, required double itemExtent, required void Function(int)? onSelectedItemChanged, required Widget? Function(BuildContext, int) itemBuilder, int? childCount, Widget? selectionOverlay = const CupertinoPickerDefaultSelectionOverlay()})
@@ -171,19 +171,19 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           childCount: p.get('childCount').build(),
           selectionOverlay: p.get('selectionOverlay').build(),
         );
-    mateUse('key', key);
-    mateUse('diameterRatio', diameterRatio);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('offAxisFraction', offAxisFraction);
-    mateUse('useMagnifier', useMagnifier);
-    mateUse('magnification', magnification);
-    mateUse('scrollController', scrollController);
-    mateUse('squeeze', squeeze);
-    mateUse('itemExtent', itemExtent);
-    mateUse('onSelectedItemChanged', onSelectedItemChanged);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('childCount', childCount);
-    mateUse('selectionOverlay', selectionOverlay);
+    mateUse('key', key, isNamed: true);
+    mateUse('diameterRatio', diameterRatio, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('offAxisFraction', offAxisFraction, isNamed: true);
+    mateUse('useMagnifier', useMagnifier, isNamed: true);
+    mateUse('magnification', magnification, isNamed: true);
+    mateUse('scrollController', scrollController, isNamed: true);
+    mateUse('squeeze', squeeze, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('onSelectedItemChanged', onSelectedItemChanged, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('childCount', childCount, isNamed: true);
+    mateUse('selectionOverlay', selectionOverlay, isNamed: true);
   }
 }
 
@@ -216,9 +216,9 @@ class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefault
           capStartEdge: p.get('capStartEdge').build(),
           capEndEdge: p.get('capEndEdge').build(),
         );
-    mateUse('key', key);
-    mateUse('background', background);
-    mateUse('capStartEdge', capStartEdge);
-    mateUse('capEndEdge', capEndEdge);
+    mateUse('key', key, isNamed: true);
+    mateUse('background', background, isNamed: true);
+    mateUse('capStartEdge', capStartEdge, isNamed: true);
+    mateUse('capEndEdge', capEndEdge, isNamed: true);
   }
 }

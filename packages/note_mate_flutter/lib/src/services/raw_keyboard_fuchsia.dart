@@ -28,8 +28,8 @@ class RawKeyEventDataFuchsia$Mate extends RawKeyEventDataFuchsia with Mate {
           codePoint: p.get('codePoint').build(),
           modifiers: p.get('modifiers').build(),
         );
-    mateUse('hidUsage', hidUsage);
-    mateUse('codePoint', codePoint);
-    mateUse('modifiers', modifiers);
+    mateUse('hidUsage', hidUsage, isNamed: true);
+    mateUse('codePoint', codePoint, isNamed: true);
+    mateUse('modifiers', modifiers, isNamed: true);
   }
 }

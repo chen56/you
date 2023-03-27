@@ -25,7 +25,7 @@ class RoundedRectangleBorder$Mate extends RoundedRectangleBorder with Mate {
           side: p.get('side').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    mateUse('side', side);
-    mateUse('borderRadius', borderRadius);
+    mateUse('side', side, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
   }
 }

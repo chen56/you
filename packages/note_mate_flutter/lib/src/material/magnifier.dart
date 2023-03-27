@@ -31,8 +31,8 @@ class TextMagnifier$Mate extends TextMagnifier with Mate {
           key: p.get('key').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
-    mateUse('key', key);
-    mateUse('magnifierInfo', magnifierInfo);
+    mateUse('key', key, isNamed: true);
+    mateUse('magnifierInfo', magnifierInfo, isNamed: true);
   }
 }
 
@@ -75,11 +75,11 @@ class Magnifier$Mate extends Magnifier with Mate {
           shadows: p.get('shadows').build(),
           size: p.get('size').build(),
         );
-    mateUse('key', key);
-    mateUse('additionalFocalPointOffset', additionalFocalPointOffset);
-    mateUse('borderRadius', borderRadius);
-    mateUse('filmColor', filmColor);
-    mateUse('shadows', shadows);
-    mateUse('size', size);
+    mateUse('key', key, isNamed: true);
+    mateUse('additionalFocalPointOffset', additionalFocalPointOffset, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('filmColor', filmColor, isNamed: true);
+    mateUseList('shadows', shadows, isNamed: true);
+    mateUse('size', size, isNamed: true);
   }
 }

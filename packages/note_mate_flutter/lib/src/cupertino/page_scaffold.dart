@@ -41,10 +41,10 @@ class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with Mate {
           resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('navigationBar', navigationBar);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('navigationBar', navigationBar, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('resizeToAvoidBottomInset', resizeToAvoidBottomInset, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

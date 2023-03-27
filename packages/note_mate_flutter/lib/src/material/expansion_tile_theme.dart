@@ -78,18 +78,18 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
           collapsedShape: p.get('collapsedShape').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('collapsedBackgroundColor', collapsedBackgroundColor);
-    mateUse('tilePadding', tilePadding);
-    mateUse('expandedAlignment', expandedAlignment);
-    mateUse('childrenPadding', childrenPadding);
-    mateUse('iconColor', iconColor);
-    mateUse('collapsedIconColor', collapsedIconColor);
-    mateUse('textColor', textColor);
-    mateUse('collapsedTextColor', collapsedTextColor);
-    mateUse('shape', shape);
-    mateUse('collapsedShape', collapsedShape);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('collapsedBackgroundColor', collapsedBackgroundColor, isNamed: true);
+    mateUse('tilePadding', tilePadding, isNamed: true);
+    mateUse('expandedAlignment', expandedAlignment, isNamed: true);
+    mateUse('childrenPadding', childrenPadding, isNamed: true);
+    mateUse('iconColor', iconColor, isNamed: true);
+    mateUse('collapsedIconColor', collapsedIconColor, isNamed: true);
+    mateUse('textColor', textColor, isNamed: true);
+    mateUse('collapsedTextColor', collapsedTextColor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('collapsedShape', collapsedShape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -117,8 +117,8 @@ class ExpansionTileTheme$Mate extends ExpansionTileTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

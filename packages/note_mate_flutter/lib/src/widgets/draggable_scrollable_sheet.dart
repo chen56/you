@@ -65,16 +65,16 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
           controller: p.get('controller').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key);
-    mateUse('initialChildSize', initialChildSize);
-    mateUse('minChildSize', minChildSize);
-    mateUse('maxChildSize', maxChildSize);
-    mateUse('expand', expand);
-    mateUse('snap', snap);
-    mateUse('snapSizes', snapSizes);
-    mateUse('snapAnimationDuration', snapAnimationDuration);
-    mateUse('controller', controller);
-    mateUse('builder', builder);
+    mateUse('key', key, isNamed: true);
+    mateUse('initialChildSize', initialChildSize, isNamed: true);
+    mateUse('minChildSize', minChildSize, isNamed: true);
+    mateUse('maxChildSize', maxChildSize, isNamed: true);
+    mateUse('expand', expand, isNamed: true);
+    mateUse('snap', snap, isNamed: true);
+    mateUseList('snapSizes', snapSizes, isNamed: true);
+    mateUse('snapAnimationDuration', snapAnimationDuration, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
   }
 }
 
@@ -112,11 +112,11 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
           initialExtent: p.get('initialExtent').build(),
           context: p.get('context').build(),
         );
-    mateUse('extent', extent);
-    mateUse('minExtent', minExtent);
-    mateUse('maxExtent', maxExtent);
-    mateUse('initialExtent', initialExtent);
-    mateUse('context', context);
+    mateUse('extent', extent, isNamed: true);
+    mateUse('minExtent', minExtent, isNamed: true);
+    mateUse('maxExtent', maxExtent, isNamed: true);
+    mateUse('initialExtent', initialExtent, isNamed: true);
+    mateUse('context', context, isNamed: true);
   }
 }
 
@@ -139,7 +139,7 @@ class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with 
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

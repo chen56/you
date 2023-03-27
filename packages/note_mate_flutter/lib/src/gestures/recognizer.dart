@@ -23,7 +23,7 @@ class OffsetPair$Mate extends OffsetPair with Mate {
           local: p.get('local').build(),
           global: p.get('global').build(),
         );
-    mateUse('local', local);
-    mateUse('global', global);
+    mateUse('local', local, isNamed: true);
+    mateUse('global', global, isNamed: true);
   }
 }

@@ -20,7 +20,7 @@ class SemanticsTag$Mate extends SemanticsTag with Mate {
     mateCreateName = 'SemanticsTag';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsTag$Mate(p.get('name').value);
-    mateUse('name', name);
+    mateUse('name', name, isNamed: false);
   }
 }
 
@@ -35,7 +35,7 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate {
     mateCreateName = 'CustomSemanticsAction';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
-    mateUse('label', label);
+    mateUse('label', label, isNamed: true);
   }
 
   /// CustomSemanticsAction CustomSemanticsAction.overridingAction({required String hint, required SemanticsAction action})
@@ -55,8 +55,8 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate {
           hint: p.get('hint').build(),
           action: p.get('action').build(),
         );
-    mateUse('hint', hint);
-    mateUse('action', action);
+    mateUse('hint', hint, isNamed: true);
+    mateUse('action', action, isNamed: true);
   }
 }
 
@@ -78,8 +78,8 @@ class AttributedString$Mate extends AttributedString with Mate {
           p.get('string').value,
           attributes: p.get('attributes').build(),
         );
-    mateUse('string', string);
-    mateUse('attributes', attributes);
+    mateUse('string', string, isNamed: false);
+    mateUseList('attributes', attributes, isNamed: true);
   }
 }
 
@@ -126,13 +126,13 @@ class AttributedStringProperty$Mate extends AttributedStringProperty with Mate {
           level: p.get('level').build(),
           description: p.get('description').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('showName', showName);
-    mateUse('showWhenEmpty', showWhenEmpty);
-    mateUse('defaultValue', defaultValue);
-    mateUse('level', level);
-    mateUse('description', description);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('showWhenEmpty', showWhenEmpty, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('level', level, isNamed: true);
+    mateUse('description', description, isNamed: true);
   }
 }
 
@@ -265,30 +265,30 @@ class SemanticsData$Mate extends SemanticsData with Mate {
           transform: p.get('transform').build(),
           customSemanticsActionIds: p.get('customSemanticsActionIds').build(),
         );
-    mateUse('flags', flags);
-    mateUse('actions', actions);
-    mateUse('attributedLabel', attributedLabel);
-    mateUse('attributedValue', attributedValue);
-    mateUse('attributedIncreasedValue', attributedIncreasedValue);
-    mateUse('attributedDecreasedValue', attributedDecreasedValue);
-    mateUse('attributedHint', attributedHint);
-    mateUse('tooltip', tooltip);
-    mateUse('textDirection', textDirection);
-    mateUse('rect', rect);
-    mateUse('elevation', elevation);
-    mateUse('thickness', thickness);
-    mateUse('textSelection', textSelection);
-    mateUse('scrollIndex', scrollIndex);
-    mateUse('scrollChildCount', scrollChildCount);
-    mateUse('scrollPosition', scrollPosition);
-    mateUse('scrollExtentMax', scrollExtentMax);
-    mateUse('scrollExtentMin', scrollExtentMin);
-    mateUse('platformViewId', platformViewId);
-    mateUse('maxValueLength', maxValueLength);
-    mateUse('currentValueLength', currentValueLength);
-    mateUse('tags', tags);
-    mateUse('transform', transform);
-    mateUse('customSemanticsActionIds', customSemanticsActionIds);
+    mateUse('flags', flags, isNamed: true);
+    mateUse('actions', actions, isNamed: true);
+    mateUse('attributedLabel', attributedLabel, isNamed: true);
+    mateUse('attributedValue', attributedValue, isNamed: true);
+    mateUse('attributedIncreasedValue', attributedIncreasedValue, isNamed: true);
+    mateUse('attributedDecreasedValue', attributedDecreasedValue, isNamed: true);
+    mateUse('attributedHint', attributedHint, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('rect', rect, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('thickness', thickness, isNamed: true);
+    mateUse('textSelection', textSelection, isNamed: true);
+    mateUse('scrollIndex', scrollIndex, isNamed: true);
+    mateUse('scrollChildCount', scrollChildCount, isNamed: true);
+    mateUse('scrollPosition', scrollPosition, isNamed: true);
+    mateUse('scrollExtentMax', scrollExtentMax, isNamed: true);
+    mateUse('scrollExtentMin', scrollExtentMin, isNamed: true);
+    mateUse('platformViewId', platformViewId, isNamed: true);
+    mateUse('maxValueLength', maxValueLength, isNamed: true);
+    mateUse('currentValueLength', currentValueLength, isNamed: true);
+    mateUse('tags', tags, isNamed: true);
+    mateUse('transform', transform, isNamed: true);
+    mateUseList('customSemanticsActionIds', customSemanticsActionIds, isNamed: true);
   }
 }
 
@@ -311,8 +311,8 @@ class SemanticsHintOverrides$Mate extends SemanticsHintOverrides with Mate {
           onTapHint: p.get('onTapHint').build(),
           onLongPressHint: p.get('onLongPressHint').build(),
         );
-    mateUse('onTapHint', onTapHint);
-    mateUse('onLongPressHint', onLongPressHint);
+    mateUse('onTapHint', onTapHint, isNamed: true);
+    mateUse('onLongPressHint', onLongPressHint, isNamed: true);
   }
 }
 
@@ -625,66 +625,66 @@ class SemanticsProperties$Mate extends SemanticsProperties with Mate {
           onDismiss: p.get('onDismiss').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
-    mateUse('enabled', enabled);
-    mateUse('checked', checked);
-    mateUse('mixed', mixed);
-    mateUse('selected', selected);
-    mateUse('toggled', toggled);
-    mateUse('button', button);
-    mateUse('link', link);
-    mateUse('header', header);
-    mateUse('textField', textField);
-    mateUse('slider', slider);
-    mateUse('keyboardKey', keyboardKey);
-    mateUse('readOnly', readOnly);
-    mateUse('focusable', focusable);
-    mateUse('focused', focused);
-    mateUse('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
-    mateUse('hidden', hidden);
-    mateUse('obscured', obscured);
-    mateUse('multiline', multiline);
-    mateUse('scopesRoute', scopesRoute);
-    mateUse('namesRoute', namesRoute);
-    mateUse('image', image);
-    mateUse('liveRegion', liveRegion);
-    mateUse('maxValueLength', maxValueLength);
-    mateUse('currentValueLength', currentValueLength);
-    mateUse('label', label);
-    mateUse('attributedLabel', attributedLabel);
-    mateUse('value', value);
-    mateUse('attributedValue', attributedValue);
-    mateUse('increasedValue', increasedValue);
-    mateUse('attributedIncreasedValue', attributedIncreasedValue);
-    mateUse('decreasedValue', decreasedValue);
-    mateUse('attributedDecreasedValue', attributedDecreasedValue);
-    mateUse('hint', hint);
-    mateUse('tooltip', tooltip);
-    mateUse('attributedHint', attributedHint);
-    mateUse('hintOverrides', hintOverrides);
-    mateUse('textDirection', textDirection);
-    mateUse('sortKey', sortKey);
-    mateUse('tagForChildren', tagForChildren);
-    mateUse('onTap', onTap);
-    mateUse('onLongPress', onLongPress);
-    mateUse('onScrollLeft', onScrollLeft);
-    mateUse('onScrollRight', onScrollRight);
-    mateUse('onScrollUp', onScrollUp);
-    mateUse('onScrollDown', onScrollDown);
-    mateUse('onIncrease', onIncrease);
-    mateUse('onDecrease', onDecrease);
-    mateUse('onCopy', onCopy);
-    mateUse('onCut', onCut);
-    mateUse('onPaste', onPaste);
-    mateUse('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
-    mateUse('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
-    mateUse('onMoveCursorForwardByWord', onMoveCursorForwardByWord);
-    mateUse('onMoveCursorBackwardByWord', onMoveCursorBackwardByWord);
-    mateUse('onSetSelection', onSetSelection);
-    mateUse('onSetText', onSetText);
-    mateUse('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
-    mateUse('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
-    mateUse('onDismiss', onDismiss);
-    mateUse('customSemanticsActions', customSemanticsActions);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('checked', checked, isNamed: true);
+    mateUse('mixed', mixed, isNamed: true);
+    mateUse('selected', selected, isNamed: true);
+    mateUse('toggled', toggled, isNamed: true);
+    mateUse('button', button, isNamed: true);
+    mateUse('link', link, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUse('textField', textField, isNamed: true);
+    mateUse('slider', slider, isNamed: true);
+    mateUse('keyboardKey', keyboardKey, isNamed: true);
+    mateUse('readOnly', readOnly, isNamed: true);
+    mateUse('focusable', focusable, isNamed: true);
+    mateUse('focused', focused, isNamed: true);
+    mateUse('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup, isNamed: true);
+    mateUse('hidden', hidden, isNamed: true);
+    mateUse('obscured', obscured, isNamed: true);
+    mateUse('multiline', multiline, isNamed: true);
+    mateUse('scopesRoute', scopesRoute, isNamed: true);
+    mateUse('namesRoute', namesRoute, isNamed: true);
+    mateUse('image', image, isNamed: true);
+    mateUse('liveRegion', liveRegion, isNamed: true);
+    mateUse('maxValueLength', maxValueLength, isNamed: true);
+    mateUse('currentValueLength', currentValueLength, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('attributedLabel', attributedLabel, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('attributedValue', attributedValue, isNamed: true);
+    mateUse('increasedValue', increasedValue, isNamed: true);
+    mateUse('attributedIncreasedValue', attributedIncreasedValue, isNamed: true);
+    mateUse('decreasedValue', decreasedValue, isNamed: true);
+    mateUse('attributedDecreasedValue', attributedDecreasedValue, isNamed: true);
+    mateUse('hint', hint, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('attributedHint', attributedHint, isNamed: true);
+    mateUse('hintOverrides', hintOverrides, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('sortKey', sortKey, isNamed: true);
+    mateUse('tagForChildren', tagForChildren, isNamed: true);
+    mateUse('onTap', onTap, isNamed: true);
+    mateUse('onLongPress', onLongPress, isNamed: true);
+    mateUse('onScrollLeft', onScrollLeft, isNamed: true);
+    mateUse('onScrollRight', onScrollRight, isNamed: true);
+    mateUse('onScrollUp', onScrollUp, isNamed: true);
+    mateUse('onScrollDown', onScrollDown, isNamed: true);
+    mateUse('onIncrease', onIncrease, isNamed: true);
+    mateUse('onDecrease', onDecrease, isNamed: true);
+    mateUse('onCopy', onCopy, isNamed: true);
+    mateUse('onCut', onCut, isNamed: true);
+    mateUse('onPaste', onPaste, isNamed: true);
+    mateUse('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter, isNamed: true);
+    mateUse('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter, isNamed: true);
+    mateUse('onMoveCursorForwardByWord', onMoveCursorForwardByWord, isNamed: true);
+    mateUse('onMoveCursorBackwardByWord', onMoveCursorBackwardByWord, isNamed: true);
+    mateUse('onSetSelection', onSetSelection, isNamed: true);
+    mateUse('onSetText', onSetText, isNamed: true);
+    mateUse('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus, isNamed: true);
+    mateUse('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus, isNamed: true);
+    mateUse('onDismiss', onDismiss, isNamed: true);
+    mateUse('customSemanticsActions', customSemanticsActions, isNamed: true);
   }
 }
 
@@ -707,8 +707,8 @@ class SemanticsNode$Mate extends SemanticsNode with Mate {
           key: p.get('key').build(),
           showOnScreen: p.get('showOnScreen').build(),
         );
-    mateUse('key', key);
-    mateUse('showOnScreen', showOnScreen);
+    mateUse('key', key, isNamed: true);
+    mateUse('showOnScreen', showOnScreen, isNamed: true);
   }
 
   /// SemanticsNode SemanticsNode.root({Key? key, void Function()? showOnScreen, required SemanticsOwner owner})
@@ -733,9 +733,9 @@ class SemanticsNode$Mate extends SemanticsNode with Mate {
           showOnScreen: p.get('showOnScreen').build(),
           owner: p.get('owner').build(),
         );
-    mateUse('key', key);
-    mateUse('showOnScreen', showOnScreen);
-    mateUse('owner', owner);
+    mateUse('key', key, isNamed: true);
+    mateUse('showOnScreen', showOnScreen, isNamed: true);
+    mateUse('owner', owner, isNamed: true);
   }
 }
 
@@ -750,7 +750,7 @@ class SemanticsOwner$Mate extends SemanticsOwner with Mate {
     mateCreateName = 'SemanticsOwner';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsOwner$Mate(onSemanticsUpdate: p.get('onSemanticsUpdate').build());
-    mateUse('onSemanticsUpdate', onSemanticsUpdate);
+    mateUse('onSemanticsUpdate', onSemanticsUpdate, isNamed: true);
   }
 }
 
@@ -772,7 +772,7 @@ class OrdinalSortKey$Mate extends OrdinalSortKey with Mate {
           p.get('order').value,
           name: p.get('name').build(),
         );
-    mateUse('order', order);
-    mateUse('name', name);
+    mateUse('order', order, isNamed: false);
+    mateUse('name', name, isNamed: true);
   }
 }

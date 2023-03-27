@@ -39,10 +39,10 @@ class TransformProperty$Mate extends TransformProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('showName', showName);
-    mateUse('defaultValue', defaultValue);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }

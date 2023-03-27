@@ -15,6 +15,6 @@ class DebugReassembleConfig$Mate extends DebugReassembleConfig with Mate {
     mateCreateName = 'DebugReassembleConfig';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DebugReassembleConfig$Mate(widgetName: p.get('widgetName').build());
-    mateUse('widgetName', widgetName);
+    mateUse('widgetName', widgetName, isNamed: true);
   }
 }

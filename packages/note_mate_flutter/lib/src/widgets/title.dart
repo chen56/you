@@ -36,9 +36,9 @@ class Title$Mate extends Title with Mate {
           color: p.get('color').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('title', title);
-    mateUse('color', color);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -22,7 +22,7 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate {
     mateCreateName = 'IntrinsicColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build());
-    mateUse('flex', flex);
+    mateUse('flex', flex, isNamed: true);
   }
 }
 
@@ -37,7 +37,7 @@ class FixedColumnWidth$Mate extends FixedColumnWidth with Mate {
     mateCreateName = 'FixedColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FixedColumnWidth$Mate(p.get('value').value);
-    mateUse('value', value);
+    mateUse('value', value, isNamed: false);
   }
 }
 
@@ -52,7 +52,7 @@ class FractionColumnWidth$Mate extends FractionColumnWidth with Mate {
     mateCreateName = 'FractionColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FractionColumnWidth$Mate(p.get('value').value);
-    mateUse('value', value);
+    mateUse('value', value, isNamed: false);
   }
 }
 
@@ -67,7 +67,7 @@ class FlexColumnWidth$Mate extends FlexColumnWidth with Mate {
     mateCreateName = 'FlexColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FlexColumnWidth$Mate(p.get('value').value);
-    mateUse('value', value);
+    mateUse('value', value, isNamed: false);
   }
 }
 
@@ -90,8 +90,8 @@ class MaxColumnWidth$Mate extends MaxColumnWidth with Mate {
           p.get('a').value,
           p.get('b').value,
         );
-    mateUse('a', a);
-    mateUse('b', b);
+    mateUse('a', a, isNamed: false);
+    mateUse('b', b, isNamed: false);
   }
 }
 
@@ -114,8 +114,8 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
           p.get('a').value,
           p.get('b').value,
         );
-    mateUse('a', a);
-    mateUse('b', b);
+    mateUse('a', a, isNamed: false);
+    mateUse('b', b, isNamed: false);
   }
 }
 
@@ -183,16 +183,16 @@ class RenderTable$Mate extends RenderTable with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateUse('columns', columns);
-    mateUse('rows', rows);
-    mateUse('columnWidths', columnWidths);
-    mateUse('defaultColumnWidth', defaultColumnWidth);
-    mateUse('textDirection', textDirection);
-    mateUse('border', border);
-    mateUse('rowDecorations', rowDecorations);
-    mateUse('configuration', configuration);
-    mateUse('defaultVerticalAlignment', defaultVerticalAlignment);
-    mateUse('textBaseline', textBaseline);
-    mateUse('children', children);
+    mateUse('columns', columns, isNamed: true);
+    mateUse('rows', rows, isNamed: true);
+    mateUse('columnWidths', columnWidths, isNamed: true);
+    mateUse('defaultColumnWidth', defaultColumnWidth, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('border', border, isNamed: true);
+    mateUseList('rowDecorations', rowDecorations, isNamed: true);
+    mateUse('configuration', configuration, isNamed: true);
+    mateUse('defaultVerticalAlignment', defaultVerticalAlignment, isNamed: true);
+    mateUse('textBaseline', textBaseline, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }

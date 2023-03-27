@@ -39,11 +39,11 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    mateUse('key', key);
-    mateUse('optionsMask', optionsMask);
-    mateUse('rasterizerThreshold', rasterizerThreshold);
-    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse('key', key, isNamed: true);
+    mateUse('optionsMask', optionsMask, isNamed: true);
+    mateUse('rasterizerThreshold', rasterizerThreshold, isNamed: true);
+    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages, isNamed: true);
+    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers, isNamed: true);
   }
 
   /// PerformanceOverlay PerformanceOverlay.allEnabled({Key? key, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
@@ -73,9 +73,9 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    mateUse('key', key);
-    mateUse('rasterizerThreshold', rasterizerThreshold);
-    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse('key', key, isNamed: true);
+    mateUse('rasterizerThreshold', rasterizerThreshold, isNamed: true);
+    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages, isNamed: true);
+    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers, isNamed: true);
   }
 }

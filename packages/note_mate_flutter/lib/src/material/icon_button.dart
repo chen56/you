@@ -138,28 +138,28 @@ class IconButton$Mate extends IconButton with Mate {
           selectedIcon: p.get('selectedIcon').build(),
           icon: p.get('icon').build(),
         );
-    mateUse('key', key);
-    mateUse('iconSize', iconSize);
-    mateUse('visualDensity', visualDensity);
-    mateUse('padding', padding);
-    mateUse('alignment', alignment);
-    mateUse('splashRadius', splashRadius);
-    mateUse('color', color);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('highlightColor', highlightColor);
-    mateUse('splashColor', splashColor);
-    mateUse('disabledColor', disabledColor);
-    mateUse('onPressed', onPressed);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('tooltip', tooltip);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('constraints', constraints);
-    mateUse('style', style);
-    mateUse('isSelected', isSelected);
-    mateUse('selectedIcon', selectedIcon);
-    mateUse('icon', icon);
+    mateUse('key', key, isNamed: true);
+    mateUse('iconSize', iconSize, isNamed: true);
+    mateUse('visualDensity', visualDensity, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('splashRadius', splashRadius, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('highlightColor', highlightColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('isSelected', isSelected, isNamed: true);
+    mateUse('selectedIcon', selectedIcon, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
   }
 }

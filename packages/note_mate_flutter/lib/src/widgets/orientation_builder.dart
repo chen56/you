@@ -23,7 +23,7 @@ class OrientationBuilder$Mate extends OrientationBuilder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key);
-    mateUse('builder', builder);
+    mateUse('key', key, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
   }
 }

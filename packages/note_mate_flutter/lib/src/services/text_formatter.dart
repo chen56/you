@@ -27,9 +27,9 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           allow: p.get('allow').build(),
           replacementString: p.get('replacementString').build(),
         );
-    mateUse('filterPattern', filterPattern);
-    mateUse('allow', allow);
-    mateUse('replacementString', replacementString);
+    mateUse('filterPattern', filterPattern, isNamed: false);
+    mateUse('allow', allow, isNamed: true);
+    mateUse('replacementString', replacementString, isNamed: true);
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.allow(Pattern filterPattern, {String replacementString = ''})
@@ -48,8 +48,8 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           p.get('filterPattern').value,
           replacementString: p.get('replacementString').build(),
         );
-    mateUse('filterPattern', filterPattern);
-    mateUse('replacementString', replacementString);
+    mateUse('filterPattern', filterPattern, isNamed: false);
+    mateUse('replacementString', replacementString, isNamed: true);
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.deny(Pattern filterPattern, {String replacementString = ''})
@@ -68,8 +68,8 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           p.get('filterPattern').value,
           replacementString: p.get('replacementString').build(),
         );
-    mateUse('filterPattern', filterPattern);
-    mateUse('replacementString', replacementString);
+    mateUse('filterPattern', filterPattern, isNamed: false);
+    mateUse('replacementString', replacementString, isNamed: true);
   }
 }
 
@@ -91,7 +91,7 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
           p.get('maxLength').value,
           maxLengthEnforcement: p.get('maxLengthEnforcement').build(),
         );
-    mateUse('maxLength', maxLength);
-    mateUse('maxLengthEnforcement', maxLengthEnforcement);
+    mateUse('maxLength', maxLength, isNamed: false);
+    mateUse('maxLengthEnforcement', maxLengthEnforcement, isNamed: true);
   }
 }

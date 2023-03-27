@@ -15,6 +15,6 @@ class SpellCheckSuggestionsToolbarLayoutDelegate$Mate extends SpellCheckSuggesti
     mateCreateName = 'SpellCheckSuggestionsToolbarLayoutDelegate';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
-    mateUse('anchor', anchor);
+    mateUse('anchor', anchor, isNamed: true);
   }
 }

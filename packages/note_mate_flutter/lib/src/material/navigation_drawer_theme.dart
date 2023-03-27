@@ -70,16 +70,16 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
           labelTextStyle: p.get('labelTextStyle').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateUse('tileHeight', tileHeight);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('indicatorShape', indicatorShape);
-    mateUse('indicatorSize', indicatorSize);
-    mateUse('labelTextStyle', labelTextStyle);
-    mateUse('iconTheme', iconTheme);
+    mateUse('tileHeight', tileHeight, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('indicatorShape', indicatorShape, isNamed: true);
+    mateUse('indicatorSize', indicatorSize, isNamed: true);
+    mateUse('labelTextStyle', labelTextStyle, isNamed: true);
+    mateUse('iconTheme', iconTheme, isNamed: true);
   }
 }
 
@@ -107,8 +107,8 @@ class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

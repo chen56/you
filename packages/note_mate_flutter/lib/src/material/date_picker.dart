@@ -102,23 +102,23 @@ class DatePickerDialog$Mate extends DatePickerDialog with Mate {
           keyboardType: p.get('keyboardType').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse('key', key);
-    mateUse('initialDate', initialDate);
-    mateUse('firstDate', firstDate);
-    mateUse('lastDate', lastDate);
-    mateUse('currentDate', currentDate);
-    mateUse('initialEntryMode', initialEntryMode);
-    mateUse('selectableDayPredicate', selectableDayPredicate);
-    mateUse('cancelText', cancelText);
-    mateUse('confirmText', confirmText);
-    mateUse('helpText', helpText);
-    mateUse('initialCalendarMode', initialCalendarMode);
-    mateUse('errorFormatText', errorFormatText);
-    mateUse('errorInvalidText', errorInvalidText);
-    mateUse('fieldHintText', fieldHintText);
-    mateUse('fieldLabelText', fieldLabelText);
-    mateUse('keyboardType', keyboardType);
-    mateUse('restorationId', restorationId);
+    mateUse('key', key, isNamed: true);
+    mateUse('initialDate', initialDate, isNamed: true);
+    mateUse('firstDate', firstDate, isNamed: true);
+    mateUse('lastDate', lastDate, isNamed: true);
+    mateUse('currentDate', currentDate, isNamed: true);
+    mateUse('initialEntryMode', initialEntryMode, isNamed: true);
+    mateUse('selectableDayPredicate', selectableDayPredicate, isNamed: true);
+    mateUse('cancelText', cancelText, isNamed: true);
+    mateUse('confirmText', confirmText, isNamed: true);
+    mateUse('helpText', helpText, isNamed: true);
+    mateUse('initialCalendarMode', initialCalendarMode, isNamed: true);
+    mateUse('errorFormatText', errorFormatText, isNamed: true);
+    mateUse('errorInvalidText', errorInvalidText, isNamed: true);
+    mateUse('fieldHintText', fieldHintText, isNamed: true);
+    mateUse('fieldLabelText', fieldLabelText, isNamed: true);
+    mateUse('keyboardType', keyboardType, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
   }
 }
 
@@ -221,23 +221,23 @@ class DateRangePickerDialog$Mate extends DateRangePickerDialog with Mate {
           fieldEndLabelText: p.get('fieldEndLabelText').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse('key', key);
-    mateUse('initialDateRange', initialDateRange);
-    mateUse('firstDate', firstDate);
-    mateUse('lastDate', lastDate);
-    mateUse('currentDate', currentDate);
-    mateUse('initialEntryMode', initialEntryMode);
-    mateUse('helpText', helpText);
-    mateUse('cancelText', cancelText);
-    mateUse('confirmText', confirmText);
-    mateUse('saveText', saveText);
-    mateUse('errorInvalidRangeText', errorInvalidRangeText);
-    mateUse('errorFormatText', errorFormatText);
-    mateUse('errorInvalidText', errorInvalidText);
-    mateUse('fieldStartHintText', fieldStartHintText);
-    mateUse('fieldEndHintText', fieldEndHintText);
-    mateUse('fieldStartLabelText', fieldStartLabelText);
-    mateUse('fieldEndLabelText', fieldEndLabelText);
-    mateUse('restorationId', restorationId);
+    mateUse('key', key, isNamed: true);
+    mateUse('initialDateRange', initialDateRange, isNamed: true);
+    mateUse('firstDate', firstDate, isNamed: true);
+    mateUse('lastDate', lastDate, isNamed: true);
+    mateUse('currentDate', currentDate, isNamed: true);
+    mateUse('initialEntryMode', initialEntryMode, isNamed: true);
+    mateUse('helpText', helpText, isNamed: true);
+    mateUse('cancelText', cancelText, isNamed: true);
+    mateUse('confirmText', confirmText, isNamed: true);
+    mateUse('saveText', saveText, isNamed: true);
+    mateUse('errorInvalidRangeText', errorInvalidRangeText, isNamed: true);
+    mateUse('errorFormatText', errorFormatText, isNamed: true);
+    mateUse('errorInvalidText', errorInvalidText, isNamed: true);
+    mateUse('fieldStartHintText', fieldStartHintText, isNamed: true);
+    mateUse('fieldEndHintText', fieldEndHintText, isNamed: true);
+    mateUse('fieldStartLabelText', fieldStartLabelText, isNamed: true);
+    mateUse('fieldEndLabelText', fieldEndLabelText, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
   }
 }

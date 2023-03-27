@@ -84,18 +84,18 @@ class Scrollable$Mate extends Scrollable with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('axisDirection', axisDirection);
-    mateUse('controller', controller);
-    mateUse('physics', physics);
-    mateUse('viewportBuilder', viewportBuilder);
-    mateUse('incrementCalculator', incrementCalculator);
-    mateUse('excludeFromSemantics', excludeFromSemantics);
-    mateUse('semanticChildCount', semanticChildCount);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('restorationId', restorationId);
-    mateUse('scrollBehavior', scrollBehavior);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('viewportBuilder', viewportBuilder, isNamed: true);
+    mateUse('incrementCalculator', incrementCalculator, isNamed: true);
+    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
+    mateUse('semanticChildCount', semanticChildCount, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -122,9 +122,9 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate {
           onScrollViewScrolled: p.get('onScrollViewScrolled').build(),
           velocityScalar: p.get('velocityScalar').build(),
         );
-    mateUse('scrollable', scrollable);
-    mateUse('onScrollViewScrolled', onScrollViewScrolled);
-    mateUse('velocityScalar', velocityScalar);
+    mateUse('scrollable', scrollable, isNamed: false);
+    mateUse('onScrollViewScrolled', onScrollViewScrolled, isNamed: true);
+    mateUse('velocityScalar', velocityScalar, isNamed: true);
   }
 }
 
@@ -152,9 +152,9 @@ class ScrollableDetails$Mate extends ScrollableDetails with Mate {
           controller: p.get('controller').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('direction', direction);
-    mateUse('controller', controller);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('direction', direction, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -177,8 +177,8 @@ class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate {
           type: p.get('type').build(),
           metrics: p.get('metrics').build(),
         );
-    mateUse('type', type);
-    mateUse('metrics', metrics);
+    mateUse('type', type, isNamed: true);
+    mateUse('metrics', metrics, isNamed: true);
   }
 }
 
@@ -201,7 +201,7 @@ class ScrollIntent$Mate extends ScrollIntent with Mate {
           direction: p.get('direction').build(),
           type: p.get('type').build(),
         );
-    mateUse('direction', direction);
-    mateUse('type', type);
+    mateUse('direction', direction, isNamed: true);
+    mateUse('type', type, isNamed: true);
   }
 }

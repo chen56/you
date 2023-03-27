@@ -143,30 +143,30 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           isExtended: p.get('isExtended').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('tooltip', tooltip);
-    mateUse('foregroundColor', foregroundColor);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('splashColor', splashColor);
-    mateUse('heroTag', heroTag);
-    mateUse('elevation', elevation);
-    mateUse('focusElevation', focusElevation);
-    mateUse('hoverElevation', hoverElevation);
-    mateUse('highlightElevation', highlightElevation);
-    mateUse('disabledElevation', disabledElevation);
-    mateUse('onPressed', onPressed);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('mini', mini);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('isExtended', isExtended);
-    mateUse('enableFeedback', enableFeedback);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('foregroundColor', foregroundColor, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('heroTag', heroTag, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('focusElevation', focusElevation, isNamed: true);
+    mateUse('hoverElevation', hoverElevation, isNamed: true);
+    mateUse('highlightElevation', highlightElevation, isNamed: true);
+    mateUse('disabledElevation', disabledElevation, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('mini', mini, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('isExtended', isExtended, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
   }
 
   /// FloatingActionButton FloatingActionButton.small({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool? enableFeedback})
@@ -286,28 +286,28 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('tooltip', tooltip);
-    mateUse('foregroundColor', foregroundColor);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('splashColor', splashColor);
-    mateUse('heroTag', heroTag);
-    mateUse('elevation', elevation);
-    mateUse('focusElevation', focusElevation);
-    mateUse('hoverElevation', hoverElevation);
-    mateUse('highlightElevation', highlightElevation);
-    mateUse('disabledElevation', disabledElevation);
-    mateUse('onPressed', onPressed);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('enableFeedback', enableFeedback);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('foregroundColor', foregroundColor, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('heroTag', heroTag, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('focusElevation', focusElevation, isNamed: true);
+    mateUse('hoverElevation', hoverElevation, isNamed: true);
+    mateUse('highlightElevation', highlightElevation, isNamed: true);
+    mateUse('disabledElevation', disabledElevation, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
   }
 
   /// FloatingActionButton FloatingActionButton.large({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool? enableFeedback})
@@ -427,28 +427,28 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('tooltip', tooltip);
-    mateUse('foregroundColor', foregroundColor);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('splashColor', splashColor);
-    mateUse('heroTag', heroTag);
-    mateUse('elevation', elevation);
-    mateUse('focusElevation', focusElevation);
-    mateUse('hoverElevation', hoverElevation);
-    mateUse('highlightElevation', highlightElevation);
-    mateUse('disabledElevation', disabledElevation);
-    mateUse('onPressed', onPressed);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('enableFeedback', enableFeedback);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('foregroundColor', foregroundColor, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('heroTag', heroTag, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('focusElevation', focusElevation, isNamed: true);
+    mateUse('hoverElevation', hoverElevation, isNamed: true);
+    mateUse('highlightElevation', highlightElevation, isNamed: true);
+    mateUse('disabledElevation', disabledElevation, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
   }
 
   /// FloatingActionButton FloatingActionButton.extended({Key? key, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, Color? splashColor, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor = SystemMouseCursors.click, ShapeBorder? shape, bool isExtended = true, MaterialTapTargetSize? materialTapTargetSize, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, Widget? icon, required Widget label, bool? enableFeedback})
@@ -593,32 +593,32 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           label: p.get('label').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key);
-    mateUse('tooltip', tooltip);
-    mateUse('foregroundColor', foregroundColor);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('heroTag', heroTag);
-    mateUse('elevation', elevation);
-    mateUse('focusElevation', focusElevation);
-    mateUse('hoverElevation', hoverElevation);
-    mateUse('splashColor', splashColor);
-    mateUse('highlightElevation', highlightElevation);
-    mateUse('disabledElevation', disabledElevation);
-    mateUse('onPressed', onPressed);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('shape', shape);
-    mateUse('isExtended', isExtended);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('extendedIconLabelSpacing', extendedIconLabelSpacing);
-    mateUse('extendedPadding', extendedPadding);
-    mateUse('extendedTextStyle', extendedTextStyle);
-    mateUse('icon', icon);
-    mateUse('label', label);
-    mateUse('enableFeedback', enableFeedback);
+    mateUse('key', key, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('foregroundColor', foregroundColor, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('heroTag', heroTag, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('focusElevation', focusElevation, isNamed: true);
+    mateUse('hoverElevation', hoverElevation, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('highlightElevation', highlightElevation, isNamed: true);
+    mateUse('disabledElevation', disabledElevation, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('isExtended', isExtended, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('extendedIconLabelSpacing', extendedIconLabelSpacing, isNamed: true);
+    mateUse('extendedPadding', extendedPadding, isNamed: true);
+    mateUse('extendedTextStyle', extendedTextStyle, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
   }
 }

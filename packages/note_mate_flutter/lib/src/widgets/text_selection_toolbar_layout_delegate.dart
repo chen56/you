@@ -29,8 +29,8 @@ class TextSelectionToolbarLayoutDelegate$Mate extends TextSelectionToolbarLayout
           anchorBelow: p.get('anchorBelow').build(),
           fitsAbove: p.get('fitsAbove').build(),
         );
-    mateUse('anchorAbove', anchorAbove);
-    mateUse('anchorBelow', anchorBelow);
-    mateUse('fitsAbove', fitsAbove);
+    mateUse('anchorAbove', anchorAbove, isNamed: true);
+    mateUse('anchorBelow', anchorBelow, isNamed: true);
+    mateUse('fitsAbove', fitsAbove, isNamed: true);
   }
 }

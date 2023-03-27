@@ -31,9 +31,9 @@ class ImageInfo$Mate extends ImageInfo with Mate {
           scale: p.get('scale').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('image', image);
-    mateUse('scale', scale);
-    mateUse('debugLabel', debugLabel);
+    mateUse('image', image, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }
 
@@ -60,9 +60,9 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
           onChunk: p.get('onChunk').build(),
           onError: p.get('onError').build(),
         );
-    mateUse('onImage', onImage);
-    mateUse('onChunk', onChunk);
-    mateUse('onError', onError);
+    mateUse('onImage', onImage, isNamed: false);
+    mateUse('onChunk', onChunk, isNamed: true);
+    mateUse('onError', onError, isNamed: true);
   }
 }
 
@@ -85,8 +85,8 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
           cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
           expectedTotalBytes: p.get('expectedTotalBytes').build(),
         );
-    mateUse('cumulativeBytesLoaded', cumulativeBytesLoaded);
-    mateUse('expectedTotalBytes', expectedTotalBytes);
+    mateUse('cumulativeBytesLoaded', cumulativeBytesLoaded, isNamed: true);
+    mateUse('expectedTotalBytes', expectedTotalBytes, isNamed: true);
   }
 }
 
@@ -108,8 +108,8 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
           p.get('image').value,
           informationCollector: p.get('informationCollector').build(),
         );
-    mateUse('image', image);
-    mateUse('informationCollector', informationCollector);
+    mateUse('image', image, isNamed: false);
+    mateUse('informationCollector', informationCollector, isNamed: true);
   }
 }
 
@@ -147,10 +147,10 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           chunkEvents: p.get('chunkEvents').build(),
           informationCollector: p.get('informationCollector').build(),
         );
-    mateUse('codec', codec);
-    mateUse('scale', scale);
-    mateUse('debugLabel', debugLabel);
-    mateUse('chunkEvents', chunkEvents);
-    mateUse('informationCollector', informationCollector);
+    mateUse('codec', codec, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse('chunkEvents', chunkEvents, isNamed: true);
+    mateUse('informationCollector', informationCollector, isNamed: true);
   }
 }

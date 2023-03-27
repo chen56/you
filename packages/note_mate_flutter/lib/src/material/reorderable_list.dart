@@ -146,30 +146,30 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('onReorder', onReorder);
-    mateUse('onReorderStart', onReorderStart);
-    mateUse('onReorderEnd', onReorderEnd);
-    mateUse('itemExtent', itemExtent);
-    mateUse('prototypeItem', prototypeItem);
-    mateUse('proxyDecorator', proxyDecorator);
-    mateUse('buildDefaultDragHandles', buildDefaultDragHandles);
-    mateUse('padding', padding);
-    mateUse('header', header);
-    mateUse('footer', footer);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('scrollController', scrollController);
-    mateUse('primary', primary);
-    mateUse('physics', physics);
-    mateUse('shrinkWrap', shrinkWrap);
-    mateUse('anchor', anchor);
-    mateUse('cacheExtent', cacheExtent);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateUse('restorationId', restorationId);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('onReorder', onReorder, isNamed: true);
+    mateUse('onReorderStart', onReorderStart, isNamed: true);
+    mateUse('onReorderEnd', onReorderEnd, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('prototypeItem', prototypeItem, isNamed: true);
+    mateUse('proxyDecorator', proxyDecorator, isNamed: true);
+    mateUse('buildDefaultDragHandles', buildDefaultDragHandles, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUse('footer', footer, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('scrollController', scrollController, isNamed: true);
+    mateUse('primary', primary, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('shrinkWrap', shrinkWrap, isNamed: true);
+    mateUse('anchor', anchor, isNamed: true);
+    mateUse('cacheExtent', cacheExtent, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 
   /// ReorderableListView ReorderableListView.builder({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
@@ -304,30 +304,30 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('itemCount', itemCount);
-    mateUse('onReorder', onReorder);
-    mateUse('onReorderStart', onReorderStart);
-    mateUse('onReorderEnd', onReorderEnd);
-    mateUse('itemExtent', itemExtent);
-    mateUse('prototypeItem', prototypeItem);
-    mateUse('proxyDecorator', proxyDecorator);
-    mateUse('buildDefaultDragHandles', buildDefaultDragHandles);
-    mateUse('padding', padding);
-    mateUse('header', header);
-    mateUse('footer', footer);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('scrollController', scrollController);
-    mateUse('primary', primary);
-    mateUse('physics', physics);
-    mateUse('shrinkWrap', shrinkWrap);
-    mateUse('anchor', anchor);
-    mateUse('cacheExtent', cacheExtent);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('keyboardDismissBehavior', keyboardDismissBehavior);
-    mateUse('restorationId', restorationId);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('itemCount', itemCount, isNamed: true);
+    mateUse('onReorder', onReorder, isNamed: true);
+    mateUse('onReorderStart', onReorderStart, isNamed: true);
+    mateUse('onReorderEnd', onReorderEnd, isNamed: true);
+    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse('prototypeItem', prototypeItem, isNamed: true);
+    mateUse('proxyDecorator', proxyDecorator, isNamed: true);
+    mateUse('buildDefaultDragHandles', buildDefaultDragHandles, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('header', header, isNamed: true);
+    mateUse('footer', footer, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('scrollController', scrollController, isNamed: true);
+    mateUse('primary', primary, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('shrinkWrap', shrinkWrap, isNamed: true);
+    mateUse('anchor', anchor, isNamed: true);
+    mateUse('cacheExtent', cacheExtent, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('keyboardDismissBehavior', keyboardDismissBehavior, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }

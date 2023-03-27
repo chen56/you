@@ -68,15 +68,15 @@ class DialogTheme$Mate extends DialogTheme with Mate {
           contentTextStyle: p.get('contentTextStyle').build(),
           actionsPadding: p.get('actionsPadding').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('shape', shape);
-    mateUse('alignment', alignment);
-    mateUse('iconColor', iconColor);
-    mateUse('titleTextStyle', titleTextStyle);
-    mateUse('contentTextStyle', contentTextStyle);
-    mateUse('actionsPadding', actionsPadding);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('iconColor', iconColor, isNamed: true);
+    mateUse('titleTextStyle', titleTextStyle, isNamed: true);
+    mateUse('contentTextStyle', contentTextStyle, isNamed: true);
+    mateUse('actionsPadding', actionsPadding, isNamed: true);
   }
 }

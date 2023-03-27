@@ -34,9 +34,9 @@ class SliderTheme$Mate extends SliderTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -199,36 +199,36 @@ class SliderThemeData$Mate extends SliderThemeData with Mate {
           thumbSelector: p.get('thumbSelector').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse('trackHeight', trackHeight);
-    mateUse('activeTrackColor', activeTrackColor);
-    mateUse('inactiveTrackColor', inactiveTrackColor);
-    mateUse('secondaryActiveTrackColor', secondaryActiveTrackColor);
-    mateUse('disabledActiveTrackColor', disabledActiveTrackColor);
-    mateUse('disabledInactiveTrackColor', disabledInactiveTrackColor);
-    mateUse('disabledSecondaryActiveTrackColor', disabledSecondaryActiveTrackColor);
-    mateUse('activeTickMarkColor', activeTickMarkColor);
-    mateUse('inactiveTickMarkColor', inactiveTickMarkColor);
-    mateUse('disabledActiveTickMarkColor', disabledActiveTickMarkColor);
-    mateUse('disabledInactiveTickMarkColor', disabledInactiveTickMarkColor);
-    mateUse('thumbColor', thumbColor);
-    mateUse('overlappingShapeStrokeColor', overlappingShapeStrokeColor);
-    mateUse('disabledThumbColor', disabledThumbColor);
-    mateUse('overlayColor', overlayColor);
-    mateUse('valueIndicatorColor', valueIndicatorColor);
-    mateUse('overlayShape', overlayShape);
-    mateUse('tickMarkShape', tickMarkShape);
-    mateUse('thumbShape', thumbShape);
-    mateUse('trackShape', trackShape);
-    mateUse('valueIndicatorShape', valueIndicatorShape);
-    mateUse('rangeTickMarkShape', rangeTickMarkShape);
-    mateUse('rangeThumbShape', rangeThumbShape);
-    mateUse('rangeTrackShape', rangeTrackShape);
-    mateUse('rangeValueIndicatorShape', rangeValueIndicatorShape);
-    mateUse('showValueIndicator', showValueIndicator);
-    mateUse('valueIndicatorTextStyle', valueIndicatorTextStyle);
-    mateUse('minThumbSeparation', minThumbSeparation);
-    mateUse('thumbSelector', thumbSelector);
-    mateUse('mouseCursor', mouseCursor);
+    mateUse('trackHeight', trackHeight, isNamed: true);
+    mateUse('activeTrackColor', activeTrackColor, isNamed: true);
+    mateUse('inactiveTrackColor', inactiveTrackColor, isNamed: true);
+    mateUse('secondaryActiveTrackColor', secondaryActiveTrackColor, isNamed: true);
+    mateUse('disabledActiveTrackColor', disabledActiveTrackColor, isNamed: true);
+    mateUse('disabledInactiveTrackColor', disabledInactiveTrackColor, isNamed: true);
+    mateUse('disabledSecondaryActiveTrackColor', disabledSecondaryActiveTrackColor, isNamed: true);
+    mateUse('activeTickMarkColor', activeTickMarkColor, isNamed: true);
+    mateUse('inactiveTickMarkColor', inactiveTickMarkColor, isNamed: true);
+    mateUse('disabledActiveTickMarkColor', disabledActiveTickMarkColor, isNamed: true);
+    mateUse('disabledInactiveTickMarkColor', disabledInactiveTickMarkColor, isNamed: true);
+    mateUse('thumbColor', thumbColor, isNamed: true);
+    mateUse('overlappingShapeStrokeColor', overlappingShapeStrokeColor, isNamed: true);
+    mateUse('disabledThumbColor', disabledThumbColor, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('valueIndicatorColor', valueIndicatorColor, isNamed: true);
+    mateUse('overlayShape', overlayShape, isNamed: true);
+    mateUse('tickMarkShape', tickMarkShape, isNamed: true);
+    mateUse('thumbShape', thumbShape, isNamed: true);
+    mateUse('trackShape', trackShape, isNamed: true);
+    mateUse('valueIndicatorShape', valueIndicatorShape, isNamed: true);
+    mateUse('rangeTickMarkShape', rangeTickMarkShape, isNamed: true);
+    mateUse('rangeThumbShape', rangeThumbShape, isNamed: true);
+    mateUse('rangeTrackShape', rangeTrackShape, isNamed: true);
+    mateUse('rangeValueIndicatorShape', rangeValueIndicatorShape, isNamed: true);
+    mateUse('showValueIndicator', showValueIndicator, isNamed: true);
+    mateUse('valueIndicatorTextStyle', valueIndicatorTextStyle, isNamed: true);
+    mateUse('minThumbSeparation', minThumbSeparation, isNamed: true);
+    mateUse('thumbSelector', thumbSelector, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
   }
 }
 
@@ -243,7 +243,7 @@ class RoundSliderTickMarkShape$Mate extends RoundSliderTickMarkShape with Mate {
     mateCreateName = 'RoundSliderTickMarkShape';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
-    mateUse('tickMarkRadius', tickMarkRadius);
+    mateUse('tickMarkRadius', tickMarkRadius, isNamed: true);
   }
 }
 
@@ -258,7 +258,7 @@ class RoundRangeSliderTickMarkShape$Mate extends RoundRangeSliderTickMarkShape w
     mateCreateName = 'RoundRangeSliderTickMarkShape';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundRangeSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
-    mateUse('tickMarkRadius', tickMarkRadius);
+    mateUse('tickMarkRadius', tickMarkRadius, isNamed: true);
   }
 }
 
@@ -291,10 +291,10 @@ class RoundSliderThumbShape$Mate extends RoundSliderThumbShape with Mate {
           elevation: p.get('elevation').build(),
           pressedElevation: p.get('pressedElevation').build(),
         );
-    mateUse('enabledThumbRadius', enabledThumbRadius);
-    mateUse('disabledThumbRadius', disabledThumbRadius);
-    mateUse('elevation', elevation);
-    mateUse('pressedElevation', pressedElevation);
+    mateUse('enabledThumbRadius', enabledThumbRadius, isNamed: true);
+    mateUse('disabledThumbRadius', disabledThumbRadius, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('pressedElevation', pressedElevation, isNamed: true);
   }
 }
 
@@ -327,10 +327,10 @@ class RoundRangeSliderThumbShape$Mate extends RoundRangeSliderThumbShape with Ma
           elevation: p.get('elevation').build(),
           pressedElevation: p.get('pressedElevation').build(),
         );
-    mateUse('enabledThumbRadius', enabledThumbRadius);
-    mateUse('disabledThumbRadius', disabledThumbRadius);
-    mateUse('elevation', elevation);
-    mateUse('pressedElevation', pressedElevation);
+    mateUse('enabledThumbRadius', enabledThumbRadius, isNamed: true);
+    mateUse('disabledThumbRadius', disabledThumbRadius, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('pressedElevation', pressedElevation, isNamed: true);
   }
 }
 
@@ -345,7 +345,7 @@ class RoundSliderOverlayShape$Mate extends RoundSliderOverlayShape with Mate {
     mateCreateName = 'RoundSliderOverlayShape';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundSliderOverlayShape$Mate(overlayRadius: p.get('overlayRadius').build());
-    mateUse('overlayRadius', overlayRadius);
+    mateUse('overlayRadius', overlayRadius, isNamed: true);
   }
 }
 
@@ -368,8 +368,8 @@ class RangeValues$Mate extends RangeValues with Mate {
           p.get('start').value,
           p.get('end').value,
         );
-    mateUse('start', start);
-    mateUse('end', end);
+    mateUse('start', start, isNamed: false);
+    mateUse('end', end, isNamed: false);
   }
 }
 
@@ -392,7 +392,7 @@ class RangeLabels$Mate extends RangeLabels with Mate {
           p.get('start').value,
           p.get('end').value,
         );
-    mateUse('start', start);
-    mateUse('end', end);
+    mateUse('start', start, isNamed: false);
+    mateUse('end', end, isNamed: false);
   }
 }

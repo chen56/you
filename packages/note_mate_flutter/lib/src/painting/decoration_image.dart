@@ -85,19 +85,19 @@ class DecorationImage$Mate extends DecorationImage with Mate {
           invertColors: p.get('invertColors').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    mateUse('image', image);
-    mateUse('onError', onError);
-    mateUse('colorFilter', colorFilter);
-    mateUse('fit', fit);
-    mateUse('alignment', alignment);
-    mateUse('centerSlice', centerSlice);
-    mateUse('repeat', repeat);
-    mateUse('matchTextDirection', matchTextDirection);
-    mateUse('scale', scale);
-    mateUse('opacity', opacity);
-    mateUse('filterQuality', filterQuality);
-    mateUse('invertColors', invertColors);
-    mateUse('isAntiAlias', isAntiAlias);
+    mateUse('image', image, isNamed: true);
+    mateUse('onError', onError, isNamed: true);
+    mateUse('colorFilter', colorFilter, isNamed: true);
+    mateUse('fit', fit, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('centerSlice', centerSlice, isNamed: true);
+    mateUse('repeat', repeat, isNamed: true);
+    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
+    mateUse('scale', scale, isNamed: true);
+    mateUse('opacity', opacity, isNamed: true);
+    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse('invertColors', invertColors, isNamed: true);
+    mateUse('isAntiAlias', isAntiAlias, isNamed: true);
   }
 }
 
@@ -125,8 +125,8 @@ class ImageTilingInfo$Mate extends ImageTilingInfo with Mate {
           tmy: p.get('tmy').build(),
           transform: p.get('transform').build(),
         );
-    mateUse('tmx', tmx);
-    mateUse('tmy', tmy);
-    mateUse('transform', transform);
+    mateUse('tmx', tmx, isNamed: true);
+    mateUse('tmy', tmy, isNamed: true);
+    mateUse('transform', transform, isNamed: true);
   }
 }

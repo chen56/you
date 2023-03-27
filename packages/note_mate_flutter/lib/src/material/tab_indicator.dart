@@ -31,8 +31,8 @@ class UnderlineTabIndicator$Mate extends UnderlineTabIndicator with Mate {
           borderSide: p.get('borderSide').build(),
           insets: p.get('insets').build(),
         );
-    mateUse('borderRadius', borderRadius);
-    mateUse('borderSide', borderSide);
-    mateUse('insets', insets);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('borderSide', borderSide, isNamed: true);
+    mateUse('insets', insets, isNamed: true);
   }
 }

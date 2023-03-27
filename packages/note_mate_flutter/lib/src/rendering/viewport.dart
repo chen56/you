@@ -27,8 +27,8 @@ class RevealedOffset$Mate extends RevealedOffset with Mate {
           offset: p.get('offset').build(),
           rect: p.get('rect').build(),
         );
-    mateUse('offset', offset);
-    mateUse('rect', rect);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('rect', rect, isNamed: true);
   }
 }
 
@@ -86,15 +86,15 @@ class RenderViewport$Mate extends RenderViewport with Mate {
           cacheExtentStyle: p.get('cacheExtentStyle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('axisDirection', axisDirection);
-    mateUse('crossAxisDirection', crossAxisDirection);
-    mateUse('offset', offset);
-    mateUse('anchor', anchor);
-    mateUse('children', children);
-    mateUse('center', center);
-    mateUse('cacheExtent', cacheExtent);
-    mateUse('cacheExtentStyle', cacheExtentStyle);
-    mateUse('clipBehavior', clipBehavior);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('crossAxisDirection', crossAxisDirection, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('anchor', anchor, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('center', center, isNamed: true);
+    mateUse('cacheExtent', cacheExtent, isNamed: true);
+    mateUse('cacheExtentStyle', cacheExtentStyle, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
   }
 }
 
@@ -132,10 +132,10 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport wit
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('axisDirection', axisDirection);
-    mateUse('crossAxisDirection', crossAxisDirection);
-    mateUse('offset', offset);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('children', children);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('crossAxisDirection', crossAxisDirection, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }

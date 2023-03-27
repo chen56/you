@@ -41,10 +41,10 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar w
           children: p.get('children').build(),
           toolbarBuilder: p.get('toolbarBuilder').build(),
         );
-    mateUse('key', key);
-    mateUse('anchorAbove', anchorAbove);
-    mateUse('anchorBelow', anchorBelow);
-    mateUse('children', children);
-    mateUse('toolbarBuilder', toolbarBuilder);
+    mateUse('key', key, isNamed: true);
+    mateUse('anchorAbove', anchorAbove, isNamed: true);
+    mateUse('anchorBelow', anchorBelow, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('toolbarBuilder', toolbarBuilder, isNamed: true);
   }
 }

@@ -35,9 +35,9 @@ class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Mat
           value: p.get('value').build(),
           sized: p.get('sized').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('value', value);
-    mateUse('sized', sized);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('sized', sized, isNamed: true);
   }
 }

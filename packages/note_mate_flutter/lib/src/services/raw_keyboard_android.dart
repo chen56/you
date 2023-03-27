@@ -68,16 +68,16 @@ class RawKeyEventDataAndroid$Mate extends RawKeyEventDataAndroid with Mate {
           deviceId: p.get('deviceId').build(),
           repeatCount: p.get('repeatCount').build(),
         );
-    mateUse('flags', flags);
-    mateUse('codePoint', codePoint);
-    mateUse('plainCodePoint', plainCodePoint);
-    mateUse('keyCode', keyCode);
-    mateUse('scanCode', scanCode);
-    mateUse('metaState', metaState);
-    mateUse('eventSource', eventSource);
-    mateUse('vendorId', vendorId);
-    mateUse('productId', productId);
-    mateUse('deviceId', deviceId);
-    mateUse('repeatCount', repeatCount);
+    mateUse('flags', flags, isNamed: true);
+    mateUse('codePoint', codePoint, isNamed: true);
+    mateUse('plainCodePoint', plainCodePoint, isNamed: true);
+    mateUse('keyCode', keyCode, isNamed: true);
+    mateUse('scanCode', scanCode, isNamed: true);
+    mateUse('metaState', metaState, isNamed: true);
+    mateUse('eventSource', eventSource, isNamed: true);
+    mateUse('vendorId', vendorId, isNamed: true);
+    mateUse('productId', productId, isNamed: true);
+    mateUse('deviceId', deviceId, isNamed: true);
+    mateUse('repeatCount', repeatCount, isNamed: true);
   }
 }

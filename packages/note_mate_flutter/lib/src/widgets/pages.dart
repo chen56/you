@@ -76,17 +76,17 @@ class PageRouteBuilder$Mate<T> extends PageRouteBuilder<T> with Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    mateUse('settings', settings);
-    mateUse('pageBuilder', pageBuilder);
-    mateUse('transitionsBuilder', transitionsBuilder);
-    mateUse('transitionDuration', transitionDuration);
-    mateUse('reverseTransitionDuration', reverseTransitionDuration);
-    mateUse('opaque', opaque);
-    mateUse('barrierDismissible', barrierDismissible);
-    mateUse('barrierColor', barrierColor);
-    mateUse('barrierLabel', barrierLabel);
-    mateUse('maintainState', maintainState);
-    mateUse('fullscreenDialog', fullscreenDialog);
-    mateUse('allowSnapshotting', allowSnapshotting);
+    mateUse('settings', settings, isNamed: true);
+    mateUse('pageBuilder', pageBuilder, isNamed: true);
+    mateUse('transitionsBuilder', transitionsBuilder, isNamed: true);
+    mateUse('transitionDuration', transitionDuration, isNamed: true);
+    mateUse('reverseTransitionDuration', reverseTransitionDuration, isNamed: true);
+    mateUse('opaque', opaque, isNamed: true);
+    mateUse('barrierDismissible', barrierDismissible, isNamed: true);
+    mateUse('barrierColor', barrierColor, isNamed: true);
+    mateUse('barrierLabel', barrierLabel, isNamed: true);
+    mateUse('maintainState', maintainState, isNamed: true);
+    mateUse('fullscreenDialog', fullscreenDialog, isNamed: true);
+    mateUse('allowSnapshotting', allowSnapshotting, isNamed: true);
   }
 }

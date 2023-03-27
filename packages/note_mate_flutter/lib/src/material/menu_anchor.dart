@@ -88,19 +88,19 @@ class MenuAnchor$Mate extends MenuAnchor with Mate {
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('controller', controller);
-    mateUse('childFocusNode', childFocusNode);
-    mateUse('style', style);
-    mateUse('alignmentOffset', alignmentOffset);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('anchorTapClosesMenu', anchorTapClosesMenu);
-    mateUse('onOpen', onOpen);
-    mateUse('onClose', onClose);
-    mateUse('crossAxisUnconstrained', crossAxisUnconstrained);
-    mateUse('menuChildren', menuChildren);
-    mateUse('builder', builder);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('childFocusNode', childFocusNode, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('alignmentOffset', alignmentOffset, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('anchorTapClosesMenu', anchorTapClosesMenu, isNamed: true);
+    mateUse('onOpen', onOpen, isNamed: true);
+    mateUse('onClose', onClose, isNamed: true);
+    mateUse('crossAxisUnconstrained', crossAxisUnconstrained, isNamed: true);
+    mateUseList('menuChildren', menuChildren, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -138,11 +138,11 @@ class MenuBar$Mate extends MenuBar with Mate {
           controller: p.get('controller').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key);
-    mateUse('style', style);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('controller', controller);
-    mateUse('children', children);
+    mateUse('key', key, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUseList('children', children, isNamed: true);
   }
 }
 
@@ -220,19 +220,19 @@ class MenuItemButton$Mate extends MenuItemButton with Mate {
           trailingIcon: p.get('trailingIcon').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onPressed', onPressed);
-    mateUse('onHover', onHover);
-    mateUse('requestFocusOnHover', requestFocusOnHover);
-    mateUse('onFocusChange', onFocusChange);
-    mateUse('focusNode', focusNode);
-    mateUse('shortcut', shortcut);
-    mateUse('style', style);
-    mateUse('statesController', statesController);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('leadingIcon', leadingIcon);
-    mateUse('trailingIcon', trailingIcon);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('onHover', onHover, isNamed: true);
+    mateUse('requestFocusOnHover', requestFocusOnHover, isNamed: true);
+    mateUse('onFocusChange', onFocusChange, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('shortcut', shortcut, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('statesController', statesController, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('leadingIcon', leadingIcon, isNamed: true);
+    mateUse('trailingIcon', trailingIcon, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -315,20 +315,20 @@ class CheckboxMenuButton$Mate extends CheckboxMenuButton with Mate {
           trailingIcon: p.get('trailingIcon').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('tristate', tristate);
-    mateUse('isError', isError);
-    mateUse('onChanged', onChanged);
-    mateUse('onHover', onHover);
-    mateUse('onFocusChange', onFocusChange);
-    mateUse('focusNode', focusNode);
-    mateUse('shortcut', shortcut);
-    mateUse('style', style);
-    mateUse('statesController', statesController);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('trailingIcon', trailingIcon);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('tristate', tristate, isNamed: true);
+    mateUse('isError', isError, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('onHover', onHover, isNamed: true);
+    mateUse('onFocusChange', onFocusChange, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('shortcut', shortcut, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('statesController', statesController, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('trailingIcon', trailingIcon, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -411,20 +411,20 @@ class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with Mate {
           trailingIcon: p.get('trailingIcon').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('groupValue', groupValue);
-    mateUse('onChanged', onChanged);
-    mateUse('toggleable', toggleable);
-    mateUse('onHover', onHover);
-    mateUse('onFocusChange', onFocusChange);
-    mateUse('focusNode', focusNode);
-    mateUse('shortcut', shortcut);
-    mateUse('style', style);
-    mateUse('statesController', statesController);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('trailingIcon', trailingIcon);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('groupValue', groupValue, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('toggleable', toggleable, isNamed: true);
+    mateUse('onHover', onHover, isNamed: true);
+    mateUse('onFocusChange', onFocusChange, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('shortcut', shortcut, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('statesController', statesController, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('trailingIcon', trailingIcon, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -512,21 +512,21 @@ class SubmenuButton$Mate extends SubmenuButton with Mate {
           menuChildren: p.get('menuChildren').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onHover', onHover);
-    mateUse('onFocusChange', onFocusChange);
-    mateUse('onOpen', onOpen);
-    mateUse('onClose', onClose);
-    mateUse('style', style);
-    mateUse('menuStyle', menuStyle);
-    mateUse('alignmentOffset', alignmentOffset);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('focusNode', focusNode);
-    mateUse('statesController', statesController);
-    mateUse('leadingIcon', leadingIcon);
-    mateUse('trailingIcon', trailingIcon);
-    mateUse('menuChildren', menuChildren);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onHover', onHover, isNamed: true);
+    mateUse('onFocusChange', onFocusChange, isNamed: true);
+    mateUse('onOpen', onOpen, isNamed: true);
+    mateUse('onClose', onClose, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('menuStyle', menuStyle, isNamed: true);
+    mateUse('alignmentOffset', alignmentOffset, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('statesController', statesController, isNamed: true);
+    mateUse('leadingIcon', leadingIcon, isNamed: true);
+    mateUse('trailingIcon', trailingIcon, isNamed: true);
+    mateUseList('menuChildren', menuChildren, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -541,7 +541,7 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate {
     mateCreateName = 'DismissMenuAction';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
-    mateUse('controller', controller);
+    mateUse('controller', controller, isNamed: true);
   }
 }
 
@@ -574,10 +574,10 @@ class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
           hasSubmenu: p.get('hasSubmenu').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onInvoke', onInvoke);
-    mateUse('hasSubmenu', hasSubmenu);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onInvoke', onInvoke, isNamed: true);
+    mateUse('hasSubmenu', hasSubmenu, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -604,8 +604,8 @@ class MenuAcceleratorLabel$Mate extends MenuAcceleratorLabel with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('label', label);
-    mateUse('key', key);
-    mateUse('builder', builder);
+    mateUse('label', label, isNamed: false);
+    mateUse('key', key, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
   }
 }

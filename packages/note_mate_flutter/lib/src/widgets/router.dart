@@ -27,8 +27,8 @@ class RouteInformation$Mate extends RouteInformation with Mate {
           location: p.get('location').build(),
           state: p.get('state').build(),
         );
-    mateUse('location', location);
-    mateUse('state', state);
+    mateUse('location', location, isNamed: true);
+    mateUse('state', state, isNamed: true);
   }
 }
 
@@ -61,10 +61,10 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate {
           routerDelegate: p.get('routerDelegate').build(),
           backButtonDispatcher: p.get('backButtonDispatcher').build(),
         );
-    mateUse('routeInformationProvider', routeInformationProvider);
-    mateUse('routeInformationParser', routeInformationParser);
-    mateUse('routerDelegate', routerDelegate);
-    mateUse('backButtonDispatcher', backButtonDispatcher);
+    mateUse('routeInformationProvider', routeInformationProvider, isNamed: true);
+    mateUse('routeInformationParser', routeInformationParser, isNamed: true);
+    mateUse('routerDelegate', routerDelegate, isNamed: true);
+    mateUse('backButtonDispatcher', backButtonDispatcher, isNamed: true);
   }
 }
 
@@ -107,12 +107,12 @@ class Router$Mate<T> extends Router<T> with Mate {
           backButtonDispatcher: p.get('backButtonDispatcher').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateUse('key', key);
-    mateUse('routeInformationProvider', routeInformationProvider);
-    mateUse('routeInformationParser', routeInformationParser);
-    mateUse('routerDelegate', routerDelegate);
-    mateUse('backButtonDispatcher', backButtonDispatcher);
-    mateUse('restorationScopeId', restorationScopeId);
+    mateUse('key', key, isNamed: true);
+    mateUse('routeInformationProvider', routeInformationProvider, isNamed: true);
+    mateUse('routeInformationParser', routeInformationParser, isNamed: true);
+    mateUse('routerDelegate', routerDelegate, isNamed: true);
+    mateUse('backButtonDispatcher', backButtonDispatcher, isNamed: true);
+    mateUse('restorationScopeId', restorationScopeId, isNamed: true);
   }
 }
 
@@ -127,7 +127,7 @@ class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate
     mateCreateName = 'ChildBackButtonDispatcher';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ChildBackButtonDispatcher$Mate(p.get('parent').value);
-    mateUse('parent', parent);
+    mateUse('parent', parent, isNamed: false);
   }
 }
 
@@ -155,9 +155,9 @@ class BackButtonListener$Mate extends BackButtonListener with Mate {
           child: p.get('child').build(),
           onBackButtonPressed: p.get('onBackButtonPressed').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('onBackButtonPressed', onBackButtonPressed);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('onBackButtonPressed', onBackButtonPressed, isNamed: true);
   }
 }
 
@@ -173,6 +173,6 @@ class PlatformRouteInformationProvider$Mate extends PlatformRouteInformationProv
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder =
         (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
-    mateUse('initialRouteInformation', initialRouteInformation);
+    mateUse('initialRouteInformation', initialRouteInformation, isNamed: true);
   }
 }

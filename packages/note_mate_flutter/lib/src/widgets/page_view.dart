@@ -39,9 +39,9 @@ class PageController$Mate extends PageController with Mate {
           keepPage: p.get('keepPage').build(),
           viewportFraction: p.get('viewportFraction').build(),
         );
-    mateUse('initialPage', initialPage);
-    mateUse('keepPage', keepPage);
-    mateUse('viewportFraction', viewportFraction);
+    mateUse('initialPage', initialPage, isNamed: true);
+    mateUse('keepPage', keepPage, isNamed: true);
+    mateUse('viewportFraction', viewportFraction, isNamed: true);
   }
 }
 
@@ -89,13 +89,13 @@ class PageMetrics$Mate extends PageMetrics with Mate {
           viewportFraction: p.get('viewportFraction').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateUse('minScrollExtent', minScrollExtent);
-    mateUse('maxScrollExtent', maxScrollExtent);
-    mateUse('pixels', pixels);
-    mateUse('viewportDimension', viewportDimension);
-    mateUse('axisDirection', axisDirection);
-    mateUse('viewportFraction', viewportFraction);
-    mateUse('devicePixelRatio', devicePixelRatio);
+    mateUse('minScrollExtent', minScrollExtent, isNamed: true);
+    mateUse('maxScrollExtent', maxScrollExtent, isNamed: true);
+    mateUse('pixels', pixels, isNamed: true);
+    mateUse('viewportDimension', viewportDimension, isNamed: true);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('viewportFraction', viewportFraction, isNamed: true);
+    mateUse('devicePixelRatio', devicePixelRatio, isNamed: true);
   }
 }
 
@@ -110,7 +110,7 @@ class PageScrollPhysics$Mate extends PageScrollPhysics with Mate {
     mateCreateName = 'PageScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
-    mateUse('parent', parent);
+    mateUse('parent', parent, isNamed: true);
   }
 }
 
@@ -193,20 +193,20 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           padEnds: p.get('padEnds').build(),
         );
-    mateUse('key', key);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('controller', controller);
-    mateUse('physics', physics);
-    mateUse('pageSnapping', pageSnapping);
-    mateUse('onPageChanged', onPageChanged);
-    mateUse('children', children);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('allowImplicitScrolling', allowImplicitScrolling);
-    mateUse('restorationId', restorationId);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('scrollBehavior', scrollBehavior);
-    mateUse('padEnds', padEnds);
+    mateUse('key', key, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('pageSnapping', pageSnapping, isNamed: true);
+    mateUse('onPageChanged', onPageChanged, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('allowImplicitScrolling', allowImplicitScrolling, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
+    mateUse('padEnds', padEnds, isNamed: true);
   }
 
   /// PageView PageView.builder({Key? key, Axis scrollDirection = Axis.horizontal, bool reverse = false, PageController? controller, ScrollPhysics? physics, bool pageSnapping = true, void Function(int)? onPageChanged, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool allowImplicitScrolling = false, String? restorationId, Clip clipBehavior = Clip.hardEdge, ScrollBehavior? scrollBehavior, bool padEnds = true})
@@ -296,22 +296,22 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           padEnds: p.get('padEnds').build(),
         );
-    mateUse('key', key);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('controller', controller);
-    mateUse('physics', physics);
-    mateUse('pageSnapping', pageSnapping);
-    mateUse('onPageChanged', onPageChanged);
-    mateUse('itemBuilder', itemBuilder);
-    mateUse('findChildIndexCallback', findChildIndexCallback);
-    mateUse('itemCount', itemCount);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('allowImplicitScrolling', allowImplicitScrolling);
-    mateUse('restorationId', restorationId);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('scrollBehavior', scrollBehavior);
-    mateUse('padEnds', padEnds);
+    mateUse('key', key, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('pageSnapping', pageSnapping, isNamed: true);
+    mateUse('onPageChanged', onPageChanged, isNamed: true);
+    mateUse('itemBuilder', itemBuilder, isNamed: true);
+    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
+    mateUse('itemCount', itemCount, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('allowImplicitScrolling', allowImplicitScrolling, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
+    mateUse('padEnds', padEnds, isNamed: true);
   }
 
   /// PageView PageView.custom({Key? key, Axis scrollDirection = Axis.horizontal, bool reverse = false, PageController? controller, ScrollPhysics? physics, bool pageSnapping = true, void Function(int)? onPageChanged, required SliverChildDelegate childrenDelegate, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool allowImplicitScrolling = false, String? restorationId, Clip clipBehavior = Clip.hardEdge, ScrollBehavior? scrollBehavior, bool padEnds = true})
@@ -391,19 +391,19 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           padEnds: p.get('padEnds').build(),
         );
-    mateUse('key', key);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('reverse', reverse);
-    mateUse('controller', controller);
-    mateUse('physics', physics);
-    mateUse('pageSnapping', pageSnapping);
-    mateUse('onPageChanged', onPageChanged);
-    mateUse('childrenDelegate', childrenDelegate);
-    mateUse('dragStartBehavior', dragStartBehavior);
-    mateUse('allowImplicitScrolling', allowImplicitScrolling);
-    mateUse('restorationId', restorationId);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('scrollBehavior', scrollBehavior);
-    mateUse('padEnds', padEnds);
+    mateUse('key', key, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('reverse', reverse, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('pageSnapping', pageSnapping, isNamed: true);
+    mateUse('onPageChanged', onPageChanged, isNamed: true);
+    mateUse('childrenDelegate', childrenDelegate, isNamed: true);
+    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse('allowImplicitScrolling', allowImplicitScrolling, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
+    mateUse('padEnds', padEnds, isNamed: true);
   }
 }

@@ -30,9 +30,9 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate {
           localPosition: p.get('localPosition').build(),
           pressure: p.get('pressure').build(),
         );
-    mateUse('globalPosition', globalPosition);
-    mateUse('localPosition', localPosition);
-    mateUse('pressure', pressure);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('pressure', pressure, isNamed: true);
   }
 }
 
@@ -75,11 +75,11 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('startPressure', startPressure);
-    mateUse('peakPressure', peakPressure);
-    mateUse('interpolation', interpolation);
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('startPressure', startPressure, isNamed: true);
+    mateUse('peakPressure', peakPressure, isNamed: true);
+    mateUse('interpolation', interpolation, isNamed: true);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }

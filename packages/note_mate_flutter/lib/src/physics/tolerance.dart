@@ -28,8 +28,8 @@ class Tolerance$Mate extends Tolerance with Mate {
           time: p.get('time').build(),
           velocity: p.get('velocity').build(),
         );
-    mateUse('distance', distance);
-    mateUse('time', time);
-    mateUse('velocity', velocity);
+    mateUse('distance', distance, isNamed: true);
+    mateUse('time', time, isNamed: true);
+    mateUse('velocity', velocity, isNamed: true);
   }
 }

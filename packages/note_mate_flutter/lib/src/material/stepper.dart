@@ -40,10 +40,10 @@ class ControlsDetails$Mate extends ControlsDetails with Mate {
           onStepCancel: p.get('onStepCancel').build(),
           onStepContinue: p.get('onStepContinue').build(),
         );
-    mateUse('currentStep', currentStep);
-    mateUse('stepIndex', stepIndex);
-    mateUse('onStepCancel', onStepCancel);
-    mateUse('onStepContinue', onStepContinue);
+    mateUse('currentStep', currentStep, isNamed: true);
+    mateUse('stepIndex', stepIndex, isNamed: true);
+    mateUse('onStepCancel', onStepCancel, isNamed: true);
+    mateUse('onStepContinue', onStepContinue, isNamed: true);
   }
 }
 
@@ -86,12 +86,12 @@ class Step$Mate extends Step with Mate {
           isActive: p.get('isActive').build(),
           label: p.get('label').build(),
         );
-    mateUse('title', title);
-    mateUse('subtitle', subtitle);
-    mateUse('content', content);
-    mateUse('state', state);
-    mateUse('isActive', isActive);
-    mateUse('label', label);
+    mateUse('title', title, isNamed: true);
+    mateUse('subtitle', subtitle, isNamed: true);
+    mateUse('content', content, isNamed: true);
+    mateUse('state', state, isNamed: true);
+    mateUse('isActive', isActive, isNamed: true);
+    mateUse('label', label, isNamed: true);
   }
 }
 
@@ -159,16 +159,16 @@ class Stepper$Mate extends Stepper with Mate {
           elevation: p.get('elevation').build(),
           margin: p.get('margin').build(),
         );
-    mateUse('key', key);
-    mateUse('steps', steps);
-    mateUse('physics', physics);
-    mateUse('type', type);
-    mateUse('currentStep', currentStep);
-    mateUse('onStepTapped', onStepTapped);
-    mateUse('onStepContinue', onStepContinue);
-    mateUse('onStepCancel', onStepCancel);
-    mateUse('controlsBuilder', controlsBuilder);
-    mateUse('elevation', elevation);
-    mateUse('margin', margin);
+    mateUse('key', key, isNamed: true);
+    mateUseList('steps', steps, isNamed: true);
+    mateUse('physics', physics, isNamed: true);
+    mateUse('type', type, isNamed: true);
+    mateUse('currentStep', currentStep, isNamed: true);
+    mateUse('onStepTapped', onStepTapped, isNamed: true);
+    mateUse('onStepContinue', onStepContinue, isNamed: true);
+    mateUse('onStepCancel', onStepCancel, isNamed: true);
+    mateUse('controlsBuilder', controlsBuilder, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('margin', margin, isNamed: true);
   }
 }

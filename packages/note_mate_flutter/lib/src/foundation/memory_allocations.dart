@@ -28,9 +28,9 @@ class ObjectCreated$Mate extends ObjectCreated with Mate {
           className: p.get('className').build(),
           object: p.get('object').build(),
         );
-    mateUse('library', library);
-    mateUse('className', className);
-    mateUse('object', object);
+    mateUse('library', library, isNamed: true);
+    mateUse('className', className, isNamed: true);
+    mateUse('object', object, isNamed: true);
   }
 }
 
@@ -45,6 +45,6 @@ class ObjectDisposed$Mate extends ObjectDisposed with Mate {
     mateCreateName = 'ObjectDisposed';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectDisposed$Mate(object: p.get('object').build());
-    mateUse('object', object);
+    mateUse('object', object, isNamed: true);
   }
 }

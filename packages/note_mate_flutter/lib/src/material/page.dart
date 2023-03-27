@@ -41,11 +41,11 @@ class MaterialPageRoute$Mate<T> extends MaterialPageRoute<T> with Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    mateUse('builder', builder);
-    mateUse('settings', settings);
-    mateUse('maintainState', maintainState);
-    mateUse('fullscreenDialog', fullscreenDialog);
-    mateUse('allowSnapshotting', allowSnapshotting);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('settings', settings, isNamed: true);
+    mateUse('maintainState', maintainState, isNamed: true);
+    mateUse('fullscreenDialog', fullscreenDialog, isNamed: true);
+    mateUse('allowSnapshotting', allowSnapshotting, isNamed: true);
   }
 }
 
@@ -98,13 +98,13 @@ class MaterialPage$Mate<T> extends MaterialPage<T> with Mate {
           arguments: p.get('arguments').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse('child', child);
-    mateUse('maintainState', maintainState);
-    mateUse('fullscreenDialog', fullscreenDialog);
-    mateUse('allowSnapshotting', allowSnapshotting);
-    mateUse('key', key);
-    mateUse('name', name);
-    mateUse('arguments', arguments);
-    mateUse('restorationId', restorationId);
+    mateUse('child', child, isNamed: true);
+    mateUse('maintainState', maintainState, isNamed: true);
+    mateUse('fullscreenDialog', fullscreenDialog, isNamed: true);
+    mateUse('allowSnapshotting', allowSnapshotting, isNamed: true);
+    mateUse('key', key, isNamed: true);
+    mateUse('name', name, isNamed: true);
+    mateUse('arguments', arguments, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
   }
 }

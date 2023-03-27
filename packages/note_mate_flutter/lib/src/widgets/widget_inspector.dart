@@ -31,9 +31,9 @@ class WidgetInspector$Mate extends WidgetInspector with Mate {
           child: p.get('child').build(),
           selectButtonBuilder: p.get('selectButtonBuilder').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('selectButtonBuilder', selectButtonBuilder);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('selectButtonBuilder', selectButtonBuilder, isNamed: true);
   }
 }
 
@@ -56,8 +56,8 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
           p.get('description').value,
           p.get('url').value,
         );
-    mateUse('description', description);
-    mateUse('url', url);
+    mateUse('description', description, isNamed: false);
+    mateUse('url', url, isNamed: false);
   }
 }
 
@@ -113,13 +113,13 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
           service: p.get('service').build(),
           addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
         );
-    mateUse('groupName', groupName);
-    mateUse('summaryTree', summaryTree);
-    mateUse('maxDescendantsTruncatableNode', maxDescendantsTruncatableNode);
-    mateUse('expandPropertyValues', expandPropertyValues);
-    mateUse('subtreeDepth', subtreeDepth);
-    mateUse('includeProperties', includeProperties);
-    mateUse('service', service);
-    mateUse('addAdditionalPropertiesCallback', addAdditionalPropertiesCallback);
+    mateUse('groupName', groupName, isNamed: true);
+    mateUse('summaryTree', summaryTree, isNamed: true);
+    mateUse('maxDescendantsTruncatableNode', maxDescendantsTruncatableNode, isNamed: true);
+    mateUse('expandPropertyValues', expandPropertyValues, isNamed: true);
+    mateUse('subtreeDepth', subtreeDepth, isNamed: true);
+    mateUse('includeProperties', includeProperties, isNamed: true);
+    mateUse('service', service, isNamed: true);
+    mateUse('addAdditionalPropertiesCallback', addAdditionalPropertiesCallback, isNamed: true);
   }
 }

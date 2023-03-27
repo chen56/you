@@ -29,9 +29,9 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
           uri: p.get('uri').build(),
           data: p.get('data').build(),
         );
-    mateUse('mimeType', mimeType);
-    mateUse('uri', uri);
-    mateUse('data', data);
+    mateUse('mimeType', mimeType, isNamed: true);
+    mateUse('uri', uri, isNamed: true);
+    mateUse('data', data, isNamed: true);
   }
 
   /// KeyboardInsertedContent KeyboardInsertedContent.fromJson(Map<String, dynamic> metadata)
@@ -43,6 +43,6 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
     mateCreateName = 'KeyboardInsertedContent.fromJson';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
-    mateUse('metadata', metadata);
+    mateUse('metadata', metadata, isNamed: false);
   }
 }

@@ -17,7 +17,7 @@ class SawTooth$Mate extends SawTooth with Mate {
     mateCreateName = 'SawTooth';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SawTooth$Mate(p.get('count').value);
-    mateUse('count', count);
+    mateUse('count', count, isNamed: false);
   }
 }
 
@@ -44,9 +44,9 @@ class Interval$Mate extends Interval with Mate {
           p.get('end').value,
           curve: p.get('curve').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
-    mateUse('curve', curve);
+    mateUse('begin', begin, isNamed: false);
+    mateUse('end', end, isNamed: false);
+    mateUse('curve', curve, isNamed: true);
   }
 }
 
@@ -61,7 +61,7 @@ class Threshold$Mate extends Threshold with Mate {
     mateCreateName = 'Threshold';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => Threshold$Mate(p.get('threshold').value);
-    mateUse('threshold', threshold);
+    mateUse('threshold', threshold, isNamed: false);
   }
 }
 
@@ -94,10 +94,10 @@ class Cubic$Mate extends Cubic with Mate {
           p.get('c').value,
           p.get('d').value,
         );
-    mateUse('a', a);
-    mateUse('b', b);
-    mateUse('c', c);
-    mateUse('d', d);
+    mateUse('a', a, isNamed: false);
+    mateUse('b', b, isNamed: false);
+    mateUse('c', c, isNamed: false);
+    mateUse('d', d, isNamed: false);
   }
 }
 
@@ -135,11 +135,11 @@ class ThreePointCubic$Mate extends ThreePointCubic with Mate {
           p.get('a2').value,
           p.get('b2').value,
         );
-    mateUse('a1', a1);
-    mateUse('b1', b1);
-    mateUse('midpoint', midpoint);
-    mateUse('a2', a2);
-    mateUse('b2', b2);
+    mateUse('a1', a1, isNamed: false);
+    mateUse('b1', b1, isNamed: false);
+    mateUse('midpoint', midpoint, isNamed: false);
+    mateUse('a2', a2, isNamed: false);
+    mateUse('b2', b2, isNamed: false);
   }
 }
 
@@ -162,8 +162,8 @@ class Curve2DSample$Mate extends Curve2DSample with Mate {
           p.get('t').value,
           p.get('value').value,
         );
-    mateUse('t', t);
-    mateUse('value', value);
+    mateUse('t', t, isNamed: false);
+    mateUse('value', value, isNamed: false);
   }
 }
 
@@ -195,10 +195,10 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate {
           startHandle: p.get('startHandle').build(),
           endHandle: p.get('endHandle').build(),
         );
-    mateUse('controlPoints', controlPoints);
-    mateUse('tension', tension);
-    mateUse('startHandle', startHandle);
-    mateUse('endHandle', endHandle);
+    mateUseList('controlPoints', controlPoints, isNamed: false);
+    mateUse('tension', tension, isNamed: true);
+    mateUse('startHandle', startHandle, isNamed: true);
+    mateUse('endHandle', endHandle, isNamed: true);
   }
 
   /// CatmullRomSpline CatmullRomSpline.precompute(List<Offset> controlPoints, {double tension = 0.0, Offset? startHandle, Offset? endHandle})
@@ -227,10 +227,10 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate {
           startHandle: p.get('startHandle').build(),
           endHandle: p.get('endHandle').build(),
         );
-    mateUse('controlPoints', controlPoints);
-    mateUse('tension', tension);
-    mateUse('startHandle', startHandle);
-    mateUse('endHandle', endHandle);
+    mateUseList('controlPoints', controlPoints, isNamed: false);
+    mateUse('tension', tension, isNamed: true);
+    mateUse('startHandle', startHandle, isNamed: true);
+    mateUse('endHandle', endHandle, isNamed: true);
   }
 }
 
@@ -252,8 +252,8 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate {
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
         );
-    mateUse('controlPoints', controlPoints);
-    mateUse('tension', tension);
+    mateUseList('controlPoints', controlPoints, isNamed: false);
+    mateUse('tension', tension, isNamed: true);
   }
 
   /// CatmullRomCurve CatmullRomCurve.precompute(List<Offset> controlPoints, {double tension = 0.0})
@@ -272,8 +272,8 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate {
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
         );
-    mateUse('controlPoints', controlPoints);
-    mateUse('tension', tension);
+    mateUseList('controlPoints', controlPoints, isNamed: false);
+    mateUse('tension', tension, isNamed: true);
   }
 }
 
@@ -288,7 +288,7 @@ class FlippedCurve$Mate extends FlippedCurve with Mate {
     mateCreateName = 'FlippedCurve';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => FlippedCurve$Mate(p.get('curve').value);
-    mateUse('curve', curve);
+    mateUse('curve', curve, isNamed: false);
   }
 }
 
@@ -303,7 +303,7 @@ class ElasticInCurve$Mate extends ElasticInCurve with Mate {
     mateCreateName = 'ElasticInCurve';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ElasticInCurve$Mate(p.get('period').value);
-    mateUse('period', period);
+    mateUse('period', period, isNamed: false);
   }
 }
 
@@ -318,7 +318,7 @@ class ElasticOutCurve$Mate extends ElasticOutCurve with Mate {
     mateCreateName = 'ElasticOutCurve';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ElasticOutCurve$Mate(p.get('period').value);
-    mateUse('period', period);
+    mateUse('period', period, isNamed: false);
   }
 }
 
@@ -333,6 +333,6 @@ class ElasticInOutCurve$Mate extends ElasticInOutCurve with Mate {
     mateCreateName = 'ElasticInOutCurve';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ElasticInOutCurve$Mate(p.get('period').value);
-    mateUse('period', period);
+    mateUse('period', period, isNamed: false);
   }
 }

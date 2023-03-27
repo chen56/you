@@ -60,14 +60,14 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate {
           insetAnimationDuration: p.get('insetAnimationDuration').build(),
           insetAnimationCurve: p.get('insetAnimationCurve').build(),
         );
-    mateUse('key', key);
-    mateUse('title', title);
-    mateUse('content', content);
-    mateUse('actions', actions);
-    mateUse('scrollController', scrollController);
-    mateUse('actionScrollController', actionScrollController);
-    mateUse('insetAnimationDuration', insetAnimationDuration);
-    mateUse('insetAnimationCurve', insetAnimationCurve);
+    mateUse('key', key, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('content', content, isNamed: true);
+    mateUseList('actions', actions, isNamed: true);
+    mateUse('scrollController', scrollController, isNamed: true);
+    mateUse('actionScrollController', actionScrollController, isNamed: true);
+    mateUse('insetAnimationDuration', insetAnimationDuration, isNamed: true);
+    mateUse('insetAnimationCurve', insetAnimationCurve, isNamed: true);
   }
 }
 
@@ -95,9 +95,9 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with Mate {
           isSurfacePainted: p.get('isSurfacePainted').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('isSurfacePainted', isSurfacePainted);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('isSurfacePainted', isSurfacePainted, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -145,13 +145,13 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
           actionScrollController: p.get('actionScrollController').build(),
           cancelButton: p.get('cancelButton').build(),
         );
-    mateUse('key', key);
-    mateUse('title', title);
-    mateUse('message', message);
-    mateUse('actions', actions);
-    mateUse('messageScrollController', messageScrollController);
-    mateUse('actionScrollController', actionScrollController);
-    mateUse('cancelButton', cancelButton);
+    mateUse('key', key, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('message', message, isNamed: true);
+    mateUseList('actions', actions, isNamed: true);
+    mateUse('messageScrollController', messageScrollController, isNamed: true);
+    mateUse('actionScrollController', actionScrollController, isNamed: true);
+    mateUse('cancelButton', cancelButton, isNamed: true);
   }
 }
 
@@ -189,11 +189,11 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Ma
           isDestructiveAction: p.get('isDestructiveAction').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onPressed', onPressed);
-    mateUse('isDefaultAction', isDefaultAction);
-    mateUse('isDestructiveAction', isDestructiveAction);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('isDefaultAction', isDefaultAction, isNamed: true);
+    mateUse('isDestructiveAction', isDestructiveAction, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -236,11 +236,11 @@ class CupertinoDialogAction$Mate extends CupertinoDialogAction with Mate {
           textStyle: p.get('textStyle').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onPressed', onPressed);
-    mateUse('isDefaultAction', isDefaultAction);
-    mateUse('isDestructiveAction', isDestructiveAction);
-    mateUse('textStyle', textStyle);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('isDefaultAction', isDefaultAction, isNamed: true);
+    mateUse('isDestructiveAction', isDestructiveAction, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -31,9 +31,9 @@ class TapDownDetails$Mate extends TapDownDetails with Mate {
           localPosition: p.get('localPosition').build(),
           kind: p.get('kind').build(),
         );
-    mateUse('globalPosition', globalPosition);
-    mateUse('localPosition', localPosition);
-    mateUse('kind', kind);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse('kind', kind, isNamed: true);
   }
 }
 
@@ -61,9 +61,9 @@ class TapUpDetails$Mate extends TapUpDetails with Mate {
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateUse('kind', kind);
-    mateUse('globalPosition', globalPosition);
-    mateUse('localPosition', localPosition);
+    mateUse('kind', kind, isNamed: true);
+    mateUse('globalPosition', globalPosition, isNamed: true);
+    mateUse('localPosition', localPosition, isNamed: true);
   }
 }
 
@@ -91,8 +91,8 @@ class TapGestureRecognizer$Mate extends TapGestureRecognizer with Mate {
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner);
-    mateUse('supportedDevices', supportedDevices);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse('debugOwner', debugOwner, isNamed: true);
+    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
   }
 }

@@ -50,13 +50,13 @@ class StarBorder$Mate extends StarBorder with Mate {
           rotation: p.get('rotation').build(),
           squash: p.get('squash').build(),
         );
-    mateUse('side', side);
-    mateUse('points', points);
-    mateUse('innerRadiusRatio', innerRadiusRatio);
-    mateUse('pointRounding', pointRounding);
-    mateUse('valleyRounding', valleyRounding);
-    mateUse('rotation', rotation);
-    mateUse('squash', squash);
+    mateUse('side', side, isNamed: true);
+    mateUse('points', points, isNamed: true);
+    mateUse('innerRadiusRatio', innerRadiusRatio, isNamed: true);
+    mateUse('pointRounding', pointRounding, isNamed: true);
+    mateUse('valleyRounding', valleyRounding, isNamed: true);
+    mateUse('rotation', rotation, isNamed: true);
+    mateUse('squash', squash, isNamed: true);
   }
 
   /// StarBorder StarBorder.polygon({BorderSide side = BorderSide.none, double sides = 5, double pointRounding = 0, double rotation = 0, double squash = 0})
@@ -91,10 +91,10 @@ class StarBorder$Mate extends StarBorder with Mate {
           rotation: p.get('rotation').build(),
           squash: p.get('squash').build(),
         );
-    mateUse('side', side);
-    mateUse('sides', sides);
-    mateUse('pointRounding', pointRounding);
-    mateUse('rotation', rotation);
-    mateUse('squash', squash);
+    mateUse('side', side, isNamed: true);
+    mateUse('sides', sides, isNamed: true);
+    mateUse('pointRounding', pointRounding, isNamed: true);
+    mateUse('rotation', rotation, isNamed: true);
+    mateUse('squash', squash, isNamed: true);
   }
 }

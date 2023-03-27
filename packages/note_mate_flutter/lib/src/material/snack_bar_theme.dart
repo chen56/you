@@ -77,17 +77,17 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate {
           closeIconColor: p.get('closeIconColor').build(),
           actionOverflowThreshold: p.get('actionOverflowThreshold').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('actionTextColor', actionTextColor);
-    mateUse('disabledActionTextColor', disabledActionTextColor);
-    mateUse('contentTextStyle', contentTextStyle);
-    mateUse('elevation', elevation);
-    mateUse('shape', shape);
-    mateUse('behavior', behavior);
-    mateUse('width', width);
-    mateUse('insetPadding', insetPadding);
-    mateUse('showCloseIcon', showCloseIcon);
-    mateUse('closeIconColor', closeIconColor);
-    mateUse('actionOverflowThreshold', actionOverflowThreshold);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('actionTextColor', actionTextColor, isNamed: true);
+    mateUse('disabledActionTextColor', disabledActionTextColor, isNamed: true);
+    mateUse('contentTextStyle', contentTextStyle, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('behavior', behavior, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('insetPadding', insetPadding, isNamed: true);
+    mateUse('showCloseIcon', showCloseIcon, isNamed: true);
+    mateUse('closeIconColor', closeIconColor, isNamed: true);
+    mateUse('actionOverflowThreshold', actionOverflowThreshold, isNamed: true);
   }
 }

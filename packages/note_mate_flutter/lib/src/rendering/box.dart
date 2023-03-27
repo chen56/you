@@ -35,10 +35,10 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           minHeight: p.get('minHeight').build(),
           maxHeight: p.get('maxHeight').build(),
         );
-    mateUse('minWidth', minWidth);
-    mateUse('maxWidth', maxWidth);
-    mateUse('minHeight', minHeight);
-    mateUse('maxHeight', maxHeight);
+    mateUse('minWidth', minWidth, isNamed: true);
+    mateUse('maxWidth', maxWidth, isNamed: true);
+    mateUse('minHeight', minHeight, isNamed: true);
+    mateUse('maxHeight', maxHeight, isNamed: true);
   }
 
   /// BoxConstraints BoxConstraints.tight(Size size)
@@ -50,7 +50,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
     mateCreateName = 'BoxConstraints.tight';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tight(p.get('size').value);
-    mateUse('size', size);
+    mateUse('size', size, isNamed: false);
   }
 
   /// BoxConstraints BoxConstraints.tightFor({double? width, double? height})
@@ -70,8 +70,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    mateUse('width', width);
-    mateUse('height', height);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
   }
 
   /// BoxConstraints BoxConstraints.tightForFinite({double width = double.infinity, double height = double.infinity})
@@ -91,8 +91,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    mateUse('width', width);
-    mateUse('height', height);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
   }
 
   /// BoxConstraints BoxConstraints.loose(Size size)
@@ -104,7 +104,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
     mateCreateName = 'BoxConstraints.loose';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.loose(p.get('size').value);
-    mateUse('size', size);
+    mateUse('size', size, isNamed: false);
   }
 
   /// BoxConstraints BoxConstraints.expand({double? width, double? height})
@@ -124,8 +124,8 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    mateUse('width', width);
-    mateUse('height', height);
+    mateUse('width', width, isNamed: true);
+    mateUse('height', height, isNamed: true);
   }
 }
 
@@ -140,7 +140,7 @@ class BoxHitTestResult$Mate extends BoxHitTestResult with Mate {
     mateCreateName = 'BoxHitTestResult.wrap';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxHitTestResult$Mate.wrap(p.get('result').value);
-    mateUse('result', result);
+    mateUse('result', result, isNamed: false);
   }
 }
 
@@ -163,7 +163,7 @@ class BoxHitTestEntry$Mate extends BoxHitTestEntry with Mate {
           p.get('target').value,
           p.get('localPosition').value,
         );
-    mateUse('target', target);
-    mateUse('localPosition', localPosition);
+    mateUse('target', target, isNamed: false);
+    mateUse('localPosition', localPosition, isNamed: false);
   }
 }

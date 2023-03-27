@@ -89,18 +89,18 @@ class Dialog$Mate extends Dialog with Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('insetAnimationDuration', insetAnimationDuration);
-    mateUse('insetAnimationCurve', insetAnimationCurve);
-    mateUse('insetPadding', insetPadding);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('shape', shape);
-    mateUse('alignment', alignment);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('insetAnimationDuration', insetAnimationDuration, isNamed: true);
+    mateUse('insetAnimationCurve', insetAnimationCurve, isNamed: true);
+    mateUse('insetPadding', insetPadding, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Dialog Dialog.fullscreen({Key? key, Color? backgroundColor, Duration insetAnimationDuration = Duration.zero, Curve insetAnimationCurve = Curves.decelerate, Widget? child})
@@ -135,11 +135,11 @@ class Dialog$Mate extends Dialog with Mate {
           insetAnimationCurve: p.get('insetAnimationCurve').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('insetAnimationDuration', insetAnimationDuration);
-    mateUse('insetAnimationCurve', insetAnimationCurve);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('insetAnimationDuration', insetAnimationDuration, isNamed: true);
+    mateUse('insetAnimationCurve', insetAnimationCurve, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -287,33 +287,33 @@ class AlertDialog$Mate extends AlertDialog with Mate {
           alignment: p.get('alignment').build(),
           scrollable: p.get('scrollable').build(),
         );
-    mateUse('key', key);
-    mateUse('icon', icon);
-    mateUse('iconPadding', iconPadding);
-    mateUse('iconColor', iconColor);
-    mateUse('title', title);
-    mateUse('titlePadding', titlePadding);
-    mateUse('titleTextStyle', titleTextStyle);
-    mateUse('content', content);
-    mateUse('contentPadding', contentPadding);
-    mateUse('contentTextStyle', contentTextStyle);
-    mateUse('actions', actions);
-    mateUse('actionsPadding', actionsPadding);
-    mateUse('actionsAlignment', actionsAlignment);
-    mateUse('actionsOverflowAlignment', actionsOverflowAlignment);
-    mateUse('actionsOverflowDirection', actionsOverflowDirection);
-    mateUse('actionsOverflowButtonSpacing', actionsOverflowButtonSpacing);
-    mateUse('buttonPadding', buttonPadding);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('semanticLabel', semanticLabel);
-    mateUse('insetPadding', insetPadding);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('shape', shape);
-    mateUse('alignment', alignment);
-    mateUse('scrollable', scrollable);
+    mateUse('key', key, isNamed: true);
+    mateUse('icon', icon, isNamed: true);
+    mateUse('iconPadding', iconPadding, isNamed: true);
+    mateUse('iconColor', iconColor, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('titlePadding', titlePadding, isNamed: true);
+    mateUse('titleTextStyle', titleTextStyle, isNamed: true);
+    mateUse('content', content, isNamed: true);
+    mateUse('contentPadding', contentPadding, isNamed: true);
+    mateUse('contentTextStyle', contentTextStyle, isNamed: true);
+    mateUseList('actions', actions, isNamed: true);
+    mateUse('actionsPadding', actionsPadding, isNamed: true);
+    mateUse('actionsAlignment', actionsAlignment, isNamed: true);
+    mateUse('actionsOverflowAlignment', actionsOverflowAlignment, isNamed: true);
+    mateUse('actionsOverflowDirection', actionsOverflowDirection, isNamed: true);
+    mateUse('actionsOverflowButtonSpacing', actionsOverflowButtonSpacing, isNamed: true);
+    mateUse('buttonPadding', buttonPadding, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('semanticLabel', semanticLabel, isNamed: true);
+    mateUse('insetPadding', insetPadding, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('scrollable', scrollable, isNamed: true);
   }
 }
 
@@ -346,10 +346,10 @@ class SimpleDialogOption$Mate extends SimpleDialogOption with Mate {
           padding: p.get('padding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('onPressed', onPressed);
-    mateUse('padding', padding);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -437,21 +437,21 @@ class SimpleDialog$Mate extends SimpleDialog with Mate {
           shape: p.get('shape').build(),
           alignment: p.get('alignment').build(),
         );
-    mateUse('key', key);
-    mateUse('title', title);
-    mateUse('titlePadding', titlePadding);
-    mateUse('titleTextStyle', titleTextStyle);
-    mateUse('children', children);
-    mateUse('contentPadding', contentPadding);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('semanticLabel', semanticLabel);
-    mateUse('insetPadding', insetPadding);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('shape', shape);
-    mateUse('alignment', alignment);
+    mateUse('key', key, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('titlePadding', titlePadding, isNamed: true);
+    mateUse('titleTextStyle', titleTextStyle, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('contentPadding', contentPadding, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('semanticLabel', semanticLabel, isNamed: true);
+    mateUse('insetPadding', insetPadding, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
   }
 }
 
@@ -514,15 +514,15 @@ class DialogRoute$Mate<T> extends DialogRoute<T> with Mate {
           anchorPoint: p.get('anchorPoint').build(),
           traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),
         );
-    mateUse('context', context);
-    mateUse('builder', builder);
-    mateUse('themes', themes);
-    mateUse('barrierColor', barrierColor);
-    mateUse('barrierDismissible', barrierDismissible);
-    mateUse('barrierLabel', barrierLabel);
-    mateUse('useSafeArea', useSafeArea);
-    mateUse('settings', settings);
-    mateUse('anchorPoint', anchorPoint);
-    mateUse('traversalEdgeBehavior', traversalEdgeBehavior);
+    mateUse('context', context, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('themes', themes, isNamed: true);
+    mateUse('barrierColor', barrierColor, isNamed: true);
+    mateUse('barrierDismissible', barrierDismissible, isNamed: true);
+    mateUse('barrierLabel', barrierLabel, isNamed: true);
+    mateUse('useSafeArea', useSafeArea, isNamed: true);
+    mateUse('settings', settings, isNamed: true);
+    mateUse('anchorPoint', anchorPoint, isNamed: true);
+    mateUse('traversalEdgeBehavior', traversalEdgeBehavior, isNamed: true);
   }
 }

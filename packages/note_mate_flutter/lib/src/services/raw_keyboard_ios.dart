@@ -33,9 +33,9 @@ class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate {
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
         );
-    mateUse('characters', characters);
-    mateUse('charactersIgnoringModifiers', charactersIgnoringModifiers);
-    mateUse('keyCode', keyCode);
-    mateUse('modifiers', modifiers);
+    mateUse('characters', characters, isNamed: true);
+    mateUse('charactersIgnoringModifiers', charactersIgnoringModifiers, isNamed: true);
+    mateUse('keyCode', keyCode, isNamed: true);
+    mateUse('modifiers', modifiers, isNamed: true);
   }
 }

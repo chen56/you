@@ -44,11 +44,11 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           scrollDirection: p.get('scrollDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('controller', controller);
-    mateUse('automaticallyInheritForPlatforms', automaticallyInheritForPlatforms);
-    mateUse('scrollDirection', scrollDirection);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('automaticallyInheritForPlatforms', automaticallyInheritForPlatforms, isNamed: true);
+    mateUse('scrollDirection', scrollDirection, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// PrimaryScrollController PrimaryScrollController.none({Key? key, required Widget child})
@@ -68,7 +68,7 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -85,19 +85,19 @@ class CupertinoDatePicker$Mate extends CupertinoDatePicker with Mate {
           backgroundColor: p.get('backgroundColor').build(),
           showDayOfWeek: p.get('showDayOfWeek').build(),
         );
-    mateUse('key', key);
-    mateUse('mode', mode);
-    mateUse('onDateTimeChanged', onDateTimeChanged);
-    mateUse('initialDateTime', initialDateTime);
-    mateUse('minimumDate', minimumDate);
-    mateUse('maximumDate', maximumDate);
-    mateUse('minimumYear', minimumYear);
-    mateUse('maximumYear', maximumYear);
-    mateUse('minuteInterval', minuteInterval);
-    mateUse('use24hFormat', use24hFormat);
-    mateUse('dateOrder', dateOrder);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('showDayOfWeek', showDayOfWeek);
+    mateUse('key', key, isNamed: true);
+    mateUse('mode', mode, isNamed: true);
+    mateUse('onDateTimeChanged', onDateTimeChanged, isNamed: true);
+    mateUse('initialDateTime', initialDateTime, isNamed: true);
+    mateUse('minimumDate', minimumDate, isNamed: true);
+    mateUse('maximumDate', maximumDate, isNamed: true);
+    mateUse('minimumYear', minimumYear, isNamed: true);
+    mateUse('maximumYear', maximumYear, isNamed: true);
+    mateUse('minuteInterval', minuteInterval, isNamed: true);
+    mateUse('use24hFormat', use24hFormat, isNamed: true);
+    mateUse('dateOrder', dateOrder, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('showDayOfWeek', showDayOfWeek, isNamed: true);
   }
 }
 
@@ -150,13 +150,13 @@ class CupertinoTimerPicker$Mate extends CupertinoTimerPicker with Mate {
           backgroundColor: p.get('backgroundColor').build(),
           onTimerDurationChanged: p.get('onTimerDurationChanged').build(),
         );
-    mateUse('key', key);
-    mateUse('mode', mode);
-    mateUse('initialTimerDuration', initialTimerDuration);
-    mateUse('minuteInterval', minuteInterval);
-    mateUse('secondInterval', secondInterval);
-    mateUse('alignment', alignment);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('onTimerDurationChanged', onTimerDurationChanged);
+    mateUse('key', key, isNamed: true);
+    mateUse('mode', mode, isNamed: true);
+    mateUse('initialTimerDuration', initialTimerDuration, isNamed: true);
+    mateUse('minuteInterval', minuteInterval, isNamed: true);
+    mateUse('secondInterval', secondInterval, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('onTimerDurationChanged', onTimerDurationChanged, isNamed: true);
   }
 }

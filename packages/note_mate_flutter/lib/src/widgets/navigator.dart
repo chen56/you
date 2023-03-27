@@ -29,8 +29,8 @@ class RouteSettings$Mate extends RouteSettings with Mate {
           name: p.get('name').build(),
           arguments: p.get('arguments').build(),
         );
-    mateUse('name', name);
-    mateUse('arguments', arguments);
+    mateUse('name', name, isNamed: true);
+    mateUse('arguments', arguments, isNamed: true);
   }
 }
 
@@ -58,9 +58,9 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('controller', controller);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// HeroControllerScope HeroControllerScope.none({Key? key, required Widget child})
@@ -80,8 +80,8 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -164,20 +164,20 @@ class Navigator$Mate extends Navigator with Mate {
           restorationScopeId: p.get('restorationScopeId').build(),
           routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
         );
-    mateUse('key', key);
-    mateUse('pages', pages);
-    mateUse('onPopPage', onPopPage);
-    mateUse('initialRoute', initialRoute);
-    mateUse('onGenerateInitialRoutes', onGenerateInitialRoutes);
-    mateUse('onGenerateRoute', onGenerateRoute);
-    mateUse('onUnknownRoute', onUnknownRoute);
-    mateUse('transitionDelegate', transitionDelegate);
-    mateUse('reportsRouteUpdateToEngine', reportsRouteUpdateToEngine);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('observers', observers);
-    mateUse('requestFocus', requestFocus);
-    mateUse('restorationScopeId', restorationScopeId);
-    mateUse('routeTraversalEdgeBehavior', routeTraversalEdgeBehavior);
+    mateUse('key', key, isNamed: true);
+    mateUseList('pages', pages, isNamed: true);
+    mateUse('onPopPage', onPopPage, isNamed: true);
+    mateUse('initialRoute', initialRoute, isNamed: true);
+    mateUse('onGenerateInitialRoutes', onGenerateInitialRoutes, isNamed: true);
+    mateUse('onGenerateRoute', onGenerateRoute, isNamed: true);
+    mateUse('onUnknownRoute', onUnknownRoute, isNamed: true);
+    mateUse('transitionDelegate', transitionDelegate, isNamed: true);
+    mateUse('reportsRouteUpdateToEngine', reportsRouteUpdateToEngine, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUseList('observers', observers, isNamed: true);
+    mateUse('requestFocus', requestFocus, isNamed: true);
+    mateUse('restorationScopeId', restorationScopeId, isNamed: true);
+    mateUse('routeTraversalEdgeBehavior', routeTraversalEdgeBehavior, isNamed: true);
   }
 }
 
@@ -205,8 +205,8 @@ class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate {
           onPresent: p.get('onPresent').build(),
           onComplete: p.get('onComplete').build(),
         );
-    mateUse('navigatorFinder', navigatorFinder);
-    mateUse('onPresent', onPresent);
-    mateUse('onComplete', onComplete);
+    mateUse('navigatorFinder', navigatorFinder, isNamed: true);
+    mateUse('onPresent', onPresent, isNamed: true);
+    mateUse('onComplete', onComplete, isNamed: true);
   }
 }

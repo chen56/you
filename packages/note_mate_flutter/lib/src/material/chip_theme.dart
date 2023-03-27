@@ -35,9 +35,9 @@ class ChipTheme$Mate extends ChipTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -150,25 +150,25 @@ class ChipThemeData$Mate extends ChipThemeData with Mate {
           pressElevation: p.get('pressElevation').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('deleteIconColor', deleteIconColor);
-    mateUse('disabledColor', disabledColor);
-    mateUse('selectedColor', selectedColor);
-    mateUse('secondarySelectedColor', secondarySelectedColor);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('selectedShadowColor', selectedShadowColor);
-    mateUse('showCheckmark', showCheckmark);
-    mateUse('checkmarkColor', checkmarkColor);
-    mateUse('labelPadding', labelPadding);
-    mateUse('padding', padding);
-    mateUse('side', side);
-    mateUse('shape', shape);
-    mateUse('labelStyle', labelStyle);
-    mateUse('secondaryLabelStyle', secondaryLabelStyle);
-    mateUse('brightness', brightness);
-    mateUse('elevation', elevation);
-    mateUse('pressElevation', pressElevation);
-    mateUse('iconTheme', iconTheme);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('deleteIconColor', deleteIconColor, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('selectedColor', selectedColor, isNamed: true);
+    mateUse('secondarySelectedColor', secondarySelectedColor, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('selectedShadowColor', selectedShadowColor, isNamed: true);
+    mateUse('showCheckmark', showCheckmark, isNamed: true);
+    mateUse('checkmarkColor', checkmarkColor, isNamed: true);
+    mateUse('labelPadding', labelPadding, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('side', side, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('labelStyle', labelStyle, isNamed: true);
+    mateUse('secondaryLabelStyle', secondaryLabelStyle, isNamed: true);
+    mateUse('brightness', brightness, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('pressElevation', pressElevation, isNamed: true);
+    mateUse('iconTheme', iconTheme, isNamed: true);
   }
 }

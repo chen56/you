@@ -49,12 +49,12 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    mateUse('builder', builder);
-    mateUse('title', title);
-    mateUse('settings', settings);
-    mateUse('maintainState', maintainState);
-    mateUse('fullscreenDialog', fullscreenDialog);
-    mateUse('allowSnapshotting', allowSnapshotting);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('settings', settings, isNamed: true);
+    mateUse('maintainState', maintainState, isNamed: true);
+    mateUse('fullscreenDialog', fullscreenDialog, isNamed: true);
+    mateUse('allowSnapshotting', allowSnapshotting, isNamed: true);
   }
 }
 
@@ -112,15 +112,15 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate {
           arguments: p.get('arguments').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse('child', child);
-    mateUse('maintainState', maintainState);
-    mateUse('title', title);
-    mateUse('fullscreenDialog', fullscreenDialog);
-    mateUse('allowSnapshotting', allowSnapshotting);
-    mateUse('key', key);
-    mateUse('name', name);
-    mateUse('arguments', arguments);
-    mateUse('restorationId', restorationId);
+    mateUse('child', child, isNamed: true);
+    mateUse('maintainState', maintainState, isNamed: true);
+    mateUse('title', title, isNamed: true);
+    mateUse('fullscreenDialog', fullscreenDialog, isNamed: true);
+    mateUse('allowSnapshotting', allowSnapshotting, isNamed: true);
+    mateUse('key', key, isNamed: true);
+    mateUse('name', name, isNamed: true);
+    mateUse('arguments', arguments, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
   }
 }
 
@@ -158,11 +158,11 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
           child: p.get('child').build(),
           linearTransition: p.get('linearTransition').build(),
         );
-    mateUse('key', key);
-    mateUse('primaryRouteAnimation', primaryRouteAnimation);
-    mateUse('secondaryRouteAnimation', secondaryRouteAnimation);
-    mateUse('child', child);
-    mateUse('linearTransition', linearTransition);
+    mateUse('key', key, isNamed: true);
+    mateUse('primaryRouteAnimation', primaryRouteAnimation, isNamed: true);
+    mateUse('secondaryRouteAnimation', secondaryRouteAnimation, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('linearTransition', linearTransition, isNamed: true);
   }
 }
 
@@ -200,11 +200,11 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
           child: p.get('child').build(),
           linearTransition: p.get('linearTransition').build(),
         );
-    mateUse('key', key);
-    mateUse('primaryRouteAnimation', primaryRouteAnimation);
-    mateUse('secondaryRouteAnimation', secondaryRouteAnimation);
-    mateUse('child', child);
-    mateUse('linearTransition', linearTransition);
+    mateUse('key', key, isNamed: true);
+    mateUse('primaryRouteAnimation', primaryRouteAnimation, isNamed: true);
+    mateUse('secondaryRouteAnimation', secondaryRouteAnimation, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('linearTransition', linearTransition, isNamed: true);
   }
 }
 
@@ -257,14 +257,14 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
           settings: p.get('settings').build(),
           anchorPoint: p.get('anchorPoint').build(),
         );
-    mateUse('builder', builder);
-    mateUse('barrierLabel', barrierLabel);
-    mateUse('barrierColor', barrierColor);
-    mateUse('barrierDismissible', barrierDismissible);
-    mateUse('semanticsDismissible', semanticsDismissible);
-    mateUse('filter', filter);
-    mateUse('settings', settings);
-    mateUse('anchorPoint', anchorPoint);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('barrierLabel', barrierLabel, isNamed: true);
+    mateUse('barrierColor', barrierColor, isNamed: true);
+    mateUse('barrierDismissible', barrierDismissible, isNamed: true);
+    mateUse('semanticsDismissible', semanticsDismissible, isNamed: true);
+    mateUse('filter', filter, isNamed: true);
+    mateUse('settings', settings, isNamed: true);
+    mateUse('anchorPoint', anchorPoint, isNamed: true);
   }
 }
 
@@ -322,14 +322,14 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate {
           settings: p.get('settings').build(),
           anchorPoint: p.get('anchorPoint').build(),
         );
-    mateUse('builder', builder);
-    mateUse('context', context);
-    mateUse('barrierDismissible', barrierDismissible);
-    mateUse('barrierColor', barrierColor);
-    mateUse('barrierLabel', barrierLabel);
-    mateUse('transitionDuration', transitionDuration);
-    mateUse('transitionBuilder', transitionBuilder);
-    mateUse('settings', settings);
-    mateUse('anchorPoint', anchorPoint);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('context', context, isNamed: true);
+    mateUse('barrierDismissible', barrierDismissible, isNamed: true);
+    mateUse('barrierColor', barrierColor, isNamed: true);
+    mateUse('barrierLabel', barrierLabel, isNamed: true);
+    mateUse('transitionDuration', transitionDuration, isNamed: true);
+    mateUse('transitionBuilder', transitionBuilder, isNamed: true);
+    mateUse('settings', settings, isNamed: true);
+    mateUse('anchorPoint', anchorPoint, isNamed: true);
   }
 }

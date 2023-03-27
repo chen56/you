@@ -55,14 +55,14 @@ class AnimationController$Mate extends AnimationController with Mate {
           animationBehavior: p.get('animationBehavior').build(),
           vsync: p.get('vsync').build(),
         );
-    mateUse('value', value);
-    mateUse('duration', duration);
-    mateUse('reverseDuration', reverseDuration);
-    mateUse('debugLabel', debugLabel);
-    mateUse('lowerBound', lowerBound);
-    mateUse('upperBound', upperBound);
-    mateUse('animationBehavior', animationBehavior);
-    mateUse('vsync', vsync);
+    mateUse('value', value, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('reverseDuration', reverseDuration, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse('lowerBound', lowerBound, isNamed: true);
+    mateUse('upperBound', upperBound, isNamed: true);
+    mateUse('animationBehavior', animationBehavior, isNamed: true);
+    mateUse('vsync', vsync, isNamed: true);
   }
 
   /// AnimationController AnimationController.unbounded({double value = 0.0, Duration? duration, Duration? reverseDuration, String? debugLabel, required TickerProvider vsync, AnimationBehavior animationBehavior = AnimationBehavior.preserve})
@@ -102,11 +102,11 @@ class AnimationController$Mate extends AnimationController with Mate {
           vsync: p.get('vsync').build(),
           animationBehavior: p.get('animationBehavior').build(),
         );
-    mateUse('value', value);
-    mateUse('duration', duration);
-    mateUse('reverseDuration', reverseDuration);
-    mateUse('debugLabel', debugLabel);
-    mateUse('vsync', vsync);
-    mateUse('animationBehavior', animationBehavior);
+    mateUse('value', value, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('reverseDuration', reverseDuration, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse('vsync', vsync, isNamed: true);
+    mateUse('animationBehavior', animationBehavior, isNamed: true);
   }
 }

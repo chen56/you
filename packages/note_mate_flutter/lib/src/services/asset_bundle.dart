@@ -15,6 +15,6 @@ class NetworkAssetBundle$Mate extends NetworkAssetBundle with Mate {
     mateCreateName = 'NetworkAssetBundle';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => NetworkAssetBundle$Mate(p.get('baseUrl').value);
-    mateUse('baseUrl', baseUrl);
+    mateUse('baseUrl', baseUrl, isNamed: false);
   }
 }

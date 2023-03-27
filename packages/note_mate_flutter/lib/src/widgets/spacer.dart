@@ -24,7 +24,7 @@ class Spacer$Mate extends Spacer with Mate {
           key: p.get('key').build(),
           flex: p.get('flex').build(),
         );
-    mateUse('key', key);
-    mateUse('flex', flex);
+    mateUse('key', key, isNamed: true);
+    mateUse('flex', flex, isNamed: true);
   }
 }

@@ -50,13 +50,13 @@ class Hero$Mate extends Hero with Mate {
           transitionOnUserGestures: p.get('transitionOnUserGestures').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('tag', tag);
-    mateUse('createRectTween', createRectTween);
-    mateUse('flightShuttleBuilder', flightShuttleBuilder);
-    mateUse('placeholderBuilder', placeholderBuilder);
-    mateUse('transitionOnUserGestures', transitionOnUserGestures);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('tag', tag, isNamed: true);
+    mateUse('createRectTween', createRectTween, isNamed: true);
+    mateUse('flightShuttleBuilder', flightShuttleBuilder, isNamed: true);
+    mateUse('placeholderBuilder', placeholderBuilder, isNamed: true);
+    mateUse('transitionOnUserGestures', transitionOnUserGestures, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -71,7 +71,7 @@ class HeroController$Mate extends HeroController with Mate {
     mateCreateName = 'HeroController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroController$Mate(createRectTween: p.get('createRectTween').build());
-    mateUse('createRectTween', createRectTween);
+    mateUse('createRectTween', createRectTween, isNamed: true);
   }
 }
 
@@ -99,8 +99,8 @@ class HeroMode$Mate extends HeroMode with Mate {
           child: p.get('child').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('enabled', enabled);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
   }
 }

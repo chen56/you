@@ -106,23 +106,23 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('textTheme', textTheme);
-    mateUse('layoutBehavior', layoutBehavior);
-    mateUse('minWidth', minWidth);
-    mateUse('height', height);
-    mateUse('padding', padding);
-    mateUse('shape', shape);
-    mateUse('alignedDropdown', alignedDropdown);
-    mateUse('buttonColor', buttonColor);
-    mateUse('disabledColor', disabledColor);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('highlightColor', highlightColor);
-    mateUse('splashColor', splashColor);
-    mateUse('colorScheme', colorScheme);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('textTheme', textTheme, isNamed: true);
+    mateUse('layoutBehavior', layoutBehavior, isNamed: true);
+    mateUse('minWidth', minWidth, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('alignedDropdown', alignedDropdown, isNamed: true);
+    mateUse('buttonColor', buttonColor, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('highlightColor', highlightColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('colorScheme', colorScheme, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// ButtonTheme ButtonTheme.fromButtonThemeData({Key? key, required ButtonThemeData data, required Widget child})
@@ -147,9 +147,9 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -237,20 +237,20 @@ class ButtonThemeData$Mate extends ButtonThemeData with Mate {
           colorScheme: p.get('colorScheme').build(),
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
         );
-    mateUse('textTheme', textTheme);
-    mateUse('minWidth', minWidth);
-    mateUse('height', height);
-    mateUse('padding', padding);
-    mateUse('shape', shape);
-    mateUse('layoutBehavior', layoutBehavior);
-    mateUse('alignedDropdown', alignedDropdown);
-    mateUse('buttonColor', buttonColor);
-    mateUse('disabledColor', disabledColor);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('highlightColor', highlightColor);
-    mateUse('splashColor', splashColor);
-    mateUse('colorScheme', colorScheme);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
+    mateUse('textTheme', textTheme, isNamed: true);
+    mateUse('minWidth', minWidth, isNamed: true);
+    mateUse('height', height, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('layoutBehavior', layoutBehavior, isNamed: true);
+    mateUse('alignedDropdown', alignedDropdown, isNamed: true);
+    mateUse('buttonColor', buttonColor, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('highlightColor', highlightColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('colorScheme', colorScheme, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
   }
 }

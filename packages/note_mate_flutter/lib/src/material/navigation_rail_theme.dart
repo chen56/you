@@ -85,19 +85,19 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
           minWidth: p.get('minWidth').build(),
           minExtendedWidth: p.get('minExtendedWidth').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('unselectedLabelTextStyle', unselectedLabelTextStyle);
-    mateUse('selectedLabelTextStyle', selectedLabelTextStyle);
-    mateUse('unselectedIconTheme', unselectedIconTheme);
-    mateUse('selectedIconTheme', selectedIconTheme);
-    mateUse('groupAlignment', groupAlignment);
-    mateUse('labelType', labelType);
-    mateUse('useIndicator', useIndicator);
-    mateUse('indicatorColor', indicatorColor);
-    mateUse('indicatorShape', indicatorShape);
-    mateUse('minWidth', minWidth);
-    mateUse('minExtendedWidth', minExtendedWidth);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('unselectedLabelTextStyle', unselectedLabelTextStyle, isNamed: true);
+    mateUse('selectedLabelTextStyle', selectedLabelTextStyle, isNamed: true);
+    mateUse('unselectedIconTheme', unselectedIconTheme, isNamed: true);
+    mateUse('selectedIconTheme', selectedIconTheme, isNamed: true);
+    mateUse('groupAlignment', groupAlignment, isNamed: true);
+    mateUse('labelType', labelType, isNamed: true);
+    mateUse('useIndicator', useIndicator, isNamed: true);
+    mateUse('indicatorColor', indicatorColor, isNamed: true);
+    mateUse('indicatorShape', indicatorShape, isNamed: true);
+    mateUse('minWidth', minWidth, isNamed: true);
+    mateUse('minExtendedWidth', minExtendedWidth, isNamed: true);
   }
 }
 
@@ -125,8 +125,8 @@ class NavigationRailTheme$Mate extends NavigationRailTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -106,23 +106,23 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           gestureSettings: p.get('gestureSettings').build(),
           displayFeatures: p.get('displayFeatures').build(),
         );
-    mateUse('size', size);
-    mateUse('devicePixelRatio', devicePixelRatio);
-    mateUse('textScaleFactor', textScaleFactor);
-    mateUse('platformBrightness', platformBrightness);
-    mateUse('padding', padding);
-    mateUse('viewInsets', viewInsets);
-    mateUse('systemGestureInsets', systemGestureInsets);
-    mateUse('viewPadding', viewPadding);
-    mateUse('alwaysUse24HourFormat', alwaysUse24HourFormat);
-    mateUse('accessibleNavigation', accessibleNavigation);
-    mateUse('invertColors', invertColors);
-    mateUse('highContrast', highContrast);
-    mateUse('disableAnimations', disableAnimations);
-    mateUse('boldText', boldText);
-    mateUse('navigationMode', navigationMode);
-    mateUse('gestureSettings', gestureSettings);
-    mateUse('displayFeatures', displayFeatures);
+    mateUse('size', size, isNamed: true);
+    mateUse('devicePixelRatio', devicePixelRatio, isNamed: true);
+    mateUse('textScaleFactor', textScaleFactor, isNamed: true);
+    mateUse('platformBrightness', platformBrightness, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('viewInsets', viewInsets, isNamed: true);
+    mateUse('systemGestureInsets', systemGestureInsets, isNamed: true);
+    mateUse('viewPadding', viewPadding, isNamed: true);
+    mateUse('alwaysUse24HourFormat', alwaysUse24HourFormat, isNamed: true);
+    mateUse('accessibleNavigation', accessibleNavigation, isNamed: true);
+    mateUse('invertColors', invertColors, isNamed: true);
+    mateUse('highContrast', highContrast, isNamed: true);
+    mateUse('disableAnimations', disableAnimations, isNamed: true);
+    mateUse('boldText', boldText, isNamed: true);
+    mateUse('navigationMode', navigationMode, isNamed: true);
+    mateUse('gestureSettings', gestureSettings, isNamed: true);
+    mateUseList('displayFeatures', displayFeatures, isNamed: true);
   }
 
   /// MediaQueryData MediaQueryData.fromView(FlutterView view, {MediaQueryData? platformData})
@@ -141,8 +141,8 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           p.get('view').value,
           platformData: p.get('platformData').build(),
         );
-    mateUse('view', view);
-    mateUse('platformData', platformData);
+    mateUse('view', view, isNamed: false);
+    mateUse('platformData', platformData, isNamed: true);
   }
 }
 
@@ -170,8 +170,8 @@ class MediaQuery$Mate extends MediaQuery with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -58,13 +58,13 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate {
           horizontalScreenEdgePadding: p.get('horizontalScreenEdgePadding').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
-    mateUse('key', key);
-    mateUse('animationCurve', animationCurve);
-    mateUse('controller', controller);
-    mateUse('dragResistance', dragResistance);
-    mateUse('hideBelowThreshold', hideBelowThreshold);
-    mateUse('horizontalScreenEdgePadding', horizontalScreenEdgePadding);
-    mateUse('magnifierInfo', magnifierInfo);
+    mateUse('key', key, isNamed: true);
+    mateUse('animationCurve', animationCurve, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('dragResistance', dragResistance, isNamed: true);
+    mateUse('hideBelowThreshold', hideBelowThreshold, isNamed: true);
+    mateUse('horizontalScreenEdgePadding', horizontalScreenEdgePadding, isNamed: true);
+    mateUse('magnifierInfo', magnifierInfo, isNamed: true);
   }
 }
 
@@ -112,12 +112,12 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate {
           borderSide: p.get('borderSide').build(),
           inOutAnimation: p.get('inOutAnimation').build(),
         );
-    mateUse('key', key);
-    mateUse('size', size);
-    mateUse('borderRadius', borderRadius);
-    mateUse('additionalFocalPointOffset', additionalFocalPointOffset);
-    mateUse('shadows', shadows);
-    mateUse('borderSide', borderSide);
-    mateUse('inOutAnimation', inOutAnimation);
+    mateUse('key', key, isNamed: true);
+    mateUse('size', size, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('additionalFocalPointOffset', additionalFocalPointOffset, isNamed: true);
+    mateUseList('shadows', shadows, isNamed: true);
+    mateUse('borderSide', borderSide, isNamed: true);
+    mateUse('inOutAnimation', inOutAnimation, isNamed: true);
   }
 }

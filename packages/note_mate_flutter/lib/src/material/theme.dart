@@ -34,9 +34,9 @@ class Theme$Mate extends Theme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -59,8 +59,8 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin);
-    mateUse('end', end);
+    mateUse('begin', begin, isNamed: true);
+    mateUse('end', end, isNamed: true);
   }
 }
 
@@ -103,11 +103,11 @@ class AnimatedTheme$Mate extends AnimatedTheme with Mate {
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('curve', curve);
-    mateUse('duration', duration);
-    mateUse('onEnd', onEnd);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('curve', curve, isNamed: true);
+    mateUse('duration', duration, isNamed: true);
+    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

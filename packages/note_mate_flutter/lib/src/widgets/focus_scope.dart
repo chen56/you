@@ -87,20 +87,20 @@ class Focus$Mate extends Focus with Mate {
           includeSemantics: p.get('includeSemantics').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('focusNode', focusNode);
-    mateUse('parentNode', parentNode);
-    mateUse('autofocus', autofocus);
-    mateUse('onFocusChange', onFocusChange);
-    mateUse('onKeyEvent', onKeyEvent);
-    mateUse('onKey', onKey);
-    mateUse('canRequestFocus', canRequestFocus);
-    mateUse('skipTraversal', skipTraversal);
-    mateUse('descendantsAreFocusable', descendantsAreFocusable);
-    mateUse('descendantsAreTraversable', descendantsAreTraversable);
-    mateUse('includeSemantics', includeSemantics);
-    mateUse('debugLabel', debugLabel);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('parentNode', parentNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('onFocusChange', onFocusChange, isNamed: true);
+    mateUse('onKeyEvent', onKeyEvent, isNamed: true);
+    mateUse('onKey', onKey, isNamed: true);
+    mateUse('canRequestFocus', canRequestFocus, isNamed: true);
+    mateUse('skipTraversal', skipTraversal, isNamed: true);
+    mateUse('descendantsAreFocusable', descendantsAreFocusable, isNamed: true);
+    mateUse('descendantsAreTraversable', descendantsAreTraversable, isNamed: true);
+    mateUse('includeSemantics', includeSemantics, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }
 
@@ -168,17 +168,17 @@ class FocusScope$Mate extends FocusScope with Mate {
           onKey: p.get('onKey').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key);
-    mateUse('node', node);
-    mateUse('parentNode', parentNode);
-    mateUse('child', child);
-    mateUse('autofocus', autofocus);
-    mateUse('onFocusChange', onFocusChange);
-    mateUse('canRequestFocus', canRequestFocus);
-    mateUse('skipTraversal', skipTraversal);
-    mateUse('onKeyEvent', onKeyEvent);
-    mateUse('onKey', onKey);
-    mateUse('debugLabel', debugLabel);
+    mateUse('key', key, isNamed: true);
+    mateUse('node', node, isNamed: true);
+    mateUse('parentNode', parentNode, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('onFocusChange', onFocusChange, isNamed: true);
+    mateUse('canRequestFocus', canRequestFocus, isNamed: true);
+    mateUse('skipTraversal', skipTraversal, isNamed: true);
+    mateUse('onKeyEvent', onKeyEvent, isNamed: true);
+    mateUse('onKey', onKey, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }
 
@@ -206,8 +206,8 @@ class ExcludeFocus$Mate extends ExcludeFocus with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('excluding', excluding);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('excluding', excluding, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

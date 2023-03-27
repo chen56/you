@@ -58,14 +58,14 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
           padding: p.get('padding').build(),
           leadingPadding: p.get('leadingPadding').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('shadowColor', shadowColor);
-    mateUse('dividerColor', dividerColor);
-    mateUse('contentTextStyle', contentTextStyle);
-    mateUse('elevation', elevation);
-    mateUse('padding', padding);
-    mateUse('leadingPadding', leadingPadding);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('dividerColor', dividerColor, isNamed: true);
+    mateUse('contentTextStyle', contentTextStyle, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('leadingPadding', leadingPadding, isNamed: true);
   }
 }
 
@@ -93,8 +93,8 @@ class MaterialBannerTheme$Mate extends MaterialBannerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

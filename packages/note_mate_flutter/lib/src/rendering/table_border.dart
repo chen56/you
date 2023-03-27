@@ -50,12 +50,12 @@ class TableBorder$Mate extends TableBorder with Mate {
           verticalInside: p.get('verticalInside').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    mateUse('top', top);
-    mateUse('right', right);
-    mateUse('bottom', bottom);
-    mateUse('left', left);
-    mateUse('horizontalInside', horizontalInside);
-    mateUse('verticalInside', verticalInside);
-    mateUse('borderRadius', borderRadius);
+    mateUse('top', top, isNamed: true);
+    mateUse('right', right, isNamed: true);
+    mateUse('bottom', bottom, isNamed: true);
+    mateUse('left', left, isNamed: true);
+    mateUse('horizontalInside', horizontalInside, isNamed: true);
+    mateUse('verticalInside', verticalInside, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
   }
 }

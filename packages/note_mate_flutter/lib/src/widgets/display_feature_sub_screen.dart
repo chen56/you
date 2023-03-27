@@ -30,8 +30,8 @@ class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with Mate {
           anchorPoint: p.get('anchorPoint').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('anchorPoint', anchorPoint);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('anchorPoint', anchorPoint, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

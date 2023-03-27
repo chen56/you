@@ -35,10 +35,10 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('registrar', registrar);
-    mateUse('delegate', delegate);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('registrar', registrar, isNamed: true);
+    mateUse('delegate', delegate, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// SelectionContainer SelectionContainer.disabled({Key? key, required Widget child})
@@ -58,8 +58,8 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -87,8 +87,8 @@ class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with Mate {
           registrar: p.get('registrar').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('registrar', registrar);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('registrar', registrar, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

@@ -94,21 +94,21 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
           borderRadius: p.get('borderRadius').build(),
           borderWidth: p.get('borderWidth').build(),
         );
-    mateUse('textStyle', textStyle);
-    mateUse('constraints', constraints);
-    mateUse('color', color);
-    mateUse('selectedColor', selectedColor);
-    mateUse('disabledColor', disabledColor);
-    mateUse('fillColor', fillColor);
-    mateUse('focusColor', focusColor);
-    mateUse('highlightColor', highlightColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('splashColor', splashColor);
-    mateUse('borderColor', borderColor);
-    mateUse('selectedBorderColor', selectedBorderColor);
-    mateUse('disabledBorderColor', disabledBorderColor);
-    mateUse('borderRadius', borderRadius);
-    mateUse('borderWidth', borderWidth);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('selectedColor', selectedColor, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('fillColor', fillColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('highlightColor', highlightColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUse('borderColor', borderColor, isNamed: true);
+    mateUse('selectedBorderColor', selectedBorderColor, isNamed: true);
+    mateUse('disabledBorderColor', disabledBorderColor, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('borderWidth', borderWidth, isNamed: true);
   }
 }
 
@@ -136,8 +136,8 @@ class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

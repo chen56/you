@@ -24,7 +24,7 @@ class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionC
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse('child', child);
-    mateUse('key', key);
+    mateUse('child', child, isNamed: true);
+    mateUse('key', key, isNamed: true);
   }
 }

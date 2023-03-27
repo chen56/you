@@ -43,10 +43,10 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    mateUse('color', color);
-    mateUse('image', image);
-    mateUse('gradient', gradient);
-    mateUse('shadows', shadows);
-    mateUse('shape', shape);
+    mateUse('color', color, isNamed: true);
+    mateUse('image', image, isNamed: true);
+    mateUse('gradient', gradient, isNamed: true);
+    mateUseList('shadows', shadows, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
   }
 }

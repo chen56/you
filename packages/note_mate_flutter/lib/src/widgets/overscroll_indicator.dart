@@ -53,13 +53,13 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Ma
           notificationPredicate: p.get('notificationPredicate').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('showLeading', showLeading);
-    mateUse('showTrailing', showTrailing);
-    mateUse('axisDirection', axisDirection);
-    mateUse('color', color);
-    mateUse('notificationPredicate', notificationPredicate);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('showLeading', showLeading, isNamed: true);
+    mateUse('showTrailing', showTrailing, isNamed: true);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('notificationPredicate', notificationPredicate, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -97,11 +97,11 @@ class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator w
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('axisDirection', axisDirection);
-    mateUse('notificationPredicate', notificationPredicate);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('axisDirection', axisDirection, isNamed: true);
+    mateUse('notificationPredicate', notificationPredicate, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -116,6 +116,6 @@ class OverscrollIndicatorNotification$Mate extends OverscrollIndicatorNotificati
     mateCreateName = 'OverscrollIndicatorNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
-    mateUse('leading', leading);
+    mateUse('leading', leading, isNamed: true);
   }
 }

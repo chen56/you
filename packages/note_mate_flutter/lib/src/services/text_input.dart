@@ -27,8 +27,8 @@ class TextInputType$Mate extends TextInputType with Mate {
           signed: p.get('signed').build(),
           decimal: p.get('decimal').build(),
         );
-    mateUse('signed', signed);
-    mateUse('decimal', decimal);
+    mateUse('signed', signed, isNamed: true);
+    mateUse('decimal', decimal, isNamed: true);
   }
 }
 
@@ -121,22 +121,22 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
           enableDeltaModel: p.get('enableDeltaModel').build(),
         );
-    mateUse('inputType', inputType);
-    mateUse('readOnly', readOnly);
-    mateUse('obscureText', obscureText);
-    mateUse('autocorrect', autocorrect);
-    mateUse('smartDashesType', smartDashesType);
-    mateUse('smartQuotesType', smartQuotesType);
-    mateUse('enableSuggestions', enableSuggestions);
-    mateUse('enableInteractiveSelection', enableInteractiveSelection);
-    mateUse('actionLabel', actionLabel);
-    mateUse('inputAction', inputAction);
-    mateUse('keyboardAppearance', keyboardAppearance);
-    mateUse('textCapitalization', textCapitalization);
-    mateUse('autofillConfiguration', autofillConfiguration);
-    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    mateUse('allowedMimeTypes', allowedMimeTypes);
-    mateUse('enableDeltaModel', enableDeltaModel);
+    mateUse('inputType', inputType, isNamed: true);
+    mateUse('readOnly', readOnly, isNamed: true);
+    mateUse('obscureText', obscureText, isNamed: true);
+    mateUse('autocorrect', autocorrect, isNamed: true);
+    mateUse('smartDashesType', smartDashesType, isNamed: true);
+    mateUse('smartQuotesType', smartQuotesType, isNamed: true);
+    mateUse('enableSuggestions', enableSuggestions, isNamed: true);
+    mateUse('enableInteractiveSelection', enableInteractiveSelection, isNamed: true);
+    mateUse('actionLabel', actionLabel, isNamed: true);
+    mateUse('inputAction', inputAction, isNamed: true);
+    mateUse('keyboardAppearance', keyboardAppearance, isNamed: true);
+    mateUse('textCapitalization', textCapitalization, isNamed: true);
+    mateUse('autofillConfiguration', autofillConfiguration, isNamed: true);
+    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning, isNamed: true);
+    mateUseList('allowedMimeTypes', allowedMimeTypes, isNamed: true);
+    mateUse('enableDeltaModel', enableDeltaModel, isNamed: true);
   }
 }
 
@@ -159,8 +159,8 @@ class RawFloatingCursorPoint$Mate extends RawFloatingCursorPoint with Mate {
           offset: p.get('offset').build(),
           state: p.get('state').build(),
         );
-    mateUse('offset', offset);
-    mateUse('state', state);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('state', state, isNamed: true);
   }
 }
 
@@ -188,9 +188,9 @@ class TextEditingValue$Mate extends TextEditingValue with Mate {
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('text', text);
-    mateUse('selection', selection);
-    mateUse('composing', composing);
+    mateUse('text', text, isNamed: true);
+    mateUse('selection', selection, isNamed: true);
+    mateUse('composing', composing, isNamed: true);
   }
 }
 
@@ -218,8 +218,8 @@ class SelectionRect$Mate extends SelectionRect with Mate {
           bounds: p.get('bounds').build(),
           direction: p.get('direction').build(),
         );
-    mateUse('position', position);
-    mateUse('bounds', bounds);
-    mateUse('direction', direction);
+    mateUse('position', position, isNamed: true);
+    mateUse('bounds', bounds, isNamed: true);
+    mateUse('direction', direction, isNamed: true);
   }
 }

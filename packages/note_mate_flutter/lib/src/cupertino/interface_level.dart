@@ -29,8 +29,8 @@ class CupertinoUserInterfaceLevel$Mate extends CupertinoUserInterfaceLevel with 
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

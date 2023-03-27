@@ -70,16 +70,16 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           position: p.get('position').build(),
         );
-    mateUse('color', color);
-    mateUse('shape', shape);
-    mateUse('elevation', elevation);
-    mateUse('shadowColor', shadowColor);
-    mateUse('surfaceTintColor', surfaceTintColor);
-    mateUse('textStyle', textStyle);
-    mateUse('labelTextStyle', labelTextStyle);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('position', position);
+    mateUse('color', color, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('labelTextStyle', labelTextStyle, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('position', position, isNamed: true);
   }
 }
 
@@ -107,8 +107,8 @@ class PopupMenuTheme$Mate extends PopupMenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

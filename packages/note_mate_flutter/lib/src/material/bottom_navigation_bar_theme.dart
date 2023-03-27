@@ -91,20 +91,20 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData wit
           landscapeLayout: p.get('landscapeLayout').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('selectedIconTheme', selectedIconTheme);
-    mateUse('unselectedIconTheme', unselectedIconTheme);
-    mateUse('selectedItemColor', selectedItemColor);
-    mateUse('unselectedItemColor', unselectedItemColor);
-    mateUse('selectedLabelStyle', selectedLabelStyle);
-    mateUse('unselectedLabelStyle', unselectedLabelStyle);
-    mateUse('showSelectedLabels', showSelectedLabels);
-    mateUse('showUnselectedLabels', showUnselectedLabels);
-    mateUse('type', type);
-    mateUse('enableFeedback', enableFeedback);
-    mateUse('landscapeLayout', landscapeLayout);
-    mateUse('mouseCursor', mouseCursor);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('selectedIconTheme', selectedIconTheme, isNamed: true);
+    mateUse('unselectedIconTheme', unselectedIconTheme, isNamed: true);
+    mateUse('selectedItemColor', selectedItemColor, isNamed: true);
+    mateUse('unselectedItemColor', unselectedItemColor, isNamed: true);
+    mateUse('selectedLabelStyle', selectedLabelStyle, isNamed: true);
+    mateUse('unselectedLabelStyle', unselectedLabelStyle, isNamed: true);
+    mateUse('showSelectedLabels', showSelectedLabels, isNamed: true);
+    mateUse('showUnselectedLabels', showUnselectedLabels, isNamed: true);
+    mateUse('type', type, isNamed: true);
+    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse('landscapeLayout', landscapeLayout, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
   }
 }
 
@@ -132,8 +132,8 @@ class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

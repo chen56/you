@@ -63,14 +63,14 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmente
           pressedColor: p.get('pressedColor').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('onValueChanged', onValueChanged);
-    mateUse('groupValue', groupValue);
-    mateUse('unselectedColor', unselectedColor);
-    mateUse('selectedColor', selectedColor);
-    mateUse('borderColor', borderColor);
-    mateUse('pressedColor', pressedColor);
-    mateUse('padding', padding);
+    mateUse('key', key, isNamed: true);
+    mateUse('children', children, isNamed: true);
+    mateUse('onValueChanged', onValueChanged, isNamed: true);
+    mateUse('groupValue', groupValue, isNamed: true);
+    mateUse('unselectedColor', unselectedColor, isNamed: true);
+    mateUse('selectedColor', selectedColor, isNamed: true);
+    mateUse('borderColor', borderColor, isNamed: true);
+    mateUse('pressedColor', pressedColor, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
   }
 }

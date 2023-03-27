@@ -78,17 +78,17 @@ class InkSparkle$Mate extends InkSparkle with Mate {
           onRemoved: p.get('onRemoved').build(),
           turbulenceSeed: p.get('turbulenceSeed').build(),
         );
-    mateUse('controller', controller);
-    mateUse('referenceBox', referenceBox);
-    mateUse('color', color);
-    mateUse('position', position);
-    mateUse('textDirection', textDirection);
-    mateUse('containedInkWell', containedInkWell);
-    mateUse('rectCallback', rectCallback);
-    mateUse('borderRadius', borderRadius);
-    mateUse('customBorder', customBorder);
-    mateUse('radius', radius);
-    mateUse('onRemoved', onRemoved);
-    mateUse('turbulenceSeed', turbulenceSeed);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('referenceBox', referenceBox, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('position', position, isNamed: true);
+    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse('containedInkWell', containedInkWell, isNamed: true);
+    mateUse('rectCallback', rectCallback, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('customBorder', customBorder, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
+    mateUse('onRemoved', onRemoved, isNamed: true);
+    mateUse('turbulenceSeed', turbulenceSeed, isNamed: true);
   }
 }

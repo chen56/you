@@ -79,18 +79,18 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('textColor', textColor);
-    mateUse('smallSize', smallSize);
-    mateUse('largeSize', largeSize);
-    mateUse('textStyle', textStyle);
-    mateUse('padding', padding);
-    mateUse('alignment', alignment);
-    mateUse('offset', offset);
-    mateUse('label', label);
-    mateUse('isLabelVisible', isLabelVisible);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('textColor', textColor, isNamed: true);
+    mateUse('smallSize', smallSize, isNamed: true);
+    mateUse('largeSize', largeSize, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('isLabelVisible', isLabelVisible, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 
   /// Badge Badge.count({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, required int count, bool isLabelVisible = true, Widget? child})
@@ -160,17 +160,17 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('textColor', textColor);
-    mateUse('smallSize', smallSize);
-    mateUse('largeSize', largeSize);
-    mateUse('textStyle', textStyle);
-    mateUse('padding', padding);
-    mateUse('alignment', alignment);
-    mateUse('offset', offset);
-    mateUse('count', count);
-    mateUse('isLabelVisible', isLabelVisible);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('textColor', textColor, isNamed: true);
+    mateUse('smallSize', smallSize, isNamed: true);
+    mateUse('largeSize', largeSize, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('alignment', alignment, isNamed: true);
+    mateUse('offset', offset, isNamed: true);
+    mateUse('count', count, isNamed: true);
+    mateUse('isLabelVisible', isLabelVisible, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

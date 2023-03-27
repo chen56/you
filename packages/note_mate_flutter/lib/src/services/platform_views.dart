@@ -23,8 +23,8 @@ class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate {
           id: p.get('id').build(),
           toolType: p.get('toolType').build(),
         );
-    mateUse('id', id);
-    mateUse('toolType', toolType);
+    mateUse('id', id, isNamed: true);
+    mateUse('toolType', toolType, isNamed: true);
   }
 }
 
@@ -82,15 +82,15 @@ class AndroidPointerCoords$Mate extends AndroidPointerCoords with Mate {
           x: p.get('x').build(),
           y: p.get('y').build(),
         );
-    mateUse('orientation', orientation);
-    mateUse('pressure', pressure);
-    mateUse('size', size);
-    mateUse('toolMajor', toolMajor);
-    mateUse('toolMinor', toolMinor);
-    mateUse('touchMajor', touchMajor);
-    mateUse('touchMinor', touchMinor);
-    mateUse('x', x);
-    mateUse('y', y);
+    mateUse('orientation', orientation, isNamed: true);
+    mateUse('pressure', pressure, isNamed: true);
+    mateUse('size', size, isNamed: true);
+    mateUse('toolMajor', toolMajor, isNamed: true);
+    mateUse('toolMinor', toolMinor, isNamed: true);
+    mateUse('touchMajor', touchMajor, isNamed: true);
+    mateUse('touchMinor', touchMinor, isNamed: true);
+    mateUse('x', x, isNamed: true);
+    mateUse('y', y, isNamed: true);
   }
 }
 
@@ -178,20 +178,20 @@ class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate {
           flags: p.get('flags').build(),
           motionEventId: p.get('motionEventId').build(),
         );
-    mateUse('downTime', downTime);
-    mateUse('eventTime', eventTime);
-    mateUse('action', action);
-    mateUse('pointerCount', pointerCount);
-    mateUse('pointerProperties', pointerProperties);
-    mateUse('pointerCoords', pointerCoords);
-    mateUse('metaState', metaState);
-    mateUse('buttonState', buttonState);
-    mateUse('xPrecision', xPrecision);
-    mateUse('yPrecision', yPrecision);
-    mateUse('deviceId', deviceId);
-    mateUse('edgeFlags', edgeFlags);
-    mateUse('source', source);
-    mateUse('flags', flags);
-    mateUse('motionEventId', motionEventId);
+    mateUse('downTime', downTime, isNamed: true);
+    mateUse('eventTime', eventTime, isNamed: true);
+    mateUse('action', action, isNamed: true);
+    mateUse('pointerCount', pointerCount, isNamed: true);
+    mateUseList('pointerProperties', pointerProperties, isNamed: true);
+    mateUseList('pointerCoords', pointerCoords, isNamed: true);
+    mateUse('metaState', metaState, isNamed: true);
+    mateUse('buttonState', buttonState, isNamed: true);
+    mateUse('xPrecision', xPrecision, isNamed: true);
+    mateUse('yPrecision', yPrecision, isNamed: true);
+    mateUse('deviceId', deviceId, isNamed: true);
+    mateUse('edgeFlags', edgeFlags, isNamed: true);
+    mateUse('source', source, isNamed: true);
+    mateUse('flags', flags, isNamed: true);
+    mateUse('motionEventId', motionEventId, isNamed: true);
   }
 }

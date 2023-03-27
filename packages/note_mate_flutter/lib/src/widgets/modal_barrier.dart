@@ -58,14 +58,14 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
-    mateUse('key', key);
-    mateUse('color', color);
-    mateUse('dismissible', dismissible);
-    mateUse('onDismiss', onDismiss);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('barrierSemanticsDismissible', barrierSemanticsDismissible);
-    mateUse('clipDetailsNotifier', clipDetailsNotifier);
-    mateUse('semanticsOnTapHint', semanticsOnTapHint);
+    mateUse('key', key, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('dismissible', dismissible, isNamed: true);
+    mateUse('onDismiss', onDismiss, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('barrierSemanticsDismissible', barrierSemanticsDismissible, isNamed: true);
+    mateUse('clipDetailsNotifier', clipDetailsNotifier, isNamed: true);
+    mateUse('semanticsOnTapHint', semanticsOnTapHint, isNamed: true);
   }
 }
 
@@ -118,13 +118,13 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
-    mateUse('key', key);
-    mateUse('color', color);
-    mateUse('dismissible', dismissible);
-    mateUse('semanticsLabel', semanticsLabel);
-    mateUse('barrierSemanticsDismissible', barrierSemanticsDismissible);
-    mateUse('onDismiss', onDismiss);
-    mateUse('clipDetailsNotifier', clipDetailsNotifier);
-    mateUse('semanticsOnTapHint', semanticsOnTapHint);
+    mateUse('key', key, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('dismissible', dismissible, isNamed: true);
+    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
+    mateUse('barrierSemanticsDismissible', barrierSemanticsDismissible, isNamed: true);
+    mateUse('onDismiss', onDismiss, isNamed: true);
+    mateUse('clipDetailsNotifier', clipDetailsNotifier, isNamed: true);
+    mateUse('semanticsOnTapHint', semanticsOnTapHint, isNamed: true);
   }
 }

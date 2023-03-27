@@ -31,9 +31,9 @@ class RestorationScope$Mate extends RestorationScope with Mate {
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('restorationId', restorationId);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -61,9 +61,9 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate
           bucket: p.get('bucket').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('bucket', bucket);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('bucket', bucket, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -91,8 +91,8 @@ class RootRestorationScope$Mate extends RootRestorationScope with Mate {
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('restorationId', restorationId);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

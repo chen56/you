@@ -67,15 +67,15 @@ class CupertinoSlider$Mate extends CupertinoSlider with Mate {
           activeColor: p.get('activeColor').build(),
           thumbColor: p.get('thumbColor').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('onChanged', onChanged);
-    mateUse('onChangeStart', onChangeStart);
-    mateUse('onChangeEnd', onChangeEnd);
-    mateUse('min', min);
-    mateUse('max', max);
-    mateUse('divisions', divisions);
-    mateUse('activeColor', activeColor);
-    mateUse('thumbColor', thumbColor);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('onChangeStart', onChangeStart, isNamed: true);
+    mateUse('onChangeEnd', onChangeEnd, isNamed: true);
+    mateUse('min', min, isNamed: true);
+    mateUse('max', max, isNamed: true);
+    mateUse('divisions', divisions, isNamed: true);
+    mateUse('activeColor', activeColor, isNamed: true);
+    mateUse('thumbColor', thumbColor, isNamed: true);
   }
 }

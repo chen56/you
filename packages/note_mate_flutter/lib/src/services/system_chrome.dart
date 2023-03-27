@@ -24,8 +24,8 @@ class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription
           label: p.get('label').build(),
           primaryColor: p.get('primaryColor').build(),
         );
-    mateUse('label', label);
-    mateUse('primaryColor', primaryColor);
+    mateUse('label', label, isNamed: true);
+    mateUse('primaryColor', primaryColor, isNamed: true);
   }
 }
 
@@ -78,13 +78,13 @@ class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate {
           statusBarIconBrightness: p.get('statusBarIconBrightness').build(),
           systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').build(),
         );
-    mateUse('systemNavigationBarColor', systemNavigationBarColor);
-    mateUse('systemNavigationBarDividerColor', systemNavigationBarDividerColor);
-    mateUse('systemNavigationBarIconBrightness', systemNavigationBarIconBrightness);
-    mateUse('systemNavigationBarContrastEnforced', systemNavigationBarContrastEnforced);
-    mateUse('statusBarColor', statusBarColor);
-    mateUse('statusBarBrightness', statusBarBrightness);
-    mateUse('statusBarIconBrightness', statusBarIconBrightness);
-    mateUse('systemStatusBarContrastEnforced', systemStatusBarContrastEnforced);
+    mateUse('systemNavigationBarColor', systemNavigationBarColor, isNamed: true);
+    mateUse('systemNavigationBarDividerColor', systemNavigationBarDividerColor, isNamed: true);
+    mateUse('systemNavigationBarIconBrightness', systemNavigationBarIconBrightness, isNamed: true);
+    mateUse('systemNavigationBarContrastEnforced', systemNavigationBarContrastEnforced, isNamed: true);
+    mateUse('statusBarColor', statusBarColor, isNamed: true);
+    mateUse('statusBarBrightness', statusBarBrightness, isNamed: true);
+    mateUse('statusBarIconBrightness', statusBarIconBrightness, isNamed: true);
+    mateUse('systemStatusBarContrastEnforced', systemStatusBarContrastEnforced, isNamed: true);
   }
 }

@@ -55,12 +55,12 @@ class SelectionArea$Mate extends SelectionArea with Mate {
           onSelectionChanged: p.get('onSelectionChanged').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('focusNode', focusNode);
-    mateUse('selectionControls', selectionControls);
-    mateUse('contextMenuBuilder', contextMenuBuilder);
-    mateUse('magnifierConfiguration', magnifierConfiguration);
-    mateUse('onSelectionChanged', onSelectionChanged);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('selectionControls', selectionControls, isNamed: true);
+    mateUse('contextMenuBuilder', contextMenuBuilder, isNamed: true);
+    mateUse('magnifierConfiguration', magnifierConfiguration, isNamed: true);
+    mateUse('onSelectionChanged', onSelectionChanged, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

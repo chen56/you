@@ -40,11 +40,11 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate {
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateUse('physicalKey', physicalKey);
-    mateUse('logicalKey', logicalKey);
-    mateUse('character', character);
-    mateUse('timeStamp', timeStamp);
-    mateUse('synthesized', synthesized);
+    mateUse('physicalKey', physicalKey, isNamed: true);
+    mateUse('logicalKey', logicalKey, isNamed: true);
+    mateUse('character', character, isNamed: true);
+    mateUse('timeStamp', timeStamp, isNamed: true);
+    mateUse('synthesized', synthesized, isNamed: true);
   }
 }
 
@@ -77,10 +77,10 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate {
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateUse('physicalKey', physicalKey);
-    mateUse('logicalKey', logicalKey);
-    mateUse('timeStamp', timeStamp);
-    mateUse('synthesized', synthesized);
+    mateUse('physicalKey', physicalKey, isNamed: true);
+    mateUse('logicalKey', logicalKey, isNamed: true);
+    mateUse('timeStamp', timeStamp, isNamed: true);
+    mateUse('synthesized', synthesized, isNamed: true);
   }
 }
 
@@ -113,10 +113,10 @@ class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate {
           character: p.get('character').build(),
           timeStamp: p.get('timeStamp').build(),
         );
-    mateUse('physicalKey', physicalKey);
-    mateUse('logicalKey', logicalKey);
-    mateUse('character', character);
-    mateUse('timeStamp', timeStamp);
+    mateUse('physicalKey', physicalKey, isNamed: true);
+    mateUse('logicalKey', logicalKey, isNamed: true);
+    mateUse('character', character, isNamed: true);
+    mateUse('timeStamp', timeStamp, isNamed: true);
   }
 }
 
@@ -139,8 +139,8 @@ class KeyMessage$Mate extends KeyMessage with Mate {
           p.get('events').value,
           p.get('rawEvent').value,
         );
-    mateUse('events', events);
-    mateUse('rawEvent', rawEvent);
+    mateUseList('events', events, isNamed: false);
+    mateUse('rawEvent', rawEvent, isNamed: false);
   }
 }
 
@@ -163,7 +163,7 @@ class KeyEventManager$Mate extends KeyEventManager with Mate {
           p.get('_hardwareKeyboard').value,
           p.get('_rawKeyboard').value,
         );
-    mateUse('_hardwareKeyboard', _hardwareKeyboard);
-    mateUse('_rawKeyboard', _rawKeyboard);
+    mateUse('_hardwareKeyboard', _hardwareKeyboard, isNamed: false);
+    mateUse('_rawKeyboard', _rawKeyboard, isNamed: false);
   }
 }

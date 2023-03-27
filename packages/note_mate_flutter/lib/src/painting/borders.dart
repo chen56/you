@@ -35,9 +35,9 @@ class BorderSide$Mate extends BorderSide with Mate {
           style: p.get('style').build(),
           strokeAlign: p.get('strokeAlign').build(),
         );
-    mateUse('color', color);
-    mateUse('width', width);
-    mateUse('style', style);
-    mateUse('strokeAlign', strokeAlign);
+    mateUse('color', color, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('strokeAlign', strokeAlign, isNamed: true);
   }
 }

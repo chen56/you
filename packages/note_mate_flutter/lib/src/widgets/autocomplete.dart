@@ -64,15 +64,15 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
           textEditingController: p.get('textEditingController').build(),
           initialValue: p.get('initialValue').build(),
         );
-    mateUse('key', key);
-    mateUse('optionsViewBuilder', optionsViewBuilder);
-    mateUse('optionsBuilder', optionsBuilder);
-    mateUse('displayStringForOption', displayStringForOption);
-    mateUse('fieldViewBuilder', fieldViewBuilder);
-    mateUse('focusNode', focusNode);
-    mateUse('onSelected', onSelected);
-    mateUse('textEditingController', textEditingController);
-    mateUse('initialValue', initialValue);
+    mateUse('key', key, isNamed: true);
+    mateUse('optionsViewBuilder', optionsViewBuilder, isNamed: true);
+    mateUse('optionsBuilder', optionsBuilder, isNamed: true);
+    mateUse('displayStringForOption', displayStringForOption, isNamed: true);
+    mateUse('fieldViewBuilder', fieldViewBuilder, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('onSelected', onSelected, isNamed: true);
+    mateUse('textEditingController', textEditingController, isNamed: true);
+    mateUse('initialValue', initialValue, isNamed: true);
   }
 }
 
@@ -100,8 +100,8 @@ class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption w
           highlightIndexNotifier: p.get('highlightIndexNotifier').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('highlightIndexNotifier', highlightIndexNotifier);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('highlightIndexNotifier', highlightIndexNotifier, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

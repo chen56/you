@@ -81,18 +81,18 @@ class BottomSheet$Mate extends BottomSheet with Mate {
           onClosing: p.get('onClosing').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key);
-    mateUse('animationController', animationController);
-    mateUse('enableDrag', enableDrag);
-    mateUse('onDragStart', onDragStart);
-    mateUse('onDragEnd', onDragEnd);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('constraints', constraints);
-    mateUse('onClosing', onClosing);
-    mateUse('builder', builder);
+    mateUse('key', key, isNamed: true);
+    mateUse('animationController', animationController, isNamed: true);
+    mateUse('enableDrag', enableDrag, isNamed: true);
+    mateUse('onDragStart', onDragStart, isNamed: true);
+    mateUse('onDragEnd', onDragEnd, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('onClosing', onClosing, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
   }
 }
 
@@ -190,22 +190,22 @@ class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate {
           anchorPoint: p.get('anchorPoint').build(),
           useSafeArea: p.get('useSafeArea').build(),
         );
-    mateUse('builder', builder);
-    mateUse('capturedThemes', capturedThemes);
-    mateUse('barrierLabel', barrierLabel);
-    mateUse('barrierOnTapHint', barrierOnTapHint);
-    mateUse('backgroundColor', backgroundColor);
-    mateUse('elevation', elevation);
-    mateUse('shape', shape);
-    mateUse('clipBehavior', clipBehavior);
-    mateUse('constraints', constraints);
-    mateUse('modalBarrierColor', modalBarrierColor);
-    mateUse('isDismissible', isDismissible);
-    mateUse('enableDrag', enableDrag);
-    mateUse('isScrollControlled', isScrollControlled);
-    mateUse('settings', settings);
-    mateUse('transitionAnimationController', transitionAnimationController);
-    mateUse('anchorPoint', anchorPoint);
-    mateUse('useSafeArea', useSafeArea);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('capturedThemes', capturedThemes, isNamed: true);
+    mateUse('barrierLabel', barrierLabel, isNamed: true);
+    mateUse('barrierOnTapHint', barrierOnTapHint, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('modalBarrierColor', modalBarrierColor, isNamed: true);
+    mateUse('isDismissible', isDismissible, isNamed: true);
+    mateUse('enableDrag', enableDrag, isNamed: true);
+    mateUse('isScrollControlled', isScrollControlled, isNamed: true);
+    mateUse('settings', settings, isNamed: true);
+    mateUse('transitionAnimationController', transitionAnimationController, isNamed: true);
+    mateUse('anchorPoint', anchorPoint, isNamed: true);
+    mateUse('useSafeArea', useSafeArea, isNamed: true);
   }
 }

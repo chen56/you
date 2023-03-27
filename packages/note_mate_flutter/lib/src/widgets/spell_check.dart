@@ -30,8 +30,8 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
           spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
-    mateUse('spellCheckService', spellCheckService);
-    mateUse('misspelledTextStyle', misspelledTextStyle);
-    mateUse('spellCheckSuggestionsToolbarBuilder', spellCheckSuggestionsToolbarBuilder);
+    mateUse('spellCheckService', spellCheckService, isNamed: true);
+    mateUse('misspelledTextStyle', misspelledTextStyle, isNamed: true);
+    mateUse('spellCheckSuggestionsToolbarBuilder', spellCheckSuggestionsToolbarBuilder, isNamed: true);
   }
 }

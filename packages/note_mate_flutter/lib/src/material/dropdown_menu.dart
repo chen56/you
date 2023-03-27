@@ -51,12 +51,12 @@ class DropdownMenuEntry$Mate<T> extends DropdownMenuEntry<T> with Mate {
           enabled: p.get('enabled').build(),
           style: p.get('style').build(),
         );
-    mateUse('value', value);
-    mateUse('label', label);
-    mateUse('leadingIcon', leadingIcon);
-    mateUse('trailingIcon', trailingIcon);
-    mateUse('enabled', enabled);
-    mateUse('style', style);
+    mateUse('value', value, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('leadingIcon', leadingIcon, isNamed: true);
+    mateUse('trailingIcon', trailingIcon, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('style', style, isNamed: true);
   }
 }
 
@@ -164,24 +164,24 @@ class DropdownMenu$Mate<T> extends DropdownMenu<T> with Mate {
           requestFocusOnTap: p.get('requestFocusOnTap').build(),
           dropdownMenuEntries: p.get('dropdownMenuEntries').build(),
         );
-    mateUse('key', key);
-    mateUse('enabled', enabled);
-    mateUse('width', width);
-    mateUse('menuHeight', menuHeight);
-    mateUse('leadingIcon', leadingIcon);
-    mateUse('trailingIcon', trailingIcon);
-    mateUse('label', label);
-    mateUse('hintText', hintText);
-    mateUse('selectedTrailingIcon', selectedTrailingIcon);
-    mateUse('enableFilter', enableFilter);
-    mateUse('enableSearch', enableSearch);
-    mateUse('textStyle', textStyle);
-    mateUse('inputDecorationTheme', inputDecorationTheme);
-    mateUse('menuStyle', menuStyle);
-    mateUse('controller', controller);
-    mateUse('initialSelection', initialSelection);
-    mateUse('onSelected', onSelected);
-    mateUse('requestFocusOnTap', requestFocusOnTap);
-    mateUse('dropdownMenuEntries', dropdownMenuEntries);
+    mateUse('key', key, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('width', width, isNamed: true);
+    mateUse('menuHeight', menuHeight, isNamed: true);
+    mateUse('leadingIcon', leadingIcon, isNamed: true);
+    mateUse('trailingIcon', trailingIcon, isNamed: true);
+    mateUse('label', label, isNamed: true);
+    mateUse('hintText', hintText, isNamed: true);
+    mateUse('selectedTrailingIcon', selectedTrailingIcon, isNamed: true);
+    mateUse('enableFilter', enableFilter, isNamed: true);
+    mateUse('enableSearch', enableSearch, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('inputDecorationTheme', inputDecorationTheme, isNamed: true);
+    mateUse('menuStyle', menuStyle, isNamed: true);
+    mateUse('controller', controller, isNamed: true);
+    mateUse('initialSelection', initialSelection, isNamed: true);
+    mateUse('onSelected', onSelected, isNamed: true);
+    mateUse('requestFocusOnTap', requestFocusOnTap, isNamed: true);
+    mateUseList('dropdownMenuEntries', dropdownMenuEntries, isNamed: true);
   }
 }

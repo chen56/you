@@ -116,24 +116,24 @@ class Checkbox$Mate extends Checkbox with Mate {
           side: p.get('side').build(),
           isError: p.get('isError').build(),
         );
-    mateUse('key', key);
-    mateUse('value', value);
-    mateUse('tristate', tristate);
-    mateUse('onChanged', onChanged);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('activeColor', activeColor);
-    mateUse('fillColor', fillColor);
-    mateUse('checkColor', checkColor);
-    mateUse('focusColor', focusColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('overlayColor', overlayColor);
-    mateUse('splashRadius', splashRadius);
-    mateUse('materialTapTargetSize', materialTapTargetSize);
-    mateUse('visualDensity', visualDensity);
-    mateUse('focusNode', focusNode);
-    mateUse('autofocus', autofocus);
-    mateUse('shape', shape);
-    mateUse('side', side);
-    mateUse('isError', isError);
+    mateUse('key', key, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('tristate', tristate, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('activeColor', activeColor, isNamed: true);
+    mateUse('fillColor', fillColor, isNamed: true);
+    mateUse('checkColor', checkColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse('splashRadius', splashRadius, isNamed: true);
+    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
+    mateUse('visualDensity', visualDensity, isNamed: true);
+    mateUse('focusNode', focusNode, isNamed: true);
+    mateUse('autofocus', autofocus, isNamed: true);
+    mateUse('shape', shape, isNamed: true);
+    mateUse('side', side, isNamed: true);
+    mateUse('isError', isError, isNamed: true);
   }
 }

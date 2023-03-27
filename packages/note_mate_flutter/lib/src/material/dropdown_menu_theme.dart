@@ -32,9 +32,9 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate {
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
           menuStyle: p.get('menuStyle').build(),
         );
-    mateUse('textStyle', textStyle);
-    mateUse('inputDecorationTheme', inputDecorationTheme);
-    mateUse('menuStyle', menuStyle);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('inputDecorationTheme', inputDecorationTheme, isNamed: true);
+    mateUse('menuStyle', menuStyle, isNamed: true);
   }
 }
 
@@ -62,8 +62,8 @@ class DropdownMenuTheme$Mate extends DropdownMenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

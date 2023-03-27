@@ -18,7 +18,7 @@ class NumericFocusOrder$Mate extends NumericFocusOrder with Mate {
     mateCreateName = 'NumericFocusOrder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NumericFocusOrder$Mate(p.get('order').value);
-    mateUse('order', order);
+    mateUse('order', order, isNamed: false);
   }
 }
 
@@ -33,7 +33,7 @@ class LexicalFocusOrder$Mate extends LexicalFocusOrder with Mate {
     mateCreateName = 'LexicalFocusOrder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LexicalFocusOrder$Mate(p.get('order').value);
-    mateUse('order', order);
+    mateUse('order', order, isNamed: false);
   }
 }
 
@@ -48,7 +48,7 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
     mateCreateName = 'OrderedTraversalPolicy';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
-    mateUse('secondary', secondary);
+    mateUse('secondary', secondary, isNamed: true);
   }
 }
 
@@ -76,9 +76,9 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
           order: p.get('order').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('order', order);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('order', order, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -116,11 +116,11 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
           descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('policy', policy);
-    mateUse('descendantsAreFocusable', descendantsAreFocusable);
-    mateUse('descendantsAreTraversable', descendantsAreTraversable);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('policy', policy, isNamed: true);
+    mateUse('descendantsAreFocusable', descendantsAreFocusable, isNamed: true);
+    mateUse('descendantsAreTraversable', descendantsAreTraversable, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -135,7 +135,7 @@ class RequestFocusIntent$Mate extends RequestFocusIntent with Mate {
     mateCreateName = 'RequestFocusIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RequestFocusIntent$Mate(p.get('focusNode').value);
-    mateUse('focusNode', focusNode);
+    mateUse('focusNode', focusNode, isNamed: false);
   }
 }
 
@@ -157,8 +157,8 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
           p.get('direction').value,
           ignoreTextFields: p.get('ignoreTextFields').build(),
         );
-    mateUse('direction', direction);
-    mateUse('ignoreTextFields', ignoreTextFields);
+    mateUse('direction', direction, isNamed: false);
+    mateUse('ignoreTextFields', ignoreTextFields, isNamed: true);
   }
 }
 
@@ -186,8 +186,8 @@ class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('excluding', excluding);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('excluding', excluding, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

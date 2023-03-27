@@ -16,7 +16,7 @@ class CharacterBoundary$Mate extends CharacterBoundary with Mate {
     mateCreateName = 'CharacterBoundary';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => CharacterBoundary$Mate(p.get('_text').value);
-    mateUse('_text', _text);
+    mateUse('_text', _text, isNamed: false);
   }
 }
 
@@ -31,7 +31,7 @@ class LineBoundary$Mate extends LineBoundary with Mate {
     mateCreateName = 'LineBoundary';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => LineBoundary$Mate(p.get('_textLayout').value);
-    mateUse('_textLayout', _textLayout);
+    mateUse('_textLayout', _textLayout, isNamed: false);
   }
 }
 
@@ -46,7 +46,7 @@ class ParagraphBoundary$Mate extends ParagraphBoundary with Mate {
     mateCreateName = 'ParagraphBoundary';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ParagraphBoundary$Mate(p.get('_text').value);
-    mateUse('_text', _text);
+    mateUse('_text', _text, isNamed: false);
   }
 }
 
@@ -61,6 +61,6 @@ class DocumentBoundary$Mate extends DocumentBoundary with Mate {
     mateCreateName = 'DocumentBoundary';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => DocumentBoundary$Mate(p.get('_text').value);
-    mateUse('_text', _text);
+    mateUse('_text', _text, isNamed: false);
   }
 }

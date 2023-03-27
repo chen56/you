@@ -30,9 +30,9 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: p.get('stiffness').build(),
           damping: p.get('damping').build(),
         );
-    mateUse('mass', mass);
-    mateUse('stiffness', stiffness);
-    mateUse('damping', damping);
+    mateUse('mass', mass, isNamed: true);
+    mateUse('stiffness', stiffness, isNamed: true);
+    mateUse('damping', damping, isNamed: true);
   }
 
   /// SpringDescription SpringDescription.withDampingRatio({required double mass, required double stiffness, double ratio = 1.0})
@@ -57,9 +57,9 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: p.get('stiffness').build(),
           ratio: p.get('ratio').build(),
         );
-    mateUse('mass', mass);
-    mateUse('stiffness', stiffness);
-    mateUse('ratio', ratio);
+    mateUse('mass', mass, isNamed: true);
+    mateUse('stiffness', stiffness, isNamed: true);
+    mateUse('ratio', ratio, isNamed: true);
   }
 }
 
@@ -96,11 +96,11 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    mateUse('spring', spring);
-    mateUse('start', start);
-    mateUse('end', end);
-    mateUse('velocity', velocity);
-    mateUse('tolerance', tolerance);
+    mateUse('spring', spring, isNamed: false);
+    mateUse('start', start, isNamed: false);
+    mateUse('end', end, isNamed: false);
+    mateUse('velocity', velocity, isNamed: false);
+    mateUse('tolerance', tolerance, isNamed: true);
   }
 }
 
@@ -137,10 +137,10 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    mateUse('spring', spring);
-    mateUse('start', start);
-    mateUse('end', end);
-    mateUse('velocity', velocity);
-    mateUse('tolerance', tolerance);
+    mateUse('spring', spring, isNamed: false);
+    mateUse('start', start, isNamed: false);
+    mateUse('end', end, isNamed: false);
+    mateUse('velocity', velocity, isNamed: false);
+    mateUse('tolerance', tolerance, isNamed: true);
   }
 }

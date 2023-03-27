@@ -25,8 +25,8 @@ class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -41,6 +41,6 @@ class KeepAliveNotification$Mate extends KeepAliveNotification with Mate {
     mateCreateName = 'KeepAliveNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeepAliveNotification$Mate(p.get('handle').value);
-    mateUse('handle', handle);
+    mateUse('handle', handle, isNamed: false);
   }
 }

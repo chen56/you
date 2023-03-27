@@ -39,10 +39,10 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
           p.get('key3').value,
           p.get('key4').value,
         );
-    mateUse('key1', key1);
-    mateUse('key2', key2);
-    mateUse('key3', key3);
-    mateUse('key4', key4);
+    mateUse('key1', key1, isNamed: false);
+    mateUse('key2', key2, isNamed: false);
+    mateUse('key3', key3, isNamed: false);
+    mateUse('key4', key4, isNamed: false);
   }
 
   /// KeySet<T> KeySet.fromSet(Set<T> keys)
@@ -54,7 +54,7 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
     mateCreateName = 'KeySet.fromSet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeySet$Mate<T>.fromSet(p.get('keys').value);
-    mateUse('keys', keys);
+    mateUse('keys', keys, isNamed: false);
   }
 }
 
@@ -87,10 +87,10 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
           p.get('key3').value,
           p.get('key4').value,
         );
-    mateUse('key1', key1);
-    mateUse('key2', key2);
-    mateUse('key3', key3);
-    mateUse('key4', key4);
+    mateUse('key1', key1, isNamed: false);
+    mateUse('key2', key2, isNamed: false);
+    mateUse('key3', key3, isNamed: false);
+    mateUse('key4', key4, isNamed: false);
   }
 
   /// LogicalKeySet LogicalKeySet.fromSet(Set<LogicalKeyboardKey> keys)
@@ -102,7 +102,7 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
     mateCreateName = 'LogicalKeySet.fromSet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LogicalKeySet$Mate.fromSet(p.get('keys').value);
-    mateUse('keys', keys);
+    mateUse('keys', keys, isNamed: false);
   }
 }
 
@@ -144,12 +144,12 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
           level: p.get('level').build(),
           description: p.get('description').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('showName', showName);
-    mateUse('defaultValue', defaultValue);
-    mateUse('level', level);
-    mateUse('description', description);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('level', level, isNamed: true);
+    mateUse('description', description, isNamed: true);
   }
 }
 
@@ -191,12 +191,12 @@ class SingleActivator$Mate extends SingleActivator with Mate {
           meta: p.get('meta').build(),
           includeRepeats: p.get('includeRepeats').build(),
         );
-    mateUse('trigger', trigger);
-    mateUse('control', control);
-    mateUse('shift', shift);
-    mateUse('alt', alt);
-    mateUse('meta', meta);
-    mateUse('includeRepeats', includeRepeats);
+    mateUse('trigger', trigger, isNamed: false);
+    mateUse('control', control, isNamed: true);
+    mateUse('shift', shift, isNamed: true);
+    mateUse('alt', alt, isNamed: true);
+    mateUse('meta', meta, isNamed: true);
+    mateUse('includeRepeats', includeRepeats, isNamed: true);
   }
 }
 
@@ -233,11 +233,11 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
           meta: p.get('meta').build(),
           includeRepeats: p.get('includeRepeats').build(),
         );
-    mateUse('character', character);
-    mateUse('alt', alt);
-    mateUse('control', control);
-    mateUse('meta', meta);
-    mateUse('includeRepeats', includeRepeats);
+    mateUse('character', character, isNamed: false);
+    mateUse('alt', alt, isNamed: true);
+    mateUse('control', control, isNamed: true);
+    mateUse('meta', meta, isNamed: true);
+    mateUse('includeRepeats', includeRepeats, isNamed: true);
   }
 }
 
@@ -260,8 +260,8 @@ class ShortcutManager$Mate extends ShortcutManager with Mate {
           shortcuts: p.get('shortcuts').build(),
           modal: p.get('modal').build(),
         );
-    mateUse('shortcuts', shortcuts);
-    mateUse('modal', modal);
+    mateUse('shortcuts', shortcuts, isNamed: true);
+    mateUse('modal', modal, isNamed: true);
   }
 }
 
@@ -294,10 +294,10 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: p.get('child').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key);
-    mateUse('shortcuts', shortcuts);
-    mateUse('child', child);
-    mateUse('debugLabel', debugLabel);
+    mateUse('key', key, isNamed: true);
+    mateUse('shortcuts', shortcuts, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 
   /// Shortcuts Shortcuts.manager({Key? key, required ShortcutManager manager, required Widget child, String? debugLabel})
@@ -327,10 +327,10 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: p.get('child').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key);
-    mateUse('manager', manager);
-    mateUse('child', child);
-    mateUse('debugLabel', debugLabel);
+    mateUse('key', key, isNamed: true);
+    mateUse('manager', manager, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('debugLabel', debugLabel, isNamed: true);
   }
 }
 
@@ -358,9 +358,9 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
           bindings: p.get('bindings').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('bindings', bindings);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('bindings', bindings, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }
 
@@ -383,7 +383,7 @@ class ShortcutRegistrar$Mate extends ShortcutRegistrar with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

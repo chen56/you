@@ -54,12 +54,12 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmented
           padding: p.get('padding').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('onValueChanged', onValueChanged);
-    mateUse('groupValue', groupValue);
-    mateUse('thumbColor', thumbColor);
-    mateUse('padding', padding);
-    mateUse('backgroundColor', backgroundColor);
+    mateUse('key', key, isNamed: true);
+    mateUse('children', children, isNamed: true);
+    mateUse('onValueChanged', onValueChanged, isNamed: true);
+    mateUse('groupValue', groupValue, isNamed: true);
+    mateUse('thumbColor', thumbColor, isNamed: true);
+    mateUse('padding', padding, isNamed: true);
+    mateUse('backgroundColor', backgroundColor, isNamed: true);
   }
 }

@@ -42,11 +42,11 @@ class Form$Mate extends Form with Mate {
           onChanged: p.get('onChanged').build(),
           autovalidateMode: p.get('autovalidateMode').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('onWillPop', onWillPop);
-    mateUse('onChanged', onChanged);
-    mateUse('autovalidateMode', autovalidateMode);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('onWillPop', onWillPop, isNamed: true);
+    mateUse('onChanged', onChanged, isNamed: true);
+    mateUse('autovalidateMode', autovalidateMode, isNamed: true);
   }
 }
 
@@ -99,13 +99,13 @@ class FormField$Mate<T> extends FormField<T> with Mate {
           autovalidateMode: p.get('autovalidateMode').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse('key', key);
-    mateUse('builder', builder);
-    mateUse('onSaved', onSaved);
-    mateUse('validator', validator);
-    mateUse('initialValue', initialValue);
-    mateUse('enabled', enabled);
-    mateUse('autovalidateMode', autovalidateMode);
-    mateUse('restorationId', restorationId);
+    mateUse('key', key, isNamed: true);
+    mateUse('builder', builder, isNamed: true);
+    mateUse('onSaved', onSaved, isNamed: true);
+    mateUse('validator', validator, isNamed: true);
+    mateUse('initialValue', initialValue, isNamed: true);
+    mateUse('enabled', enabled, isNamed: true);
+    mateUse('autovalidateMode', autovalidateMode, isNamed: true);
+    mateUse('restorationId', restorationId, isNamed: true);
   }
 }

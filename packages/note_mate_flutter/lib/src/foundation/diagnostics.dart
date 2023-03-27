@@ -139,31 +139,31 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           suffixLineOne: p.get('suffixLineOne').build(),
           mandatoryFooter: p.get('mandatoryFooter').build(),
         );
-    mateUse('prefixLineOne', prefixLineOne);
-    mateUse('prefixOtherLines', prefixOtherLines);
-    mateUse('prefixLastChildLineOne', prefixLastChildLineOne);
-    mateUse('prefixOtherLinesRootNode', prefixOtherLinesRootNode);
-    mateUse('linkCharacter', linkCharacter);
-    mateUse('propertyPrefixIfChildren', propertyPrefixIfChildren);
-    mateUse('propertyPrefixNoChildren', propertyPrefixNoChildren);
-    mateUse('lineBreak', lineBreak);
-    mateUse('lineBreakProperties', lineBreakProperties);
-    mateUse('afterName', afterName);
-    mateUse('afterDescriptionIfBody', afterDescriptionIfBody);
-    mateUse('afterDescription', afterDescription);
-    mateUse('beforeProperties', beforeProperties);
-    mateUse('afterProperties', afterProperties);
-    mateUse('mandatoryAfterProperties', mandatoryAfterProperties);
-    mateUse('propertySeparator', propertySeparator);
-    mateUse('bodyIndent', bodyIndent);
-    mateUse('footer', footer);
-    mateUse('showChildren', showChildren);
-    mateUse('addBlankLineIfNoChildren', addBlankLineIfNoChildren);
-    mateUse('isNameOnOwnLine', isNameOnOwnLine);
-    mateUse('isBlankLineBetweenPropertiesAndChildren', isBlankLineBetweenPropertiesAndChildren);
-    mateUse('beforeName', beforeName);
-    mateUse('suffixLineOne', suffixLineOne);
-    mateUse('mandatoryFooter', mandatoryFooter);
+    mateUse('prefixLineOne', prefixLineOne, isNamed: true);
+    mateUse('prefixOtherLines', prefixOtherLines, isNamed: true);
+    mateUse('prefixLastChildLineOne', prefixLastChildLineOne, isNamed: true);
+    mateUse('prefixOtherLinesRootNode', prefixOtherLinesRootNode, isNamed: true);
+    mateUse('linkCharacter', linkCharacter, isNamed: true);
+    mateUse('propertyPrefixIfChildren', propertyPrefixIfChildren, isNamed: true);
+    mateUse('propertyPrefixNoChildren', propertyPrefixNoChildren, isNamed: true);
+    mateUse('lineBreak', lineBreak, isNamed: true);
+    mateUse('lineBreakProperties', lineBreakProperties, isNamed: true);
+    mateUse('afterName', afterName, isNamed: true);
+    mateUse('afterDescriptionIfBody', afterDescriptionIfBody, isNamed: true);
+    mateUse('afterDescription', afterDescription, isNamed: true);
+    mateUse('beforeProperties', beforeProperties, isNamed: true);
+    mateUse('afterProperties', afterProperties, isNamed: true);
+    mateUse('mandatoryAfterProperties', mandatoryAfterProperties, isNamed: true);
+    mateUse('propertySeparator', propertySeparator, isNamed: true);
+    mateUse('bodyIndent', bodyIndent, isNamed: true);
+    mateUse('footer', footer, isNamed: true);
+    mateUse('showChildren', showChildren, isNamed: true);
+    mateUse('addBlankLineIfNoChildren', addBlankLineIfNoChildren, isNamed: true);
+    mateUse('isNameOnOwnLine', isNameOnOwnLine, isNamed: true);
+    mateUse('isBlankLineBetweenPropertiesAndChildren', isBlankLineBetweenPropertiesAndChildren, isNamed: true);
+    mateUse('beforeName', beforeName, isNamed: true);
+    mateUse('suffixLineOne', suffixLineOne, isNamed: true);
+    mateUse('mandatoryFooter', mandatoryFooter, isNamed: true);
   }
 }
 
@@ -196,10 +196,10 @@ class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
           wrapWidthProperties: p.get('wrapWidthProperties').build(),
           maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').build(),
         );
-    mateUse('minLevel', minLevel);
-    mateUse('wrapWidth', wrapWidth);
-    mateUse('wrapWidthProperties', wrapWidthProperties);
-    mateUse('maxDescendentsTruncatableNode', maxDescendentsTruncatableNode);
+    mateUse('minLevel', minLevel, isNamed: true);
+    mateUse('wrapWidth', wrapWidth, isNamed: true);
+    mateUse('wrapWidthProperties', wrapWidthProperties, isNamed: true);
+    mateUse('maxDescendentsTruncatableNode', maxDescendentsTruncatableNode, isNamed: true);
   }
 }
 
@@ -231,10 +231,10 @@ class MessageProperty$Mate extends MessageProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('message', message);
-    mateUse('style', style);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('message', message, isNamed: false);
+    mateUse('style', style, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -296,16 +296,16 @@ class StringProperty$Mate extends StringProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('description', description);
-    mateUse('tooltip', tooltip);
-    mateUse('showName', showName);
-    mateUse('defaultValue', defaultValue);
-    mateUse('quoted', quoted);
-    mateUse('ifEmpty', ifEmpty);
-    mateUse('style', style);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('description', description, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('quoted', quoted, isNamed: true);
+    mateUse('ifEmpty', ifEmpty, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -362,15 +362,15 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('ifNull', ifNull);
-    mateUse('unit', unit);
-    mateUse('tooltip', tooltip);
-    mateUse('defaultValue', defaultValue);
-    mateUse('showName', showName);
-    mateUse('style', style);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('unit', unit, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 
   /// DoubleProperty DoubleProperty.lazy(String name, double? Function() computeValue, {String? ifNull, bool showName = true, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
@@ -419,14 +419,14 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('computeValue', computeValue);
-    mateUse('ifNull', ifNull);
-    mateUse('showName', showName);
-    mateUse('unit', unit);
-    mateUse('tooltip', tooltip);
-    mateUse('defaultValue', defaultValue);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('computeValue', computeValue, isNamed: false);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('unit', unit, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -478,14 +478,14 @@ class IntProperty$Mate extends IntProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('ifNull', ifNull);
-    mateUse('showName', showName);
-    mateUse('unit', unit);
-    mateUse('defaultValue', defaultValue);
-    mateUse('style', style);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('unit', unit, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -532,13 +532,13 @@ class PercentProperty$Mate extends PercentProperty with Mate {
           unit: p.get('unit').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('fraction', fraction);
-    mateUse('ifNull', ifNull);
-    mateUse('showName', showName);
-    mateUse('tooltip', tooltip);
-    mateUse('unit', unit);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('fraction', fraction, isNamed: false);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('unit', unit, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -585,13 +585,13 @@ class FlagProperty$Mate extends FlagProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('ifTrue', ifTrue);
-    mateUse('ifFalse', ifFalse);
-    mateUse('showName', showName);
-    mateUse('defaultValue', defaultValue);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: true);
+    mateUse('ifTrue', ifTrue, isNamed: true);
+    mateUse('ifFalse', ifFalse, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -648,15 +648,15 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('defaultValue', defaultValue);
-    mateUse('ifNull', ifNull);
-    mateUse('ifEmpty', ifEmpty);
-    mateUse('style', style);
-    mateUse('showName', showName);
-    mateUse('showSeparator', showSeparator);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('ifEmpty', ifEmpty, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('showSeparator', showSeparator, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -688,10 +688,10 @@ class EnumProperty$Mate<T> extends EnumProperty<T> with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('defaultValue', defaultValue);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -733,12 +733,12 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           showName: p.get('showName').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('ifPresent', ifPresent);
-    mateUse('ifNull', ifNull);
-    mateUse('showName', showName);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('ifPresent', ifPresent, isNamed: true);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 
   /// ObjectFlagProperty<T> ObjectFlagProperty.has(String name, T? value, {DiagnosticLevel level = DiagnosticLevel.info})
@@ -762,9 +762,9 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           p.get('value').value,
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -806,12 +806,12 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('ifEmpty', ifEmpty);
-    mateUse('showName', showName);
-    mateUse('showSeparator', showSeparator);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('ifEmpty', ifEmpty, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('showSeparator', showSeparator, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -903,22 +903,22 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('description', description);
-    mateUse('ifNull', ifNull);
-    mateUse('ifEmpty', ifEmpty);
-    mateUse('showName', showName);
-    mateUse('showSeparator', showSeparator);
-    mateUse('defaultValue', defaultValue);
-    mateUse('tooltip', tooltip);
-    mateUse('missingIfNull', missingIfNull);
-    mateUse('linePrefix', linePrefix);
-    mateUse('expandableValue', expandableValue);
-    mateUse('allowWrap', allowWrap);
-    mateUse('allowNameWrap', allowNameWrap);
-    mateUse('style', style);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('value', value, isNamed: false);
+    mateUse('description', description, isNamed: true);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('ifEmpty', ifEmpty, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('showSeparator', showSeparator, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('missingIfNull', missingIfNull, isNamed: true);
+    mateUse('linePrefix', linePrefix, isNamed: true);
+    mateUse('expandableValue', expandableValue, isNamed: true);
+    mateUse('allowWrap', allowWrap, isNamed: true);
+    mateUse('allowNameWrap', allowNameWrap, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 
   /// DiagnosticsProperty<T> DiagnosticsProperty.lazy(String? name, T? Function() computeValue, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
@@ -1002,21 +1002,21 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name);
-    mateUse('computeValue', computeValue);
-    mateUse('description', description);
-    mateUse('ifNull', ifNull);
-    mateUse('ifEmpty', ifEmpty);
-    mateUse('showName', showName);
-    mateUse('showSeparator', showSeparator);
-    mateUse('defaultValue', defaultValue);
-    mateUse('tooltip', tooltip);
-    mateUse('missingIfNull', missingIfNull);
-    mateUse('expandableValue', expandableValue);
-    mateUse('allowWrap', allowWrap);
-    mateUse('allowNameWrap', allowNameWrap);
-    mateUse('style', style);
-    mateUse('level', level);
+    mateUse('name', name, isNamed: false);
+    mateUse('computeValue', computeValue, isNamed: false);
+    mateUse('description', description, isNamed: true);
+    mateUse('ifNull', ifNull, isNamed: true);
+    mateUse('ifEmpty', ifEmpty, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('showSeparator', showSeparator, isNamed: true);
+    mateUse('defaultValue', defaultValue, isNamed: true);
+    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse('missingIfNull', missingIfNull, isNamed: true);
+    mateUse('expandableValue', expandableValue, isNamed: true);
+    mateUse('allowWrap', allowWrap, isNamed: true);
+    mateUse('allowNameWrap', allowNameWrap, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('level', level, isNamed: true);
   }
 }
 
@@ -1044,9 +1044,9 @@ class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNo
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('style', style);
+    mateUse('name', name, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('style', style, isNamed: true);
   }
 }
 
@@ -1074,9 +1074,9 @@ class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    mateUse('name', name);
-    mateUse('value', value);
-    mateUse('style', style);
+    mateUse('name', name, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('style', style, isNamed: true);
   }
 }
 
@@ -1091,7 +1091,7 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with 
     mateCreateName = 'DiagnosticPropertiesBuilder.fromProperties';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value);
-    mateUse('properties', properties);
+    mateUseList('properties', properties, isNamed: false);
   }
 }
 
@@ -1159,16 +1159,16 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
           children: p.get('children').build(),
           properties: p.get('properties').build(),
         );
-    mateUse('name', name);
-    mateUse('style', style);
-    mateUse('showName', showName);
-    mateUse('showSeparator', showSeparator);
-    mateUse('linePrefix', linePrefix);
-    mateUse('value', value);
-    mateUse('description', description);
-    mateUse('level', level);
-    mateUse('allowTruncate', allowTruncate);
-    mateUse('children', children);
-    mateUse('properties', properties);
+    mateUse('name', name, isNamed: true);
+    mateUse('style', style, isNamed: true);
+    mateUse('showName', showName, isNamed: true);
+    mateUse('showSeparator', showSeparator, isNamed: true);
+    mateUse('linePrefix', linePrefix, isNamed: true);
+    mateUse('value', value, isNamed: true);
+    mateUse('description', description, isNamed: true);
+    mateUse('level', level, isNamed: true);
+    mateUse('allowTruncate', allowTruncate, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUseList('properties', properties, isNamed: true);
   }
 }

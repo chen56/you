@@ -149,30 +149,30 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
           direction: p.get('direction').build(),
           verticalDirection: p.get('verticalDirection').build(),
         );
-    mateUse('key', key);
-    mateUse('children', children);
-    mateUse('isSelected', isSelected);
-    mateUse('onPressed', onPressed);
-    mateUse('mouseCursor', mouseCursor);
-    mateUse('tapTargetSize', tapTargetSize);
-    mateUse('textStyle', textStyle);
-    mateUse('constraints', constraints);
-    mateUse('color', color);
-    mateUse('selectedColor', selectedColor);
-    mateUse('disabledColor', disabledColor);
-    mateUse('fillColor', fillColor);
-    mateUse('focusColor', focusColor);
-    mateUse('highlightColor', highlightColor);
-    mateUse('hoverColor', hoverColor);
-    mateUse('splashColor', splashColor);
-    mateUse('focusNodes', focusNodes);
-    mateUse('renderBorder', renderBorder);
-    mateUse('borderColor', borderColor);
-    mateUse('selectedBorderColor', selectedBorderColor);
-    mateUse('disabledBorderColor', disabledBorderColor);
-    mateUse('borderRadius', borderRadius);
-    mateUse('borderWidth', borderWidth);
-    mateUse('direction', direction);
-    mateUse('verticalDirection', verticalDirection);
+    mateUse('key', key, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUseList('isSelected', isSelected, isNamed: true);
+    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse('tapTargetSize', tapTargetSize, isNamed: true);
+    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse('constraints', constraints, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('selectedColor', selectedColor, isNamed: true);
+    mateUse('disabledColor', disabledColor, isNamed: true);
+    mateUse('fillColor', fillColor, isNamed: true);
+    mateUse('focusColor', focusColor, isNamed: true);
+    mateUse('highlightColor', highlightColor, isNamed: true);
+    mateUse('hoverColor', hoverColor, isNamed: true);
+    mateUse('splashColor', splashColor, isNamed: true);
+    mateUseList('focusNodes', focusNodes, isNamed: true);
+    mateUse('renderBorder', renderBorder, isNamed: true);
+    mateUse('borderColor', borderColor, isNamed: true);
+    mateUse('selectedBorderColor', selectedBorderColor, isNamed: true);
+    mateUse('disabledBorderColor', disabledBorderColor, isNamed: true);
+    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse('borderWidth', borderWidth, isNamed: true);
+    mateUse('direction', direction, isNamed: true);
+    mateUse('verticalDirection', verticalDirection, isNamed: true);
   }
 }

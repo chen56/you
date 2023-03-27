@@ -33,9 +33,9 @@ class MaterialSlice$Mate extends MaterialSlice with Mate {
           child: p.get('child').build(),
           color: p.get('color').build(),
         );
-    mateUse('key', key);
-    mateUse('child', child);
-    mateUse('color', color);
+    mateUse('key', key, isNamed: true);
+    mateUse('child', child, isNamed: true);
+    mateUse('color', color, isNamed: true);
   }
 }
 
@@ -58,8 +58,8 @@ class MaterialGap$Mate extends MaterialGap with Mate {
           key: p.get('key').build(),
           size: p.get('size').build(),
         );
-    mateUse('key', key);
-    mateUse('size', size);
+    mateUse('key', key, isNamed: true);
+    mateUse('size', size, isNamed: true);
   }
 }
 
@@ -102,11 +102,11 @@ class MergeableMaterial$Mate extends MergeableMaterial with Mate {
           children: p.get('children').build(),
           dividerColor: p.get('dividerColor').build(),
         );
-    mateUse('key', key);
-    mateUse('mainAxis', mainAxis);
-    mateUse('elevation', elevation);
-    mateUse('hasDividers', hasDividers);
-    mateUse('children', children);
-    mateUse('dividerColor', dividerColor);
+    mateUse('key', key, isNamed: true);
+    mateUse('mainAxis', mainAxis, isNamed: true);
+    mateUse('elevation', elevation, isNamed: true);
+    mateUse('hasDividers', hasDividers, isNamed: true);
+    mateUseList('children', children, isNamed: true);
+    mateUse('dividerColor', dividerColor, isNamed: true);
   }
 }

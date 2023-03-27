@@ -26,7 +26,7 @@ class ScrollAwareImageProvider$Mate<T extends Object> extends ScrollAwareImagePr
           context: p.get('context').build(),
           imageProvider: p.get('imageProvider').build(),
         );
-    mateUse('context', context);
-    mateUse('imageProvider', imageProvider);
+    mateUse('context', context, isNamed: true);
+    mateUse('imageProvider', imageProvider, isNamed: true);
   }
 }

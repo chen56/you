@@ -35,10 +35,10 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           animating: p.get('animating').build(),
           radius: p.get('radius').build(),
         );
-    mateUse('key', key);
-    mateUse('color', color);
-    mateUse('animating', animating);
-    mateUse('radius', radius);
+    mateUse('key', key, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('animating', animating, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
   }
 
   /// CupertinoActivityIndicator CupertinoActivityIndicator.partiallyRevealed({Key? key, Color? color, double radius = _kDefaultIndicatorRadius, double progress = 1.0})
@@ -68,9 +68,9 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           radius: p.get('radius').build(),
           progress: p.get('progress').build(),
         );
-    mateUse('key', key);
-    mateUse('color', color);
-    mateUse('radius', radius);
-    mateUse('progress', progress);
+    mateUse('key', key, isNamed: true);
+    mateUse('color', color, isNamed: true);
+    mateUse('radius', radius, isNamed: true);
+    mateUse('progress', progress, isNamed: true);
   }
 }

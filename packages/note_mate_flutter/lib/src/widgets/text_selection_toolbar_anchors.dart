@@ -23,7 +23,7 @@ class TextSelectionToolbarAnchors$Mate extends TextSelectionToolbarAnchors with 
           primaryAnchor: p.get('primaryAnchor').build(),
           secondaryAnchor: p.get('secondaryAnchor').build(),
         );
-    mateUse('primaryAnchor', primaryAnchor);
-    mateUse('secondaryAnchor', secondaryAnchor);
+    mateUse('primaryAnchor', primaryAnchor, isNamed: true);
+    mateUse('secondaryAnchor', secondaryAnchor, isNamed: true);
   }
 }

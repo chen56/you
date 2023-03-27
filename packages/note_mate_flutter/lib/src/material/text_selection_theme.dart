@@ -30,9 +30,9 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate {
           selectionColor: p.get('selectionColor').build(),
           selectionHandleColor: p.get('selectionHandleColor').build(),
         );
-    mateUse('cursorColor', cursorColor);
-    mateUse('selectionColor', selectionColor);
-    mateUse('selectionHandleColor', selectionHandleColor);
+    mateUse('cursorColor', cursorColor, isNamed: true);
+    mateUse('selectionColor', selectionColor, isNamed: true);
+    mateUse('selectionHandleColor', selectionHandleColor, isNamed: true);
   }
 }
 
@@ -60,8 +60,8 @@ class TextSelectionTheme$Mate extends TextSelectionTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key);
-    mateUse('data', data);
-    mateUse('child', child);
+    mateUse('key', key, isNamed: true);
+    mateUse('data', data, isNamed: true);
+    mateUse('child', child, isNamed: true);
   }
 }

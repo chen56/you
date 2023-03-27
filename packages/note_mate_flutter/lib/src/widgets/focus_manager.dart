@@ -50,13 +50,13 @@ class FocusNode$Mate extends FocusNode with Mate {
           descendantsAreFocusable: p.get('descendantsAreFocusable').build(),
           descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
         );
-    mateUse('debugLabel', debugLabel);
-    mateUse('onKey', onKey);
-    mateUse('onKeyEvent', onKeyEvent);
-    mateUse('skipTraversal', skipTraversal);
-    mateUse('canRequestFocus', canRequestFocus);
-    mateUse('descendantsAreFocusable', descendantsAreFocusable);
-    mateUse('descendantsAreTraversable', descendantsAreTraversable);
+    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse('onKey', onKey, isNamed: true);
+    mateUse('onKeyEvent', onKeyEvent, isNamed: true);
+    mateUse('skipTraversal', skipTraversal, isNamed: true);
+    mateUse('canRequestFocus', canRequestFocus, isNamed: true);
+    mateUse('descendantsAreFocusable', descendantsAreFocusable, isNamed: true);
+    mateUse('descendantsAreTraversable', descendantsAreTraversable, isNamed: true);
   }
 }
 
@@ -99,11 +99,11 @@ class FocusScopeNode$Mate extends FocusScopeNode with Mate {
           canRequestFocus: p.get('canRequestFocus').build(),
           traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),
         );
-    mateUse('debugLabel', debugLabel);
-    mateUse('onKeyEvent', onKeyEvent);
-    mateUse('onKey', onKey);
-    mateUse('skipTraversal', skipTraversal);
-    mateUse('canRequestFocus', canRequestFocus);
-    mateUse('traversalEdgeBehavior', traversalEdgeBehavior);
+    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse('onKeyEvent', onKeyEvent, isNamed: true);
+    mateUse('onKey', onKey, isNamed: true);
+    mateUse('skipTraversal', skipTraversal, isNamed: true);
+    mateUse('canRequestFocus', canRequestFocus, isNamed: true);
+    mateUse('traversalEdgeBehavior', traversalEdgeBehavior, isNamed: true);
   }
 }
